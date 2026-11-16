@@ -3795,3 +3795,186 @@ R_{\rm glob}^{(v4100\text{-}r27,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r28 Source-Only: Status of the Residual Bend and of the Counting Rule after the Explorations of 16--17 November}
+\addcontentsline{toc}{section}{v4.10.0-r28 Source-Only: Status of the Residual Bend and of the Counting Rule after the Explorations of 16--17 November}
+\label{sec:v4100-r28-bend-counting-status}
+% ============================================================================
+
+\paragraph{Purpose.}
+Between v4.10.0-r27 and this layer the author asked for a series of tests and explorations on two open problems: the residual bend of the
+lepton phase (OP3) and the counting rule of the horizon readout (OP1).  They were run as pre-registered tests H106--H111 and as explorations
+without an H number, and were recorded only in notes.  This layer collects their status in the Companion.  It adds no new computation; every
+number below is taken from the cited script output.  Earlier layers are not rewritten.  The notes are listed in
+\S\ref{subsec:v4100-r28-notes}.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r28 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r28 results}
+\label{subsec:v4100-r28-results}
+
+\paragraph{Remark v4.10.0-r28.1 (six pre-registered tests on the carrier side, all refuted).}
+Each test was fixed in a pre-registration note before the computation; the target was the pole-mass phase \(3\delta=0.666674\) within
+\(2\cdot10^{-4}\).
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.50\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}@{}}
+\toprule
+test & mechanism & outcome\\
+\midrule
+H106 & singlet admixture to the spin-1 triangle & refuted; nearest phase \(0.640\) or \(0.679\)\\
+H107 & nested normalisation (ten mechanisms, two solutions each) & refuted; no hit within \(2\cdot10^{-4}\)\\
+H108 & entangled generations (second Majorana point) & refuted; phases far from the target\\
+H109 & generation-dependent frames under cyclic assignment & refuted; the assignment respects generation symmetry and does not bend\\
+H110 & one algebra per frame, the fourth as observer (HS(7) half) & refuted; pure \(K=2/3,\ \varphi=\pi/4\), singlet \(K=1/2,\ \varphi=0\), no variant at the target\\
+H111 & time octant through the frames & refuted; a design flaw (the cross-Gram matrix in \(\C^2\) has rank two) was recognised after the computation and is
+stated in the result note\\
+\bottomrule
+\end{tabular}
+\end{center}
+Two further explorations belong here.  Running masses at \(M_Z\) give \(3\delta=0.663370\), \(0.0033\) below the pole-mass phase; the
+pole-mass convention of the rounds is kept.  Multiplying the Dixon algebra by the sedenions gives
+\(\C\otimes\Hh\otimes\Oo\otimes\mathbb S\) of real dimension \(2\cdot4\cdot8\cdot16=2^{10}\), that is the level HS(10), not HS(7): every factor
+multiplies the dimension.
+
+\paragraph{Remark v4.10.0-r28.2 (diagnosis: the phase is rigid in the carrier geometry; correction).}
+Symmetric constructions on the carrier fix the Bargmann phase by their overlap: spin \(\tfrac12\), \(1\), \(\tfrac32\), \(2\) give
+\(0.785\), \(0.679\), \(0.650\), \(0.637\).  The value \(\tfrac23\) is not a rational part of \(2\pi\).  A first diagnosis concluded that the
+second number (\(\delta\)) is a property of the field state and needs a selection law, and that further carrier variants would yield nothing.
+That diagnosis missed the guarded core and the open prediction H102 (v4.10.0-r14.5--r14.7) and is corrected here: the solid angle
+\(2\varphi=1.33333\) is the octant \(\pi/2\) minus a cap of solid angle \(\gamma_M=0.237533\) (deviation \(6.7\cdot10^{-5}\) sr), so
+\(\varphi=\pi/4-\gamma_M/2\) has a geometric reading.  The core escapes the rigidity because it changes the connection on the generation
+sphere, not the states.  No native dephasing or entanglement parameter \(\kappa\) was found; in the core picture the bend starts at the
+octant and the deficit to be explained is \(\pi/4-\tfrac23=0.1187\).  The chain then reads
+\[
+\varphi\ \leftarrow\ \text{core}\ \leftarrow\ \Omega=\gamma_M\ \leftarrow\ \text{counting rule of frame M}\ \leftarrow\ \text{OP1},
+\]
+and the selection law for the state reduces to one question: why frame M counts every spin with weight two.
+
+\paragraph{Remark v4.10.0-r28.3 (what H102 rests on).}
+H102 predicts \(m_\tau=1777.134\) MeV, \(+2.3\sigma\) above PDG 2024 (\(1776.93\pm0.09\) MeV, unchanged in PDG 2026); Belle II alone is
+compatible (\(+0.3\sigma\)).  The measured inputs are correct.  The critical input is \(\gamma_M\): H102 and the frame factor
+\(\gamma_L=1.8647\) stand on the U(1) counting of Domagala--Lewandowski and Meissner (weight 2 per spin, \(\gamma=0.237533\)).  With the
+SU(2) counting (\(2j+1\), \(\gamma=0.274067\)), which the later literature prefers for horizons, H102 would give \(m_\tau\approx1868\) MeV and
+fail.  The value also depends on the form of the area spectrum: with \(j\) or \(j+\tfrac12\) in place of \(\sqrt{j(j+1)}\) the U(1) count
+gives \(0.3497\) or \(0.2206\).  H102 is therefore a joint test of the core reading, the U(1) counting and the spectrum \(\sqrt{j(j+1)}\).
+
+\paragraph{Remark v4.10.0-r28.4 (the U(1) axis has a native form; (S1) as a lock between two SU(2)).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The duality rotation \(z\mapsto e^{ia}z\) turns \(\chi\) about its helicity axis by \(-2a\) (200 random fields, deviation below
+\(10^{-15}\)); the tachyon map is its element \(a=\pi/2\).  Its poles are the self-dual and anti-self-dual fields, which are the compensator
+and partner ports (r16.2(b), r16.4(b)).  Frame M is defined through this axis (convention F).  The U(1) of the counting thus has a native
+form: electromagnetic duality, with the helicity axis as its axis.
+\item[(b)] The spatial rotation group, whose Casimir gives the area of a puncture, leaves \(s_\pm\) fixed (500 rotations, deviation
+\(1.5\cdot10^{-14}\)); \(\chi\) is a singlet of it.  The SU(2) in which the frame maps act as Pauli matrices is internal.  The identification
+(A) of r24 therefore equates two different groups and needs a lock between them.
+\item[(c)] A natural lock is (S1\('\)): an elementary strand is a massless quantum crossing the horizon along the normal.  Then
+\(J_\nu=\lambda\), only \(\pm j\) are allowed, and the DL counting follows as the state count of massless crossings.  Under (S1\('\)),
+however, the frame maps do not act as rotations at a fixed normal, so (A) fails in the form stated in r24.  In the literature the U(1) axis
+of the ABK construction is the horizon normal, counting only horizon states gives the U(1) reduction (Mitra), and \(S=A/4\) holds for every
+\(\gamma\) in the spin-foam derivation (Bianchi); none of this fixes the weight two.
+\end{enumerate}
+
+\paragraph{Remark v4.10.0-r28.5 (a time-dependent correction term and an impermeable boundary).}
+On the author's idea a correction term that bends the phase along the time evolution was fitted, with two methods fixed in advance
+(\texttt{Methoden\_\allowbreak Notiz.md}, \texttt{Methoden\_\allowbreak Notiz\_\allowbreak Verbindung.md}).  As a correction of the states it can
+reveal no dynamics: in the representation on \(S\) (r16.8, r16.9) \(K\) and \(\varphi\) depend only on the populations, no native element
+shifts them, and the minimal path is the tangent of the Koide circle.  As a time-dependent connection that removes the flux
+\(\Delta\Phi=0.118724\) from the octant triangle with \(K=2/3\) exact, a local economical flow empties a seam along the edges on three grids
+and does not produce the core of H102; that is an exclusion.  An impermeable boundary with one puncture would be a \emph{sufficient}
+condition for a core of the H102 kind, with free position and the target value as its area.  The stock does not justify such a boundary,
+and the mirror structure of the edges does not either (it is a pseudoscalar).  The line ends at the same two points: why exactly one core,
+and why \(\Delta\Phi=\gamma_M/2\).
+
+\paragraph{Remark v4.10.0-r28.6 (topology of the core; several reflectors; two rasters).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] On \(S^2\) one core is the only rigid bend; with the reflector \(\Theta=i\sigma_yK\) (antipodal, \(\Theta^2=-1\)) as a symmetry
+it is a core pair \(\pm z_c\), one puncture in \(\mathbb{RP}^2\).  A field with \(F(-n)=F(n)\) forces a core pair, and Borsuk--Ulam forces a
+flux.  The size \(\Delta\Phi=\gamma_M/2\) is not topologically reachable, since \(\tfrac23\) is no rational part of \(2\pi\).
+\item[(b)] Compared with the cryptographic sections, there is more than one reflector: \(C\) (\(z\mapsto-z\), the identity on \(\chi\)),
+\(J_B\), and the rotor conjugates \(R_\alpha^{-1}J_BR_\alpha\); at \(\alpha=\pi/8\) core and antipode are exchanged.
+\item[(c)] Two rasters were compared: the triole raster (\(D_3\), \(120^\circ\), generation cycle) and the quarter raster (\(D_4\)), which
+contains the Klein group of the frame maps.  The axes of the effective reflectors lie at the magic angle.  Neither raster fixes
+\(\gamma_M\); H111 was the test of this line (Remark r28.1).
+\end{enumerate}
+
+\paragraph{Remark v4.10.0-r28.7 (counting per frame: blurred readout, a separate HC per frame, register entropy).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] A counting weight two per spin is compatible with full rotation invariance if the readout averages over the axis
+(acceptance \(2/(2j+1)\)); the objection ``U(1) is a gauge fixing'' then does not apply.  The HC selects the states that saturate the
+uncertainty relation (v4.9.0-r63.2).  A counter-HC read as complement leads to the SU(2) value \(0.274\); read as blurring it keeps \(0.2375\).
+\item[(b)] With one HC per frame the counts nest as \(T\subseteq M\subseteq P\): T counts \(j=\tfrac12\) (\(0.127384\)), M weight two
+(\(0.237533\)), P all \(2j+1\) (\(0.274067\)).  The last is a setting motivated by the degeneracy of the ports (F2).
+\item[(c)] In convention F, P lies between M and T in the coordinate \(x\).  In rapidity, \(x=\tanh^2\eta\), M lies at \(\eta\) and T at
+\(\eta+i\pi/2\) (\(1/x\)); both branches end at P for \(\eta\to\infty\).  P is the common endpoint, and seen from R it lies outside, as in the
+counting.  A limit of rank-two masks never reaches \(2j+1\), so the HC of P is a separate one, not a limit.
+\item[(d)] With each of the \(2j\) strands of a puncture in the register state of its frame, the count of P follows exactly (maximally mixed
+register, all \(2j+1\) states, \(0.274067\)), and R gives one.  The register of M gives a spin-dependent number (tending to \(2.40\) Shannon,
+\(1.865\) participation), not the constant two.  The rule of M is equivalent to pure strands with unknown port (one bit per puncture).
+\end{enumerate}
+Reading: the counts of R and P follow from the register; the count of M does not, and OP1 stays open at exactly this point.
+
+\subsection*{v4.10.0-r28 frames}
+\label{subsec:v4100-r28-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M: weight two per spin, \(\gamma_M=0.237533\); used in H102 and in \(\gamma_L\).  Not derived from the register of M.
+\item T: \(j=\tfrac12\) only, \(\gamma_T=0.127384\) (ABK).  Branch shifted by \(i\pi/2\) in rapidity.
+\item P: all \(2j+1\), \(\gamma_P=0.274067\); a setting, supported by the maximally mixed register.  Common endpoint of both branches.
+\end{itemize}
+
+\subsection*{v4.10.0-r28 register entries}
+\label{subsec:v4100-r28-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r28\\
+\midrule
+residual bend of the lepton phase (OP3) & open; carrier variants H106--H111 refuted; chain ends at the counting rule of M\\
+H102 (\(m_\tau=1777.134\) MeV) & open prediction, \(+2.3\sigma\); joint test of core reading, U(1) counting and spectrum \(\sqrt{j(j+1)}\)\\
+counting rule of frame M (OP1) & open; native U(1) axis found, weight two not derived\\
+(S1), (A) & (A) needs a lock between two SU(2); (S1\('\)) gives the weight two but breaks (A) in its r24 form\\
+count of P & all \(2j+1\) from the register (under (S1)); setting, not compared with data\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r28 notes}
+\label{subsec:v4100-r28-notes}
+
+Pre-registrations and results H106--H111 with scripts k228--k233: \texttt{notes/\allowbreak research/\allowbreak predictions/}.  Explorations:
+\texttt{op3\_\allowbreak renormalisation}, \texttt{op3\_\allowbreak frame\_\allowbreak typed\_\allowbreak halves},
+\texttt{op3\_\allowbreak frame\_\allowbreak algebras\_\allowbreak observer}, \texttt{op3\_\allowbreak dixon\_\allowbreak times\_\allowbreak sedenions},
+\texttt{op3\_\allowbreak native\_\allowbreak kappa}, \texttt{op3\_\allowbreak chain\_\allowbreak diagnosis},
+\texttt{op3\_\allowbreak correction\_\allowbreak term}, \texttt{op3\_\allowbreak topology\_\allowbreak core},
+\texttt{op1\_\allowbreak counting\_\allowbreak rule\_\allowbreak data}, \texttt{op1\_\allowbreak u1\_\allowbreak check},
+\texttt{op1\_\allowbreak s1\_\allowbreak check}, \texttt{op1\_\allowbreak r\_\allowbreak readout\_\allowbreak precheck},
+\texttt{op1\_\allowbreak hc\_\allowbreak blur} (all dated 2026-11-16) and \texttt{op1\_\allowbreak entropy\_\allowbreak count} (2026-11-17), each under
+\texttt{notes/\allowbreak research/}.  Except H106--H111, all are explorations and not blind: targets and weights were known.
+
+\subsection*{v4.10.0-r28 ledger and guard update}
+\label{subsec:v4100-r28-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r28}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; the counting rule of frame M and the size of the core not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r28,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r28}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
