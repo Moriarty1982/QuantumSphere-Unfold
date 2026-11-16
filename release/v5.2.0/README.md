@@ -1,11 +1,15 @@
 # Quantum Sphaera Companion v5.2.0
 
-In preparation (17 November 2026). Not yet published.
+Published on Zenodo on 17 November 2026.
 
-- Version DOI: 10.5281/zenodo.24294648 (reserved 17 November 2026, draft 24294648, unpublished).
-- Reservation run: 43978639426.
+- Version DOI: https://doi.org/10.5281/zenodo.24294648
+- Record and eight deposited files: https://zenodo.org/records/24294648
 - Concept DOI: https://doi.org/10.5281/zenodo.19210728
 - Predecessor: v5.1.0, DOI 10.5281/zenodo.24237112.
+- Frozen source commit and tag target: 8fb6e9378f6e6789697c60d3ba8b748cc2b56de6.
+- Paired document build: 43978954178; upload: 43981330807; reservation: 43978639426.
+
+The two English editions share one source snapshot. The full Companion has 1457 pages; the physics edition has 30.
 
 ## What is new
 
@@ -20,7 +24,7 @@ In preparation (17 November 2026). Not yet published.
   of symmetric carrier constructions, the core as the only escape, its size given only by the weight-two counting
   rule, dependence of the tau-mass test on counting rule and area spectrum), and one sentence in the outlook.
 
-## Validation (before upload)
+## Validation
 
 - Paired document build 43978954178 of commit 8fb6e93: full Companion 1457 pages, physics edition 30 pages; both with
   zero undefined references, multiply defined labels, rerun requests and overfull boxes; no tracked changes.
@@ -28,6 +32,11 @@ In preparation (17 November 2026). Not yet published.
   DOI (`tools/qs.py doi`). Pages inspected visually: full page 1, physics page 18 (new subsection 5.8).
 - Edition tests (`qam.store.test_editions`) passed locally; guard linter on round r28: 0 candidates.
 - Zenodo dry run 43978552171 and reservation 43978639426.
+- The upload run verified the unpublished draft, the DOI, the version and all eight checksums; its preview check
+  failed because the helper does not set the preview explicitly. The author set the preview on Zenodo and published
+  the record. After publication the public record was checked: eight files with MD5 equal to the uploaded package,
+  both PDFs equal to the paired build, default preview `Quantum_Sphaera_Companion_v5_2_0_full.pdf`, version v5.2.0,
+  date 2026-11-17, relation "is new version of" v5.1.0.
 
 ## Scope
 

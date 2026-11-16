@@ -1,8 +1,10 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 16. November 2026, Runden bis v4.10.0-r28; öffentliche Baseline v5.1.0 vom 15.11.2026 (bis r14).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 17. November 2026, Runden bis v4.10.0-r28 (1457 Seiten); öffentliche Baseline v5.2.0 vom 17.11.2026 (bis r28).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
-**Veröffentlichungshinweis vom 15.11.2026:** Öffentliche Baseline ist v5.1.0, DOI 10.5281/zenodo.24237112, mit den Runden bis r14
+**Veröffentlichungshinweis vom 17.11.2026:** Öffentliche Baseline ist v5.2.0, DOI 10.5281/zenodo.24294648, mit den Runden bis r28 und dem Abschnitt 5.8 zur Herkunft der fehlenden Zahl im Physik-Paper. Kein OP und kein Guard wird dadurch geschlossen.
+
+**Veröffentlichungshinweis vom 15.11.2026:** Damalige Baseline v5.1.0, DOI 10.5281/zenodo.24237112, mit den Runden bis r14
 und dem Abschnitt zum gebogenen Oktanten im Physik-Paper. Kein OP und kein Guard wird dadurch geschlossen.
 
 **Veröffentlichungshinweis vom 12.11.2026:** Öffentliche Baseline ist

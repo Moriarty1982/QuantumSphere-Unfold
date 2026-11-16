@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: v5.2.0 veröffentlicht (DOI 10.5281/zenodo.24294648) in Home, Versionen-und-Quellen, Gesamtbild.
+
 - 17.11.2026: Runde r28 (Stand Restbiegung und Zählregel) in Inhalt, Content-overview, Forschungslinie, Gesamtbild, Forschungsstand, Offene-Probleme.
 
 - 17.11.2026: Zählung aus der Register-Entropie (OP1) in Forschungsstand und Offene-Probleme.
