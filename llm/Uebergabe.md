@@ -9,7 +9,8 @@
 - **GitHub:** `main` nach PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Offen: PR #149** (Zweig `research/v4.10-r23-cascade-endpoint`, Runde r23, Kaskade; wartet auf Freigabe;
+  (14feb02, Release v5.1.0). **Offen: PR #150** (Zweig `qam/import-round-items`: Aussagenspeicher erfasst die Runden-Absätze, 354 Einträge aus
+  134 Runden; v5-Editionen unverändert; 42 Tests lokal grün; wartet auf Freigabe). **Offen: PR #149** (Zweig `research/v4.10-r23-cascade-endpoint`, Runde r23, Kaskade; wartet auf Freigabe;
   CI-Lauf gestartet, Ergebnis nicht geprüft). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
@@ -180,6 +181,9 @@
   Antwort auf r22.4: zwei Kaskaden unter einem Namen. Kompensator-Kaskade (C ∘ Π_J, Kollar, Hopf, Λ = 0) → R; Nullachsen-
   Transport (`thm:fractal` mit r06) trägt P, führt nicht hin; Dephasierung → P nur im Grenzwert; Reservoir (r28.2(c)) dazwischen,
   je nach Kopplung. Zum Nullzustand P führt keine endliche Kaskade. Kandidat 1444 Seiten, Linter 0. Zuletzt vergebene Runde: **r23**.
+- **Datenbank analysiert (16.11.):** Aussagenspeicher aus `main` lokal gebaut: 2599 Objekte, fast alle `imported-unreviewed`,
+  Frame `unspecified`, 2481 offene Guards; nur die Koide/HC-Zweige geprüft (63 Reviews, 1 abgelehnt). Lücke: Runden nur als je ein
+  Thema → PR #150 schließt sie (Runden-Absätze als Aussagen). Nächster Schritt danach: Frame-Tabellen der Runden einlesen.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
