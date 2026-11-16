@@ -45,6 +45,9 @@
   - **Grunddaten H102 und Zählregel (16.11., PR #159, `notes/research/op1_counting_rule_data_2026_11_16/`):** Messdaten in Ordnung
     (PDG 2026 = 2024). Kritisch: γ_M ist die U(1)-Zählung DL (0,237533); Literatur bevorzugt SU(2)/GM (0,274) → H102 m_τ ≈ 1868, γ_L 2,1515.
     Zählregel M = U1 (nur U(1)-Ladung über J = L_e7) + U2 (j = |m|, r24.2). Nächster Schritt: U1 am Bestand prüfen (r17, r24.2, r51).
+  - **U1 geprüft (16.11., PR #159, `notes/research/op1_u1_check_2026_11_16/`):** M-Maske braucht feste Achse je Punktierung; nativ =
+    Helizitätsachse der Dualität (Ports, Frame M über Kompensator-Port). Offen: (S1) Punktierungsspin = χ-Qubit eines Strangs
+    (Horizontnormale = Helizitätsachse?). Berichtigung: U(1)-gegen-SU(2) stand schon in r68.3. Nächster Schritt: (S1) prüfen.
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
