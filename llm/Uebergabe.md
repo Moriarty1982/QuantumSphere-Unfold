@@ -36,6 +36,11 @@
   - **Natives κ gesucht (16.11., Erkundung, nicht blind, `notes/research/op3_native_kappa_2026_11_16/`, im Zweig von PR #157):** passender Kanal
     = Zwirbeln mit n·σ = (R+T+J_B)/√3, p = 0,0308; zehn native Kandidaten alle zu stark (nächster Abstand 0,109). Kein natives κ.
     Nächster Schritt: Autorentscheidung (kleine Kopplung als p lesen = neue Setzung, oder OP3 ruhen lassen); PR #157/#158 mergen.
+  - **Diagnose OP3 (16.11., `notes/research/op3_chain_diagnosis_2026_11_16/`, c071444 im Zweig von PR #157; Auftrag: Logikkette zurück, OP5):**
+    Ziel und Gram-Lesart stimmen. δ ist eine zweite, unabhängige Zahl; reine symmetrische Konstruktionen binden die Phase starr an die
+    Überlappung (Spin ½/1/3/2: 0,785/0,679/0,650). Zielzustand nicht kohärent (Kohärenzmaß 1,068, Rang zwei von S, r16.8). Fehlende Zahl =
+    Eigenschaft des Feldzustands → braucht Auswahlgesetz/Dynamik, wie OP5 (Zustandsauswahl, fehlender Umlauf). Issues #131, #12 kommentiert.
+    Empfehlung: keine weiteren Träger-Varianten für OP3; Fortschritt an W1/W2 (eingefroren) gekoppelt.
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
