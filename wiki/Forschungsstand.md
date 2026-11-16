@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Runde r28: Stand von Restbiegung und Zählregel (17.11.2026)
+
+Die Tests und Erkundungen vom 16. und 17.11. (H106–H111, OP3-Diagnose, H102-Grunddaten, U1, (S1), Korrekturterm, Topologie, HC je Frame, Register-Entropie) stehen jetzt als Runde v4.10.0-r28 im Companion (r28.1–r28.7), als Vorbereitung für v5.2.0. Keine neue Rechnung. Kern: Die Phase ist im Träger starr; der bewachte Kern entgeht dem über die Verbindung, seine Größe kommt nur aus der Zählregel von M; H102 prüft Kernlesart, U(1)-Zählung und Flächenspektrum gemeinsam. OP1 und OP3 offen. [Runde](../notes/research/v4_10_0_r28/README.md).
+
 ### OP1: Zählung aus der Register-Entropie (17.11.2026)
 
 Auftrag des Autors. Erkundung, nicht blind. Modell: Eine Punktierung mit Spin j ist ein Bündel aus 2j Strängen, jeder im Registerzustand seines Frames (Konvention F).

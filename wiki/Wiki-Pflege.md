@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: Runde r28 (Stand Restbiegung und Zählregel) in Inhalt, Content-overview, Forschungslinie, Gesamtbild, Forschungsstand, Offene-Probleme.
+
 - 17.11.2026: Zählung aus der Register-Entropie (OP1) in Forschungsstand und Offene-Probleme.
 
 - 17.11.2026: Nachtrag Lage von P (Rapidität statt x, eigener HC von P) in Forschungsstand.
