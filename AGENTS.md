@@ -10,6 +10,8 @@ Sphaera“. Die öffentliche Baseline ist **v5.1.0** vom 2026-11-15
 Vorgänger v5.0.0, 10.5281/zenodo.24152615; davor v4.11.0, 10.5281/zenodo.24108818).
 v5.1.0 bringt die Runden v4.10.0-r12 bis r14, das Gegenterm-Register und einen Abschnitt zum gebogenen Oktanten im
 Physik-Paper (1412/29 Seiten); Paketquellstand dfdb41387264e728a13a9a51a8636fd532011ff2, Tag v5.1.0.
+In Vorbereitung ist **v5.2.0**: Version-DOI 10.5281/zenodo.24294648 reserviert am 2026-11-17 (Entwurf 24294648,
+**unveröffentlicht**, Zweig `release/v5.2.0-prep`). Bis zur Veröffentlichung bleibt v5.1.0 die zitierte Version.
 
 Version 5 enthält die datenbankgestützte Dokumentarchitektur und zwei englische
 Ausgaben (1402/28 Seiten). Der veröffentlichte Paketquellstand ist

@@ -2,7 +2,8 @@
 
 In preparation (17 November 2026). Not yet published.
 
-- Version DOI: reserved, entered after the reservation run.
+- Version DOI: 10.5281/zenodo.24294648 (reserved 17 November 2026, draft 24294648, unpublished).
+- Reservation run: 43978639426.
 - Concept DOI: https://doi.org/10.5281/zenodo.19210728
 - Predecessor: v5.1.0, DOI 10.5281/zenodo.24237112.
 
