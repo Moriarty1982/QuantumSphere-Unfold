@@ -1,5 +1,21 @@
 # Forschungsstand
 
+### OP3: Test H108, verschränkte Generationszustände (16.11.2026)
+
+Auftrag des Autors nach H107: verschränkte Zustände prüfen. Vorab festgelegt (H108, 01a0f86): Jeder Spin-1-Zustand der zwei Kopien-Qubits ist
+durch zwei Punkte auf der Kugel bestimmt (Majorana-Darstellung); gleiche Punkte geben den kohärenten, verschiedene einen verschränkten Zustand.
+Generation k bekam den Punkt n_k und als zweiten einen natürlichen Punkt der Konstruktion (Nachbar n_{k+1}, Pole ±z, Gegenpunkt −n_k, Gegenpunkt
+des Nachbarn).
+
+**Widerlegt:** 10 Versuche, kein Treffer. Ein gemeinsamer Punkt am Pol der Zyklusachse macht das Dreieck wieder flach (Phase π/4, eine masselose
+Generation), Gegenpunkte geben reelle Zustände (Phase 0), der Nachbarpunkt überdreht (0,176). Das unverschränkte kohärente Dreieck (0,679) bleibt
+am nächsten an der Lepton-Phase.
+
+**Einordnung:** Mit H106, H107 und H108 sind drei parameterfreie Familien aus der Kopienstruktur von HS(8) widerlegt. Nach der Regel zur Suchrichtung
+ist der nächste Schritt der zweite Weg des Autors, die Renormierung (Polmassen gegen laufende Massen).
+
+[Vorab-Notiz](../notes/research/predictions/Vorab_Notiz_H108_Verschraenkte_Generationen.md) · [Ergebnis](../notes/research/predictions/Ergebnis_H108_Verschraenkte_Generationen.md).
+
 ### OP3: Test H107, verschachtelte Normierung in HS(8) (16.11.2026)
 
 Idee des Autors: HS(8) als ein HS(7) und zwei HS(6) verschachteln; ein HS(6) als Normierung, das HS(7) als Normierung der beiden HS(6), wobei
