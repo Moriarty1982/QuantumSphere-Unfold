@@ -1,0 +1,130 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r25 Source-Only: Two and Four Dixon Copies on the Tensor Shift; the Fourth Copy as the Normal of Three Generations}
+\addcontentsline{toc}{section}{v4.10.0-r25 Source-Only: Two and Four Dixon Copies on the Tensor Shift; the Fourth Copy as the Normal of Three Generations}
+\label{sec:v4100-r25-dixon-copies}
+% ============================================================================
+
+\paragraph{Purpose.}
+v4.10.0-r19 found that one generation of \(\C\otimes\Hh\otimes\Oo\) carries no generation qubit: the commutant of gauge and Lorentz group is
+\(\C^6\), and only copies give \(M_n(\C)\).  r13 left a three-generation carrier with a neutral Levi--Civita triple open.  The author asked
+whether the 64 dimensions of the Dixon algebra suffice, proposed to continue the tensor shift of the atlas (HS(6) is the Dixon carrier with
+64 channels) to HS(7) with two and HS(8) with four Dixon algebras, suggested that the fourth algebra store the normals of the other three to
+each other, and that the stages partition by halving.  This layer checks these ideas.  Exploration, not blind: the computations are
+representation theory and fixed beforehand.  The notes are \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r25/} and
+\texttt{notes/\allowbreak research/\allowbreak op3\_dixon\_copies\_2026\_11\_16/}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r25 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.1.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24237112}{10.5281/zenodo.24237112} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r25 results}
+\label{subsec:v4100-r25-results}
+
+\paragraph{Theoremlet v4.10.0-r25.1 (commutant on copies).}
+One generation (16 Weyl components times 2 spinor components, 32 complex, 64 real) has commutant \(\C^6\) under gauge group and rotations
+(as r19).  On \(n\) copies every commutant splits into \(n^2\) blocks, so its dimension is \(6n^2\) (computed for \(n=2\): \(24\); for \(n=4\)
+from the block structure: \(96\)), with copy part \(M_n(\C)\).  The gauge group acts trivially on the copy index; every state on it has
+definite charge, so the obstacle of r16.1 does not arise there.
+
+\paragraph{Theoremlet v4.10.0-r25.2 (HS(7): two copies give the flat octant).}
+The three mutually unbiased states \(+x,+y,+z\) of the copy qubit have overlap \(\tfrac12\), \(K=\tfrac23\), Bargmann phase \(\pi/4\) and
+\(\det G=0\): the flat octant of r14, with one massless generation.  Reading: this matches the two generations of route~A in r13 (128
+dimensions); that both say the same thing is not shown.
+
+\paragraph{Theoremlet v4.10.0-r25.3 (HS(8): triplet plus singlet; the fourth copy as the normal).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Four copies are two qubits: \(\C^4=\C^2\otimes\C^2=\mathrm{Sym}^2\oplus\Lambda^2\), a triplet (spin \(1\)) and a singlet (the Levi--Civita
+tensor \(\varepsilon_{ab}\)).
+\item[(b)] The spin-1 triangle of r15.3 lies wholly in the triplet (singlet part \(10^{-17}\)) and is bent: \(K=\tfrac23\), phase \(0.679042\),
+\(\det G=0.050253\).
+\item[(c)] The only \(SU(2)\)-equivariant map from three triplet vectors to the singlet is their triple product \(\det V=v_1\cdot(v_2\times v_3)\);
+the cross products are the normals.  Computed: \(\det V=-0.224171\,i\) and \(|\det V|^2=\det G=0.050253\), unchanged under a common \(SU(2)\)
+rotation; the singlet is invariant and charge-neutral.
+\end{enumerate}
+\begin{center}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+case & phase \(\varphi\) & \(\det G=|\det V|^2\)\\
+\midrule
+flat octant (HS(7)) & \(\pi/4\) & \(0\)\\
+spin-1 triangle (HS(8)) & \(0.679042\) & \(0.050253\)\\
+charged leptons & \(2/3\) & \(0.055706\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The fourth copy is occupied exactly when the three generations are bent, that is when all three masses are positive.  It is the neutral
+Levi--Civita carrier sought in r13.6, here on the copy index.
+
+\paragraph{Theoremlet v4.10.0-r25.4 (halving).}
+HS(8) \(=\) HS(7) \(\oplus\) HS(7) and HS(7) \(=\) HS(6) \(\oplus\) HS(6): the first copy bit halves HS(8), the second each half; the four boxes
+\(|00\rangle,|01\rangle,|10\rangle,|11\rangle\) are the four Dixon algebras.  Triplet and singlet lie across the halving: the singlet
+\((|01\rangle-|10\rangle)/\sqrt2\) has weight \(\tfrac12\) in each half.  The carrier has two decompositions, into boxes and into \(3+1\); the
+generations are not the boxes but spread over them.
+
+\paragraph{Remark v4.10.0-r25.5 (the boxes carry the mass hierarchy; found afterwards).}
+Each of the three generations spreads over the boxes alike: \(|00\rangle\) \(0.7927\), \(|01\rangle\) and \(|10\rangle\) \(0.0976\) each, \(|11\rangle\)
+\(0.0120\).  These are the mass-root weights of the spin-1 triangle (\(1:16.24:65.93\)), as the Fourier structure requires.  Against the charged
+leptons (\(\tau\) \(0.7931\), \(\mu\) \(0.1934\), \(e\) \(0.01345\)) this is \(0.05\%\), \(0.9\%\) and \(11\%\); the difference is the known residual bend.  Not
+blind.
+
+\paragraph{Proof sketch.}
+r25.1 by solving the commutation equations (\texttt{dixon\_\allowbreak copies.py}) and the block decomposition.  r25.2 and r25.3 by direct
+computation; \(|\det V|^2=\det(V^\dagger V)\).  r25.4 by the product basis of the copy index.  \(\square\)
+
+\paragraph{What this does not give.}
+HS(7) and HS(8) are not defined in the atlas; whether the HS(4) gate and the HS(5) debt-free condition admit a seventh and eighth stage is not
+checked.  That the generations are read out as coherent spin-1 states with overlap \(\tfrac12\) remains a setting (the core question of
+Koide).  The singlet stores the bend but does not fix its value; the residual \(0.012376\) to the lepton phase is not explained.  The frame maps
+do not act on the copy index (r19); the reading of r15.5 does not carry over.  No test.
+
+\subsection*{v4.10.0-r25 status in the three frames}
+\label{subsec:v4100-r25-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item M, T: the copy index is untouched by gauge group and frame maps; triplet, singlet and the triple product are frame-free.
+\item P: not evaluated.
+\end{itemize}
+
+\subsection*{v4.10.0-r25 register entries}
+\label{subsec:v4100-r25-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r25\\
+\midrule
+commutant on \(n\) Dixon copies & \(6n^2\), copy part \(M_n(\C)\), charge-definite (r25.1)\\
+HS(7), two copies & copy qubit; three unbiased states form the flat octant (r25.2)\\
+HS(8), four copies & triplet \(\oplus\) singlet; spin-1 triangle bent; triple product in the singlet, \(|\det V|^2=\det G\) (r25.3)\\
+neutral Levi--Civita carrier (r13.6) & the singlet of four copies, under this reading\\
+halving of the tensor shift & HS(8) \(=2\times\)HS(7) \(=4\times\)HS(6); \(3+1\) lies across it (r25.4)\\
+HS(7), HS(8) in the atlas & not defined; admissibility open\\
+OP3 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r25 ledger and guard update}
+\label{subsec:v4100-r25-ledger-guard}
+
+\[
+R_{\rm op}^{v4100\text{-}r25}=(1,1,0)
+\]
+for (copy structure recorded; computations checked in the cited script; atlas admissibility and the selection of the states open).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r25,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r25}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.

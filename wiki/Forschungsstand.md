@@ -1,5 +1,37 @@
 # Forschungsstand
 
+### OP3: Zwei und vier Dixon-Kopien; die vierte als Normale der drei Generationen (16.11.2026, Runde r25)
+
+Erkundung, nicht blind; Idee des Autors. Frage: Reichen die 64 Dimensionen der Dixon-Algebra $\mathbb C\otimes\mathbb H\otimes\mathbb O$? Im
+Atlas hat der Tensor-Shift HS(n) $2^n$ Kanäle; HS(6) ist der Dixon-Träger mit 64 Bit. Weiterschieben gibt HS(7) mit zwei und HS(8) mit vier
+Dixon-Algebren. Die Vermutung des Autors: Die vierte speichert die Normalen der drei anderen zueinander.
+
+- **Kopien und Ladung (r25.1):** Auf $n$ Kopien hat der Kommutant von Eich- und Lorentzgruppe die Dimension $6n^2$, mit Kopienanteil
+  $M_n(\mathbb C)$. Die Eichgruppe wirkt auf dem Kopienindex nicht; jeder Zustand dort hat bestimmte Ladung.
+- **HS(7), zwei Kopien (r25.2):** ein Qubit. Seine drei unverzerrten Zustände geben K = 2/3, aber den **flachen** Oktanten ($\det G = 0$,
+  eine masselose Generation). Das passt zu den zwei Generationen von Weg A in r13.
+- **HS(8), vier Kopien (r25.3):** zwei Qubits, also Triplett (Spin 1) plus Singulett ($\varepsilon_{ab}$). Das Spin-1-Dreieck liegt im
+  Triplett und ist **gebogen** (Phase 0,679, drei positive Massen). Die einzige mit SU(2) verträgliche Abbildung von drei Triplett-Vektoren auf
+  das Singulett ist ihr Spatprodukt $\det V = v_1\cdot(v_2\times v_3)$; die Kreuzprodukte sind die Normalen. Nachgerechnet:
+  $|\det V|^2 = \det G$.
+
+| Fall | Phase | $`\det G = \lvert\det V\rvert^2`$ |
+|---|---|---|
+| flacher Oktant (HS(7)) | $`\pi/4`$ | 0 |
+| Spin-1-Dreieck (HS(8)) | 0,679 | 0,0503 |
+| Leptonen | 2/3 | 0,0557 |
+
+  Die vierte Algebra ist genau dann besetzt, wenn alle drei Generationen massiv sind; sie speichert die Biegung, die offene Größe von OP3.
+  Ladungsneutral, also der seit r13.6 gesuchte neutrale Levi-Civita-Träger.
+- **Halbierung (r25.4, Vermutung des Autors bestätigt):** HS(8) = 2 × HS(7) = 4 × HS(6); die vier Kästen sind die vier Dixon-Algebren.
+  Triplett und Singulett liegen quer dazu: Die Generationen sind über die Kästen verteilt.
+- **Nachträglich (r25.5):** Die Kästen tragen die Massenhierarchie: Gewichte 0,7927 / 0,1952 / 0,0120 je Generation, die Wurzel-Gewichte des
+  Spin-1-Dreiecks; gegen die Leptonen τ auf 0,05 %, μ auf 0,9 %, e auf 11 % (die bekannte Restbiegung).
+- **Offen:** HS(7) und HS(8) sind im Atlas nicht definiert; die Auswahl der drei Zustände (Überlappung ½) bleibt gesetzt; den Rest 0,0124 zur
+  Lepton-Phase erklärt das Singulett nicht. Kein Test.
+
+[Erkundung](../notes/research/op3_dixon_copies_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r25/README.md).
+
 ### OP1: Statistik je Frame rückwärts geprüft; T zählt Querungen (16.11.2026, Runde r24)
 
 Erkundung, nicht blind; OP1 bleibt offen. Die Zählregel „M alle Spins mit Gewicht 2, T nur j = ½“ (H98) war seit r17.5 als Statistik

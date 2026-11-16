@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r24.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r25.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -125,6 +125,8 @@ Layer v4.10.0-r22 types all 93 occurrences of the collapse state $z^-$ in the ma
 Layer v4.10.0-r23 answers r22.4: the main body carries two cascades under one name. The compensator cascade ($\hat K = C\circ\Pi_J$, collar step, Hopf chain, Markov with Λ = 0) ends at R, since compensation makes every field pure, null fields included; the null-axis transport of `thm:fractal` (with v4.8.0-r06) carries P but does not lead there. With a tachyon reservoir the attractor lies between P and R depending on the coupling; without one, many frequencies dephase towards P only in the limit. No finite cascade leads to the null state P.
 
 Layer v4.10.0-r24 takes up OP1. A backward search finds no reason in the source for the statistics per frame of r17.5 (T fermionic, M bosonic): everything the tachyon map exchanges acts strand by strand and commutes with the exchange of strands (r24.1); the strand-wise compensator gives a reading of the extremal doublet of M (r24.2). T11 does not support the guard "T = string sector" and contradicts it with the disk ports (r24.3). Following I1 on the author's decision, T counts crossings of the horizon, one strand per crossing, so j = ½ without statistics; support from `thm:core`, r64(e) and r63.3 (r24.4). A reading, no test; OP1 stays open.
+
+Layer v4.10.0-r25 follows an idea of the author: the tensor shift of the atlas, continued to HS(7) and HS(8), carries two and four Dixon algebras. On $n$ copies the commutant has copy part $M_n(\mathbb C)$ with definite charge (r25.1). Two copies give a qubit whose three unbiased states form the flat octant (r25.2). Four copies split into triplet and singlet; the spin-1 triangle in the triplet is bent, and the only SU(2)-equivariant map of the three generations to the singlet is their triple product, with $\lvert\det V\rvert^2 = \det G$, so the fourth copy stores the bend as a neutral Levi-Civita carrier (r25.3). HS(8) = 2 × HS(7) = 4 × HS(6), with 3 + 1 across the halving (r25.4). HS(7) and HS(8) are not defined in the atlas; OP3 stays open.
 
 ## Never claimed
 
