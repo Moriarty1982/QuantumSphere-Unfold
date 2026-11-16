@@ -175,6 +175,10 @@
   im Sinn von r21.8 liegt beim Horizont. **Berichtigung zu r21.9 Zeile 3:** „never fully reach z⁻ = 0“ ist R (bleibender
   Versatz), nicht P. Wiki im selben PR; Register #17 nachgezogen. Kandidat 1442 Seiten, Guard-Linter 0.
   Zuletzt vergebene Runde: **r22**.
+- **Kaskade (16.11., Zweig `research/cascade-endpoint`, noch kein PR, keine Runde):** `notes/research/cascade_endpoint_2026_11_16/`.
+  Antwort auf r22.4: zwei Kaskaden unter einem Namen. Kompensator-Kaskade (C ∘ Π_J, Kollar, Hopf, Λ = 0) → R; Nullachsen-
+  Transport (`thm:fractal` mit r06) trägt P, führt nicht hin; Dephasierung → P nur im Grenzwert; Reservoir (r28.2(c)) dazwischen,
+  je nach Kopplung. Zum Nullzustand P führt keine endliche Kaskade. Vorschlag: als Runde r23; Autorentscheidung ausstehend.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
