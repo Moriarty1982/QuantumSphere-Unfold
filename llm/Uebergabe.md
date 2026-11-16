@@ -72,6 +72,8 @@
     Fall A. Borsuk–Ulam: fermionische Umkehrwalze erzwingt Fluss. Offen: Holonomie auf dem Möbiusband; Phase des Kernpaars nur mit Vorab-Notiz.
     Nachtrag mehrere Umkehrwalzen (r02/r04, Enigma; e01b785): C (auf chi Identität), J_B, Rotor-Konjugate; Walzenstellung alpha = pi/8 tauscht
     z_c und -z_c, als Symmetrie Kernpaar; fixpunktfrei auf chi nur Theta (neu). Lesart: eine wirksame Walzenstellung, zeitlich wechselnd.
+    Wechselnde Walze: Triolenraster (r14) -> zwei Walzen = 120 Grad um Helizitaetsachse = Drittelzyklus r16.9; Kern-Walze pi/8 nur im
+    Viertelraster (Faktor 1/2, Oktantenmitten). Kern-Bild und Generationszyklus in zwei Walzenrastern (Lesart).
   - Davor H109 (k231, widerlegt, Vorab 15004ce, Ergebnis 302bb9f).
   - H109: generationsabhängige zyklische Frame-Lesung (Generation k im Frame F_k aus R/T/J_B; L1 F⊗F, L2 kontrollierte Lesung einer Hälfte),
     9 Mechanismen, 14 Versuche, kein Treffer. Drehungen lassen 0,679042 stehen (kohärentes Dreieck, Überlappung ½); L2 gibt 0,05–0,78.
