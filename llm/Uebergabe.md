@@ -189,7 +189,11 @@
   vertauscht (Frame-Abbildungen, Port-Parität J, strangweiser Kompensator wirken strangweise). (S2) aus Frame-/Portstruktur nicht
   begründbar; weitere Varianten mit dieser Voraussetzung ausgeschlossen. Nebenbefund: strangweise Kompensation → ausgerichtete
   Bündel = Lesart für (S3). Auslöser I1-3 getroffen, I1 dem Autor als Ausweg vorgelegt (T zählt Endpunkte einzelner Strings;
-  Preis Guard 1 von CT-004). Autorentscheidung ausstehend: I1 verfolgen? Runde r24?
+  Preis Guard 1 von CT-004).
+- **OP1 mit I1 (16.11., selber Zweig, `notes/research/op1_i1_crossing_2026_11_16/`):** Guard 1 „T = String-Sektor“ hat keine Stütze;
+  T11 widerspricht ihm sogar (Scheiben-Ports: M liest C = String, T liest A = LQG). Ersatz: „T zählt Querungen des Horizonts, eine
+  Querung = ein Strang“ (Stütze `thm:core`, r64(e), r63.3); j = ½ aus der Einzahl, (S2) entfällt. Lesart, kein Test. Vorschlag:
+  beide Notizen als Runde r24; Autorentscheidung ausstehend. CT-004-Register unverändert.
 - **C5 ruht nach r21.12:** Form (iii) ohne Kandidat; ohne neue Struktur keine weiteren Varianten. Möglich: OP1 (a)
   oder den Kollapszustand im ganzen Hauptkorpus nach der Tabelle r21.9 typisieren (R oder P).
 - **(a) OP1 aus dem Bild des Kerns angehen:** Warum zählt T nur den Boden? Vorher Vorwissen (r08–r10, H98, H104,
