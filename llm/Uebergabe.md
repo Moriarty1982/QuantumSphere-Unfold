@@ -9,7 +9,7 @@
 - **GitHub:** `main` nach PR #156 (f0bb768, Runde r27, Berichtigung), davor PR #155 (69863d8, Runde r26, Verdopplungsregel), davor PR #154 (942508b, Runde r25, Dixon-Kopien), davor PR #153 (17f20aa, Vorab-Notiz H105), davor PR #152 (ad665b4, Runde r24, OP1), davor PR #151 (Frame-Abschnitte im Aussagenspeicher), davor PR #150 (fdde521, Runden-Absätze im Aussagenspeicher), davor PR #149 (f495e5a, Runde r23, Kaskade), davor PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Offen: PR #157** (Zweig `research/h106-singlet-residual`: H106, H107, H108 widerlegt; wartet auf Freigabe). **Offen: PR #158** (Zweig `tools/hs-partition`: Hilfskonstruktion `tools/hs_partition.py`,
+  (14feb02, Release v5.1.0). **Offen: PR #157** (Zweig `research/h106-singlet-residual`: H106–H108 widerlegt, Renormierung geprüft; wartet auf Freigabe). **Offen: PR #158** (Zweig `tools/hs-partition`: Hilfskonstruktion `tools/hs_partition.py`,
   Idee des Autors; Selbsttest reproduziert r25/H106; wartet auf Freigabe). Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
@@ -33,6 +33,9 @@
   - H108: verschränkte Generationszustände als Majorana-Paare {n_k, b_k} im Triplett, b_k aus den natürlichen Punkten (Nachbar, ±z,
     Gegenpunkt, Gegenpunkt des Nachbarn; E1–E5). Widerlegt: ±z gibt flachen Oktanten, Gegenpunkte Phase 0, Nachbar 0,176.
     Drei parameterfreie Familien aus der Kopienstruktur (H106–H108) widerlegt → Suchrichtung wechseln: Renormierung (Autor).
+- **Renormierung geprüft (16.11., Erkundung, nicht blind, `notes/research/op3_renormalisation_2026_11_16/`, im Zweig von PR #157):**
+  Laufende Leptonmassen verschieben 3δ um −0,0033 (QED 1-Schleife reproduziert H1 bei M_Z), weg vom Spin-1-Dreieck, ein Viertel des Rests.
+  Vier Wege geprüft, Rest 0,012376 offen. Vorschlag: OP3 ruhen lassen bis zu neuer Struktur.
   - H107 (k229, Vorab 30a4a50, erweitert 44cda89): widerlegt.
   - H107 widerlegt: verschachtelte Normierung HS(8) = HS(7) ⊕ HS(6) ⊕ HS(6) (Idee des Autors), volle Grammatik, 20 Versuche, kein Treffer
     auf 0,0002 rad; nächster N1 −0,0015. Struktur: Bei Produktzuständen |n⟩|n⟩ ist ein in seiner HS(7)-Hälfte normiertes HS(6) das Gewicht
