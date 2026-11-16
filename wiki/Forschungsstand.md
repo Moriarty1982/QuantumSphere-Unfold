@@ -8,6 +8,8 @@ Idee des Autors: einen von der Zeit abhängigen Korrekturterm einfügen, der die
 
 **Nachlauf (16.11.):** Mit Startfeld nahe null konvergiert auch τ = 3π. Weiterhin kein Befund. Die über fast alle Varianten gleiche dissipative Mischung (91 % J₊, 9 % J₋²) ist analytisch durch die Tangente des Koide-Kreises festgelegt. Ergebnis: In der Darstellung auf S hängen K und φ nur an den Populationen, und kein natives Element verschiebt sie; jeder Korrekturterm ist dort fremd und sein minimaler Verlauf reine Geometrie. Vorschlag: denselben Ansatz mit einer zeitabhängigen Verbindung (Fluss, wie beim bewachten Kern) statt eines Hamiltonterms.
 
+**Methoden-Notiz 2 (16.11.):** Derselbe Ansatz mit zeitabhängiger Verbindung: Auf der Generationskugel bleiben die drei Auslesezustände fest (K = 2/3 exakt), und nur der Berry-Fluss durch das Oktantendreieck wird umverteilt (Gesamtfluss 2π fest, Kontinuitätsgleichung). Gesucht ist der sparsamste Fluss-Strom, der 0,1187 aus dem Dreieck bringt; verglichen mit der Kern-Konfiguration von H102 (flussfreie Kappe, Fluss am Gegenpol) und mit gleichmäßiger Verteilung. Vorab genannte Erwartung: Lokaler Transport schiebt Fluss am Rand hinaus und bildet keinen Kern; bestätigt sich das, ist es ein Ausschluss für eine lokale Herkunft des Kerns. [Methoden-Notiz 2](../notes/research/op3_correction_term_2026_11_16/Methoden_Notiz_Verbindung.md).
+
 ### OP1: Setzung (S1) geprüft – masselose Querungen statt „derselben SU(2)“ (16.11.2026)
 
 Auftrag des Autors: (S1) prüfen. Erkundung, nicht blind.
