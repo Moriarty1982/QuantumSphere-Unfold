@@ -6,14 +6,13 @@
   Record https://zenodo.org/records/24237112; Vorgänger v5.0.0 (10.5281/zenodo.24152615). Vollausgabe 1412 Seiten,
   Physik-Paper 29 Seiten. Paketquellstand dfdb413, Tag `v5.1.0`, GitHub-Release gesetzt. Nach der Veröffentlichung
   geprüft: acht Dateien prüfsummengleich mit dem Paket, Vorschau = Vollausgabe. Release-Notiz `release/v5.1.0/README.md`.
-- **GitHub:** `main` nach PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
+- **GitHub:** `main` nach PR #148 (a141650, Runde r22, Kollapszustand typisiert), davor PR #147 (c0f3011, Runde r21, C5 neu gestellt), davor PR #146 (d9d4b5c, Runde r20, C5), davor PR #145 (81a6ccb, Neuheitsprüfungen Kern und Koide), davor #144 (982c476, Runde r19), davor #143 (80af436, C5 (α) in der r10-Lesart), davor #142 (cdb45bf, C5 Nullaugenblick), davor #141 (144d4ff, Runde r18), davor #140 (c66a5ab, OP4 Zeitzyklus und Spin(8)-Zentrum), davor #139 (86d80c8, Suche nach blindem Test, H2 nachgerechnet), davor #138 (68e1075, Runde r17), davor #137 (a835c46, OP1 Brücke: Barbero-Dublett, Penrose-Stränge), davor #136 (45f518d, OP3 Uhr-Abgleich und Treue-Lesart, OP1 Irreduzibilität), davor #135 (e0be304, Runde r16 mit r16.1–r16.9), davor #134 (f32ae5c, k220 „ein Objekt“ übernommen), davor #133 (37ac7da, OP3: C⊗O, Helizitätsachse, invariante Kugel, Feldvorzeichen), davor #132
   (b6ed1a5, Runde r15, Dauerauftrag Issues), #130 (eeb6083,
   Berichtigung zu CT-004), #129 (c9bfb19, OP1 mit I1, CT-004) und #128
-  (14feb02, Release v5.1.0). **Offen: PR #148** (Zweig `research/v4.10-r22-collapse-state`, Runde r22, Kollapszustand typisiert; wartet auf
-  Freigabe; CI-Lauf gestartet, Ergebnis nicht geprüft). Gemergt am 14./15.11.: #124–#128
+  (14feb02, Release v5.1.0). **Keine offenen PRs.** Gemergt am 14./15.11.: #124–#128
   (OP3-Rückwärtssuche, Dauerauftrag Versionsverwaltung, Abbildung C⊗S → C⊗H⊗O, bewachter Kern, Release), davor #108–#123.
   Gemergte Zweige sind gelöscht (16.11.: drei lokale Altzweige). Die Läufe nach dem Merge von #146 waren erfolgreich.
-- **Letzte Runde:** v4.10.0-r21 (gemergt über PR #147 als c0f3011, Zweig gelöscht), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
+- **Letzte Runde:** v4.10.0-r22 (Kollapszustand, PR #148, a141650). **Davor:** v4.10.0-r21 (gemergt über PR #147 als c0f3011), C5 frame-sauber neu gestellt (PR #147). Anteile C5_M + C5_T = 1,
   frame-freier Boden |s|/2u. Drei Fragen: Übergangsfrage (Verlagerung, keine Entladung), Photonpunkt-Frage (für Felder
   positiv; bleibende Null nur bei s₊ = s₋ = w = 0), Brückenfrage (offen). Berichtigung zu r20.4: gleiche Anteile sind für P
   notwendig, nicht hinreichend. Notizen `notes/research/c5_restatement_2026_11_16/`, `notes/research/v4_10_0_r21/`.
@@ -169,7 +168,7 @@
   Form (iii) hat keinen Kandidaten mehr. C5 offen in der Übergangsfrage (nur Verlagerung, δ). Dazu Nachtrag zu (B3):
   helizitätsneutral ist die einzige von allen Frame-Abbildungen erhaltene Helizitätsstufe (nur Notiz/Wiki, nicht im Rundentext).
   Wiki: Berichtigungsvermerke an den r20-Einträgen. CI-Lauf gestartet, Ergebnis nicht geprüft.
-- **Kollapszustand typisiert = Runde v4.10.0-r22 (16.11., PR #148, Zweig `research/v4.10-r22-collapse-state`):**
+- **Kollapszustand typisiert = Runde v4.10.0-r22 (16.11., gemergt über PR #148 als a141650, Zweig gelöscht):**
   `notes/research/collapse_state_typing_2026_11_16/`. Alle 93 z⁻-Stellen des Hauptkorpus: Gruppe 1 (Nullpunkt des Versatzes)
   = R; Gruppe 2 (invariantes Objekt) = Rolle von P am Punkt z⁻ = 0; Gruppe 3 (Horizont z⁻ → ∞, β → 1) = Ort von P; Gruppe 4
   kein Punkt; Gruppe 5 (Richtung der Kaskade) offen. Die Koordinate z⁻ läuft von R nach P wie η_R in r21.8. Der Nullzustand
