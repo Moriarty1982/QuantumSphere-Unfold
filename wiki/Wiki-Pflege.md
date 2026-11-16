@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Runde v4.10.0-r25 (Dixon-Kopien auf HS(7)/HS(8), vierte Kopie als Normale) eingetragen: Forschungsstand,
+  Offene-Probleme (OP3), Gesamtbild, Forschungslinie, Inhalt, Content-overview. Kein Abschluss.
+
 - 16.11.2026: Vorab-Notiz H105 (Flächenschritte und Echos unter Setzung V1) in Vorhersagen-und-Tests, Offene-Probleme
   (OP1) und Forschungsstand eingetragen. Offen, Frist 31.12.2028.
 

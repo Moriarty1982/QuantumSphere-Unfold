@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r24.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r25.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -143,6 +143,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Kollapszustand typisiert (r22):** Alle 93 Stellen mit $z^-$ im Hauptkorpus: Als Nullpunkt des Versatzes ist $z^-=0$ der Bezugsframe R; die Rolle des invarianten Objekts gehört dem Photonpunkt P, der in der Koordinate des Hauptkorpus beim Horizont liegt ($z^-\to\infty$). Der Kollapszustand als Nullzustand ist das Horizont-Ende. Berichtigung zu r21.9; offen, wohin die Kaskade führt. Lesart.
 - **Kaskade (r23):** Zwei Kaskaden unter einem Namen: Die Kompensator-Kaskade ($\hat K = C\circ\Pi_J$, Kollar, Hopf, Λ = 0) endet in R, der Nullachsen-Transport von `thm:fractal` trägt P, führt aber nicht hin. Mit Reservoir liegt der Endpunkt je nach Kopplung zwischen P und R. Zum Nullzustand P führt keine endliche Kaskade.
 - **OP1, Querungen (r24):** Die Statistik je Frame ist aus der Frame- und Portstruktur nicht begründbar. Mit I1 gelesen zählt T Querungen des Horizonts, eine Querung trägt einen Strang, also j = ½; Stütze `thm:core`, r64(e), r63.3. T11 widerspricht der Setzung „T = String-Sektor“. Lesart; OP1 offen.
+- **Dixon-Kopien (r25):** Auf HS(8) zerfallen vier Dixon-Kopien in Triplett und Singulett; die drei Generationen sitzen im Triplett (gebogen), ihr Spatprodukt im Singulett mit $\lvert\det V\rvert^2 = \det G$. Die vierte Kopie speichert so die Biegung, ladungsneutral. Zwei Kopien (HS(7)) geben nur den flachen Oktanten. Idee des Autors; OP3 offen.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*

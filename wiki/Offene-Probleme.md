@@ -32,6 +32,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Dixon-Kopien, 16.11.2026 (Runde r25, Idee des Autors):** Eine Dixon-Algebra trägt eine Generation, aber kein Generations-Qubit (r19). Auf dem Tensor-Shift weitergeschoben gibt HS(7) zwei Kopien (ein Qubit, flacher Oktant) und HS(8) vier Kopien, also Triplett plus Singulett. Das Spin-1-Dreieck im Triplett ist gebogen, und das Spatprodukt der drei Generationen liegt kanonisch im Singulett mit $\lvert\det V\rvert^2 = \det G$: Die vierte Kopie speichert die Biegung, ladungsneutral, als der gesuchte Levi-Civita-Träger. Offen: HS(7)/HS(8) im Atlas nicht definiert, Auswahl der drei Zustände, Rest 0,0124. [Erkundung](../notes/research/op3_dixon_copies_2026_11_16/README.md).
+
 **Bezugsauswahl, 14.11.2026:** Ein zusätzlich gesetztes Vergleichs-H
 aus zwei Rang-eins-Projektoren wählt bei gleichen Kopplungen den
 bekannten Bezug (1+sqrt(3),1,1) als eindeutiges Minimum. Das umgeht die

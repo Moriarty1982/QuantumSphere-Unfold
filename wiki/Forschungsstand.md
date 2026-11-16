@@ -1,5 +1,37 @@
 # Forschungsstand
 
+### OP3: Zwei und vier Dixon-Kopien; die vierte als Normale der drei Generationen (16.11.2026, Runde r25)
+
+Erkundung, nicht blind; Idee des Autors. Frage: Reichen die 64 Dimensionen der Dixon-Algebra $\mathbb C\otimes\mathbb H\otimes\mathbb O$? Im
+Atlas hat der Tensor-Shift HS(n) $2^n$ Kanäle; HS(6) ist der Dixon-Träger mit 64 Bit. Weiterschieben gibt HS(7) mit zwei und HS(8) mit vier
+Dixon-Algebren. Die Vermutung des Autors: Die vierte speichert die Normalen der drei anderen zueinander.
+
+- **Kopien und Ladung (r25.1):** Auf $n$ Kopien hat der Kommutant von Eich- und Lorentzgruppe die Dimension $6n^2$, mit Kopienanteil
+  $M_n(\mathbb C)$. Die Eichgruppe wirkt auf dem Kopienindex nicht; jeder Zustand dort hat bestimmte Ladung.
+- **HS(7), zwei Kopien (r25.2):** ein Qubit. Seine drei unverzerrten Zustände geben K = 2/3, aber den **flachen** Oktanten ($\det G = 0$,
+  eine masselose Generation). Das passt zu den zwei Generationen von Weg A in r13.
+- **HS(8), vier Kopien (r25.3):** zwei Qubits, also Triplett (Spin 1) plus Singulett ($\varepsilon_{ab}$). Das Spin-1-Dreieck liegt im
+  Triplett und ist **gebogen** (Phase 0,679, drei positive Massen). Die einzige mit SU(2) verträgliche Abbildung von drei Triplett-Vektoren auf
+  das Singulett ist ihr Spatprodukt $\det V = v_1\cdot(v_2\times v_3)$; die Kreuzprodukte sind die Normalen. Nachgerechnet:
+  $|\det V|^2 = \det G$.
+
+| Fall | Phase | $`\det G = \lvert\det V\rvert^2`$ |
+|---|---|---|
+| flacher Oktant (HS(7)) | $`\pi/4`$ | 0 |
+| Spin-1-Dreieck (HS(8)) | 0,679 | 0,0503 |
+| Leptonen | 2/3 | 0,0557 |
+
+  Die vierte Algebra ist genau dann besetzt, wenn alle drei Generationen massiv sind; sie speichert die Biegung, die offene Größe von OP3.
+  Ladungsneutral, also der seit r13.6 gesuchte neutrale Levi-Civita-Träger.
+- **Halbierung (r25.4, Vermutung des Autors bestätigt):** HS(8) = 2 × HS(7) = 4 × HS(6); die vier Kästen sind die vier Dixon-Algebren.
+  Triplett und Singulett liegen quer dazu: Die Generationen sind über die Kästen verteilt.
+- **Nachträglich (r25.5):** Die Kästen tragen die Massenhierarchie: Gewichte 0,7927 / 0,1952 / 0,0120 je Generation, die Wurzel-Gewichte des
+  Spin-1-Dreiecks; gegen die Leptonen τ auf 0,05 %, μ auf 0,9 %, e auf 11 % (die bekannte Restbiegung).
+- **Offen:** HS(7) und HS(8) sind im Atlas nicht definiert; die Auswahl der drei Zustände (Überlappung ½) bleibt gesetzt; den Rest 0,0124 zur
+  Lepton-Phase erklärt das Singulett nicht. Kein Test.
+
+[Erkundung](../notes/research/op3_dixon_copies_2026_11_16/README.md) · [Runde](../notes/research/v4_10_0_r25/README.md).
+
 ### OP1: Test H105 unter Setzung V1 (16.11.2026)
 
 Eine Suche nach einem blinden Test für die Querungs-Lesart (r24.4) ergab: Sie hat eine messbare Folge nur, wenn **jede** Querung des
@@ -1286,7 +1318,6 @@ Ein orthogonaler Austausch von Feld- und Registerphase liefert den reversiblen L
 
 **Erster fachlich geprüfter Store-Zweig:** Die vier Koide-Propositionen wurden mit den importierten Entsprechungen abgeglichen und unter ihren expliziten mathematischen Hypothesen selbstgeprüft. Drei Definitionsbereiche und vier Originalbeweise sind konkret zugeordnet. Die native Wurzelauslesung, Gleichnormauswahl, Phase/Skala und der Hierarchiemechanismus bleiben als vier präzise Pflichten neben den bisherigen breiten Guards offen. Dies ist eine dokumentierte Selbstprüfung und keine formale oder unabhängige Zertifizierung.
 
-
 ## HC-Identifikationszweig: Selbstprüfung vom 2026-11-11
 
 Fünf Aussagen aus `hc-mass-identification.tex` sind mit Originalbeweisen,
@@ -1601,7 +1632,6 @@ des eingefrorenen Release-Stands. Die Datenbankinventarisierung ersetzt
 keine Beweisprüfung; beide Editionen behalten offene Argumentprüfungen.
 Die öffentliche Zitationsbaseline bleibt v4.11.0; v5 hat noch keine DOI.
 
-
 ### Fachliche Selbstprüfung der Physikfassung (11. November 2026)
 
 Die gesamte englische Physikfassung einschließlich Anhang wurde sequentiell
@@ -1614,7 +1644,6 @@ Prämissenspur abgerufen; die Prämissen bleiben conditional. Zwei lokale
 Präzisierungen betreffen nichtnullige Quotienteneingaben und reelle
 Kopplungsskalen. Die Dokumente und Reviewflags wurden nicht umgestuft.
 
-
 ### Unterlagen für Version 5
 
 Unter release/v5.0.0-prep liegen die englische Änderungsübersicht, der
@@ -1625,7 +1654,6 @@ vorhandenen PDFs war erfolgreich; eine Annahme durch den Zenodo-Server
 ist damit nicht geprüft. Version-DOI, Veröffentlichungsdatum und finales
 Quellenpaket fehlen noch. Es wurde kein Zenodo-Entwurf angelegt und nichts
 veröffentlicht. Die öffentliche Zitation bleibt v4.11.0.
-
 
 ### Präzisierungen der Physikfassung
 
@@ -1639,7 +1667,6 @@ deutschen Seiten wurden gesichtet. Native Auslese, Präparation, Skala und
 regionale Existenz bleiben offen; keine Änderung der wissenschaftlichen
 Guards oder Veröffentlichung.
 
-
 ### Englisches Veröffentlichungspaket
 
 Auf Autorenwunsch enthält der vorbereitete Upload nur die englische
@@ -1651,7 +1678,6 @@ GitHub-Lauf 43087358029. Beide Dokumente ließen sich zusätzlich direkt
 aus dem gepackten Quellenarchiv fehlerfrei bauen. Der vollständige lokale
 Trockenlauf ist erfolgreich; DOI-Reservierung, endgültige Titelseiten und
 Zenodo-Upload sind noch nicht ausgeführt.
-
 
 ### Zurück zur ursprünglichen OP3-Frage
 
@@ -1668,7 +1694,6 @@ nichtnullig sein, benötigt aber ebenfalls native Matrixelemente und ein
 physikalisches Auslesegesetz. Nächster Quellenauftrag sind die vier
 Beiträge zur Kompression S*Omega S; OP3 bleibt offen.
 
-
 ### Innerer Operator: zusätzliche Generationenprüfung
 
 Die vier Beiträge der bestehenden Mastergleichung sind auf eine gemeinsame
@@ -1684,7 +1709,6 @@ Ein rein HC-ungerader Wechseloperator hat auf drei ungeraden Seeds keine
 direkte Kompression; indirekte Wirkungen benötigen eigene Voraussetzungen.
 Diese bedingten Aussagen identifizieren keine native Leptonmasse. OP3 bleibt offen.
 
-
 ### Generationseinbettung: Farbtyp bleibt bei neutraler Closure erhalten (12.11.2026)
 
 Die Quellenprüfung verfolgt die e4/e5/e6-Slots zurück zu r35/r36: Mit
@@ -1698,7 +1722,6 @@ Als vorhandene Alternativen bleiben die Trialitätsslots O³ und rechte
 Quaternion-/Dixon-Labels; deren physikalische Rollen und Dynamik sind
 separat zu bestimmen. Nächster Quellenauftrag ist die native Wirkung auf
 den Trialitätsslotindex. Kein neuer Massenfit oder OP-Abschluss.
-
 
 ### Trialitätsträger: Slotraum und Konfigurationsraum unterscheiden (12.11.2026)
 
@@ -1714,7 +1737,6 @@ unabhängigen linearen Seeds, aber nicht drei Auslesungen einer gemeinsamen
 Konfiguration oder Zustände eines noch zu definierenden Funktionsraums.
 Die Brücke von dieser Konfiguration zu physikalischen Zuständen oder
 Massenauslesungen ist deshalb der nächste Quellenauftrag. OP3 bleibt offen.
-
 
 ### Offene Stringfrage für Version 5 (12.11.2026)
 
@@ -1732,7 +1754,6 @@ Weder Koide 2/3 noch Lambda oder das Leptonspektrum sind daraus hergeleitet.
 Diese offene Frage bildet den Forschungsanschluss für die beauftragte
 Version 5; OPs und Guards bleiben unverändert. Details in
 [der Erkundungsnotiz](../notes/research/op3_string_relaxation_lambda_2026_11_12.md).
-
 
 ### Rückwärtssuche zur Stringfrage (12.11.2026, nach v5.0.0)
 
@@ -1791,7 +1812,6 @@ unverändert.
 > gegen integrierte Gleichungen auf $10^{-12}$). Keine H-/k-Nummer, kein
 > MMA-Beleg.
 
-
 ### Weg W-b: Quellensuche nach einer nicht konvexen Stringenergie (12.11.2026)
 
 Auf Autorenentscheidung wurde zuerst der Weg „gleiche Strings mit zweifach
@@ -1849,7 +1869,6 @@ Ungeprüft sind die Wege W-a (ungleiche Moduln) und W-c (Knotengeometrie).
 > `sec:v490-r44-mass-frame-couplings`, `sec:v490-r82-higgs-stability`,
 > `sec:v4110-koide-overlap`. Keine H-/k-Nummer, kein MMA-Beleg.
 
-
 ### Quellensuche zur Koide-Phase (12.11.2026)
 
 Gefragt war, ob der Companion eine Größe enthält, die die Phase $\delta$
@@ -1902,7 +1921,6 @@ trägt das nach.
 > structurally closed“) und die Bemerkung „The 2/3 factor is everywhere“
 > in `v470/10_sphaera_and_physics.tex`. Nur gemeldet, nicht geändert.
 
-
 ### Erkundung: $\rho$-ungerade Platzkopplung aus der Trialitätsform (13.11.2026)
 
 Strukturerkundung ohne Entscheidungskriterium, nicht blind. Gefragt war,
@@ -1949,7 +1967,6 @@ sind nicht hergeleitet; OP3/OP4 bleiben offen, Guards unverändert.
 > `notes/research/op3_rho_odd_coupling_2026_11_12.md` mit Prüfskript
 > (Oktonionenprodukt der Konvention r04). Vorwissen: r44.1, r45.1, r46.1,
 > k85, k86. Keine H-/k-Nummer, kein MMA-Beleg.
-
 
 ### Erkundung: Platzkopplung auf dem vollen Dixon-Raum (13.11.2026)
 
@@ -2060,7 +2077,6 @@ Aussage von r45, an einer bestimmten Stelle verortet. Eine Phase aus der
 Struktur verlangte eine zweite unabhängige Dublett-Komponente oder ein
 Prinzip, das die beiden Konstanten bindet. OP3/OP4 bleiben offen.
 
-
 ### Weg C: Sind die Generationen zyklisch gekoppelte gleiche Kopien? (13.11.2026)
 
 Auf Autorenentscheidung wurde die Platzstruktur selbst geprüft.
@@ -2112,7 +2128,6 @@ vierten Generation fehlt). OP3/OP4 bleiben offen, Guards unverändert.
 > `notes/research/op3_generation_carrier_review_2026_11_13.md` mit
 > Prüfskript. Vorwissen: r33, r37, r45, r46, r47, r50, r52–r60 und die
 > fünf OP3-Notizen vom 12.11. Keine H-/k-Nummer, kein MMA-Beleg.
-
 
 ### Erkundung: Eigenwerte der Platz-Gram-Matrix als eichinvariante Auslesung (13.11.2026)
 
@@ -2193,7 +2208,6 @@ wurde kein neuer Test gerechnet und keine H-Nummer vergeben.
   (höchstens $\rho^2=0{,}378$). Die negative Wurzel von H2 entspräche
   einem indefiniten Skalarprodukt; ob der Companion dafür eine native
   Form hat, ist nicht geprüft.
-
 
 ### Indefinite Form im neutralen Sektor und Test H99 (13.11.2026)
 
@@ -2799,7 +2813,6 @@ Guards unverändert, OP3 und OP4 offen. Guard-Prüfung der neuen Runde: 0 Treffe
 > Vorwissen: H2 (v4.8.0-r12), r10, r11, `sec:v4110-koide-overlap`.
 > NuFIT-6.1-Zentralwerte nur aus arXiv:2601.18781.
 
-
 ### Version 5: Veröffentlichungsvorbereitung wieder aufgenommen (12.11.2026)
 
 PR #100 integriert die jüngsten OP3-Erkundungen. Auf Autorenauftrag werden
@@ -2814,7 +2827,6 @@ Abschnitt 46 der Langfassung und Abschnitt 7.6 der Physikfassung. Quellen-,
 Datenbank- und Prüfsummenprüfung erfolgreich; keine unabhängige Begutachtung
 oder neue physikalische Herleitung. Zenodo-Veröffentlichung noch ausstehend.
 
-
 ### Zenodo-Veröffentlichung bestätigt (12.11.2026)
 
 Der Autor hat v5.0.0 selbst veröffentlicht. Der öffentliche Eintrag
@@ -2825,7 +2837,6 @@ beide PDFs sind byteidentisch mit dem geprüften Kandidaten. Die Langfassung
 ist als Vorschau gesetzt. Vorgänger- und Concept-DOI sind korrekt verknüpft.
 Der GitHub-Release und die bisherigen Zitationsangaben müssen noch
 nachgezogen werden. Die Veröffentlichung ändert keine wissenschaftlichen Guards.
-
 
 ### GitHub-Abschluss v5.0.0 (12.11.2026)
 
