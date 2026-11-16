@@ -1,0 +1,4 @@
+(1) Bargmann-Phase Oktant +0.785398, nach komplexer Konjugation K -0.785398 (Vorzeichen gewechselt: pseudoskalar)
+    an 200 Zufallsdreiecken: Phase(K g) = -Phase(g): True
+(2) Raumwinkel der geleerten Scheibe = 2*Delta = 0.237448 sr (gamma_M = 0.237533), Radius 15.80 Grad; Abstand Schwerpunkt-Kante 35.26 Grad -> Lage der Scheibe frei in einem Bereich von 19.46 Grad um die Mitte
+    Kosten (Masse zur Senke im Mittelpunkt): 4.506e-03, unabhaengig von der Lage (Isometrie)

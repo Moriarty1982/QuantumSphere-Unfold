@@ -1,0 +1,2 @@
+S1 Spin-1-Dreieck: Raten J+ = 0.00507, J-^2 = 0.00049 (je Zeiteinheit x tau), Anteil J+ = 0.912, Restfehler 1.6e-16
+S2 flacher Oktant: Raten J+ = 0.04240, J-^2 = 0.00426 (je Zeiteinheit x tau), Anteil J+ = 0.909, Restfehler 5.3e-17

@@ -102,6 +102,18 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Undurchlässiger Rand (kein Grund im Bestand, hinreichend für Kern) in Forschungsstand.
+
+- 16.11.2026: Ergebnis Methoden-Notiz 2 (Randlösung statt Kern, Ausschluss) in Forschungsstand.
+
+- 16.11.2026: Methoden-Notiz 2 (zeitabhängige Verbindung) in Forschungsstand.
+
+- 16.11.2026: Nachlauf zum Korrekturterm (konvergiert, kein Befund, Grenze der Darstellung auf S) in Forschungsstand.
+
+- 16.11.2026: Erste Rechnung zum Korrekturterm (kein Befund, τ = 3π nicht konvergiert) in Forschungsstand.
+
+- 16.11.2026: Methoden-Notiz zum zeitabhängigen Korrekturterm (OP3) in Forschungsstand.
+
 - 16.11.2026: Literatur EPRL/Bianchi zu Ausweg 2 und Spektrumsempfindlichkeit von H102 in Forschungsstand und Offene-Probleme (OP1).
 
 - 16.11.2026: Vorprüfung „Flussauslesung in R“ (kein Test, Ausgang analytisch) in Forschungsstand und Offene-Probleme (OP1).
