@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: U1-Prüfung (Helizitätsachse als native U(1)-Achse, offen (S1)) und Berichtigung zum Vorwissen (r68.3) in
+  Forschungsstand und Offene-Probleme (OP1).
+
 - 16.11.2026: Grunddaten von H102 und Zählregel des Frames M (U(1)-Zählung DL gegen SU(2)/GM) in Forschungsstand und
   Offene-Probleme (OP1).
 

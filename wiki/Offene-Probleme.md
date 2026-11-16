@@ -26,7 +26,7 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Offen:** warum die Frames gerade diese Zählregeln wählen. **Nächster Schritt:** die U(1)-Auswahl aus der inneren Einheit $J$ herleiten oder ausschließen.
 
-**Zählregel und Grunddaten, 16.11.2026:** Die Zählregel des Frames M ist die U(1)-Zählung von Domagala–Lewandowski (γ = 0,237533); die neuere Literatur bevorzugt für Horizonte SU(2) bzw. Ghosh–Mitra (γ = 0,274). Daran hängen γ_L = 1,8647, H102 (mit 0,274: m_τ ≈ 1868 MeV), H15, H46 und H96. DL folgt aus U1 (M liest nur eine U(1)-Ladung, J = L_e7) und U2 (j = |m|, Extremdublett der Port-Auslesung). Offen ist U1. [Notiz](../notes/research/op1_counting_rule_data_2026_11_16/README.md).
+**Zählregel und Grunddaten, 16.11.2026:** Die Zählregel des Frames M ist die U(1)-Zählung von Domagala–Lewandowski (γ = 0,237533); die neuere Literatur bevorzugt für Horizonte SU(2) bzw. Ghosh–Mitra (γ = 0,274). Daran hängen γ_L = 1,8647, H102 (mit 0,274: m_τ ≈ 1868 MeV), H15, H46 und H96. DL folgt aus U1 (M liest nur eine U(1)-Ladung, J = L_e7) und U2 (j = |m|, Extremdublett der Port-Auslesung). Offen ist U1. [Notiz](../notes/research/op1_counting_rule_data_2026_11_16/README.md). **U1 geprüft:** Die Achse ist nativ die Helizitätsachse der Dualität (Ports, Frame M über den Kompensator-Port); offen bleibt (S1), Punktierungsspin = χ-Qubit eines Strangs. Der U(1)-Befund selbst steht schon in r68.3. [U1](../notes/research/op1_u1_check_2026_11_16/README.md).
 
 ## OP2: Dirac-Operator auf dem antisymmetrischen Sektor
 

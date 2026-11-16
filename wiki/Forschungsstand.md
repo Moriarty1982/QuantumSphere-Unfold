@@ -1,5 +1,21 @@
 # Forschungsstand
 
+### OP1: Bedingung U1 geprüft – die native Achse ist die Helizitätsachse (16.11.2026)
+
+Auftrag des Autors: U1 prüfen. Erkundung, nicht blind. **Berichtigung vorweg:** Dass γ_M der U(1)-Wert ist und die Literatur SU(2) (0,274)
+bevorzugt, steht schon in v4.9.0-r68.3/r68.4; die vorige Notiz hatte das nicht als Vorwissen geführt.
+
+- **Was U1 genau verlangt** (QAM-Notiz zu den Zählmasken): eine ausgezeichnete Achse u an jeder Punktierung. Dann ist die M-Maske
+  1{J² − J_u² − |J_u| = 0} mit Rang 2 je Spin, und ihre Spur gibt die DL-Gleichung (0,237533); ohne Achse kommt Ghosh–Mitra (0,274) heraus.
+- **Der Bestand hat diese Achse nativ.** Die Dualitätsdrehung z ↦ e^{ia}z dreht χ um die Helizitätsachse (nachgerechnet); die Tachyon-Abbildung R
+  ist ihr Element bei a = π/2. Die Pole sind die Ports (Eigenzustände von iL_e7, r16.2(b)), und Konvention F definiert den Frame M über den
+  Kompensator-Port. U1 lautet also: M liest die Helizitätsladung eines Strangbündels.
+- **Offen bleibt (S1):** dass der Spin einer Horizont-Punktierung das χ-Qubit eines Strangs ist, und damit die Frage, ob die Horizontnormale (die
+  in der Literatur die U(1) festlegt) die Helizitätsachse ist. Dualität ist außerdem nur für das freie Feld eine Symmetrie.
+
+Kette jetzt: Phase ← Kern γ_M ← DL-Zählung M ← U1 (Helizitätsachse, nativ) + U2 (Extremdublett, Lesart) ← (S1). OP1 offen; H102 unverändert.
+[Notiz](../notes/research/op1_u1_check_2026_11_16/README.md).
+
 ### OP1/OP3: Grunddaten von H102 und die Zählregel des Frames M (16.11.2026)
 
 Auftrag des Autors: prüfen, ob H102 von falschen Grunddaten ausgeht, und die Zählregel angehen. Erkundung, nicht blind.

@@ -81,3 +81,8 @@ Die DL-Zählung für M folgt aus zwei Bedingungen, die im Bestand schon einzeln 
 ## Grenzen
 Nicht blind: γ-Werte und Daten waren bekannt. Die Literaturaussagen stammen aus einer Übersicht, nicht aus den Originalarbeiten. H102, H15, H46 und
 H96 bleiben unverändert (append-only); keine Aussage hier ändert ihren Status. OP1 und OP3 offen.
+
+## Nachtrag (16.11.2026): Berichtigung zum Vorwissen
+Der Befund „γ_M ist der U(1)-Wert, die Literatur bevorzugt SU(2) mit 0,274“ steht schon in v4.9.0-r68.3 und r68.4 (dort auch: ein SU(2)-Paar gibt
+β_sym = 0,604, außerhalb des Fensters). Diese Notiz hatte r68 nicht als Vorwissen geführt. Neu ist hier nur die Zerlegung der Zählregel in U1 und
+U2 und die Aufschlüsselung, was die SU(2)-Zählung für H102 bedeutete. Weiter in `../op1_u1_check_2026_11_16/`.
