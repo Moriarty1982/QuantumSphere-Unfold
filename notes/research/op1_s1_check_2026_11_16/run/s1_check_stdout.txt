@@ -1,0 +1,10 @@
+(1) s+- unter 500 zufaelligen Drehungen: max. Abweichung 1.5e-14 -> chi ist ein Singulett der raeumlichen Drehgruppe
+(2) Welle Helizitaet +1, Richtung entlang Normale +1, J_nu = +1
+      R: (E,B) -> (-B, E)   : Helizitaet +1, Richtung +1, J_nu = +1
+      T: (E,B) -> (E,-B)    : Helizitaet -1, Richtung -1, J_nu = +1
+      J_B: (E,B) -> (B, E)  : Helizitaet -1, Richtung -1, J_nu = +1
+(2) Welle Helizitaet -1, Richtung entlang Normale +1, J_nu = -1
+      R: (E,B) -> (-B, E)   : Helizitaet -1, Richtung +1, J_nu = -1
+      T: (E,B) -> (E,-B)    : Helizitaet +1, Richtung -1, J_nu = -1
+      J_B: (E,B) -> (B, E)  : Helizitaet +1, Richtung -1, J_nu = -1
+(3) Zustaende je j an einer Punktierung: masselos (nur Helizitaet +-j) [2, 2, 2, 2, 2, 2, 2, 2] | massiv (2j+1) [2, 3, 4, 5, 6, 7, 8, 9]
