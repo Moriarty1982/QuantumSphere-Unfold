@@ -1,5 +1,17 @@
 # Forschungsstand
 
+### OP3: Auswahlgesetz – Berichtigung zur Diagnose, Rückführung auf OP1 (16.11.2026)
+
+Auftrag des Autors: das Auswahlgesetz für den Feldzustand angehen. Die Vorwissen-Suche fand den bewachten Kern (r14.5–r14.7) und die offene
+Vorhersage H102, die die Diagnose übersehen hatte. **Berichtigt:** Die Phase 2/3 hat eine geometrische Lesart, $\varphi=\pi/4-\gamma_M/2$
+(Oktant minus eine flussfreie Kappe vom Raumwinkel $\gamma_M$, Abweichung $3{,}3\cdot10^{-5}$). Der Kern ändert nicht die Zustände, sondern die
+Verbindung auf der Generationskugel; der verdrängte Fluss sitzt am Gegenpol (Umkehrwalze). So entgeht er der Starrheit mit genau einer Zahl.
+
+Die Kette lautet: Phase ← Kern ($\Omega$) ← Flächenquant des Beobachter-Frames M ← Zählregel des Frames M ← OP1. Das Auswahlgesetz läuft damit
+auf eine Frage hinaus: warum der Materie-Frame alle Spins mit Gewicht 2 zählt. H102 ($m_\tau=1777{,}134$ MeV, heute $+2{,}3\sigma$) bleibt
+eingefroren und wird mit der nächsten PDG-Ausgabe entschieden. OP1 und OP3 offen.
+[Nachtrag zur Diagnose](../notes/research/op3_chain_diagnosis_2026_11_16/README.md).
+
 ### OP3: Diagnose – woran die Biegung scheitert (16.11.2026)
 
 Auftrag des Autors: die Logikkette zurückgehen und bei OP5 nachsehen. Erkundung, nicht blind.

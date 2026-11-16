@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Nachtrag zur OP3-Diagnose (bewachter Kern übersehen, Rückführung des Auswahlgesetzes auf OP1) in Forschungsstand
+  und Offene-Probleme.
+
 - 16.11.2026: H109, H110 (widerlegt), Erkundungen Frame-Hälften, Betrachter, C⊗H⊗O⊗S, natives κ und die OP3-Diagnose in
   Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme (OP3).
 
