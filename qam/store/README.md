@@ -57,6 +57,20 @@ Stand am 16.11.2026 (Quellstand `main` mit Runde v4.10.0-r22): **354 Runden-Eint
 Zusammen mit den 2468 Satzumgebungen sind es 2953 Objekte und 2835 offene Prüf-Guards. Frames bleiben `unspecified`; die
 Frame-Tabellen der Runden werden noch nicht eingelesen.
 
+**Frame-Abschnitte (16.11.2026, Nachtrag).** Seit v4.9.0-r22 (Konvention F, Regel F4) hat jede Runde einen Abschnitt
+`subsec:...-rNN-frames` mit dem M/T/P-Status ihrer Ergebnisse. Der Import liest ihn jetzt ein. Jeder Runden-Eintrag einer Runde mit
+solchem Abschnitt erhält:
+
+- Frame-Spalte `convention-f-section` (sonst weiterhin `unspecified`);
+- `inventory.frames.section`: den Abschnitt als Text;
+- `inventory.frames.item_rows`: die Tabellenzeilen oder Listenpunkte, die die Itemnummer des Eintrags nennen (z. B. `r21.8`);
+- `inventory.frames.letters_mentioned`: die in diesen Zeilen vorkommenden Buchstaben M, T, P, R. Das ist eine Heuristik: R kann auch
+  eine Drehung, P ein Projektor sein, und „P not evaluated“ zählt als Erwähnung.
+
+Das ist **keine geprüfte Frame-Typisierung**; Status und Prüf-Guard bleiben unverändert. Stand am 16.11.2026 (`main` bis v4.10.0-r23):
+359 Runden-Einträge aus 135 Runden; 236 Einträge aus 83 Runden haben einen Frame-Abschnitt, 117 davon werden dort mit eigener Zeile
+genannt (häufigste Muster: M/P/T 44, M/T 18, M/P/R/T 10). 123 Einträge stammen aus Runden ohne Frame-Abschnitt (vor v4.9.0-r22).
+
 **Die v5-Editionen bleiben unverändert:** `configure_v5_editions` nimmt nur Einträge mit `literal-import-v1` auf; `qsc-v5-full` hat
 weiterhin 2468 Mitglieder. Die Runden-Einträge sind Objekte des Speichers, keine Editionsmitglieder.
 

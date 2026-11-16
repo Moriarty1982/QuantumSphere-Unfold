@@ -70,16 +70,35 @@ class ManuscriptImportTests(unittest.TestCase):
                 '\\paragraph{Correction.}\nA correction without number.\n'
                 '% \\paragraph{Theoremlet v4.10.0-r21.9 (commented).}\n'
                 '\\paragraph{Definition v4.10.0-r21.1 (floor).}\nThe floor.\n'
-                '\\subsection*{v4.10.0-r21 register}\n', encoding='utf-8')
+                '\\subsection*{v4.10.0-r21 status in the three frames}\n\\label{subsec:v4100-r21-frames}\n'
+                '\\begin{tabular}{ll}\n\\toprule\nitem & M / T / P\\\\\n\\midrule\n'
+                'r21.3 & M reads one share, T the other\\\\\nfloor & frame-free\\\\\n\\bottomrule\n\\end{tabular}\n'
+                '\\subsection*{v4.10.0-r21 register}\n'
+                '\\section*{v4.10.0-r22 Source-Only: Later}\n'
+                '\\paragraph{Theoremlet v4.10.0-r22.1 (no frame section).}\nText.\n', encoding='utf-8')
             nodes = [row for row in collect(repo) if row[2] != 'file']
             self.assertEqual([row[2] for row in nodes],
-                             ['paragraph-theoremlet', 'paragraph-correction', 'paragraph-definition'])
+                             ['paragraph-theoremlet', 'paragraph-correction', 'paragraph-definition', 'paragraph-theoremlet'])
             self.assertTrue(nodes[0][5].endswith('Shares add to one.'))
             self.assertNotIn('Proof sketch', nodes[0][5])
             self.assertNotIn('\\subsection', nodes[2][5])
             db = repo / 'store.sqlite3'
             report = import_manuscript(db, repo)
-            self.assertEqual(report['statements'], 3)
+            self.assertEqual(report['statements'], 4)
+            with store_session(db) as (session, models):
+                def version(object_id):
+                    return session.scalar(select(models.qstore_versions).where(models.qstore_versions.object_id == object_id))
+                typed = version('manuscript:sources/research/parts/layers.tex:item:paragraph-theoremlet:v4.10.0-r21.3')
+                self.assertEqual(typed.frame, 'convention-f-section')
+                frames = json.loads(typed.payload_json)['inventory']['frames']
+                self.assertEqual(frames['item_rows'], ['r21.3 & M reads one share, T the other'])
+                self.assertEqual(frames['letters_mentioned'], ['M', 'T'])
+                self.assertIn('floor & frame-free', frames['section'])
+                untyped = version('manuscript:sources/research/parts/layers.tex:item:paragraph-definition:v4.10.0-r21.1')
+                self.assertEqual(json.loads(untyped.payload_json)['inventory']['frames']['item_rows'], [])
+                later = version('manuscript:sources/research/parts/layers.tex:item:paragraph-theoremlet:v4.10.0-r22.1')
+                self.assertEqual(later.frame, 'unspecified')
+                self.assertNotIn('frames', json.loads(later.payload_json)['inventory'])
             with store_session(db) as (session, models):
                 obj = session.get(models.qstore_objects,
                                   'manuscript:sources/research/parts/layers.tex:item:paragraph-theoremlet:v4.10.0-r21.3')
@@ -93,7 +112,7 @@ class ManuscriptImportTests(unittest.TestCase):
                 definition = session.get(models.qstore_objects,
                                          'manuscript:sources/research/parts/layers.tex:item:paragraph-definition:v4.10.0-r21.1')
                 self.assertEqual(definition.object_type, 'definition')
-                self.assertEqual(session.scalar(select(func.count()).select_from(models.qstore_guards)), 3)
+                self.assertEqual(session.scalar(select(func.count()).select_from(models.qstore_guards)), 4)
             self.assertFalse(any(import_manuscript(db, repo)['new_rows'].values()))
 
     def test_nested_environment_preserves_full_source(self):

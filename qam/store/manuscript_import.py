@@ -16,6 +16,29 @@ from qam.tools.manuscript_inventory import balanced, collect, mask_comments
 # Item numbers of research-layer paragraphs, e.g. "v4.10.0-r21.12", "v4.9.0-r28.2", "r86.1"; and the round of a layer heading.
 ROUND_ITEM = re.compile(r'\b(?:v\d+\.\d+\.\d+-)?r\d+(?:\.\d+)+')
 ROUND_LAYER = re.compile(r'\b(?:v\d+\.\d+\.\d+-)?r\d+(?![.\d])')
+ROUND_PREFIX = re.compile(r'^v\d+\.\d+\.\d+-')
+# Frame subsections required by Convention F (v4.9.0-r22, F4): \label{subsec:v490-r22-frames}, \label{subsec:v4100-r21-frames}.
+FRAMES_LABEL = re.compile(r'\\label\{subsec:v\d+-r\d+-frames\}')
+FRAMES_END = re.compile(r'\\(?:sub)*section\*?\{|\\clearpage\b|\\paragraph\{')
+# Heuristic only: standalone M, T, P, R in a matched row (R may also be a rotation, P a projector).
+FRAME_LETTER = re.compile(r'(?<![A-Za-z\\])([MTPR])(?![A-Za-z])')
+
+
+def frame_block(text, start):
+    end = FRAMES_END.search(text, start)
+    return text[start:end.start() if end else len(text)].strip()
+
+
+def frame_rows(block):
+    """Split a frame subsection into rows: table rows, list items, or the whole text."""
+    if '\\begin{tabular}' in block:
+        body = block.split('\\midrule', 1)[-1].split('\\bottomrule', 1)[0]
+        rows = re.split(r'\\\\', body)
+    elif '\\item' in block:
+        rows = re.split(r'\\item\b', block.split('\\end{itemize}', 1)[0])[1:]
+    else:
+        rows = [block]
+    return [' '.join(row.split()) for row in rows if row.strip()]
 
 
 THEMES = {
@@ -50,12 +73,15 @@ def import_manuscript(database, repo):
                          'importer_sha256': importer_hash, 'collector_sha256': collector_hash})
     headings = {}
     sections = {}
+    frame_sections = {}
     for source in source_hashes:
         text = mask_comments((repo / source).read_text(encoding='utf-8-sig'))
         headings[source] = [(text.count('\n', 0, match.start()) + 1, match.group(1))
                             for match in re.finditer(r'\\(?:sub)*section\*?\{([^{}\n]+)\}', text)]
         sections[source] = [(text.count('\n', 0, match.start()) + 1, match.group(1))
                             for match in re.finditer(r'\\section\*?\{([^\n]+)\}', text)]
+        frame_sections[source] = [(text.count('\n', 0, match.start()) + 1, frame_block(text, match.end()))
+                                  for match in FRAMES_LABEL.finditer(text)]
     versions = {}
     objects = {}
     sources = {}
@@ -66,13 +92,13 @@ def import_manuscript(database, repo):
     unlabelled = 0
     duplicate_labels = 0
 
-    def add(object_id, kind, payload, source, line):
+    def add(object_id, kind, payload, source, line, frame='unspecified'):
         identity = {'format': 'qstore-version-v1', 'object_id': object_id, 'kind': kind,
-                    'frame': 'unspecified', 'status': 'imported-unreviewed', 'payload': payload}
+                    'frame': frame, 'status': 'imported-unreviewed', 'payload': payload}
         key = digest(identity)
         objects[object_id] = {'object_id': object_id, 'object_type': kind}
         versions[key] = {'version_hash': key, 'object_id': object_id, 'payload_json': canonical(payload),
-                         'status': 'imported-unreviewed', 'frame': 'unspecified'}
+                         'status': 'imported-unreviewed', 'frame': frame}
         provenance = {'version_hash': key, 'source_path': source, 'source_hash': source_hashes[source],
                       'source_revision': 'inventory-current-source-bytes', 'locator': f'line {line}'}
         sources[tuple(provenance.values())] = provenance
@@ -151,12 +177,26 @@ def import_manuscript(database, repo):
             layer = ROUND_LAYER.search(sections[source][section_index][1]) if section_index >= 0 else None
             metadata['round'] = layer.group(0) if layer else None
             metadata['item'] = item.group(0) if item else None
+        frame = 'unspecified'
+        if paragraph and section_index >= 0:
+            start = sections[source][section_index][0]
+            stop = sections[source][section_index + 1][0] if section_index + 1 < len(sections[source]) else float('inf')
+            block = next((b for at, b in frame_sections[source] if start <= at < stop), None)
+            if block is not None:
+                frame = 'convention-f-section'
+                rows = frame_rows(block)
+                short = ROUND_PREFIX.sub('', item.group(0)) if item else None
+                matched = [row for row in rows if short and re.search(r'(?<![\d.])' + re.escape(short) + r'(?!\d)', row)]
+                metadata['frames'] = {
+                    'scope': 'Frame subsection of the round, literal; item rows matched by number; not a reviewed typing',
+                    'section': ' '.join(block.split()), 'item_rows': matched,
+                    'letters_mentioned': sorted({m.group(1) for row in matched for m in FRAME_LETTER.finditer(row)})}
         if kind == 'definition':
             payload = {'title': title, 'body': statement, 'scope': 'Imported definition; interpretation pending',
                        'assumptions': [], 'inventory': metadata}
         else:
             payload = {'title': title, 'latex': statement, 'assumptions': [], 'dependencies': [], 'inventory': metadata}
-        key = add(object_id, kind, payload, source, line)
+        key = add(object_id, kind, payload, source, line, frame)
         relation(files[parent_id], key, 'contains', 'declared', 'Literal environment occurrence')
         section_index = bisect_right([item[0] for item in headings[source]], line) - 1
         heading = headings[source][section_index][1] if section_index >= 0 else ''
