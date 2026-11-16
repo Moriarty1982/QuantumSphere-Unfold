@@ -36,6 +36,11 @@
 - **Renormierung geprüft (16.11., Erkundung, nicht blind, `notes/research/op3_renormalisation_2026_11_16/`, im Zweig von PR #157):**
   Laufende Leptonmassen verschieben 3δ um −0,0033 (QED 1-Schleife reproduziert H1 bei M_Z), weg vom Spin-1-Dreieck, ein Viertel des Rests.
   Vier Wege geprüft, Rest 0,012376 offen. Vorschlag: OP3 ruhen lassen bis zu neuer Struktur.
+- **Frame-getypte Hälften geprüft (16.11., Erkundung, nicht blind, `notes/research/op3_frame_typed_halves_2026_11_16/`, 84bea88 im
+  Zweig von PR #157; Frage des Autors „Partitionierungen in verschiedenen Frames lesen?“):** Die Frame-Abbildungen von r16.7
+  (R=σz, T=σx, J_B=σy) brechen die Generationsgleichheit; zykluserhaltende Lesungen geben nur den Tausch 00↔11 (Werte schon in H107).
+  **Kein H109 angelegt** (H109/k231 weiter frei). Offene Autorentscheidung: generationsabhängige Lesungen als neue Familie zulassen
+  (freie Wahl Generation → Frame) oder OP3 ruhen lassen. PR-Kommentar #157 und Issue #131 nachgezogen.
   - H107 (k229, Vorab 30a4a50, erweitert 44cda89): widerlegt.
   - H107 widerlegt: verschachtelte Normierung HS(8) = HS(7) ⊕ HS(6) ⊕ HS(6) (Idee des Autors), volle Grammatik, 20 Versuche, kein Treffer
     auf 0,0002 rad; nächster N1 −0,0015. Struktur: Bei Produktzuständen |n⟩|n⟩ ist ein in seiner HS(7)-Hälfte normiertes HS(6) das Gewicht
