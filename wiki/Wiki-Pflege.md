@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: QAM: Frame-Abschnitte der Runden im Aussagenspeicher (Nachtrag im Abschnitt zu den Forschungsrunden).
+
 - 16.11.2026: QAM: Forschungsrunden im Aussagenspeicher (354 Runden-Einträge), Abschnitt in QAM ergänzt.
 
 - 16.11.2026: Runde v4.10.0-r23 (wohin die Kaskade führt) eingetragen: Forschungsstand (mit Vermerk an r22.4),

@@ -700,12 +700,14 @@ Itemnummer (`item`, z. B. `v4.10.0-r21.12`). Stand: **354 Runden-Einträge aus 1
 Prüf-Guards. Jeder Eintrag ist `imported-unreviewed` mit Frame `unspecified`; Status, Frame und Prämissen sind je Eintrag noch zu prüfen.
 Die v5-Editionen bleiben bei den Satzumgebungen (`qsc-v5-full` weiterhin 2468 Mitglieder). Einzelheiten: `qam/store/README.md`.
 
+**Frames (Nachtrag 16.11.2026).** Der Import liest jetzt auch die Frame-Abschnitte der Runden (Regel F4 der Konvention F). Einträge aus Runden mit solchem Abschnitt tragen die Frame-Angabe `convention-f-section`, den Abschnitt als Text und die Zeilen, die ihre Itemnummer nennen. Stand bis r23: 359 Runden-Einträge, davon 236 aus 83 Runden mit Frame-Abschnitt, 117 mit eigener Zeile. Das ist der wörtliche Frame-Vermerk der Runde, keine geprüfte Typisierung; die Prüf-Guards bleiben offen.
+
 **Research rounds in the statement store (16 Nov 2026).** Until 16 November 2026 the statement store held only the theorem environments
 of the main body (2468 statements, mostly from v4.7.0); the research rounds from v4.8.0 on were each recorded as a single topic. The import
 now also records the round paragraphs `Theoremlet`, `Remark`, `Correction`, `Restatement`, `Definition`, `Lemma`, `Proposition` and
 `Corollary` as separate unreviewed statements with a round (`round`) and an item number (`item`). Status: **354 round items from 134
 rounds**, 2953 objects and 2835 open review guards in all. Every item is `imported-unreviewed` with frame `unspecified`. The v5 editions
-keep the theorem environments only (`qsc-v5-full` still has 2468 members).
+keep the theorem environments only (`qsc-v5-full` still has 2468 members). **Frames (addendum):** the import now also reads the frame subsections of the rounds (rule F4 of Convention F); items from such rounds carry the frame `convention-f-section`, the subsection text and the rows naming their item number. Through r23: 359 round items, 236 from 83 rounds with a frame subsection, 117 with a row of their own. This is the literal frame note of the round, not a reviewed typing; the review guards stay open.
 
 ## Gegenterm-Register im Aussagenspeicher (Schema v7, Phase 1)
 
