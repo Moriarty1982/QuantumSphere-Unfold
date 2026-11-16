@@ -10,6 +10,8 @@ Idee des Autors: einen von der Zeit abhängigen Korrekturterm einfügen, der die
 
 **Methoden-Notiz 2 (16.11.):** Derselbe Ansatz mit zeitabhängiger Verbindung: Auf der Generationskugel bleiben die drei Auslesezustände fest (K = 2/3 exakt), und nur der Berry-Fluss durch das Oktantendreieck wird umverteilt (Gesamtfluss 2π fest, Kontinuitätsgleichung). Gesucht ist der sparsamste Fluss-Strom, der 0,1187 aus dem Dreieck bringt; verglichen mit der Kern-Konfiguration von H102 (flussfreie Kappe, Fluss am Gegenpol) und mit gleichmäßiger Verteilung. Vorab genannte Erwartung: Lokaler Transport schiebt Fluss am Rand hinaus und bildet keinen Kern; bestätigt sich das, ist es ein Ausschluss für eine lokale Herkunft des Kerns. [Methoden-Notiz 2](../notes/research/op3_correction_term_2026_11_16/Methoden_Notiz_Verbindung.md).
 
+**Ergebnis (16.11.):** Der sparsamste lokale Fluss leert einen flussfreien Saum entlang der drei Kanten des Dreiecks (Breite gegen gut 3°), keinen Kern in der Mitte. Die Kern-Konfiguration von H102 kostet mindestens das 270-fache, mit Fluss am Gegenpol etwa doppelt so viel wie bei gleichmäßiger Verteilung. Ausschluss: Ein lokaler, sparsamer Fluss erzeugt den Kern nicht. Erzwingen würde ihn ein undurchlässiger Rand des Dreiecks mit Abfluss nur über eine Punktierung (Lesart „removed“), nicht gerechnet. [Ergebnis](../notes/research/op3_correction_term_2026_11_16/README.md).
+
 ### OP1: Setzung (S1) geprüft – masselose Querungen statt „derselben SU(2)“ (16.11.2026)
 
 Auftrag des Autors: (S1) prüfen. Erkundung, nicht blind.

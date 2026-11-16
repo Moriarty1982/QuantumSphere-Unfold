@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 16.11.2026: Ergebnis Methoden-Notiz 2 (Randlösung statt Kern, Ausschluss) in Forschungsstand.
+
 - 16.11.2026: Methoden-Notiz 2 (zeitabhängige Verbindung) in Forschungsstand.
 
 - 16.11.2026: Nachlauf zum Korrekturterm (konvergiert, kein Befund, Grenze der Darstellung auf S) in Forschungsstand.

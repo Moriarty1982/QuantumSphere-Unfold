@@ -74,3 +74,42 @@ Berry-Verbindung auf der Generationskugel. Ein zeitabhängiger Korrekturterm mü
 Zeit aufbaut) sein, und seine Form könnte Struktur zeigen (Verteilung, Ort, Zeitverlauf des Flusses). Das wäre eine neue Methoden-Notiz.
 
 OP3 offen; H111 frei.
+
+## Methoden-Notiz 2: zeitabhängige Verbindung – Ergebnis
+Methode `Methoden_Notiz_Verbindung.md` (e8370d7) mit Nachtrag N2 (e4f7b30), Skript `connection_flow.py`, Ausgaben `run/connection_flow_stdout.txt`,
+`run/connection_flow.json`. Ziel: ΔΦ = 0,118724 Berry-Fluss aus dem Oktantendreieck T bringen; K = 2/3 bleibt dabei exakt.
+
+| Gitter (Knoten) | V0 Randlösung: Breite des geleerten Saums | Kosten W2 | Lage der geleerten Knoten (Winkel zur Zyklusachse) | V1 Kosten (Kantenlänge²) |
+|---|---|---|---|---|
+| 3 (642) | 0,081 rad | 7,6·10⁻⁵ | 31,3° bis 54,7° | 4,4·10⁻⁶ |
+| 4 (2562) | 0,066 rad | 1,08·10⁻⁴ | 33,1° bis 54,7° | 5,7·10⁻⁷ |
+| 5 (10 242) | 0,060 rad | 1,03·10⁻⁴ | 33,0° bis 54,7° | 7,3·10⁻⁸ |
+
+| Kern-Konfiguration (exakter W2, LP) | Gitter 3 dicht | Gitter 3, Schranke 0,6 | Gitter 4, Schranke 0,6 |
+|---|---|---|---|
+| K-A: flussfreie Kappe, Fluss am Gegenpol (H102) | 0,0533 | 0,0533 | 0,0295 |
+| K-B: flussfreie Kappe, Fluss gleichmäßig verteilt | 0,0275 | 0,0275 | 0,0154 |
+| Verhältnis K-A / Rand | 702 | 702 | 273 |
+| Verhältnis K-B / Rand | 363 | 363 | 143 |
+
+- **N1 (wo verlässt der Fluss T?):** über die Ränder. Es bildet sich ein **flussfreier Saum** entlang der drei Kanten des Dreiecks (Breite gegen 0,05 bis
+  0,06 rad, gut 3°; Mittelpunkt-zu-Kante 35,3°, Ecken 54,7°), **kein Kern in der Mitte**. Das ist die vorab genannte Erwartung.
+- **N2 (wohin?):** direkt jenseits des Randes, im Abstand gleich dem Randabstand.
+- **N3 (Zeitverlauf):** analytisch gleichförmig (Verschiebungsinterpolation).
+- **N4 (Kosten):** Die Kern-Konfiguration von H102 kostet mindestens das 270-fache der Randlösung (Gitter 4; die Kern-Kosten sinken mit der
+  Verfeinerung noch, das Verhältnis bleibt über 100). Gegenpol (K-A) kostet etwa doppelt so viel wie gleichmäßige Verteilung (K-B), passend zu
+  „B ist das Energieminimum“ in der Kern-Notiz. V1 (Stromnorm ohne Gewichtung) ist entartet: Die Kosten gehen mit der Verfeinerung gegen null, der
+  Strom sitzt nur auf den Randkanten.
+- Die Schranke 0,6 rad ändert auf Gitter 3 nichts (Kaskaden aus kurzen Schritten reichen); die Kern-Werte sind also nicht durch die Schranke
+  verfälscht.
+
+**Bewertung nach Abschnitt 6:** Kein Befund im Sinne einer unerwarteten Struktur; die Randlösung bestätigt sich über V0, V1 und drei Gitter. Das ist
+ein **Ausschluss:** Ein lokaler, sparsamer Fluss erzeugt den Kern von H102 nicht; er leert einen Saum an den Kanten. Der Kern braucht einen nicht
+lokalen Grund (Umkehrwalze als feste Regel) oder eine zusätzliche Bedingung.
+
+**Eine Bedingung, die den Kern erzwingen würde (Lesart, nicht gerechnet):** Sind die Kanten von T **undurchlässig** (etwa weil sie Geodäten zwischen
+festen Auslesezuständen sind), kann der Fluss T nicht über den Rand verlassen. Dann bleibt nur ein Abfluss durch eine **Punktierung** im Inneren, also
+genau die Lesart „removed“ aus Faden 1 der Kern-Notiz (S³ ∖ B_ε(K)). Ob ein undurchlässiger Rand im Bestand begründet ist, wäre die nächste Frage;
+das wäre eine eigene Methoden-Notiz.
+
+OP3 offen; H111 frei.
