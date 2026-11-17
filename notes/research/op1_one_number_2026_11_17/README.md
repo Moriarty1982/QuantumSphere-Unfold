@@ -47,3 +47,31 @@ statisch sein (PR #171); ein Beobachter in Bewegung relativ zum statischen Horiz
 Frame-Faktor, Moran-Dimension, Frequenzverhältnis, Lorentz-Faktor und Registerbreite sind dieselbe Zahl; liest man sie als Lorentz-Faktor des
 flussentgegengesetzten Beobachterpaars, ist die Frequenz von M die Bit-Frequenz von T, vom Gegenbeobachter gesehen. Fehlt noch: die Zuordnung des Paars zu
 M und T. OP1 offen.
+
+## Nachtrag (17.11.2026): Das Beobachterpaar ist nicht (M, T); die Boost-Lesart der Frequenz wird zurückgenommen
+Auftrag des Autors: „Paar M und T prüfen“. Skript `pair_check.py`, Ausgabe `run/pair_check_stdout.txt`. Analytisch vorher entschieden, nachgerechnet.
+
+| Prüfung | Ergebnis |
+|---|---|
+| (1) Ein Boost lässt s = (E + iB)² fest | Abweichung 7,7·10⁻¹⁴ (500 Felder, beliebige Richtungen) |
+| Frame-Abbildungen auf s | R: −s; T-Abbildung: s̄; J_B: −s̄. Der T-Frame ist in Konvention F das J_B-Bild von M: Materiefeld s = 1 → s = −1 (Tachyonseite) |
+| (2) Paar aus r11.5(b): vom flussfreien Profil R um +η und −η | beide r = 0,5363 = b_M, Fluss entgegengesetzt (±0,787), gleiches s; Feld des einen = Drehung um π des anderen |
+| relativer Lorentz-Faktor des Paars | cosh 2η = 1,864701 = γ_L |
+| (3) Energiedichte u(M)/u(R) | cosh 2η = γ_L |
+| T-Abbildung (E, −B) auf Feldern mit E·B = 0 | gleich einer Drehung um π um E |
+| (4) imaginäre Verschiebung η → η + iπ/2 | x = 0,3018 → 3,3129 = 1/x (Tachyon-Ast, Konvention F) |
+
+**Ergebnis.**
+1. **Das Paar ist (M, M̄), nicht (M, T).** Ein reeller Boost erhält s; der T-Frame verlangt s ↦ −s̄ (Materie → Tachyon). Zwischen M und T liegt die
+   imaginäre Verschiebung iπ/2, keine reelle Rapidität. Das bestätigt die Lage von T in `../op1_hc_blur_2026_11_16/` (Nachtrag Lage von P) und Konvention F.
+2. **Warum das Beispiel in r11.5(b) wie T aussah:** Auf Feldern mit E·B = 0 ist die T-*Abbildung* (E, −B) eine Drehung um π um E. Die beiden
+   Beobachter sehen also gedrehte Kopien desselben Felds; der T-*Frame* (J_B-Bild) ist damit nicht erreicht. r11.5(b) hatte die Gleichsetzung zu Recht offen
+   gelassen; sie fällt.
+3. **Gestalt (6) in der Tabelle oben** gilt für das Paar (M, M̄): γ_L ist ihr gegenseitiger Lorentz-Faktor und das Verhältnis der Energiedichten
+   zwischen M und dem flussfreien Profil R. Sie sagt nichts über M gegen T.
+4. **Die Lesart „Frequenz von M = Bit-Frequenz von T, vom Gegenbeobachter gesehen“ ist zurückgenommen.** Übrig bleibt ω_M/ω_T = γ_L als Identität der
+   Bohr-Lesart und γ_L = u(M)/u(R) als Kinematik. Beide zusammen ergäben eine Boost-Lesart nur, wenn die Bit-Frequenz von T die Ruhefrequenz in R wäre;
+   T und R sind aber verschiedene Frames (R flussfrei mit b = 1, T auf dem imaginären Ast mit |b| = b_M). Dafür gibt es keinen Grund im Bestand.
+
+**Stand der Frage nach der Frequenz von M:** wieder offen. Gesichert ist: Sie ist γ_L · ln 2 · T_H (Bohr-Lesart), sie ist keine Ruhefrequenz eines
+Schwarzschild-Horizonts (16 Kandidaten), und sie entsteht nicht durch einen reellen Boost aus der T-Frequenz. OP1 offen.

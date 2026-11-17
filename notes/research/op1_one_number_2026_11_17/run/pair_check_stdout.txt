@@ -1,0 +1,7 @@
+(1) Boost laesst s fest: max. Abweichung 7.7e-14.  Materiefeld s = 1 -> J_B-Bild s = -1 (Tachyonseite): kein Boost verbindet M mit T.
+(2) Beobachter +eta: r = 0.5363, Fluss [ 0.      0.     -0.7869];  -eta: r = 0.5363, Fluss [0.     0.     0.7869];  1/cosh 2eta = 0.5363
+    s gleich: 0.0e+00;  -eta-Feld = Drehung um pi des +eta-Feldes: True
+    relativer Lorentz-Faktor zwischen beiden = cosh 2 eta = 1.864701 = gamma_L
+(3) Energiedichte u(+eta)/u(R) = 1.864701 = cosh 2 eta
+    T-Bild (E,-B) eines Feldes mit E.B = 0 gleich Drehung um pi um E: True
+(4) Breite x = tanh^2 eta = 0.3018; bei eta + i pi/2: 3.3129 = 1/x = 3.3129 (Tachyon-Ast, Konvention F)
