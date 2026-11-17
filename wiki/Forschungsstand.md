@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP4: Bestandsaufnahme der Mischungs-Linie (17.11.2026)
+
+Auftrag des Autors: „OP4 aufgreifen“. Keine Rechnung. Datenstand: NuFIT v6.1 (Daten November 2025) ist die neueste Version, JUNO zuletzt am 29.09.2026; die offenen Vorhersagen H9, H42, H46, H100 warten. Tabelle aller Mischungstests nach hergeleitet, angepasst, offen. Neu: H9 und H45/H46 hängen an β_sym bzw. η, also an der Zahl von OP1; die kommenden Neutrinodaten prüfen sie indirekt mit. OP4 offen. [Notiz](../notes/research/op4_status_audit_2026_11_17/README.md).
+
 ### Runde r29: Die Zählregel von M als eine Zahl (17.11.2026)
 
 Die Arbeiten aus PR #167–#173 stehen jetzt als Runde v4.10.0-r29 im Companion (r29.1–r29.7, mit drei ausdrücklichen Rücknahmen). Keine neue Rechnung. Kern: Die Zählgleichung ist eine Moran-Gleichung, γ_L ist die Hausdorff-Dimension des M-Fraktals und zugleich Frequenzverhältnis, cosh 2η und 1/b_M; die Registerbreite ist eine Beobachtergröße; OP1 ist die Frage nach β_sym. OP1–OP5 offen. [Runde](../notes/research/v4_10_0_r29/README.md).
