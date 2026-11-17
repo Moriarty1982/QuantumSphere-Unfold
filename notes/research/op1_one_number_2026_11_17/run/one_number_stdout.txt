@@ -1,0 +1,7 @@
+(1) Zaehlung      gamma_M/gamma_T            = 1.864699765
+(2) Moran         Hausdorff-Dimension D_M    = 1.864699765
+(3) Frequenz      omega_M/omega_T            = 1.864699765  (omega_T = ln2 T_H, omega_M = Quant_M T_H/4)
+(4) Lorentz       cosh 2 eta, beta = tanh eta = 1.864699765  (beta = 0.549406)
+(5) Register      1/b_M                      = 1.864699765
+(6) Boost         gamma_L * omega_T = E(T-Bit vom Gegenbeobachter) = 1.292511 T_H = omega_M 1.292511 T_H
+Prinzip (Moran, nachtraeglich): groesste ganze Kopienzahl je Skala in der Ebene = floor(1/sum r^2) = floor(2.3006) = 2 -> D = 1.8647
