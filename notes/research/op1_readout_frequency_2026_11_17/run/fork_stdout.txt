@@ -1,0 +1,8 @@
+Spektrum | gamma_M | gamma_T | gamma_L | Quant M | Quant T | omega_M/T_H | QNM-Bedingung (Quant M = 4 ln3)
+sqrt(j(j+1))       | 0.237533 | 0.127384 | 1.864700 | 5.1700 | 2.7726 | 1.292511 | nein
+j                  | 0.349699 | 0.220636 | 1.584963 | 4.3944 | 2.7726 | 1.098612 | erfuellt
+j+1/2              | 0.220636 | 0.110318 | 2.000000 | 5.5452 | 2.7726 | 1.386294 | nein
+sqrt(j(j+1)+1/4)   | 0.220636 | 0.110318 | 2.000000 | 5.5452 | 2.7726 | 1.386294 | nein
+j^0.8 (Testform)   | 0.344030 | 0.192074 | 1.791126 | 4.9661 | 2.7726 | 1.241514 | nein
+log2(3) = 1.584963;  ln3 = 1.098612;  Datenpaarung H98: gamma_L = 1.864700 -> omega_M/T_H = gamma_L ln2 = 1.292512
+Anteil j = 1/2 in der M-Zaehlung (sqrt): 0.549161 = 2^(1-gamma_L) = 0.549161;  beta_sym = 0.549406 (nachtraeglich gesehen, Abweichung 2.5e-04, nicht exakt)

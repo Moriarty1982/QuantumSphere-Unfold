@@ -59,3 +59,38 @@ Quasinormal-Quant nach Dreyer: ΔA = 4 ln 3 = 4,394.
 ## Ergebnis in einem Satz
 Die Quasinormal-Frequenz ist genau die Übergangsfrequenz der Gewicht-2-Regel von M, aber nur bei linearem Flächenspektrum (γ = ln 3/π, Schritt
 4 ln 3); mit dem Spektrum √(j(j+1)) des Bestands und seiner Datenpaarung passt sie nicht. OP1 offen.
+
+## Nachtrag (17.11.2026): Die Gabel hängt nicht vom Spektrum ab
+Auftrag des Autors: „Gabel weiter prüfen“. Skript `fork.py`, Ausgabe `run/fork_stdout.txt`. Erkundung, nicht blind.
+
+**Identität.** Für jedes Flächenspektrum a(j) gilt: T (nur j = ½, Gewicht 2) hat das kleinste Quant 8πγ_T a(½) = 4 ln 2, denn 2e^{−2πγ_T a(½)} = 1.
+M (alle j, Gewicht 2) hat das kleinste Quant 8πγ_M a(½). Das Verhältnis ist γ_M/γ_T = γ_L. Mit der Bohr-Korrespondenz ω = ΔA·T_H/4
+(T_H = 1/(8πM)) heißt das:
+
+  ω_T = ln 2 · T_H,  ω_M = γ_L · ln 2 · T_H,  ω_M/ω_T = γ_L.
+
+Der Frame-Faktor ist also das Verhältnis der Übergangsfrequenzen der kleinsten Schritte beider Auslesungen (Lesart; als Identität trivial, weil
+a(½) gemeinsam ist).
+
+| Spektrum | γ_M | γ_T | γ_L | Quant M | ω_M/T_H | Quasinormal (Quant M = 4 ln 3) |
+|---|---|---|---|---|---|---|
+| √(j(j+1)) (Bestand) | 0,237533 | 0,127384 | 1,864700 | 5,170 | 1,2925 | nein |
+| j | 0,349699 | 0,220636 | 1,584963 = log₂ 3 | 4,394 | 1,0986 = ln 3 | erfüllt |
+| j + ½ | 0,220636 | 0,110318 | 2 | 5,545 | 1,3863 = ln 4 | nein |
+| √(j(j+1) + ¼) | 0,220636 | 0,110318 | 2 | 5,545 | 1,3863 | nein |
+| j^0,8 (Testform) | 0,344030 | 0,192074 | 1,791126 | 4,966 | 1,2415 | nein |
+
+**Folgerungen.**
+1. **„M liest mit der Quasinormal-Frequenz aus“ ist gleichwertig mit γ_L = log₂ 3, für jedes Spektrum,** solange T die ABK-Regel (nur j = ½)
+   behält. Die Gabel ist damit kein Streit um das Spektrum: Das lineare Spektrum ist nur das einfachste, das die Bedingung erfüllt; jedes andere,
+   das sie erfüllt, gibt dasselbe γ_L und dasselbe Ω_M = 0,226.
+2. **Die Datenpaarung von H98 (γ_L = 1,8647) legt die Auslesefrequenz von M fest:** ω_M = 1,2925 · T_H, nicht ln 3 · T_H = 1,0986 · T_H. Eine
+   Quelle dieser Frequenz kennt weder der Bestand noch die gelesene Literatur.
+3. **Auswege, falls M doch mit der Quasinormal-Frequenz liest:** (a) T zählt nicht nach ABK, dann ändert sich ω_T und γ_L ist nicht mehr an
+   log₂ 3 gebunden; (b) der für M maßgebliche Übergang ist nicht das Verschwinden einer Punktierung mit j = ½. Beides wäre eine neue Setzung.
+4. **Nachträglich gesehen, nicht verwendet:** Der Anteil der Punktierungen mit j = ½ in der M-Zählung ist 2e^{−2πγ_M a(½)} = 2^{1−γ_L} = 0,549161;
+   β_sym = 0,549406. Abweichung 2,5·10⁻⁴, also nicht exakt (dieselbe Größenordnung wie die Zufallsnähe 2 arctan γ_M ≈ arctan ½ aus r17.4).
+
+**Ergebnis des Nachtrags.** Die Gabel ist spektrumfrei: Mit T nach ABK erzwingt eine Quasinormal-Auslesung von M den Frame-Faktor log₂ 3 und
+widerspricht damit der Datenpaarung; umgekehrt legt die Datenpaarung die Auslesefrequenz von M auf 1,2925 · T_H fest, ohne bekannte Quelle.
+OP1 offen.

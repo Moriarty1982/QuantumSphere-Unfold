@@ -8,7 +8,7 @@ Auftrag des Autors („weiter“). Erkundung, nicht blind. Literatur: Dreyer (Qu
 - **Mit dem Spektrum √(j(j+1)) des Bestands** passt keine Regel (M 5,17; P 5,97). T trifft in beiden Spektren 4 ln 2 (Bekensteins Bit).
 - **Preis:** Linear wird γ_L = log₂ 3 = 1,585 und Ω_M = 0,226 statt 0,302; die Datenpaarung von H98 fällt. Gabel: Quasinormal-Frequenz ⇒ lineares Spektrum ⇒ H98 fällt; √(j(j+1)) ⇒ M ohne Quasinormal-Frequenz.
 
-OP1 offen. [Notiz](../notes/research/op1_readout_frequency_2026_11_17/README.md).
+**Nachtrag (Gabel spektrumfrei):** T hat in jedem Spektrum das kleinste Quant 4 ln 2; das Verhältnis der Auslesefrequenzen ist ω_M/ω_T = γ_L. „M liest mit der Quasinormal-Frequenz“ ist daher gleichwertig mit γ_L = log₂ 3, für jedes Spektrum, solange T nach ABK zählt. Umgekehrt legt die Datenpaarung (γ_L = 1,8647) die Auslesefrequenz von M auf 1,2925 · T_H fest, ohne bekannte Quelle. OP1 offen. [Notiz](../notes/research/op1_readout_frequency_2026_11_17/README.md).
 
 ### OP1: Querungen oder Flusslinien? (17.11.2026)
 
