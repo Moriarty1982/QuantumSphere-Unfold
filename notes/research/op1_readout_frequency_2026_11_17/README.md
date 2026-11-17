@@ -94,3 +94,18 @@ a(½) gemeinsam ist).
 **Ergebnis des Nachtrags.** Die Gabel ist spektrumfrei: Mit T nach ABK erzwingt eine Quasinormal-Auslesung von M den Frame-Faktor log₂ 3 und
 widerspricht damit der Datenpaarung; umgekehrt legt die Datenpaarung die Auslesefrequenz von M auf 1,2925 · T_H fest, ohne bekannte Quelle.
 OP1 offen.
+
+## Nachtrag (17.11.2026): Quelle für ω_M = 1,2925 · T_H gesucht, keine gefunden
+Auftrag des Autors: „Quelle 1,2925 suchen“. Vor der Rechnung festgelegt und committet: `Kandidatenliste_1_2925.md` (9fce085), 16 physikalisch
+ausgezeichnete Frequenzen eines Schwarzschild-Horizonts und zwei Größen des Bestands; Treffer bei relativer Abweichung ≤ 10⁻³, Kombinationen
+zählen nicht. Skript `candidates.py`, Ausgabe `run/candidates_stdout.txt`. Nicht blind (Zielwert bekannt).
+
+**Ergebnis: 0 Treffer von 16.** Nächste Kandidaten: 2η aus γ_L = cosh 2η (1,2351, 4,4 %), ln 4 aus dem Halbschritt-Spektrum (1,3863, 7,3 %),
+asymptotische Quasinormal-Frequenz ln 3 (1,0986, 15 %), Maximum der Photonenzahl im Planck-Spektrum (1,5936, 23 %). Grundtöne der Quasinormalmoden,
+Photonring und Maggiore-Lesart liegen um Faktoren 2 bis 12 daneben.
+
+**Einordnung.** Wegen ω_M = γ_L ln 2 · T_H ist eine Quelle für 1,2925 gleichwertig mit einer Herleitung von γ_L; die Frequenzsprache bringt
+nur dann einen neuen Zugang, wenn eine ausgezeichnete Horizontfrequenz den Wert trifft. Das ist für die festgelegte Liste nicht der Fall. Die
+Suchrichtung „Frequenz der Auslesung“ ist damit für Schwarzschild-Frequenzen ausgeschöpft; offen bleiben nicht geprüfte Frequenzen (geladene oder
+rotierende Horizonte, Graukörper-gewichtete Spektren). OP1 ist wieder bei der Ausgangsfrage: Warum ist γ_L = 1,8647, also warum zählt M mit
+Gewicht 2 im Spektrum √(j(j+1)). OP1 offen.
