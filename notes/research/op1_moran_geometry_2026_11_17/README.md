@@ -69,3 +69,65 @@ größte Skala“, eine Strecke mit D = 1; P (alle 2j + 1) passt nicht auf die F
 ## Ergebnis in einem Satz
 Die Zählgleichung ist exakt eine Moran-Gleichung, die Frame-Faktoren sind Hausdorff-Dimensionen (T 1, M 1,8647, P 2,1515), und die Regel von M ist die
 größte ganze Kopienzahl je SU(2)-Skala, deren Fraktal noch auf eine Fläche passt; die volle SU(2)-Zählung passt nicht. Lesart, nicht blind. OP1 offen.
+
+## Nachtrag (17.11.2026): Die Dimensionsleiter T, M, P
+Auftrag des Autors: „weiter“ (blinden Test zur Moran-Lesart suchen). Skript `dimension_ladder.py`, Ausgabe `run/dimension_ladder_stdout.txt`.
+**Nicht blind:** Die Fälle d = 1 und d = 3 waren vor der Rechnung überschlagen.
+
+Im Regelraum S von H98 (Spinbereiche alle, halbzahlig, ganzzahlig, nur ½, nur 1; Gewichte 2, 2j + 1), Spektrum √(j(j+1)), ist die Regel mit der
+größten Moran-Dimension unter denen, die in ℝ^d passen (Σ g r^d ≤ 1):
+
+| d | Regel | D | Σ g r^d | Frame |
+|---|---|---|---|---|
+| 1 | nur j = ½, Gewicht 2 | 1 | 1 (die zwei Hälften füllen die Strecke genau) | **T** |
+| 2 | alle Spins, Gewicht 2 | 1,8647 | 0,869 | **M** |
+| 3 | alle Spins, Gewicht 2j + 1 | 2,1515 | 0,410 | **P** |
+
+**Lesart:** Die drei Frames sind die reichsten selbstähnlichen Auslesungen auf einer Linie, einer Fläche und im Raum. Das passt zum Bestand: T zählt
+Querungen, also einzelne Stränge (r24.4); M zählt auf der Horizontfläche; P zählt alle 2j + 1 Zustände und liegt außerhalb der Fläche (eigener HC,
+`../op1_hc_blur_2026_11_16/`). Die geschachtelte Zählung T ⊆ M ⊆ P wird zur Folge von Dimensionen 1 ⊂ 2 ⊂ 3.
+
+**Grenzen.**
+- Die Leiter gilt im Regelraum S. Mit beliebigen konstanten Kopienzahlen über alle Spins gäbe d = 3 fünf Kopien (D = 2,83), nicht P; d = 1 hätte dann
+  keine Regel über alle Spins (Σ r = 1,46 > 1).
+- Spannung zu `../op1_flux_lines_2026_11_17/`: Dort liegen die statischen Felder eines Horizonts im Gleichgewicht in der Lage von P. Die Leiter liest P
+  als Raum- statt Flächenauslesung. Beides zugleich verlangt, dass der Gleichgewichtshorizont nicht als Fläche, sondern als Volumen ausgelesen wird; das
+  ist offen.
+
+**Blinder Test.** Rückwärtssuche: Gesucht war eine Folgerung, die (a) ohne freien Parameter aus der Leiter folgt, (b) keine der schon verwendeten
+Größen ist (γ_L, β_sym, Ω_M, m_W, m_τ) und (c) mit Daten verglichen werden kann. Die Leiter legt nur die drei bekannten Regeln fest; jenseits von d = 3
+bleibt sie bei P, eine vierte Stufe gibt es in S nicht. Ein blinder Test ist aus der Moran-Lesart allein **nicht** zu gewinnen; sie ist eine
+Strukturaussage über bekannte Zahlen. Ein Test bräuchte einen neuen Sektor mit eigener Zählung (etwa eine Farb- oder Quarkauslesung); das wäre eine
+neue Setzung. OP1 offen.
+
+## Nachtrag (17.11.2026): Die Spannung zu P aufgelöst
+Auftrag des Autors: „Spannung zu P klären“. Skript `register_threshold.py`, Ausgabe `run/register_threshold_stdout.txt`. Erkundung ohne Zielwert.
+
+**Die beiden Bedeutungen von P.** (a) Flusslinien-Notiz: Ein statisches, reelles Feld liegt auf dem χ-Äquator, also in der Registerlage von P (b = 0).
+(b) Dimensionsleiter: P ist die Zählregel 2j + 1 mit D = 2,15, die nur im Raum Platz hat. Verbunden sind beide über das Registermodell
+(`../op1_entropy_count_2026_11_17/`): Ein Bündel im Register b = 0 zählt genau 2j + 1.
+
+**Rechnung: Ab welcher Sichtbarkeit b passt die Registerzählung auf eine Fläche?**
+
+| Zählung | Σ N r² bei b = 0 | bei b_M = 0,5363 | bei b = 1 | Schwelle b_c (Σ N r² = 1) | D bei b_M |
+|---|---|---|---|---|---|
+| Register allein, Shannon | 1,199 | 0,837 | 0,435 | 0,347 | 1,838 |
+| Register allein, Beteiligung | 1,199 | 0,721 | 0,435 | 0,254 | 1,700 |
+| Mischung mit Spiegel (unbekannter Port), Shannon | 1,199 | 1,117 | 0,869 | 0,800 | 2,097 |
+| Mischung mit Spiegel, Beteiligung | 1,199 | 1,074 | 0,869 | 0,693 | 2,064 |
+
+**Auflösung.**
+1. **Kein Widerspruch, sondern eine gemeinsame Aussage:** Mit b = 0 passt keine Registerzählung auf eine Fläche. Ein statischer Horizont, der seine
+   Punktierungen über ihr eigenes Register zählt, ist deshalb **keine Flächenauslesung**, sondern eine Raumauslesung (P, D = 2,15). Die Flusslinien-Notiz
+   (statische Felder liegen bei P) und die Leiter (P ist die Raumstufe) sagen dasselbe.
+2. **Fläche verlangt Frequenz:** Auf eine Fläche passt die Registerzählung erst ab b > b_c > 0 (0,25 bis 0,35 für das Register allein). Eine Breite b ≠ 0
+   gibt es nach `../op1_flux_lines_2026_11_17/` (Nachtrag) nur mit relativen Phasen, also bei Frequenz ω > 0. Die drei Notizen fügen sich damit zu einer
+   Kette: **Flächenauslesung ⇒ b > b_c ⇒ Frequenz ⇒ nicht statisch.** Die Zählregel von M ist die Flächenstufe und setzt eine zeitharmonische
+   Auslesung voraus; der statische Gleichgewichtshorizont liest wie P.
+3. **Die Regel von M ist nicht das Register von M:** Das Register bei b_M allein gibt D = 1,838 (Shannon), 1,4 % unter γ_L (wie schon in der
+   Entropie-Notiz, γ = 0,2342 statt 0,2375); die Mischung des M-Registers mit seinem Spiegel passt nicht auf die Fläche (1,117). Nur reine Stränge mit
+   unbekanntem Port (b = 1, gemischt) geben genau Gewicht 2 und passen (0,869). Das bestätigt die Lesart „M zählt reine Stränge mit unbekanntem Port“.
+4. Keine Schwelle b_c fällt auf b_M; behauptet wird kein Treffer.
+
+**Was offen bleibt:** warum die Flächenauslesung M reine Stränge mit Frequenz sieht, während der statische Horizont wie P liest. Damit ist OP1 an
+derselben Stelle wie nach der Auslesefrequenz: Woher kommt die Frequenz der Auslesung M? OP1 offen.

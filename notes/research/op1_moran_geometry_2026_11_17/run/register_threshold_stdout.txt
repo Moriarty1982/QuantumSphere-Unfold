@@ -1,0 +1,5 @@
+Register allein      Shannon    : Flaeche bei b = 0: 1.1990, bei b_M: 0.8372, bei b = 1: 0.4347; Schwelle b_c = 0.3470; D(b_M) = 1.8383
+Register allein      Beteiligung: Flaeche bei b = 0: 1.1990, bei b_M: 0.7207, bei b = 1: 0.4347; Schwelle b_c = 0.2540; D(b_M) = 1.7004
+Mischung mit Spiegel Shannon    : Flaeche bei b = 0: 1.1990, bei b_M: 1.1166, bei b = 1: 0.8693; Schwelle b_c = 0.7999; D(b_M) = 2.0967
+Mischung mit Spiegel Beteiligung: Flaeche bei b = 0: 1.1990, bei b_M: 1.0735, bei b = 1: 0.8693; Schwelle b_c = 0.6930; D(b_M) = 2.0635
+b_M = 0.5363; zum Vergleich gamma_L = 1,8647
