@@ -14,12 +14,13 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. Keine offenen PRs. CI nach #166 grün.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
 ### Forschung
-- **Letzte Runde:** v4.10.0-r28 (Stand Restbiegung und Zählregel, r28.1–r28.7). Davor r27 (PR #156).
+- **Letzte Runde:** v4.10.0-r29 (Zählregel von M als eine Zahl, r29.1–r29.7, drei Rücknahmen; PR #174; Kandidat 1461 Seiten, Linter 0).
+  Davor r28 (in v5.2.0), r27 (PR #156). Runden r29 ff. sind nicht veröffentlicht (öffentlich: v5.2.0 bis r28).
 - **Hypothesen:** zuletzt vergeben **H111** (k233, widerlegt). Frei: **H112, k234**.
 - **Inhaltlicher Stand:** Die Phase ist im Träger starr (H106–H111 widerlegt); der bewachte Kern (φ = π/4 − γ_M/2) entgeht
   dem über die Verbindung, seine Größe kommt nur aus der Zählregel von M (Gewicht 2, gewählt). H102 (m_τ = 1777,134 MeV,
