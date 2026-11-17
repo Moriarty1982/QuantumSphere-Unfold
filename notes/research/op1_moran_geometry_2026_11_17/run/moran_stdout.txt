@@ -1,0 +1,8 @@
+sqrt(j(j+1))  T: D = 1.000000, M: D = 1.864700, P: D = 2.151501
+j             T: D = 1.000000, M: D = 1.584963, P: D = 1.771553
+j+1/2         T: D = 1.000000, M: D = 2.000000, P: D = 2.335974
+Vergleich: gamma_M/gamma_T = 1.864700, gamma_P/gamma_T = 2.151503, log2 3 = 1.584963
+sqrt(j(j+1)) T: D = 1.0000; Flaeche sum g r^2 = 0.5000, Volumen sum g r^3 = 0.2500; passt in Quadrat: Strecke (zwei Haelften); in Wuerfel: True
+sqrt(j(j+1)) M: D = 1.8647; Flaeche sum g r^2 = 0.8693, Volumen sum g r^3 = 0.3441; passt in Quadrat: False; in Wuerfel: True
+sqrt(j(j+1)) P: D = 2.1515; Flaeche sum g r^2 = 1.1990, Volumen sum g r^3 = 0.4103; passt in Quadrat: False; in Wuerfel: True
+Breite von M: b_M = 1/D_M = 0.5363 (Konvention F: 0,5363); beta^2 = (D-1)/(D+1) = 0.3018

@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: OP1 Moran-Lesart der Zählgleichung in Forschungsstand und Offene-Probleme.
+
 - 17.11.2026: Nachtrag H6 Kriterium C (trägt nicht) in Forschungsstand.
 
 - 17.11.2026: Sichtung verworfener Ideen und TOE-Vergleich in Forschungsstand.
