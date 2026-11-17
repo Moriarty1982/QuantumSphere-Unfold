@@ -14,12 +14,12 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #179** (Zufallsabschätzung), davor **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. CI nach #166 grün.
 - **PR #177 gemergt** (Squash 9b369c5; Vorab-Commit 42bebf0 per ours-Merge 2b6a1b1 von main erreichbar). Zweig gelöscht.
 - **PR #178 gemergt** (5afb5d0, Merge-Commit): I5 Außenwirkung in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Zweig gelöscht. #17 nachgezogen.
-- **Offen: PR #179** (Zweig `research/zufallsabschaetzung`, Methode vorab 8557ed7): Zufallsabschätzung, Notiz
-  `notes/research/chance_estimate_2026_11_18/`, Skript k235, Wiki. Wartet auf „PR 179 mergen“; danach #17 und #10 nachziehen.
+- **PR #179 gemergt** (9407d90, Merge-Commit; Methode 8557ed7 erreichbar): Zufallsabschätzung. Zweig gelöscht. Keine offenen PRs.
+  Issues #17, #10 nachgezogen.
   Issues #17, #10, #11 nachgezogen.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
@@ -27,7 +27,7 @@
 - **Letzte Runde:** v4.10.0-r29 (Zählregel von M als eine Zahl, r29.1–r29.7, drei Rücknahmen; PR #174; Kandidat 1461 Seiten, Linter 0).
   Davor r28 (in v5.2.0), r27 (PR #156). Runden r29 ff. sind nicht veröffentlicht (öffentlich: v5.2.0 bis r28).
 - **Hypothesen:** zuletzt vergeben **H112** (k234, offen, vorab 42bebf0, PR #177 gemergt). Frei: **H113, k236** (k235 = Zufallsabschätzung).
-- **Zufallsabschätzung (18.11., PR #179, Erkundung, nicht blind):** Dreifachtreffer von DL/ABCK (sin²θ₁₂, cot θ_W, Ω_m) unter festem Katalog
+- **Zufallsabschätzung (18.11., PR #179 gemergt, Erkundung, nicht blind):** Dreifachtreffer von DL/ABCK (sin²θ₁₂, cot θ_W, Ω_m) unter festem Katalog
   (16 Ziele, 8 Formen, 2σ) **mit Zufall verträglich**: über 36 Paare 0,64–0,81 gleich gute erwartet; nur bei datenfrei feststehendem Paar ≈ 2 %.
   Teil A: Σp = 1,31 gegen 4 Treffer, P(4/4) = 0,004 als Untergrenze. Nachträglich: Ziele um 0,30 zu 73 % gekoppelt.
   Folge: Gewicht hängt an datenfreier Begründung der Zuordnung (OP1) und an vorab festgelegten Vorhersagen.
