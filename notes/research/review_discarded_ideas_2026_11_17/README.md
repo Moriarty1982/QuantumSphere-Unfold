@@ -70,3 +70,10 @@ Materie) ist mit festen Gewichten und dynamisch (H95) gescheitert; die Gründe (
 Von den verworfenen Ideen hängt nur eine erkennbar an einer inzwischen überholten Grundannahme: **H6, Kriterium C** (TM1 aus Triole plus
 Vorzeichen-Symmetrie), weil der Bestand seit 16.11. eine modellinterne Vierergruppe hat; H13 und H73 bleiben nachgerechnet widerlegt, H61–H63 sind offen
 statt verneint, P2 verdient eine Neufassung. OP1–OP5, C5, C6/T2 offen.
+
+## Nachtrag (17.11.2026): Kandidat H6 geprüft, trägt nicht
+Beim Aufsetzen der Vorab-Notiz zeigte sich, dass die Gleichsetzung der Vorzeichen-Symmetrie mit den Frame-Abbildungen analytisch ausgeschlossen ist (die
+Vorzeichen-Elemente halten span(1, e₇) fest, auf das die Frame-Abbildungen unter φ wirken), ebenso mit der Familien-su(2) (sie vertauschen mit ihr).
+Die Behauptung in Abschnitt A, die Kleinsche Gruppe der Frame-Abbildungen liefere den fehlenden Grund, ist damit **zurückgenommen**: Es ist dasselbe
+Muster (Vierergruppe plus Dreierzyklus, A₄/S₄) auf zwei verschiedenen Räumen, keine Gleichsetzung. Einzelheiten:
+`../op4_h6_criterion_c_2026_11_17/`. Die Sichtung hat damit keinen verworfenen Gedanken gefunden, der an einer überholten Annahme hängt und jetzt trägt.

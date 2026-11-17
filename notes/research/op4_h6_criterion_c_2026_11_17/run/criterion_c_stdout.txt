@@ -1,0 +1,12 @@
+Vorzeichen-Kern: 4 Elemente; Diagonalen (e1..e7): [1, -1, -1, -1, -1, 1, 1]; [-1, 1, -1, -1, 1, -1, 1]; [-1, -1, 1, 1, -1, -1, 1]
+Automorphismen von O: max. Abweichung 0.0e+00
+(1) Einschraenkung der Vorzeichen-Elemente auf span(1, e7): ['Identitaet', 'Identitaet', 'Identitaet', 'Identitaet']
+    Frame-Abbildungen dort: {'R': [[0, -1], [1, 0]], 'T': [[1, 0], [0, -1]], 'J_B': [[0, 1], [1, 0]]} -> keine ist die Identitaet: Gleichsetzung unter phi unmoeglich
+    e7 e8 = +e15
+(2) Fortsetzung auf S ist Automorphismus (max. Abweichung 0.0e+00) und vertauscht mit R_e7, R_e8, R_e15 (max. 0.0e+00)
+    -> auf jedem Dublett der Familien-su(2) hoechstens ein Skalar, kein Pauli-Tripel
+(3) vertauscht mit L_e7 (komplex-linear bzgl. der e7-Struktur): max. Abweichung 0.0e+00; Linien durch e7: [(1, 6, 7), (2, 5, 7), (3, 4, 7)]
+    Element: Linie (1, 6): +1, Linie (2, 5): -1, Linie (3, 4): -1
+    Element: Linie (1, 6): -1, Linie (2, 5): +1, Linie (3, 4): -1
+    Element: Linie (1, 6): -1, Linie (2, 5): -1, Linie (3, 4): +1
+    -> Vorzeichenwechsel auf genau zwei der drei Linien (Determinante +1): die Kleinsche Gruppe im Torus von Stab(e7) = SU(3)
