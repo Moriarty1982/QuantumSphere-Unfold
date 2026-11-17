@@ -14,10 +14,10 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. CI nach #166 grün.
 - **PR #177 gemergt** (Squash 9b369c5; Vorab-Commit 42bebf0 per ours-Merge 2b6a1b1 von main erreichbar). Zweig gelöscht.
-- **Offen: PR #178** (Zweig `notes/i5-aussenwirkung`): I5 Außenwirkung in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Wartet auf „PR 178 mergen“.
+- **PR #178 gemergt** (5afb5d0, Merge-Commit): I5 Außenwirkung in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Zweig gelöscht. Keine offenen PRs. #17 nachgezogen.
   Issues #17, #10, #11 nachgezogen.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
@@ -32,7 +32,7 @@
   1. ~~**H112 Überbestimmungstest:**~~ erledigt (Vorab-Notiz, PR #177 gemergt); offen bleiben 2 und 3. vorab festlegen, dass β aus der nächsten JUNO-Messung von θ₁₂ (β² = sin²θ₁₂ cos²θ₁₃) und β aus dem
      nächsten Ω_m (Euclid/DESI DR3, β² = Ω_M) innerhalb der gemeinsamen Fehler übereinstimmen; prüft „eine Zahl“ ohne den exakten Wert der
      Zählregel. Heutiger Stand (kein Test): NuFIT 6.1 0,5494, JUNO 2026 0,5448, DESI DR2 0,5454, Planck 0,5615 (±0,006–0,008).
-  2. ~~**Außenwirkung:**~~ vom Autor zurückgestellt (17.11.), als I5 mit markiertem Material und Auslösern (PR #178); Neuheit prüfen (Moran-Lesart der Zählgleichung; Koide-Phase als Oktant minus γ_M/2, Brannen beachten), dann
+  2. ~~**Außenwirkung:**~~ vom Autor zurückgestellt (17.11.), als I5 mit markiertem Material und Auslösern (PR #178 gemergt); offen bleibt nur Vorschlag 3. Neuheit prüfen (Moran-Lesart der Zählgleichung; Koide-Phase als Oktant minus γ_M/2, Brannen beachten), dann
      2–3 kurze englische Notizen mit Standardbegriffen und je einem Test.
   3. **Zufallsabschätzung:** Zahl der Auswahlmöglichkeiten hinter den Treffern zählen und die Zufallswahrscheinlichkeit abschätzen.
 - **OP4 (17.11., PR #175, `notes/research/op4_status_audit_2026_11_17/`):** Bestandsaufnahme gegen Datenstand (NuFIT v6.1 = neueste, Daten
