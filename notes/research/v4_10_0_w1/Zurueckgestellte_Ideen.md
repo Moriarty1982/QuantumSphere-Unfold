@@ -90,3 +90,20 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
 - **Auslöser für den VPS:** Mehrere Geräte oder LLM-Clients brauchen denselben QAM-Stand, oder die Abfragen sollen bei ausgeschaltetem Arbeitsplatzrechner erreichbar sein. Dafür wäre ein geschützter MCP-Endpunkt über HTTPS nötig. Der Prototyp nutzt lokal stdio.
 - **Erster Betriebsumfang:** Einen konsistenten SQLite-Snapshot schreibgeschützt einbinden und bei Bedarf austauschen. Formeln, vorhandene MMA-Belege und Prämissenspuren über MCP abrufen. MML-Ausführung und Replay separat bewerten, sobald regelmäßig neue Rechnungen aus der Ferne gebraucht werden.
 - **Datenbankwahl erneut prüfen:** PostgreSQL bei regelmäßigen konkurrierenden Schreibzugriffen erwägen, Stored Procedures bei gemeinsam durchzusetzenden mehrstufigen Schreiboperationen und SQLAlchemy Core bei mehreren Datenbank-Backends oder vielen gemeinsam gepflegten Abfragen. Für den Leseprototyp genügt Pythons `sqlite3`.
+
+## I5: Außenwirkung – einzelne prüfbare Befunde als kurze englische Notizen
+- **Herkunft:** Vorschlag aus der Sitzung vom 17.11.2026 (Übergabe, Vorschlag 2). Autor, 17.11.2026: zurückstellen, „dafür ist für meinen Geschmack noch etwas zu viel offen“; Material schon sammeln und markieren.
+- **Inhalt:** Zuerst Neuheit prüfen (Literatur), dann 2–3 kurze englische Notizen mit Standardbegriffen (ohne Frames M/T/P, Runden, Projektsprache) und je einem klaren Test. Versand an Journal, arXiv oder Kollegen nur mit Freigabe des Autors.
+- **Material (nur markiert, nicht bearbeitet; vor Verwendung prüfen, ob es noch gilt):**
+  1. **Moran-Lesart der Zählgleichung:** Domagała–Lewandowski/Meissner-Zählung = Moran-Gleichung Σ g r^D = 1; γ_L = 1,8647 als Hausdorff-Dimension, Dimensionsleiter T ⊂ M ⊂ P als ℝ¹ ⊂ ℝ² ⊂ ℝ³. `../op1_moran_geometry_2026_11_17/README.md` (PR #170, #171). Nicht blind; ein eigener blinder Test fehlt. Neuheit ungeprüft.
+  2. **Koide-Phase als Oktant minus γ_M/2 (H102):** Φ_e = π/4 − γ_M/2, m_τ = 1777,134 MeV, Test mit der nächsten PDG-Ausgabe. `../predictions/Vorab_Notiz_H102_Tau_Masse_aus_gamma.md`; Abgrenzung zu Brannen (Found. Phys. 40 (2010) 1681, arXiv:1006.3114) nötig. Hängt an CT-001/CT-002 (sieben Guards), nachträglich gefunden (154 Versuche, ein Treffer).
+  3. **Eine Zahl an zwei Messstellen (H9, H96, H112):** |U_e2|² = β² und Ω_M = β², Überbestimmung ohne den Wert der Zählregel. `../predictions/Vorab_Notiz_H112_Ueberbestimmung_beta.md`, `../predictions/Vorab_Notiz_H96_Omega_M_beta2.md`, `../v4_8_0_r03_r12/llm/Vorab_Notiz_H9_Solarwinkel_beta_sym.md`. Klarster externer Test; H9 nachträglich gefunden.
+  4. **Sonderstellung der Zählregel-Paarung (H98, H104):** DL/ABCK als einziges datenverträgliches Paar unter 36, aber abhängig vom festgehaltenen Spektrum. `../predictions/Ergebnis_H98_Zaehlregel_Sonderstellung.md`. Eher Begleitmaterial für 1 oder 3.
+  5. **Neutrino-Verhältnis R (H99, H100):** drei feste Werte für Δm²₂₁/Δm²₃₁ gegen die nächste NuFIT-Version. `../predictions/Ergebnis_H99_Neutrino_Phase_Bogenrand.md`, `../predictions/Vorab_Notiz_H100_Neutrino_Verhaeltnis_naechster_Fit.md`. Brannen-Bezug wie bei 2.
+  6. **Hintergrund, nicht als eigene Notiz:** `../toe_comparison_2026_11_17/` (Abgrenzung gegen andere TOEs, Quellen teils aus Vorwissen), `../review_discarded_ideas_2026_11_17/` (was schon verworfen ist).
+- **Auslöser:**
+  1. Eine der Vorhersagen H9, H96, H100, H102 oder H112 wird mit neuen Daten entschieden (bestätigt oder widerlegt).
+  2. OP1 bekommt eine Herleitung der Zählregel von M oder wird vom Autor ruhen gelassen.
+  3. Die Moran-Lesart bekommt einen blinden Test.
+  4. Der Autor fragt nach Veröffentlichung einzelner Ergebnisse oder nach Rückmeldung von außen.
+- **Stand:** zurückgestellt (17.11.2026); nur gesammelt.
