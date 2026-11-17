@@ -14,21 +14,21 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. CI nach #166 grün.
-- **Offen: PR #177** (Zweig `research/h112-ueberbestimmung`, Commit 42bebf0): Vorab-Notiz H112 mit Skript k234 und Wiki. Wartet auf „PR 177 mergen“;
-  danach Zweig löschen und Issues #17, #10 (OP1), #11 (OP4) nachziehen.
+- **PR #177 gemergt** (Squash 9b369c5; Vorab-Commit 42bebf0 per ours-Merge 2b6a1b1 von main erreichbar). Zweig gelöscht. Keine offenen PRs.
+  Issues #17, #10, #11 nachgezogen.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
 ### Forschung
 - **Letzte Runde:** v4.10.0-r29 (Zählregel von M als eine Zahl, r29.1–r29.7, drei Rücknahmen; PR #174; Kandidat 1461 Seiten, Linter 0).
   Davor r28 (in v5.2.0), r27 (PR #156). Runden r29 ff. sind nicht veröffentlicht (öffentlich: v5.2.0 bis r28).
-- **Hypothesen:** zuletzt vergeben **H112** (k234, offen, vorab 42bebf0, PR #177). Frei: **H113, k235**.
+- **Hypothesen:** zuletzt vergeben **H112** (k234, offen, vorab 42bebf0, PR #177 gemergt). Frei: **H113, k235**.
 - **H112 (17.11., Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H112_Ueberbestimmung_beta.md`):** sin²θ₁₂ cos²θ₁₃ (Prüfdaten H9) = Ω_m
   (Prüfdaten H96), ohne den Wert 0,30185; |z| ≥ 3 widerlegt, Frist 31.12.2029. Schwacher Test (widerlegt erst ab |Δβ²| ≳ 0,022), offen benannt.
   Vorschau (kein Test): alle vier Paarungen verträglich. Auswertung: `python k234_test_h112.py S12 S12+ S12- S13 OM OM+ OM-`, sobald beide Daten da sind.
 - **Offene Vorschläge an den Autor (17.11., noch nicht entschieden):**
-  1. ~~**H112 Überbestimmungstest:**~~ erledigt (Vorab-Notiz, PR #177); vorab festlegen, dass β aus der nächsten JUNO-Messung von θ₁₂ (β² = sin²θ₁₂ cos²θ₁₃) und β aus dem
+  1. ~~**H112 Überbestimmungstest:**~~ erledigt (Vorab-Notiz, PR #177 gemergt); offen bleiben 2 und 3. vorab festlegen, dass β aus der nächsten JUNO-Messung von θ₁₂ (β² = sin²θ₁₂ cos²θ₁₃) und β aus dem
      nächsten Ω_m (Euclid/DESI DR3, β² = Ω_M) innerhalb der gemeinsamen Fehler übereinstimmen; prüft „eine Zahl“ ohne den exakten Wert der
      Zählregel. Heutiger Stand (kein Test): NuFIT 6.1 0,5494, JUNO 2026 0,5448, DESI DR2 0,5454, Planck 0,5615 (±0,006–0,008).
   2. **Außenwirkung:** Neuheit prüfen (Moran-Lesart der Zählgleichung; Koide-Phase als Oktant minus γ_M/2, Brannen beachten), dann
