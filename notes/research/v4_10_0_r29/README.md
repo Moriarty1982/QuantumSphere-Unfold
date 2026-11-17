@@ -17,6 +17,6 @@ Guard ausgegeben.
 
 ## Prüfung
 - Guard-Linter (`python tools/qs.py guards sources/research/parts/v4100-post-release-layers.tex --start 3981`): 0 Kandidaten in den Zeilen 3981–4133.
-- Kandidaten-Build: siehe PR.
+- Kandidaten-Build (`python .github/scripts/qsc_latex_build.py --source-dir sources/research --output-dir <Pfad>`, MiKTeX): 1461 Seiten, 0 Fehler, 0 undefinierte Verweise, 0 Overfull; r29 im Inhaltsverzeichnis, Text ab Seite 1455.
 
 OP1–OP5, C5, C6/T2 offen.
