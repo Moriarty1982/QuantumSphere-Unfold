@@ -14,7 +14,7 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. Keine offenen PRs. CI nach #166 grün.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
@@ -38,6 +38,11 @@
   und zurückgenommen, `op4_h6_criterion_c_2026_11_17/`: Vorzeichen-Symmetrie = Kleinsche Gruppe im Torus von Stab(e₇), nur Parallele A₄/S₄).
   `toe_comparison_2026_11_17/`: Bruchstellen anderer TOEs; Lesart: Breite zwischen reell (Äquator) und selbstdual (Pol), M bei b = 1/γ_L.
   Quellen teils Vorwissen, vor Verwendung im Paper prüfen.
+- **Moran-Lesart (17.11., PR #170, `notes/research/op1_moran_geometry_2026_11_17/`, Erkundung, nicht blind):** Zählgleichung in T-Einheiten =
+  Moran-Gleichung Σ g r^D = 1, r_j = 2^{−a(j)/a(½)}; Frame-Faktoren = Hausdorff-Dimensionen (T 1, M 1,8647 = γ_L, P 2,1515; linear M = log₂ 3).
+  M-Fraktal liegt in der Ebene (explizite Anordnung), P nicht (Σ r² = 1,199). 2 = größte ganze Kopienzahl je SU(2)-Skala in der Ebene (3: D 2,27).
+  Nachträgliches Prinzip: reichstes selbstähnliches Gebilde mit ganzer Kopienzahl auf der Fläche → M, γ_L, b_M ohne freien Parameter.
+  Offen: ein blinder Test (Dimension 1,8647 an anderer Stelle messbar?).
 - **Möglicher nächster Schritt:** OP1 steht wieder bei „warum Gewicht 2 im Spektrum √(j(j+1))“; ungeprüft: geladene/rotierende
   Horizonte, Graukörper. Ggf. OP1 ruhen lassen (Autorentscheidung). Test nur mit Vorab-Notiz (H112). Nächste Version erst mit
   genug Stoff für beide Ausgaben.
