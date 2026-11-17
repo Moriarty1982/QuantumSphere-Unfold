@@ -102,6 +102,10 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: Nachtrag H6 Kriterium C (trägt nicht) in Forschungsstand.
+
+- 17.11.2026: Sichtung verworfener Ideen und TOE-Vergleich in Forschungsstand.
+
 - 17.11.2026: Quellensuche ω_M = 1,2925 · T_H (0 Treffer) in Forschungsstand.
 
 - 17.11.2026: Nachtrag Gabel spektrumfrei (ω_M/ω_T = γ_L) in Forschungsstand.
