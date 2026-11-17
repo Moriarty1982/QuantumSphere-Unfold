@@ -109,3 +109,9 @@ nur dann einen neuen Zugang, wenn eine ausgezeichnete Horizontfrequenz den Wert 
 Suchrichtung „Frequenz der Auslesung“ ist damit für Schwarzschild-Frequenzen ausgeschöpft; offen bleiben nicht geprüfte Frequenzen (geladene oder
 rotierende Horizonte, Graukörper-gewichtete Spektren). OP1 ist wieder bei der Ausgangsfrage: Warum ist γ_L = 1,8647, also warum zählt M mit
 Gewicht 2 im Spektrum √(j(j+1)). OP1 offen.
+
+## Nachtrag (17.11.2026, nach `../op1_two_readings_2026_11_17/`): nur unter Lesart (H)
+Die Folgerung, die Breite von M verlange eine Frequenz, nimmt die Registerbreite b als Helizitätsbreite (Lesart H). Der Test beider Lesarten zeigt,
+dass Konvention F nur in der Beobachterlesart (B), φ = sech 2η, widerspruchsfrei ist (r21.8: R ist ein reelles Feld mit E ∥ B und φ = 1). Unter (B)
+erreichen auch statische Felder die Breite b_M (Beobachter mit Rapidität η), und die Frequenzbedingung entfällt. Die Rechnungen dieser Notiz bleiben
+richtig; ihre Deutung für das Register von M gilt nur unter (H).

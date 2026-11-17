@@ -1,0 +1,21 @@
+b_M = 1/gamma_L = 0.5363
+Feld | (B) phi | (H) b_H
+R (E || B, reell)            | 1.0000 | 0.0000
+M (R geboostet, eta)         | 0.5363 | 0.0000
+T (J_B-Bild von M)           | 0.5363 | 0.0000
+P (Nullfeld)                 | 0.0000 | nan
+Pol (selbstdual, komplex)    | nan | 1.0000
+Bestandsaussagen: S1 R hat Breite 1 (rein); S2 P hat 0; S3 |b_M| = |b_T| = 0,5363; S4 Breite beobachterunabhaengig.
+  (B): S1 ja (phi = 1), S2 ja (0), S3 ja (0,5363 fuer M und T), S4 nein (phi haengt vom Beobachter ab).
+  (H): S1 nein (reelles R liegt bei 0 = Lage von P), S2 unbestimmt (Nullfeld ohne Punkt), S3 nein fuer reelle Felder (0), S4 ja.
+Kandidatenliste (B), Ziel v = 0.549406, Treffer bei rel. Abstand <= 1e-3:
+  1 Photonring-Kreisbahn               1.000000  rel. Abstand 0.820
+  2 ISCO-Kreisbahn                     0.500000  rel. Abstand 0.090
+  3 freier Fall bei 6M                 0.577350  rel. Abstand 0.051
+  4 freier Fall bei 3M                 0.816497  rel. Abstand 0.486
+  5 marginal gebundene Kreisbahn 4M    0.707107  rel. Abstand 0.287
+  6 freier Fall bei 4M                 0.707107  rel. Abstand 0.287
+  7 Energiedichte x2                   0.577350  rel. Abstand 0.051
+  9a tanh(gamma_M)                     0.233164  rel. Abstand 0.576
+  9b tanh(gamma_P)                     0.267405  rel. Abstand 0.513
+Treffer: 0 von 9

@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: OP1 beide Lesarten der Registerbreite getestet in Forschungsstand und Offene-Probleme.
+
 - 17.11.2026: OP1 Rückwärtssuche und offene Voraussetzung (Lesarten H und B) in Forschungsstand.
 
 - 17.11.2026: Nachtrag Beobachterpaar (M, M̄), Boost-Lesart zurückgenommen, in Forschungsstand und Offene-Probleme.
