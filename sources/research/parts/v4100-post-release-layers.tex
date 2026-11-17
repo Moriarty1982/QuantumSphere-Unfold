@@ -3978,3 +3978,156 @@ R_{\rm glob}^{(v4100\text{-}r28,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r29 Source-Only: The Counting Rule of Frame M as One Number: Flux Lines, Readout Frequency, Moran Dimension and Two Readings of the Register}
+\addcontentsline{toc}{section}{v4.10.0-r29 Source-Only: The Counting Rule of Frame M as One Number}
+\label{sec:v4100-r29-one-number}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v5.2.0 the author continued with OP1, the question why frame M counts every spin with weight two.  The work of 17 November 2026 is recorded here:
+the horizon punctures as flux lines, the readout frequency of M, the counting equation as a Moran equation, the equivalence of several forms of the
+frame factor, and a test of two readings of the register of convention~F.  It also records a review of discarded ideas, one candidate from it that
+did not hold, and a comparison with other unification attempts.  Every item is an exploration without pre-registration; targets and weights were
+known.  Three readings stated during the work were withdrawn and are recorded as such.  Earlier layers are not rewritten.  The notes are listed in
+\S\ref{subsec:v4100-r29-notes}.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r29 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.2.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24294648}{10.5281/zenodo.24294648} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r29 results}
+\label{subsec:v4100-r29-results}
+
+\paragraph{Remark v4.10.0-r29.1 (punctures of an isolated horizon are flux lines; literature and computation).}
+At an isolated horizon \(T_{\mu\nu}l^\mu l^\nu=0\) gives \(\phi_0=0\) (Eder and Sahlmann, arXiv:1801.00747): no radiation crosses, and Maxwell punctures
+are flux lines carrying electric and magnetic charge through \(\phi_1\).  No reading of the U(1) count as a count of massless helicities was found in
+the literature read.  Real fields, including static flux lines and real Weyl fields of type~D with any \(\Psi_2\), lie on the equator of the \(\chi\)
+sphere (r16.3(c)).  Hence (S1\('\)) as a massless crossing does not fit the isolated horizon at which the DL and ABK counts are made.
+
+\paragraph{Remark v4.10.0-r29.2 (readout frequency and the quasinormal fork).}
+For every area spectrum \(a(j)\) the rule of T has the smallest area quantum \(4\ln2\), and the ratio of the smallest quanta of M and T is
+\(\gamma_M/\gamma_T=\gamma_L\).  Read by Bohr correspondence (\(\omega=\Delta A\,T_H/4\)),
+\[
+\omega_T=\ln2\cdot T_H,\qquad \omega_M=\gamma_L\ln2\cdot T_H=1.2925\,T_H .
+\]
+The weight-two rule with the linear spectrum \(a(j)=j\) gives \(\gamma=\ln3/\pi\) and the smallest step \(4\ln3\), the quasinormal quantum of Dreyer
+(gr-qc/0211076); this combination is not in the papers read (Dreyer, Corichi, Polychronakos, Frodden--Geiller--Noui--Perez).  For any spectrum, a
+quasinormal readout of M is equivalent to \(\gamma_L=\log_23\), hence \(\Omega_M=0.226\), against the data pairing of H98.  A list of 16 distinguished
+Schwarzschild frequencies, fixed before the computation, contains no source of \(1.2925\,T_H\).
+
+\paragraph{Theoremlet v4.10.0-r29.3 (the counting equation is a Moran equation).}
+In units of the T quantum the counting equation \(\sum_jg(j)e^{-2\pi\gamma a(j)}=1\) reads
+\[
+\sum_j g(j)\,r_j^{\,D}=1,\qquad r_j=2^{-a(j)/a(1/2)},\qquad D=\gamma/\gamma_T .
+\]
+This is the Moran equation of a self-similar set with \(g(j)\) copies at scale \(r_j\); with the open set condition its Hausdorff dimension is
+\(D\).  For the spectrum \(\sqrt{j(j+1)}\): \(D_T=1\), \(D_M=1.8647=\gamma_L\), \(D_P=2.1515\); for the linear spectrum \(D_M=\log_23\) (Sierpinski
+triangle).  An explicit arrangement in the unit square (twelve largest copies placed and checked, the rest by Moon--Moser) shows that the M set lies in
+the plane.  The P set cannot: \(\sum(2j+1)r_j^2=1.199>1\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] With a constant integer number \(w\) of copies per scale, \(w=2\) is the largest that fits in the plane (\(w=3\): \(D=2.27\)); \(D=2\) would
+need \(w=2.30\).
+\item[(b)] In the rule space of H98 the richest rule that fits in \(\mathbb R^d\) is that of T for \(d=1\) (two halves tile the segment), of M for
+\(d=2\) and of P for \(d=3\).
+\end{enumerate}
+Reading, stated afterwards: a horizon carries the richest self-similar structure with an integer number of copies per SU(2) scale that fits on the
+two-dimensional surface; this fixes the rule of M, \(\gamma_L\) and \(b_M=1/\gamma_L\) without a free parameter.  It is a reading, not a derivation.
+
+\paragraph{Remark v4.10.0-r29.4 (one number in six forms).}
+\(\gamma_L=1.864699765\) equals \(\gamma_M/\gamma_T\) (definition), \(D_M\) (r29.3), \(\omega_M/\omega_T\) (r29.2), \(\cosh2\eta\) with
+\(\beta_{\rm sym}=\tanh\eta\) (definition), \(1/b_M\) (convention~F) and the Lorentz factor of two flux-opposed observers (r11.5(b)).  The pair of
+r11.5(b) is \((M,\bar M)\), not \((M,T)\): a boost preserves \(s=(E+iB)^2\), whereas the frame T is the \(J_B\) image with \(s\mapsto-\bar s\) (matter to
+tachyon), reached only by the imaginary shift \(i\pi/2\).  The example of r11.5(b) looked like T because on fields with \(E\cdot B=0\) the map
+\((E,B)\mapsto(E,-B)\) is a rotation by \(\pi\).  \(\gamma_L\) is the mutual Lorentz factor of \(M\) and \(\bar M\) and the energy-density ratio
+\(u(M)/u(R)\).
+
+\paragraph{Theoremlet v4.10.0-r29.5 (two readings of the register; the observer reading is the consistent one).}
+The register width \(b\) of convention~F admits two readings with the value \(1/\gamma_L\): (H) the helicity width
+\((|s_+|-|s_-|)/(|s_+|+|s_-|)\), invariant, zero for real fields; (B) the observer quantity \(\phi=|s|/(|E|^2+|B|^2)=\operatorname{sech}2\eta_R\) of
+r21.8.  Checked on the same fields: (B) reproduces the definitions of R (\(E\parallel B\), \(\phi=1\)), P (null field, \(\phi=0\)) and of M and T
+(\(0.5363\), separated by the sign of \(\operatorname{Re}s\)); (H) places the real reference field R at \(0\), the position of P, and contradicts
+r21.8(c).  The register is therefore an observer quantity.  Consequences: the chain ``width \(\ne0\) \(\Rightarrow\) relative phases \(\Rightarrow\)
+frequency'' holds only under (H) and is marked conditional in the notes; a static horizon read as P (\(\sum(2j+1)r_j^2>1\)) remains true as a counting
+statement.  Under (B) OP1 is the question why the observer M moves with \(\beta_{\rm sym}=0.5494\) relative to the rest frame of the field; nine
+distinguished horizon velocities fixed in advance give no hit (nearest \(1/\sqrt3\), \(5.1\%\)).
+
+\paragraph{Remark v4.10.0-r29.6 (review of discarded ideas; a candidate that did not hold).}
+The 35 refuted tests, the withdrawn conditions and the deferred ideas I1--I4 were checked against ten premises corrected later.  Rechecked with the
+corrected premise and still refuted: H13 (frame velocity \(\beta_{\rm sym}\) instead of \(1/\sqrt3\), \(z=-4.9\)) and H73 (tachyon weights,
+\(|w+1|=0.104\)).  H61--H63 were rejected under a test assumption and are open, not negated.  The candidate H6, criterion C (TM1 if the group of triole
+and reflection contains the four-element sign symmetry of the octonions), did not hold: the sign symmetry is the Klein group in the torus of
+\(\operatorname{Stab}(e_7)=SU(3)\); it fixes \(\operatorname{span}(1,e_7)\), on which the frame maps act through \(\varphi\), and commutes with the
+family \(\mathfrak{su}(2)\) of r13.4.  The same pattern (\(A_4\), with a reflection \(S_4\)) appears on two different spaces; there is no
+identification.
+
+\paragraph{Remark v4.10.0-r29.7 (comparison with other unification attempts; reading).}
+Kaluza--Klein, supergravity, grand unification, strings, loop gravity, self-dual variables, twistors, \(E_8\), division algebras, noncommutative
+geometry and Koide derivations fail or stall at four places: chirality and three generations, the selection of the state, a free parameter of the
+gravitational sector, and reality against self-duality.  The companion meets the same four (OP3, OP5, OP1, the \(\chi\) sphere).  Part of the
+literature in this comparison is prior knowledge and not read in this session; it is not used in any statement above.
+
+\paragraph{Withdrawn during the work.}
+(i) ``The four-element group of the frame maps gives criterion C of H6 its reason'' (r29.6).  (ii) ``The frequency of M is the bit frequency of T seen
+by the counter-observer'' (r29.4).  (iii) ``A surface readout requires a frequency'' as a statement about the register of M (r29.5; it holds only
+under the helicity reading).
+
+\subsection*{v4.10.0-r29 frames}
+\label{subsec:v4100-r29-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item R: rest frame of the field, \(E\parallel B\), \(\phi=1\); rapidity \(0\).
+\item M: observer at rapidity \(\eta\) (\(\tanh\eta=\beta_{\rm sym}\)), \(\phi=1/\gamma_L\); weight two, Moran dimension \(1.8647\), surface rung.
+\item T: \(J_B\) image, tachyon side, shift \(i\pi/2\); \(j=\tfrac12\) only, dimension \(1\), line rung.
+\item P: null field, \(\phi=0\), rapidity \(\infty\); all \(2j+1\), dimension \(2.1515\), volume rung.
+\end{itemize}
+
+\subsection*{v4.10.0-r29 register entries}
+\label{subsec:v4100-r29-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r29\\
+\midrule
+counting rule of frame M (OP1) & open; equivalent to one number \(\gamma_L\) in six forms; Moran reading fixes it by a principle stated afterwards\\
+register width of convention~F & observer quantity \(\phi=\operatorname{sech}2\eta\) (r29.5)\\
+frequency requirement for M & conditional on the helicity reading; not a statement about the register\\
+(S1\('\)) as massless crossing & does not fit the isolated horizon (\(\phi_0=0\))\\
+H6 criterion C & no model-internal reason (r29.6)\\
+H61--H63 & open, not negated\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r29 notes}
+\label{subsec:v4100-r29-notes}
+
+\texttt{op1\_\allowbreak flux\_\allowbreak lines}, \texttt{op1\_\allowbreak readout\_\allowbreak frequency}, \texttt{review\_\allowbreak discarded\_\allowbreak ideas},
+\texttt{toe\_\allowbreak comparison}, \texttt{op4\_\allowbreak h6\_\allowbreak criterion\_\allowbreak c}, \texttt{op1\_\allowbreak moran\_\allowbreak geometry},
+\texttt{op1\_\allowbreak one\_\allowbreak number}, \texttt{op1\_\allowbreak backward\_\allowbreak search}, \texttt{op1\_\allowbreak two\_\allowbreak readings}, all dated
+2026-11-17, each under \texttt{notes/\allowbreak research/}.  The candidate lists of r29.2 and r29.5 were committed before the computations.
+
+\subsection*{v4.10.0-r29 ledger and guard update}
+\label{subsec:v4100-r29-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r29}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; the counting rule of frame M and the velocity \(\beta_{\rm sym}\) not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r29,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r29}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
