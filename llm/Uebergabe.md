@@ -22,6 +22,13 @@
 - **Letzte Runde:** v4.10.0-r29 (Zählregel von M als eine Zahl, r29.1–r29.7, drei Rücknahmen; PR #174; Kandidat 1461 Seiten, Linter 0).
   Davor r28 (in v5.2.0), r27 (PR #156). Runden r29 ff. sind nicht veröffentlicht (öffentlich: v5.2.0 bis r28).
 - **Hypothesen:** zuletzt vergeben **H111** (k233, widerlegt). Frei: **H112, k234**.
+- **Offene Vorschläge an den Autor (17.11., noch nicht entschieden):**
+  1. **H112 Überbestimmungstest:** vorab festlegen, dass β aus der nächsten JUNO-Messung von θ₁₂ (β² = sin²θ₁₂ cos²θ₁₃) und β aus dem
+     nächsten Ω_m (Euclid/DESI DR3, β² = Ω_M) innerhalb der gemeinsamen Fehler übereinstimmen; prüft „eine Zahl“ ohne den exakten Wert der
+     Zählregel. Heutiger Stand (kein Test): NuFIT 6.1 0,5494, JUNO 2026 0,5448, DESI DR2 0,5454, Planck 0,5615 (±0,006–0,008).
+  2. **Außenwirkung:** Neuheit prüfen (Moran-Lesart der Zählgleichung; Koide-Phase als Oktant minus γ_M/2, Brannen beachten), dann
+     2–3 kurze englische Notizen mit Standardbegriffen und je einem Test.
+  3. **Zufallsabschätzung:** Zahl der Auswahlmöglichkeiten hinter den Treffern zählen und die Zufallswahrscheinlichkeit abschätzen.
 - **OP4 (17.11., PR #175, `notes/research/op4_status_audit_2026_11_17/`):** Bestandsaufnahme gegen Datenstand (NuFIT v6.1 = neueste, Daten
   Nov. 2025; JUNO zuletzt 29.09.2026, sin²θ₁₂ = 0,3036 ± 0,0064). Offen und wartend: H9 (JUNO σ ≤ 0,004), H42/H46 (nächste globale Auswertung),
   H100 (NuFIT nach 6.1, Frist 31.12.2027). H9 und H46 hängen an β_sym/η (OP1-Zahl). Issue #11: drei von vier Kriterien erfüllt, Herleitung fehlt.
