@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: OP4-Vorschau der wartenden Vorhersagen in Offene-Probleme.
+
 - 17.11.2026: OP4-Bestandsaufnahme in Offene-Probleme und Forschungsstand.
 
 - 17.11.2026: Runde r29 (Zählregel von M als eine Zahl) in Inhalt, Content-overview, Forschungslinie, Gesamtbild, Forschungsstand.

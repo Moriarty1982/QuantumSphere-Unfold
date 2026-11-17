@@ -50,3 +50,21 @@ Verwendung in der Mischung. Keine neue Vorhersage; die bestehenden Kriterien ble
 - [x] Freie Kalibrierung von Hergeleitetem getrennt (Tabelle).
 - [x] Verbleibende Abweichung und Zusatzannahmen benannt.
 - [ ] Eine geprüfte Herleitung oder ein ausdrücklich eingeschränkter Ersatzsatz: **nicht vorhanden.** OP4 offen.
+
+## Nachtrag (17.11.2026): Vorschau der wartenden Vorhersagen (kein Test)
+Auftrag des Autors: „weiter“. Skript `preview.py`, Ausgabe `run/preview_stdout.txt`. **Kein Test:** NuFIT 6.1 (Datenstand November 2025) und JUNO
+(29.09.2026) liegen vor den Festlegungen bzw. erfüllen die Genauigkeitsbedingung nicht; die Kriterien bleiben unverändert. Die Vorschau zeigt nur, wie
+die Vorhersagen bei unveränderten Werten ausgingen. Werte aus der Parametertabelle v61.tbl-parameters.pdf (normale Ordnung, mit und ohne SK-atm gleich).
+2σ-Intervalle hier genähert als Bestwert ± 2 × einseitiger 1σ-Fehler.
+
+| Vorhersage | Kriterium | NuFIT 6.1 | JUNO 29.09.2026 |
+|---|---|---|---|
+| H42: sin²θ₂₃ ≤ 0,54 | bestätigt, wenn 2σ ganz unter 0,54 | 2σ ≈ [0,442; 0,504]: **läge bestätigt** | – |
+| H46: sin²θ₂₃ ∈ [0,49; 0,50] | widerlegt, wenn 2σ nicht berührt; bestätigt, wenn 1σ berührt und 2σ-Breite < 0,06 | 1σ [0,456; 0,487] berührt nicht, 2σ berührt, Breite 0,062: **unentschieden**; Bestwert 1,2σ unter 0,49 | – |
+| H9: sin²θ₁₂ = β_sym²/cos²θ₁₃ | \|z\| < 2 verträglich, ≥ 3 widerlegt; nur JUNO mit σ ≤ 0,004 | 0,3088 gegen 0,3088: **0,00σ** | +0,81σ (σ = 0,0064, zu groß für das Kriterium) |
+| H12: sin²θ₁₂ = 0,2991 ± 0,0057 | verträglich bei \|z\| < 2 | −1,11σ | −0,53σ |
+| TM1 (H4): sin²θ₁₂ = 0,3182 | Vergleich | +1,40σ | +2,28σ |
+
+**Lesart der Vorschau.** Bleiben die Werte, wird H42 bestätigt, H46 bleibt ohne Entscheidung (die θ₂₃-Messung ist dafür noch zu breit) und H9 bleibt
+verträglich; TM1 wird mit jeder genaueren JUNO-Messung bei 0,304 weiter ausgeschlossen. Die Vorhersage mit dem größten Gewicht ist H9, weil sie keine
+freie Größe hat und JUNO sie in wenigen Jahren mit σ ≤ 0,004 entscheiden kann. OP4 offen.
