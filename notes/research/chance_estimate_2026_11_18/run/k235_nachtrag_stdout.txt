@@ -1,0 +1,2 @@
+P(sin2 t12) 0.176, P(Omega_m) 0.212, P(beide) 0.129, P(Omega_m | sin2 t12) 0.733
+ohne Omega_m im Katalog (15 Ziele): P(n>=2) 0.0494, 36*P 1.780
