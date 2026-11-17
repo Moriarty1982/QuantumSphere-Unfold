@@ -14,7 +14,7 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #167** (012b296, OP1 Querungen oder Flusslinien), davor **PR #166** (9a07c7b, Release v5.2.0), #165 (ee81bf2), …
+- `main` nach **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. Keine offenen PRs. CI nach #166 grün.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
@@ -29,7 +29,11 @@
   (Eder–Sahlmann 1801.00747): keine Strahlung quert, Punktierungen sind Flusslinien. Reelle Felder (EM und Weyl, auch Typ D)
   liegen auf der χ-Kugel bei P; Breite von M und Ports nur mit Frequenz ω > 0. (S1′) als Querung passt nicht zum isolierten
   Horizont. Kein blinder H112 auf dieser Linie (Autor: „Erkundung statt Test“).
-- **Möglicher nächster Schritt:** OP1 – mit welcher Frequenz liest M aus? Kandidaten: Uhr (r17, Zeitzyklus r18) oder
-  quasinormale Moden des Horizonts (Literatur zuerst). Test nur mit Vorab-Notiz (H112). Nächste Version erst mit genug
-  Stoff für beide Ausgaben.
+- **Auslesefrequenz (17.11., PR #168, `notes/research/op1_readout_frequency_2026_11_17/`, Erkundung):** Quasinormal-Quant 4 ln 3
+  (Dreyer) = kleinster Schritt der Gewicht-2-Regel nur bei linearem Spektrum (γ = ln 3/π). Spektrumfrei: ω_M/ω_T = γ_L; QNM-Auslesung
+  von M ⇔ γ_L = log₂ 3 (Ω_M 0,226, widerspricht H98). Datenpaarung ⇒ ω_M = 1,2925·T_H; Quellensuche mit vorab festgelegter Liste
+  (9fce085, 16 Kandidaten): 0 Treffer, nächster 2η (4,4 %). Suchrichtung Frequenz für Schwarzschild ausgeschöpft.
+- **Möglicher nächster Schritt:** OP1 steht wieder bei „warum Gewicht 2 im Spektrum √(j(j+1))“; ungeprüft: geladene/rotierende
+  Horizonte, Graukörper. Ggf. OP1 ruhen lassen (Autorentscheidung). Test nur mit Vorab-Notiz (H112). Nächste Version erst mit
+  genug Stoff für beide Ausgaben.
 - OP1–OP5, C5, C6/T2 offen. Notizen unter `notes/research/op1_*_2026_11_1[67]/`, `op3_*_2026_11_16/`, `v4_10_0_r28/`.
