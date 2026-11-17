@@ -1,0 +1,9 @@
+(a) reelle Weyl-Felder: max |Breite| = 0.0e+00 (Lage von P)
+    Typ D, Psi_2 = 1.0: Breite 0.0e+00
+    Typ D, Psi_2 = (0.8+0.3j): Breite 0.0e+00
+    Typ D, Psi_2 = (0.2+1j): Breite 0.0e+00
+(b) relative Phase 0.0: Breite +0.0000
+(b) relative Phase 0.3: Breite -0.0928
+(b) relative Phase 0.8: Breite -0.0704
+(b) relative Phase 1.2: Breite -0.0318
+    relative Phase 0 = reelles (statisches) Feld bis auf Gesamtphase -> Breite 0; Phasen gibt es nur bei w > 0

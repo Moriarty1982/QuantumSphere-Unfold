@@ -60,3 +60,26 @@ III.A, III.C, IV.B–D); Vaid, „Quantum Hall Effect and Black Hole Entropy in 
 ## Ergebnis in einem Satz
 Am isolierten Horizont quert keine Strahlung (φ₀ = 0); seine Punktierungen sind Flusslinien, und Flusslinien liegen auf der χ-Kugel bei P, nicht an
 den Ports. (S1′) als masselose Querung passt deshalb nicht zum isolierten Horizont, und die Gewicht-2-Zählung von M bleibt unbegründet. OP1 offen.
+
+## Nachtrag (17.11.2026): Die Breite von M setzt eine Frequenz voraus
+Entscheidung des Autors: „Erkundung statt Test“. Ein blinder Test H112 auf dieser Linie gibt es nicht: Die Lage reeller Felder steht analytisch
+fest, und eine Zuordnung „Gleichgewichtshorizont zählt wie P“ für γ_L ist durch die Daten schon entschieden (γ_L = 2,1515, Ω_M = β² = 0,365 statt
+0,302, m_τ ≈ 1868 MeV; H98 hatte das Paar DL/ABCK als einziges datenverträgliches gefunden). H112 bleibt frei. Skript `frequency.py`, Ausgabe
+`run/frequency_stdout.txt`.
+
+| Prüfung | Ergebnis |
+|---|---|
+| (a) gravitatives Analogon: Q = E + iB mit reellen, symmetrischen, spurfreien E_ij, B_ij; s₊ = tr Q², s₋ = tr Q̄² | Breite 0 für alle 1000 Felder (Lage von P) |
+| (a) Typ D am isolierten Horizont (nur Ψ₂), Ψ₂ reell (Schwarzschild) oder komplex (Kerr) | Breite 0 |
+| (b) zeitharmonisches Maxwell-Feld, relative Phase φ zwischen Amplitudenkomponenten | φ = 0: Breite 0; φ = 0,3/0,8/1,2: Breite −0,093/−0,070/−0,032 |
+
+**Folgerung.** Auf der χ-Kugel liegt jedes reelle Feld, elektromagnetisch wie gravitativ, bei P. Eine Breite ungleich null, und damit die Lage von
+M (b = 0,5363) und die Ports, gibt es nur mit relativen Phasen zwischen den Amplituden, also nur für ein zeitharmonisches Feld mit Frequenz
+ω > 0. Ein Horizont im Gleichgewicht hat keine solche Frequenz: Seine Daten (Ψ₂, φ₁) sind reell im Sinn von r16.3(c) und liegen bei P.
+Die Gewicht-2-Zählung des Frames M gehört deshalb, wenn sie physikalisch begründet ist, zu einer **zeitharmonischen Auslesung** (Frequenz,
+Helizität), nicht zum statischen Horizont. Das schärft OP1: Gesucht ist nicht eine Eigenschaft der Punktierungen eines isolierten Horizonts,
+sondern die Frequenz, mit der M ausliest.
+
+**Bezug.** Passt zu r16.8 (s(t) mit e^{∓2iωt}, Rang zwei von S nur für zeitharmonische Felder) und zur Lesart „M liest in R aus“
+(`../op1_r_readout_precheck_2026_11_16/`). Woher die Frequenz kommt, ist offen; Kandidaten wären die Uhr (r17, Zeitzyklus r18) oder
+quasinormale Moden des Horizonts (Literatur, nicht geprüft). Nicht blind, keine H-Nummer. OP1 offen.

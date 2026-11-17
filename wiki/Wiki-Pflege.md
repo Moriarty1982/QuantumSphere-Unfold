@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: Nachtrag „Breite von M setzt Frequenz voraus“ in Forschungsstand.
+
 - 17.11.2026: OP1 Querungen oder Flusslinien in Forschungsstand und Offene-Probleme.
 
 - 17.11.2026: v5.2.0 veröffentlicht (DOI 10.5281/zenodo.24294648) in Home, Versionen-und-Quellen, Gesamtbild.

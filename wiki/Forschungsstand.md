@@ -7,7 +7,7 @@ Auftrag des Autors („weiter“). Erkundung, nicht blind. Literatur: Am isolier
 - Flusslinien sind reelle Felder und liegen auf der χ-Kugel auf dem Äquator, also in der Lage von P (Helizität 0, r16.3(c)); die Dualität dreht dort nur den Ladungswinkel. Die Ports (Pole) und die Breite von M erreichen nur komplexe, zeitharmonische Felder.
 - Folge: (S1′) als masselose Querung passt nicht zum isolierten Horizont, an dem DL und ABK zählen. Lesart (nicht hergeleitet): Ein Horizont im Gleichgewicht trägt Punktierungen in der Lage von P und zählt 2j + 1 (0,274), wie die SU(2)-Behandlung; die Gewicht-2-Zählung von M bliebe einem nicht isolierten Horizont vorbehalten. Für H102 ist das eine Warnung, kein Befund.
 
-Grenze: LQG-Stränge sind gravitative Flusslinien; die χ-Lage ist nur für das Maxwell-Feld erklärt. OP1 offen. [Notiz](../notes/research/op1_flux_lines_2026_11_17/README.md).
+Grenze: LQG-Stränge sind gravitative Flusslinien; die χ-Lage ist nur für das Maxwell-Feld erklärt. **Nachtrag (Entscheidung des Autors: Erkundung statt Test):** Auch reelle Weyl-Felder (Typ D, beliebiges Ψ₂) liegen bei P; eine Breite ungleich null, also M und die Ports, gibt es nur mit relativen Phasen, das heißt bei Frequenz ω > 0. Die Gewicht-2-Zählung von M gehört damit, wenn überhaupt, zu einer zeitharmonischen Auslesung, nicht zum statischen Horizont; gesucht ist die Frequenz, mit der M ausliest. Kein blinder Test möglich, H112 frei. OP1 offen. [Notiz](../notes/research/op1_flux_lines_2026_11_17/README.md).
 
 ### Runde r28: Stand von Restbiegung und Zählregel (17.11.2026)
 
