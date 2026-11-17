@@ -14,7 +14,7 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. Keine offenen PRs. CI nach #166 grün.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
@@ -47,6 +47,9 @@
   ℝ³ = P (T ⊆ M ⊆ P als 1 ⊂ 2 ⊂ 3). Aus der Moran-Lesart allein kein blinder Test. Spannung zu P aufgelöst: Registerzählung passt erst ab
   b > b_c ≈ 0,25–0,35 auf eine Fläche; Kette Flächenauslesung ⇒ b > b_c ⇒ Frequenz ⇒ nicht statisch; statischer Horizont liest wie P.
   Offene Kernfrage OP1: woher die Frequenz der Auslesung M kommt.
+- **Eine Zahl (17.11., PR #172, `notes/research/op1_one_number_2026_11_17/`):** γ_L = γ_M/γ_T = D_M = ω_M/ω_T = cosh 2η = 1/b_M.
+  Beobachterpaar aus r11.5(b) geprüft: (M, M̄), nicht (M, T) (Boost erhält s; T = J_B-Bild, Tachyonseite, iπ/2). Boost-Lesart der Frequenz
+  zurückgenommen; γ_L = Lorentz-Faktor (M, M̄) = u(M)/u(R). Frequenz von M weiter offen.
 - **Möglicher nächster Schritt:** OP1 steht wieder bei „warum Gewicht 2 im Spektrum √(j(j+1))“; ungeprüft: geladene/rotierende
   Horizonte, Graukörper. Ggf. OP1 ruhen lassen (Autorentscheidung). Test nur mit Vorab-Notiz (H112). Nächste Version erst mit
   genug Stoff für beide Ausgaben.
