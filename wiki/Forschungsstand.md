@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### OP1: Mit welcher Frequenz liest M aus? (17.11.2026)
+
+Auftrag des Autors („weiter“). Erkundung, nicht blind. Literatur: Dreyer (Quasinormal-Frequenz ln 3/(8πM), Flächenquant 4 ln 3), Corichi, Polychronakos (äquidistantes Spektrum), Frodden–Geiller–Noui–Perez (γ = ±i gibt S = A/4; im Bild von r17.4 die Pole, also die Ports).
+
+- **Befund:** Die Gewicht-2-Regel von M mit linearem Flächenspektrum gibt γ = ln 3/π, und ihr kleinster Schritt (Δj = ½) hat genau die Fläche 4 ln 3, Dreyers Quasinormal-Quant. Die Bohr-Frequenz dieses Schritts ist die Quasinormal-Frequenz; Bekenstein–Hawking gilt zugleich, ohne SO(3) und ohne j_min = 1. In den gelesenen Arbeiten steht diese Kombination nicht.
+- **Mit dem Spektrum √(j(j+1)) des Bestands** passt keine Regel (M 5,17; P 5,97). T trifft in beiden Spektren 4 ln 2 (Bekensteins Bit).
+- **Preis:** Linear wird γ_L = log₂ 3 = 1,585 und Ω_M = 0,226 statt 0,302; die Datenpaarung von H98 fällt. Gabel: Quasinormal-Frequenz ⇒ lineares Spektrum ⇒ H98 fällt; √(j(j+1)) ⇒ M ohne Quasinormal-Frequenz.
+
+**Nachtrag (Gabel spektrumfrei):** T hat in jedem Spektrum das kleinste Quant 4 ln 2; das Verhältnis der Auslesefrequenzen ist ω_M/ω_T = γ_L. „M liest mit der Quasinormal-Frequenz“ ist daher gleichwertig mit γ_L = log₂ 3, für jedes Spektrum, solange T nach ABK zählt. Umgekehrt legt die Datenpaarung (γ_L = 1,8647) die Auslesefrequenz von M auf 1,2925 · T_H fest, ohne bekannte Quelle. **Quellensuche:** 16 vorab festgelegte Frequenzen (Quasinormalmoden asymptotisch und Grundtöne, Bekenstein-Bit, Photonring, Planck-Maxima, Maggiore, 2η) – 0 Treffer; nächster 2η = 1,2351 (4,4 %). Eine Quelle für 1,2925 wäre gleichwertig mit einer Herleitung von γ_L. OP1 offen. [Notiz](../notes/research/op1_readout_frequency_2026_11_17/README.md).
+
 ### OP1: Querungen oder Flusslinien? (17.11.2026)
 
 Auftrag des Autors („weiter“). Erkundung, nicht blind. Literatur: Am isolierten Horizont gilt T(l, l) = 0, also φ₀ = 0; es quert keine Strahlung (Eder–Sahlmann, arXiv:1801.00747). Maxwell-Punktierungen sind dort Flusslinien mit elektrischer und magnetischer Ladung, keine Querungen. Eine Lesart der U(1)-Zählung als Zählung masseloser Helizitäten wurde nicht gefunden.

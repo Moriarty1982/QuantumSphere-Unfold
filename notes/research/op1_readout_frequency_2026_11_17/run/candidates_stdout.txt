@@ -1,0 +1,18 @@
+Ziel omega_M/T_H = gamma_L ln2 = 1.29251; Treffer: relative Abweichung <= 1e-3
+  1 QNM asymptotisch gravitativ: ln 3          1.09861  rel. Abstand 0.150  
+  2 Bekenstein-Bit: ln 2                       0.69315  rel. Abstand 0.464  
+  2 Halbschritt (j+1/2): ln 4                  1.38629  rel. Abstand 0.073  
+  3 Polychronakos: ln((3+sqrt5)/2)             0.96242  rel. Abstand 0.255  
+  4 Maggiore: 2 pi                             6.28319  rel. Abstand 3.861  
+  5 QNM Grundton Skalar l=0 (0,11046)          2.77616  rel. Abstand 1.148  
+  5 QNM Grundton Skalar l=1 (0,29294)          7.36239  rel. Abstand 4.696  
+  5 QNM Grundton EM l=1 (0,24826)              6.23945  rel. Abstand 3.827  
+  5 QNM Grundton grav l=2 (0,37367)            9.39135  rel. Abstand 6.266  
+  5 QNM Grundton grav l=3 (0,59944)           15.06557  rel. Abstand 10.656  
+  6 Photonring 1/(3 sqrt3 M)                   4.83680  rel. Abstand 2.742  
+  7 Planck: Max. Energie pro d omega           2.82144  rel. Abstand 1.183  
+  7 Planck: Max. Photonenzahl pro d omega      1.59362  rel. Abstand 0.233  
+  7 Planck: mittlere Photonenenergie           2.70118  rel. Abstand 1.090  
+  8 Bestand: 2 eta (gamma_L = cosh 2 eta)      1.23506  rel. Abstand 0.044  
+  8 Bestand: eta                               0.61753  rel. Abstand 0.522  
+Treffer: 0 von 16; naechster Kandidat: 8 Bestand: 2 eta (gamma_L = cosh 2 eta) (1.23506, 0.044)
