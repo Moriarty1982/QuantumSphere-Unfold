@@ -83,3 +83,9 @@ sondern die Frequenz, mit der M ausliest.
 **Bezug.** Passt zu r16.8 (s(t) mit e^{∓2iωt}, Rang zwei von S nur für zeitharmonische Felder) und zur Lesart „M liest in R aus“
 (`../op1_r_readout_precheck_2026_11_16/`). Woher die Frequenz kommt, ist offen; Kandidaten wären die Uhr (r17, Zeitzyklus r18) oder
 quasinormale Moden des Horizonts (Literatur, nicht geprüft). Nicht blind, keine H-Nummer. OP1 offen.
+
+## Nachtrag (17.11.2026, nach `../op1_two_readings_2026_11_17/`): nur unter Lesart (H)
+Die Folgerung, die Breite von M verlange eine Frequenz, nimmt die Registerbreite b als Helizitätsbreite (Lesart H). Der Test beider Lesarten zeigt,
+dass Konvention F nur in der Beobachterlesart (B), φ = sech 2η, widerspruchsfrei ist (r21.8: R ist ein reelles Feld mit E ∥ B und φ = 1). Unter (B)
+erreichen auch statische Felder die Breite b_M (Beobachter mit Rapidität η), und die Frequenzbedingung entfällt. Die Rechnungen dieser Notiz bleiben
+richtig; ihre Deutung für das Register von M gilt nur unter (H).

@@ -131,3 +131,9 @@ Auftrag des Autors: „Spannung zu P klären“. Skript `register_threshold.py`,
 
 **Was offen bleibt:** warum die Flächenauslesung M reine Stränge mit Frequenz sieht, während der statische Horizont wie P liest. Damit ist OP1 an
 derselben Stelle wie nach der Auslesefrequenz: Woher kommt die Frequenz der Auslesung M? OP1 offen.
+
+## Nachtrag (17.11.2026, nach `../op1_two_readings_2026_11_17/`): nur unter Lesart (H)
+Die Folgerung, die Breite von M verlange eine Frequenz, nimmt die Registerbreite b als Helizitätsbreite (Lesart H). Der Test beider Lesarten zeigt,
+dass Konvention F nur in der Beobachterlesart (B), φ = sech 2η, widerspruchsfrei ist (r21.8: R ist ein reelles Feld mit E ∥ B und φ = 1). Unter (B)
+erreichen auch statische Felder die Breite b_M (Beobachter mit Rapidität η), und die Frequenzbedingung entfällt. Die Rechnungen dieser Notiz bleiben
+richtig; ihre Deutung für das Register von M gilt nur unter (H).
