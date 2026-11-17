@@ -99,3 +99,35 @@ Größen ist (γ_L, β_sym, Ω_M, m_W, m_τ) und (c) mit Daten verglichen werden
 bleibt sie bei P, eine vierte Stufe gibt es in S nicht. Ein blinder Test ist aus der Moran-Lesart allein **nicht** zu gewinnen; sie ist eine
 Strukturaussage über bekannte Zahlen. Ein Test bräuchte einen neuen Sektor mit eigener Zählung (etwa eine Farb- oder Quarkauslesung); das wäre eine
 neue Setzung. OP1 offen.
+
+## Nachtrag (17.11.2026): Die Spannung zu P aufgelöst
+Auftrag des Autors: „Spannung zu P klären“. Skript `register_threshold.py`, Ausgabe `run/register_threshold_stdout.txt`. Erkundung ohne Zielwert.
+
+**Die beiden Bedeutungen von P.** (a) Flusslinien-Notiz: Ein statisches, reelles Feld liegt auf dem χ-Äquator, also in der Registerlage von P (b = 0).
+(b) Dimensionsleiter: P ist die Zählregel 2j + 1 mit D = 2,15, die nur im Raum Platz hat. Verbunden sind beide über das Registermodell
+(`../op1_entropy_count_2026_11_17/`): Ein Bündel im Register b = 0 zählt genau 2j + 1.
+
+**Rechnung: Ab welcher Sichtbarkeit b passt die Registerzählung auf eine Fläche?**
+
+| Zählung | Σ N r² bei b = 0 | bei b_M = 0,5363 | bei b = 1 | Schwelle b_c (Σ N r² = 1) | D bei b_M |
+|---|---|---|---|---|---|
+| Register allein, Shannon | 1,199 | 0,837 | 0,435 | 0,347 | 1,838 |
+| Register allein, Beteiligung | 1,199 | 0,721 | 0,435 | 0,254 | 1,700 |
+| Mischung mit Spiegel (unbekannter Port), Shannon | 1,199 | 1,117 | 0,869 | 0,800 | 2,097 |
+| Mischung mit Spiegel, Beteiligung | 1,199 | 1,074 | 0,869 | 0,693 | 2,064 |
+
+**Auflösung.**
+1. **Kein Widerspruch, sondern eine gemeinsame Aussage:** Mit b = 0 passt keine Registerzählung auf eine Fläche. Ein statischer Horizont, der seine
+   Punktierungen über ihr eigenes Register zählt, ist deshalb **keine Flächenauslesung**, sondern eine Raumauslesung (P, D = 2,15). Die Flusslinien-Notiz
+   (statische Felder liegen bei P) und die Leiter (P ist die Raumstufe) sagen dasselbe.
+2. **Fläche verlangt Frequenz:** Auf eine Fläche passt die Registerzählung erst ab b > b_c > 0 (0,25 bis 0,35 für das Register allein). Eine Breite b ≠ 0
+   gibt es nach `../op1_flux_lines_2026_11_17/` (Nachtrag) nur mit relativen Phasen, also bei Frequenz ω > 0. Die drei Notizen fügen sich damit zu einer
+   Kette: **Flächenauslesung ⇒ b > b_c ⇒ Frequenz ⇒ nicht statisch.** Die Zählregel von M ist die Flächenstufe und setzt eine zeitharmonische
+   Auslesung voraus; der statische Gleichgewichtshorizont liest wie P.
+3. **Die Regel von M ist nicht das Register von M:** Das Register bei b_M allein gibt D = 1,838 (Shannon), 1,4 % unter γ_L (wie schon in der
+   Entropie-Notiz, γ = 0,2342 statt 0,2375); die Mischung des M-Registers mit seinem Spiegel passt nicht auf die Fläche (1,117). Nur reine Stränge mit
+   unbekanntem Port (b = 1, gemischt) geben genau Gewicht 2 und passen (0,869). Das bestätigt die Lesart „M zählt reine Stränge mit unbekanntem Port“.
+4. Keine Schwelle b_c fällt auf b_M; behauptet wird kein Treffer.
+
+**Was offen bleibt:** warum die Flächenauslesung M reine Stränge mit Frequenz sieht, während der statische Horizont wie P liest. Damit ist OP1 an
+derselben Stelle wie nach der Auslesefrequenz: Woher kommt die Frequenz der Auslesung M? OP1 offen.
