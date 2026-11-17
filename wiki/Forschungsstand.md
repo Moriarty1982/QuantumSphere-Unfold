@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### H112: Überbestimmung von β² aus Mischung und Kosmologie (17.11.2026)
+
+Auftrag des Autors: „H112 Überbestimmung“. Vorab festgelegt, noch keine Prüfdaten. Der Companion liest β_sym² zweimal ab: als |U_e2|² = sin²θ₁₂ cos²θ₁₃ (H9) und als Ω_M (H96). H112 verlangt nur, dass beide Messungen dieselbe Zahl zeigen (|z| ≥ 3 widerlegt), gleich welche; der Wert 0,30185 aus der Zählregel (OP1) geht nicht ein. Fallen H9 oder H96, H112 aber nicht, ist die Zählregel belastet, nicht die Gleichsetzung; fällt H112, fällt mindestens eine der beiden Lesarten. Prüfdaten wie H9 und H96, Frist 31.12.2029. Offen gesagt: schwacher Test (gemeinsames σ ≈ 0,007–0,009); TM1 und β_sym² trennt er nicht, die Hopf-Variante 1/3 schon. Heute (kein Test) in allen vier Paarungen verträglich. OP1 und OP4 offen. [Vorab-Notiz](../notes/research/predictions/Vorab_Notiz_H112_Ueberbestimmung_beta.md), Skript `k234_test_h112.py`.
+
 ### OP4: Bestandsaufnahme der Mischungs-Linie (17.11.2026)
 
 Auftrag des Autors: „OP4 aufgreifen“. Keine Rechnung. Datenstand: NuFIT v6.1 (Daten November 2025) ist die neueste Version, JUNO zuletzt am 29.09.2026; die offenen Vorhersagen H9, H42, H46, H100 warten. Tabelle aller Mischungstests nach hergeleitet, angepasst, offen. Neu: H9 und H45/H46 hängen an β_sym bzw. η, also an der Zahl von OP1; die kommenden Neutrinodaten prüfen sie indirekt mit. OP4 offen. [Notiz](../notes/research/op4_status_audit_2026_11_17/README.md).
