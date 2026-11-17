@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### OP1: Mit welcher Frequenz liest M aus? (17.11.2026)
+
+Auftrag des Autors („weiter“). Erkundung, nicht blind. Literatur: Dreyer (Quasinormal-Frequenz ln 3/(8πM), Flächenquant 4 ln 3), Corichi, Polychronakos (äquidistantes Spektrum), Frodden–Geiller–Noui–Perez (γ = ±i gibt S = A/4; im Bild von r17.4 die Pole, also die Ports).
+
+- **Befund:** Die Gewicht-2-Regel von M mit linearem Flächenspektrum gibt γ = ln 3/π, und ihr kleinster Schritt (Δj = ½) hat genau die Fläche 4 ln 3, Dreyers Quasinormal-Quant. Die Bohr-Frequenz dieses Schritts ist die Quasinormal-Frequenz; Bekenstein–Hawking gilt zugleich, ohne SO(3) und ohne j_min = 1. In den gelesenen Arbeiten steht diese Kombination nicht.
+- **Mit dem Spektrum √(j(j+1)) des Bestands** passt keine Regel (M 5,17; P 5,97). T trifft in beiden Spektren 4 ln 2 (Bekensteins Bit).
+- **Preis:** Linear wird γ_L = log₂ 3 = 1,585 und Ω_M = 0,226 statt 0,302; die Datenpaarung von H98 fällt. Gabel: Quasinormal-Frequenz ⇒ lineares Spektrum ⇒ H98 fällt; √(j(j+1)) ⇒ M ohne Quasinormal-Frequenz.
+
+OP1 offen. [Notiz](../notes/research/op1_readout_frequency_2026_11_17/README.md).
+
 ### OP1: Querungen oder Flusslinien? (17.11.2026)
 
 Auftrag des Autors („weiter“). Erkundung, nicht blind. Literatur: Am isolierten Horizont gilt T(l, l) = 0, also φ₀ = 0; es quert keine Strahlung (Eder–Sahlmann, arXiv:1801.00747). Maxwell-Punktierungen sind dort Flusslinien mit elektrischer und magnetischer Ladung, keine Querungen. Eine Lesart der U(1)-Zählung als Zählung masseloser Helizitäten wurde nicht gefunden.
