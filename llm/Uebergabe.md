@@ -14,7 +14,7 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. Keine offenen PRs. CI nach #166 grün.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
@@ -50,6 +50,11 @@
 - **Eine Zahl (17.11., PR #172, `notes/research/op1_one_number_2026_11_17/`):** γ_L = γ_M/γ_T = D_M = ω_M/ω_T = cosh 2η = 1/b_M.
   Beobachterpaar aus r11.5(b) geprüft: (M, M̄), nicht (M, T) (Boost erhält s; T = J_B-Bild, Tachyonseite, iπ/2). Boost-Lesart der Frequenz
   zurückgenommen; γ_L = Lorentz-Faktor (M, M̄) = u(M)/u(R). Frequenz von M weiter offen.
+- **Rückwärtssuche und zwei Lesarten (17.11., PR #173, `notes/research/op1_backward_search_2026_11_17/`, `op1_two_readings_2026_11_17/`):**
+  Registerbreite b: (B) Beobachtergröße φ = sech 2η gibt alle Definitionen wieder (R E∥B φ = 1, P 0, M/T 0,5363, Vorzeichen Re s); (H) Helizitäts-
+  breite widerspricht R. Frequenzkette (Flusslinien, Auslesefrequenz, Spannung zu P) als nur unter (H) gültig vermerkt; Moran-Lesart unberührt.
+  **OP1 jetzt:** warum bewegt sich der Beobachter M mit β_sym = 0,5494 relativ zum Ruheframe des Feldes (T6, H48)? 9 Horizontgeschwindigkeiten
+  (Liste 4677bc1): 0 Treffer, nächste 1/√3 (5,1 %). Ungeprüft für (H): Kerr/Superradianz.
 - **Möglicher nächster Schritt:** OP1 steht wieder bei „warum Gewicht 2 im Spektrum √(j(j+1))“; ungeprüft: geladene/rotierende
   Horizonte, Graukörper. Ggf. OP1 ruhen lassen (Autorentscheidung). Test nur mit Vorab-Notiz (H112). Nächste Version erst mit
   genug Stoff für beide Ausgaben.
