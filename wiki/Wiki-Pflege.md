@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 18.11.2026: Zufallsabschätzung der Treffer von γ_L (Erkundung) in Forschungsstand und Offene-Probleme (OP1).
+
 - 17.11.2026: H112 vorab (Überbestimmung von β²) in Vorhersagen-und-Tests, Forschungsstand und Gesamtbild.
 
 - 17.11.2026: OP4-Vorschau der wartenden Vorhersagen in Offene-Probleme.

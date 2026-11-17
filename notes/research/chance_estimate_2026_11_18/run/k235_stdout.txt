@@ -1,0 +1,17 @@
+TEIL A: belegte Auswahl je Treffer
+  Omega_M = beta^2 (26 Lesarten, w 0,049)              p = 0.729
+  |U_e2|^2 = beta^2 (10 Konstanten, w 0.0130)          p = 0.123
+  cot theta_W = gamma_L (H15)                          p = 0.170
+  Phi_e = pi/4 - gamma_M/2 (H102, 0,34 erwartet)       p = 0.288
+  Summe p (erwartete Zufallstreffer) = 1.31; Produkt = P(4 von 4) = 0.0044; P(>=3) = 0.070
+
+TEIL B: 9 Regeln, 36 Paare; gamma_L von 1.006 bis 3.513
+DL/ABCK: gamma_L = 1.864700, Treffer n_obs = 3: ['sin2 t12', 'cot tW onshell', 'Omega_m DESI']
+   sin2 t12        durch ['beta2'] (z -1.05)
+   cot tW onshell  durch ['gL'] (z -0.58)
+   Omega_m DESI    durch ['beta2'] (z +0.51)
+Verteilung der Trefferzahl ueber die 36 Paare: 0: 11, 1: 21, 2: 3, 3: 1
+Paare mit n >= 3: 1 -> A,g=2/S1/2,g=2 (3)
+Ensemble gleichverteilt     : mittlere Trefferzahl 1.011, P(n>=1) 0.807, P(n>=3) 0.02259, 36*P = 0.813
+   Trefferanteil je Ziel: sin2 t12 0.1770, sin2 t23 0.5228, sin2 t13 0.0020, dm21/dm31 0.0017, cot tW onshell 0.0091, sin2 tW MSbar 0.0004, mH/mZ 0.0180, mt/mW 0.0215, mmu/mtau 0.0000, alpha_s 0.0046, |Vus| 0.0068, |Vcb| 0.0048, |Vub| 0.0007, Omega_m DESI 0.2134, n_s 0.0272, Omega_b h2 0.0005
+Ensemble log-gleichverteilt : mittlere Trefferzahl 0.911, P(n>=1) 0.739, P(n>=3) 0.01786, 36*P = 0.643
