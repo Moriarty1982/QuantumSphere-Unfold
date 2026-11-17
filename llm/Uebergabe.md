@@ -14,8 +14,8 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #166** (9a07c7b, Release v5.2.0), davor PR #165 (ee81bf2), #164, #163, … Zweig `release/v5.2.0-prep` gelöscht.
-  Keine offenen PRs. Die Prüfungen lean/tests liefen beim Merge noch (pending, nicht rot).
+- `main` nach **PR #167** (012b296, OP1 Querungen oder Flusslinien), davor **PR #166** (9a07c7b, Release v5.2.0), #165 (ee81bf2), …
+  Zweige gelöscht. Keine offenen PRs. CI nach #166 grün.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
 ### Forschung
@@ -25,6 +25,11 @@
   dem über die Verbindung, seine Größe kommt nur aus der Zählregel von M (Gewicht 2, gewählt). H102 (m_τ = 1777,134 MeV,
   +2,3σ) prüft Kernlesart, U(1)-Zählung und Spektrum √(j(j+1)) gemeinsam; entschieden mit der nächsten PDG-Ausgabe.
   Register-Entropie erklärt P (2j+1) und R, nicht M; Regel von M = reine Stränge mit unbekanntem Port.
-- **Möglicher nächster Schritt:** OP1 – prüfen, ob die Stränge masselos sind und normal queren (S1′), und wie das zu (A)
-  passt; ein Test nur mit Vorab-Notiz (H112). Nächste Version erst mit genug Stoff für beide Ausgaben.
+- **Flusslinien (17.11., PR #167, `notes/research/op1_flux_lines_2026_11_17/`, Erkundung):** Am isolierten Horizont φ₀ = 0
+  (Eder–Sahlmann 1801.00747): keine Strahlung quert, Punktierungen sind Flusslinien. Reelle Felder (EM und Weyl, auch Typ D)
+  liegen auf der χ-Kugel bei P; Breite von M und Ports nur mit Frequenz ω > 0. (S1′) als Querung passt nicht zum isolierten
+  Horizont. Kein blinder H112 auf dieser Linie (Autor: „Erkundung statt Test“).
+- **Möglicher nächster Schritt:** OP1 – mit welcher Frequenz liest M aus? Kandidaten: Uhr (r17, Zeitzyklus r18) oder
+  quasinormale Moden des Horizonts (Literatur zuerst). Test nur mit Vorab-Notiz (H112). Nächste Version erst mit genug
+  Stoff für beide Ausgaben.
 - OP1–OP5, C5, C6/T2 offen. Notizen unter `notes/research/op1_*_2026_11_1[67]/`, `op3_*_2026_11_16/`, `v4_10_0_r28/`.
