@@ -69,3 +69,33 @@ größte Skala“, eine Strecke mit D = 1; P (alle 2j + 1) passt nicht auf die F
 ## Ergebnis in einem Satz
 Die Zählgleichung ist exakt eine Moran-Gleichung, die Frame-Faktoren sind Hausdorff-Dimensionen (T 1, M 1,8647, P 2,1515), und die Regel von M ist die
 größte ganze Kopienzahl je SU(2)-Skala, deren Fraktal noch auf eine Fläche passt; die volle SU(2)-Zählung passt nicht. Lesart, nicht blind. OP1 offen.
+
+## Nachtrag (17.11.2026): Die Dimensionsleiter T, M, P
+Auftrag des Autors: „weiter“ (blinden Test zur Moran-Lesart suchen). Skript `dimension_ladder.py`, Ausgabe `run/dimension_ladder_stdout.txt`.
+**Nicht blind:** Die Fälle d = 1 und d = 3 waren vor der Rechnung überschlagen.
+
+Im Regelraum S von H98 (Spinbereiche alle, halbzahlig, ganzzahlig, nur ½, nur 1; Gewichte 2, 2j + 1), Spektrum √(j(j+1)), ist die Regel mit der
+größten Moran-Dimension unter denen, die in ℝ^d passen (Σ g r^d ≤ 1):
+
+| d | Regel | D | Σ g r^d | Frame |
+|---|---|---|---|---|
+| 1 | nur j = ½, Gewicht 2 | 1 | 1 (die zwei Hälften füllen die Strecke genau) | **T** |
+| 2 | alle Spins, Gewicht 2 | 1,8647 | 0,869 | **M** |
+| 3 | alle Spins, Gewicht 2j + 1 | 2,1515 | 0,410 | **P** |
+
+**Lesart:** Die drei Frames sind die reichsten selbstähnlichen Auslesungen auf einer Linie, einer Fläche und im Raum. Das passt zum Bestand: T zählt
+Querungen, also einzelne Stränge (r24.4); M zählt auf der Horizontfläche; P zählt alle 2j + 1 Zustände und liegt außerhalb der Fläche (eigener HC,
+`../op1_hc_blur_2026_11_16/`). Die geschachtelte Zählung T ⊆ M ⊆ P wird zur Folge von Dimensionen 1 ⊂ 2 ⊂ 3.
+
+**Grenzen.**
+- Die Leiter gilt im Regelraum S. Mit beliebigen konstanten Kopienzahlen über alle Spins gäbe d = 3 fünf Kopien (D = 2,83), nicht P; d = 1 hätte dann
+  keine Regel über alle Spins (Σ r = 1,46 > 1).
+- Spannung zu `../op1_flux_lines_2026_11_17/`: Dort liegen die statischen Felder eines Horizonts im Gleichgewicht in der Lage von P. Die Leiter liest P
+  als Raum- statt Flächenauslesung. Beides zugleich verlangt, dass der Gleichgewichtshorizont nicht als Fläche, sondern als Volumen ausgelesen wird; das
+  ist offen.
+
+**Blinder Test.** Rückwärtssuche: Gesucht war eine Folgerung, die (a) ohne freien Parameter aus der Leiter folgt, (b) keine der schon verwendeten
+Größen ist (γ_L, β_sym, Ω_M, m_W, m_τ) und (c) mit Daten verglichen werden kann. Die Leiter legt nur die drei bekannten Regeln fest; jenseits von d = 3
+bleibt sie bei P, eine vierte Stufe gibt es in S nicht. Ein blinder Test ist aus der Moran-Lesart allein **nicht** zu gewinnen; sie ist eine
+Strukturaussage über bekannte Zahlen. Ein Test bräuchte einen neuen Sektor mit eigener Zählung (etwa eine Farb- oder Quarkauslesung); das wäre eine
+neue Setzung. OP1 offen.

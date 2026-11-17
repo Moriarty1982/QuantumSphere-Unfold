@@ -8,7 +8,7 @@ Frage des Autors: Gibt es eine geometrische Struktur, die das Problem von selbst
 - **Fläche:** Das M-Fraktal liegt überlappungsfrei in der Ebene (explizite Anordnung). Die volle SU(2)-Zählung (P) kann auf keiner Fläche liegen (Σ r² = 1,199 > 1). Im Regelraum von H98 schließt die Ebenenbedingung genau diese eine Regel aus; M hat unter den übrigen die größte Dimension.
 - **Prinzip (Lesart, nachträglich):** 2 ist die größte ganze Kopienzahl je SU(2)-Skala, die auf eine Fläche passt (3 gibt D = 2,27). „Der Horizont trägt das reichste selbstähnliche Gebilde mit ganzer Kopienzahl, das auf die Fläche passt“ legt die Regel von M, γ_L und b_M ohne freien Parameter fest.
 
-Grenzen: nicht blind, Prinzip nachträglich gewählt, Literatur (Moran, Mauldin–Urbański, Moon–Moser) aus Vorwissen. OP1 offen. [Notiz](../notes/research/op1_moran_geometry_2026_11_17/README.md).
+Grenzen: nicht blind, Prinzip nachträglich gewählt, Literatur (Moran, Mauldin–Urbański, Moon–Moser) aus Vorwissen. OP1 offen. **Nachtrag Dimensionsleiter:** Im Regelraum von H98 ist die reichste Regel, die in ℝ^d passt, für d = 1 die von T (zwei Hälften füllen die Strecke), für d = 2 die von M, für d = 3 die von P. Die Frames sind die reichsten Auslesungen auf Linie, Fläche und Raum; T ⊆ M ⊆ P wird zu 1 ⊂ 2 ⊂ 3. Nur im Regelraum S; nicht blind. Ein blinder Test folgt aus der Moran-Lesart allein nicht. [Notiz](../notes/research/op1_moran_geometry_2026_11_17/README.md).
 
 ### Sichtung verworfener Ideen und Vergleich mit anderen TOE-Versuchen (17.11.2026)
 

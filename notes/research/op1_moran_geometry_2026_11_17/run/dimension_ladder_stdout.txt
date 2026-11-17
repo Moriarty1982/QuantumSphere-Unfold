@@ -1,0 +1,17 @@
+Regel | D | sum g r^1 | sum g r^2 | sum g r^3
+A (alle)       ,2     | 1.8647 | 2.9154 | 0.8693 | 0.3441
+A (alle)       ,2j+1  | 2.1515 | 5.7831 | 1.1990 | 0.4103
+H (halbzahlig) ,2     | 1.4848 | 1.7630 | 0.6120 | 0.2709
+H (halbzahlig) ,2j+1  | 1.7496 | 3.1379 | 0.7514 | 0.2938
+I (ganzzahlig) ,2     | 1.0812 | 1.1524 | 0.2573 | 0.0732
+I (ganzzahlig) ,2j+1  | 1.4932 | 2.6451 | 0.4476 | 0.1164
+S1/2           ,2     | 1.0000 | 1.0000 | 0.5000 | 0.2500
+S1/2           ,2j+1  | 1.0000 | 1.0000 | 0.5000 | 0.2500
+S1             ,2     | 0.6124 | 0.6448 | 0.2079 | 0.0670
+S1             ,2j+1  | 0.9706 | 0.9673 | 0.3119 | 0.1005
+d = 1: groesste Dimension unter den passenden Regeln: D = 1.0000, Regel(n): ['S1/2,2', 'S1/2,2j+1']
+d = 2: groesste Dimension unter den passenden Regeln: D = 1.8647, Regel(n): ['A (alle),2']
+d = 3: groesste Dimension unter den passenden Regeln: D = 2.1515, Regel(n): ['A (alle),2j+1']
+konstante Kopienzahl ueber alle Spins, d = 1: groesstes w = 0 (Grenze 1/sum r^d = 0.686), D = nan
+konstante Kopienzahl ueber alle Spins, d = 2: groesstes w = 2 (Grenze 1/sum r^d = 2.301), D = 1.8647
+konstante Kopienzahl ueber alle Spins, d = 3: groesstes w = 5 (Grenze 1/sum r^d = 5.813), D = 2.8266
