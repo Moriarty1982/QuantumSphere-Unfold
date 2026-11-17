@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### OP1: Eine Zahl in sechs Gestalten (17.11.2026)
+
+Auftrag des Autors („weiter“). Zusammenstellung, nicht blind. γ_L = 1,864699765 ist zugleich das Verhältnis der Zählparameter γ_M/γ_T (Definition), die Hausdorff-Dimension des M-Fraktals (Satz), das Verhältnis der Bohr-Frequenzen ω_M/ω_T (Identität), cosh 2η mit β_sym = tanh η (Definition), der Kehrwert der Registerbreite 1/b_M (Konvention F) und der Lorentz-Faktor zweier flussentgegengesetzter Beobachter (r11.5(b), Lesart).
+
+**Frequenz von M (Lesart):** Das Bit-Quant von T (ln 2 · T_H), gesehen von einem Beobachter mit Rapidität 2η, hat die Energie γ_L · ln 2 · T_H = ω_M. Die Frequenz von M ist danach keine Ruhefrequenz des Horizonts, sondern die geboostete Bit-Frequenz von T; deshalb fand die Suche unter Schwarzschild-Ruhefrequenzen nichts. Offen: die Zuordnung des Beobachterpaars aus r11.5(b) zu M und T, und ein blinder Test. OP1 offen. [Notiz](../notes/research/op1_one_number_2026_11_17/README.md).
+
 ### OP1: Die Zählgleichung als Moran-Gleichung (17.11.2026)
 
 Frage des Autors: Gibt es eine geometrische Struktur, die das Problem von selbst löst? Erkundung, nicht blind.

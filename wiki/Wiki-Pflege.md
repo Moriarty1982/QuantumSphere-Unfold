@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 17.11.2026: OP1 eine Zahl in sechs Gestalten in Forschungsstand und Offene-Probleme.
+
 - 17.11.2026: Nachtrag Spannung zu P (Fläche verlangt Frequenz) in Forschungsstand.
 
 - 17.11.2026: Nachtrag Dimensionsleiter T, M, P in Forschungsstand.
