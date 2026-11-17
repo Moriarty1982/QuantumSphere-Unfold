@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Runde r29: Die Zählregel von M als eine Zahl (17.11.2026)
+
+Die Arbeiten aus PR #167–#173 stehen jetzt als Runde v4.10.0-r29 im Companion (r29.1–r29.7, mit drei ausdrücklichen Rücknahmen). Keine neue Rechnung. Kern: Die Zählgleichung ist eine Moran-Gleichung, γ_L ist die Hausdorff-Dimension des M-Fraktals und zugleich Frequenzverhältnis, cosh 2η und 1/b_M; die Registerbreite ist eine Beobachtergröße; OP1 ist die Frage nach β_sym. OP1–OP5 offen. [Runde](../notes/research/v4_10_0_r29/README.md).
+
 ### OP1: Beide Lesarten der Registerbreite getestet (17.11.2026)
 
 Auftrag des Autors: „teste beides“. Erkundung, nicht blind. Gegen die Bestandsaussagen gehalten: Die Beobachterlesart (B), φ = sech 2η, gibt alle Definitionen des Registers wieder (R mit E ∥ B bei φ = 1, P als Nullfeld bei 0, M und T bei 0,5363, getrennt durch das Vorzeichen von Re s). Die Helizitätslesart (H) widerspricht der Definition von R (dasselbe reelle Feld läge bei 0, in der Lage von P). **Folge:** Die Frequenzkette der Notizen zu Flusslinien, Auslesefrequenz und Spannung zu P gilt nur unter (H) und ist dort als bedingt vermerkt; Moran-Lesart und Dimensionsleiter sind unberührt. Unter (B) ist OP1 die Frage, warum der Beobachter M sich mit β_sym = 0,5494 relativ zum Ruheframe des Feldes bewegt; neun vorab festgelegte Horizontgeschwindigkeiten treffen nicht (nächste 1/√3, 5,1 %). OP1 offen. [Notiz](../notes/research/op1_two_readings_2026_11_17/README.md).
