@@ -80,7 +80,7 @@ mindmap
       Runden r01 bis r86 seit v4.8.0, danach v4.10.0-r01 bis r13
       Vorab-Tests H1 bis H104
       Lean-Formalisierung
-      Offene Vorhersagen H9, H15, H42, H46, H96, H100, H102
+      Offene Vorhersagen H9, H15, H42, H46, H96, H100, H102, H112
 ```
 
 ## Wie die Teile zusammenhängen
