@@ -1,0 +1,2 @@
+Schwelle 0.01: gepackt False (4 Quadrate); Restflaeche kleiner Quadrate 2.53e-04; groesstes freies Quadrat Seite 0.1776 (Flaeche 3.15e-02); Moon-Moser-Bedingung Rest <= Flaeche/2 und Seite >= Schwelle: True
+Schwelle 0.001: gepackt False (4 Quadrate); Restflaeche kleiner Quadrate 2.05e-06; groesstes freies Quadrat Seite 0.1776 (Flaeche 3.15e-02); Moon-Moser-Bedingung Rest <= Flaeche/2 und Seite >= Schwelle: True

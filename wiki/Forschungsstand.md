@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### OP1: Die Zählgleichung als Moran-Gleichung (17.11.2026)
+
+Frage des Autors: Gibt es eine geometrische Struktur, die das Problem von selbst löst? Erkundung, nicht blind.
+
+- **Exakt:** In Einheiten des T-Quants ist die Zählgleichung Σ g(j) r_j^D = 1 mit r_j = 2^{−a(j)/a(½)}, die Moran-Gleichung eines selbstähnlichen Fraktals. Die Frame-Faktoren sind Hausdorff-Dimensionen: T 1 (Strecke), M 1,8647 = γ_L, P 2,1515; die Breite von M ist b_M = 1/D_M. Mit linearem Spektrum ist M das Sierpinski-Dreieck (log₂ 3).
+- **Fläche:** Das M-Fraktal liegt überlappungsfrei in der Ebene (explizite Anordnung). Die volle SU(2)-Zählung (P) kann auf keiner Fläche liegen (Σ r² = 1,199 > 1). Im Regelraum von H98 schließt die Ebenenbedingung genau diese eine Regel aus; M hat unter den übrigen die größte Dimension.
+- **Prinzip (Lesart, nachträglich):** 2 ist die größte ganze Kopienzahl je SU(2)-Skala, die auf eine Fläche passt (3 gibt D = 2,27). „Der Horizont trägt das reichste selbstähnliche Gebilde mit ganzer Kopienzahl, das auf die Fläche passt“ legt die Regel von M, γ_L und b_M ohne freien Parameter fest.
+
+Grenzen: nicht blind, Prinzip nachträglich gewählt, Literatur (Moran, Mauldin–Urbański, Moon–Moser) aus Vorwissen. OP1 offen. [Notiz](../notes/research/op1_moran_geometry_2026_11_17/README.md).
+
 ### Sichtung verworfener Ideen und Vergleich mit anderen TOE-Versuchen (17.11.2026)
 
 Aufträge des Autors. Erkundung, nicht blind.

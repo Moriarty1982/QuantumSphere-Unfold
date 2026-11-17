@@ -1,0 +1,5 @@
+w = 1: D = 1.2685, sum w r^2 = 0.4347 -> passt in die Ebene
+w = 2: D = 1.8647, sum w r^2 = 0.8693 -> passt in die Ebene
+w = 3: D = 2.2688, sum w r^2 = 1.3040 -> passt nicht (D > 2)
+w = 4: D = 2.5769, sum w r^2 = 1.7387 -> passt nicht (D > 2)
+D = 2 genau bei w = 1/sum r^2 = 2.3006 (nicht ganzzahlig); groesste ganzzahlige Kopienzahl in der Ebene: 2
