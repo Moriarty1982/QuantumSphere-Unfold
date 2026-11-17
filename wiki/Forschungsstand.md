@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP1: Rückwärtssuche und eine offene Voraussetzung (17.11.2026)
+
+Stand nach PR #167–#172 als Rückwärtssuche: sechs notwendige Bedingungen (Flächenauslesung, reine Stränge mit unbekanntem Port, Breite ≠ 0, Frequenz γ_L · ln 2 · T_H ohne Schwarzschild-Ruhequelle, kein Boost aus T, Gleichgewichtshorizont liest wie P) und die ausgeschlossenen Wege. **Offene Voraussetzung:** Die Registerbreite b von Konvention F lässt zwei Lesarten zu, beide mit Wert 1/γ_L: (H) Helizitätsbreite entlang der Port-Achse, Eigenschaft des Feldzustands, verlangt eine Frequenz; (B) Beobachterlesart r = |s|/(2u), Eigenschaft des Beobachters (Rapidität η vom flussfreien Profil), keine Frequenz nötig, dafür die alte Frage nach β_sym. Welche gemeint ist, legt der Autor fest. OP1 offen. [Notiz](../notes/research/op1_backward_search_2026_11_17/README.md).
+
 ### OP1: Eine Zahl in sechs Gestalten (17.11.2026)
 
 Auftrag des Autors („weiter“). Zusammenstellung, nicht blind. γ_L = 1,864699765 ist zugleich das Verhältnis der Zählparameter γ_M/γ_T (Definition), die Hausdorff-Dimension des M-Fraktals (Satz), das Verhältnis der Bohr-Frequenzen ω_M/ω_T (Identität), cosh 2η mit β_sym = tanh η (Definition), der Kehrwert der Registerbreite 1/b_M (Konvention F) und der Lorentz-Faktor zweier flussentgegengesetzter Beobachter (r11.5(b), Lesart).
