@@ -14,7 +14,7 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. Keine offenen PRs. CI nach #166 grün.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
@@ -33,6 +33,11 @@
   (Dreyer) = kleinster Schritt der Gewicht-2-Regel nur bei linearem Spektrum (γ = ln 3/π). Spektrumfrei: ω_M/ω_T = γ_L; QNM-Auslesung
   von M ⇔ γ_L = log₂ 3 (Ω_M 0,226, widerspricht H98). Datenpaarung ⇒ ω_M = 1,2925·T_H; Quellensuche mit vorab festgelegter Liste
   (9fce085, 16 Kandidaten): 0 Treffer, nächster 2η (4,4 %). Suchrichtung Frequenz für Schwarzschild ausgeschöpft.
+- **Sichtung und TOE-Vergleich (17.11., PR #169):** `notes/research/review_discarded_ideas_2026_11_17/` (35 widerlegte Tests gegen zehn berichtigte
+  Annahmen; H13, H73 nachgerechnet weiter widerlegt; H61–H63 offen statt verneint; P2 als Frequenzbedingung neu fassbar; Kandidat H6 C geprüft
+  und zurückgenommen, `op4_h6_criterion_c_2026_11_17/`: Vorzeichen-Symmetrie = Kleinsche Gruppe im Torus von Stab(e₇), nur Parallele A₄/S₄).
+  `toe_comparison_2026_11_17/`: Bruchstellen anderer TOEs; Lesart: Breite zwischen reell (Äquator) und selbstdual (Pol), M bei b = 1/γ_L.
+  Quellen teils Vorwissen, vor Verwendung im Paper prüfen.
 - **Möglicher nächster Schritt:** OP1 steht wieder bei „warum Gewicht 2 im Spektrum √(j(j+1))“; ungeprüft: geladene/rotierende
   Horizonte, Graukörper. Ggf. OP1 ruhen lassen (Autorentscheidung). Test nur mit Vorab-Notiz (H112). Nächste Version erst mit
   genug Stoff für beide Ausgaben.
