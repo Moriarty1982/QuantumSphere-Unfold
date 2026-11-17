@@ -1,0 +1,4 @@
+H13 damals 1/sqrt3           v = 0.577350: delta = 28.56 Grad, cos delta = 0.8783, z = -7.9 -> widerlegt
+H13 Konvention F: beta_sym   v = 0.549406: delta = 25.48 Grad, cos delta = 0.9027, z = -4.9 -> widerlegt
+H13 Geschwindigkeit fuer f(+): v = 0.4858 (Rapiditaet 0.5305); Bestandswerte: beta_sym 0,5494, 1/sqrt3 0,5774
+H73 Materie-Frame w = -0.1006 (|w+1| = 0.899); Tachyon-Frame w = -1.1043 (|w+1| = 0.104); Schranke 0,05
