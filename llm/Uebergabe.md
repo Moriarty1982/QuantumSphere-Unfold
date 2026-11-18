@@ -14,6 +14,9 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
+- **Codex-Nachtrag (18.11.2026):** PR #188 (OP5-Paarung, Kristall–Julia, OP2-Sonden, Feistel und Zellfixpunkt) auf `main` gemergt als `9f5d31827a58ab3feef0f80efd969eeb737ec42c`. Register #17 und OP5 #12 nachgezogen, OP2 #189 angelegt. OP2, OP5 und H96 offen. PR #187 unabhängig davon.
+- **Fortsetzung:** Entwurfs-PR #190 mit vorab festgelegter bifokaler Formprobe. Starre Translation scheitert punktweise, Anpassung der kleinen Halbachse repariert exakt. Offen sind die native Quellenabbildung und die Energie dieser Formantwort. Keine neue H-Nummer, kein Release. Der gemergte Branch `codex/op5-pairing-readout` war nach dem Merge noch auf GitHub vorhanden; lokaler GitHub-Zugriff scheiterte an DNS.
+
 - `main` nach **PR #186** (Wurzelkarte), davor **PR #185** (Flächenquant unter Boosts), **PR #184** (Einheitenliste), davor **PR #183** (J_B-Kandidat), davor **PR #182** (T-Regel), davor **PR #181** (U2 unter (B)), davor **PR #180** (OP1 gemeinsame Prämisse), davor **PR #179** (Zufallsabschätzung), davor **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. CI nach #166 grün.
 - **PR #177 gemergt** (Squash 9b369c5; Vorab-Commit 42bebf0 per ours-Merge 2b6a1b1 von main erreichbar). Zweig gelöscht.
