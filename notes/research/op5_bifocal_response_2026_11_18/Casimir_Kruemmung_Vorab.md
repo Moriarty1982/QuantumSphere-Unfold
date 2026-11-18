@@ -1,0 +1,3 @@
+# Vorab: Casimir-Kraft an der elliptischen Grenzfläche
+
+Analytische Erkundung, nicht blind. Vorwissen: Casimir.md, Transmission.md, bifokale Ellipse und ideale Plattenformel. Setze als zusätzliche Geometrie voraus, dass der elliptische Querschnitt entlang einer Achse extrudiert wird und einer Ebene nahekommt (Linienkontakt). Vergleiche Platten, extrudierte Ellipse und Kugel vor Ebene innerhalb der Proximity-Approximation, bei festem Radius bzw. Querschnitt während der Spaltvariation. Prüfe Kraftpotenz und Anteil d/d₀ an der elastischen Schwelle für eine lineare Feder. Vergleiche die Orientierung der Ellipse über die beiden Krümmungsradien an ihren Scheiteln. Keine native Einbettung oder Kontaktleitfähigkeit und keine Datenprüfung.
