@@ -1,0 +1,3 @@
+# Vorab: OP2-Sondenkopplung und Erhaltung des Überschusses
+
+Analytische Erkundung, nicht blind. Vorwissen: Dualitaet.md, Verbund.md, Wurzelkarte und OP2-Register, Sondenlinsung und geometrischer Kreuzterm in v470/12. Die ART/QFT-Sonden werden nicht mit M/T identifiziert. Nimm zwei hypothetisch typisierte M/T-Moden auf gemeinsamem Träger und vergleiche einen hermiteschen Mischterm mit einer diagonalen relativen Entwicklung. Definiere den Überschuss zunächst als Besetzungsdifferenz. Prüfe die Erhaltung für alle Zustände und suche explizit eine Änderung eines phasenempfindlichen Kreuzterms bei festem Überschuss. Die Rechnung prüft ein Modell, nicht die Existenz von D_-; keine H96-Anpassung. Ein geometrisches Signal allein zählt nicht als Nachweis druckloser Stress-Energie.

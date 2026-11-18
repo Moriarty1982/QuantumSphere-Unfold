@@ -1,0 +1,3 @@
+# Vorab: Fixpunktauswahl durch Zellresiduen
+
+Analytische Erkundung, nicht blind. Vorwissen: Feistel.md, Verbund.md, OP2_Block.md, korrigierte Zellverträglichkeit und Phasenbindung in v470/14–15 sowie op3_native_threshold_repair_2026_11_10.md. Prüfe einen reversiblen Feistel-Schritt, dessen Impulsupdate aus der Summe der quadrierten Phase- und Geometrieresiduen folgt. Erhalte Q als Parameter. Unterscheide stationäres Minimum von Nullresiduum, prüfe die freie und die verankerte Schnittstelle, und vergleiche die erforderlichen Ableitungen mit den gelieferten Zellbedingungen. Kein Fit an H96 und kein Datentest.
