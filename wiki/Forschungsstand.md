@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP1: Die Regel des Frames T (18.11.2026)
+
+Auftrag des Autors: „T-Regel angehen“. Erkundung, nicht blind. Von fünf Gründen dafür, dass T nur j = ½ zählt, ist keiner datenfrei und tragfähig: Tachyon-Boden (trägt nicht, r10), Irreduzibilität (braucht (A)), eine Querung = ein Strang (CT-002), Fundamentaldarstellung offener Strings (CT-004), Dimensionsleiter. **Neu:** Die Dimensionsleiter der Moran-Lesart hängt an der Einheit. Sie gibt T, M, P auf Linie, Fläche und Raum genau für Einheiten γ₀ ∈ [1; 1,0757) · γ_T; die untere Grenze ist das T-Quant selbst. Mit der Einheit über M (D_M = 2) oder P steht eine andere Regel auf der Linie. Für T ist die Leiter damit im Kreis. Kandidaten für einen datenfreien Grund (ungeprüft): J_B wählt die Dubletts mit J_B² = −1; eine unabhängige Einheit im schmalen Fenster. OP1 offen. [Notiz](../notes/research/op1_t_rule_2026_11_18/README.md).
+
 ### OP1: U2 unter Lesart (B), Boost an einer Punktierung (18.11.2026)
 
 Auftrag des Autors: „U2 unter (B) prüfen“. Erkundung, nicht blind; Verfahren vorab festgelegt (Commit 4ee7618). Frage: Löst ein Beobachter, der mit der Rapidität des Frames M (η = artanh β_sym = 0,6175) entlang der Horizontnormalen geboostet ist, an einer Punktierung nur die Extremzustände |k, ±k⟩ auf? Rechnung in der SL(2,ℂ)-Hauptreihe (EPRL-artig, γ = γ_M). **Ergebnis: graduell.** Die Extremzustände bleiben am besten erhalten (P = 0,74–0,82 gegen höchstens 0,59–0,73 für |m| < k, k = ½ … 3), werden aber nicht ausgewählt; die vorab gesetzten Schranken für „scharf“ werden in beide Richtungen verfehlt. Nachträglich: Die Trennung wächst mit der Rapidität und wäre erst in der masselosen Grenze (S1′) scharf; transversale Boosts zeichnen nichts aus. U2 folgt aus (B) allein nicht. OP1 offen. [Notiz](../notes/research/op1_u2_boost_2026_11_18/README.md).
