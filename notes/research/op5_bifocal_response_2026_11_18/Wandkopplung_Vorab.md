@@ -1,0 +1,5 @@
+# Vorab: Bindet der Transport die Dirac-Wandmode ein?
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Domaene.md (Kink und Nullmode), Interferenz.md (Kopplung angenommen), Transmission.md (endliche Barriere), Transport.md (Ringgeneratoren), W2_Ladung.md und W2_Frame.md (klassischer Strom und Frameabbildung), wiki/Gesamtbild.md und OP5-Vergleichsmodell-Anleitung. Keine erneute Rechnung am eingefrorenen Vergleichsmodell.
+
+Rückwärtssuche von der Fano-Nullstelle: Sie benötigt einen propagierenden Normalstromkanal bei der Wandenergie und eine Kopplung an den gebundenen Zustand. Trenne den statischen Dirac-Hamiltonoperator, den lokalen Stromoperator und eine mögliche zeitabhängige Störung. Prüfe die unendliche Wand aus Domaene.md sowie als Kontrolle ein endliches Wandstück mit masselosen Leitungen. Bei der Kontrolle ist exakt zu prüfen, ob eine eingebettete L²-Mode bzw. eine Transmissionsnull im offenen Band existiert. Ein Übergangsmatrixelement des Stroms allein zählt nicht als statische Kopplung. Kein H96-Datentest.
