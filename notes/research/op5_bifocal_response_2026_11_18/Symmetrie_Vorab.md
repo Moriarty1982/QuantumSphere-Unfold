@@ -1,0 +1,3 @@
+# Vorab: Fokusvertauschung und Antwortordnung
+
+Analytische Erkundung, nicht blind. Vorwissen: Form- und Steifigkeitsrechnung dieses PRs, Dualitätsprobe in PR #188, bifokaler Monitor v470/05 und H96. Gleicher euklidischer Chart. Prüfe, ob Fokusvertauschung bei getrennten Foki c>0 und bei c=0 (zusammenfallende Foki) den Leitterm der minimalen Energie ändert. Dafür setze die vorzeichenbehaftete Fokuskoordinate c+u, feste Ruhelänge und positive Umfangssteifigkeit an. Entscheidung: Bestimme den ersten nichtverschwindenden Term der minimierten Energie und unterscheide die Austauschparität von der Annahme u∝Q. Kontrolliere den entarteten Fall bei a=b=1, κ=1 numerisch für halbierte u. Keine Identifikation des Kreisgrenzfalls mit einem physikalischen Frame; kein Datentest.
