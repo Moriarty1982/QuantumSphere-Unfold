@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 18.11.2026: OP1 T-Regel, Nachtrag J_B-Kandidat (entfällt) in Forschungsstand und Offene-Probleme.
+
 - 18.11.2026: OP1 T-Regel (fünf Gründe, Einheit der Dimensionsleiter) in Forschungsstand und Offene-Probleme.
 
 - 18.11.2026: OP1 U2 unter (B), Boost an einer Punktierung (Erkundung) in Forschungsstand und Offene-Probleme.
