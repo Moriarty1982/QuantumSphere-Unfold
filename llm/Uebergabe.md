@@ -14,7 +14,7 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #184** (Einheitenliste), davor **PR #183** (J_B-Kandidat), davor **PR #182** (T-Regel), davor **PR #181** (U2 unter (B)), davor **PR #180** (OP1 gemeinsame Prämisse), davor **PR #179** (Zufallsabschätzung), davor **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #186** (Wurzelkarte), davor **PR #185** (Flächenquant unter Boosts), **PR #184** (Einheitenliste), davor **PR #183** (J_B-Kandidat), davor **PR #182** (T-Regel), davor **PR #181** (U2 unter (B)), davor **PR #180** (OP1 gemeinsame Prämisse), davor **PR #179** (Zufallsabschätzung), davor **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. CI nach #166 grün.
 - **PR #177 gemergt** (Squash 9b369c5; Vorab-Commit 42bebf0 per ours-Merge 2b6a1b1 von main erreichbar). Zweig gelöscht.
 - **PR #178 gemergt** (5afb5d0, Merge-Commit): I5 Außenwirkung in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Zweig gelöscht. #17 nachgezogen.
@@ -24,13 +24,9 @@
 - **PR #182 gemergt** (T-Regel). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen.
 - **PR #183 gemergt** (J_B-Kandidat). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** entfällt; J_B² = −1 wählt Kramers (unter (A), schon 15.11.), jedes j oder j = 1, 3, 5 (als Dualität), nie allein j = ½.
 - **PR #184 gemergt** (Einheitenliste, Liste c64caff erreichbar). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** 0 von 47 Einheiten im Fenster [γ_T; γ_P/2), erwartet 0,94; Kandidat 2 entfällt, T-Regel ohne datenfreien Grund.
-- **Offen: PR #185** (Zweig `research/op1-flaechenquant-boost`): Flächenquant unter Boosts, Literatur Rovelli–Speziale (gr-qc/0205108).
-  Wartet auf „PR 185 mergen“; danach #17, #10 nachziehen. **Befund:** Unitäre Boosts erhalten das Flächenspektrum; das frame-abhängige Flächenquant
-  aus r10 braucht eine nicht-unitäre Frame-Abbildung (einzige Kandidatin J_B mit iπ/2) oder γ_T als Mittelwert (zirkulär).
-  **Nächster Schritt (Vorschlag):** prüfen, ob J_B (imaginäre Rapidität iπ/2) auf dem Flächenoperator nicht-unitär wirkt und das Spektrum skaliert;
-  sonst OP1 ruhen lassen.
-- **Offen: PR #186** (Zweig `research/op-wurzelkarte`, gestapelt auf #185): Wurzelkarte der offenen Probleme. Zuerst #185, dann #186 mergen;
-  danach #17 und #10 nachziehen. **Befund:** Zahlen von OP2–OP5 gehen auf die OP1-Zahl zurück; die fünf Übersetzungen in die Sektoren
+- **PR #185 gemergt** (a98b75d): Flächenquant unter Boosts, Rovelli–Speziale. Unitäre Boosts erhalten das Flächenspektrum; das
+  frame-abhängige Flächenquant aus r10 braucht eine nicht-unitäre Frame-Abbildung (J_B mit iπ/2) oder γ_T als Mittelwert (zirkulär).
+- **PR #186 gemergt** (8884dda): Wurzelkarte, `notes/research/op_root_map_2026_11_18/`. Zweige gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** Zahlen von OP2–OP5 gehen auf die OP1-Zahl zurück; die fünf Übersetzungen in die Sektoren
   (Versatz, Restbiegung, |U_e2|² und ε, Ω_M, cot θ_W) sind einzeln gesetzt, vier nachträglich; jedes OP hat einen eigenen Rest.
   Offene Autorentscheidung: Register #17 um eine Zeile „Wurzel und Übersetzungen“ ergänzen? **Nächster Schritt (Vorschlag):** Profil des
   Vermittlers (kann einer von I1, I4, k185 zwei Übersetzungen zugleich erzeugen?).
