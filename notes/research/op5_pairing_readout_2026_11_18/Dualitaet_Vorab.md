@@ -1,0 +1,3 @@
+# Vorab: gemeinsame Dualität der Schnittstelle
+
+Analytische Erkundung, nicht blind. Vorwissen: P_Rand.md, Verbund.md, Konvention F und v470/13 zum positiven Kompensator-Ansatz. Vergleiche nach Abbildung in dieselbe Modellkoordinate die gemeinsame Drehung z_f→exp(iθ)z_f mit der diskreten Vierteldrehung und mit einer relativen Drehung von P. Verwende die Nullbedingung für P. Prüfe einen hermiteschen und einen komplex-bilinearen Kopplungsterm auf Energiekrümmung im gekoppelten Zustand. Prüfe am Kompensator die zur Invarianz notwendige Transformationsinformation; kein Schließen von OP5 ohne native Schnittstellenabbildung und Kopplung. Keine Parametersuche oder Messprüfung.
