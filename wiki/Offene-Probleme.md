@@ -16,6 +16,8 @@ Fast alle offenen Punkte hängen an derselben Lücke: Es gibt keine gemeinsame, 
 
 **Wurzelkarte, 18.11.2026 (Erkundung):** Die Zahlenwerte von OP2 bis OP5 lassen sich alle auf die eine Zahl aus OP1 zurückführen (Versatz = β_sym; Restbiegung π/4 − γ_M/2; |U_e2|² = β² und ε = η; Ω_M = β²; dazu cot θ_W = γ_L). Die fünf Übersetzungen dieser Zahl in die Sektoren sind aber einzeln gesetzt, vier davon nachträglich, und nichts im Bestand erzeugt zwei davon zugleich. Daneben hat jedes OP einen eigenen strukturellen Rest (Generationen, ℤ₂ und δ_CP, CKM, absoluter Vakuumwert, Existenz von D₋, C5, C6). Lesart: OP1 ist die Wurzel; eine gemeinsame Übersetzungsschicht würde mehrere OPs zugleich betreffen, müsste aber einen eigenen Zustand zwischen den Sektoren haben (kein Frame-Wechsel). [Notiz](../notes/research/op_root_map_2026_11_18/README.md).
 
+**Vermittler-Profil, 18.11.2026 (Erkundung):** Keiner der Kandidaten I1, I4, k185 erzeugt die fünf Übersetzungen; I1 berührt zwei (OP1, OP3) unter CT-002 und CT-004, I4 bringt nur eine Skala, k185 setzt η voraus. Ein direkt koppelnder Vermittler ist nach H74 nur mit verstimmten Spektren stabil, was γ_L ≠ 1 erfüllt, aber nicht festlegt. [Notiz](../notes/research/op_mediator_profile_2026_11_18/README.md).
+
 Ein erster Test dieser Skizze (H48) zeigt eine Grenze: In der einfachsten Reduktion folgt $\beta_{\mathrm{sym}}$ nicht aus der Dynamik, weil ein eingefrorener Wert immer die Expansionsgeschichte mitträgt. Ein dimensionsloser Strukturwert müsste aus einem dimensionslosen Verhältnis kommen, zum Beispiel aus zwei Zählungen (r63) oder einem Winkel je Ereignis (r27: 28,78° statt 30°).
 
 ## OP1: Woher kommt $\beta_{\mathrm{sym}}$?

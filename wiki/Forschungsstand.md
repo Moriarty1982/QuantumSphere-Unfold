@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Profil des Vermittlers (18.11.2026)
+
+Auftrag des Autors: „Ja, Vermittler-Profil“. Erkundung ohne Rechnung. Eine Übersetzungsschicht müsste (A1) η als Ergebnis liefern, (A2) M und T über einen eigenen Zustand koppeln, (A3) stabil sein, was bei direkter Kopplung nach H74 verstimmte Spektren in M und T verlangt, (A4) alle fünf Übersetzungen der Wurzelkarte erzeugen und (A5) für einen Teilchentest eine Skala mitbringen. **Befund:** Kein Kandidat erfüllt das. Die String-Brücke I1 ist der einzige mit zwei Übersetzungen zugleich (Zählung von T über CT-004, Restbiegung γ_M/2 über CT-002); das Kondensat I4 bringt als einziger eine Skala, aber keine Zahl; der Konnektor k185 trägt η nur als Eingabe. Neu: Die Stabilitätsbedingung A3 passt zu γ_L ≠ 1, erklärt den Wert aber nicht. Nächster möglicher Schritt: I1 auf eine dritte Übersetzung prüfen (|U_e2|² oder Ω_M), vorab festgelegt. Alle OPs offen. [Notiz](../notes/research/op_mediator_profile_2026_11_18/README.md).
+
 ### Wurzelkarte der offenen Probleme (18.11.2026)
 
 Frage des Autors: Sind die OPs wirklich offen, oder hängen sie an einer fehlenden Übersetzungsschicht? Erkundung ohne Rechnung. **Befund:** Für die Zahlen stimmt die Vermutung. Jede Zahl, die OP2 bis OP5 heute liefern, ist eine Funktion der OP1-Zahl β_sym. Für die Übersetzungen stimmt sie noch nicht: Versatz (OP2), Restbiegung (OP3), Mischungselement und ε (OP4), Dichteanteil (OP5) und Kopplungsverhältnis (H15) sind fünf einzeln gesetzte Gleichsetzungen, vier nachträglich. Das erklärt, warum die Treffer mit Zufall verträglich sind. Jedes OP hat außerdem einen eigenen Rest, der nicht an der Zahl hängt. Eine Übersetzungsschicht müsste nach Rovelli–Speziale einen eigenen Zustand zwischen den Sektoren haben. Alle OPs offen. [Notiz](../notes/research/op_root_map_2026_11_18/README.md).
