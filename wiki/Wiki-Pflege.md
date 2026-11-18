@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 18.11.2026: Wurzelkarte der offenen Probleme in Offene-Probleme (gemeinsamer Kern) und Forschungsstand.
+
 - 18.11.2026: OP1 Flächenquant und Boosts (Literatur Rovelli–Speziale) in Forschungsstand und Offene-Probleme.
 
 - 18.11.2026: OP1 T-Regel, Nachtrag Einheitenliste (0 Treffer) in Forschungsstand und Offene-Probleme.

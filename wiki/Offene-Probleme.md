@@ -14,6 +14,8 @@ Fast alle offenen Punkte hängen an derselben Lücke: Es gibt keine gemeinsame, 
 6. **Triality als Symmetrie der Kinetik**, gebrochen durch die Chiralität.
 7. **Eine Uhr aus der Phasendifferenz** zwischen Materie und Tachyon; ein gemeinsamer Energieversatz ist nicht beobachtbar.
 
+**Wurzelkarte, 18.11.2026 (Erkundung):** Die Zahlenwerte von OP2 bis OP5 lassen sich alle auf die eine Zahl aus OP1 zurückführen (Versatz = β_sym; Restbiegung π/4 − γ_M/2; |U_e2|² = β² und ε = η; Ω_M = β²; dazu cot θ_W = γ_L). Die fünf Übersetzungen dieser Zahl in die Sektoren sind aber einzeln gesetzt, vier davon nachträglich, und nichts im Bestand erzeugt zwei davon zugleich. Daneben hat jedes OP einen eigenen strukturellen Rest (Generationen, ℤ₂ und δ_CP, CKM, absoluter Vakuumwert, Existenz von D₋, C5, C6). Lesart: OP1 ist die Wurzel; eine gemeinsame Übersetzungsschicht würde mehrere OPs zugleich betreffen, müsste aber einen eigenen Zustand zwischen den Sektoren haben (kein Frame-Wechsel). [Notiz](../notes/research/op_root_map_2026_11_18/README.md).
+
 Ein erster Test dieser Skizze (H48) zeigt eine Grenze: In der einfachsten Reduktion folgt $\beta_{\mathrm{sym}}$ nicht aus der Dynamik, weil ein eingefrorener Wert immer die Expansionsgeschichte mitträgt. Ein dimensionsloser Strukturwert müsste aus einem dimensionslosen Verhältnis kommen, zum Beispiel aus zwei Zählungen (r63) oder einem Winkel je Ereignis (r27: 28,78° statt 30°).
 
 ## OP1: Woher kommt $\beta_{\mathrm{sym}}$?
