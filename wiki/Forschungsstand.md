@@ -10,6 +10,8 @@ Analytische Erkundung mit vorab committeten Kriterien. In einem gemeinsamen Ruhe
 
 **Kristallverbund:** Eine eigenständige M–T-Schnittstellenkoordinate kann bei festem Überschuss den Geometrierest vollständig ausgleichen, wenn ihr keine zusätzliche Rückstellenergie entgegensteht. Eine feste P-Verankerung kann positiven Zusatzdruck erzeugen; eine frei mitgehende P-Koordinate vermeidet ihn im Modell. Die native Kopplung und die H96-Anfangsbedingung fehlen. [Notiz](../notes/research/op5_pairing_readout_2026_11_18/Verbund.md).
 
+**P-Randprobe:** Zwei Fortsetzungen im selben Maxwell-Nullsektor können trotz gleicher Anfangstangente konstante bzw. quadratisch steigende Energiedichte haben. Die freie Dualitätsbahn liefert einen energieflachen Kandidaten. Die Nullbedingung bestimmt weder die native Randabbildung noch die Energie der gemeinsamen Kopplung. [Notiz](../notes/research/op5_pairing_readout_2026_11_18/P_Rand.md).
+
 ### Wurzelkarte der offenen Probleme (18.11.2026)
 
 Frage des Autors: Sind die OPs wirklich offen, oder hängen sie an einer fehlenden Übersetzungsschicht? Erkundung ohne Rechnung. **Befund:** Für die Zahlen stimmt die Vermutung. Jede Zahl, die OP2 bis OP5 heute liefern, ist eine Funktion der OP1-Zahl β_sym. Für die Übersetzungen stimmt sie noch nicht: Versatz (OP2), Restbiegung (OP3), Mischungselement und ε (OP4), Dichteanteil (OP5) und Kopplungsverhältnis (H15) sind fünf einzeln gesetzte Gleichsetzungen, vier nachträglich. Das erklärt, warum die Treffer mit Zufall verträglich sind. Jedes OP hat außerdem einen eigenen Rest, der nicht an der Zahl hängt. Eine Übersetzungsschicht müsste nach Rovelli–Speziale einen eigenen Zustand zwischen den Sektoren haben. Alle OPs offen. [Notiz](../notes/research/op_root_map_2026_11_18/README.md).
