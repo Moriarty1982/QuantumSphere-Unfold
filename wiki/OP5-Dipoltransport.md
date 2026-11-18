@@ -1,6 +1,6 @@
 # OP5: Dipoltransport und lokale Umlagerung
 
-Arbeitsstand zu PR #190. Die Größen beziehen sich auf das geometrische Randmodell, nicht auf eine bereits hergeleitete kosmologische Ladung.
+Forschungsstand nach PR #190 und anschließender thermischer Prüfung. Die Größen beziehen sich auf das geometrische Randmodell, nicht auf eine bereits hergeleitete kosmologische Ladung.
 
 - Nachbardiffusion erhält den Mittelwert, lässt den Dipol aber abklingen. Ein eigens gewählter Generator mit geschützter erster Winkelharmonischer kann den Dipol erhalten.
 - Eine reellwertige Umlagerung auf vier benachbarten Stellen kann Gesamtmenge und beide Dipolmomente exakt erhalten. Die getestete Blockprojektion dämpft höhere Winkelmoden langsam.
@@ -71,3 +71,5 @@ Ein neutrales Singulett kann über einen eichinvarianten Yukawa-Operator der Dim
 Die gewöhnlichen Quarkgenerationen haben zwar dieselben Eichdarstellungen je Teilchenart. Der beobachtete geladene schwache Strom verbindet aber über CKM alle sechs Quarkflavours. Ein gemeinsamer Projektor, der die Quarkmassen und diesen Strom respektiert, ist daher entweder null oder die Identität. Das schließt eine exakt durch Generationsladung geschützte Sperre für diese Kopien aus. Wie groß die Leckage eines konkreten Wandmodells wäre, folgt daraus nicht. [CKM-Prüfung](../notes/research/op5_bifocal_response_2026_11_18/Generationensperre.md).
 
 Bei einer abrupten Zweikanalwand mit denselben zwei positiven Massenschwellen auf beiden Seiten hebt jede Drehung der offenen Richtungen aus der orthogonalen Lage die exakte Sperre auf. Die Durchlasswahrscheinlichkeit wächst für kleine Winkel quadratisch und ist bei der geometrischen Mitte der Schwellen maximal. Die Rechnung beschreibt Streuung pro Einfall. Eine OP5-Leckrate oder eine Zuordnung des Winkels zur CKM-Mischung ist offen. [Streurechnung](../notes/research/op5_bifocal_response_2026_11_18/Kanalleck.md).
+
+Für einen klassischen eindimensionalen Wärmefluss mit getrennten Kanälen ist die Durchlasswahrscheinlichkeit bei tiefen Temperaturen proportional zu √τ exp[−(M−m)/τ]. Ein fester kleiner Mischwinkel erzeugt unterhalb der oberen Schwelle einen stärkeren Beitrag proportional zu θ²τ. Bei konstanter Einfallsrate und einer angenommenen Abkühlung τ∼t⁻ᵖ ist die erste Form für jedes p>0 zeitlich integrierbar, die zweite bei festem Mischwinkel erst für p>1. Diese Bedingungen gehören zum Kontrollmodell und sind für OP5 noch nicht aus der Wirkung hergeleitet. [Thermische Rechnung](../notes/research/op5_bifocal_response_2026_11_18/Thermisches_Leck.md).
