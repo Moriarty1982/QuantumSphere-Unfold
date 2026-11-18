@@ -29,6 +29,11 @@
   aus r10 braucht eine nicht-unitäre Frame-Abbildung (einzige Kandidatin J_B mit iπ/2) oder γ_T als Mittelwert (zirkulär).
   **Nächster Schritt (Vorschlag):** prüfen, ob J_B (imaginäre Rapidität iπ/2) auf dem Flächenoperator nicht-unitär wirkt und das Spektrum skaliert;
   sonst OP1 ruhen lassen.
+- **Offen: PR #186** (Zweig `research/op-wurzelkarte`, gestapelt auf #185): Wurzelkarte der offenen Probleme. Zuerst #185, dann #186 mergen;
+  danach #17 und #10 nachziehen. **Befund:** Zahlen von OP2–OP5 gehen auf die OP1-Zahl zurück; die fünf Übersetzungen in die Sektoren
+  (Versatz, Restbiegung, |U_e2|² und ε, Ω_M, cot θ_W) sind einzeln gesetzt, vier nachträglich; jedes OP hat einen eigenen Rest.
+  Offene Autorentscheidung: Register #17 um eine Zeile „Wurzel und Übersetzungen“ ergänzen? **Nächster Schritt (Vorschlag):** Profil des
+  Vermittlers (kann einer von I1, I4, k185 zwei Übersetzungen zugleich erzeugen?).
   **Befund:** fünf Gründe für j = ½ in T, keiner datenfrei tragfähig; Dimensionsleiter gilt nur für Einheit γ₀ ∈ [1; 1,0757) · γ_T, für T also im Kreis.
   Ungeprüfte Kandidaten: J_B wählt Dubletts mit J_B² = −1; unabhängige Einheit im Fenster (vorab festgelegte Liste).
   U2 folgt aus (B) allein nicht; scharf erst in der masselosen Grenze.
