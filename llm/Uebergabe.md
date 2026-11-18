@@ -27,6 +27,11 @@
 - **PR #185 gemergt** (a98b75d): Flächenquant unter Boosts, Rovelli–Speziale. Unitäre Boosts erhalten das Flächenspektrum; das
   frame-abhängige Flächenquant aus r10 braucht eine nicht-unitäre Frame-Abbildung (J_B mit iπ/2) oder γ_T als Mittelwert (zirkulär).
 - **PR #186 gemergt** (8884dda): Wurzelkarte, `notes/research/op_root_map_2026_11_18/`. Zweige gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** Zahlen von OP2–OP5 gehen auf die OP1-Zahl zurück; die fünf Übersetzungen in die Sektoren
+- **Offen: PR #187** (Zweig `research/vermittler-profil`): Profil des Vermittlers. Wartet auf „PR 187 mergen“; danach #17, #10 nachziehen.
+  **Befund:** kein Kandidat erfüllt das Profil A1–A5; I1 berührt zwei Übersetzungen (T-Zählung OP1, Restbiegung OP3) unter CT-002/CT-004,
+  I4 bringt nur eine Skala, k185 setzt η voraus. Neu A3: direkte Kopplung nur mit verstimmten Spektren stabil (H74), passt zu γ_L ≠ 1.
+  **Nächster Schritt (Vorschlag):** I1 auf eine dritte Übersetzung prüfen (|U_e2|² oder Ω_M), Zuordnung String-Größe → Übersetzung vorab
+  festlegen; offene Autorentscheidung zu Register #17 („Wurzel und Übersetzungen“).
   (Versatz, Restbiegung, |U_e2|² und ε, Ω_M, cot θ_W) sind einzeln gesetzt, vier nachträglich; jedes OP hat einen eigenen Rest.
   Offene Autorentscheidung: Register #17 um eine Zeile „Wurzel und Übersetzungen“ ergänzen? **Nächster Schritt (Vorschlag):** Profil des
   Vermittlers (kann einer von I1, I4, k185 zwei Übersetzungen zugleich erzeugen?).
