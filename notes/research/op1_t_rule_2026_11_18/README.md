@@ -53,3 +53,21 @@ Die zurückgestellte Idee I1 (Auslöser 3) ist bereits G4 und gibt nur eine weit
 - Die T-Regel ist im Bestand nicht begründet. Die Dimensionsleiter trägt für T nichts Eigenes, solange die Einheit an T hängt; das schwächt auch die
   Moran-Lesart als gemeinsames Prinzip für M und T (gemeinsame-Prämisse-Notiz, Befund 5).
 - OP1 offen; H98, H102, H112 unverändert.
+
+## Nachtrag (18.11.2026): Kandidat 1 geprüft – J_B² = −1 wählt nicht j = ½
+Auftrag des Autors: „J_B-Kandidat prüfen“. **Erkundung, nicht blind:** Der Ausgang steht analytisch fest. Skript `k238_jb_square.py`, Ausgabe
+`run/k238_stdout.txt`.
+
+**Berichtigung zuerst:** Kandidat 1 war schon weitgehend beantwortet. Der Nachtrag vom 15.11. in `../op1_frame_irreducibility_2026_11_15/` zeigt,
+dass „R² = −1“ die Kramers-Regel wählt (alle halbzahligen j, β = 0,337, ausgeschlossen). Unter (A) wirkt J_B wie R als exp(−iπJ_k); das gilt also
+auch für J_B. Das hätte oben stehen müssen. Neu ist nur die Wirkung von J_B ohne (A).
+
+| Wirkung von J_B auf einer Punktierung | J_B² = −1 für | Regel |
+|---|---|---|
+| (a) unter (A): exp(−iπJ_k) | alle halbzahligen j | Kramers |
+| (b1) Dualitätsdrehung um π/2, Phase je Vorzeichen der Helizität (wie beim Maxwell-Feld) | jedes j | keine Auswahl |
+| (b2) Dualitätsdrehung um π/2, Phase je Helizität ±j | j = 1, 3, 5, … | schließt j = ½ aus |
+
+**Ergebnis:** Keine natürliche Wirkung von J_B wählt allein j = ½. Kandidat 1 entfällt. Von den Eigenschaften der Frame-Abbildungen geben j = ½ allein
+nur die Irreduzibilität (braucht (A)) und der fermionische Austausch (S2, reine Setzung, 15.11.). Offen bleibt Kandidat 2 (eine unabhängige Einheit
+für die Dimensionsleiter). OP1 offen.
