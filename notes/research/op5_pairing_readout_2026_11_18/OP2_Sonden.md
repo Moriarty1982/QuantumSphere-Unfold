@@ -1,0 +1,9 @@
+# OP2: Sondengeometrie bei festem Überschuss
+
+Analytische Erkundung nach [Vorab-Notiz](OP2_Vorab.md), Commit 7c117b53fcaf81354d5379166e8917d0f37af463. Im Companion ist der geometrische Kreuzterm Re(bar Ψ_ART Γ^a D_μ Ψ_QFT), kein Nachweis einer M/T-Zuordnung oder eines Mischterms im Generator. Die folgende Zweimodenreduktion dient als Strukturprobe. ℏ=1.
+
+Sei ψ=(m,t), N=ψ†σ_zψ=|m|²−|t|² und X=ψ†σ_xψ=2 Re(m* t) ein Stellvertreter für einen phasensensitiven Geometriekanal. Wähle H=Δσ_z/2+gσ_x, g reell per Wahl der relativen Phase. Aus d⟨O⟩/dt=i⟨[H,O]⟩ folgen dN/dt=2g⟨σ_y⟩ und dX/dt=−Δ⟨σ_y⟩. N ist für alle Zustände genau dann erhalten, wenn g=0, äquivalent zu [H,σ_z]=0. Die Gesamtnorm bleibt in beiden Fällen erhalten.
+
+Bei g=0 und Δ≠0 erhält man für ψ(0)=(√3/2,1/2) dauerhaft N=1/2, während X(t)=√3 cos(Δt)/2. Auch im ursprünglichen Bilinear verändert eine konstante relative Rephasierung den Realteil, sofern die kovariante Ableitung linear in der rephasierten Sonde wirkt und die Hintergrunddaten festgehalten werden. Eine körnige oder räumlich variable Rephasierung bräuchte eine neue Rechnung mit Ableitung der Phase. Der Modus benötigt Kohärenz zwischen den beiden Amplituden. Der antisymmetrische OP2-Sektor ist nicht mit dem T-Frame gleichgesetzt.
+
+Damit gibt es eine relative Geometrieantwort bei festem Besetzungsüberschuss, ohne direkten Transfer zwischen den Moden. Der konservative Zweimodengenerator wählt aber keinen bleibend reparierten Zustand aus: X oszilliert. Ein direkt mischender Generator tauscht generisch den hier definierten Überschuss aus. Offen bleibt, ob eine native OP2-Realisierung ein phasensensitives geometrisches Residuum mit einer unabhängigen erhaltenen Größe verbindet und einen stationären reparierten Zustand ohne Zusatzdruck liefert. OP2 und OP5 bleiben offen; H96 wurde nicht mit Daten geprüft.
