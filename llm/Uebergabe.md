@@ -22,19 +22,21 @@
   Issues #17, #10 nachgezogen.
 - **PR #181 gemergt** (U2 unter (B), Methode 4ee7618 erreichbar). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** graduell; Boost mit η_M entlang der Normalen bevorzugt |k, ±k⟩ (P 0,74–0,82 gegen 0,49–0,73), wählt sie nicht.
 - **PR #182 gemergt** (T-Regel). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen.
+- **Offen: PR #183** (Zweig `research/op1-jb-kandidat`): J_B-Kandidat, Skript k238, Nachtrag in der T-Regel-Notiz. Wartet auf „PR 183 mergen“;
+  danach #17, #10 nachziehen. **Befund:** entfällt; J_B² = −1 wählt Kramers (unter (A), schon 15.11.), jedes j oder j = 1, 3, 5 (als Dualität), nie allein j = ½.
   **Befund:** fünf Gründe für j = ½ in T, keiner datenfrei tragfähig; Dimensionsleiter gilt nur für Einheit γ₀ ∈ [1; 1,0757) · γ_T, für T also im Kreis.
   Ungeprüfte Kandidaten: J_B wählt Dubletts mit J_B² = −1; unabhängige Einheit im Fenster (vorab festgelegte Liste).
   U2 folgt aus (B) allein nicht; scharf erst in der masselosen Grenze.
 - **PR #180 gemergt** (OP1 gemeinsame Prämisse, `notes/research/op1_common_premise_2026_11_18/`). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen.
 - **Befund 18.11. (gemeinsame Prämisse):** keine einzelne gemeinsame Prämisse; Kern U2 für M (drei Wege, Zustände |j, ±j⟩), „alle Spins“ nur gesetzt, T-Regel mit fünf
-  Gründen. **Nächster Schritt (Vorschlag):** U2 unter (B) erledigt (graduell). T-Regel erledigt (PR #182 gemergt). Offen: Kandidat J_B prüfen, Einheitenliste, oder OP1 ruhen lassen.
+  Gründen. **Nächster Schritt (Vorschlag):** U2 unter (B) erledigt (graduell). T-Regel erledigt (PR #182 gemergt). J_B-Kandidat entfällt (PR #183). Offen: Einheitenliste (vorab festlegen) oder OP1 ruhen lassen.
   Issues #17, #10, #11 nachgezogen.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
 ### Forschung
 - **Letzte Runde:** v4.10.0-r29 (Zählregel von M als eine Zahl, r29.1–r29.7, drei Rücknahmen; PR #174; Kandidat 1461 Seiten, Linter 0).
   Davor r28 (in v5.2.0), r27 (PR #156). Runden r29 ff. sind nicht veröffentlicht (öffentlich: v5.2.0 bis r28).
-- **Hypothesen:** zuletzt vergeben **H112** (k234, offen, vorab 42bebf0, PR #177 gemergt). Frei: **H113, k238** (k235 Zufallsabschätzung, k236 U2-Boost, k237 Leiter-Einheit).
+- **Hypothesen:** zuletzt vergeben **H112** (k234, offen, vorab 42bebf0, PR #177 gemergt). Frei: **H113, k239** (k235 Zufallsabschätzung, k236 U2-Boost, k237 Leiter-Einheit, k238 J_B-Quadrat).
 - **Zufallsabschätzung (18.11., PR #179 gemergt, Erkundung, nicht blind):** Dreifachtreffer von DL/ABCK (sin²θ₁₂, cot θ_W, Ω_m) unter festem Katalog
   (16 Ziele, 8 Formen, 2σ) **mit Zufall verträglich**: über 36 Paare 0,64–0,81 gleich gute erwartet; nur bei datenfrei feststehendem Paar ≈ 2 %.
   Teil A: Σp = 1,31 gegen 4 Treffer, P(4/4) = 0,004 als Untergrenze. Nachträglich: Ziele um 0,30 zu 73 % gekoppelt.
