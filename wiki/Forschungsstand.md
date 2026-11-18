@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Wurzelkarte der offenen Probleme (18.11.2026)
+
+Frage des Autors: Sind die OPs wirklich offen, oder hängen sie an einer fehlenden Übersetzungsschicht? Erkundung ohne Rechnung. **Befund:** Für die Zahlen stimmt die Vermutung. Jede Zahl, die OP2 bis OP5 heute liefern, ist eine Funktion der OP1-Zahl β_sym. Für die Übersetzungen stimmt sie noch nicht: Versatz (OP2), Restbiegung (OP3), Mischungselement und ε (OP4), Dichteanteil (OP5) und Kopplungsverhältnis (H15) sind fünf einzeln gesetzte Gleichsetzungen, vier nachträglich. Das erklärt, warum die Treffer mit Zufall verträglich sind. Jedes OP hat außerdem einen eigenen Rest, der nicht an der Zahl hängt. Eine Übersetzungsschicht müsste nach Rovelli–Speziale einen eigenen Zustand zwischen den Sektoren haben. Alle OPs offen. [Notiz](../notes/research/op_root_map_2026_11_18/README.md).
+
 ### OP1: Kann ein Boost das Flächenquant ändern? (18.11.2026)
 
 Auftrag des Autors: „Weiter an OP1“. Erkundung, Literatur gelesen (Rovelli–Speziale, gr-qc/0205108). Nach r10 ist die Zuordnung DL → M, ABCK → T gleichwertig mit einem frame-abhängigen Flächenquant (γ_M/γ_T = γ_L). Rovelli und Speziale zeigen: Ein geboosteter Beobachter misst einen anderen, nicht vertauschenden Flächenoperator mit **demselben** Spektrum, sofern der Boost unitär wirkt; nur der Mittelwert kontrahiert. Unter Lesart (B) sind M und M̄ durch einen echten Boost verbunden und sehen also dasselbe γ; die Dualitätsdrehung lässt die Geometrie ohnehin fest (r10). **Folge:** Ein frame-abhängiges Flächenquant ist mit unitären Boosts unverträglich. Die Zuordnung braucht eine nicht-unitäre Frame-Abbildung (einzige Kandidatin: J_B mit imaginärer Rapidität iπ/2) oder eine Umdeutung von γ_T als Mittelwert (zirkulär). OP1 offen. [Notiz](../notes/research/op1_area_quantum_boost_2026_11_18/README.md).
