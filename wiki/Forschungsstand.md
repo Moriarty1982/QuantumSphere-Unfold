@@ -30,6 +30,8 @@ Analytische Erkundung mit vorab committeten Kriterien. In einem gemeinsamen Ruhe
 
 **Kreisgrenzfall:** Bei zusammenfallenden Foki beginnt die minimierte feste Rückstellenergie in vierter Ordnung des signierten Fokusabstands. Bei getrennten Foki bleibt der quadratische Term. Die Quellenabbildung sowie zusätzliche direkte Energieterme sind ungeklärt. [Symmetrieprobe](../notes/research/op5_bifocal_response_2026_11_18/Symmetrie.md).
 
+**Dipolauslesung:** Der erste Kosinuskoeffizient der Brennpunktdifferenz liest den signierten Fokusabstand auf der Reparaturellipse exakt aus. Der Winkelmittelwert bleibt null. Der quartische Energieleitterm bleibt auch in dieser Auslesekoordinate quartisch. Eine native orientierte Achse und eine erhaltene physikalische Ladung folgen daraus noch nicht. [Notiz](../notes/research/op5_bifocal_response_2026_11_18/Dipol.md).
+
 ### Wurzelkarte der offenen Probleme (18.11.2026)
 
 Frage des Autors: Sind die OPs wirklich offen, oder hängen sie an einer fehlenden Übersetzungsschicht? Erkundung ohne Rechnung. **Befund:** Für die Zahlen stimmt die Vermutung. Jede Zahl, die OP2 bis OP5 heute liefern, ist eine Funktion der OP1-Zahl β_sym. Für die Übersetzungen stimmt sie noch nicht: Versatz (OP2), Restbiegung (OP3), Mischungselement und ε (OP4), Dichteanteil (OP5) und Kopplungsverhältnis (H15) sind fünf einzeln gesetzte Gleichsetzungen, vier nachträglich. Das erklärt, warum die Treffer mit Zufall verträglich sind. Jedes OP hat außerdem einen eigenen Rest, der nicht an der Zahl hängt. Eine Übersetzungsschicht müsste nach Rovelli–Speziale einen eigenen Zustand zwischen den Sektoren haben. Alle OPs offen. [Notiz](../notes/research/op_root_map_2026_11_18/README.md).
