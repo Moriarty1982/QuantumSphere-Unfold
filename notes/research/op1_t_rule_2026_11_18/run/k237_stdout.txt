@@ -1,0 +1,5 @@
+Leiter (T, M, P) fuer gamma_0 in [0.127385; 0.137033], also [1.0000; 1.0757] * gamma_T
+  Einheit gamma_T (T-Quant als Einheit, Moran-Notiz)   gamma_0 = 0.127384: d=1,2,3 -> ['S1/2,g=2 (T)', 'A,g=2 (M)', 'A,g=2j+1 (P)']
+  Einheit gamma_M/2 (M fuellt die Ebene, D_M = 2)      gamma_0 = 0.118766: d=1,2,3 -> ['S1,g=2', 'A,g=2 (M)', 'A,g=2j+1 (P)']
+  Einheit gamma_P/3 (P fuellt den Raum)                gamma_0 = 0.091356: d=1,2,3 -> ['S1,g=2', 'I,g=2', 'A,g=2j+1 (P)']
+  Einheit 1/(2 pi)                                     gamma_0 = 0.159155: d=1,2,3 -> ['I,g=2', 'A,g=2j+1 (P)', 'A,g=2j+1 (P)']
