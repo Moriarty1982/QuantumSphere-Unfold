@@ -1,0 +1,9 @@
+Fenster [0.127384; 0.137033), 47 Einheiten von 0.0260 bis 1.0000
+Zufallserwartung: Fensteranteil 0.0200 der log-Spannweite, erwartet 0.94 Treffer
+Treffer: 0
+Naechste Eintraege:
+  L2 gamma[A,g=2j+1 (P)]/2           0.137033 (1.0758 gamma_T)
+  L2 gamma[I,g=2]/1                  0.137727 (1.0812 gamma_T)
+  L1 ln3/(2 pi sqrt2)                0.123637 (0.9706 gamma_T)
+  L2 gamma[S1,g=2j+1]/1              0.123637 (0.9706 gamma_T)
+  L2 gamma[A,g=2 (M)]/2              0.118766 (0.9323 gamma_T)
