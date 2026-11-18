@@ -20,17 +20,19 @@
 - **PR #178 gemergt** (5afb5d0, Merge-Commit): I5 Außenwirkung in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Zweig gelöscht. #17 nachgezogen.
 - **PR #179 gemergt** (9407d90, Merge-Commit; Methode 8557ed7 erreichbar): Zufallsabschätzung. Zweig gelöscht. Keine offenen PRs.
   Issues #17, #10 nachgezogen.
+- **Offen: PR #181** (Zweig `research/op1-u2-boost`, Methode vorab 4ee7618): U2 unter (B), Skript k236. Wartet auf „PR 181 mergen“;
+  danach #17, #10 nachziehen. **Befund:** graduell; Boost mit η_M entlang der Normalen bevorzugt |k, ±k⟩ (P 0,74–0,82 gegen 0,49–0,73), wählt sie nicht.
+  U2 folgt aus (B) allein nicht; scharf erst in der masselosen Grenze.
 - **PR #180 gemergt** (OP1 gemeinsame Prämisse, `notes/research/op1_common_premise_2026_11_18/`). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen.
-- **Befund 18.11.:** keine einzelne gemeinsame Prämisse; Kern U2 für M (drei Wege, Zustände |j, ±j⟩), „alle Spins“ nur gesetzt, T-Regel mit fünf
-  Gründen. **Nächster Schritt (Vorschlag):** U2 unter Lesart (B) prüfen: löst ein Beobachter mit Rapidität η an einer Punktierung nur Extremzustände
-  auf? Alternativ die T-Regel (schwächste Stelle) angehen.
+- **Befund 18.11. (gemeinsame Prämisse):** keine einzelne gemeinsame Prämisse; Kern U2 für M (drei Wege, Zustände |j, ±j⟩), „alle Spins“ nur gesetzt, T-Regel mit fünf
+  Gründen. **Nächster Schritt (Vorschlag):** U2 unter (B) erledigt (graduell). Offen: T-Regel (schwächste Stelle) oder OP1 ruhen lassen.
   Issues #17, #10, #11 nachgezogen.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
 ### Forschung
 - **Letzte Runde:** v4.10.0-r29 (Zählregel von M als eine Zahl, r29.1–r29.7, drei Rücknahmen; PR #174; Kandidat 1461 Seiten, Linter 0).
   Davor r28 (in v5.2.0), r27 (PR #156). Runden r29 ff. sind nicht veröffentlicht (öffentlich: v5.2.0 bis r28).
-- **Hypothesen:** zuletzt vergeben **H112** (k234, offen, vorab 42bebf0, PR #177 gemergt). Frei: **H113, k236** (k235 = Zufallsabschätzung).
+- **Hypothesen:** zuletzt vergeben **H112** (k234, offen, vorab 42bebf0, PR #177 gemergt). Frei: **H113, k237** (k235 = Zufallsabschätzung, k236 = U2-Boost).
 - **Zufallsabschätzung (18.11., PR #179 gemergt, Erkundung, nicht blind):** Dreifachtreffer von DL/ABCK (sin²θ₁₂, cot θ_W, Ω_m) unter festem Katalog
   (16 Ziele, 8 Formen, 2σ) **mit Zufall verträglich**: über 36 Paare 0,64–0,81 gleich gute erwartet; nur bei datenfrei feststehendem Paar ≈ 2 %.
   Teil A: Σp = 1,31 gegen 4 Treffer, P(4/4) = 0,004 als Untergrenze. Nachträglich: Ziele um 0,30 zu 73 % gekoppelt.
