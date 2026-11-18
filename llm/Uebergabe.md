@@ -14,14 +14,13 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #179** (Zufallsabschätzung), davor **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #180** (OP1 gemeinsame Prämisse), davor **PR #179** (Zufallsabschätzung), davor **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. CI nach #166 grün.
 - **PR #177 gemergt** (Squash 9b369c5; Vorab-Commit 42bebf0 per ours-Merge 2b6a1b1 von main erreichbar). Zweig gelöscht.
 - **PR #178 gemergt** (5afb5d0, Merge-Commit): I5 Außenwirkung in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Zweig gelöscht. #17 nachgezogen.
 - **PR #179 gemergt** (9407d90, Merge-Commit; Methode 8557ed7 erreichbar): Zufallsabschätzung. Zweig gelöscht. Keine offenen PRs.
   Issues #17, #10 nachgezogen.
-- **Offen: PR #180** (Zweig `research/op1-gemeinsame-praemisse`): OP1 gemeinsame Prämisse der Zuordnung (Erkundung), Notiz
-  `notes/research/op1_common_premise_2026_11_18/`. Wartet auf „PR 180 mergen“; danach #17, #10 nachziehen.
+- **PR #180 gemergt** (OP1 gemeinsame Prämisse, `notes/research/op1_common_premise_2026_11_18/`). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen.
 - **Befund 18.11.:** keine einzelne gemeinsame Prämisse; Kern U2 für M (drei Wege, Zustände |j, ±j⟩), „alle Spins“ nur gesetzt, T-Regel mit fünf
   Gründen. **Nächster Schritt (Vorschlag):** U2 unter Lesart (B) prüfen: löst ein Beobachter mit Rapidität η an einer Punktierung nur Extremzustände
   auf? Alternativ die T-Regel (schwächste Stelle) angehen.
