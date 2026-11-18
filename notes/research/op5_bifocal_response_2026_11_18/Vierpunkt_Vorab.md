@@ -1,0 +1,3 @@
+# Vorab: lokaler Umlagerungsschritt auf dem Ring
+
+Analytische Erkundung, nicht blind. Vorwissen: Transport.md, Dipol.md und reversible Zellschritte aus PR #188. Im festen Chart mit regelmäßigem Winkelraster untersuche eine additive Umlagerung auf aufeinanderfolgenden Stellen, die Summe, Sinus- und Kosinusmoment für beliebige Amplituden erhält. Bestimme die minimale Blockgröße. Wähle pro Block die orthogonale Projektion, die das lokale Quadrat des signierten Residualfelds verringert. Prüfe den gemeinsamen Fixraum und die Konvergenz beim zyklischen Durchlauf. Kontrolle mit N=32 und D=0,5+0,25 cos θ+0,125 sin θ+0,5 cos 2θ bei 256 beziehungsweise 4096 Durchläufen. Die Regel ist eine effektive dissipative Modellwahl, keine native Mikrodynamik; kein Datentest.
