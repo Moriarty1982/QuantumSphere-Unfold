@@ -14,7 +14,7 @@
 - Inhalt: Runden v4.10.0-r15 bis r28; im Physik-Paper Abschnitt 5.8 „Where the missing number comes from“ und ein Satz im Ausblick.
 
 ### GitHub
-- `main` nach **PR #182** (T-Regel), davor **PR #181** (U2 unter (B)), davor **PR #180** (OP1 gemeinsame Prämisse), davor **PR #179** (Zufallsabschätzung), davor **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
+- `main` nach **PR #183** (J_B-Kandidat), davor **PR #182** (T-Regel), davor **PR #181** (U2 unter (B)), davor **PR #180** (OP1 gemeinsame Prämisse), davor **PR #179** (Zufallsabschätzung), davor **PR #178** (I5 zurückgestellt), davor **PR #177** (H112 vorab), davor **PR #176** (OP4-Vorschau), davor **PR #175** (OP4-Bestandsaufnahme), davor **PR #174** (Runde v4.10.0-r29), davor **PR #173** (OP1 Rückwärtssuche, beide Lesarten der Registerbreite), davor **PR #172** (OP1 eine Zahl in sechs Gestalten, Paar (M, M̄)), davor **PR #171** (OP1 Dimensionsleiter, Spannung zu P), davor **PR #170** (OP1 Moran-Lesart), davor **PR #169** (Sichtung verworfener Ideen, TOE-Vergleich, H6 Kriterium C), davor **PR #168** (OP1 Auslesefrequenz von M), davor **PR #167** (012b296, OP1 Querungen oder Flusslinien), **PR #166** (9a07c7b, Release v5.2.0), …
   Zweige gelöscht. CI nach #166 grün.
 - **PR #177 gemergt** (Squash 9b369c5; Vorab-Commit 42bebf0 per ours-Merge 2b6a1b1 von main erreichbar). Zweig gelöscht.
 - **PR #178 gemergt** (5afb5d0, Merge-Commit): I5 Außenwirkung in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Zweig gelöscht. #17 nachgezogen.
@@ -22,14 +22,13 @@
   Issues #17, #10 nachgezogen.
 - **PR #181 gemergt** (U2 unter (B), Methode 4ee7618 erreichbar). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** graduell; Boost mit η_M entlang der Normalen bevorzugt |k, ±k⟩ (P 0,74–0,82 gegen 0,49–0,73), wählt sie nicht.
 - **PR #182 gemergt** (T-Regel). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen.
-- **Offen: PR #183** (Zweig `research/op1-jb-kandidat`): J_B-Kandidat, Skript k238, Nachtrag in der T-Regel-Notiz. Wartet auf „PR 183 mergen“;
-  danach #17, #10 nachziehen. **Befund:** entfällt; J_B² = −1 wählt Kramers (unter (A), schon 15.11.), jedes j oder j = 1, 3, 5 (als Dualität), nie allein j = ½.
+- **PR #183 gemergt** (J_B-Kandidat). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** entfällt; J_B² = −1 wählt Kramers (unter (A), schon 15.11.), jedes j oder j = 1, 3, 5 (als Dualität), nie allein j = ½.
   **Befund:** fünf Gründe für j = ½ in T, keiner datenfrei tragfähig; Dimensionsleiter gilt nur für Einheit γ₀ ∈ [1; 1,0757) · γ_T, für T also im Kreis.
   Ungeprüfte Kandidaten: J_B wählt Dubletts mit J_B² = −1; unabhängige Einheit im Fenster (vorab festgelegte Liste).
   U2 folgt aus (B) allein nicht; scharf erst in der masselosen Grenze.
 - **PR #180 gemergt** (OP1 gemeinsame Prämisse, `notes/research/op1_common_premise_2026_11_18/`). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen.
 - **Befund 18.11. (gemeinsame Prämisse):** keine einzelne gemeinsame Prämisse; Kern U2 für M (drei Wege, Zustände |j, ±j⟩), „alle Spins“ nur gesetzt, T-Regel mit fünf
-  Gründen. **Nächster Schritt (Vorschlag):** U2 unter (B) erledigt (graduell). T-Regel erledigt (PR #182 gemergt). J_B-Kandidat entfällt (PR #183). Offen: Einheitenliste (vorab festlegen) oder OP1 ruhen lassen.
+  Gründen. **Nächster Schritt (Vorschlag):** U2 unter (B) erledigt (graduell). T-Regel erledigt (PR #182 gemergt). J_B-Kandidat entfällt (PR #183 gemergt). Offen: Einheitenliste (vorab festlegen) oder OP1 ruhen lassen.
   Issues #17, #10, #11 nachgezogen.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
