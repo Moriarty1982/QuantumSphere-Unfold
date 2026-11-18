@@ -2,7 +2,7 @@
 
 ### OP5: Formantwort der bifokalen Kristall-Schnittstelle (18.11.2026)
 
-Erkundung mit vorab festgelegter Geometrie. Eine Änderung des Brennpunktabstands erzeugt ein gegenpunktgerades Residuum, das eine starre Translation nicht aufheben kann. Bei festem Sollwert der Abstandssumme kompensiert die Änderung der kleinen Ellipsenhalbachse den Defekt exakt. Die physikalische Quellenabbildung und die Verformungsenergie fehlen. [Notiz](../notes/research/op5_bifocal_response_2026_11_18/README.md).
+Erkundung mit vorab festgelegter Geometrie. Eine Änderung des Brennpunktabstands erzeugt ein gegenpunktgerades Residuum, das eine starre Translation nicht aufheben kann. Bei festem Sollwert der Abstandssumme kompensiert die Änderung der kleinen Ellipsenhalbachse den Defekt exakt. Die physikalische Quellenabbildung fehlt. Eine zusätzliche Umfangssteifigkeit mit fester Ruhelänge hinterlässt einen linearen Restdefekt und quadratische Energie. Eine Ruhelänge, die der Reparaturellipse mitgeführt wird, vermeidet beides im Modell. Ob eine solche Kopplung physikalisch vorliegt, bleibt offen. [Formantwort](../notes/research/op5_bifocal_response_2026_11_18/README.md), [Energieprüfung](../notes/research/op5_bifocal_response_2026_11_18/Steifigkeit.md).
 
 ### OP5: Gepaarter Vakuumanteil und ungepaarter Staub (18.11.2026)
 
