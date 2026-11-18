@@ -1,0 +1,9 @@
+# OP5: Ein gekoppelter Ordnungsparameter für Vakuum und Überschuss
+
+Analytische Erkundung, nicht blind. [Vorab-Kriterien](Kopplung_Vorab.md), Commit 62877aa7c85bd47fe2c911145a201e524ee2e529. Effektives Zellenmodell im gemeinsamen Ruhesystem, kein aus dem Companion hergeleiteter mikroskopischer Term.
+
+Für E(q,n)=V0+Kq²/2+(m+gq)n+λn²/2 ergibt das adiabatische Minimum q*=−gn/K. Mit χ=λ−g²/K ist ρ(n)=V0+mn+χn²/2 und p=n dρ/dn−ρ=−V0+χn²/2. Die Druckformel folgt aus −d[Vρ(N/V)]/dV bei festem N. Für n=0 bleibt positives Vakuum mit p=−ρ. Für n→0 ist mn drucklos in erster Ordnung. Bei endlichem n ist der Überschuss exakt drucklos genau für χ=0. Im barotropen adiabatischen Grenzfall gilt c_s²=χn/(m+χn). Bei positiver Enthalpie hat χ<0 eine langwellige Gradienteninstabilität, χ>0 erzeugt Druck und χ=0 ist der drucklose Grenzfall. Dies ist keine Prüfung der vollen mikroskopischen Stabilität.
+
+Eine Kopplung ohne Direktterm (λ=0, g≠0) hat χ<0. Ein einfacher struktureller Kandidat für χ=0 ist die Energie V0+mn+(K/2)(q+gn/K)², sofern die Mikrodynamik tatsächlich genau diese Kombination erzwingt. Dann bleibt q an n gekoppelt, der quadratische Beitrag verschwindet am Minimum, und der effektive Tensor ist im homogenen adiabatischen Modell T_ab=mn u_a u_b−V0 g_ab. Für ein dynamisches q können Gradienten und verzögerte Anpassung die Gleichung korrigieren. Das vollständige Quadrat wird hier als Modellstruktur gewählt.
+
+Für erhaltenen Strom und a0=1 gilt n=n0 a⁻³. Die heutige H96-Quote verlangt mn0/V0=(γ_M−γ_T)/(2γ_T)≈0,43235. Die q-Gleichung legt q bei gegebenem n fest und wählt n0 nicht. Der Kopplungskandidat realisiert somit den Vakuum- und Staubgrenzfall, liefert aber weder die native Herkunft des vollständigen Quadrats noch die Anfangs- bzw. Übergangsbedingung für H96. OP5 und H96 bleiben offen.
