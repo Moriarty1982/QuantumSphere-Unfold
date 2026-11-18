@@ -20,6 +20,8 @@ Analytische Erkundung mit vorab committeten Kriterien. In einem gemeinsamen Ruhe
 
 **Prüfung am Sondenblock:** Die beiden aktiven linearen Kopplungen zum dritten Kanal zwingen in der hermiteschen Dreimodenreduktion alle erhaltenen diagonalen Ladungsgewichte zur Gleichheit. Ein stationärer Zustand kann einen von null verschiedenen Geometrie-Kreuzterm tragen. Das vorherige konservative Bindungsmodell oszilliert bei Auslenkung. [Notiz](../notes/research/op5_pairing_readout_2026_11_18/OP2_Block.md).
 
+**Feistel-artiger Zellschritt:** Die getrennten Teilflüsse des Dreikanalmodells ergeben eine reversible Zellregel mit exakt erhaltenem Gesamtüberschuss Q. Der reparierte Fixpunkt ist linear stabil für 0<τ²K/I<4. Die Regel erzeugt keine Einregelung; ihre Koeffizienten und das geometrische Phasenziel sind bislang Eingaben des effektiven Modells. [Notiz](../notes/research/op5_pairing_readout_2026_11_18/Feistel.md).
+
 ### Wurzelkarte der offenen Probleme (18.11.2026)
 
 Frage des Autors: Sind die OPs wirklich offen, oder hängen sie an einer fehlenden Übersetzungsschicht? Erkundung ohne Rechnung. **Befund:** Für die Zahlen stimmt die Vermutung. Jede Zahl, die OP2 bis OP5 heute liefern, ist eine Funktion der OP1-Zahl β_sym. Für die Übersetzungen stimmt sie noch nicht: Versatz (OP2), Restbiegung (OP3), Mischungselement und ε (OP4), Dichteanteil (OP5) und Kopplungsverhältnis (H15) sind fünf einzeln gesetzte Gleichsetzungen, vier nachträglich. Das erklärt, warum die Treffer mit Zufall verträglich sind. Jedes OP hat außerdem einen eigenen Rest, der nicht an der Zahl hängt. Eine Übersetzungsschicht müsste nach Rovelli–Speziale einen eigenen Zustand zwischen den Sektoren haben. Alle OPs offen. [Notiz](../notes/research/op_root_map_2026_11_18/README.md).
