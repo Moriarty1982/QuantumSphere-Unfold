@@ -24,6 +24,11 @@
 - **PR #182 gemergt** (T-Regel). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen.
 - **PR #183 gemergt** (J_B-Kandidat). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** entfällt; J_B² = −1 wählt Kramers (unter (A), schon 15.11.), jedes j oder j = 1, 3, 5 (als Dualität), nie allein j = ½.
 - **PR #184 gemergt** (Einheitenliste, Liste c64caff erreichbar). Zweig gelöscht. Keine offenen PRs. #17, #10 nachgezogen. **Befund:** 0 von 47 Einheiten im Fenster [γ_T; γ_P/2), erwartet 0,94; Kandidat 2 entfällt, T-Regel ohne datenfreien Grund.
+- **Offen: PR #185** (Zweig `research/op1-flaechenquant-boost`): Flächenquant unter Boosts, Literatur Rovelli–Speziale (gr-qc/0205108).
+  Wartet auf „PR 185 mergen“; danach #17, #10 nachziehen. **Befund:** Unitäre Boosts erhalten das Flächenspektrum; das frame-abhängige Flächenquant
+  aus r10 braucht eine nicht-unitäre Frame-Abbildung (einzige Kandidatin J_B mit iπ/2) oder γ_T als Mittelwert (zirkulär).
+  **Nächster Schritt (Vorschlag):** prüfen, ob J_B (imaginäre Rapidität iπ/2) auf dem Flächenoperator nicht-unitär wirkt und das Spektrum skaliert;
+  sonst OP1 ruhen lassen.
   **Befund:** fünf Gründe für j = ½ in T, keiner datenfrei tragfähig; Dimensionsleiter gilt nur für Einheit γ₀ ∈ [1; 1,0757) · γ_T, für T also im Kreis.
   Ungeprüfte Kandidaten: J_B wählt Dubletts mit J_B² = −1; unabhängige Einheit im Fenster (vorab festgelegte Liste).
   U2 folgt aus (B) allein nicht; scharf erst in der masselosen Grenze.
