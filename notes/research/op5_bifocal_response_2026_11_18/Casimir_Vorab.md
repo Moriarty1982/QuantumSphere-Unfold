@@ -1,0 +1,3 @@
+# Vorab: Casimir-Randenergie als Schaltkandidat
+
+Analytische Erkundung, nicht blind. Vorwissen: Gate.md, Grenze_W2.md, Domaene.md, klassische Casimir-Wechselwirkung ideal paralleler leitender Platten (Casimir 1948). Prüfe E/A=κ(d−d₀)²/2−C/d³ mit κ,C,d₀>0 als mögliche elastische Grenzfläche bei festem Wandzustand s; optional setzt d₀(s)=d_b−ℓs geometrisch eine monotone Ruhelänge. Bestimme Existenz und Stabilitätsgrenze lokaler Minima und die dort auftretende relative Spaltweite. Unterscheide Verlust eines Minimums von einer nachgewiesenen Transportsperre. Prüfe separat die Skalierung des reinen Casimir-Terms bei gemeinsam skaliertem Plattenabstand und Fläche. Keine native M/T-Elektrodynamik, keine Modellanpassung an H96, kein Messdatentest.
