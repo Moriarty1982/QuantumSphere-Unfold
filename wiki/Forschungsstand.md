@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Formantwort der bifokalen Kristall-Schnittstelle (18.11.2026)
+
+Erkundung mit vorab festgelegter Geometrie. Eine Änderung des Brennpunktabstands erzeugt ein gegenpunktgerades Residuum, das eine starre Translation nicht aufheben kann. Bei festem Sollwert der Abstandssumme kompensiert die Änderung der kleinen Ellipsenhalbachse den Defekt exakt. Die physikalische Quellenabbildung und die Verformungsenergie fehlen. [Notiz](../notes/research/op5_bifocal_response_2026_11_18/README.md).
+
 ### OP5: Gepaarter Vakuumanteil und ungepaarter Staub (18.11.2026)
 
 Analytische Erkundung mit vorab committeten Kriterien. In einem gemeinsamen Ruhesystem liefert der Ansatz für positive Beiträge A ≥ B mit p = −2B den Staubanteil (A−B)/(A+B). Bei A=B bleibt Vakuum, bei B=0 Staub. Bei getrennter Erhaltung entwickelt sich der Anteil wie im flachen Staub-plus-Vakuum-Modell. Eine konstante innere Quote erfordert Energietransfer. k183 verfehlt den Vakuumgrenzfall. k193 liefert nahe dem Kondensat Staub plus Vakuum, lässt ihr Verhältnis aber als Anfangsdaten frei. Die Kristall-Auslesung begründet dabei keine gravitative Quellenabbildung. H96 und OP5 bleiben offen. [Notiz](../notes/research/op5_pairing_readout_2026_11_18/README.md).
