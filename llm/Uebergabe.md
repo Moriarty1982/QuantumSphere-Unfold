@@ -20,6 +20,11 @@
 - **PR #178 gemergt** (5afb5d0, Merge-Commit): I5 Außenwirkung in `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md`. Zweig gelöscht. #17 nachgezogen.
 - **PR #179 gemergt** (9407d90, Merge-Commit; Methode 8557ed7 erreichbar): Zufallsabschätzung. Zweig gelöscht. Keine offenen PRs.
   Issues #17, #10 nachgezogen.
+- **Offen: PR #180** (Zweig `research/op1-gemeinsame-praemisse`): OP1 gemeinsame Prämisse der Zuordnung (Erkundung), Notiz
+  `notes/research/op1_common_premise_2026_11_18/`. Wartet auf „PR 180 mergen“; danach #17, #10 nachziehen.
+- **Befund 18.11.:** keine einzelne gemeinsame Prämisse; Kern U2 für M (drei Wege, Zustände |j, ±j⟩), „alle Spins“ nur gesetzt, T-Regel mit fünf
+  Gründen. **Nächster Schritt (Vorschlag):** U2 unter Lesart (B) prüfen: löst ein Beobachter mit Rapidität η an einer Punktierung nur Extremzustände
+  auf? Alternativ die T-Regel (schwächste Stelle) angehen.
   Issues #17, #10, #11 nachgezogen.
 - Issues #17, #10 (OP1), #131 (OP3) nachgezogen.
 
