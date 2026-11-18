@@ -71,3 +71,15 @@ auch für J_B. Das hätte oben stehen müssen. Neu ist nur die Wirkung von J_B o
 **Ergebnis:** Keine natürliche Wirkung von J_B wählt allein j = ½. Kandidat 1 entfällt. Von den Eigenschaften der Frame-Abbildungen geben j = ½ allein
 nur die Irreduzibilität (braucht (A)) und der fermionische Austausch (S2, reine Setzung, 15.11.). Offen bleibt Kandidat 2 (eine unabhängige Einheit
 für die Dimensionsleiter). OP1 offen.
+
+## Nachtrag (18.11.2026): Kandidat 2 geprüft – keine unabhängige Einheit im Fenster
+Auftrag des Autors: „Einheitenliste prüfen“. Liste vor der Auswertung festgelegt (`Einheitenliste.md`, Commit c64caff; nicht blind gegenüber vier
+Einträgen aus k237). Skript `k239_unit_list.py`, Ausgabe `run/k239_stdout.txt`.
+
+- 47 Einheiten nach zwei Bauregeln: c/(2π a) mit sechs Zählkonstanten und vier Flächenmaßen (ohne γ_T selbst) und γ_R/d für die acht übrigen Regeln
+  und d = 1, 2, 3.
+- **Treffer im Fenster [γ_T; γ_P/2): 0.** Zufallserwartung 0,94; ein Treffer wäre also auch nicht bemerkenswert gewesen.
+- Am nächsten: γ_P/2 genau am offenen Rand (dort füllt P die Ebene, die Leiter gäbe P statt M auf d = 2), γ(I, g = 2) bei 1,081 γ_T und Dreyers
+  ln 3/(2π√2) bei 0,971 γ_T, knapp unter dem Fenster.
+
+**Ergebnis:** Kandidat 2 entfällt. Die Dimensionsleiter bleibt für T im Kreis; keiner der geprüften Wege gibt der T-Regel einen datenfreien Grund. OP1 offen.
