@@ -1,0 +1,11 @@
+# Paarumwandlung: erhaltener Überschuss und geometrische Auslesung
+
+Analytische Erkundung gemäß [Vorab-Notiz](Paarsymmetrie_Vorab.md), Commit 523244ab19041a7ba98f1b4359f9b7f2c101792f. Die komplexen kanonischen Moden m,t,p sind ein Modell, keine nachgewiesene Identifikation mit den Sonden bzw. Frames des Companion. P als Frame ist vom Platzhalter p zu unterscheiden.
+
+Eine Gegenphasen-Symmetrie m↦e^{iα}m, t↦e^{−iα}t, p↦p hat im kanonischen Modell den Generator Q=|m|²−|t|² (bis auf Wahl der Richtung des Gruppenparameters). Der Paarterm H_int=−2g Re(mt p*) ist invariant und erhält Q exakt. Bei alleinigen freien diagonalen Termen und diesem Paarterm sind sogar |m|²+|p|² bzw. |t|²+|p|² jeweils erhalten: Ein p-Quant steht im Umwandlungsansatz einem M/T-Paar gegenüber. Bei festen, von null verschiedenen Amplituden und g>0 liegt das Phasenminimum bei arg m+arg t−arg p=0 modulo 2π. Der Term wählt die relative Phase arg t−arg m nicht aus.
+
+Der aus v470/12 motivierte sesquilineare Kreuzterm trägt unter denselben Annahmen Ladungsgewicht −2: m* t↦e^{−2iα}m* t. Sein Realteil ist nicht invariant. Zum Gegencheck: m=t=p=1 und die gegenphasig um α=π/4 gedrehte Konfiguration haben gleiche Beträge und denselben Paarterm am Phasenminimum; der Realteil des Kreuzterms ist erst 1 und dann 0. Dasselbe Transformationsgewicht gilt für einen kovariant mit t transformierenden Ableitungsterm. Dies schließt ihn als eigenständige invariante Auslesung unter dieser Symmetrie aus. Ein global-symmetrisches Modell kann dennoch geladene, referenzabhängige Observablen besitzen.
+
+Ein neutraler Monitor könnte auf der Paargröße mt p* beruhen, wäre aber unter einfachem M/T-Tausch gerade und noch kein signierter Randdipol. Möglich wäre auch ein zusätzlicher Referenz- oder Feldfaktor mit Ladungsgewicht +2, der den vorhandenen Kreuzterm neutralisiert; ein neutrales p leistet dies nicht. Alternativ ist Q selbst invariant unter der Gegenphase und wechselt beim M/T-Tausch das Vorzeichen; eine geometrische Auslesung könnte direkt an Q koppeln, ist im Bestand aber nicht konstruiert.
+
+Die Rechnung liefert ein exaktes Erhaltungsgesetz für eine Paarumwandlung und zugleich eine Auswahlregel für die Auslesung. Sie liefert keine Herkunft dieser Kopplung aus OP2 oder der Zellwirkung, keinen gravitativen Tensor und keine H96-Quote. OP2, OP5 und H96 bleiben offen.
