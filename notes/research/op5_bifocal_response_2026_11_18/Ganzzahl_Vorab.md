@@ -1,0 +1,3 @@
+# Vorab: ganzzahlige Dipol-Umlagerung
+
+Analytische Erkundung, nicht blind. Vorwissen: Vierpunkt.md, Transport.md, Dipol.md und die Unterscheidung quantisierter und reellwertiger Überschüsse im OP5-Ansatz. Gleicher fester Winkelchart. Prüfe für den bisherigen 32er-Ring, ob ein von null verschiedener ganzzahliger Schritt auf vier aufeinanderfolgenden Stellen Summe und beide Dipolkomponenten exakt erhalten kann. Bestimme für Zweierpotenzringe ab N=8 die kürzeste zusammenhängende Ringstrecke mit einem solchen Schritt und prüfe N=6 als Rasterkontrolle. Verwende rationale Polynome und ganzzahlige Koeffizienten, keine Fließkommatoleranz für die Entscheidung. Die Ganzzahligkeit ist ein Modellzusatz, keine Aussage über die native QAM oder physikalische Ladung.

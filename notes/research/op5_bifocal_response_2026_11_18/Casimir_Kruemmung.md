@@ -1,0 +1,11 @@
+# Casimir-Schaltschwelle bei elliptischem Querschnitt
+
+Analytische Erkundung nach [Vorab-Notiz](Casimir_Kruemmung_Vorab.md), Commit e856013d05e15ad30f53e6647174a2f59c693d4f. Die bifokale Ellipse wird als zusätzliche Modellannahme starr entlang einer langen Achse extrudiert und einer Ebene gegenübergestellt. Ideale Leiter, kleine Lücke d≪R, feste Querschnittsform und vernachlässigte Enden. Keine native M/T-Einbettung. Referenz für den runden Spezialfall: [Emig–Jaffe–Kardar–Scardicchio](https://arxiv.org/abs/cond-mat/0601055).
+
+Mit lokaler Krümmungsradius R am nächsten Scheitel ist der Spalt transversal h(y)=d+y²/(2R)+O(y⁴) und entlang der Kontaktlinie konstant. In der Proximity-Näherung ergibt die Integration der Plattenenergie −C/h³ mit C=π²ħc_light/720:
+E/L≈−(3π/8) C√(2R) d^(−5/2), |F|/L≈(15π/16) C√(2R) d^(−7/2).
+Das folgt mit y=√(2Rd)t und ∫_(−∞)^∞(1+t²)^−3dt=3π/8. Für eine Ellipse a≥b>0 sind die Krümmungsradien am großen bzw. kleinen Scheitel b²/a bzw. a²/b. Der flachere kleine Scheitel hat daher bei gleichem d eine um (a/b)^(3/2) stärkere lokale Kraft pro Länge. Für a=√2, b=1: Faktor 2^(3/4)≈1,68. Die Annäherung einer größeren zusammenhängenden Fläche ist damit von Punkt- und Linienminimum zu unterscheiden.
+
+Für eine skalare lineare Feder mit Kraft κ(d₀−d) und Attraktion B d^(−n) verliert der stabile offene Zweig sein Minimum bei der doppelten Nullstelle κ(d₀−d)=B d^−n und κ=nB d^(−n−1). Daraus folgt d/d₀=n/(n+1). Platten n=4 ergeben 4/5, extrudierte Ellipse mit Linienminimum n=7/2 ergibt 7/9, Kugel vor einer Ebene mit Punktminimum n=3 ergibt 3/4. Die Ellipsenorientierung ändert B und damit die absolute Schwelle, nicht deren relatives Verhältnis in demselben asymptotischen Modell. Das Schwellenresultat gilt nur, wenn der kritische Spalt noch im kleinen-Spalt-Regime liegt und die Form während der Spaltbewegung näherungsweise fest ist.
+
+Für OP5 erlaubt die zuvor berechnete bifokale Formantwort eine konkrete lokale Krümmung. Sie bestimmt aber nicht von sich aus, welche zweite Fläche und welche Richtung entlang der dritten Dimension physikalisch gemeint sind. Die Schaltschwelle bleibt eine mechanische Größe und liefert keine Transmissionsnullstelle, Drucklosigkeit oder H96-Auslesung.

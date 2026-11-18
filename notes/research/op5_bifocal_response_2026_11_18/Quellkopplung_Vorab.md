@@ -1,0 +1,3 @@
+# Vorab: direkte Kopplung der Ladung an den Randdipol
+
+Analytische Erkundung, nicht blind. Vorwissen: Paarsymmetrie.md, Dipol.md, Symmetrie.md und Kopplung.md aus PR #188. Betrachte im festen Chart Q und q als unter M/T-Tausch vorzeichenwechselnde Größen. Keine native Identifikation. Prüfe rückwärts vom Ziel q∝Q und fehlender quadratischer Zusatzenergie: Minimiere V=K q²/2−gQq+C Q²/2+λq⁴/4 (λ>0) bei festem Q. Vergleiche K>0 mit dem quartisch weichen Fall K=0 und g≠0. Behandle das Ergebnis als effektive Energie, Druck nur bedingt bei Identifikation von Q mit einer Eigendichte. Keine Messdaten und keine Einstellung an H96.

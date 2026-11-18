@@ -1,0 +1,3 @@
+# Vorab: erreichbare Randzustände bei ganzzahliger Umlagerung
+
+Analytische Erkundung, nicht blind. Vorwissen: Ganzzahl.md, Vierpunkt.md, Dipol.md und Transport.md. Festes Winkelraster und unveränderte gemeinsame Einheit. Prüfe rückwärts vom Zielraum aus Konstante, Sinus und Kosinus: Können auf einem Zweierpotenzring alle höheren Moden durch ganzzahlige, exakt dipolerhaltende Schritte abgebaut werden, auch wenn antipodale Aktionen erlaubt sind? Bestimme erhaltene Gegenpunktdifferenzen, prüfe das ganzzahlige Gegenbeispiel e₀−e_(N/2) für N=32 und gib seine minimale Abweichung vom Zielzustand mit denselben drei Momenten an. Vergleiche die Dimensionen zulässiger Änderungsrichtungen auf N=6. Keine physikalische Identifikation oder Messdaten.

@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Formantwort der bifokalen Kristall-Schnittstelle (18.11.2026)
+
+Erkundung mit vorab festgelegter Geometrie. Eine Änderung des Brennpunktabstands erzeugt ein gegenpunktgerades Residuum, das eine starre Translation nicht aufheben kann. Bei festem Sollwert der Abstandssumme kompensiert die Änderung der kleinen Ellipsenhalbachse den Defekt exakt. Die physikalische Quellenabbildung fehlt. Eine zusätzliche Umfangssteifigkeit mit fester Ruhelänge hinterlässt einen linearen Restdefekt und quadratische Energie. Eine Ruhelänge, die der Reparaturellipse mitgeführt wird, vermeidet beides im Modell. Ob eine solche Kopplung physikalisch vorliegt, bleibt offen. [Formantwort](../notes/research/op5_bifocal_response_2026_11_18/README.md), [Energieprüfung](../notes/research/op5_bifocal_response_2026_11_18/Steifigkeit.md).
+
 ### OP5: Gepaarter Vakuumanteil und ungepaarter Staub (18.11.2026)
 
 Analytische Erkundung mit vorab committeten Kriterien. In einem gemeinsamen Ruhesystem liefert der Ansatz für positive Beiträge A ≥ B mit p = −2B den Staubanteil (A−B)/(A+B). Bei A=B bleibt Vakuum, bei B=0 Staub. Bei getrennter Erhaltung entwickelt sich der Anteil wie im flachen Staub-plus-Vakuum-Modell. Eine konstante innere Quote erfordert Energietransfer. k183 verfehlt den Vakuumgrenzfall. k193 liefert nahe dem Kondensat Staub plus Vakuum, lässt ihr Verhältnis aber als Anfangsdaten frei. Die Kristall-Auslesung begründet dabei keine gravitative Quellenabbildung. H96 und OP5 bleiben offen. [Notiz](../notes/research/op5_pairing_readout_2026_11_18/README.md).
@@ -23,6 +27,10 @@ Analytische Erkundung mit vorab committeten Kriterien. In einem gemeinsamen Ruhe
 **Feistel-artiger Zellschritt:** Die getrennten Teilflüsse des Dreikanalmodells ergeben eine reversible Zellregel mit exakt erhaltenem Gesamtüberschuss Q. Der reparierte Fixpunkt ist linear stabil für 0<τ²K/I<4. Die Regel erzeugt keine Einregelung; ihre Koeffizienten und das geometrische Phasenziel sind bislang Eingaben des effektiven Modells. [Notiz](../notes/research/op5_pairing_readout_2026_11_18/Feistel.md).
 
 **Zellfixpunkt aus Residuen:** Der reversible Schritt kann direkt aus dem Gradienten der quadrierten Zellresiduen gebildet werden. Ein invertierbarer lokaler Residuen-Jacobi liefert einen eindeutigen Fixpunkt mit Nullresiduum. Bei zusätzlicher Verankerungsenergie kann ein stationärer Restdefekt bleiben. Die historischen Zellbedingungen liefern die benötigten nativen Antwortfunktionen noch nicht. [Notiz](../notes/research/op5_pairing_readout_2026_11_18/Zellfixpunkt.md).
+
+**Kreisgrenzfall:** Bei zusammenfallenden Foki beginnt die minimierte feste Rückstellenergie in vierter Ordnung des signierten Fokusabstands. Bei getrennten Foki bleibt der quadratische Term. Die Quellenabbildung sowie zusätzliche direkte Energieterme sind ungeklärt. [Symmetrieprobe](../notes/research/op5_bifocal_response_2026_11_18/Symmetrie.md).
+
+**Dipolauslesung:** Der erste Kosinuskoeffizient der Brennpunktdifferenz liest den signierten Fokusabstand auf der Reparaturellipse exakt aus. Der Winkelmittelwert bleibt null. Der quartische Energieleitterm bleibt auch in dieser Auslesekoordinate quartisch. Eine native orientierte Achse und eine erhaltene physikalische Ladung folgen daraus noch nicht. [Notiz](../notes/research/op5_bifocal_response_2026_11_18/Dipol.md).
 
 ### Wurzelkarte der offenen Probleme (18.11.2026)
 

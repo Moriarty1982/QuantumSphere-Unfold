@@ -1,0 +1,3 @@
+# Vorab: Erhaltung der Dipolauslesung am Rand
+
+Analytische Erkundung, nicht blind. Vorwissen: Dipol.md, v470/05 (Indexparität des Orbit-Scans), OP2_Sonden.md in PR #188 und H96. Gleicher Chart und feste orientierte Achse. Trenne Randkontinuität, Transport mit einem Einzelschritt auf dem Winkelraster und echte Dipolerhaltung. Prüfe über den adjungierten Generator einfache symmetrische Nachbardiffusion, einen hypothetischen lokalen Generator mit geschützter erster Harmonischer und die Möglichkeit eines irreduziblen positiven Markov-Transports. Nutze N=32 und Fourier-Moden 0, 1, 2 als Kontrolle. Die historische Indexfolge wird ohne zusätzliche Zuordnung nicht als gleichmäßig verteiltes Winkelraster behandelt. Keine physikalische Identifikation oder Datenprüfung.

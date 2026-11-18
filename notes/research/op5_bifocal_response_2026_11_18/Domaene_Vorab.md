@@ -1,0 +1,3 @@
+# Vorab: zwei gleich tiefe Randzustände und Wandmoden
+
+Analytische Erkundung, nicht blind. Vorwissen: Grenze_W2.md, Grenzflaeche.md, W2_Frame.md und W2-Higgs-Ansatz r82. Prüfe die verbundenen Minima des komplexen W2-Dubletts bei verschwindenden übrigen klassischen Feldern, einschließlich der bei reeller Einschränkung sichtbaren Vorzeichen. Stelle als ausdrücklich ergänztes Kontrollmodell einen reellen neutralen Ordnungsparameter mit zwei diskreten Minima auf und leite statische Wand, positive Spannung und Fermion-Normalmode für eine vorzeichenwechselnde Dirac-Masse her. Unterscheide eine gebundene Mode von einer reflektierenden Barriere zwischen zwei propagierenden Reservoiren. Keine native Identifikation, keine Messdaten.

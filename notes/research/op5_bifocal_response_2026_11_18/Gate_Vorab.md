@@ -1,0 +1,5 @@
+# Vorab: eine Grenzfläche, die durch Ladungsfluss schließt
+
+Analytische Erkundung, nicht blind. Vorwissen: Grenzflaeche.md, Grenze_W2.md, Domaene.md, Quellkopplung.md und H96. Starre gemeinsame Ruhesystem-Zelle, keine Ableitung aus W2 und keine M/T-Framegleichsetzung. Q=Q_M−Q_T, F Normalfluss von M nach T, s Wandzustand, Q̇=−2F, ṡ=ηF mit η>0. Setze Zellenergie E=Q²/(2χ)+K s²/2, χ,K>0. Nutze den dissipativen Ansatz F=G(s)(2Q/χ−ηKs) mit G(s)=G₀[max(1−s/s_c,0)+ε], s_c>0. Anfang F>0 und 0≤s₀<s_c.
+
+Prüfe unabhängig Energieabnahme, erhaltene Kombination und Bedingung dafür, dass die Barriere vor dem energetischen Ausgleich schließt. Vergleiche perfekte Sperre ε=0 und endliche Leckage ε>0. Prüfe, ob die Endladung universell ist oder Anfangsdaten bzw. Wandparameter enthält. Zahlenkontrollen ohne Fit: χ=K=η=G₀=s_c=1, s₀=0, Q₀=4 oder 2, mit ε=0 sowie ε=0,05 bei Q₀=4. Keine Messdaten, keine H96-Anpassung. Der Energieverlust geht in einen nicht aufgelösten Kanal; Druck und Casimir-Energie benötigen zusätzliche Physik.
