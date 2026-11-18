@@ -47,3 +47,5 @@ Die beiden Vorzeichen eines reell eingeschränkten W2-Higgsfelds sind im komplex
 ## Selbstschließende Grenzfläche
 
 Ein dissipatives Modell, in dem der Fluss den Wandzustand verändert, kann einen Überschuss trotz verbleibenden Antriebs sperren. Der Endwert hängt von Anfangsüberschuss und Schaltschwelle ab. Eine endliche Leckage löst die Sperre auf und führt auf den energetischen Ausgleich; dieser kann eine andere, nichtverschwindende Restladung tragen. Die Wand- und Speicherenergie sind explizit, ein kosmologischer Druck und eine Casimir-Korrektur folgen noch nicht. [Modell und Rechnung](../notes/research/op5_bifocal_response_2026_11_18/Gate.md).
+
+Die ideale Casimir-Wechselwirkung kann im Modell mit elastischem Spalt eine mechanische Schaltschwelle liefern: Bei d/d₀=4/5 verschwindet das stabile offene Minimum. Daraus folgt noch keine Transportsperre. Der reine Casimir-Beitrag skaliert bei gleichmäßiger Dilatation als ρ_C∝a⁻⁴ mit p_C=ρ_C/3 für die isotrope Dilatationsantwort. Das ist kein druckloser Überschuss und keine kosmologische Herleitung. [Casimir-Rechnung](../notes/research/op5_bifocal_response_2026_11_18/Casimir.md).
