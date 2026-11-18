@@ -19,3 +19,5 @@ Quellenabgleich vom 18.11.2026. Die [Definition des endlichen Scans](../sources/
 ## Rückwärtssuche nach einer physikalisch erhaltenen Größe
 
 Unter der Maxwell-Abbildung M→T bleibt die Energie gleich. Die passende vorzeichenwechselnde Größe Re S=E²−B² ist dagegen nicht allgemein erhalten, wie ein periodisches stehendes Feld bei konstanter Gesamtenergie exakt zeigt. W1 hat einen erhaltenen internen Eichstrom, dessen Ladungsvorzeichen bisher keine nachgewiesene Zuordnung zum M–T-Randdipol besitzen. Der physikalische Übergang bleibt offen. [Gegenprobe und Quellenabgleich](../notes/research/op5_bifocal_response_2026_11_18/Quelle.md).
+
+Eine modellhafte Paarumwandlung M+T↔p mit neutraler Hilfsmode erhält die M–T-Besetzungsdifferenz genau. Sie bindet die Summe der beiden Phasen relativ zur Hilfsmode. Der sesquilineare Sonden-Kreuzterm hängt dagegen an der Differenz der Phasen und ist unter dieser Erhaltungssymmetrie nicht invariant. Eine neue Auslesung oder eine physikalisch begründete Phasenreferenz bleibt nötig. [Paarprüfung](../notes/research/op5_bifocal_response_2026_11_18/Paarsymmetrie.md).
