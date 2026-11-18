@@ -9,3 +9,5 @@ Arbeitsstand zu PR #190. Die Größen beziehen sich auf das geometrische Randmod
 Die physikalische Zuordnung des Randdipols, das native Übergangsgesetz und H96 bleiben offen.
 
 [Herleitung zur Ganzzahligkeit](../notes/research/op5_bifocal_response_2026_11_18/Ganzzahl.md).
+
+Die antipodale Kopplung reicht auf dem 32er-Ring nicht für beliebige Glättung. Jede ganzzahlige exakte Umlagerung lässt alle Gegenpunktdifferenzen und damit alle ungeraden Winkelmoden unverändert. Neben den beiden Dipolkomponenten bleiben so 14 weitere ungerade Richtungen erhalten. Auf dem 6er-Ring gibt es diese zusätzliche lineare Einschränkung nicht. [Herleitung und Gegenbeispiel](../notes/research/op5_bifocal_response_2026_11_18/Relaxation.md).
