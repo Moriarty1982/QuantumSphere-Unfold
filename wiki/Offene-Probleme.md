@@ -157,6 +157,44 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Umkehrwalze und Dipol, 19.11.2026:** $J_B$ vertauscht die räumlichen Paritäten der freien Doppelamplitude. Der gleiche Feldtausch würde an jedem geladenen J-Fokus magnetische Quellen erfordern. Native Entartung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Dipol.md).
+
+**Kramers-Dipol, 19.11.2026:** Ein isoliertes Kramers-Dublett schützt keine orientierte B−L-Dichte. Der zeitumkehrgerade, paritätsungerade Dipol verschwindet im Dublett. Zwei Dubletts entgegengesetzter Parität können energetisch aufspalten. Native Orientierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Kramers_Dipol.md).
+
+**Quantendipol, 19.11.2026:** Ideale Coulomb-Entartung erlaubt einen stationären Dipol bei gewählter Präparation. Der abgeschirmte Higgsanteil spaltet das betrachtete $2s$–$2p$-Dublett auf und lässt den präparierten Dipol schwingen. Native Orientierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Quantendipol.md).
+
+**Drehimpuls, 19.11.2026:** Im konservativen Modell kann eine Kreisbahn den Fokusabstand radial stabilisieren. Die J-Dipolstrahlung lässt die klassische isolierte Bahn schrumpfen, und der B−L-Dipol hat auf der idealen Kreisbahn keinen zeitlichen Mittelwert. Eine stationäre Randwirkung bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusbahn.md).
+
+**Thermische Neutralbesetzung, 19.11.2026:** Die W2-Phasenladungen schützen keine neutrale Teilchen-Loch-Belegung. Im thermischen Zweimodenmodell bleibt die Fermionkrümmung bei jeder endlichen Temperatur negativ. Native übrige Krümmung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Gleichgewicht.md).
+
+**Neutrale Fermionbesetzung, 19.11.2026:** Eine festgehaltene neutrale Belegung schneidet im projizierten Dirac-Modenpaar den negativen Infrarotlogarithmus ab. Der verbleibende Beitrag zur quadratischen Variation ist negativ. Restkrümmung, Besetzungsdynamik und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Neutralbesetzung.md).
+
+**Chirale Z-String-Nullmoden, 19.11.2026:** Endliche Energie pro Länge im elektromagnetischen und J-Maxwell-Kanal erzwingt im geprüften unendlichen Nullmodensektor verschwindende B−L-Ladung und verschwindenden B−L-Strom. Stabilisierung durch Neutralbesetzung oder zusätzliche Moden bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Nullmoden.md).
+
+**Endzonenmodell, 19.11.2026:** Ein abklingender Außenkanal liefert eine berechenbare endliche Steifigkeit. Bei der W-Masse als Außenmaß sinkt die modellhafte kritische Länge auf rund 0,0031 fm. Die gekoppelte physische Endantwort bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Endzonen.md).
+
+**Längenskala des Z-Segments, 19.11.2026:** Eine publizierte elektroschwache Vergleichsskala ergibt für starre Enden rund 0,007 fm, nur etwa drei Abschirmlängen. Die vollständigen Endzonen und die gemeinsame Gültigkeit mit dem mechanischen Modell sind offen. [Rechnung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Laengenskala.md).
+
+**Endliches Z-Segment, 19.11.2026:** Im Einmodenmodell können Randbedingungen die negative Innenmode nur unterhalb einer kritischen Länge unterdrücken. Selbst für feste Enden muss $R<\pi/\mu$ gelten. Die physische Endantwort und der gemeinsame Bereich mit dem mechanischen Gleichgewicht bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Segment.md).
+
+**Z-Strang, 19.11.2026:** Der elektroschwache Vergleich ermöglicht endliche Wirbelspannung, hat aber am physikalischen Parameterpunkt eine instabile Mode. Die magnetische Endpunktanziehung reduziert zusätzlich die effektive Coulombabstoßung im OP5-Kontrollmodell. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Strang.md).
+
+**Neutraler Higgsstrang, 19.11.2026:** Die transversale Skalierung schließt im glatten, quellenfreien, statischen W2-Teilsystem einen geraden Strang mit positiver endlicher Spannung aus. Zusätzliche gekoppelte Felder oder längs verteilte Quellen wären getrennt zu prüfen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutraler_Strang.md).
+
+**Herkunft des Zugterms, 19.11.2026:** Ein einzelner durchgehender J-Fluss hätte entgegengesetzt geladene Endpunkte. Eine neutrale Weltfläche könnte den Zugterm bei unabhängig gleichnamigen Foki liefern. Für I1 fehlen die Randbindung und der Spannungswert, für k185 die entsprechende Dynamik. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Zugterm_Quelle.md).
+
+**Gleichnamige J-Ladungen, 19.11.2026:** Im statischen Fokusmodell ergibt die Coulombabstoßung gegen die Higgsanziehung höchstens ein instabiles Gleichgewicht. Eine zusätzliche Zugspannung liefert ein bedingtes Stabilitätsmodell. Ihre Herkunft aus der Wirkung bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Gleichnamige_Foki.md).
+
+**Fokusabstand, 19.11.2026:** Bei ladungskonjugierten radialen Wolken sind im quadratischen statischen Modell sowohl die Vektor- als auch die Higgswechselwirkung attraktiv. Ein getrennter Abstand mit wirksamem Außenkanal verlangt eine zusätzliche Gegenkraft. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusabstand.md).
+
+**Radiale Fokusprofile, 19.11.2026:** Kalibrierte Z-Profilfaktoren erlauben die Dipolrekonstruktion aus zwei Punkten pro Feld. Bei unbekanntem Profil ist der Betrag selbst mit vollständigem Außenfeld mehrdeutig. Die native Profil- und Randdynamik bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusprofile.md).
+
+**Neutrale Ströme, 19.11.2026:** Photon- und Z-Vektorquellen bilden in der elektroschwachen Referenz lokal eine signierte $B-L$-Auslese. Abgeschirmte glatte Quellen können dennoch den Dipol vor sämtlichen Außenfeldmessungen verbergen. W2-Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutralstroeme.md).
+
+**J-Eichkanal, 19.11.2026:** Die Maxwell-Quelle ist vorzeichenempfindlich für J. Ein Quark-Lepton-Gegenbeispiel hält J-Quelle und radialen Higgsanteil gemeinsam fest, während der $B-L$-Dipol sein Vorzeichen wechselt. Die J-Eigenfeldkraft ist unter den statischen Modellannahmen gerade in der Ladung. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_J_Eichkanal.md).
+
+**Nachtrag 19.11.2026:** Die radiale Dirac-Yukawa-Quelle hängt bei festen Besetzungen von der Teilchen-Antiteilchen-Summe ab. Zwei feste, ladungskonjugiert belegte Foki können deshalb denselben Higgsradius und entgegengesetzte Ladungsdipole haben. Der geprüfte Skalarkanal liefert kein signiertes Randresiduum. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Higgsquelle.md).
+
 **Eingeordnet als Runde v4.10.0-r11 (7.11.):** Die folgenden Arbeitsnotizen sind in den Companion aufgenommen und nachgerechnet (k219, 31 von 31). Präzisiert sind die Punkte 1 und 2 der r05-Neuordnung: Der OP5-Kern ist als bedingtes Schema geschlossen, eine native Route fehlt; die Λ-Auslesung ist die zusätzliche Gleichsetzung q = Ω_M (H96), die Kaskade leitet die Zahl nicht her. Offen: ein Mechanismus, der q auswählt, und eine Messabbildung vom Register zur Dichte. [Runde r11](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r11/README.md).
 
 **Neu priorisiert nach Rückgang zur Grundidee (Arbeitsnotiz, 6.11.):** Der Spin-/Zählzweig setzt bereits die physikalische Einheit von M/T/P voraus. Die erneute Rückverfolgung legt eine frühere Aufgabe offen: die Bedeutung von „ein Objekt“ und die Identifikation der konkreten Feldsektoren mit physikalischen Teilchentypen. Gemeinsame Algebra und aktiver Dualitätszusammenhang beweisen weder dieselbe physikalische Konfiguration noch einen Photon-Ausgang der Projektion. Der weitere Prüfpunkt liegt daher vor einer neuen Spinmaske oder Λ-Rechnung. [Zehn Schritte zurück bis zum Ansatz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/qsc_back_to_basic_idea_2026_11_06.md).

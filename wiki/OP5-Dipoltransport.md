@@ -131,3 +131,79 @@ Für zwei gleich normierte radiale Sondenantworten $K(d_-)$ und $K(d_+)$ ist die
 Die blaue Kurve hält $d_-+d_+=2a$ konstant. Die gestrichelte Kurve hält die **rohe Signalsumme** $K(d_-)+K(d_+)$ konstant. Gezeigt ist der Coulomb-Grenzfall $K(d)\propto1/d$ mit $w/a=0{,}35$. Der Sollwert beider Kurven wird jeweils am selben Hauptscheitel festgelegt. Entlang der kleinen Achse hat die Signalkontur einen kleineren Radius.
 
 Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall invertierbar sind, ergeben sich die Distanzen aus $d_\pm=K^{-1}(Y_\pm)$. Aus ihnen lassen sich Distanzsumme und signierte Distanzdifferenz bilden. Die native physikalische Kopplung und H96 bleiben offen. [Modell und Herleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f85f29b8c094307c724369143c07e3ca0cce9a21/notes/research/op5_bifocal_response_2026_11_18/Sondenform.md)
+
+## Liest der vorhandene W2-Higgsradius die signierte Ladung?
+
+**Stand 19.11.2026.** In der Dirac-Gasreduktion im gemeinsamen statischen Ruhesystem ist die radiale Yukawa-Quelle proportional zur gewichteten Besetzungssumme $f_++f_-$. Die globale Ladung hängt an $f_+-f_-$. Vertauscht man bei gleicher Impulsverteilung Teilchen und Antiteilchen an zwei festen Foki, bleiben die radiale Quelle und bei gleichen Randdaten die möglichen Higgsprofile gleich. Der Ladungsdipol kehrt sein Vorzeichen um. Auch der nichtlineare radiale Higgsanteil beseitigt diese Mehrdeutigkeit im Modell nicht. Für eine native Randkopplung ist ein gesondert begründeter ladungs- oder phasenempfindlicher Kanal nötig. Die volle W2-Dynamik, OP5 und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Higgsquelle.md).
+
+## Was liest der vorhandene J-Eichkanal?
+
+**Stand 19.11.2026.** Die J-Maxwell-Gleichung liest in der Dirac-Reduktion die Summe der signierten Teilchenzahlen, während $B-L$ Quarks und Leptonen verschieden gewichtet. Entgegengesetzte Quark- und Leptonüberschüsse können den J-Strom punktweise aufheben und bei gleichen Besetzungssummen auch das Higgsprofil unverändert lassen. Der $B-L$-Dipol kann dabei sein Vorzeichen wechseln. Für zwei kugelsymmetrische, getrennte Quellen mit J-Ladungen $\pm Q$ ist die Eigenfeldkraft attraktiv und proportional zu $Q^2/R^2$. Ein linearer Formantrieb aus dem Vorzeichen braucht einen geeigneten Hintergrund samt Randkopplung. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_J_Eichkanal.md).
+
+## Photon und Z als gemeinsame Ladungsauslese
+
+**Stand 19.11.2026.** In der elektroschwachen Dirac-Referenz auf Baumebene gilt für die Vektorquellen $\rho_{B-L}=(2-4\sin^2\theta_W)\rho_\gamma/e-4\rho_Z^V/g_Z$. Damit ist die lokale Ladungsdichte aus beiden Quellwerten bestimmbar. W2 spezifiziert diese beiden dynamischen Neutralfelder hier nicht. Bei glatten Quellen kann ein kompaktes Z-Potential außerhalb des Quellgebiets vollständig verschwinden und trotzdem einen nichtverschwindenden $B-L$-Dipol tragen. Das begrenzt die Auslese aus Randfeldern allein. Die native Wirkung, die Formkraft und H96 bleiben offen. [Herleitung und Gegenbeispiel](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutralstroeme.md).
+
+## Was zwei radiale Foki am Rand verraten
+
+**Stand 19.11.2026.** Bei bekannten, getrennten Foki bestimmen zwei spiegelbildliche Außenmesspunkte pro Feld die beiden Außenamplituden. Das Photon trägt die gewöhnlichen Ladungen. Beim Z-Feld ist jede Amplitude mit einem Profilfaktor gewichtet, dem Mittel von $\sinh(mr)/(mr)$. Bekannte Profilfaktoren erlauben die Rekonstruktion des $B-L$-Dipols. Verschiedene unkalibrierte radiale Profile können dasselbe vollständige Außenfeld und verschiedene Dipolbeträge liefern. Die physikalische Herkunft der Profile und die Formkraft bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusprofile.md).
+
+## Können die Feldterme den Fokusabstand stabilisieren?
+
+**Stand 19.11.2026.** Für zwei getrennte, ladungskonjugierte radiale Wolken ziehen sowohl der J-Vektorkanal als auch der linear antwortende Higgsradius die Foki zusammen. Die Vektorquellen sind entgegengesetzt. Die Higgsquellen sind gleich, und nach Eliminieren der radialen Higgsantwort hat ihre Wechselwirkungsenergie ein negatives Vorzeichen. Bei fester zulässiger Profilmenge kann auch radiale Relaxation kein isoliertes Minimum im Abstand erzeugen. Der Befund gilt für den quadratischen statischen Zweig. Eine native Gegenkraft, die Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusabstand.md).
+
+## Können gleichnamige J-Ladungen den Abstand stabilisieren?
+
+**Stand 19.11.2026.** Ein Zustand mit gleichnamigen J-Ladungen kann entgegengesetzte $B-L$-Ladungen an den Foki tragen. Im quadratischen Modell wirkt dann eine Coulombabstoßung gegen die abgeschirmte Higgsanziehung. Ein möglicher Kräfteausgleich ist ein striktes Energiemaximum, auch wenn radiale Profile als weitere Variablen zugelassen werden. Ein zusätzlicher Zugterm $TR$ kann dagegen ein Minimum erzeugen. Dessen physikalische Herkunft und die native Randwirkung sind offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Gleichnamige_Foki.md).
+
+## Kann der J-Fluss selbst den Zugterm liefern?
+
+**Stand 19.11.2026.** Ein einziger durchgehender J-Fluss trägt an seinen Enden Gegenladungen. Die stabilisierende Coulombabstoßung würde dagegen gleichnamige J-Quellen erfordern. Die freie Maxwell-Wirkung liefert im geprüften Zweifokusmodell Coulombenergie und keine fest gespannte Flussröhre. Eine neutrale, unabhängig an beide Foki gebundene Weltfläche könnte den Zugterm $TR$ liefern. I1 gibt dafür einen Kandidaten, während k185 ein Impulsquadrat bestimmt. Endpunktbindung und Spannungswert bleiben offen. [Quellenabgleich und Rechnung](../notes/research/op5_bifocal_response_2026_11_18/W2_Zugterm_Quelle.md).
+
+## Trägt der vorhandene Higgssektor einen neutralen Strang?
+
+**Stand 19.11.2026.** Im statischen, glatten und quellenfreien W2-Sektor auf flacher Transversalebene bleibt die Gradientenenergie eines geraden Higgsprofils unter Dilatation gleich. Die positive Vakuum-subtrahierte Potentialenergie skaliert mit der Fläche. Stationarität erzwingt daher das Vakuum und eine Spannung von null. Der Befund betrifft das unter J neutrale Dublett ohne zusätzliche transversale Eichdynamik. Ein hypothetischer gekoppelter magnetischer Kanal könnte die Skalierungsbilanz ändern. Eine lokalisierte Lösung, ihre Bindung an Foki und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutraler_Strang.md).
+
+## Elektroschwacher Z-String und seine Endpunkte
+
+**Stand 19.11.2026.** Ein zusätzlicher Z-Magnetkanal erlaubt endliche Energie pro Länge. Der nackte gerade Z-String ist bei den gemessenen Standardmodellparametern instabil. Nambu-Endpunkte eines Segments tragen außerdem entgegengesetzten elektromagnetischen Magnetfluss vom Betrag $4\pi\sin^2\theta_W/e$. Seine Coulombanziehung schwächt die im Zugmodell benötigte J-Abstoßung. W2 legt diesen Defekt und seine Endpunkte bisher nicht fest. [Herleitung und Quellen](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Strang.md).
+
+## Wie kurz müsste ein Z-String-Segment sein?
+
+**Stand 19.11.2026.** Im Modell einer einzigen negativen Transversalmode mit Eigenwert $-\mu^2$ heben freie Enden die Instabilität nicht auf. Selbst starre Enden unterdrücken sie nur für $R<\pi/\mu$. Bei einer symmetrischen endlichen Endsteifigkeit $h$ sinkt die Grenze auf $R_{\rm crit}=2\arctan(h/\mu)/\mu$. Der aus der Kräftebilanz gewonnene Abstand muss auch unterhalb dieser Grenze und im Gültigkeitsbereich des Langstreckenmodells liegen. Die Endsteifigkeit und das gemeinsame Gültigkeitsfenster sind für W2 offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Segment.md).
+
+## Wie groß ist die kritische Länge?
+
+**Stand 19.11.2026.** Für die bei physikalischen sichtbaren Massen publizierte Z-String-Eigenwertskala der elektroschwachen Referenz mit Dunkelsektor liegt die bestmögliche Längengrenze im Einmodenvergleich bei rund $0{,}007$ fm. Das sind nur etwa drei elektroschwache Abschirmlängen. Ein gemeinsamer Geltungsbereich mit der Langstrecken-Kräftebilanz ist dadurch nicht nachgewiesen. Der Vergleich ist eine Größenordnung und keine Rechnung für die vollständigen Nambu-Endzonen. [Literaturabgleich und Umrechnung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Laengenskala.md).
+
+## Was bringt eine massive Außenzone?
+
+**Stand 19.11.2026.** Im eindimensionalen Modell ersetzt ein abklingendes Außenfeld die starre Endbedingung durch endliche Steifigkeit. Liegt die Außenmasse unterhalb einer festen Schranke, gibt die abrupte Stufe in dieser Modellklasse die größte entsprechende Endsteifigkeit. Mit der W-Masse als Außenmaß und der bisherigen Instabilitätsskala ergibt sich eine kritische Länge von etwa $0{,}0031$ fm. Eine tatsächliche Nambu-Endzone wurde damit noch nicht bestimmt. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Endzonen.md).
+
+## Können chirale Nullmoden B−L im Strang tragen?
+
+**Stand 19.11.2026.** Im geraden Dirac-Z-String mit einem zusätzlichen masselosen J-Kanal verknüpfen die Laufrichtungen den B−L-Überschuss mit der elektromagnetischen Ladung und dem J-Strom. Endliche Energie pro Länge verlangt verschwindende Ladungen und Längsströme in beiden Maxwell-Kanälen. Damit verschwinden auch B−L-Überschuss und B−L-Strom in diesem Nullmodensektor. Endliche Stränge mit Rückströmen, zusätzliche Moden und Neutralbesetzungen bleiben gesonderte Fälle. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Nullmoden.md).
+
+## Kann eine neutrale Fermionbesetzung die Instabilität abschwächen?
+
+**Stand 19.11.2026.** Ein neutral angeregtes Paar gegenläufiger Dirac-Moden kann den infraroten Anteil der negativen Fermionenergie durch Besetzungsblockierung abschneiden. Im hergeleiteten Modell bleibt eine reguläre negative Krümmung aus den ungeblockten Impulsen. Eine positive Gesamtkrümmung braucht einen hinreichend positiven Restbeitrag. Die Netto-Ladungen sichern die angeregte Belegung allein nicht. Native W2-Stabilisierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Neutralbesetzung.md).
+
+## Thermische Neutralbesetzung und Krümmung
+
+**Stand 19.11.2026.** Die geprüften W2-Phasenladungen zählen Teilchen-Antiteilchen-Differenzen. Sie halten eine neutrale Teilchen-Loch-Anregung allein nicht fest. Im gegenläufigen Dirac-Modenpaar macht eine endliche Temperatur den infraroten Energiebeitrag regulär. Die Krümmung bleibt jedoch negativ. Ein positiver Beitrag dieses Paars braucht eine hinreichend starke Besetzungsinversion. Die übrige W2-Krümmung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Gleichgewicht.md).
+
+## Dynamischer Fokusabstand durch Drehimpuls
+
+**Stand 19.11.2026.** Zwei anziehende Fokuswolken können bei festgehaltenem mechanischem Drehimpuls einen radial stabilen Kreisbahnradius haben. Die entgegengesetzten J-Ladungen bilden dabei jedoch einen rotierenden Dipol. Ohne einlaufende Strahlung verliert die klassische Bahn Energie und ihr Abstand nimmt ab. Der B−L-Dipol eines ladungskonjugierten Paars mittelt sich über eine ideale Umlaufperiode zu null. Eine stationär orientierte Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusbahn.md).
+
+## Quantenbindung und stationärer Dipol
+
+**Stand 19.11.2026.** Der Coulomb-Grundzustand bindet den relativen Abstand bei verschwindendem Dipol. Die ideale $2s$–$2p$-Entartung erlaubt präparierte stationäre Dipolzustände. Der abgeschirmte Higgsanteil hebt diese Entartung in erster Ordnung auf. Der präparierte Dipol schwingt danach und hat über eine volle Periode Mittelwert null. Eine geschützte Orientierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Quantendipol.md).
+
+## Warum eine Kramers-Paarung den Dipol nicht schützt
+
+**Stand 19.11.2026.** Auf einem isolierten Kramers-Dublett ist jeder zeitumkehrgerade hermitesche Operator proportional zur Identität. Ein zusätzlich paritätsungerader Dichtedipol verschwindet dort. Zwei Kramers-Dubletts entgegengesetzter Parität können bei gleicher Energie einen Dipol tragen. Zeitumkehr und Parität erlauben aber eine Aufspaltung zwischen ihnen. Eine weitere physische Symmetrie oder Orientierung bleibt erforderlich. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Kramers_Dipol.md).
+
+## Vertauscht die Umkehrwalze die physikalische Parität?
+
+**Stand 19.11.2026.** Auf freien elektromagnetischen Doppelamplituden antikommutiert $J_B=iK$ mit der räumlichen Feldparität und vertauscht deren Eigenräume. Auf elektrisch geladenen J-Foki würde derselbe Feldtausch den elektrischen Fluss durch jede einzelne Fokusfläche zu magnetischem Fluss machen. Das widerspricht der glatten magnetisch quellenfreien W1-Gleichung, auch bei insgesamt neutralem Paar. Die freie Feldoperation schützt daher keine Entartung des elektrisch gebundenen Fokuspaars. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Dipol.md).

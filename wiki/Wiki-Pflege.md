@@ -102,6 +102,25 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die freie Paritätsvertauschung und das Gauss-Hindernis an den J-Foki ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Kramers-Auswahlregel für den stationären Quantendipol ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Coulomb-Gegenprobe und die Higgs-Aufspaltung des Quantendipols ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die konservative Fokusbahn, ihr Strahlungslimit und die Dipolmittelung ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die thermische Fermionkrümmung und die Grenzen der W2-Erhaltungssätze ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die neutrale Besetzungsblockierung und die verbleibende Krümmung ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Maxwell-Energiegrenze für B−L-Ladung und Strom der chiralen Z-String-Nullmoden ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Stabilitätsgrenze für ein abklingendes Außenfeld ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die kritische Z-Segmentlänge mit einer publizierten Eigenwertskala verglichen.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Längengrenze des projizierten Z-Segments und ihren Vergleich mit der Kräftebilanz ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme Stabilitäts- und Endpunktprüfung des elektroschwachen Z-Strings ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die transversale Virialprüfung des neutralen W2-Higgsstrangs ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die J-Fluss-Endpunktbilanz und den Wirkungsabgleich zu I1 und k185 ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die instabile Kräftebilanz gleichnamiger J-Foki und die Zugspannungskontrolle ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme den Kraftbefund für ladungskonjugierte Fokuswolken und die Grenze radialer Relaxation ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Rekonstruktion für radiale Foki und die verbleibende Profilmehrdeutigkeit ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die lokale elektroschwache Ladungsauslese und das Gegenbeispiel für Außenfelder ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Mehrdeutigkeit von J- und Higgs-Auslese sowie die Vorzeichenparität der Eigenfeldkraft ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Vorzeichengrenze der radialen W2-Yukawa-Quelle ergänzt.
 - 19.11.2026: Julia-Residualabbildungen des Historical Witness aus den Parametern der historischen Bildunterschrift neu berechnet. Beide aktuellen Entwürfe zeigen zusätzlich den Modellvergleich von Distanz- und Signalsummen, einschließlich der Yukawa-Formantwort. Die archivierten Frame-Flicker-Fits brauchen weiterhin die ursprünglichen Benchmark-Daten.
 
 - 19.11.2026: SQLite enthält zusätzlich die vollständigen LaTeX-Quellen des Historical Witness und Verweisfundstellen für Langfassung, Historical Witness und Physik-Paper. Querverweise, Zitate und Ressourcen tragen einen Auflösungsstatus. Der Dokument-Build schreibt den Index in das Artefakt.
