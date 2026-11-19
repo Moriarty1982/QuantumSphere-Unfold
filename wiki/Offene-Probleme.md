@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Neutraler Higgsstrang, 19.11.2026:** Die transversale Skalierung schließt im glatten, quellenfreien, statischen W2-Teilsystem einen geraden Strang mit positiver endlicher Spannung aus. Zusätzliche gekoppelte Felder oder längs verteilte Quellen wären getrennt zu prüfen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutraler_Strang.md).
+
 **Herkunft des Zugterms, 19.11.2026:** Ein einzelner durchgehender J-Fluss hätte entgegengesetzt geladene Endpunkte. Eine neutrale Weltfläche könnte den Zugterm bei unabhängig gleichnamigen Foki liefern. Für I1 fehlen die Randbindung und der Spannungswert, für k185 die entsprechende Dynamik. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Zugterm_Quelle.md).
 
 **Gleichnamige J-Ladungen, 19.11.2026:** Im statischen Fokusmodell ergibt die Coulombabstoßung gegen die Higgsanziehung höchstens ein instabiles Gleichgewicht. Eine zusätzliche Zugspannung liefert ein bedingtes Stabilitätsmodell. Ihre Herkunft aus der Wirkung bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Gleichnamige_Foki.md).

@@ -159,3 +159,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Kann der J-Fluss selbst den Zugterm liefern?
 
 **Stand 19.11.2026.** Ein einziger durchgehender J-Fluss trägt an seinen Enden Gegenladungen. Die stabilisierende Coulombabstoßung würde dagegen gleichnamige J-Quellen erfordern. Die freie Maxwell-Wirkung liefert im geprüften Zweifokusmodell Coulombenergie und keine fest gespannte Flussröhre. Eine neutrale, unabhängig an beide Foki gebundene Weltfläche könnte den Zugterm $TR$ liefern. I1 gibt dafür einen Kandidaten, während k185 ein Impulsquadrat bestimmt. Endpunktbindung und Spannungswert bleiben offen. [Quellenabgleich und Rechnung](../notes/research/op5_bifocal_response_2026_11_18/W2_Zugterm_Quelle.md).
+
+## Trägt der vorhandene Higgssektor einen neutralen Strang?
+
+**Stand 19.11.2026.** Im statischen, glatten und quellenfreien W2-Sektor auf flacher Transversalebene bleibt die Gradientenenergie eines geraden Higgsprofils unter Dilatation gleich. Die positive Vakuum-subtrahierte Potentialenergie skaliert mit der Fläche. Stationarität erzwingt daher das Vakuum und eine Spannung von null. Der Befund betrifft das unter J neutrale Dublett ohne zusätzliche transversale Eichdynamik. Ein hypothetischer gekoppelter magnetischer Kanal könnte die Skalierungsbilanz ändern. Eine lokalisierte Lösung, ihre Bindung an Foki und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutraler_Strang.md).
