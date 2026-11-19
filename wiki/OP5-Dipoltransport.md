@@ -271,3 +271,7 @@ Mit unveränderter Vektorkopplung des Myons verursacht ein 1-MeV-J-Boson beim bi
 ## Neutron–Blei-Streuung am Lepton-Nullpunkt
 
 Die elektromagnetische Abstimmung, die die Myonkopplung auf null setzt, erhöht die Protonkopplung und lässt die Neutronkopplung bestehen. Im bisherigen MeV-Fenster liefert der nichtperturbative repulsive Neutron–Blei-Vergleich mit nichtnegativem innerem Randparameter eine Streulänge von mindestens 949 fm. Für Blei-208 sind 9,50 fm tabelliert. Eine volle Rechnung mit nuklearen und resonanten Randdaten bleibt offen. H96 bleibt offen.
+
+## Kernrand und effektive Reichweite
+
+Für die tabellierte Neutron–Blei-Streulänge verlangt der repulsive J-Ausläufer einen negativen Kernrand. Am einzelnen Nullenergiepunkt lässt sich die Streulänge formal einstellen, aber die erforderliche Spanne des Randwertes ist kleiner als 6 × 10⁻⁷⁶ fm⁻¹. Für jeden reellen lokalen energieunabhängigen Kern folgt zugleich eine effektive Reichweite kleiner als −4,4 × 10⁷² fm. Die Schranke macht die Energieabhängigkeit prüfbar. Absorption, Mehrkanalstreuung, ein vollständiger Datenfit und H96 bleiben offen.
