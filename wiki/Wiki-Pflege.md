@@ -102,6 +102,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Kramers-Auswahlregel für den stationären Quantendipol ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Coulomb-Gegenprobe und die Higgs-Aufspaltung des Quantendipols ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die konservative Fokusbahn, ihr Strahlungslimit und die Dipolmittelung ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die thermische Fermionkrümmung und die Grenzen der W2-Erhaltungssätze ergänzt.

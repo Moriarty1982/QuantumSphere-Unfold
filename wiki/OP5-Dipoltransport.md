@@ -199,3 +199,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Quantenbindung und stationärer Dipol
 
 **Stand 19.11.2026.** Der Coulomb-Grundzustand bindet den relativen Abstand bei verschwindendem Dipol. Die ideale $2s$–$2p$-Entartung erlaubt präparierte stationäre Dipolzustände. Der abgeschirmte Higgsanteil hebt diese Entartung in erster Ordnung auf. Der präparierte Dipol schwingt danach und hat über eine volle Periode Mittelwert null. Eine geschützte Orientierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Quantendipol.md).
+
+## Warum eine Kramers-Paarung den Dipol nicht schützt
+
+**Stand 19.11.2026.** Auf einem isolierten Kramers-Dublett ist jeder zeitumkehrgerade hermitesche Operator proportional zur Identität. Ein zusätzlich paritätsungerader Dichtedipol verschwindet dort. Zwei Kramers-Dubletts entgegengesetzter Parität können bei gleicher Energie einen Dipol tragen. Zeitumkehr und Parität erlauben aber eine Aufspaltung zwischen ihnen. Eine weitere physische Symmetrie oder Orientierung bleibt erforderlich. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Kramers_Dipol.md).
