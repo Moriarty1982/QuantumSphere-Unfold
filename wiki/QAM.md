@@ -1,5 +1,17 @@
 # QAM – Buchführungsprüfung für Forschungstexte
 
+## Ein QAM-Beleg zum Mitlesen
+
+![Die in QAM deklarierte Feldfamilie und ihre Prämissen gehen in eine MML-READOUT-Anfrage ein. MMA liefert ein bedingtes Ergebnis mit Prämissenspur und Hash. Fehlt eine gespeicherte Prämisse, meldet der Lauf guard.](https://raw.githubusercontent.com/Moriarty1982/QuantumSphere-Unfold/refs/heads/main/wiki/assets/qam-gram-beleg.png)
+
+1. **QAM.** Die bedingte Regel bindet die Feldfamilie $\mathbf E=2e_x$, $\mathbf B=t e_y+u e_z$, $t^2+u^2=1$ und den Boost $v=1/4$ entlang $z$ an die deklarierte Abbildung vom Labor zum Ziel-Frame.
+2. **MML.** Die Anfrage setzt $t\in[-1/4,1/4]$ als Eingabe für die Auslesung.
+3. **MMA.** Der gespeicherte Beleg liefert das exakte Intervall $[121/162,961/1202]$ für den ersten Diagonaleintrag des normierten Gram-Registers im Ziel-Frame. Er nennt Regelhash und Prämissenspur. Der Erfolg gilt unter den angegebenen Eingaben. Die Belegfelder für einen Schließungs- oder mathematischen Beweis sind auf falsch gesetzt.
+
+Im gezeigten Lauf waren alle gespeicherten Prämissen vorhanden. Der orange Hinweis in der Grafik beschreibt den Fall einer fehlenden Prämisse. [Regel](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f85f29b8c094307c724369143c07e3ca0cce9a21/qam/examples/gram-range-rule.qam) · [Anfrage](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f85f29b8c094307c724369143c07e3ca0cce9a21/qam/examples/gram_range_mml.json) · [Beleg](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f85f29b8c094307c724369143c07e3ca0cce9a21/qam/editions/evidence/gram_interval_receipt.json)
+
+**English.** The example binds a laboratory field family and a fixed longitudinal boost to a conditional rule. An MML request supplies the interval for the signed magnetic component. MMA evaluates the exact output interval and records the premise trace and rule hash. If a premise is missing, MMA reports `guard`. The stored example reports neither a closure proof nor a mathematical proof.
+
 ## Frame-Schnittstellensprache und Physikmapping
 
 **Koide-Überlagerung im Materieframe (10.11.2026, bedingte Erkundung).** Bei gemeinsamer Generationsbasis, gleicher mittlerer Massenwurzel und Mittelung der Wurzeln vor dem Quadrieren hängt die resultierende Massenform nur vom gewichteten komplexen Phasenmittel ab. Eine gleich gewichtete Spiegelpaarung verringert den Koide-Radius und lässt die mittlere Phase unverändert. Die aus den Polmassen rekonstruierten Phasen und Gewichte sind Fitwerte. Eine native Präparation, die kohärente Zusammenführung und die Auslesung bleiben Voraussetzungen. Das QAM-Beispiel führt auch die getrennte Mittelung der Massen als Gegenkontrolle. [QAM-Quelle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/koide-phase-overlap.tex) · [Rechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/koide_phase_overlap.py)
