@@ -1,0 +1,3 @@
+# Vorab: native Kandidaten für eine vorzeichenbehaftete M–T-Größe
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Dipol.md, Quellenabgleich im Wiki, v4.10.0-r07/r11 zur Maxwell-Dualität, Wirkung_W1_Dixon_U1.md, H69 und k193. Prüfe rückwärts: Eine direkt identifizierte Größe müsste unter der deklarierten M→T-Vierteldrehung das Vorzeichen wechseln, unter der Dynamik erhalten sein und eine eigenständige Abbildung in die orientierte Randkoordinate besitzen. Prüfe die bekannte Maxwell-Energie und die dualitätsungerade reelle Feldinvariante in einem periodischen freien stehenden Wellenfeld ohne Randfluss. Prüfe die Bedeutung der W1-Ladung als separaten Quellenabgleich. Keine Vergleichsmessung und keine Prüfung der ganzen M/T/P-Dynamik.

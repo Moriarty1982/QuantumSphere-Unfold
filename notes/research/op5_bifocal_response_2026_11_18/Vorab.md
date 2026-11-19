@@ -1,0 +1,5 @@
+# Vorab: Antwort der Kristall-Schnittstelle im bifokalen Modell
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: PR #188, Zellfixpunkt.md und Dualitaet.md, Companion v470/05 (bifokaler Monitor), v470/14–15 (Zellreparatur), op3_native_threshold_repair_2026_11_10.md, Wurzelkarte und H96. Dieselbe euklidische Chartmetrik für beide Kanäle; keine Identifikation von Chartfoki mit physikalischen Frames.
+
+Ausgang: Ellipse mit Halbachsen a>b>0, Foki ±c und c²=a²−b². Setze in der Erkundung eine kleine Änderung u des halben Brennpunktabstands als Quelle ein. Das ist kein aus OP2 abgeleiteter Einfügungsoperator. Halte den Monitorsollwert 2a fest. Vergleiche die erste Variation des vorzeichenbehafteten bifokalen Monitors über den ganzen Rand für (i) eine starre Translation der Randpunkte bei den neuen festen Foki, (ii) eine Änderung der kleinen Halbachse. Kriterium: Reparatur verlangt, dass die Änderung des Monitors in jeder Richtung verschwindet, nicht nur im Mittel. Prüfe zusätzlich die exakte Ellipsenfamilie und trenne geometrische Reparatur von der Energie ihrer Verformung. Keine Anpassung an H96 und kein Datentest.

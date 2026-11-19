@@ -1,0 +1,5 @@
+# Vorab: Kann eine Auswahlregel den Normaltransport sperren?
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Wandkopplung.md (einkanaliger Dirac-Kanal), Interferenz.md (einzelne Nullstelle), Paarsymmetrie.md, W2_Ladung.md, W2_Frame.md, analysis/OP5_Dynamics_And_Symmetry_Selection.md und analysis/OP5_Phase_Integrability_And_Primitive_Sectors_Result.md (gemeinsamer Kommutant). Gesamtbild und OP5-Vergleichsmodell-Anleitung geprüft.
+
+Rückwärtssuche von einem offenen Energieintervall mit verschwindender Transmission. Prüfe erst den endlichen, statischen reinen Mehrkanal-Dirac-Abschnitt mit sämtlichen Kanälen auf beiden Seiten offen. Prüfe dann ein Zweikanal-Gegenmodell mit unterschiedlichen offenen Sektoren in den asymptotischen Leitungen. Voraussetzung für eine Symmetriesperre ist ein erhaltener Sektor und das Fehlen eines rechts propagierenden Zustands im einlaufenden Sektor. Vergleiche diese Bedingung mit dem bereits ausgewiesenen W2-B−L-Generator und der M→T-Abbildung. Eigenständige analytische Kontrollmodelle. Kein H96-Datentest.

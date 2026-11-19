@@ -1,0 +1,3 @@
+# Vorab: Ausfrieren bei endlicher Transmission
+
+Analytische Erkundung, nicht blind. Vorwissen: Gate.md, Casimir.md, Transmission.md und H96. Rückwärtssuche: Wenn kein exakt sperrender Kontakt vorliegt, prüfe, ob ein nichtverschwindender Abstand vom Gleichgewicht im Grenzfall trotzdem möglich ist. Nutze eine mitbewegte Ladung Q, einen festen mitbewegten Gleichgewichtswert Q_eq und die effektive Relaxation Q̇=−Γ(t)(Q−Q_eq), Γ≥0. Prüfe das integrierte Kriterium und für Γ∝a^−n die Grenzfälle a∝t^p und a∝exp(Ht). Leite keine Rate aus dem Kontaktmodell her. Unterscheide die Auslese heute vom Zukunftsgrenzwert und vom Druck des verbleibenden Beitrags. Keine H96-Anpassung und keine Messdaten.

@@ -1,0 +1,5 @@
+# Vorab: Expansion und integrierte OP5-Leckage
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Thermisches_Leck.md (Mittelwert über den einfallenden Wärmefluss), Ausfrieren.md (endliche integrierte Restrate), Grenzflaeche.md (Ladungsbilanz), Kanalleck.md, Gesamtbild und OP5-Vergleichsmodell-Anleitung. Kein neuer Fit.
+
+Rückwärtssuche von der nötigen endlichen integrierten Rate. Betrachte zwei gleich große comoving Reservoirs mit gemeinsamer comoving Wand in einem vorgegebenen flachen FRW-Hintergrund. Als Modellabschluss gelten homogene isotrope verdünnte nichtrelativistische Verteilungen mit gleichem Impulsprofil pro Teilchen auf beiden Seiten, kinetisch entkoppeltes Rotverschieben und quasistatische Transmission pro Einfall nach Thermisches_Leck.md. Verwende getrennte Teilchenzahlen bis auf Wandtransfer. Leite die einseitige Flussrate pro Teilchen und die Rate für die komovierende Differenz her. Prüfe den asymptotischen Fall a(t)∝t^p für festen kleinen Mischwinkel einschließlich p=1/2, p=2/3 und des Grenzfalls p=1/4. Unterscheide die Aussage über Endlichkeit vom Wert des Rests. Kein H96-Datentest oder Anspruch auf ein aus W2 abgeleitetes FRW-Wandnetz.

@@ -1,0 +1,5 @@
+# Vorab: Thermische Leckage an der OP5-Zweikanalwand
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Kanalauswahl.md, Higgs_Spektren.md, Kanalleck.md, Ausfrieren.md, Gate.md, Gesamtbild und OP5-Vergleichsmodell-Anleitung. Rückwärtssuche von endlicher integrierter Restrate: Unterscheide Leckage durch offene Zustände oberhalb der Sperrschwelle von Leckage innerhalb des Sperrfensters bei Kanalmischung.
+
+Verwende denselben abrupten Zweikanal-Massensprung mit 0<m<M. Setze eine einseitig einfallende leichte Sorte mit klassischer eindimensionaler, auf den gesamten Einfallsfluss normierter Energieverteilung w(E)=exp[−(E−m)/τ]/τ für E≥m voraus. Bei exakt getrennten Kanälen (θ=0) leite die Transmission für E>M und die führende Niedrigtemperatur-Asymptotik des thermischen Mittels her. Für festen 0<θ<π/2 leite den führenden Beitrag aus m<E<M aus Kanalleck.md her und beschränke den Beitrag oberhalb von M durch die gesamte dortige Flusswahrscheinlichkeit. Numerische Kontrolle m=1, M=3, τ=0,1; 0,05; 0,02 für θ=0 und θ=0,1 Radiant. Keine native Wärmegeschichte oder H96-Daten.

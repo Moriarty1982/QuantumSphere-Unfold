@@ -1,0 +1,3 @@
+# Vorab: Transport beim Schließen des Spalts
+
+Analytische Erkundung, nicht blind. Vorwissen: Casimir.md, Gate.md, Grenze_W2.md, Domaene.md. Verwende ein zusätzliches statisches 1D-Dirac-Streuungsmodell im selben Ruhesystem: masselose Leitungen auf beiden Seiten, konstante reelle Masse m im Spalt der Breite d. Kein Kontaktmodell und keine Identifikation mit nativer M/T-Kopplung. Prüfe die Transmission für 0<ω<|m|, die Richtung ihrer Änderung bei kleinerem d und Grenzfälle d→0 bei fixem m sowie bei wachsender m(d). Prüfe ausdrücklich, ob der mechanische Schwellenwert d/d₀=4/5 eine Transmissionsnullstelle liefert. Kontrolle in Einheiten m=1, ω=1/2, d₀=1 bei d=1, 4/5 und 1/10. Keine Messdaten.

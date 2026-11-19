@@ -1,0 +1,11 @@
+# Lokale Vierpunkt-Umlagerung mit Dipolerhaltung
+
+Analytische Erkundung mit numerischer Kontrolle nach [Vorab-Notiz](Vierpunkt_Vorab.md), Commit ed816111d02164556cf9e0ddefef6d801044dc23. Festes regelmäßiges Winkelraster θ_j=jh, h=2π/N, N≥5. D ist ein signiertes Residualfeld. Der Schritt ist eine effektive dissipative Modellwahl.
+
+Jede lokale Änderung muss orthogonal zu 1, cos θ und sin θ sein, damit Summe und beide Dipolkomponenten erhalten bleiben. Auf höchstens drei verschiedenen Ringpunkten gibt es keine von Null verschiedene solche Änderung: drei verschiedene Kreisstellen sind nicht kollinear, also hat die Matrix aus den Zeilen 1, cos θ, sin θ dort Rang drei. Auf vier Nachbarstellen ist die Lösung bis auf Skalierung eindeutig. Setze g=1+2cos h, v=(1,−g,g,−1). Das Polynom 1−gz+gz²−z³=(1−z)(1−2cos(h)z+z²) hat Nullstellen 1 und exp(±ih). Damit schützt jede Addition eines Vielfachen von v die drei Momente exakt.
+
+Für einen Block B wähle B'=B−v(v·B)/(v·v). Das ist eine orthogonale Projektion und vermindert das volle Quadrat der Ringdaten um (v·B)²/(v·v). Ein ganzer zyklischer Durchlauf kann die Norm nur dann unverändert lassen, wenn alle Einzelprojektionen den Zustand unverändert lassen. Der gemeinsame Fixraum ist genau der Raum der drei geschützten Fouriermoden; dies folgt aus den drei Nullstellen der zyklischen Stencilmatrix. Auf dem orthogonalen Komplement kontrahiert der volle Durchlauf im festen endlichen Ring strikt im Operatornorm-Sinn (Kompaktheit der Einheitssphäre). Die Durchläufe konvergieren daher zur orthogonalen Projektion des Ausgangsfelds auf den geschützten Raum. Die Regel ist weder umkehrbar noch ein positiver Markov-Transport.
+
+Kontrolle für N=32 aus D=0,5+0,25cos θ+0,125sin θ+0,5cos(2θ). Mittelwert 0,5, Kosinuskoeffizient 0,25 und Sinuskoeffizient 0,125 blieben nach 256 und 4096 Durchläufen bis auf 9·10⁻¹⁶ erhalten. Der RMS des Rests über dem geschützten Teil sank von 0,353553 auf 0,336706 bzw. 0,161880. Das Modell konvergiert, bei dieser lokalen Wahl langsam.
+
+OP5: Dies gibt einen minimalen lokalen Mechanismus im Ringmodell. Er arbeitet über eine gekoppelte Umlagerung, nicht über unabhängige Einzelübergänge. Ob der native Zellübergang eine solche Operation trägt und ob der geometrische Dipol physikalisch als Ladung dient, bleibt unbestimmt. OP5 und H96 bleiben offen.

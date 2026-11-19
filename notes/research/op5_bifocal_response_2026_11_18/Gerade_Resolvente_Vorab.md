@@ -1,0 +1,3 @@
+# Vorab: Skalare Resolventenreduktion für gerade OP5-Grade
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Legendre_Induktion.md, Wigner_Induktion.md, Schaleninduktion.md, Gesamtbild und OP5-Vergleichsmodell-Anleitung. Prüfe für gerades ℓ den vom positiven Eigenraum befreiten Resolventen, einschließlich des negativen Eigenraums mit demselben Bahndrehimpuls. Leite daraus ein Kriterium mit ausschließlich skalaren Legendre-Gewichten für das Vorzeichen von A_{k,ℓ} ab. Prüfe die genaue Normalisierung gegen die unabhängige Spin-Wigner-Rechnung und untersuche, ob der skalare Resolventenanteil selbst ein festes Vorzeichen besitzt. Kein allgemeines positives Vorzeichen ohne Beweis und keine H96-Daten.

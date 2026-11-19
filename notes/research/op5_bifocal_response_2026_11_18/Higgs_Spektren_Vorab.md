@@ -1,0 +1,5 @@
+# Vorab: W2-Higgsprofil und komplementäre Leitungsspektren
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Kanalauswahl.md (komplementäre propagierende Sektoren), W2_Ladung.md (vier Dirac-Yukawa-Kanäle), W2_Frame.md (Erhaltung der Ladungssektoren unter M→T), Grenze_W2.md (keine statische radiale 0–v-Wand im einfachen W2-Ansatz), Domaene.md (zusätzlicher neutraler Kink). Gesamtbild, zurückgestellte Ideen und OP5-Vergleichsmodell geprüft.
+
+Rückwärtssuche: Die breitbandige Sperre braucht bei gemeinsamer Energie links und rechts unverträgliche offene Ladungssektoren. Prüfe, ob die asymptotischen Massenmatrizen für ein Higgsdublett und feste Yukawa-Kopplungen eine solche Umordnung erlauben, einschließlich h=0, Phase und Orientierung. Untersuche danach als analytische Kontrolle, ob der bereits eingeführte zusätzliche neutrale Kink mit einem gemeinsamen Massenoffset und entgegengesetzten Kopplungen die offenen Kanäle vertauscht. Statische Einteilchen-Reduktion mit asymptotisch verschwindenden Eichfeldern, ohne chemische Potentiale und ohne unterschiedliche Zeitnormierung. Kein H96-Datentest.

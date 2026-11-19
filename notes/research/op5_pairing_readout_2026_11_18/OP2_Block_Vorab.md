@@ -1,0 +1,3 @@
+# Vorab: Erhaltung und Phase im triadischen Sondenblock
+
+Analytische Erkundung, nicht blind. Grundlage: v470/10 triadischer Zweison­denblock und Wirkung, v470/12 gemischter Geometrieterm, OP2_Lock.md. Projiziere bedingt auf drei Moden eines gemeinsamen Hamiltonraums, mit hermiteschen reziproken Kopplungen und unverändertem Hintergrund. Prüfe eine diagonale Erhaltungsgröße mit unterschiedlichen M/T-Gewichten anhand des Kommutators, insbesondere bei beiden aktiven Kopplungen zum orthogonalen Kanal. Getrennt prüfe, ob ein stationärer Phasenwert durch die Blockstruktur mit dem Nullwert des geometrischen Monitors verknüpft ist, und ob konservative Auslenkungen im vorigen Modell einregeln. Keine Identifikation der drei Sonden mit M/T/P, kein Test an Messdaten.

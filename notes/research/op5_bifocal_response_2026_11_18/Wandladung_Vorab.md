@@ -1,0 +1,5 @@
+# Vorab: Energie eines auf der Wand gebundenen Ladungsanteils
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Wand_Stress.md (Ladungsdifferenz im Reservoir), Domaene.md und Wandkopplung.md (gebundene Dirac-Mode), Grenzflaeche.md und Quellkopplung.md. Gesamtbild und OP5-Vergleichsmodell-Anleitung geprüft.
+
+Rückwärtssuche von einer möglichen homogenen Energie des Überschusses. Erweitere den ebenen Dirac-Kink als Kontrollmodell um zwei tangentiale Raumrichtungen. Prüfe die Dispersion der normal gebundenen Mode. Fülle ihre positive Teilchen- oder Antiteilchenbranche bei Temperatur null, mit erhaltener Netto-Wandladung, ohne Eichfeldenergie und bei festem Profil. Bestimme Flächenenergie, Tangentialdruck und Skalierung für komovierende Wandflächen. Prüfe zusätzlich die radiale Energiebilanz einer großen kugelförmigen Wand bei fester Ladung in der Dünnwandnäherung, einschließlich des Kriteriums, ob die Ladung dort unter der äußeren Kontinuumsschwelle liegen kann. Die Wandladung wird als zusätzliche Belegung angesetzt; die Erzeugung aus dem bisherigen Reservoirüberschuss ist nicht vorausgesetzt. Kein H96-Datentest.

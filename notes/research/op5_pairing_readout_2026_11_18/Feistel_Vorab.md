@@ -1,0 +1,3 @@
+# Vorab: Feistel-artiger Zellschritt
+
+Analytische Erkundung, nicht blind. Grundlage: OP2_Lock.md, OP2_Block.md, Verbund.md und die Zellreparatur v470/14–15. Zerlege bei festem Q den reduzierten bisherigen Phasen-Hamiltonian in kinetische Antwort und Cosinus-Potential und setze einen expliziten Zeitschritt τ. Prüfe die Inverse, den Fixpunkt, die lineare Stabilität und das Verhalten der Defektenergie nach einer Auslenkung. Numerische Kontrolle der linearen Abbildung für I=K=1, τ=0,5 und 2,5, mit identischen Startwerten x=0,2, y=0, Q=0,4. Keine Anpassung an H96. Unterscheide die aus dem Modell ableitbaren Koeffizienten von solchen aus dem historischen Zellgesetz.

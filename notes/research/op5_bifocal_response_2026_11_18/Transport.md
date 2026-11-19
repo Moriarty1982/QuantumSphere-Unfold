@@ -1,0 +1,11 @@
+# Dipolerhaltung bei Randtransport
+
+Analytische Erkundung gemäß [Vorab-Notiz](Transport_Vorab.md), Commit 5234f0821e8f2bf14bfd9d6fb9e6ac7c70755a76. Achse, große Halbachse a und Winkelkoordinate fest; die folgenden Transportgesetze sind Modellkontrollen.
+
+Für ∂_t D+∂_θ J=0 folgt aus periodischer partieller Integration q̇=−⟨J sin θ⟩/a für q=⟨D cos θ⟩/a. Die Kontinuitätsgleichung schützt den Mittelwert von D, aber im Allgemeinen nicht q. Auf einem regelmäßigen Ring erhält ein linearer Generator L den Dipol für alle D genau dann, wenn L^T cos=0, und beide Komponenten genau dann, wenn auch L^T sin=0. Ein zyklischer Schritt um einen Winkel dreht das Paar der ersten Harmonischen und schützt dessen Länge, nicht die Projektion auf die feste Achse. Eine mitrotierende Achse kann dieselbe Projektion per Konstruktion erhalten. Die Indexparität in v470/05 allein bestimmt weder eine Winkelverschiebung noch eine Dynamik der Fokusantwort.
+
+Für diskrete Nachbardiffusion L=Δ mit ΔD_j=D_(j+1)+D_(j−1)−2D_j ist λ_k=4 sin²(π k/N) und L auf dem k-Modus gleich −λ_k. Ein Gegenmodell mit lokalem Zweinachbar-Stencil ist L=−Δ(Δ+λ_1 Id), mit Eigenwert −λ_k(λ_k−λ_1). Es erhält den Mittelwert und beide Dipolkomponenten exakt und dämpft die höheren Moden. Bei N=32: Nachbardiffusion hat Eigenwerte 0, −0,03842944, −0,15224093 für k=0,1,2, der zweite Generator 0, 0, −0,01732677. Die Stencilauswertung auf den drei Moden bestätigte diese Werte.
+
+Für einen irreduziblen kontinuierlichen Markov-Transport mit nichtnegativen Übergangsraten und Massenerhaltung kann cos kein stationäres adjungiertes Observable sein: An einem Maximum kann die gewichtete Summe der Differenzen nur verschwinden, wenn alle erreichbaren Nachbarn dasselbe Maximum tragen. Irreduzibilität erzwingt dann Konstanz. Der erhaltende Gegenentwurf hat deshalb negative Koeffizienten bei Abstand zwei, ist kein solcher Markov-Generator und setzt den Dipol gezielt in seinen Kern. Als Modell für ein signiertes Residualfeld ist er mathematisch zulässig.
+
+Für OP5 ist damit ein konkreter Erhaltungstest bekannt. Ein lokaler Transport kann den Dipol schützen, wenn seine Dynamik die erste Harmonische auszeichnet. Weder aus der Randkontinuität noch aus dem triolischen Paritätsregister folgt diese Auszeichnung. Keine Herleitung einer physikalischen Ladung oder Schließung von OP5/H96.
