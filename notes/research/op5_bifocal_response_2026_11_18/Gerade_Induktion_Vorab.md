@@ -1,0 +1,3 @@
+# Vorab: Produktformel und Vorzeichen der geraden OP5-Inkremente
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Gerade_Resolvente.md, Schaleninduktion.md, Legendre_Induktion.md, Gesamtbild, zurückgestellte Ideen und OP5-Vergleichsmodell-Anleitung. Prüfe, ob die skalare Resolventensumme mit Gaunt-Gewichten das rationale Produkt mit Nullstellen an den alternierenden Bahndrehimpulsen ist. Vergleiche die Residuen mittels der 3j-Fakultäten. Leite aus dem regulären Teil am Pol d eine Schranke für I/J ab und prüfe, ob sie die verbleibende Vorzeichenbedingung für gerade ℓ erfüllt. Kontrolliere Produktgewichte und endliche Teile unabhängig per exakter Arithmetik. Keine geschlossene Formel der ungeraden Plateauhöhe oder H96-Daten.
