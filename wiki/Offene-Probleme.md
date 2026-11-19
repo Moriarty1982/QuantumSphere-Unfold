@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**J-Eichkanal, 19.11.2026:** Die Maxwell-Quelle ist vorzeichenempfindlich für J. Ein Quark-Lepton-Gegenbeispiel hält J-Quelle und radialen Higgsanteil gemeinsam fest, während der $B-L$-Dipol sein Vorzeichen wechselt. Die J-Eigenfeldkraft ist unter den statischen Modellannahmen gerade in der Ladung. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_J_Eichkanal.md).
+
 **Nachtrag 19.11.2026:** Die radiale Dirac-Yukawa-Quelle hängt bei festen Besetzungen von der Teilchen-Antiteilchen-Summe ab. Zwei feste, ladungskonjugiert belegte Foki können deshalb denselben Higgsradius und entgegengesetzte Ladungsdipole haben. Der geprüfte Skalarkanal liefert kein signiertes Randresiduum. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Higgsquelle.md).
 
 **Eingeordnet als Runde v4.10.0-r11 (7.11.):** Die folgenden Arbeitsnotizen sind in den Companion aufgenommen und nachgerechnet (k219, 31 von 31). Präzisiert sind die Punkte 1 und 2 der r05-Neuordnung: Der OP5-Kern ist als bedingtes Schema geschlossen, eine native Route fehlt; die Λ-Auslesung ist die zusätzliche Gleichsetzung q = Ω_M (H96), die Kaskade leitet die Zahl nicht her. Offen: ein Mechanismus, der q auswählt, und eine Messabbildung vom Register zur Dichte. [Runde r11](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r11/README.md).
