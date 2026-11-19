@@ -1,0 +1,3 @@
+# Vorab: Legendre-Resolvente für die ungerade OP5-Induktion
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Wigner_Induktion.md, Schaleninduktion.md, Geschlossene_Schalen.md, Gesamtbild, zurückgestellte Ideen und OP5-Vergleichsmodell-Anleitung. Prüfe für ungerades ℓ die Resolvente des Kugel-Diracoperators im orbitalen Paritätsraum nach Multiplikation mit P_ℓ. Reduziere die Spurbedingung auf ein Legendre-Integral und untersuche den Bereich ℓ≤2k−1 mit Polynommomenten. Kontrolliere die Normierung unabhängig gegen die bereits exakte Wigner-Rechnung, auch unterhalb der Aufhebungsschwelle. Ein separater Beweis der vermuteten geschlossenen Plateauformel und gerade Grade sind außerhalb dieser Rechnung. Keine H96-Daten.
