@@ -102,6 +102,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Längengrenze des projizierten Z-Segments und ihren Vergleich mit der Kräftebilanz ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme Stabilitäts- und Endpunktprüfung des elektroschwachen Z-Strings ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die transversale Virialprüfung des neutralen W2-Higgsstrangs ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die J-Fluss-Endpunktbilanz und den Wirkungsabgleich zu I1 und k185 ergänzt.

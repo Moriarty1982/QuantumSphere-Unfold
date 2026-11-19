@@ -167,3 +167,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Elektroschwacher Z-String und seine Endpunkte
 
 **Stand 19.11.2026.** Ein zusätzlicher Z-Magnetkanal erlaubt endliche Energie pro Länge. Der nackte gerade Z-String ist bei den gemessenen Standardmodellparametern instabil. Nambu-Endpunkte eines Segments tragen außerdem entgegengesetzten elektromagnetischen Magnetfluss vom Betrag $4\pi\sin^2\theta_W/e$. Seine Coulombanziehung schwächt die im Zugmodell benötigte J-Abstoßung. W2 legt diesen Defekt und seine Endpunkte bisher nicht fest. [Herleitung und Quellen](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Strang.md).
+
+## Wie kurz müsste ein Z-String-Segment sein?
+
+**Stand 19.11.2026.** Im Modell einer einzigen negativen Transversalmode mit Eigenwert $-\mu^2$ heben freie Enden die Instabilität nicht auf. Selbst starre Enden unterdrücken sie nur für $R<\pi/\mu$. Bei einer symmetrischen endlichen Endsteifigkeit $h$ sinkt die Grenze auf $R_{\rm crit}=2\arctan(h/\mu)/\mu$. Der aus der Kräftebilanz gewonnene Abstand muss auch unterhalb dieser Grenze und im Gültigkeitsbereich des Langstreckenmodells liegen. Die Endsteifigkeit und das gemeinsame Gültigkeitsfenster sind für W2 offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Segment.md).

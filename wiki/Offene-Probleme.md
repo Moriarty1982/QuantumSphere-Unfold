@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Endliches Z-Segment, 19.11.2026:** Im Einmodenmodell können Randbedingungen die negative Innenmode nur unterhalb einer kritischen Länge unterdrücken. Selbst für feste Enden muss $R<\pi/\mu$ gelten. Die physische Endantwort und der gemeinsame Bereich mit dem mechanischen Gleichgewicht bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Segment.md).
+
 **Z-Strang, 19.11.2026:** Der elektroschwache Vergleich ermöglicht endliche Wirbelspannung, hat aber am physikalischen Parameterpunkt eine instabile Mode. Die magnetische Endpunktanziehung reduziert zusätzlich die effektive Coulombabstoßung im OP5-Kontrollmodell. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Strang.md).
 
 **Neutraler Higgsstrang, 19.11.2026:** Die transversale Skalierung schließt im glatten, quellenfreien, statischen W2-Teilsystem einen geraden Strang mit positiver endlicher Spannung aus. Zusätzliche gekoppelte Felder oder längs verteilte Quellen wären getrennt zu prüfen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutraler_Strang.md).
