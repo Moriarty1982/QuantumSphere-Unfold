@@ -738,3 +738,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Wellenauslese:** Geometrische Optik, Born-Winkelantwort und notwendige Phaseninformation nachgezogen.
 
 **19.11.2026, OP5-Tensorkopplung:** Feld- und Gesamttensorabgleich, Laufphase und Vorwärtsamplitude nachgezogen.
+
+**19.11.2026, OP5-Metrischer-Abgleich:** Gemeinsamer Lichtkegel, masseloser Austausch und Ricci-Feldumdefinition nachgezogen.

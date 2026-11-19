@@ -303,3 +303,7 @@ Ein skalarer Maxwell-Koeffizient Z erzeugt in geometrischer Optik keine zusätzl
 ## Laufphase aus Tensor-Kopplung
 
 Ein unabhängiger, eichinvarianter Tensoroperator kann den elektrischen und magnetischen J-Koeffizienten unterschiedlich ändern und damit eine lineare Laufphase erzeugen. Kopplung an den vollständigen D-Tensor liefert im ruhenden Modell eine Massensäule, während Kopplung nur an das D-Feld eine bindungsgewichtete Säule ergibt. Die vorherige Vorwärtsauslöschung bleibt eine Eigenschaft des rein skalaren Operators. Abgleich der Koeffizienten, beobachtbare J-Welle und H96 bleiben offen.
+
+## Metrischer Abgleich der Tensor-Kopplung
+
+Minimale Gravitation gibt einer masselosen J-Welle und einem ebenfalls minimal gekoppelten Referenzsignal denselben Lichtkegel. Der masselose Gravitonenaustausch besitzt einen Pol und liefert keinen unabhängigen lokalen Tensor-Koeffizienten. Ein zusätzlich gewählter Ricci-Operator ist zur ersten Ordnung einer Kopplung an den gesamten Stress äquivalent. Ein selektiver D-Beitrag, radiativer Abgleich und H96 bleiben offen.
