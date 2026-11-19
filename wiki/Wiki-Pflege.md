@@ -702,3 +702,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Paarstabilität:** Artenzahlen, Zerfallskanäle, Mindestbelegung für B−L und Anomalie der gemeinsamen Eichung nachgezogen.
 
 **19.11.2026, OP5-Sechserbindung:** Induktiver Bindungsnachweis, niedrigste Fragmentationsschwelle und anomale J-Beimischung nachgezogen.
+
+**19.11.2026, OP5-Beta-Zerfall:** Anomaliefreie Vergleichsfeldliste, Ladungsbilanz des Beta-Kanals und Coulomb-Bindungsobergrenze nachgezogen.
