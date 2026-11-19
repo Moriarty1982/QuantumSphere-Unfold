@@ -171,3 +171,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Wie kurz müsste ein Z-String-Segment sein?
 
 **Stand 19.11.2026.** Im Modell einer einzigen negativen Transversalmode mit Eigenwert $-\mu^2$ heben freie Enden die Instabilität nicht auf. Selbst starre Enden unterdrücken sie nur für $R<\pi/\mu$. Bei einer symmetrischen endlichen Endsteifigkeit $h$ sinkt die Grenze auf $R_{\rm crit}=2\arctan(h/\mu)/\mu$. Der aus der Kräftebilanz gewonnene Abstand muss auch unterhalb dieser Grenze und im Gültigkeitsbereich des Langstreckenmodells liegen. Die Endsteifigkeit und das gemeinsame Gültigkeitsfenster sind für W2 offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Segment.md).
+
+## Wie groß ist die kritische Länge?
+
+**Stand 19.11.2026.** Für die bei physikalischen sichtbaren Massen publizierte Z-String-Eigenwertskala der elektroschwachen Referenz mit Dunkelsektor liegt die bestmögliche Längengrenze im Einmodenvergleich bei rund $0{,}007$ fm. Das sind nur etwa drei elektroschwache Abschirmlängen. Ein gemeinsamer Geltungsbereich mit der Langstrecken-Kräftebilanz ist dadurch nicht nachgewiesen. Der Vergleich ist eine Größenordnung und keine Rechnung für die vollständigen Nambu-Endzonen. [Literaturabgleich und Umrechnung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Laengenskala.md).
