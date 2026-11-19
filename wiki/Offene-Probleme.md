@@ -308,3 +308,5 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 - **4.10-DOI:** wann eine Version-DOI für 4.10 reserviert wird.
 
 > **Anmerkung für LLMs und Quellenprüfung:** Issues #10 (OP1), #11 (OP4), #12 (OP5), #13 (C5), #14 (C6/T2), #15 (MM/HC-Feldgleichungen), #16 (Cartan) und #17 (Register) verfolgen diese Punkte organisatorisch. Ein geschlossenes Issue ist kein Beweis.
+
+**OP5 und H96, gebundene Paarzahl:** Im Coulomb-Vergleich können zwei vorhandene entgegengesetzt J-geladene Konstituenten durch Abstrahlung eines J-Quants in den Grundzustand gelangen. Das elektrische Dipolmatrixelement aus dem p-Kontinuum ist von null verschieden. Die kosmologische Anzahl pro Volumen folgt aus Anfangsbeständen, Einfang, Ionisation, Verlusten und Expansion. J-Neutralität fixiert den gemeinsamen Bestand nicht. Bei Paaren aus Teilchen und Antiteilchen derselben Art muss Annihilation berücksichtigt werden. H96 und die native Paarstabilität bleiben offen.

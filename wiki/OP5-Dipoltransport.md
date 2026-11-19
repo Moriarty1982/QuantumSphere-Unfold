@@ -219,3 +219,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Wann wird aus der Feldenergie ein Materiebeitrag?
 
 **Stand 19.11.2026.** Im gebundenen Zweikörpervergleich heben die kinetische Quellspannung und die integrierten Coulomb- und Higgs-Wechselwirkungsstresse einander durch die Virialrelation auf. Ein ruhendes isotropes Paarensemble kann dadurch auf führender Ordnung drucklos sein. Seine gravitative Dichte enthält Quellmassen und die gesamte Bindungsenergie. Die positive Außenfeldenergie allein bestimmt diese Dichte nicht. Paarhäufigkeit und Normierung für H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gebundener_Tensor.md).
+
+## Einfang gebundener Paare
+
+Im Coulomb-Vergleich können zwei vorhandene entgegengesetzt J-geladene Konstituenten durch Abstrahlung eines J-Quants in den Grundzustand gelangen. Das elektrische Dipolmatrixelement aus dem p-Kontinuum ist von null verschieden. Die kosmologische Anzahl pro Volumen folgt aus Anfangsbeständen, Einfang, Ionisation, Verlusten und Expansion. J-Neutralität fixiert den gemeinsamen Bestand nicht. Bei Paaren aus Teilchen und Antiteilchen derselben Art muss Annihilation berücksichtigt werden. H96 und die native Paarstabilität bleiben offen.
