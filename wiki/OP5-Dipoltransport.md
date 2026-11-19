@@ -311,3 +311,7 @@ Minimale Gravitation gibt einer masselosen J-Welle und einem ebenfalls minimal g
 ## Massiver Tensorvermittler
 
 Ein massiver Spin-2-Pol erzeugt für konservierte Quellen die lokale J–D-Tensorkopplung samt Eigenwechselwirkungen beider Sektoren. Der Mischkoeffizient ist betragsmäßig durch das geometrische Mittel der Eigenkoeffizienten begrenzt. In geladener gewöhnlicher Materie ist der J-Feldtensor allein nicht erhalten. Eine Erweiterung, die auch Sender und Empfänger erfasst, sowie H96 bleiben offen.
+
+## Differentielle Laufzeit und Quellenerhaltung
+
+Tauscht gewöhnliche geladene Materie Impuls sowohl mit J als auch mit dem elektromagnetischen Feld aus, erzwingt die Erhaltung der gewichteten Spin-2-Quelle im geprüften Ansatz gleiche Kopplungen an alle drei sichtbaren Tensoren. Der D-Hintergrund verschiebt dann die Laufzeit von J und gewöhnlichem Licht gleich. Ungleiche Gewichte aktivieren longitudinale Quellen, die über den bisherigen Abgleich hinausgehen. H96 bleibt offen.
