@@ -263,3 +263,7 @@ Eine abelsche Stückelberg-Masse ersetzt im Vergleich die masselose J-Kraft durc
 ## Wasserstoff-Spektroskopie bei endlicher J-Reichweite
 
 Eine Kombination aus 1S–2S, 2S–8D und der 2S–2P-Lamb-Aufspaltung eliminiert die führenden Rydberg- und Protonradius-Terme. Die lineare J-Korrektur liegt im bisherigen nominellen Einfangfenster bei über 11 MHz, während das konservativ aus dem CODATA-Fit abgeleitete Residuum unter 0,21 MHz liegt. Das ist eine quantitative Spannung für die bisherigen Punktladungen. Eine vollständige Neubestimmung mit relativistischen und weiteren J-Korrekturen sowie H96 bleiben offen.
+
+## Myonmoment bei endlicher J-Reichweite
+
+Mit unveränderter Vektorkopplung des Myons verursacht ein 1-MeV-J-Boson beim bisherigen Beispiel eine magnetische Zusatzanomalie von rund 1,55 × 10⁻³. Analytische notwendige Bedingungen aus kaltem Einfang und einer geschlossenen Anregungsschwelle ergeben im schwach gekoppelten Referenzbereich mit 50 GeV je Singulett weiterhin mindestens 7,5 × 10⁻⁵. Das liegt weit über der Differenz zwischen Messung und Standardrechnung. Änderungen der sichtbaren Kopplungen oder des Einfangkanals müssen separat geprüft werden. H96 bleibt offen.

@@ -718,3 +718,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Endliche-Reichweite:** Stückelberg-Vergleich, Spektralschranken, Einfangschwelle und kurzreichweitige Beiträge nachgezogen.
 
 **19.11.2026, OP5-Wasserstoffspektrum:** Kontaktfreie Spektralkombination, Vergleich mit CODATA und Geltungsgrenzen des linearen J-Beitrags nachgezogen.
+
+**19.11.2026, OP5-Myonmoment:** Schleifenbeitrag, notwendige Einfang- und Anregungsschwellen und sichtbare Kopplungen nachgezogen.
