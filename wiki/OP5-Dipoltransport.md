@@ -191,3 +191,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Thermische Neutralbesetzung und Krümmung
 
 **Stand 19.11.2026.** Die geprüften W2-Phasenladungen zählen Teilchen-Antiteilchen-Differenzen. Sie halten eine neutrale Teilchen-Loch-Anregung allein nicht fest. Im gegenläufigen Dirac-Modenpaar macht eine endliche Temperatur den infraroten Energiebeitrag regulär. Die Krümmung bleibt jedoch negativ. Ein positiver Beitrag dieses Paars braucht eine hinreichend starke Besetzungsinversion. Die übrige W2-Krümmung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Gleichgewicht.md).
+
+## Dynamischer Fokusabstand durch Drehimpuls
+
+**Stand 19.11.2026.** Zwei anziehende Fokuswolken können bei festgehaltenem mechanischem Drehimpuls einen radial stabilen Kreisbahnradius haben. Die entgegengesetzten J-Ladungen bilden dabei jedoch einen rotierenden Dipol. Ohne einlaufende Strahlung verliert die klassische Bahn Energie und ihr Abstand nimmt ab. Der B−L-Dipol eines ladungskonjugierten Paars mittelt sich über eine ideale Umlaufperiode zu null. Eine stationär orientierte Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusbahn.md).
