@@ -706,3 +706,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Beta-Zerfall:** Anomaliefreie Vergleichsfeldliste, Ladungsbilanz des Beta-Kanals und Coulomb-Bindungsobergrenze nachgezogen.
 
 **19.11.2026, OP5-Protonverband:** Fragmentationsschwellen, Induktion für vier Antineutrinos und schwache Rückumwandlung nachgezogen.
+
+**19.11.2026, OP5-Massenbudget:** Massenobergrenze des Protonverbands und baryonenfreier Ladungskandidat nachgezogen.

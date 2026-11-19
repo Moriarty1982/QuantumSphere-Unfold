@@ -239,3 +239,7 @@ Eine zusätzliche Dirac-Generation mit entgegengesetzter J-Ladung hebt die gemis
 ## Bindung der protonhaltigen Zerfallsprodukte
 
 Im Coulomb-Vergleich kann der protonhaltige Endzustand des Beta-Zerfalls alle vier Antineutrinos binden. Die elektromagnetische Proton-Elektron-Anziehung überwiegt im geprüften Bereich die J-Abstoßung und hält die zwei positiven J-Zentren zusammen. Eine Induktion zeigt bei endlichen Massen, dass jedes weitere Antineutrino die Energie unter die niedrigste Aufbruchsschwelle senkt. Die schwache Rückumwandlung in den neutronhaltigen Sektor liegt bei gewöhnlichen Nukleonmassen und schwacher Kopplung über dem gebundenen Zustand. Die Bildungsrate, weitere Teilchenkanäle und H96 bleiben offen.
+
+## Massenbudget des Protonverbands
+
+Ein Verband aus Proton, Elektron und vier Antineutrinos verbraucht ein Baryon aus dem gewöhnlichen Bestand. Die zusätzliche Masse gegenüber dem Proton-Elektron-Zustand ist kleiner als vier Antineutrinomassen. Selbst bei einem Verband pro Baryon und m ≤ 1 eV beträgt der Zuwachs höchstens rund 2,1 × 10⁻¹⁰ der kritischen Dichte, normiert mit der konventionellen Planck-Baryonendichte. Diese Route deckt in der geprüften Massenbilanz den zusätzlichen Materieanteil für H96 nicht. Ein baryonenfreier Kandidat aus beiden Generationen besitzt passende Ladungen, seine Population und vollständige Stabilität bleiben offen.
