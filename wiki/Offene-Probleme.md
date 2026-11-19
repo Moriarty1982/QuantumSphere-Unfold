@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Gleichnamige J-Ladungen, 19.11.2026:** Im statischen Fokusmodell ergibt die Coulombabstoßung gegen die Higgsanziehung höchstens ein instabiles Gleichgewicht. Eine zusätzliche Zugspannung liefert ein bedingtes Stabilitätsmodell. Ihre Herkunft aus der Wirkung bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Gleichnamige_Foki.md).
+
 **Fokusabstand, 19.11.2026:** Bei ladungskonjugierten radialen Wolken sind im quadratischen statischen Modell sowohl die Vektor- als auch die Higgswechselwirkung attraktiv. Ein getrennter Abstand mit wirksamem Außenkanal verlangt eine zusätzliche Gegenkraft. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusabstand.md).
 
 **Radiale Fokusprofile, 19.11.2026:** Kalibrierte Z-Profilfaktoren erlauben die Dipolrekonstruktion aus zwei Punkten pro Feld. Bei unbekanntem Profil ist der Betrag selbst mit vollständigem Außenfeld mehrdeutig. Die native Profil- und Randdynamik bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusprofile.md).

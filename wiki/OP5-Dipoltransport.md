@@ -151,3 +151,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Können die Feldterme den Fokusabstand stabilisieren?
 
 **Stand 19.11.2026.** Für zwei getrennte, ladungskonjugierte radiale Wolken ziehen sowohl der J-Vektorkanal als auch der linear antwortende Higgsradius die Foki zusammen. Die Vektorquellen sind entgegengesetzt. Die Higgsquellen sind gleich, und nach Eliminieren der radialen Higgsantwort hat ihre Wechselwirkungsenergie ein negatives Vorzeichen. Bei fester zulässiger Profilmenge kann auch radiale Relaxation kein isoliertes Minimum im Abstand erzeugen. Der Befund gilt für den quadratischen statischen Zweig. Eine native Gegenkraft, die Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusabstand.md).
+
+## Können gleichnamige J-Ladungen den Abstand stabilisieren?
+
+**Stand 19.11.2026.** Ein Zustand mit gleichnamigen J-Ladungen kann entgegengesetzte $B-L$-Ladungen an den Foki tragen. Im quadratischen Modell wirkt dann eine Coulombabstoßung gegen die abgeschirmte Higgsanziehung. Ein möglicher Kräfteausgleich ist ein striktes Energiemaximum, auch wenn radiale Profile als weitere Variablen zugelassen werden. Ein zusätzlicher Zugterm $TR$ kann dagegen ein Minimum erzeugen. Dessen physikalische Herkunft und die native Randwirkung sind offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Gleichnamige_Foki.md).
