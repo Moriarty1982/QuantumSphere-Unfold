@@ -714,3 +714,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Rückstoß:** Elastischer Formfaktor, spektrale Untergrenze für Anregung und Aufbruch sowie Einordnung an direkter Suche nachgezogen.
 
 **19.11.2026, OP5-Singulettpaar:** Ladungsformfaktor, inelastische Schwelle und langreichweitige J-Kraft auf Wasserstoff nachgezogen.
+
+**19.11.2026, OP5-Endliche-Reichweite:** Stückelberg-Vergleich, Spektralschranken, Einfangschwelle und kurzreichweitige Beiträge nachgezogen.

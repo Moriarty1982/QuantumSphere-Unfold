@@ -255,3 +255,7 @@ Bei einem baryonenfreien Neutrinopaar kann der elastische Z-Beitrag wegen der r�
 ## Singulettvergleich und langreichweitige J-Kraft
 
 Ein elektroschwaches Singulettpaar mit entgegengesetzten J-Ladungen und gleichen Massen hat im Coulomb-Grundzustand bei Einzelaustausch einen exakt verschwindenden elastischen J-Ladungsformfaktor. Die erste Anregung durch diesen Operator ist der 2p-Kanal. Eine dafür hinreichend große Kopplung widerspricht in der Referenzrechnung dem ungeschirmten masselosen J-Kanal auf gewöhnliche Materie. Wasserstoff hat J-Ladung +4 und würde sich ohne Abschirmung stark abstoßen. Ein Reichweiten- oder Abschirmungsmechanismus, Bestand und H96 bleiben offen.
+
+## Endliche Reichweite und Einfangschwelle
+
+Eine abelsche Stückelberg-Masse ersetzt im Vergleich die masselose J-Kraft durch eine Yukawa-Kraft. Analytische Schranken zeigen ein nominelles Fenster für erhaltene Bindung, gesperrte Ladungsanregung und kinematisch mögliche J-Abstrahlung beim Einfang. Beim Beispiel mit 50 GeV je Konstituent, A = 0,01 und einem J-Boson von 1 MeV bleibt auf Kernskalen eine zusätzliche Kraft im MeV-Bereich. Die Verträglichkeit mit gewöhnlicher Materie, die Einfangrate und H96 bleiben offen.
