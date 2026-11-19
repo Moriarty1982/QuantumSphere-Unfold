@@ -307,3 +307,7 @@ Ein unabhängiger, eichinvarianter Tensoroperator kann den elektrischen und magn
 ## Metrischer Abgleich der Tensor-Kopplung
 
 Minimale Gravitation gibt einer masselosen J-Welle und einem ebenfalls minimal gekoppelten Referenzsignal denselben Lichtkegel. Der masselose Gravitonenaustausch besitzt einen Pol und liefert keinen unabhängigen lokalen Tensor-Koeffizienten. Ein zusätzlich gewählter Ricci-Operator ist zur ersten Ordnung einer Kopplung an den gesamten Stress äquivalent. Ein selektiver D-Beitrag, radiativer Abgleich und H96 bleiben offen.
+
+## Massiver Tensorvermittler
+
+Ein massiver Spin-2-Pol erzeugt für konservierte Quellen die lokale J–D-Tensorkopplung samt Eigenwechselwirkungen beider Sektoren. Der Mischkoeffizient ist betragsmäßig durch das geometrische Mittel der Eigenkoeffizienten begrenzt. In geladener gewöhnlicher Materie ist der J-Feldtensor allein nicht erhalten. Eine Erweiterung, die auch Sender und Empfänger erfasst, sowie H96 bleiben offen.
