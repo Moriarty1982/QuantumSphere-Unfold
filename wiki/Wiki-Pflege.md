@@ -698,3 +698,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: Nachtrag Holonomie-Fluss-Paarung (γ m als Fläche und Phase; γ/2 nur mit Einheit 8πGħ und |m|) in Forschungsstand.
 
 **19.11.2026, OP5-Strahlungseinfang:** Coulomb-Einfang, Paarzahlbilanz und offene Stabilität im Wiki nachgezogen.
+
+**19.11.2026, OP5-Paarstabilität:** Artenzahlen, Zerfallskanäle, Mindestbelegung für B−L und Anomalie der gemeinsamen Eichung nachgezogen.

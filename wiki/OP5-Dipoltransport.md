@@ -223,3 +223,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Einfang gebundener Paare
 
 Im Coulomb-Vergleich können zwei vorhandene entgegengesetzt J-geladene Konstituenten durch Abstrahlung eines J-Quants in den Grundzustand gelangen. Das elektrische Dipolmatrixelement aus dem p-Kontinuum ist von null verschieden. Die kosmologische Anzahl pro Volumen folgt aus Anfangsbeständen, Einfang, Ionisation, Verlusten und Expansion. J-Neutralität fixiert den gemeinsamen Bestand nicht. Bei Paaren aus Teilchen und Antiteilchen derselben Art muss Annihilation berücksichtigt werden. H96 und die native Paarstabilität bleiben offen.
+
+## Erhaltungssätze und Zerfall der Paare
+
+In der massendiagonalen J–Higgs-Reduktion schützen getrennte Artenzahlen gemischte Paare vor vollständiger Annihilation in reine Feldquanten. In der elektroschwachen, farbigen Ein-Generationen-Referenz sind elektrisch und J-neutrale Zweierpaare gleichartig und besitzen einen J-Annihilationskanal im Spin-Singulett. Ein J-neutrales Farbsingulett mit B−L ungleich null braucht mindestens sechs Konstituenten. Die gleichzeitige Eichung von J und schwachem SU(2) erfordert mit der gegebenen Feldliste außerdem die Aufhebung der gemischten Eichanomalie. Bindung, Lebensdauer und H96 sind offen.
