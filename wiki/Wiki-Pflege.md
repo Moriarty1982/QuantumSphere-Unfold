@@ -102,6 +102,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Virialbilanz und die fehlende Normierung für H96 ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die gerade Dipolauslese und ihre Grenze für H96 ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme den Induktionsbeweis für Feldoperationen beliebiger Länge ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die freie Paritätsvertauschung und das Gauss-Hindernis an den J-Foki ergänzt.

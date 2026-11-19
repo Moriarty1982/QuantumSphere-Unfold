@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Gebundene Materieauslese, 19.11.2026:** Die integrierte Druckbilanz des führenden gebundenen Modells verschwindet nach Einschluss der Quell- und Feldspannungen. Für H96 fehlen weiterhin die physische Paarhäufigkeit und die gravitative Normierung. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gebundener_Tensor.md).
+
 **Gerade Auslese für H96, 19.11.2026:** Ein isotropes Nullmittel des Dipols kann positive quadratische J-Außenenergie tragen. Für H96 fehlt die Zuordnung dieser Feldkomponente und der Bindungsbeiträge zur gravitativen Materiedichte. Die signierte Randwirkung bleibt separat offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gerade_Dipolauslese.md).
 
 **Induktion über Feldoperationen, 19.11.2026:** Jede paritätsvertauschende Komposition der dokumentierten Vierteldrehung und Konjugation erzeugt an einer lokalen elektrischen J-Quelle eine magnetische Quelle. Beliebig lange Folgen heben diese Gauss-Sperre nicht auf. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Induktion.md).

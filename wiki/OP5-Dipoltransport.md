@@ -215,3 +215,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Gerade Dipolauslese und H96
 
 **Stand 19.11.2026.** H96 formuliert eine skalare Materiequote und setzt keine feste Dipolrichtung voraus. Ein isotropes Ensemble hat Dipolmittel null und kann dennoch ein positives Dipolquadrat tragen. Im statischen J-Maxwell-Sektor liefert dieses Quadrat den exakten Dipolbeitrag zur Außenenergie $\langle|\mathbf d_J|^2\rangle/(12\pi R_0^3)$. Der isolierte isotrope Maxwell-Beitrag hat Druck $\rho/3$. Die Zuordnung zur gesamten gravitativen Materiedichte samt Normierung bleibt offen. [Rückwärtsprüfung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gerade_Dipolauslese.md).
+
+## Wann wird aus der Feldenergie ein Materiebeitrag?
+
+**Stand 19.11.2026.** Im gebundenen Zweikörpervergleich heben die kinetische Quellspannung und die integrierten Coulomb- und Higgs-Wechselwirkungsstresse einander durch die Virialrelation auf. Ein ruhendes isotropes Paarensemble kann dadurch auf führender Ordnung drucklos sein. Seine gravitative Dichte enthält Quellmassen und die gesamte Bindungsenergie. Die positive Außenfeldenergie allein bestimmt diese Dichte nicht. Paarhäufigkeit und Normierung für H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gebundener_Tensor.md).
