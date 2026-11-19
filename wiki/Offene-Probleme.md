@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Neutrale Fermionbesetzung, 19.11.2026:** Eine festgehaltene neutrale Belegung schneidet im projizierten Dirac-Modenpaar den negativen Infrarotlogarithmus ab. Der verbleibende Beitrag zur quadratischen Variation ist negativ. Restkrümmung, Besetzungsdynamik und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Neutralbesetzung.md).
+
 **Chirale Z-String-Nullmoden, 19.11.2026:** Endliche Energie pro Länge im elektromagnetischen und J-Maxwell-Kanal erzwingt im geprüften unendlichen Nullmodensektor verschwindende B−L-Ladung und verschwindenden B−L-Strom. Stabilisierung durch Neutralbesetzung oder zusätzliche Moden bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Nullmoden.md).
 
 **Endzonenmodell, 19.11.2026:** Ein abklingender Außenkanal liefert eine berechenbare endliche Steifigkeit. Bei der W-Masse als Außenmaß sinkt die modellhafte kritische Länge auf rund 0,0031 fm. Die gekoppelte physische Endantwort bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Endzonen.md).

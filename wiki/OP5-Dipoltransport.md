@@ -183,3 +183,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Können chirale Nullmoden B−L im Strang tragen?
 
 **Stand 19.11.2026.** Im geraden Dirac-Z-String mit einem zusätzlichen masselosen J-Kanal verknüpfen die Laufrichtungen den B−L-Überschuss mit der elektromagnetischen Ladung und dem J-Strom. Endliche Energie pro Länge verlangt verschwindende Ladungen und Längsströme in beiden Maxwell-Kanälen. Damit verschwinden auch B−L-Überschuss und B−L-Strom in diesem Nullmodensektor. Endliche Stränge mit Rückströmen, zusätzliche Moden und Neutralbesetzungen bleiben gesonderte Fälle. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Nullmoden.md).
+
+## Kann eine neutrale Fermionbesetzung die Instabilität abschwächen?
+
+**Stand 19.11.2026.** Ein neutral angeregtes Paar gegenläufiger Dirac-Moden kann den infraroten Anteil der negativen Fermionenergie durch Besetzungsblockierung abschneiden. Im hergeleiteten Modell bleibt eine reguläre negative Krümmung aus den ungeblockten Impulsen. Eine positive Gesamtkrümmung braucht einen hinreichend positiven Restbeitrag. Die Netto-Ladungen sichern die angeregte Belegung allein nicht. Native W2-Stabilisierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Neutralbesetzung.md).
