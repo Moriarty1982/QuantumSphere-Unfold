@@ -16,6 +16,7 @@ from qam.store.editions import save_edition, read_edition, export_edition
 from qam.store.snapshots import create_snapshot
 from qam.tools.store_koide_branch import run as store_koide
 from qam.tools.store_example import run as matrix_example
+from qam.tools.register_v5_research_notes import register_research_notes
 
 
 TITLES = [('question', 'Introduction'), ('core', 'A graded carrier and its interpretation'),
@@ -128,6 +129,8 @@ def configure(database, destination):
     for path in ('qam/store/matrix_example.json', 'notes/research/koide_store_branch_review_2026_11_11.md',
                  'notes/research/hc_identification_store_review_2026_11_11.md', 'notes/research/hc_koide_bridge_review_2026_11_11.md'):
         source_files[path] = hashlib.sha256((repo / path).read_bytes()).hexdigest()
+    research_notes, research_sources = register_research_notes(database, repo)
+    source_files.update(research_sources)
     snapshot = create_snapshot(database, 'v5-dual-document-assemblies')['snapshot_hash']
     # Importer source order follows the manuscript's literal input traversal.
     # Include files without theorem environments too (preamble, opening, etc.).
@@ -156,7 +159,8 @@ def configure(database, destination):
                 'sources/research/v480-companion.tex')
     exports = {name: export_edition(database, repo, key, destination / name) for name, key in [('physics', physics), ('full', full)]}
     result = {'snapshot_hash': snapshot, 'physics': physics, 'full': full, 'exports': exports,
-              'physics_sections': len(sections), 'full_statements': sum(len(s['members']) for s in full_sections)}
+              'physics_sections': len(sections), 'full_statements': sum(len(s['members']) for s in full_sections),
+              'research_notes': research_notes}
     (destination / 'editions.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
     for name, key in [('physics', physics), ('full', full)]:
         edition = read_edition(database, key)

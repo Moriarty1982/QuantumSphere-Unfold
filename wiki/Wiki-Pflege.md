@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: Dokument-Store registriert die Befunde zu ungeraden Schalenplateaus, bifokaler Sondenform und Vermittlerprofil mit Quellenhash und je einer offenen Prüfpflicht. Die Entwurfs-Toolchain weist Versionen und Prüfpflichten im Buildmanifest aus.
+
 - 18.11.2026: Profil des Vermittlers in Forschungsstand und Offene-Probleme (gemeinsamer Kern).
 
 - 18.11.2026: Wurzelkarte der offenen Probleme in Offene-Probleme (gemeinsamer Kern) und Forschungsstand.

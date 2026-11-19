@@ -535,3 +535,14 @@ Herleitungen ersetzt werden. Dafür gilt zusätzlich:
   (`counterterm_export_issues`).
 - Tests: `python -m unittest qam.store.test_counterterm_export`, einschließlich
   einer pdflatex-Übersetzung des Entwurfs, wenn pdflatex vorhanden ist.
+
+### Aktuelle Forschungsnotizen im Dokument-Store
+
+Der Zwei-Dokumente-Builder und `python -m qam.tools.configure_v5_editions`
+registrieren den expliziten Katalog `qam/editions/v5_research_notes.json`.
+Jeder Eintrag bindet einen eindeutigen wörtlichen Ausschnitt und den SHA-256
+der Originalnotiz an eine unveränderliche Version mit einer offenen
+Prüfpflicht. Eine identische Wiederholung fügt keine Version oder Pflicht
+hinzu. Die Einträge bleiben `imported-unreviewed` und sind im gemeinsamen
+Snapshot sowie als Hash-Paare im Buildbericht auffindbar. Die
+Auswahl der PDF-Abschnitte wird über die bestehenden Editionsregeln gesteuert.

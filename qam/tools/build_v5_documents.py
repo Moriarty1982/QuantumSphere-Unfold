@@ -106,13 +106,17 @@ def build(output):
         result['tracked_changes'] = bool(git_metadata(repo, 'status', '--porcelain', '--untracked-files=no'))
         result['builder_sha256'] = digest(Path(__file__))
         result['editions_builder_sha256'] = digest(repo / 'qam/tools/configure_v5_editions.py')
+        research_importer = repo / 'qam/tools/register_v5_research_notes.py'
+        result['research_importer_sha256'] = digest(research_importer)
         provenance = output / 'provenance'
         provenance.mkdir()
         for relative in ('qam/tools/build_v5_documents.py', 'qam/tools/configure_v5_editions.py',
+                         'qam/tools/register_v5_research_notes.py',
                          'qam/store/physics_paper.py', 'qam/store/requirements.txt'):
             shutil.copyfile(repo / relative, provenance / Path(relative).name)
         editions = configure(output / 'qam.sqlite3', output / 'editions')
         result['snapshot_hash'] = editions['snapshot_hash']
+        result['research_notes'] = editions['research_notes']
         manifests = {name: verify_export(output / 'editions' / name) for name in ('full', 'physics')}
         full, physics = [manifests[n][0] for n in ('full', 'physics')]
         if full['snapshot_hash'] != physics['snapshot_hash'] or full['source_files'] != physics['source_files']:
@@ -135,7 +139,9 @@ def build(output):
         for name, expected in result['source_files'].items():
             if digest(repo / name) != expected:
                 raise ValueError('Repository source changed during compilation: ' + name)
-        if digest(Path(__file__)) != result['builder_sha256'] or digest(repo / 'qam/tools/configure_v5_editions.py') != result['editions_builder_sha256']:
+        if (digest(Path(__file__)) != result['builder_sha256']
+                or digest(repo / 'qam/tools/configure_v5_editions.py') != result['editions_builder_sha256']
+                or digest(research_importer) != result['research_importer_sha256']):
             raise ValueError('Build implementation changed during compilation')
     except Exception as error:
         result['error'] = type(error).__name__ + ': ' + str(error)
