@@ -203,3 +203,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Warum eine Kramers-Paarung den Dipol nicht schützt
 
 **Stand 19.11.2026.** Auf einem isolierten Kramers-Dublett ist jeder zeitumkehrgerade hermitesche Operator proportional zur Identität. Ein zusätzlich paritätsungerader Dichtedipol verschwindet dort. Zwei Kramers-Dubletts entgegengesetzter Parität können bei gleicher Energie einen Dipol tragen. Zeitumkehr und Parität erlauben aber eine Aufspaltung zwischen ihnen. Eine weitere physische Symmetrie oder Orientierung bleibt erforderlich. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Kramers_Dipol.md).
+
+## Vertauscht die Umkehrwalze die physikalische Parität?
+
+**Stand 19.11.2026.** Auf freien elektromagnetischen Doppelamplituden antikommutiert $J_B=iK$ mit der räumlichen Feldparität und vertauscht deren Eigenräume. Auf elektrisch geladenen J-Foki würde derselbe Feldtausch den elektrischen Fluss durch jede einzelne Fokusfläche zu magnetischem Fluss machen. Das widerspricht der glatten magnetisch quellenfreien W1-Gleichung, auch bei insgesamt neutralem Paar. Die freie Feldoperation schützt daher keine Entartung des elektrisch gebundenen Fokuspaars. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Dipol.md).

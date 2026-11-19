@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Umkehrwalze und Dipol, 19.11.2026:** $J_B$ vertauscht die räumlichen Paritäten der freien Doppelamplitude. Der gleiche Feldtausch würde an jedem geladenen J-Fokus magnetische Quellen erfordern. Native Entartung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Dipol.md).
+
 **Kramers-Dipol, 19.11.2026:** Ein isoliertes Kramers-Dublett schützt keine orientierte B−L-Dichte. Der zeitumkehrgerade, paritätsungerade Dipol verschwindet im Dublett. Zwei Dubletts entgegengesetzter Parität können energetisch aufspalten. Native Orientierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Kramers_Dipol.md).
 
 **Quantendipol, 19.11.2026:** Ideale Coulomb-Entartung erlaubt einen stationären Dipol bei gewählter Präparation. Der abgeschirmte Higgsanteil spaltet das betrachtete $2s$–$2p$-Dublett auf und lässt den präparierten Dipol schwingen. Native Orientierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Quantendipol.md).
