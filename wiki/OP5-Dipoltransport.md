@@ -179,3 +179,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Was bringt eine massive Außenzone?
 
 **Stand 19.11.2026.** Im eindimensionalen Modell ersetzt ein abklingendes Außenfeld die starre Endbedingung durch endliche Steifigkeit. Liegt die Außenmasse unterhalb einer festen Schranke, gibt die abrupte Stufe in dieser Modellklasse die größte entsprechende Endsteifigkeit. Mit der W-Masse als Außenmaß und der bisherigen Instabilitätsskala ergibt sich eine kritische Länge von etwa $0{,}0031$ fm. Eine tatsächliche Nambu-Endzone wurde damit noch nicht bestimmt. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Endzonen.md).
+
+## Können chirale Nullmoden B−L im Strang tragen?
+
+**Stand 19.11.2026.** Im geraden Dirac-Z-String mit einem zusätzlichen masselosen J-Kanal verknüpfen die Laufrichtungen den B−L-Überschuss mit der elektromagnetischen Ladung und dem J-Strom. Endliche Energie pro Länge verlangt verschwindende Ladungen und Längsströme in beiden Maxwell-Kanälen. Damit verschwinden auch B−L-Überschuss und B−L-Strom in diesem Nullmodensektor. Endliche Stränge mit Rückströmen, zusätzliche Moden und Neutralbesetzungen bleiben gesonderte Fälle. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Nullmoden.md).
