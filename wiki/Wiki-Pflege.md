@@ -744,3 +744,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Tensorvermittler:** Massiver Baumabgleich, Kopplungsmatrix und Quellenerhaltung nachgezogen.
 
 **20.11.2026, OP5-Differenzphase:** Gemeinsame sichtbare Quellkopplung, Laufzeitvergleich und longitudinale Quellen nachgezogen.
+
+**20.11.2026, OP5-Longitudinaler-Abgleich:** Gemischter Propagator, D-Spur und freie Ausbreitung bei ungleichen Gewichten nachgezogen.

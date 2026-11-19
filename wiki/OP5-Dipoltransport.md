@@ -315,3 +315,7 @@ Ein massiver Spin-2-Pol erzeugt für konservierte Quellen die lokale J–D-Tenso
 ## Differentielle Laufzeit und Quellenerhaltung
 
 Tauscht gewöhnliche geladene Materie Impuls sowohl mit J als auch mit dem elektromagnetischen Feld aus, erzwingt die Erhaltung der gewichteten Spin-2-Quelle im geprüften Ansatz gleiche Kopplungen an alle drei sichtbaren Tensoren. Der D-Hintergrund verschiebt dann die Laufzeit von J und gewöhnlichem Licht gleich. Ungleiche Gewichte aktivieren longitudinale Quellen, die über den bisherigen Abgleich hinausgehen. H96 bleibt offen.
+
+## Longitudinaler Austausch
+
+Beim massiven Spin-2-Austausch mit einem erhaltenen D-Tensor bleibt aus den impulsabhängigen Zählertermen nur die doppelte Divergenz der sichtbaren Quelle mal D-Spur übrig. Für freie Maxwell-Wellen verschwindet dieses longitudinale Glied. Ungleiche transversale Gewichte können lokal eine differentielle Laufphase erzeugen, während geladene Quellen und Detektoren zusätzliche Beiträge verlangen. Der vollständige Abgleich und H96 bleiben offen.
