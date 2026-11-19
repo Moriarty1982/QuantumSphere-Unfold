@@ -211,3 +211,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Vollständige Induktion für die Feldoperationen
 
 **Stand 19.11.2026.** Jedes endliche Wort aus Vierteldrehung $R$ und Konjugation $K$ lässt sich zu $R^aK^b$ reduzieren. Genau die ungeraden Exponenten $a$ vertauschen die räumlichen Feldparitäten. Dieselben Wörter machen eine lokale elektrische J-Quelle zu einer magnetischen und scheitern dadurch an der glatten W1-Gauss-Gleichung. Das Hindernis gilt sogar für beliebige invertierbare konstante Mischungen der beiden Feldkomponenten. Eine native Materiesymmetrie und H96 bleiben offen. [Induktionsbeweis](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Induktion.md).
+
+## Gerade Dipolauslese und H96
+
+**Stand 19.11.2026.** H96 formuliert eine skalare Materiequote und setzt keine feste Dipolrichtung voraus. Ein isotropes Ensemble hat Dipolmittel null und kann dennoch ein positives Dipolquadrat tragen. Im statischen J-Maxwell-Sektor liefert dieses Quadrat den exakten Dipolbeitrag zur Außenenergie $\langle|\mathbf d_J|^2\rangle/(12\pi R_0^3)$. Der isolierte isotrope Maxwell-Beitrag hat Druck $\rho/3$. Die Zuordnung zur gesamten gravitativen Materiedichte samt Normierung bleibt offen. [Rückwärtsprüfung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gerade_Dipolauslese.md).

@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Gerade Auslese für H96, 19.11.2026:** Ein isotropes Nullmittel des Dipols kann positive quadratische J-Außenenergie tragen. Für H96 fehlt die Zuordnung dieser Feldkomponente und der Bindungsbeiträge zur gravitativen Materiedichte. Die signierte Randwirkung bleibt separat offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gerade_Dipolauslese.md).
+
 **Induktion über Feldoperationen, 19.11.2026:** Jede paritätsvertauschende Komposition der dokumentierten Vierteldrehung und Konjugation erzeugt an einer lokalen elektrischen J-Quelle eine magnetische Quelle. Beliebig lange Folgen heben diese Gauss-Sperre nicht auf. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Induktion.md).
 
 **Umkehrwalze und Dipol, 19.11.2026:** $J_B$ vertauscht die räumlichen Paritäten der freien Doppelamplitude. Der gleiche Feldtausch würde an jedem geladenen J-Fokus magnetische Quellen erfordern. Native Entartung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Dipol.md).
