@@ -104,6 +104,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 - 18.11.2026: Profil des Vermittlers in Forschungsstand und Offene-Probleme (gemeinsamer Kern).
 
+- 19.11.2026: Erklärgrafiken zu Konvention F, dem Gram-Auslesebeleg und den beiden OP5-Sondenkanälen ergänzt. Quellen und Geltungsbereiche stehen an den Abbildungen.
+
 - 18.11.2026: Wurzelkarte der offenen Probleme in Offene-Probleme (gemeinsamer Kern) und Forschungsstand.
 
 - 18.11.2026: OP1 Flächenquant und Boosts (Literatur Rovelli–Speziale) in Forschungsstand und Offene-Probleme.

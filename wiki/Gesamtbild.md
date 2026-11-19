@@ -30,6 +30,14 @@ Kein offenes Problem wurde in dieser Zeit geschlossen, und die Guards sind unver
 
 Der Companion geht von einer Vermutung aus: Materie, Licht und ein Tachyon-Sektor sind *ein* Objekt, gesehen aus drei Bezugsrahmen (Frames). Mathematisch ist dieses Objekt ein Biquaternion-Kern aus drei komplexen Kernen, den ein Projektor (der Heisenberg-Kompensator) in einen symmetrischen und einen antisymmetrischen Teil zerlegt. Darauf baut eine Architektur aus Hopf-Kaskade, Oktonionen, Mastergleichung und Kompensatormatrix auf. Aus ihr sollen Standardmodell, Gravitation und Kosmologie als *Auslesungen* folgen. Das tragende Ergebnis von rund 90 Prüfrunden seit v4.8.0 lautet: Die algebraische Struktur ist sauber, viele physikalische Auslesungen sind dagegen widerlegt, archiviert oder nur bedingt gültig. Vor allem fehlt eine gemeinsame Dynamik, also eine Wirkung, aus der die Größen folgen, statt gesetzt zu werden.
 
+## Frame-Spickzettel
+
+Konvention F benennt **M** als Materieframe, **T** als Tachyonframe und **P** als Photon-Eigenframe. Ältere Kapitel verwenden „Photon-Frame“ stellenweise für den Referenzframe **R**, den reinen Dublettzustand mit $|b|=1$. Der eigentliche Photon-Eigenframe **P** hat $b=0$. Vor einem Vergleich zuerst die Frame-Zuordnung der Stelle und dann die Abbildung der verglichenen Größe prüfen.
+
+![Auf derselben komplexen Ebene dreht die Tachyon-Abbildung den Ausgangsvektor um 90 Grad gegen den Uhrzeigersinn. Die Zeitumkehr spiegelt ihn an der reellen Achse.](https://raw.githubusercontent.com/Moriarty1982/QuantumSphere-Unfold/refs/heads/main/wiki/assets/frame-operationen.png)
+
+Auf der komplexen Frame-Ebene wirkt die Tachyon-Abbildung als $z\mapsto iz$ und die Zeitumkehr als $z\mapsto\bar z$. Die Skizze zeigt diese beiden Operationen auf der Frame-Ebene. Für einen physikalischen Vergleich braucht die jeweilige Größe eine deklarierte Transportregel. [Korrektur der Operationen in r51](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f85f29b8c094307c724369143c07e3ca0cce9a21/notes/research/v4_10_0_r48_r55/rounds/v490_r51_round.tex) · [Statusvermerk zur historischen Frame-Bezeichnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f85f29b8c094307c724369143c07e3ca0cce9a21/sources/research/parts/v470/10_sphaera_and_physics.tex)
+
 ## Mindmap
 
 ```mermaid
