@@ -287,3 +287,7 @@ Für beliebig viele abelsche Vektoren mit positiver kinetischer Form bleibt bei 
 ## J-Feldantwort eines neutralen Verbands
 
 Eine Kopplung proportional zu F_J² F_D² lässt einen unter J neutralen D-Verband auf ein angelegtes J-Feld reagieren. Die Bindungsenergie reagiert im langsam veränderlichen Hintergrund auf das elektrische Feldquadrat. Ohne angelegtes J-Feld entsteht im geprüften Modell keine permanente J-Quelle. Eine lineare Änderung des Energiesignals braucht einen vorgegebenen Hintergrund. Der Kopplungskoeffizient, der kosmologische Bestand und H96 bleiben offen.
+
+## Gemittelte Feldantwort und Fluktuationen
+
+Im verdünnten Ensemble der J-neutralen Verbände ist der Maxwell-Koeffizient Z = 1 + 4 κ n. Homogene J-Ausbreitung bestimmt daher nur das Produkt aus Dichte und Einzelantwort. Unter der zusätzlichen Annahme einer Poisson-Population würden ein kalibrierter Mittelwert und der diskrete Fluktuationsanteil beide Größen trennen. Die reale Populationsstatistik, Kopplung und H96 bleiben offen.

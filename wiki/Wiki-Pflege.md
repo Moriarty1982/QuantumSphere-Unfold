@@ -730,3 +730,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Gemeinsamer-J-Strom:** Positive Vektorsumme, Isotopendifferenz und unabhängige Ladungsrichtung nachgezogen.
 
 **19.11.2026, OP5-Neutrale-Feldantwort:** Lokale Feldstärkekopplung, Bindungsantwort und offene Normierung nachgezogen.
+
+**19.11.2026, OP5-Ensembleantwort:** Homogene Modengleichung, Dichte-Kopplungs-Degenerierung und bedingte Poisson-Inversion nachgezogen.
