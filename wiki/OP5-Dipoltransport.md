@@ -147,3 +147,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Was zwei radiale Foki am Rand verraten
 
 **Stand 19.11.2026.** Bei bekannten, getrennten Foki bestimmen zwei spiegelbildliche Außenmesspunkte pro Feld die beiden Außenamplituden. Das Photon trägt die gewöhnlichen Ladungen. Beim Z-Feld ist jede Amplitude mit einem Profilfaktor gewichtet, dem Mittel von $\sinh(mr)/(mr)$. Bekannte Profilfaktoren erlauben die Rekonstruktion des $B-L$-Dipols. Verschiedene unkalibrierte radiale Profile können dasselbe vollständige Außenfeld und verschiedene Dipolbeträge liefern. Die physikalische Herkunft der Profile und die Formkraft bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusprofile.md).
+
+## Können die Feldterme den Fokusabstand stabilisieren?
+
+**Stand 19.11.2026.** Für zwei getrennte, ladungskonjugierte radiale Wolken ziehen sowohl der J-Vektorkanal als auch der linear antwortende Higgsradius die Foki zusammen. Die Vektorquellen sind entgegengesetzt. Die Higgsquellen sind gleich, und nach Eliminieren der radialen Higgsantwort hat ihre Wechselwirkungsenergie ein negatives Vorzeichen. Bei fester zulässiger Profilmenge kann auch radiale Relaxation kein isoliertes Minimum im Abstand erzeugen. Der Befund gilt für den quadratischen statischen Zweig. Eine native Gegenkraft, die Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusabstand.md).
