@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Neutrale Ströme, 19.11.2026:** Photon- und Z-Vektorquellen bilden in der elektroschwachen Referenz lokal eine signierte $B-L$-Auslese. Abgeschirmte glatte Quellen können dennoch den Dipol vor sämtlichen Außenfeldmessungen verbergen. W2-Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutralstroeme.md).
+
 **J-Eichkanal, 19.11.2026:** Die Maxwell-Quelle ist vorzeichenempfindlich für J. Ein Quark-Lepton-Gegenbeispiel hält J-Quelle und radialen Higgsanteil gemeinsam fest, während der $B-L$-Dipol sein Vorzeichen wechselt. Die J-Eigenfeldkraft ist unter den statischen Modellannahmen gerade in der Ladung. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_J_Eichkanal.md).
 
 **Nachtrag 19.11.2026:** Die radiale Dirac-Yukawa-Quelle hängt bei festen Besetzungen von der Teilchen-Antiteilchen-Summe ab. Zwei feste, ladungskonjugiert belegte Foki können deshalb denselben Higgsradius und entgegengesetzte Ladungsdipole haben. Der geprüfte Skalarkanal liefert kein signiertes Randresiduum. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Higgsquelle.md).

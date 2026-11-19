@@ -139,3 +139,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Was liest der vorhandene J-Eichkanal?
 
 **Stand 19.11.2026.** Die J-Maxwell-Gleichung liest in der Dirac-Reduktion die Summe der signierten Teilchenzahlen, während $B-L$ Quarks und Leptonen verschieden gewichtet. Entgegengesetzte Quark- und Leptonüberschüsse können den J-Strom punktweise aufheben und bei gleichen Besetzungssummen auch das Higgsprofil unverändert lassen. Der $B-L$-Dipol kann dabei sein Vorzeichen wechseln. Für zwei kugelsymmetrische, getrennte Quellen mit J-Ladungen $\pm Q$ ist die Eigenfeldkraft attraktiv und proportional zu $Q^2/R^2$. Ein linearer Formantrieb aus dem Vorzeichen braucht einen geeigneten Hintergrund samt Randkopplung. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_J_Eichkanal.md).
+
+## Photon und Z als gemeinsame Ladungsauslese
+
+**Stand 19.11.2026.** In der elektroschwachen Dirac-Referenz auf Baumebene gilt für die Vektorquellen $\rho_{B-L}=(2-4\sin^2\theta_W)\rho_\gamma/e-4\rho_Z^V/g_Z$. Damit ist die lokale Ladungsdichte aus beiden Quellwerten bestimmbar. W2 spezifiziert diese beiden dynamischen Neutralfelder hier nicht. Bei glatten Quellen kann ein kompaktes Z-Potential außerhalb des Quellgebiets vollständig verschwinden und trotzdem einen nichtverschwindenden $B-L$-Dipol tragen. Das begrenzt die Auslese aus Randfeldern allein. Die native Wirkung, die Formkraft und H96 bleiben offen. [Herleitung und Gegenbeispiel](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutralstroeme.md).

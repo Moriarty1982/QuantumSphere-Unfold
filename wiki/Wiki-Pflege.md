@@ -102,6 +102,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die lokale elektroschwache Ladungsauslese und das Gegenbeispiel für Außenfelder ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Mehrdeutigkeit von J- und Higgs-Auslese sowie die Vorzeichenparität der Eigenfeldkraft ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Vorzeichengrenze der radialen W2-Yukawa-Quelle ergänzt.
 - 19.11.2026: Julia-Residualabbildungen des Historical Witness aus den Parametern der historischen Bildunterschrift neu berechnet. Beide aktuellen Entwürfe zeigen zusätzlich den Modellvergleich von Distanz- und Signalsummen, einschließlich der Yukawa-Formantwort. Die archivierten Frame-Flicker-Fits brauchen weiterhin die ursprünglichen Benchmark-Daten.
