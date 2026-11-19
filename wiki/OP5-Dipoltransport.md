@@ -291,3 +291,7 @@ Eine Kopplung proportional zu F_J² F_D² lässt einen unter J neutralen D-Verba
 ## Gemittelte Feldantwort und Fluktuationen
 
 Im verdünnten Ensemble der J-neutralen Verbände ist der Maxwell-Koeffizient Z = 1 + 4 κ n. Homogene J-Ausbreitung bestimmt daher nur das Produkt aus Dichte und Einzelantwort. Unter der zusätzlichen Annahme einer Poisson-Population würden ein kalibrierter Mittelwert und der diskrete Fluktuationsanteil beide Größen trennen. Die reale Populationsstatistik, Kopplung und H96 bleiben offen.
+
+## Gemeinsame J- und Gravitationsauslese
+
+Bei einem festen Verhältnis von Masse zu J-Antwort kürzt sich die Verklumpung im Verhältnis von J–Gravitations-Kreuzspektrum und J-Leistung heraus. Ein kalibrierter Mittelwert liefert dann die Dichte des Verbandssektors. Korrelierte gewöhnliche Materie verzerrt das direkte Verhältnis. Sie lässt sich mit einem unabhängigen Tracer herausprojizieren, wenn dessen Residuum unkorreliert ist und eine unabhängige J-Fluktuation übrig bleibt. Eine Rangbedingung am isolierten diskreten Anteil prüft konstante Masse pro J-Antwort. Beobachtungsabbildung und H96 bleiben offen.
