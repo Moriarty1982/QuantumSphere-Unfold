@@ -143,3 +143,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Photon und Z als gemeinsame Ladungsauslese
 
 **Stand 19.11.2026.** In der elektroschwachen Dirac-Referenz auf Baumebene gilt für die Vektorquellen $\rho_{B-L}=(2-4\sin^2\theta_W)\rho_\gamma/e-4\rho_Z^V/g_Z$. Damit ist die lokale Ladungsdichte aus beiden Quellwerten bestimmbar. W2 spezifiziert diese beiden dynamischen Neutralfelder hier nicht. Bei glatten Quellen kann ein kompaktes Z-Potential außerhalb des Quellgebiets vollständig verschwinden und trotzdem einen nichtverschwindenden $B-L$-Dipol tragen. Das begrenzt die Auslese aus Randfeldern allein. Die native Wirkung, die Formkraft und H96 bleiben offen. [Herleitung und Gegenbeispiel](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutralstroeme.md).
+
+## Was zwei radiale Foki am Rand verraten
+
+**Stand 19.11.2026.** Bei bekannten, getrennten Foki bestimmen zwei spiegelbildliche Außenmesspunkte pro Feld die beiden Außenamplituden. Das Photon trägt die gewöhnlichen Ladungen. Beim Z-Feld ist jede Amplitude mit einem Profilfaktor gewichtet, dem Mittel von $\sinh(mr)/(mr)$. Bekannte Profilfaktoren erlauben die Rekonstruktion des $B-L$-Dipols. Verschiedene unkalibrierte radiale Profile können dasselbe vollständige Außenfeld und verschiedene Dipolbeträge liefern. Die physikalische Herkunft der Profile und die Formkraft bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusprofile.md).

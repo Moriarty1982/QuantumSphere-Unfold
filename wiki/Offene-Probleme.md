@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Radiale Fokusprofile, 19.11.2026:** Kalibrierte Z-Profilfaktoren erlauben die Dipolrekonstruktion aus zwei Punkten pro Feld. Bei unbekanntem Profil ist der Betrag selbst mit vollständigem Außenfeld mehrdeutig. Die native Profil- und Randdynamik bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusprofile.md).
+
 **Neutrale Ströme, 19.11.2026:** Photon- und Z-Vektorquellen bilden in der elektroschwachen Referenz lokal eine signierte $B-L$-Auslese. Abgeschirmte glatte Quellen können dennoch den Dipol vor sämtlichen Außenfeldmessungen verbergen. W2-Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutralstroeme.md).
 
 **J-Eichkanal, 19.11.2026:** Die Maxwell-Quelle ist vorzeichenempfindlich für J. Ein Quark-Lepton-Gegenbeispiel hält J-Quelle und radialen Higgsanteil gemeinsam fest, während der $B-L$-Dipol sein Vorzeichen wechselt. Die J-Eigenfeldkraft ist unter den statischen Modellannahmen gerade in der Ladung. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_J_Eichkanal.md).
