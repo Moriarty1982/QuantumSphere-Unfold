@@ -283,3 +283,7 @@ Der Vergleich mit der evaluierten thermischen Blei-208-Streuung erzwingt im reel
 ## Gemeinsame J-Ladungsrichtung und Isotope
 
 Für beliebig viele abelsche Vektoren mit positiver kinetischer Form bleibt bei gemeinsamer J-Ladungsrichtung die zusätzliche Neutron–Neutron-Abstoßung exakt neunmal so groß wie die Anziehung im Singulettpaar. Bei gleicher Protonenzahl hebt die Differenz der Punktkernpotentiale den elektrischen Mischterm auf. Eine unabhängige Ladungsrichtung kann beide Kräfte trennen, liefert dann aber in der geprüften Konstruktion keinen Beitrag zum ursprünglichen J-Strom. Native Auslese, Bestand und H96 bleiben offen.
+
+## J-Feldantwort eines neutralen Verbands
+
+Eine Kopplung proportional zu F_J² F_D² lässt einen unter J neutralen D-Verband auf ein angelegtes J-Feld reagieren. Die Bindungsenergie reagiert im langsam veränderlichen Hintergrund auf das elektrische Feldquadrat. Ohne angelegtes J-Feld entsteht im geprüften Modell keine permanente J-Quelle. Eine lineare Änderung des Energiesignals braucht einen vorgegebenen Hintergrund. Der Kopplungskoeffizient, der kosmologische Bestand und H96 bleiben offen.
