@@ -1,0 +1,3 @@
+# Vorab: Gemeinsame Übergangsformel für die OP5-Schaleninduktion
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Schaleninduktion.md, Ungerade_Induktion.md, Oktupol_Schalen.md, Gesamtbild und OP5-Vergleichsmodell-Anleitung. Leite aus Helizitätskomponenten, der spin-gewichteten Gaunt-Formel und Parität eine einzelne Formel für T_{k,ν}^{(ℓ)} mit Wigner-3j-Symbol her. Schreibe den Induktionsschritt als Erwartungswert eines einzigen Clebsch-Gordan-Gewichts und kontrolliere ihn exakt gegen die bekannte Übergangsrekursion. Untersuche danach die ungeraden Plateaus als rationalen Formelkandidaten. Trenne algebraische Reduktion, numerische bzw. endliche exakte Prüfungen und einen möglichen allgemeinen Beweis. Keine H96-Daten.

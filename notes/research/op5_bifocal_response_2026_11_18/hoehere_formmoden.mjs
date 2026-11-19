@@ -62,9 +62,29 @@ function run(maxL=64,maxDegree=12) {
     maxQuadrupoleError=Math.max(maxQuadrupoleError,Math.abs(increments[2]-exact));
   }
   const rows=grid.slice(2).map((row,i)=>({degree:i+2,min:Math.min(...row.slice(1)),largestShell:row[maxL],nonpositive:row.slice(1).filter(x=>x<=0).length}));
-  return {rows,maxNormError,maxQuadrupoleError,maxTranslation:Math.max(...grid[1].map(Math.abs))};
+  return {grid,rows,maxNormError,maxQuadrupoleError,maxTranslation:Math.max(...grid[1].map(Math.abs))};
 }
 
-const result = run();
-console.table(result.rows);
-console.log({maxNormError: result.maxNormError, maxQuadrupoleError: result.maxQuadrupoleError, maxTranslation: result.maxTranslation});
+if (process.argv.includes("--induction")) {
+  const result = run(96,24);
+  const tolerance = 1e-8;
+  const rows = result.grid.slice(2).map((row,index) => {
+    const increments = row.slice(1).map((value,k) => value-row[k]);
+    return {
+      degree: index+2,
+      minimum: Math.min(...increments),
+      negative: increments.filter(value => value < -tolerance).length,
+      unresolved: increments.filter(value => Math.abs(value) <= tolerance).length,
+    };
+  });
+  console.table(rows);
+  console.log({maxNormError: result.maxNormError});
+} else {
+  const result = run();
+  console.table(result.rows);
+  console.log({
+    maxNormError: result.maxNormError,
+    maxQuadrupoleError: result.maxQuadrupoleError,
+    maxTranslation: result.maxTranslation,
+  });
+}
