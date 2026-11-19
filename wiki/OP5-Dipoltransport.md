@@ -163,3 +163,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Trägt der vorhandene Higgssektor einen neutralen Strang?
 
 **Stand 19.11.2026.** Im statischen, glatten und quellenfreien W2-Sektor auf flacher Transversalebene bleibt die Gradientenenergie eines geraden Higgsprofils unter Dilatation gleich. Die positive Vakuum-subtrahierte Potentialenergie skaliert mit der Fläche. Stationarität erzwingt daher das Vakuum und eine Spannung von null. Der Befund betrifft das unter J neutrale Dublett ohne zusätzliche transversale Eichdynamik. Ein hypothetischer gekoppelter magnetischer Kanal könnte die Skalierungsbilanz ändern. Eine lokalisierte Lösung, ihre Bindung an Foki und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutraler_Strang.md).
+
+## Elektroschwacher Z-String und seine Endpunkte
+
+**Stand 19.11.2026.** Ein zusätzlicher Z-Magnetkanal erlaubt endliche Energie pro Länge. Der nackte gerade Z-String ist bei den gemessenen Standardmodellparametern instabil. Nambu-Endpunkte eines Segments tragen außerdem entgegengesetzten elektromagnetischen Magnetfluss vom Betrag $4\pi\sin^2\theta_W/e$. Seine Coulombanziehung schwächt die im Zugmodell benötigte J-Abstoßung. W2 legt diesen Defekt und seine Endpunkte bisher nicht fest. [Herleitung und Quellen](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Strang.md).

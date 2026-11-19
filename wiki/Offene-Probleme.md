@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Z-Strang, 19.11.2026:** Der elektroschwache Vergleich ermöglicht endliche Wirbelspannung, hat aber am physikalischen Parameterpunkt eine instabile Mode. Die magnetische Endpunktanziehung reduziert zusätzlich die effektive Coulombabstoßung im OP5-Kontrollmodell. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Strang.md).
+
 **Neutraler Higgsstrang, 19.11.2026:** Die transversale Skalierung schließt im glatten, quellenfreien, statischen W2-Teilsystem einen geraden Strang mit positiver endlicher Spannung aus. Zusätzliche gekoppelte Felder oder längs verteilte Quellen wären getrennt zu prüfen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Neutraler_Strang.md).
 
 **Herkunft des Zugterms, 19.11.2026:** Ein einzelner durchgehender J-Fluss hätte entgegengesetzt geladene Endpunkte. Eine neutrale Weltfläche könnte den Zugterm bei unabhängig gleichnamigen Foki liefern. Für I1 fehlen die Randbindung und der Spannungswert, für k185 die entsprechende Dynamik. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Zugterm_Quelle.md).
