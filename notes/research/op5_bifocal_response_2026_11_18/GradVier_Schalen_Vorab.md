@@ -1,0 +1,3 @@
+# Vorab: Exakte Schalenantwort für Formgrad vier
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Oktupol_Schalen.md, Hoehere_Formmoden.md, Geschlossene_Schalen.md, Gesamtbild und OP5-Vergleichsmodell-Anleitung. Das numerische Raster zeigt für ℓ=4 einen positiven und mit der Schalenanzahl wachsenden Koeffizienten. Berechne die endlichen Übergangsstärken von P₄ bei voller positiver Dirac-Schale, bestimme das Vorzeichen des exakten quadratischen Koeffizienten für alle Schalen und prüfe die niedrigen Randfälle sowie die unabhängige numerische Rekursion. Keine Behauptung für alle anderen Grade oder H96.
