@@ -154,7 +154,15 @@ def export_edition(database, repo, key, destination):
     elif edition.get('presentation', {}).get('style') == 'physics-paper':
         from qam.store.physics_paper import render_paper, audit_markdown
         snapshot = read_snapshot(database, edition['snapshot_hash'])
-        (destination / 'paper.tex').write_text(render_paper(edition, snapshot), encoding='utf-8')
+        figure = files.get('sources/research/parts/op5-illustrative-controls.tex')
+        geometry = None
+        if figure is not None:
+            name = 'sources/research/figures/op5_geometry_controls.pdf'
+            target = destination / 'figures/op5_geometry_controls.pdf'
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(files[name])
+            geometry = figure.decode('utf-8-sig')
+        (destination / 'paper.tex').write_text(render_paper(edition, snapshot, geometry), encoding='utf-8')
         (destination / 'audit.md').write_text(audit_markdown(edition, snapshot), encoding='utf-8')
         entry = 'paper.tex'
         incomplete = any(state['candidates'] or (state['selection'] and state['selection']['findings'])

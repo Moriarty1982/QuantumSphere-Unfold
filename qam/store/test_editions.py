@@ -87,7 +87,13 @@ class EditionTests(unittest.TestCase):
             self.assertEqual((first['physics'], first['full']), (second['physics'], second['full']))
             self.assertEqual(first['physics_sections'], 7)
             self.assertEqual(first['full_statements'], 2468)
-            self.assertEqual(len(read_edition(db, first['full'])['sections']), 62)
+            full_sections = read_edition(db, first['full'])['sections']
+            full_sources = first['document_index']['full']['source_files']
+            self.assertCountEqual((section['title'] for section in full_sections), full_sources)
+            self.assertIn('sources/research/parts/op5-illustrative-controls.tex', full_sources)
+            figure = 'figures/op5_geometry_controls.pdf'
+            self.assertEqual((root / 'first/physics' / figure).read_bytes(),
+                             (root / 'first/full/source/sources/research' / figure).read_bytes())
             with store_session(db) as (session, models):
                 self.assertEqual(count, session.scalar(select(func.count()).select_from(models.qstore_editions)))
             manifest = json.loads((root / 'first/physics/assembly.json').read_text(encoding='utf-8'))

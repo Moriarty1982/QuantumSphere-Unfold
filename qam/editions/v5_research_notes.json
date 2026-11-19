@@ -1,0 +1,36 @@
+[
+  {
+    "id": "op5-odd-dirac-plateau",
+    "path": "notes/research/op5_bifocal_response_2026_11_18/Ungerades_Plateau.md",
+    "title": "Odd Dirac-shell plateau",
+    "excerpt": "    B_(L,ℓ) = (ℓ−1)ℓ(ℓ+1)(ℓ+2)/[64(2ℓ+1)] · [(ℓ−1)!!/ℓ!!]²,\n    L ≥ (ℓ−1)/2.",
+    "assumptions": [
+      "Intrinsic massless Dirac operator on a sphere, fixed area, completely occupied positive shells and odd degree at least three.",
+      "Quadratic energy response at a fixed finite shell count."
+    ],
+    "guard": "Native OP5 coupling and stability",
+    "obligation": "Derive the native coupling and physical readout and check nonlinear and dynamical stability. H96 remains open."
+  },
+  {
+    "id": "op5-bifocal-probe-shape",
+    "path": "notes/research/op5_bifocal_response_2026_11_18/Sondenform.md",
+    "title": "Bifocal radial probe shape",
+    "excerpt": "Strikte Konvexität auf [a−|w|,a+|w|] schließt die Bedingung für jedes w≠0 aus, weil S_K am großen Scheitel strikt größer als an der kleinen Achse ist.",
+    "assumptions": [
+      "Common Euclidean chart, two equally normalized radial probe signals, fixed major vertex and nonzero focus separation."
+    ],
+    "guard": "Native probe and boundary equation",
+    "obligation": "Derive distinguishable calibrated channels and a physical boundary equation from the native action. H96 remains open."
+  },
+  {
+    "id": "qsc-mediator-profile",
+    "path": "notes/research/op_mediator_profile_2026_11_18/README.md",
+    "title": "Mediator candidate profile",
+    "excerpt": "Alle drei setzen η oder die Grundzahlen voraus, statt sie zu liefern (A1).",
+    "assumptions": [
+      "Exploratory comparison restricted to I1, I4 and k185 against the documented A1–A5 profile."
+    ],
+    "guard": "Native mediator",
+    "obligation": "Derive a stable intermediary with independent scale and sector maps. The candidate comparison leaves OP1–OP5, C5 and C6/T2 open."
+  }
+]
