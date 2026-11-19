@@ -736,3 +736,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Gravitationsabgleich:** Kreuzspektren, korrelierte Materie und bedingte Tracer-Projektion nachgezogen.
 
 **19.11.2026, OP5-Wellenauslese:** Geometrische Optik, Born-Winkelantwort und notwendige Phaseninformation nachgezogen.
+
+**19.11.2026, OP5-Tensorkopplung:** Feld- und Gesamttensorabgleich, Laufphase und Vorwärtsamplitude nachgezogen.

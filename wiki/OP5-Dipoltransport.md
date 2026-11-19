@@ -299,3 +299,7 @@ Bei einem festen Verhältnis von Masse zu J-Antwort kürzt sich die Verklumpung 
 ## Wellenobservablen des J-Mediums
 
 Ein skalarer Maxwell-Koeffizient Z erzeugt in geometrischer Optik keine zusätzliche Phase entlang des Strahls. In erster Born-Ordnung ist die Vorwärtsstreuung null und die seitliche Intensität enthält q⁴ mal das Quadrat des Fourierkoeffizienten. Die komplexe Streuamplitude könnte räumliche J-Modi liefern. Reine Intensität enthält das für den Gravitationsabgleich nötige lineare Kreuzspektrum im Allgemeinen nicht. Mittelwertkalibrierung, Beobachtbarkeit und H96 bleiben offen.
+
+## Laufphase aus Tensor-Kopplung
+
+Ein unabhängiger, eichinvarianter Tensoroperator kann den elektrischen und magnetischen J-Koeffizienten unterschiedlich ändern und damit eine lineare Laufphase erzeugen. Kopplung an den vollständigen D-Tensor liefert im ruhenden Modell eine Massensäule, während Kopplung nur an das D-Feld eine bindungsgewichtete Säule ergibt. Die vorherige Vorwärtsauslöschung bleibt eine Eigenschaft des rein skalaren Operators. Abgleich der Koeffizienten, beobachtbare J-Welle und H96 bleiben offen.
