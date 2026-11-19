@@ -227,3 +227,7 @@ Im Coulomb-Vergleich können zwei vorhandene entgegengesetzt J-geladene Konstitu
 ## Erhaltungssätze und Zerfall der Paare
 
 In der massendiagonalen J–Higgs-Reduktion schützen getrennte Artenzahlen gemischte Paare vor vollständiger Annihilation in reine Feldquanten. In der elektroschwachen, farbigen Ein-Generationen-Referenz sind elektrisch und J-neutrale Zweierpaare gleichartig und besitzen einen J-Annihilationskanal im Spin-Singulett. Ein J-neutrales Farbsingulett mit B−L ungleich null braucht mindestens sechs Konstituenten. Die gleichzeitige Eichung von J und schwachem SU(2) erfordert mit der gegebenen Feldliste außerdem die Aufhebung der gemischten Eichanomalie. Bindung, Lebensdauer und H96 sind offen.
+
+## Bindung im J-Coulomb-Kernmodell
+
+Im reduzierten J-Coulomb-Modell mit vorgegebenem stabilem Kern der Ladung +3 liegen die Grundzustände mit einem, zwei und drei Antineutrinos jeweils strikt unter der vorigen Ionisationsschwelle. Der Beweis per vollständiger Induktion gilt auch bei endlicher Kernmasse. Die kleinste Zerfallsschwelle des Dreierverbands ist der Kern mit zwei gebundenen Antineutrinos plus ein freies. Eine Mischung von J mit B−L beseitigt die gemischte elektroschwache Eichanomalie nicht. Die reine B−L-Richtung entfernt die J-Anziehung des Kandidaten. Native Kerndynamik und H96 bleiben offen.

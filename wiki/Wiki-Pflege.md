@@ -700,3 +700,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Strahlungseinfang:** Coulomb-Einfang, Paarzahlbilanz und offene Stabilität im Wiki nachgezogen.
 
 **19.11.2026, OP5-Paarstabilität:** Artenzahlen, Zerfallskanäle, Mindestbelegung für B−L und Anomalie der gemeinsamen Eichung nachgezogen.
+
+**19.11.2026, OP5-Sechserbindung:** Induktiver Bindungsnachweis, niedrigste Fragmentationsschwelle und anomale J-Beimischung nachgezogen.
