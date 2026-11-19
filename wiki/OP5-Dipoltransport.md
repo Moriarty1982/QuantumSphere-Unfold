@@ -235,3 +235,7 @@ Im reduzierten J-Coulomb-Modell mit vorgegebenem stabilem Kern der Ladung +3 lie
 ## Gemeinsame Eichung und Beta-Zerfall
 
 Eine zusätzliche Dirac-Generation mit entgegengesetzter J-Ladung hebt die gemischten Eichanomalien auf und behält die ursprünglichen J-Ladungen bei. Der geladene schwache Strom erlaubt dem gebundenen udd-Kern weiterhin den Beta-Zerfall. Im Coulomb-Vergleich ist die Bindungsenergie der drei Antineutrinos wegen Rückstoß, gegenseitiger Abstoßung und Pauli-Belegung höchstens (81/8) m A². Bei leichter Neutrinomasse und schwacher Kopplung liegt das weit unter dem gewöhnlichen Beta-Energieüberschuss. Zerfallsrate, Bestand und H96 bleiben offen.
+
+## Bindung der protonhaltigen Zerfallsprodukte
+
+Im Coulomb-Vergleich kann der protonhaltige Endzustand des Beta-Zerfalls alle vier Antineutrinos binden. Die elektromagnetische Proton-Elektron-Anziehung überwiegt im geprüften Bereich die J-Abstoßung und hält die zwei positiven J-Zentren zusammen. Eine Induktion zeigt bei endlichen Massen, dass jedes weitere Antineutrino die Energie unter die niedrigste Aufbruchsschwelle senkt. Die schwache Rückumwandlung in den neutronhaltigen Sektor liegt bei gewöhnlichen Nukleonmassen und schwacher Kopplung über dem gebundenen Zustand. Die Bildungsrate, weitere Teilchenkanäle und H96 bleiben offen.
