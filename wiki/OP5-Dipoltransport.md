@@ -207,3 +207,79 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Vertauscht die Umkehrwalze die physikalische Parität?
 
 **Stand 19.11.2026.** Auf freien elektromagnetischen Doppelamplituden antikommutiert $J_B=iK$ mit der räumlichen Feldparität und vertauscht deren Eigenräume. Auf elektrisch geladenen J-Foki würde derselbe Feldtausch den elektrischen Fluss durch jede einzelne Fokusfläche zu magnetischem Fluss machen. Das widerspricht der glatten magnetisch quellenfreien W1-Gleichung, auch bei insgesamt neutralem Paar. Die freie Feldoperation schützt daher keine Entartung des elektrisch gebundenen Fokuspaars. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Dipol.md).
+
+## Vollständige Induktion für die Feldoperationen
+
+**Stand 19.11.2026.** Jedes endliche Wort aus Vierteldrehung $R$ und Konjugation $K$ lässt sich zu $R^aK^b$ reduzieren. Genau die ungeraden Exponenten $a$ vertauschen die räumlichen Feldparitäten. Dieselben Wörter machen eine lokale elektrische J-Quelle zu einer magnetischen und scheitern dadurch an der glatten W1-Gauss-Gleichung. Das Hindernis gilt sogar für beliebige invertierbare konstante Mischungen der beiden Feldkomponenten. Eine native Materiesymmetrie und H96 bleiben offen. [Induktionsbeweis](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Induktion.md).
+
+## Gerade Dipolauslese und H96
+
+**Stand 19.11.2026.** H96 formuliert eine skalare Materiequote und setzt keine feste Dipolrichtung voraus. Ein isotropes Ensemble hat Dipolmittel null und kann dennoch ein positives Dipolquadrat tragen. Im statischen J-Maxwell-Sektor liefert dieses Quadrat den exakten Dipolbeitrag zur Außenenergie $\langle|\mathbf d_J|^2\rangle/(12\pi R_0^3)$. Der isolierte isotrope Maxwell-Beitrag hat Druck $\rho/3$. Die Zuordnung zur gesamten gravitativen Materiedichte samt Normierung bleibt offen. [Rückwärtsprüfung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gerade_Dipolauslese.md).
+
+## Wann wird aus der Feldenergie ein Materiebeitrag?
+
+**Stand 19.11.2026.** Im gebundenen Zweikörpervergleich heben die kinetische Quellspannung und die integrierten Coulomb- und Higgs-Wechselwirkungsstresse einander durch die Virialrelation auf. Ein ruhendes isotropes Paarensemble kann dadurch auf führender Ordnung drucklos sein. Seine gravitative Dichte enthält Quellmassen und die gesamte Bindungsenergie. Die positive Außenfeldenergie allein bestimmt diese Dichte nicht. Paarhäufigkeit und Normierung für H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gebundener_Tensor.md).
+
+## Einfang gebundener Paare
+
+Im Coulomb-Vergleich können zwei vorhandene entgegengesetzt J-geladene Konstituenten durch Abstrahlung eines J-Quants in den Grundzustand gelangen. Das elektrische Dipolmatrixelement aus dem p-Kontinuum ist von null verschieden. Die kosmologische Anzahl pro Volumen folgt aus Anfangsbeständen, Einfang, Ionisation, Verlusten und Expansion. J-Neutralität fixiert den gemeinsamen Bestand nicht. Bei Paaren aus Teilchen und Antiteilchen derselben Art muss Annihilation berücksichtigt werden. H96 und die native Paarstabilität bleiben offen.
+
+## Erhaltungssätze und Zerfall der Paare
+
+In der massendiagonalen J–Higgs-Reduktion schützen getrennte Artenzahlen gemischte Paare vor vollständiger Annihilation in reine Feldquanten. In der elektroschwachen, farbigen Ein-Generationen-Referenz sind elektrisch und J-neutrale Zweierpaare gleichartig und besitzen einen J-Annihilationskanal im Spin-Singulett. Ein J-neutrales Farbsingulett mit B−L ungleich null braucht mindestens sechs Konstituenten. Die gleichzeitige Eichung von J und schwachem SU(2) erfordert mit der gegebenen Feldliste außerdem die Aufhebung der gemischten Eichanomalie. Bindung, Lebensdauer und H96 sind offen.
+
+## Bindung im J-Coulomb-Kernmodell
+
+Im reduzierten J-Coulomb-Modell mit vorgegebenem stabilem Kern der Ladung +3 liegen die Grundzustände mit einem, zwei und drei Antineutrinos jeweils strikt unter der vorigen Ionisationsschwelle. Der Beweis per vollständiger Induktion gilt auch bei endlicher Kernmasse. Die kleinste Zerfallsschwelle des Dreierverbands ist der Kern mit zwei gebundenen Antineutrinos plus ein freies. Eine Mischung von J mit B−L beseitigt die gemischte elektroschwache Eichanomalie nicht. Die reine B−L-Richtung entfernt die J-Anziehung des Kandidaten. Native Kerndynamik und H96 bleiben offen.
+
+## Gemeinsame Eichung und Beta-Zerfall
+
+Eine zusätzliche Dirac-Generation mit entgegengesetzter J-Ladung hebt die gemischten Eichanomalien auf und behält die ursprünglichen J-Ladungen bei. Der geladene schwache Strom erlaubt dem gebundenen udd-Kern weiterhin den Beta-Zerfall. Im Coulomb-Vergleich ist die Bindungsenergie der drei Antineutrinos wegen Rückstoß, gegenseitiger Abstoßung und Pauli-Belegung höchstens (81/8) m A². Bei leichter Neutrinomasse und schwacher Kopplung liegt das weit unter dem gewöhnlichen Beta-Energieüberschuss. Zerfallsrate, Bestand und H96 bleiben offen.
+
+## Bindung der protonhaltigen Zerfallsprodukte
+
+Im Coulomb-Vergleich kann der protonhaltige Endzustand des Beta-Zerfalls alle vier Antineutrinos binden. Die elektromagnetische Proton-Elektron-Anziehung überwiegt im geprüften Bereich die J-Abstoßung und hält die zwei positiven J-Zentren zusammen. Eine Induktion zeigt bei endlichen Massen, dass jedes weitere Antineutrino die Energie unter die niedrigste Aufbruchsschwelle senkt. Die schwache Rückumwandlung in den neutronhaltigen Sektor liegt bei gewöhnlichen Nukleonmassen und schwacher Kopplung über dem gebundenen Zustand. Die Bildungsrate, weitere Teilchenkanäle und H96 bleiben offen.
+
+## Massenbudget des Protonverbands
+
+Ein Verband aus Proton, Elektron und vier Antineutrinos verbraucht ein Baryon aus dem gewöhnlichen Bestand. Die zusätzliche Masse gegenüber dem Proton-Elektron-Zustand ist kleiner als vier Antineutrinomassen. Selbst bei einem Verband pro Baryon und m ≤ 1 eV beträgt der Zuwachs höchstens rund 2,1 × 10⁻¹⁰ der kritischen Dichte, normiert mit der konventionellen Planck-Baryonendichte. Diese Route deckt in der geprüften Massenbilanz den zusätzlichen Materieanteil für H96 nicht. Ein baryonenfreier Kandidat aus beiden Generationen besitzt passende Ladungen, seine Population und vollständige Stabilität bleiben offen.
+
+## Baryonenfreier Neutrinokandidat
+
+Ein gewöhnliches Neutrino und ein Neutrino der Zusatzgeneration bilden im Coulomb-Vergleich ein baryonenfreies J-neutrales Paar. Getrennte B−L-Erhaltung schützt vor vollständiger Annihilation. Die schwachen Vektorladungen addieren sich im kohärenten Grenzfall. Für ein schweres Zusatzneutrino steckt fast die gesamte Masse schon in diesem Konstituenten. Der Einfang eines leichten Neutrinos kann sie kaum erhöhen und bestimmt auch nicht die Abundanz des schweren Bestands. H96 und vollständige Stabilität bleiben offen.
+
+## Schwacher Rückstoß bei endlichem Impuls
+
+Bei einem baryonenfreien Neutrinopaar kann der elastische Z-Beitrag wegen der räumlichen Ausdehnung abfallen. Rechnet man Anregung und Aufbruch mit, bleibt im führenden Coulomb-Impulsmodell für die geprüften Massen und Impulse mehr als 99 Prozent der schwachen Vektorstärke eines freien schweren Konstituenten unterhalb eines internen Energieaufwands von 1 eV. Die Neutron-Streuskala eines aktiven Dirac-Konstituenten liegt bei rund 1,8 × 10⁻³⁹ cm². Der Vergleich mit LZ zeigt ein Problem für einen gewöhnlichen Halo aus diesen Paaren. Eine vollständige Ausschlussrechnung und H96 bleiben offen.
+
+## Singulettvergleich und langreichweitige J-Kraft
+
+Ein elektroschwaches Singulettpaar mit entgegengesetzten J-Ladungen und gleichen Massen hat im Coulomb-Grundzustand bei Einzelaustausch einen exakt verschwindenden elastischen J-Ladungsformfaktor. Die erste Anregung durch diesen Operator ist der 2p-Kanal. Eine dafür hinreichend große Kopplung widerspricht in der Referenzrechnung dem ungeschirmten masselosen J-Kanal auf gewöhnliche Materie. Wasserstoff hat J-Ladung +4 und würde sich ohne Abschirmung stark abstoßen. Ein Reichweiten- oder Abschirmungsmechanismus, Bestand und H96 bleiben offen.
+
+## Endliche Reichweite und Einfangschwelle
+
+Eine abelsche Stückelberg-Masse ersetzt im Vergleich die masselose J-Kraft durch eine Yukawa-Kraft. Analytische Schranken zeigen ein nominelles Fenster für erhaltene Bindung, gesperrte Ladungsanregung und kinematisch mögliche J-Abstrahlung beim Einfang. Beim Beispiel mit 50 GeV je Konstituent, A = 0,01 und einem J-Boson von 1 MeV bleibt auf Kernskalen eine zusätzliche Kraft im MeV-Bereich. Die Verträglichkeit mit gewöhnlicher Materie, die Einfangrate und H96 bleiben offen.
+
+## Wasserstoff-Spektroskopie bei endlicher J-Reichweite
+
+Eine Kombination aus 1S–2S, 2S–8D und der 2S–2P-Lamb-Aufspaltung eliminiert die führenden Rydberg- und Protonradius-Terme. Die lineare J-Korrektur liegt im bisherigen nominellen Einfangfenster bei über 11 MHz, während das konservativ aus dem CODATA-Fit abgeleitete Residuum unter 0,21 MHz liegt. Das ist eine quantitative Spannung für die bisherigen Punktladungen. Eine vollständige Neubestimmung mit relativistischen und weiteren J-Korrekturen sowie H96 bleiben offen.
+
+## Myonmoment bei endlicher J-Reichweite
+
+Mit unveränderter Vektorkopplung des Myons verursacht ein 1-MeV-J-Boson beim bisherigen Beispiel eine magnetische Zusatzanomalie von rund 1,55 × 10⁻³. Analytische notwendige Bedingungen aus kaltem Einfang und einer geschlossenen Anregungsschwelle ergeben im schwach gekoppelten Referenzbereich mit 50 GeV je Singulett weiterhin mindestens 7,5 × 10⁻⁵. Das liegt weit über der Differenz zwischen Messung und Standardrechnung. Änderungen der sichtbaren Kopplungen oder des Einfangkanals müssen separat geprüft werden. H96 bleibt offen.
+
+## Neutron–Blei-Streuung am Lepton-Nullpunkt
+
+Die elektromagnetische Abstimmung, die die Myonkopplung auf null setzt, erhöht die Protonkopplung und lässt die Neutronkopplung bestehen. Im bisherigen MeV-Fenster liefert der nichtperturbative repulsive Neutron–Blei-Vergleich mit nichtnegativem innerem Randparameter eine Streulänge von mindestens 949 fm. Für Blei-208 sind 9,50 fm tabelliert. Eine volle Rechnung mit nuklearen und resonanten Randdaten bleibt offen. H96 bleibt offen.
+
+## Kernrand und effektive Reichweite
+
+Für die tabellierte Neutron–Blei-Streulänge verlangt der repulsive J-Ausläufer einen negativen Kernrand. Am einzelnen Nullenergiepunkt lässt sich die Streulänge formal einstellen, aber die erforderliche Spanne des Randwertes ist kleiner als 6 × 10⁻⁷⁶ fm⁻¹. Für jeden reellen lokalen energieunabhängigen Kern folgt zugleich eine effektive Reichweite kleiner als −4,4 × 10⁷² fm. Die Schranke macht die Energieabhängigkeit prüfbar. Absorption, Mehrkanalstreuung, ein vollständiger Datenfit und H96 bleiben offen.
+
+## Thermischer Streuvergleich
+
+Der Vergleich mit der evaluierten thermischen Blei-208-Streuung erzwingt im reellen lokalen energieunabhängigen Einkanalmodell mindestens einen inneren Randpol zwischen Nullenergie und 25,3 meV, um auch die kleine Nullenergie-Streulänge zu treffen. Der Beweis benutzt die äußere Streugleichung bei beiden Energien und keine Fortsetzung der effektiven-Reichweiten-Reihe. Absorption, Mehrkanalstreuung und H96 bleiben offen.
+
+## Gemeinsame J-Ladungsrichtung und Isotope
+
+Für beliebig viele abelsche Vektoren mit positiver kinetischer Form bleibt bei gemeinsamer J-Ladungsrichtung die zusätzliche Neutron–Neutron-Abstoßung exakt neunmal so groß wie die Anziehung im Singulettpaar. Bei gleicher Protonenzahl hebt die Differenz der Punktkernpotentiale den elektrischen Mischterm auf. Eine unabhängige Ladungsrichtung kann beide Kräfte trennen, liefert dann aber in der geprüften Konstruktion keinen Beitrag zum ursprünglichen J-Strom. Native Auslese, Bestand und H96 bleiben offen.

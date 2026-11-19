@@ -102,6 +102,9 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Virialbilanz und die fehlende Normierung für H96 ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die gerade Dipolauslese und ihre Grenze für H96 ergänzt.
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme den Induktionsbeweis für Feldoperationen beliebiger Länge ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die freie Paritätsvertauschung und das Gauss-Hindernis an den J-Foki ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Kramers-Auswahlregel für den stationären Quantendipol ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Coulomb-Gegenprobe und die Higgs-Aufspaltung des Quantendipols ergänzt.
@@ -693,3 +696,35 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 13.11.2026, spät: H102 vorab (m_τ = 1777,134 MeV) in Vorhersagen-und-Tests und Forschungsstand eingetragen.
 
 13.11.2026, spät: Nachtrag Holonomie-Fluss-Paarung (γ m als Fläche und Phase; γ/2 nur mit Einheit 8πGħ und |m|) in Forschungsstand.
+
+**19.11.2026, OP5-Strahlungseinfang:** Coulomb-Einfang, Paarzahlbilanz und offene Stabilität im Wiki nachgezogen.
+
+**19.11.2026, OP5-Paarstabilität:** Artenzahlen, Zerfallskanäle, Mindestbelegung für B−L und Anomalie der gemeinsamen Eichung nachgezogen.
+
+**19.11.2026, OP5-Sechserbindung:** Induktiver Bindungsnachweis, niedrigste Fragmentationsschwelle und anomale J-Beimischung nachgezogen.
+
+**19.11.2026, OP5-Beta-Zerfall:** Anomaliefreie Vergleichsfeldliste, Ladungsbilanz des Beta-Kanals und Coulomb-Bindungsobergrenze nachgezogen.
+
+**19.11.2026, OP5-Protonverband:** Fragmentationsschwellen, Induktion für vier Antineutrinos und schwache Rückumwandlung nachgezogen.
+
+**19.11.2026, OP5-Massenbudget:** Massenobergrenze des Protonverbands und baryonenfreier Ladungskandidat nachgezogen.
+
+**19.11.2026, OP5-Neutrinopaar:** Getrennte Erhaltungsgrößen, schwache Neutralströme und Massenbilanz des baryonenfreien Vergleichs nachgezogen.
+
+**19.11.2026, OP5-Rückstoß:** Elastischer Formfaktor, spektrale Untergrenze für Anregung und Aufbruch sowie Einordnung an direkter Suche nachgezogen.
+
+**19.11.2026, OP5-Singulettpaar:** Ladungsformfaktor, inelastische Schwelle und langreichweitige J-Kraft auf Wasserstoff nachgezogen.
+
+**19.11.2026, OP5-Endliche-Reichweite:** Stückelberg-Vergleich, Spektralschranken, Einfangschwelle und kurzreichweitige Beiträge nachgezogen.
+
+**19.11.2026, OP5-Wasserstoffspektrum:** Kontaktfreie Spektralkombination, Vergleich mit CODATA und Geltungsgrenzen des linearen J-Beitrags nachgezogen.
+
+**19.11.2026, OP5-Myonmoment:** Schleifenbeitrag, notwendige Einfang- und Anregungsschwellen und sichtbare Kopplungen nachgezogen.
+
+**19.11.2026, OP5-Neutron–Blei:** Elektromagnetische Abstimmung, repulsive Streulängenuntergrenze und Vergleich mit Blei-208 nachgezogen.
+
+**19.11.2026, OP5-Kernrandabstimmung:** Inverser Wronskianvergleich, Bethe-Integral und offene Mehrkanalprüfung nachgezogen.
+
+**19.11.2026, OP5-Thermische-Streuung:** JENDL-Vergleich bei endlicher Energie und notwendiger innerer Randpol nachgezogen.
+
+**19.11.2026, OP5-Gemeinsamer-J-Strom:** Positive Vektorsumme, Isotopendifferenz und unabhängige Ladungsrichtung nachgezogen.
