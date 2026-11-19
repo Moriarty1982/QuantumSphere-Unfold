@@ -1,0 +1,3 @@
+# Vorab: Exakte Aufhebung für ungerade OP5-Formgrade
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Schaleninduktion.md, Oktupol_Schalen.md, Hoehere_Formmoden.md, Gesamtbild und OP5-Vergleichsmodell-Anleitung. Prüfe für ℓ=5 und ℓ=7, ob die numerisch kleinen Schaleninkremente ab k=(ℓ+1)/2 algebraisch exakt verschwinden. Berechne Übergangsstärken aus der orbitalen Rekursion und Spinaddition mit rationaler Arithmetik, behandle die unteren Randfälle anhand tatsächlich vorhandener Schalen und vergleiche mit der unabhängigen numerischen Übergangsrechnung. Wenn die Aufhebung gelingt, gib die exakten Anfangswerte und das Plateau an. Keine Schlussfolgerung für beliebige ungerade Grade oder H96.
