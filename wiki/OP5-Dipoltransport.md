@@ -195,3 +195,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Dynamischer Fokusabstand durch Drehimpuls
 
 **Stand 19.11.2026.** Zwei anziehende Fokuswolken können bei festgehaltenem mechanischem Drehimpuls einen radial stabilen Kreisbahnradius haben. Die entgegengesetzten J-Ladungen bilden dabei jedoch einen rotierenden Dipol. Ohne einlaufende Strahlung verliert die klassische Bahn Energie und ihr Abstand nimmt ab. Der B−L-Dipol eines ladungskonjugierten Paars mittelt sich über eine ideale Umlaufperiode zu null. Eine stationär orientierte Randwirkung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusbahn.md).
+
+## Quantenbindung und stationärer Dipol
+
+**Stand 19.11.2026.** Der Coulomb-Grundzustand bindet den relativen Abstand bei verschwindendem Dipol. Die ideale $2s$–$2p$-Entartung erlaubt präparierte stationäre Dipolzustände. Der abgeschirmte Higgsanteil hebt diese Entartung in erster Ordnung auf. Der präparierte Dipol schwingt danach und hat über eine volle Periode Mittelwert null. Eine geschützte Orientierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Quantendipol.md).

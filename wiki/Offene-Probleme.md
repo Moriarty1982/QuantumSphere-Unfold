@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Quantendipol, 19.11.2026:** Ideale Coulomb-Entartung erlaubt einen stationären Dipol bei gewählter Präparation. Der abgeschirmte Higgsanteil spaltet das betrachtete $2s$–$2p$-Dublett auf und lässt den präparierten Dipol schwingen. Native Orientierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Quantendipol.md).
+
 **Drehimpuls, 19.11.2026:** Im konservativen Modell kann eine Kreisbahn den Fokusabstand radial stabilisieren. Die J-Dipolstrahlung lässt die klassische isolierte Bahn schrumpfen, und der B−L-Dipol hat auf der idealen Kreisbahn keinen zeitlichen Mittelwert. Eine stationäre Randwirkung bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusbahn.md).
 
 **Thermische Neutralbesetzung, 19.11.2026:** Die W2-Phasenladungen schützen keine neutrale Teilchen-Loch-Belegung. Im thermischen Zweimodenmodell bleibt die Fermionkrümmung bei jeder endlichen Temperatur negativ. Native übrige Krümmung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Gleichgewicht.md).
