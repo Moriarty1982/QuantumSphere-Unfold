@@ -726,3 +726,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Kernrandabstimmung:** Inverser Wronskianvergleich, Bethe-Integral und offene Mehrkanalprüfung nachgezogen.
 
 **19.11.2026, OP5-Thermische-Streuung:** JENDL-Vergleich bei endlicher Energie und notwendiger innerer Randpol nachgezogen.
+
+**19.11.2026, OP5-Gemeinsamer-J-Strom:** Positive Vektorsumme, Isotopendifferenz und unabhängige Ladungsrichtung nachgezogen.

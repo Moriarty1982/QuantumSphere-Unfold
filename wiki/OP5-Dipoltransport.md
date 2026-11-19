@@ -279,3 +279,7 @@ Für die tabellierte Neutron–Blei-Streulänge verlangt der repulsive J-Ausläu
 ## Thermischer Streuvergleich
 
 Der Vergleich mit der evaluierten thermischen Blei-208-Streuung erzwingt im reellen lokalen energieunabhängigen Einkanalmodell mindestens einen inneren Randpol zwischen Nullenergie und 25,3 meV, um auch die kleine Nullenergie-Streulänge zu treffen. Der Beweis benutzt die äußere Streugleichung bei beiden Energien und keine Fortsetzung der effektiven-Reichweiten-Reihe. Absorption, Mehrkanalstreuung und H96 bleiben offen.
+
+## Gemeinsame J-Ladungsrichtung und Isotope
+
+Für beliebig viele abelsche Vektoren mit positiver kinetischer Form bleibt bei gemeinsamer J-Ladungsrichtung die zusätzliche Neutron–Neutron-Abstoßung exakt neunmal so groß wie die Anziehung im Singulettpaar. Bei gleicher Protonenzahl hebt die Differenz der Punktkernpotentiale den elektrischen Mischterm auf. Eine unabhängige Ladungsrichtung kann beide Kräfte trennen, liefert dann aber in der geprüften Konstruktion keinen Beitrag zum ursprünglichen J-Strom. Native Auslese, Bestand und H96 bleiben offen.
