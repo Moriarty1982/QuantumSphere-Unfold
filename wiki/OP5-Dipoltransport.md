@@ -251,3 +251,7 @@ Ein gewöhnliches Neutrino und ein Neutrino der Zusatzgeneration bilden im Coulo
 ## Schwacher Rückstoß bei endlichem Impuls
 
 Bei einem baryonenfreien Neutrinopaar kann der elastische Z-Beitrag wegen der räumlichen Ausdehnung abfallen. Rechnet man Anregung und Aufbruch mit, bleibt im führenden Coulomb-Impulsmodell für die geprüften Massen und Impulse mehr als 99 Prozent der schwachen Vektorstärke eines freien schweren Konstituenten unterhalb eines internen Energieaufwands von 1 eV. Die Neutron-Streuskala eines aktiven Dirac-Konstituenten liegt bei rund 1,8 × 10⁻³⁹ cm². Der Vergleich mit LZ zeigt ein Problem für einen gewöhnlichen Halo aus diesen Paaren. Eine vollständige Ausschlussrechnung und H96 bleiben offen.
+
+## Singulettvergleich und langreichweitige J-Kraft
+
+Ein elektroschwaches Singulettpaar mit entgegengesetzten J-Ladungen und gleichen Massen hat im Coulomb-Grundzustand bei Einzelaustausch einen exakt verschwindenden elastischen J-Ladungsformfaktor. Die erste Anregung durch diesen Operator ist der 2p-Kanal. Eine dafür hinreichend große Kopplung widerspricht in der Referenzrechnung dem ungeschirmten masselosen J-Kanal auf gewöhnliche Materie. Wasserstoff hat J-Ladung +4 und würde sich ohne Abschirmung stark abstoßen. Ein Reichweiten- oder Abschirmungsmechanismus, Bestand und H96 bleiben offen.
