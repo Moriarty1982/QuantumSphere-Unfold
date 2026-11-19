@@ -243,3 +243,7 @@ Im Coulomb-Vergleich kann der protonhaltige Endzustand des Beta-Zerfalls alle vi
 ## Massenbudget des Protonverbands
 
 Ein Verband aus Proton, Elektron und vier Antineutrinos verbraucht ein Baryon aus dem gewöhnlichen Bestand. Die zusätzliche Masse gegenüber dem Proton-Elektron-Zustand ist kleiner als vier Antineutrinomassen. Selbst bei einem Verband pro Baryon und m ≤ 1 eV beträgt der Zuwachs höchstens rund 2,1 × 10⁻¹⁰ der kritischen Dichte, normiert mit der konventionellen Planck-Baryonendichte. Diese Route deckt in der geprüften Massenbilanz den zusätzlichen Materieanteil für H96 nicht. Ein baryonenfreier Kandidat aus beiden Generationen besitzt passende Ladungen, seine Population und vollständige Stabilität bleiben offen.
+
+## Baryonenfreier Neutrinokandidat
+
+Ein gewöhnliches Neutrino und ein Neutrino der Zusatzgeneration bilden im Coulomb-Vergleich ein baryonenfreies J-neutrales Paar. Getrennte B−L-Erhaltung schützt vor vollständiger Annihilation. Die schwachen Vektorladungen addieren sich im kohärenten Grenzfall. Für ein schweres Zusatzneutrino steckt fast die gesamte Masse schon in diesem Konstituenten. Der Einfang eines leichten Neutrinos kann sie kaum erhöhen und bestimmt auch nicht die Abundanz des schweren Bestands. H96 und vollständige Stabilität bleiben offen.

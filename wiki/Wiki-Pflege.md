@@ -708,3 +708,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Protonverband:** Fragmentationsschwellen, Induktion für vier Antineutrinos und schwache Rückumwandlung nachgezogen.
 
 **19.11.2026, OP5-Massenbudget:** Massenobergrenze des Protonverbands und baryonenfreier Ladungskandidat nachgezogen.
+
+**19.11.2026, OP5-Neutrinopaar:** Getrennte Erhaltungsgrößen, schwache Neutralströme und Massenbilanz des baryonenfreien Vergleichs nachgezogen.
