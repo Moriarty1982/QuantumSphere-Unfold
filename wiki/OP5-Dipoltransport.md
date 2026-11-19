@@ -275,3 +275,7 @@ Die elektromagnetische Abstimmung, die die Myonkopplung auf null setzt, erhöht 
 ## Kernrand und effektive Reichweite
 
 Für die tabellierte Neutron–Blei-Streulänge verlangt der repulsive J-Ausläufer einen negativen Kernrand. Am einzelnen Nullenergiepunkt lässt sich die Streulänge formal einstellen, aber die erforderliche Spanne des Randwertes ist kleiner als 6 × 10⁻⁷⁶ fm⁻¹. Für jeden reellen lokalen energieunabhängigen Kern folgt zugleich eine effektive Reichweite kleiner als −4,4 × 10⁷² fm. Die Schranke macht die Energieabhängigkeit prüfbar. Absorption, Mehrkanalstreuung, ein vollständiger Datenfit und H96 bleiben offen.
+
+## Thermischer Streuvergleich
+
+Der Vergleich mit der evaluierten thermischen Blei-208-Streuung erzwingt im reellen lokalen energieunabhängigen Einkanalmodell mindestens einen inneren Randpol zwischen Nullenergie und 25,3 meV, um auch die kleine Nullenergie-Streulänge zu treffen. Der Beweis benutzt die äußere Streugleichung bei beiden Energien und keine Fortsetzung der effektiven-Reichweiten-Reihe. Absorption, Mehrkanalstreuung und H96 bleiben offen.

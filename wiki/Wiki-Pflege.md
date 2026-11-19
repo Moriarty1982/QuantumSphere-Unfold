@@ -724,3 +724,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Neutron–Blei:** Elektromagnetische Abstimmung, repulsive Streulängenuntergrenze und Vergleich mit Blei-208 nachgezogen.
 
 **19.11.2026, OP5-Kernrandabstimmung:** Inverser Wronskianvergleich, Bethe-Integral und offene Mehrkanalprüfung nachgezogen.
+
+**19.11.2026, OP5-Thermische-Streuung:** JENDL-Vergleich bei endlicher Energie und notwendiger innerer Randpol nachgezogen.
