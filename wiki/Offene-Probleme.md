@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**Herkunft des Zugterms, 19.11.2026:** Ein einzelner durchgehender J-Fluss hätte entgegengesetzt geladene Endpunkte. Eine neutrale Weltfläche könnte den Zugterm bei unabhängig gleichnamigen Foki liefern. Für I1 fehlen die Randbindung und der Spannungswert, für k185 die entsprechende Dynamik. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Zugterm_Quelle.md).
+
 **Gleichnamige J-Ladungen, 19.11.2026:** Im statischen Fokusmodell ergibt die Coulombabstoßung gegen die Higgsanziehung höchstens ein instabiles Gleichgewicht. Eine zusätzliche Zugspannung liefert ein bedingtes Stabilitätsmodell. Ihre Herkunft aus der Wirkung bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Gleichnamige_Foki.md).
 
 **Fokusabstand, 19.11.2026:** Bei ladungskonjugierten radialen Wolken sind im quadratischen statischen Modell sowohl die Vektor- als auch die Higgswechselwirkung attraktiv. Ein getrennter Abstand mit wirksamem Außenkanal verlangt eine zusätzliche Gegenkraft. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Fokusabstand.md).

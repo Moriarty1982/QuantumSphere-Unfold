@@ -155,3 +155,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Können gleichnamige J-Ladungen den Abstand stabilisieren?
 
 **Stand 19.11.2026.** Ein Zustand mit gleichnamigen J-Ladungen kann entgegengesetzte $B-L$-Ladungen an den Foki tragen. Im quadratischen Modell wirkt dann eine Coulombabstoßung gegen die abgeschirmte Higgsanziehung. Ein möglicher Kräfteausgleich ist ein striktes Energiemaximum, auch wenn radiale Profile als weitere Variablen zugelassen werden. Ein zusätzlicher Zugterm $TR$ kann dagegen ein Minimum erzeugen. Dessen physikalische Herkunft und die native Randwirkung sind offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Gleichnamige_Foki.md).
+
+## Kann der J-Fluss selbst den Zugterm liefern?
+
+**Stand 19.11.2026.** Ein einziger durchgehender J-Fluss trägt an seinen Enden Gegenladungen. Die stabilisierende Coulombabstoßung würde dagegen gleichnamige J-Quellen erfordern. Die freie Maxwell-Wirkung liefert im geprüften Zweifokusmodell Coulombenergie und keine fest gespannte Flussröhre. Eine neutrale, unabhängig an beide Foki gebundene Weltfläche könnte den Zugterm $TR$ liefern. I1 gibt dafür einen Kandidaten, während k185 ein Impulsquadrat bestimmt. Endpunktbindung und Spannungswert bleiben offen. [Quellenabgleich und Rechnung](../notes/research/op5_bifocal_response_2026_11_18/W2_Zugterm_Quelle.md).

@@ -102,6 +102,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die J-Fluss-Endpunktbilanz und den Wirkungsabgleich zu I1 und k185 ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die instabile Kräftebilanz gleichnamiger J-Foki und die Zugspannungskontrolle ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme den Kraftbefund für ladungskonjugierte Fokuswolken und die Grenze radialer Relaxation ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Rekonstruktion für radiale Foki und die verbleibende Profilmehrdeutigkeit ergänzt.
