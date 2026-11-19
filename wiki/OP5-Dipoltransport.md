@@ -259,3 +259,7 @@ Ein elektroschwaches Singulettpaar mit entgegengesetzten J-Ladungen und gleichen
 ## Endliche Reichweite und Einfangschwelle
 
 Eine abelsche Stückelberg-Masse ersetzt im Vergleich die masselose J-Kraft durch eine Yukawa-Kraft. Analytische Schranken zeigen ein nominelles Fenster für erhaltene Bindung, gesperrte Ladungsanregung und kinematisch mögliche J-Abstrahlung beim Einfang. Beim Beispiel mit 50 GeV je Konstituent, A = 0,01 und einem J-Boson von 1 MeV bleibt auf Kernskalen eine zusätzliche Kraft im MeV-Bereich. Die Verträglichkeit mit gewöhnlicher Materie, die Einfangrate und H96 bleiben offen.
+
+## Wasserstoff-Spektroskopie bei endlicher J-Reichweite
+
+Eine Kombination aus 1S–2S, 2S–8D und der 2S–2P-Lamb-Aufspaltung eliminiert die führenden Rydberg- und Protonradius-Terme. Die lineare J-Korrektur liegt im bisherigen nominellen Einfangfenster bei über 11 MHz, während das konservativ aus dem CODATA-Fit abgeleitete Residuum unter 0,21 MHz liegt. Das ist eine quantitative Spannung für die bisherigen Punktladungen. Eine vollständige Neubestimmung mit relativistischen und weiteren J-Korrekturen sowie H96 bleiben offen.
