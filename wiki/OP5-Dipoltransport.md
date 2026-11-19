@@ -295,3 +295,7 @@ Im verdünnten Ensemble der J-neutralen Verbände ist der Maxwell-Koeffizient Z 
 ## Gemeinsame J- und Gravitationsauslese
 
 Bei einem festen Verhältnis von Masse zu J-Antwort kürzt sich die Verklumpung im Verhältnis von J–Gravitations-Kreuzspektrum und J-Leistung heraus. Ein kalibrierter Mittelwert liefert dann die Dichte des Verbandssektors. Korrelierte gewöhnliche Materie verzerrt das direkte Verhältnis. Sie lässt sich mit einem unabhängigen Tracer herausprojizieren, wenn dessen Residuum unkorreliert ist und eine unabhängige J-Fluktuation übrig bleibt. Eine Rangbedingung am isolierten diskreten Anteil prüft konstante Masse pro J-Antwort. Beobachtungsabbildung und H96 bleiben offen.
+
+## Wellenobservablen des J-Mediums
+
+Ein skalarer Maxwell-Koeffizient Z erzeugt in geometrischer Optik keine zusätzliche Phase entlang des Strahls. In erster Born-Ordnung ist die Vorwärtsstreuung null und die seitliche Intensität enthält q⁴ mal das Quadrat des Fourierkoeffizienten. Die komplexe Streuamplitude könnte räumliche J-Modi liefern. Reine Intensität enthält das für den Gravitationsabgleich nötige lineare Kreuzspektrum im Allgemeinen nicht. Mittelwertkalibrierung, Beobachtbarkeit und H96 bleiben offen.
