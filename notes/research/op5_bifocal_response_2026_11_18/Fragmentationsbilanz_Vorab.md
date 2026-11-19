@@ -1,0 +1,5 @@
+# Vorab: Gemeinsame Fragmentationsbilanz von Schalen und Wandkrümmung
+
+Analytische Erkundung, nicht blind. Vorwissen geprüft: Dirac_Schalen.md, Normalmoden_Biegung.md, Wandform.md, Pauli_Beladung.md, Gesamtbild, OP5-Vergleichsmodell-Anleitung und Ogure et al. (hep-ph/0212332). Rückwärtssuche von der maximalen Energieersparnis zweier großer Tochterkugeln zu dem notwendigen Krümmungszuschlag pro Komponente.
+
+Bilde einen additiven Dünnwand-Kontrollansatz für weit getrennte runde Kugeln. Verwende intrinsische Besetzung, den berechneten extrinsischen Fermionterm und den Gaußterm des starren skalaren Profils. Werte die führenden Krümmungskorrekturen bei der ungestörten Gleichgewichtsdichte aus. Bestimme den nötigen Zuschlag zur Unterdrückung der Aufspaltung in zwei große Kugeln unabhängig von der Schalenfüllung. Prüfe, für welche r=k_*/M im lösbaren Profil dieser Zuschlag erreicht wird. Numerische Kontrolle gegen die 300 Partitionen aus Dirac_Schalen.md. Kein Zerfallsweg, keine Profilrelaxation und keine H96-Daten.
