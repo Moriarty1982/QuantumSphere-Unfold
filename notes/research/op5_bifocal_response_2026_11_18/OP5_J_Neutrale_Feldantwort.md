@@ -25,7 +25,7 @@ Nimm D in dieser Runde masselos und setze $A_D=g_D^2/(4\pi)$. Auf der Skala des 
 $$
 E_{\rm bind}(F_J^2)=-\frac{\mu A_D^2}{2Z_D^2},\qquad
 \Delta E_{\rm bind}=\frac{c\mu A_D^2}{\Lambda^4}F_J^2
-+O\!\left(\frac{c^2(F_J^2)^2}{\Lambda^8}\right).
++O\!\left(\mu A_D^2\frac{c^2(F_J^2)^2}{\Lambda^8}\right).
 $$
 Gradientenkorrekturen aus einem veränderlichen Hintergrund sind hier weggelassen. Lokale selbstenergieartige Antworten der beiden Konstituenten könnten zusätzlich zum Bindungsterm beitragen. Ihre Koeffizienten werden durch diese Rechnung nicht fixiert.
 
