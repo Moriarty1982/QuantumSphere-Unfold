@@ -2,6 +2,8 @@
 
 ## Stand vom 19.11.2026 (Codex)
 
+- **Abbildungen in PR #196:** Vier Julia-Panels und Vergleichsseite als PDF/PNG rekonstruiert. Neue OP5-Modellgrafik für Langfassung und Physik-Paper. Sechs historische Julia-Dateiverweise gelöst. Sechs historische OP5-Fitdateien bleiben ohne Original-Benchmarkdaten offen.
+
 - **Dokumentindex:** PR #196 um den Historical Witness und die abfragbaren TeX-Verweise erweitert. Lokal in `build/qam.sqlite3` aktiv. Langfassung 62, Historical Witness 10 und Physik-Paper 1 indexierte LaTeX-Quellen. Zwölf historische Grafikziele fehlen am geprüften Quellstand. QAM-Guardregister und Forschung bleiben unverändert.
 
 - **GitHub:** `main` bei `f85f29b8c094307c724369143c07e3ca0cce9a21`. PR #194 (ungerade Plateaus), #195 (bifokale Sondenform) und #187 (Vermittlerprofil) gemergt. Wiki Sync 44442247354 und Dokumententwurf 44442247290 erfolgreich.

@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: Julia-Residualabbildungen des Historical Witness aus den Parametern der historischen Bildunterschrift neu berechnet. Beide aktuellen Entwürfe zeigen zusätzlich den Modellvergleich von Distanz- und Signalsummen, einschließlich der Yukawa-Formantwort. Die archivierten Frame-Flicker-Fits brauchen weiterhin die ursprünglichen Benchmark-Daten.
+
 - 19.11.2026: SQLite enthält zusätzlich die vollständigen LaTeX-Quellen des Historical Witness und Verweisfundstellen für Langfassung, Historical Witness und Physik-Paper. Querverweise, Zitate und Ressourcen tragen einen Auflösungsstatus. Der Dokument-Build schreibt den Index in das Artefakt.
 
 - 19.11.2026: Dokument-Store registriert die Befunde zu ungeraden Schalenplateaus, bifokaler Sondenform und Vermittlerprofil mit Quellenhash und je einer offenen Prüfpflicht. Die Entwurfs-Toolchain weist Versionen und Prüfpflichten im Buildmanifest aus.

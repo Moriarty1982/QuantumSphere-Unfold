@@ -4,7 +4,7 @@ from qam.store.latex_export import escape
 from qam.store.latex_resources import resource_groups
 
 
-def render_paper(edition, snapshot):
+def render_paper(edition, snapshot, geometry_figure=None):
     presentation = edition['presentation']
     date_lines = 'Working paper ' + escape(presentation['version']) + r'\\\small ' + escape(presentation.get('date', '11 November 2026')) + '; not peer reviewed'
     if 'version_doi' in presentation:
@@ -22,7 +22,7 @@ def render_paper(edition, snapshot):
     lines = [r'\documentclass[11pt,a4paper]{article}', r'\usepackage[T1]{fontenc}',
              r'\usepackage[utf8]{inputenc}', r'\usepackage[margin=27mm]{geometry}',
              r'\setlength{\emergencystretch}{2em}']
-    lines += [r'\usepackage{' + p + '}' for p in sorted(packages | {'amsmath', 'amssymb', 'amsthm'})]
+    lines += [r'\usepackage{' + p + '}' for p in sorted(packages | {'amsmath', 'amssymb', 'amsthm', 'graphicx'})]
     lines += [m['payload']['latex'] for m in macros]
     lines += [r'\newtheorem{proposition}{Proposition}[section]',
               r'\title{' + escape(edition['title']) + '}',
@@ -36,6 +36,8 @@ def render_paper(edition, snapshot):
                 continue
             payload = json.loads(versions[member['version']]['payload_json'])
             lines.append(payload['latex'])
+        if section['key'] == 'geometry' and geometry_figure is not None:
+            lines.append(geometry_figure)
     if bibliography:
         lines += [r'\begin{thebibliography}{99}']
         lines += [entry['payload']['latex'] for entry in bibliography]
