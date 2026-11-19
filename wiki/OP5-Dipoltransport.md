@@ -187,3 +187,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Kann eine neutrale Fermionbesetzung die Instabilität abschwächen?
 
 **Stand 19.11.2026.** Ein neutral angeregtes Paar gegenläufiger Dirac-Moden kann den infraroten Anteil der negativen Fermionenergie durch Besetzungsblockierung abschneiden. Im hergeleiteten Modell bleibt eine reguläre negative Krümmung aus den ungeblockten Impulsen. Eine positive Gesamtkrümmung braucht einen hinreichend positiven Restbeitrag. Die Netto-Ladungen sichern die angeregte Belegung allein nicht. Native W2-Stabilisierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Neutralbesetzung.md).
+
+## Thermische Neutralbesetzung und Krümmung
+
+**Stand 19.11.2026.** Die geprüften W2-Phasenladungen zählen Teilchen-Antiteilchen-Differenzen. Sie halten eine neutrale Teilchen-Loch-Anregung allein nicht fest. Im gegenläufigen Dirac-Modenpaar macht eine endliche Temperatur den infraroten Energiebeitrag regulär. Die Krümmung bleibt jedoch negativ. Ein positiver Beitrag dieses Paars braucht eine hinreichend starke Besetzungsinversion. Die übrige W2-Krümmung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Gleichgewicht.md).

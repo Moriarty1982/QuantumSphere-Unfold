@@ -102,6 +102,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die thermische Fermionkrümmung und die Grenzen der W2-Erhaltungssätze ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die neutrale Besetzungsblockierung und die verbleibende Krümmung ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Maxwell-Energiegrenze für B−L-Ladung und Strom der chiralen Z-String-Nullmoden ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Stabilitätsgrenze für ein abklingendes Außenfeld ergänzt.
