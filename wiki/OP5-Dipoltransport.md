@@ -207,3 +207,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Vertauscht die Umkehrwalze die physikalische Parität?
 
 **Stand 19.11.2026.** Auf freien elektromagnetischen Doppelamplituden antikommutiert $J_B=iK$ mit der räumlichen Feldparität und vertauscht deren Eigenräume. Auf elektrisch geladenen J-Foki würde derselbe Feldtausch den elektrischen Fluss durch jede einzelne Fokusfläche zu magnetischem Fluss machen. Das widerspricht der glatten magnetisch quellenfreien W1-Gleichung, auch bei insgesamt neutralem Paar. Die freie Feldoperation schützt daher keine Entartung des elektrisch gebundenen Fokuspaars. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Dipol.md).
+
+## Vollständige Induktion für die Feldoperationen
+
+**Stand 19.11.2026.** Jedes endliche Wort aus Vierteldrehung $R$ und Konjugation $K$ lässt sich zu $R^aK^b$ reduzieren. Genau die ungeraden Exponenten $a$ vertauschen die räumlichen Feldparitäten. Dieselben Wörter machen eine lokale elektrische J-Quelle zu einer magnetischen und scheitern dadurch an der glatten W1-Gauss-Gleichung. Das Hindernis gilt sogar für beliebige invertierbare konstante Mischungen der beiden Feldkomponenten. Eine native Materiesymmetrie und H96 bleiben offen. [Induktionsbeweis](../notes/research/op5_bifocal_response_2026_11_18/W2_Port_Induktion.md).
