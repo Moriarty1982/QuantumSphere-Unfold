@@ -175,3 +175,7 @@ Wenn die beiden Kanäle separat kalibriert und auf dem betrachteten Intervall in
 ## Wie groß ist die kritische Länge?
 
 **Stand 19.11.2026.** Für die bei physikalischen sichtbaren Massen publizierte Z-String-Eigenwertskala der elektroschwachen Referenz mit Dunkelsektor liegt die bestmögliche Längengrenze im Einmodenvergleich bei rund $0{,}007$ fm. Das sind nur etwa drei elektroschwache Abschirmlängen. Ein gemeinsamer Geltungsbereich mit der Langstrecken-Kräftebilanz ist dadurch nicht nachgewiesen. Der Vergleich ist eine Größenordnung und keine Rechnung für die vollständigen Nambu-Endzonen. [Literaturabgleich und Umrechnung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Laengenskala.md).
+
+## Was bringt eine massive Außenzone?
+
+**Stand 19.11.2026.** Im eindimensionalen Modell ersetzt ein abklingendes Außenfeld die starre Endbedingung durch endliche Steifigkeit. Liegt die Außenmasse unterhalb einer festen Schranke, gibt die abrupte Stufe in dieser Modellklasse die größte entsprechende Endsteifigkeit. Mit der W-Masse als Außenmaß und der bisherigen Instabilitätsskala ergibt sich eine kritische Länge von etwa $0{,}0031$ fm. Eine tatsächliche Nambu-Endzone wurde damit noch nicht bestimmt. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/W2_Z_Endzonen.md).

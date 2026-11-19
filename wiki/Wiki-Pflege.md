@@ -102,6 +102,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Stabilitätsgrenze für ein abklingendes Außenfeld ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die kritische Z-Segmentlänge mit einer publizierten Eigenwertskala verglichen.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Längengrenze des projizierten Z-Segments und ihren Vergleich mit der Kräftebilanz ergänzt.
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme Stabilitäts- und Endpunktprüfung des elektroschwachen Z-Strings ergänzt.
