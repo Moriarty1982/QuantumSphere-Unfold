@@ -1,11 +1,18 @@
 """Index manuscript statements as unreviewed inventory, separate from QAM evidence."""
 
 import argparse
+from contextlib import closing
 import hashlib
 import json
 from pathlib import Path
 import re
 import sqlite3
+
+
+ENTRYPOINTS = {
+    'full': 'sources/research/v480-companion.tex',
+    'historical': 'sources/historical-witness.tex',
+}
 
 
 def mask_comments(text):
@@ -69,10 +76,10 @@ def paragraph_items(text, clean):
         yield match.start(), end, 'paragraph-' + word.group(1).lower(), text[match.end():close - 1].strip()
 
 
-def collect(repo):
+def collect(repo, entrypoint=ENTRYPOINTS['full']):
     repo = Path(repo).resolve()
-    root = repo / 'sources/research'
-    entry = root / 'v480-companion.tex'
+    entry = repo / entrypoint
+    root = entry.parent
     nodes = []
     seen = set()
 
@@ -129,21 +136,24 @@ def collect(repo):
     return nodes
 
 
-def build(repo, database):
-    nodes = collect(repo)
-    database.parent.mkdir(parents=True, exist_ok=True)
-    with sqlite3.connect(database) as db:
-        db.execute('''CREATE TABLE IF NOT EXISTS manuscript_inventory (
+def store_inventory(db, nodes):
+    entries = {row[0]: row for row in nodes}
+    db.execute('''CREATE TABLE IF NOT EXISTS manuscript_inventory (
             node_id TEXT PRIMARY KEY, parent_id TEXT, kind TEXT, source TEXT,
             line INTEGER, statement TEXT, source_sha256 TEXT, status TEXT,
             frame TEXT, missing_bridge TEXT)''')
-        db.execute('DELETE FROM manuscript_inventory')
-        db.executemany('INSERT INTO manuscript_inventory VALUES (?,?,?,?,?,?,?,?,?,?)', nodes)
-        count = db.execute('SELECT count(*) FROM manuscript_inventory').fetchone()[0]
-        assert count == len(nodes)
-    files = sum(row[2] == 'file' for row in nodes)
+    db.execute('DELETE FROM manuscript_inventory')
+    db.executemany('INSERT INTO manuscript_inventory VALUES (?,?,?,?,?,?,?,?,?,?)', entries.values())
+    return sum(row[2] == 'file' for row in entries.values()), len(entries)
+
+
+def build(repo, database):
+    nodes = [row for entry in ENTRYPOINTS.values() for row in collect(repo, entry)]
+    database.parent.mkdir(parents=True, exist_ok=True)
+    with closing(sqlite3.connect(database)) as db, db:
+        files, count = store_inventory(db, nodes)
     print(json.dumps({'database': str(database), 'files': files,
-                      'statements': len(nodes) - files,
+                      'statements': count - files,
                       'status': 'imported-unreviewed', 'logical_edges': 0}))
 
 

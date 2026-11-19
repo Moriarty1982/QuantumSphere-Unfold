@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+- 19.11.2026: SQLite enthält zusätzlich die vollständigen LaTeX-Quellen des Historical Witness und Verweisfundstellen für Langfassung, Historical Witness und Physik-Paper. Querverweise, Zitate und Ressourcen tragen einen Auflösungsstatus. Der Dokument-Build schreibt den Index in das Artefakt.
+
 - 19.11.2026: Dokument-Store registriert die Befunde zu ungeraden Schalenplateaus, bifokaler Sondenform und Vermittlerprofil mit Quellenhash und je einer offenen Prüfpflicht. Die Entwurfs-Toolchain weist Versionen und Prüfpflichten im Buildmanifest aus.
 
 - 18.11.2026: Profil des Vermittlers in Forschungsstand und Offene-Probleme (gemeinsamer Kern).

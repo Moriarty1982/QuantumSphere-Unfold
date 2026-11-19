@@ -546,3 +546,25 @@ Prüfpflicht. Eine identische Wiederholung fügt keine Version oder Pflicht
 hinzu. Die Einträge bleiben `imported-unreviewed` und sind im gemeinsamen
 Snapshot sowie als Hash-Paare im Buildbericht auffindbar. Die
 Auswahl der PDF-Abschnitte wird über die bestehenden Editionsregeln gesteuert.
+
+### Dokumentquellen und Verweise
+
+`python -m qam.tools.document_index --db build/qam.sqlite3` indiziert die
+Langfassung und den eigenständigen Historical Witness. Mit `--physics`
+kann der erzeugte LaTeX-Einstieg des Physik-Papers angegeben werden.
+Der Zwei-PDF-Build indexiert alle drei Dokumente und gibt Quellhashes und
+Zählungen im Buildmanifest aus.
+
+- `document_sources` enthält die vollständigen Quellbytes mit SHA-256.
+- `document_targets` erfasst Labels, Hyperlink-Anker und Literaturziele
+  mit Datei und Zeile im jeweiligen Dokument.
+- `document_links` enthält wörtliche Referenzbefehle mit Fundstelle,
+  Ziel, Auflösungsstatus und gegebenenfalls der Zieldatei und -zeile.
+- `manuscript_inventory` enthält jetzt auch Aussageausschnitte aus dem
+  Historical Witness. Die dokumentinternen Ziele werden pro Ausgabe
+  aufgelöst, da beide Ausgaben dieselben Labels verwenden können.
+
+Der Index analysiert TeX-Quellen ohne Makroexpansion. Externe Links sind
+als Literale erfasst und werden nicht abgerufen. Fehlende Dateien,
+mehrdeutige Ziele und dynamische Makroargumente bleiben abfragbar.
+Dokumentverweise sind keine QAM-Proof-Links.
