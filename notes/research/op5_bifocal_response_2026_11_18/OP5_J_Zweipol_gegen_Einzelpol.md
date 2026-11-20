@@ -44,3 +44,57 @@ Die Schranke beschränkt keine unbekannte Einzelpolmasse oder Einzelpolstärke. 
 Setze $t=(4,9)$, $a=(1,1)$, $[L,U]=[1,10]$ und $d=1$. Eine numerische Halbierung zur Gleichheit der Randfehler liefert $c\simeq4{,}073785$, $\tau\simeq4{,}634890$, $b\simeq1{,}550510$ und $p(x)\simeq0{,}02230463-0{,}000747067(x-c)$. Der Maximalfehler dieses Kandidaten beträgt rund $2{,}3670\times10^{-4}$. Für die untere Schranke verwende Anker $(2,8)$ und Gruppen $(1,6)$ sowie $(4,10)$. Die direkte Auswertung ergibt $\sigma_2\simeq5{,}3013\times10^{-7}$ und $B\simeq0{,}26747$. Der tatsächliche gleichmäßige Abstand liegt somit mindestens bei $1{,}98\times10^{-6}$ und höchstens bei etwa $2{,}37\times10^{-4}$.
 
 Bei zwei konkurrierenden Vorhersagen mit absoluter Fehlerhalbbreite $\epsilon$ pro Stützstelle gibt die untere Schranke sichere Trennung, wenn $2\epsilon<\sigma_2/B$. Ist $2\epsilon$ mindestens der berechnete obere Fehler, bestehen dagegen überlappende Vorhersageintervalle sogar auf dem ganzen Bereich. Dazwischen bleibt die genaue Schwelle offen. Die Auswertung benutzt synthetische Antworten. Zugängliche Skalen, Tracerfehler, tatsächliche Beobachtbarkeit und H96 bleiben offen.
+
+## Minimax-Schranken aus fünf alternierenden Stützstellen
+
+Für zwei Kandidaten $g$ und $g_*$ aus derselben Modellklasse ist
+$$
+g(x)-g_*(x)=\frac{Q(x)}{(x+\tau)(x+\tau_*)},\qquad \deg Q\le d+2.
+$$
+Seien $x_0<\cdots<x_{d+3}$ Stützstellen, an denen $f-g_*$ alternierende Vorzeichen und jeweils einen Betrag von mindestens $E_-$ hat. Falls $|f-g|<E_-$ an jeder dieser Stellen wäre, hätte $g-g_*=(f-g_*)-(f-g)$ dort dieselben alternierenden Vorzeichen. Die positiven Nenner übertragen diese Vorzeichen auf $Q$. Zwischen den Stützstellen müsste $Q$ mindestens $d+3$ verschiedene Nullstellen haben, im Widerspruch zur Gradgrenze und zu den von null verschiedenen Werten an den Stützstellen. Damit ist $E_-$ eine Untergrenze für die beste gleichmäßige Approximation auf diesen Stützstellen und auf dem gesamten Intervall. Das Argument gilt für beliebige reelle Einzelpolstärken und Kontaktkoeffizienten bei $\tau>0$.
+
+Für das Zahlenbeispiel mit $d=1$ setzen wir $g_*(x)=p_0+p_1x+b/(x+\tau)$ mit den exakten rationalen Koeffizienten
+$$
+(p_0,p_1,b,\tau)=\frac{1}{10^{12}}
+(24800178816,-675564271,1549075645442,4615710103478).
+$$
+Der Kandidat stammt aus einem numerischen Abgleich alternierender Residuen an beiden Endpunkten und drei inneren Extremstellen. Für die Schranken verwenden wir nur die gerundeten Werte. An den Stützstellen
+$$
+(x_0,x_1,x_2,x_3,x_4)=(1,1.715805257,4.068462517,7.810339505,10)
+$$
+gilt $(-1)^j(f-g_*)(x_j)\ge 28588359/10^{12}$. Auf dem äquidistanten Gitter $1+9j/N$ mit $N=65536$ und $0\le j\le N$ ist jeder Residuenbetrag kleiner als $2858837/10^{11}$. Für $r=f-g_*$ gilt zusätzlich
+$$
+\sup_{[1,10]}|r''|\le\frac{2}{5^3}+\frac{2}{10^3}+\frac{2b}{(1+\tau)^3}<\frac1{20}.
+$$
+Auf jedem Gitterteilintervall der Länge $h=9/N$ weicht $r$ von seiner linearen Interpolante um höchstens $h^2\sup|r''|/8$ ab. Das folgt aus der Interpolationsfehlerformel mit dem Produkt der beiden Abstände zu den Teilintervallgrenzen. Die Interpolante selbst bleibt im Betrag unter dem größeren Randwert. Damit folgt für $E_*=\inf_g\|f-g\|_{\infty,[1,10]}$ die Einschließung
+$$
+2.8588359\times10^{-5}\le E_*<2.8588488\times10^{-5}.
+$$
+
+Die rationalen Ungleichungen lassen sich so nachrechnen.
+
+~~~python
+from fractions import Fraction as F
+
+scale = 10**12
+p0, p1, b, tau = (F(n, scale) for n in
+                   (24800178816, -675564271, 1549075645442, 4615710103478))
+
+def residual(x):
+    return 1/(x + 4) + 1/(x + 9) - p0 - p1*x - b/(x + tau)
+
+nodes = (1000000000, 1715805257, 4068462517, 7810339505, 10000000000)
+lower = F(28588359, scale)
+assert all((-1)**j * residual(F(n, 10**9)) >= lower
+           for j, n in enumerate(nodes))
+
+N = 65536
+grid_bound = F(2858837, 10**11)
+assert all(abs(residual(1 + F(9*j, N))) < grid_bound
+           for j in range(N + 1))
+curvature_bound = F(1, 20)
+assert F(2, 5**3) + F(2, 10**3) + 2*b/(1 + tau)**3 < curvature_bound
+assert grid_bound + F(9, N)**2 * curvature_bound/8 < F(28588488, scale)
+~~~
+
+Bei derselben absoluten Fehlerhalbbreite $\epsilon$ für beide Modellvorhersagen garantieren die fünf Stützstellen getrennte Vorhersageintervalle an mindestens einer Stelle für $\epsilon<1.42941795\times10^{-5}$. Ab $\epsilon=1.4294244\times10^{-5}$ überlappen die Vorhersageintervalle von $f$ und $g_*$ auf dem gesamten Bereich. Diese Schwellen gelten für die synthetische Antwort und ihre Normierung. Die Beobachtungsabbildung für H96 bleibt offen.

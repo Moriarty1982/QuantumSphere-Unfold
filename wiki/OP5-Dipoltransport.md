@@ -354,4 +354,4 @@ Für einen festgelegten schweren Yukawa-Pol ist der beste Kontaktterm endlichen 
 
 ## Zwei Pole gegen einen angepassten Einzelpol
 
-Zwei gleichsignierte Pole können durch einen frei angepassten Einzelpol plus Kontaktterm mehrere Taylor-Koeffizienten exakt teilen. Der verbleibende Unterschied ist durch eine gewichtete Streuung der inversen Polabstände bestimmt. Eine Rangmatrix liefert eine unabhängige untere Schranke für alle Einzelpolparameter. Das Zahlenbeispiel schränkt den Modellabstand ein, bestimmt ihn aber nicht exakt. H96 bleibt offen.
+Zwei gleichsignierte Pole können durch einen frei angepassten Einzelpol plus Kontaktterm mehrere Taylor-Koeffizienten exakt teilen. Der verbleibende Unterschied ist durch eine gewichtete Streuung der inversen Polabstände bestimmt. Fünf alternierende Residuen begrenzen den besten Einzelpol mit linearem Kontaktterm von unten. Der exakt geprüfte Kandidat grenzt den gleichmäßigen Abstand im synthetischen Beispiel auf $[2{,}8588359;\,2{,}8588488)\times10^{-5}$ ein. H96 bleibt offen.
