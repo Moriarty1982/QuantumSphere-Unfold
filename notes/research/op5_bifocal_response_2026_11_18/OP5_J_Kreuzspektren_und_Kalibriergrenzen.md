@@ -44,3 +44,5 @@ python op5_j_kreuzspektren.py --raw
 ```
 
 Der erste Aufruf gibt alle Antwortwerte, Profilspalten und Resthalbbreiten als Brüche aus und prüft die Injektion an 27 Punkten pro Bin. Der zweite berechnet die rationale Klammer. Der dritte gibt JSON mit allen sechs Kreuz- und Autospektren je Bin und den Antwortänderungen der drei injizierten Moden aus. Das JSON ist direkt als Eingabe für `op5_j_kalibrierprofile.py` verwendbar.
+
+[Die erzeugte Eingabedatei](op5_j_kreuzspektren_synthetisch.json) für $\lambda=10^{-5}$ durchläuft den bestehenden Profilrechner und liefert in allen sieben Bins dieselben exakten Profile und Resthalbbreiten wie die direkte Auswertung.
