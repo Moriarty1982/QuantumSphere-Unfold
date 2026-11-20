@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Außenfelder:** Gemeinsame lineare Kompensation, Achsenkrümmung und Änderung der Momentbilanz ergänzt.
+
 **20.11.2026, OP5-Antriebsenergie:** Lokale Reservoirbilanz, masselose Antwort und gedruckte Wolfram-Rechnung ergänzt.
 
 **20.11.2026, OP5-Dynamik:** Retardierte Kompensation, Quellenkorrektur und gedruckte Wolfram-Kontrolle ergänzt.
