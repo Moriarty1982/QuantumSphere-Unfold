@@ -221,3 +221,5 @@ Für $[1,10]$, $(t_1,t_2)=(4,9)$, $d=1$ und $a_1=1$ gilt näherungsweise $k=4.29
 | $-3$ | $1.432300$ | Einzelpol bei $\tau\simeq0.620242$ |
 
 Die Gewichte und Skalen sind synthetisch. Für H96 bleibt die Zuordnung zu Beobachtungen offen.
+
+Der [Minimax-Abgleich für mehr als zwei gleichsignierte Pole](OP5_J_Minimax_Polreduktion.md) behandelt die allgemeine Reduktion von $r$ auf $r-1$ Pole und die dafür nötigen exakten Stützstellen.
