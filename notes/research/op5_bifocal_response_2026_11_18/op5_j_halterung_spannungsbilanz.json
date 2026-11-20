@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Halterung_Spannungsbilanz",
+  "repository": {
+    "commit": "3607706ce08ad28471c09c10b5e493d9475c633e",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_halterung_spannungsbilanz.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Statische Kraft- und Spannungsgleichgewichte zweier linear-elastischer Komponenten, gemeinsame Restmassen- und Higgsquelle, Trägheitssumme, Federenergie und Laplace-Kommutation.",
+    "coefficient_domain": "Symbolische lineare Differential- und Tensoridentitäten.",
+    "conventions": "Materieframe M, lineare Cauchy-Spannung, nichtrelativistische Elastizität und statische lineare Gravitation.",
+    "inputs": [
+      "Kompaktes OP5-Laplace-Profil der Vorarbeit; kolokalisierte elastische Komponenten mit proportionalen Steifigkeiten; vorgegebene relative Federstellung."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine native W2–OP5-Kopplung, keine vollständige reale Apparatur, keine Einschaltstrahlung oder H96-Messung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T08:57:48.803Z",
+    "runtime_seconds": 8.988,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_halterung_spannungsbilanz.txt",
+      "sha256": "fef8db31b0899b748e909726680de587d6ab17805ea14705ae5d6b9d696392dd",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert isError=false. Prozesscode nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Symbolische Kraft-, Spannungs-, Energie- und Laplace-Reste verschwinden. Die Trägheitsbedingung erscheint als eigener Faktor."
+  ],
+  "result": "Die symbolischen Kontrollen stimmen mit der statischen analytischen Konstruktion überein.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Federstellung und Materialmodell sind zusätzliche Annahmen. Beiträge der Energieversorgung liegen außerhalb der linearen Rechnung."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_halterung_spannungsbilanz.wl",
+      "sha256": "ebf9acefb59c6ebc3f81bda7a0023e9dff5d50bbf1b7e32ac8a6767479304820",
+      "sha256_after": "ebf9acefb59c6ebc3f81bda7a0023e9dff5d50bbf1b7e32ac8a6767479304820"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_halterung_spannungsbilanz.txt"
+  ]
+}

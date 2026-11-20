@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Quadrupol_Kompensation",
+  "repository": {
+    "commit": "af42fc21c1922d0e9ba8007d72d72c4d564b616c",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_quadrupol_kompensation.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Achsenjet und Querstrahlmittel des neuen Laplace-Profils. Kommutator von Laplace- und statischem Antriebsoperator, direkte Momente Grad zwei und vier.",
+    "coefficient_domain": "Exakte symbolische Ableitungen, Winkelintegrale und ein rationales Radialmoment-Beispiel.",
+    "conventions": "Materieframe M, positive Vermittlermasse, statischer Newton-Vergleich, Radiusvariable s=r^2/R^2.",
+    "inputs": [
+      "PR #209 auf GitHub als fachlicher Ausgangspunkt. Lokaler OP5-Notizstand mit denselben Eingabeformeln. Glatter radialer Zuschnitt in der Herleitung."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine Bilanz der Halterungen, keine native Higgs–OP5-Kopplung, keine H96-Messung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T08:51:59.124Z",
+    "runtime_seconds": 9.406,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_quadrupol_kompensation.txt",
+      "sha256": "97189e7205a97cefbe8835dadccbba41e0e144cc5f58a125423b10ffbb89a24c",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert isError=false. Prozesscode nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Zwei harmonische Momente und der allgemeine Operator-Kommutator liefern Nullreste. Der Gezeitenkoeffizient behält den früheren Wert."
+  ],
+  "result": "Symbolische Kontrollen stimmen. Die Kompaktheit des gesamten direkten Newton-Potentials folgt aus der analytischen Poisson-Identität.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Das finite Glattheitsbeispiel prüft nur die Momente. Die vollständige physische Quelle ist offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_quadrupol_kompensation.wl",
+      "sha256": "bc3f8ae730444eefa2f8a42133ef07ebd22d87929b1131c79c450ac12cfcee7c",
+      "sha256_after": "bc3f8ae730444eefa2f8a42133ef07ebd22d87929b1131c79c450ac12cfcee7c"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_quadrupol_kompensation.txt"
+  ]
+}
