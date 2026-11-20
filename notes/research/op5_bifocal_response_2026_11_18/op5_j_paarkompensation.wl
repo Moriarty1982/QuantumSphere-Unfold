@@ -1,0 +1,15 @@
+Clear[x,y,z,t,m,eta,u,a,b,h0,h2,j1,j2,w1,w2,p,q,kk,stress];
+coords={x,y,z};
+cut=eta[x,y,z]; field=u[x,y,z];
+op[g_]:=g-Laplacian[g,coords]/m^2;
+crossTerm=FullSimplify[op[cut field]-cut op[field]+(2 Grad[cut,coords].Grad[field,coords]+field Laplacian[cut,coords])/m^2];
+rules=First[Solve[{a+b==h0,j1 a+j2 b==h2},{a,b}]];
+moments=FullSimplify[{a+b-h0,j1 a+j2 b-h2}/.rules,Assumptions->j1!=j2];
+kk=DiagonalMatrix[{p[t,x,y,z],q[t,x,y,z]}];
+div=Table[Sum[D[kk[[i,j]],coords[[j]]],{j,2}],{i,2}];
+density=Sum[D[div[[i]],coords[[i]]],{i,2}];
+flux=-D[div,t];
+stress=D[kk,{t,2}];
+energy=FullSimplify[D[density,t]+Sum[D[flux[[i]],coords[[i]]],{i,2}]];
+momentum=FullSimplify[D[flux,t]+Table[Sum[D[stress[[j,i]],coords[[j]]],{j,2}],{i,2}]];
+Print[{crossTerm,rules,moments,energy,momentum}];
