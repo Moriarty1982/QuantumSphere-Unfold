@@ -412,3 +412,5 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 **OP5, metrischer Lichtkegel:** Die Hauptkopplung eines bereits luminalen Vermittlers muss für eine gemeinsame obere Geschwindigkeitsgrenze verschwinden. Ein reduzierter Vergleich mit langsameren Vermittlern erfüllt die Grenze. Native Physik und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Metrische_Kegelgrenze.md)
 
 **OP5, luminaler Vergleich:** Ein konformer Einstein-Quellterm und eine getrennte gerichtete massive Quelle erlauben den Achsenkontrast bei unveränderter Einstein-Welle im Modell. Native Kopplung und tatsächliche J-Auslese bleiben ebenso offen wie H96. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Luminaler_Einstein_Kanal.md)
+
+**OP5, sichtbare Auslese:** Ein identisch erhaltener höherer Krümmungsoperator gibt im idealen axialen Vergleich einen bedingten Laufzeitkontrast. Seine Koeffizientendifferenz und die reale Messkette sind weiterhin offen. H96 bleibt offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sichtbarer_Kruemmungsterm.md)
