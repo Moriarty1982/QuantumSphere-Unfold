@@ -1,0 +1,15 @@
+Clear[nx,ny,nz,m,d,amp,s,theta,deltaE,pairCount,work];
+moment=-amp s DiagonalMatrix[{1,1,0}];
+dir={Sin[theta],0,Cos[theta]};
+eTheta={Cos[theta],0,-Sin[theta]};
+ePhi={0,1,0};
+newton=FullSimplify[3 dir.moment.dir-Tr[moment]];
+ttPlus=FullSimplify[eTheta.moment.eTheta-ePhi.moment.ePhi];
+ttCross=FullSimplify[eTheta.moment.ePhi];
+cancel=Together[(1+d/m^2)/d-(1/d+1/m^2)];
+energy=Solve[deltaE+pairCount work==0,deltaE];
+Print["Static angular factor: ",InputForm[newton]];
+Print["TT plus moment: ",InputForm[ttPlus]];
+Print["TT cross moment: ",InputForm[ttCross]];
+Print["Massless operator split residual: ",InputForm[cancel]];
+Print["Reservoir balance: ",InputForm[energy]];
