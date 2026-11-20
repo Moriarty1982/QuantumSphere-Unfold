@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Umschaltung.** Forschungsstand und offene Probleme um quadratische Nachführung, Speicherbedingung und retardierten mechanischen Außenbeitrag ergänzt.
+
 **21.11.2026, OP5-Ruhelagen.** Forschungsstand und offene Probleme um den statischen Dichte- und Spannungsabgleich zweiter Ordnung und seine Bedeutung für die Auslese ergänzt.
 
 **20.11.2026, OP5-Schaltung und zweiter Materialabgleich.** Forschungsstand und offene Probleme um die lineare Dynamik, Reservoirbilanz und hyperelastische Kompaktheitsgrenze ergänzt.

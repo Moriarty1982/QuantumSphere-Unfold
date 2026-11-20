@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Umschaltung_Ruhelagen",
+  "repository": {
+    "commit": "48b1c3e804dcb9fc0ca4d33ff99df2a6676f612e",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_umschaltung_ruhelagen.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Kraftdivergenz und Spannungssymmetrie beider Kontinua; quadratischer Transporttensor für allgemeine Schaltverläufe; seine Divergenz; retardierte Wellengleichung und Spurumkehr bis auf lineare Eichung.",
+    "coefficient_domain": "Exakte symbolische Differentialrechnung mit allgemeinen glatten Profil- und Zeitfunktionen.",
+    "conventions": "Materieframe M, Signatur (-,+,+,+), Lichtgeschwindigkeit eins, quadratische Auslenkung und lineare Gravitation.",
+    "inputs": [
+      "Longitudinales Profil, zwei proportionale erste Verschiebungen, zweiter Sollversatz als Divergenz eines symmetrischen Tensors, unabhängige Zeitfunktionen."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine mikroskopische Realisierung der aktiven Metrik oder des Speicherflusses, kein Beleg für die native Higgs–OP5-Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T23:57:33.607Z",
+    "runtime_seconds": 10.02,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_umschaltung_ruhelagen.txt",
+      "sha256": "6ad82061862f7542e05348cb4688c78bd09fa5fb4622d3f1161357f8b35c62a0",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Der Connector meldete isError=false ohne Warnung. Wolfram-Rückgabewert Null. Zeitangaben messen den Connector-Aufruf. Der Kernelprozesscode wurde nicht ausgewiesen.",
+    "Der Transport wird im Text aus der Entwicklung des Pushforwards abgeleitet. Das Skript kontrolliert die expliziten Koeffizienten und die Erhaltung für eine unabhängige zweite Zeitfunktion."
+  ],
+  "result": "Exakte Nullreste der deklarierten Kraft-, Erhaltungs- und Eichidentitäten.",
+  "residual_risks": [
+    "Die Nichtradiation ist ein Schluss aus retardierter Randbedingung, Eichidentität und Kompaktheit. Sie setzt den effektiven Speicherstress im Text voraus."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_umschaltung_ruhelagen.wl",
+      "sha256": "9d66e1d6a0b938cc06dc14cf6bbbae4ee47d5b3d135b7bd2c1b3dc25b72a46b1",
+      "sha256_after": "9d66e1d6a0b938cc06dc14cf6bbbae4ee47d5b3d135b7bd2c1b3dc25b72a46b1"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_umschaltung_ruhelagen.txt"
+  ]
+}
