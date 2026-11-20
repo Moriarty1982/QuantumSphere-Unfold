@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Paarmodulation:** Gebundene Paare als bedingter Spannungsträger und Yukawa-Grenze bei gleichsinniger Verkürzung ergänzt.
+
 **20.11.2026, OP5-Spannungsbilanz:** Momentidentität, quantitative Schaltschranke und lineare Feldprüfung ergänzt.
 
 **20.11.2026, OP5-Ansteuerung:** Rotationshindernis, passives Plateau und skalar getriebene Alternative mit Quadrupol-Fernanteil ergänzt.
