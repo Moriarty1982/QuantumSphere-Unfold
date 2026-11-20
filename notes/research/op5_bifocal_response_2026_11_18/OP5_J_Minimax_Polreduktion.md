@@ -243,3 +243,87 @@ assert all(root_sum_bounds(x, wl)[1] < 0 for x in lo)
 assert all(root_sum_bounds(x, wu)[0] > 0 for x in hi)
 assert F("2.022788725072e-8") < eu[0] <= el[1] < F("2.022788725075e-8")
 ~~~
+
+## Minimax-Abgleich auf vorgegebenen Stützstellen
+
+Seien $x_0<\cdots<x_n$ beliebige vorgegebene Stützstellen in $[L,U]$, mit $n=d+2r-1$. Die lokalen Fehlerskalen $\sigma_j$ sind positiv. Gesucht ist jetzt
+$$
+E_X=\inf_g\max_{0\le j\le n}\frac{|f(x_j)-g(x_j)|}{\sigma_j}
+$$
+für dieselbe Klasse von Antworten mit höchstens $r-1$ Polen. Die Stützstellen und Fehlerskalen bestimmen eine $r\times r$-Matrix, aus deren größtem Eigenwert und positivem Eigenvektor der beste Abgleich folgt.
+
+### Konstruktion aus der Interpolationsmatrix
+
+Setze
+$$
+\omega(x)=\prod_{j=0}^n(x-x_j),\quad
+\gamma_j=\frac{1}{|\omega'(x_j)|},\quad
+L_i(x)=\prod_{\ell\ne i}(x+t_\ell),\quad
+\Delta_i=L_i(-t_i).
+$$
+Für einen Ersatznenner $Q=\sum_{i=1}^r v_i L_i$ mit $v_i>0$ und $\sum_i v_i=1$ gilt $Q(-t_i)=v_i\Delta_i$. Somit liegt je eine einfache Nullstelle in jeder Lücke der negativen Zielpole. Schreibe $D(x)=Q(x)\prod_i(x+t_i)$ und interpoliere das Polynom $P$ vom Grad höchstens $n$, das an $x_j$ den Wert $(-1)^{n-j}D(x_j)\sigma_j$ annimmt. In der Lagrange-Formel kürzen sich die alternierenden Vorzeichen gegen die von $\omega'(x_j)$. Daher ist der Leitkoeffizient $\sum_j\gamma_j D(x_j)\sigma_j>0$. An den negativen Zielpolen ergibt sich
+$$
+(-1)^n P(-t_i)=
+\left(\prod_{j=0}^n (t_i+x_j)\right)
+  \sum_{j=0}^n\gamma_j\sigma_j L_i(x_j)Q(x_j).
+$$
+Am Zielpol nimmt $D f$ den Wert $a_i\Delta_i^2 v_i$ an. Damit alle Zielpole beim Abzug des skalierten Residuals auf einmal verschwinden, definiere
+$$
+c_i=\frac{\prod_j(t_i+x_j)}{a_i\Delta_i^2},\qquad
+G_{ik}=\sum_{j=0}^n\gamma_j\sigma_j L_i(x_j)L_k(x_j),\qquad
+A=\operatorname{diag}(c_i)\,G.
+$$
+Die Kürzungsbedingungen für $g=f-(-1)^n E P/D$ lauten dann $Av=E^{-1}v$.
+
+$G$ ist als Gram-Matrix positiv definit. Eine Linearkombination der $L_i$ kann nur dann an allen Stützstellen verschwinden, wenn sie als Polynom vom Grad höchstens $r-1$ identisch null ist. Auswerten bei $-t_i$ zeigt dann, dass sämtliche Koeffizienten null sind. $A$ ist ähnlich zu der symmetrischen positiv definiten Matrix $\operatorname{diag}(\sqrt{c_i})\,G\,\operatorname{diag}(\sqrt{c_i})$ mit strikt positiven Einträgen. Ihr größter Eigenwert $\mu$ ist einfach und hat einen strikt positiven Eigenvektor. Im Rayleigh-Quotienten verbessert der komponentenweise Betrag jeden Vektor mit gemischten Vorzeichen strikt. Ein nichtnegativer maximierender Eigenvektor muss wegen der positiven Matrix strikt positiv sein. Ein zweiter Eigenvektor zum selben Eigenwert könnte orthogonal zu ihm gewählt werden und hätte gemischte Vorzeichen. Der zugehörige Eigenvektor von $A$ wird auf $\sum_i v_i=1$ normiert.
+
+Mit diesem $v$ lassen sich alle Zielpolfaktoren aus $g_*=f-(-1)^n P/(\mu D)$ kürzen. Die Gradgrenze liefert danach ein Kontaktpolynom bis Grad $d$. Aus der Lagrange-Formel ist $(-1)^n P(-\tau)>0$ bei jeder positiven Ersatzpolposition $\tau$. Die Vorzeichen der übrigen Nennerfaktoren liefern damit wieder strikt positive Ersatzgewichte. Das Residuum alterniert auf allen $n+1$ Stützstellen mit gewichtetem Betrag $1/\mu$. Das Gradargument mit dividierten Differenzen beweist, dass $g_*$ der eindeutige Abgleich und
+$$
+E_X=\frac{1}{\mu}
+$$
+der exakte diskrete Minimax-Abstand ist. Die scharfe Schwelle für gemeinsame symmetrische Fehlerintervalle der Halbbreite $\kappa\sigma_j$ ist $E_X/2$.
+
+### Rationale Einschließung
+
+Für jeden Vektor $v$ mit positiven Komponenten erfüllen die Quotienten die [Collatz-Wielandt-Schranken](https://ddu.ext.unb.ca/6634/Lecture_notes/Lecture_4_centrality_measure.pdf)
+$$
+\min_i\frac{(Av)_i}{v_i}\ \le\ \mu\ \le\ \max_i\frac{(Av)_i}{v_i}.
+$$
+Mit einem positiven linken Eigenvektor von $A$ ist $\mu$ ein positiv gewichteter Mittelwert dieser Quotienten. Die Potenziteration aus jedem positiven Startvektor konvergiert nach Normierung zum positiven Eigenvektor, da alle anderen Eigenwerte zwischen null und $\mu$ liegen. Bei rationalen Eingaben kann man sowohl die Iteration als auch die Einschließung von $E_X$ mit exakter Bruchrechnung auswerten.
+
+Im Drei-Pol-Beispiel mit $\sigma_j=(x_j+2)/3$ und dem Raster $(1,2,3,4,6,8,10)$ ergibt sich
+$$
+9.85758091713774\cdot10^{-9}<E_X<9.85758091713777\cdot10^{-9}.
+$$
+Das sind rund $48.73$ Prozent des gewichteten Intervallabstands $E_\sigma$. Die gerundeten Massenquadrate des für dieses Raster optimalen Abgleichs sind $\tau_1\simeq4.04760479864$ und $\tau_2\simeq11.19226082154$. Die folgende Rechnung prüft den diskreten Fehler und sein Verhältnis zur obigen Intervallschranke.
+
+~~~python
+from fractions import Fraction as F
+from math import prod
+
+t = (4, 9, 16)
+a = (1, 1, 1)
+x = (1, 2, 3, 4, 6, 8, 10)
+sigma = tuple(F(z + 2, 3) for z in x)
+gamma = [F(1, prod(abs(z - y) for y in x if y != z)) for z in x]
+
+def L(i, z):
+    return prod(z + u for j, u in enumerate(t) if j != i)
+
+c = [F(prod(z + u for z in x), a[i]*L(i, -u)**2)
+     for i, u in enumerate(t)]
+A = [[c[i]*sum(g*s*L(i,z)*L(k,z) for z,g,s in zip(x,gamma,sigma))
+      for k in range(len(t))] for i in range(len(t))]
+
+v = [F(1)]*len(t)
+for _ in range(10):
+    v = [sum(row[k]*v[k] for k in range(len(t))) for row in A]
+Av = [sum(row[k]*v[k] for k in range(len(t))) for row in A]
+ratios = [y/z for y,z in zip(Av,v)]
+lo, hi = 1/max(ratios), 1/min(ratios)
+assert F("9.85758091713774e-9") < lo <= hi < F("9.85758091713777e-9")
+assert F("0.48732627") < lo/F("2.022788725075e-8")
+assert hi/F("2.022788725072e-8") < F("0.48732628")
+~~~
+
+Die Rasterwerte und die Fehlerhülle sind synthetisch. Das Verfahren ist auf gegebene Stützstellen und lokale Unsicherheiten anwendbar, sobald die Beobachtungsabbildung für H96 vorliegt.
