@@ -391,3 +391,7 @@ Eine kompakte Fensterfunktion lässt den Paarbeitrag im inneren Messgebiet beste
 ## Dynamische Kompensation des massiven Vermittlers
 
 Im linearen retardierten Vergleich erzeugt der dynamische Wellenoperator auf einem kompakten erhaltenen Hilfstensor eine Quelle mit exakt kompakter Feldantwort. Die Konstruktion umfasst die Spurterme an den Endpunkten. Sie erfordert eine zusätzliche Dichte proportional zur zweiten Zeitableitung und eine Änderung des integrierten Stresses mit vierter Zeitableitung. Ein physischer Antrieb, weitere Apparaturantworten und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dynamische_Kompensation.md)
+
+## Antriebsenergie und masselose Antwort
+
+Die vollständige Kompensationsquelle hat keine Änderung der Energie je Querebene. Die bei der Paarverkürzung gewonnene Bindungs- und Antriebsenergie muss in einer vollständig erfassten Schicht durch eine andere Energieänderung aufgewogen werden. Die Kompensation des massiven Vermittlers lässt in linearer Einstein-Gravitation den statischen Quadrupol und während der Schaltung eine gravitative Fernantwort zu. Der Beitrag zur realen Differenzmessung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsenergie_und_Gravitation.md)
