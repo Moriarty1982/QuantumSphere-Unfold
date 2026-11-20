@@ -581,4 +581,4 @@ assert F("9.17353229881560e-12") < box_lo <= box_hi < F("9.17353229881564e-12")
 assert lo > 900*box_hi
 ~~~
 
-Für einen H96-Einsatz müssten die Beobachtungsabbildung, die getrennten Fehlerskalen und die gemeinsamen Kalibrierprofile aus der tatsächlichen Messung bestimmt werden.
+Die [OP5-Kalibrierprofile](OP5_J_Kalibrierprofile.md) leiten die Antwort auf gemeinsame Gain-, Transfer-, Tracer- und Skalenfehler her. Für Messprofile müssen die Rohspektren und Kalibriergrenzen aus der tatsächlichen Messung bestimmt werden.
