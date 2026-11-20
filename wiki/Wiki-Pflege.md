@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Rückwirkung:** Kompakter Antrieb mit Rückwirkung und charakteristische Kegelgrenze ergänzt.
+
 **20.11.2026, OP5-Doppelkopplung:** Zähler beider Vermittler, kinetische Verschiebung und Positivitätsbedingungen ergänzt.
 
 **20.11.2026, OP5-Wirkung:** Lokale gerichtete Antriebswirkung, kanonischer Impuls und linearer Krümmungsquellterm ergänzt.
