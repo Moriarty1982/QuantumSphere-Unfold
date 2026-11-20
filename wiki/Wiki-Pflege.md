@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-fixierte Isotopenanschlüsse:** Innere Dipolrichtung je Sorte und optimierte Konditionierung für H und D ergänzt.
+
 **20.11.2026, OP5-gebundene Anschlüsse:** Schwerpunkt- und Polarisationsströme, Ranggrenze bei fixiertem Schwerpunkt sowie profilgebundene Halterungsphase nachgezogen.
 
 **20.11.2026, OP5-Sende- und Empfangsanschlüsse:** Kinetische Normierung, Eigenphasen im A/B-Vergleich und die Ranggrenze im Elektronenmodell ergänzt.

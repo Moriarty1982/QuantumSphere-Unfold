@@ -443,3 +443,7 @@ Im idealen A/B-Vergleich liefern die Eigenphasen der gemessenen Übertragungsmat
 ## Gebundene neutrale Materie als Anschluss
 
 Im Proton-Elektron-Dipolmodell trägt eine Schwerpunktbewegung J-Strom und eine innere Polarisation zusätzlich elektrischen Strom. Getrennte Ansteuerung und Auslese beider Koordinaten geben lokal Rang zwei. Ein festgehaltener Schwerpunkt lässt nur die innere Stromrichtung übrig. Eine profilabhängige Änderung der Halterungssteifigkeit verschiebt bei Dämpfung zudem die Endpunktphase. Die reale Apparatur und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Anschluesse.md)
+
+## Fixierte neutrale Isotope als Anschlüsse
+
+Im Punktkern-Dipolmodell liefern alle inneren elektrischen Dipolübergänge einer fixierten neutralen Sorte dieselbe Feldrichtung. Zwei getrennt adressierte Sorten erreichen genau dann Rang zwei, wenn ihre ladungsgewichteten Rückstoßfaktoren verschieden sind. Wasserstoff und Deuterium erfüllen das formal. Im diagonal-kinetischen Vergleich liegt selbst die beste normierte Konditionszahl bei rund 14 747. Unabhängige Adressierung, Rauschen, Rückwirkung und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Fixierte_Isotopenanschluesse.md)
