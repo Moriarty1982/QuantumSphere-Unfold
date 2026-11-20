@@ -499,3 +499,86 @@ assert all(matrix(lo)[i][j] < 0 for i in range(len(u)) for j in range(i))
 ~~~
 
 Das Beispiel verwendet gesetzte Messmitten und Fehlerbalken. Die Umrechnung realer H96-Messungen in diese statische Antwort bleibt offen.
+
+## Gemeinsame Kalibrierfehler
+
+Zusätzlich zu den einzelnen Fehlerbalken seien $s$ bekannte Kalibrierprofile $b_\alpha=(b_\alpha(x_j))_j$ gegeben. Jedes Profil hat einen gemeinsamen unbekannten Koeffizienten für alle Stützstellen. Wir erlauben Datenvektoren
+$$
+z_j=y_j+\kappa\left(\epsilon_j\sigma_j+
+      \sum_{\alpha=1}^s\eta_\alpha b_\alpha(x_j)\right),
+\qquad |\epsilon_j|\le1,\quad |\eta_\alpha|\le1.
+$$
+Dieses Modell beschreibt beschränkte Fehleramplituden. Es setzt keine Wahrscheinlichkeitsverteilung voraus. Setze $B_\alpha=H(b_\alpha)$ mit derselben linearen Datenmatrix wie im vorigen Abschnitt.
+
+Für feste $\eta$ ist die kleinste Matrix in der positiven Semidefinitheitsordnung
+$$
+H(y)-\kappa G+\kappa\sum_\alpha\eta_\alpha B_\alpha.
+$$
+Sie wird erreicht, indem die unabhängigen Fehler die alternierenden Vorzeichen $\epsilon_j=-(-1)^n\operatorname{sgn}\omega'(x_j)$ erhalten. Denn jede andere Wahl addiert zu dieser Matrix eine Summe positiv semidefiniter Rang-eins-Matrizen. Die kleinsten Matrizen für alle $\eta$ sind Konvexkombinationen der Werte an den Ecken $\nu\in\{-1,1\}^s$. Daher ist die Prüfmatrix für alle erlaubten Fehler genau dann positiv definit, wenn alle Eckmatrizen
+$$
+H(y)-\kappa M_\nu\succ0,\qquad M_\nu=G-\sum_{\alpha=1}^s\nu_\alpha B_\alpha
+$$
+positiv definit sind. In diesem Fall ist die reduzierte Polklasse ausgeschlossen.
+
+Für $H(y)\succ0$ ist die kritische Amplitude der Matrixprüfung
+$$
+\kappa_{\mathrm{gemeinsam}}
+ =\left[\max_{\nu\in\{-1,1\}^s}\lambda_{\max}(M_\nu,H(y))\right]^{-1}.
+$$
+Der Ausdruck in der Klammer ist positiv, weil der Mittelwert der $M_\nu$ gleich $G\succ0$ ist. An einer maximierenden Ecke wird die Matrix an der kritischen Amplitude singulär und bleibt positiv semidefinit. Liefert ihr Kern einen zulässigen Nenner, konstruiert die Interpolation aus dem vorigen Abschnitt an genau diesem erlaubten Datenvektor einen reduzierten Kandidaten. Dann ist die Ausschlussschwelle scharf für die gekoppelten Fehler. Bei fehlendem Nennernachweis ist sie eine Untergrenze.
+
+### Gemeinsamer Offset und Drift
+
+Ist $b_\alpha$ ein Polynom vom Grad höchstens $d$, dann ist $B_\alpha=0$. Jede Matrixkomponente ist eine dividierte Differenz der Ordnung $n=d+2m+1$ eines Polynoms vom Grad höchstens $d+2m$. Solche Profile fallen aus dem Test heraus und können vor der Eckenauswertung gestrichen werden. Das entspricht der Möglichkeit, sie direkt in das Kontaktpolynom aufzunehmen. Bei $d=1$ gilt dies für einen gemeinsamen Offset und eine gemeinsame lineare Drift in $x=q^2$.
+
+Für $d=1$ ist der nächste monomiale Beitrag $b(x)=c x^2$. In einer Basis aus Polynomen mit Leitkoeffizient eins und Grad $m$ hat $H(b)$ in jeder Zelle den Eintrag $(-1)^n c=c$, da $n=2m+2$ gerade ist. Die dividierte Differenz erfasst genau den Leitkoeffizienten des Produkts. Für $c>0$ ist $H(b)$ positiv semidefinit und die Eckauswertung reduziert sich bei diesem einzelnen wirksamen Profil auf $G+H(b)$.
+
+### Synthetische Zahlenprobe
+
+Zum gestörten Drei-Pol-Datensatz aus dem vorigen Abschnitt fügen wir die gemeinsamen Profile $10$, $x$ und $100x^2$ hinzu. Die ersten beiden verschwinden in der Prüfmatrix. Die Matrixrechnung für die gemeinsame quadratische Drift ergibt
+$$
+8.36123007008602\cdot10^{-9}<\kappa_{\mathrm{gemeinsam}}<
+8.36123007008604\cdot10^{-9}.
+$$
+An der unteren Schranke hat die Prüfmatrix in der gewählten Referenzbasis strikt negative Nebendiagonaleinträge. Da $G+H(b)$ nur positive Einträge hat, bleiben die Nebendiagonaleinträge bis zur singulären Grenze negativ. Der Kern liefert dort einen zulässigen Nenner und die Schranke ist scharf.
+
+Würde man dieselben Profile stattdessen als zusätzliche unabhängige Punktschwankungen behandeln, ergäbe die Fehlerskala $\sigma_j+10+x_j+100x_j^2$ eine Matrixschwelle von rund $9.17353\cdot10^{-12}$. Im Beispiel ist die scharfe Schwelle bei korrekt gemeinsamem Fehler mehr als 900-mal größer. Die Größen der Profile sind für den Vergleich synthetisch gewählt. Die Rechnung verwendet die Variablen und Hilfsfunktionen aus der vorigen Zahlenprobe.
+
+~~~python
+offset = [F(10) for z in x]
+tilt = [F(z) for z in x]
+curvature = [F(100*z*z) for z in x]
+
+def mode(values):
+    return gram([val/den for val,den in zip(values,omega_prime)])
+
+assert all(val == 0 for vals in (offset,tilt) for row in mode(vals) for val in row)
+C = mode(curvature)
+assert all(val == 100 for row in C for val in row)
+G_joint = [[g+c for g,c in zip(gr,cr)] for gr,cr in zip(G,C)]
+G_box = gram([(scale+a+b+c)/abs(den) for scale,a,b,c,den
+              in zip(s,offset,tilt,curvature,omega_prime)])
+
+def reduced(k, B):
+    return [[h-k*b for h,b in zip(hr,br)] for hr,br in zip(H,B)]
+
+def bracket(B):
+    lo, hi = F(0), F("2e-8")
+    for _ in range(75):
+        mid = (lo+hi)/2
+        if positive_definite(reduced(mid,B)):
+            lo = mid
+        else:
+            hi = mid
+    return lo, hi
+
+
+lo, hi = bracket(G_joint)
+assert F("8.36123007008602e-9") < lo <= hi < F("8.36123007008604e-9")
+assert all(reduced(lo,G_joint)[i][j] < 0 for i in range(3) for j in range(i))
+box_lo, box_hi = bracket(G_box)
+assert F("9.17353229881560e-12") < box_lo <= box_hi < F("9.17353229881564e-12")
+assert lo > 900*box_hi
+~~~
+
+Für einen H96-Einsatz müssten die Beobachtungsabbildung, die getrennten Fehlerskalen und die gemeinsamen Kalibrierprofile aus der tatsächlichen Messung bestimmt werden.
