@@ -1,0 +1,21 @@
+Clear[a,rr,ss,b,va,vb,j0,jm,x,d0,dm,z0,om,n0,nm,g0,gm,mu];
+v={{b,j0,jm},{j0,va,0},{jm,0,vb}};
+k=DiagonalMatrix[{a,1,1}];
+lower=Together[Det[v]-va vb (b-j0^2/va-jm^2/vb)];
+upper=Together[Det[k-v]-(1-va)(1-vb)(a-b-j0^2/(1-va)-jm^2/(1-vb))];
+unitMinor=Det[(k-v)[[{1,2},{1,2}]]] /. va->1;
+diag=51/100-rr/50;
+(* Apply the rational squares directly to avoid square roots in the comparison. *)
+sumR=3 rr^2/200+(1/4-rr/2+rr^2)/50;
+lmargin=Expand[diag-2 sumR];
+umargin=Expand[49/50-diag-2 sumR];
+operator=d0 dm;
+drive=z0 (om-x) d0 dm-g0^2 n0 dm-gm^2 nm d0;
+response=Together[(z0 (x-om)+g0^2 n0/d0+gm^2 nm/dm) operator+drive];
+Print["Lower Schur residual: ",InputForm[lower]];
+Print["Upper Schur residual: ",InputForm[upper]];
+Print["Minor for a luminal coupled mediator: ",InputForm[unitMinor]];
+Print["Example lower endpoint margins: ",InputForm[{lmargin/.rr->0,lmargin/.rr->1}]];
+Print["Example upper endpoint margins: ",InputForm[{umargin/.rr->0,umargin/.rr->1}]];
+Print["Example margin curvatures: ",InputForm[{D[lmargin,{rr,2}],D[umargin,{rr,2}]}]];
+Print["Compact driven response residual: ",InputForm[response]];
