@@ -319,3 +319,7 @@ Tauscht gewöhnliche geladene Materie Impuls sowohl mit J als auch mit dem elekt
 ## Longitudinaler Austausch
 
 Beim massiven Spin-2-Austausch mit einem erhaltenen D-Tensor bleibt aus den impulsabhängigen Zählertermen nur die doppelte Divergenz der sichtbaren Quelle mal D-Spur übrig. Für freie Maxwell-Wellen verschwindet dieses longitudinale Glied. Ungleiche transversale Gewichte können lokal eine differentielle Laufphase erzeugen, während geladene Quellen und Detektoren zusätzliche Beiträge verlangen. Der vollständige Abgleich und H96 bleiben offen.
+
+## Doppelte Laufzeitdifferenz
+
+Bei einer kontrollierten Änderung der inneren D-Säule hebt das doppelte Verhältnis der Übertragungsfunktionen unveränderte Sender- und Empfängerphasen auf. Für einen massiven Vermittler ist der Randfehler der planaren Yukawa-Faltung exponentiell im Abstand zur geänderten Dichte beschränkt. Das ist eine bedingte Trennung von Ausbreitung und Apparatur. Reale Sensoren, Kalibrierung und H96 bleiben offen.
