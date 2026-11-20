@@ -419,3 +419,7 @@ Koppeln lineare Einstein- und Fierz–Pauli-Felder an dieselbe erhaltene Verglei
 ## Ansteuerung mit Rückwirkung und charakteristische Geschwindigkeit
 
 Ein abgestimmter kompakter Antrieb erzeugt die doppelt kompensierte Lösung auch mit linearer Rückwirkung. Im homogenen gekoppelten Modell liegt bei nichtverschwindender massiver Kopplung eine charakteristische Geschwindigkeit über der der Hintergrundmetrik, in jeder Richtung. Die Aussage betrifft die Fortsetzung des linearen Modells zu großen Wellenzahlen. Physischer Richtungsträger, reale Auslese und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckwirkung_und_Charakteristiken.md)
+
+## Bedingung für die metrische Geschwindigkeitsgrenze
+
+Ein Vermittler auf dem metrischen Kegel erfordert im geprüften Hauptteil verschwindende Hauptkopplung. Zwei explizite Schur-Grenzen erlauben einen lokalen Vergleich mit langsameren Vermittlern, positiver Energie und weiterhin kompakter Ansteuerung. Die physische Anpassung der Einstein- oder massiven Kopplung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Metrische_Kegelgrenze.md)
