@@ -383,3 +383,7 @@ Die Energie-Impuls-Erhaltung verknüpft die zweite Zeitableitung des Dichtemomen
 ## Gebundene Paare als Spannungsträger
 
 Zwei Gruppen quer orientierter Paare können im effektiven Coulomb-Zug-Modell das verlangte Dichtemoment und die integrierte Querspannung realisieren. Dafür muss sich die Zugspannung ändern und Arbeit zuführen. Wenn alle Paare bei festen Zentren kürzer werden, bleibt ein gerichteter Yukawa-Fernanteil. Die Ruhemassenroute verfehlt damit den exakten Endpunktabgleich in der zusammenhängenden Vakuumregion. Native Zugkraft, vollständige Quelle und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Paare_Spannung.md)
+
+## Kontinuierliche Kompensation der Paarmodulation
+
+Eine kompakte Fensterfunktion lässt den Paarbeitrag im inneren Messgebiet bestehen und erzeugt eine kompakte statische Gesamtantwort. Zwei äußere Ringprofile legen die Quermasse und das zweite Quermoment unabhängig fest. Der Achsenkontrast bleibt erhalten und die Apparaturregionen haben im Yukawa-Modell exakt null Feldänderung. Ein formaler transversaler Erhaltungstensor erfüllt die resultierende Spannungsbilanz. Physische Ansteuerung, Apparaturantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Paarkompensation.md)
