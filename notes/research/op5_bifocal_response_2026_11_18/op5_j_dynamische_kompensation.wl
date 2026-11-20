@@ -1,0 +1,16 @@
+Clear[t,x,y,z,m,kx,ky,p,q,r,s,chi,omega,k2,qMoment];
+coords={t,x,y,z};
+op[g_]:=g+(D[g,{t,2}]-Sum[D[g,{coords[[i]],2}],{i,2,4}])/m^2;
+p=kx[t,x,y,z]; q=ky[t,x,y,z];
+chi=D[p,{x,2}]+D[q,{y,2}];
+r={{chi,-D[p,t,x],-D[q,t,y],0},{-D[p,t,x],D[p,{t,2}],0,0},{-D[q,t,y],0,D[q,{t,2}],0},{0,0,0,0}};
+div[mat_]:=Table[Sum[D[mat[[i,j]],coords[[i]]],{i,4}],{j,4}];
+source=Map[op,r,{2}];
+n={-1,0,0,1};
+phaseTerm=Expand[n.r.n-chi];
+Print["Divergence of auxiliary tensor: ", InputForm[Simplify[div[r]]]];
+Print["Divergence of corrected source: ", InputForm[Simplify[div[source]]]];
+Print["Density counterterm residual: ", InputForm[Simplify[source[[1,1]]-op[chi]]]];
+Print["Fourier denominator cancellation residual: ", InputForm[Cancel[((m^2+k2-omega^2)/m^2)*(m^2/(m^2+k2-omega^2))-1]]];
+Print["Axial null contraction residual: ", InputForm[phaseTerm]];
+Print["Moment identity residual: ", InputForm[Simplify[D[-qMoment (s[t]+D[s[t],{t,2}]/m^2),{t,2}]/2+qMoment (D[s[t],{t,2}]+D[s[t],{t,4}]/m^2)/2]]];

@@ -1,0 +1,27 @@
+Clear[x,y,z,t,rho,mu,lam,zz,h,u1,u2,u3,kx,ky,hdd];
+coords={x,y,z};
+proj=DiagonalMatrix[{1,1,0}];
+scalar=h[t,x,y,z];
+u={u1[t,x,y,z],u2[t,x,y,z],u3[t,x,y,z]};
+v=u+proj.Grad[scalar,coords]/rho;
+strain[f_]:=Table[(D[f[[i]],coords[[j]]]+D[f[[j]],coords[[i]]])/2,{i,3},{j,3}];
+hooke[e_]:=2 mu e+lam Tr[e] IdentityMatrix[3];
+comp[sigma_]:=(sigma-lam Tr[sigma] IdentityMatrix[3]/(2 mu+3 lam))/(2 mu);
+div[mat_]:=Table[Sum[D[mat[[i,j]],coords[[j]]],{j,3}],{i,3}];
+targetStress=hooke[strain[v]]-proj D[scalar,{t,2}];
+residual=Simplify[(rho D[v,{t,2}]-div[hooke[strain[v]]])-(rho D[u,{t,2}]-div[targetStress])];
+a=comp[proj] hdd;
+timeHessian=FullSimplify[D[-Tr[a.hooke[a]]/2,{hdd,2}]];
+wave={kx,ky,0};
+kinetic=ArrayFlatten[{{rho IdentityMatrix[3],Transpose[{wave}]},{{wave},{{zz+wave.wave/rho}}}}];
+Print["Higher-time-derivative coefficient: ",InputForm[timeHessian]];
+Print["Elastic equation residual: ",InputForm[residual]];
+Print["Completed kinetic determinant: ",InputForm[Factor[Det[kinetic]]]];
+Print["Canonical momentum minus material momentum: ",InputForm[Simplify[rho D[v-u,t]]]];
+Clear[j00xx,j00yy,j0xtx,j0yty,jxxtt,jyytt];
+curvature=-scalar (j0xtx+j0yty-(j00xx+j00yy+jxxtt+jyytt)/2);
+var00=D[D[curvature,j00xx],{x,2}]+D[D[curvature,j00yy],{y,2}];
+variation={2 var00,D[D[curvature,j0xtx],t,x],D[D[curvature,j0yty],t,y],
+ 2 D[D[curvature,jxxtt],{t,2}],2 D[D[curvature,jyytt],{t,2}]};
+source={D[scalar,{x,2}]+D[scalar,{y,2}],-D[scalar,t,x],-D[scalar,t,y],D[scalar,{t,2}],D[scalar,{t,2}]};
+Print["Metric variation residual (00, 0x, 0y, xx, yy): ",InputForm[Simplify[variation-source]]];

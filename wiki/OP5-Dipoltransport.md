@@ -371,3 +371,47 @@ Im planaren Yukawa-Modell ist das Streckenintegral durch die Säulenmasse und di
 ## Querströmung und dynamischer Endpunktrest
 
 Der statische Kontrollkontrast lässt sich im Kontinuumsmodell durch einen kompakten radialen Massenstrom innerhalb jeder Querebene aufbauen. Ein formal erhaltener Quelltensor ergänzt Impulsstrom und transversale Spannungen. In der direkten Nullkontraktion für den freien axialen Strahl bleibt die Dichte, während die Spur eine zusätzliche Spannung enthält. Der dynamische Dichtebeitrag am Endpunkt ist pro submassiver Frequenzkomponente quadratisch in der Frequenz begrenzt. Native Ansteuerung, komplette Endpunktkalibrierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Quertransport.md)
+
+## Welche Kräfte den Quertransport tragen können
+
+Im linearisierten homogenen barotropen Fluid haben Druck und skalare Potentiale nur Gradientenkräfte. Der geforderte kompakte rein transversale Strom braucht beim Beschleunigen eine Kraft mit Rotation. Auch ein passives kompaktes Plateau scheitert im geprüften Druck-Yukawa-Modell außer im entarteten kraftfreien Grenzfall. Lässt man Längsstrom zu, kann ein skalares Potential die Dichteänderung antreiben. Für das konkrete Profil hat die Poissonlösung dann einen Quadrupol-Fernanteil. Native Spannungen, Endpunktantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antrieb_Quertransport.md)
+
+## Integrierte Spannungsbilanz des Zielprofils
+
+Die Energie-Impuls-Erhaltung verknüpft die zweite Zeitableitung des Dichtemoments mit dem integrierten Spannungstensor. Für den Kontrollkontrast muss die Längs- minus Querspannung proportional zur Schaltbeschleunigung sein und ihr Vorzeichen wechseln. Kalte Teilchenkinetik allein und die linearen spurfreien Maxwell-Higgs-Terme um das feldfreie homogene Profil tragen die Bilanz nicht. Auch eine kompakte Magnetstörung um ein räumlich konstantes Axialfeld liefert kein integriertes lineares Spannungsmoment. Konkrete Bindungs- oder Hintergrundantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Spannungsbilanz.md)
+
+## Gebundene Paare als Spannungsträger
+
+Zwei Gruppen quer orientierter Paare können im effektiven Coulomb-Zug-Modell das verlangte Dichtemoment und die integrierte Querspannung realisieren. Dafür muss sich die Zugspannung ändern und Arbeit zuführen. Wenn alle Paare bei festen Zentren kürzer werden, bleibt ein gerichteter Yukawa-Fernanteil. Die Ruhemassenroute verfehlt damit den exakten Endpunktabgleich in der zusammenhängenden Vakuumregion. Native Zugkraft, vollständige Quelle und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Paare_Spannung.md)
+
+## Kontinuierliche Kompensation der Paarmodulation
+
+Eine kompakte Fensterfunktion lässt den Paarbeitrag im inneren Messgebiet bestehen und erzeugt eine kompakte statische Gesamtantwort. Zwei äußere Ringprofile legen die Quermasse und das zweite Quermoment unabhängig fest. Der Achsenkontrast bleibt erhalten und die Apparaturregionen haben im Yukawa-Modell exakt null Feldänderung. Ein formaler transversaler Erhaltungstensor erfüllt die resultierende Spannungsbilanz. Physische Ansteuerung, Apparaturantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Paarkompensation.md)
+
+## Dynamische Kompensation des massiven Vermittlers
+
+Im linearen retardierten Vergleich erzeugt der dynamische Wellenoperator auf einem kompakten erhaltenen Hilfstensor eine Quelle mit exakt kompakter Feldantwort. Die Konstruktion umfasst die Spurterme an den Endpunkten. Sie erfordert eine zusätzliche Dichte proportional zur zweiten Zeitableitung und eine Änderung des integrierten Stresses mit vierter Zeitableitung. Ein physischer Antrieb, weitere Apparaturantworten und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dynamische_Kompensation.md)
+
+## Antriebsenergie und masselose Antwort
+
+Die vollständige Kompensationsquelle hat keine Änderung der Energie je Querebene. Die bei der Paarverkürzung gewonnene Bindungs- und Antriebsenergie muss in einer vollständig erfassten Schicht durch eine andere Energieänderung aufgewogen werden. Die Kompensation des massiven Vermittlers lässt in linearer Einstein-Gravitation den statischen Quadrupol und während der Schaltung eine gravitative Fernantwort zu. Der Beitrag zur realen Differenzmessung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsenergie_und_Gravitation.md)
+
+## Gleichzeitige Kompensation beider Außenfelder
+
+Eine vollständig vorgeschriebene erhaltene Quelle mit beiden Wellenoperatoren lässt im linearen Modell das massive und masselose Feld außerhalb des Messvolumens gleichzeitig unverändert. Die transversale Krümmung liefert weiterhin einen positiven Achsenkontrast für ein explizites Profil. Der frühere Plateauquadrupol muss entfallen, und die Schaltung erfordert ein anderes Spannungsmoment. Native Ansteuerung, Apparatur und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweifache_Aussenfeldkompensation.md)
+
+## Elastischer Vergleich für die vollständige Quelle
+
+Eine vorgegebene kompakte anisotrope Eigenverformung kann im linearen elastischen Vergleich Dichte, Impuls und Spannung des Quelltensors gleichzeitig erzeugen. Auf dem Endplateau bleibt die spannungsfreie Form geändert. Das Energiegesetz beziffert die lokale Antriebsleistung und erfordert einen Reservoirabgleich. Native Ansteuerung und zusätzliche Feldquellen des Antriebs bleiben ebenso offen wie H96. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Elastischer_Quellenabgleich.md)
+
+## Verformungsrichtungen des Antriebs
+
+Eine kompakte Teilfamilie mit positivem Achsenkontrast benötigt fünf feste Tensorantworten auf dem ruhenden Endplateau und bei von null verschiedenem ersten Lamé-Parameter sechs über die ganze Schaltung. Ein Skalarprofil kann im Vergleich dieselben Komponenten über seine gerichteten Ableitungen erzeugen. Die passende Kopplung ist im nativen D-Sektor offen. H96 bleibt offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsrichtungen.md)
+
+## Lokale Antriebswirkung und Metrikquelle
+
+Eine quadratische Wirkung mit gerichteter Skalarableitung liefert die elastische Zielgleichung und positive Energie im festen flachen Vergleich. Ihr kanonischer Impuls reicht zur Bestimmung der Metrikquelle nicht aus. Ein separater Krümmungsterm liefert den vollständigen linearen Zielbeitrag zur gewöhnlichen Metrik. Dynamische Richtungsträger, Kopplung des massiven Vermittlers, Stabilität mit dynamischer Gravitation und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lokale_Antriebswirkung.md)
+
+## Lineare Stabilität der doppelten Vermittlerkopplung
+
+Koppeln lineare Einstein- und Fierz–Pauli-Felder an dieselbe erhaltene Vergleichsquelle, reduziert der massive Pol die lokale Skalarkinetik. Beide Vermittler reduzieren die statische Steifigkeit. Zwei explizite Positivitätsbedingungen liefern einen stabilen quadratischen Bereich mit beiden Kopplungen. Native Kopplungen, Antrieb, Kausalität und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Doppelkopplung.md)

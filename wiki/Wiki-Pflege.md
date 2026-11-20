@@ -102,6 +102,28 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Doppelkopplung:** Zähler beider Vermittler, kinetische Verschiebung und Positivitätsbedingungen ergänzt.
+
+**20.11.2026, OP5-Wirkung:** Lokale gerichtete Antriebswirkung, kanonischer Impuls und linearer Krümmungsquellterm ergänzt.
+
+**20.11.2026, OP5-Verformungsrichtungen:** Rang der Materialantworten und gerichtete skalare Ableitungskopplung ergänzt.
+
+**20.11.2026, OP5-Elastizität:** Aktive Eigenverformung, Quellenabgleich und lokale Arbeitsbilanz ergänzt.
+
+**20.11.2026, OP5-Außenfelder:** Gemeinsame lineare Kompensation, Achsenkrümmung und Änderung der Momentbilanz ergänzt.
+
+**20.11.2026, OP5-Antriebsenergie:** Lokale Reservoirbilanz, masselose Antwort und gedruckte Wolfram-Rechnung ergänzt.
+
+**20.11.2026, OP5-Dynamik:** Retardierte Kompensation, Quellenkorrektur und gedruckte Wolfram-Kontrolle ergänzt.
+
+**20.11.2026, OP5-Paarkompensation:** Kompakte Antwort, Quermomente und formaler Erhaltungstensor ergänzt.
+
+**20.11.2026, OP5-Paarmodulation:** Gebundene Paare als bedingter Spannungsträger und Yukawa-Grenze bei gleichsinniger Verkürzung ergänzt.
+
+**20.11.2026, OP5-Spannungsbilanz:** Momentidentität, quantitative Schaltschranke und lineare Feldprüfung ergänzt.
+
+**20.11.2026, OP5-Ansteuerung:** Rotationshindernis, passives Plateau und skalar getriebene Alternative mit Quadrupol-Fernanteil ergänzt.
+
 **20.11.2026, OP5-Quertransport:** Massenerhaltender Querstrom, erhaltener Modelltensor und frequenzabhängige Endpunktschranke ergänzt.
 
 **20.11.2026, OP5-Kontrollkontrast:** Planare Grenze, transversale Nullkontrolle und Verstimmungsgrenze auf `OP5-Dipoltransport` und `Offene-Probleme` ergänzt.

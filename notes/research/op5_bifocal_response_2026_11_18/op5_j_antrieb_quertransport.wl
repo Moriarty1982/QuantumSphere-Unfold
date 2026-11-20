@@ -1,0 +1,10 @@
+Clear[x,y,z,r,u,a,l,amp,g,cs,rho,m,k,s,dd,chi,f,psi];
+vars={x,y,z}; c=chi[x,y,z];
+trans={D[c,x],D[c,y],0};
+potential=cs f[x,y,z]+rho g psi[x,y,z];
+force=dd trans-s Grad[potential,vars];
+harmonic=z^2-(x^2+y^2)/2;
+radial=FullSimplify[Integrate[2 Pi r^3 (1-r^2/a^2)^4,{r,0,a}],Assumptions->a>0];
+diff=FullSimplify[radial-(radial/.a->2 a)/4,Assumptions->a>0];
+axial=l Integrate[(1-u^2)^4,{u,-1,1}];
+Print[{Simplify[Curl[force,vars]],Laplacian[harmonic,vars],radial,diff,FullSimplify[-amp diff axial/2],Expand[cs (1+k/m^2)+rho g]}];

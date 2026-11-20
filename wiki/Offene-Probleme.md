@@ -384,3 +384,25 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 **OP5, Kontrollkontrast:** Planare Profile gleicher Säulenmasse liefern bei unveränderten Endpunktfeldern denselben Streckenbeitrag. Eine kompakte transversale Modulation mit Nullkontrolle trennt beides bei festgelegter Vermittlermasse im Modell. Die physische Kontrolle der D-Dichte, die Apparatursensitivität und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Kontrollkontrast.md)
 
 **OP5, Quertransport:** Das Profil des Kontrollkontrasts kann durch einen kompakten, lokal massenerhaltenden Querstrom aufgebaut werden. Impulsbilanz erfordert zusätzliche Gesamtspannung. Freie Ausbreitung und geladene Endpunkte haben weiterhin verschiedene Quellenkontraktionen. Materialgesetz, dynamische Endpunktantwort und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Quertransport.md)
+
+**OP5, Ansteuerung:** Eine skalare Kraft reicht im homogenen barotropen Vergleich nicht für den kompakten rein transversalen Zielstrom. Ein Längsstrom ermöglicht eine formale skalare Steuerung mit zusätzlichem Fernfeld. Native D-Dynamik und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antrieb_Quertransport.md)
+
+**OP5, Spannungsbilanz:** Die integrierte Anisotropie des vollständigen Modelltensors ist beim Umschalten durch das Dichtemoment festgelegt. Für einen kompakten Kontrolltransport bleibt ein physischer Spannungsträger mit der nötigen integrierten Antwort offen. H96 bleibt offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Spannungsbilanz.md)
+
+**OP5, gebundene Paarmodulation:** Steuerbare Zugspannung trägt im Paarvergleich das integrierte Spannungsmoment. Gleichsinnige Paarverkürzung hat ein unvermeidbares Yukawa-Außenfeld der Ruhemassenänderung. Räumliche Kompensation, nativer Antrieb und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Paare_Spannung.md)
+
+**OP5, kontinuierliche Kompensation:** Eine vorgeschriebene glatte Dichteänderung aus Übergangszone und zwei Ringprofilen kann das Paar-Außenfeld kompensieren. Das alte Maß für die integrierte Querspannung bleibt erhalten. Die Realisierung durch Materie und Antrieb sowie H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Paarkompensation.md)
+
+**OP5, dynamische Kompensation:** Eine vollständig vorgeschriebene, erhaltene Quelle kann den linearen retardierten Vermittler auch während der Umschaltung lokal halten. Die notwendige zeitabhängige Dichte- und Stresskorrektur ist hergeleitet. Native Ansteuerung und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dynamische_Kompensation.md)
+
+**OP5, Energiebilanz und Gravitation:** Die Arbeit der Paarverkürzung braucht eine bilanzierte Energiequelle. Das bisherige Moment erzeugt trotz Kompensation des massiven Vermittlers gewöhnliche gravitative Außenwirkung. Die reale J–A-Differenz und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsenergie_und_Gravitation.md)
+
+**OP5, Kompensation beider Kanäle:** Ein erhaltener linearer Modellquelltensor liefert kompakte Antworten im massiven und masselosen Kanal bei positivem Achsenkontrast. Dabei entfällt das frühere statische Quellenquadrupolmoment. Ansteuerung, reale J-Differenzmessung und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweifache_Aussenfeldkompensation.md)
+
+**OP5, elastische Ansteuerung:** Eine aktiv vorgegebene Eigenverformung liefert einen linearen Materialvergleich für den vollständigen Zielquelltensor. Eine native materielle Umsetzung einschließlich des Antriebs und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Elastischer_Quellenabgleich.md)
+
+**OP5, Verformungsrichtungen:** Lokale feste isotrope oder gemeinsam diagonale Tensorantworten reichen für die geprüfte Quelle nicht. Eine formale gerichtete Ableitungskopplung eines Skalars rekonstruiert die nötigen Komponenten. Ihre physische Herleitung und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsrichtungen.md)
+
+**OP5, lokale Wirkung:** Die gerichtete Antriebswirkung besitzt im flachen Vergleich eine positive quadratische Energie. Ein linear variierter Krümmungsterm erzeugt die gewünschte Metrikquelle. Die native Wirkung für Antrieb und Richtungsträger, die massive Kopplung und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lokale_Antriebswirkung.md)
+
+**OP5, doppelte Vermittlerkopplung:** Für festgelegte lineare Kopplungen und externen Richtungsträger ist ein positiver gekoppelter Bereich nachgewiesen. Native Kopplungen, reale J-Auslese und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Doppelkopplung.md)
