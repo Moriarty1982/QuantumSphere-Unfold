@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_HCl_Anschlusskondition",
+  "repository": {
+    "commit": "a3a6897ba31a6ff6cc6341223298616f12f6888d",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_hcl_anschlusskondition.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Spur und Determinante des Anschluss-Grams, verschobene Gram-Determinante, H-Radialgleichung und statische Polarisierbarkeit. Eine komplexe Matrix gegen direkte SVD, drei elementare Grenzfälle und zwei Kopplungsbeispiele.",
+    "coefficient_domain": "Exakte symbolische reelle Parameter, komplexes Übersprechen mit rationalem Kontrollbeispiel; 50-stellige Eingabe für die numerische SVD.",
+    "conventions": "Spalten H und HCl, Winkelphase im Symbolbeispiel reell, normierte Feldrichtungen, Lorentz-Halbbreite als Energie.",
+    "inputs": [
+      "R(0)-Dipolbetrag 0.0719426 D; CODATA-Umrechnungen; Winkelkoeffizienten aus der vorigen HCl-Erkundung; komplexe Beispieldaten im Skript."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30,
+      "complex_svd_cases": 1,
+      "coupling_ratios": [
+        1,
+        0.001
+      ]
+    },
+    "non_claims": [
+      "Keine Apparaturkalibrierung, physische J-Kopplung oder H96-Bestätigung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T06:43:00.248Z",
+    "runtime_seconds": 9.579,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_hcl_anschlusskondition.txt",
+      "sha256": "1caed4200157e40239b45776c46acd07afd9c09f9f0ee9e9ca591a6a63354e4c",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert die beobachtete Connector-Antwort isError=false. Ein Prozesscode wurde nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Symbolische Nullreste für drei Gram-Identitäten und die H-Radialgleichung.",
+    "Singulärzahlformel reproduziert direkte SVD im komplexen Beispiel bis zur ausgewiesenen Rechenpräzision."
+  ],
+  "result": "Identitäten symbolisch geprüft. Endliche Kontrollen für genau die angegebenen Beispiele ausgeführt.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit, keine Kernel-CPU-Zeit.",
+    "Die tatsächlich verwendeten Kopplungs-, Dichte- und Überlappungswerte einer Apparatur sind offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_hcl_anschlusskondition.wl",
+      "sha256": "a0c2eced0a349d1cf09eaa369e3c7f83a5adee1ec650b3a64e630ba7d0bb0a7a",
+      "sha256_after": "a0c2eced0a349d1cf09eaa369e3c7f83a5adee1ec650b3a64e630ba7d0bb0a7a"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_hcl_anschlusskondition.txt"
+  ]
+}

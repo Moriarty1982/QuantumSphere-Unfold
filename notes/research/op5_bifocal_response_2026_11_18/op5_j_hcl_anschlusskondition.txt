@@ -1,0 +1,20 @@
+During evaluation of In[1]:= Wolfram kernel version = 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= complex overlap trace residual (unit vectors) = 0
+During evaluation of In[1]:= complex overlap determinant residual = 0
+During evaluation of In[1]:= ideal shifted Gram determinant residual = 0
+During evaluation of In[1]:= complex sample minimum singular value = 0.1561674013
+During evaluation of In[1]:=                                             -50
+complex sample direct SVD residual = 0. × 10
+During evaluation of In[1]:= equal-gain orthogonal case = 1
+During evaluation of In[1]:= singular overlap and zero gain cases = {0, 0}
+During evaluation of In[1]:= hydrogen first-order radial equation residual = 0
+During evaluation of In[1]:=                                                                9
+hydrogen static polarizability [a.u., infinite nuclear mass] = -
+                                                               2
+During evaluation of In[1]:= polarized HCl electric transition dipole [a.u.] = 0.016341546
+During evaluation of In[1]:= HCl/H strength coefficient [eV], before population and overlap = 0.0016148212
+During evaluation of In[1]:= angle sines for g/e=1, two signs = {0.97844362, 0.48888125}
+During evaluation of In[1]:= angle sines for g/e=0.001, two signs = {0.0025365528, 0.0025370859}
+During evaluation of In[1]:= minimum b/a for sigmaMin/a=0.1 without overlap, g/e=1 = {0.10222613, 0.20791950}
+
+Out[1]= Null

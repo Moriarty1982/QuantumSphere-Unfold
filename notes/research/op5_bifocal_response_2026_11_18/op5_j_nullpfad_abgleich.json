@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Nullpfad_Abgleich",
+  "repository": {
+    "commit": "6236946db1f6ce88040da338e2ce73a02206fdfe",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_nullpfad_abgleich.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Zyklische Ähnlichkeit, reziproke Endpunktabweichung, Nullkalibrierung mit identischen Faktoren, charakteristische Produktidentität sowie illustrative Fehlerbudgets.",
+    "coefficient_domain": "Komplex-rationale Kontrollmatrizen, symbolische Determinante, zwei numerische Eigenwertkontrollen bei 45-stelliger Eingabe.",
+    "conventions": "2-Norm, komplexer Feldraum, e^(+i omega tau), Abweichung als relative Matrix in derselben kanonischen Feldbasis.",
+    "inputs": [
+      "Nichtkommutierende rationale Matrizen im Skript; illustrativer Frequenzabstand 100 MHz, 0.25 ps Sekantenfehler, 0.1 rad Eigenphasenabstand."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30,
+      "numerical_mixing_strengths": [
+        0.01,
+        0.001
+      ]
+    },
+    "non_claims": [
+      "Keine apparative Toleranzmessung, physische J-Ausbreitung oder H96-Bestätigung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T06:52:56.104Z",
+    "runtime_seconds": 8.608,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_nullpfad_abgleich.txt",
+      "sha256": "85c2e22bdca3128d4d597d709336279ba06c092639fd554d2466f3261fbdf5d9",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert die beobachtete Connector-Antwort isError=false. Ein Prozesscode wurde nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Exakte Nullreste für die Matrix-, Determinanten- und Budgetidentitäten. Direkte Eigenwerte für zwei Stärken desselben Mischungsmusters."
+  ],
+  "result": "Die endlichen Instanzen und symbolischen Reste stimmen. Das universelle Argument mit seinen Voraussetzungen steht in der Forschungsnotiz.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Die Norm- und Mischungsbeispiele sind ohne additives Rauschen. Die Modenbasis und systematische Diagonalfehler müssten experimentell geprüft werden."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_nullpfad_abgleich.wl",
+      "sha256": "55a796d19adefd4931e6234eb938c4ae254a2fc2cdccb9ab8d7bb963b7bd9e2a",
+      "sha256_after": "55a796d19adefd4931e6234eb938c4ae254a2fc2cdccb9ab8d7bb963b7bd9e2a"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_nullpfad_abgleich.txt"
+  ]
+}

@@ -6,3 +6,17 @@ notes/research/op3_triality_slot_phases_2026_11_14/** -text
 notes/research/op3_triality_slot_phases_2026_11_14/run/** whitespace=cr-at-eol
 notes/research/op3_reference_energy_selection_2026_11_14/** -text
 notes/research/op3_reference_energy_selection_2026_11_14/run/** whitespace=cr-at-eol
+
+# Preserve the exact Wolfram inputs and Print outputs recorded by the OP5 manifests.
+notes/research/op5_bifocal_response_2026_11_18/op5_j_ab_fehlerbudget.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_ab_fehlerbudget.txt text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_gleicher_messweg_nullprofil.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_gleicher_messweg_nullprofil.txt text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_hcl_anschlusskondition.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_hcl_anschlusskondition.txt text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_nullpfad_abgleich.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_nullpfad_abgleich.txt text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_signierter_profilantrieb.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_signierter_profilantrieb.txt text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_w2_dichteantrieb.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_w2_dichteantrieb.txt text eol=lf

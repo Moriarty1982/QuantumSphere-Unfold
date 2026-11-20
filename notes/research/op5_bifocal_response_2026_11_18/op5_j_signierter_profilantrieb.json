@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Signierter_Profilantrieb",
+  "repository": {
+    "commit": "670e5ccd5c12dda0eba88c1258121e84b487bd12",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_signierter_profilantrieb.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Axiale Faktorisierung und Exponentialmomente, eindimensionale Green-Normierung, Zweiquellenidentität zur Ausläuferschranke und Kraft- sowie Energieidentitäten des Aktors.",
+    "coefficient_domain": "Exakte symbolische Polynome, Ableitungen und elementare Exponentialfunktionen.",
+    "conventions": "Statisches Plateau im Materieframe, Fourier-q als Quadratlänge des räumlichen Wellenvektors, a als transversaler Anteil.",
+    "inputs": [
+      "Symbolische Koeffizienten des langsameren massiven Vergleichs und generische zeitabhängige Zielquelle."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine native Kopplung an einen physischen Aktor, keine apparative Kalibrierung und kein H96-Test."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T07:08:58.405Z",
+    "runtime_seconds": 8.692,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_signierter_profilantrieb.txt",
+      "sha256": "d589f6d5b094e5fbfbfc5ad452cdf882f3608959aa918f1c9c6253a380bf976a",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert isError=false. Prozesscode nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Exakte Nullreste und Green-Normierung eins. Die stetige Positivitätsschranke folgt separat aus Cauchy–Schwarz."
+  ],
+  "result": "Die algebraischen und differentiellen Identitäten stimmen mit der Notiz überein.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Das Aktorfeld und die Anbindung sind zusätzliche Modellannahmen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_signierter_profilantrieb.wl",
+      "sha256": "baa6254020abe15a8ad4f55bbeccfc0399b8cb5edd85827874b184b0ba500d63",
+      "sha256_after": "baa6254020abe15a8ad4f55bbeccfc0399b8cb5edd85827874b184b0ba500d63"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_signierter_profilantrieb.txt"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_AB_Fehlerbudget",
+  "repository": {
+    "commit": "e2e166694ad305effdabf6c221a23080f234d8c8",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_ab_fehlerbudget.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Gewichteter Matrixrest, Zweifaktor-Endpunktdrift, Tangentialgeometrie der Phasenkreise, numerische Fehlerhülle eines komplexen 2x2-Beispiels und illustrative Rückwärtszahlen.",
+    "coefficient_domain": "Symbolische Matrix- und Kreisidentitäten, ein komplex-rationales Matrixbeispiel mit 40-stelliger numerischer Kontrolle.",
+    "conventions": "2-Norm, e^(+i omega tau), Laufzeit als Sekante entfalteter Eigenphasen.",
+    "inputs": [
+      "Rationale Matrizen im Skript; illustrative Fehlertoleranz 0.25 ps, Abstand 100 MHz, Phasentrennung mindestens 0.1 rad an den Endfrequenzen."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30,
+      "complex_pencil_cases": 1,
+      "drift_example_count": 2
+    },
+    "non_claims": [
+      "Kein Test einer physischen Apparatur, realen Linienbreite, J-Kopplung oder H96."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T06:47:38.802Z",
+    "runtime_seconds": 9.315,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_ab_fehlerbudget.txt",
+      "sha256": "378ae0e07fd36117023cb183550befad2b3680f64afa6eecfc17ba352e2dd825",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert die beobachtete Connector-Antwort isError=false. Ein Prozesscode wurde nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Symbolische Nullreste und unabhängige numerische Eigenwerte für das komplexe Beispiel."
+  ],
+  "result": "Die geprüften Identitäten ergeben Nullreste. Alle drei numerischen Prüfprädikate des Beispiels sind wahr.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Die Beispielwerte sind keine gemessenen Apparaturparameter. Die allgemeine Fehlerhülle folgt aus dem Argument in der Notiz."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_ab_fehlerbudget.wl",
+      "sha256": "bc3cbfa55b4f8f5adfa9b2a336551455e621e8b1130a893b083eb9b1a558c1d4",
+      "sha256_after": "bc3cbfa55b4f8f5adfa9b2a336551455e621e8b1130a893b083eb9b1a558c1d4"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_ab_fehlerbudget.txt"
+  ]
+}

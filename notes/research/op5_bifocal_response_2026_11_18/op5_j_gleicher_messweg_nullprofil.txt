@@ -1,0 +1,20 @@
+During evaluation of In[1]:= kernel version = 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:=                                                           32    32
+axis profile, Laplacian and transverse Hessians = {0, 0, ----, ----, 0}
+                                                            4     4
+                                                         rad   rad
+During evaluation of In[1]:=                                                                    16 amp scale
+axis integrated tidal coefficient per unit longitudinal integral = ------------
+                                                                        2    4
+                                                                    mass  rad
+During evaluation of In[1]:=                          32 (1 - 9 kappa s)
+azimuthal mean Hessian = ------------------
+                                   4
+                                rad
+During evaluation of In[1]:= transverse integral moment residual = 0
+During evaluation of In[1]:=                                           4
+sharp-disk moment ratio for cutoff s<=1 = -
+                                          3
+During evaluation of In[1]:= planar column and exterior-tail residual = 0
+
+Out[1]= Null

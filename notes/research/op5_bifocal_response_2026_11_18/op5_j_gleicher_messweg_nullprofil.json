@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Gleicher_Messweg_Nullprofil",
+  "repository": {
+    "commit": "61456e7b911772dbd49678c79a581449cc42ec97",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_gleicher_messweg_nullprofil.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Planare Säulenidentität, querkompensiertes Moment, Achsenjet und Polarisationsmittel des Krümmungskontrasts.",
+    "coefficient_domain": "Exakte symbolische Differential- und Integralrechnung.",
+    "conventions": "Achsenrichtung z, s=(x²+y²)/R², kanonischer linearer Vergleich, positive Vermittlermasse.",
+    "inputs": [
+      "Symbolische Profilparameter, Polynome s² und s³ im flachen Kern, scharfer Einheitskreis als reine Momentenprobe."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine native Quelle, keine realisierte Apparatur, keine höhere Störungsordnung und kein H96-Datenvergleich."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T07:04:04.110Z",
+    "runtime_seconds": 11.517,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_gleicher_messweg_nullprofil.txt",
+      "sha256": "014d20f26ad83b20157097f6f84aa462b742a5068478d00c1f397095681a4a30",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert die beobachtete Connector-Antwort isError=false. Ein Prozesscode wurde nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Nullreste bei Momentenkompensation und planarer Faltung. Exakte Achsen- und Azimutalkoeffizienten."
+  ],
+  "result": "Symbolische Ausdrücke stimmen mit der Konstruktion in der Forschungsnotiz überein.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Die glatte globale Konstruktion und Wirkungsgrenzen folgen aus der Herleitung, nicht aus der scharfen Momentenprobe."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_gleicher_messweg_nullprofil.wl",
+      "sha256": "9e587efd162b132f75355545d5e1e7f5dd3305fe9e95ab4e5f7ad9603af2e43a",
+      "sha256_after": "9e587efd162b132f75355545d5e1e7f5dd3305fe9e95ab4e5f7ad9603af2e43a"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_gleicher_messweg_nullprofil.txt"
+  ]
+}
