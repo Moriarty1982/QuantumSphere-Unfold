@@ -447,3 +447,7 @@ Im Proton-Elektron-Dipolmodell trägt eine Schwerpunktbewegung J-Strom und eine 
 ## Fixierte neutrale Isotope als Anschlüsse
 
 Im Punktkern-Dipolmodell liefern alle inneren elektrischen Dipolübergänge einer fixierten neutralen Sorte dieselbe Feldrichtung. Zwei getrennt adressierte Sorten erreichen genau dann Rang zwei, wenn ihre ladungsgewichteten Rückstoßfaktoren verschieden sind. Wasserstoff und Deuterium erfüllen das formal. Im diagonal-kinetischen Vergleich liegt selbst die beste normierte Konditionszahl bei rund 14 747. Unabhängige Adressierung, Rauschen, Rückwirkung und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Fixierte_Isotopenanschluesse.md)
+
+## Myonischer Wasserstoff als innerer Dipolanschluss
+
+Der größere Leptonrückstoß trennt die normierten Richtungen von H und myonischem H im diagonal-kinetischen Vergleich deutlich. Eine gemeinsame elektromagnetische Beimischung erhält den Rang, auch am Lepton-Nullpunkt. Im gemeinsamen Frequenzfenster unterhalb der ersten Dipolanregung ist die elektrische Coulomb-Antwort pro myonischem Atom aber nur von der Größenordnung $10^{-7}$ des H-Werts. Eine unabhängig adressierbare Apparatur und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Myonischer_Anschluss.md)
