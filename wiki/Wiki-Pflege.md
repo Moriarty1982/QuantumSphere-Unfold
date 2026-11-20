@@ -763,4 +763,4 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 **20.11.2026, OP5-Minimax-Kontaktterm:** Exakter Reziprokenfehler, Alternationspunkte und notwendige Messpräzision nachgezogen.
 
-**20.11.2026, OP5-Zweipolvergleich:** Angepasster Einzelpol, Ranguntergrenze und synthetisches Beispiel nachgezogen. Fünf alternierende Stützstellen und ein mit rationaler Rechnung geprüfter Kandidat grenzen den Minimax-Abstand weiter ein.
+**20.11.2026, OP5-Zweipolvergleich:** Angepasster Einzelpol, Ranguntergrenze und synthetisches Beispiel nachgezogen. Fünf alternierende Stützstellen und ein mit rationaler Rechnung geprüfter Kandidat grenzen den Minimax-Abstand ein. Die allgemeine Konstruktion bestimmt den eindeutigen optimalen Einzelpol für zwei gleichsignierte Pole und beliebigen Kontaktgrad.

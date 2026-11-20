@@ -43,7 +43,7 @@ Die Schranke beschränkt keine unbekannte Einzelpolmasse oder Einzelpolstärke. 
 
 Setze $t=(4,9)$, $a=(1,1)$, $[L,U]=[1,10]$ und $d=1$. Eine numerische Halbierung zur Gleichheit der Randfehler liefert $c\simeq4{,}073785$, $\tau\simeq4{,}634890$, $b\simeq1{,}550510$ und $p(x)\simeq0{,}02230463-0{,}000747067(x-c)$. Der Maximalfehler dieses Kandidaten beträgt rund $2{,}3670\times10^{-4}$. Für die untere Schranke verwende Anker $(2,8)$ und Gruppen $(1,6)$ sowie $(4,10)$. Die direkte Auswertung ergibt $\sigma_2\simeq5{,}3013\times10^{-7}$ und $B\simeq0{,}26747$. Der tatsächliche gleichmäßige Abstand liegt somit mindestens bei $1{,}98\times10^{-6}$ und höchstens bei etwa $2{,}37\times10^{-4}$.
 
-Bei zwei konkurrierenden Vorhersagen mit absoluter Fehlerhalbbreite $\epsilon$ pro Stützstelle gibt die untere Schranke sichere Trennung, wenn $2\epsilon<\sigma_2/B$. Ist $2\epsilon$ mindestens der berechnete obere Fehler, bestehen dagegen überlappende Vorhersageintervalle sogar auf dem ganzen Bereich. Dazwischen bleibt die genaue Schwelle offen. Die Auswertung benutzt synthetische Antworten. Zugängliche Skalen, Tracerfehler, tatsächliche Beobachtbarkeit und H96 bleiben offen.
+Bei zwei konkurrierenden Vorhersagen mit absoluter Fehlerhalbbreite $\epsilon$ pro Stützstelle gibt die untere Schranke sichere Trennung, wenn $2\epsilon<\sigma_2/B$. Ist $2\epsilon$ mindestens der berechnete obere Fehler, bestehen dagegen überlappende Vorhersageintervalle sogar auf dem ganzen Bereich. Dazwischen bleibt die Schwelle mit diesen beiden Schranken offen. Die Auswertung benutzt synthetische Antworten. Zugängliche Skalen, Tracerfehler, tatsächliche Beobachtbarkeit und H96 bleiben offen.
 
 ## Minimax-Schranken aus fünf alternierenden Stützstellen
 
@@ -98,3 +98,66 @@ assert grid_bound + F(9, N)**2 * curvature_bound/8 < F(28588488, scale)
 ~~~
 
 Bei derselben absoluten Fehlerhalbbreite $\epsilon$ für beide Modellvorhersagen garantieren die fünf Stützstellen getrennte Vorhersageintervalle an mindestens einer Stelle für $\epsilon<1.42941795\times10^{-5}$. Ab $\epsilon=1.4294244\times10^{-5}$ überlappen die Vorhersageintervalle von $f$ und $g_*$ auf dem gesamten Bereich. Diese Schwellen gelten für die synthetische Antwort und ihre Normierung. Die Beobachtungsabbildung für H96 bleibt offen.
+
+## Exakter Minimax-Einzelpol für zwei gleichsignierte Pole
+
+Seien $0<t_1<t_2$, $a_1,a_2>0$, $0\le L<U$ und $d\ge0$. Unter allen $g=p+b/(x+\tau)$ mit $\deg p\le d$, $b\in\mathbb R$ und $\tau>0$ gibt es genau eine beste gleichmäßige Approximation von $f=a_1/(x+t_1)+a_2/(x+t_2)$. Sie hat $t_1<\tau<t_2$ und $b>0$. Der Fehler alterniert an genau $d+4$ Punkten einschließlich der Intervallenden. Bei zwei negativen Zielgewichten folgt die entsprechende Aussage durch Vorzeichenwechsel.
+
+### Konstruktion der alternierenden Funktion
+
+Setze $m=(L+U)/2$, $h=(U-L)/2$, $n=d+3$ und
+$$
+\rho(t)=\frac{h}{m+t+\sqrt{(m+t)^2-h^2}},\qquad
+\rho_1=\rho(t_1),\quad \rho_2=\rho(t_2),\quad \rho_3=\rho(\tau).
+$$
+Alle $\rho_i$ liegen in $(0,1)$. Unter $x=m+\frac h2(z+z^{-1})$ entsprechen $-\rho_i$ und $-1/\rho_i$ den Stellen $-t_1,-t_2,-\tau$. Definiere
+$$
+B(z)=z^d\prod_{i=1}^3\frac{z+\rho_i}{1+\rho_i z},
+\qquad R_\tau(x)=\frac{B(z)+B(z)^{-1}}2,
+\qquad D_\tau(x)=(x+t_1)(x+t_2)(x+\tau).
+$$
+Auf $z=e^{i\theta}$, $0\le\theta\le\pi$, hat jeder Quotient in $B$ Betrag eins. Sein stetiges Argument wächst von $0$ bis $\pi$ mit Ableitung $(1-\rho_i^2)/(1+2\rho_i\cos\theta+\rho_i^2)>0$. Das Argument von $B$ wächst damit strikt von $0$ bis $n\pi$. Folglich ist $\lVert R_\tau\rVert_\infty=1$ und $R_\tau$ erreicht die Werte $\pm1$ abwechselnd genau an den $n+1$ Punkten, an denen dieses Argument ein ganzzahliges Vielfaches von $\pi$ ist.
+
+Schreibe $N(z)=\prod_i(z+\rho_i)$, $H(z)=\prod_i(1+\rho_i z)$ und $K=(h/2)^3/(\rho_1\rho_2\rho_3)$. Aus $D_\tau(x(z))=K z^{-3}N(z)H(z)$ folgt
+$$
+P_\tau(x(z)):=D_\tau(x(z))R_\tau(x(z))
+=\frac K2\left(z^{d-3}N(z)^2+z^{-d-3}H(z)^2\right).
+$$
+Der Ausdruck ist unter $z\mapsto z^{-1}$ invariant. Seine Laurentpotenzen liegen zwischen $-n$ und $n$. Er ist also ein Polynom in $x$ vom Grad höchstens $n$. Dazu setzt man $S_k=z^k+z^{-k}$ und zeigt per Induktion mit $S_{k+1}=2(x-m)S_k/h-S_{k-1}$, dass $S_k$ ein Polynom in $x$ vom Grad $k$ ist. Für $u_1=t_1$, $u_2=t_2$, $u_3=\tau$ liefert die Auswertung bei $z=-\rho_i$
+$$
+P_\tau(-u_i)=(-1)^n\frac K2 V_i,\qquad
+V_i=\rho_i^{-n}\prod_{j=1}^3(1-\rho_i\rho_j)^2>0.
+$$
+
+### Abgleich der Ausgangspole
+
+Für $\tau\in(t_1,t_2)$ sind die Werte von $D_\tau f$ an den beiden Zielpolen
+$$
+A_1=a_1(t_2-t_1)(\tau-t_1),\qquad
+A_2=a_2(t_2-t_1)(t_2-\tau).
+$$
+Die stetige Funktion $A_1/V_1-A_2/V_2$ ist bei $\tau=t_1$ negativ und bei $\tau=t_2$ positiv. Wähle eine innere Nullstelle und setze $E=2A_1/(KV_1)>0$. Dann stimmt $(-1)^n E P_\tau$ bei $-t_1$ und $-t_2$ mit $D_\tau f$ überein. Also lässt sich der Zähler von
+$$
+g_*(x)=f(x)-(-1)^n E R_\tau(x)
+$$
+durch $(x+t_1)(x+t_2)$ kürzen. Der verbleibende Zähler hat Grad höchstens $d+1$, sein Nenner ist $x+\tau$. Polynomdivision ergibt $g_*=p_*+b_*/(x+\tau)$ mit $\deg p_*\le d$. Aus der Auswertung vor der Kürzung bei $-\tau$ folgt
+$$
+b_*=\frac{E K V_3}{2(\tau-t_1)(t_2-\tau)}>0.
+$$
+
+Das Residuum $f-g_*$ alterniert mit Betrag $E$ an $d+4$ Stützstellen. Das vorangehende Nullstellenargument beweist die Optimalität. Für die Eindeutigkeit sei $g$ ein weiterer Kandidat mit Fehler höchstens $E$. An den Alternationspunkten $x_j$ hat der Zähler $Q$ von $g-g_*$ schwach alternierende Vorzeichen. Die dividierte Differenz
+$$
+\sum_{j=0}^{d+3}\frac{Q(x_j)}{\prod_{i\ne j}(x_j-x_i)}
+$$
+verschwindet wegen $\deg Q\le d+2$. Die Nenner haben ebenfalls alternierende Vorzeichen, sodass alle Summanden dasselbe schwache Vorzeichen haben. Daher verschwinden alle $Q(x_j)$ und damit $Q$ identisch. Weil $b_*>0$, besitzt $g_*$ einen echten Pol. Seine Lage bestimmt $\tau$ eindeutig. Somit gibt es auch genau eine Nullstelle der Abgleichgleichung in $(t_1,t_2)$.
+
+### Quadratische Gleichung und Zahlenprobe
+
+Mit $C_i=\rho_i^{-n}(1-\rho_i\rho_1)^2(1-\rho_i\rho_2)^2$ für $i=1,2$ und $r=\rho_3$ ist $V_i=C_i(1-\rho_i r)^2$. Setzt man $t=\frac h2(\rho(t)+1/\rho(t))-m$ in den Polabgleich ein, ergibt sich
+$$
+a_1\rho_2 C_2(\rho_1-r)(1-\rho_2r)
+=a_2\rho_1 C_1(r-\rho_2)(1-\rho_1r).
+$$
+Die quadratische Gleichung hat genau eine Lösung im offenen Intervall $(\rho_2,\rho_1)$. Aus ihr folgen $\tau$, der exakte Modellabstand $E$ und das Residuum. Für $[L,U]=[1,10]$, $(t_1,t_2)=(4,9)$, $a_1=a_2=1$ und $d=1$ ergibt die numerische Auswertung der Formel $\tau\simeq4.61571010347817$, $b_*\simeq1.54907564544239$ und $E\simeq2.8588362842460\times10^{-5}$. Das liegt in der zuvor rational geprüften Einschließung. Die fünf Alternationspunkte stimmen auf neun Nachkommastellen mit der obigen Stützstellenwahl überein. Für H96 bleibt die Abbildung auf messbare Antworten offen.
+
+Eine verwandte Darstellung gewichteter Chebyshev-Polynome über den Einheitskreis findet sich bei [Kroó und Pinkus, *Strong Uniqueness*, Abschnitt 13](https://www2.math.ethz.ch/EMIS/journals/SAT/papers/12/12.pdf).
