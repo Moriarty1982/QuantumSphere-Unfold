@@ -388,3 +388,5 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 **OP5, Ansteuerung:** Eine skalare Kraft reicht im homogenen barotropen Vergleich nicht für den kompakten rein transversalen Zielstrom. Ein Längsstrom ermöglicht eine formale skalare Steuerung mit zusätzlichem Fernfeld. Native D-Dynamik und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antrieb_Quertransport.md)
 
 **OP5, Spannungsbilanz:** Die integrierte Anisotropie des vollständigen Modelltensors ist beim Umschalten durch das Dichtemoment festgelegt. Für einen kompakten Kontrolltransport bleibt ein physischer Spannungsträger mit der nötigen integrierten Antwort offen. H96 bleibt offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Spannungsbilanz.md)
+
+**OP5, gebundene Paarmodulation:** Steuerbare Zugspannung trägt im Paarvergleich das integrierte Spannungsmoment. Gleichsinnige Paarverkürzung hat ein unvermeidbares Yukawa-Außenfeld der Ruhemassenänderung. Räumliche Kompensation, nativer Antrieb und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Paare_Spannung.md)
