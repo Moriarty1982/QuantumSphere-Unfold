@@ -1,0 +1,22 @@
+ClearAll["Global`*"];
+x1 = center + mass2/(mass1 + mass2) r;
+x2 = center - mass1/(mass1 + mass2) r;
+dipE = electric (z1 x1 + z2 x2 - electronSum);
+dipJ = g (3 a1 x1 + 3 a2 x2 + electronSum);
+nuclear = (3 a1 + z1) x1 + (3 a2 + z2) x2;
+b = D[nuclear, r];
+electronic = {-g, electric};
+vibration = {g (bend - effectiveCharge), electric effectiveCharge};
+ports = Transpose[{electronic, vibration}];
+susceptibility = ports . DiagonalMatrix[{chiElectronic, chiVibration}] . Transpose[ports];
+hd = FullSimplify[(4 (mass2 + electronMass) - 7 (mass1 + electronMass))/(mass1 + mass2 + 2 electronMass)];
+mp = 1836152673426/10^9;
+md = 3670482967655/10^9;
+Print["charge identity residual = ", FullSimplify[dipJ/g + dipE/electric - nuclear]];
+Print["two-nucleus relative coefficient = ", InputForm[Factor[b]]];
+Print["clamped-electron and vibration determinant = ", InputForm[Factor[Det[ports]]]];
+Print["two-mode susceptibility determinant = ", InputForm[Factor[Det[susceptibility]]]];
+Print["HD weighted midpoint coefficient = ", InputForm[hd]];
+Print["HD coefficient with CODATA masses = ", NumberForm[N[hd /. {mass1 -> mp, mass2 -> md, electronMass -> 1}], 9]];
+Print["balanced normalized condition for a purely J vibrational direction = ",
+  FullSimplify[Sqrt[(1 + 1/Sqrt[2])/(1 - 1/Sqrt[2])]]];
