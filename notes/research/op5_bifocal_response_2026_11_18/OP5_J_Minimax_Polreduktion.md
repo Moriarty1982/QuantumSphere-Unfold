@@ -78,7 +78,7 @@ $$
 (b_1,b_2)\simeq(1.05766563432,1.76305659918),\qquad
 E\simeq4.16856060828\times10^{-8}.
 $$
-Die Fixpunktiteration aus den Lückenmitten stabilisierte sich in diesem Beispiel nach sieben Anwendungen bis auf $10^{-13}$ in den Massenquadraten. Brouwers Satz liefert die Existenz, und die Alternation beweist die Eindeutigkeit. Eine allgemeine Konvergenzaussage für diese Iteration bleibt offen. Die sieben Alternationspunkte liegen näherungsweise bei
+Die Fixpunktiteration aus den Lückenmitten stabilisierte sich in diesem Beispiel nach sieben Anwendungen bis auf $10^{-13}$ in den Massenquadraten. Brouwers Satz liefert die Existenz, und die Alternation beweist die Eindeutigkeit. Die globale Konvergenz und rationale Fehlerschranken sind im nächsten Abschnitt hergeleitet. Die sieben Alternationspunkte liegen näherungsweise bei
 $$
 1,\quad 1.328587207,\quad 2.359037983,\quad 4.162774779,\quad
 6.605852285,\quad 8.972871652,\quad 10.
@@ -91,3 +91,90 @@ $$
 An diesen sechs Stellen stimmen die Antworten exakt überein. Bei $x=8$ beträgt das Residuum $f-g_{\mathrm{int}}=-1715/7745442216$.
 
 Die Fehlerwerte beziehen sich auf synthetische Antworten in der verwendeten Normierung. Die Abbildung auf tatsächlich messbare H96-Antworten bleibt offen.
+
+## Globale Konvergenz und überprüfbare Schranken
+
+Bezeichne die Abbildung des Lückenvektors mit $T(\tau)=\tau'$. Sie erhält die komponentenweise Ordnung und ist strikt in jeder Ausgabekomponente, sobald mindestens eine Eingabekomponente strikt wächst und die anderen nicht sinken.
+
+Seien dazu $\tau\le\sigma$ und $w_i(\tau)$, $w_i(\sigma)$ die jeweiligen Interpolationsgewichte. Die Funktion $\rho(u)$ fällt strikt mit $u$. Im Quotienten der Gewichte kürzen sich sämtliche festen Faktoren und es bleibt
+$$
+c_i:=\frac{w_i(\sigma)}{w_i(\tau)}
+=\prod_{j=1}^{r-1}
+  \left(\frac{1-\rho(t_i)\rho(\sigma_j)}
+             {1-\rho(t_i)\rho(\tau_j)}\right)^2.
+$$
+Jeder Faktor wächst als Funktion von $\rho(t_i)$ und wächst strikt, wenn $\sigma_j>\tau_j$. Daher fällt $c_i$ mit $t_i$, im strikten Fall sogar strikt.
+
+Innerhalb einer Lücke sind die Nullstellen von $Q_\tau(-x)$ genau die Nullstellen von
+$$
+M_\tau(x)=\sum_{i=1}^r\frac{w_i(\tau)}{t_i-x}.
+$$
+$M_\tau$ wächst dort strikt, da seine Ableitung $\sum_i w_i(\tau)/(t_i-x)^2$ positiv ist. Setze $\xi=T_j(\tau)$ und wähle $c$ zwischen $c_j$ und $c_{j+1}$. Dann gilt
+$$
+M_\sigma(\xi)=\sum_i \frac{w_i(\tau)(c_i-c)}{t_i-\xi}\le0.
+$$
+Hier wurde $cM_\tau(\xi)=0$ abgezogen. Für $i\le j$ ist der Nenner negativ und $c_i\ge c$. Für $i>j$ ist der Nenner positiv und $c_i\le c$. Daher liegt die neue Nullstelle $T_j(\sigma)$ rechts von $\xi$ oder stimmt mit ihr überein. Im strikten Fall kann man $c_j>c>c_{j+1}$ wählen, und die Ungleichung wird strikt.
+
+Beginne mit $\ell^{(0)}=(t_1,\ldots,t_{r-1})$ und $u^{(0)}=(t_2,\ldots,t_r)$. Weil $T$ die Box ins Innere abbildet, gilt $\ell^{(0)}<T(\ell^{(0)})$ und $T(u^{(0)})<u^{(0)}$. Die Iterierten der unteren Ecke steigen komponentenweise, die der oberen fallen. Beide bleiben in der Box und schließen die Iterierten jedes anderen Startwerts in der Box ein. Die Grenzvektoren sind wegen der Stetigkeit Fixpunkte. Die bereits bewiesene Eindeutigkeit ergibt denselben Grenzwert $\tau_*$ für beide Folgen. Dies liefert auch einen Existenzbeweis über monotone Folgen.
+
+Allgemeiner sind $\ell\le T(\ell)$ und $T(u)\le u$ bei $\ell\le u$ hinreichend für $\ell\le\tau_*\le u$. Der Beweis verwendet dieselben monotonen Iterationen. Bei Vektoren strikt innerhalb ihrer Lücken lassen sich diese beiden Bedingungen über $M_\ell(\ell_j)\le0$ und $M_u(u_j)\ge0$ direkt prüfen. Das ermöglicht eine Zertifizierung auch dann, wenn die gerundeten Näherungswerte durch schnelle numerische Verfahren gewonnen wurden.
+
+Definiere $e(\tau)=2/(K_\tau S(\tau))$ auch für vorläufige $\tau$. Bei steigenden Eingabekomponenten wachsen $K_\tau$ und die $w_i$ gemäß ihren Formeln. Daraus folgt
+$$
+e(u)\le E\le e(\ell).
+$$
+So liefert die Poleinschließung zugleich eine Einschließung des optimalen Fehlers.
+
+### Rationale Prüfung im Drei-Pol-Beispiel
+
+Für die vorigen Werte ergeben sich die strikten Schranken
+$$
+\begin{aligned}
+4.0468786598444 &< \tau_1 < 4.0468786598446,\\
+11.1864061954984 &< \tau_2 < 11.1864061954986,\\
+4.168560608275\cdot10^{-8} &< E < 4.168560608277\cdot10^{-8}.
+\end{aligned}
+$$
+Die Randvektoren sind exakte Dezimalbrüche. Der folgende Nachweis schließt jede benötigte Quadratwurzel rational ein und prüft die Vorzeichen sowie die Fehlerschranken mit exakter Bruchrechnung.
+
+~~~python
+from fractions import Fraction as F
+from math import isqrt, prod
+
+t = (F(4), F(9), F(16))
+c, h = F("5.5"), F("4.5")
+n = 6
+scale = 10**36
+
+def rho_bounds(u):
+    square = (c + u)**2 - h*h
+    k = isqrt(square.numerator * scale**2 // square.denominator)
+    return h/(c + u + F(k + 1, scale)), h/(c + u + F(k, scale))
+
+def data(tau):
+    bounds = [rho_bounds(u) for u in t + tau]
+    low, high = zip(*bounds)
+    weights = []
+    for i in range(len(t)):
+        delta = prod(v - t[i] for j, v in enumerate(t) if i != j)
+        wl = high[i]**(-n) * prod((1 - high[i]*v)**2 for v in high)
+        wu = low[i]**(-n) * prod((1 - low[i]*v)**2 for v in low)
+        weights.append((wl/delta**2, wu/delta**2))
+    wlow, whigh = zip(*weights)
+    kl = (h/2)**len(bounds) / prod(high)
+    ku = (h/2)**len(bounds) / prod(low)
+    return weights, (2/(ku*sum(whigh)), 2/(kl*sum(wlow)))
+
+def root_sum_bounds(x, weights):
+    terms = [sorted((lo/(v-x), hi/(v-x)))
+             for v, (lo, hi) in zip(t, weights)]
+    return tuple(map(sum, zip(*terms)))
+
+lo = tuple(map(F, ("4.0468786598444", "11.1864061954984")))
+hi = tuple(map(F, ("4.0468786598446", "11.1864061954986")))
+wl, el = data(lo)
+wu, eu = data(hi)
+assert all(root_sum_bounds(x, wl)[1] < 0 for x in lo)
+assert all(root_sum_bounds(x, wu)[0] > 0 for x in hi)
+assert F("4.168560608275e-8") < eu[0] <= el[1] < F("4.168560608277e-8")
+~~~
