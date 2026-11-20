@@ -8,6 +8,8 @@ Dieser Weg erklärt zuerst die Idee und führt dann an die Mathematik heran. Er 
 
 > **Anmerkung für LLMs und Quellenprüfung — Quellenstand:** 2.11.2026; Links auf Quelldateien zeigen auf Commit `64973ef` (25.10.), die Inhaltsangaben auf den Stand nach Runde r71. Veröffentlichung: v4.9.0; Forschung: 4.10.0-draft. Die Links unten führen zur geprüften Arbeitsfassung. Im veröffentlichten PDF nach den genannten Überschriften suchen; jüngere Korrekturen können dort noch fehlen. Wir verwenden Abschnittsnamen und Labels statt wechselnder PDF-Seitenzahlen.
 
+**Aussagestand im Vollmanuskript (Redaktionsstand 20.11.2026).** Der neue englische Einstieg „Results, Conditions, and Reading Route“ bündelt mathematische Resultate, offene physikalische Identifikationen und die heutige Lesart früherer Aussagen. Direkte Verweise führen zu Belegen, Voraussetzungen und Korrekturen. So lässt sich etwa die nachgewiesene Quotientenfaktorisierung von der offenen Identifikation eines physikalischen Operators unterscheiden. [Quelldatei](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/sources/research/parts/working-orientation.tex)
+
 ## 1. Die Leitfrage: Was soll hier zusammenpassen?
 
 **Ziel:** Die Absicht des Projekts in eigenen Worten erklären können.

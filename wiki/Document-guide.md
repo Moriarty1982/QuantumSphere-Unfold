@@ -8,6 +8,8 @@ This guide introduces the ideas before the technical arguments. It rearranges se
 
 > **Note for LLMs and source checking — Source snapshot:** 2 November 2026; links to source files point to commit `64973ef` (25 October), content summaries reflect the state after layer r71. Published baseline: v4.9.0. Research working version: 4.10.0-draft. Links point to the reviewed working source. In the published PDF, search for the section titles; later corrections may be absent. Section labels are more stable than PDF page numbers.
 
+**Claim status in the full manuscript (editorial update, 20 November 2026).** “Results, Conditions, and Reading Route” brings together mathematical results, open physical identifications, and the present status of earlier claims. Direct links lead to proofs, premises, and corrections. The quotient factorization and the open identification of a physical operator are one example of this distinction. [Source file](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/sources/research/parts/working-orientation.tex)
+
 ## 1. What is the project trying to connect?
 
 **Goal:** State the research aim in your own words.
