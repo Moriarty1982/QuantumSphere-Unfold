@@ -762,3 +762,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **20.11.2026, OP5-Polauflösung:** Nahe Polpaare, Rangdeterminante und Restschranke für schwere Pole nachgezogen.
 
 **20.11.2026, OP5-Minimax-Kontaktterm:** Exakter Reziprokenfehler, Alternationspunkte und notwendige Messpräzision nachgezogen.
+
+**20.11.2026, OP5-Zweipolvergleich:** Angepasster Einzelpol, Ranguntergrenze und synthetisches Beispiel nachgezogen.

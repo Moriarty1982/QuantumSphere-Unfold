@@ -351,3 +351,7 @@ Bei endlicher Genauigkeit sind zwei nahe gleichsignierte Pole nur quadratisch vo
 ## Optimaler Kontaktterm für einen schweren Pol
 
 Für einen festgelegten schweren Yukawa-Pol ist der beste Kontaktterm endlichen Grades jetzt exakt bestimmbar. Der Fehler alterniert an d+2 gezielt platzierten Stützstellen. Im bisherigen Zahlenbeispiel sinkt der maximal unvermeidbare Rest gegenüber dem Taylor-Vergleich von rund 9,09 × 10⁻⁶ auf 2,58 × 10⁻⁷. Reale Fehler, weitere veränderliche Pole und H96 bleiben offen.
+
+## Zwei Pole gegen einen angepassten Einzelpol
+
+Zwei gleichsignierte Pole können durch einen frei angepassten Einzelpol plus Kontaktterm mehrere Taylor-Koeffizienten exakt teilen. Der verbleibende Unterschied ist durch eine gewichtete Streuung der inversen Polabstände bestimmt. Eine Rangmatrix liefert eine unabhängige untere Schranke für alle Einzelpolparameter. Das Zahlenbeispiel schränkt den Modellabstand ein, bestimmt ihn aber nicht exakt. H96 bleibt offen.
