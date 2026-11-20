@@ -367,3 +367,7 @@ A–B–B–A in gleichen Zeitabständen entfernt im Einzelpfadmodell konstante 
 ## Kontrollkontrast mit unveränderten Endpunktfeldern
 
 Im planaren Yukawa-Modell ist das Streckenintegral durch die Säulenmasse und die beiden Endpunktwerte festgelegt. Bei festgelegter Vermittlermasse erzeugt in drei Dimensionen eine kompakte, massenerhaltende Quellenänderung eine kompakte Antwort. Zentrierte und seitlich verschobene Modulation lassen das Vermittlerfeld in den Apparaturregionen unverändert. Auf der Achse beträgt der Kontrast in der zentrierten Geometrie $64A\ell/105$, in der verschobenen Kontrolle null. Verstimmung und reale Apparaturempfindlichkeit brauchen eigene Kalibrierung. H96 bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Kontrollkontrast.md)
+
+## Querströmung und dynamischer Endpunktrest
+
+Der statische Kontrollkontrast lässt sich im Kontinuumsmodell durch einen kompakten radialen Massenstrom innerhalb jeder Querebene aufbauen. Ein formal erhaltener Quelltensor ergänzt Impulsstrom und transversale Spannungen. In der direkten Nullkontraktion für den freien axialen Strahl bleibt die Dichte, während die Spur eine zusätzliche Spannung enthält. Der dynamische Dichtebeitrag am Endpunkt ist pro submassiver Frequenzkomponente quadratisch in der Frequenz begrenzt. Native Ansteuerung, komplette Endpunktkalibrierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Quertransport.md)
