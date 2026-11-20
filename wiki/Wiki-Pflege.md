@@ -748,3 +748,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **20.11.2026, OP5-Longitudinaler-Abgleich:** Gemischter Propagator, D-Spur und freie Ausbreitung bei ungleichen Gewichten nachgezogen.
 
 **20.11.2026, OP5-Doppelte-Laufzeitdifferenz:** Übertragungsphasen, endliche Reichweite und Endpunktfehler nachgezogen.
+
+**20.11.2026, OP5-Transversale-Massenmodulation:** Dreidimensionale Yukawa-Projektion, Strahlgewicht und Modulation bei gleicher Gesamtmasse nachgezogen.

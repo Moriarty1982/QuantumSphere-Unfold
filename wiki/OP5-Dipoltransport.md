@@ -323,3 +323,7 @@ Beim massiven Spin-2-Austausch mit einem erhaltenen D-Tensor bleibt aus den impu
 ## Doppelte Laufzeitdifferenz
 
 Bei einer kontrollierten Änderung der inneren D-Säule hebt das doppelte Verhältnis der Übertragungsfunktionen unveränderte Sender- und Empfängerphasen auf. Für einen massiven Vermittler ist der Randfehler der planaren Yukawa-Faltung exponentiell im Abstand zur geänderten Dichte beschränkt. Das ist eine bedingte Trennung von Ausbreitung und Apparatur. Reale Sensoren, Kalibrierung und H96 bleiben offen.
+
+## Transversale Massenmodulation
+
+Bei endlicher Vermittlerreichweite misst die doppelte Laufzeitdifferenz eine transversal gefaltete Massensäule. Reine Verschiebung längs des Strahls lässt die volle Projektion unverändert. Querumverteilung kann bei derselben Gesamtmasse einen Kontrast liefern. Ein Vergleich von Scheibe und flächengleichem Ring demonstriert dies. Reale Modulation, Koeffizienten und H96 bleiben offen.
