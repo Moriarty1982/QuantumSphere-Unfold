@@ -752,3 +752,15 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **20.11.2026, OP5-Transversale-Massenmodulation:** Dreidimensionale Yukawa-Projektion, Strahlgewicht und Modulation bei gleicher Gesamtmasse nachgezogen.
 
 **20.11.2026, OP5-Tomographie:** Positive Gegenfamilie, Vakuumkriterium und Zweimoden-Kalibrierung nachgezogen.
+
+**20.11.2026, OP5-Gravitative-Reichweitenkalibrierung:** Partielle Kreuzspektren, Zweiskalen-Abgleich und Poltest nachgezogen.
+
+**20.11.2026, OP5-Mehrpolrekonstruktion:** Dividierte Differenzen, Rang, Polmassen und Fehlergrenzen nachgezogen.
+
+**20.11.2026, OP5-Kontakttermrekonstruktion:** Ankerdifferenzen, Polabgleich und Fehlerschranke nachgezogen.
+
+**20.11.2026, OP5-Polauflösung:** Nahe Polpaare, Rangdeterminante und Restschranke für schwere Pole nachgezogen.
+
+**20.11.2026, OP5-Minimax-Kontaktterm:** Exakter Reziprokenfehler, Alternationspunkte und notwendige Messpräzision nachgezogen.
+
+**20.11.2026, OP5-Zweipolvergleich:** Angepasster Einzelpol, Ranguntergrenze und synthetisches Beispiel nachgezogen. Fünf alternierende Stützstellen und ein mit rationaler Rechnung geprüfter Kandidat grenzen den Minimax-Abstand ein. Die allgemeine Konstruktion bestimmt den eindeutigen optimalen Einzelpol für zwei gleichsignierte Pole und beliebigen Kontaktgrad. Für gegenläufige Gewichte sind die endlichen und die beiden Grenzregime klassifiziert. Die gleichsignierte Reduktion von $r$ auf $r-1$ Pole und die minimale Zahl exakter Stützstellen sind hergeleitet. Die globale Konvergenz der Fixpunktiteration ist bewiesen und das Drei-Pol-Beispiel rational eingeschlossen. Der gewichtete Abgleich liefert die Trennschwelle auch bei unterschiedlichen Fehlerhalbbreiten entlang des Intervalls. Der Fehler auf vorgegebenen Stützstellen ist als Eigenwertformel hergeleitet und an einem festen Raster rational geprüft.

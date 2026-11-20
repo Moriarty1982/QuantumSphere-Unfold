@@ -331,3 +331,27 @@ Bei endlicher Vermittlerreichweite misst die doppelte Laufzeitdifferenz eine tra
 ## Tomographie und unbekannte Reichweite
 
 Ideale Laufzeitprojektionen aus allen Richtungen rekonstruieren den gefalteten D-Antwortkörper. Bei unbekannter Vermittlermasse kann eine andere positive Dichte derselben Gesamtmasse exakt dieselben Projektionen liefern. Ein bekannter Vakuumbereich mit nichtverschwindender Antwort oder ein unabhängig bekanntes Kalibrierungsprofil kann die Mehrdeutigkeit aufheben. Ein realer Abgleich und H96 bleiben offen.
+
+## Gravitative Reichweitenkalibrierung
+
+Der partielle J–Gravitations-Quotient nach Abzug eines geeigneten Tracers ist im Ein-Massen-Yukawa-Modell linear in q². Zwei räumliche Skalen bestimmen Kopplung und Reichweite, sofern korrelierte Materiereste entfernt sind und eine J-Fluktuation übrig bleibt. Ein dritter Modus prüft die Skalenform. Ein absoluter J-Mittelwert wäre zusätzlich für die mittlere Massendichte nötig. Reale Karten und H96 bleiben offen.
+
+## Mehrere Vermittler mit gemischten Vorzeichen
+
+Aus dividierten Differenzen der gravitationskalibrierten J-Antwort lassen sich im endlichen Yukawa-Modell auch Pole mit gemischten Vorzeichen bestimmen. Der Matrixrang zählt die sichtbaren Polmassen bei genügend exakten Stützstellen. Eine zweite Matrix liefert ihre Massenquadrate. Messfehler, Kontaktterme, Nullstellen der Antwort und H96 bleiben offen.
+
+## Unbekannte Kontaktterme
+
+Unbekannte Kontaktterme bis zu einem vorgegebenen Grad lassen sich durch dividierte Differenzen entfernen. Dabei bleiben Pole und Vorzeichen erhalten. Zwei Pole und ein linearer Kontaktterm werden im Test aus sechs Stützstellen rekonstruiert und an einer siebten geprüft. Ohne Schranke für den lokalen Anteil und ohne kontrollierte Messfehler bleibt die Polzahl aus endlichen Daten mehrdeutig. H96 bleibt offen.
+
+## Auflösungsgrenzen der Polrekonstruktion
+
+Bei endlicher Genauigkeit sind zwei nahe gleichsignierte Pole nur quadratisch vom entsprechenden Einzelpol verschieden. Genau gegenläufige Gewichte hinterlassen einen linearen Rest. Ein sehr schwerer Pol kann über einen begrenzten q²-Bereich einem lokalen Kontaktpolynom ähneln, mit expliziter Restschranke. Exakter Rang und reale Auflösung sind dadurch getrennt. H96 bleibt offen.
+
+## Optimaler Kontaktterm für einen schweren Pol
+
+Für einen festgelegten schweren Yukawa-Pol ist der beste Kontaktterm endlichen Grades jetzt exakt bestimmbar. Der Fehler alterniert an d+2 gezielt platzierten Stützstellen. Im bisherigen Zahlenbeispiel sinkt der maximal unvermeidbare Rest gegenüber dem Taylor-Vergleich von rund 9,09 × 10⁻⁶ auf 2,58 × 10⁻⁷. Reale Fehler, weitere veränderliche Pole und H96 bleiben offen.
+
+## Zwei Pole gegen einen angepassten Einzelpol
+
+Zwei gleichsignierte Pole können durch einen frei angepassten Einzelpol plus Kontaktterm mehrere Taylor-Koeffizienten exakt teilen. Der verbleibende Unterschied ist durch eine gewichtete Streuung der inversen Polabstände bestimmt. Für zwei gleichsignierte Pole existiert bei jedem Kontaktgrad genau ein gleichmäßig bester Einzelpol. Sein Massenquadrat liegt zwischen den beiden ursprünglichen Massenquadraten und folgt aus einer quadratischen Gleichung. Im synthetischen Beispiel mit linearem Kontaktterm liegt der Minimax-Abstand bei rund $2{,}8588363\times10^{-5}$. Bei gegenläufigen Gewichten kann der beste Pol außerhalb des ursprünglichen Massenbereichs liegen. Zwei Schwellen bestimmen die Bereiche, in denen das Fehlerinfimum erst bei verschwindendem oder unbegrenzt wachsendem Massenquadrat erreicht wird. Für $r$ gleichsignierte Pole gibt es genau eine beste Antwort mit $r-1$ Polen, je einem in jeder Lücke. $d+2r$ exakte Stützstellen sind nötig und ausreichend, um die reduzierte Klasse auszuschließen. Die Fixpunktiteration konvergiert aus der gesamten Box der Pollücken. Untere und obere Iterierte liefern überprüfbare Schranken für Polpositionen und Minimax-Fehler. Bei variierender positiver Messunsicherheit bleibt der gewichtete Minimax-Abgleich eindeutig. Ein Satz von $d+2r$ gewichteten Alternationspunkten erreicht die Trennschwelle des ganzen Intervalls. Für beliebige $d+2r$ vorgegebene Stützstellen liefert der größte Eigenwert einer $r\times r$-Matrix den exakten diskreten Fehler. H96 bleibt offen.
