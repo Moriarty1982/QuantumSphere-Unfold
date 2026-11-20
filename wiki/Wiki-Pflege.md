@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Kegelgrenze:** Schur-Kriterien und lokaler Vergleich mit kompakter Ansteuerung ergänzt.
+
 **20.11.2026, OP5-Rückwirkung:** Kompakter Antrieb mit Rückwirkung und charakteristische Kegelgrenze ergänzt.
 
 **20.11.2026, OP5-Doppelkopplung:** Zähler beider Vermittler, kinetische Verschiebung und Positivitätsbedingungen ergänzt.
