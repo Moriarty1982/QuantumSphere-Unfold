@@ -756,3 +756,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **20.11.2026, OP5-Gravitative-Reichweitenkalibrierung:** Partielle Kreuzspektren, Zweiskalen-Abgleich und Poltest nachgezogen.
 
 **20.11.2026, OP5-Mehrpolrekonstruktion:** Dividierte Differenzen, Rang, Polmassen und Fehlergrenzen nachgezogen.
+
+**20.11.2026, OP5-Kontakttermrekonstruktion:** Ankerdifferenzen, Polabgleich und Fehlerschranke nachgezogen.

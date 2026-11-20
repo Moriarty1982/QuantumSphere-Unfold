@@ -339,3 +339,7 @@ Der partielle J–Gravitations-Quotient nach Abzug eines geeigneten Tracers ist 
 ## Mehrere Vermittler mit gemischten Vorzeichen
 
 Aus dividierten Differenzen der gravitationskalibrierten J-Antwort lassen sich im endlichen Yukawa-Modell auch Pole mit gemischten Vorzeichen bestimmen. Der Matrixrang zählt die sichtbaren Polmassen bei genügend exakten Stützstellen. Eine zweite Matrix liefert ihre Massenquadrate. Messfehler, Kontaktterme, Nullstellen der Antwort und H96 bleiben offen.
+
+## Unbekannte Kontaktterme
+
+Unbekannte Kontaktterme bis zu einem vorgegebenen Grad lassen sich durch dividierte Differenzen entfernen. Dabei bleiben Pole und Vorzeichen erhalten. Zwei Pole und ein linearer Kontaktterm werden im Test aus sechs Stützstellen rekonstruiert und an einer siebten geprüft. Ohne Schranke für den lokalen Anteil und ohne kontrollierte Messfehler bleibt die Polzahl aus endlichen Daten mehrdeutig. H96 bleibt offen.
