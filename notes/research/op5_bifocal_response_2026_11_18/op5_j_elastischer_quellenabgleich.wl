@@ -1,0 +1,16 @@
+Clear[t,x,y,z,rho,mu,lam,bx,by,h];
+xs={x,y,z};
+bmat=DiagonalMatrix[{bx[t,x,y,z],by[t,x,y,z],0}];
+div[mat_]:=Table[Sum[D[mat[[i,j]],xs[[j]]],{j,3}],{i,3}];
+u=-div[bmat]/rho;
+strain=Table[(D[u[[i]],xs[[j]]]+D[u[[j]],xs[[i]]])/2,{i,3},{j,3}];
+sigma=-D[bmat,{t,2}];
+hooke[mat_]:=2 mu mat+lam Tr[mat] IdentityMatrix[3];
+compliance[mat_]:=(mat-lam Tr[mat] IdentityMatrix[3]/(2 mu+3 lam))/(2 mu);
+eigen=strain-compliance[sigma];
+energyStrain=DiagonalMatrix[{h[t],2 h[t],-h[t]}];
+elasticEnergy=Tr[energyStrain.hooke[energyStrain]]/2;
+Print["Density residual: ",InputForm[Simplify[-rho Sum[D[u[[i]],xs[[i]]],{i,3}]-Sum[D[div[bmat][[i]],xs[[i]]],{i,3}]]]];
+Print["Momentum residual: ",InputForm[Simplify[rho D[u,{t,2}]-div[sigma]]]];
+Print["Constitutive residual: ",InputForm[Simplify[hooke[strain-eigen]-sigma]]];
+Print["Energy derivative sample residual: ",InputForm[Simplify[D[elasticEnergy,t]-Tr[hooke[energyStrain].D[energyStrain,t]]]]];
