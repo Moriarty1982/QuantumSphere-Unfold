@@ -427,3 +427,7 @@ Ein Vermittler auf dem metrischen Kegel erfordert im geprüften Hauptteil versch
 ## Luminaler Einstein-Kanal mit gerichtetem Kontrast
 
 Eine konforme Verbesserung lässt die freie Einstein-Welle auf dem metrischen Kegel und erzeugt einen lokalen Metrikterm. Dieselbe Quellenform liefert keinen erhaltenen massiven Spin-2-Kontrast. Mit einer getrennten gerichteten Kopplung am langsameren massiven Vergleichsfeld bleiben positive Energie, kompakte Ansteuerung und axialer Modellkontrast erreichbar. Die physische Herleitung beider Kopplungen, Empfang und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Luminaler_Einstein_Kanal.md)
+
+## Separat erhaltener sichtbarer Krümmungsterm
+
+Eine gesetzte Krümmungs-Feldstärke-Kopplung erzeugt eine identisch erhaltene sichtbare Zusatzquelle. Verschiedene Koeffizienten für J und die Referenz erzeugen im kompakten gerichteten Vergleich einen differentiellen axialen Laufzeitbeitrag. Er hängt von der transversalen Profilkrümmung ab. Koeffizienten, geladene Apparatur und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sichtbarer_Kruemmungsterm.md)
