@@ -1,0 +1,18 @@
+Clear[x,q,mm,a,z0,om,g0,gm,scaleK,y,cs,alpha];
+n0=a^2/2;
+nm=2 (x^2-a x+a^2)/3;
+d=q-x;
+r=q+mm-x;
+kernel=z0 (x-om)+g0^2 n0/d+gm^2 nm/r;
+operator=d r/mm^2;
+drive=(z0 (om-x) d r-g0^2 n0 r-gm^2 nm d)/mm^2;
+disp=Expand[Together[kernel d r]];
+scale={q->scaleK,x->scaleK y,a->scaleK alpha,om->cs scaleK};
+principal=Factor[Coefficient[Expand[disp/.scale],scaleK,3]];
+f=z0 (y-cs) (1-y)+g0^2 alpha^2/2+2 gm^2 (y^2-alpha y+alpha^2)/3;
+Print["Compact drive residual: ",InputForm[Together[kernel operator+drive]]];
+Print["Massless response residual: ",InputForm[Together[operator/d-r/mm^2]]];
+Print["Massive response residual: ",InputForm[Together[operator/r-d/mm^2]]];
+Print["Principal factorization residual: ",InputForm[Expand[principal-(1-y) f]]];
+Print["Principal polynomial at metric cone: ",InputForm[Expand[f/.y->1]]];
+Print["Highest coefficient of that polynomial: ",InputForm[Coefficient[Expand[f],y,2]]];
