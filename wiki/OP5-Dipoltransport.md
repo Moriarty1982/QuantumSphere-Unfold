@@ -415,3 +415,35 @@ Eine quadratische Wirkung mit gerichteter Skalarableitung liefert die elastische
 ## Lineare Stabilität der doppelten Vermittlerkopplung
 
 Koppeln lineare Einstein- und Fierz–Pauli-Felder an dieselbe erhaltene Vergleichsquelle, reduziert der massive Pol die lokale Skalarkinetik. Beide Vermittler reduzieren die statische Steifigkeit. Zwei explizite Positivitätsbedingungen liefern einen stabilen quadratischen Bereich mit beiden Kopplungen. Native Kopplungen, Antrieb, Kausalität und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Doppelkopplung.md)
+
+## Ansteuerung mit Rückwirkung und charakteristische Geschwindigkeit
+
+Ein abgestimmter kompakter Antrieb erzeugt die doppelt kompensierte Lösung auch mit linearer Rückwirkung. Im homogenen gekoppelten Modell liegt bei nichtverschwindender massiver Kopplung eine charakteristische Geschwindigkeit über der der Hintergrundmetrik, in jeder Richtung. Die Aussage betrifft die Fortsetzung des linearen Modells zu großen Wellenzahlen. Physischer Richtungsträger, reale Auslese und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckwirkung_und_Charakteristiken.md)
+
+## Bedingung für die metrische Geschwindigkeitsgrenze
+
+Ein Vermittler auf dem metrischen Kegel erfordert im geprüften Hauptteil verschwindende Hauptkopplung. Zwei explizite Schur-Grenzen erlauben einen lokalen Vergleich mit langsameren Vermittlern, positiver Energie und weiterhin kompakter Ansteuerung. Die physische Anpassung der Einstein- oder massiven Kopplung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Metrische_Kegelgrenze.md)
+
+## Luminaler Einstein-Kanal mit gerichtetem Kontrast
+
+Eine konforme Verbesserung lässt die freie Einstein-Welle auf dem metrischen Kegel und erzeugt einen lokalen Metrikterm. Dieselbe Quellenform liefert keinen erhaltenen massiven Spin-2-Kontrast. Mit einer getrennten gerichteten Kopplung am langsameren massiven Vergleichsfeld bleiben positive Energie, kompakte Ansteuerung und axialer Modellkontrast erreichbar. Die physische Herleitung beider Kopplungen, Empfang und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Luminaler_Einstein_Kanal.md)
+
+## Separat erhaltener sichtbarer Krümmungsterm
+
+Eine gesetzte Krümmungs-Feldstärke-Kopplung erzeugt eine identisch erhaltene sichtbare Zusatzquelle. Verschiedene Koeffizienten für J und die Referenz erzeugen im kompakten gerichteten Vergleich einen differentiellen axialen Laufzeitbeitrag. Er hängt von der transversalen Profilkrümmung ab. Koeffizienten, geladene Apparatur und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sichtbarer_Kruemmungsterm.md)
+
+## Dirac-Schwellenvergleich und sichtbare Mischung
+
+Unter gemeinsamer effektiver Metrikkopplung ergeben schwere Dirac-Arten eine ladungs- und massengewichtete Matrix der sichtbaren Krümmungsantwort. Im axialen Profil tragen Ricci- und Riemann-Term gemeinsam bei. Der gemischte Eintrag verschwindet bei formal entarteten Schwellen und bleibt bei allgemeinen Massen erhalten. Deshalb müssen die Sende- und Empfangsports auf die Ausbreitungsmoden bezogen werden. Native Kopplung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dirac_Schwellenabgleich.md)
+
+## Sende- und Empfangsanschlüsse
+
+Im idealen A/B-Vergleich liefern die Eigenphasen der gemessenen Übertragungsmatrizen beide relativen Laufzeiten, wenn Sende- und Empfangsmatrizen jeweils Rang zwei haben und beim Profilwechsel stabil bleiben. Konstante kinetische Mischung erhält den Rang der Ladungsrichtungen. Im Modell mit nur einer Elektronenschwelle und reinen Elektronenanschlüssen ist nur die Laufzeit der geladenen Mode messbar. Die zweite unabhängige Richtung der Apparatur und H96 bleiben offen. [Herleitung und Rechenausgaben](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sende_Empfangsports.md)
+
+## Gebundene neutrale Materie als Anschluss
+
+Im Proton-Elektron-Dipolmodell trägt eine Schwerpunktbewegung J-Strom und eine innere Polarisation zusätzlich elektrischen Strom. Getrennte Ansteuerung und Auslese beider Koordinaten geben lokal Rang zwei. Ein festgehaltener Schwerpunkt lässt nur die innere Stromrichtung übrig. Eine profilabhängige Änderung der Halterungssteifigkeit verschiebt bei Dämpfung zudem die Endpunktphase. Die reale Apparatur und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Anschluesse.md)
+
+## Fixierte neutrale Isotope als Anschlüsse
+
+Im Punktkern-Dipolmodell liefern alle inneren elektrischen Dipolübergänge einer fixierten neutralen Sorte dieselbe Feldrichtung. Zwei getrennt adressierte Sorten erreichen genau dann Rang zwei, wenn ihre ladungsgewichteten Rückstoßfaktoren verschieden sind. Wasserstoff und Deuterium erfüllen das formal. Im diagonal-kinetischen Vergleich liegt selbst die beste normierte Konditionszahl bei rund 14 747. Unabhängige Adressierung, Rauschen, Rückwirkung und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Fixierte_Isotopenanschluesse.md)

@@ -102,6 +102,22 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-fixierte Isotopenanschlüsse:** Innere Dipolrichtung je Sorte und optimierte Konditionierung für H und D ergänzt.
+
+**20.11.2026, OP5-gebundene Anschlüsse:** Schwerpunkt- und Polarisationsströme, Ranggrenze bei fixiertem Schwerpunkt sowie profilgebundene Halterungsphase nachgezogen.
+
+**20.11.2026, OP5-Sende- und Empfangsanschlüsse:** Kinetische Normierung, Eigenphasen im A/B-Vergleich und die Ranggrenze im Elektronenmodell ergänzt.
+
+**20.11.2026, OP5-Dirac-Schwellen:** Axiale Ricci-Riemann-Kombination, Ladungsmatrix und Signalmischung ergänzt.
+
+**20.11.2026, OP5-sichtbare Auslese:** Separat erhaltener Krümmungsterm und axialer Laufzeitkontrast ergänzt.
+
+**20.11.2026, OP5-Einstein-Kanal:** Konforme Quelle, getrennte massive Kopplung und Achsenkontrast ergänzt.
+
+**20.11.2026, OP5-Kegelgrenze:** Schur-Kriterien und lokaler Vergleich mit kompakter Ansteuerung ergänzt.
+
+**20.11.2026, OP5-Rückwirkung:** Kompakter Antrieb mit Rückwirkung und charakteristische Kegelgrenze ergänzt.
+
 **20.11.2026, OP5-Doppelkopplung:** Zähler beider Vermittler, kinetische Verschiebung und Positivitätsbedingungen ergänzt.
 
 **20.11.2026, OP5-Wirkung:** Lokale gerichtete Antriebswirkung, kanonischer Impuls und linearer Krümmungsquellterm ergänzt.

@@ -1,0 +1,12 @@
+Clear[gj,ea,wu,wd,wn,we];
+colors={3,3,1,1};
+charge={{gj,2 ea/3},{gj,-ea/3},{gj,0},{gj,-ea}};
+weights={wu,wd,wn,we};
+gram=FullSimplify[Total[MapThread[#1 #2 Outer[Times,#3,#3]&,{colors,weights,charge}]]];
+electron=Outer[Times,Last[charge],Last[charge]];
+dark={ea,gj};
+Print["Axial spinor Wilson multiplier (in units alpha/pi): ",InputForm[2 (13/360)+4 (-1/360)]];
+Print["One-generation charge matrix: ",InputForm[gram]];
+Print["Degenerate threshold matrix: ",InputForm[FullSimplify[gram/.{wu->1,wd->1,wn->1,we->1}]]];
+Print["Single-electron determinant: ",InputForm[Det[electron]]];
+Print["Single-electron transparent direction residual: ",InputForm[Simplify[electron.dark]]];

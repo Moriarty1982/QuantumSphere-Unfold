@@ -406,3 +406,19 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 **OP5, lokale Wirkung:** Die gerichtete Antriebswirkung besitzt im flachen Vergleich eine positive quadratische Energie. Ein linear variierter Krümmungsterm erzeugt die gewünschte Metrikquelle. Die native Wirkung für Antrieb und Richtungsträger, die massive Kopplung und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lokale_Antriebswirkung.md)
 
 **OP5, doppelte Vermittlerkopplung:** Für festgelegte lineare Kopplungen und externen Richtungsträger ist ein positiver gekoppelter Bereich nachgewiesen. Native Kopplungen, reale J-Auslese und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Doppelkopplung.md)
+
+**OP5, Rückwirkung und Lichtkegel:** Eine kompakte erzwungene Lösung ist im Vergleich modellierbar. Die stabile Ableitungskopplung hat im hochfrequenten Hauptteil eine schnellere Charakteristik als die Hintergrundmetrik. Der physische Geltungsbereich und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckwirkung_und_Charakteristiken.md)
+
+**OP5, metrischer Lichtkegel:** Die Hauptkopplung eines bereits luminalen Vermittlers muss für eine gemeinsame obere Geschwindigkeitsgrenze verschwinden. Ein reduzierter Vergleich mit langsameren Vermittlern erfüllt die Grenze. Native Physik und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Metrische_Kegelgrenze.md)
+
+**OP5, luminaler Vergleich:** Ein konformer Einstein-Quellterm und eine getrennte gerichtete massive Quelle erlauben den Achsenkontrast bei unveränderter Einstein-Welle im Modell. Native Kopplung und tatsächliche J-Auslese bleiben ebenso offen wie H96. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Luminaler_Einstein_Kanal.md)
+
+**OP5, sichtbare Auslese:** Ein identisch erhaltener höherer Krümmungsoperator gibt im idealen axialen Vergleich einen bedingten Laufzeitkontrast. Seine Koeffizientendifferenz und die reale Messkette sind weiterhin offen. H96 bleibt offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sichtbarer_Kruemmungsterm.md)
+
+**OP5, sichtbare Schwellen:** Ein Dirac-Vergleich liefert bedingt einen nichtuniversellen Krümmungsbeitrag samt J–A-Mischterm. Die gemeinsame effektive Metrik ist vorausgesetzt. Physische Kopplung, Schwellen, Empfang und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dirac_Schwellenabgleich.md)
+
+**OP5, Sende- und Empfangsanschlüsse:** Zwei relative Laufzeiten sind im idealen kohärenten A/B-Vergleich aus zwei stabilen und unabhängigen Anschlüssen je Ende bestimmbar. Reine Elektronenanschlüsse liefern im Elektronenschwellenmodell nur eine Laufzeit, auch bei kinetischer Mischung. Der physische Aufbau, profilgebundene Rückwirkung und H96 bleiben offen. [Herleitung und Rechenausgaben](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sende_Empfangsports.md)
+
+**OP5, gebundene Anschlüsse:** Ein neutraler Proton-Elektron-Vergleich bietet eine reine J-Schwerpunktbewegung und eine elektrisch aktive innere Polarisation. Physische Ansteuerbarkeit und getrennte Auslese sind zusätzliche Bedingungen. Bei fixiertem Schwerpunkt hat der Dipolanschluss Rang eins. Profilgebundene Halterungsantwort und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Anschluesse.md)
+
+**OP5, fixierte Isotopenanschlüsse:** Verschiedene Rückstoßfaktoren erzeugen formal Rang zwei. H und D bleiben im normierten diagonal-kinetischen Vergleich stark schlecht konditioniert. Ein stabiler unabhängiger materieller Zugang zu zwei Richtungen und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Fixierte_Isotopenanschluesse.md)
