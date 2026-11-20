@@ -407,3 +407,7 @@ Eine vorgegebene kompakte anisotrope Eigenverformung kann im linearen elastische
 ## Verformungsrichtungen des Antriebs
 
 Eine kompakte Teilfamilie mit positivem Achsenkontrast benötigt fünf feste Tensorantworten auf dem ruhenden Endplateau und bei von null verschiedenem ersten Lamé-Parameter sechs über die ganze Schaltung. Ein Skalarprofil kann im Vergleich dieselben Komponenten über seine gerichteten Ableitungen erzeugen. Die passende Kopplung ist im nativen D-Sektor offen. H96 bleibt offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsrichtungen.md)
+
+## Lokale Antriebswirkung und Metrikquelle
+
+Eine quadratische Wirkung mit gerichteter Skalarableitung liefert die elastische Zielgleichung und positive Energie im festen flachen Vergleich. Ihr kanonischer Impuls reicht zur Bestimmung der Metrikquelle nicht aus. Ein separater Krümmungsterm liefert den vollständigen linearen Zielbeitrag zur gewöhnlichen Metrik. Dynamische Richtungsträger, Kopplung des massiven Vermittlers, Stabilität mit dynamischer Gravitation und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lokale_Antriebswirkung.md)
