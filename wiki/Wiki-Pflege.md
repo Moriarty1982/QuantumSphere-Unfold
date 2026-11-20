@@ -750,3 +750,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **20.11.2026, OP5-Doppelte-Laufzeitdifferenz:** Übertragungsphasen, endliche Reichweite und Endpunktfehler nachgezogen.
 
 **20.11.2026, OP5-Transversale-Massenmodulation:** Dreidimensionale Yukawa-Projektion, Strahlgewicht und Modulation bei gleicher Gesamtmasse nachgezogen.
+
+**20.11.2026, OP5-Tomographie:** Positive Gegenfamilie, Vakuumkriterium und Zweimoden-Kalibrierung nachgezogen.

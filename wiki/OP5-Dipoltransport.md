@@ -327,3 +327,7 @@ Bei einer kontrollierten Änderung der inneren D-Säule hebt das doppelte Verhä
 ## Transversale Massenmodulation
 
 Bei endlicher Vermittlerreichweite misst die doppelte Laufzeitdifferenz eine transversal gefaltete Massensäule. Reine Verschiebung längs des Strahls lässt die volle Projektion unverändert. Querumverteilung kann bei derselben Gesamtmasse einen Kontrast liefern. Ein Vergleich von Scheibe und flächengleichem Ring demonstriert dies. Reale Modulation, Koeffizienten und H96 bleiben offen.
+
+## Tomographie und unbekannte Reichweite
+
+Ideale Laufzeitprojektionen aus allen Richtungen rekonstruieren den gefalteten D-Antwortkörper. Bei unbekannter Vermittlermasse kann eine andere positive Dichte derselben Gesamtmasse exakt dieselben Projektionen liefern. Ein bekannter Vakuumbereich mit nichtverschwindender Antwort oder ein unabhängig bekanntes Kalibrierungsprofil kann die Mehrdeutigkeit aufheben. Ein realer Abgleich und H96 bleiben offen.
