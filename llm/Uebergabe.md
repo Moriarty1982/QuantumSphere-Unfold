@@ -1,5 +1,10 @@
 # Übergabe: Stand der letzten Sitzung
 
+## 20.11.2026 nach PR #209 (Codex)
+
+- [PR #209](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/209) ist als `11b5bf5c1ae667fd1a41f9a9e2dcf38eb348ad52` auf `main` gemergt. Kopf `822117ebd27119c99011a0944ac4346ad949fb1f` ist enthalten. Der PR-Zweig wurde lokal und auf GitHub entfernt. [Wiki-Synchronisierung](https://github.com/Moriarty1982/QuantumSphere-Unfold/actions/runs/44705746554) und [PR-Prüfungen](https://github.com/Moriarty1982/QuantumSphere-Unfold/actions/runs/44705561963) erfolgreich. [OP5 #12](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues/12#issuecomment-7034842726) und [Register #17](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues/17#issuecomment-7034841388) nachgezogen.
+- Der Stand umfasst sieben Erkundungen zu HCl/H, A/B-Fehlerbudget, Nullprofil und W2-Dichteantrieb. Ausgangspunkt für die weitere Arbeit ist der gewöhnliche Quadrupol des ursprünglichen Dichteprofils. [Forschungsnotiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/11b5bf5c1ae667fd1a41f9a9e2dcf38eb348ad52/notes/research/op5_bifocal_response_2026_11_18/OP5_J_W2_Dichteantrieb.md)
+
 ## 20.11.2026 (Codex)
 
 - [PR #206](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/206) ist als `3c73a9619496901c7cfb9abe13b14faf96240387` auf `main` gemergt. GitHub-Zweig `codex/op5-transport-drive` gelöscht, kein gleichnamiger lokaler Zweig. Mit #206 ist die Ablage der tatsächlichen Rechenausgaben Projektregel.
