@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Feder_Reservoirbilanz",
+  "repository": {
+    "commit": "1a7f68040618b10fc08b706dda3236c5906a2d3c",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_feder_reservoirbilanz.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Federleistungsbilanz, 25 exakte Rampenintegrale, longitudinale Spannungsidentität und quadratischer Dichtetransport im harmonischen Testmoment.",
+    "coefficient_domain": "Exakte symbolische Operatoridentitäten und rationale Polynomintegrale.",
+    "conventions": "Materieframe M, lineare Elastizität mit quadratischer mechanischer Energie, in Ruhe c_Licht=1, statischer Testmomentvergleich.",
+    "inputs": [
+      "Dynamische Gegenbewegung der lokalen Vorarbeit, eine polynomielle Rampe zur Kontrolle, harmonischer Grad-zwei-Test."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30,
+      "ramp_matrix_size": 5
+    },
+    "non_claims": [
+      "Kein vollständiger Stress zweiter Ordnung, keine physische Reservoirkopplung, kein H96-Datenvergleich."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T09:09:23.370Z",
+    "runtime_seconds": 8.741,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_feder_reservoirbilanz.txt",
+      "sha256": "cd1992d61f899eccbba1d0982aa498ee981aadb0b9289fada35e5847068e9b70",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert isError=false. Prozesscode nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Rampenmatrix hat exakt einen Eintrag 1/2. Kraftleistungs- und harmonische Identitätsreste verschwinden."
+  ],
+  "result": "Die endliche Rampenkontrolle und die symbolischen Identitäten stimmen mit der Herleitung überein.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Der direkte Quadrupol ist kein Nachweis eines vollständigen Gravitationsfelds zweiter Ordnung."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_feder_reservoirbilanz.wl",
+      "sha256": "570bdf5989d8dfb83f8945c4611aeb5fa660e9fce718630938c3972d36ea5d89",
+      "sha256_after": "570bdf5989d8dfb83f8945c4611aeb5fa660e9fce718630938c3972d36ea5d89"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_feder_reservoirbilanz.txt"
+  ]
+}

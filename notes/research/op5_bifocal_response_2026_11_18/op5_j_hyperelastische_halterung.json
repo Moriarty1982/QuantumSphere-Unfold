@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Hyperelastische_Halterung",
+  "repository": {
+    "commit": "618fe7307ad061e3e22f77188682ca7dcfa58275",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_hyperelastische_halterung.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Quadratischer erster Piola-Tensor, Spurkoeffizient, Hessian-Divergenzidentität, Cauchy-Umrechnung und Skalierung des Gegenkörpers.",
+    "coefficient_domain": "Exakte symbolische Tensor- und Differentialrechnung.",
+    "conventions": "Materieframe M, gemeinsamer Materialchart, erster Piola-Tensor in Referenzkoordinaten, longitudinale Verschiebung, statische zweite Ordnung.",
+    "inputs": [
+      "Saint-Venant–Kirchhoff-Energie; zwei proportional steife Kontinua; Paarfeder pro Referenzvolumen."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine allgemeine Aussage für alle hyperelastischen Werkstoffe, kein vollständiger gravitativer Stress oder H96-Datenvergleich."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T11:44:51.308Z",
+    "runtime_seconds": 8.686,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_hyperelastische_halterung.txt",
+      "sha256": "039f46568c510ed81f44efb62e651020b25064b58235f0e973f12aa55c448282",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert isError=false. Prozesscode nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Exakte Nullreste. Die Nichtkompaktheit folgt separat aus Spur und gewichteter Impulsbilanz."
+  ],
+  "result": "Symbolische Identitäten stimmen. Das Spurargument schließt kompakte zweite Verschiebungen im deklarierten Vergleich aus.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Andere Materialgesetze und zusätzliche Kräfte können die zweite Gleichung verändern."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_hyperelastische_halterung.wl",
+      "sha256": "5df95cbbaf84dadc0e90b2af71200762565cb896f941a3308e21f0e79a556565",
+      "sha256_after": "5df95cbbaf84dadc0e90b2af71200762565cb896f941a3308e21f0e79a556565"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_hyperelastische_halterung.txt"
+  ]
+}
