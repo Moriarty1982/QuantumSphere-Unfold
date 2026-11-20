@@ -403,3 +403,7 @@ Eine vollständig vorgeschriebene erhaltene Quelle mit beiden Wellenoperatoren l
 ## Elastischer Vergleich für die vollständige Quelle
 
 Eine vorgegebene kompakte anisotrope Eigenverformung kann im linearen elastischen Vergleich Dichte, Impuls und Spannung des Quelltensors gleichzeitig erzeugen. Auf dem Endplateau bleibt die spannungsfreie Form geändert. Das Energiegesetz beziffert die lokale Antriebsleistung und erfordert einen Reservoirabgleich. Native Ansteuerung und zusätzliche Feldquellen des Antriebs bleiben ebenso offen wie H96. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Elastischer_Quellenabgleich.md)
+
+## Verformungsrichtungen des Antriebs
+
+Eine kompakte Teilfamilie mit positivem Achsenkontrast benötigt fünf feste Tensorantworten auf dem ruhenden Endplateau und bei von null verschiedenem ersten Lamé-Parameter sechs über die ganze Schaltung. Ein Skalarprofil kann im Vergleich dieselben Komponenten über seine gerichteten Ableitungen erzeugen. Die passende Kopplung ist im nativen D-Sektor offen. H96 bleibt offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsrichtungen.md)
