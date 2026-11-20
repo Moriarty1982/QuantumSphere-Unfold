@@ -379,3 +379,7 @@ Im linearisierten homogenen barotropen Fluid haben Druck und skalare Potentiale 
 ## Integrierte Spannungsbilanz des Zielprofils
 
 Die Energie-Impuls-Erhaltung verknüpft die zweite Zeitableitung des Dichtemoments mit dem integrierten Spannungstensor. Für den Kontrollkontrast muss die Längs- minus Querspannung proportional zur Schaltbeschleunigung sein und ihr Vorzeichen wechseln. Kalte Teilchenkinetik allein und die linearen spurfreien Maxwell-Higgs-Terme um das feldfreie homogene Profil tragen die Bilanz nicht. Auch eine kompakte Magnetstörung um ein räumlich konstantes Axialfeld liefert kein integriertes lineares Spannungsmoment. Konkrete Bindungs- oder Hintergrundantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Spannungsbilanz.md)
+
+## Gebundene Paare als Spannungsträger
+
+Zwei Gruppen quer orientierter Paare können im effektiven Coulomb-Zug-Modell das verlangte Dichtemoment und die integrierte Querspannung realisieren. Dafür muss sich die Zugspannung ändern und Arbeit zuführen. Wenn alle Paare bei festen Zentren kürzer werden, bleibt ein gerichteter Yukawa-Fernanteil. Die Ruhemassenroute verfehlt damit den exakten Endpunktabgleich in der zusammenhängenden Vakuumregion. Native Zugkraft, vollständige Quelle und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Paare_Spannung.md)
