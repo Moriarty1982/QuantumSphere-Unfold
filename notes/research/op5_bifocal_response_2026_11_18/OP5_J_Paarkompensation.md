@@ -51,3 +51,7 @@ Die vier Divergenzen verschwinden. Damit erfüllt dieser Vergleich die Erhaltung
 ## Kontrolle und offene Voraussetzungen
 
 [Wolfram Language](op5_j_paarkompensation.wl) prüft die Produktregel für $L_m$, die beiden Momentgleichungen und die Divergenzen des Tensors. Eine Quantenschaltung ist für diese Feld- und Kontinuumsrechnung nicht definiert. Die Konstruktion legt eine steuerbare Dichteänderung von außen fest. Native Ansteuerung, Dynamik und Wechselwirkungsenergie der Kompensationsreservoirs, endliche Schaltfrequenzen, die reale Apparaturantwort und H96 bleiben offen.
+
+### Ausgabe des Wolfram-Laufs
+
+Die gedruckte Liste in linearer Darstellung enthält: `{0, {a -> -( (-h2 + h0 j2)/(j1 - j2)), b -> -( (h2 - h0 j1)/(j1 - j2))}, {0, 0}, 0, {0, 0}}`. Dabei sind `j1,j2` die zweiten Ringmomente und `a,b` die Ringkoeffizienten. Der separate Rückgabewert des abschließenden `Print` war `Null`.
