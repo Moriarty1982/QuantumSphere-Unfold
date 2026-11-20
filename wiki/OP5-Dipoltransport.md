@@ -399,3 +399,7 @@ Die vollständige Kompensationsquelle hat keine Änderung der Energie je Querebe
 ## Gleichzeitige Kompensation beider Außenfelder
 
 Eine vollständig vorgeschriebene erhaltene Quelle mit beiden Wellenoperatoren lässt im linearen Modell das massive und masselose Feld außerhalb des Messvolumens gleichzeitig unverändert. Die transversale Krümmung liefert weiterhin einen positiven Achsenkontrast für ein explizites Profil. Der frühere Plateauquadrupol muss entfallen, und die Schaltung erfordert ein anderes Spannungsmoment. Native Ansteuerung, Apparatur und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweifache_Aussenfeldkompensation.md)
+
+## Elastischer Vergleich für die vollständige Quelle
+
+Eine vorgegebene kompakte anisotrope Eigenverformung kann im linearen elastischen Vergleich Dichte, Impuls und Spannung des Quelltensors gleichzeitig erzeugen. Auf dem Endplateau bleibt die spannungsfreie Form geändert. Das Energiegesetz beziffert die lokale Antriebsleistung und erfordert einen Reservoirabgleich. Native Ansteuerung und zusätzliche Feldquellen des Antriebs bleiben ebenso offen wie H96. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Elastischer_Quellenabgleich.md)
