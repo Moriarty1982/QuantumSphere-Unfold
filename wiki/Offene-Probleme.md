@@ -406,3 +406,5 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 **OP5, lokale Wirkung:** Die gerichtete Antriebswirkung besitzt im flachen Vergleich eine positive quadratische Energie. Ein linear variierter Krümmungsterm erzeugt die gewünschte Metrikquelle. Die native Wirkung für Antrieb und Richtungsträger, die massive Kopplung und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lokale_Antriebswirkung.md)
 
 **OP5, doppelte Vermittlerkopplung:** Für festgelegte lineare Kopplungen und externen Richtungsträger ist ein positiver gekoppelter Bereich nachgewiesen. Native Kopplungen, reale J-Auslese und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Doppelkopplung.md)
+
+**OP5, Rückwirkung und Lichtkegel:** Eine kompakte erzwungene Lösung ist im Vergleich modellierbar. Die stabile Ableitungskopplung hat im hochfrequenten Hauptteil eine schnellere Charakteristik als die Hintergrundmetrik. Der physische Geltungsbereich und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckwirkung_und_Charakteristiken.md)
