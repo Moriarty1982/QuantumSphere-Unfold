@@ -335,3 +335,7 @@ Ideale Laufzeitprojektionen aus allen Richtungen rekonstruieren den gefalteten D
 ## Gravitative Reichweitenkalibrierung
 
 Der partielle J–Gravitations-Quotient nach Abzug eines geeigneten Tracers ist im Ein-Massen-Yukawa-Modell linear in q². Zwei räumliche Skalen bestimmen Kopplung und Reichweite, sofern korrelierte Materiereste entfernt sind und eine J-Fluktuation übrig bleibt. Ein dritter Modus prüft die Skalenform. Ein absoluter J-Mittelwert wäre zusätzlich für die mittlere Massendichte nötig. Reale Karten und H96 bleiben offen.
+
+## Mehrere Vermittler mit gemischten Vorzeichen
+
+Aus dividierten Differenzen der gravitationskalibrierten J-Antwort lassen sich im endlichen Yukawa-Modell auch Pole mit gemischten Vorzeichen bestimmen. Der Matrixrang zählt die sichtbaren Polmassen bei genügend exakten Stützstellen. Eine zweite Matrix liefert ihre Massenquadrate. Messfehler, Kontaktterme, Nullstellen der Antwort und H96 bleiben offen.
