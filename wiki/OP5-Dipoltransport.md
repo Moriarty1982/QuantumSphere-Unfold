@@ -439,3 +439,7 @@ Unter gemeinsamer effektiver Metrikkopplung ergeben schwere Dirac-Arten eine lad
 ## Sende- und Empfangsanschlüsse
 
 Im idealen A/B-Vergleich liefern die Eigenphasen der gemessenen Übertragungsmatrizen beide relativen Laufzeiten, wenn Sende- und Empfangsmatrizen jeweils Rang zwei haben und beim Profilwechsel stabil bleiben. Konstante kinetische Mischung erhält den Rang der Ladungsrichtungen. Im Modell mit nur einer Elektronenschwelle und reinen Elektronenanschlüssen ist nur die Laufzeit der geladenen Mode messbar. Die zweite unabhängige Richtung der Apparatur und H96 bleiben offen. [Herleitung und Rechenausgaben](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sende_Empfangsports.md)
+
+## Gebundene neutrale Materie als Anschluss
+
+Im Proton-Elektron-Dipolmodell trägt eine Schwerpunktbewegung J-Strom und eine innere Polarisation zusätzlich elektrischen Strom. Getrennte Ansteuerung und Auslese beider Koordinaten geben lokal Rang zwei. Ein festgehaltener Schwerpunkt lässt nur die innere Stromrichtung übrig. Eine profilabhängige Änderung der Halterungssteifigkeit verschiebt bei Dämpfung zudem die Endpunktphase. Die reale Apparatur und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gebundene_Anschluesse.md)
