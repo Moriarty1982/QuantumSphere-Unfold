@@ -102,6 +102,12 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Quertransport:** Massenerhaltender Querstrom, erhaltener Modelltensor und frequenzabhängige Endpunktschranke ergänzt.
+
+**20.11.2026, OP5-Kontrollkontrast:** Planare Grenze, transversale Nullkontrolle und Verstimmungsgrenze auf `OP5-Dipoltransport` und `Offene-Probleme` ergänzt.
+
+**20.11.2026, OP5-Endpunktdrift:** A–B–B–A-Schranke und Identifizierbarkeit auf `OP5-Dipoltransport` und `Offene-Probleme` ergänzt.
+
 **20.11.2026, OP5-Kreuzspektren:** Durchgehende synthetische Auswertung mit Zertifikat für das gekoppelte Kalibrierbudget auf `OP5-Dipoltransport` und `Offene-Probleme` ergänzt.
 
 - 19.11.2026: In OP5-Dipoltransport und Offene-Probleme die Virialbilanz und die fehlende Normierung für H96 ergänzt.

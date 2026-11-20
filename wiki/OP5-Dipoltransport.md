@@ -359,3 +359,15 @@ Zwei gleichsignierte Pole können durch einen frei angepassten Einzelpol plus Ko
 ## Synthetische Kreuzspektren und Kalibriergrenzen
 
 Aus zwei J-Splits, einer Gravitationskarte und einem Tracer wurden an sieben Modellskalen alle sechs Rohspektren erzeugt. Die Tracerprojektion entfernt den tracerproportionalen Anteil. Ein mit dem D-Signal korrelierter Gravitationsrest bleibt im Quotienten erhalten. Im synthetischen Drei-Pol-Beispiel schließt die Matrixprüfung zwei Pole plus linearen Kontaktterm bis zu einem gemeinsamen Kalibrierfaktor von rund $8{,}74917\times10^{-4}$ aus. Die Grenze enthält die nichtlineare Resthülle. Gemessene Spektren, externe Kalibriergrenzen und H96 bleiben offen. [Rechnung und Reproduktion](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Kreuzspektren_und_Kalibriergrenzen.md)
+
+## Zeitdrift und profilgebundene Endpunktantwort
+
+A–B–B–A in gleichen Zeitabständen entfernt im Einzelpfadmodell konstante und lineare Zeitdrift. Bei einer Schranke $M$ für ihre zweite Zeitableitung bleibt höchstens $Mh^2$. Die mit dem Profilwechsel gekoppelte Endpunktantwort hat dieselbe Messsignatur wie die gesuchte Ausbreitungsänderung. Ein Kontrollblock mit bekanntem Ausbreitungskontrast und begrenzter Endpunktabweichung liefert eine zusätzliche Gleichung. Reale Endpunktkalibrierung, J-Karten und H96 bleiben offen. [Herleitung und Kontrollen](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktdrift.md)
+
+## Kontrollkontrast mit unveränderten Endpunktfeldern
+
+Im planaren Yukawa-Modell ist das Streckenintegral durch die Säulenmasse und die beiden Endpunktwerte festgelegt. Bei festgelegter Vermittlermasse erzeugt in drei Dimensionen eine kompakte, massenerhaltende Quellenänderung eine kompakte Antwort. Zentrierte und seitlich verschobene Modulation lassen das Vermittlerfeld in den Apparaturregionen unverändert. Auf der Achse beträgt der Kontrast in der zentrierten Geometrie $64A\ell/105$, in der verschobenen Kontrolle null. Verstimmung und reale Apparaturempfindlichkeit brauchen eigene Kalibrierung. H96 bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Kontrollkontrast.md)
+
+## Querströmung und dynamischer Endpunktrest
+
+Der statische Kontrollkontrast lässt sich im Kontinuumsmodell durch einen kompakten radialen Massenstrom innerhalb jeder Querebene aufbauen. Ein formal erhaltener Quelltensor ergänzt Impulsstrom und transversale Spannungen. In der direkten Nullkontraktion für den freien axialen Strahl bleibt die Dichte, während die Spur eine zusätzliche Spannung enthält. Der dynamische Dichtebeitrag am Endpunkt ist pro submassiver Frequenzkomponente quadratisch in der Frequenz begrenzt. Native Ansteuerung, komplette Endpunktkalibrierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Quertransport.md)
