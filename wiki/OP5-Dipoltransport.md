@@ -375,3 +375,7 @@ Der statische Kontrollkontrast lässt sich im Kontinuumsmodell durch einen kompa
 ## Welche Kräfte den Quertransport tragen können
 
 Im linearisierten homogenen barotropen Fluid haben Druck und skalare Potentiale nur Gradientenkräfte. Der geforderte kompakte rein transversale Strom braucht beim Beschleunigen eine Kraft mit Rotation. Auch ein passives kompaktes Plateau scheitert im geprüften Druck-Yukawa-Modell außer im entarteten kraftfreien Grenzfall. Lässt man Längsstrom zu, kann ein skalares Potential die Dichteänderung antreiben. Für das konkrete Profil hat die Poissonlösung dann einen Quadrupol-Fernanteil. Native Spannungen, Endpunktantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antrieb_Quertransport.md)
+
+## Integrierte Spannungsbilanz des Zielprofils
+
+Die Energie-Impuls-Erhaltung verknüpft die zweite Zeitableitung des Dichtemoments mit dem integrierten Spannungstensor. Für den Kontrollkontrast muss die Längs- minus Querspannung proportional zur Schaltbeschleunigung sein und ihr Vorzeichen wechseln. Kalte Teilchenkinetik allein und die linearen spurfreien Maxwell-Higgs-Terme um das feldfreie homogene Profil tragen die Bilanz nicht. Auch eine kompakte Magnetstörung um ein räumlich konstantes Axialfeld liefert kein integriertes lineares Spannungsmoment. Konkrete Bindungs- oder Hintergrundantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Spannungsbilanz.md)
