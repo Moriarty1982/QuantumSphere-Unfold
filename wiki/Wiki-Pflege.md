@@ -102,6 +102,12 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-HD-Ramananschluss:** Rotationsparität, Orientierung, Zweimoden-Umwandlung und Pumpenphasensteigung nachgezogen.
+
+**20.11.2026, OP5-Molekülanschlüsse:** Mehrkern-Ladungsidentität, dynamische Dipolableitung und HD-Stretch ergänzt.
+
+**20.11.2026, OP5-myonischer Anschluss:** Rückstoßtrennung, Lepton-Nullpunkt und Schranke für das gemeinsame Coulomb-Frequenzfenster ergänzt.
+
 **20.11.2026, OP5-fixierte Isotopenanschlüsse:** Innere Dipolrichtung je Sorte und optimierte Konditionierung für H und D ergänzt.
 
 **20.11.2026, OP5-gebundene Anschlüsse:** Schwerpunkt- und Polarisationsströme, Ranggrenze bei fixiertem Schwerpunkt sowie profilgebundene Halterungsphase nachgezogen.
