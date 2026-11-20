@@ -15,7 +15,7 @@ u_i=-\partial_jB_{ij}/\rho_0,\qquad
 $$
 Lineare Massenerhaltung liefert dann $\delta\rho=-\rho_0\partial_i u_i=\partial_i\partial_j B_{ij}=\delta T^{00}$ in Einheiten $c=1$. Der Impulsfluss $\rho_0\dot u_i$ entspricht $\delta T^{0i}$, und $-\sigma_{ij}$ entspricht $\delta T^{ij}$ in erster Ordnung. Der konvektive Stress ist quadratisch in der Störung. Die Bewegungsgleichung $\rho_0\ddot u_i=\partial_j\sigma_{ij}$ ist mit diesen Definitionen erfüllt. Im Vergleich kommt die Kraft aus der inneren Spannung. Eine zusätzliche äußere Volumenkraft ist in dieser Bilanz entbehrlich.
 
-Für die isotrope Elastizität schreibe $\mathsf C e=2\mu e+\lambda\,\operatorname{tr}(e)\mathbf 1$ mit $\mu>0$ und $2\mu+3\lambda>0$. Sei $\varepsilon(u)$ der symmetrische Verschiebungsgradient und $\varepsilon_*$ die lokal spannungsfreie Dehnung. Das Materialgesetz lautet $\sigma=\mathsf C(\varepsilon(u)-\varepsilon_*)$. [Eigenstrain und elastische Dehnung, Pu et al.](https://doi.org/10.1029/2018EA000442)
+Für die isotrope Elastizität schreibe $\mathsf C e=2\mu e+\lambda\,\operatorname{tr}(e)\mathbf 1$ mit $\mu>0$ und $2\mu+3\lambda>0$. Sei $\varepsilon(u)$ der symmetrische Verschiebungsgradient und $\varepsilon_*$ die lokal spannungsfreie Dehnung. Das Materialgesetz lautet $\sigma=\mathsf C(\varepsilon(u)-\varepsilon_*)$. [Esh3D zur Eigenverformung und elastischen Dehnung](https://doi.org/10.1029/2018EA000442)
 
 Die nötige vorgegebene Dehnung ist damit explizit
 $$
