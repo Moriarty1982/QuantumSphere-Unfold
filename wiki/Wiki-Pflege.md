@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Spannungsbilanz:** Momentidentität, quantitative Schaltschranke und lineare Feldprüfung ergänzt.
+
 **20.11.2026, OP5-Ansteuerung:** Rotationshindernis, passives Plateau und skalar getriebene Alternative mit Quadrupol-Fernanteil ergänzt.
 
 **20.11.2026, OP5-Quertransport:** Massenerhaltender Querstrom, erhaltener Modelltensor und frequenzabhängige Endpunktschranke ergänzt.
