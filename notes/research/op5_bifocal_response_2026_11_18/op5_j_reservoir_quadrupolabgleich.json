@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Reservoir_Quadrupolabgleich",
+  "repository": {
+    "commit": "b86cea5043c227c196064942321add506e1b21ce",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_reservoir_quadrupolabgleich.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Doppelte Divergenzform des direkten Energieterms, konservierter Reservoir-Störungstensor, elastische Kraftbilanz, Kompensation auf dem Plateau und isotroper sowie uniaxialer Wärmeleitungsbeitrag zum Quadrupol.",
+    "coefficient_domain": "Exakte symbolische Differential- und Tensoridentitäten.",
+    "conventions": "Materieframe M, lineare Cauchy-Spannung mit T^ij=-σ_ij für die kleine Reservoirverschiebung, quadratische Ordnung relativ zur Hauptschaltung.",
+    "inputs": [
+      "Longitudinale Plateauverschiebung und direkte Dichtestörung der vorigen Reservoirstudie, glatte kompakte räumliche Profile."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Kein vollständiger nichtlinearer Tensor der Hauptapparatur und keine Kompensation ihrer unbekannten zweiten Verschiebungen, kein H96-Datenvergleich."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T11:40:35.469Z",
+    "runtime_seconds": 9.417,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_reservoir_quadrupolabgleich.txt",
+      "sha256": "7972066058f4a55ad1e69c0d13744475e75ce7dd51666de9fe7cd08deafc7965",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert isError=false. Prozesscode nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Exakte Nullreste für Signalfluss, Tensorerhaltung und elastische Kraftbilanz. Uniaxialer Momentkoeffizient separat ausgegeben."
+  ],
+  "result": "Symbolische Identitäten stimmen mit der Herleitung und Plateau-Bedingung überein.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Wärmeleitung wird als vorgegebener linearer Flussansatz geprüft. Die verstellbare Eigenverformung des Kompensators ist eine eigene Modellannahme."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_reservoir_quadrupolabgleich.wl",
+      "sha256": "cc0011e19ae4675bebe6108482448d2f2ee0518b8a37ca212b65ebd8fb35dcea",
+      "sha256_after": "cc0011e19ae4675bebe6108482448d2f2ee0518b8a37ca212b65ebd8fb35dcea"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_reservoir_quadrupolabgleich.txt"
+  ]
+}

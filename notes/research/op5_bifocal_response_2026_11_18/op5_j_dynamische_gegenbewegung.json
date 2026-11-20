@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Dynamische_Gegenbewegung",
+  "repository": {
+    "commit": "b1c601a4ddf31259a06671e42325891975c2d860",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_dynamische_gegenbewegung.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Gleichheit innerer Kräfte nach Vorzeichenwechsel, Erhaltung des linearen Tensors, longitudinale Higgsquelle, Wellenfaktor und statische Achsen- und Mittelungskoeffizienten.",
+    "coefficient_domain": "Exakte symbolische Operatorpolynome und Winkelintegral.",
+    "conventions": "Materieframe M, formale Ableitungssymbole, D=∂t²−Δ, lineare Elastizität und linearisierte Einstein-Gleichung.",
+    "inputs": [
+      "Fachlicher Ausgangspunkt PR #210; kolokalisierte Kontinua mit proportionalen Steifigkeiten und generischen positiven Ruhedichten; kompakter radialer Profilkern."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine native Higgs–OP5-Kopplung, keine vollständige Apparatur, keine Gravitation höherer Ordnung oder H96-Messung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T09:03:38.842Z",
+    "runtime_seconds": 12.757,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_dynamische_gegenbewegung.txt",
+      "sha256": "7bc7b30a4568776e9d3745c9f363bee8b5447c6d5ee939adbf274d2a6d388de5",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert isError=false. Prozesscode nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Alle angegebenen Operatorreste sind null. Achsenkoeffizient und Azimutalmittel sind exakt."
+  ],
+  "result": "Die symbolischen Identitäten stimmen mit der analytischen Konstruktion. Die retardierte Kompaktheit folgt aus dem Wellenoperator und den Anfangsdaten.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Das Modell setzt eine frei geformte, ruhespannungsfreie Federansteuerung voraus. Versorgungsenergie ab zweiter Ordnung wurde nicht bilanziert."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_dynamische_gegenbewegung.wl",
+      "sha256": "f1c3dd1c5e4d31bba6f2effa0f508036076c9f70ce113caccfe4b8939be7caf2",
+      "sha256_after": "f1c3dd1c5e4d31bba6f2effa0f508036076c9f70ce113caccfe4b8939be7caf2"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_dynamische_gegenbewegung.txt"
+  ]
+}

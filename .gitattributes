@@ -26,3 +26,13 @@ notes/research/op5_bifocal_response_2026_11_18/op5_j_halterung_spannungsbilanz.w
 notes/research/op5_bifocal_response_2026_11_18/op5_j_halterung_spannungsbilanz.txt text eol=lf
 notes/research/op5_bifocal_response_2026_11_18/op5_j_quadrupol_kompensation.wl text eol=lf
 notes/research/op5_bifocal_response_2026_11_18/op5_j_quadrupol_kompensation.txt text eol=lf
+
+# Preserve exact Wolfram inputs and outputs recorded by OP5 second-order manifests.
+notes/research/op5_bifocal_response_2026_11_18/op5_j_dynamische_gegenbewegung.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_dynamische_gegenbewegung.txt text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_feder_reservoirbilanz.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_feder_reservoirbilanz.txt text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_reservoir_quadrupolabgleich.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_reservoir_quadrupolabgleich.txt text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_hyperelastische_halterung.wl text eol=lf
+notes/research/op5_bifocal_response_2026_11_18/op5_j_hyperelastische_halterung.txt text eol=lf

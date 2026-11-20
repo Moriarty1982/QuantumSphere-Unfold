@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Schaltung und zweiter Materialabgleich.** Forschungsstand und offene Probleme um die lineare Dynamik, Reservoirbilanz und hyperelastische Kompaktheitsgrenze ergänzt.
+
 **20.11.2026, OP5-Quadrupol und Halterung.** Kompaktes direktes Newton-Potential, statische Gegenspannung und offene Schaltbilanz im Forschungsstand und bei OP5 ergänzt.
 
 **20.11.2026, OP5-HCl und Profilantrieb.** Forschungsstand und offene Probleme um Anschlusskondition, A/B-Nullkontrolle, quer ausgeglichenes Profil und den direkten W2-Quadrupol ergänzt.
