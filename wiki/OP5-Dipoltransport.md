@@ -387,3 +387,7 @@ Zwei Gruppen quer orientierter Paare können im effektiven Coulomb-Zug-Modell da
 ## Kontinuierliche Kompensation der Paarmodulation
 
 Eine kompakte Fensterfunktion lässt den Paarbeitrag im inneren Messgebiet bestehen und erzeugt eine kompakte statische Gesamtantwort. Zwei äußere Ringprofile legen die Quermasse und das zweite Quermoment unabhängig fest. Der Achsenkontrast bleibt erhalten und die Apparaturregionen haben im Yukawa-Modell exakt null Feldänderung. Ein formaler transversaler Erhaltungstensor erfüllt die resultierende Spannungsbilanz. Physische Ansteuerung, Apparaturantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Paarkompensation.md)
+
+## Dynamische Kompensation des massiven Vermittlers
+
+Im linearen retardierten Vergleich erzeugt der dynamische Wellenoperator auf einem kompakten erhaltenen Hilfstensor eine Quelle mit exakt kompakter Feldantwort. Die Konstruktion umfasst die Spurterme an den Endpunkten. Sie erfordert eine zusätzliche Dichte proportional zur zweiten Zeitableitung und eine Änderung des integrierten Stresses mit vierter Zeitableitung. Ein physischer Antrieb, weitere Apparaturantworten und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dynamische_Kompensation.md)
