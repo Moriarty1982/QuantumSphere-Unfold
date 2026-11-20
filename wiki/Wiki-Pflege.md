@@ -758,3 +758,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **20.11.2026, OP5-Mehrpolrekonstruktion:** Dividierte Differenzen, Rang, Polmassen und Fehlergrenzen nachgezogen.
 
 **20.11.2026, OP5-Kontakttermrekonstruktion:** Ankerdifferenzen, Polabgleich und Fehlerschranke nachgezogen.
+
+**20.11.2026, OP5-Polauflösung:** Nahe Polpaare, Rangdeterminante und Restschranke für schwere Pole nachgezogen.

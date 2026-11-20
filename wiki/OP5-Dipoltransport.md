@@ -343,3 +343,7 @@ Aus dividierten Differenzen der gravitationskalibrierten J-Antwort lassen sich i
 ## Unbekannte Kontaktterme
 
 Unbekannte Kontaktterme bis zu einem vorgegebenen Grad lassen sich durch dividierte Differenzen entfernen. Dabei bleiben Pole und Vorzeichen erhalten. Zwei Pole und ein linearer Kontaktterm werden im Test aus sechs Stützstellen rekonstruiert und an einer siebten geprüft. Ohne Schranke für den lokalen Anteil und ohne kontrollierte Messfehler bleibt die Polzahl aus endlichen Daten mehrdeutig. H96 bleibt offen.
+
+## Auflösungsgrenzen der Polrekonstruktion
+
+Bei endlicher Genauigkeit sind zwei nahe gleichsignierte Pole nur quadratisch vom entsprechenden Einzelpol verschieden. Genau gegenläufige Gewichte hinterlassen einen linearen Rest. Ein sehr schwerer Pol kann über einen begrenzten q²-Bereich einem lokalen Kontaktpolynom ähneln, mit expliziter Restschranke. Exakter Rang und reale Auflösung sind dadurch getrennt. H96 bleibt offen.
