@@ -363,3 +363,7 @@ Aus zwei J-Splits, einer Gravitationskarte und einem Tracer wurden an sieben Mod
 ## Zeitdrift und profilgebundene Endpunktantwort
 
 A–B–B–A in gleichen Zeitabständen entfernt im Einzelpfadmodell konstante und lineare Zeitdrift. Bei einer Schranke $M$ für ihre zweite Zeitableitung bleibt höchstens $Mh^2$. Die mit dem Profilwechsel gekoppelte Endpunktantwort hat dieselbe Messsignatur wie die gesuchte Ausbreitungsänderung. Ein Kontrollblock mit bekanntem Ausbreitungskontrast und begrenzter Endpunktabweichung liefert eine zusätzliche Gleichung. Reale Endpunktkalibrierung, J-Karten und H96 bleiben offen. [Herleitung und Kontrollen](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktdrift.md)
+
+## Kontrollkontrast mit unveränderten Endpunktfeldern
+
+Im planaren Yukawa-Modell ist das Streckenintegral durch die Säulenmasse und die beiden Endpunktwerte festgelegt. Bei festgelegter Vermittlermasse erzeugt in drei Dimensionen eine kompakte, massenerhaltende Quellenänderung eine kompakte Antwort. Zentrierte und seitlich verschobene Modulation lassen das Vermittlerfeld in den Apparaturregionen unverändert. Auf der Achse beträgt der Kontrast in der zentrierten Geometrie $64A\ell/105$, in der verschobenen Kontrolle null. Verstimmung und reale Apparaturempfindlichkeit brauchen eigene Kalibrierung. H96 bleibt offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Kontrollkontrast.md)
