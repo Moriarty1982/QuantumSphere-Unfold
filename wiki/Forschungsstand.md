@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Spannungsfreie Ruhelagen und statisches Außenfeld (21.11.2026)
+
+Zwei idealisierte elastische Komponenten haben je zwei kompatible Ruhelagen mit gleicher gespeicherter Energie und verschwindendem Cauchy-Stress. Eine kompakte Verschiebung zweiter Ordnung in der zweiten Komponente gleicht den quadratischen Massentransport punktweise aus. Die lineare Dichteänderung ist ein Laplace-Profil und behält ihre lokale Higgsquelle im W2-Vergleich. In linearer Gravitation ist das gewöhnliche statische A/B-Außenfeld der mechanischen Quelle bis einschließlich zweiter Ordnung in der Auslenkung null. Die Modellenergie liefert die Schaltbarriere und einen Leistungsport. Physische Ansteuerung, Schalttransienten, gewöhnliches Binnenfeld der Sonde und native Kopplung bleiben für die Auslese zu prüfen. [Herleitung und symbolische Kontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Spannungsfreie_Ruhelagen.md)
+
 ### OP5: Dynamische Halterung und Materialbilanz zweiter Ordnung (20.11.2026)
 
 Zwei idealisierte elastische Komponenten erhalten beim Schalten den linearen mechanischen Tensor. Ein gezielt geformtes Profil hält den direkten gewöhnlichen linearen Gravitationsbeitrag auch während des Übergangs kompakt und erhält den axialen Plateaukontrast. In quadratischer Ordnung gleicht ein ortsfestes Reservoir die Gesamtarbeit aus. Die bekannte direkte Energiedichte kann trotzdem einen Quadrupol haben. Ein aktiv verformter Kompensator mit erhaltenem Tensor gleicht diesen berechneten Dichteanteil auf dem Plateau aus. [Dynamische Gegenbewegung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dynamische_Gegenbewegung.md) · [Reservoir](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Reservoir_Quadrupolabgleich.md)
