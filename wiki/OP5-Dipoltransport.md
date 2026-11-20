@@ -415,3 +415,7 @@ Eine quadratische Wirkung mit gerichteter Skalarableitung liefert die elastische
 ## Lineare Stabilität der doppelten Vermittlerkopplung
 
 Koppeln lineare Einstein- und Fierz–Pauli-Felder an dieselbe erhaltene Vergleichsquelle, reduziert der massive Pol die lokale Skalarkinetik. Beide Vermittler reduzieren die statische Steifigkeit. Zwei explizite Positivitätsbedingungen liefern einen stabilen quadratischen Bereich mit beiden Kopplungen. Native Kopplungen, Antrieb, Kausalität und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Doppelkopplung.md)
+
+## Ansteuerung mit Rückwirkung und charakteristische Geschwindigkeit
+
+Ein abgestimmter kompakter Antrieb erzeugt die doppelt kompensierte Lösung auch mit linearer Rückwirkung. Im homogenen gekoppelten Modell liegt bei nichtverschwindender massiver Kopplung eine charakteristische Geschwindigkeit über der der Hintergrundmetrik, in jeder Richtung. Die Aussage betrifft die Fortsetzung des linearen Modells zu großen Wellenzahlen. Physischer Richtungsträger, reale Auslese und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckwirkung_und_Charakteristiken.md)
