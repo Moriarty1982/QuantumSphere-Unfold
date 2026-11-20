@@ -371,3 +371,7 @@ Im planaren Yukawa-Modell ist das Streckenintegral durch die Säulenmasse und di
 ## Querströmung und dynamischer Endpunktrest
 
 Der statische Kontrollkontrast lässt sich im Kontinuumsmodell durch einen kompakten radialen Massenstrom innerhalb jeder Querebene aufbauen. Ein formal erhaltener Quelltensor ergänzt Impulsstrom und transversale Spannungen. In der direkten Nullkontraktion für den freien axialen Strahl bleibt die Dichte, während die Spur eine zusätzliche Spannung enthält. Der dynamische Dichtebeitrag am Endpunkt ist pro submassiver Frequenzkomponente quadratisch in der Frequenz begrenzt. Native Ansteuerung, komplette Endpunktkalibrierung und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Quertransport.md)
+
+## Welche Kräfte den Quertransport tragen können
+
+Im linearisierten homogenen barotropen Fluid haben Druck und skalare Potentiale nur Gradientenkräfte. Der geforderte kompakte rein transversale Strom braucht beim Beschleunigen eine Kraft mit Rotation. Auch ein passives kompaktes Plateau scheitert im geprüften Druck-Yukawa-Modell außer im entarteten kraftfreien Grenzfall. Lässt man Längsstrom zu, kann ein skalares Potential die Dichteänderung antreiben. Für das konkrete Profil hat die Poissonlösung dann einen Quadrupol-Fernanteil. Native Spannungen, Endpunktantwort und H96 bleiben offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antrieb_Quertransport.md)
