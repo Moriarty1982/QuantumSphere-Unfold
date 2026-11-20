@@ -31,6 +31,7 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
 - `notes/anleitungen/`: Schritt-für-Schritt-Abläufe.
 
 ## Für alle Modelle verbindlich
+- **Rechenwerkzeuge wählen:** Bei jeder neuen oder wiederaufgenommenen Rechen- und Beweisaufgabe vor dem Ansatz prüfen, ob Wolfram Language und/oder Qiskit für Herleitung, Rechnung oder unabhängige Kontrolle besser geeignet sind. Das jeweils besser geeignete Werkzeug tatsächlich einsetzen, bei verschiedenen geeigneten Teilaufgaben beide. Wolfram insbesondere für symbolische und exakte Rechnungen, Qiskit für explizit definierte Quantenschaltungen, Zustands- und Messsimulationen. Die Werkzeugwahl, die durchgeführten Prüfungen und die Grenzen des Ergebnisses bei relevanten Befunden festhalten. Die vorgesehenen QAM/MML/MMA-Abläufe gelten weiterhin.
 - **QAM-Belege abrufen:** Bei Fragen zu gespeicherten MMA-Belegen, QAM-Aussagen oder Prämissenspuren im Projekt
   zuerst den schreibgeschützten MCP-Server `qsc-qam` verwenden, falls verfügbar. Belege per Hash prüfen und
   offene Guards in der Antwort angeben. Falls MCP nicht verfügbar ist, die lokalen Lesebefehle aus
