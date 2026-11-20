@@ -435,3 +435,7 @@ Eine gesetzte Krümmungs-Feldstärke-Kopplung erzeugt eine identisch erhaltene s
 ## Dirac-Schwellenvergleich und sichtbare Mischung
 
 Unter gemeinsamer effektiver Metrikkopplung ergeben schwere Dirac-Arten eine ladungs- und massengewichtete Matrix der sichtbaren Krümmungsantwort. Im axialen Profil tragen Ricci- und Riemann-Term gemeinsam bei. Der gemischte Eintrag verschwindet bei formal entarteten Schwellen und bleibt bei allgemeinen Massen erhalten. Deshalb müssen die Sende- und Empfangsports auf die Ausbreitungsmoden bezogen werden. Native Kopplung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dirac_Schwellenabgleich.md)
+
+## Sende- und Empfangsanschlüsse
+
+Im idealen A/B-Vergleich liefern die Eigenphasen der gemessenen Übertragungsmatrizen beide relativen Laufzeiten, wenn Sende- und Empfangsmatrizen jeweils Rang zwei haben und beim Profilwechsel stabil bleiben. Konstante kinetische Mischung erhält den Rang der Ladungsrichtungen. Im Modell mit nur einer Elektronenschwelle und reinen Elektronenanschlüssen ist nur die Laufzeit der geladenen Mode messbar. Die zweite unabhängige Richtung der Apparatur und H96 bleiben offen. [Herleitung und Rechenausgaben](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sende_Empfangsports.md)

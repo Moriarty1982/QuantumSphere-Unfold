@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**20.11.2026, OP5-Sende- und Empfangsanschlüsse:** Kinetische Normierung, Eigenphasen im A/B-Vergleich und die Ranggrenze im Elektronenmodell ergänzt.
+
 **20.11.2026, OP5-Dirac-Schwellen:** Axiale Ricci-Riemann-Kombination, Ladungsmatrix und Signalmischung ergänzt.
 
 **20.11.2026, OP5-sichtbare Auslese:** Separat erhaltener Krümmungsterm und axialer Laufzeitkontrast ergänzt.
