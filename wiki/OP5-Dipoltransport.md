@@ -423,3 +423,7 @@ Ein abgestimmter kompakter Antrieb erzeugt die doppelt kompensierte Lösung auch
 ## Bedingung für die metrische Geschwindigkeitsgrenze
 
 Ein Vermittler auf dem metrischen Kegel erfordert im geprüften Hauptteil verschwindende Hauptkopplung. Zwei explizite Schur-Grenzen erlauben einen lokalen Vergleich mit langsameren Vermittlern, positiver Energie und weiterhin kompakter Ansteuerung. Die physische Anpassung der Einstein- oder massiven Kopplung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Metrische_Kegelgrenze.md)
+
+## Luminaler Einstein-Kanal mit gerichtetem Kontrast
+
+Eine konforme Verbesserung lässt die freie Einstein-Welle auf dem metrischen Kegel und erzeugt einen lokalen Metrikterm. Dieselbe Quellenform liefert keinen erhaltenen massiven Spin-2-Kontrast. Mit einer getrennten gerichteten Kopplung am langsameren massiven Vergleichsfeld bleiben positive Energie, kompakte Ansteuerung und axialer Modellkontrast erreichbar. Die physische Herleitung beider Kopplungen, Empfang und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Luminaler_Einstein_Kanal.md)
