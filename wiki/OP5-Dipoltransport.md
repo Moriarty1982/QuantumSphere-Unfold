@@ -411,3 +411,7 @@ Eine kompakte Teilfamilie mit positivem Achsenkontrast benötigt fünf feste Ten
 ## Lokale Antriebswirkung und Metrikquelle
 
 Eine quadratische Wirkung mit gerichteter Skalarableitung liefert die elastische Zielgleichung und positive Energie im festen flachen Vergleich. Ihr kanonischer Impuls reicht zur Bestimmung der Metrikquelle nicht aus. Ein separater Krümmungsterm liefert den vollständigen linearen Zielbeitrag zur gewöhnlichen Metrik. Dynamische Richtungsträger, Kopplung des massiven Vermittlers, Stabilität mit dynamischer Gravitation und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lokale_Antriebswirkung.md)
+
+## Lineare Stabilität der doppelten Vermittlerkopplung
+
+Koppeln lineare Einstein- und Fierz–Pauli-Felder an dieselbe erhaltene Vergleichsquelle, reduziert der massive Pol die lokale Skalarkinetik. Beide Vermittler reduzieren die statische Steifigkeit. Zwei explizite Positivitätsbedingungen liefern einen stabilen quadratischen Bereich mit beiden Kopplungen. Native Kopplungen, Antrieb, Kausalität und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Doppelkopplung.md)
