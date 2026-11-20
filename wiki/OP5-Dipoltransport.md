@@ -347,3 +347,7 @@ Unbekannte Kontaktterme bis zu einem vorgegebenen Grad lassen sich durch dividie
 ## Auflösungsgrenzen der Polrekonstruktion
 
 Bei endlicher Genauigkeit sind zwei nahe gleichsignierte Pole nur quadratisch vom entsprechenden Einzelpol verschieden. Genau gegenläufige Gewichte hinterlassen einen linearen Rest. Ein sehr schwerer Pol kann über einen begrenzten q²-Bereich einem lokalen Kontaktpolynom ähneln, mit expliziter Restschranke. Exakter Rang und reale Auflösung sind dadurch getrennt. H96 bleibt offen.
+
+## Optimaler Kontaktterm für einen schweren Pol
+
+Für einen festgelegten schweren Yukawa-Pol ist der beste Kontaktterm endlichen Grades jetzt exakt bestimmbar. Der Fehler alterniert an d+2 gezielt platzierten Stützstellen. Im bisherigen Zahlenbeispiel sinkt der maximal unvermeidbare Rest gegenüber dem Taylor-Vergleich von rund 9,09 × 10⁻⁶ auf 2,58 × 10⁻⁷. Reale Fehler, weitere veränderliche Pole und H96 bleiben offen.
