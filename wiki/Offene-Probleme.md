@@ -404,3 +404,5 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 **OP5, Verformungsrichtungen:** Lokale feste isotrope oder gemeinsam diagonale Tensorantworten reichen für die geprüfte Quelle nicht. Eine formale gerichtete Ableitungskopplung eines Skalars rekonstruiert die nötigen Komponenten. Ihre physische Herleitung und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsrichtungen.md)
 
 **OP5, lokale Wirkung:** Die gerichtete Antriebswirkung besitzt im flachen Vergleich eine positive quadratische Energie. Ein linear variierter Krümmungsterm erzeugt die gewünschte Metrikquelle. Die native Wirkung für Antrieb und Richtungsträger, die massive Kopplung und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lokale_Antriebswirkung.md)
+
+**OP5, doppelte Vermittlerkopplung:** Für festgelegte lineare Kopplungen und externen Richtungsträger ist ein positiver gekoppelter Bereich nachgewiesen. Native Kopplungen, reale J-Auslese und H96 bleiben offen. [Erkundung](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Doppelkopplung.md)
