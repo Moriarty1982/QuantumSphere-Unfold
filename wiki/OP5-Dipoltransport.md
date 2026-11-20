@@ -455,3 +455,7 @@ Der größere Leptonrückstoß trennt die normierten Richtungen von H und myonis
 ## Molekülbewegung als zweite Dipolrichtung
 
 Die gewichtete Kernverschiebung bestimmt, ob die Schwingungsrichtung von der rein elektronischen Dipolrichtung unabhängig ist. Die dynamische elektrische Dipolableitung beeinflusst die Richtung, fällt aber aus der Determinante heraus. Bei HD ist der Stretch in der adiabatischen Näherung elektrisch dipolstill und trägt im Modell eine reine J-Richtung mit Kernkoeffizient rund 0,3315. Separate Ansteuerung und Auslese, Messband, Kopplung und H96 bleiben offen. [Herleitung und Wolfram-Ausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Molekuelanschluesse.md)
+
+## Raman-Umwandlung am HD-Stretch
+
+Im freien HD-Rotor verbinden der symmetrische Raman-Term und der J-Dipol verschiedene Rotationsparitäten. Eine gerade Achsenausrichtung erhält diese Grenze. Ein richtungsgebendes Feld liefert im Modell eine lineare Kreuzantwort. Die Steigung einer beim Profilwechsel veränderten Pumpenphasendifferenz kann dabei als Laufzeit erscheinen. Physische Orientierung, stabiler Anschluss und H96 bleiben offen. [Herleitung und Rechenausgaben](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_HD_Ramananschluss.md)
