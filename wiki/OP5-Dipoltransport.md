@@ -431,3 +431,7 @@ Eine konforme Verbesserung lässt die freie Einstein-Welle auf dem metrischen Ke
 ## Separat erhaltener sichtbarer Krümmungsterm
 
 Eine gesetzte Krümmungs-Feldstärke-Kopplung erzeugt eine identisch erhaltene sichtbare Zusatzquelle. Verschiedene Koeffizienten für J und die Referenz erzeugen im kompakten gerichteten Vergleich einen differentiellen axialen Laufzeitbeitrag. Er hängt von der transversalen Profilkrümmung ab. Koeffizienten, geladene Apparatur und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Sichtbarer_Kruemmungsterm.md)
+
+## Dirac-Schwellenvergleich und sichtbare Mischung
+
+Unter gemeinsamer effektiver Metrikkopplung ergeben schwere Dirac-Arten eine ladungs- und massengewichtete Matrix der sichtbaren Krümmungsantwort. Im axialen Profil tragen Ricci- und Riemann-Term gemeinsam bei. Der gemischte Eintrag verschwindet bei formal entarteten Schwellen und bleibt bei allgemeinen Massen erhalten. Deshalb müssen die Sende- und Empfangsports auf die Ausbreitungsmoden bezogen werden. Native Kopplung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dirac_Schwellenabgleich.md)
