@@ -327,3 +327,258 @@ assert hi/F("2.022788725072e-8") < F("0.48732628")
 ~~~
 
 Die Rasterwerte und die Fehlerhülle sind synthetisch. Das Verfahren ist auf gegebene Stützstellen und lokale Unsicherheiten anwendbar, sobald die Beobachtungsabbildung für H96 vorliegt.
+
+## Größere Messraster und bestimmende Teilmengen
+
+Sei $X=\{x_1<\cdots<x_m\}$ ein vorgegebenes Raster mit $m\ge n+1$, $n=d+2r-1$. An jedem Knoten sei eine positive Fehlerskala $\sigma(x_j)$ gegeben. Für $r$ gleichsignierte Zielpole gilt
+$$
+E_X=\max_{\substack{Y\subseteq X\\ |Y|=n+1}} E_Y,
+\qquad
+E_Y=\frac{1}{\mu(A_Y)} .
+$$
+Hier verwendet jede Teilmenge ihre eigenen Lagrange-Gewichte in der Matrix $A_Y$ aus dem vorigen Abschnitt. Der optimale Abgleich für $X$ ist eindeutig und wird von jeder maximierenden Teilmenge bereits bestimmt.
+
+### Beweis auf einem endlichen Raster
+
+Für einen vorläufigen Lückenvektor $\tau$ wähle das Polynom $P_\tau$ mit Leitkoeffizient eins und Grad $n$, das $\max_{x\in X}|P_\tau(x)|/(D_\tau(x)\sigma(x))$ minimiert. Ein Minimum existiert, da eine Normschranke auf mindestens $n+1$ verschiedenen Knoten die Koeffizienten beschränkt und die Zielfunktion stetig ist. Ein Minimierer erreicht den gewichteten Maximalbetrag an mindestens $n+1$ Stellen mit wechselnden Vorzeichen. Andernfalls lassen sich die Extremstellen in höchstens $n$ aufeinanderfolgende Gruppen mit jeweils gleichem Vorzeichen aufteilen. Ein Polynom mit je einer Nullstelle zwischen den Gruppen hat Grad höchstens $n-1$ und kann durch ein gemeinsames Vorzeichen an die Extremwerte angepasst werden. Sein hinreichend kleines Vielfaches verringert nach Abzug den Fehler an allen Extremstellen. An den übrigen Knoten bleibt der Fehler wegen des strikten Abstands zum Maximum und der Endlichkeit von $X$ ebenfalls unter dem alten Maximum. Die Eindeutigkeit folgt aus der dividierten Differenz der Kandidatendifferenz an $n+1$ alternierenden Stellen.
+
+Wie beim kontinuierlich gewichteten Vergleich liegen alle $n$ Nullstellen von $P_\tau$ zwischen Alternationspunkten. Die Werte $(-1)^n P_\tau(-t_i)$ sind positiv. Sie hängen stetig von $\tau$ ab. Die gewichteten Normen auf dem endlichen Raster sind auf der kompakten Lückenbox gleichmäßig äquivalent zur Koeffizientennorm. Bei Konvergenz der Lückenvektoren ist deshalb jede Koeffizientengrenze ein Minimierer der Grenzaufgabe. Seine Eindeutigkeit liefert die Stetigkeit.
+
+Die Interpolation der Zielpolwerte und die Fixpunktkonstruktion aus dem Abschnitt zur Fehlerhülle gelten daher auch für $X$. Sie liefern genau eine beste Antwort mit positiven Ersatzgewichten und einem Massenquadrat pro Lücke. Sei $Y$ eine Auswahl von $n+1$ gewichteten Alternationspunkten dieser Antwort. Das Alternationsargument für Kandidatendifferenzen zeigt, dass sie bereits auf $Y$ optimal ist und $E_Y=E_X$ gilt. Für jede Teilmenge $Y'$ gilt $E_{Y'}\le E_X$, da sie nur einen Teil der Ungleichungen auf $X$ prüft. Nimmt eine Teilmenge das Maximum an, ist der Rasterminimierer auf ihr optimal. Die Eindeutigkeit auf der Teilmenge zeigt, dass sie denselben Kandidaten bestimmt.
+
+### Lineare Machbarkeit bei festem Fehlerniveau
+
+Die Teilmengenformel erlaubt eine exakte Kontrolle kleiner Raster. Auf größeren Rastern lässt sich die Kombinationenzahl umgehen. Für ein vorgegebenes $e\ge0$ schreibe $g=N/Q$ mit $\deg N\le d+r-1$ und $Q=\sum_i v_i L_i$, $v_i\ge0$, $\sum_i v_i=1$. Auf $X$ sind alle $L_i$ positiv. Die Bedingungen
+$$
+-e\,\sigma(x)Q(x)\le f(x)Q(x)-N(x)\le e\,\sigma(x)Q(x)
+\qquad (x\in X)
+$$
+sind linear in $v_i$ und den Koeffizienten von $N$. Für $e\ge E_X$ ist das System mit dem konstruierten Rasterminimierer erfüllbar. Für $e<E_X$ widerspricht bereits die bestimmende Alternationsmenge der Machbarkeit. Der Zähler einer Differenz $N/Q-g_*$ hat auch in dieser geschlossenen Suchmenge Grad höchstens $n-1$ und der Nenner bleibt überall auf $X$ positiv. Damit kann auch ein möglicher mehrfacher Pol am Rand des Suchraums den Fehlerwert nicht senken. Eine Halbierung des Fehlerniveaus mit linearen Machbarkeitstests schließt $E_X$ ein.
+
+### Zehn ganzzahlige Stützstellen
+
+Für das Drei-Pol-Beispiel mit $\sigma(x)=(x+2)/3$ wählen wir $X=\{1,2,\ldots,10\}$. Über alle $\binom{10}{7}=120$ Teilmengen ergibt sich eindeutig
+$$
+Y_*=\{1,2,3,4,6,9,10\},\qquad
+1.10277872903767\cdot10^{-8}<E_X<1.10277872903768\cdot10^{-8}.
+$$
+Die Obergrenzen aller anderen Teilmengen liegen unter der Untergrenze für $Y_*$. Das Raster erreicht rund $54.52$ Prozent des kontinuierlichen gewichteten Abstands. Für gemeinsame Fehlerintervalle ist die scharfe Schwelle daher $\kappa_*=E_X/2\simeq5.51389\cdot10^{-9}$. Die folgende Rechnung prüft die Auswahl und Schranken rational.
+
+~~~python
+from fractions import Fraction as F
+from itertools import combinations
+from math import prod
+
+t = (4, 9, 16)
+a = (1, 1, 1)
+grid = tuple(range(1, 11))
+
+def basis(i, z):
+    return prod(z + u for j, u in enumerate(t) if j != i)
+
+def error_bounds(x):
+    gamma = [F(1, prod(abs(z-y) for y in x if y != z)) for z in x]
+    sigma = [F(z+2, 3) for z in x]
+    scale = [F(prod(z+u for z in x), a[i]*basis(i,-u)**2)
+             for i,u in enumerate(t)]
+    A = [[scale[i]*sum(w*s*basis(i,z)*basis(k,z)
+                       for z,w,s in zip(x,gamma,sigma))
+          for k in range(len(t))] for i in range(len(t))]
+    def apply(v):
+        return [sum(a*b for a,b in zip(row,v)) for row in A]
+    v = [F(1)]*len(t)
+    for _ in range(8):
+        v = apply(v)
+    rates = [y/z for y,z in zip(apply(v),v)]
+    return 1/max(rates), 1/min(rates)
+
+bounds = {x: error_bounds(x) for x in combinations(grid, 7)}
+best = max(bounds, key=lambda x: bounds[x][0])
+lo, hi = bounds[best]
+other = max(upper for x, (_, upper) in bounds.items() if x != best)
+assert len(bounds) == 120
+assert best == (1, 2, 3, 4, 6, 9, 10)
+assert other < lo
+assert F("1.10277872903767e-8") < lo <= hi < F("1.10277872903768e-8")
+assert F("0.54517741") < lo/F("2.022788725075e-8")
+assert hi/F("2.022788725072e-8") < F("0.54517742")
+~~~
+
+Die Formel vergleicht eine gegebene gleichsignierte Zielantwort mit der reduzierten Modellklasse. Die Zuordnung einer solchen Zielantwort und ihrer Fehlerhalbbreiten zu H96-Messungen bleibt offen.
+
+## Prüfung direkt aus Messwerten und Fehlerbalken
+
+Auf $n+1=d+2r$ verschiedenen Stützstellen seien Messmitten $y_j$ sowie positive Fehlerskalen $\sigma_j$ bekannt. Ein Kandidat muss $|g(x_j)-y_j|\le\kappa\sigma_j$ für alle $j$ erfüllen. Setze $m=r-1$, $\omega(x)=\prod_{j=0}^{n}(x-x_j)$ und $v(x)=(1,x,\ldots,x^m)^\mathsf T$. Definiere aus den Messwerten
+$$
+H(y)=(-1)^n\sum_{j=0}^{n}\frac{y_j}{\omega'(x_j)}v(x_j)v(x_j)^\mathsf T,\qquad
+G=\sum_{j=0}^{n}\frac{\sigma_j}{|\omega'(x_j)|}v(x_j)v(x_j)^\mathsf T.
+$$
+Die Prüfung und ihre Eigenwerte sind unabhängig von der gewählten Polynombasis. $G$ ist positiv definit, da ein Polynom bis Grad $m$ mit null Norm an mehr als $m$ verschiedenen Stellen verschwinden würde.
+
+### Ausschluss eines Modells mit weniger Polen
+
+Ein Kandidat mit höchstens $m$ Polen hat die Form $g=N/Q$ mit $\deg N\le d+m$ und $\deg Q\le m$. Sein Nenner hat auf den Stützstellen keine Nullstelle. Sind $q$ die Koeffizienten von $Q$, dann gilt
+$$
+q^\mathsf T H(g)q=(-1)^n\sum_j\frac{N(x_j)Q(x_j)}{\omega'(x_j)}=0.
+$$
+Die Summe ist eine dividierte Differenz der Ordnung $n=d+2m+1$ eines Polynoms vom Grad höchstens $n-1$. Für jedes $z$ innerhalb der Fehlerintervalle ist
+$$
+H(z)\succeq H(y)-\kappa G,
+$$
+weil in jeder quadratischen Form der maximale Abzug durch $|z_j-y_j|\le\kappa\sigma_j$ beschränkt wird. Ist $H(y)-\kappa G$ positiv definit, ist das reduzierte Modell ausgeschlossen, auch mit frei vorgegebenen Vorzeichen seiner Polgewichte. Die Prüfung verwendet weder Zielmassen noch eine bekannte Zielantwort. Ein Kontaktpolynom vom Grad höchstens $d$ fällt in $H$ heraus.
+
+Für positiv definites $H(y)$ liefert
+$$
+\kappa_0=\lambda_{\min}(H(y),G)
+$$
+den kritischen Wert dieses Ausschlusses. Bei negativ definit orientierten Daten kann man dieselbe Rechnung mit $-y$ durchführen. Auf größeren Rastern genügt für den Ausschluss jede Teilmenge von $d+2r$ Stützstellen mit positiver Definitheit. Hier bezeichnet $\kappa$ den Fehlerbalken um einen gemessenen Datenvektor. Beim früheren Vergleich zweier Modelle mit einem gemeinsamen Fehlerbalken um jede Vorhersage gilt weiterhin der Faktor zwei.
+
+### Wann die Schwelle erreicht wird
+
+Definiere bei $\kappa=\kappa_0$ den alternierend verschobenen Vektor
+$$
+y_j^- = y_j-\kappa_0\sigma_j\,(-1)^n \operatorname{sgn}\omega'(x_j).
+$$
+Dann gilt $H(y^-)=H(y)-\kappa_0G$. Liegt im Kern ein Polynom $Q$ vom Grad $m$ mit $m$ einfachen, streng negativen Nullstellen, wird die Schwelle durch ein zulässiges Modell erreicht. Dazu interpoliere $N(x_j)=Q(x_j)y_j^-$ durch ein Polynom bis Grad $n$. Die Kernbedingung besagt, dass für $k=0,\ldots,m$ jeweils $\sum_j N(x_j)x_j^k/\omega'(x_j)=0$. Zuerst verschwindet damit der Koeffizient von $x^n$ in $N$. Nach jedem solchen Schritt ist der Grad von $x^kN$ beim nächsten Test höchstens $n$, und die Summe liefert dessen Leitkoeffizienten zu $x^n$. Nacheinander verschwinden damit die obersten $m+1$ Koeffizienten von $N$. Übrig bleibt $\deg N\le n-m-1=d+m$. Polynomdivision und Partialbruchzerlegung von $N/Q$ ergeben einen zulässigen Kandidaten, der $y^-$ exakt trifft. Ohne Nachweis eines solchen Kernpolynoms liefert $\kappa_0$ eine Untergrenze für den nötigen Fehlerbalken.
+
+Ein hinreichender Test verwendet beliebige Referenzwerte $0<u_1<\cdots<u_r$ und die Basis $L_i(x)=\prod_{\ell\ne i}(x+u_\ell)$. Hat die Darstellung von $H(y)-\kappa_0G$ in dieser Basis strikt negative Nebendiagonaleinträge, so ist ihr Kern eindimensional und hat einen strikt positiven Koeffizientenvektor. Für einen Kernvektor mit gemischten Vorzeichen würde sein komponentenweiser Betrag die quadratische Form strikt absenken und damit die positive Semidefinitheit verletzen. Ein nichtnegativer Kernvektor kann wegen der negativen Nebendiagonale keine Nullkomponente haben. Zwei unabhängige Kernvektoren würden eine Linearkombination mit einer Nullkomponente erlauben. Die positiven Koeffizienten erzwingen wechselnde Vorzeichen von $Q(-u_i)$ und damit die benötigten einfachen negativen Nullstellen.
+
+### Anschluss an die Eigenwertformel und Zahlenprobe
+
+Für eine exakte gleichsignierte Zielantwort mit positiven Gewichten gilt
+$$
+H(f)=\sum_{i=1}^r \frac{a_i}{\prod_j(t_i+x_j)}v(-t_i)v(-t_i)^\mathsf T .
+$$
+Bei der dividierten Differenz ersetzt man jeden Polynomfaktor in der quadratischen Form durch seinen Wert bei $-t_i$. Der bei der Division durch $x+t_i$ entstehende Polynomialteil hat Grad kleiner als $n$ und verschwindet. In der Basis der Zielpole ist $H(f)$ diagonal mit Einträgen $1/c_i$ aus der Konstruktion für feste Stützstellen. Daher ist $\lambda_{\min}(H(f),G)=1/\mu(A)$ derselbe exakte Abstand.
+
+Für die sieben Stützstellen $(1,2,3,4,6,9,10)$ aus dem Zehn-Punkte-Raster sei $\sigma_j=(x_j+2)/3$. Die Messmitten werden synthetisch aus drei Polen bei $4,9,16$ mit Gewichten eins gewonnen und zusätzlich um $10^{-10}\sigma_j$ mal $(1,-2,1,0,2,-1,1)_j$ verschoben. Der datenbasierte Test liefert
+$$
+1.11248856266898\cdot10^{-8}<\kappa_0<1.11248856266900\cdot10^{-8}.
+$$
+An der unteren Grenze ist die Prüfmatrix positiv definit und ihre Nebendiagonale in der Referenzbasis strikt negativ. Die Nebendiagonale bleibt bis zur kritischen Schwelle negativ, da $G$ in dieser Basis strikt positive Einträge besitzt. Die negative Determinante an der oberen Grenze prüft den Verlust der positiven Definitheit. Damit ist die Schwelle im Beispiel scharf. Die folgende Rechnung prüft alle Vorzeichen und Schranken mit exakten Brüchen.
+
+~~~python
+from fractions import Fraction as F
+from math import prod
+from itertools import permutations
+
+x = (1, 2, 3, 4, 6, 9, 10)
+u = (4, 9, 16)  # Reference poles for the polynomial basis.
+s = tuple(F(z+2, 3) for z in x)
+noise = (1, -2, 1, 0, 2, -1, 1)
+y = tuple(sum(F(1,z+t) for t in u) + F(v,10**10)*scale
+          for z,v,scale in zip(x,noise,s))
+omega_prime = tuple(prod(z-w for w in x if w != z) for z in x)
+basis = [[prod(z+t for k,t in enumerate(u) if k!=i) for z in x]
+         for i in range(len(u))]
+
+def gram(weights):
+    return [[sum(w*p*q for w,p,q in zip(weights,row,col)) for col in basis]
+            for row in basis]
+
+H = gram([val/den for val,den in zip(y,omega_prime)])  # n=6 is even.
+G = gram([scale/abs(den) for scale,den in zip(s,omega_prime)])
+
+def matrix(kappa):
+    return [[h-kappa*g for h,g in zip(hr,gr)] for hr,gr in zip(H,G)]
+
+def det(B, size):
+    total = F(0)
+    for p in permutations(range(size)):
+        swaps = sum(p[i]>p[j] for i in range(size) for j in range(i+1,size))
+        total += (-1)**swaps * prod(B[i][p[i]] for i in range(size))
+    return total
+
+def positive_definite(B):
+    return all(det(B,k)>0 for k in range(1,len(B)+1))
+
+lo, hi = F("1.11248856266898e-8"), F("1.11248856266900e-8")
+assert positive_definite(matrix(lo))
+assert det(matrix(hi), len(u)) < 0
+assert all(matrix(lo)[i][j] < 0 for i in range(len(u)) for j in range(i))
+~~~
+
+Das Beispiel verwendet gesetzte Messmitten und Fehlerbalken. Die Umrechnung realer H96-Messungen in diese statische Antwort bleibt offen.
+
+## Gemeinsame Kalibrierfehler
+
+Zusätzlich zu den einzelnen Fehlerbalken seien $s$ bekannte Kalibrierprofile $b_\alpha=(b_\alpha(x_j))_j$ gegeben. Jedes Profil hat einen gemeinsamen unbekannten Koeffizienten für alle Stützstellen. Wir erlauben Datenvektoren
+$$
+z_j=y_j+\kappa\left(\epsilon_j\sigma_j+
+      \sum_{\alpha=1}^s\eta_\alpha b_\alpha(x_j)\right),
+\qquad |\epsilon_j|\le1,\quad |\eta_\alpha|\le1.
+$$
+Dieses Modell beschreibt beschränkte Fehleramplituden. Es setzt keine Wahrscheinlichkeitsverteilung voraus. Setze $B_\alpha=H(b_\alpha)$ mit derselben linearen Datenmatrix wie im vorigen Abschnitt.
+
+Für feste $\eta$ ist die kleinste Matrix in der positiven Semidefinitheitsordnung
+$$
+H(y)-\kappa G+\kappa\sum_\alpha\eta_\alpha B_\alpha.
+$$
+Sie wird erreicht, indem die unabhängigen Fehler die alternierenden Vorzeichen $\epsilon_j=-(-1)^n\operatorname{sgn}\omega'(x_j)$ erhalten. Denn jede andere Wahl addiert zu dieser Matrix eine Summe positiv semidefiniter Rang-eins-Matrizen. Die kleinsten Matrizen für alle $\eta$ sind Konvexkombinationen der Werte an den Ecken $\nu\in\{-1,1\}^s$. Daher ist die Prüfmatrix für alle erlaubten Fehler genau dann positiv definit, wenn alle Eckmatrizen
+$$
+H(y)-\kappa M_\nu\succ0,\qquad M_\nu=G-\sum_{\alpha=1}^s\nu_\alpha B_\alpha
+$$
+positiv definit sind. In diesem Fall ist die reduzierte Polklasse ausgeschlossen.
+
+Für $H(y)\succ0$ ist die kritische Amplitude der Matrixprüfung
+$$
+\kappa_{\mathrm{gemeinsam}}
+ =\left[\max_{\nu\in\{-1,1\}^s}\lambda_{\max}(M_\nu,H(y))\right]^{-1}.
+$$
+Der Ausdruck in der Klammer ist positiv, weil der Mittelwert der $M_\nu$ gleich $G\succ0$ ist. An einer maximierenden Ecke wird die Matrix an der kritischen Amplitude singulär und bleibt positiv semidefinit. Liefert ihr Kern einen zulässigen Nenner, konstruiert die Interpolation aus dem vorigen Abschnitt an genau diesem erlaubten Datenvektor einen reduzierten Kandidaten. Dann ist die Ausschlussschwelle scharf für die gekoppelten Fehler. Bei fehlendem Nennernachweis ist sie eine Untergrenze.
+
+### Gemeinsamer Offset und Drift
+
+Ist $b_\alpha$ ein Polynom vom Grad höchstens $d$, dann ist $B_\alpha=0$. Jede Matrixkomponente ist eine dividierte Differenz der Ordnung $n=d+2m+1$ eines Polynoms vom Grad höchstens $d+2m$. Solche Profile fallen aus dem Test heraus und können vor der Eckenauswertung gestrichen werden. Das entspricht der Möglichkeit, sie direkt in das Kontaktpolynom aufzunehmen. Bei $d=1$ gilt dies für einen gemeinsamen Offset und eine gemeinsame lineare Drift in $x=q^2$.
+
+Für $d=1$ ist der nächste monomiale Beitrag $b(x)=c x^2$. In einer Basis aus Polynomen mit Leitkoeffizient eins und Grad $m$ hat $H(b)$ in jeder Zelle den Eintrag $(-1)^n c=c$, da $n=2m+2$ gerade ist. Die dividierte Differenz erfasst genau den Leitkoeffizienten des Produkts. Für $c>0$ ist $H(b)$ positiv semidefinit und die Eckauswertung reduziert sich bei diesem einzelnen wirksamen Profil auf $G+H(b)$.
+
+### Synthetische Zahlenprobe
+
+Zum gestörten Drei-Pol-Datensatz aus dem vorigen Abschnitt fügen wir die gemeinsamen Profile $10$, $x$ und $100x^2$ hinzu. Die ersten beiden verschwinden in der Prüfmatrix. Die Matrixrechnung für die gemeinsame quadratische Drift ergibt
+$$
+8.36123007008602\cdot10^{-9}<\kappa_{\mathrm{gemeinsam}}<
+8.36123007008604\cdot10^{-9}.
+$$
+An der unteren Schranke hat die Prüfmatrix in der gewählten Referenzbasis strikt negative Nebendiagonaleinträge. Da $G+H(b)$ nur positive Einträge hat, bleiben die Nebendiagonaleinträge bis zur singulären Grenze negativ. Der Kern liefert dort einen zulässigen Nenner und die Schranke ist scharf.
+
+Würde man dieselben Profile stattdessen als zusätzliche unabhängige Punktschwankungen behandeln, ergäbe die Fehlerskala $\sigma_j+10+x_j+100x_j^2$ eine Matrixschwelle von rund $9.17353\cdot10^{-12}$. Im Beispiel ist die scharfe Schwelle bei korrekt gemeinsamem Fehler mehr als 900-mal größer. Die Größen der Profile sind für den Vergleich synthetisch gewählt. Die Rechnung verwendet die Variablen und Hilfsfunktionen aus der vorigen Zahlenprobe.
+
+~~~python
+offset = [F(10) for z in x]
+tilt = [F(z) for z in x]
+curvature = [F(100*z*z) for z in x]
+
+def mode(values):
+    return gram([val/den for val,den in zip(values,omega_prime)])
+
+assert all(val == 0 for vals in (offset,tilt) for row in mode(vals) for val in row)
+C = mode(curvature)
+assert all(val == 100 for row in C for val in row)
+G_joint = [[g+c for g,c in zip(gr,cr)] for gr,cr in zip(G,C)]
+G_box = gram([(scale+a+b+c)/abs(den) for scale,a,b,c,den
+              in zip(s,offset,tilt,curvature,omega_prime)])
+
+def reduced(k, B):
+    return [[h-k*b for h,b in zip(hr,br)] for hr,br in zip(H,B)]
+
+def bracket(B):
+    lo, hi = F(0), F("2e-8")
+    for _ in range(75):
+        mid = (lo+hi)/2
+        if positive_definite(reduced(mid,B)):
+            lo = mid
+        else:
+            hi = mid
+    return lo, hi
+
+
+lo, hi = bracket(G_joint)
+assert F("8.36123007008602e-9") < lo <= hi < F("8.36123007008604e-9")
+assert all(reduced(lo,G_joint)[i][j] < 0 for i in range(3) for j in range(i))
+box_lo, box_hi = bracket(G_box)
+assert F("9.17353229881560e-12") < box_lo <= box_hi < F("9.17353229881564e-12")
+assert lo > 900*box_hi
+~~~
+
+Die [OP5-Kalibrierprofile](OP5_J_Kalibrierprofile.md) leiten die Antwort auf gemeinsame Gain-, Transfer-, Tracer- und Skalenfehler her. Für Messprofile müssen die Rohspektren und Kalibriergrenzen aus der tatsächlichen Messung bestimmt werden.
