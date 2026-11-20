@@ -151,8 +151,8 @@ def rho_bounds(u):
     k = isqrt(square.numerator * scale**2 // square.denominator)
     return h/(c + u + F(k + 1, scale)), h/(c + u + F(k, scale))
 
-def data(tau):
-    bounds = [rho_bounds(u) for u in t + tau]
+def data(tau, auxiliary=(), sigma_scale=F(1)):
+    bounds = [rho_bounds(u) for u in t + tau + auxiliary]
     low, high = zip(*bounds)
     weights = []
     for i in range(len(t)):
@@ -163,7 +163,8 @@ def data(tau):
     wlow, whigh = zip(*weights)
     kl = (h/2)**len(bounds) / prod(high)
     ku = (h/2)**len(bounds) / prod(low)
-    return weights, (2/(ku*sum(whigh)), 2/(kl*sum(wlow)))
+    return weights, (2/(sigma_scale*ku*sum(whigh)),
+                     2/(sigma_scale*kl*sum(wlow)))
 
 def root_sum_bounds(x, weights):
     terms = [sorted((lo/(v-x), hi/(v-x)))
@@ -177,4 +178,68 @@ wu, eu = data(hi)
 assert all(root_sum_bounds(x, wl)[1] < 0 for x in lo)
 assert all(root_sum_bounds(x, wu)[0] > 0 for x in hi)
 assert F("4.168560608275e-8") < eu[0] <= el[1] < F("4.168560608277e-8")
+~~~
+
+## Unterschiedliche Genauigkeit der Stützstellen
+
+Sei $\sigma(x)>0$ auf $[L,U]$ stetig. Verglichen wird jetzt der Fehler relativ zur örtlichen Fehlerskala,
+$$
+E_\sigma=\inf_g\left\|\frac{f-g}{\sigma}\right\|_\infty.
+$$
+Für $r$ gleichsignierte Zielpole bleibt die optimale Antwort mit höchstens $r-1$ Polen eindeutig. Die Ersatzpole liegen weiterhin je einzeln in den Lücken. Das gewichtete Residuum erreicht seinen Maximalbetrag mit wechselnden Vorzeichen an mindestens $d+2r$ Stellen. An einer solchen Auswahl aus genau $d+2r$ Stellen ergibt sich derselbe Minimax-Fehler wie auf dem ganzen Intervall.
+
+### Stetige positive Fehlerhülle
+
+Für einen vorläufigen Lückenvektor $\tau$ sei $P_\tau$ jetzt das Polynom mit Leitkoeffizient eins vom Grad $n=d+2r-1$, das
+$$
+\lambda_\tau=\left\|\frac{P_\tau}{D_\tau\sigma}\right\|_\infty
+$$
+minimiert. Der [gewichtete Alternationssatz](https://people.sc.fsu.edu/~jburkardt/publications/vgb_2016.pdf) liefert Existenz, Eindeutigkeit und $n+1$ Alternationspunkte. Er wird auf die Approximation von $x^n$ durch Polynome vom Grad höchstens $n-1$ mit dem stetigen positiven Gewicht $1/(D_\tau\sigma)$ angewandt. Zwischen den Alternationspunkten liegen $n$ verschiedene Nullstellen von $P_\tau$. Daher sind alle Werte
+$$
+V_i(\tau)=(-1)^n P_\tau(-u_i)
+$$
+positiv. Die Koeffizienten von $P_\tau$ hängen stetig von $\tau$ ab. Auf der kompakten Lückenbox sind die Gewichte $1/(D_\tau\sigma)$ gleichmäßig nach unten und oben beschränkt, und der Vergleich mit $x^n$ liefert eine einheitliche Normschranke für $P_\tau$. Die Koeffizienten sind deshalb beschränkt. Bei $\tau^{(k)}\to\tau$ minimiert jede Koeffizientengrenze die Grenznorm, da die Gewichte gleichmäßig konvergieren. Die Eindeutigkeit des Grenzpolynoms ergibt die Stetigkeit.
+
+Mit diesen $V_i$ definiert man $w_i,S,Q_\tau$ wie oben. Die Vorzeichen von $Q_\tau(-t_i)$ liefern dieselbe stetige Abbildung der Lückenbox in ihr Inneres. Am Brouwer-Fixpunkt ist
+$$
+g_*=f-\frac{(-1)^nP_\tau}{S D_\tau},\qquad E_\sigma=\frac{\lambda_\tau}{S}.
+$$
+Das Kürzen der Zielpole und die positiven Ersatzgewichte folgen aus denselben Auswertungen wie im ungewichteten Fall. Da $\sigma>0$ ist, übertragen die gewichteten Extremwerte ihre Vorzeichen unverändert auf die Differenz zweier Kandidaten. Die Gradgrenze und die dividierte Differenz beweisen damit Optimalität und Eindeutigkeit. Für allgemeine $\sigma$ liefert der Satz mindestens $n+1$ Alternationspunkte. Der Beweis setzt keine Alternation an den Intervallenden voraus.
+
+### Trennschwelle für Fehlerintervalle
+
+Haben beide Vorhersagen die Fehlerhalbbreite $\kappa\sigma(x)$, dann ist die genaue Schwelle für ihre Trennung $\kappa_*=E_\sigma/2$. Für $\kappa<\kappa_*$ sind die Vorhersageintervalle jedes reduzierten Kandidaten und des Zielmodells an wenigstens einem der $n+1$ Alternationspunkte disjunkt. Ab $\kappa=\kappa_*$ überlappen die Intervalle des optimalen Kandidaten und des Zielmodells auf dem ganzen Intervall. An den Extrempunkten berühren sie sich bei Gleichheit. Mit nur $n$ beliebigen exakten Stützstellen existiert der Interpolant aus dem vorigen Abschnitt, auch bei beliebiger positiver $\sigma$.
+
+Für eine bekannte gemeinsame Beobachtungsabbildung $y(x)=A(x)f(x)+C(x)$ mit stetigem $A$ ohne Nullstelle und einer positiven Fehlerskala $\sigma_y$ der beobachteten Antwort kann man $\sigma=\sigma_y/|A|$ setzen. Der gemeinsame additive Beitrag $C$ fällt in der Differenz heraus. Bei H96 ist eine solche Abbildung mit belastbarer Fehlerskala weiterhin herzuleiten.
+
+### Explizite Rechnung bei polynomialer Fehlerhülle
+
+Für $\sigma(x)=c_\sigma\prod_{\ell=1}^k(x+\eta_\ell)$ mit $c_\sigma>0$, $\eta_\ell>0$ und $0\le k\le d$ kann man die Einheitskreiskonstruktion direkt verwenden. Man hängt die festen $\eta_\ell$ an die Parameterliste $u$ an und ersetzt den Vorfaktor $z^d$ in $B_\tau$ durch $z^{d-k}$. Die Phase wächst weiterhin insgesamt um $n\pi$. Mit
+$$
+D_\tau^{+}(x)=D_\tau(x)\prod_\ell(x+\eta_\ell)
+$$
+ist $D_\tau^{+}R_\tau$ der Residualzähler bis auf Normierung. $K_\tau$ und $V_i$ aus der ursprünglichen expliziten Formel werden über die verlängerte Liste berechnet. Dann gelten $f-g_*=(-1)^n c_\sigma E_\sigma\big(\prod_\ell(x+\eta_\ell)\big)R_\tau$ und
+$$
+E_\sigma=\frac{2}{c_\sigma K_\tau S}.
+$$
+Die zusätzlichen Faktoren sind im Quotienten $w_i(\widehat\tau)/w_i(\tau)$ zweier Lückenvektoren fest und kürzen sich. Daher gelten die monotone Fixpunktiteration und ihre Einschließungen auch für diese Fehlerhüllen. Die Phase liefert in diesem Fall genau $n+1$ Alternationspunkte einschließlich beider Intervallenden.
+
+Beim Drei-Pol-Beispiel mit $d=1$ und $\sigma(x)=(x+2)/3$ ist die Fehlerskala am unteren Ende eins und am oberen Ende vier. Der gewichtete Minimax-Abgleich liefert
+$$
+(\tau_1,\tau_2)\simeq(4.04310364408,11.13017049743),
+\qquad
+2.022788725072\cdot10^{-8}<E_\sigma<2.022788725075\cdot10^{-8}.
+$$
+Die inneren Alternationspunkte liegen näherungsweise bei $1.263417489$, $2.115391605$, $3.707800639$, $6.101426025$ und $8.738411472$. Die Fehlerhalbbreite $\kappa\sigma$ hat damit eine Trennschwelle von $\kappa_*\simeq1.01139436254\cdot10^{-8}$.
+
+Die Fehlerschranke lässt sich mit der obigen Bruchrechnung nachprüfen. Das zusätzliche feste Argument $2$ geht nur in die Liste der $\rho$-Werte ein. Der Faktor $c_\sigma=1/3$ geht in die Fehlergrenzen ein. Mit diesen Argumenten für `data` ergibt sich die Prüfung:
+
+~~~python
+lo = tuple(map(F, ("4.0431036440795", "11.1301704974249")))
+hi = tuple(map(F, ("4.0431036440798", "11.1301704974252")))
+wl, el = data(lo, auxiliary=(F(2),), sigma_scale=F(1, 3))
+wu, eu = data(hi, auxiliary=(F(2),), sigma_scale=F(1, 3))
+assert all(root_sum_bounds(x, wl)[1] < 0 for x in lo)
+assert all(root_sum_bounds(x, wu)[0] > 0 for x in hi)
+assert F("2.022788725072e-8") < eu[0] <= el[1] < F("2.022788725075e-8")
 ~~~
