@@ -331,3 +331,7 @@ Bei endlicher Vermittlerreichweite misst die doppelte Laufzeitdifferenz eine tra
 ## Tomographie und unbekannte Reichweite
 
 Ideale Laufzeitprojektionen aus allen Richtungen rekonstruieren den gefalteten D-Antwortkörper. Bei unbekannter Vermittlermasse kann eine andere positive Dichte derselben Gesamtmasse exakt dieselben Projektionen liefern. Ein bekannter Vakuumbereich mit nichtverschwindender Antwort oder ein unabhängig bekanntes Kalibrierungsprofil kann die Mehrdeutigkeit aufheben. Ein realer Abgleich und H96 bleiben offen.
+
+## Gravitative Reichweitenkalibrierung
+
+Der partielle J–Gravitations-Quotient nach Abzug eines geeigneten Tracers ist im Ein-Massen-Yukawa-Modell linear in q². Zwei räumliche Skalen bestimmen Kopplung und Reichweite, sofern korrelierte Materiereste entfernt sind und eine J-Fluktuation übrig bleibt. Ein dritter Modus prüft die Skalenform. Ein absoluter J-Mittelwert wäre zusätzlich für die mittlere Massendichte nötig. Reale Karten und H96 bleiben offen.
