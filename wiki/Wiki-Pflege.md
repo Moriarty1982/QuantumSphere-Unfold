@@ -728,3 +728,27 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **19.11.2026, OP5-Thermische-Streuung:** JENDL-Vergleich bei endlicher Energie und notwendiger innerer Randpol nachgezogen.
 
 **19.11.2026, OP5-Gemeinsamer-J-Strom:** Positive Vektorsumme, Isotopendifferenz und unabhängige Ladungsrichtung nachgezogen.
+
+**19.11.2026, OP5-Neutrale-Feldantwort:** Lokale Feldstärkekopplung, Bindungsantwort und offene Normierung nachgezogen.
+
+**19.11.2026, OP5-Ensembleantwort:** Homogene Modengleichung, Dichte-Kopplungs-Degenerierung und bedingte Poisson-Inversion nachgezogen.
+
+**19.11.2026, OP5-Gravitationsabgleich:** Kreuzspektren, korrelierte Materie und bedingte Tracer-Projektion nachgezogen.
+
+**19.11.2026, OP5-Wellenauslese:** Geometrische Optik, Born-Winkelantwort und notwendige Phaseninformation nachgezogen.
+
+**19.11.2026, OP5-Tensorkopplung:** Feld- und Gesamttensorabgleich, Laufphase und Vorwärtsamplitude nachgezogen.
+
+**19.11.2026, OP5-Metrischer-Abgleich:** Gemeinsamer Lichtkegel, masseloser Austausch und Ricci-Feldumdefinition nachgezogen.
+
+**19.11.2026, OP5-Tensorvermittler:** Massiver Baumabgleich, Kopplungsmatrix und Quellenerhaltung nachgezogen.
+
+**20.11.2026, OP5-Differenzphase:** Gemeinsame sichtbare Quellkopplung, Laufzeitvergleich und longitudinale Quellen nachgezogen.
+
+**20.11.2026, OP5-Longitudinaler-Abgleich:** Gemischter Propagator, D-Spur und freie Ausbreitung bei ungleichen Gewichten nachgezogen.
+
+**20.11.2026, OP5-Doppelte-Laufzeitdifferenz:** Übertragungsphasen, endliche Reichweite und Endpunktfehler nachgezogen.
+
+**20.11.2026, OP5-Transversale-Massenmodulation:** Dreidimensionale Yukawa-Projektion, Strahlgewicht und Modulation bei gleicher Gesamtmasse nachgezogen.
+
+**20.11.2026, OP5-Tomographie:** Positive Gegenfamilie, Vakuumkriterium und Zweimoden-Kalibrierung nachgezogen.
