@@ -1,0 +1,12 @@
+Clear[r,u,a,ell,amp,x,y,z,eps,fields];
+transverseMoment=Integrate[2 Pi r^3 (1-r^2/a^2)^4,{r,0,a},Assumptions->a>0];
+axialIntegral=ell Integrate[(1-u^2)^4,{u,-1,1}];
+xMoment=FullSimplify[amp axialIntegral (transverseMoment-(transverseMoment/.a->2 a)/4)/2,Assumptions->a>0&&ell>0&&amp>0];
+positions={x,y,z};
+weights=Laplacian[# ,positions]& /@ {x^2,y^2,z^2,z^2-(x^2+y^2)/2};
+fields=Array[e,3];
+tf[v_]:=Outer[Times,v,v]-(v.v) IdentityMatrix[3]/3;
+linearRest=Map[Coefficient[#,eps,1]&,Expand[tf[eps fields]],{2}];
+linearBiased=Map[Coefficient[#,eps,1]&,Expand[tf[{0,0,b0}+eps fields]],{2}];
+rampArea=Integrate[t,{t,0,tau/2}]+Integrate[tau-t,{t,tau/2,tau}];
+Print[{rampArea,xMoment,xMoment/2,weights,linearRest,linearBiased}];
