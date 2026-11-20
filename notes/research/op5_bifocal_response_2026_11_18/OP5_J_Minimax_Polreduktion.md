@@ -327,3 +327,81 @@ assert hi/F("2.022788725072e-8") < F("0.48732628")
 ~~~
 
 Die Rasterwerte und die Fehlerhülle sind synthetisch. Das Verfahren ist auf gegebene Stützstellen und lokale Unsicherheiten anwendbar, sobald die Beobachtungsabbildung für H96 vorliegt.
+
+## Größere Messraster und bestimmende Teilmengen
+
+Sei $X=\{x_1<\cdots<x_m\}$ ein vorgegebenes Raster mit $m\ge n+1$, $n=d+2r-1$. An jedem Knoten sei eine positive Fehlerskala $\sigma(x_j)$ gegeben. Für $r$ gleichsignierte Zielpole gilt
+$$
+E_X=\max_{\substack{Y\subseteq X\\ |Y|=n+1}} E_Y,
+\qquad
+E_Y=\frac{1}{\mu(A_Y)} .
+$$
+Hier verwendet jede Teilmenge ihre eigenen Lagrange-Gewichte in der Matrix $A_Y$ aus dem vorigen Abschnitt. Der optimale Abgleich für $X$ ist eindeutig und wird von jeder maximierenden Teilmenge bereits bestimmt.
+
+### Beweis auf einem endlichen Raster
+
+Für einen vorläufigen Lückenvektor $\tau$ wähle das Polynom $P_\tau$ mit Leitkoeffizient eins und Grad $n$, das $\max_{x\in X}|P_\tau(x)|/(D_\tau(x)\sigma(x))$ minimiert. Ein Minimum existiert, da eine Normschranke auf mindestens $n+1$ verschiedenen Knoten die Koeffizienten beschränkt und die Zielfunktion stetig ist. Ein Minimierer erreicht den gewichteten Maximalbetrag an mindestens $n+1$ Stellen mit wechselnden Vorzeichen. Andernfalls lassen sich die Extremstellen in höchstens $n$ aufeinanderfolgende Gruppen mit jeweils gleichem Vorzeichen aufteilen. Ein Polynom mit je einer Nullstelle zwischen den Gruppen hat Grad höchstens $n-1$ und kann durch ein gemeinsames Vorzeichen an die Extremwerte angepasst werden. Sein hinreichend kleines Vielfaches verringert nach Abzug den Fehler an allen Extremstellen. An den übrigen Knoten bleibt der Fehler wegen des strikten Abstands zum Maximum und der Endlichkeit von $X$ ebenfalls unter dem alten Maximum. Die Eindeutigkeit folgt aus der dividierten Differenz der Kandidatendifferenz an $n+1$ alternierenden Stellen.
+
+Wie beim kontinuierlich gewichteten Vergleich liegen alle $n$ Nullstellen von $P_\tau$ zwischen Alternationspunkten. Die Werte $(-1)^n P_\tau(-t_i)$ sind positiv. Sie hängen stetig von $\tau$ ab. Die gewichteten Normen auf dem endlichen Raster sind auf der kompakten Lückenbox gleichmäßig äquivalent zur Koeffizientennorm. Bei Konvergenz der Lückenvektoren ist deshalb jede Koeffizientengrenze ein Minimierer der Grenzaufgabe. Seine Eindeutigkeit liefert die Stetigkeit.
+
+Die Interpolation der Zielpolwerte und die Fixpunktkonstruktion aus dem Abschnitt zur Fehlerhülle gelten daher auch für $X$. Sie liefern genau eine beste Antwort mit positiven Ersatzgewichten und einem Massenquadrat pro Lücke. Sei $Y$ eine Auswahl von $n+1$ gewichteten Alternationspunkten dieser Antwort. Das Alternationsargument für Kandidatendifferenzen zeigt, dass sie bereits auf $Y$ optimal ist und $E_Y=E_X$ gilt. Für jede Teilmenge $Y'$ gilt $E_{Y'}\le E_X$, da sie nur einen Teil der Ungleichungen auf $X$ prüft. Nimmt eine Teilmenge das Maximum an, ist der Rasterminimierer auf ihr optimal. Die Eindeutigkeit auf der Teilmenge zeigt, dass sie denselben Kandidaten bestimmt.
+
+### Lineare Machbarkeit bei festem Fehlerniveau
+
+Die Teilmengenformel erlaubt eine exakte Kontrolle kleiner Raster. Auf größeren Rastern lässt sich die Kombinationenzahl umgehen. Für ein vorgegebenes $e\ge0$ schreibe $g=N/Q$ mit $\deg N\le d+r-1$ und $Q=\sum_i v_i L_i$, $v_i\ge0$, $\sum_i v_i=1$. Auf $X$ sind alle $L_i$ positiv. Die Bedingungen
+$$
+-e\,\sigma(x)Q(x)\le f(x)Q(x)-N(x)\le e\,\sigma(x)Q(x)
+\qquad (x\in X)
+$$
+sind linear in $v_i$ und den Koeffizienten von $N$. Für $e\ge E_X$ ist das System mit dem konstruierten Rasterminimierer erfüllbar. Für $e<E_X$ widerspricht bereits die bestimmende Alternationsmenge der Machbarkeit. Der Zähler einer Differenz $N/Q-g_*$ hat auch in dieser geschlossenen Suchmenge Grad höchstens $n-1$ und der Nenner bleibt überall auf $X$ positiv. Damit kann auch ein möglicher mehrfacher Pol am Rand des Suchraums den Fehlerwert nicht senken. Eine Halbierung des Fehlerniveaus mit linearen Machbarkeitstests schließt $E_X$ ein.
+
+### Zehn ganzzahlige Stützstellen
+
+Für das Drei-Pol-Beispiel mit $\sigma(x)=(x+2)/3$ wählen wir $X=\{1,2,\ldots,10\}$. Über alle $\binom{10}{7}=120$ Teilmengen ergibt sich eindeutig
+$$
+Y_*=\{1,2,3,4,6,9,10\},\qquad
+1.10277872903767\cdot10^{-8}<E_X<1.10277872903768\cdot10^{-8}.
+$$
+Die Obergrenzen aller anderen Teilmengen liegen unter der Untergrenze für $Y_*$. Das Raster erreicht rund $54.52$ Prozent des kontinuierlichen gewichteten Abstands. Für gemeinsame Fehlerintervalle ist die scharfe Schwelle daher $\kappa_*=E_X/2\simeq5.51389\cdot10^{-9}$. Die folgende Rechnung prüft die Auswahl und Schranken rational.
+
+~~~python
+from fractions import Fraction as F
+from itertools import combinations
+from math import prod
+
+t = (4, 9, 16)
+a = (1, 1, 1)
+grid = tuple(range(1, 11))
+
+def basis(i, z):
+    return prod(z + u for j, u in enumerate(t) if j != i)
+
+def error_bounds(x):
+    gamma = [F(1, prod(abs(z-y) for y in x if y != z)) for z in x]
+    sigma = [F(z+2, 3) for z in x]
+    scale = [F(prod(z+u for z in x), a[i]*basis(i,-u)**2)
+             for i,u in enumerate(t)]
+    A = [[scale[i]*sum(w*s*basis(i,z)*basis(k,z)
+                       for z,w,s in zip(x,gamma,sigma))
+          for k in range(len(t))] for i in range(len(t))]
+    def apply(v):
+        return [sum(a*b for a,b in zip(row,v)) for row in A]
+    v = [F(1)]*len(t)
+    for _ in range(8):
+        v = apply(v)
+    rates = [y/z for y,z in zip(apply(v),v)]
+    return 1/max(rates), 1/min(rates)
+
+bounds = {x: error_bounds(x) for x in combinations(grid, 7)}
+best = max(bounds, key=lambda x: bounds[x][0])
+lo, hi = bounds[best]
+other = max(upper for x, (_, upper) in bounds.items() if x != best)
+assert len(bounds) == 120
+assert best == (1, 2, 3, 4, 6, 9, 10)
+assert other < lo
+assert F("1.10277872903767e-8") < lo <= hi < F("1.10277872903768e-8")
+assert F("0.54517741") < lo/F("2.022788725075e-8")
+assert hi/F("2.022788725072e-8") < F("0.54517742")
+~~~
+
+Die Formel vergleicht eine gegebene gleichsignierte Zielantwort mit der reduzierten Modellklasse. Die Zuordnung einer solchen Zielantwort und ihrer Fehlerhalbbreiten zu H96-Messungen bleibt offen.
