@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, Stand der lokalen Auslese vom 20.11.2026.** HCl und atomarer Wasserstoff liefern im idealisierten Modell zwei Feldrichtungen. Ein Nullprofil im selben Messweg beseitigt im linearen Vergleich den direkten lokalen Hintergrundwechsel an den Anschlüssen. Die materielle W2-Higgsquelle ist kompressionsabhängig. Der direkte Massenanteil des aktuellen Profils erzeugt einen gewöhnlichen Quadrupol. Offen bleiben native OP5-Kopplung, freie J-Ausbreitung im Messband, Anschlusskalibrierung, vollständiger Stress des Antriebs und H96. Der Geltungsbereich der lokalen Closure ist unverändert. [W2-Dichteantrieb](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_W2_Dichteantrieb.md)
+
 **Gebundene Materieauslese, 19.11.2026:** Die integrierte Druckbilanz des führenden gebundenen Modells verschwindet nach Einschluss der Quell- und Feldspannungen. Für H96 fehlen weiterhin die physische Paarhäufigkeit und die gravitative Normierung. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gebundener_Tensor.md).
 
 **Gerade Auslese für H96, 19.11.2026:** Ein isotropes Nullmittel des Dipols kann positive quadratische J-Außenenergie tragen. Für H96 fehlt die Zuordnung dieser Feldkomponente und der Bindungsbeiträge zur gravitativen Materiedichte. Die signierte Randwirkung bleibt separat offen. [Herleitung](../notes/research/op5_bifocal_response_2026_11_18/OP5_Gerade_Dipolauslese.md).

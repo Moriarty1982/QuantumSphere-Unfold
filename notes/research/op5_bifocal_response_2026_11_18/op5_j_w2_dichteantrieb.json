@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_W2_Dichteantrieb",
+  "repository": {
+    "commit": "8046eab74c437e6a586b8dab95f345db50bbab06",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_w2_dichteantrieb.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Host nicht ausgewiesen. Kernelarchitektur x86 (64-bit)."
+  },
+  "mathematics": {
+    "assertion_tested": "Lokale lineare Yukawa-Quelle, gekoppelte Energiedichte, radiale Divergenzlösung und Wirkung des Antriebspolynoms auf den harmonischen Quadrupol.",
+    "coefficient_domain": "Exakte symbolische Ableitungen und Polynome, rationale Momentenkontrolle einer scharfen Scheibe.",
+    "conventions": "Materieframe M, positive Higgsradiusnorm und nichtrelativistische Ruhestoffreferenz.",
+    "inputs": [
+      "W2-Massenansatz m_i=y_i h, glattes kompaktes Quartikprofil der Vorarbeit, statischer OP5-Antriebsoperator."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine Identifikation des Higgsradius mit dem OP5-Vergleichsskalar, keine vollständige Hilfsapparatur oder H96-Messung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T07:22:22.631Z",
+    "runtime_seconds": 9.998,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_w2_dichteantrieb.txt",
+      "sha256": "94c79fdab113a6424d0c00394d27c33dc89dccf31a69d30d4431e89483542cc8",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Manifeststatus 0 kodiert isError=false. Prozesscode nicht ausgewiesen. Separater Wolfram-Rückgabewert Null.",
+    "Exakte Nullreste für Quellen-, Divergenz- und Quadrupolidentitäten. Die strikte glatte Momentenungleichung wird analytisch begründet."
+  ],
+  "result": "Symbolische Kontrollen stimmen mit der Forschungsnotiz überein.",
+  "residual_risks": [
+    "Laufzeit ist Tool-Wandzeit. Der restmassengesteuerte Vergleich lässt Druck, Bindung und Halterungen im Zahlenansatz weg."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_w2_dichteantrieb.wl",
+      "sha256": "83ac270c766305f0b26e1a15b61de0ab69e4655a786cfc0634cc310ea5d2a9fb",
+      "sha256_after": "83ac270c766305f0b26e1a15b61de0ab69e4655a786cfc0634cc310ea5d2a9fb"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_w2_dichteantrieb.txt"
+  ]
+}
