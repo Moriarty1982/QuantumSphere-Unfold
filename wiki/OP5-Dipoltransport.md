@@ -395,3 +395,7 @@ Im linearen retardierten Vergleich erzeugt der dynamische Wellenoperator auf ein
 ## Antriebsenergie und masselose Antwort
 
 Die vollständige Kompensationsquelle hat keine Änderung der Energie je Querebene. Die bei der Paarverkürzung gewonnene Bindungs- und Antriebsenergie muss in einer vollständig erfassten Schicht durch eine andere Energieänderung aufgewogen werden. Die Kompensation des massiven Vermittlers lässt in linearer Einstein-Gravitation den statischen Quadrupol und während der Schaltung eine gravitative Fernantwort zu. Der Beitrag zur realen Differenzmessung und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Antriebsenergie_und_Gravitation.md)
+
+## Gleichzeitige Kompensation beider Außenfelder
+
+Eine vollständig vorgeschriebene erhaltene Quelle mit beiden Wellenoperatoren lässt im linearen Modell das massive und masselose Feld außerhalb des Messvolumens gleichzeitig unverändert. Die transversale Krümmung liefert weiterhin einen positiven Achsenkontrast für ein explizites Profil. Der frühere Plateauquadrupol muss entfallen, und die Schaltung erfordert ein anderes Spannungsmoment. Native Ansteuerung, Apparatur und H96 bleiben offen. [Herleitung und Rechenausgabe](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweifache_Aussenfeldkompensation.md)
