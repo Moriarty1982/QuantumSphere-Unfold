@@ -359,3 +359,7 @@ Zwei gleichsignierte Pole können durch einen frei angepassten Einzelpol plus Ko
 ## Synthetische Kreuzspektren und Kalibriergrenzen
 
 Aus zwei J-Splits, einer Gravitationskarte und einem Tracer wurden an sieben Modellskalen alle sechs Rohspektren erzeugt. Die Tracerprojektion entfernt den tracerproportionalen Anteil. Ein mit dem D-Signal korrelierter Gravitationsrest bleibt im Quotienten erhalten. Im synthetischen Drei-Pol-Beispiel schließt die Matrixprüfung zwei Pole plus linearen Kontaktterm bis zu einem gemeinsamen Kalibrierfaktor von rund $8{,}74917\times10^{-4}$ aus. Die Grenze enthält die nichtlineare Resthülle. Gemessene Spektren, externe Kalibriergrenzen und H96 bleiben offen. [Rechnung und Reproduktion](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Kreuzspektren_und_Kalibriergrenzen.md)
+
+## Zeitdrift und profilgebundene Endpunktantwort
+
+A–B–B–A in gleichen Zeitabständen entfernt im Einzelpfadmodell konstante und lineare Zeitdrift. Bei einer Schranke $M$ für ihre zweite Zeitableitung bleibt höchstens $Mh^2$. Die mit dem Profilwechsel gekoppelte Endpunktantwort hat dieselbe Messsignatur wie die gesuchte Ausbreitungsänderung. Ein Kontrollblock mit bekanntem Ausbreitungskontrast und begrenzter Endpunktabweichung liefert eine zusätzliche Gleichung. Reale Endpunktkalibrierung, J-Karten und H96 bleiben offen. [Herleitung und Kontrollen](../notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktdrift.md)
