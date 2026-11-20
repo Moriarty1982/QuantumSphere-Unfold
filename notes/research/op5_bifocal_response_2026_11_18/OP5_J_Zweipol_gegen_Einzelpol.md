@@ -161,3 +161,63 @@ $$
 Die quadratische Gleichung hat genau eine Lösung im offenen Intervall $(\rho_2,\rho_1)$. Aus ihr folgen $\tau$, der exakte Modellabstand $E$ und das Residuum. Für $[L,U]=[1,10]$, $(t_1,t_2)=(4,9)$, $a_1=a_2=1$ und $d=1$ ergibt die numerische Auswertung der Formel $\tau\simeq4.61571010347817$, $b_*\simeq1.54907564544239$ und $E\simeq2.8588362842460\times10^{-5}$. Das liegt in der zuvor rational geprüften Einschließung. Die fünf Alternationspunkte stimmen auf neun Nachkommastellen mit der obigen Stützstellenwahl überein. Für H96 bleibt die Abbildung auf messbare Antworten offen.
 
 Eine verwandte Darstellung gewichteter Chebyshev-Polynome über den Einheitskreis findet sich bei [Kroó und Pinkus, *Strong Uniqueness*, Abschnitt 13](https://www2.math.ethz.ch/EMIS/journals/SAT/papers/12/12.pdf).
+
+## Gegenläufige Polgewichte und Grenzfälle
+
+Seien weiterhin $0<t_1<t_2$, $0\le L<U$ und $d\ge0$, jetzt mit $a_1>0>a_2$. Ein gemeinsamer Vorzeichenwechsel deckt die andere Reihenfolge der Vorzeichen ab. Mit den $\rho_i,C_i$ aus der vorigen Konstruktion setze
+$$
+k=\frac{a_1\rho_2 C_2}{|a_2|\rho_1 C_1},\qquad
+F(r)=\frac{(\rho_2-r)(1-\rho_1r)}{(\rho_1-r)(1-\rho_2r)},\qquad
+k_\infty=F(0)=\frac{\rho_2}{\rho_1},\qquad k_0=F(\rho(0)).
+$$
+Es gilt $0<k_\infty<1\le k_0$. Für $L>0$ ist $k_0>1$. Für $L=0$ gilt $\rho(0)=1$ und $k_0=1$.
+
+| Bereich | Gleichmäßig beste Antwort oder Grenzwert | Wird das Infimum bei $\tau>0$ erreicht? |
+| --- | --- | --- |
+| $0<k<k_\infty$ | Eindeutiger Einzelpol mit $\tau>t_2$ und $b<0$ | Ja |
+| $k_\infty\le k<1$ | Bestes Polynom vom Grad $d+1$ als Grenzwert für $\tau\to\infty$ | Nein |
+| $k=1$ | Eindeutige Antwort als Kontaktpolynom vom Grad höchstens $d$. Bei $b=0$ bleibt $\tau$ frei. | Ja |
+| $1<k\le k_0$ | Beste Antwort $p+b/x$ mit $b\ne0$ als Grenzwert für $\tau\downarrow0$ | Nein |
+| $k>k_0$ | Eindeutiger Einzelpol mit $0<\tau<t_1$ und $b>0$ | Ja |
+
+Für $L=0$ ist der vierte Bereich leer. Die Grenzen betreffen das Massenquadrat $\tau$ und die gleichmäßige Abweichung auf dem gegebenen Intervall.
+
+### Endliche Einzelpole und der Fall $b=0$
+
+Der Abgleich $A_1/V_1=A_2/V_2$ bleibt gültig, jetzt mit $A_2=a_2(t_2-t_1)(t_2-\tau)$. Innerhalb $(t_1,t_2)$ haben $A_1$ und $A_2$ entgegengesetzte Vorzeichen. Außerhalb dieses Bereichs ist der Abgleich für $r=\rho(\tau)$ äquivalent zu $k=F(r)$. Auf $(0,\rho_2)$ fällt $F$ strikt von $k_\infty$ auf null. Auf $(\rho_1,1]$ fällt $F$ strikt von $+\infty$ auf eins. Dies folgt in beiden Bereichen aus der Ableitung von $\log F$: Die Beiträge aus den beiden Quotienten $(\rho_2-r)/(\rho_1-r)$ und $(1-\rho_1r)/(1-\rho_2r)$ sind jeweils negativ. Positive endliche $\tau$ entsprechen $0<r<\rho(0)$. Jede solche Lösung liefert $f-g_*=(2A_1/(KV_1))(-1)^n R_\tau$ und damit einen eindeutigen Minimax-Kandidaten nach dem Alternationsargument. Die Vorzeichen von $b$ folgen aus der Auswertung des Residualzählers bei $-\tau$.
+
+Für die Notwendigkeit betrachte eine optimale Antwort mit $b\ne0$ und setze $s=1/(1+\tau)$, $D_s=1-s+sx$. Schreibe die Antwort als $M/D_s$ mit $\deg M\le d+1$. Im Inneren $0<s<1$ spannen die Variationen von $M$ und $s$ alle Funktionen
+$$
+\frac{\Delta M\, D_s-M(x-1)\Delta s}{D_s^2}
+=\frac{Q}{D_s^2},\qquad \deg Q\le d+2,
+$$
+auf. Dazu wählt man $\Delta s$ über die Auswertung des Zählers am Pol, wo $M$ und $x-1$ von null verschieden sind. Der Rest ist dann durch $D_s$ teilbar. Ohne $d+4$ alternierende Extremwerte gäbe es ein $Q$ vom Grad höchstens $d+2$ mit passendem strengem Vorzeichen auf allen Extremstellen. Die Nullstellen von $Q$ lassen sich zwischen den aufeinanderfolgenden Gruppen entgegengesetzter Vorzeichen platzieren. Eine hinreichend kleine Variation in dieser Richtung senkt den Maximalfehler, da die Variation gleichmäßig bis auf einen quadratischen Rest gilt und der Fehler abseits der Extremstellen unter seinem Maximum liegt.
+
+Der Residualzähler $D_\tau(f-g)$ hat Grad höchstens $d+3$. Bei $d+4$ alternierenden Extremwerten muss er Grad $d+3$ haben. Er ist ein Vielfaches von $P_\tau$ aus der Einheitskreiskonstruktion. Beide sind, nach Anpassung des Leitkoeffizienten, ausgezeichnete Polynome minimaler Norm mit Gewicht $1/D_\tau$. Das Alternationsargument mit dividierten Differenzen beweist die Eindeutigkeit auch in dieser Klasse. Bei $\tau=t_i$ verschwindet $D_\tau(f-g)$ an der doppelten Nennernullstelle, während $P_\tau$ dort von null verschieden ist. Damit sind alle optimalen Lösungen mit einem endlichen positiven Pol und $b\ne0$ durch die genannte skalare Gleichung erfasst.
+
+Ein Kontaktpolynom $p$ vom Grad höchstens $d$ kann nur dann für alle $\tau$ optimal sein, wenn $f-p$ mindestens $d+3$ alternierende Extremwerte besitzt. Das folgt bereits aus der linearen Approximation bei einer festen positiven $\tau$, deren Differenzen Zähler vom Grad höchstens $d+1$ und einen positiven Nenner haben. Umgekehrt reichen diese $d+3$ Werte für die Optimalität und Eindeutigkeit von $p$ in der ganzen Klasse. Dazu ordnet man den Zähler von $g-p$ für jedes $\tau$ demselben Grad zu und benutzt wieder die dividierte Differenz.
+
+Für diese Alternation verwendet man die Einheitskreiskonstruktion mit zwei Faktoren in $B$ und dem Vorfaktor $z^d$. Der Residualzähler über $(x+t_1)(x+t_2)$ ist dann vom Grad $d+2$. Die beiden Beträge an den Zielpolen sind proportional zu $\rho_1 C_1$ und $\rho_2 C_2$. Wie im Dreifaktorenfall erzwingt die Alternation ein Vielfaches dieses Zählers. Die vorgegebenen Zählerwerte sind $a_1(t_2-t_1)$ und $|a_2|(t_2-t_1)$. Ihr Verhältnis stimmt genau für $k=1$ mit dem Verhältnis der konstruierten Werte überein. Dann kürzen sich beide Polfaktoren aus der Approximation heraus und es bleibt das eindeutige Kontaktpolynom.
+
+### Grenzen des Massenbereichs
+
+Für $L>0$ lässt sich die Klasse $M/D_s$ auf $0\le s\le1$ erweitern. Der Nenner bleibt gleichmäßig positiv. Für eine beschränkte Folge von Antworten sind auch die Zähler gleichmäßig beschränkt, also haben ihre Koeffizienten eine konvergente Teilfolge. Ein Minimum existiert daher in der erweiterten Klasse. Beide Randräume sind gleichmäßig durch Antworten mit $0<s<1$ approximierbar. Sie bestehen aus Polynomen vom Grad höchstens $d+1$ bei $s=0$ und Antworten $p+b/x$ bei $s=1$.
+
+Falls bei $k\ne1$ kein innerer Minimierer existiert, kann nur einer der beiden Ränder optimal sein. Wären $M_0/D_0$ und $M_1/D_1$ beide optimal, ergäbe $(M_0+M_1)/(D_0+D_1)$ durch punktweise positive Mittelung eine ebenso gute innere Antwort. Innerhalb jedes Randraums ist die beste Antwort durch den linearen Alternationssatz eindeutig.
+
+Wenn $k$ von unten gegen $k_\infty$ wächst, geht die Lösung der skalaren Gleichung gegen $r=0$ und daher $s\to0$. Aus der Kompaktheit und der stetigen Abhängigkeit der minimalen Fehler von $f$ folgt die Optimalität von $s=0$ bei $k=k_\infty$. Ebenso liefert die Annäherung an $k_0$ von oben den optimalen Rand $s=1$ bei $k=k_0$. Die minimalen Fehler in den beiden festen Randräumen sind stetig in $k$, etwa bei festem $a_1$ und stetig variiertem $a_2$. Sie können sich in den offenen Bereichen $(k_\infty,1)$ und $(1,k_0)$ nicht schneiden, da dort kein innerer Minimierer existiert. Somit bleibt in jedem dieser Bereiche derselbe Rand optimal wie an seiner äußeren Grenze. Die jeweilige Antwort kann dort kein Kontaktpolynom vom Grad höchstens $d$ sein, denn das würde $k=1$ voraussetzen.
+
+Für $L=0$ und $k_\infty<k<1$ gilt die Klassifikation als Polynomgrenze zunächst auf $[\delta,U]$ für hinreichend kleines $\delta>0$, da $k$ und $k_\infty$ stetig in der unteren Intervallgrenze sind. Die besten Polynomfehler auf $[\delta,U]$ konvergieren beim Grenzübergang $\delta\downarrow0$ gegen den besten Polynomfehler auf $[0,U]$. Dazu sind die Polynomkoeffizienten auf einem festen Teilintervall gleichmäßig beschränkt und jede konvergente Teilfolge liefert ein Polynom auf $[0,U]$ mit derselben Fehlerschranke. Der Polynomfehler ist damit eine Untergrenze für das ursprüngliche Infimum. Die gleichmäßige Approximation des Polynoms durch $s\downarrow0$ auf $[0,U]$ liefert die andere Richtung. Der Endpunkt $k=k_\infty$ folgt durch Stetigkeit der Fehler in den Zielgewichten. In diesem Bereich gibt es auch auf $[0,U]$ keine zulässige Antwort, die das Infimum annimmt.
+
+### Zahlenprobe
+
+Für $[1,10]$, $(t_1,t_2)=(4,9)$, $d=1$ und $a_1=1$ gilt näherungsweise $k=4.296900/|a_2|$, $k_\infty=0.631685$ und $k_0=1.275882$.
+
+| $a_2$ | $k$ (gerundet) | Optimale Antwort |
+| --- | --- | --- |
+| $-10$ | $0.429690$ | Einzelpol bei $\tau\simeq20.215712$ |
+| $-6$ | $0.716150$ | Quadratisches Polynom als Grenzwert |
+| $-4$ | $1.074225$ | Pol bei null als Grenzwert |
+| $-3$ | $1.432300$ | Einzelpol bei $\tau\simeq0.620242$ |
+
+Die Gewichte und Skalen sind synthetisch. Für H96 bleibt die Zuordnung zu Beobachtungen offen.
