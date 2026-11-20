@@ -1,0 +1,15 @@
+During evaluation of In[1]:= kernel version = 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= axis profile and transverse Laplacian = {0, 0}
+During evaluation of In[1]:=                                    16 amp mix p[z]
+axis tidal term per polarization = ---------------
+                                         2    4
+                                     mass  rad
+During evaluation of In[1]:= integrated transverse-only mean Hessian factor = 1 - 16 kappa s
+During evaluation of In[1]:= seed moment compensation residual = 0
+During evaluation of In[1]:= static operator and Laplacian commutator = 0
+During evaluation of In[1]:= adjoint direct-source quadrupole and degree-four residual = {0, 0}
+During evaluation of In[1]:=                                                                  15
+finite smoothness example moment ratio and two radial moments = {--, 0, 0}
+                                                                 4
+
+Out[1]= Null
