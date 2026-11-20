@@ -405,3 +405,97 @@ assert hi/F("2.022788725072e-8") < F("0.54517742")
 ~~~
 
 Die Formel vergleicht eine gegebene gleichsignierte Zielantwort mit der reduzierten Modellklasse. Die Zuordnung einer solchen Zielantwort und ihrer Fehlerhalbbreiten zu H96-Messungen bleibt offen.
+
+## Prüfung direkt aus Messwerten und Fehlerbalken
+
+Auf $n+1=d+2r$ verschiedenen Stützstellen seien Messmitten $y_j$ sowie positive Fehlerskalen $\sigma_j$ bekannt. Ein Kandidat muss $|g(x_j)-y_j|\le\kappa\sigma_j$ für alle $j$ erfüllen. Setze $m=r-1$, $\omega(x)=\prod_{j=0}^{n}(x-x_j)$ und $v(x)=(1,x,\ldots,x^m)^\mathsf T$. Definiere aus den Messwerten
+$$
+H(y)=(-1)^n\sum_{j=0}^{n}\frac{y_j}{\omega'(x_j)}v(x_j)v(x_j)^\mathsf T,\qquad
+G=\sum_{j=0}^{n}\frac{\sigma_j}{|\omega'(x_j)|}v(x_j)v(x_j)^\mathsf T.
+$$
+Die Prüfung und ihre Eigenwerte sind unabhängig von der gewählten Polynombasis. $G$ ist positiv definit, da ein Polynom bis Grad $m$ mit null Norm an mehr als $m$ verschiedenen Stellen verschwinden würde.
+
+### Ausschluss eines Modells mit weniger Polen
+
+Ein Kandidat mit höchstens $m$ Polen hat die Form $g=N/Q$ mit $\deg N\le d+m$ und $\deg Q\le m$. Sein Nenner hat auf den Stützstellen keine Nullstelle. Sind $q$ die Koeffizienten von $Q$, dann gilt
+$$
+q^\mathsf T H(g)q=(-1)^n\sum_j\frac{N(x_j)Q(x_j)}{\omega'(x_j)}=0.
+$$
+Die Summe ist eine dividierte Differenz der Ordnung $n=d+2m+1$ eines Polynoms vom Grad höchstens $n-1$. Für jedes $z$ innerhalb der Fehlerintervalle ist
+$$
+H(z)\succeq H(y)-\kappa G,
+$$
+weil in jeder quadratischen Form der maximale Abzug durch $|z_j-y_j|\le\kappa\sigma_j$ beschränkt wird. Ist $H(y)-\kappa G$ positiv definit, ist das reduzierte Modell ausgeschlossen, auch mit frei vorgegebenen Vorzeichen seiner Polgewichte. Die Prüfung verwendet weder Zielmassen noch eine bekannte Zielantwort. Ein Kontaktpolynom vom Grad höchstens $d$ fällt in $H$ heraus.
+
+Für positiv definites $H(y)$ liefert
+$$
+\kappa_0=\lambda_{\min}(H(y),G)
+$$
+den kritischen Wert dieses Ausschlusses. Bei negativ definit orientierten Daten kann man dieselbe Rechnung mit $-y$ durchführen. Auf größeren Rastern genügt für den Ausschluss jede Teilmenge von $d+2r$ Stützstellen mit positiver Definitheit. Hier bezeichnet $\kappa$ den Fehlerbalken um einen gemessenen Datenvektor. Beim früheren Vergleich zweier Modelle mit einem gemeinsamen Fehlerbalken um jede Vorhersage gilt weiterhin der Faktor zwei.
+
+### Wann die Schwelle erreicht wird
+
+Definiere bei $\kappa=\kappa_0$ den alternierend verschobenen Vektor
+$$
+y_j^- = y_j-\kappa_0\sigma_j\,(-1)^n \operatorname{sgn}\omega'(x_j).
+$$
+Dann gilt $H(y^-)=H(y)-\kappa_0G$. Liegt im Kern ein Polynom $Q$ vom Grad $m$ mit $m$ einfachen, streng negativen Nullstellen, wird die Schwelle durch ein zulässiges Modell erreicht. Dazu interpoliere $N(x_j)=Q(x_j)y_j^-$ durch ein Polynom bis Grad $n$. Die Kernbedingung besagt, dass für $k=0,\ldots,m$ jeweils $\sum_j N(x_j)x_j^k/\omega'(x_j)=0$. Zuerst verschwindet damit der Koeffizient von $x^n$ in $N$. Nach jedem solchen Schritt ist der Grad von $x^kN$ beim nächsten Test höchstens $n$, und die Summe liefert dessen Leitkoeffizienten zu $x^n$. Nacheinander verschwinden damit die obersten $m+1$ Koeffizienten von $N$. Übrig bleibt $\deg N\le n-m-1=d+m$. Polynomdivision und Partialbruchzerlegung von $N/Q$ ergeben einen zulässigen Kandidaten, der $y^-$ exakt trifft. Ohne Nachweis eines solchen Kernpolynoms liefert $\kappa_0$ eine Untergrenze für den nötigen Fehlerbalken.
+
+Ein hinreichender Test verwendet beliebige Referenzwerte $0<u_1<\cdots<u_r$ und die Basis $L_i(x)=\prod_{\ell\ne i}(x+u_\ell)$. Hat die Darstellung von $H(y)-\kappa_0G$ in dieser Basis strikt negative Nebendiagonaleinträge, so ist ihr Kern eindimensional und hat einen strikt positiven Koeffizientenvektor. Für einen Kernvektor mit gemischten Vorzeichen würde sein komponentenweiser Betrag die quadratische Form strikt absenken und damit die positive Semidefinitheit verletzen. Ein nichtnegativer Kernvektor kann wegen der negativen Nebendiagonale keine Nullkomponente haben. Zwei unabhängige Kernvektoren würden eine Linearkombination mit einer Nullkomponente erlauben. Die positiven Koeffizienten erzwingen wechselnde Vorzeichen von $Q(-u_i)$ und damit die benötigten einfachen negativen Nullstellen.
+
+### Anschluss an die Eigenwertformel und Zahlenprobe
+
+Für eine exakte gleichsignierte Zielantwort mit positiven Gewichten gilt
+$$
+H(f)=\sum_{i=1}^r \frac{a_i}{\prod_j(t_i+x_j)}v(-t_i)v(-t_i)^\mathsf T .
+$$
+Bei der dividierten Differenz ersetzt man jeden Polynomfaktor in der quadratischen Form durch seinen Wert bei $-t_i$. Der bei der Division durch $x+t_i$ entstehende Polynomialteil hat Grad kleiner als $n$ und verschwindet. In der Basis der Zielpole ist $H(f)$ diagonal mit Einträgen $1/c_i$ aus der Konstruktion für feste Stützstellen. Daher ist $\lambda_{\min}(H(f),G)=1/\mu(A)$ derselbe exakte Abstand.
+
+Für die sieben Stützstellen $(1,2,3,4,6,9,10)$ aus dem Zehn-Punkte-Raster sei $\sigma_j=(x_j+2)/3$. Die Messmitten werden synthetisch aus drei Polen bei $4,9,16$ mit Gewichten eins gewonnen und zusätzlich um $10^{-10}\sigma_j$ mal $(1,-2,1,0,2,-1,1)_j$ verschoben. Der datenbasierte Test liefert
+$$
+1.11248856266898\cdot10^{-8}<\kappa_0<1.11248856266900\cdot10^{-8}.
+$$
+An der unteren Grenze ist die Prüfmatrix positiv definit und ihre Nebendiagonale in der Referenzbasis strikt negativ. Die Nebendiagonale bleibt bis zur kritischen Schwelle negativ, da $G$ in dieser Basis strikt positive Einträge besitzt. Die negative Determinante an der oberen Grenze prüft den Verlust der positiven Definitheit. Damit ist die Schwelle im Beispiel scharf. Die folgende Rechnung prüft alle Vorzeichen und Schranken mit exakten Brüchen.
+
+~~~python
+from fractions import Fraction as F
+from math import prod
+from itertools import permutations
+
+x = (1, 2, 3, 4, 6, 9, 10)
+u = (4, 9, 16)  # Reference poles for the polynomial basis.
+s = tuple(F(z+2, 3) for z in x)
+noise = (1, -2, 1, 0, 2, -1, 1)
+y = tuple(sum(F(1,z+t) for t in u) + F(v,10**10)*scale
+          for z,v,scale in zip(x,noise,s))
+omega_prime = tuple(prod(z-w for w in x if w != z) for z in x)
+basis = [[prod(z+t for k,t in enumerate(u) if k!=i) for z in x]
+         for i in range(len(u))]
+
+def gram(weights):
+    return [[sum(w*p*q for w,p,q in zip(weights,row,col)) for col in basis]
+            for row in basis]
+
+H = gram([val/den for val,den in zip(y,omega_prime)])  # n=6 is even.
+G = gram([scale/abs(den) for scale,den in zip(s,omega_prime)])
+
+def matrix(kappa):
+    return [[h-kappa*g for h,g in zip(hr,gr)] for hr,gr in zip(H,G)]
+
+def det(B, size):
+    total = F(0)
+    for p in permutations(range(size)):
+        swaps = sum(p[i]>p[j] for i in range(size) for j in range(i+1,size))
+        total += (-1)**swaps * prod(B[i][p[i]] for i in range(size))
+    return total
+
+def positive_definite(B):
+    return all(det(B,k)>0 for k in range(1,len(B)+1))
+
+lo, hi = F("1.11248856266898e-8"), F("1.11248856266900e-8")
+assert positive_definite(matrix(lo))
+assert det(matrix(hi), len(u)) < 0
+assert all(matrix(lo)[i][j] < 0 for i in range(len(u)) for j in range(i))
+~~~
+
+Das Beispiel verwendet gesetzte Messmitten und Fehlerbalken. Die Umrechnung realer H96-Messungen in diese statische Antwort bleibt offen.
