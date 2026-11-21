@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, Konverter und lokaler Ringfehler (21.11.2026).** Physischer J-Modenkonverter und Leerkörpertransfer sind zu kalibrieren. Die starke Vorzeichenkompensation beim gewöhnlichen b₄-Abzug bleibt für den gewählten Ringentwurf schlecht konditioniert. [Kontrollrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Konverter_Leerkoerper_Ringfehler.md)
+
 **OP5, Laststandard und Ringfehler (21.11.2026).** Physische J-Last, unabhängiger Direktmonitor und lokale Dichtegrenzen im Übergangsring bleiben nachzuweisen. [Kontrollrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Laststandard_Monitor_Annulus.md)
 
 **OP5, J-Terminierung und Radialraster (21.11.2026).** Die komplexe J-Last, Reziprozität, Veränderungen des Direktpfads und die Lipschitz-Schranke der gewöhnlichen Säulendichte müssen unabhängig belegt werden. [Parallelprüfung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Echo_Radialraster.md)

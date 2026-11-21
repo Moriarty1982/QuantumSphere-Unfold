@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Konverterlast, Leerkörper und Ringfehler (21.11.2026)
+
+Ein separat kalibrierter reziproker Modenkonverter könnte einen A-Spiegel als J-Last abbilden. Der Leerkörperkalibriertransfer braucht einen unabhängigen Direktwert. Lokale Bernstein-Grenzen senken den radialen Formfehler, reichen für den steilen Übergangsring aber nicht für ein brauchbares relatives b₄-Budget. [Konverter und lokale Ringgrenzen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Konverter_Leerkoerper_Ringfehler.md)
+
 ### OP5: Laststandard, Direktpfadmonitor und Annulus (21.11.2026)
 
 Zwei passive additive H/HCl-Kontakte können keine reine J-Last bilden. Ein separat kalibrierter Direktmonitor begrenzt den sichtbaren Rücklauf. Ein exakt kompensierter Übergangsring zeigt, warum eine globale Dichteänderungsgrenze allein keine brauchbare relative b₄-Genauigkeit liefert. [Last und Kontrollprofil](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Laststandard_Monitor_Annulus.md)
