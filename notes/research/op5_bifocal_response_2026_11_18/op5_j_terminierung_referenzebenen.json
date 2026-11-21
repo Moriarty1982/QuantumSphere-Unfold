@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Terminierung_Referenzebenen",
+  "repository": {
+    "commit": "b1569dc99d4987bfb7fb6929b0c9d5cc3359c476",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_terminierung_referenzebenen.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Schur-Interzeptrest, geometrisches Phasenbudget bei 4 m und Ricci-/Weyl-Koeffizienten des Elektronenvergleichs.",
+    "coefficient_domain": "Exakte komplexe Algebra und numerische Auswertung von Fehlerschranken.",
+    "conventions": "Materieframe M; homogene passive Markerschicht und effektiver Dirac-Modellhintergrund.",
+    "inputs": [
+      "100 MHz, rechtsseitige homogene Reflexionsgrenzen, nominaler J-Dispersionsast."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine physische Terminierung, kein nachgewiesener J-Dispersionsast und keine bestimmte native Vermittlermetrik."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T10:13:11Z",
+    "runtime_seconds": 8.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_terminierung_referenzebenen.txt",
+      "sha256": "e3c612faaf74994c6ae21135f82ca6a4d8ae8185c8c828d00af9c60f597e368b",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste zum Interzept, zur Geometrie und zur Krümmungszerlegung. Rückgabe Null. Zeiten auf Sekunden gerundet."
+  ],
+  "result": "Feste passive J-Last genügt im homogenen Modell. Relative Referenzebenenänderung bei 4 m nominal nur bis 8,33 pm im Einzelbudget. Elektronenmodell liefert Krümmungskoeffizientenverhältnis -4/11.",
+  "residual_risks": [
+    "Physische weiter außen liegende Kreuzreflexion, effektive Referenzebenen und native lokale Koeffizienten offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_terminierung_referenzebenen.wl",
+      "sha256": "7520b07d579ef1bbb06fa76f24268011168e4ce7d0e41140d2b442a862ac80ab",
+      "sha256_after": "7520b07d579ef1bbb06fa76f24268011168e4ce7d0e41140d2b442a862ac80ab"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_terminierung_referenzebenen.txt"
+  ]
+}

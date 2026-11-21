@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Feste Terminierung und Referenzebenen (21.11.2026)
+
+Im homogenen Marker reicht die kleine Kreuzreflexion für die A-Zweilastmessung mit fester passiver J-Last. Für 4 m bleibt die Änderung des relativen A/J-Referenzwegs im Beispiel auf Pikometerniveau zu begrenzen. Zwei orthogonale Polarisationen prüfen die Ricci-/Weyl-Struktur des Elektronenvergleichs. [Terminierung und Geometrie](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Referenzebenen.md)
+
 ### OP5: Passive Lasten, Dispersion und Schwellen (21.11.2026)
 
 Im homogenen Modell erreichen getrennte passive A/J-Lasten das zuvor angesetzte Lastdreieck nicht. Eine passive Modenumwandlung kann es theoretisch erreichen. Bei unverändertem Fehlerbudget trennen rund vier Meter freie Strecke die illustrative massive Dispersion vom konstanten Versatz bei 100 MHz. Eine einzelne Dirac-Schwelle liefert eine nichtproportionale Kinetikmatrix, die Summe braucht einen eigenen Abgleich. [Last- und Schwellenrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passive_Last_Dispersion.md)

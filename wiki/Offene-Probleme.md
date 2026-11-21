@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, Terminierung und Geometrie (21.11.2026).** Die homogene Schicht erlaubt eine feste J-Last bei kontrollierter Kreuzreflexion. Für die reale Strecke bleiben Anschlussreflexion, frequenzabhängiger relativer Referenzweg, effektive Krümmung und lokale Restoperatoren offen. [Referenzebenen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Referenzebenen.md)
+
 **OP5, erreichbare Lasten und Dispersion (21.11.2026).** Passive Portdiversität, Meterstrecke mit kohärenter J/A-Referenz und die physische Summe der Krümmungsschwellen bleiben zu belegen. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passive_Last_Dispersion.md)
 
 **OP5, Zweikanal-Lastvariation und Laufphase (21.11.2026).** Die unabhängige Variation der beiden Rückwellen und die Kondition der HCl/H-Ports bleiben zu belegen. Die J-Frequenzsteigung braucht eine engere Fehlerhülle oder ein anderes Band. Eine native nichtminimale Aufspaltung bleibt herzuleiten. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lastvariation_Laufphase.md)
