@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Feldreferenz.** Forschungsstand und offene Probleme um Rang-eins-Referenz und zeitgleiches Nullbudget ergänzt.
+
 **21.11.2026, OP5-Modenzuordnung.** Forschungsstand und offene Probleme um markierte Spurauslese, Driftgrenze und Identifizierbarkeit der mittleren Kopplungen ergänzt.
 
 **21.11.2026, OP5-Zweilauf.** Forschungsstand und offene Probleme um Ringprofil, Modenmomente und konditioniertes Zweilauf-Fehlerbudget ergänzt.

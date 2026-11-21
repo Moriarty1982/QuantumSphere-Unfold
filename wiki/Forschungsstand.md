@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Rang-eins-Feldreferenz und zeitgleiche Null (21.11.2026)
+
+Eine kalibrierte Rang-eins-Vorwärtsantwort genügt zur vorzeichenfesten Modenzuordnung, sofern ihre beiden Diagonalgewichte verschieden sind und ihr komplexer Hub bekannt ist. Die illustrativen HCl/H-Richtungen haben günstige Gewichtstrennung. Das bestimmt weder einen erreichbaren Vorwärtshub noch die Anschlussverstärkung. Bei tatsächlich gemeinsam benutzten Anschlüssen kürzt eine zeitgleiche Nullmessung ihre gemeinsame Drift exakt. Das kombinierte Fehlerbudget führt Profil- und Markierungsquotient zusammen. [Herleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Feldreferenz.md)
+
 ### OP5: Vorzeichenfeste Modenzuordnung (21.11.2026)
 
 Eine im Feldraum kalibrierte Markierung der beiden Moden erlaubt die Spurauslese ihrer komplexen Übertragungen auch bei gleichen Eigenphasen. Die Fehlerschranke hängt von Profil- und Markierungsfehlern ab. Profilgebundene Anschlussdrift muss weiterhin begrenzt werden. Referenzierte Einzelphasen der zwei Läufe bestimmen die mittleren Kopplungen auch bei ungleichen Modengewichten. Ohne gemeinsame Zeitreferenz liefern vier differentielle Läufe bei unabhängig variierten, bekannten Strahlgewichten vollen Rang. Die physische J-selektive Markierung und die reale Anschlusskalibrierung bleiben offen. [Herleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Modenzuordnung.md)
