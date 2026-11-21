@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, passiver Vorwärtshub (21.11.2026).** Phase, Verlust und Reflexion eines idealisierten passiven Markers sind parametrisiert. Der HCl-Einlinienmarker und resonante Anschlüsse müssen sich ein Fenster aus Verstimmung und Mindestantwort teilen. Das vorhandene schwach gekoppelte Anschlussbeispiel verfehlt das Ziel bereits geometrisch. Freie J-Ausbreitung, gemessene Vorwärtstransmission, native Kopplung und H96 bleiben offen. [Bandbedingung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passiver_Vorwaertshub.md)
+
 **OP5, Feldreferenz (21.11.2026).** Die Modenzuordnung benötigt eine kalibrierte modenselektive Vorwärtstransmission im Feldraum. HCl/H liefert dafür Richtungen im Vergleichsmodell. Komplexer Markierungshub, tatsächliche Übereinstimmung der Nullanschlüsse, freie J-Ausbreitung, native Kopplung und H96 bleiben offen. [Referenzbudget](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Feldreferenz.md)
 
 **OP5, markierte Phasenauslese (21.11.2026).** Eine unabhängig kalibrierte Feldmarkierung macht die Phasenzuordnung vom Abstand der Eigenphasen unabhängig. Mittlere Kopplungen sind im deklarierten Modell aus referenzierten Einzelphasen oder aus vier differentiellen Läufen mit bekannt veränderten Gewichten bestimmbar. Feldmarkierung, Driftkontrolle, weitere gewöhnliche Operatoren, native Kopplung und H96 bleiben offen. [Modenzuordnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Modenzuordnung.md)

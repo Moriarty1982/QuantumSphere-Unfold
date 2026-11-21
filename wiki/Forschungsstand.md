@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Passiver Markierungshub und Anschlussband (21.11.2026)
+
+Im verdünnten HCl-Einlinienmodell kostet ein Pi-Hub bei höchstens einem Prozent Amplitudenverlust rund 313 Halbbreiten Verstimmung. Die Anschlussantwort sinkt dabei. Die Bandrechnung gibt eine notwendige Überlappung und eine gemeinsame Säulenbedingung an. Für das bisherige schwach gekoppelte HCl/H-Beispiel unterschreitet schon die geometrische Anschlussschranke das Ziel. Ein separater off-resonanter H-Marker umgeht den HCl-Phasen-Verlust-Konflikt des Markers. Die reale Vorwärtsantwort und die Zweikanalanschlüsse bleiben zu prüfen. [Schicht- und Bandrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passiver_Vorwaertshub.md)
+
 ### OP5: Rang-eins-Feldreferenz und zeitgleiche Null (21.11.2026)
 
 Eine kalibrierte Rang-eins-Vorwärtsantwort genügt zur vorzeichenfesten Modenzuordnung, sofern ihre beiden Diagonalgewichte verschieden sind und ihr komplexer Hub bekannt ist. Die illustrativen HCl/H-Richtungen haben günstige Gewichtstrennung. Das bestimmt weder einen erreichbaren Vorwärtshub noch die Anschlussverstärkung. Bei tatsächlich gemeinsam benutzten Anschlüssen kürzt eine zeitgleiche Nullmessung ihre gemeinsame Drift exakt. Das kombinierte Fehlerbudget führt Profil- und Markierungsquotient zusammen. [Herleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Feldreferenz.md)

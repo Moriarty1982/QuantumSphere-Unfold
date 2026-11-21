@@ -1,0 +1,10 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Lorentz phase/loss residual: 0
+During evaluation of In[1]:= Slab transmission and reflection residuals: {0, 0}
+During evaluation of In[1]:=                                                                                                          -7
+Illustrative {detuning/width, peak/minimum gain, half-band eV}: {312.5858379, 312.5874374, 2.067833848 10  }
+During evaluation of In[1]:=                                                                     -6                23
+Ideal atomic H {wavelength m, pi-phase column m^-2}: {3.440860947 10  , 4.106211797 10  }
+During evaluation of In[1]:= Sufficient interface amplitude bound for unmodeled multiple transmission: 0.00221555644
+
+Out[1]= Null

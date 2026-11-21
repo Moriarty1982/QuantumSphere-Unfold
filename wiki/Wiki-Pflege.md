@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Vorwärtshub.** Forschungsstand und offene Probleme um passive Schicht, Bandüberlappung und getrennten H-Marker ergänzt.
+
 **21.11.2026, OP5-Feldreferenz.** Forschungsstand und offene Probleme um Rang-eins-Referenz und zeitgleiches Nullbudget ergänzt.
 
 **21.11.2026, OP5-Modenzuordnung.** Forschungsstand und offene Probleme um markierte Spurauslese, Driftgrenze und Identifizierbarkeit der mittleren Kopplungen ergänzt.
