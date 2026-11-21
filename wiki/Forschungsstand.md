@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Leistungsbilanz, Fourier-Echos und Ringmessung (21.11.2026)
+
+Eine A-Leistungsbilanz kann eine J-Amplitude bei separat begrenzten Verlusten und anderen Ausgängen eingrenzen. Ein 3×3-Phasengitter liefert gerade markierte Echokanäle. Die gewöhnliche Achsensäule ist mit exakten logarithmischen Ringgewichten und einem Fehlerbudget für Messlücken berechenbar. [Leistung, Fourier und Säule](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Leistungsbilanz_Fourier_Ringmessung.md)
+
 ### OP5: Optische Null, gekoppelte Echos und Achsensäule (21.11.2026)
 
 Ein kohärenter H/HCl-A-Nullabgleich kann im Modell eine J-Richtung erzeugen. Die absolute J-Amplitude bleibt offen. Zwei unabhängig geschaltete Echophasen entfernen auch gemischte Zweierpfade im linearen Modell. Eine gewöhnliche Säulendichtemessung mit Außenreferenz kann das Achsenpotential des Kontrollprofils und damit den gewöhnlichen b₄-Beitrag bestimmen. [Nullport und Säulendichte](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Optischer_Nullport_Echo_Achsensaeule.md)

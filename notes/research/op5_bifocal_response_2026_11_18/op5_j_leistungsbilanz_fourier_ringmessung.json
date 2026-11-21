@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Leistungsbilanz_Fourier_Ringmessung",
+  "repository": {
+    "commit": "1a4df05130ca41d5d79f481b30b53488813bd146",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_leistungsbilanz_fourier_ringmessung.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "A-Leistungsdefizit, höhere Echophasen, diskrete Poisson-Gewichte.",
+    "coefficient_domain": "Exakte komplexe Algebra, Wurzelgitter und numerische analytische Grenzen.",
+    "conventions": "Materieframe M, physikalische Flussnorm und gewöhnliche radiale Poisson-Metrik.",
+    "inputs": [
+      "A-Portbilanz; 3x3-Phasenraster; normierte Flächenringe."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Kein physischer J-Amplitudenstandard, keine experimentelle Echomessung, keine vermessene Randdichte."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T10:40:38Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_leistungsbilanz_fourier_ringmessung.txt",
+      "sha256": "b85cdf7c1645aa3ee6bf7afd3203f4cc569dbbb852f9d545fea5ac7056e58091",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste für Flussdefizit, DFT-Alias und Stammfunktion. Rückgabe Null. Connector-Aufruf mit symbolischem Integral zuerst intern fehlgeschlagen; danach über Stammfunktion gerechnet."
+  ],
+  "result": "Leistungsbilanz liest bei belegten Verlusten eine J-Betragsgrenze. 3x3-Gitter trennt gerade Zählkanäle; unmarkierte Echos bleiben verborgen. Ringgewichte quantifizieren Lückenfehler.",
+  "residual_risks": [
+    "Selektive J-Phase, unabhängige Verluste, unmarkierte Rückwege und gewöhnliche Randdichte offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_leistungsbilanz_fourier_ringmessung.wl",
+      "sha256": "6787f468a633031bb9c9cd055059756eafd5c59357c3fec780488062f2cb6d40",
+      "sha256_after": "6787f468a633031bb9c9cd055059756eafd5c59357c3fec780488062f2cb6d40"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_leistungsbilanz_fourier_ringmessung.txt"
+  ]
+}

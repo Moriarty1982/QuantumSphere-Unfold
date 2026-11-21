@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Leistungsbilanz.** Forschungsstand und offene Probleme um J-Leistungsgrenze, gerade Fourier-Echokanäle und diskrete Säulenmessung ergänzt.
+
 **21.11.2026, OP5-Nullport und Säulendichte.** Forschungsstand und offene Probleme um A-Nullabgleich, gekoppelte Echopfade und Poisson-Transfer ergänzt.
 
 **21.11.2026, OP5-Kontrollstandards.** Forschungsstand und offene Probleme um A/J-Kreuzstandard, Echo-Phasenumlauf und gewöhnliches Weyl-Kontrollprofil ergänzt.

@@ -1,0 +1,19 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= power closure operator residual = {{0, 0}, {0, 0}}
+During evaluation of In[1]:= hidden-side mixing leaves the A deficit Gram residual = {{0, 0}, {0, 0}}
+During evaluation of In[1]:=                                                                                                 -7                    -14
+one-percent amplitude power error allowances for amplitudes 0.003 and 1e-6 = {1.7910000000000 10  , 1.9900000000000 10   }
+During evaluation of In[1]:= illustrative scalar power nonidentifiability residual = 0
+During evaluation of In[1]:= 3x3 Fourier alias identities residuals = {0, 0, 0, 0}
+During evaluation of In[1]:=                                                                                  -9                    -14
+mean echo and second-tag alias bounds at total radius 0.002 = {8.0160320641283 10  , 3.2064128256513 10   }
+During evaluation of In[1]:= radial log-kernel antiderivative residual = 0
+During evaluation of In[1]:= missing central 1 percent area log-kernel weight = 0.056051701859881
+During evaluation of In[1]:=                                                              -6
+3x3 symmetric exact-majorant limit check = 6.0000000000001 10
+During evaluation of In[1]:= last 10 percent of radius log-kernel weight = 0.019315964634321
+During evaluation of In[1]:=                                                                   2
+centered log-kernel norms and common-bias cancellation = {Log[2], -, 0}
+                                                                  E
+
+Out[1]= Null
