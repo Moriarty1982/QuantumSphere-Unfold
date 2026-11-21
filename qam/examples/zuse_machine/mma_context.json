@@ -1,0 +1,42 @@
+{
+  "schema": "qsc-framework-interface/2",
+  "scope": {
+    "regime": "bounded",
+    "description": "Executable binary tape reference model for Companion sections 19K–19L."
+  },
+  "provenance": {
+    "source": "Companion sections 19K–19L and the Zuse machine reference example",
+    "parent_context_hash": null
+  },
+  "qam": {
+    "spaces": {},
+    "objects": {
+      "unary_increment": {
+        "kind": "operator",
+        "payload": {
+          "states": ["scan", "halt"],
+          "halt": "halt",
+          "rules": [
+            {"state": "scan", "read": 1, "write": 1, "move": 1, "next": "scan"},
+            {"state": "scan", "read": 0, "write": 1, "move": 0, "next": "halt"}
+          ]
+        },
+        "indices": {},
+        "guards": [],
+        "source": "Unary increment transition table from machine.json"
+      },
+      "edge": {
+        "kind": "state",
+        "payload": {"tape": [1, 1], "head": 0, "state": "scan"},
+        "indices": {},
+        "guards": [],
+        "source": "Edge example from machine.json"
+      }
+    },
+    "guards": {},
+    "active_guards": [],
+    "mask_universes": {},
+    "relations": {},
+    "residuals": {}
+  }
+}

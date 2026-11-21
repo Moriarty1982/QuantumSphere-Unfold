@@ -1,0 +1,12 @@
+{
+  "states": ["scan", "halt"],
+  "halt": "halt",
+  "rules": [
+    {"state": "scan", "read": 1, "write": 1, "move": 1, "next": "scan"},
+    {"state": "scan", "read": 0, "write": 1, "move": 0, "next": "halt"}
+  ],
+  "examples": [
+    {"name": "room", "tape": [1, 1, 0], "head": 0, "state": "scan", "steps": 6},
+    {"name": "edge", "tape": [1, 1], "head": 0, "state": "scan", "steps": 6}
+  ]
+}

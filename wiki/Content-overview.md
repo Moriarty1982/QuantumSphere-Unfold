@@ -14,6 +14,8 @@ Spacetime and particles are projections of an underlying information layer. Matt
 
 States, layers, operators, readouts and branches are written in a coded language, the **QAM**, defined on top of Zermelo–Fraenkel set theory by eight tagged tuple predicates. A finite instruction language (MML) and its execution semantics (MMA) sit above it. **Status:** clean definitions, recognition clauses rather than a new axiom system; translation back to set theory is shown for the admissible fragment.
 
+**Executable example, 21 November 2026.** QAM holds the program and initial state of the binary tape model from 19K–19L. After guard checks, the MML instruction `RUN_TAPE` runs the machine within declared bounds on a fixed or right-extensible tape. MMA stores a replayable receipt. Wolfram Language independently checks tape growth, and Qiskit checks the reversible step on a fixed tape. The identification of the spinorial support and HC return remains conditional. [Code and instructions](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/qam/examples/zuse_machine)
+
 ## 2. The building block: three complex kernels
 
 Each level has a biquaternion kernel $q = it + z_1e_1 + z_2e_2 + z_3e_3$, $e_3 = e_1e_2$. An involution $J$ splits every state into a symmetric part $C(f) = \tfrac12(f+Jf)$ (the **Heisenberg compensator**, $C^2 = C$) and an antisymmetric part. Since v4.8.0-r07 the sector is given by the sign of $s = \sum z_k^2$: matter $s > 0$, tachyon $s < 0$, light $s = 0$; the original norm had the wrong signature (1,6) and was replaced ("reading B"). **Status:** decomposition and sector rule are sound; that the sectors *are* matter, tachyon and light is conjecture.
