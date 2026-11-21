@@ -1,0 +1,19 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= matched cavity reflection numerator and denominator norm residuals = {0, 0}
+During evaluation of In[1]:=                                                                                                  6                    10
+old and required temporal coupling (Hz), multiplier, old band-edge residual = {8.7131520945535 10 , 1.1785113019537 10  , 1352.5659705750, 0.99816070378600}
+During evaluation of In[1]:= on-resonance symmetric-extraction amplitude and A reflection at maximum loss = {0.44445678984911, 0.55554321015089}
+During evaluation of In[1]:= symmetric extraction stationarity residual = 0
+During evaluation of In[1]:= Chebyshev-Lobatto potential-step moments and total variation = {{-1, 0, 0, 0, 0, 0}, 362}
+During evaluation of In[1]:=                                                                                    -8                    -9                    -8                    -8
+ten-factor, directional leakage, combined and display budgets = {2.5000000381250 10  , 2.0800000021632 10  , 2.7080000435413 10  , 5.5988635818364 10  }
+During evaluation of In[1]:= local pilot transfer residual = 0
+During evaluation of In[1]:=                                                                                -74
+eight-node two-log example {absolute moment residual, total variation} = {0. 10   , 107529.493229496}
+During evaluation of In[1]:= rational two-log dual bound {sup-norm ceiling, TV floor} = {1.233524548377855, 87172.56042524867}
+During evaluation of In[1]:= two-log certified floor exceeds 87172.5 = True
+During evaluation of In[1]:=                                                                                                                                                       -13
+tight rational-node variation certificate {lower, upper, inverse perturbation factor} = {95915.312363770442, 96013.775234706349, 7.2598779231070411 10   }
+During evaluation of In[1]:= rounded certificate checks = {True, True, True}
+
+Out[1]= Null

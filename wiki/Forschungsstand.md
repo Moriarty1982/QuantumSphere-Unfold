@@ -1,5 +1,33 @@
 # Forschungsstand
 
+### OP5: Optischer Vorversuch und Ansteuerungsfenster (21.11.2026)
+
+Ein rein optischer A-Kontrollversuch kann die gewöhnliche Echo- und Referenzkette mit unabhängigem Direktstandard prüfen. Die kohärente Quelle entfernt Gemeinsames, lässt aber gemischte Delay-Terme. Das gewöhnliche Kontrollpotential hat eine messbedingte Untergrenze und mechanisch bedingte obere Grenzen. [Kontrollversuch und Ansteuerung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Optischer_Kontrollversuch_Ansteuerungsfenster.md)
+
+### OP5: Endpunktphase und Materialhub (21.11.2026)
+
+Die Resonanz-A-Null lässt Phase und Verlust offen. Bei 99 Prozent Konversion bleibt im Modell eine J-Reflexionsamplitude von einem Prozent, die in der Lastnormierung zu berücksichtigen ist. Drei bekannte Lasten bestimmen bei fester Quelle deren Rückreflexion. Für das gewöhnliche Momentprofil sind notwendige Grenzen für Hub, Dehnung, Dichte und Stützkraft abgeleitet. [Endpunktphase und Materialhub](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktphase_Laststandard_Materialhub.md)
+
+### OP5: Bandendpunkte und glatte Momentkerne (21.11.2026)
+
+Zwei getrennt abgestimmte Kalibrierfrequenzen reichen für den bisherigen Endpunktbeitrag, verlangen im verlustbehafteten Vergleich aber besonders enge Stabilität. Zwei kohärente Wellenstandards kalibrieren den Pilotabgriff bei endlicher Richtwirkung. Endlich breite glatte Kerne erfüllen die selektiven Momentbedingungen exakt. [Endpunkte und Momentkerne](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Bandendpunkte_Pilot_Momentkerne.md)
+
+### OP5: Resonatorband und Momentprofil (21.11.2026)
+
+Der synchron resonante Zweimodenvergleich benötigt für das bisherige 100-MHz-Band eine weit größere effektive Kopplung als das räumliche Vergleichsmodell. Ein lokaler Pilotabgriff kürzt den Empfängergewinn. Das gewöhnliche Momentprofil ist direkt konstruierbar, und die b₄-Achsenselektivität schränkt das Variationsinfimum im betrachteten Übergang auf rund 95 915 bis 96 014 ein, gegenüber 362 für die fünf Polynom-Momente allein. [Resonator und Momentprofil](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Resonator_Pilot_Momentprofil.md)
+
+### OP5: Phasenanpassung, Pilot und Gradientenbudget (21.11.2026)
+
+Phasenangepasste Konversion benötigt im idealisierten Modell einen Metermaßstab und engere Index- und Verlustgrenzen als die kurze Schicht. Ein separat kalibrierter Pilot bestimmt den komplexen Direktgain-Transfer. Die Kompensation erzwingt beim gewöhnlichen Gradienten eine nichtverschwindende Mindestvariation. [Konversion und Gradientenbudget](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Phasenanpassung_Pilot_Gradient.md)
+
+### OP5: Konverterlast, Leerkörper und Ringfehler (21.11.2026)
+
+Ein separat kalibrierter reziproker Modenkonverter könnte einen A-Spiegel als J-Last abbilden. Der Leerkörperkalibriertransfer braucht einen unabhängigen Direktwert. Lokale Bernstein-Grenzen senken den radialen Formfehler, reichen für den steilen Übergangsring aber nicht für ein brauchbares relatives b₄-Budget. [Konverter und lokale Ringgrenzen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Konverter_Leerkoerper_Ringfehler.md)
+
+### OP5: Laststandard, Direktpfadmonitor und Annulus (21.11.2026)
+
+Zwei passive additive H/HCl-Kontakte können keine reine J-Last bilden. Ein separat kalibrierter Direktmonitor begrenzt den sichtbaren Rücklauf. Ein exakt kompensierter Übergangsring zeigt, warum eine globale Dichteänderungsgrenze allein keine brauchbare relative b₄-Genauigkeit liefert. [Last und Kontrollprofil](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Laststandard_Monitor_Annulus.md)
+
 ### OP5: J-Terminierung, Echokontrolle und Radialraster (21.11.2026)
 
 Eine bekannte komplexe J-Last liefert das kohärente Produkt aus Hin- und Rückübertragung. Bei reziproken Ports bleibt das Wurzelvorzeichen. Kalibrierte Dämpfung eines unmarkierten Rücklaufs erlaubt Extrapolation mit quadratischem Rest. Abgestufte Flächenringe senken die Formfehlergrenze für eine Lipschitz-Säulendichte. [Terminierung und Ringraster](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Echo_Radialraster.md)

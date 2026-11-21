@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Phasenanpassung_Pilot_Gradient",
+  "repository": {
+    "commit": "6c315aeb44472768c802c2af1d5ce53372586cf9",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_phasenanpassung_pilot_gradient.wl",
+    "timeConstraint=50"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Meterkonverter, separater Pilottransfer und gewöhnliche Gradientenvariation.",
+    "coefficient_domain": "Exakte Algebra, rationale Bernstein-Grenzen und hochpräzise Beispielrechnung.",
+    "conventions": "Materieframe M, Zweimoden-Hüllkurve, gewöhnliche statische Poisson-Metrik.",
+    "inputs": [
+      "100 MHz; x=1e-3; drei normierte Übergangsgeometrien."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 50
+    },
+    "non_claims": [
+      "Keine reale J-Konversion, kein gemessener Pilottransfer und kein selektiv vermessener gewöhnlicher Gradient."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T16:22:33Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_phasenanpassung_pilot_gradient.txt",
+      "sha256": "f2d9c80888b112a43b70757e744856261cb2c16635cedd1c02b7b61356741cd0",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Rechenwerte, exakte Nullreste und Rückgabe Null. Eine Zwischenfassung verwendete denselben Variablennamen für Bandhalbweite und Radialkoordinate; die abgelegte Fassung hat getrennte Variablen."
+  ],
+  "result": "Optimistischer phasenangepasster Meterkonverter braucht neue Materialgrenzen; Gain-Pilot ist bedingt identifizierend; Chebyshev-Untergrenze und Bernstein-Obergrenze für Gradientenvariation.",
+  "residual_risks": [
+    "Physischer J-Konverter, kalibrierter Pilottransfer und gewöhnlich-selektiver Absolutgradient fehlen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_phasenanpassung_pilot_gradient.wl",
+      "sha256": "434da5e88eace12bcda1563bf2281a86d0f81c94ff693b67ff25d828f94fa6c4",
+      "sha256_after": "434da5e88eace12bcda1563bf2281a86d0f81c94ff693b67ff25d828f94fa6c4"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_phasenanpassung_pilot_gradient.txt"
+  ]
+}

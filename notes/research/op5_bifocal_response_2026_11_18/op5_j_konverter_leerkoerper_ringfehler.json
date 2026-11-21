@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Konverter_Leerkoerper_Ringfehler",
+  "repository": {
+    "commit": "8b02b8ac5f96dd39de7021eccf686e4a112a1c01",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_konverter_leerkoerper_ringfehler.wl",
+    "timeConstraint=50"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Reziproke Konverterlast, Leerkörpertransfer und lokale Annulusgrenzen.",
+    "coefficient_domain": "Komplexe lineare Algebra, exakte rationale Bernstein-Koeffizienten und hochpräzise Zahlen.",
+    "conventions": "Materieframe M, Flussnorm, gewöhnliche radiale Poisson-Metrik.",
+    "inputs": [
+      "100 MHz; konditionaler verlustfreier reziproker Konverter; 32 und 128 Ringe."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 50
+    },
+    "non_claims": [
+      "Keine physische J-Konversion, keine beobachteten Echo- oder Dichtetoleranzen."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T16:17:06Z",
+    "runtime_seconds": 10.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_konverter_leerkoerper_ringfehler.txt",
+      "sha256": "8bd33e7aa31a1c984bad9ccc20a18f569e61d8d9630074f6785d7e5b2eb691a0",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste für lokale Lastnorm und Leerkörperquotient; rationale Bernstein-Intervalle; Rückgabe Null."
+  ],
+  "result": "Bedingte starke Last via Konverter, relativer Leerkörpertransfer braucht unabhängigen Direktstandard, lokale Annulusgrenzen verbessern den Faktor ohne hinreichendes Prozentziel.",
+  "residual_risks": [
+    "Physischer J-Konverter, komplexer Gewinntransfer und günstigeres gewöhnliches Kontrollprofil offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_konverter_leerkoerper_ringfehler.wl",
+      "sha256": "d1229e195cb2971d96e7b5dc594f6e94e7cd6d9015666140f5fdc034dfb6c259",
+      "sha256_after": "d1229e195cb2971d96e7b5dc594f6e94e7cd6d9015666140f5fdc034dfb6c259"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_konverter_leerkoerper_ringfehler.txt"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Optischer_Kontrollversuch_Ansteuerungsfenster",
+  "repository": {
+    "commit": "ab57dd282b5d5af0898ca59d777fae566466cd56",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_optischer_kontrollversuch_ansteuerungsfenster.wl",
+    "timeConstraint=40"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "A-Kontrollabschluss, kohärente Restphase und notwendiges Ansteuerungsfenster.",
+    "coefficient_domain": "Exakte algebraische und kinematische Identitäten; hochpräzise Fehlerauswertung.",
+    "conventions": "Materieframe M, gewöhnlicher A-Port und kompensiertes longitudinales Kontrollprofil.",
+    "inputs": [
+      "100 MHz; bisherige A- und J-Modellbudgets; deklarierte b4-Transfergrenzen."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 40
+    },
+    "non_claims": [
+      "Kein durchgeführter optischer Versuch, keine gemessenen Werkstoffdaten und keine physische J-Phase."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T16:54:14Z",
+    "runtime_seconds": 8.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_optischer_kontrollversuch_ansteuerungsfenster.txt",
+      "sha256": "067a0d9b324939b074ea1947b5238c19f6ea25327c2969029b06ce340d06af70",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste für Lastabschlüsse, affine Unbestimmtheit, Delay, Kinematik und Produkttransfer. Numerische Budgets; Rückgabe Null."
+  ],
+  "result": "A-only-Kontrollversuch prüft gewöhnliche Kette unter separatem Direktstandard. Gemischter Delay bleibt trotz Master. Symbolisches Materialfenster aus Unter- und Obergrenzen.",
+  "residual_risks": [
+    "Messdaten, physische Portreferenzen und Material-/Aktorgrenzen offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_optischer_kontrollversuch_ansteuerungsfenster.wl",
+      "sha256": "a0391830e5db0603257fed6e998ede084e83cdd5e796fe01e663a2d9b4bf7d24",
+      "sha256_after": "a0391830e5db0603257fed6e998ede084e83cdd5e796fe01e663a2d9b4bf7d24"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_optischer_kontrollversuch_ansteuerungsfenster.txt"
+  ]
+}

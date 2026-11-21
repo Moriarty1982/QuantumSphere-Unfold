@@ -157,6 +157,20 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, optischer Vorversuch und Ansteuerung (21.11.2026).** A-Referenz, gemischter Delay und Werkstoffdaten sind real zu vermessen. Der optische Prüfplan bestimmt keine freie J-Ausbreitung. [Kontrollrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Optischer_Kontrollversuch_Ansteuerungsfenster.md)
+
+**OP5, Endpunktphase und Materialhub (21.11.2026).** Unabhängiger J-Ausgang, Dämpfungsgrenze, komplexer Standardeintrag bei Frequenzwechsel und tatsächliche gewöhnliche Materialgrenzen sind zu belegen. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktphase_Laststandard_Materialhub.md)
+
+**OP5, Bandendpunkte und Momentkerne (21.11.2026).** Phasen- und Verlustkalibrierung der Resonanzen, zwei unabhängige Wellenstandards und die materielle Ansteuerung glatter Momentkerne bleiben zu prüfen. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Bandendpunkte_Pilot_Momentkerne.md)
+
+**OP5, Resonator und Momentprofil (21.11.2026).** Unabhängige Richtreferenz, physischer A/J-Konverter und materielle Realisierung des gewöhnlichen Momentprofils bleiben offen. Die b₄-Achsenselektivität verlangt zwei zusätzliche logarithmische Momente. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Resonator_Pilot_Momentprofil.md)
+
+**OP5, Phasenanpassung und gewöhnlicher Gradient (21.11.2026).** Physische Modenkonversion, unabhängig normierter Pilot und ein gewöhnlich-selektiver absoluter Gradientenkanal bleiben offen. Eine breitere Übergangszone verbessert die Modellgrenzen, die bisherige Profilform bleibt für unabhängige relative Fehler schlecht konditioniert. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Phasenanpassung_Pilot_Gradient.md)
+
+**OP5, Konverter und lokaler Ringfehler (21.11.2026).** Physischer J-Modenkonverter und Leerkörpertransfer sind zu kalibrieren. Die starke Vorzeichenkompensation beim gewöhnlichen b₄-Abzug bleibt für den gewählten Ringentwurf schlecht konditioniert. [Kontrollrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Konverter_Leerkoerper_Ringfehler.md)
+
+**OP5, Laststandard und Ringfehler (21.11.2026).** Physische J-Last, unabhängiger Direktmonitor und lokale Dichtegrenzen im Übergangsring bleiben nachzuweisen. [Kontrollrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Laststandard_Monitor_Annulus.md)
+
 **OP5, J-Terminierung und Radialraster (21.11.2026).** Die komplexe J-Last, Reziprozität, Veränderungen des Direktpfads und die Lipschitz-Schranke der gewöhnlichen Säulendichte müssen unabhängig belegt werden. [Parallelprüfung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Echo_Radialraster.md)
 
 **OP5, Leistungsbilanz und Ringmessung (21.11.2026).** Die komplexe J-Phase, unmarkierte Rückwege und die gewöhnliche Randdichte bleiben unabhängig zu bestimmen. Die A-Leistungsbilanz braucht eine Verlustgrenze. Null-Quermoment allein beseitigt keine Dichteformfehler in Ringlücken. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Leistungsbilanz_Fourier_Ringmessung.md)

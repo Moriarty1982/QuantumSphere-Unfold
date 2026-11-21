@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Endpunktphase_Laststandard_Materialhub",
+  "repository": {
+    "commit": "f230c1c587571a18ddc277d81a7624a8e4c84060",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_endpunktphase_laststandard_materialhub.wl",
+    "timeConstraint=50"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Resonanzphase und Dissipation, Drei-Last-Portkalibrierung und notwendiger Materialhub.",
+    "coefficient_domain": "Exakte Streu- und Poisson-Identitäten; hochpräzise Beispielgrenzen.",
+    "conventions": "Materieframe M, komplexe Flusswellen und longitudinales Zweikomponentenmodell.",
+    "inputs": [
+      "Zwei Resonanzendpunkte, komplexe Lasten, selektives gewöhnliches b4-Potential."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 50
+    },
+    "non_claims": [
+      "Keine gemessene freie J-Ausbreitung, keine physische Kalibrierung und kein Werkstoffgrenzwert."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T16:45:49Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_endpunktphase_laststandard_materialhub.txt",
+      "sha256": "fc8337d76f11fe8329bb422b21b0955e60719609d64c9afb87362f64cbdf158c",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Restidentitäten für Transmission, Verlust, Lastdifferenz, Quellenrücklauf und radialen Gradienten. Numerische Fehler- und Materialgrenzen; Rückgabe Null."
+  ],
+  "result": "A-Null lässt komplexe Transmissionsphase und Dämpfung offen. Drei Lasten identifizieren Quellenrücklauf bei gemeinsamem Zustand. Isolierter b4-Kanal verlangt materialabhängige Mindestgrößen.",
+  "residual_risks": [
+    "Physischer J-Port, komplexer Gewinntransfer, Ansteuerung und native Vermittlermetrik offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_endpunktphase_laststandard_materialhub.wl",
+      "sha256": "c597233affe950919f8cb17b1a41e5f37890a804e52c009b792cb1d19a6fa0af",
+      "sha256_after": "c597233affe950919f8cb17b1a41e5f37890a804e52c009b792cb1d19a6fa0af"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_endpunktphase_laststandard_materialhub.txt"
+  ]
+}
