@@ -306,6 +306,29 @@ supported MML instructions and their guard semantics are those of the
 existing framework interface. The numerical spin readout continues to use
 its separate cache recipe.
 
+### Execute a declared tape machine
+
+The MMA database adapter accepts the MML instruction `RUN_TAPE`.
+Its `program` argument names a QAM `operator` carrying a deterministic
+binary transition table. Its `initial` argument names a QAM `state`
+carrying the tape, head position and control state. Context, request and
+object guards, and any linked QAM premises, are checked before execution.
+
+```powershell
+python -m qam.tools.readout_db mma qam/examples/zuse_machine/mma_context.json qam/examples/zuse_machine/run_tape_mml.json --summary
+python -m qam.tools.readout_db receipts --instruction RUN_TAPE
+python -m qam.tools.readout_db receipt RECEIPT_HASH --replay --summary
+```
+
+`mode` is `fixed` or `grow`. Growth appends a blank at the right edge.
+`max_steps` and `max_cells` bound the run to at most 1024 transitions
+and cells. Setting `trace` to `true` saves each visited configuration in
+the full receipt. The tape's stop reason is reported separately from
+MMA's guard decision. See the [reference example](examples/zuse_machine/README.md)
+for the input format and stop reasons.
+
+### Bounded readout recipes
+
 The database adapter also accepts the bounded MML instruction `READOUT`:
 
 ```powershell

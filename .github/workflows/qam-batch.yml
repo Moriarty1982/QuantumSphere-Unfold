@@ -25,7 +25,16 @@ jobs:
           python-version: "3.12"
       - run: python -m unittest discover -s scripts/qsc_audit/tests -p test_qam_pair_batch.py
       - run: python -m unittest discover -s scripts/qsc_audit/tests -p test_framework_interface.py
+      - run: python -m unittest qam.tools.test_tape_machine
       - name: Install statement-store dependencies
         run: python -m pip install -r qam/store/requirements.txt
       - name: Check statement store and document editions
         run: python -m unittest discover -s qam/store -p "test_*.py"
+      - name: Compare both tape controllers against MMA
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog
+          python -m qam.examples.zuse_machine.hdl.check
+          python -m pip install mcp==2.3.0
+          python mcp/check_hdl_stdio.py

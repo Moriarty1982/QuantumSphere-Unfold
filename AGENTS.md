@@ -54,6 +54,15 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   verwenden, falls verfügbar. Den Sammelbericht in Eingabereihenfolge auswerten und blockierte Anfragen mit
   ihrem Vorgänger benennen. Bei fehlendem Stapelserver den lokalen `mma-batch`-Aufruf aus `qam/README.md` nutzen.
   Für ausdrücklich beauftragte Paarstapel aus dem Chat `run_qam_pair_batch` auf demselben Server nutzen.
+- **HDL-Vergleich automatisch einsetzen:** Bei Änderungen an `RUN_TAPE`, der zugehörigen SystemVerilog-Steuerung
+  oder Aussagen über deren Übergangsregeln die Vergleichssuite mit MMA ausführen. In Codex
+  `run_qam_hdl_check` auf `qsc-qam-batch` verwenden, wenn verfügbar. Sonst den lokalen Aufruf in
+  `qam/examples/zuse_machine/hdl/README.md` nutzen. Bei offenen Problemen den Vergleich als unabhängige
+  Kontrolle einsetzen, wenn die Schlussfolgerung von einem konkret definierten endlichen Such-, Auswahl-
+  oder Guard-Ablauf abhängt. Ist dieser Ablauf in der festen Suite nicht abgedeckt, dafür eigene Testfälle
+  formulieren und mit den MMA-Referenzspuren vergleichen. Den geprüften Bereich, gegebenenfalls die
+  erste Abweichung und offene Voraussetzungen festhalten. Die Wahl der Rechenwerkzeuge für die fachliche Herleitung
+  richtet sich weiterhin nach der jeweiligen Aufgabe.
 - **Abläufe:** Schritt-für-Schritt-Anleitungen in `notes/anleitungen/` (Übersicht und Nutzung je Modell in
   `notes/anleitungen/README.md`). Sie sind die einzige Quelle; Claude-Skills im lokalen Ordner verweisen nur darauf.
   - `weitermachen.md`: Sitzungsstart, Stand aus Übergabe und Repo rekonstruieren.

@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, Subagentenregel.** Die Hinweise für LLMs erläutern die projektweite Arbeitsteilung bei unabhängigen Teilaufgaben.
+
 **21.11.2026, OP5-Radialraster.** Forschungsstand und offene Probleme um kohärente J-Last, unmarkierte Echo-Dämpfung und optimierte Ringgewichte ergänzt.
 
 **21.11.2026, OP5-Leistungsbilanz.** Forschungsstand und offene Probleme um J-Leistungsgrenze, gerade Fourier-Echokanäle und diskrete Säulenmessung ergänzt.
@@ -139,6 +141,14 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **21.11.2026, OP5-Markerhub.** Forschungsstand und offene Probleme um Diagonalkontrast und Rücklaufgrenzen bei endlichem Phasenhub ergänzt.
 
 **21.11.2026, OP5-Zweikanalmarker.** Forschungsstand und offene Probleme um Vorwärts- und Rückstreuung bei unterschiedlichen Wellenzahlen und Admittanzen ergänzt.
+
+**21.11.2026, Standard für den HDL/MMA-Vergleich.** Die Hinweise für LLMs beschreiben den selbstständigen Aufruf bei Änderungen an der Bandmaschine und begrenzte OP-Anwendungen.
+
+**21.11.2026, HDL-Vergleich per MCP.** Die deutsche und die englische Inhaltsübersicht dokumentieren den wiederholbaren Aufruf und seine Ausgabe.
+
+**21.11.2026, SystemVerilog-Bandmaschine.** Die deutsche und die englische Inhaltsübersicht nennen den geprüften Umfang und die Taktzahlen für direkte und zyklische Regelwahl.
+
+**21.11.2026, Rechenmodell aus 19K–19L.** Die deutsche und die englische Inhaltsübersicht erläutern `RUN_TAPE`, den wiederholbaren MMA-Beleg und die Voraussetzungen des Zuse-Kerns.
 
 **21.11.2026, Standardsprache für Medien.** Englische Standardsprache und Vorrang ausdrücklicher Sprachvorgaben in den Hinweisen für LLMs aufgenommen.
 
