@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Komplexe Vorwärtsreferenz (21.11.2026)
+
+Nach Abzug des Rücklaufs bleiben im 100-MHz-Modell rund 6,234·10⁻⁶ für komplexe Kalibrierfehler und weitere Markierungsreste. Die Schichttoleranz allein deckt eine Zentralmessung nicht ab. Ein glatter linearer Indexverlauf kann die skalare Transmission am Bandrand um 7,856·10⁻³ verschieben. Für den Kalibrieranteil der Laufzeitdifferenz genügen direkte Messungen der tatsächlichen Diagonalen an beiden Bandenden, wenn die Feldbasis und das Fehlerbudget eingehalten werden. [Referenzrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Komplexe_Referenz.md)
+
 ### OP5: Rücklauftoleranzen mit massivem J-Modellkanal (21.11.2026)
 
 Eine auf das Bandzentrum abgestimmte massive J-Dispersion erhält die drei zentralen Auslöschungen. Im 100-MHz-Schichtbeispiel mit gemeinsamen Grenzen von 2,5·10⁻⁷ für relativen Dickenfehler, reelle Indexabweichung und imaginären Index bleibt der einfache Rücklauf unter 3,513·10⁻⁶. Die skalare Reflexion dominiert. Verlust und Phasendrift der Transmission benötigen eine eigene Kalibrierung. [Toleranzrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Ruecklauf_Toleranzen.md)

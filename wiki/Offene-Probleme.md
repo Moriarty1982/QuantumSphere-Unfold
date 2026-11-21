@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, komplexe Referenz (21.11.2026).** Die Reflexion lässt im Modell eine kleine Reserve für die Vorwärtsreferenz. Für eine Zentralmessung braucht es eine unabhängige Dispersionsschranke und eine schärfere Grenze für die gekoppelte A-Diagonale. Messwerte an beiden Bandenden, physische Anschlussstärke und freie J-Ausbreitung bleiben offen. [Kalibriergrenze](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Komplexe_Referenz.md)
+
 **OP5, Toleranzen des lokalen Markers (21.11.2026).** Das 100-MHz-Modell mit massiver J-Dispersion und komplexem A-Index liefert gemeinsame Schichttoleranzen unter einem halben illustrativen Rücklaufbudget. Gemessene Materialdaten, der HCl/H-Anschluss, freie J-Ausbreitung und die native Kopplung bleiben offen. [Toleranzen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Ruecklauf_Toleranzen.md)
 
 **OP5, Rückstreuung im Messband (21.11.2026).** Die Phase der ersten beiden Korrekturen ermöglicht im idealisierten 100-MHz-Beispiel einen Rücklaufrest unter der vorgesehenen Quotientengrenze. Die Phasenempfindlichkeit gegenüber realer Dispersion, Verlust und Schichtdicke sowie die Anschlussgrenze, native Kopplung und H96 bleiben offen. [Bandschranke](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckstreuung_Band.md)
