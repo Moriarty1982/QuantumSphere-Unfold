@@ -1,0 +1,15 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= three-load even closure and five-load odd closure residuals = {0, 0}
+During evaluation of In[1]:= affine contamination invisible in both closures ={0, 0}
+During evaluation of In[1]:=                                                                                          -8                     -7
+A-only direct witness per-state radius and cross-quotient log bound ={9.00100000000000 10  , 3.63676784209368 10  }
+During evaluation of In[1]:=                                                               -8
+illustrative affine-null closure noise radius = 8.000000000 10
+During evaluation of In[1]:=                                                              -18                     -15
+delay and single optical path ceilings = {3.97887357729738 10   , 1.36907507028299 10   }
+During evaluation of In[1]:= phase contrast decomposition residual = 0
+During evaluation of In[1]:= complex load error and one-way phase ceilings = {0.00412344663890512, 0.00206172478008429}
+During evaluation of In[1]:= rest-to-rest time acceleration coefficient residual = 0
+During evaluation of In[1]:= relative b4 product transfer identity residual = 0
+
+Out[1]= Null

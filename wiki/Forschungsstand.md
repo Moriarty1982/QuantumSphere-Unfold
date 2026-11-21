@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Optischer Vorversuch und Ansteuerungsfenster (21.11.2026)
+
+Ein rein optischer A-Kontrollversuch kann die gewöhnliche Echo- und Referenzkette mit unabhängigem Direktstandard prüfen. Die kohärente Quelle entfernt Gemeinsames, lässt aber gemischte Delay-Terme. Das gewöhnliche Kontrollpotential hat eine messbedingte Untergrenze und mechanisch bedingte obere Grenzen. [Kontrollversuch und Ansteuerung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Optischer_Kontrollversuch_Ansteuerungsfenster.md)
+
 ### OP5: Endpunktphase und Materialhub (21.11.2026)
 
 Die Resonanz-A-Null lässt Phase und Verlust offen. Bei 99 Prozent Konversion bleibt im Modell eine J-Reflexionsamplitude von einem Prozent, die in der Lastnormierung zu berücksichtigen ist. Drei bekannte Lasten bestimmen bei fester Quelle deren Rückreflexion. Für das gewöhnliche Momentprofil sind notwendige Grenzen für Hub, Dehnung, Dichte und Stützkraft abgeleitet. [Endpunktphase und Materialhub](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktphase_Laststandard_Materialhub.md)
