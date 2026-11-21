@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Port_Referenz_Spot",
+  "repository": {
+    "commit": "35b9e2f6de8d5e37c1e86c191d030042a33f798d",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_port_referenz_spot.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Richtungsselektive Reflexion, stationäre Phasen und Drei-Spot-Kondition.",
+    "coefficient_domain": "Exakte komplexe Matrixalgebra, kreisgemittelte Polynome und hochpräzise Beispielrechnung.",
+    "conventions": "Materieframe M, kanonische Feldamplituden und deklarierte lineare Vergleichsmetriken.",
+    "inputs": [
+      "100 MHz, 4 m, ideale Richtungsgewinne, runde identische Spots im flachen Kern."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine real vermessenen Ports, freie J-Mode oder native Vermittlermetrik."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T10:25:17Z",
+    "runtime_seconds": 11.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_port_referenz_spot.txt",
+      "sha256": "29032abd2b3ae35277a6208b1db323648d137c7219a3bfd8541094b92c7e0631",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste der Richtungsprojektion, Referenzkürzung, Winkelmittel und Kontraste. Rückgabe Null. Zeiten auf Sekunden gerundet."
+  ],
+  "result": "Gezielter Portzugriff bei passenden Portprojektionen; robustes Rohphasenbudget; endliche Spotbreite erhält die Radialidentifizierbarkeit bei bekannter gewöhnlicher Profilform.",
+  "residual_risks": [
+    "Portreinheit und stationärer chromatischer Rest ungemessen. Freie Formparameter können die Spotinversion entarten lassen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_port_referenz_spot.wl",
+      "sha256": "0bff23fe66c7d781350c92c03909327b2323b807e448b488afb7aab9251dcd55",
+      "sha256_after": "0bff23fe66c7d781350c92c03909327b2323b807e448b488afb7aab9251dcd55"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_port_referenz_spot.txt"
+  ]
+}

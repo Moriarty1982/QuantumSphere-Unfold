@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, Portprojektion und Spotbreite (21.11.2026).** Richtungsbezogener Gain, Modenreinheit, gemischter chromatischer Referenzrest und gewöhnliche Profilform bleiben unabhängig zu bestimmen. Ein unbekannter konstanter gewöhnlicher Profilanteil ist mit dem massiven Beitrag entartet. [Bedingte Auslese](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Port_Referenz_Spot.md)
+
 **OP5, Anschlussabgleich und Polarisationswege (21.11.2026).** Äußere Kreuzreflexion, Pilotempfindlichkeit während des Längenwechsels und reale Polarisationsgeometrie bleiben unabhängig abzugleichen. Die modellierte Ricci-/Weyl-Trennung bestimmt die native effektive Metrik noch nicht. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Anschluss_Pilot_Polarisation.md)
 
 **OP5, Terminierung und Geometrie (21.11.2026).** Die homogene Schicht erlaubt eine feste J-Last bei kontrollierter Kreuzreflexion. Für die reale Strecke bleiben Anschlussreflexion, frequenzabhängiger relativer Referenzweg, effektive Krümmung und lokale Restoperatoren offen. [Referenzebenen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Referenzebenen.md)

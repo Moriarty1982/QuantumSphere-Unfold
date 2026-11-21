@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Portprojektion, Referenzphase und Spotbreite (21.11.2026)
+
+Eine separat kalibrierte J-Einspeisung und A-Empfangsprojektion bestimmen die Kreuzreflexion gezielt. Der 4-m-Vergleich hat nun ein Budget für acht Rohwerte und einen gemischten Referenzphasenterm. Identisch breite runde Spots erhalten die Radialtrennung im Profilkern bei bekannter gewöhnlicher Profilform. [Port- und Spotrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Port_Referenz_Spot.md)
+
 ### OP5: Anschlussabgleich und Polarisationswege (21.11.2026)
 
 Die Kaskadenrechnung begrenzt die Kreuzreflexion der äußeren Anschlussebene. Ein Längenkreuzquotient entfernt auch chromatische Referenzterme, sofern sie den Längenwechsel überstehen. Ein seitlich versetzter Strahl hebt im Profilkern die Weyl-Polarisation hervor. Unterschiedliche Radialformen trennen im kompensierten Vergleich gewöhnliche und massive Weyl-Beiträge. [Anschluss und Polarisationswege](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Anschluss_Pilot_Polarisation.md)

@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Port und Spot.** Forschungsstand und offene Probleme um Richtungskalibrierung, Rohphasenbudgets und die endliche Spotmittelung ergänzt.
+
 **21.11.2026, OP5-Anschlussabgleich.** Forschungsstand und offene Probleme um Kaskadengrenze, Längenkreuzquotient und Polarisationsprofile ergänzt.
 
 **21.11.2026, OP5-Terminierung.** Forschungsstand und offene Probleme um feste J-Lasten, das Freiwegfehlerbudget und eine Krümmungskontrolle ergänzt.
