@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, Endpunktphase und Materialhub (21.11.2026).** Unabhängiger J-Ausgang, Dämpfungsgrenze, komplexer Standardeintrag bei Frequenzwechsel und tatsächliche gewöhnliche Materialgrenzen sind zu belegen. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktphase_Laststandard_Materialhub.md)
+
 **OP5, Bandendpunkte und Momentkerne (21.11.2026).** Phasen- und Verlustkalibrierung der Resonanzen, zwei unabhängige Wellenstandards und die materielle Ansteuerung glatter Momentkerne bleiben zu prüfen. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Bandendpunkte_Pilot_Momentkerne.md)
 
 **OP5, Resonator und Momentprofil (21.11.2026).** Unabhängige Richtreferenz, physischer A/J-Konverter und materielle Realisierung des gewöhnlichen Momentprofils bleiben offen. Die b₄-Achsenselektivität verlangt zwei zusätzliche logarithmische Momente. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Resonator_Pilot_Momentprofil.md)

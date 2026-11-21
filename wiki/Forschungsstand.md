@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Endpunktphase und Materialhub (21.11.2026)
+
+Die Resonanz-A-Null lässt Phase und Verlust offen. Bei 99 Prozent Konversion bleibt im Modell eine J-Reflexionsamplitude von einem Prozent, die in der Lastnormierung zu berücksichtigen ist. Drei bekannte Lasten bestimmen bei fester Quelle deren Rückreflexion. Für das gewöhnliche Momentprofil sind notwendige Grenzen für Hub, Dehnung, Dichte und Stützkraft abgeleitet. [Endpunktphase und Materialhub](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktphase_Laststandard_Materialhub.md)
+
 ### OP5: Bandendpunkte und glatte Momentkerne (21.11.2026)
 
 Zwei getrennt abgestimmte Kalibrierfrequenzen reichen für den bisherigen Endpunktbeitrag, verlangen im verlustbehafteten Vergleich aber besonders enge Stabilität. Zwei kohärente Wellenstandards kalibrieren den Pilotabgriff bei endlicher Richtwirkung. Endlich breite glatte Kerne erfüllen die selektiven Momentbedingungen exakt. [Endpunkte und Momentkerne](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Bandendpunkte_Pilot_Momentkerne.md)
