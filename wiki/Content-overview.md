@@ -18,6 +18,8 @@ States, layers, operators, readouts and branches are written in a coded language
 
 **Hardware comparison.** Two SystemVerilog controllers produced the same traces and stop reasons as MMA in 209 bounded tests. Incrementing seven by one took four clock cycles with direct rule lookup and twenty-four with a cyclic scan of the six table slots. The measurement begins after loading the initial configuration. [Simulation and run report](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/qam/examples/zuse_machine/hdl)
 
+The local MCP tool `run_qam_hdl_check` reruns the comparison and returns structured stop reasons, cycle counts and the example trace. With Yosys it also reports generic cell counts. [MCP instructions](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/mcp/README.md#hdl-and-mma-comparison-in-codex)
+
 ## 2. The building block: three complex kernels
 
 Each level has a biquaternion kernel $q = it + z_1e_1 + z_2e_2 + z_3e_3$, $e_3 = e_1e_2$. An involution $J$ splits every state into a symmetric part $C(f) = \tfrac12(f+Jf)$ (the **Heisenberg compensator**, $C^2 = C$) and an antisymmetric part. Since v4.8.0-r07 the sector is given by the sign of $s = \sum z_k^2$: matter $s > 0$, tachyon $s < 0$, light $s = 0$; the original norm had the wrong signature (1,6) and was replaced ("reading B"). **Status:** decomposition and sector rule are sound; that the sectors *are* matter, tachyon and light is conjecture.

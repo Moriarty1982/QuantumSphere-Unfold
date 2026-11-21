@@ -32,6 +32,8 @@ Der Companion beschreibt Zustände, Schichten, Operatoren, Auslesungen und Zweig
 
 **Hardwarevergleich.** Zwei SystemVerilog-Steuerungen ergeben in 209 begrenzten Testfällen dieselben Spuren und Stopmeldungen wie MMA. Bei der Addition von eins zu sieben braucht die direkte Regelwahl vier Takte, der zyklische Durchlauf der sechs Tabellenadressen 24. Die Messung beginnt nach dem Laden der Startkonfiguration. [Simulation und Laufbericht](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/qam/examples/zuse_machine/hdl)
 
+Der lokale MCP-Aufruf `run_qam_hdl_check` wiederholt den Vergleich und liefert Stopgründe, Taktzahlen und die Beispielspur als Daten. Mit Yosys ergänzt er die generischen Zellzahlen. [MCP-Anleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/mcp/README.md#hdl-and-mma-comparison-in-codex)
+
 ## 2. Der Grundbaustein: drei komplexe Kerne
 
 Jede Stufe der Struktur hat einen **Biquaternion-Kern** aus drei komplexen Kernen $K_1, K_2, K_3$:

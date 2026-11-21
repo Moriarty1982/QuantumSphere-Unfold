@@ -21,6 +21,7 @@ STATES = 3
 CELLS = 8
 STOP = ("running", "halted", "boundary", "stuck", "step_limit", "cell_limit")
 CONTROLLERS = ("Direkt", "Zyklisch")
+EXAMPLE_COUNT = 5
 
 
 @dataclass
@@ -150,12 +151,33 @@ def compare(cases, references, output):
     return done
 
 
-def report(cases, references, done):
+def comparison_result(cases, references, done):
+    return {
+        "case_count": len(cases),
+        "enumerated_start_count": len(cases) - EXAMPLE_COUNT,
+        "physical_cells": CELLS,
+        "rule_slots": 2 * STATES,
+        "examples": [
+            {
+                "name": case.name,
+                "stop": references[i]["stop"],
+                "mma_steps": references[i]["steps"],
+                "direct_cycles": done[i, 0][0],
+                "cyclic_cycles": done[i, 1][0],
+                "final": references[i]["final"],
+            }
+            for i, case in enumerate(cases[:EXAMPLE_COUNT])
+        ],
+        "increment_trace": references[0]["trace"],
+    }
+
+
+def report(result):
     lines = [
         "# Vergleich von MMA und SystemVerilog",
         "",
-        f"Beide HDL-Steuerungen stimmten in allen {len(cases)} Fällen mit MMA überein.",
-        "Das umfasst 204 Startkombinationen aus allen Binärbändern der Längen 1–3, "
+        f"Beide HDL-Steuerungen stimmten in allen {result['case_count']} Fällen mit MMA überein.",
+        f"Das umfasst {result['enumerated_start_count']} Startkombinationen aus allen Binärbändern der Längen 1–3, "
         "allen Kopfpositionen, drei Zuständen und zwei Bandmodi eines Verzweigungsprogramms.",
         "",
         "Takte ab geladener Startkonfiguration bis zur Stopmeldung",
@@ -163,11 +185,16 @@ def report(cases, references, done):
         "| Fall | Stop | Gezählt in MMA | Direkt | Zyklisch |",
         "|---|---|---:|---:|---:|",
     ]
-    for i, case in enumerate(cases[:5]):
-        result = references[i]
-        lines.append(f"| {case.name} | `{result['stop']}` | {result['steps']} | {done[i, 0][0]} | {done[i, 1][0]} |")
+    for case in result["examples"]:
+        lines.append(f"| {case['name']} | `{case['stop']}` | {case['mma_steps']} | "
+                     f"{case['direct_cycles']} | {case['cyclic_cycles']} |")
     lines += ["", "Bandspur für 7 + 1 mit wachsendem Band", "",
-              " → ".join(f"`{row['tape']}`" for row in references[0]["trace"]), ""]
+              " → ".join(f"`{row['tape']}`" for row in result["increment_trace"]), ""]
+    if "generic_cells" in result:
+        cells = result["generic_cells"]
+        lines += ["", "Generische Yosys-Zellen (synth -noabc, ohne FPGA-Mapping)", "",
+                  "| Direkt | Zyklisch |", "|---:|---:|",
+                  f"| {cells['direct']} | {cells['cyclic']} |", ""]
     return "\n".join(lines)
 
 
@@ -198,6 +225,7 @@ def main():
     parser.add_argument("--iverilog", default="iverilog")
     parser.add_argument("--vvp", default="vvp")
     parser.add_argument("--yosys", nargs="?", const="yosys", help="Add generic cell counts from Yosys")
+    parser.add_argument("--json", action="store_true", help="Write the comparison result as JSON to stdout")
     parser.add_argument("--report", type=Path, help="Write the checked Markdown report")
     parser.add_argument("--wave", type=Path, help="Write a VCD waveform for the simulation")
     args = parser.parse_args()
@@ -216,15 +244,14 @@ def main():
         if simulation.returncode:
             raise RuntimeError(simulation.stdout)
         done = compare(cases, references, simulation.stdout)
-    markdown = report(cases, references, done)
+    result = comparison_result(cases, references, done)
     if args.yosys:
         direct, scan = synthesize(args.yosys)
-        markdown += ("\nGenerische Yosys-Zellen (synth -noabc, ohne FPGA-Mapping)\n\n"
-                     f"| Direkt | Zyklisch |\n|---:|---:|\n| {direct} | {scan} |\n")
-    print(markdown, end="")
+        result["generic_cells"] = {"direct": direct, "cyclic": scan}
+    print(json.dumps(result) if args.json else report(result), end="\n" if args.json else "")
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
-        args.report.write_text(markdown, encoding="utf-8")
+        args.report.write_text(report(result), encoding="utf-8")
 
 
 if __name__ == "__main__":

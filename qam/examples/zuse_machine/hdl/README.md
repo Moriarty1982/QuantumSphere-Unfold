@@ -34,6 +34,10 @@ Eingaben. Der Python-Vergleich meldet bei einer Abweichung den Startfall und
 den ersten abweichenden Spureintrag. Unter Linux läuft der Vergleich
 außerdem im bestehenden GitHub-Workflow für QAM.
 
+In Codex führt das Werkzeug `run_qam_hdl_check` auf `qsc-qam-batch`
+dasselbe Prüfprogramm aus und liefert die Ergebnisse als strukturierte
+Daten. [MCP-Aufruf und Voraussetzungen](../../../../mcp/README.md#hdl-and-mma-comparison-in-codex)
+
 Der Vergleich erfasst das Startband und jeden sichtbaren Maschinenversuch.
 Ein Schritt über eine feste Grenze zählt in MMA als Versuch mit
 `boundary`. Beim `cell_limit` verbraucht der Versuch Takte und lässt Band,

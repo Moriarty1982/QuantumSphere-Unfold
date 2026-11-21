@@ -118,6 +118,30 @@ Use `replay_qam_batch_report` on `qsc-qam-batch` to recompute a saved report
 without saving new receipts. It verifies the stored input and context,
 then resolves premises against the current index.
 
+## HDL and MMA comparison in Codex
+
+On the local `qsc-qam-batch` server, call `run_qam_hdl_check()` to run
+both SystemVerilog controllers against MMA on the 209 reference cases.
+The result includes the number of matched cases, stop reasons, clock
+counts, and the example tape trace. Call
+`run_qam_hdl_check(synthesis=true)` to add generic Yosys cell counts.
+The tool runs a fixed suite using temporary files. Its only parameter
+toggles synthesis.
+
+Install `iverilog` and `vvp` on the server's PATH. Synthesis also
+requires `yosys`. On Windows the tool can use the default WSL distribution
+with Python 3 and the same tools if they are unavailable natively.
+Portable WSL launchers named `iverilog`, `vvp`, and optionally `yosys`
+can also be placed in the ignored `build/hdl-tools/` directory.
+
+Start a fresh Codex chat to discover the added tool on the existing server.
+The following command checks discovery and the full call through MCP
+stdio locally.
+
+```powershell
+python mcp/check_hdl_stdio.py
+```
+
 ## Read-only QAM container
 
 Build from the repository root. Use an existing, consistent SQLite snapshot
