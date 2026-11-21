@@ -1,0 +1,21 @@
+Wolfram Language
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= measured two-load intercept error residual = 0
+During evaluation of In[1]:=                                                                        1
+separable common multiplier residual and additive counterexample = {0, -}
+                                                                       6
+During evaluation of In[1]:=                                                                                                -7                     -7
+one-endpoint log and phase bounds with conservative true reference floor = {3.63676795229877 10  , 3.63676778697277 10  }
+During evaluation of In[1]:= dimensionless mechanical bounds and window residuals = {{0, 0, 0, 0, 0}, 0}
+During evaluation of In[1]:=                                                                                              -7
+indicative displacement readout fraction for one-percent isolated model = 1.04258642337704 10
+During evaluation of In[1]:= Hessian rank determinant and compatible metric first-order residual = {8, {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}}
+
+Out[1]= Null
+
+Python synthetic CLI checks
+Python 3.12.10
+nominal: exit=0, endpoint=within-budget, log=3.81809072504e-07, closure=0, closure_limit=4e-08
+affine: exit=1, endpoint=uncertified, log=1.08532699275e-06, closure=0, closure_limit=4e-08
+curvature: exit=1, endpoint=model-inconsistent, log=7.45623277889e-07, closure=4e-07, closure_limit=4e-08
+JSON round-trip: exit=0; coincident fit loads: exit=2

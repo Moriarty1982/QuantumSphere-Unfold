@@ -104,6 +104,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 **21.11.2026, Subagentenregel.** Die Hinweise für LLMs erläutern die projektweite Arbeitsteilung bei unabhängigen Teilaufgaben.
 
+**21.11.2026, OP5-A-Auswertung.** Forschungsstand und offene Probleme um ausführbaren A-Prüfpfad, synthetische Fehlerfälle und dimensionslose Aktorgrenzen ergänzt.
+
 **21.11.2026, OP5-Kontrollversuch.** Forschungsstand und offene Probleme um optischen Prüfplan, kohärente Delaygrenze und gewöhnliches Ansteuerungsfenster ergänzt.
 
 **21.11.2026, OP5-Phase und Materialhub.** Forschungsstand und offene Probleme um Transmissionsphase, Dreilaststandard und mechanische Mindestanforderungen ergänzt.

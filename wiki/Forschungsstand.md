@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Ausführbare A-Port-Prüfung (21.11.2026)
+
+Das gewöhnliche A-Prüfschema verarbeitet zwei Bandenden mit Lastvariation, Kontrollpunkt und eigenem Direktstandard. Synthetische Fehlerfälle unterscheiden gekrümmte Lastantwort und affinen Interzeptfehler. Das gewöhnliche Ansteuerungsfenster ist dimensionslos formuliert und enthält einen bedingten Aktor-Rangtest. [Auswertung und Grenzen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_A_Port_Auswertung.md)
+
 ### OP5: Optischer Vorversuch und Ansteuerungsfenster (21.11.2026)
 
 Ein rein optischer A-Kontrollversuch kann die gewöhnliche Echo- und Referenzkette mit unabhängigem Direktstandard prüfen. Die kohärente Quelle entfernt Gemeinsames, lässt aber gemischte Delay-Terme. Das gewöhnliche Kontrollpotential hat eine messbedingte Untergrenze und mechanisch bedingte obere Grenzen. [Kontrollversuch und Ansteuerung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Optischer_Kontrollversuch_Ansteuerungsfenster.md)

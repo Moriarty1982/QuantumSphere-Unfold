@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_A_Port_Auswertung",
+  "repository": {
+    "commit": "3175c4a0f403eb25e78bef0983f11c0508952f0a",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_a_port_evaluation.wl",
+    "timeConstraint=35",
+    "Python CLI: --demo nominal; --demo affine; --demo curvature; --example-input; --input JSON round-trip and load-separation guard"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      },
+      {
+        "name": "Python",
+        "version": "3.12.10"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "A-Zweilast- und Drittpunktprüfung, Referenzradien, dimensionsloses Materialfenster.",
+    "coefficient_domain": "Exakte algebraische Kontrollen und deterministische synthetische Python-Prüfung.",
+    "conventions": "Materieframe M, herkömmliche A-Flussnorm und deklarierte elastische Vergleichsmechanik.",
+    "inputs": [
+      "Synthetische Lastwerte und komplexe Referenzradien; dimensionslose Kontrollgrößen."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 35
+    },
+    "non_claims": [
+      "Keine realen optischen Messdaten, keine physische J-Mode oder realisierten Aktoren."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T22:04:46Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_a_port_evaluation.txt",
+      "sha256": "579f4401da61e8c8ab8180172b89ec5dda8047f090e2e07b323a46571080f177",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Wolfram: exakte Nullreste, additives Gegenbeispiel und Rangdeterminante 8; Rückgabe Null. Python: nominal 0, affine und curvature 1, gültige JSON-Datei 0 und kollabierte Lasten 2."
+  ],
+  "result": "Ausführbarer gewöhnlicher A-Prüfpfad; nur unabhängiger Direktstandard findet affinen Interzeptfehler. Dimensionslose Material- und Aktorgrenzen dokumentiert.",
+  "residual_risks": [
+    "Physische Referenzkalibrierung, Werkstoffdaten, J-Ausbreitung und native Metrik fehlen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_a_port_evaluation.wl",
+      "sha256": "27b6e4fc026cc48ca5fbf7d31100366121607200d8d04784ca8d6d4debd67217",
+      "sha256_after": "27b6e4fc026cc48ca5fbf7d31100366121607200d8d04784ca8d6d4debd67217"
+    },
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_a_port_check.py",
+      "sha256": "ff76139116f258bce5f700a1e70200dccb981dea492d1f5fa39d4a5aa495b0bc",
+      "sha256_after": "ff76139116f258bce5f700a1e70200dccb981dea492d1f5fa39d4a5aa495b0bc"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_a_port_evaluation.txt"
+  ]
+}
