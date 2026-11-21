@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Zweikanal-Lastvariation und J/A-Laufphase (21.11.2026)
+
+Bei zwei Rücklaufmoden bestimmen drei affin unabhängige Laststellungen den A-Durchgang. Eine feste J-Reflexion kann bei bloßer A-Variation einen Offset hinterlassen. Im J-Beispiel ist die Längenphase auflösbar, die Änderung über 100 MHz bleibt unter der Fehlergrenze. Der minimale klassische Zwei-Ableitungssektor hat bei gemeinsamer Metrik einen gemeinsamen transversalen Hauptteil. [Last- und Phasenrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lastvariation_Laufphase.md)
+
 ### OP5: Durchgang und parallele Prüfkriterien (21.11.2026)
 
 Zwei Laststellungen mit kohärenter Portmessung bestimmen den A-Einwegdurchgang trotz einfallender Gegenwelle. Drei abgeglichene Längen liefern einen Konsistenztest für eine isolierte J-Mode. Der verallgemeinerte Eigenwertabstand der elektrischen und magnetischen Kinetik bestimmt, ob eine masselose lokale Laufphasenaufspaltung möglich ist. [Durchgang und Prüfkriterien](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Durchgang_Parallelpruefung.md)

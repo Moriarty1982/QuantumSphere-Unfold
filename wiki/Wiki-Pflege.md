@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Zweikanal-Lastvariation.** Forschungsstand und offene Probleme um Lastkondition, Fehler des J-Frequenztests und Ordnung des minimalen Hauptteils ergänzt.
+
 **21.11.2026, OP5-Durchgang.** Forschungsstand und offene Probleme um Zweilastmessung, J-Längenprüfung und invariantes Kinetikkriterium ergänzt.
 
 **21.11.2026, OP5-Einwegfehler.** Forschungsstand und offene Probleme um das Rücklaufkriterium und die getrennten Prüfvoraussetzungen ergänzt.
