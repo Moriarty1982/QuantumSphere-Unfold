@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Zweilauf_Kalibrierung",
+  "repository": {
+    "commit": "8aaada2f70377304889605f978eef9bac0d86522",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_zweilauf_kalibrierung.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit). Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Profilpolynome im Strahlkern, ursprünglicher Kalibrierrest, Modenmomente, Quotientenidentitäten und illustrative Anschlussanforderung.",
+    "coefficient_domain": "Exakte Symbolrechnung und Dezimalausgabe aus exakten Eingaben.",
+    "conventions": "Materieframe M, statischer Einweg, radial gewichtete parallele Referenzstrahlen, lineare geometrische Optik.",
+    "inputs": [
+      "Signalprofil s^5 und s^6, Kalibrierkern s^2 und s^3, unabhängige Momente der Moden, Rechenbeispiel mit 100 MHz und 0,25 ps."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine numerische Strahlausbreitung oder Übertragung auf ein konkretes Gerät. Keine native Higgs–OP5-Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T00:54:17.065Z",
+    "runtime_seconds": 8.747,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_zweilauf_kalibrierung.txt",
+      "sha256": "1a5d43816a9a8273845e733cd3e0d06f5843ce0d23113bb74fa76ba5100532dc",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, keine Warnung. Start und Laufzeit beziehen sich auf den Connector-Aufruf. Kernelprozesscode nicht ausgewiesen.",
+    "Die Wirkung des getrennten Ringträgers sowie die Fehlergrenzen werden analytisch hergeleitet. Die Ausgabe der Polynomgrade ist ein Sollwert."
+  ],
+  "result": "Alle ausgewiesenen Residuen sind null. Das Zahlenbeispiel ergibt rund 0,0319 minimale Endempfindlichkeit und 6,33e-11 maximalen Fehler pro Matrix bei Endempfindlichkeit 0,00254.",
+  "residual_risks": [
+    "Der Kontrolldurchlauf benötigt kalibrierte Modengewichte und eine vorzeichenfeste Phasenzuordnung. Das Zahlenbeispiel setzt jeweilige Solltrennung im Band und ein ausschließliches Matrixfehlerbudget voraus."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_zweilauf_kalibrierung.wl",
+      "sha256": "7b76d58a9a539fc1d6c16e90fcfde011e562f8543bf6c1dd31c3cd595a068f8f",
+      "sha256_after": "7b76d58a9a539fc1d6c16e90fcfde011e562f8543bf6c1dd31c3cd595a068f8f"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_zweilauf_kalibrierung.txt"
+  ]
+}
