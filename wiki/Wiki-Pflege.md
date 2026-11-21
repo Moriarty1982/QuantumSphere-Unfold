@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Speicherkopplung.** Forschungsstand und offene Probleme um gemeinsame Wirkung, Eigenzeitzwang und Hilbert-Tensor der lokalen Kopplung ergänzt.
+
 **21.11.2026, OP5-Arbeitsspeicher.** Forschungsstand und offene Probleme um Teilchenstrom, lokale Reaktionskräfte und den bedingten Ausgleich zusätzlichen Speicherstresses ergänzt.
 
 **21.11.2026, OP5-Umschaltung.** Forschungsstand und offene Probleme um quadratische Nachführung, Speicherbedingung und retardierten mechanischen Außenbeitrag ergänzt.
