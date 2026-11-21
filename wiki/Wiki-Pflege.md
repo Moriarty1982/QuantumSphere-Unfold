@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, Standard für den HDL/MMA-Vergleich.** Die Hinweise für LLMs beschreiben den selbstständigen Aufruf bei Änderungen an der Bandmaschine und begrenzte OP-Anwendungen.
+
 **21.11.2026, HDL-Vergleich per MCP.** Die deutsche und die englische Inhaltsübersicht dokumentieren den wiederholbaren Aufruf und seine Ausgabe.
 
 **21.11.2026, SystemVerilog-Bandmaschine.** Die deutsche und die englische Inhaltsübersicht nennen den geprüften Umfang und die Taktzahlen für direkte und zyklische Regelwahl.
