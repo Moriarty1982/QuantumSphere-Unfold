@@ -1,0 +1,13 @@
+{
+  "id": "unary_increment_grow",
+  "instruction": "RUN_TAPE",
+  "guards": [],
+  "arguments": {
+    "program": "unary_increment",
+    "initial": "edge",
+    "mode": "grow",
+    "max_steps": 6,
+    "max_cells": 8,
+    "trace": true
+  }
+}

@@ -322,12 +322,19 @@ def rule_chains(db, target, max_steps):
     """, (max_steps, target))]
 
 
-def adapter_receipt(interface, request):
+def adapter_receipt(interface, request, *, inherited_guards=()):
     from scripts.qsc_audit import tensor_grammar_check as tensor
 
     # Reuse the interpreter's envelope and guard validation without running a recipe.
     probe = dict(request, instruction="EXPORT", arguments={"view": "framework"})
     roots = probe.pop("premises", [])
+    if inherited_guards:
+        try:
+            tensor._strings(probe.get("guards"))
+        except tensor.InputError:
+            pass  # The interpreter records the malformed declaration.
+        else:
+            probe["guards"] = sorted(set(probe["guards"]) | set(inherited_guards))
     receipt = interface.execute(probe)
     receipt.pop("receipt_hash")
     receipt["request_hash"] = tensor.digest(request)
@@ -834,11 +841,48 @@ def execute_mml(db, context, request):
         receipt = readout_mml(db, interface, request)
     elif instruction == "SEARCH_ROUTE":
         receipt = route_mml(db, interface, request)
+    elif instruction == "RUN_TAPE":
+        receipt = tape_mml(db, interface, request)
     else:
         receipt = interface.execute(request)
     with db:
         store_mml_receipt(db, interface.context, request, receipt, instruction)
     return receipt
+
+
+def tape_mml(db, interface, request, *, trace=None):
+    from qam.tools import tape_machine
+    from scripts.qsc_audit import tensor_grammar_check as tensor
+
+    args = request.get("arguments")
+    guards = set()
+    argument_errors = []
+    try:
+        tensor._keys(args, {"program", "initial", "mode", "max_steps", "max_cells", "trace"})
+        qam = interface.context["qam"]
+        program = tensor._object(qam, args["program"])
+        initial = tensor._object(qam, args["initial"])
+        if program["kind"] != "operator" or initial["kind"] != "state":
+            raise tensor.InputError("RUN_TAPE requires a QAM operator and a QAM state")
+        guards.update(program["guards"])
+        guards.update(initial["guards"])
+    except tensor.InputError as error:
+        argument_errors.append(str(error))
+
+    receipt, roots = adapter_receipt(interface, request, inherited_guards=guards)
+    attach_premises(db, receipt, roots, trace)
+    receipt["tape_solver_hash"] = tensor.digest_bytes(Path(tape_machine.__file__).read_bytes())
+    receipt["adapter_hash"] = tensor.digest_bytes(Path(__file__).read_bytes())
+    if argument_errors:
+        receipt["errors"].extend(argument_errors)
+        receipt["mma_status"] = "reject"
+    if receipt["mma_status"] == "continue":
+        try:
+            receipt["result"] = tape_machine.run(program["payload"], initial["payload"], args)
+        except tensor.InputError as error:
+            receipt["errors"].append(str(error))
+            receipt["mma_status"] = "reject"
+    return dict(receipt, receipt_hash=tensor.digest(receipt))
 
 
 def store_mml_receipt(db, context, request, receipt, instruction):
@@ -1190,6 +1234,8 @@ def receipt_summary(receipt, instruction, request):
         "obligations": receipt.get("obligations", []),
         "declared_guards": receipt.get("declared_guards", []),
     }
+    if instruction == "RUN_TAPE" and receipt["mma_status"] == "continue":
+        summary.update({key: receipt["result"][key] for key in ("mode", "steps", "stop", "final")})
     if "failed_pair_indices" in receipt["result"]:
         for key in ("failed_pair_indices", "first_six_pairs_preserved", "seventh_pair_yes_preserved"):
             if key in receipt["result"]:
@@ -1287,7 +1333,7 @@ def main():
     batch_reports.add_argument("--status", choices=("continue", "guard", "reject", "blocked"))
     commands.add_parser("mma-status", help="count distinct stored MMA receipts by status")
     receipts = commands.add_parser("receipts", help="find stored MMA receipts and premise dependents")
-    receipts.add_argument("--instruction", choices=("EXPORT", "SCRUB", "READOUT", "SEARCH_ROUTE"))
+    receipts.add_argument("--instruction", choices=("EXPORT", "SCRUB", "READOUT", "SEARCH_ROUTE", "RUN_TAPE"))
     receipts.add_argument("--status", choices=("continue", "guard", "reject"))
     receipts.add_argument("--premise", help="QAM claim hash, including transitive premises")
     receipts.add_argument("--limit", type=int, default=20)
@@ -1466,6 +1512,8 @@ def main():
                     current = route_mml(db, interface, request, use_cache=False, trace=receipt.get("premise_trace"))
                 elif instruction == "READOUT":
                     current = readout_mml(db, interface, request, use_cache=False, trace=receipt.get("premise_trace"))
+                elif instruction == "RUN_TAPE":
+                    current = tape_mml(db, interface, request, trace=receipt.get("premise_trace"))
                 else:
                     current = interface.execute(request)
                 response["replay"] = {

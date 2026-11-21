@@ -281,7 +281,7 @@ def list_qam_receipts(instruction: str | None = None, status: str | None = None,
     """Find saved MMA receipts, optionally by transitive premise, instruction or status."""
     args = ["receipts", "--limit", _qam_limit(limit)]
     if instruction is not None:
-        if instruction not in ("EXPORT", "SCRUB", "READOUT", "SEARCH_ROUTE"):
+        if instruction not in ("EXPORT", "SCRUB", "READOUT", "SEARCH_ROUTE", "RUN_TAPE"):
             raise AuditError("Unsupported MML instruction filter.")
         args.extend(["--instruction", instruction])
     if status is not None:
