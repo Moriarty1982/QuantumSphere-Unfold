@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Anschluss_Pilot_Polarisation",
+  "repository": {
+    "commit": "8f5ff5987d4a9d1c5d7a21dce2cb165936b2f903",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_anschluss_pilot_polarisation.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Anschlusskaskade, Pilotkürzung und Polarisationsgeometrie.",
+    "coefficient_domain": "Exakte komplexe Matrix- und Polynomalgebra, hochpräzise exemplarische Auswertung.",
+    "conventions": "Materieframe M; normierte Anschlusswellen und deklarierte lineare Vergleichsmetriken.",
+    "inputs": [
+      "100 MHz und 5e-7 Logfehlerziel; flache radiale Kerne der bisherigen Profile."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine vermessenen Anschlüsse, kein nativer Metriknachweis, keine geklärte freie J-Ausbreitung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T10:19:32Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_anschluss_pilot_polarisation.txt",
+      "sha256": "27961635618f6de9303039cd1c5f0fb07f1eb4d3c16d02b6ffe83792ab16888f",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste für Kaskadeninversion, Längen- und Pilotkombination, Gezeitenmatrix und Determinante. Beispielbudget True; Rückgabe Null."
+  ],
+  "result": "Bedingtes Anschlussbudget; gemeinsame Referenzfehler kürzen über Länge; unabhängige Ricci-/Weyl-Projektionen und modellinterne Radialtrennung.",
+  "residual_risks": [
+    "Reale normierte Anschlussmessungen, gemeinsame Pilotantwort und native Vermittlermetrik offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_anschluss_pilot_polarisation.wl",
+      "sha256": "98e6e236828054f52af9df98e005829039d64da93b61dbf16d03df0b00e4f40b",
+      "sha256_after": "98e6e236828054f52af9df98e005829039d64da93b61dbf16d03df0b00e4f40b"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_anschluss_pilot_polarisation.txt"
+  ]
+}

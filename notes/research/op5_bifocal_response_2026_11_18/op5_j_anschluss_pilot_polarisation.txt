@@ -1,0 +1,13 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= left load identity residual = 0
+During evaluation of In[1]:=                                                                                              -7                     -6                                           -7
+loaded front increment and outer cross, outer diagonal, full log error = {2.00000000000140 10  , 1.30883837789505 10  , 0.000103712001377895, 4.98301474512679 10  }
+During evaluation of In[1]:= fixture example passes = True
+During evaluation of In[1]:= scalar fixture inverse and sensitivity residuals = {0, 0}
+During evaluation of In[1]:= noncommuting inverse and propagation residuals = {{{0, 0}, {0, 0}}, {{0, 0}, {0, 0}}}
+During evaluation of In[1]:= two-length chromatic cancellation residual = 0
+During evaluation of In[1]:= two-path pilot correction residual = 0
+During evaluation of In[1]:= screen and pure Weyl ring residuals = {{{0, 0}, {0, 0}}, {{0, 0}, {0, 0}}}
+During evaluation of In[1]:= ordinary Weyl separation and second difference residuals = {0, 0}
+
+Out[1]= Null

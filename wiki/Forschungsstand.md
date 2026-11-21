@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Anschlussabgleich und Polarisationswege (21.11.2026)
+
+Die Kaskadenrechnung begrenzt die Kreuzreflexion der äußeren Anschlussebene. Ein Längenkreuzquotient entfernt auch chromatische Referenzterme, sofern sie den Längenwechsel überstehen. Ein seitlich versetzter Strahl hebt im Profilkern die Weyl-Polarisation hervor. Unterschiedliche Radialformen trennen im kompensierten Vergleich gewöhnliche und massive Weyl-Beiträge. [Anschluss und Polarisationswege](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Anschluss_Pilot_Polarisation.md)
+
 ### OP5: Feste Terminierung und Referenzebenen (21.11.2026)
 
 Im homogenen Marker reicht die kleine Kreuzreflexion für die A-Zweilastmessung mit fester passiver J-Last. Für 4 m bleibt die Änderung des relativen A/J-Referenzwegs im Beispiel auf Pikometerniveau zu begrenzen. Zwei orthogonale Polarisationen prüfen die Ricci-/Weyl-Struktur des Elektronenvergleichs. [Terminierung und Geometrie](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Referenzebenen.md)
