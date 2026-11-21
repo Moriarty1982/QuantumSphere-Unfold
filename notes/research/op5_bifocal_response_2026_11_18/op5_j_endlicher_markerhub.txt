@@ -1,0 +1,11 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Green Wronskian residual: 0
+During evaluation of In[1]:= Outgoing Robin residuals: {0, 0}
+During evaluation of In[1]:= Perturbation eigenvalue polynomial residual: 0
+During evaluation of In[1]:= Example {Neumann parameter, diagonal contrast error bound, reflection error bound}: {0.003143321001, 0.00002296499438, 0.003153232623}
+During evaluation of In[1]:=                                                                                                 -6               -10
+Full transfer at the example frequency {diagonal contrast error, reflected norm}: {3.14143558 10  , 1.57056269 10   }
+During evaluation of In[1]:= Both example bounds hold: {True, True}
+During evaluation of In[1]:= Illustrative 100 MHz band {contrast lower bound, reflection upper bound}: {1.999977030, 0.003155037406}
+
+Out[1]= Null

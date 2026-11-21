@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Endlicher Markerhub und Rückstreugrenze (21.11.2026)
+
+Eine exakt behandelte A-Schicht trägt den endlichen Phasenhub. Für eine schwache J-Beimischung begrenzt eine konvergente Reihe die Abweichung der Vorwärts- und Rückstreumatrix. Der diagonale Markerkontrast ändert sich erst quadratisch in der Beimischung, während Umwandlung linear sein kann. Das analytische 100-MHz-Beispiel erlaubt einen Kontrast nahe zwei und erfordert weiterhin eine eigene Rücklaufkontrolle. Die Anschlussgrenze und die physische Kalibrierung bleiben offen. [Markerhub und Schranken](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endlicher_Markerhub.md)
+
 ### OP5: Zweikanalstreuung am Feldmarker (21.11.2026)
 
 Bei unterschiedlichen A/J-Wellenzahlen gewichtet Vorwärtsstreuung die Modenumwandlung mit der Wellenzahldifferenz, Rückstreuung mit der Summe. Ein gemischter lokaler Rang-eins-Marker kann in Born-Ordnung eine Vorwärtskorrektur vom Rang zwei ergeben. Die Modenzuordnung verlangt nur einen kalibrierten Diagonalkontrast der Vorwärtsmatrix im betrachteten diagonalen Streckenmodell. Eine exakte Schichtmatrix ergänzt die schwache Rechnung für endliche Phasen. Die geometrische Mindestantwort der Zweikanalanschlüsse und freie J-Ausbreitung bleiben offen. [Streurechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweikanal_Marker.md)
