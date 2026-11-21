@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Energieabschätzung in der Schaltphase (21.11.2026)
+
+Die Druck- und Uhrkorrektur erlaubt für kleine Auslenkung und feste glatte Schaltbahn eine gleichmäßig positive symmetrische Reduktion im bewegten Innenbereich. Eine Energieabschätzung begrenzt das Wachstum freier Störungen über die endliche Schaltzeit ohne zusätzlichen Ableitungsverlust, solange kein Energiefluss vom Rand eintritt. Aus der retardierten Lösung folgt eine Schranke für ein zeitlich gefenstertes gewöhnliches Gezeitensignal am Außenmesspunkt. Sie enthält Gewichte proportional zu $d^{-1}$, $d^{-2}$ und $d^{-3}$ für Abstand $d$ und hängt vom Messband und den Materialkoeffizienten ab. Die Grenze ist für den idealisierten Außensensor formuliert. Randdynamik, Zahlen für eine reale Auslese, Binnenfeld und native Kopplung bleiben offen. [Energie- und Messabschätzung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Schaltphase_Fehlergrenze.md)
+
 ### OP5: Störungen des Speichers und der Eigenzeituhr (21.11.2026)
 
 Das druckfreie Speichermodell hat im homogenen Eingangsplateau einen longitudinalen Jordanblock. Geschwindigkeitsfehler erzeugen Dichtefehler proportional zu Wellenzahl und Zeit. Eine kompakte stationäre Dichtestörung bei gleicher Gesamtmasse und gleichem Dipol kann bereits eine gewöhnliche Außenquadrupolkrümmung erzeugen. Druck- und Uhrterme, deren erste Variation auf der Sollbahn verschwindet, erhalten die bisherige Außenkompensation der Sollbahn. Sie geben im homogenen Ruhepunkt reguläre akustische und gekoppelte elastische Uhrmoden. Die Stabilität über die Schaltphase und das gewöhnliche Außenfeld ihrer Störungen bleiben offen. [Störungsrechnung und symbolische Kontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Arbeitsspeicher.md)

@@ -1,0 +1,11 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Elastic null-Lagrangian coercivity residual: 0
+During evaluation of In[1]:= Null-Lagrangian force residual: {0, 0, 0}
+During evaluation of In[1]:= Acoustic symmetrizer residual: {{0, 0}, {0, 0}}
+During evaluation of In[1]:= First-order time and space symmetry residuals: {{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}}, {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}}}
+During evaluation of In[1]:= Variable energy identity residual: 0
+During evaluation of In[1]:= Retarded spatial gradient residual: {0, 0, 0}
+During evaluation of In[1]:= Retarded spatial Hessian residual: {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+During evaluation of In[1]:= Radial dyad and trace-free angular norm spectra: {{0, 0, 1}, {-1, -1, 2}}
+
+Out[1]= Null

@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Schaltphase_Fehlergrenze",
+  "repository": {
+    "commit": "088c1bd5730b31823a6928f2caaed1b661567a74",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_schaltphase_fehlergrenze.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit). Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Elastischer Nullterm samt verschwindender Euler-Kraft, akustische Symmetrisierung, algebraische Symmetrie in einer Raumrichtung, variable Energieidentität, Gradient und Hesse-Matrix des retardierten Kerns sowie Winkelnormen.",
+    "coefficient_domain": "Exakte symbolische Differential- und Lineare Algebra.",
+    "conventions": "Materieframe M, Lichtgeschwindigkeit eins, Störungslinearisation entlang einer glatten vorbereiteten Bahn, gewöhnliche Gravitation erster Ordnung in G.",
+    "inputs": [
+      "Isotrope Referenzelastizität, allgemeine symmetrische Koeffizienten in der Energieidentität, retardierter Kern mit freier skalarer Zeitfunktion."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine überprüfte Materialtoleranz für eine reale Apparatur. Kein Randwertproblem, keine nichtlineare Stabilität, keine native Higgs–OP5-Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T00:37:43.792Z",
+    "runtime_seconds": 8.96,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_schaltphase_fehlergrenze.txt",
+      "sha256": "e11deac6bfc359695d530435046721a4236da11ce4687c47ba139eca735c5d90",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, keine Warnung. Zeiten beziehen sich auf den Connector-Aufruf. Kernelprozesscode nicht separat ausgewiesen.",
+    "Alle ausgewiesenen Residuen sind null. Die ausgegebenen Winkelspektren sind Sollwerte und keine Residuen. Positivität entlang der Bahn und Messabschätzung werden im Text analytisch hergeleitet."
+  ],
+  "result": "Die kontrollierten Identitäten stimmen exakt.",
+  "residual_risks": [
+    "Die variable Abschätzung ist eine Innenabschätzung. Die Messschranke setzt eine getrennte äußere Position und bekannte Material- und Fensterparameter voraus."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_schaltphase_fehlergrenze.wl",
+      "sha256": "6f347bc092567fd56f330d84cb42b2f5b0ed85379aedd28dd8e09fc02fd5ab9c",
+      "sha256_after": "6f347bc092567fd56f330d84cb42b2f5b0ed85379aedd28dd8e09fc02fd5ab9c"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_schaltphase_fehlergrenze.txt"
+  ]
+}
