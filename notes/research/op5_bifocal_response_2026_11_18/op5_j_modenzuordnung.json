@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Modenzuordnung",
+  "repository": {
+    "commit": "65cb2c690c9362006239723bc4e5c10db4cee1f5",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_modenzuordnung.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Markierte Spurauslese ohne Phasenabstand, algebraische Fehlerentwicklung, Rangdeterminanten und radiale Kalibrierkoeffizienten.",
+    "coefficient_domain": "Exakte symbolische Matrix- und Differentialrechnung.",
+    "conventions": "Materieframe M, kohärenter kommutierender Einweg-Vergleich, zwei feste Feldmoden.",
+    "inputs": [
+      "Generische nichtdiagonale Anschlüsse im angegebenen Ansatz, ideale Feldmarkierung mit Eigenwerten +1 und -1, kubisches gewöhnliches Gezeitenprofil."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine physische J-selektive Markierung oder validierte Anschlussstabilität. Keine native Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T04:10:06.507Z",
+    "runtime_seconds": 8.658,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_modenzuordnung.txt",
+      "sha256": "39679611a6dccd24766d1e83e78f88ad1007ae9da35b8f51611dd3ab44fb04c8",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, keine Warnung. Start und Laufzeit beziehen sich auf den Connector-Aufruf. Kernelprozesscode nicht ausgewiesen.",
+    "Norm- und Phasenabschätzungen werden analytisch hergeleitet."
+  ],
+  "result": "Alle deklarierten Residuen sind exakt null.",
+  "residual_risks": [
+    "Die Rangbedingungen liefern keine experimentelle Kondition ohne gemessene Skalierung von Modengewichten und Fehlern."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_modenzuordnung.wl",
+      "sha256": "20a6fee0dddd6655372d96815698dd9936136f4d482de1126a3ff7fa9dccb716",
+      "sha256_after": "20a6fee0dddd6655372d96815698dd9936136f4d482de1126a3ff7fa9dccb716"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_modenzuordnung.txt"
+  ]
+}

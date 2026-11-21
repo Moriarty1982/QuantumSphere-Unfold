@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Vorzeichenfeste Modenzuordnung (21.11.2026)
+
+Eine im Feldraum kalibrierte Markierung der beiden Moden erlaubt die Spurauslese ihrer komplexen Übertragungen auch bei gleichen Eigenphasen. Die Fehlerschranke hängt von Profil- und Markierungsfehlern ab. Profilgebundene Anschlussdrift muss weiterhin begrenzt werden. Referenzierte Einzelphasen der zwei Läufe bestimmen die mittleren Kopplungen auch bei ungleichen Modengewichten. Ohne gemeinsame Zeitreferenz liefern vier differentielle Läufe bei unabhängig variierten, bekannten Strahlgewichten vollen Rang. Die physische J-selektive Markierung und die reale Anschlusskalibrierung bleiben offen. [Herleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Modenzuordnung.md)
+
 ### OP5: Zweilauf-Kalibrierung mit endlicher Strahlbreite (21.11.2026)
 
 Wird das Querintegral des Kalibrierprofils durch einen getrennten Ring außerhalb des Strahlkerns ausgeglichen, bleibt der OP5-Gezeitenkontrast für alle Strahlen im Kern null, und die gewöhnliche Gezeitenkrümmung ist dort konstant. Ungleiche erste Modenmomente können weiterhin einen gewöhnlichen Laufzeitrest erzeugen. Die Zweilauf-Auswertung enthält Schranken für Modengewichte, Kalibrierfaktor und Anschlussfehler sowie eine Bedingung für eindeutig zugeordnete Eigenphasen. Bei unveränderten Beispielvorgaben von 100 MHz und 0,25 ps fordert die Aufteilung des reinen Matrixbudgets auf beide Läufe rund 0,0319 kleinste Singulärzahl pro Ende. Messwerte für reale Modengewichte, Anschlüsse und native Kopplung fehlen. [Zweilauf-Rechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweilauf_Kalibrierung.md)
