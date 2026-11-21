@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Störungen des Speichers und der Eigenzeituhr (21.11.2026)
+
+Das druckfreie Speichermodell hat im homogenen Eingangsplateau einen longitudinalen Jordanblock. Geschwindigkeitsfehler erzeugen Dichtefehler proportional zu Wellenzahl und Zeit. Eine kompakte stationäre Dichtestörung bei gleicher Gesamtmasse und gleichem Dipol kann bereits eine gewöhnliche Außenquadrupolkrümmung erzeugen. Druck- und Uhrterme, deren erste Variation auf der Sollbahn verschwindet, erhalten die bisherige Außenkompensation der Sollbahn. Sie geben im homogenen Ruhepunkt reguläre akustische und gekoppelte elastische Uhrmoden. Die Stabilität über die Schaltphase und das gewöhnliche Außenfeld ihrer Störungen bleiben offen. [Störungsrechnung und symbolische Kontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Stabilitaet_Arbeitsspeicher.md)
+
 ### OP5: Lokale kovariante Kopplung für den Arbeitsspeicher (21.11.2026)
 
 In der vorbereiteten Schaltung beginnt die Änderung der Ruheenergie im Speicher quadratisch, die Mitnahmekraft aber linear. Eine gemeinsame Kontinuumswirkung liefert die Kraft über eine aus Materiallabels und Eigenzeit gebildete 1-Form. Ihr Kopplungsterm ist metrikunabhängig. Elastischer Tensor und Speicher-Tensor ergeben wieder die bilanzierte gewöhnliche Quelle. Die Uhr mit idealem Eigenzeitzwang hat auf der Sollbahn Multiplikator null. Die Uhr- und Matrixgleichung folgen bis zur zweiten Auslenkungsordnung aus der Trägergleichung und der Variationsidentität zur Diffeomorphismeninvarianz. Die retardierte gewöhnliche Außenkompensation bleibt in linearer Gravitation erhalten. Stabilität, reale Schaltkomponenten und native Kopplung sind offen. [Wirkung und Rechenkontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Kovariante_Speicherkopplung.md)

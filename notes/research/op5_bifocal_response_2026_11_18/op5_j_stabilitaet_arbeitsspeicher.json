@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Stabilitaet_Arbeitsspeicher",
+  "repository": {
+    "commit": "12b43263f46e00f3911fbf41509889f9669e4ded",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_stabilitaet_arbeitsspeicher.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit). Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Jordanblock und Propagator des druckfreien Speichers, Schallgeschwindigkeit der Druckkorrektur, longitudinales Matrix-Uhr-Symbol und quadratische Energie, lineare Uhrquelle, statischer Quadrupolkern.",
+    "coefficient_domain": "Exakte symbolische Differential- und Matrixrechnung mit rationalen Beispielparametern.",
+    "conventions": "Materieframe M, Einheiten mit Lichtgeschwindigkeit eins, lineare Störungen des homogenen Eingangsplateaus, gewöhnliche Gravitation linear in G.",
+    "inputs": [
+      "Positiver homogener Speicherhintergrund, isotrope Elastizität am Ruhepunkt, barotrope Korrektur und dynamische Uhr mit gerichteter Gradientenenergie."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine Stabilitätsaussage für die Schaltphase oder nichtlineare Dynamik. Keine Toleranz für eine reale Apparatur und keine native Higgs–OP5-Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T00:25:03.286Z",
+    "runtime_seconds": 9.002,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_stabilitaet_arbeitsspeicher.txt",
+      "sha256": "172fea82308095dd64db9572a3b71980ec2a284c74f0789227cfe5e1d6658e5f",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, keine Warnung. Start und Laufzeit messen den Connector-Aufruf. Ein Kernelprozesscode wurde nicht separat ausgewiesen.",
+    "Für n0>0 liefert Wolfram Rang eins und Quadrat null. Dies ist Maschinenergebnis und keine Warnung. Alle als Residuen ausgewiesenen Werte sind exakt null."
+  ],
+  "result": "Ausgewiesene Identitäten stimmen. Ableitungsverlust, Außenquadrupol und Persistenz der Sollbahn folgen aus der analytischen Rechnung.",
+  "residual_risks": [
+    "Der homogene Plateau-Hauptteil deckt räumlich und zeitlich veränderliche Koeffizienten sowie Randbedingungen nicht ab."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_stabilitaet_arbeitsspeicher.wl",
+      "sha256": "6f346cd8e0aab9b896f9dab59834311834ff0eba7b9cca7f84d2d466f6c0d4e5",
+      "sha256_after": "6f346cd8e0aab9b896f9dab59834311834ff0eba7b9cca7f84d2d466f6c0d4e5"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_stabilitaet_arbeitsspeicher.txt"
+  ]
+}
