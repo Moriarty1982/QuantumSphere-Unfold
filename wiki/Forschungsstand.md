@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Zweikanalstreuung am Feldmarker (21.11.2026)
+
+Bei unterschiedlichen A/J-Wellenzahlen gewichtet Vorwärtsstreuung die Modenumwandlung mit der Wellenzahldifferenz, Rückstreuung mit der Summe. Ein gemischter lokaler Rang-eins-Marker kann in Born-Ordnung eine Vorwärtskorrektur vom Rang zwei ergeben. Die Modenzuordnung verlangt nur einen kalibrierten Diagonalkontrast der Vorwärtsmatrix im betrachteten diagonalen Streckenmodell. Eine exakte Schichtmatrix ergänzt die schwache Rechnung für endliche Phasen. Die geometrische Mindestantwort der Zweikanalanschlüsse und freie J-Ausbreitung bleiben offen. [Streurechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweikanal_Marker.md)
+
 ### OP5: Passiver Markierungshub und Anschlussband (21.11.2026)
 
 Im verdünnten HCl-Einlinienmodell kostet ein Pi-Hub bei höchstens einem Prozent Amplitudenverlust rund 313 Halbbreiten Verstimmung. Die Anschlussantwort sinkt dabei. Die Bandrechnung gibt eine notwendige Überlappung und eine gemeinsame Säulenbedingung an. Für das bisherige schwach gekoppelte HCl/H-Beispiel unterschreitet schon die geometrische Anschlussschranke das Ziel. Ein separater off-resonanter H-Marker umgeht den HCl-Phasen-Verlust-Konflikt des Markers. Die reale Vorwärtsantwort und die Zweikanalanschlüsse bleiben zu prüfen. [Schicht- und Bandrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passiver_Vorwaertshub.md)
