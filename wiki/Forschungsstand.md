@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Kohärente A-Nullreferenz (21.11.2026)
+
+Zwei flankierende Nullmessungen kürzen affine Drift der logarithmischen Verstärkung und Phase, wenn der Phasenzweig verfolgt wird. Eine schaltabhängige Änderung des komplexen Gewinns braucht eine unabhängige Kontrolle. Für den vollen Zweikanalmarker genügt im Beispiel ein symmetrischer J-Amplitudenanteil von höchstens 2,890·10⁻⁴ je Einkanalanschluss. Die Rechnung budgetiert Zeitdrift und Projektion an beiden Bandenden. [Nullreferenz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Einkanal_Nullreferenz.md)
+
 ### OP5: Diagonalfehler des skalaren Markers (21.11.2026)
 
 Das 100-MHz-Schichtmodell begrenzt die Abweichung der A-Diagonale von der skalaren Transmission auf 1,612·10⁻⁶. Im J-Kanal kürzen sich Teile der ersten und zweiten Korrektur. Die Abweichung vom freien J-Referenzwert bleibt unter 1,638·10⁻⁶. Bei Verwendung beider skalarer Diagonalwerte bleiben nach Rücklauf und Modellfehler 4,596·10⁻⁶ für die komplexe Referenzmessung und weitere Beiträge. [Diagonalrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Diagonalreferenz.md)

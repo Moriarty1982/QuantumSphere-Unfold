@@ -1,0 +1,12 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= projected correction residual = 0
+During evaluation of In[1]:= linear log drift and exact quadratic residual = 0
+During evaluation of In[1]:= null branch ambiguity example = {-1, 1, -1}
+During evaluation of In[1]:= max symmetric amplitude leakage, full marker and diagonal witness = {0.00028909309171801, 0.00099999950000037}
+During evaluation of In[1]:=                                                                            -6
+log drift curvature per s^2 for one second half-window = 1.9999878750373 10
+During evaluation of In[1]:=                                                                  -7
+remaining reference budget for other effects = 5.9600000000000 10
+During evaluation of In[1]:= example conservative limits pass = {True, True}
+
+Out[1]= Null

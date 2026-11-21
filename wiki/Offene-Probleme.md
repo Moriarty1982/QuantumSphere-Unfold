@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, A-Nullreferenz (21.11.2026).** Die komplexe Referenzmessung an beiden Bandenden hat ein bedingtes Drift- und Projektionsbudget. Phasenverfolgung, schaltabhängiger Gain und Modenreinheit brauchen eigene Messkontrollen. Der HCl/H-Zweikanalanschluss bleibt offen. [Einkanalrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Einkanal_Nullreferenz.md)
+
 **OP5, Diagonalmodell des Markers (21.11.2026).** Im illustrativen Band sind nun beide Modellreste der skalaren Referenz durch die phasenaufgelöste Rechnung begrenzt. Die reale komplexe A-Kalibrierung und die HCl/H-Anschlusskondition bleiben offen. [Modellrest](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Diagonalreferenz.md)
 
 **OP5, komplexe Referenz (21.11.2026).** Die Reflexion lässt im Modell eine kleine Reserve für die Vorwärtsreferenz. Für eine Zentralmessung braucht es eine unabhängige Dispersionsschranke und eine schärfere Grenze für die gekoppelte A-Diagonale. Messwerte an beiden Bandenden, physische Anschlussstärke und freie J-Ausbreitung bleiben offen. [Kalibriergrenze](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Komplexe_Referenz.md)
