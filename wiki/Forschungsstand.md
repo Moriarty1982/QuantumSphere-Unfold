@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: A-Port-Kreuzkontrast und Aktorprüfung (21.11.2026)
+
+Pro Frequenz fallen separable multiplikative Fehler im A-Vierfachkontrast exakt heraus. Ein unabhängig kalibrierter Vierzustands-Phasenrest kann die Einzelgrenzen weiter verschärfen. Für die gewöhnlichen Aktoren gibt es eine Sechs-Richtungen-Messung mit Fehlergrenze und einen Stellwegtest für den gemeinsamen Gegenhub. Reale Referenz- und Materialdaten fehlen. [Kreuzkontrast und Aktorprüfung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_A_Kreuzkontrast_Aktorpruefung.md)
+
 ### OP5: Ausführbare A-Port-Prüfung (21.11.2026)
 
 Das gewöhnliche A-Prüfschema verarbeitet zwei Bandenden mit Lastvariation, Kontrollpunkt und eigenem Direktstandard. Synthetische Fehlerfälle unterscheiden gekrümmte Lastantwort und affinen Interzeptfehler. Das gewöhnliche Ansteuerungsfenster ist dimensionslos formuliert und enthält einen bedingten Aktor-Rangtest. [Auswertung und Grenzen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_A_Port_Auswertung.md)

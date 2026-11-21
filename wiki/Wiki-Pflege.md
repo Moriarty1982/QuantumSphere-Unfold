@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**21.11.2026, OP5-Kreuzkontrast und Aktorprüfung:** Schranke am gemessenen Vierfachkontrast und Messvorschrift für lokale Aktorantwort mit gemeinsamem Gegenhub ergänzt.
+
 **12.11.2026, String-Längenmodell:** Stabiles elastisches Vergleichsminimum
 und rückgerechnetes 2/3-Beispiel dokumentiert; gleiche Strings, offene
 Torus-Realisierung und zusätzliche Massenwurzel-Auslese getrennt.
