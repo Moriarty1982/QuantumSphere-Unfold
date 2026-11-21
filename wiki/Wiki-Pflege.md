@@ -104,6 +104,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 **21.11.2026, Subagentenregel.** Die Hinweise für LLMs erläutern die projektweite Arbeitsteilung bei unabhängigen Teilaufgaben.
 
+**21.11.2026, OP5-Resonator und Momentprofil.** Forschungsstand und offene Probleme um Resonatorband, lokalen Pilottransfer und Logmomentgrenzen ergänzt.
+
 **21.11.2026, OP5-Phasenanpassung.** Forschungsstand und offene Probleme um Kopplungslänge, Pilottransfer und die Gradientenvariation ergänzt.
 
 **21.11.2026, OP5-Konverter und Ringfehler.** Forschungsstand und offene Probleme um die Lastabbildung, den Leerkörpertransfer und lokale Annulusgrenzen ergänzt.

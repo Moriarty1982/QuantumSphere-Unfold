@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Resonator_Pilot_Momentprofil",
+  "repository": {
+    "commit": "55781a111df9c74c8a098b24688e16c1311ccb55",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_resonator_pilot_momentprofil.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Zweimoden-Resonatorband, lokaler Pilottransfer und duale Momentprofil-Grenze.",
+    "coefficient_domain": "Exakte algebraische und rationale Bernstein-Zertifizierung; hochpräzise Acht-Knoten-Rechnung.",
+    "conventions": "Materieframe M, komplexe Flusswellen, gewöhnliche radiale Poisson-Metrik.",
+    "inputs": [
+      "100 MHz; A-Leckziel 9e-6; Übergangsring [1/4,3/4]."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine physische J-Mode und keine vermessene Pilot- oder Gradientenapparatur."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T16:28:22Z",
+    "runtime_seconds": 10.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_resonator_pilot_momentprofil.txt",
+      "sha256": "ac793a7f813e860ff1b0e303f493923d0861992712a61bae1f7bdba6fba92cc5",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Resonator- und Pilotidentitäten; exakte sechs Polynom-Momente; 80-stelliges Logmomentprofil; rationale Untergrenze >87172,5 True. Rückgabe Null."
+  ],
+  "result": "Bedingter Resonator braucht 11,785 GHz Kopplungsrate für 100 MHz und 9e-6 Leck. Lokaler Pilottransfer braucht unabhängige Richtreferenz. TV-Infimum relaxiert 362, bei zwei Logmomenten zertifizierte Untergrenze >87172,5 und konstruktiver Vergleich um 107530.",
+  "residual_risks": [
+    "Physischer J-Konverter, Richtkopplerkalibrierung, tatsächlich realisierbares Momentprofil und native Metrik offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_resonator_pilot_momentprofil.wl",
+      "sha256": "fca76fd7218ff8a1201a2ade6e6c32bb7877c122883f20fca8da1bd329fba60d",
+      "sha256_after": "fca76fd7218ff8a1201a2ade6e6c32bb7877c122883f20fca8da1bd329fba60d"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_resonator_pilot_momentprofil.txt"
+  ]
+}

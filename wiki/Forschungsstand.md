@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Resonatorband und Momentprofil (21.11.2026)
+
+Der synchron resonante Zweimodenvergleich benötigt für das bisherige 100-MHz-Band eine weit größere effektive Kopplung als das räumliche Vergleichsmodell. Ein lokaler Pilotabgriff kürzt den Empfängergewinn. Das gewöhnliche Momentprofil ist direkt konstruierbar, und die b₄-Achsenselektivität erzwingt eine viel höhere Mindestvariation als die fünf Polynom-Momente allein. [Resonator und Momentprofil](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Resonator_Pilot_Momentprofil.md)
+
 ### OP5: Phasenanpassung, Pilot und Gradientenbudget (21.11.2026)
 
 Phasenangepasste Konversion benötigt im idealisierten Modell einen Metermaßstab und engere Index- und Verlustgrenzen als die kurze Schicht. Ein separat kalibrierter Pilot bestimmt den komplexen Direktgain-Transfer. Die Kompensation erzwingt beim gewöhnlichen Gradienten eine nichtverschwindende Mindestvariation. [Konversion und Gradientenbudget](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Phasenanpassung_Pilot_Gradient.md)

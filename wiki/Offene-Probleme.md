@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, Resonator und Momentprofil (21.11.2026).** Unabhängige Richtreferenz, physischer A/J-Konverter und materielle Realisierung des gewöhnlichen Momentprofils bleiben offen. Die b₄-Achsenselektivität verlangt zwei zusätzliche logarithmische Momente. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Resonator_Pilot_Momentprofil.md)
+
 **OP5, Phasenanpassung und gewöhnlicher Gradient (21.11.2026).** Physische Modenkonversion, unabhängig normierter Pilot und ein gewöhnlich-selektiver absoluter Gradientenkanal bleiben offen. Eine breitere Übergangszone verbessert die Modellgrenzen, die bisherige Profilform bleibt für unabhängige relative Fehler schlecht konditioniert. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Phasenanpassung_Pilot_Gradient.md)
 
 **OP5, Konverter und lokaler Ringfehler (21.11.2026).** Physischer J-Modenkonverter und Leerkörpertransfer sind zu kalibrieren. Die starke Vorzeichenkompensation beim gewöhnlichen b₄-Abzug bleibt für den gewählten Ringentwurf schlecht konditioniert. [Kontrollrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Konverter_Leerkoerper_Ringfehler.md)
