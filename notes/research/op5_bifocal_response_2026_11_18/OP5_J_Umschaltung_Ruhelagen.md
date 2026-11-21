@@ -68,14 +68,14 @@ $$
 $$
 Die drei Restterme geben auch die Quelle einer Fehlsteuerung von $f$ an. Sie verschwinden bei $f=s^2$. Der lineare Teil ist lokal erhalten. Der quadratische Teil ist für beliebiges $f$ separat lokal erhalten.
 
-Für $f=s^2$ definiere $D=\partial_t^2-\Delta$ und $U=D_{\rm ret}^{-1}A$ mit vor der Schaltung verschwindender Störung. In harmonischer Eichung ist die retardierte spurgespiegelte Metrik $\bar h_{\mu\nu}=16\pi G D_{\rm ret}^{-1}\delta T_{\mu\nu}$. Nach Spurumkehr gilt
+Für $f=s^2$ definiere $D=\partial_t^2-\Delta$ und $U=D_{\rm ret}^{-1}A$ mit vor der Schaltung verschwindender Störung. In harmonischer Eichung ist die retardierte spurumgekehrte Metrik $\bar h_{\mu\nu}=16\pi G D_{\rm ret}^{-1}\delta T_{\mu\nu}$. Nach Spurumkehr gilt
 $$
 h_{\mu\nu}
 =8\pi G\, A\,\delta_{\mu\nu}+\partial_\mu\xi_\nu+\partial_\nu\xi_\mu,
 \qquad
 \xi_0=-16\pi G\,\dot U,\quad \xi_i=0 .
 $$
-Hier bezeichnet $\delta_{\mu\nu}$ die Einheitsmatrix aller vier Komponenten. Der Eichanteil hat verschwindenden linearisierten Riemann-Tensor. Damit verschwindet die gewöhnliche Außenkrümmung des definierten mechanischen Gesamttensors auch während des Schaltens, bei retardierten Daten und bis zur betrachteten Ordnung. Innerhalb des Profils bleibt eine zeitabhängige gewöhnliche Krümmung. Das Plateau behält seine lineare W2-Higgsquelle. Die native Higgs–OP5-Kopplung, die vollständige Quelle realer Steuer- und Feldkomponenten, höhere Amplitudenordnungen und Rückwirkung jenseits linearer Gravitation bleiben offen. [Harmonische Eichung und linearisierte Krümmung, Carroll `6](https://ned.ipac.caltech.edu/level5/March01/Carroll3/Carroll6.html)
+Hier bezeichnet $\delta_{\mu\nu}$ die Einheitsmatrix aller vier Komponenten. Der Eichanteil hat verschwindenden linearisierten Riemann-Tensor. Damit verschwindet die gewöhnliche Außenkrümmung des definierten mechanischen Gesamttensors auch während des Schaltens, bei retardierten Daten und bis zur betrachteten Ordnung. Innerhalb des Profils bleibt eine zeitabhängige gewöhnliche Krümmung. Das Plateau behält seine lineare W2-Higgsquelle. Die native Higgs–OP5-Kopplung, die vollständige Quelle realer Steuer- und Feldkomponenten, höhere Amplitudenordnungen und Rückwirkung jenseits linearer Gravitation bleiben offen. [Harmonische Eichung und linearisierte Krümmung, Carroll, Abschnitt 6](https://ned.ipac.caltech.edu/level5/March01/Carroll3/Carroll6.html)
 
 ## Rechenkontrolle
 

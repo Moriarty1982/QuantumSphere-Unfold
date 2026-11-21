@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Druckfreier_Arbeitsspeicher",
+  "repository": {
+    "commit": "5e262654b15db096ff8ee5f9bafdafd3458c7770",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_druckfreier_arbeitsspeicher.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit). Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Relativweg, Ruheenergieänderung, quadratische Entwicklung des Teilchentensors, Spannungstransport, Reaktionskraft und Restleistung, Nachstellen eines zusätzlichen quadratischen Spannungsbeitrags.",
+    "coefficient_domain": "Exakte symbolische Differential- und Reihenrechnung.",
+    "conventions": "Materieframe M, Signatur (-,+,+,+), Lichtgeschwindigkeit eins, zweite Ordnung in der Verschiebung.",
+    "inputs": [
+      "Glattes longitudinales Profil, allgemeiner Schaltverlauf, positiver mitbewegter Hintergrund, Druckkorrektur mit isotropem Materialgesetz und diagonalem F in der symbolischen Kontrolle."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Kein mikroskopischer Kraft- oder Energiewandler. Keine native Higgs–OP5-Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T00:03:37.654Z",
+    "runtime_seconds": 8.883,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_druckfreier_arbeitsspeicher.txt",
+      "sha256": "66b1abbccacdbac4074c07dade5c2bf4d527948a198c6259a12b3ae399dadb5a",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, keine Warnung. Die Zeiten beziehen sich auf den Connector-Aufruf. Der Kernelprozesscode wurde nicht separat ausgewiesen.",
+    "Die allgemeine Spannungsumrechnung und Erhaltung der Teilchenzahl werden im Text analytisch gezeigt."
+  ],
+  "result": "Exakte Nullreste für die deklarierten Ausdrücke.",
+  "residual_risks": [
+    "Der resultierende Tensor setzt die lokalen, paarweise gegensinnigen Kraft- und Energieports voraus."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_druckfreier_arbeitsspeicher.wl",
+      "sha256": "4859bbaf9affc3ebaf66840e3c8097bb6b781ba78a25267f4149e9decd15b8f0",
+      "sha256_after": "4859bbaf9affc3ebaf66840e3c8097bb6b781ba78a25267f4149e9decd15b8f0"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_druckfreier_arbeitsspeicher.txt"
+  ]
+}

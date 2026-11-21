@@ -1,0 +1,11 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Carrier drift and energy conversion residuals: {{0, 0, 0}, 0, 0}
+During evaluation of In[1]:= Dust lab tensor residual: {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}}
+During evaluation of In[1]:= Stress time component and orthogonality residuals: {0, {0, 0, 0, 0}}
+During evaluation of In[1]:= Retuned quadratic spatial stress residual: {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+During evaluation of In[1]:= Quadratic pressure energy and flux orders: {0, 0, 0, 0}
+During evaluation of In[1]:= Local momentum reaction residual: {0, 0, 0}
+During evaluation of In[1]:= Local energy reaction and rest-power residuals: {0, 0}
+During evaluation of In[1]:= Integrated-motion representative ends at rest when s' and s'' vanish: {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, 0}
+
+Out[1]= Null
