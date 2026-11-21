@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Diagonalfehler des skalaren Markers (21.11.2026)
+
+Das 100-MHz-Schichtmodell begrenzt die Abweichung der A-Diagonale von der skalaren Transmission auf 1,612·10⁻⁶. Im J-Kanal kürzen sich Teile der ersten und zweiten Korrektur. Die Abweichung vom freien J-Referenzwert bleibt unter 1,638·10⁻⁶. Bei Verwendung beider skalarer Diagonalwerte bleiben nach Rücklauf und Modellfehler 4,596·10⁻⁶ für die komplexe Referenzmessung und weitere Beiträge. [Diagonalrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Diagonalreferenz.md)
+
 ### OP5: Komplexe Vorwärtsreferenz (21.11.2026)
 
 Nach Abzug des Rücklaufs bleiben im 100-MHz-Modell rund 6,234·10⁻⁶ für komplexe Kalibrierfehler und weitere Markierungsreste. Die Schichttoleranz allein deckt eine Zentralmessung nicht ab. Ein glatter linearer Indexverlauf kann die skalare Transmission am Bandrand um 7,856·10⁻³ verschieben. Für den Kalibrieranteil der Laufzeitdifferenz genügen direkte Messungen der tatsächlichen Diagonalen an beiden Bandenden, wenn die Feldbasis und das Fehlerbudget eingehalten werden. [Referenzrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Komplexe_Referenz.md)
