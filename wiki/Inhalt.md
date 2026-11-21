@@ -30,6 +30,8 @@ Der Companion beschreibt Zustände, Schichten, Operatoren, Auslesungen und Zweig
 
 **Rechenbeispiel vom 21. November 2026.** QAM trägt das Programm und den Startzustand des binären Bandmodells aus 19K–19L. Der MML-Befehl `RUN_TAPE` startet nach der Guard-Prüfung einen begrenzten Lauf mit festem oder nach rechts wachsendem Band. MMA speichert einen wiederholbaren Beleg. Wolfram Language prüft unabhängig das Bandwachstum, Qiskit den reversiblen Schritt auf einem festen Band. Die Identifikation des spinoriellen Trägers und der HC-Rückkehr bleibt bedingt. [Code und Anleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/qam/examples/zuse_machine)
 
+**Hardwarevergleich.** Zwei SystemVerilog-Steuerungen ergeben in 209 begrenzten Testfällen dieselben Spuren und Stopmeldungen wie MMA. Bei der Addition von eins zu sieben braucht die direkte Regelwahl vier Takte, der zyklische Durchlauf der sechs Tabellenadressen 24. Die Messung beginnt nach dem Laden der Startkonfiguration. [Simulation und Laufbericht](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/qam/examples/zuse_machine/hdl)
+
 ## 2. Der Grundbaustein: drei komplexe Kerne
 
 Jede Stufe der Struktur hat einen **Biquaternion-Kern** aus drei komplexen Kernen $K_1, K_2, K_3$:

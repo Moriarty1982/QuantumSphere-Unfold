@@ -27,6 +27,9 @@ Qiskit baut für jede Bandlänge eine reversible Einzelschrittschaltung. Alle En
 
 ## Mit QAM, MML und MMA rechnen
 
+Für den Abgleich beider Steuerungen mit MMA gibt es einen
+[SystemVerilog-Testbench mit automatisch erzeugtem Laufbericht](hdl/README.md).
+
 ```powershell
 python -m qam.tools.readout_db mma qam/examples/zuse_machine/mma_context.json qam/examples/zuse_machine/run_tape_mml.json --summary
 ```
