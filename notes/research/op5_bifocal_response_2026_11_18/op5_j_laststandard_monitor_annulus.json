@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Laststandard_Monitor_Annulus",
+  "repository": {
+    "commit": "f12651f9869b4aa0f5c20152029e289eabf3358a",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_laststandard_monitor_annulus.wl",
+    "timeConstraint=40"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Additive J-Last, projizierter Rücklauf und kontrollierter Annulus.",
+    "coefficient_domain": "Komplexe lineare Algebra, exakte rationale Bernstein-Koeffizienten und hochpräzise Zahlen.",
+    "conventions": "Materieframe M, diagonal-kinetische H/HCl, gewöhnliche radiale Poisson-Metrik.",
+    "inputs": [
+      "100 MHz; illustrative H/HCl-Richtungen; Monitor- und Echo-Budget; Übergangsring in der Flächenkoordinate."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 40
+    },
+    "non_claims": [
+      "Keine physische J-Last, keine experimentelle Echo- oder Dichtekalibrierung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T16:07:17Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_laststandard_monitor_annulus.txt",
+      "sha256": "a91d8030f7a3a6406dbee062b3e1739fe61032783d7fea6e78c3a215641f881c",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste, Übergangsjets und rationale Bernstein-Koeffizienten; Rückgabe Null. Die erste direkte Endpunktauswertung wurde wegen 0^0 durch Auswertung des expandierten Polynoms ersetzt."
+  ],
+  "result": "Zwei additive H/HCl-Kontakte reichen nicht für eine reine J-Last. Separater Direktmonitor begrenzt einen sichtbaren Echo-Eintrag. Exakter kompensierter Übergang besitzt große Dichtejet-Grenzen.",
+  "residual_risks": [
+    "Physischer Laststandard, Echofreiheit des Monitors und günstigere Übergangsform offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_laststandard_monitor_annulus.wl",
+      "sha256": "079e4c01e80ffb627943cec6f1aea3dcfd207dcfcc8f00f2bcf01d3fc18ddca8",
+      "sha256_after": "079e4c01e80ffb627943cec6f1aea3dcfd207dcfcc8f00f2bcf01d3fc18ddca8"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_laststandard_monitor_annulus.txt"
+  ]
+}

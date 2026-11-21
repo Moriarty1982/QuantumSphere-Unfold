@@ -1,0 +1,19 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= three-load synthesis residual = {{0, 0}, {0, 0}}
+During evaluation of In[1]:=                                                                                                           -6                    -13                      -6                    -13
+additive model J load ceilings and max per-state A readout error for 1 percent root = {{1.5353755212500 10  , 2.7498575585588 10   }, {2.5315366126755 10  , 4.5339820733019 10   }}
+During evaluation of In[1]:= two unnormalized A and cross constraints determinant = -r + s
+During evaluation of In[1]:=                                                                    -7
+remaining normalized visible V budget per read = 4.1653431888499 10
+During evaluation of In[1]:= annulus derivative coefficient checks for monomial n=3,4,5 = {0, 0, 0}
+During evaluation of In[1]:= two examples with invisible unmodulated V residuals = {0, 0}
+During evaluation of In[1]:= cutoff endpoint values and derivative jets through order 12 = {1, 0, {{0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}}}
+During evaluation of In[1]:= cutoff derivative beta-kernel residual = 0
+During evaluation of In[1]:=                                                                                       -8
+monitor difference acceptance with unit measured direct amplitude = 3.3068616943234 10
+During evaluation of In[1]:=                                                                        8                  12                  15
+exact rational Bernstein bounds, rounded {m3,m4,m5} = {4.77933328241 10 , 1.06472407123 10  , 5.44564973415 10  }
+During evaluation of In[1]:= core derivative factors = {576, 0, 0}
+During evaluation of In[1]:= zero mass from primitive endpoint = 0
+
+Out[1]= Null

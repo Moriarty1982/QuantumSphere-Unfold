@@ -104,6 +104,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 **21.11.2026, Subagentenregel.** Die Hinweise für LLMs erläutern die projektweite Arbeitsteilung bei unabhängigen Teilaufgaben.
 
+**21.11.2026, OP5-Last und Annulus.** Forschungsstand und offene Probleme um Laststandard, Direktmonitor und Übergangsring ergänzt.
+
 **21.11.2026, OP5-Radialraster.** Forschungsstand und offene Probleme um kohärente J-Last, unmarkierte Echo-Dämpfung und optimierte Ringgewichte ergänzt.
 
 **21.11.2026, OP5-Leistungsbilanz.** Forschungsstand und offene Probleme um J-Leistungsgrenze, gerade Fourier-Echokanäle und diskrete Säulenmessung ergänzt.

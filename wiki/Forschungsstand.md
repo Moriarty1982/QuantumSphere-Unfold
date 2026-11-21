@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Laststandard, Direktpfadmonitor und Annulus (21.11.2026)
+
+Zwei passive additive H/HCl-Kontakte können keine reine J-Last bilden. Ein separat kalibrierter Direktmonitor begrenzt den sichtbaren Rücklauf. Ein exakt kompensierter Übergangsring zeigt, warum eine globale Dichteänderungsgrenze allein keine brauchbare relative b₄-Genauigkeit liefert. [Last und Kontrollprofil](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Laststandard_Monitor_Annulus.md)
+
 ### OP5: J-Terminierung, Echokontrolle und Radialraster (21.11.2026)
 
 Eine bekannte komplexe J-Last liefert das kohärente Produkt aus Hin- und Rückübertragung. Bei reziproken Ports bleibt das Wurzelvorzeichen. Kalibrierte Dämpfung eines unmarkierten Rücklaufs erlaubt Extrapolation mit quadratischem Rest. Abgestufte Flächenringe senken die Formfehlergrenze für eine Lipschitz-Säulendichte. [Terminierung und Ringraster](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Echo_Radialraster.md)
