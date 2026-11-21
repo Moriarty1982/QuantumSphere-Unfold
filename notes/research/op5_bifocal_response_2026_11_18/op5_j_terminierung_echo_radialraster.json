@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Terminierung_Echo_Radialraster",
+  "repository": {
+    "commit": "69c383cbcf802090461d9e51ddd11d7f64b1460f",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_terminierung_echo_radialraster.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Kohärentes J-Produkt, dissipative Echokontrolle und abgestufte Ringmessung.",
+    "coefficient_domain": "Exakte skalare Streuidentitäten und hochpräzise numerische Fehlerauswertung.",
+    "conventions": "Materieframe M, kanonische Flusswellen und gewöhnliche radiale Poisson-Metrik.",
+    "inputs": [
+      "Kalibrierte J-Last beider Vorzeichen; dämpfbarer linearer Rücklauf; Lipschitz-Dichte in Flächenkoordinate."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine realisierte J-Terminierung, kein gemessener Kontrolltransfer und keine experimentelle Randdichte."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T10:46:12Z",
+    "runtime_seconds": 13.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_terminierung_echo_radialraster.txt",
+      "sha256": "64f9bd2eceafeb3eb742eb7e11b8af53d3c9e59f0968b2672dd57917f0e6afbf",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste für J-Produkt, Echoidentität, Ringableitung und Achsenform. Rückgabe Null. Zeiten auf Sekunden gerundet."
+  ],
+  "result": "Kalibrierte J-Last liefert Produkt; Rücklaufdämpfung lässt quadratischen Extrapolationsrest; 17 abgestufte statt 23 gleichflächige Ringe im Formbeispiel.",
+  "residual_risks": [
+    "J-Lastphase und Reziprozität ungemessen; ungeschaltetes V, Dichte-Lipschitzkonstante und Referenzfehler separat."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_terminierung_echo_radialraster.wl",
+      "sha256": "5d91570fdc656cd92b51c07c4846d49cee3a10db5637913d12be31861f7a1e72",
+      "sha256_after": "5d91570fdc656cd92b51c07c4846d49cee3a10db5637913d12be31861f7a1e72"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_terminierung_echo_radialraster.txt"
+  ]
+}

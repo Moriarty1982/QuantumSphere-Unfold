@@ -1,0 +1,12 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= switched J-endpoint and exact two-load product residuals = {0, 0}
+During evaluation of In[1]:=                                                                                                      -7                    -7
+reciprocal product example {bias and noise, one percent complex root allowance} = {1.2255639097744 10  , 1.7910000000000 10  }
+During evaluation of In[1]:= attenuated unmarked echo extrapolation residual = 0
+During evaluation of In[1]:=                                                                                        -7                    -6
+attenuated example relative echo bound and eight-read phase bound = {3.3346568111499 10  , 2.6677254489200 10  }
+During evaluation of In[1]:= Lipschitz ring kernel derivative and axis limit residuals = {0, 0}
+During evaluation of In[1]:= 8-ring Lipschitz costs {uniform area, graded} = {0.0065947332108500, 0.0043277626497277}
+During evaluation of In[1]:= crossing of normalized ring target 0.001 {uniform N=22,23; graded N=16,17} = {0.0010461657374091, 0.00096417445460310, 0.0010902331656695, 0.00096617792154637}
+
+Out[1]= Null
