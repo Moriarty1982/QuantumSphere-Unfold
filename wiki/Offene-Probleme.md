@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, erreichbare Lasten und Dispersion (21.11.2026).** Passive Portdiversität, Meterstrecke mit kohärenter J/A-Referenz und die physische Summe der Krümmungsschwellen bleiben zu belegen. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passive_Last_Dispersion.md)
+
 **OP5, Zweikanal-Lastvariation und Laufphase (21.11.2026).** Die unabhängige Variation der beiden Rückwellen und die Kondition der HCl/H-Ports bleiben zu belegen. Die J-Frequenzsteigung braucht eine engere Fehlerhülle oder ein anderes Band. Eine native nichtminimale Aufspaltung bleibt herzuleiten. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lastvariation_Laufphase.md)
 
 **OP5, Durchgang und Prüfkriterien (21.11.2026).** Eine kalibrierte Zweilastmessung kann den A-Durchgang bestimmen. Das J-Längenkriterium braucht eine unabhängige Moden- und Mehrwegkontrolle. Für die Laufphase fehlt die Ableitung der Kinetikaufspaltung aus der nativen Wirkung. [Parallelprüfung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Durchgang_Parallelpruefung.md)

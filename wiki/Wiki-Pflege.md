@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Last- und Schwellenrechnung.** Forschungsstand und offene Probleme um die erreichbaren Lasten, die quantitative Dispersionsschwelle und den Dirac-Matrixabgleich ergänzt.
+
 **21.11.2026, OP5-Zweikanal-Lastvariation.** Forschungsstand und offene Probleme um Lastkondition, Fehler des J-Frequenztests und Ordnung des minimalen Hauptteils ergänzt.
 
 **21.11.2026, OP5-Durchgang.** Forschungsstand und offene Probleme um Zweilastmessung, J-Längenprüfung und invariantes Kinetikkriterium ergänzt.

@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Passive_Last_Dispersion",
+  "repository": {
+    "commit": "afec977195126dedb92ade98a9b4695fa156fd3b",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_passive_last_dispersion.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Erreichbare passive Lasten, Distanz- und Bandgrenzen, Dirac-Schwellenproportionalität.",
+    "coefficient_domain": "Exakte Matrixalgebra und hochpräzise numerische Auswertung.",
+    "conventions": "Materieframe M; passive modale Streumatrix und illustrative freie massive Dispersion.",
+    "inputs": [
+      "100 MHz, kJ/kA=0,9999, J-Rücklaufgrenzen aus dem homogenen Marker."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Kein experimentell bestätigter Modenumwandler, kein J-Dispersionsnachweis und keine native Gesamtwirkung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T10:03:41Z",
+    "runtime_seconds": 8.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_passive_last_dispersion.txt",
+      "sha256": "7a1fb1a7779f5a6a8c8d703109236803a2eef476a6f79ad38a4efc15358b11ea",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Matrixidentitäten, hochpräzise Bandwurzeln und Zweigtest, Rückgabe Null. Zeiten auf Sekunden gerundet."
+  ],
+  "result": "Diagonallasten erreichen vorgesehenes Lastdreieck nicht. Vier Meter reichen unter bisherigen Fehlerannahmen zur Modelltrennung bei 100 MHz. Rang eins spaltet einzeln, die native Dirac-Summe bleibt offen.",
+  "residual_risks": [
+    "Physische Portdiversität, Mehrwegkontrolle über Meter und effektive schwere Schwellen fehlen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_passive_last_dispersion.wl",
+      "sha256": "7ae3d63e4eae29db3d30206708cdeaa43065b67408457e7cfcfd3f1e4fd4d8b7",
+      "sha256_after": "7ae3d63e4eae29db3d30206708cdeaa43065b67408457e7cfcfd3f1e4fd4d8b7"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_passive_last_dispersion.txt"
+  ]
+}

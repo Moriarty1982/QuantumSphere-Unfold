@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Passive Lasten, Dispersion und Schwellen (21.11.2026)
+
+Im homogenen Modell erreichen getrennte passive A/J-Lasten das zuvor angesetzte Lastdreieck nicht. Eine passive Modenumwandlung kann es theoretisch erreichen. Bei unverändertem Fehlerbudget trennen rund vier Meter freie Strecke die illustrative massive Dispersion vom konstanten Versatz bei 100 MHz. Eine einzelne Dirac-Schwelle liefert eine nichtproportionale Kinetikmatrix, die Summe braucht einen eigenen Abgleich. [Last- und Schwellenrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passive_Last_Dispersion.md)
+
 ### OP5: Zweikanal-Lastvariation und J/A-Laufphase (21.11.2026)
 
 Bei zwei Rücklaufmoden bestimmen drei affin unabhängige Laststellungen den A-Durchgang. Eine feste J-Reflexion kann bei bloßer A-Variation einen Offset hinterlassen. Im J-Beispiel ist die Längenphase auflösbar, die Änderung über 100 MHz bleibt unter der Fehlergrenze. Der minimale klassische Zwei-Ableitungssektor hat bei gemeinsamer Metrik einen gemeinsamen transversalen Hauptteil. [Last- und Phasenrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lastvariation_Laufphase.md)
