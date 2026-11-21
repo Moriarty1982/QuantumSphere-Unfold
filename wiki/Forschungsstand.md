@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Phasenaufgelöste Rückstreugrenze (21.11.2026)
+
+Bei endlichem A-Hub liest die erste Rückumwandlung die Wellenzahlsumme sowie einen durch die interne Gegenwelle unterdrückten Differenzanteil. Beide verschwinden im Zentrum des idealisierten Vergleichsbands. Mit der Phasenabschätzung der zweiten Iteration sinkt die analytische 100-MHz-Obergrenze der Reflexionsnorm auf rund 1,84·10⁻⁶ und liegt für diesen Rücklaufbeitrag unter dem bisherigen Quotientenbudget. Reale Dispersion, Schichtfehler und Anschlussantwort bleiben zu prüfen. [Reflexionsrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckstreuung_Band.md)
+
 ### OP5: Endlicher Markerhub und Rückstreugrenze (21.11.2026)
 
 Eine exakt behandelte A-Schicht trägt den endlichen Phasenhub. Für eine schwache J-Beimischung begrenzt eine konvergente Reihe die Abweichung der Vorwärts- und Rückstreumatrix. Der diagonale Markerkontrast ändert sich erst quadratisch in der Beimischung, während Umwandlung linear sein kann. Das analytische 100-MHz-Beispiel erlaubt einen Kontrast nahe zwei und erfordert weiterhin eine eigene Rücklaufkontrolle. Die Anschlussgrenze und die physische Kalibrierung bleiben offen. [Markerhub und Schranken](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endlicher_Markerhub.md)

@@ -157,6 +157,8 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**OP5, Rückstreuung im Messband (21.11.2026).** Die Phase der ersten beiden Korrekturen ermöglicht im idealisierten 100-MHz-Beispiel einen Rücklaufrest unter der vorgesehenen Quotientengrenze. Die Phasenempfindlichkeit gegenüber realer Dispersion, Verlust und Schichtdicke sowie die Anschlussgrenze, native Kopplung und H96 bleiben offen. [Bandschranke](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckstreuung_Band.md)
+
 **OP5, endlicher Markerhub (21.11.2026).** Um eine exakte A-Referenz sind der Diagonalkontrast und die Rückstreuung für schwache Beimischung kontrolliert. Reale Dispersions- und Verlustdaten, Empfängerrücklauf, Anschlusskondition, native Kopplung und H96 bleiben offen. [Bandschranke](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endlicher_Markerhub.md)
 
 **OP5, Feldmarker mit zwei offenen Kanälen (21.11.2026).** Unterschiedliche Admittanzen und Wellenzahlen sind im Streuvergleich berücksichtigt. Der hinreichende Kalibrierkontrast hängt an den Diagonaleinträgen. Gemessene Wellenzahlen, Admittanzen, Vorwärtsantwort und rückgekoppelte Reflexion, native Kopplung und H96 bleiben offen. [Markerstreuung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweikanal_Marker.md)
