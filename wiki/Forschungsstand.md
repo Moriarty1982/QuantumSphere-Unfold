@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Phasenanpassung, Pilot und Gradientenbudget (21.11.2026)
+
+Phasenangepasste Konversion benötigt im idealisierten Modell einen Metermaßstab und engere Index- und Verlustgrenzen als die kurze Schicht. Ein separat kalibrierter Pilot bestimmt den komplexen Direktgain-Transfer. Die Kompensation erzwingt beim gewöhnlichen Gradienten eine nichtverschwindende Mindestvariation. [Konversion und Gradientenbudget](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Phasenanpassung_Pilot_Gradient.md)
+
 ### OP5: Konverterlast, Leerkörper und Ringfehler (21.11.2026)
 
 Ein separat kalibrierter reziproker Modenkonverter könnte einen A-Spiegel als J-Last abbilden. Der Leerkörperkalibriertransfer braucht einen unabhängigen Direktwert. Lokale Bernstein-Grenzen senken den radialen Formfehler, reichen für den steilen Übergangsring aber nicht für ein brauchbares relatives b₄-Budget. [Konverter und lokale Ringgrenzen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Konverter_Leerkoerper_Ringfehler.md)
