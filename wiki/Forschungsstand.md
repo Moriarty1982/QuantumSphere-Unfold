@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Rücklauf und Einwegfehler (21.11.2026)
+
+Der Vier-Zustands-Rücklauf misst das Produkt der Einwegfaktoren. Der Einwegfehler kann auf 5·10⁻⁷ im Loggewinn begrenzt werden, wenn Echo-Rest und unabhängig belegte gemischte Richtungsasymmetrie zusammen höchstens 10⁻⁶ betragen. A-Durchgang, J-Ausbreitung und native Differenzkopplung haben damit getrennte Prüfgrößen. [Einwegrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Einweg_Ruecklauf.md)
+
 ### OP5: Gekreuzte Schaltkontrolle (21.11.2026)
 
 Der Vier-Zustands-Quotient kürzt getrennte Körper- und Schaltfaktoren. Eine zustandsgemischte Anschlussänderung bleibt mit der Markertransmission multipliziert und braucht einen unabhängigen Kontrolltransfer. Vier oder acht zeitlich gestaffelte Messungen können affine beziehungsweise quadratische Drift des differentiellen Loggewinns kürzen. [Schaltkontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gekreuzte_Schaltkontrolle.md)
