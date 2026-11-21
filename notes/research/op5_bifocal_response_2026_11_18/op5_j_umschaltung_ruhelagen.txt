@@ -1,0 +1,9 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Separate force balance residual: {{0, 0, 0}, {0, 0, 0}}
+During evaluation of In[1]:= Stress symmetry residual: {{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}, {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}}
+During evaluation of In[1]:= General timing, density/current/stress residuals: {0, {0, 0, 0}, {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}}
+During evaluation of In[1]:= Local conservation residuals: {0, {0, 0, 0}}
+During evaluation of In[1]:= Retarded wave equation residual: {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}}
+During evaluation of In[1]:= Trace reversal and gauge residual: {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}}
+
+Out[1]= Null

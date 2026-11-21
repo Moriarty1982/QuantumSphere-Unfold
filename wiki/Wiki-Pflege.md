@@ -102,6 +102,28 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Vorwärtshub.** Forschungsstand und offene Probleme um passive Schicht, Bandüberlappung und getrennten H-Marker ergänzt.
+
+**21.11.2026, OP5-Feldreferenz.** Forschungsstand und offene Probleme um Rang-eins-Referenz und zeitgleiches Nullbudget ergänzt.
+
+**21.11.2026, OP5-Modenzuordnung.** Forschungsstand und offene Probleme um markierte Spurauslese, Driftgrenze und Identifizierbarkeit der mittleren Kopplungen ergänzt.
+
+**21.11.2026, OP5-Zweilauf.** Forschungsstand und offene Probleme um Ringprofil, Modenmomente und konditioniertes Zweilauf-Fehlerbudget ergänzt.
+
+**21.11.2026, OP5-Binnenfeld.** Forschungsstand und offene Probleme um gewöhnliche Achsenlaufzeit, Gezeitenproportionalität, Stabilitätsgrenze und ein getrenntes Kalibrierprofil ergänzt.
+
+**21.11.2026, OP5-Schaltphase.** Forschungsstand und offene Probleme um variable Energieabschätzung und die Toleranzformel für ein gewöhnliches äußeres Gezeitensignal ergänzt.
+
+**21.11.2026, OP5-Störungen.** Forschungsstand und offene Probleme um Ableitungsverlust, gewöhnliches Fehlerquadrupol und die Druck- und Uhrkorrektur ergänzt.
+
+**21.11.2026, OP5-Speicherkopplung.** Forschungsstand und offene Probleme um gemeinsame Wirkung, Eigenzeitzwang und Hilbert-Tensor der lokalen Kopplung ergänzt.
+
+**21.11.2026, OP5-Arbeitsspeicher.** Forschungsstand und offene Probleme um Teilchenstrom, lokale Reaktionskräfte und den bedingten Ausgleich zusätzlichen Speicherstresses ergänzt.
+
+**21.11.2026, OP5-Umschaltung.** Forschungsstand und offene Probleme um quadratische Nachführung, Speicherbedingung und retardierten mechanischen Außenbeitrag ergänzt.
+
+**21.11.2026, OP5-Ruhelagen.** Forschungsstand und offene Probleme um den statischen Dichte- und Spannungsabgleich zweiter Ordnung und seine Bedeutung für die Auslese ergänzt.
+
 **20.11.2026, OP5-Schaltung und zweiter Materialabgleich.** Forschungsstand und offene Probleme um die lineare Dynamik, Reservoirbilanz und hyperelastische Kompaktheitsgrenze ergänzt.
 
 **20.11.2026, OP5-Quadrupol und Halterung.** Kompaktes direktes Newton-Potential, statische Gegenspannung und offene Schaltbilanz im Forschungsstand und bei OP5 ergänzt.

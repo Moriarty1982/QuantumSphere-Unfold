@@ -1,0 +1,11 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Rank-one modal reconstruction residual: {0, 0}
+During evaluation of In[1]:= Misestimated weight residual: {0, 0}
+During evaluation of In[1]:= Contemporaneous null and tag trace residuals: {0, 0}
+During evaluation of In[1]:= Illustrative H, HCl weight contrasts: {0.9999980088, 0.9999952645, 0.9999750091}
+During evaluation of In[1]:=                                                                   -6               -7
+Equal quotient allocations, strong and weak marker: {9.81742885 10  , 9.34996981 10  }
+During evaluation of In[1]:=                                                                                                 -11
+Strong-marker minimum end gain and max per-matrix error at 0.00254: {0.0451353882, 3.16689065 10   }
+
+Out[1]= Null

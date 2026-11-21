@@ -1,0 +1,16 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Interior potential column residual: 0
+During evaluation of In[1]:= Axial delay and unit-normalized tidal residuals: {0, 0}
+During evaluation of In[1]:= Leading finite-beam tidal polynomial residual: 0
+During evaluation of In[1]:= Ordinary-to-OP5 tidal ratio residual: 0
+During evaluation of In[1]:= Calibration axial delay, massive line, OP5 tide and ordinary tide residuals: {0, 0, 0, 0}
+During evaluation of In[1]:= Calibration transverse moment residual: 0
+During evaluation of In[1]:= Static transverse drive polynomial residual: 0
+During evaluation of In[1]:= Transverse stability margin residual: 0
+During evaluation of In[1]:=                                                               101
+Dimensionless quadratic coefficient in the reference example: ---
+                                                              400
+During evaluation of In[1]:= Ordinary static screen-curvature residual: 0
+During evaluation of In[1]:= Linear null-condition delay residual: 0
+
+Out[1]= Null

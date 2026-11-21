@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Spannungsfreie_Ruhelagen",
+  "repository": {
+    "commit": "f2a4e687273f2ec7f4124d490e696e07c00f387a",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_spannungsfreie_ruhelagen.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit). Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Piola-Ableitung, Cauchy-Symmetrie, stationäre Ruhelagen der Materialenergie, Massen-Pushforward in starker und schwacher Form und Poisson-Identität.",
+    "coefficient_domain": "Exakte symbolische Tensor- und Differentialrechnung.",
+    "conventions": "Materieframe M, stationäre Endzustände, lineare gravitative Antwort, Ordnung zwei in der Auslenkung.",
+    "inputs": [
+      "Zwei kompatible Referenzmetriken, isotropes elastisches Vergleichsgesetz im Skript, konstante positive Ruhedichten in der aktiven Region, kompakte longitudinale Erstverschiebung."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Kein Schaltverlauf, keine gravitative Vollquelle der technischen Ansteuerung und kein Nachweis der nativen Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-20T23:52:15.578Z",
+    "runtime_seconds": 8.675,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_spannungsfreie_ruhelagen.txt",
+      "sha256": "88ecd63621245457cf7f57dc4b11961e1a3c99adbbd21a1c83d63392770b69ad",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Connector isError=false und Wolfram-Rückgabewert Null. Der Connector meldete im dokumentierten Lauf keine Warnung. Startzeit und Laufzeit beziehen sich auf den Connector-Aufruf. Kernelprozesscode und Kernelzeit wurden nicht ausgewiesen.",
+    "Exakte Nullreste für Piola, Symmetrie, die beiden Ruhelagen, beide Ableitungen der Dichte und Poisson. Der Massenabgleich wurde auch als volle Divergenz im Testfunktionsintegrand geprüft."
+  ],
+  "result": "Die deklarierte symbolische Kontrolle stimmt. Die räumliche Kompaktheit folgt analytisch aus dem kompakten Profil und der Randbedingung.",
+  "residual_risks": [
+    "Der symbolische Lauf prüft das isotrope Materialgesetz. Der allgemeine Energie- und Symmetrieschluss im Text verwendet die Selbstadjungiertheit des Elastizitätstensors."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_spannungsfreie_ruhelagen.wl",
+      "sha256": "aaad2f8d6a16b79a8057f00bf2c493994aefd622db98d88b0d85f3d3103fc7f7",
+      "sha256_after": "aaad2f8d6a16b79a8057f00bf2c493994aefd622db98d88b0d85f3d3103fc7f7"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_spannungsfreie_ruhelagen.txt"
+  ]
+}

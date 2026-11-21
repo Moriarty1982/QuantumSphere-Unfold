@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Feldreferenz",
+  "repository": {
+    "commit": "c83791f3840b8e48321d9be325c39a75c12c18cb",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_feldreferenz.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Spurrekonstruktion, Gewichtsstörung, gemeinsame Nullreferenz und illustrative Quotientenbudgets.",
+    "coefficient_domain": "Exakte symbolische Matrixrechnung, gerundete Vergleichswerte aus rationalen und exakten Eingaben.",
+    "conventions": "Materieframe M, diagonaler Solltransport und kohärente Vorwärtstransmission.",
+    "inputs": [
+      "Rang-eins-Referenz mit komplexem Hub; illustrative H/HCl-Dipolverhältnisse und vorhandenes Zweilaufbudget."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine gemessene HCl/H-Vorwärtsreferenz, kein Nachweis freier J-Ausbreitung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T06:56:26.693Z",
+    "runtime_seconds": 8.611,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_feldreferenz.txt",
+      "sha256": "d501f897ffedb6e08d5a79e0fd807f6fce0a270435f0573cbb99af1b79ca00a6",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Kernel-Rückgabe Null, keine Warnung. Zeitangaben messen den Connector-Aufruf; Prozesscode nicht separat beobachtet."
+  ],
+  "result": "Alle ausgewiesenen Residuen exakt null. Die Vergleichswerte sind gerundet.",
+  "residual_risks": [
+    "Der Ansatz setzt gemessene komplexe Markierung und tatsächlich gemeinsame Nullreferenz voraus."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_feldreferenz.wl",
+      "sha256": "7defb7dffbaa72ef761b985a58cc5a587570b70acacc81a01beee13b4237ee21",
+      "sha256_after": "7defb7dffbaa72ef761b985a58cc5a587570b70acacc81a01beee13b4237ee21"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_feldreferenz.txt"
+  ]
+}

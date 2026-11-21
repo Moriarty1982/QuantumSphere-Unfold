@@ -1,0 +1,15 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Signal finite-beam OP5 polynomial residual: 0
+During evaluation of In[1]:= Original calibration leakage residual: 0
+During evaluation of In[1]:= Annular calibration core residuals: {0, 0, 0}
+During evaluation of In[1]:= Signal ordinary degrees: {3, 4}
+During evaluation of In[1]:= Signal-to-calibration axial match residual: 0
+During evaluation of In[1]:= Unequal-mode mean-coupling residual: 0
+During evaluation of In[1]:= Calibration bias from unmatched first moments residual: 0
+During evaluation of In[1]:= Calibration ratio perturbation residual: 0
+During evaluation of In[1]:= Two-run elimination residual: 0
+During evaluation of In[1]:= Quotient estimate perturbation residual: 0
+During evaluation of In[1]:=                                                                                                                                           -11
+Two-run equal-share example {radius, minimum end gain, maximum per-matrix error at 0.00254}: {0.0000196349541, 0.0319155391, 6.33378131 10   }
+
+Out[1]= Null

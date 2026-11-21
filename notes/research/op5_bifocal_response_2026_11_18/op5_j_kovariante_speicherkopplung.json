@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Kovariante_Speicherkopplung",
+  "repository": {
+    "commit": "940f5688626fa24303a577eed7f5af6787dd7dbc",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_kovariante_speicherkopplung.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit). Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Metrikvariation des Uhrterms, Kraft und Metrikunabhängigkeit des Kopplungsterms, exakte Beispielrechnung für die relativistische Dehnung und elastische Metrikvariation, quadratische Energie- und Flussbilanz.",
+    "coefficient_domain": "Symbolische Differential- und Reihenrechnung mit exakten rationalen Eingaben im Elastizitätsbeispiel.",
+    "conventions": "Materieframe M, Signatur (-,+,+,+), Lichtgeschwindigkeit eins. Vorbereitete Bahn und Entwicklung bis zur zweiten Auslenkungsordnung.",
+    "inputs": [
+      "Densitisierte erhaltene Referenzströme, unabhängige Uhren- und Materialfelder, materialabhängige Einsform, isotroper Elastizitätstensor im Beispiel und nichtdiagonale rationale Abbildung."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine Stabilitätsaussage und kein Nachweis eines realen Kraft- und Energiewandlers oder einer realen Eigenzeituhr. Keine native Higgs–OP5-Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T00:20:18.400Z",
+    "runtime_seconds": 9.313,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_kovariante_speicherkopplung.txt",
+      "sha256": "791bb4bb17f18ffbb357a14c072d1c93f76f3f0b4e3cabbfc094b5d8b95102fc",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, keine Warnung. Start und Laufzeit beziehen sich auf den Connector-Aufruf. Ein Kernelprozesscode wurde nicht separat ausgewiesen.",
+    "Die Noether-Identität und die daraus folgende Uhr- und Matrixvariation werden im Text analytisch hergeleitet."
+  ],
+  "result": "Exakte Nullreste für die ausgewiesenen Identitäten und das deklarierte Beispiel.",
+  "residual_risks": [
+    "Der allgemeine Schluss stützt sich auf die analytische Tensorrechnung und den idealen Multiplikator für die Eigenzeit."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_kovariante_speicherkopplung.wl",
+      "sha256": "aadf2c7e40dfd89cb2c1ebbbeab0baec4930868d2d5076e19227bc584ad8a3c1",
+      "sha256_after": "aadf2c7e40dfd89cb2c1ebbbeab0baec4930868d2d5076e19227bc584ad8a3c1"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_kovariante_speicherkopplung.txt"
+  ]
+}

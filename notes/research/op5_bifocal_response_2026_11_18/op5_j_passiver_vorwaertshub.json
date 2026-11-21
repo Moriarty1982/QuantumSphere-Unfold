@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Passiver_Vorwaertshub",
+  "repository": {
+    "commit": "bddfbf691a8b4ef2d57f306fcd970870f5cc1202",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_passiver_vorwaertshub.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Lorentz-Phasen-Verlust-Identität, Transmission und Reflexion der Schicht, illustrative Frequenz- und Säulenzahlen.",
+    "coefficient_domain": "Exakte symbolische Rechnung, gerundete Zahlen aus exakten oder dezimal festgelegten Eingaben.",
+    "conventions": "Materieframe M, passive Schicht in identischen Halbräumen und zwei degenerierte Feldmoden im Vergleich.",
+    "inputs": [
+      "Einlinienmodell, ein Prozent maximaler Amplitudenverlust, 100 MHz Bandabstand, statische H-Polarisierbarkeit."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine gemessene HCl/H-Transmission und keine experimentelle Bandüberlappung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:01:09.353Z",
+    "runtime_seconds": 7.873,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_passiver_vorwaertshub.txt",
+      "sha256": "27d567e7036c19655daf94301ed877caf06f4d406acbeee9f915de41ceaffc97",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Kernel-Rückgabe Null, keine Warnung. Zeiten beziehen sich auf den Connector-Aufruf. Prozesscode nicht separat ausgewiesen."
+  ],
+  "result": "Residuen exakt null. Beispielwerte: 312,59 Halbbreiten für Pi bei einem Prozent Amplitudenverlust; ideale H-Säule 4,11e23/m².",
+  "residual_risks": [
+    "Die Bandgrenze setzt den verdünnten Einlinienvergleich voraus. Nichtdegenerierte Moden und gekoppelte Reflexionen brauchen eine eigene Rechnung."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_passiver_vorwaertshub.wl",
+      "sha256": "26e3b4135f324bd94ab63949dc54e43fa2e88cf9583c63f24b7727ccb86b494b",
+      "sha256_after": "26e3b4135f324bd94ab63949dc54e43fa2e88cf9583c63f24b7727ccb86b494b"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_passiver_vorwaertshub.txt"
+  ]
+}

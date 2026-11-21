@@ -1,0 +1,9 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Modal trace residual at arbitrary phase gap: {0, 0}
+During evaluation of In[1]:= Modal trace residual at coincident phases: {0, 0}
+During evaluation of In[1]:= Perturbation expansion residual: {0, 0}
+During evaluation of In[1]:= Reference modal rank determinant residual: 0
+During evaluation of In[1]:= Differential data determinant residual: 0
+During evaluation of In[1]:= Ordinary radial curvature coefficients residual: {0, 0, 0, 0}
+
+Out[1]= Null
