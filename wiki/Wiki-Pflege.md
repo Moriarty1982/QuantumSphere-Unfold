@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, SystemVerilog-Bandmaschine.** Die deutsche und die englische Inhaltsübersicht nennen den geprüften Umfang und die Taktzahlen für direkte und zyklische Regelwahl.
+
 **21.11.2026, Rechenmodell aus 19K–19L.** Die deutsche und die englische Inhaltsübersicht erläutern `RUN_TAPE`, den wiederholbaren MMA-Beleg und die Voraussetzungen des Zuse-Kerns.
 
 **21.11.2026, Standardsprache für Medien.** Englische Standardsprache und Vorrang ausdrücklicher Sprachvorgaben in den Hinweisen für LLMs aufgenommen.
