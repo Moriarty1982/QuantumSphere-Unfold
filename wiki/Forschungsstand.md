@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Kreuzstandard, Echophasen und Weyl-Kontrolle (21.11.2026)
+
+Ein kalibrierter Standard mit nichtverschwindendem A/J-Kreuzeintrag fixiert die relative Portskala. Komplexes Phasenmitteln unterdrückt einen gezielt phasenmarkierten skalaren Echo-Rundlauf. Ein s⁴-Kern prüft den gewöhnlichen Weyl-Anteil bei verschwindender massiver Gezeitenantwort und macht den entarteten gewöhnlichen Koeffizienten im Achsenpotential separat zugänglich. [Standards und Kontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Standards_Echophasen_Weylkontrolle.md)
+
 ### OP5: Portprojektion, Referenzphase und Spotbreite (21.11.2026)
 
 Eine separat kalibrierte J-Einspeisung und A-Empfangsprojektion bestimmen die Kreuzreflexion gezielt. Der 4-m-Vergleich hat nun ein Budget für acht Rohwerte und einen gemischten Referenzphasenterm. Identisch breite runde Spots erhalten die Radialtrennung im Profilkern bei bekannter gewöhnlicher Profilform. [Port- und Spotrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Port_Referenz_Spot.md)

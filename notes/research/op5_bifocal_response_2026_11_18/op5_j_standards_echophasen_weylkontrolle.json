@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Standards_Echophasen_Weylkontrolle",
+  "repository": {
+    "commit": "1006654cf58ffdf0b80d8233363c3bfee1903981",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_standards_echophasen_weylkontrolle.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "A/J-Standardeichung, Referenzentartung und Echophasen, Weyl-Kontrollprofil.",
+    "coefficient_domain": "Exakte algebraische Identitäten und numerische Beispielwerte.",
+    "conventions": "Materieframe M, komplexe Portamplituden und lineares kompensiertes Profil.",
+    "inputs": [
+      "100 MHz, 4 m, exemplarisch kalibrierter Kreuzstandard und gewöhnliches s^4-Profil."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Kein experimenteller J-Standard, kein Nachweis eines isolierten Echos und keine native Metrikbestimmung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T10:30:03Z",
+    "runtime_seconds": 8.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_standards_echophasen_weylkontrolle.txt",
+      "sha256": "591b8a90bc61141e44b9a59ce9266eea71562cc6f8116174b797bf9d9b7be67a",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste für Projektoren, Referenzeichung, zwei und vier Echophasen. Ausgewiesene Laplace-Jets und Rückgabe Null."
+  ],
+  "result": "Kreuzstandard fixiert diagonale relative Skala; gezielter skalarer Rundlauf wird im komplexen Mittel unterdrückt. Weyl-Nullprofil kontrolliert b0, b4 bleibt im Signal entartet und ist über ein gewöhnliches Achsenpotential separat prüfbar.",
+  "residual_risks": [
+    "Keine vermessene A/J-Kreuzkalibrierung, kein unabhängig bekannter Pilottransfer und kein gewöhnlich-selektiver Achsennachweis."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_standards_echophasen_weylkontrolle.wl",
+      "sha256": "67e4ec7a17e33bc1626fd30bf1d7bdea2d018c036098867807944e105690a0c7",
+      "sha256_after": "67e4ec7a17e33bc1626fd30bf1d7bdea2d018c036098867807944e105690a0c7"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_standards_echophasen_weylkontrolle.txt"
+  ]
+}
