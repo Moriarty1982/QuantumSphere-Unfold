@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Optischer_Nullport_Echo_Achsensaeule",
+  "repository": {
+    "commit": "c0ad1b8d316baa1ca642b327c429ea1cfdee0321",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_optischer_nullport_echo_achsensaeule.wl",
+    "timeConstraint=30"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Elektrische A-Null, gekoppelte Echo-Parität und gewöhnlicher b4-Transfer.",
+    "coefficient_domain": "Exakte komplexe Algebra, polynomiale Poisson-Kontrolle und numerische Beispielwerte.",
+    "conventions": "Materieframe M, diagonal-kinetischer H/HCl-Vergleich und lineares kompensiertes Binnenfeld.",
+    "inputs": [
+      "Zwei normierte H/HCl-Richtungen, 4-m-Echobudget und s^4-Kontrolle."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 30
+    },
+    "non_claims": [
+      "Keine absolute J-Kalibrierung, keine gemessenen Echopfade, keine experimentelle Säulendichte."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T10:33:41Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_optischer_nullport_echo_achsensaeule.txt",
+      "sha256": "54ea1f1688df56713896085ccd6e4dfd9236f6f98da46a2350867a29c665c810",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste für A-Null, Echo-Majorante und RFF-Transfer. Poisson-Kernmomente und Rückgabe Null. Erster Connector-Aufruf mit allgemeinem Integral meldete internen Fehler, durchnormierte Fassung vollständig ausgeführt."
+  ],
+  "result": "Bedingte J-Richtung aus elektrischem Nullabgleich, gekoppelte Echos gerader Einzelparität bleiben, gewöhnliche Säulendichte liefert ein Modell-Observable für den b4-Transfer.",
+  "residual_risks": [
+    "Physische J-Normierung, unbekannte unmarkierte Mehrwege und selektive gewöhnliche Dichtemessung offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_optischer_nullport_echo_achsensaeule.wl",
+      "sha256": "b8b280f6361da1865629bbd7dbddf9e9d8eb26b47f6959c4f6261e77d222808b",
+      "sha256_after": "b8b280f6361da1865629bbd7dbddf9e9d8eb26b47f6959c4f6261e77d222808b"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_optischer_nullport_echo_achsensaeule.txt"
+  ]
+}

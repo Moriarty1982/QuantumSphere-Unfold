@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Optische Null, gekoppelte Echos und Achsensäule (21.11.2026)
+
+Ein kohärenter H/HCl-A-Nullabgleich kann im Modell eine J-Richtung erzeugen. Die absolute J-Amplitude bleibt offen. Zwei unabhängig geschaltete Echophasen entfernen auch gemischte Zweierpfade im linearen Modell. Eine gewöhnliche Säulendichtemessung mit Außenreferenz kann das Achsenpotential des Kontrollprofils und damit den gewöhnlichen b₄-Beitrag bestimmen. [Nullport und Säulendichte](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Optischer_Nullport_Echo_Achsensaeule.md)
+
 ### OP5: Kreuzstandard, Echophasen und Weyl-Kontrolle (21.11.2026)
 
 Ein kalibrierter Standard mit nichtverschwindendem A/J-Kreuzeintrag fixiert die relative Portskala. Komplexes Phasenmitteln unterdrückt einen gezielt phasenmarkierten skalaren Echo-Rundlauf. Ein s⁴-Kern prüft den gewöhnlichen Weyl-Anteil bei verschwindender massiver Gezeitenantwort und macht den entarteten gewöhnlichen Koeffizienten im Achsenpotential separat zugänglich. [Standards und Kontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Standards_Echophasen_Weylkontrolle.md)

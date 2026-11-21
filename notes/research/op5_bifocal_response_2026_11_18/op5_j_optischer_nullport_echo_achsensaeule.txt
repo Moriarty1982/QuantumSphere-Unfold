@@ -1,0 +1,16 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= optical null vector residual = {0, 0}
+During evaluation of In[1]:= calibration mismatch residual = {0, 0}
+During evaluation of In[1]:=                                                                                                         -7                                          -7
+conditional H/HCl J remainder and relative optical gain limit = {{0.0025365570000000, 5.0731114263527 10  }, {0.0025371030000000, 5.0742014000162 10  }}
+During evaluation of In[1]:=                                                                    2    2   2     4      2  2    4   4
+two-variable echo majorant residual and first coefficients = {0, (a  + b ) t  + (a  + 6 a  b  + b ) t }
+During evaluation of In[1]:=                                                                                              -7                    -6
+two tagged echo paths example {normalized rest, eight-read phase bound} = {5.0000050000050 10  , 4.0000040000042 10  }
+During evaluation of In[1]:=                                                       1     1
+Poisson log-kernel and compensated example moments = {-, 0, --}
+                                                      4     12
+During evaluation of In[1]:= equal tagged-path limit for eight-read 6e-6 budget = 0.00061237197641696
+During evaluation of In[1]:= signal b4 Weyl to control-axis transfer residual = 0
+
+Out[1]= Null
