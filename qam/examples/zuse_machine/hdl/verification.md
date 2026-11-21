@@ -39,3 +39,15 @@ erste Abweichung.
 ```text
 7 + 1, festes Band, Direkt, Schritt 3: MMA (3, {'tape': [0, 0, 1], 'head': 2, 'state': 'scan', 'status': 'boundary'}), HDL (3, {'tape': [0, 0, 0], 'head': 2, 'state': 'scan', 'status': 'boundary'})
 ```
+
+## MCP-Aufruf
+
+Ein lokaler MCP-Client hat `run_qam_hdl_check` über den vorhandenen
+Windows-Server `qsc-qam-batch` gefunden und mit Icarus in WSL ausgeführt.
+Beide Aufrufe haben die erwartete strukturierte Antwort geliefert.
+
+```text
+MCP HDL/MMA: 209 cases; 4 direct clocks, 24 cyclic clocks.
+MCP HDL/MMA: 209 cases; 4 direct clocks, 24 cyclic clocks.
+Generic Yosys cells: {'direct': 564, 'cyclic': 613}
+```
