@@ -102,6 +102,46 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, Subagentenregel.** Die Hinweise für LLMs erläutern die projektweite Arbeitsteilung bei unabhängigen Teilaufgaben.
+
+**21.11.2026, OP5-Radialraster.** Forschungsstand und offene Probleme um kohärente J-Last, unmarkierte Echo-Dämpfung und optimierte Ringgewichte ergänzt.
+
+**21.11.2026, OP5-Leistungsbilanz.** Forschungsstand und offene Probleme um J-Leistungsgrenze, gerade Fourier-Echokanäle und diskrete Säulenmessung ergänzt.
+
+**21.11.2026, OP5-Nullport und Säulendichte.** Forschungsstand und offene Probleme um A-Nullabgleich, gekoppelte Echopfade und Poisson-Transfer ergänzt.
+
+**21.11.2026, OP5-Kontrollstandards.** Forschungsstand und offene Probleme um A/J-Kreuzstandard, Echo-Phasenumlauf und gewöhnliches Weyl-Kontrollprofil ergänzt.
+
+**21.11.2026, OP5-Port und Spot.** Forschungsstand und offene Probleme um Richtungskalibrierung, Rohphasenbudgets und die endliche Spotmittelung ergänzt.
+
+**21.11.2026, OP5-Anschlussabgleich.** Forschungsstand und offene Probleme um Kaskadengrenze, Längenkreuzquotient und Polarisationsprofile ergänzt.
+
+**21.11.2026, OP5-Terminierung.** Forschungsstand und offene Probleme um feste J-Lasten, das Freiwegfehlerbudget und eine Krümmungskontrolle ergänzt.
+
+**21.11.2026, OP5-Last- und Schwellenrechnung.** Forschungsstand und offene Probleme um die erreichbaren Lasten, die quantitative Dispersionsschwelle und den Dirac-Matrixabgleich ergänzt.
+
+**21.11.2026, OP5-Zweikanal-Lastvariation.** Forschungsstand und offene Probleme um Lastkondition, Fehler des J-Frequenztests und Ordnung des minimalen Hauptteils ergänzt.
+
+**21.11.2026, OP5-Durchgang.** Forschungsstand und offene Probleme um Zweilastmessung, J-Längenprüfung und invariantes Kinetikkriterium ergänzt.
+
+**21.11.2026, OP5-Einwegfehler.** Forschungsstand und offene Probleme um das Rücklaufkriterium und die getrennten Prüfvoraussetzungen ergänzt.
+
+**21.11.2026, OP5-Schaltkontrolle.** Forschungsstand und offene Probleme um den Vier-Zustands-Quotienten und die Driftgrenzen der Kontrollmessung ergänzt.
+
+**21.11.2026, OP5-Nullreferenz.** Forschungsstand und offene Probleme um den symmetrischen Nullabgleich und die Einkanal-Projektionsgrenze ergänzt.
+
+**21.11.2026, OP5-Diagonalreferenz.** Forschungsstand und offene Probleme um die Bandgrenzen beider Diagonalfehler und die verbleibende Referenzreserve ergänzt.
+
+**21.11.2026, OP5-Referenz.** Forschungsstand und offene Probleme um die komplexe Kalibrierreserve und die Bedingungen für Zentral- und Endpunktmessung ergänzt.
+
+**21.11.2026, OP5-Rücklauftoleranzen.** Forschungsstand und offene Probleme um die gemeinsame Dicken-, Index- und Verlustgrenze ergänzt.
+
+**21.11.2026, OP5-Rückstreuung.** Forschungsstand und offene Probleme um die phasenaufgelöste Rückstreugrenze ergänzt.
+
+**21.11.2026, OP5-Markerhub.** Forschungsstand und offene Probleme um Diagonalkontrast und Rücklaufgrenzen bei endlichem Phasenhub ergänzt.
+
+**21.11.2026, OP5-Zweikanalmarker.** Forschungsstand und offene Probleme um Vorwärts- und Rückstreuung bei unterschiedlichen Wellenzahlen und Admittanzen ergänzt.
+
 **21.11.2026, Standard für den HDL/MMA-Vergleich.** Die Hinweise für LLMs beschreiben den selbstständigen Aufruf bei Änderungen an der Bandmaschine und begrenzte OP-Anwendungen.
 
 **21.11.2026, HDL-Vergleich per MCP.** Die deutsche und die englische Inhaltsübersicht dokumentieren den wiederholbaren Aufruf und seine Ausgabe.

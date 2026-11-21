@@ -1,0 +1,24 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= diagonal-gauge and known cross-standard identities = {{{0, 0}, {0, 0}}, 0, {{0, 0}, {0, 0}}}
+During evaluation of In[1]:=                                                                                                                                                 -7
+same-projection reference ratio: illustrative relative gain uncertainty and absolute entry uncertainty = {0.0001000000000000, 1.0011001100110 10  }
+During evaluation of In[1]:= fixed cross-phase ambiguity residual = 0
+During evaluation of In[1]:= four-phase echo rejection residual = 0
+During evaluation of In[1]:=                                                                                           -6
+pilot share and illustrative four-phase symmetric echo product bound = {3.8027312121735 10  , 0.085081600581301}
+During evaluation of In[1]:=                                      2
+                               2304 s   36864 s  147456
+control core Laplacian jets = {-------, -------, ------}
+                                   4        6        8
+                                rad      rad      rad
+During evaluation of In[1]:=                                                                            18432 b0 s
+control normalized half-difference, massive transverse Hessian residual = {----------, 0}
+                                                                                 6
+                                                                              rad
+During evaluation of In[1]:=                                           147456 b4
+ordinary axis coefficient after control = ---------
+                                               8
+                                            rad
+During evaluation of In[1]:= two-phase echo identity and isolated round-trip limit in split budget = {0, 0.00086602540378440}
+
+Out[1]= Null

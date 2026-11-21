@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Endlicher_Markerhub",
+  "repository": {
+    "commit": "ea4a455f59df64b058242c0c9b799aaf36c47f73",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_endlicher_markerhub.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Wronskian, auslaufende Randbedingungen, Kopplungsnorm sowie analytische Vergleichsschranken und ein vollständiger gekoppelter Transferpunkt.",
+    "coefficient_domain": "Symbolische Rechnung und ein Transferpunkt bei 55-stelliger Eingabe.",
+    "conventions": "Materieframe M, linksseitiger Einfall, zwei offene flussnormierte Kanäle.",
+    "inputs": [
+      "Illustrativer verlustfreier Schichtindex 1,0001, Flussverhältnis 0,001 und 100 MHz Bandbreite."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine gemessene Bandzertifizierung, kein Frequenzgitter und keine native Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:19:07.686Z",
+    "runtime_seconds": 8.996,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_endlicher_markerhub.txt",
+      "sha256": "817a01a1661d700e7d73736f9fdc4afbe9d88bbbc7b9c976d78997d70b4b6b62",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Kernel-Rückgabe Null, keine Warnung. Zeiten messen den Connector-Aufruf. Prozesscode nicht separat ausgewiesen.",
+    "Beide Schranken am Transferpunkt wurden im Lauf direkt verglichen. Die Bandschranke wird analytisch hergeleitet."
+  ],
+  "result": "Symbolische Residuen exakt null; beide Vergleiche am Beispielpunkt True.",
+  "residual_risks": [
+    "Der Vergleichspunkt ist phasenabgestimmt; die Rückstreugrenze über das Band hängt von den ausdrücklich gesetzten Parametern ab."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_endlicher_markerhub.wl",
+      "sha256": "69ddf7339d3550b89dd89b2754049b875f8f777f5aab4fd48f41fa737a9035bb",
+      "sha256_after": "69ddf7339d3550b89dd89b2754049b875f8f777f5aab4fd48f41fa737a9035bb"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_endlicher_markerhub.txt"
+  ]
+}

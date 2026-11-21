@@ -39,6 +39,13 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   offene Guards in der Antwort angeben. Falls MCP nicht verfügbar ist, die lokalen Lesebefehle aus
   `mcp/README.md` verwenden, soweit verfügbar. Neue MML-Rechnungen laufen über den dafür vorgesehenen MMA-Ablauf.
   Stapelberichte ohne bekannten Hash über `list_qam_batch_reports` suchen und anschließend per Hash abrufen.
+- **Subagenten projektweit einsetzen:** Gibt es mehrere substanzielle unabhängige Teilaufgaben, verteilt der
+  Hauptagent sie standardmäßig parallel auf Subagenten, sofern das Werkzeug sie unterstützt. Das gilt im
+  gesamten Repository, etwa für getrennte Forschungsfragen, Rechnungen und unabhängige Gegenprüfungen,
+  Codeänderungen, Tests und Dokumentation. Jeder Subagent erhält eine konkrete Aufgabe und bei Änderungen
+  einen klar abgegrenzten Dateibereich. Der Hauptagent koordiniert gemeinsame Prämissen und Abhängigkeiten,
+  prüft die Ergebnisse und führt sie zusammen. Kleine Einzelaufgaben und unmittelbar voneinander abhängige
+  Schritte bearbeitet der Hauptagent direkt. Die Vorgaben zur QAM-Belegprüfung gelten zusätzlich.
 - **QAM-Belegprüfung parallelisieren:** Bei einem Auftrag zur Prüfung mehrerer unabhängiger MMA-Belege oder
   Prämissenzweige in Codex je Prüfgruppe einen `qam_evidence_reviewer` parallel einsetzen. Gemeinsame
   Prämissen nur einmal prüfen, Abhängigkeiten in ihrer Reihenfolge auswerten und die Befunde nach Beleg-

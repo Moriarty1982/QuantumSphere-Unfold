@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Gekreuzte_Schaltkontrolle",
+  "repository": {
+    "commit": "95d340ed9ba60613478ee8770d90cebf993905bd",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_gekreuzte_schaltkontrolle.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Kreuzquotient, Unbestimmtheit der gemischten Störung, Differenzenpolynome und Driftbudget.",
+    "coefficient_domain": "Exakte komplexe Quotientenalgebra und rationale Differenzengewichte; numerische Budgetkontrolle.",
+    "conventions": "Materieframe M; kohärente Einkanalreferenz an beiden Bandenden.",
+    "inputs": [
+      "100 MHz; 2e-6 Zeit-, Schalt- und Messbudget; 0,25 s Beispielabstand."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine gemessene Übereinstimmung des Monitortransfers, kein gemessener HCl/H-Zweikanalanschluss."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:44:02Z",
+    "runtime_seconds": 10.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_gekreuzte_schaltkontrolle.txt",
+      "sha256": "68a67c534635054748777b63c3429c8516a936bbdd6266d0ce1f6d0735be3897",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Rückgabe Null, fünf exakte Nullreste für Quotienten- und Differenzenidentitäten. Zwei Budgetprüfungen True. Connector-Zeit auf Sekunden gerundet."
+  ],
+  "result": "Kreuzquotient kürzt reine Schalt- und Körperfaktoren. Der gemischte Anschlussrest braucht unabhängige Kontrolle. Vier bzw. acht Zustandsmessungen kürzen affine bzw. quadratische gemeinsame Logdrift.",
+  "residual_risks": [
+    "Messbare Übereinstimmung der gemischten Einflüsse im Kontroll- und Signalpfad bleibt offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_gekreuzte_schaltkontrolle.wl",
+      "sha256": "ef2d3a21cb2b3cf93c0716b36d1dcddf7dc9bb10665b2940d0bb4d5f5747f7ca",
+      "sha256_after": "ef2d3a21cb2b3cf93c0716b36d1dcddf7dc9bb10665b2940d0bb4d5f5747f7ca"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_gekreuzte_schaltkontrolle.txt"
+  ]
+}

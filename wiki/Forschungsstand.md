@@ -1,5 +1,81 @@
 # Forschungsstand
 
+### OP5: J-Terminierung, Echokontrolle und Radialraster (21.11.2026)
+
+Eine bekannte komplexe J-Last liefert das kohärente Produkt aus Hin- und Rückübertragung. Bei reziproken Ports bleibt das Wurzelvorzeichen. Kalibrierte Dämpfung eines unmarkierten Rücklaufs erlaubt Extrapolation mit quadratischem Rest. Abgestufte Flächenringe senken die Formfehlergrenze für eine Lipschitz-Säulendichte. [Terminierung und Ringraster](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Echo_Radialraster.md)
+
+### OP5: Leistungsbilanz, Fourier-Echos und Ringmessung (21.11.2026)
+
+Eine A-Leistungsbilanz kann eine J-Amplitude bei separat begrenzten Verlusten und anderen Ausgängen eingrenzen. Ein 3×3-Phasengitter liefert gerade markierte Echokanäle. Die gewöhnliche Achsensäule ist mit exakten logarithmischen Ringgewichten und einem Fehlerbudget für Messlücken berechenbar. [Leistung, Fourier und Säule](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Leistungsbilanz_Fourier_Ringmessung.md)
+
+### OP5: Optische Null, gekoppelte Echos und Achsensäule (21.11.2026)
+
+Ein kohärenter H/HCl-A-Nullabgleich kann im Modell eine J-Richtung erzeugen. Die absolute J-Amplitude bleibt offen. Zwei unabhängig geschaltete Echophasen entfernen auch gemischte Zweierpfade im linearen Modell. Eine gewöhnliche Säulendichtemessung mit Außenreferenz kann das Achsenpotential des Kontrollprofils und damit den gewöhnlichen b₄-Beitrag bestimmen. [Nullport und Säulendichte](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Optischer_Nullport_Echo_Achsensaeule.md)
+
+### OP5: Kreuzstandard, Echophasen und Weyl-Kontrolle (21.11.2026)
+
+Ein kalibrierter Standard mit nichtverschwindendem A/J-Kreuzeintrag fixiert die relative Portskala. Komplexes Phasenmitteln unterdrückt einen gezielt phasenmarkierten skalaren Echo-Rundlauf. Ein s⁴-Kern prüft den gewöhnlichen Weyl-Anteil bei verschwindender massiver Gezeitenantwort und macht den entarteten gewöhnlichen Koeffizienten im Achsenpotential separat zugänglich. [Standards und Kontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Standards_Echophasen_Weylkontrolle.md)
+
+### OP5: Portprojektion, Referenzphase und Spotbreite (21.11.2026)
+
+Eine separat kalibrierte J-Einspeisung und A-Empfangsprojektion bestimmen die Kreuzreflexion gezielt. Der 4-m-Vergleich hat nun ein Budget für acht Rohwerte und einen gemischten Referenzphasenterm. Identisch breite runde Spots erhalten die Radialtrennung im Profilkern bei bekannter gewöhnlicher Profilform. [Port- und Spotrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Port_Referenz_Spot.md)
+
+### OP5: Anschlussabgleich und Polarisationswege (21.11.2026)
+
+Die Kaskadenrechnung begrenzt die Kreuzreflexion der äußeren Anschlussebene. Ein Längenkreuzquotient entfernt auch chromatische Referenzterme, sofern sie den Längenwechsel überstehen. Ein seitlich versetzter Strahl hebt im Profilkern die Weyl-Polarisation hervor. Unterschiedliche Radialformen trennen im kompensierten Vergleich gewöhnliche und massive Weyl-Beiträge. [Anschluss und Polarisationswege](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Anschluss_Pilot_Polarisation.md)
+
+### OP5: Feste Terminierung und Referenzebenen (21.11.2026)
+
+Im homogenen Marker reicht die kleine Kreuzreflexion für die A-Zweilastmessung mit fester passiver J-Last. Für 4 m bleibt die Änderung des relativen A/J-Referenzwegs im Beispiel auf Pikometerniveau zu begrenzen. Zwei orthogonale Polarisationen prüfen die Ricci-/Weyl-Struktur des Elektronenvergleichs. [Terminierung und Geometrie](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Terminierung_Referenzebenen.md)
+
+### OP5: Passive Lasten, Dispersion und Schwellen (21.11.2026)
+
+Im homogenen Modell erreichen getrennte passive A/J-Lasten das zuvor angesetzte Lastdreieck nicht. Eine passive Modenumwandlung kann es theoretisch erreichen. Bei unverändertem Fehlerbudget trennen rund vier Meter freie Strecke die illustrative massive Dispersion vom konstanten Versatz bei 100 MHz. Eine einzelne Dirac-Schwelle liefert eine nichtproportionale Kinetikmatrix, die Summe braucht einen eigenen Abgleich. [Last- und Schwellenrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passive_Last_Dispersion.md)
+
+### OP5: Zweikanal-Lastvariation und J/A-Laufphase (21.11.2026)
+
+Bei zwei Rücklaufmoden bestimmen drei affin unabhängige Laststellungen den A-Durchgang. Eine feste J-Reflexion kann bei bloßer A-Variation einen Offset hinterlassen. Im J-Beispiel ist die Längenphase auflösbar, die Änderung über 100 MHz bleibt unter der Fehlergrenze. Der minimale klassische Zwei-Ableitungssektor hat bei gemeinsamer Metrik einen gemeinsamen transversalen Hauptteil. [Last- und Phasenrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Lastvariation_Laufphase.md)
+
+### OP5: Durchgang und parallele Prüfkriterien (21.11.2026)
+
+Zwei Laststellungen mit kohärenter Portmessung bestimmen den A-Einwegdurchgang trotz einfallender Gegenwelle. Drei abgeglichene Längen liefern einen Konsistenztest für eine isolierte J-Mode. Der verallgemeinerte Eigenwertabstand der elektrischen und magnetischen Kinetik bestimmt, ob eine masselose lokale Laufphasenaufspaltung möglich ist. [Durchgang und Prüfkriterien](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Durchgang_Parallelpruefung.md)
+
+### OP5: Rücklauf und Einwegfehler (21.11.2026)
+
+Der Vier-Zustands-Rücklauf misst das Produkt der Einwegfaktoren. Der Einwegfehler kann auf 5·10⁻⁷ im Loggewinn begrenzt werden, wenn Echo-Rest und unabhängig belegte gemischte Richtungsasymmetrie zusammen höchstens 10⁻⁶ betragen. A-Durchgang, J-Ausbreitung und native Differenzkopplung haben damit getrennte Prüfgrößen. [Einwegrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Einweg_Ruecklauf.md)
+
+### OP5: Gekreuzte Schaltkontrolle (21.11.2026)
+
+Der Vier-Zustands-Quotient kürzt getrennte Körper- und Schaltfaktoren. Eine zustandsgemischte Anschlussänderung bleibt mit der Markertransmission multipliziert und braucht einen unabhängigen Kontrolltransfer. Vier oder acht zeitlich gestaffelte Messungen können affine beziehungsweise quadratische Drift des differentiellen Loggewinns kürzen. [Schaltkontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gekreuzte_Schaltkontrolle.md)
+
+### OP5: Kohärente A-Nullreferenz (21.11.2026)
+
+Zwei flankierende Nullmessungen kürzen affine Drift der logarithmischen Verstärkung und Phase, wenn der Phasenzweig verfolgt wird. Eine schaltabhängige Änderung des komplexen Gewinns braucht eine unabhängige Kontrolle. Für den vollen Zweikanalmarker genügt im Beispiel ein symmetrischer J-Amplitudenanteil von höchstens 2,890·10⁻⁴ je Einkanalanschluss. Die Rechnung budgetiert Zeitdrift und Projektion an beiden Bandenden. [Nullreferenz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Einkanal_Nullreferenz.md)
+
+### OP5: Diagonalfehler des skalaren Markers (21.11.2026)
+
+Das 100-MHz-Schichtmodell begrenzt die Abweichung der A-Diagonale von der skalaren Transmission auf 1,612·10⁻⁶. Im J-Kanal kürzen sich Teile der ersten und zweiten Korrektur. Die Abweichung vom freien J-Referenzwert bleibt unter 1,638·10⁻⁶. Bei Verwendung beider skalarer Diagonalwerte bleiben nach Rücklauf und Modellfehler 4,596·10⁻⁶ für die komplexe Referenzmessung und weitere Beiträge. [Diagonalrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Diagonalreferenz.md)
+
+### OP5: Komplexe Vorwärtsreferenz (21.11.2026)
+
+Nach Abzug des Rücklaufs bleiben im 100-MHz-Modell rund 6,234·10⁻⁶ für komplexe Kalibrierfehler und weitere Markierungsreste. Die Schichttoleranz allein deckt eine Zentralmessung nicht ab. Ein glatter linearer Indexverlauf kann die skalare Transmission am Bandrand um 7,856·10⁻³ verschieben. Für den Kalibrieranteil der Laufzeitdifferenz genügen direkte Messungen der tatsächlichen Diagonalen an beiden Bandenden, wenn die Feldbasis und das Fehlerbudget eingehalten werden. [Referenzrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Komplexe_Referenz.md)
+
+### OP5: Rücklauftoleranzen mit massivem J-Modellkanal (21.11.2026)
+
+Eine auf das Bandzentrum abgestimmte massive J-Dispersion erhält die drei zentralen Auslöschungen. Im 100-MHz-Schichtbeispiel mit gemeinsamen Grenzen von 2,5·10⁻⁷ für relativen Dickenfehler, reelle Indexabweichung und imaginären Index bleibt der einfache Rücklauf unter 3,513·10⁻⁶. Die skalare Reflexion dominiert. Verlust und Phasendrift der Transmission benötigen eine eigene Kalibrierung. [Toleranzrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Ruecklauf_Toleranzen.md)
+
+### OP5: Phasenaufgelöste Rückstreugrenze (21.11.2026)
+
+Bei endlichem A-Hub liest die erste Rückumwandlung die Wellenzahlsumme sowie einen durch die interne Gegenwelle unterdrückten Differenzanteil. Beide verschwinden im Zentrum des idealisierten Vergleichsbands. Mit der Phasenabschätzung der zweiten Iteration sinkt die analytische 100-MHz-Obergrenze der Reflexionsnorm auf rund 1,84·10⁻⁶ und liegt für diesen Rücklaufbeitrag unter dem bisherigen Quotientenbudget. Reale Dispersion, Schichtfehler und Anschlussantwort bleiben zu prüfen. [Reflexionsrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckstreuung_Band.md)
+
+### OP5: Endlicher Markerhub und Rückstreugrenze (21.11.2026)
+
+Eine exakt behandelte A-Schicht trägt den endlichen Phasenhub. Für eine schwache J-Beimischung begrenzt eine konvergente Reihe die Abweichung der Vorwärts- und Rückstreumatrix. Der diagonale Markerkontrast ändert sich erst quadratisch in der Beimischung, während Umwandlung linear sein kann. Das analytische 100-MHz-Beispiel erlaubt einen Kontrast nahe zwei und erfordert weiterhin eine eigene Rücklaufkontrolle. Die Anschlussgrenze und die physische Kalibrierung bleiben offen. [Markerhub und Schranken](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endlicher_Markerhub.md)
+
+### OP5: Zweikanalstreuung am Feldmarker (21.11.2026)
+
+Bei unterschiedlichen A/J-Wellenzahlen gewichtet Vorwärtsstreuung die Modenumwandlung mit der Wellenzahldifferenz, Rückstreuung mit der Summe. Ein gemischter lokaler Rang-eins-Marker kann in Born-Ordnung eine Vorwärtskorrektur vom Rang zwei ergeben. Die Modenzuordnung verlangt nur einen kalibrierten Diagonalkontrast der Vorwärtsmatrix im betrachteten diagonalen Streckenmodell. Eine exakte Schichtmatrix ergänzt die schwache Rechnung für endliche Phasen. Die geometrische Mindestantwort der Zweikanalanschlüsse und freie J-Ausbreitung bleiben offen. [Streurechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Zweikanal_Marker.md)
+
 ### OP5: Passiver Markierungshub und Anschlussband (21.11.2026)
 
 Im verdünnten HCl-Einlinienmodell kostet ein Pi-Hub bei höchstens einem Prozent Amplitudenverlust rund 313 Halbbreiten Verstimmung. Die Anschlussantwort sinkt dabei. Die Bandrechnung gibt eine notwendige Überlappung und eine gemeinsame Säulenbedingung an. Für das bisherige schwach gekoppelte HCl/H-Beispiel unterschreitet schon die geometrische Anschlussschranke das Ziel. Ein separater off-resonanter H-Marker umgeht den HCl-Phasen-Verlust-Konflikt des Markers. Die reale Vorwärtsantwort und die Zweikanalanschlüsse bleiben zu prüfen. [Schicht- und Bandrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Passiver_Vorwaertshub.md)

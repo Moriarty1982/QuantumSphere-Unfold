@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Einkanal_Nullreferenz",
+  "repository": {
+    "commit": "a300560f21d27aba05dd534ed4d52151bd064d38",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_einkanal_nullreferenz.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Einkanal-Projektionsrest, symmetrische logarithmische Driftkorrektur und numerische Fehlertoleranzen.",
+    "coefficient_domain": "Exakte Matrixalgebra und komplexe Phasenbeispiele; numerische Auswertung hinreichender Schranken.",
+    "conventions": "Materieframe M, kanonische Flussbasis, kohärente Einzelpassreferenz.",
+    "inputs": [
+      "100 MHz, Referenzreserve 4,596e-6; Obergrenze der Modenumwandlung 0,00317."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine gemessene Nullstellung, Modenreinheit, Anschlusskondition oder Drift."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:39:59Z",
+    "runtime_seconds": 8.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_einkanal_nullreferenz.txt",
+      "sha256": "968fbea5b840615e53d8186c43c0c647d2699ba903f8bd7a7433fa5b0292c6f7",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Rückgabe Null, zwei exakte Nullreste und beide konservativen Fehlertoleranzen True. Connector-Zeit auf Sekunden gerundet."
+  ],
+  "result": "Bei gemeinsamer, phasenstetiger Nullreferenz und symmetrischen Zeitpunkten verschwindet affine logarithmische Drift. Mit der gewählten Budgetteilung genügen J-Amplitudenanteile <=2,890e-4 je Anschluss am vollen Marker.",
+  "residual_risks": [
+    "Schaltabhängiger komplexer Gewinn, Modenreinheit und HCl/H-Zweikanalanschluss brauchen unabhängige Kontrolle."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_einkanal_nullreferenz.wl",
+      "sha256": "09b4651e61cd5fbc15ed05f9c894eb344c6712ab7b4758a0c8353c0446bbab00",
+      "sha256_after": "09b4651e61cd5fbc15ed05f9c894eb344c6712ab7b4758a0c8353c0446bbab00"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_einkanal_nullreferenz.txt"
+  ]
+}

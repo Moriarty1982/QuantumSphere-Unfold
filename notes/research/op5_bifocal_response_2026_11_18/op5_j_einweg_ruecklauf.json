@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Einweg_Ruecklauf",
+  "repository": {
+    "commit": "783af2a3030a0ea2d9dabb116ffc31333ef857d6",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_einweg_ruecklauf.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Bedingungen für Einweggewinn aus einem Vier-Zustands-Echo.",
+    "coefficient_domain": "Exakte skalare Quotientenalgebra.",
+    "conventions": "Materieframe M; komplexe Einwegfaktoren an festen Referenzebenen.",
+    "inputs": [
+      "100 MHz; maximale gemischte Einwegabweichung 5e-7 im Loggewinn."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine gemessene Reziprozität, native Kopplung oder freie J-Ausbreitung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:51:35Z",
+    "runtime_seconds": 8.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_einweg_ruecklauf.txt",
+      "sha256": "397fbb706c37216e878e61fc13c6144194db6a012bf0b07b1020c866dc23c50d",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Vier exakte Nullreste, Rückgabe Null. Zeiten auf Sekunden gerundet."
+  ],
+  "result": "Nur Echo plus unabhängig bekannte Richtungsasymmetrie bestimmt den Einwegfehler; ihre Log-Restbudgets müssen zusammen höchstens 1e-6 betragen.",
+  "residual_risks": [
+    "Richtungsabgleich, A-Kontrolltransfer, freie J-Ausbreitung und native Wirkung bleiben offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_einweg_ruecklauf.wl",
+      "sha256": "0c4ccf2b74328a650c1a136f66bd8db06e4a31b37cb90e10a5b3f77043280604",
+      "sha256_after": "0c4ccf2b74328a650c1a136f66bd8db06e4a31b37cb90e10a5b3f77043280604"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_einweg_ruecklauf.txt"
+  ]
+}

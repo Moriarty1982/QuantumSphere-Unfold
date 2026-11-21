@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Komplexe_Referenz",
+  "repository": {
+    "commit": "a0a8839fc772fc7ebd22111285076597e538db0a",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_komplexe_referenz.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Diagonaler Kalibrierfehler, verbleibende Referenzreserve, Dispersion und Endpunktinterpolation.",
+    "coefficient_domain": "Exakte rationale Matrixidentität und numerische Auswertung analytischer Schranken.",
+    "conventions": "Materieframe M, bisheriger passiver Zweikanalmarker und diagonaler Solltransport.",
+    "inputs": [
+      "100 MHz; Rücklaufrest höchstens 3,513e-6; Quotientenfehler der Vergleichsstrecke 9,81742885e-6."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Illustratives Fehlerbudget. Keine gemessene Referenz, Anschlussstärke oder native Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:31:50Z",
+    "runtime_seconds": 8.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_komplexe_referenz.txt",
+      "sha256": "53ed9e78f9875fcb737241bafb910059c3a40b77efbaf255996e3cd5a8f274d9",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Rückgabe Null, zwei exakte Nullreste und beide Schrankenvergleiche True. Connector-Zeit auf Sekunden gerundet."
+  ],
+  "result": "Komplexe Referenzreserve rund 6,234e-6. Eine lineare Indexrampe in der Schichttoleranz erzeugt 7,856e-3 Drift gegenüber dem Zentralwert.",
+  "residual_risks": [
+    "Die vorhandene Modellgrenze für T_AA minus t_A übersteigt das Referenzbudget. Reale Diagonalen und Anschlussstärke bleiben offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_komplexe_referenz.wl",
+      "sha256": "42ef171cf581af1d652d8a00012088e7aad9894bfd1456c552f9bcb467057413",
+      "sha256_after": "42ef171cf581af1d652d8a00012088e7aad9894bfd1456c552f9bcb467057413"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_komplexe_referenz.txt"
+  ]
+}

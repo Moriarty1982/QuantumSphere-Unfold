@@ -1,0 +1,19 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:=                                                               -8                    -10                    -7
+cross reflection, offset, full log error = {3.8597000000000 10  , 1.2235291970345 10   , 4.8134284090669 10  }
+During evaluation of In[1]:=                                                                                             -8                    -7
+coarse full reflection used for cross entry: offset and full log error = {1.1133079099374 10  , 5.2583062460290 10  }
+During evaluation of In[1]:=                                                                 -6
+max cross-entry bound with unit termination = 1.4952627898253 10
+During evaluation of In[1]:= illustrative matched-termination limits with coarse reflection = 0.42575905620258
+During evaluation of In[1]:= formal J Schur correction residual = 0
+During evaluation of In[1]:=                                                                                                                                                             -8                    -6                    -12
+four-m phase, extra contrast allowance, one-at-a-time length errors (m) = {0.00083842185103072, 0.000015210924848694, {0.072569314981449, 8.3299592025155 10  , 7.2569314981472 10  , 8.3307922817464 10   }}
+During evaluation of In[1]:= total relative additive radius and example damping ceiling per m = {0.00010380273119243, 0.58495084802833}
+During evaluation of In[1]:= mean/difference geometry identity residual = 0
+During evaluation of In[1]:=                                                                              11     1      4
+electron curvature coefficients {Ricci mean, Weyl half difference, ratio} = {---, -(--), -(--)}
+                                                                             360    90     11
+During evaluation of In[1]:= axial recovery and local cancellation residuals = {0, 0}
+
+Out[1]= Null

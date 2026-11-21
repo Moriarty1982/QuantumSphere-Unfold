@@ -1,0 +1,17 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= center checks (J phase, A phase, three integral numerators) = {0, 0, 0, 0, 0}
+During evaluation of In[1]:= J rest energy eV = 0.00509569419003
+During evaluation of In[1]:= J slope relative to proportional model = 1.00020003000400
+During evaluation of In[1]:= J-only band phase excursion (massive, proportional) = {0.01803058127496, 0.01802697533798}
+During evaluation of In[1]:= box: Re U radius, Im U max, complex U radius, J radius, rho, theta = {0.03373934073807, 0.007853988104666, 0.03464142379562, 0.02588378201635, 0.00005012265599264, 0.003151193668239}
+During evaluation of In[1]:=                                                                         -6                   -9                   -9                   -8                   -6                   -6
+box: scalar, first, second, higher, total R, return = {3.472640344731 10  , 4.572324879557 10  , 2.623316213187 10  , 3.139348491215 10  , 3.511229470735 10  , 3.511241799511 10  }
+During evaluation of In[1]:= box: A transmission phase drift bound and fractional amplitude loss = {0.007856576381552, 0.007823226127508}
+During evaluation of In[1]:=                                                     -6
+half-budget reflection threshold = 4.908690329641 10
+During evaluation of In[1]:=                                                                       -6                   -6
+common tolerance 4.4e-7, 4.6e-7 reflection bounds = {4.833423266169 10  , 4.973728761770 10  }
+During evaluation of In[1]:= thickness m and absolute box error nm = {0.01720430473206, 4.301076183014}
+During evaluation of In[1]:= box inside reflection threshold = True
+
+Out[1]= Null

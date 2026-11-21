@@ -1,0 +1,10 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Weighted boundary Green kernel residual: 0
+During evaluation of In[1]:= First return conversion integrand residual: 0
+During evaluation of In[1]:= Central sum and difference integral residuals: {0, 0, 0}
+During evaluation of In[1]:=                                                                                    -6                -9                -9                -8                -6
+Uniform band contributions {reference, first, second, tail, total}: {1.802967965 10  , 1.804773005 10  , 2.605021509 10  , 3.115546430 10  , 1.838533224 10  }
+During evaluation of In[1]:=                                                      -6
+Return rest bound at unit return norm: 1.838536604 10
+
+Out[1]= Null

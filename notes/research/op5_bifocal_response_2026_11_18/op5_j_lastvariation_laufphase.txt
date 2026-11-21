@@ -1,0 +1,15 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= triangle Gram and intercept residuals = {{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}, {0, 0, 0}}
+During evaluation of In[1]:= fixed J load residual = 0
+During evaluation of In[1]:= A-only intercept bias residual = 0
+During evaluation of In[1]:=                                                                       -8                    -7
+triangle through and full illustrative log error = {2.0000014142146 10  , 4.8080813876431 10  }
+During evaluation of In[1]:= illustrative sufficient fixed-J reflection magnitude = 0.00985328459242
+During evaluation of In[1]:= short and long branch criteria = {1.55234479051, 1.18843729608}
+During evaluation of In[1]:=                                                                                  -6
+long phase, band variation and two-edge error = {-1.82605034177, 2.09605462758 10  , 0.000404000000667}
+During evaluation of In[1]:= minimal mass term absent from homogeneous principal part = 0
+During evaluation of In[1]:= proportional kinetic common characteristic root = {{0, 0}, {0, 0}}
+During evaluation of In[1]:= gradient amplitude order and compact Hessian integral = {2, 0}
+
+Out[1]= Null

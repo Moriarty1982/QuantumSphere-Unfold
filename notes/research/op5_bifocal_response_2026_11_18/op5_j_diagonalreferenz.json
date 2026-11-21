@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Diagonalreferenz",
+  "repository": {
+    "commit": "d82a7cdd65bffc72b4d1153dc5171c542997c811",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_diagonalreferenz.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Phasenaufgelöste Diagonalkorrekturen, J-Kürzung und stetige Bandgrenzen.",
+    "coefficient_domain": "Exakte algebraische und Integralidentitäten; hochpräzise Transfermatrix-Stichproben.",
+    "conventions": "Materieframe M; passiver homogener Zweikanalmarker mit massiver freier J-Modellphase.",
+    "inputs": [
+      "100 MHz; Dicken-, Index- und Verlustgrenzen 2,5e-7; Flussamplitudenverhältnis höchstens 1/1000."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Transfermatrix-Stichproben sind keine Bandzertifizierung. Materialdaten und physische Kopplung offen."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:37:35Z",
+    "runtime_seconds": 10.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_diagonalreferenz.txt",
+      "sha256": "a9018cd86462ca9c3222167e67e8e69cc28d0c791a111027e2e0e29b6c7d209a",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Rückgabe Null, vier exakte Nullreste. Drei Transferkontrollen innerhalb der analytischen Grenzen. Connector-Zeit auf Sekunden gerundet."
+  ],
+  "result": "Skalarer Diagonalrest in Operatornorm höchstens 1,638e-6. Reserve für Kalibrierung und weitere Beiträge mindestens 4,596e-6.",
+  "residual_risks": [
+    "Bandabhängige komplexe A-Referenz und HCl/H-Anschluss weiter zu prüfen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_diagonalreferenz.wl",
+      "sha256": "277e2cd8cd55b795db931a7d974d9d84498730dceb0aa9b5ba74eda2256453e3",
+      "sha256_after": "277e2cd8cd55b795db931a7d974d9d84498730dceb0aa9b5ba74eda2256453e3"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_diagonalreferenz.txt"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Lastvariation_Laufphase",
+  "repository": {
+    "commit": "901c8d3c02a51399cc7066bc3b19cd5aea37439c",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_lastvariation_laufphase.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Lastaffinität und J-Offset, Rauschgrenzen im Längentest, Ordnung des gemeinsamen Hauptteils.",
+    "coefficient_domain": "Exakte Algebra und hochpräzise numerische Auswertung der Beispielwerte.",
+    "conventions": "Materieframe M, komplexe normierte Portamplituden, minimale klassische gemeinsame Metrik.",
+    "inputs": [
+      "100 MHz, Referenzfehlerziel 5e-7, nominal kJ/kA=0,9999."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine experimentelle A/J-Kalibrierung und kein aus W1/W2 bestimmter nativer Kopplungskoeffizient."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T08:02:09Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_lastvariation_laufphase.txt",
+      "sha256": "d73e18928962e2d6b6a66350392bbb473df1fc160091b59a73b737837a3711a3",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Nullreste für Lastgeometrie, J-Offset und minimales Hauptsymbol. Rückgabe Null. Connector-Zeit auf Sekunden gerundet."
+  ],
+  "result": "Drei generische Laststellungen bei zwei Rücklaufmoden. Beispielhaft auflösbare Längenphase, Frequenzsteigung weit unter Fehlergrenze. Gemeinsamer minimaler Hauptteil.",
+  "residual_risks": [
+    "Zwei unabhängige Lastvariationen, Portdiversität, J-Mehrweggrenzen und native Koeffizienten sind physisch offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_lastvariation_laufphase.wl",
+      "sha256": "7f6613ac5d1472552d3c8879560000247db17bd8fcfbdba38d6722cc6d66165c",
+      "sha256_after": "7f6613ac5d1472552d3c8879560000247db17bd8fcfbdba38d6722cc6d66165c"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_lastvariation_laufphase.txt"
+  ]
+}

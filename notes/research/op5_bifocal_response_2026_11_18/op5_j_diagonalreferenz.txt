@@ -1,0 +1,16 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= affine integral and two center residuals = {0, 0, 0}
+During evaluation of In[1]:= J forward cancellation residual = 0
+During evaluation of In[1]:=                                                                     -6                   -11                   -11                   -6
+A bounds {order 2, order 3, orders >= 4, total} = {1.611007271002 10  , 3.124765131506 10   , 9.892695087911 10   , 1.611137445604 10  }
+During evaluation of In[1]:=                                                                                               -6                   -8                   -8                   -6
+J bounds {combined leading terms, other second order, orders >= 3, total} = {1.590048778573 10  , 1.650873440530 10  , 3.139348491215 10  , 1.637950997890 10  }
+During evaluation of In[1]:=                                                                           -6                   -6
+remaining calibration budget {A only, both diagonals} = {4.622862554396 10  , 4.596049002110 10  }
+During evaluation of In[1]:=                                                                           -6                  -6                    -6                  -6                    -6                  -6
+transfer controls {A, J} at center and two band edges = {{1.57063965156 10  , 1.57079593009 10  }, {1.56223892259 10  , 1.57471319370 10  }, {1.56670916976 10  , 1.56687063257 10  }}
+During evaluation of In[1]:= all controls within bounds = True
+During evaluation of In[1]:=                                                                                                      -11                   -11
+sufficient index excursion with both scalar diagonals, center error zero or 2e-6 = {8.844392055895 10   , 2.478199577160 10   }
+
+Out[1]= Null

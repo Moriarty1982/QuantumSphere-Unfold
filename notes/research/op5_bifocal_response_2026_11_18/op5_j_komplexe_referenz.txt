@@ -1,0 +1,14 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= diagonal calibration identity residual = {0, 0}
+During evaluation of In[1]:=                                                                                                                                               -6
+contrast lower bound, offdiagonal upper bound, scalar A to full A diagonal error bound = {1.992123060205, 0.003162283506675, 9.967517613038 10  }
+During evaluation of In[1]:= contrast and offdiagonal checks = {True, True}
+During evaluation of In[1]:=                                                                        -6                   -6
+reference budget, nondispersive and interface term = {6.234038192431 10  , 1.817440210517 10  }
+During evaluation of In[1]:=                                                                                     -10                   -11
+max complex index excursion for zero and 2e-6 measurement error = {1.405845642703 10   , 7.692263948297 10   }
+During evaluation of In[1]:=                                                                                                           -18                   -21
+index slope per Hz, complex transmission curvature per Hz^2 at 2e-6 measurement error = {1.538452789659 10   , 3.387230553945 10   }
+During evaluation of In[1]:= linear index example, absolute edge drift of scalar tA = 0.007855768948674
+
+Out[1]= Null

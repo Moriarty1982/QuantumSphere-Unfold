@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Zweikanal_Marker",
+  "repository": {
+    "commit": "64032e278c393f9dff2a21d56d5304abca09b11b",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_zweikanal_marker.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Freie Flussbasis und Wechselwirkungsblock, verlustfreier Fluss, Born-Rangdeterminante, Spurauslese und geometrische Massenskala.",
+    "coefficient_domain": "Exakte symbolische Matrixrechnung; eine gerundete Skalenillustration.",
+    "conventions": "Materieframe M, zwei offene eindimensionale Kanäle, Zeitkonvention exp(-i omega t).",
+    "inputs": [
+      "Positive freie Admittanzen; verlustfreier symmetrischer Kopplungsblock im Flusscheck; 0,360329 eV und 1 m im Beispiel."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine experimentelle Feldreferenz oder native Ausbreitung. Keine numerische starke Schichtsimulation."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:14:43.360Z",
+    "runtime_seconds": 7.917,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_zweikanal_marker.txt",
+      "sha256": "bb760e63bea43daa9995a484387b782655769e2762834cf929cbf3798960d8ef",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Kernel-Rückgabe Null, keine Warnung; Zeiten messen den Connector-Aufruf. Prozesscode nicht separat ausgewiesen.",
+    "Im Vorlauf blieb im Verlustlosigkeitscheck ein symbolischer Imaginärteil stehen. Der archivierte Lauf setzt die reelle Symmetrie vor der komplexen Konjugation ein."
+  ],
+  "result": "Alle ausgewiesenen Residuen exakt null.",
+  "residual_risks": [
+    "Die Rechnung setzt gemeinsame räumliche Streuflächen und konstantes freies Materialgesetz voraus."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_zweikanal_marker.wl",
+      "sha256": "c4772c8f15b85f1f8c5ffd95901c571fe6713869fcbecfbeddcef1990190777f",
+      "sha256_after": "c4772c8f15b85f1f8c5ffd95901c571fe6713869fcbecfbeddcef1990190777f"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_zweikanal_marker.txt"
+  ]
+}

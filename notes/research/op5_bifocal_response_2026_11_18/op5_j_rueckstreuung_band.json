@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Rueckstreuung_Band",
+  "repository": {
+    "commit": "ace37f957f5faa7b584db37839e854144393ea85",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_rueckstreuung_band.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Randidentität, erster Reflexionsintegrand, drei zentrale Nullintegrale und analytische Bandgrenzen.",
+    "coefficient_domain": "Exakte Symbolrechnung und gerundete Auswertung analytischer Schranken.",
+    "conventions": "Materieframe M, zwei offene Kanäle, verlustfreies Bandbeispiel und lineare Energieskalierung der Wellenzahlen.",
+    "inputs": [
+      "Nominale Schichtphasen 9999 Pi und 10001 Pi, Flussverhältnis 1/1000 und 100 MHz Bandbreite."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine gemessene Bandantwort oder physische Kalibrierung. Keine native Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:23:10.369Z",
+    "runtime_seconds": 9.074,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_rueckstreuung_band.txt",
+      "sha256": "e45c0612f988c800e7fbb2ed65a046cdfd6d3489b62785562d5c6d1cd77ad980",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, keine Warnung. Zeiten beziehen sich auf den Connector-Aufruf. Kein Frequenzgitter.",
+    "Die Dreiecksabschätzung und die Betragsgrenzen für die restlichen Terme werden analytisch im Text hergeleitet."
+  ],
+  "result": "Alle Residuen exakt null. Reflexionsnorm bandweit höchstens 1,839e-6 im illustrativen Modell.",
+  "residual_risks": [
+    "Für reale Dispersion und Schichtfehler müssen die Phasenintervalle neu bestimmt werden."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_rueckstreuung_band.wl",
+      "sha256": "e57507ace0774f3a987c009ed108b8eae68abd779c37022b99b30e7dbeed32a9",
+      "sha256_after": "e57507ace0774f3a987c009ed108b8eae68abd779c37022b99b30e7dbeed32a9"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_rueckstreuung_band.txt"
+  ]
+}

@@ -1,0 +1,14 @@
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= passive candidate mapping residual = {0, 0}
+During evaluation of In[1]:= diagonal J maximum and triangle requirement = {0.0031735120123342, 0.017320508075689}
+During evaluation of In[1]:= general mixing sufficient radius for norm 0.99 = 0.98999652313221
+During evaluation of In[1]:=                                                             -8
+illustrative elliptic measurement error = 2.0000094281349 10
+During evaluation of In[1]:= baseline criteria in m, centered and uniform = {1.9274306850186, 3.8548613700371}
+During evaluation of In[1]:= bandwidth criteria in GHz at one cm = {19.2743066143, 38.5486118132}
+During evaluation of In[1]:= cm anchor condition at four m = 0.0810020001337
+During evaluation of In[1]:= rank-one determinant residual = 0
+During evaluation of In[1]:= equal-weight counterexample residual = {{0, 0}, {0, 0}}
+During evaluation of In[1]:= electron-neutrino mixed and J diagonal alignment residuals = {0, 0}
+
+Out[1]= Null

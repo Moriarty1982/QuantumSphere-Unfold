@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Durchgang_Parallelpruefung",
+  "repository": {
+    "commit": "4f02805bedce4b93c3a3b31c55a9918b1d8f550e",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_durchgang_parallelpruefung.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Zweilast-Durchgang, komplexer Längenabschluss und basisinvariante Aufspaltung des masselosen Hauptteils.",
+    "coefficient_domain": "Exakte komplexe Algebra und numerische Auswertung des exemplarischen Kalibrierbudgets.",
+    "conventions": "Materieframe M; skalare A-Referenz; abgeglichene Längenmessung; positiver reeller elektrisch-magnetischer Hauptteil.",
+    "inputs": [
+      "Referenzziel 5e-7 im Loggewinn; illustrative Zweiport-Fehler 1e-8."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine gemessene A-Kalibrierung, J-Dispersion oder native Kopplung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:57:48Z",
+    "runtime_seconds": 8.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_durchgang_parallelpruefung.txt",
+      "sha256": "37b934b669360ab807e26d37b38b2dc29cc137dcbaafd9a3e1c7b4d727d77971",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Sechs exakte Nullreste, evaneszenter Abschlussrest -i/16, Budgetprüfung True und Rückgabe Null. Zeiten auf Sekunden gerundet."
+  ],
+  "result": "Beispielhafter Abgleich 4,809e-7; drei Längen prüfen Einmodenkonsistenz; die verallgemeinerte elektrische/magnetische Aufspaltung ist basisinvariant.",
+  "residual_risks": [
+    "Reale Referenzebenen und Modenkontrolle fehlen; native Kinetik stammt noch aus Vergleichsansätzen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_durchgang_parallelpruefung.wl",
+      "sha256": "736a9612fda360a382d0eb2a73871000371f656cfb2dc13dafd2b2d89085baa5",
+      "sha256_after": "736a9612fda360a382d0eb2a73871000371f656cfb2dc13dafd2b2d89085baa5"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_durchgang_parallelpruefung.txt"
+  ]
+}
