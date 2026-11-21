@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Durchgang und parallele Prüfkriterien (21.11.2026)
+
+Zwei Laststellungen mit kohärenter Portmessung bestimmen den A-Einwegdurchgang trotz einfallender Gegenwelle. Drei abgeglichene Längen liefern einen Konsistenztest für eine isolierte J-Mode. Der verallgemeinerte Eigenwertabstand der elektrischen und magnetischen Kinetik bestimmt, ob eine masselose lokale Laufphasenaufspaltung möglich ist. [Durchgang und Prüfkriterien](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Durchgang_Parallelpruefung.md)
+
 ### OP5: Rücklauf und Einwegfehler (21.11.2026)
 
 Der Vier-Zustands-Rücklauf misst das Produkt der Einwegfaktoren. Der Einwegfehler kann auf 5·10⁻⁷ im Loggewinn begrenzt werden, wenn Echo-Rest und unabhängig belegte gemischte Richtungsasymmetrie zusammen höchstens 10⁻⁶ betragen. A-Durchgang, J-Ausbreitung und native Differenzkopplung haben damit getrennte Prüfgrößen. [Einwegrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Einweg_Ruecklauf.md)
