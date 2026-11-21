@@ -27,6 +27,7 @@ Wer mit einem KI-Werkzeug im Repository arbeitet (Codex, Claude, ChatGPT und and
 - gemergte Zweige nach jedem Merge ohne Rückfrage löschen, lokal und auf GitHub; nicht gemergte bleiben stehen;
 - interne Nummern (H, k, Runden, CT) selbst vergeben und Übergabe- oder Buchführungs-Commits ohne Rückfrage auf `main` pushen; Inhalt nur über PR, Zenodo und neue öffentliche Versionen nur mit Freigabe;
 - das Wiki im selben PR mitziehen;
+- Präsentationen, Audio, Videos, Sprechskripte und Untertitel standardmäßig auf Englisch erstellen. Eine ausdrückliche Sprachvorgabe des Autors hat Vorrang.
 - keine festen absoluten Pfade in Skripten.
 
 Die Abläufe stehen Schritt für Schritt in
