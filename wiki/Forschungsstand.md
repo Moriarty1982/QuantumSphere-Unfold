@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Bandendpunkte und glatte Momentkerne (21.11.2026)
+
+Zwei getrennt abgestimmte Kalibrierfrequenzen reichen für den bisherigen Endpunktbeitrag, verlangen im verlustbehafteten Vergleich aber besonders enge Stabilität. Zwei kohärente Wellenstandards kalibrieren den Pilotabgriff bei endlicher Richtwirkung. Endlich breite glatte Kerne erfüllen die selektiven Momentbedingungen exakt. [Endpunkte und Momentkerne](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Bandendpunkte_Pilot_Momentkerne.md)
+
 ### OP5: Resonatorband und Momentprofil (21.11.2026)
 
 Der synchron resonante Zweimodenvergleich benötigt für das bisherige 100-MHz-Band eine weit größere effektive Kopplung als das räumliche Vergleichsmodell. Ein lokaler Pilotabgriff kürzt den Empfängergewinn. Das gewöhnliche Momentprofil ist direkt konstruierbar, und die b₄-Achsenselektivität schränkt das Variationsinfimum im betrachteten Übergang auf rund 95 915 bis 96 014 ein, gegenüber 362 für die fünf Polynom-Momente allein. [Resonator und Momentprofil](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Resonator_Pilot_Momentprofil.md)

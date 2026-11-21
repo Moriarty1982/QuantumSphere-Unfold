@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Bandendpunkte_Pilot_Momentkerne",
+  "repository": {
+    "commit": "608c5ce361b00dc4e5b54a39ef7235b20c92ebf5",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_bandendpunkte_pilot_momentkerne.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Schmalbandige Endpunkte, bidirektionaler Pilot und glatte Momentkerne.",
+    "coefficient_domain": "Exakte Streualgebra, rationale Intervallzertifizierung und hochpräzise Beispiele.",
+    "conventions": "Materieframe M, komplexe Flusswellen und gewöhnliche radiale Poisson-Metrik.",
+    "inputs": [
+      "A-Leckziel 9e-6; zwei kalibrierte Standards; endliche Beta-Kerne mit glatter symmetrischer Faltung."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Keine vermessenen J-Moden, realen Frequenz- oder Porttoleranzen und keine materielle Ansteuerung."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T16:37:23Z",
+    "runtime_seconds": 11.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_bandendpunkte_pilot_momentkerne.txt",
+      "sha256": "1d25d1ce4f07233a62487673506da6606c05ae29e88927d6baab04d321e28127",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "Exakte Reflexions- und Auskopplungsidentitäten, numerische Pilotfehler und rationale Neumann-Schranken für endliche Momentkerne. Rückgabe Null."
+  ],
+  "result": "Kalibrierung an zwei Endpunkten bedingt ausreichend, der verlustbehaftete Vergleich fordert sub-Hz-Stabilität. Bidirektionale Portnormierung und glatte Profile quantitativ eingegrenzt.",
+  "residual_risks": [
+    "Native Transmission, J-Metrik und Hardwarekalibrierung bleiben offen."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_bandendpunkte_pilot_momentkerne.wl",
+      "sha256": "c8d69c92a79cc220374e25bc209889b3cffcbddf227c7d5944a4c59fe05ac2ca",
+      "sha256_after": "c8d69c92a79cc220374e25bc209889b3cffcbddf227c7d5944a4c59fe05ac2ca"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_bandendpunkte_pilot_momentkerne.txt"
+  ]
+}
