@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Rücklauftoleranzen mit massivem J-Modellkanal (21.11.2026)
+
+Eine auf das Bandzentrum abgestimmte massive J-Dispersion erhält die drei zentralen Auslöschungen. Im 100-MHz-Schichtbeispiel mit gemeinsamen Grenzen von 2,5·10⁻⁷ für relativen Dickenfehler, reelle Indexabweichung und imaginären Index bleibt der einfache Rücklauf unter 3,513·10⁻⁶. Die skalare Reflexion dominiert. Verlust und Phasendrift der Transmission benötigen eine eigene Kalibrierung. [Toleranzrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Ruecklauf_Toleranzen.md)
+
 ### OP5: Phasenaufgelöste Rückstreugrenze (21.11.2026)
 
 Bei endlichem A-Hub liest die erste Rückumwandlung die Wellenzahlsumme sowie einen durch die interne Gegenwelle unterdrückten Differenzanteil. Beide verschwinden im Zentrum des idealisierten Vergleichsbands. Mit der Phasenabschätzung der zweiten Iteration sinkt die analytische 100-MHz-Obergrenze der Reflexionsnorm auf rund 1,84·10⁻⁶ und liegt für diesen Rücklaufbeitrag unter dem bisherigen Quotientenbudget. Reale Dispersion, Schichtfehler und Anschlussantwort bleiben zu prüfen. [Reflexionsrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Rueckstreuung_Band.md)

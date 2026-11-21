@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Ruecklauf_Toleranzen",
+  "repository": {
+    "commit": "821fea00130e73203b24d39707104b46bd595a84",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_ruecklauf_toleranzen.wl",
+    "timeConstraint=55"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "x86 (64-bit); Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Exakte Sollphasen, drei zentrale Nullintegrale und bandweite Rücklaufgrenze mit Dicken-, Index- und Verlusttoleranz.",
+    "coefficient_domain": "Exakte Sollphasen und hochpräzise numerische Auswertung analytischer Schranken.",
+    "conventions": "Materieframe M, massiver freier J-Modellkanal, passiv dämpfende homogene A-Schicht.",
+    "inputs": [
+      "100 MHz, E0 = 0,360329 eV, relative Beimischung höchstens 0,001, halbes illustratives Quotientenbudget für einfachen Rücklauf."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 55
+    },
+    "non_claims": [
+      "Illustratives Schichtmodell. Reale Material- und Anschlussdaten sowie freie J-Ausbreitung offen."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T07:28:02Z",
+    "runtime_seconds": 9.0,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_ruecklauf_toleranzen.txt",
+      "sha256": "7dbe7186bff518216eade5d4a4f395636198a345fbce65b160574a16b09ce32d",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, fünf exakte Nullreste und Budgetvergleich True. Connector-Zeit auf Sekunden gerundet.",
+    "Analytische Bandgrenzen ohne Frequenzgitter."
+  ],
+  "result": "Bei gemeinsamen Grenzen 2,5e-7 beträgt die stetige Rücklaufobergrenze 3,513e-6 und liegt unter dem halben Quotientenbudget.",
+  "residual_risks": [
+    "Eigene komplexe Kalibrierung der Transmission und HCl/H-Anschlussnachweis erforderlich."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_ruecklauf_toleranzen.wl",
+      "sha256": "890fa4c17bf60e6456b52f947111a049ba287d9cfdffb2f80cd25c85f5df1f3f",
+      "sha256_after": "890fa4c17bf60e6456b52f947111a049ba287d9cfdffb2f80cd25c85f5df1f3f"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_ruecklauf_toleranzen.txt"
+  ]
+}

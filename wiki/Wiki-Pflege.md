@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Rücklauftoleranzen.** Forschungsstand und offene Probleme um die gemeinsame Dicken-, Index- und Verlustgrenze ergänzt.
+
 **21.11.2026, OP5-Rückstreuung.** Forschungsstand und offene Probleme um die phasenaufgelöste Rückstreugrenze ergänzt.
 
 **21.11.2026, OP5-Markerhub.** Forschungsstand und offene Probleme um Diagonalkontrast und Rücklaufgrenzen bei endlichem Phasenhub ergänzt.
