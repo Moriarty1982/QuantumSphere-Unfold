@@ -39,8 +39,8 @@
     "seed": null
   },
   "run": {
-    "started_at": "2026-11-21T16:28:22Z",
-    "runtime_seconds": 10.0,
+    "started_at": "2026-11-21T16:29:49Z",
+    "runtime_seconds": 12.0,
     "exit_status": 0,
     "status": "completed",
     "resource_limits": {
@@ -53,22 +53,23 @@
   "outputs": [
     {
       "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_resonator_pilot_momentprofil.txt",
-      "sha256": "ac793a7f813e860ff1b0e303f493923d0861992712a61bae1f7bdba6fba92cc5",
+      "sha256": "3f565a6ac255528b8fc455418b0c1c0882637add0f5a8dd41933510190ec1d5b",
       "kind": "result"
     }
   ],
   "checks": [
-    "Exakte Resonator- und Pilotidentitäten; exakte sechs Polynom-Momente; 80-stelliges Logmomentprofil; rationale Untergrenze >87172,5 True. Rückgabe Null."
+    "Exakte Resonator- und Pilotidentitäten; exakte sechs Polynom-Momente; 80-stelliges Logmomentprofil; rationale Untergrenze >87172,5 True. Rückgabe Null.",
+    "Engere duale Unter- und arithmetisch zertifizierte obere Infimumsgrenze, alle drei rationalen Vergleiche True."
   ],
-  "result": "Bedingter Resonator braucht 11,785 GHz Kopplungsrate für 100 MHz und 9e-6 Leck. Lokaler Pilottransfer braucht unabhängige Richtreferenz. TV-Infimum relaxiert 362, bei zwei Logmomenten zertifizierte Untergrenze >87172,5 und konstruktiver Vergleich um 107530.",
+  "result": "Bedingter Resonator braucht 11,785 GHz Kopplungsrate für 100 MHz und 9e-6 Leck. Lokaler Pilottransfer braucht unabhängige Richtreferenz. TV-Infimum relaxiert 362; bei zwei Logmomenten strikt zwischen 95915,31 und 96013,776.",
   "residual_risks": [
     "Physischer J-Konverter, Richtkopplerkalibrierung, tatsächlich realisierbares Momentprofil und native Metrik offen."
   ],
   "input_artifacts": [
     {
       "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_resonator_pilot_momentprofil.wl",
-      "sha256": "fca76fd7218ff8a1201a2ade6e6c32bb7877c122883f20fca8da1bd329fba60d",
-      "sha256_after": "fca76fd7218ff8a1201a2ade6e6c32bb7877c122883f20fca8da1bd329fba60d"
+      "sha256": "881189ee6b9eb5c9bde2a841e336752c0e1702606918751e98a9c576ba97daac",
+      "sha256_after": "881189ee6b9eb5c9bde2a841e336752c0e1702606918751e98a9c576ba97daac"
     }
   ],
   "declared_results": [

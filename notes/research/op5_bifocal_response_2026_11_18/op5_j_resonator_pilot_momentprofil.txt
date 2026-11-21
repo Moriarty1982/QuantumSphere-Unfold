@@ -12,5 +12,8 @@ During evaluation of In[1]:=                                                    
 eight-node two-log example {absolute moment residual, total variation} = {0. 10   , 107529.493229496}
 During evaluation of In[1]:= rational two-log dual bound {sup-norm ceiling, TV floor} = {1.233524548377855, 87172.56042524867}
 During evaluation of In[1]:= two-log certified floor exceeds 87172.5 = True
+During evaluation of In[1]:=                                                                                                                                                       -13
+tight rational-node variation certificate {lower, upper, inverse perturbation factor} = {95915.312363770442, 96013.775234706349, 7.2598779231070411 10   }
+During evaluation of In[1]:= rounded certificate checks = {True, True, True}
 
 Out[1]= Null

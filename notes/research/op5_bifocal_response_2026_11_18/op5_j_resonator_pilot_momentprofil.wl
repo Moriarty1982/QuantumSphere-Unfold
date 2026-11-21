@@ -50,3 +50,20 @@ supDual=Max[Table[bernAbs[Expand[dualPoly/.tt->-1/2+(i+zz)/32]],{i,0,31}]]+
 Print["rational two-log dual bound {sup-norm ceiling, TV floor} = ",
  N[{supDual,Abs[First[dual]]/supDual},16]];
 Print["two-log certified floor exceeds 87172.5 = ", Abs[First[dual]]/supDual>174345/2];
+
+xn={7500000000000000,7209621281667645,6417758663930909,5332332566518210,
+ 4213952187581498,3289847239741027,2700089336263926,2500000000000000}/10^16;
+bas[x_] := Join[Table[x^j,{j,0,5}],{x Log[2x],x^2 Log[2x]}];
+dualT=Round[10^18 LinearSolve[bas /@ N[xn,90],Table[(-1)^j,{j,0,7}]]]/10^18;
+polT=Expand[dualT.Join[Table[loc^j,{j,0,5}],{loc seriesLog,loc^2 seriesLog}]];
+supT=Max[Table[bernAbs[Expand[polT/.tt->-1/2+(i+zz)/64]],{i,0,63}]]+
+ (3 Abs[dualT[[7]]]/4+9 Abs[dualT[[8]]]/16)/(45 2^44);
+ser60=Sum[(-1)^(j+1) tt^j/j,{j,1,60}];
+appt[x_] := Join[Table[x^j,{j,0,5}],{x,x^2}(ser60/.tt->2x-1)];
+matT=Round[10^25 Transpose[appt /@ xn]]/10^25;
+invT=Inverse[matT]; wT=invT.rhs;
+rhoT=Norm[invT,Infinity] 8(1/(61 2^60)+1/(2 10^25));
+upperT=Total[Abs[wT]]+8 rhoT Norm[wT,Infinity]/(1-rhoT);
+Print["tight rational-node variation certificate {lower, upper, inverse perturbation factor} = ",
+ N[{Abs[First[dualT]]/supT,upperT,rhoT},17]];
+Print["rounded certificate checks = ",{Abs[First[dualT]]/supT>9591531/100,upperT<96013776/1000,rhoT<1}];
