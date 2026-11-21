@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP5: Gekreuzte Schaltkontrolle (21.11.2026)
+
+Der Vier-Zustands-Quotient kürzt getrennte Körper- und Schaltfaktoren. Eine zustandsgemischte Anschlussänderung bleibt mit der Markertransmission multipliziert und braucht einen unabhängigen Kontrolltransfer. Vier oder acht zeitlich gestaffelte Messungen können affine beziehungsweise quadratische Drift des differentiellen Loggewinns kürzen. [Schaltkontrolle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gekreuzte_Schaltkontrolle.md)
+
 ### OP5: Kohärente A-Nullreferenz (21.11.2026)
 
 Zwei flankierende Nullmessungen kürzen affine Drift der logarithmischen Verstärkung und Phase, wenn der Phasenzweig verfolgt wird. Eine schaltabhängige Änderung des komplexen Gewinns braucht eine unabhängige Kontrolle. Für den vollen Zweikanalmarker genügt im Beispiel ein symmetrischer J-Amplitudenanteil von höchstens 2,890·10⁻⁴ je Einkanalanschluss. Die Rechnung budgetiert Zeitdrift und Projektion an beiden Bandenden. [Nullreferenz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Einkanal_Nullreferenz.md)

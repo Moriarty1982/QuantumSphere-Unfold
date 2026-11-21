@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Schaltkontrolle.** Forschungsstand und offene Probleme um den Vier-Zustands-Quotienten und die Driftgrenzen der Kontrollmessung ergänzt.
+
 **21.11.2026, OP5-Nullreferenz.** Forschungsstand und offene Probleme um den symmetrischen Nullabgleich und die Einkanal-Projektionsgrenze ergänzt.
 
 **21.11.2026, OP5-Diagonalreferenz.** Forschungsstand und offene Probleme um die Bandgrenzen beider Diagonalfehler und die verbleibende Referenzreserve ergänzt.
