@@ -102,6 +102,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 ## Änderungsnachweis
 
+**21.11.2026, OP5-Binnenfeld.** Forschungsstand und offene Probleme um gewöhnliche Achsenlaufzeit, Gezeitenproportionalität, Stabilitätsgrenze und ein getrenntes Kalibrierprofil ergänzt.
+
 **21.11.2026, OP5-Schaltphase.** Forschungsstand und offene Probleme um variable Energieabschätzung und die Toleranzformel für ein gewöhnliches äußeres Gezeitensignal ergänzt.
 
 **21.11.2026, OP5-Störungen.** Forschungsstand und offene Probleme um Ableitungsverlust, gewöhnliches Fehlerquadrupol und die Druck- und Uhrkorrektur ergänzt.

@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "claim_id": "OP5_Binnenfeld_Messweg",
+  "repository": {
+    "commit": "d37bc0effc543c7e2501c8f8d4d4b38cd5545127",
+    "dirty": true
+  },
+  "command": [
+    "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+    "code from notes/research/op5_bifocal_response_2026_11_18/op5_j_binnenfeld_messweg.wl",
+    "timeConstraint=60"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "Wolfram Language",
+        "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+      }
+    ],
+    "hardware": "Kernelarchitektur x86 (64-bit). Host nicht ausgewiesen."
+  },
+  "mathematics": {
+    "assertion_tested": "Gewöhnliche Nullbedingung und Gezeitenkontraktion, transversales Antriebspolynom, Potentialspalte, Achsenverhältnis, Kalibrierprofil und transversale Stabilitätsreserve.",
+    "coefficient_domain": "Exakte Symbolrechnung mit rationalen Beispielkoeffizienten.",
+    "conventions": "Materieframe M, Lichtgeschwindigkeit eins, statisches Plateau, lineare Gravitation und lineare geometrische Optik.",
+    "inputs": [
+      "Kompaktes radiales V-Profil, konstanter OP5-Antriebsoperator, bedingte W2-Quellenidentifikation und glatter Zuschnitt mit flachem Strahlkern."
+    ],
+    "bounds": {
+      "time_constraint_seconds": 60
+    },
+    "non_claims": [
+      "Keine physische Kalibrierung oder Herleitung der nativen Higgs–OP5-Kopplung. Keine Aussage über weitere gewöhnliche optische Operatoren oder reale Anschlussdrift."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-21T00:48:34.637Z",
+    "runtime_seconds": 8.688,
+    "exit_status": 0,
+    "status": "completed",
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_binnenfeld_messweg.txt",
+      "sha256": "7fc9945836ef1c524a6698dd28630ef3ac43dc7b22c26fe04f095d911f859195",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    "isError=false, Wolfram-Rückgabe Null, keine Warnung im archivierten Lauf. Start und Laufzeit messen den Connector-Aufruf. Prozesscode nicht ausgewiesen.",
+    "Die Feldübertragung und die Subtraktion des Kalibrierlaufs werden im Text analytisch hergeleitet."
+  ],
+  "result": "Alle ausgewiesenen Residuen sind null. Der Referenzwert m² b4 ist exakt 101/400.",
+  "residual_risks": [
+    "Die Kalibrierung gilt im ausgewiesenen axialen RFF-Vergleich und setzt stabile Krümmungsgewichte und kontrollierte Endpunkte voraus."
+  ],
+  "input_artifacts": [
+    {
+      "path": "notes/research/op5_bifocal_response_2026_11_18/op5_j_binnenfeld_messweg.wl",
+      "sha256": "141f8761745f14fc7a6f568cc3885d6f9e4590481f3e341f29d6cf8361250123",
+      "sha256_after": "141f8761745f14fc7a6f568cc3885d6f9e4590481f3e341f29d6cf8361250123"
+    }
+  ],
+  "declared_results": [
+    "notes/research/op5_bifocal_response_2026_11_18/op5_j_binnenfeld_messweg.txt"
+  ]
+}
