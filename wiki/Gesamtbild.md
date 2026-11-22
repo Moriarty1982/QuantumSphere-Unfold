@@ -1,8 +1,10 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 22. November 2026, Runden bis v4.10.0-r30; öffentliche Baseline v5.2.0 vom 17.11.2026 (bis r28); v5.3.0 in Vorbereitung (PR #228).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 22. November 2026, Runden bis v4.10.0-r30; öffentliche Baseline v5.3.0 vom 22.11.2026 (bis r30).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
-**Veröffentlichungshinweis vom 17.11.2026:** Öffentliche Baseline ist v5.2.0, DOI 10.5281/zenodo.24294648, mit den Runden bis r28 und dem Abschnitt 5.8 zur Herkunft der fehlenden Zahl im Physik-Paper. Kein OP und kein Guard wird dadurch geschlossen.
+**Veröffentlichungshinweis vom 22.11.2026:** Öffentliche Baseline ist v5.3.0, DOI 10.5281/zenodo.24434403, mit den Runden bis r30 und den Abschnitten 5.9 und 7.7 im Physik-Paper. Kein OP und kein Guard ist dadurch geschlossen.
+
+**Veröffentlichungshinweis vom 17.11.2026:** Davor war v5.2.0 die Baseline, DOI 10.5281/zenodo.24294648, mit den Runden bis r28 und dem Abschnitt 5.8 zur Herkunft der fehlenden Zahl im Physik-Paper. Kein OP und kein Guard wird dadurch geschlossen.
 
 **Veröffentlichungshinweis vom 15.11.2026:** Damalige Baseline v5.1.0, DOI 10.5281/zenodo.24237112, mit den Runden bis r14
 und dem Abschnitt zum gebogenen Oktanten im Physik-Paper. Kein OP und kein Guard wird dadurch geschlossen.

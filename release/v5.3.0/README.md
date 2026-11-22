@@ -1,11 +1,13 @@
 # Quantum Sphaera Companion v5.3.0
 
-In preparation (22 November 2026). Not yet published.
+Published on Zenodo on 22 November 2026.
 
-- Version DOI: 10.5281/zenodo.24434403 (reserved 22 November 2026, draft 24434403, unpublished).
+- Version DOI: https://doi.org/10.5281/zenodo.24434403
+- Record and eight deposited files: https://zenodo.org/records/24434403
 - Reservation run: 44992518635 (dry run 44986526110).
 - Concept DOI: https://doi.org/10.5281/zenodo.19210728
 - Predecessor: v5.2.0, DOI 10.5281/zenodo.24294648.
+- Frozen source commit and tag target: 53e9393a9502a9773300d8876bada7950999f138.
 
 ## What is new
 
@@ -36,7 +38,9 @@ In preparation (22 November 2026). Not yet published.
   candidate workflow now sets the default preview on the draft itself. Verification run 44995008051: unpublished draft,
   DOI and version correct, eight files with MD5 equal to the package, default preview
   `Quantum_Sphaera_Companion_v5_3_0_full.pdf`.
-- Publication is recorded here after it runs.
+- Publication run 44996657143 on the author's approval. The public record was checked afterwards: DOI
+  10.5281/zenodo.24434403, version v5.3.0, date 2026-11-22, relation "is new version of" v5.2.0, eight files with MD5
+  equal to the verified draft, the full Companion shown as the first preview.
 
 ## Scope
 
