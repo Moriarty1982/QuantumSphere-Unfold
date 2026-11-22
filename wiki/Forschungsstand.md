@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Runde r31: Orientierung des Oktanten; Holst-Term und Frame-Abbildungen (22.11.2026)
+
+Die Arbeiten nach v5.3.0 stehen jetzt als Runde v4.10.0-r31 im Companion (r31.1–r31.6): H118 (Oktantphase τ·ε·π/4, Vorzeichen = Zeitorientierung der Auslese, im Bestand nicht festgelegt), OP3 ruht (Autor; keine zeitliche Reihenfolge aus Feldabbildungen), W1 + Holst (nur Dualität der Krümmung ändert γ; A² + B² erhalten, γ_L bei gleichem G ausgeschlossen), Horizontnormale und Helizitätsachse nur über (S1) gleich, Datenstand 22.11. (kein offener Test entschieden). Keine neue Rechnung. Notiz: `notes/research/v4_10_0_r31/`.
+
 ### Dynamik: W1 mit Holst-Term und die Frame-Abbildungen (22.11.2026, Erkundung)
 
 Auftrag des Autors: „Ja, Holst-Erkundung“ (Dynamik-Linie W1/W2 dafür geöffnet). Verfahren vorab festgelegt (1e9a5e2a), nicht blind, Wolfram exakt. In W1 + Holst, L = A⟨⋆Σ,R⟩ + B⟨Σ,R⟩ mit B/A = 1/γ, lassen Boosts, Drehungen und der komplexe Boost η + iπ/2 die Wirkung unverändert. Nur eine Dualitätsdrehung der Krümmung ändert γ: arctan γ′ = arctan γ + θ (auf R allein) bzw. + 2θ (auf Σ und R), das Flächenquant κγ um cos(arctan γ)/cos(arctan γ + θ). J_B als Drehung um π/2 gibt γ ↦ −1/γ oder lässt γ fest. Keiner der Winkel π/4, π/2, iπ/2, η, 2η bildet γ_M auf γ_T ab; nötig wäre θ* = −0,1065, im Bestand nicht ausgezeichnet. OP1 offen; W1/W2 sonst weiter eingefroren. Notiz: `notes/research/w1_holst_frame_maps_2026_11_22/`.

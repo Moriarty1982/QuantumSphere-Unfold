@@ -1,0 +1,140 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r31 Source-Only: Orientation of the Octant as a Time Orientation; the Holst Term and the Frame Maps}
+\addcontentsline{toc}{section}{v4.10.0-r31 Source-Only: Orientation of the Octant; the Holst Term and the Frame Maps}
+\label{sec:v4100-r31-orientation-holst}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer records the work done after the release of v5.3.0 on 22 November 2026.  It contains the pre-registered test H118 on the
+orientation of the octant (OP3), the author's decision to let OP3 rest, an exploration of the gravitational action W1 with a Holst
+term and its addendum (OP1), a remark on the horizon normal and the helicity axis, and the status of the data for the pending
+predictions.  H118 was pre-registered but is partly not blind; the Holst work is an exploration with a method fixed before the
+computation, and its addendum was found afterwards.  Earlier layers are not rewritten.  The notes are listed in
+\S\ref{subsec:v4100-r31-notes}.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r31 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r31 results}
+\label{subsec:v4100-r31-results}
+
+\paragraph{Theoremlet v4.10.0-r31.1 (H118: the orientation of the octant is a time orientation; partly not blind).}
+For the eight triples formed by one pole each of \(R=\sigma_z\), \(T=\sigma_x\), \(J_B=\sigma_y\) on \(\chi\) (r16.7) the Bargmann phase is exactly
+\[
+\varphi=\tau\,\varepsilon\,\frac{\pi}{4},
+\]
+with \(\tau=\pm1\) the direction of the loop \(R\to T\to J_B\) and \(\varepsilon\) the product of the three pole signs; all sixteen residues
+vanish and \(|\langle a|b\rangle\langle b|c\rangle\langle c|a\rangle|=1/(2\sqrt2)\).  \(R\), \(T\), \(J_B\) preserve \(\varepsilon\) (the two orbits of r16.7), the
+antipode \(\Theta=i\sigma_yK\) reverses it.  None of nine candidates listed beforehand selects an orbit natively: the frame maps, the
+compensator, moduli, ranks and certificates are even; \(\Theta\) only exchanges the orbits; the direction of the threefold cycle of r16.9
+is odd, \(\operatorname{Im}\langle\psi|U\psi\rangle=\tfrac{\sqrt3}{2}(p_+-p_-)\), but its weights come from the lepton masses; the pole choice,
+the Hilbert-shift index, the carried phase register and the residuum \(\operatorname{Im}\zeta_{\rm sh}\) are not fixed or not mapped.  In
+addition (computed, not a criterion): time reversal of the field amplitudes, \(E\mapsto\bar E\), \(B\mapsto-\bar B\), maps \(s_\pm\mapsto\bar s_\pm\)
+and acts on \(\chi\) as complex conjugation, which reverses the orientation; parity, \(E\mapsto-E\), exchanges \(s_+\) and \(s_-\), acts as
+\(\sigma_x\) and keeps it.  The sign of the octant step is therefore a time orientation of the readout, not fixed by the Companion.
+
+\paragraph{Remark v4.10.0-r31.2 (no temporal order of the three readouts from the field dynamics; OP3 rests).}
+If the loop order were a temporal order, time reversal would flip \(\tau\) and \(\varepsilon\) together and the phase would be even; that is
+an identity, not a test.  Whether a time evolution carries the three readouts into each other is already answered by r16.4(c): only
+diagonal or exchanging maps act on \(\chi\).  Time translation multiplies \(F_\pm\) by the same phase, the duality rotation is the \(U(1)\) about
+the helicity axis, and boosts leave \(\chi\) invariant (r16.3); the Hurwitz cycle acts on another space (r16.5).  A temporal order would
+have to come from the readout protocol (two windows, H117).  No hypothesis number was assigned.  On 22 November 2026 the author decided
+to let OP3 rest until a new idea appears; size (core, OP1) and orientation of the octant phase are both recorded as additional choices.
+
+\paragraph{Theoremlet v4.10.0-r31.3 (the Holst term and the frame maps; exploration, not blind).}
+On the author's decision the frozen dynamics line W1/W2 was opened for one exploration.  Write the gravitational Lagrangian as
+\(L=A\langle\star\Sigma,R\rangle+B\langle\Sigma,R\rangle\) with \(A=-1/(2\kappa)\) (W1, v4.10.0-r01) and \(B/A=1/\gamma\) (Holst), signature \((+,-,-,-)\).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Boosts, rotations and the complex boost with rapidity \(\eta+i\pi/2\), applied to \(\Sigma\) and \(R\), leave \(L\) exactly invariant; a
+complex boost does not change \(\gamma\).
+\item[(b)] A duality rotation of the curvature, \(R\mapsto\cos\theta\,R+\sin\theta\,\star R\), gives \(A'=A\cos\theta+B\sin\theta\),
+\(B'=B\cos\theta-A\sin\theta\), hence \(\arctan\gamma'=\arctan\gamma+\theta\); on \(\Sigma\) and \(R\) together the shift is \(2\theta\).
+\item[(c)] \(J_B\) as rotation by \(\pi/2\) gives \(\gamma\mapsto-1/\gamma\) (curvature only) or leaves \(\gamma\) (both).  None of the angles
+\(\pi/4,\pi/2,i\pi/2,\eta,2\eta\), listed beforehand, maps \(\gamma_M\) onto \(\gamma_T\); the required angle \(\theta^*=-0.1065\) is not distinguished.
+\end{enumerate}
+The only place in W1 plus Holst where a frame-dependent \(\gamma\) can arise is a duality rotation of the curvature, which is not a symmetry
+of the action and changes \(\kappa\) and \(\gamma\) together.  This sharpens r30.1.
+
+\paragraph{Theoremlet v4.10.0-r31.4 (duality preserves \(A^2+B^2\); found afterwards).}
+Every duality rotation, real or complex and in any sequence, preserves \(A^2+B^2\).  For real results the area quanta
+\(a\propto\kappa\gamma=-1/(2B)\) then obey
+\[
+\frac{a'}{a}=\pm\sqrt{\frac{1+\gamma'^2}{1+\gamma^2}},
+\]
+so \(\gamma_M\mapsto\gamma_T\) gives \(\pm0.981\), independent of the path, of the number of steps and of any distortion of the sphere.  The
+factor \(\gamma_T/\gamma_M=0.536\) at equal Newton constant required by r10.3 is excluded for every sequence of duality rotations.  The
+value \(1.855\) at \(\theta=\pi/4\), \(0.53\%\) from \(\gamma_L\), belongs to \(\gamma'=1.62\), not to \(\gamma_T\); it equals \(\sqrt2/(1-\gamma_M)\) and has
+no weight.
+
+\paragraph{Remark v4.10.0-r31.5 (horizon normal and helicity axis).}
+The question left open in the \(U1\) note of 16 November 2026, whether the horizon normal coincides with the helicity axis of \(\chi\), is
+settled without computation: \(s=(E+iB)\cdot(E+iB)\) is a scalar, so every spatial rotation, including the one about the normal, acts
+trivially on \(\chi\), while the helicity axis belongs to the duality rotation.  Without (S1) the two axes never coincide; with (S1) the
+question is one of definition.  OP1 rests on (S1) and on the assignment of the counting rules.
+
+\paragraph{Remark v4.10.0-r31.6 (data status of the pending predictions, 22 November 2026).}
+No pending test is decided.  H96 and H112: DESI has published cosmology from DR1 and DR2 only, no DR3 BAO result; no Euclid cosmology
+result was found.  H102: the 2026 edition of the Particle Data Group gives \(m_\tau=1776.93\pm0.09\)\,MeV; no edition after 13 November
+2026 was found.  H9 and H112: the latest JUNO value remains \(\sin^2\theta_{12}=0.3036\pm0.0064\) (29 September 2026), above the
+threshold \(\sigma\le0.004\).  H42, H46, H100: no NuFIT version after 6.1 was found; the NuFIT site could not be read directly.
+
+\subsection*{v4.10.0-r31 frames}
+\label{subsec:v4100-r31-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item R, T, \(J_B\) act on \(\chi\) as \(\sigma_z\), \(\sigma_x\), \(\sigma_y\) and keep the orientation of the octant (r31.1).
+\item Time reversal of the field amplitudes acts on \(\chi\) as complex conjugation (\(z\mapsto\bar z\)) and reverses the orientation; it is not
+the tachyon map \(z\mapsto iz\).
+\item The gravitational action W1 plus Holst is invariant under real and complex boosts; a frame-dependent \(\gamma\) would need a duality
+rotation of the curvature, not part of convention~F.
+\end{itemize}
+
+\subsection*{v4.10.0-r31 register entries}
+\label{subsec:v4100-r31-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r31\\
+\midrule
+orientation of the octant step (OP3) & time orientation of the readout; not fixed by the Companion (H118); OP3 rests\\
+temporal order of the three readouts & not generated by field maps (r16.4(c)); would need the readout protocol\\
+frame-dependent \(\gamma\) in W1 plus Holst & only via a duality rotation of the curvature; \(\gamma_L\) at equal \(G\) excluded (r31.4)\\
+horizon normal and helicity axis & coincide only through (S1) (r31.5)\\
+H9, H42, H46, H96, H100, H102, H112 & pending; no decisive data on 22 November 2026\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r31 notes}
+\label{subsec:v4100-r31-notes}
+
+\texttt{llm/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H118\_\allowbreak Oktant\_\allowbreak Orientierung.md} (commit 371f14d7),
+\texttt{llm/\allowbreak Ergebnis\_\allowbreak H118\_\allowbreak Oktant\_\allowbreak Orientierung.md}, \texttt{llm/\allowbreak h118\_\allowbreak octant\_\allowbreak orientation.wl},
+\texttt{notes/\allowbreak research/\allowbreak w1\_\allowbreak holst\_\allowbreak frame\_\allowbreak maps\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit 1e9a5e2a,
+script \texttt{holst\_\allowbreak duality.wl}), all dated 2026-11-22.  Computations in Wolfram Language; outputs stored next to the scripts.
+
+\subsection*{v4.10.0-r31 ledger and guard update}
+\label{subsec:v4100-r31-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r31}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; the orientation of the octant, the counting rules per frame and a
+frame-dependent \(\gamma\) not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r31,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r31}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
