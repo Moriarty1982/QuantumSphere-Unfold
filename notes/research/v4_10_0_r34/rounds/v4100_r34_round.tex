@@ -1,0 +1,110 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r34 Source-Only: Searching the Companion for the Directed Mediator of the OP5 Case}
+\addcontentsline{toc}{section}{v4.10.0-r34 Source-Only: The Directed Mediator of the OP5 Case}
+\label{sec:v4100-r34-mediator}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.10.0-r33 the directed contrast of the OP5 case rests on a massive, subluminal mediator coupled linearly to the Higgs radius.  This
+layer checks a fixed list of eight candidates from the Companion against five requirements: (V1) massive, (V2) subluminal, (V3) linear
+coupling to the Higgs radius or to \(\mathcal J_h\), (V4) a distinguished axis, (V5) a field equation.  It is an exploration with a method
+fixed before the computation and is not blind.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r34 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r34 results}
+\label{subsec:v4100-r34-results}
+
+\paragraph{Theoremlet v4.10.0-r34.1 (the connectors of k185).}
+With matter \(p_M=m(\cosh\eta,\sinh\eta)\) and tachyon image \(p_T=m(\sinh\eta,\pm\cosh\eta)\) at a common rapidity, the counter-propagating pair
+connector \(q=p_M+p_T\) has
+\[
+ q^2=2m^2\sinh2\eta>0,\qquad \frac{q^1}{q^0}=-e^{-2\eta},
+\]
+so it is massive, subluminal (\(|v|=0.291\) at \(\eta_{\rm sym}\)) and tied to the axis of counter-propagation.  The counter-propagating
+transition connector has \(q^2=-2m^2\sinh2\eta\) and \(|v|=e^{2\eta}\); the co-moving connectors are light-like.  \emph{Proof.} Direct
+evaluation of \(q^2=(q^0)^2-(q^1)^2\) and \(q^1/q^0\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r34.2 (the optical mode of the two-component material).}
+For the two superposed continua of r32.2 with pair spring \(k\), the longitudinal optical branch has
+\[
+ \omega_0^2=\frac{k(\rho_1+\rho_2)}{\rho_1\rho_2},\qquad
+ v_{\rm opt}^2=\frac{K(c_\sigma\rho_1^2+\rho_2^2)}{\rho_1\rho_2(\rho_1+\rho_2)},
+\]
+with resting centre of mass, \(\rho_1u+\rho_2w=0\).  The Higgs source \(\delta\mathcal J_h=Y_1\partial u+Y_2\partial w\), \(Y_a=\sum y\,n_0\) of component \(a\),
+couples to this mode exactly if \(Y_1/\rho_1\neq Y_2/\rho_2\).  \emph{Proof.} The determinant of the plane-wave matrix gives the two
+branches; at \(q=0\) the optical eigenvector is \((-\rho_2/\rho_1,1)\).  \(\square\)
+
+\paragraph{Remark v4.10.0-r34.3 (classification).}
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+candidate & requirements met\\
+\midrule
+pair connector, counter-propagating & V1, V2, V4; V3 open; no field equation (V5)\\
+transition connector, counter-propagating & tachyonic and superluminal; in W2 it is read as \(\Phi\) itself\\
+co-moving connectors & light-like\\
+massive vectors of W2 & no linear coupling to the Higgs radius (r33.2), Lorentz invariant\\
+abelian gauge field of W1, graviton & massless; no linear coupling at minimal coupling\\
+condensate I4 & no field equation; mass and speed open\\
+optical mode of the material & V1--V5, with a directed preparation for V4; a mode of the material, not of the vacuum\\
+\bottomrule
+\end{tabular}
+\end{center}
+No vacuum field of the Companion meets V1--V5.  The counter-propagating pair connector is the closest candidate for a new field: mass,
+subluminal speed and direction follow kinematically, but an action and a linear coupling to the Higgs radius are missing, and its speed
+\(e^{-2\eta}\) is not the value \(r_m=\tfrac12\) set in the comparison model.  The optical mode meets all requirements; with it the directed
+contrast would be a property of the preparation, distinguishable by its dependence on \(Y_1/\rho_1-Y_2/\rho_2\) and on the optical gap.
+
+\subsection*{v4.10.0-r34 frames}
+\label{subsec:v4100-r34-frames}
+
+The connectors combine a matter momentum and its tachyon image under convention~F; the optical mode is computed in the matter frame M.  No
+quantity of another frame is compared without the stated map.
+
+\subsection*{v4.10.0-r34 register entries}
+\label{subsec:v4100-r34-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r34\\
+\midrule
+directed mediator as a vacuum field & not in the Companion (r34.3)\\
+counter-propagating pair connector & massive, subluminal, directed; action and coupling open\\
+optical mode of the material & meets all requirements; makes the contrast a material property\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r34 notes}
+\label{subsec:v4100-r34-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak mediator\_\allowbreak search\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit a3443d99,
+script \texttt{mediator\_\allowbreak search.wl}, output in \texttt{run/}); k185 in \texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak w1/}.
+
+\subsection*{v4.10.0-r34 ledger and guard update}
+\label{subsec:v4100-r34-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r34}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; a vacuum mediator and its action not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r34,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r34}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

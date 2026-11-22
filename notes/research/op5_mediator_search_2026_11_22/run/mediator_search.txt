@@ -1,0 +1,13 @@
+Tatsaechliche Ausgabe von mediator_search.wl (Wolfram-MCP-Kern, 22.11.2026).
+Teil (1) aus dem ersten Lauf. Teil (2) aus dem zweiten Lauf: Im ersten Lauf waehlte die Wurzel ohne Vorzeichenannahmen den falschen
+Zweig (Luecke und Eigenvektor ungueltig, "Part::partw"); im Skript werden die Positivitaetsannahmen jetzt vor dem Loesen gesetzt.
+"Symbol::undefined2" betrifft freie Symbole, keine Fehler. Bruchdarstellung zeilenweise zusammengezogen.
+
+(1) Paar gegenlaeufig: q^2 = 2 m^2 Sinh[2 e],  v = q1/q0 = -E^(-2 e),  bei eta_sym: q^2/m^2 = 3.1477, |v| = 0.29082
+(1) Uebergang gegenlaeufig: q^2 = -2 m^2 Sinh[2 e],  v = q1/q0 = E^(2 e),  bei eta_sym: q^2/m^2 = -3.1477, |v| = 3.4385
+(1) Paar mitlaufend: q^2 = 0,  v = q1/q0 = 1,  bei eta_sym: q^2/m^2 = 0., |v| = 1.
+(1) Uebergang mitlaufend: q^2 = 0,  v = q1/q0 = -1,  bei eta_sym: q^2/m^2 = 0., |v| = 1.
+(2) Zweige bei q = 0: {0, k (r1 + r2)/(r1 r2)}
+    optischer Zweig: Luecke w0^2 = k (r1 + r2)/(r1 r2);  v_opt^2 = K (c r1^2 + r2^2)/(r1 r2 (r1 + r2));  akustisch: v_ak^2 = (1 + c) K/(r1 + r2)
+    Eigenvektor der optischen Mode bei q = 0 (u, w): {{-(r2/r1), 1}};  r1 u + r2 w = 0
+    Kopplung an delta J_h = Y1 d_z u + Y2 d_z w proportional zu -(r2 Y1/r1) + Y2;  null genau fuer Y1/r1 = Y2/r2: 0

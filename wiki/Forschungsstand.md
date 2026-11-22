@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Runde r34: Vermittler-Suche für den OP5-Fall (22.11.2026, Erkundung)
+
+Auftrag des Autors: „Vermittler-Suche starten“. Methode vorab (a3443d99), nicht blind, Wolfram exakt. Acht Kandidaten des Bestands wurden gegen fünf Anforderungen geprüft (massiv, unterluminal, linear an den Higgsradius gekoppelt, gerichtet, mit Feldgleichung). Kein Vakuumfeld erfüllt alle fünf. Der gegenläufige Paar-Konnektor aus einem Materiezustand und seinem Tachyonbild ist massiv (q² = 2m² sinh 2η), unterluminal (|v| = e^{−2η} = 0,29) und gerichtet, hat aber weder Wirkung noch eine belegte Kopplung an den Higgsradius; der gegenläufige Übergangs-Konnektor ist tachyonisch, die mitlaufenden sind lichtartig. Die optische Mode des zweikomponentigen Materials hat die Lücke ω₀² = k(ρ₁+ρ₂)/(ρ₁ρ₂) und koppelt genau bei Y₁/ρ₁ ≠ Y₂/ρ₂ an die Higgsquelle; sie erfüllt alle Anforderungen, macht den gerichteten Kontrast aber zu einer Eigenschaft der Präparation. Physik-Paper 6.9, Preprint B.1 und 5.6 nachgezogen. OP5 offen. Notizen: `notes/research/op5_mediator_search_2026_11_22/`, `notes/research/v4_10_0_r34/`.
+
 ### Runde r33: Annahme (40) gegen W2 geprüft (22.11.2026, Erkundung)
 
 Auftrag des Autors: „lass uns annahme 40 untersuchen“. Methode vorab (a9b61787), nicht blind, Wolfram exakt. Im Higgs-Sektor von W2 gilt für den Radialmodus 2(∂_t² − Δ)η + 4μ²η = 𝒥_h; die Gleichsetzung δJ_OP5 = δ𝒥_h ist also exakt, wenn das OP5-Vergleichsfeld η ist. Das erzwingt c_h = 1 (gesetzt waren 1/2) und im minimalen W2 g₀ = 0 (keine lineare Metrik-Mischung) sowie g_m = 0 (Kopplung an massive Vektoren quadratisch). Der gerichtete Kontrast hängt damit an einer anderen Annahme: einem unterluminalen, linear an den Higgsradius gekoppelten massiven Vermittler, den W2 nicht enthält. Der kompakte gewöhnliche Teil bleibt unberührt. Physik-Paper 6.9, Preprint B.1 und 5.6 nachgezogen. OP5 offen. Notizen: `notes/research/op5_assumption40_w2_2026_11_22/`, `notes/research/v4_10_0_r33/`.
