@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP3: Orientierung des Oktanten ist eine Zeitorientierung (H118, 22.11.2026)
+
+Vorab festgelegt (Commit 371f14d7), teilweise nicht blind, Wolfram exakt. **H118a bestätigt:** Die Phase der acht Oktant-Tripel aus Polen von R, T, J_B ist τ·ε·π/4 (τ Umlaufrichtung, ε Produkt der Polvorzeichen); R, T, J_B erhalten ε, die Umkehrwalze Θ kehrt es um. **H118b widerlegt:** Von neun vorab gelisteten Kandidaten legt keiner die Bahn nativ fest (gerade: Frame-Abbildungen, Kompensator, Beträge/Ränge/Zertifikate; Schalter: Θ; zirkulär: Zeitrichtung des Dreierzyklus r16.9 über die Leptongewichte; ohne Festlegung oder Abbildung: Polwahl, Hilbert-Shift, Phasenregister, Residuum Im ζ_sh). Zusatz: Die Zeitumkehr der Feldamplituden wirkt auf χ als komplexe Konjugation und kehrt die Orientierung um, die Parität wirkt wie σ_x und erhält sie. Das Vorzeichen des Oktantschritts ist also eine Zeitorientierung der Auslese. OP3 offen. Dateien: `llm/Vorab_Notiz_H118_*`, `llm/Ergebnis_H118_*`, `llm/h118_octant_orientation.*`.
+
 ### Deutscher Preprint im Repository nachgezogen (22.11.2026)
 
 Der deutsche Preprint „Quantum Sphaera: Auf dem Weg zu einem gemeinsamen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie“ (v0.1.0, [10.5281/zenodo.24405552](https://doi.org/10.5281/zenodo.24405552)) liegt jetzt als Quelle unter `paper/preprint-de/`. Neu gegenüber 0.1.0: Abschnitt 3.3.3 zum Vorzeichen des Oktantschritts (Beträge und Endpunkte legen nur π/4 fest; der Kompensator vernichtet die geschlossenen ungeraden Zustände; Auswahl des Rückwegs offen, H115–H117) und Abschnitt 5.4 zur einen Zahl β = 0,5494 mit fünf getrennten Gleichsetzungen, der Zufallsabschätzung und Rovelli–Speziale. Neue Daueranweisung: Vor jeder Übergabe werden Physik-Paper, Wiki und Preprint auf den Forschungsstand gebracht. Eine neue Zenodo-Version des Preprints nur mit Freigabe.
