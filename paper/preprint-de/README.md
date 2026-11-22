@@ -12,6 +12,9 @@ Abschnitt 3.3.3 „Welches Vorzeichen der Oktantschritt hat“ (H115–H117) und
 (`AGENTS.md`). Eine neue Zenodo-Version entsteht nur mit Freigabe des Autors. Beim Übernehmen wurden die Zeilenenden auf LF
 gesetzt; die Hashes in `baseline.json` beziehen sich auf den Codex-Stand.
 
+Nachtrag 22.11.2026: Anhang B (`sections/b-herleitungen-op5.tex`) leitet die Gleichungen (39)–(51) aus Abschnitt 4.4 her und legt die
+Annahmen (39) und (40) offen; Wolfram-Prüfung unter `audit/anhang-b/`.
+
 ## Querverweise
 
 - [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Die Arbeitsgrundlage ist der bestätigte [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026.
