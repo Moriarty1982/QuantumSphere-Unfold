@@ -157,6 +157,10 @@ Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56)
 
 ## OP5: kosmologische Konstante und Vakuumbilanz
 
+**A-Port und Aktorprüfung (21.11.2026).** Pro Frequenz fallen separable multiplikative Fehler im A-Vierfachkontrast exakt heraus. Ein unabhängig kalibrierter Vierzustands-Phasenrest kann die Einzelgrenzen weiter verschärfen. Für die gewöhnlichen Aktoren gibt es eine Sechs-Richtungen-Messung mit Fehlergrenze und einen Stellwegtest für den gemeinsamen Gegenhub. Reale Referenz- und Materialdaten fehlen. [Kreuzkontrast und Aktorprüfung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_A_Kreuzkontrast_Aktorpruefung.md)
+
+**OP5, A-Auswertung und Aktorprüfung (21.11.2026).** Die ausführbare Auswertung braucht reale, unabhängig kalibrierte gewöhnliche Portdaten. Ein gewöhnlicher Vorversuch belegt weder freie J-Ausbreitung noch native Kopplung. Aktorkennwerte und materielle Zielmetriken bleiben offen. [Rechenprüfung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_A_Port_Auswertung.md)
+
 **OP5, optischer Vorversuch und Ansteuerung (21.11.2026).** A-Referenz, gemischter Delay und Werkstoffdaten sind real zu vermessen. Der optische Prüfplan bestimmt keine freie J-Ausbreitung. [Kontrollrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Optischer_Kontrollversuch_Ansteuerungsfenster.md)
 
 **OP5, Endpunktphase und Materialhub (21.11.2026).** Unabhängiger J-Ausgang, Dämpfungsgrenze, komplexer Standardeintrag bei Frequenzwechsel und tatsächliche gewöhnliche Materialgrenzen sind zu belegen. [Parallelrechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Endpunktphase_Laststandard_Materialhub.md)

@@ -1,0 +1,18 @@
+Wolfram Language, timeConstraint=35
+During evaluation of In[1]:= Wolfram: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Separable multiplicative factors, residual: 0
+During evaluation of In[1]:= Relative disk factorization, residual: 0
+During evaluation of In[1]:= Additive example cross ratio before/after: {1, 671/651}
+During evaluation of In[1]:= Kelvin reconstruction Gram characteristic polynomial: ((1 - 5*lambda + 2*lambda^2)*(2 - 7*lambda + 4*lambda^2)^2)/32
+During evaluation of In[1]:= Kelvin reconstruction determinant, minimum singular value: {1/(2*Sqrt[2]), 0.46821319246213563150851823296843779822`14., 2.13577920506985699860904510673245633402`14.}
+
+Out[1]= Null
+
+Python: 3.12.10
+nominal: exit=0, upper=within-budget, prior=3.81809072504e-07, selected=2.21037185703e-07
+common: exit=0, upper=within-budget, prior=1.98159047349e-06, selected=2.21037185681e-07
+cell-phase: exit=1, upper=uncertified, prior=2.76159047349e-06, selected=1.00103718568e-06
+grouped: exit=0, upper=within-budget, prior=2.76159047349e-06, selected=2.11037185681e-07
+affine: exit=1, upper=uncertified, prior=1.08532699275e-06, selected=9.24490448709e-07
+curvature: exit=1, upper=model-inconsistent, prior=7.45623277889e-07, selected=6.23015953827e-07
+JSON round-trip: exit=0; empty or incomplete grouped calibration: exit=2; zero in reference disk: exit=1

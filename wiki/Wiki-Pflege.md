@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**21.11.2026, OP5-Kreuzkontrast und Aktorprüfung:** Schranke am gemessenen Vierfachkontrast und Messvorschrift für lokale Aktorantwort mit gemeinsamem Gegenhub ergänzt.
+
 **12.11.2026, String-Längenmodell:** Stabiles elastisches Vergleichsminimum
 und rückgerechnetes 2/3-Beispiel dokumentiert; gleiche Strings, offene
 Torus-Realisierung und zusätzliche Massenwurzel-Auslese getrennt.
@@ -103,6 +105,8 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 ## Änderungsnachweis
 
 **21.11.2026, Subagentenregel.** Die Hinweise für LLMs erläutern die projektweite Arbeitsteilung bei unabhängigen Teilaufgaben.
+
+**21.11.2026, OP5-A-Auswertung.** Forschungsstand und offene Probleme um ausführbaren A-Prüfpfad, synthetische Fehlerfälle und dimensionslose Aktorgrenzen ergänzt.
 
 **21.11.2026, OP5-Kontrollversuch.** Forschungsstand und offene Probleme um optischen Prüfplan, kohärente Delaygrenze und gewöhnliches Ansteuerungsfenster ergänzt.
 
