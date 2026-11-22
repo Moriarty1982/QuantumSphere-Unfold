@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Runde r30: Eine Zahl und ihre Übersetzungen; Orientierung des Oktantschritts (22.11.2026)
+
+Vorbereitung für v5.3.0 (Auftrag des Autors: „Zenodo-Veröffentlichung vorbereiten“, Zielversion v5.3.0, Physik-Paper ergänzen). Die Arbeiten vom 17. bis 22.11. stehen jetzt als Runde v4.10.0-r30 im Companion. Keine neue Rechnung, keine neue Nummer.
+- **Teil I, OP1 (Erkundungen):** Ein unitär wirkender Boost ändert das Flächenspektrum nicht (Rovelli–Speziale); ein frame-abhängiges Flächenquant braucht eine nicht-unitäre Frame-Abbildung oder eine Mittelwert-Lesart (r30.1). Ein Boost mit η_M entlang der Normalen bevorzugt die Extremzustände, wählt sie aber nicht aus (r30.2). Die T-Regel (nur j = ½) hat keinen datenfreien Grund; die Dimensionsleiter ist für T im Kreis, J_B² = −1 und 47 Einheiten liefern keinen (r30.3, r30.4). Die drei Treffer von γ_L sind mit Zufall verträglich, sobald man die Wahl des Paars aus 36 mitzählt (r30.5). Die Zahlen von OP2–OP5 gehen auf eine Zahl zurück, die fünf Übersetzungen sind einzeln gesetzt (r30.6); kein Vermittler-Kandidat erfüllt das Profil A1–A5 (r30.7).
+- **Teil II, OP3 (H113–H117, nicht blind):** Keine farbäquivariante lineare Auslese des Generationsrasters (r30.8); der Photonpunkt legt die Bargmann-Phase nicht fest, unter Bures-Identifikation det G(r) = (√(1+r) − 1)/2 (r30.9); der direkte Kompensator hat auf geschlossenen ungeraden Zuständen Rang null, eine reelle Halbierung braucht eine zusätzliche Phasenwahl (r30.10); Beträge und Endpunkte legen das Vorzeichen des Oktantschritts nicht fest (r30.11); im Zwei-Fenster-Modell 3× +π/4, 3× −π/4, 9 gesperrt, 1 mehrdeutig (r30.12).
+- **OP5 und Rechenprüfungen:** geschlossene Form des ungeraden Dirac-Schalenplateaus, Ausschluss gleicher Sondensignale für streng konvexe bifokale Formen, Hintergrundmodell aus gepaartem Vakuum und Staub ohne Herleitung der H96-Quote; Bandmaschine MMA/SystemVerilog in 209 Fällen gleich (r30.13).
+- **Physik-Paper:** zwei neue Unterabschnitte („Orientation of the octant step“ im Massenteil, „One number and several translations“ im Ausblick) und je ein Satz im Haupttext; neue Literatur Rovelli–Speziale 2003.
+
+OP1–OP5, C5, C6/T2 offen. Notiz: `notes/research/v4_10_0_r30/`.
+
 ### Spinorband: Wegwahl im zweiten Umlauf (22.11.2026)
 
 Zwei Umläufe tragen als endliches Vergleichsmodell. Der erste hält Kandidaten in einem vorläufigen Zustand fest, der zweite kann bei unterschiedlicher Zulässigkeit entgegengesetzte Oktantphasen wählen. Beide zulässigen Richtungen lassen den Ausgang mehrdeutig. Wolfram, MMA und beide HDL-Steuerungen bestätigen den Vergleich. Eine native vorzeichenempfindliche HC-/Routing-Regel ist offen.
