@@ -1,0 +1,11 @@
+Tatsaechliche Ausgabe von string_mediator.wl (Wolfram-MCP-Kern, 22.11.2026), ein Lauf.
+"Symbol::undefined2" betrifft freie Symbole. Im Ein-Quanten-Residuum steht Sqrt[T0] Conjugate[Sqrt[T0]] = T0 (T0 > 0).
+Bruchdarstellung zeilenweise zusammengezogen.
+
+Normierung: Int s^2 = 1, Int s'^2 = Pi^2/L^2, Int s = 2 Sqrt[2] Sqrt[L]/Pi, Int s_2 (Mode 2) = 0
+(1) Ein-Quanten-Amplituden: {I c1 k1 tau Sqrt[T0/w1]/(Sqrt[2] v), I c1 k2 tau Sqrt[T0/w1]/(Sqrt[2] v)};  Residuum bei w1: a c1^2 Sqrt[T0] tau^2 Conjugate[Sqrt[T0]]/v^2
+    Zwei-Quanten-Amplituden: {-(1/2) tau (k1^2 - 2 w1^2)/(Sqrt[2] v w1), -(1/2) k1 k2 tau/(v w1), -(1/2) tau (k2^2 - 2 w1^2)/(Sqrt[2] v w1)}
+(2) Residuum bei 2 w1: tau^2 (a^2 - 4 a w1^2 + 8 w1^4)/(2 v^2 w1)
+    am Pol x = 4 w1^2: a^2 tau^2/(v^2 Sqrt[x]) - a tau^2 Sqrt[x]/v^2 + tau^2 x^(3/2)/(2 v^2) = tau^2 (2 a^2 - 2 a x + x^2)/(2 v^2 Sqrt[x])
+    skaliert auf den a^2-Koeffizienten von N_m: R2/lambda = 2 a^2/3 - 2 a x/3 + x^2/3;  Differenz zu N_m: -(1/3) x^2
+(4) in der Familie von r36.3: Koeffizienten (x^2, a x, a^2) = {1/3, -(2/3), 2/3}

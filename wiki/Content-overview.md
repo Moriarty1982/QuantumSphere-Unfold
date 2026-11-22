@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r36.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r37.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -155,6 +155,8 @@ Layer v4.10.0-r34 searches the Companion for that mediator. No vacuum field meet
 Layer v4.10.0-r35 works out that material route. A directed mediator needs a distinguished frame, which here comes from the sample. A uniaxial two-component preparation gives a directed massive term (mass = optical gap) that couples only if the components carry different Higgs fractions of their rest mass. The leading contrast does not need the subluminal coefficient; the numerator is one power of the transverse wave number short of the comparison model. The route carries partially.
 
 Layer v4.10.0-r36 tries a vacuum background instead. Without a background no linear coupling of a new field to |Φ|² gives a directed pole (the vector and tensor exchanges reduce to contact terms). With a frame and an axis, a spin-2 field with a positive polarization sum reproduces the numerator of the comparison model exactly. Frame, axis and polarization structure are chosen, not derived; the route carries partially.
+
+Layer v4.10.0-r37 follows the deferred idea I1: a string stretched between the matter and the tachyon system, with a tension that depends on the Higgs radius. The string supplies frame, axis and polarization structure itself. Its two-quantum states reproduce both directed parts of the numerator in the exact ratio; the undirected part is half as large, and a second pole appears at half the mass. The route carries partially; the tension law is assumed.
 
 ## Never claimed
 
