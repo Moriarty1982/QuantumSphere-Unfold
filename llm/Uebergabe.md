@@ -9,8 +9,9 @@
 - **Offene PRs:** #234 (Preprint zitiert v5.3.0, 5.9, 7.7) auf Freigabe als 3ec7caa6 gemergt; offen nur #233 (QAM-Artikel, deutscher Neuentwurf; aus einer anderen Claude-Sitzung, Zweig `claude/qam-fachartikels-entwurf-f58063`, nicht von dieser Sitzung).
 - **Repo-Einstellungen (per API, 22.11.):** Zweige nach Merge automatisch löschen; Ruleset 27827305 (main: keine Löschung, kein Force-Push; normale Pushes gehen). Autor: Firewall-Allowlist gesetzt, „Require approval for workflow runs“ aus. **Copilot nicht nutzbar:** keine Copilot-Lizenz (Pro/Pro+/Business/Enterprise); Release-Vorlagen „Release 1–4“ arbeiten Claude/Codex ab. Der Autor will nicht in GitHub eingreifen; Freigaben nur im Chat.
 - **Stand der Artikel (Daueranweisung):** Physik-Paper mit r30 (v5.3.0); Wiki Gesamtbild, Forschungsstand, Home, Versionen-und-Quellen auf v5.3.0; deutscher Preprint `paper/preprint-de/` mit 3.3.3 und 5.4, Verweise auf v5.3.0 (PR #234 gemergt); keine neue Zenodo-Version des Preprints (nur mit Freigabe). Die deutsche Lesefassung `qam/editions/de/` hängt weiter an der englischen Ausgabe vom 11.11.
-- **Nummern:** zuletzt vergeben H117 (Codex), Runde v4.10.0-r30 (diese Sitzung).
-- **Nächster Schritt:** Forschung: native Rückwegwahl (OP3), reale OP5-Messdaten; OP1 steht bei der Zuordnung der Zählregeln (Vermittler fehlt). Nächste Version erst mit genug Stoff für beide Ausgaben.
+- **Nummern:** zuletzt vergeben **H118** (diese Sitzung), Runde v4.10.0-r30.
+- **H118 vorab festgelegt** (Commit 371f14d7, Zweig `research/op3-h118-return-selection`, teilweise nicht blind): Legt der Bestand die Orientierung des Oktanten fest? Kandidatenliste K1–K9, Klassen G/U/Z/O/S, H118a exakte Phasenformel τ·ε·π/4, H118b mindestens ein Kandidat in Klasse U. Rechnung (Wolfram, `llm/h118_octant_orientation.wl`) noch nicht gelaufen.
+- **Nächster Schritt:** H118 rechnen und Ergebnis-Notiz schreiben; danach Forschung: native Rückwegwahl (OP3), reale OP5-Messdaten; OP1 steht bei der Zuordnung der Zählregeln (Vermittler fehlt). Nächste Version erst mit genug Stoff für beide Ausgaben.
 
 ## 22.11.2026 (Codex)
 
