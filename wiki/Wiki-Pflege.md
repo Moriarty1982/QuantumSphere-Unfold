@@ -1,5 +1,9 @@
 # Wiki-Pflege
 
+**22.11.2026, Spinorband und zwei Umläufe:** Zweischritt-Wahl, Mehrdeutigkeit und MMA-/HDL-Vergleich ergänzt.
+
+**22.11.2026, Spinorband:** Vernam-Vorarbeit, orientierte Oktant-Phase und Rückkehrregel eingeordnet.
+
 **22.11.2026, OP3-Kompensator:** Native ungerade Auslese und reellen Rang-fünf-Vergleich ergänzt.
 
 **22.11.2026, OP3-Photon-Eigenpunkt:** Bures-Vergleich, reeller Gram-Rang und Gegenproben zur Normalstabilität eingetragen.
