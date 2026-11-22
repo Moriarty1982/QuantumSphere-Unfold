@@ -15,7 +15,7 @@ gesetzt; die Hashes in `baseline.json` beziehen sich auf den Codex-Stand.
 ## Querverweise
 
 - [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Die Arbeitsgrundlage ist der bestätigte [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026.
-- [Quantum Sphaera Companion v5.2.0](https://doi.org/10.5281/zenodo.24294648). Der Datensatz enthält Vollausgabe und 30-seitige Physik-Ausgabe. Beide sind im Manuskript gesondert zitiert.
+- [Quantum Sphaera Companion v5.3.0](https://doi.org/10.5281/zenodo.24434403). Der Datensatz enthält Vollausgabe und 31-seitige Physik-Ausgabe. Beide sind im Manuskript gesondert zitiert.
 - [Quellennachweis pro Abschnitt](SOURCES.md).
 - [Plan für den eigenständigen QAM-Artikel](QAM-ARTIKELPLAN.md).
 
