@@ -1,0 +1,158 @@
+\clearpage
+\section{Herleitungen zu Abschnitt~\ref{sec:op5-coupling}}
+\label{sec:anhang-b}
+
+Dieser Anhang begründet die Gleichungen \eqref{eq:op5-drive} bis \eqref{eq:op5-drive-energy} und die anschließende Gleichung für den
+Piola-Tensor. Jeder Rechenschritt ist exakt mit Wolfram Language nachgeprüft; Skript und Originalausgabe liegen im Quellrepository
+unter \texttt{paper/preprint-de/audit/anhang-b/}. Zuerst wird offengelegt, welche Gleichungen keine Herleitung haben, sondern Annahmen
+sind.
+
+\subsection{Was angenommen und was hergeleitet ist}
+\label{sec:anhang-b-annahmen}
+
+Zwei Eingaben des Abschnitts sind gesetzt.
+\begin{itemize}
+ \item \textbf{Der Antriebsoperator \eqref{eq:op5-drive}.} Seine Form folgt aus dem reduzierten OP5-Vergleichsmodell mit einem
+ gerichteten massiven Vermittler und dem Einstein-Kanal; der Einstein-Beitrag \(\tfrac32 g_0^2 d\) ist im Haupttext an der
+ transversalen Verbesserung \(S^{\mu\nu}\) nachvollzogen. Die Koeffizienten \(Z\), \(r_m\), \(c_h\), \(g_0\), \(g_m\), \(\Omega_0\) und \(m\) sind
+ dagegen gewählt. Die im Text genannte Wahl ist eine in den Notizen geprüfte, keine abgeleitete.
+ \item \textbf{Die Gleichsetzung \eqref{eq:op5-match}.} Sie setzt die radiale Higgsquelle \(\delta\mathcal J_h\) der Materie mit dem
+ Antrieb \(\delta J_{\rm OP5}\) des Vergleichsfelds gleich, in der Normierung, in der beide dieselbe Einheit tragen. Begründet wäre sie
+ durch eine Wirkung, in der der Higgsradius \(h_{\rm W}\) mit dem Koeffizienten eins an das Vergleichsfeld \(h\) koppelt, also durch einen
+ Term der Form \(\int h\,\mathcal J_h\) in derselben Wirkung, aus der auch \eqref{eq:op5-drive} folgt. Eine solche Wirkung liegt nicht vor.
+\end{itemize}
+Die Gleichsetzung trägt nur die gerichtete Hälfte der Rechnung. Ohne sie gelten weiterhin die mechanische Konstruktion, die Erhaltung
+des präparierten Tensors \eqref{eq:op5-tensor} und die Kompaktheit des gewöhnlichen Außenbeitrags \eqref{eq:op5-compact}; der Tensor
+\(\delta T\) hängt nur von der Verschiebung ab. Ohne sie entfällt dagegen die Aussage, dass dieselbe Präparation den gerichteten Kontrast
+\eqref{eq:op5-contrast} antreibt. Mit einer anderen Normierung \(\delta J_{\rm OP5}=c\,\delta\mathcal J_h\) skaliert der Kontrast mit \(c\);
+seine Form und sein Vorzeichen bleiben. Ob \(c\neq0\) ist, entscheidet erst eine gemeinsame Wirkung.
+
+\subsection{Die Quelle der elastischen Verschiebung}
+\label{sec:anhang-b-quelle}
+
+Für einen Gradienten \(\mathbf b=\nabla S\) gilt mit dem isotropen Cauchy-Tensor
+\[
+ \sigma(\nabla S)=\lambda(\Delta S)\,I+2\mu\,\nabla\nabla S,\qquad
+ \mathcal L\nabla S=\nabla\cdot\sigma(\nabla S)=(\lambda+2\mu)\nabla\Delta S=K_L\nabla\Delta S .
+\]
+Daraus folgt \(\nabla\cdot\mathcal L\mathbf b=K_L\Delta^2S\). Mit \eqref{eq:op5-tensor} ist \(\delta T^{00}=-\beta_\rho K_L\Delta^2S\), und mit
+\eqref{eq:op5-density}, \(\delta\epsilon_{\rm mat}|_v=-v\,\delta\mathcal J_h\), ergibt sich \eqref{eq:op5-elas-source}:
+\(\delta\mathcal J_h=-\delta T^{00}/v=(\beta_\rho K_L/v)\Delta^2S\).
+
+\subsection{Die Wahl des Profils, Gleichung \eqref{eq:op5-profile}}
+\label{sec:anhang-b-profil}
+
+Setzt man \(S=-\dfrac{v}{\beta_\rho K_L}D_0\mathcal P_{\rm dyn}V\) in \eqref{eq:op5-elas-source} ein, so ist
+\[
+ \delta\mathcal J_h=-\Delta^2D_0\mathcal P_{\rm dyn}V=\mathcal P_{\rm dyn}\bigl(-D_0\Delta^2V\bigr)=\mathcal P_{\rm dyn}\,\delta H ,
+\]
+weil Operatoren mit konstanten Koeffizienten kommutieren. Das ist genau die Antwort, die das Vergleichsmodell auf \(\delta H\) verlangt,
+sodass \eqref{eq:op5-match} auf diesem Profil erfüllt ist. Zugleich ist \(\mathbf b=\nabla S=-D_0\mathbf b_*\) mit
+\(\mathbf b_*=(v/(\beta_\rho K_L))\nabla\mathcal P_{\rm dyn}V\). Da \(\delta T\) in \eqref{eq:op5-tensor} linear in \(\mathbf b\) ist und nur
+Ableitungen mit konstanten Koeffizienten enthält, folgt \(\delta T[\mathbf b]=-D_0\,T_*\) mit \(T_*=\delta T[\mathbf b_*]\). \(T_*\) ist als Tensor
+derselben Form wie \eqref{eq:op5-tensor} für sich erhalten.
+
+\subsection{Der kompakte gewöhnliche Außenbeitrag, Gleichung \eqref{eq:op5-compact}}
+\label{sec:anhang-b-kompakt}
+
+In harmonischer Eichung lautet die linearisierte Einstein-Gleichung \(D_0\bar\gamma_{\mu\nu}=16\pi G\,\delta T_{\mu\nu}\) mit
+\(D_0=\partial_t^2-\Delta\). Setzt man \(\delta T=-D_0T_*\) ein, ist
+\[
+ D_0\bigl(\bar\gamma_{\mu\nu}+16\pi G\,T_{*,\mu\nu}\bigr)=0 .
+\]
+Vor der Schaltung verschwinden \(V\), \(T_*\) und \(\bar\gamma\); eine einlaufende freie Welle ist ausgeschlossen. Die retardierte Lösung der
+homogenen Wellengleichung mit verschwindenden Anfangsdaten ist null, also \(\bar\gamma_{\mu\nu}=-16\pi G\,T_{*,\mu\nu}\). Weil \(V\) räumlich
+kompakt ist, ist es auch \(T_*\), und damit verschwinden \(\bar\gamma\) und seine lineare Krümmung außerhalb dieses Trägers, auch
+während der Schaltung. Die Aussage benutzt nur die Linearität, die konstanten Koeffizienten und die Anfangsdaten; die Gleichsetzung
+\eqref{eq:op5-match} geht nicht ein.
+
+\subsection{Das Achsenprofil, Gleichungen \eqref{eq:op5-axis-profile} und \eqref{eq:op5-normalized-axis}}
+\label{sec:anhang-b-achse}
+
+Mit \(\xi=r_\perp^2/R^2\) und dem zweidimensionalen radialen Laplace-Operator \(\Delta_\perp=\partial_r^2+r^{-1}\partial_r\) gilt für \(r_\perp^{2j}\)
+\[
+ \Delta_\perp\,\xi^j=\frac{(2j)^2}{R^2}\,\xi^{j-1}=\frac{4j^2}{R^2}\,\xi^{j-1}.
+\]
+Dreimal angewandt ergibt das für die beiden Terme des Profils die Faktoren \(4^3\cdot25\cdot16\cdot9=230400\) und
+\(4^3\cdot36\cdot25\cdot16=921600=4\cdot230400\), also
+\[
+ \Delta_\perp^3\bigl(\xi^5-\kappa\xi^6\bigr)=\frac{230400}{R^6}\bigl(\xi^2-4\kappa\xi^3\bigr).
+\]
+Der Vorfaktor \(-\mathcal A R^6/230400\) in \eqref{eq:op5-axis-profile} ist so gewählt, dass \(\Delta_\perp^3V=-\mathcal A\,p(z)(\xi^2-4\kappa\xi^3)\)
+im flachen Kern, wo \(\chi=1\) ist. Auf dem statischen Plateau ist \(D_0=-\Delta\) und damit \(\delta H=-D_0\Delta^2V=\Delta^3V\). Schreibt man
+\(\Delta^3=(\Delta_\perp+\partial_z^2)^3\), enthält jeder Term mit einer Längsableitung höchstens zwei radiale Laplace-Operatoren; sein
+niedrigster Grad in \(\xi\) ist \(\xi^3\). Daher ist \(\delta H=-\mathcal A p(z)\,\xi^2+O(\xi^3)\). Mit \(\Delta_\perp\xi^2=16\xi/R^2\) folgt die zweite
+Form in \eqref{eq:op5-normalized-axis}. Die Wahl von \(\kappa\) als Quotient der Momente sorgt dafür, dass das Querintegral
+\(\int V\,d^2r_\perp=\pi R^2\int_0^\infty V\,d\xi\) je Längsschnitt verschwindet.
+
+\subsection{Der Gezeitenkontrast, Gleichung \eqref{eq:op5-contrast}}
+\label{sec:anhang-b-kontrast}
+
+Im massiven Vergleich ist \(f=\Delta_\perp H/m^2\), also nahe der Achse
+\[
+ \delta f=\frac{\Delta_\perp\delta H}{m^2}=-\frac{16\mathcal A p(z)}{m^2R^2}\,\xi+O(\xi^2).
+\]
+Für eine transversale Einheitsrichtung \(e\) ist \(\partial_e^2\xi=2/R^2\), und Terme ab \(\xi^2\) haben auf der Achse keine zweite Ableitung.
+Damit ist \(\partial_e^2(\delta f)(0,z)=-32\mathcal A p(z)/(m^2R^4)\). Die verwendete Auslese ist der geometrisch-optische Gezeitenterm eines
+Strahls entlang der Achse, \(\Delta\mathcal I=-\tfrac12\int\partial_e^2(\delta f)\,dz\); er misst die integrierte transversale Krümmung des
+Vergleichsfelds für eine feste Polarisation. Einsetzen gibt \(\Delta\mathcal I=16\mathcal A\int p\,dz/(m^2R^4)\). Die Normierung
+\(-\tfrac12\) ist eine Konvention der Auslese; das Vorzeichen und der Faktor hängen an ihr, das Nicht-Verschwinden nicht.
+
+\subsection{Der Bündelfaktor, Gleichung \eqref{eq:op5-beam}}
+\label{sec:anhang-b-buendel}
+
+Integriert man über \(z\), fallen alle Beiträge mit einer Längsableitung als Randterme weg, weil \(p\) kompakt ist; es bleibt
+\(\int\delta f\,dz=-\mathcal A P\,\Delta_\perp(\xi^2-4\kappa\xi^3)/m^2\) mit \(P=\int p\,dz\). Für eine radiale Funktion \(F(r)\) ist das Mittel
+von \(\partial_e^2F\) über den Azimut eines Strahls im Abstand \(r\) gleich \(\tfrac12\Delta_\perp F\), weil
+\(\partial_x^2F=F''\cos^2\phi+(F'/r)\sin^2\phi\). Mit \(\Delta_\perp\xi=4/R^2\), \(\Delta_\perp\xi^2=16\xi/R^2\) und \(\Delta_\perp\xi^3=36\xi^2/R^2\) folgt
+für das Verhältnis zum Achsenwert
+\[
+ \frac{\langle\partial_e^2\delta f\rangle_\phi(\xi)}{\partial_e^2\delta f(0)}=1-36\kappa\,\xi .
+\]
+Über ein achsenparalleles Bündel mit rotationssymmetrischem Gewicht gemittelt, entsteht \eqref{eq:op5-beam} mit \(\langle\xi\rangle\).
+
+\subsection{Die planare Kontrolle, Gleichung \eqref{eq:op5-planar-check}}
+\label{sec:anhang-b-planar}
+
+Der Kern \(K_m(z)=\tfrac m2e^{-m|z|}\) hat das Integral eins; also ist \(\int_{\mathbb R}f\,dz=\int\delta\rho\,dz\). Liegt der Träger von
+\(\delta\rho\) in \([0,L]\), ist für \(z<0\)
+\(f(z)=\int\tfrac m2e^{-m(z'-z)}\delta\rho(z')\,dz'=e^{mz}f(0)\), und entsprechend \(f(z)=e^{-m(z-L)}f(L)\) für \(z>L\). Die beiden
+Ausläufer haben die Integrale \(f(0)/m\) und \(f(L)/m\). Zieht man sie vom Gesamtintegral ab, steht \eqref{eq:op5-planar-check} da.
+
+\subsection{Die Energiebilanz beim Schalten, Gleichung \eqref{eq:op5-drive-energy}}
+\label{sec:anhang-b-energie}
+
+Die mechanische Energiedichte ist
+\[
+ e_{\rm mech}=\tfrac12\rho_1|\dot{\mathbf u}|^2+\tfrac12\rho_2|\dot{\mathbf w}|^2+W(\varepsilon(\mathbf u))+c_\sigma W(\varepsilon(\mathbf w))
+ +\tfrac k2|\mathbf R_{\rm F}|^2 ,
+\]
+mit der elastischen Energie \(W\) zu \(\mathsf C\). Ihre Zeitableitung enthält \(\partial_tW(\varepsilon(\mathbf u))=\sigma_1:\nabla\dot{\mathbf u}
+=\nabla\cdot(\sigma_1\dot{\mathbf u})-\dot{\mathbf u}\cdot\mathcal L\mathbf u\), entsprechend für \(\mathbf w\). Auf den Bewegungsgleichungen
+\(\rho_1\ddot{\mathbf u}=\mathcal L\mathbf u-k\mathbf R_{\rm F}\) und \(\rho_2\ddot{\mathbf w}=c_\sigma\mathcal L\mathbf w+k\mathbf R_{\rm F}\) heben sich
+die elastischen Volumenterme gegen die kinetischen, und die Federterme ergeben
+\(-k\mathbf R_{\rm F}\cdot\dot{\mathbf u}+k\mathbf R_{\rm F}\cdot\dot{\mathbf w}+k\mathbf R_{\rm F}\cdot(\dot{\mathbf u}-\dot{\mathbf w}-\dot{\mathbf d})=-k\,\mathbf R_{\rm F}\cdot\dot{\mathbf d}\).
+Übrig bleiben \(\nabla\cdot\mathbf F\) und \(P_{\rm Schalt}\). Die Wolfram-Prüfung rechnet den eindimensionalen Fall mit derselben Struktur.
+
+\subsection{Der Piola-Tensor in zweiter Ordnung}
+\label{sec:anhang-b-piola}
+
+Für das Saint-Venant--Kirchhoff-Gesetz ist \(P=(I+\mathsf H)\,\mathsf C\,E\) mit \(E=\tfrac12(\mathsf H+\mathsf H^{\mathsf T}+\mathsf H^{\mathsf T}\mathsf H)\).
+Der quadratische Anteil in \(\mathsf H\) ist \(\mathsf C(\tfrac12\mathsf H^{\mathsf T}\mathsf H)+\mathsf H\,\mathsf C\,\varepsilon\). Für symmetrisches
+\(\mathsf H\) ist \(\mathsf H^{\mathsf T}\mathsf H=\mathsf H^2\) und
+\[
+ \mathsf C(\tfrac12\mathsf H^2)+\mathsf H\,\mathsf C\,\mathsf H
+ =\tfrac\lambda2\operatorname{tr}(\mathsf H^2)I+\mu\mathsf H^2+\lambda(\operatorname{tr}\mathsf H)\mathsf H+2\mu\mathsf H^2=N(\mathsf H).
+\]
+Die zweite Komponente mit Steifigkeit \(c_\sigma\mathsf C\) und \(\mathbf w_1=-\mathbf u_1/c_\sigma\) trägt \(c_\sigma N(-\mathsf H/c_\sigma)=N(\mathsf H)/c_\sigma\),
+weil \(N\) quadratisch ist. Die linearen Anteile zweiter Ordnung addieren sich zu \(\mathsf C\varepsilon(\mathbf u_2)+c_\sigma\mathsf C\varepsilon(\mathbf w_2)
+=\mathsf C\varepsilon(S_2)\). Zusammen ergibt das die Gleichung für \((P_1+P_2)^{(2)}\).
+
+\subsection{Was die Prüfung abdeckt}
+\label{sec:anhang-b-pruefung}
+
+Exakt geprüft sind: die Identität \(\mathcal L\nabla S=K_L\nabla\Delta S\) und \(\nabla\cdot\mathcal L\nabla S=K_L\Delta^2S\); die Faktoren \(4j^2\) und
+230400; der Achsenwert \(16\mathcal A P/(m^2R^4)\); der Bündelfaktor \(1-36\kappa\xi\); die planare Identität an einem Beispielprofil
+(sie ist linear in \(\delta\rho\)) samt Ausläufern und Gesamtintegral; die Energiebilanz im eindimensionalen Fall; der quadratische
+Piola-Anteil \(N(\mathsf H)\) und der Faktor \(1/c_\sigma\). Nicht geprüft und nicht prüfbar ohne eine gemeinsame Wirkung sind die Koeffizienten von
+\eqref{eq:op5-drive} und die Gleichsetzung \eqref{eq:op5-match}.

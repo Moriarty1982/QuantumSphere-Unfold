@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Deutscher Preprint: Anhang B mit Herleitungen zu Abschnitt 4.4 (22.11.2026)
+
+Auf Anregung eines anderen Sprachmodells, vom Autor beauftragt: Die Gleichungen (39)–(51) der OP5-Fallstudie im Preprint sind in einem neuen Anhang B Schritt für Schritt hergeleitet (Quelle der elastischen Verschiebung, Profilwahl, kompakter Außenbeitrag, Achsenprofil mit Faktor 230400, Gezeitenkontrast 16𝒜P/(m²R⁴), Bündelfaktor 1 − 36κ⟨ξ⟩, planare Kontrolle, Energiebilanz, Piola-Tensor zweiter Ordnung) und exakt mit Wolfram geprüft (`paper/preprint-de/audit/anhang-b/`). Offengelegt sind die beiden Annahmen: die gewählten Koeffizienten des Antriebsoperators (39) und die Gleichsetzung (40) der Higgsquelle mit dem OP5-Antrieb. Ohne (40) bleiben Mechanik, Erhaltung und kompakter gewöhnlicher Außenbeitrag gültig; der gerichtete Kontrast skaliert mit der Normierung und braucht eine gemeinsame Wirkung. OP5 bleibt offen. Preprint jetzt 43 Seiten.
+
 ### Runde r31: Orientierung des Oktanten; Holst-Term und Frame-Abbildungen (22.11.2026)
 
 Die Arbeiten nach v5.3.0 stehen jetzt als Runde v4.10.0-r31 im Companion (r31.1–r31.6): H118 (Oktantphase τ·ε·π/4, Vorzeichen = Zeitorientierung der Auslese, im Bestand nicht festgelegt), OP3 ruht (Autor; keine zeitliche Reihenfolge aus Feldabbildungen), W1 + Holst (nur Dualität der Krümmung ändert γ; A² + B² erhalten, γ_L bei gleichem G ausgeschlossen), Horizontnormale und Helizitätsachse nur über (S1) gleich, Datenstand 22.11. (kein offener Test entschieden). Keine neue Rechnung. Notiz: `notes/research/v4_10_0_r31/`.
