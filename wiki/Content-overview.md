@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r38.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r39.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -159,6 +159,8 @@ Layer v4.10.0-r36 tries a vacuum background instead. Without a background no lin
 Layer v4.10.0-r37 follows the deferred idea I1: a string stretched between the matter and the tachyon system, with a tension that depends on the Higgs radius. The string supplies frame, axis and polarization structure itself. Its two-quantum states reproduce both directed parts of the numerator in the exact ratio; the undirected part is half as large, and a second pole appears at half the mass. The route carries partially; the tension law is assumed.
 
 Layer v4.10.0-r38 gives the mediator a first set of field equations: a tensor field transverse to the axis and a scalar, both coupled to the Higgs radial mode. Their exchange reproduces the mediator term of the comparison model exactly, with unique couplings, and the trace coupling it needs (κ = ½) is the value the string gives. The ansatz is free of ghosts and statically stable exactly if g_m² ≤ 3r_m. The scalar is still set; the ansatz carries partially.
+
+Layer v4.10.0-r39 obtains the scalar as a component of one tensor field on the subspace orthogonal to the axis. With one mass and the identically conserved coupling ∂_a∂_bη − η_ab□_∥η (the version on that subspace of the improvement behind the comparison operator) the exchange is exact again, provided the time–transverse components do not couple, which is a choice. The decomposition differs from that of the string; the result carries partially.
 
 ## Never claimed
 

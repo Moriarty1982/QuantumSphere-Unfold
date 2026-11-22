@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r38.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r39.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -163,6 +163,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Vakuumweg (r36):** Ohne Hintergrund gibt keine lineare Kopplung eines neuen Feldes an |Φ|² einen gerichteten Pol. Mit Rahmen und Achse erreicht ein Spin-2-Feld mit positiver Polarisationssumme den Zähler des Vergleichsmodells exakt. Rahmen, Achse und Polarisationsstruktur sind gesetzt; trägt teilweise.
 - **Stringweg (r37, I1):** Ein zwischen M- und T-System gespannter String mit vom Higgsradius abhängiger Spannung liefert Rahmen, Achse und Polarisationsstruktur selbst. Seine Zwei-Quanten-Zustände treffen die gerichteten Anteile des Zählers exakt; der ungerichtete Anteil ist halb so groß, und bei halber Masse tritt ein zweiter Pol auf. Trägt teilweise; die Spannungsabhängigkeit ist angenommen.
 - **Feldgleichungen (r38):** Ein Tensorfeld quer zur Achse und ein Skalar, beide an den Higgs-Radialmodus gekoppelt, geben Feldgleichungen, deren Austausch den Vermittlerterm des Vergleichsmodells exakt und mit eindeutigen Kopplungen reproduziert. Die nötige Spurkopplung κ = ½ ist der Wert des Strings. Der Ansatz ist geisterfrei; stabil ist er genau für g_m² ≤ 3r_m. Der Skalar bleibt gesetzt; trägt teilweise.
+- **Ein Tensorfeld (r39):** Der Skalar folgt als Komponente eines einzigen Tensorfelds auf dem Unterraum senkrecht zur Achse, mit einer Masse und der identisch erhaltenen Kopplung ∂_a∂_bη − η_ab□_∥η (der Unterraum-Fassung der Verbesserung, aus der die Form des Vergleichsoperators stammt). Der Austausch ist dann wieder exakt, sofern die Zeit-Quer-Komponenten nicht koppeln; das ist gewählt. Die Zerlegung weicht von der des Strings ab; trägt teilweise.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*
