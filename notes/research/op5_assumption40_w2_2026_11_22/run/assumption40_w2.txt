@@ -1,0 +1,14 @@
+Tatsaechliche Ausgabe von assumption40_w2.wl (Wolfram-MCP-Kern, 22.11.2026), erster Lauf ohne Fehler.
+"Symbol::undefined2" betrifft freie Symbole der symbolischen Rechnung, keine Fehler. Bruchdarstellung zeilenweise zusammengezogen.
+
+(1) V'(v) = 0;  V''(v) = 4 mu^2
+    V'(v + eta) linear = 4 eta mu^2
+    => 2 (d_t^2 - Lap) eta + 4 mu^2 eta = J_h,  J_h = -Sum y n;  m_H^2 = 2 mu^2, kinetischer Faktor Z_W = 2
+(2) minimal: linearer Anteil von T (proportional zu g_munu) = 0  (keine lineare eta-Metrik-Mischung im Vakuum)
+    mit xi R |Phi|^2: linearer Term = Sqrt[2] mu Rcurv xi/Sqrt[lam]  (Mischung proportional zu xi v)
+    Kopplung eta an Z-Boson: 2 Sqrt[2] Sqrt[lam] mZ2 Zsq/mu * eta, quadratisch in Z (Zsq = Z_mu Z^mu): keine lineare Mischung
+(3) Bedingungen fuer OP5-Skalar = W2-Radialmodus: {{Z -> (4 - 3 g02)/2, ch2 -> 1, Om2 -> -4 mH2/(-4 + 3 g02)}}
+    insbesondere c_h^2 = 1 ;  minimal (xi = 0) ist g0 = 0, also Z = 2, Omega^2 = m_H^2
+    gesetzte Daten Z = 1, c_h^2 = 1/2, g0^2 = 3/100: Koeffizient von q = 109/200, von -x = 209/200  (gleich nur bei Lorentz-Invarianz)
+(4) Kern ohne gerichteten Kanal (g_m = 0): -3 g02 (q - x)/2 - (Om2 + ch2 q - x) Z ;  der gerichtete Kontrast (r32.4) lebt im Vermittler-Sektor N_m/d_m
+    Lorentz-invariantes massives Feld in W2 haette r_m = 1; gesetzt ist r_m = 1/2 (unterluminal): kein W2-Gegenstueck
