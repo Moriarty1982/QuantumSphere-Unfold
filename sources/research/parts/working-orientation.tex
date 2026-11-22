@@ -1,110 +1,126 @@
-\section*{Working Scope and Reading Route}
-\addcontentsline{toc}{section}{Working Scope and Reading Route}
+\section*{Results, Conditions, and Reading Route}
+\addcontentsline{toc}{section}{Results, Conditions, and Reading Route}
 \label{v480:reading-route}
 
-\paragraph{The 5.0 edition.}
-Version 5.0.0 introduces the database-backed statement inventory,
-immutable content versions, explicit dependencies and guards, and selected
-LaTeX exports. The full-source manuscript remains available while the
-database representation is completed and reviewed. The database import
-does not certify proofs or close physical identification gaps. This edition continues published v4.11.0, Version DOI
-\href{https://doi.org/10.5281/zenodo.24108818}{10.5281/zenodo.24108818}.
-The v5 version DOI identifies the shared package of the full Companion
-and the selected English physics paper. The open string-relaxation
-question is recorded in Section~\ref{sec:v500-string-relaxation}.
+This guide identifies which results can be used in the development
+manuscript, what their physical interpretations require, and where later
+corrections qualify claims retained from earlier versions. The published
+baseline is v5.2.0
+(\href{https://doi.org/10.5281/zenodo.24294648}{Version DOI}).
 
-This is the full-source version v\workingversion{}, derived from the
-complete v4.7.0 monolith, not from the older modular synchronization
-baseline, and continuing the published v4.8.0 line, whose layers are
-carried in (\S\ref{v480:support-release-layers} and
-\S\ref{v480:support-post-release-layers}). The published v4.9.0 tag preserves the earlier source baseline;
-the 4.10 main body carries explicit corrections and status notes.
-The v4.11 research line starts with the conditional Koide readout
-and finite-gap analysis in \S\ref{sec:v4110-koide-overlap}.
-Provenance of the previous versions: v4.10.0, Version DOI
-\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357};
-v4.9.0, Version DOI
-\href{https://doi.org/10.5281/zenodo.23534954}{10.5281/zenodo.23534954};
-v4.8.0, Version DOI
-\href{https://doi.org/10.5281/zenodo.23365244}{10.5281/zenodo.23365244};
-v4.7.0, Version DOI
-\href{https://doi.org/10.5281/zenodo.20232911}{10.5281/zenodo.20232911}.
-The Concept DOI on the title page is common to all versions. The main line brings together the core
-construction, physical readouts, explicit premise qualifications and
-the next research interface. The appendices retain the complete
-definitions, proofs, protocols, finite ledgers and provenance.
+\subsection*{Mathematical results to start with}
 
-\paragraph{The 4.10 consolidation.}
-Section~\ref{sec:v410-state-mediator} separates state carriers, quantum and
-relativistic readouts, orientation-complete local mediation and calibrated
-clocks. It records finite field-compatibility and precision tests without
-claiming a regional OP5 solution. Figure~\ref{fig:op5-multimode-slices}
-retains the original affine numerical baseline; later fitted fields are
-separate research records.
+\paragraph{Compensator and sector structure.}
+On its declared carrier, the average of the identity and a linear unitary involution
+is a projector onto the fixed sector. The algebraic decomposition
+and the proposed identification of its sectors with physical states
+have separate premises.
+\hyperref[subsec:v480-r04-standalone-compensator]{Standalone compensator argument}.
 
-\paragraph{What changes, and what does not.}
-The reading route changes; a stored or relocated assertion does not
-thereby become a valid theorem. The inherited material is preserved
-as source evidence, including unresolved or overstrong historical
-wording. The explicit qualifications in
-Section~\ref{v480:premise-audit} govern the known MM/HC, exponent and
-OP5 issues. Section~\ref{v480:koide-kernel} proves the additional Koide condition
-and constructs a relative local kernel model, with its remaining native
-activation obligations made explicit. Section~\ref{v480:hc-mass-identification}
-tests the HC-to-lepton-root identification, distinguishes sector and
-generation triples, and isolates the missing residual coupling.
-Section~\ref{v480:generation-coupling} constructs a conditional
-closure-defect coupling and closed generation seeds, separates slot
-readouts from candidate eigenmasses, and tests the pacer phase.
-Section~\ref{v480:native-operator-link} tests the native operator
-bridge, derives the minimal penalty compression, and separates a
-conditional gapped-sector mass law from exact closure.
-Section~\ref{v480:coupling-scale-candidate} evaluates a normalized
-cyclic coupling candidate, tests the scale choices and proves a
-fixed-shape mass-ratio obstruction.
-Section~\ref{v480:tensor-shift-coupling} extends this test to explicit
-comparison and kinetic metrics, distinguishing covariant shifts
-from added physical tensor weights and target-derived fits.
-Section~\ref{v480:hc-dynamics-geometry} carries the conditional HC
-program through projected dynamics, real actions and bilinear geometry.
-It separates the off-shell null stress match from the current test and
-the conditional same-induced-frame trace obstruction.
-Section~\ref{v490:cartan-source} adds the explicitly declared neutral
-Cartan comparison, conditional gravitational constraint propagation,
-and a finite normal-source law for compatible tangential jets. These
-results do not establish the native action or regional existence.
-The current endpoint is summarized in
-Section~\ref{v480:current-v4}; the v4.8 research program is separated
-in Section~\ref{v480:integration}. Neither section promotes a finite
-detector result to exact all-readout closure.
+\paragraph{Quotient and readout factorization.}
+A total readout constant on the declared equivalence classes factors
+uniquely through their quotient. A partial readout also needs a
+class-saturated domain for the factored map to reproduce it as a partial
+function. The relation and the admitted fragment are supplied.
+Propositions~\ref{v480:kernel-quotient} and
+\ref{v480:kernel-partial-factorization}.
 
-\paragraph{Current boundary.}
-The baseline permits guarded local/restricted and effective
-matter-detector statements under their stated assumptions. Exact
-finite C5 zero, unrestricted all-readout terminality, C6/T2 closure
-and a global photon-clock/Riemann theorem are not established here.
-The inherited scale and zero-status distinctions are retained in
-Appendix~\ref{v480:support-frames}; the next metric/field-equation
-program does not remove them.
+\paragraph{Operator compression and spectral shape.}
+The minimal defect penalty compresses to a Gram matrix for a closed
+isometric embedding. For nonnegative principal mass roots, the Koide ratio equals $2/3$ exactly when the
+singlet weight is one half of the total squared mass-root norm in the
+orthogonal singlet--doublet split. Evaluating the physical matrix
+elements and explaining the norm balance are separate tasks.
+Propositions~\ref{v480:native-penalty-identity} and
+\ref{v480:koide-equal-norm}.
 
-\paragraph{Formal-language route.}
-QAM supplies object coding and readout records, MML an instruction
-language, and MMA guarded transitions. Their full inherited definitions
-are in Appendix~\ref{v480:support-qam}. The later shifted normal form,
-not an unqualified return to the pre-shift syntax, is the integration
-interface for new material; see
-Appendix~\ref{v480:support-shift}. Historical pre-shift displays remain
-available with their occurrence and backtranslation records.
-Typed commands and short references are neither background executions
-nor proof certificates.
+\subsection*{Physical identifications that remain open}
 
-\paragraph{Release discipline.}
-The published v4.7.0, v4.8.0 and v4.9.0 TeX and PDF are unchanged.
-This development line contains the source of the v4.10.0 release (Version DOI
-\href{https://doi.org/10.5281/zenodo.23991357}{10.5281/zenodo.23991357}); no new physical closure claim
-is made by it. In inherited
-fragments, the macro \texttt{docversion} deliberately retains its
-v4.7.0 value so historical records are not relabelled as new results.
-The working title and metadata identify this copy separately.
+\paragraph{Native operators.}
+The conditional MM/HC spectral identification requires scalar action
+on the selected subspace and exclusion of further vectors at that
+eigenvalue in its complement. The native carrier, operator action and
+joint matrix elements needed for the mass coupling remain to be
+established.
+Proposition~\ref{v480:conditional-mm} and
+Section~\ref{v480:native-spectral-data}.
+
+\paragraph{Physical mass scales.}
+The gapped-block construction yields a conditional effective mass
+operator. Its scale and the physical readout need independent
+selection. In the tested fixed-shape candidate, changing a common
+positive scale leaves the failed mass ratio unchanged.
+Propositions~\ref{v480:native-schur-mass}
+and~\ref{v480:coupling-gap-ratio-obstruction}.
+
+\paragraph{Field equations and closure.}
+The neutral Cartan comparison determines source values from compatible
+tangential jets in a declared finite system. Regional existence,
+a native action and unrestricted closure require further arguments.
+A positive residual below a C5 detector tolerance does not establish
+exact finite zero. The unrestricted all-readout and C6/T2 claims
+remain open. Proposition~\ref{v490:source-law-theorem} and
+Sections~\ref{v490:cartan-evidence} and~\ref{v480:op5-premises}.
+
+\clearpage
+\subsection*{Earlier claims and their present status}
+\label{v5:earlier-claims}
+
+The source retains earlier statements with their numbering for
+traceability. A status note or a later round may restrict the use of a
+statement that still appears under its original theorem label.
+
+\paragraph{Unity and the Riemann route.}
+The Stone--von Neumann justification was withdrawn. The physical
+unity equivalence remains conjectural. The inherited GUE derivation
+and its use to determine the frame factor are archived.
+\hyperref[sec:v480-r04-riemann-decoupling]{Riemann decoupling, r04}
+and \hyperref[sec:v490-archive]{Archived Statements of the Main Body}.
+
+\paragraph{Unqualified MM/HC spectral identification.}
+Commutation alone preserves the selected subspace. The stronger
+eigenprojection claim needs the additional premises above. The
+premise audit gives counterexamples and a sufficient replacement.
+Section~\ref{v480:spectral-premises}.
+
+\paragraph{The frame factor and the inverse exponent.}
+The inverse-exponent relation is an identity. A separately fixed
+ansatz gives a conditional root. The later counting interpretation
+still requires a justification for the matter-frame counting rule.
+Section~\ref{v480:exponent-premises} and
+\hyperref[sec:v4100-r28-bend-counting-status]{counting-rule status, r28}.
+
+\paragraph{Koide from the carrier alone.}
+The historical derivation is archived. The exact norm condition
+survives as a mathematical result. A structural origin for the
+physical mass roots and the bending phase remains open.
+\hyperref[sec:v490-archive]{Archived Koide statement},
+Section~\ref{v480:koide-condition}, and
+\hyperref[sec:v4100-r13-neutral-qubit-family]{carrier comparison, r13}.
+
+\paragraph{OP5 and the cosmological readout.}
+The historical bare-vacuum and $\Theta$-sum route is suspended as a
+foundation. The tested full-sum conjecture was refuted. The guarded
+local closure question is distinct from the present-epoch
+$\Omega_M$ prediction H96, which remains open.
+Section~\ref{v480:op5-premises} and
+\hyperref[sec:v4100-r05-core-review]{separation of the OP5 questions, r05}.
+
+\subsection*{Where to go next}
+
+For the mathematical route, read the
+\hyperref[v480:premise-audit]{premise audit} and then the
+\hyperref[v480:koide-kernel]{local kernel and Koide chapter}.
+For the model-building route, continue with the
+\hyperref[sec:v410-state-mediator]{state and mediator synthesis}
+or the \hyperref[v490:cartan-source]{Cartan comparison}.
+The appendix preserves the historical record. The
+\hyperref[v480:support-qam]{QAM definitions} and
+\hyperref[v480:support-shift]{shifted normal form} explain how to trace
+an assertion to a source, a version and its guards. Stored statements
+and evidence hashes record provenance. Their mathematical use
+depends on their premises and the recorded verification scope.
+The \hyperref[sec:v500-string-relaxation]{string-relaxation question}
+is separately recorded as open.
 
 \clearpage
