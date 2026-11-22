@@ -53,7 +53,9 @@ trennen sie, um die Ausführung durch einen unzuverlässigen Ausführenden kontr
 Im Repository ist diese Teilung auch wörtlich umgesetzt (Abschnitt~\ref{sec:maschine}): Die MML-Anweisung \texttt{RUN\_TAPE}
 führt eine binäre Bandmaschine aus, deren Übergangstabelle als QAM-Objekt der Art \texttt{operator} und deren Startkonfiguration als
 \texttt{state} deklariert ist. Zwei SystemVerilog-Steuerungen führen denselben Plan aus und werden an
-209 Referenzfällen gegen die Python-Ausführung verglichen. Der Plan ist das Objekt, die Ausführungen sind austauschbar.
+209 Referenzfällen gegen die Python-Ausführung verglichen. Der Plan ist das Objekt, die Ausführungen sind austauschbar. Dass gerade eine Bandmaschine gewählt ist, hat einen inhaltlichen
+Grund: Sie ist das ausführbare Gegenstück zu der offenen Frage, ob die mathematische Struktur des Anwendungsprojekts selbst eine
+universelle Maschine trägt (Abschnitt~\ref{sec:traeger}).
 
 \subsection{Turing: die Entscheidbarkeitsgrenze}
 
