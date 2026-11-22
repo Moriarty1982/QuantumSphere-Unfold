@@ -43,3 +43,27 @@ denkbaren Lesarten ist das ohne Gewicht und wird nur der Vollständigkeit halber
   benötigte Winkel θ* = −0,1065 ist im Bestand nicht ausgezeichnet. OP1 bleibt offen; ein Test mit Kriterium bräuchte erst einen Grund
   für einen bestimmten Winkel.
 - Die Dynamik-Linie W1/W2 bleibt im Übrigen, wie am 6.11. entschieden, eingefroren; diese Erkundung ändert W1 nicht.
+
+## Nachtrag (22.11.2026, nachträglich, analytisch): Die Dualität erhält A² + B²; damit ist γ_L ausgeschlossen
+Anlass: Fragen des Autors, ob die 0,5-%-Nähe bei π/4 an der Geometrie der Kugel, am Winkel, an einer Verzerrung der Kugel unter
+gleichem Weg oder an einer zweimal ausgeführten imaginären Verzerrung liegen könnte. Keine neue Rechnung; die Aussage folgt aus
+Abschnitt (3) der Ausgabe (A′ = A cos θ + B sin θ, B′ = B cos θ − A sin θ).
+
+1. **Erhaltungsgröße.** Jede Dualitätsdrehung, auch eine komplexe und auch mehrfach hintereinander, erhält A² + B², weil
+   cos²θ + sin²θ = 1 auch für komplexe θ gilt. Mit A = −1/(2κ), B = A/γ ist das (1 + 1/γ²)/(4κ²).
+2. **Folge für das Flächenquant.** Soll das Ergebnis reell sein (reelles γ′, reelles κ′, reelles Flächenquant), sind A′, B′ reelle
+   Vielfache derselben Form; dann gilt für das Flächenquant a ∝ κγ = −1/(2B) exakt
+   a′/a = ±√((1 + γ′²)/(1 + γ²)).
+   Für γ′ = γ_T und γ = γ_M ist das **±0,981** (in der Ausgabe als a′/a bei θ* bereits enthalten: 0,9807913), unabhängig vom Weg,
+   von der Zahl der Schritte und von jeder Verzerrung der Kugel, die nur ändert, welcher Winkel zu welchem Wegstück gehört.
+   Eine zweimal ausgeführte imaginäre Drehung kann höchstens das Vorzeichen wählen, nicht den Betrag.
+3. **Widerspruch zu r10.3.** r10.3 verlangt gleiches G und ein um γ_L kleineres Flächenquant in T (Faktor 0,536). Eine
+   Dualitätsdrehung ändert G und γ stets zusammen und hält A² + B² fest; ein reelles Verhältnis 0,536 ist damit für jede Folge von
+   Dualitätsdrehungen ausgeschlossen, nicht nur für die vorab gelisteten Winkel.
+4. **Zur Nähe bei π/4.** Dort ist γ′ = 1,62, nicht γ_T; der Faktor 1,855 gehört zu einem anderen Endpunkt und hat mit der Zuordnung
+   M/T nichts zu tun. Die einzige im Bestand vorhandene Verzerrung (Registerbreite b = 1/γ_L mit Bures-Geometrie, r29.5, r17.2) staucht
+   den Winkel ohnehin (Bures-Abstand senkrechter Zustände bei b ≈ 0,54 etwa 0,39 statt π/4).
+
+**Lesart:** Innerhalb von W1 + Holst kann keine Dualitätsdrehung, reell, komplex, verzerrt oder mehrfach, ein frame-abhängiges γ bei
+gleichem G liefern. Das bräuchte einen Mechanismus, der A² + B² nicht erhält, also eine Abbildung jenseits einer Dualitätsdrehung der
+Krümmung. OP1 bleibt offen.
