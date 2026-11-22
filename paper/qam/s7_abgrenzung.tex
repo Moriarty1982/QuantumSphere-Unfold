@@ -26,15 +26,39 @@ verknüpfen, so dass dieser Status nicht mehr nur deklariert, sondern belegt ist
 
 \subsection{Verwandte Ansätze}
 
-Die für die Maschine bewiesenen Eigenschaften haben die bekannte Form syntaktischer Typkorrektheit, Erhaltung und Fortschritt~\cite{wright,pierce},
-angepasst an eine Maschine, deren Schritte abgewiesen werden können. Die Regel, dass ein Zertifikat seinen Beweis enthält, entspricht der Idee
-beweistragenden Codes~\cite{necula}. Das Protokoll der Maschine ist ein Herkunftsnachweis im Sinn des W3C-PROV-Modells~\cite{prov},
-reduziert auf Anweisungen und Ausgänge; QAM fügt die Typisierung der aufgezeichneten Objekte hinzu. Vorab-Registrierung ist in Teilen der
-empirischen Wissenschaften etabliert~\cite{nosek}; das Projekt überträgt sie auf rechnerische und theoretische Arbeit. Systeme wie
-FunSearch~\cite{funsearch} suchen mathematische Konstruktionen mit Sprachmodellen unter automatischer Bewertung, und es gibt Vorschläge für
-automatisierte Forschungsabläufe~\cite{aiscientist}. Die hier behandelte Lage ist eine andere: Ein Mensch lenkt ein langes, offenes Projekt,
-und das Problem ist nicht die Suche, sondern eine über Monate ehrliche Akte.
-\todo{systematische Literaturrecherche zu Provenienzsystemen, Workflow-Sprachen und LLM-gestützter Formalisierung}
+\paragraph{Abhängigkeitsgraphen mathematischer Texte.} Am nächsten liegen die \emph{Blueprints} großer Lean-Formalisierungsprojekte.
+Das Werkzeug \texttt{leanblueprint}~\cite{blueprint} liest einen \LaTeX-Text, in dem Sätze und Definitionen ihre Abhängigkeiten mit
+\verb|\uses| angeben, erzeugt daraus einen Abhängigkeitsgraphen und berechnet für jeden Knoten einen Formalisierungsstand. KnowTeX~\cite{knowtex}
+gewinnt Abhängigkeitsgraphen aus annotierten \LaTeX-Quellen, und LeanMarathon~\cite{leanmarathon} benutzt einen sich fortschreibenden
+Blueprint als Gerüst für die Formalisierung durch mehrere Sprachmodell-Agenten; seine Diagnose (Aussagen verschieben sich,
+Abhängigkeiten verwickeln sich, Kontext geht verloren) deckt sich mit der unseren. Der Unterschied liegt im Status: Dort bedeutet er
+Fortschritt der Formalisierung, und das Ziel ist der vollständige Beweis im Assistenten. In QAM bedeutet er die epistemische Stärke einer
+Aussage einschließlich Lesarten und physikalischer Zuordnungen, die sich nicht formalisieren lassen, und eine Beförderung über die
+Prämissen hinaus ist ein Übersetzungsfehler.
+
+\paragraph{Sprachmodelle und formale Mathematik.} Autoformalisierung übersetzt natürlichsprachliche Mathematik mit Sprachmodellen in die
+Sprache eines Beweisassistenten~\cite{autoformal}, und Sprachmodelle werden als Beweissucher in Lean eingesetzt~\cite{leandojo}. Beide
+Linien beantworten Halluzination~\cite{halluc} mit einem vollständigen Prüfer für den Inhalt. QAM setzt eine Stufe früher an, bei
+Aussagen, die (noch) nicht formalisierbar sind, und prüft dort nur die Struktur.
+
+\paragraph{Annahmenverwaltung.} Wahrheitserhaltungssysteme der klassischen KI führen zu jeder Folgerung ihre Begründung mit~\cite{doyle};
+das annahmenbasierte System von de~Kleer versieht jede Folgerung mit den Mengen von Annahmen, unter denen sie gilt~\cite{atms}. Die
+Eingabemengen von QAM sind eine eingeschränkte Form solcher Etiketten, ohne Widerspruchsverwaltung. In Sicherheitsnachweisen nach der
+Goal Structuring Notation~\cite{gsn} werden Behauptungen mit Belegen, Annahmen und ausdrücklich unentwickelten Zielen verknüpft; ein
+unentwickeltes Ziel spielt dort die Rolle eines Guards.
+
+\paragraph{Verbände und Herkunft.} Die Statusregel ist ein Verbandsmodell im Sinn von Dennings Informationsfluss~\cite{denning}, in umgekehrter
+Richtung gelesen: Statt dass Vertraulichkeit nach oben fließt, kann Gewissheit nur nach unten fließen. Die Weitergabe von Eingaben entspricht
+der Herkunftsverfolgung in Datenbanken, wie sie Herkunftshalbringe allgemein fassen~\cite{semiring}. Das Protokoll der Maschine ist ein
+Herkunftsnachweis im Sinn des W3C-PROV-Modells~\cite{prov}. Werkzeuge wie noWorkflow~\cite{noworkflow} zeichnen die Herkunft von
+Skriptausführungen auf, Workflow-Sprachen wie CWL~\cite{cwl} und Snakemake~\cite{snakemake} beschreiben Rechenabläufe reproduzierbar. Sie
+halten fest, \emph{wie} ein Ergebnis entstand; QAM fügt hinzu, \emph{als was} es gelten darf.
+
+\paragraph{Typen, Vorab-Registrierung, Sprachmodelle in der Forschung.} Die für die Maschine bewiesenen Eigenschaften haben die Form
+syntaktischer Typkorrektheit~\cite{wright,pierce}; die Regel, dass ein Zertifikat seinen Beweis enthält, entspricht beweistragendem
+Code~\cite{necula}. Vorab-Registrierung ist in Teilen der empirischen Wissenschaften etabliert~\cite{nosek}. Systeme wie
+FunSearch~\cite{funsearch} oder Vorschläge für automatisierte Forschung~\cite{aiscientist} lassen Sprachmodelle unter automatischer
+Bewertung suchen; hier lenkt dagegen ein Mensch ein langes, offenes Projekt, und das Problem ist eine über Monate ehrliche Akte.
 
 \subsection{Weiterentwicklung}
 

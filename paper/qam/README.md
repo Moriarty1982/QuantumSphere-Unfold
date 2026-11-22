@@ -2,7 +2,7 @@
 
 *Vom Plan zum Guard: QAM als Spezifikations- und Abhängigkeitsarchitektur für sprachmodellgestützte Forschung*
 
-Deutscher Entwurf vom 22.11.2026, 18 Seiten. Er ersetzt den englischen Methodenentwurf vom 4.11.2026 (in der Git-Geschichte erhalten).
+Deutscher Entwurf vom 22.11.2026, 18 Seiten Text und Anhang, mit Literaturverzeichnis 20 Seiten. Er ersetzt den englischen Methodenentwurf vom 4.11.2026 (in der Git-Geschichte erhalten).
 Veröffentlichung nur auf Zenodo. Aufbau: zuerst QAM als eigenständiges, projektunabhängiges Modell, dann die Umsetzung (LaTeX, Lean,
 Maschine, MCP), erst danach der Einsatz im Projekt Quantum Sphaera.
 
@@ -27,6 +27,6 @@ TEXINPUTS=../../qam/tex: pdflatex main.tex   # zweimal; unter Windows ../../qam/
 | `a1_lean.tex` | Lean-Module, Übersetzung, Einsatz von Sprachmodellen |
 | `outline.md` | Gliederung |
 
-Offen (im Text als `[TODO: …]` markiert): systematische Literaturrecherche zu verwandten Ansätzen.
-Außerdem: unabhängige Gutachterrunde. Die Testzahlen in Abschnitt 6 stammen aus `wiki/Vorhersagen-und-Tests.md` (Stand 22.11.2026),
+Offen: unabhängige Gutachterrunde. Abschnitt 7.2 ordnet QAM gegen Blueprints (leanblueprint, KnowTeX, LeanMarathon),
+Autoformalisierung, Annahmenverwaltung (TMS/ATMS, GSN), Informationsfluss- und Herkunftsmodelle sowie Workflow-Werkzeuge ein. Die Testzahlen in Abschnitt 6 stammen aus `wiki/Vorhersagen-und-Tests.md` (Stand 22.11.2026),
 die Aktenzahl aus den im Repository versionierten `.qam`-Dateien ohne absichtlich fehlerhafte Beispiele.

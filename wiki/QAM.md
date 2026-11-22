@@ -704,7 +704,7 @@ The [QAM horizon-access example](https://github.com/Moriarty1982/QuantumSphere-U
 
 ## Vorhandene Buchführungswerkzeuge
 
-Die vorhandene Werkzeugschicht realisiert typisierte Buchführungsprüfungen für lange Forschungstexte, mit oder ohne Sprachmodelle. Sie hängt **nicht** am Projekt Quantum Sphaera; das Projekt ist nur ihre erste Fallstudie. Ausführlich: Artikel `paper/qam/` (deutscher Entwurf vom 22.11.2026, 18 Seiten, nur Zenodo: zuerst QAM als eigenständiges Modell mit LaTeX-Anbindung, Lean-Prüfern, Guard-Ebenen, Maschine und MCP, danach der Einsatz im Projekt; Leitmotiv Zuse/Turing). Diese Werkzeugbeschreibung ersetzt nicht die oben erklärte Frame-Schnittstellenrolle.
+Die vorhandene Werkzeugschicht realisiert typisierte Buchführungsprüfungen für lange Forschungstexte, mit oder ohne Sprachmodelle. Sie hängt **nicht** am Projekt Quantum Sphaera; das Projekt ist nur ihre erste Fallstudie. Ausführlich: Artikel `paper/qam/` (deutscher Entwurf vom 22.11.2026, 18 Seiten plus Literatur, nur Zenodo: zuerst QAM als eigenständiges Modell mit LaTeX-Anbindung, Lean-Prüfern, Guard-Ebenen, Maschine und MCP, danach der Einsatz im Projekt; Leitmotiv Zuse/Turing). Diese Werkzeugbeschreibung ersetzt nicht die oben erklärte Frame-Schnittstellenrolle.
 
 ## Forschungsrunden im Aussagenspeicher (16.11.2026)
 
