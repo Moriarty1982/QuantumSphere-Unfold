@@ -1,0 +1,40 @@
+name: "Release 1: Runde schreiben (Copilot)"
+description: Befunde seit der letzten Runde als neue Runde v4.10.0-rNN einbauen.
+title: "Release vX.Y.Z: Runde v4.10.0-rNN"
+labels: ["release", "copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ablauf: `notes/anleitungen/qsc-runde-einbauen.md`. Ergebnis ist ein Draft-PR. Bestehende Runden nicht ändern.
+  - type: input
+    id: version
+    attributes:
+      label: Zielversion
+      placeholder: v5.4.0
+    validations:
+      required: true
+  - type: input
+    id: round
+    attributes:
+      label: Rundennummer (vorher gegen das Repo prüfen)
+      placeholder: v4.10.0-r31
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Einzubauende Notizen und Ergebnisse
+      description: Ordner unter notes/research/ und Ergebnisdateien, je Zeile einer.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Fertig, wenn
+      value: |
+        - Runde an `sources/research/parts/v4100-post-release-layers.tex` angehängt, Kopie unter `notes/research/v4_10_0_rNN/rounds/`
+        - `notes/research/v4_10_0_rNN/README.md` mit Tabelle der Einträge
+        - Guard-Linter: 0 Kandidaten
+        - Wiki: Forschungsstand, Inhalt, Content-overview, Gesamtbild
+        - PR-Text nennt Prüfzahlen und offene Punkte

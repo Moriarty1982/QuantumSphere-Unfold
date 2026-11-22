@@ -1,0 +1,26 @@
+name: "Release 3: Bau und Metadaten (Copilot)"
+description: Gemeinsamen Bau prüfen und Zenodo-Metadaten, CITATION und Release-Notiz vorbereiten.
+title: "Release vX.Y.Z: Bau und Metadaten"
+labels: ["release", "copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ablauf: `notes/anleitungen/zenodo-release-uebergabe.md`. Keine Zenodo-Schritte außer dem lokalen Trockenlauf.
+  - type: input
+    id: version
+    attributes:
+      label: Zielversion und Vorgänger-Record
+      placeholder: v5.4.0, Vorgänger 24294648
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Fertig, wenn
+      value: |
+        - `python -m qam.tools.build_v5_documents --out build/<neu>`: build_complete, harte Werte 0, Seitenzahlen im PR
+        - `release/zenodo/metadata_vX_Y_Z.json` nach Muster der Vorversion, isNewVersionOf = Version-DOI des Vorgängers, Version-DOI „pending reservation“
+        - Guard-Linter auf die Metadaten: 0 Kandidaten
+        - `python tools/zenodo_publish.py --metadata … --reserve-only --dry-run` ohne Fehler
+        - Entwurf von `release/vX.Y.Z/README.md`
