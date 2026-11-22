@@ -4,6 +4,8 @@ Werkzeugunabhängig. Projektfakten (DOIs, Guard-Listen, Verhältnis lokal ↔ Gi
 Anleitung beschreibt den Ablauf auf GitHub. Werkzeuge dort: Workflow `.github/workflows/zenodo_release.yml`, Hilfsskript
 `tools/zenodo_publish.py`, Metadaten unter `release/zenodo/`.
 
+Für die Delegation der Vorbereitung gibt es einen [Arbeitsauftrag für ein LLM](zenodo-release-uebergabe.md).
+
 ## Freigaben — nie ohne ausdrückliches Wort des Nutzers
 
 | Schritt | Wirkung nach außen |
