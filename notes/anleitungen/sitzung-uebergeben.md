@@ -21,6 +21,7 @@ nachziehen (Zweig und PR):
 - Deutscher Preprint: `paper/preprint-de/` (Zenodo 10.5281/zenodo.24405552); Bau nach `paper/preprint-de/README.md`, Seiten mit neuen
   Abschnitten ansehen.
 In der Übergabe je Artikel eine Zeile: Stand (Datum, Commit oder PR).
+Neue Nachweise aus der Artikelarbeit gehören zuerst als Runde in den Companion (Dauerauftrag vom 22.11.2026, „Hauptpaper bleibt Quelle“); die Artikel verweisen darauf.
 
 ## 2. Datei neu schreiben (überschreiben, nicht fortschreiben)
 Ziel: **unter ~60 Zeilen**, damit der Einstieg wenig Token kostet. Geschichte gehört in `AGENTS.md`, Runden und

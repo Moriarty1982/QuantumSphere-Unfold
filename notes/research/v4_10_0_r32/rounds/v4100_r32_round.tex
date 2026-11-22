@@ -1,0 +1,195 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r32 Source-Only: A Worked OP5 Case: One Matter Modulation, a Compact Ordinary Response and a Directed Contrast}
+\addcontentsline{toc}{section}{v4.10.0-r32 Source-Only: A Worked OP5 Case}
+\label{sec:v4100-r32-op5-worked-case}
+% ============================================================================
+
+\paragraph{Purpose.}
+This layer is the source for the worked OP5 case that the physics edition (development subsection ``A worked case: one matter
+modulation and two geometric responses'') and the German preprint (section 4.4 and appendix B) present in shorter form.  It collects
+the derivations of the OP5 notes of 18--20 November 2026 into one chain, states every step with its proof, and marks the two inputs
+that are chosen rather than derived.  Every computational step was checked exactly in Wolfram Language; script and output are listed
+in \S\ref{subsec:v4100-r32-notes}.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r32 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r32 inputs}
+\label{subsec:v4100-r32-inputs}
+
+\paragraph{Remark v4.10.0-r32.0 (what is chosen).}
+Two inputs are set, not derived.
+(i) The drive operator of the reduced OP5 comparison model,
+\[
+ \mathcal P(\omega,\mathbf k)=\frac{[Z(\Omega_0^2+c_h^2q-x)+\tfrac32g_0^2d]\,d_m-g_m^2N_m}{m^2},
+\]
+with \(x=\omega^2\), \(q=|\mathbf k|^2\), \(a_\perp=|\mathbf k_\perp|^2\), \(d=q-x\), \(d_m=m^2+r_mq-x\), \(N_m=\tfrac23(x^2-a_\perp x+a_\perp^2)\).  Its form follows from
+a directed massive mediator of mass \(m\) and the Einstein channel: with the identically transverse improvement
+\(S^{\mu\nu}=p^\mu p^\nu-\eta^{\mu\nu}d\) one has \(p_\mu S^{\mu\nu}=0\), \(\operatorname{tr}S=-3d\), \(S\!:\!S=3d^2\), and the trace-reversed exchange term
+\((S\!:\!S-(\operatorname{tr}S)^2/2)/d=-\tfrac32d\) gives the local Einstein contribution after the pole is cancelled.  The coefficients
+\(Z,r_m,c_h,g_0,g_m,\Omega_0,m\) are chosen; one choice checked in the notes is \(Z=1\), \(r_m=c_h^2=\tfrac12\), \(g_0^2=g_m^2=3/100\).
+(ii) The identification \(\delta J_{\rm OP5}=\delta\mathcal J_h\) of the radial Higgs source of matter with the drive of the comparison field, in a
+declared normalization.  It would follow from a coupling \(\int h\,\mathcal J_h\) with coefficient one in the same action that produces
+\(\mathcal P\); no such action exists.  Theoremlets r32.2--r32.3 and r32.6 do not use (ii); r32.4--r32.5 do.
+
+\subsection*{v4.10.0-r32 results}
+\label{subsec:v4100-r32-results}
+
+\paragraph{Theoremlet v4.10.0-r32.1 (the radial source of a compression).}
+Let \(h_{\rm W}=v+\eta_h\) be the Higgs radius of W2 at fixed angles, \(m_i=y_ih_{\rm W}\), and \(n_i\) non-relativistic number densities.  Then
+\(\epsilon_{\rm mat}=h_{\rm W}\sum_iy_in_i\), \(\mathcal J_h=-\partial_{h_{\rm W}}\epsilon_{\rm mat}=-\sum_iy_in_i\), and a displacement \(\mathbf u\) of a homogeneous
+reference gives
+\[
+ \delta\mathcal J_h=\Bigl(\sum_iy_in_{i0}\Bigr)\nabla\cdot\mathbf u,\qquad \delta\epsilon_{\rm mat}|_v=-v\,\delta\mathcal J_h .
+\]
+\emph{Proof.} Continuity gives \(\delta n_i=-n_{i0}\nabla\cdot\mathbf u\); insert into \(\mathcal J_h\) and \(\epsilon_{\rm mat}\) at \(h_{\rm W}=v\).  On the matter equations,
+with the Higgs radius treated as external, \(\nabla_\mu T^\mu{}_\nu=\mathcal J_h\partial_\nu h_{\rm W}\) (signature \((-+++)\),
+\(T_{\mu\nu}=-2\delta S_{\rm mat}/(\sqrt{-g}\delta g^{\mu\nu})\)); the rest energy contributes nothing to the pressure at fixed entropy per particle.
+\(\square\)
+
+\paragraph{Theoremlet v4.10.0-r32.2 (an elastic preparation that switches the source).}
+Take two superposed isotropic elastic continua with rest densities \(\rho_1,\rho_2>0\), stiffnesses \(\mathsf C\) and \(c_\sigma\mathsf C\),
+\(\mathcal L\mathbf u=\nabla\cdot\sigma(\mathbf u)\), and \(A_1=\rho_1\partial_t^2-\mathcal L\), \(A_2=\rho_2\partial_t^2-c_\sigma\mathcal L\).  For a smooth, spatially compact
+\(\mathbf b\) put \(\mathbf u=A_2\mathbf b\), \(\mathbf w=-A_1\mathbf b\) and the prescribed rest offset \(\mathbf d=\mathbf u-\mathbf w+k^{-1}A_1\mathbf u\) of an internal
+pair spring \(k>0\).  Then both equations of motion \(A_1\mathbf u=-k(\mathbf u-\mathbf w-\mathbf d)\), \(A_2\mathbf w=+k(\mathbf u-\mathbf w-\mathbf d)\) hold at
+all times, and with \(\beta_\rho=\rho_2-c_\sigma\rho_1\) the linear source tensor is
+\[
+ \delta T^{00}=-\beta_\rho\nabla\cdot\mathcal L\mathbf b,\qquad \delta T^{0i}=\beta_\rho(\mathcal L\dot{\mathbf b})_i,\qquad \delta T^{ij}=-\beta_\rho\sigma_{ij}(\ddot{\mathbf b}),
+\]
+conserved by construction.  For \(\mathbf b=\nabla S\), \(\mathcal L\nabla S=K_L\nabla\Delta S\) with \(K_L=\lambda+2\mu\), hence
+\(\delta\mathcal J_h=-\delta T^{00}/v=(\beta_\rho K_L/v)\Delta^2S\).
+\emph{Proof.} \(A_1,A_2\) have constant coefficients and commute: \(A_1\mathbf u=A_1A_2\mathbf b\), \(A_2\mathbf w=-A_1\mathbf u\), and the spring force on the first
+component equals \(A_1\mathbf u\) by the choice of \(\mathbf d\).  The sums \(\rho_1\mathbf u+\rho_2\mathbf w=\beta_\rho\mathcal L\mathbf b\) and
+\(\mathbf u+c_\sigma\mathbf w=\beta_\rho\ddot{\mathbf b}\) give density, momentum and stress; continuity and momentum balance cancel term by term.  For a
+gradient, \(\sigma(\nabla S)=\lambda\Delta S\,I+2\mu\nabla\nabla S\) and \(\nabla\cdot\sigma=(\lambda+2\mu)\nabla\Delta S\).  A rigid ratio \(\mathbf w=-\mathbf u/c_\sigma\)
+during switching would force \((\rho_1-\rho_2/c_\sigma)\ddot{\mathbf u}=0\); the two operators avoid this.  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r32.3 (the ordinary linear response is compact).}
+Let \(V\) be smooth, spatially compact and zero before the switching, \(D_0=\partial_t^2-\Delta\), and
+\[
+ S=-\frac{v}{\beta_\rho K_L}D_0\mathcal P V,\qquad \delta H=-D_0\Delta^2V .
+\]
+Then \(\delta\mathcal J_h=\mathcal P\,\delta H\), \(\delta T=-D_0T_*\) with \(T_*\) the conserved tensor of r32.2 for \(\mathbf b_*=(v/(\beta_\rho K_L))\nabla\mathcal PV\), and
+in harmonic gauge with zero initial data and no incoming wave
+\[
+ D_0\bar\gamma_{\mu\nu}=16\pi G\,\delta T_{\mu\nu}\quad\Longrightarrow\quad \bar\gamma_{\mu\nu}=-16\pi G\,T_{*,\mu\nu}.
+\]
+The ordinary linear curvature of the prepared source vanishes outside the spatial support of \(V\), also during the switching.
+\emph{Proof.} Insert \(S\) into r32.2 and commute the constant-coefficient operators.  \(\delta T\) is linear in \(\mathbf b=-D_0\mathbf b_*\), so
+\(\delta T=-D_0T_*\).  Then \(D_0(\bar\gamma+16\pi G T_*)=0\) with vanishing past data, whose retarded solution is zero.  Only linearity,
+constant coefficients and the initial data enter; the identification (ii) of r32.0 does not.  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r32.4 (a directed contrast on the same axis; under r32.0(ii)).}
+On the static plateau \(D_0=-\Delta\) and \(\delta H=\Delta^3V\).  With \(\xi=r_\perp^2/R^2\), a smooth compact cut-off \(\chi\ge0\) equal to one near the axis,
+a smooth profile \(p(z)\) with \(P=\int p\,dz>0\) supported between the ends, \(\mathcal A\neq0\), and
+\[
+ V=-\frac{\mathcal AR^6}{230400}\,p(z)\chi(\xi)\bigl(\xi^5-\kappa\xi^6\bigr),\qquad
+ \kappa=\frac{\int_0^\infty\xi^5\chi\,d\xi}{\int_0^\infty\xi^6\chi\,d\xi},
+\]
+the transverse integral of \(V\) vanishes in every slice, \(\delta H=-\mathcal A\,p(z)\,\xi^2+O(\xi^3)\) near the axis, and in the massive comparison
+\(f=\Delta_\perp H/m^2\) the tidal readout of a ray along the axis is
+\[
+ \Delta\mathcal I=-\frac12\int\partial_e^2(\delta f)(0,z)\,dz=\frac{16\mathcal AP}{m^2R^4}\neq0 .
+\]
+\emph{Proof.} \(\Delta_\perp=\partial_r^2+r^{-1}\partial_r\) gives \(\Delta_\perp\xi^j=4j^2\xi^{j-1}/R^2\); three applications give the factors
+\(4^3\cdot25\cdot16\cdot9=230400\) and \(4\cdot230400\), so \(\Delta_\perp^3(\xi^5-\kappa\xi^6)=230400(\xi^2-4\kappa\xi^3)/R^6\).  In
+\(\Delta^3=(\Delta_\perp+\partial_z^2)^3\) every term with a longitudinal derivative keeps at most two transverse Laplacians and starts at \(\xi^3\).
+Hence \(\delta H=-\mathcal Ap\,\xi^2+O(\xi^3)\) and \(\delta f=-16\mathcal Ap\,\xi/(m^2R^2)+O(\xi^2)\); with \(\partial_e^2\xi=2/R^2\) the axis value is
+\(-32\mathcal Ap/(m^2R^4)\).  The choice of \(\kappa\) makes \(\pi R^2\int V\,d\xi=0\).  The factor \(-\tfrac12\) is a convention of the readout; the
+non-vanishing is not.  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r32.5 (bundle factor and planar control).}
+(a) Averaged over an axis-parallel bundle with rotation-symmetric weight, the contrast of r32.4 acquires the factor \(1-36\kappa\langle\xi\rangle\).
+(b) For the planar static comparison \(f=K_m*\delta\rho\) with \(K_m(z)=\tfrac m2e^{-m|z|}\) and \(\delta\rho\) supported in \([0,L]\),
+\[
+ \int_0^Lf\,dz=\int_0^L\delta\rho\,dz-\frac{f(0)+f(L)}{m}.
+\]
+\emph{Proof.} (a) After \(z\)-integration the longitudinal terms drop as boundary terms; for a radial \(F\) the azimuthal mean of \(\partial_e^2F\) is
+\(\tfrac12\Delta_\perp F\), and \(\Delta_\perp\xi=4/R^2\), \(\Delta_\perp\xi^2=16\xi/R^2\), \(\Delta_\perp\xi^3=36\xi^2/R^2\) give the ratio \(1-36\kappa\xi\) to the axis
+value.  (b) \(\int K_m=1\); outside the support \(f(z)=e^{mz}f(0)\) for \(z<0\) and \(e^{-m(z-L)}f(L)\) for \(z>L\), whose integrals are \(f(0)/m\) and
+\(f(L)/m\).  \(\square\)
+Reading: equal integrated density and equal end values leave no leading planar difference, while the axial construction measures a
+transverse curvature derivative that equal transverse integrals and equal local end values do not exclude.
+
+\paragraph{Theoremlet v4.10.0-r32.6 (second order: switching work and the quadratic stress).}
+(a) With \(\mathbf R_{\rm F}=\mathbf u-\mathbf w-\mathbf d\), \(\sigma_1=\sigma(\mathbf u)\), \(\sigma_2=c_\sigma\sigma(\mathbf w)\),
+\[
+ \partial_te_{\rm mech}=\nabla\cdot\mathbf F+P_{\rm switch},\qquad \mathbf F=\sigma_1\dot{\mathbf u}+\sigma_2\dot{\mathbf w},\qquad
+ P_{\rm switch}=-k\,\mathbf R_{\rm F}\cdot\dot{\mathbf d}.
+\]
+(b) For a Saint-Venant--Kirchhoff law and \(\mathsf H=\nabla_X\mathbf u_1\) symmetric, \(\mathbf w_1=-\mathbf u_1/c_\sigma\), the summed Piola tensor has the
+second-order coefficient
+\[
+ (P_1+P_2)^{(2)}=\mathsf C\varepsilon(S_2)+(1+1/c_\sigma)N(\mathsf H),\qquad
+ N(\mathsf H)=\tfrac\lambda2\operatorname{tr}(\mathsf H^2)I+3\mu\mathsf H^2+\lambda(\operatorname{tr}\mathsf H)\mathsf H .
+\]
+\emph{Proof.} (a) Differentiate \(e_{\rm mech}\), use \(\partial_tW(\varepsilon(\mathbf u))=\nabla\cdot(\sigma_1\dot{\mathbf u})-\dot{\mathbf u}\cdot\mathcal L\mathbf u\) and the
+equations of motion; the internal spring work cancels against \(\dot{\mathbf u}-\dot{\mathbf w}\), leaving the externally prescribed \(\dot{\mathbf d}\).
+(b) \(P=(I+\mathsf H)\mathsf C E\), \(E=\tfrac12(\mathsf H+\mathsf H^{\mathsf T}+\mathsf H^{\mathsf T}\mathsf H)\); the quadratic part is
+\(\mathsf C(\tfrac12\mathsf H^2)+\mathsf H\mathsf C\mathsf H=N(\mathsf H)\); the second component contributes \(c_\sigma N(-\mathsf H/c_\sigma)=N(\mathsf H)/c_\sigma\).  \(\square\)
+A fixed reservoir with \(\partial_te_{\rm res}=-P_{\rm switch}\) balances the work in the volume; a density term \(\nabla\cdot\int\mathbf F\,dt\) remains on
+the plateau, with vanishing volume integral for compact flux.  A complete second-order source balance is a separate task.
+
+\paragraph{Remark v4.10.0-r32.7 (status).}
+The same prepared source has a compact ordinary exterior (r32.3) and, under the identification r32.0(ii), a non-zero directed contrast on
+the same path (r32.4).  With a normalization \(\delta J_{\rm OP5}=c\,\delta\mathcal J_h\) the contrast scales with \(c\); whether \(c\neq0\) is decided only
+by a common action.  Turning the contrast into a delay needs a difference of the effective couplings of the readout channels and
+calibrated ends.  OP5 and H96 remain open.
+
+\subsection*{v4.10.0-r32 frames}
+\label{subsec:v4100-r32-frames}
+
+The calculation is made in the matter frame M with units \(c=1\).  The Dirac--Yukawa mass parameters are inputs; their identification
+with the native mass readout of OP3 is open.  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r32 register entries}
+\label{subsec:v4100-r32-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r32\\
+\midrule
+compact ordinary response of a prepared matter modulation & derived (r32.3), independent of the source identification\\
+directed contrast on the same axis & derived under the identification r32.0(ii) (r32.4, r32.5)\\
+identification \(\delta J_{\rm OP5}=\delta\mathcal J_h\) & assumption; needs a common action\\
+coefficients of the drive operator & chosen\\
+second-order source balance & open (r32.6)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r32 notes}
+\label{subsec:v4100-r32-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak r32/\allowbreak llm/\allowbreak r32\_\allowbreak op5\_\allowbreak derivations.wl} with output
+\texttt{r32\_\allowbreak op5\_\allowbreak derivations.txt} (exact checks of r32.2, r32.4, r32.5 and r32.6, 22 November 2026); the OP5 notes
+\texttt{OP5\_\allowbreak J\_\allowbreak W2\_\allowbreak Dichteantrieb.md}, \texttt{OP5\_\allowbreak J\_\allowbreak Luminaler\_\allowbreak Einstein\_\allowbreak Kanal.md},
+\texttt{OP5\_\allowbreak J\_\allowbreak Dynamische\_\allowbreak Gegenbewegung.md}, \texttt{OP5\_\allowbreak J\_\allowbreak Gleicher\_\allowbreak Messweg\_\allowbreak Nullprofil.md},
+\texttt{OP5\_\allowbreak J\_\allowbreak Hyperelastische\_\allowbreak Halterung.md}, \texttt{OP5\_\allowbreak J\_\allowbreak Feder\_\allowbreak Reservoirbilanz.md} under
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak bifocal\_\allowbreak response\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 18/}.
+
+\subsection*{v4.10.0-r32 ledger and guard update}
+\label{subsec:v4100-r32-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r32}=(1,1,0)
+\]
+for (derivations recorded; computational steps checked exactly in the cited script; the source identification and a common action not
+derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r32,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r32}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

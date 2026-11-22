@@ -104,6 +104,10 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   (`qam/editions/v5_physics_article.tex` mit `v5_expanded_*.tex`), die Wiki-Seiten Gesamtbild und Forschungsstand sowie den deutschen
   Preprint (`paper/preprint-de/`, Zenodo-Concept-DOI 10.5281/zenodo.24405552). Inhaltliche Änderungen über Zweig und PR; eine neue
   Zenodo-Version des Preprints nur mit Freigabe. In der Übergabe vermerken, welcher Artikel auf welchem Stand ist.
+- **Hauptpaper bleibt Quelle** (Dauerauftrag des Autors vom 22.11.2026): Wird in einem Artikel (Physik-Paper, deutscher Preprint)
+  ein Nachweis, eine Herleitung oder ein neuer Befund ergänzt, kommt er im selben Arbeitsgang als Runde in den Companion
+  (`sources/research/parts/v4100-post-release-layers.tex`), mit Beweis und Prüfung. Die Artikel verweisen auf diese Runde und geben
+  sie verkürzt wieder; der Companion ist die maßgebliche Fassung.
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** [Anleitung für LLM-Kontext und Cache](notes/anleitungen/llm-cache-optimieren.md) anwenden.

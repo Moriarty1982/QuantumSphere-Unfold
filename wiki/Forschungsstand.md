@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Runde r32: Durchgerechneter OP5-Fall, Companion als Quelle (22.11.2026)
+
+Auf Wunsch des Autors ist der Companion die maßgebliche Fassung: Die Runde v4.10.0-r32 führt den OP5-Fall mit Beweisen (r32.0 gesetzte Eingaben, r32.1 Higgsquelle, r32.2 elastische Präparation, r32.3 kompakter Außenbeitrag, r32.4 gerichteter Kontrast, r32.5 Bündelfaktor und planare Kontrolle, r32.6 zweite Ordnung, r32.7 Status). Physik-Paper 6.9 und Preprint-Anhang B verweisen jetzt auf diese Runde. Neue Daueranweisung „Hauptpaper bleibt Quelle“: Nachweise aus der Artikelarbeit kommen im selben Arbeitsgang als Runde in den Companion. OP5 offen.
+
 ### Physik-Paper: OP5-Fallstudie aus dem Preprint übernommen (22.11.2026)
 
 Die im deutschen Preprint hergeleitete OP5-Fallstudie (Anhang B) steht jetzt knapp auf Englisch im Entwicklungsteil Geometrie des Physik-Papers („A worked case: one matter modulation and two geometric responses“), dazu ein Satz im Haupttext. Inhalt: Higgsquelle δ𝒥_h aus der Kompression, elastische Zwei-Komponenten-Präparation mit kompaktem gewöhnlichem Außenbeitrag (retardierte Lösung γ̄ = −16πG T_*), gerichteter Kontrast 16𝒜P/(m²R⁴) auf derselben Achse, Bündelfaktor 1 − 36κ⟨ξ⟩, planare Kontrolle, Bilanz zweiter Ordnung als offene Aufgabe. Die Gleichsetzung der Quellen ist ausdrücklich als Annahme ohne Wirkung benannt. Wirkt erst mit der nächsten Version. OP5 offen.

@@ -1,0 +1,16 @@
+Tatsaechliche Ausgabe von anhang_b.wl (Wolfram-MCP-Kern, 22.11.2026), in zwei Laeufen (B.1-B.5, dann B.6-B.8).
+Ein erster Gesamtlauf brach wegen Zeitueberschreitung ab (Betragsfunktion in B.6); B.6 ist im Skript stueckweise geschrieben.
+Die Kernmeldungen "Symbol::undefined2" betreffen freie Symbole der symbolischen Rechnung und sind keine Fehler.
+
+(B.1) L(grad S) - K_L grad Lap S = 0: True;  div L grad S - K_L Lap^2 S = 0: True
+(B.3) Lap_perp xi^j: {4, 16, 36, 64, 100, 144}  (erwartet 4 j^2 = 4, 16, 36, 64, 100, 144)
+      Lap_perp^3 (xi^5 - k xi^6) = 230400 r^4 (-4 k r^2 + R^2)/R^12;  gleich 230400 (xi^2 - 4 k xi^3)/R^6: True
+      Lap_perp xi^2 = 16 r^2/R^4 (also 16 xi/R^2)
+(B.4) -1/2 d_e^2 delta f auf der Achse = 16 A p/(m^2 R^4)  (erwartet 16 A p/(m^2 R^4))
+(B.5) Azimutalmittel / Achsenwert = 1 - 36 k s  (erwartet 1 - 36 k s mit s = xi)
+(B.6) int_0^L f - (int drho - (f(0)+f(L))/m) = 0
+      Auslaeufer: f(z)/f(0) fuer z < 0 = E^(m zz);  Stetigkeit f(0): 0, f(L): 0
+      Gesamtintegral: int f ueber R - int drho = 0
+(B.7) d_t e_mech - (d_s F + P_Schalt) auf den Bewegungsgleichungen = 0
+(B.8) zweite Ordnung von P bei Verschiebungsgradient eps H gleich N(H): True
+      cs N(-H/cs) - N(H)/cs = 0: True
