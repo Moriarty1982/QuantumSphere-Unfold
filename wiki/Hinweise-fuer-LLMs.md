@@ -64,7 +64,7 @@ Bei der Suche nach gespeicherten Belegen kann `select_qam_context` über den MMA
 
 ## Releases mit GitHub Copilot
 
-Für eine Veröffentlichung kann der Autor Teilaufgaben an den Copilot Coding Agent geben: Runde schreiben, Physik-Paper und deutschen Preprint nachziehen, Bau und Metadaten prüfen, reservierte DOI eintragen. Jede Aufgabe hat eine Issue-Vorlage („Release 1“ bis „Release 4“) und endet in einem Draft-PR. Merges, Zenodo-Schritte und die Entscheidung über eine neue Version gibt der Autor im Chat frei; ausgeführt werden sie vom Hauptassistenten. Die Issues legt der Hauptassistent an und weist sie Copilot zu. Copilot rechnet nicht mit Wolfram oder MMA. Einzelheiten: `notes/anleitungen/github-einstellungen.md`.
+Für eine Veröffentlichung kann der Autor Teilaufgaben an den Copilot Coding Agent geben: Runde schreiben, Physik-Paper und deutschen Preprint nachziehen, Bau und Metadaten prüfen, reservierte DOI eintragen. Jede Aufgabe hat eine Issue-Vorlage („Release 1“ bis „Release 4“) und endet in einem Draft-PR. Merges, Zenodo-Schritte und die Entscheidung über eine neue Version gibt der Autor im Chat frei; ausgeführt werden sie vom Hauptassistenten. Die Issues legt der Hauptassistent an und weist sie Copilot zu. Copilot rechnet nicht mit Wolfram oder MMA. Stand 22.11.2026 fehlt dem Konto die Copilot-Lizenz; bis dahin arbeiten Claude oder Codex die Vorlagen ab. Einzelheiten: `notes/anleitungen/github-einstellungen.md`.
 
 ## Vorgehen bei Fachfragen
 

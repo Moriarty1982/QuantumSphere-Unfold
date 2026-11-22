@@ -23,10 +23,20 @@ die Zenodo-Schlüssel bleiben als Repo-Geheimnisse.
 
 ## Einmalig einzurichten
 
-1. **Copilot Coding Agent für das Repo einschalten** (Settings → Copilot → Coding agent).
-   - Falls angeboten: die Freigabepflicht für Workflow-Läufe auf Copilot-PRs ausschalten. Sonst wartet jeder Copilot-PR mit
-     seinen Prüfungen auf einen Klick.
-   - Firewall: `zenodo.org`, `doi.org`, `ctan.org`, `mirrors.ctan.org` erlauben.
+1. **Copilot in the cloud** (früher „Coding Agent“). Stand 22.11.2026:
+   - **Lizenz fehlt:** Aufgaben an Copilot zuweisen verlangt Copilot Pro, Pro+, Business oder Enterprise. Das Konto des Autors hat
+     keine dieser Lizenzen; die Zuweisung von Issue #231 scheiterte mit „Copilot agent is not enabled in this repository“. Bis eine
+     Lizenz da ist, arbeiten Claude oder Codex die Release-Vorlagen ab.
+   - Freischaltung (mit Lizenz): Profilbild → Copilot settings → Cloud agent → Policies → Repository access
+     (https://github.com/settings/copilot/coding_agent).
+   - Firewall: Repository → Settings → „Code, planning, and automation“ → Copilot → Internet access → „Custom allowlist“ mit
+     `zenodo.org`, `doi.org`, `ctan.org`, `mirrors.ctan.org`. Vom Autor am 22.11.2026 eingestellt.
+   - „Require approval for workflow runs“ (Copilot-Einstellungen): vom Autor am 22.11.2026 ausgeschaltet. Ausgleich: Der
+     Hauptassistent weist Copilot nur selbst geschriebene Issues zu und prüft bei jedem Copilot-PR zuerst Änderungen unter
+     `.github/workflows/`.
+   - „Allow Copilot to approve pull requests“: aus lassen; betrifft Review-Freigaben, nicht Workflow-Läufe.
+   - „Approval for running fork pull request workflows from contributors“ (Settings → Actions → General): bleibt auf
+     „first-time contributors“; betrifft nur Fork-PRs Fremder.
 2. **Zweige nach Merge automatisch löschen:** am 22.11.2026 per API eingeschaltet (`delete_branch_on_merge`).
 3. **Labels** `release` und `copilot`: am 22.11.2026 angelegt, nichts zu tun.
 4. **Ruleset für `main`** „main: no deletion, no force push“ (ID 27827305): am 22.11.2026 per API angelegt, nur Lösch- und
@@ -48,5 +58,7 @@ Der Autor sagt im Chat nur, was er will („v5.4.0 vorbereiten“, „freigeben�
 3. Wie 1–2 mit „Release 2: Artikel nachziehen“ und „Release 3: Bau und Metadaten“.
 4. Nach „Reservierung freigeben“ im Chat startet der Hauptassistent den Workflow `Zenodo Release` und legt „Release 4: DOI eintragen“
    für Copilot an.
+Ohne Copilot-Lizenz übernimmt der Hauptassistent (oder Codex) die Schritte 1–4 selbst, mit denselben Vorlagen als Checkliste.
+
 5. Upload und Veröffentlichung nach Freigabe im Chat durch den Hauptassistenten. Die Vorschau auf Zenodo prüft der Hauptassistent
    über die API und meldet sie; Tag, GitHub-Release, Register #17 und OP-Issues zieht er nach `zenodo-release.md` nach.
