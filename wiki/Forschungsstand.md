@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Deutscher Preprint im Repository nachgezogen (22.11.2026)
+
+Der deutsche Preprint „Quantum Sphaera: Auf dem Weg zu einem gemeinsamen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie“ (v0.1.0, [10.5281/zenodo.24405552](https://doi.org/10.5281/zenodo.24405552)) liegt jetzt als Quelle unter `paper/preprint-de/`. Neu gegenüber 0.1.0: Abschnitt 3.3.3 zum Vorzeichen des Oktantschritts (Beträge und Endpunkte legen nur π/4 fest; der Kompensator vernichtet die geschlossenen ungeraden Zustände; Auswahl des Rückwegs offen, H115–H117) und Abschnitt 5.4 zur einen Zahl β = 0,5494 mit fünf getrennten Gleichsetzungen, der Zufallsabschätzung und Rovelli–Speziale. Neue Daueranweisung: Vor jeder Übergabe werden Physik-Paper, Wiki und Preprint auf den Forschungsstand gebracht. Eine neue Zenodo-Version des Preprints nur mit Freigabe.
+
 ### Spinorband: Wegwahl im zweiten Umlauf (22.11.2026)
 
 Zwei Umläufe tragen als endliches Vergleichsmodell. Der erste hält Kandidaten in einem vorläufigen Zustand fest, der zweite kann bei unterschiedlicher Zulässigkeit entgegengesetzte Oktantphasen wählen. Beide zulässigen Richtungen lassen den Ausgang mehrdeutig. Wolfram, MMA und beide HDL-Steuerungen bestätigen den Vergleich. Eine native vorzeichenempfindliche HC-/Routing-Regel ist offen.

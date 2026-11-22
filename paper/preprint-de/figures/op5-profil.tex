@@ -1,0 +1,20 @@
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[>=Latex,x=43cm,y=13.4cm,font=\small]
+  \draw[qs axis,->] (0,0)--(.215,0) node[right] {\(\xi=r_\perp^2/R^2\)};
+  \draw[qs axis,->] (0,0)--(0,.211);
+  \foreach \x in {.05,.1,.15,.2} {\draw[qs axis] (\x,-.004)--(\x,.004);}
+  \node[anchor=north east] at (0,0) {\(0\)};
+  \node[below=3pt] at (.1,0) {\(0{,}1\)};
+  \node[below=3pt] at (.2,0) {\(0{,}2\)};
+  \foreach \y in {.1,.2} {\draw[qs axis] (-.0012,\y)--(.0012,\y);}
+  \node[left=4pt] at (0,.1) {\(0{,}1\)};
+  \node[left=4pt] at (0,.2) {\(0{,}2\)};
+  \draw[qs rust,very thick,dashed,domain=0:.19,samples=2] plot (\x,{\x});
+  \draw[qs blue,very thick,domain=0:.19,samples=38] plot (\x,{\x*\x});
+  \node[anchor=south east,qs rust] at (.177,.179) {\(\xi\)};
+  \node[anchor=south west,qs blue] at (.163,.038) {\(\xi^2\)};
+\end{tikzpicture}
+\caption{Führende Terme nahe der Achse. Für \(p(z)\ne0\) beginnt das normierte Profil \(\delta H/(-\mathcal A p)\) mit \(\xi^2\), und sein normierter transversaler Laplace-Ausdruck \(\Delta_\perp\delta H/(-16\mathcal A p/R^2)\) mit \(\xi\). Damit verschwinden auf der Achse beide Werte, doch die zweite transversale Ableitung der Laplace-Antwort liefert den Gezeitenkontrast. Gezeigt werden die führenden Terme.}
+\label{fig:op5-profil}
+\end{figure}
