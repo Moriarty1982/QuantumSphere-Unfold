@@ -1,0 +1,123 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r38 Source-Only: Field Equations for the Directed OP5 Mediator, a First Ansatz}
+\addcontentsline{toc}{section}{v4.10.0-r38 Source-Only: Field Equations for the OP5 Mediator}
+\label{sec:v4100-r38-mediator-field-equation}
+% ============================================================================
+
+\paragraph{Purpose.}
+Up to v4.10.0-r37 the directed mediator of the OP5 case is a chosen operator (r32.0) or a microscopic picture (r37), but it has no field
+equation of its own.  This layer gives a first ansatz: a tensor field transverse to the axis and a scalar, both coupled to the Higgs radial
+mode, with field equations whose exchange is compared with the comparison model.  It is an exploration with a method fixed before the
+computation and is not blind; the coefficient conditions were sketched by hand when the method was written.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r38 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r38 ansatz}
+\label{subsec:v4100-r38-ansatz}
+
+In the rest frame \(u\) with axis \(n=e_z\), \(i,j\in\{x,y\}\), \(X_{ij}\) symmetric,
+\[
+\begin{aligned}
+\mathcal L={}&(\partial_t\eta)^2-(\nabla\eta)^2-m_H^2\eta^2+\mathcal J_h\eta
++\tfrac12\bigl[(\partial_tX_{ij})^2-r_m(\nabla X_{ij})^2-m^2X_{ij}X_{ij}\bigr]
++g\,X_{ij}\bigl(\partial_i\partial_j\eta-\kappa\,\delta_{ij}\partial_t^2\eta\bigr)\\
+&+\tfrac12\bigl[(\partial_tS)^2-r_s(\nabla S)^2-m_s^2S^2\bigr]+g_s\,S\,\partial_t^2\eta ,
+\end{aligned}
+\]
+with the field equations
+\[
+\begin{aligned}
+(\partial_t^2-r_m\Delta+m^2)X_{ij}&=g\,(\partial_i\partial_j-\kappa\,\delta_{ij}\partial_t^2)\eta,\qquad
+(\partial_t^2-r_s\Delta+m_s^2)S=g_s\,\partial_t^2\eta,\\
+2(\partial_t^2-\Delta+m_H^2)\eta&=\mathcal J_h+g\,(\partial_i\partial_jX_{ij}-\kappa\,\partial_t^2X_{ii})+g_s\,\partial_t^2S .
+\end{aligned}
+\]
+The \(\eta\) sector is the radial mode of W2 (r33.1); the Einstein channel is absent (\(g_0=0\)).
+
+\subsection*{v4.10.0-r38 results}
+\label{subsec:v4100-r38-results}
+
+\paragraph{Theoremlet v4.10.0-r38.1 (exchange).}
+Eliminating \(X\) and \(S\) gives the operator
+\[
+ 2(m_H^2+q-x)-\frac{g^2\,\operatorname{tr}V^2}{d_m}-\frac{g_s^2x^2}{d_s},\qquad \operatorname{tr}V^2=a_\perp^2-2\kappa a_\perp x+2\kappa^2x^2,
+\]
+with \(d_m=m^2+r_mq-x\), \(d_s=m_s^2+r_sq-x\).  If \(d_s=d_m\), then \(g^2\operatorname{tr}V^2+g_s^2x^2=g_m^2N_m\) identically in \(x\) and \(a_\perp\) exactly for
+\[
+ g^2=\tfrac23g_m^2,\qquad \kappa=\tfrac12,\qquad g_s^2=\tfrac13g_m^2,
+\]
+unique up to the signs of \(g\) and \(g_s\).  Without the scalar the remainder is \(-\tfrac13g_m^2x^2\); for \(d_s\neq d_m\) two poles appear.
+\emph{Proof.} Schur complement of the plane-wave matrix; coefficient comparison in \(x^2\), \(a_\perp x\), \(a_\perp^2\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r38.2 (no ghosts, static stability).}
+(a) After one integration by parts in time, the matrix of time derivatives is positive definite exactly if \(g^2\kappa^2<1\) and
+\(g_s^2+2g^2\kappa^2<2\); with the values of r38.1 this is \(g_m^2<3\).
+(b) The static operator is \(2(m_H^2+q)-g^2a_\perp^2/(m^2+r_mq)\); it is positive for all \(\mathbf k\) exactly if \(g^2\le2r_m\), that is
+\[
+ g_m^2\le3r_m .
+\]
+(c) For \(r_m=r_s=\tfrac12\), \(m^2=m_s^2=1\), \(m_H^2=2\) all roots \(x\) of the dispersion relation are real and positive on the grid
+\(a_\perp\in\{0,\tfrac12,1,2,5,20,100\}\), \(k_z^2\in\{0,1,10\}\) for \(g_m^2=\tfrac3{100},1,\tfrac75\), and a negative root appears for \(g_m^2=\tfrac85\) at large
+\(a_\perp\), as (b) requires.  \emph{Proof.} (a) leading principal minors; (b) the numerator at \(a_\perp=q\) is
+\((2r_m-g^2)q^2+2(m^2+r_mm_H^2)q+2m_H^2m^2\); (c) numerical roots of the determinant.  \(\square\)
+
+\paragraph{Remark v4.10.0-r38.3 (reading).}
+The coefficients \(\tfrac23\) and \(-\tfrac23\) of \(N_m\) are no longer free: they follow from a transverse tensor with trace coupling \(\kappa=\tfrac12\), and
+the stretched string of r37 gives exactly this value (\(\operatorname{tr}V^2=\tfrac12(2a_\perp^2-2a_\perp x+x^2)\) at \(g_s=0\)).  The propagation
+coefficient \(r_m\), not needed for the leading contrast (r35.2), bounds the coupling through \(g_m^2\le3r_m\); a medium with \(r_m\to0\) could not
+carry this mediator stably.  Against the criteria fixed beforehand the ansatz carries \emph{partially}: the scalar with weight \(g_s^2/g^2=\tfrac12\)
+and its degeneracy with the tensor do not follow from the string or from the Companion.  The degeneracy suggests reading \(S\) as a further
+component of the same field, for example the time--time component of a tensor on the subspace orthogonal to the axis; this is a reading.  A
+field \(X_{ij}(x)\) presupposes many aligned strings, whose mutual coupling would fix \(r_m\).
+
+\subsection*{v4.10.0-r38 frames}
+\label{subsec:v4100-r38-frames}
+
+All quantities are given in the matter frame M, in the rest frame and with the axis of r36 and r37.  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r38 register entries}
+\label{subsec:v4100-r38-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r38\\
+\midrule
+field equations of the mediator & first ansatz; exchange equals \(-g_m^2N_m/d_m\) exactly (r38.1)\\
+coefficients of \(N_m\) & fixed by \(\kappa=\tfrac12\), the value of the string (r38.3)\\
+stability & ghost free; static energy positive iff \(g_m^2\le3r_m\) (r38.2)\\
+scalar \(S\) & weight and degeneracy set, not derived\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r38 notes}
+\label{subsec:v4100-r38-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak mediator\_\allowbreak field\_\allowbreak equation\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit 6bad83cb,
+script \texttt{mediator\_\allowbreak field\_\allowbreak equation.wl}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r38 ledger and guard update}
+\label{subsec:v4100-r38-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r38}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; the scalar and the origin of the action not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r38,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r38}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
