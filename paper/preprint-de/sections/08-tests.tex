@@ -22,6 +22,7 @@ Bei OP5 ist die Eingabe das präparierte Profil aus \eqref{eq:op5-profile}. Abbi
 Eine spätere Messung braucht für beide Antwortwege einen Bezug zur realen Präparation. Die Beiträge des Materials, der realen Halterung und der Ansteuerungsenergie bestimmen den gewöhnlichen Hintergrund. Die Empfindlichkeit der Anschlüsse und die effektive Kopplungsdifferenz bestimmen, ob sich der gerichtete Kontrast in einer Übertragungsdifferenz wiederfindet. Die integrierte Spur in \eqref{eq:op5-second} lokalisiert ein konkretes Problem der linearen Kompensation in der nächsten Materialordnung. Für diese Ordnung ist ein vollständiger Tensor am räumlichen Ort der Messung zu bilanzieren \cite{op5-elastic-limit,op5-budget}. Der angegebene Grenzfall liefert damit eine überprüfbare Anforderung an eine Apparatur.
 
 \subsection{Was an einer einzigen Zahl hängt}
+\label{sec:one-number}
 
 Die bedingten Zahlenwerte des Companion gehen auf eine einzige
 dimensionslose Zahl zurück, die Geschwindigkeit \(\beta=0{,}5494\) des
@@ -69,3 +70,28 @@ QAM hält zu einer Formel ihre Darstellung, ihre Voraussetzungen und die noch of
 Für Fassung 0.1.0 liefen in Wolfram Language 15.0.1 insgesamt 80 exakte Prüfgruppen zum HC, zur Feldalgebra, zu Koide und zum geometrischen Vergleich. Die separate Dixon-Rechnung reproduzierte die Kommutantendimensionen sechs und null für den komplex-linearen und den antilinearen Anteil. Anhang~\ref{app:wolfram-output} stellt die Wolfram-Eingaben und ihre Originalausgaben einander gegenüber. Das Wolfram-Begleitarchiv enthält die Eingabeskripte, die protokollierten Ausgaben, den Prüfbericht und den geprüften Stand. Die Rechnungen kontrollieren die angegebenen mathematischen Identitäten und Testfälle unter ihren jeweiligen Voraussetzungen.
 
 Für die Vereinheitlichungsfrage ergibt sich so eine Folge von konkreten Aufgaben. Zuerst müssen die Zustände und ihre Ladungsdarstellung gewählt werden. Dann braucht die Massenauslese eine native Operatoridentifikation, einen Auswahlmechanismus und eine Skala. Schließlich muss sich dieselbe Materiekonstruktion in einer erhaltenen Quelle niederschlagen, deren Wirkung sich geometrisch beschreiben und prüfen lässt. Die Rechnungen geben an, an welchen Übergängen diese Schritte voneinander abhängen.
+
+\subsection{Was nach dieser Fassung offen bleibt}
+\label{sec:open-points}
+
+Drei Fragen tragen die weitere Arbeit. Sie sind hier mit ihrem Stand zusammengefasst; die Herleitungen dazu stehen im Companion.
+
+\paragraph{Ein nativer physikalischer Operator.}
+Die Massenauslese braucht einen Operator, der aus dem gemeinsamen Träger folgt und nicht nachträglich gewählt ist. Bisher ist er nicht
+gefunden. Abschnitt~\ref{sec:octant-sign} zeigt, dass der vorhandene Kompensator auf den geschlossenen ungeraden Zuständen verschwindet
+und dass kein Baustein des Companion das Vorzeichen des Oktantschritts festlegt; es ist eine Zeitorientierung der Auslese. Abschnitt
+\ref{sec:one-number} zeigt, dass alle bedingten Zahlenwerte an einer Zahl hängen, die über gesetzte Gleichsetzungen eingeht.
+
+\paragraph{Eine hergeleitete Zuordnung der Eichladungen.}
+Die Ladungszuordnung im Dixon-Vergleich ist konstruiert, nicht abgeleitet. Abschnitt~\ref{sec:charged-multiplicity} grenzt ein, wo ein
+Generationsindex sitzen kann: nicht in der Farbe, sondern in einer farbneutralen Multiplizität, deren Zahl \(n\) eine Eingabe bleibt.
+
+\paragraph{Ein unabhängig begründetes geometrisches Quellgesetz.}
+Für den gewöhnlichen Teil ist es vorhanden: Der präparierte Beitrag in Abschnitt~\ref{sec:op5-coupling} folgt allein aus der
+linearisierten Einstein-Gleichung und ist außerhalb seines Trägers kompakt (Anhang~\ref{sec:anhang-b-kompakt}). Der gerichtete Kontrast
+braucht zusätzlich die Gleichsetzung der Higgsquelle mit dem Antrieb des Vergleichsfelds; sie ist eine Annahme, die erst eine gemeinsame
+Wirkung begründen könnte (Anhang~\ref{sec:anhang-b-annahmen}). Eine Gravitationswirkung mit Holst-Term liefert den Unterschied der
+Zählregeln zwischen den Frames nicht (Abschnitt~\ref{sec:one-number}).
+
+Keiner dieser Punkte ist durch die vorliegende Fassung geschlossen. Sie legt offen, an welcher Stelle eine Herleitung ansetzen müsste.
+
