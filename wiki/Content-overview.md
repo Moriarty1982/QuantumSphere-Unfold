@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r34.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r35.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -151,6 +151,8 @@ Layer v4.10.0-r32 is the source for the worked OP5 case: an elastically prepared
 Layer v4.10.0-r33 tests the source identification of the OP5 case against the Higgs sector of W2: it holds exactly for the scalar channel if the comparison field is the Higgs radial mode, but that reading forces a Lorentz-invariant scalar and, for minimal coupling, excludes the directed mediator on which the contrast depends. The open assumption is now the existence of a subluminal massive mediator coupled linearly to the Higgs radius.
 
 Layer v4.10.0-r34 searches the Companion for that mediator. No vacuum field meets all requirements. The counter-propagating pair connector of a matter state and its tachyon image is massive, subluminal (|v| = e^{−2η}) and directed, but has no action and no established coupling to the Higgs radius. The optical mode of the two-component material meets every requirement, couples only if Y₁/ρ₁ ≠ Y₂/ρ₂, and would make the directed contrast a property of the preparation.
+
+Layer v4.10.0-r35 works out that material route. A directed mediator needs a distinguished frame, which here comes from the sample. A uniaxial two-component preparation gives a directed massive term (mass = optical gap) that couples only if the components carry different Higgs fractions of their rest mass. The leading contrast does not need the subluminal coefficient; the numerator is one power of the transverse wave number short of the comparison model. The route carries partially.
 
 ## Never claimed
 

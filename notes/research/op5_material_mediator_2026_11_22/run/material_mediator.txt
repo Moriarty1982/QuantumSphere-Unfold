@@ -1,0 +1,14 @@
+Tatsaechliche Ausgabe von material_mediator.wl (Wolfram-MCP-Kern, 22.11.2026), ein Lauf.
+Warnungen: "Symbol::undefined2" betrifft freie Symbole; zweimal "Simplify::time" (Zeitgrenze einer inneren Vereinfachung, die
+Ergebnisse sind danach mit Factor ausgegeben und unabhaengig nachvollziehbar). Bruchdarstellung zeilenweise zusammengezogen.
+
+(1) optischer Pol: x_opt(q->0) = kk (r1 + r2)/(r1 r2);  Residuum = q * (-(r2 Y1) + r1 Y2)^2/(r1 r2 (r1 + r2)) + O(q^2)
+    Lesart: D_extra ~ -Res/(x_opt - x); Gegenstueck g_m^2 N_m = Res; isotrop, Zaehler ~ q (nicht N_m)
+    Residuum mit Y_a = f_a r_a / v: q * (f1 - f2)^2 r1 r2/((r1 + r2) v^2)
+    akustischer Pol: Residuum = q * (Y1 + Y2)^2/(r1 + r2) + O(q^2)
+(2) statisch: g_m^2 N_m/d_m = 2 ap^2 gm^2/(3 m^2) - 2 ap^2 gm^2 q rm/(3 m^4) + O(q^2);  fuehrendes Glied ohne r_m: True
+(3) Laengskomponente fuer kz -> Unendlich: -((Y1 + Y2)^2/((1 + c) K q - (r1 + r2) x))
+    optischer Pol: Luecke kp (r1 + r2)/(r1 r2);  Residuum (fuehrend) = s^2 (-(r2 Y1) + r1 Y2)^2/(r1 r2 (r1 + r2))
+    haengt nur von s^2 = a_perp ab: True
+(4) statisch induzierte Quelle (optischer Anteil) = eta * -(s^2 (-(r2 Y1) + r1 Y2)^2/(kp (r1 + r2)^2));  Form Delta_perp eta / w0^2 mit Gewicht (Y1/r1 - Y2/r2)^2 mu
+    Vergleichsmodell: Vermittlerterm statisch (2/3) g_m^2 a_perp^2/m^2, also eine Potenz a_perp mehr
