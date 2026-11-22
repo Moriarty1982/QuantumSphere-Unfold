@@ -1,0 +1,34 @@
+name: "Release 2: Artikel nachziehen (Copilot)"
+description: Physik-Paper und deutschen Preprint auf den Stand der neuen Runde bringen.
+title: "Release vX.Y.Z: Physik-Paper und Preprint nachziehen"
+labels: ["release", "copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Physik-Paper: `qam/editions/v5_physics_article.tex` und `v5_expanded_*.tex`. Preprint: `paper/preprint-de/` (Zenodo 10.5281/zenodo.24405552).
+        Nur Aussagen aus der Runde und ihren Notizen übernehmen. Status ehrlich halten (offene Probleme bleiben offen).
+  - type: input
+    id: round
+    attributes:
+      label: Grundlage (Runde oder PR)
+      placeholder: v4.10.0-r31, PR #NNN
+    validations:
+      required: true
+  - type: textarea
+    id: topics
+    attributes:
+      label: Themen für neue Abschnitte
+      description: Je Zeile ein Thema und die Quelle.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Fertig, wenn
+      value: |
+        - `python -m unittest qam.store.test_editions` besteht
+        - neue Literatur in `qam/editions/v5_physics_references.tex` bzw. im Preprint
+        - Katalogeinträge in `qam/editions/v5_research_notes.json` (wörtliche Auszüge, genau einmal in der Quelldatei)
+        - Preprint baut mit pdflatex ohne Overfull und offene Verweise
+        - PR-Text nennt die Seiten mit neuen Abschnitten

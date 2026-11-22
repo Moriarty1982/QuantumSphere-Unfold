@@ -5,9 +5,11 @@ unabhängig vom Werkzeug. `CLAUDE.md` verweist nur hierauf. Regeln werden **hier
 
 ## Was dieses Repository ist
 Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematischen Unfold der Paper-Reihe „Quantum
-Sphaera“. Die öffentliche Baseline ist **v5.2.0** vom 2026-11-17
-(Version-DOI 10.5281/zenodo.24294648, Concept-DOI 10.5281/zenodo.19210728;
-Vorgänger v5.1.0, 10.5281/zenodo.24237112; davor v5.0.0, 10.5281/zenodo.24152615).
+Sphaera“. Die öffentliche Baseline ist **v5.3.0** vom 2026-11-22
+(Version-DOI 10.5281/zenodo.24434403, Concept-DOI 10.5281/zenodo.19210728;
+Vorgänger v5.2.0, 10.5281/zenodo.24294648; davor v5.1.0, 10.5281/zenodo.24237112).
+v5.3.0 bringt die Runden v4.10.0-r29 und r30 und im Physik-Paper die Abschnitte 5.9 (Orientierung des Oktantschritts) und
+7.7 (eine Zahl, mehrere Übersetzungen) (1465/31 Seiten); Paketquellstand 53e9393a9502a9773300d8876bada7950999f138, Tag v5.3.0.
 v5.2.0 bringt die Runden v4.10.0-r15 bis r28 und im Physik-Paper den Abschnitt 5.8 zur Herkunft der fehlenden Zahl
 (1457/30 Seiten); Paketquellstand 8fb6e9378f6e6789697c60d3ba8b748cc2b56de6, Tag v5.2.0.
 v5.1.0 brachte die Runden v4.10.0-r12 bis r14, das Gegenterm-Register und einen Abschnitt zum gebogenen Oktanten im
@@ -97,6 +99,11 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   OP-Bezug, Merge, Release) das OP-Register #17 und die berührten OP-Issues ohne Rückfrage aktualisieren, im selben Schritt
   wie das Wiki. Fehlt einem offenen Problem ein Issue, eines anlegen und in #17 verlinken. Ehrlicher Status: kein OP als
   geschlossen darstellen.
+- **Artikel vor jeder Übergabe nachziehen** (Dauerauftrag des Autors vom 22.11.2026): Vor jeder Übergabe alle Artikel auf den
+  Forschungsstand bringen, soweit seit dem letzten Abgleich neue Befunde dazugekommen sind: das Physik-Paper
+  (`qam/editions/v5_physics_article.tex` mit `v5_expanded_*.tex`), die Wiki-Seiten Gesamtbild und Forschungsstand sowie den deutschen
+  Preprint (`paper/preprint-de/`, Zenodo-Concept-DOI 10.5281/zenodo.24405552). Inhaltliche Änderungen über Zweig und PR; eine neue
+  Zenodo-Version des Preprints nur mit Freigabe. In der Übergabe vermerken, welcher Artikel auf welchem Stand ist.
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** [Anleitung für LLM-Kontext und Cache](notes/anleitungen/llm-cache-optimieren.md) anwenden.

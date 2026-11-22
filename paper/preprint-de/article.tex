@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[hmargin=29mm,vmargin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{fvextra}
+\usetikzlibrary{arrows.meta}
+\definecolor{qs ink}{HTML}{242B33}
+\definecolor{qs axis}{HTML}{565F68}
+\definecolor{qs blue}{HTML}{174D75}
+\definecolor{qs rust}{HTML}{99471C}
+\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Überarbeitungsentwurf zu Preprint 0.1.0}]{hyperref}
+
+\setlength{\parindent}{1em}
+\raggedbottom
+
+\newcommand{\Tr}{\operatorname{tr}}
+\newcommand{\id}{\mathrm{I}}
+\begin{document}
+\thispagestyle{plain}
+\noindent{\LARGE\bfseries Quantum Sphaera\par}
+\vspace{0.25em}
+\noindent{\large Auf dem Weg zu einem gemeinsamen Rahmen\\
+für Materie, Eichstruktur und Raumzeitgeometrie\par}
+\vspace{0.7em}
+\noindent Marc Brendecke\hfill{\small Überarbeitung zu 0.1.0 \enspace$\cdot$\enspace 22. November 2026}\par
+\noindent{\small Veröffentlichte Fassung \href{https://doi.org/10.5281/zenodo.24405553}{doi:10.5281/zenodo.24405553}\par}
+\vspace{0.55em}
+\section*{Vorwort}
+Was soll ein Heisenberg-Kompensator eigentlich kompensieren? Und wenn man dann mal endlich erfährt, was er kompensieren soll, fragt man sich ziemlich erstaunt: \glqq Wie verdammt noch mal soll er das machen?\grqq{}
+
+Also, was tut ein Star-Trek-Nerd mit zu viel Zeit und einem LLM? Richtig, er sagt ihm: \glqq Hey, erklär mir doch mal, wie das Ding bei \emph{Star Trek} funktionieren soll.\grqq{}
+
+Und Michael Okuda aus dem \emph{Star-Trek}-Team hatte darauf tatsächlich schon eine ziemlich genaue Antwort.
+
+\begin{quote}
+\glqq Danke der Nachfrage, er funktioniert sehr gut!\grqq{}\footnote{Freie Übersetzung der Antwort von Michael Okuda in \emph{Time}, 28. November 1994. \href{https://content.time.com/time/subscriber/article/0\%2C33009\%2C981892\%2C00.html}{Reconfigure the Modulators!}}
+\end{quote}
+
+Gut, an der Stelle kommt man wohl nicht weiter. Also wird das LLM jetzt etwas gequält. Und der geneigte Leser vielleicht auch. ;)
+
+\noindent Für die mitunter eigenwillige Namensgebung bitte ich um Nachsicht und gehe \mbox{\emph{in medias res}}.
+
+Wieso sollte man Heisenberg überhaupt kompensieren wollen, wenn man beamen möchte?
+
+Und, was passiert mit unserer Physik, wenn wir einfach mal annehmen, dass es so was wie einen Heisenberg-Kompensator wirklich geben könnte?
+\medskip
+
+\input{sections/01-question}
+\input{sections/02-carrier}
+\input{sections/03-matter}
+\input{sections/04-gauge}
+\input{sections/05-mass}
+\input{sections/06-geometry}
+\input{sections/08-tests}
+
+\clearpage
+\begingroup
+\small
+\raggedright
+\begin{thebibliography}{99}
+\setlength{\itemsep}{0.25\baselineskip}
+\bibitem{companion}
+M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding}, v5.2.0, Vollausgabe, 2026.
+\href{https://doi.org/10.5281/zenodo.24294648}{doi:10.5281/zenodo.24294648}.
+\bibitem{physics}
+M.~Brendecke, Quantum Sphaera Companion v5.2.0, Physik-Ausgabe, 2026.
+\href{https://doi.org/10.5281/zenodo.24294648}{Gemeinsame Zenodo-Veröffentlichung}.
+\bibitem{repo}
+M.~Brendecke, \emph{QuantumSphere-Unfold}, Quellrepository.
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold}{GitHub}.
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/v5.2.0}{Release-Tag v5.2.0}.
+\bibitem{grundidee}
+M.~Brendecke, \emph{Mit dem heutigen Wissen rückwärts bis zur Grundidee}, Forschungsnotiz, 6. November 2026.
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/qsc_back_to_basic_idea_2026_11_06.md}{Feldlesart und Frame-Zuordnung}.
+\bibitem{feldkern}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/paper/short/p2_kernel.tex}{Kern und Lorentzstruktur}, Kurzentwurf zum Companion.
+\bibitem{feldsektoren}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/paper/short/p3_frames.tex}{Dualitätssektoren und Kompensator}, Kurzentwurf zum Companion.
+\bibitem{robertson}
+H.~P. Robertson, \emph{The Uncertainty Principle}, Phys. Rev. 34, 163--164 (1929).
+\href{https://doi.org/10.1103/PhysRev.34.163}{doi:10.1103/PhysRev.34.163}.
+
+\bibitem{qam}
+\emph{QAM-Dokumentation im Companion-Quellrepository}.
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/qam/README.md}{QAM und seine Prüfwerkzeuge}.
+\bibitem{op5-density}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_W2_Dichteantrieb.md}{W2-Dichteantrieb und sein gravitativer Begleitterm}, OP5-Forschungsnotiz, 20. November 2026.
+\bibitem{op5-channel}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Luminaler_Einstein_Kanal.md}{Luminaler Einstein-Kanal und gerichteter massiver Kontrast}, OP5-Forschungsnotiz, 20. November 2026.
+\bibitem{op5-motion}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dynamische_Gegenbewegung.md}{Dynamische Gegenbewegung mit kompakter linearer Gravitation}, OP5-Forschungsnotiz, 20. November 2026.
+\bibitem{op5-axis}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gleicher_Messweg_Nullprofil.md}{Nullprofil und Krümmungsschaltung im selben Messweg}, OP5-Forschungsnotiz, 20. November 2026.
+\bibitem{op5-elastic-limit}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Hyperelastische_Halterung.md}{Hyperelastische Halterung in zweiter Ordnung}, OP5-Forschungsnotiz, 20. November 2026.
+\bibitem{op5-reservoir}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Reservoir_Quadrupolabgleich.md}{Reservoirabgleich der direkten Dichtebeiträge}, OP5-Forschungsnotiz, 20. November 2026.
+\bibitem{dixon-commutant}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/sources/research/parts/v4100-post-release-layers.tex#L2582}{Kommutant einer Generation}, Companion, Runde v4.10.0-r19.
+\bibitem{dixon-copies}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op3_dixon_copies_2026_11_16/README.md}{Zwei und vier Dixon-Kopien}, OP3-Forschungsnotiz, 16. November 2026.
+\bibitem{op5-budget}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_AB_Fehlerbudget.md}{A/B-Fehlerbudget}, OP5-Forschungsnotiz.
+\bibitem{op5-nullpfad}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Nullpfad_Abgleich.md}{Nullpfad-Abgleich}, OP5-Forschungsnotiz.
+\bibitem{op5-feder}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Feder_Reservoirbilanz.md}{Federarbeit und Reservoirbilanz}, OP5-Forschungsnotiz.
+\bibitem{op5}
+M.~Brendecke, \emph{OP5-Forschungsübergabe nach PR 211}, 20. November 2026.
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/llm/Uebergabe.md}{GitHub-Forschungsstand}.
+\bibitem{h115}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/llm/Ergebnis_H115_Kompensator_Oktant.md}{H115: Kompensator und Nullrichtung des flachen Oktanten}, Testergebnis, 22. November 2026.
+\bibitem{h116}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/llm/Ergebnis_H116_Spinorband_Phasenquelle.md}{H116: Phasenauslese und Rückkehrquelle des Spinorbands}, Testergebnis, 22. November 2026.
+\bibitem{h117}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/llm/Ergebnis_H117_Zwei_Umlaeufe.md}{H117: Zwei Umläufe und die Wahl der Oktant-Orientierung}, Testergebnis, 22. November 2026.
+\bibitem{rootmap}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/notes/research/op_root_map_2026_11_18/README.md}{Wurzelkarte der offenen Probleme}, Forschungsnotiz, 18. November 2026.
+\bibitem{chance}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/notes/research/chance_estimate_2026_11_18/README.md}{Zufallsabschätzung der Treffer von \(\gamma_L\)}, Forschungsnotiz, 18. November 2026.
+\bibitem{rovelli}
+C.~Rovelli und S.~Speziale, \emph{Reconcile Planck-scale discreteness and the Lorentz-Fitzgerald contraction}, Phys. Rev. D 67, 064019 (2003).
+\href{https://doi.org/10.1103/PhysRevD.67.064019}{doi:10.1103/PhysRevD.67.064019}.
+\end{thebibliography}
+\endgroup
+\clearpage
+\appendix
+\input{sections/a-wolfram-output}
+
+\end{document}

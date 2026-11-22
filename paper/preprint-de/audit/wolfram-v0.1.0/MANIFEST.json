@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "doi": "10.5281/zenodo.24405553",
+  "date_berlin": "2026-11-20",
+  "local_repository_head": "dc9c936af3c991fe95c2edbb27fdf471393a4aeb",
+  "local_sources": "working tree, exact hashes at consolidation",
+  "published_pdf_sha256": "99aec02ead80b924fdb93182227307eeb8e4a2f3636f16ff6604a45507dc01dc",
+  "public_pdf_verified_byte_equal": true,
+  "evaluation": "Wolfram Language Evaluator 15.0.1, Linux-x86-64, exact arithmetic; no RNG",
+  "connector_process_exit_status": null,
+  "input_artifacts": {
+    "build/article.pdf": "99aec02ead80b924fdb93182227307eeb8e4a2f3636f16ff6604a45507dc01dc",
+    "article.tex": "f7e58b854022006a24ad9773b8f16fd1bede5a3a7c40e38a9c29176b06496984",
+    "sections/01-question.tex": "99778ad545d237ea916bc469ff23b04856eeee4ad1f0ff6967be37b2a843011c",
+    "sections/02-carrier.tex": "4cd06a52e0d35b899ca6caa955f4b412a72480b59bc3827b0d03ff0003ed78d5",
+    "sections/03-matter.tex": "1bee22001a5a3f27a9870ca1d9b834087dacf4b9378d5960496ca7b44bf7234e",
+    "sections/04-gauge.tex": "f080ef8cc1ea7caec47b9936afd7a30fdac1434d6f3257bd8a9ab209412000cf",
+    "sections/05-mass.tex": "e875ac36a81c166bdeee403ee311efd86d467eb162ce77b243d051361f3e650a",
+    "sections/06-geometry.tex": "764779a913389c1121a3eb5213804a77ad71d855b627ea50d407be8ddaa9a66e",
+    "sections/08-tests.tex": "554b8e70878cbbcf29cb0515b4bf0dcbc639b71bb1d8266a4b975da58c76f935"
+  },
+  "artifacts": {
+    "core/article_core.txt": "b644a3bc8becd8a23ab0102cc3f0e1b88fb683bec8e444be29ce212ffd1ff953",
+    "core/article_core.wl": "919baeb1f2b9ab6db7c2932d2a9607cf17893c89d066012576ca8d9f3e680e45",
+    "core/connector-run.json": "451117009c4245728707700682296a19ee69d9ef3b938b03674de8c0b2cafe73",
+    "core/first_attempt.txt": "860bec333edb831bc03df981fca435f13aa369e8294d0292c18cb02957af460a",
+    "core/first_attempt.wl": "31c110f89f9090468d009dfd3ee25ae8a80adb71b8978978057e29e878f08b8d",
+    "dixon/dixon.txt": "8a904998f5a094a8b20bf4defcfd8a386b4cf5ba611ba9cd4c7275e03e803380",
+    "dixon/dixon.wl": "3e79fcc174afc1ddd97d5c42a2c6417e3aba2a2d368cd915334dabe27cf2d1af",
+    "dixon/README.md": "5949f26318d41f804fad867b165cd19324b8793ae190aeae4a906674d0c6aba4",
+    "koide/koide.txt": "2023de4941b371fffc57614e8f2e57f9477ce1f0e59cf3363db09ad1faf1d00a",
+    "koide/koide.wl": "76f53af2e6df5737e45bf82e8ee10628091ddf830fc097caf38feb1e6b979615",
+    "koide/README.md": "041116121b2b295b40c4e27a32502b83e0f9548f01b1724d91157e2dc5dec92d",
+    "op5/op5-output.txt": "1618946ce80e56cc4d9bc37df7f40f78f7dd921c56f33b0314808c7341690db6",
+    "op5/op5.wl": "2455328037971f8f4dfcb08681ce447a651b3032175eade19a187383e58f7768",
+    "op5/README.md": "14e8bd2cea6253de75ed25cfbbc1e370a73e9d99bfc69509c595623b0085b72c",
+    "README.md": "8db6156a1e3bb31e7a2a4c42de05632ca1aa51ddcb206d42e9233888c3ed35c9"
+  }
+}

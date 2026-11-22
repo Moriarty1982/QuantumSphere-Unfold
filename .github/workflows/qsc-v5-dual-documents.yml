@@ -9,6 +9,13 @@ on:
       - 'qam/**'
       - 'notes/research/**'
       - '.github/workflows/qsc-v5-dual-documents.yml'
+  # Build check for release and Copilot PRs; workflows on Copilot PRs still need one approval by the author.
+  pull_request:
+    paths:
+      - 'sources/research/**'
+      - 'qam/**'
+      - 'notes/research/**'
+      - '.github/workflows/qsc-v5-dual-documents.yml'
 
 permissions:
   contents: read

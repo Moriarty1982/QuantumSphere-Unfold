@@ -1,0 +1,20 @@
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[>=Latex,x=9.6cm,y=4.25cm,font=\small]
+  \fill[qs blue!10] (-.25,0) rectangle (.25,.255);
+  \draw[qs axis,->] (-.57,0)--(.58,0) node[right] {\(\varphi/\pi\)};
+  \draw[qs axis,->] (0,-.39)--(0,.30) node[above] {\(\det G\)};
+  \foreach \x/\lab in {-.5/{-\frac12},-.25/{-\frac14},.25/{\frac14},.5/{\frac12}} {
+    \draw[qs axis] (\x,-.012)--(\x,.012);
+    \node[below=2pt] at (\x,0) {\(\lab\)};
+  }
+  \draw[very thick,qs blue,domain=-.45:.45,samples=81]
+     plot (\x,{(sqrt(2)*cos(180*\x)-1)/2});
+  \draw[densely dashed,qs axis] (-.25,0)--(-.25,.255) (.25,0)--(.25,.255);
+  \fill[qs blue] (-.25,0) circle (1.65pt) (.25,0) circle (1.65pt);
+  \node[qs ink,fill=qs blue!10,inner sep=2pt] at (0,.09) {positiv definit};
+  \node[qs ink,anchor=west] at (.42,-.18) {\(\det G<0\)};
+\end{tikzpicture}
+\caption{Determinante der Gram-Matrix bei festen paarweisen quadratischen Überlappungen \(1/2\). Im gezeigten Phasenintervall entsprechen die beiden Nullstellen dem Rangabfall. Im markierten Bereich zwischen ihnen sind alle drei Eigenwerte positiv. In der gesamten zulässigen Familie hat die Koide-Auslese denselben Wert.}
+\label{fig:koide-phase}
+\end{figure}

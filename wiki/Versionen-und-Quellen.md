@@ -1,5 +1,10 @@
 # Versionen und Quellen
 
+Veröffentlichungsnachtrag vom **22.11.2026**: v5.3.0 ist veröffentlicht, DOI 10.5281/zenodo.24434403.
+Neu sind die Runden v4.10.0-r29 und r30 und im Physik-Paper zwei Abschnitte: Orientierung des Oktantschritts (Vorzeichen
+durch Beträge und Endpunkte nicht festgelegt) und eine Zahl mit mehreren Übersetzungen (frame-abhängiges Flächenquant nur
+nicht-unitär). Zwei englische Ausgaben (1465/31 Seiten); Tag v5.3.0 fixiert den Paketquellstand 53e9393a9502a9773300d8876bada7950999f138.
+
 Veröffentlichungsnachtrag vom **17.11.2026**: v5.2.0 ist veröffentlicht, DOI 10.5281/zenodo.24294648.
 Neu sind die Runden v4.10.0-r15 bis r28 und im Physik-Paper ein Abschnitt zur Herkunft der fehlenden Zahl (Starrheit der Phase im Träger,
 Kern als Ausweg, Größe nur aus der Zählregel von M). Zwei englische Ausgaben (1457/30 Seiten); Tag v5.2.0 fixiert den Paketquellstand 8fb6e9378f6e6789697c60d3ba8b748cc2b56de6.
@@ -18,7 +23,7 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 | Ebene | Stand | Verwendung |
 |---|---|---|
-| Öffentliche Baseline | v5.2.0, 17.11.2026, DOI 10.5281/zenodo.24294648 | Publiziertes Zwei-Dokument-Paket und Zitation |
+| Öffentliche Baseline | v5.3.0, 22.11.2026, DOI 10.5281/zenodo.24434403 | Publiziertes Zwei-Dokument-Paket und Zitation |
 | Direkter Vorgänger | v5.1.0, DOI 10.5281/zenodo.24237112 | Historische Veröffentlichung |
 | Ältere Veröffentlichungen | v5.0.0, DOI 10.5281/zenodo.24152615; v4.11.0, DOI 10.5281/zenodo.24108818 | Historische Veröffentlichung |
 | Forschung | nach v4.10.0; neue Layer `v4.10.0-rNN` | Nachträgliche Forschung und Korrekturen |
@@ -31,7 +36,7 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 - [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/README.md): öffentliche Baseline und Scope Guard.
 - [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/CITATION.cff): Zitiermetadaten.
-- [Zenodo v5.2.0](https://zenodo.org/records/24294648) ist das aktuelle Paket; [GitHub-Release v5.2.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.2.0).
+- [Zenodo v5.3.0](https://zenodo.org/records/24434403) ist das aktuelle Paket; [GitHub-Release v5.3.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.3.0).
 - [Zenodo v5.1.0](https://zenodo.org/records/24237112) ist die direkte Vorgängerversion; [GitHub-Release v5.1.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.1.0).
 - [Zenodo v5.0.0](https://zenodo.org/records/24152615) ist eine ältere Version; [GitHub-Release v5.0.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.0.0).
 - [Zenodo v4.11.0](https://zenodo.org/records/24108818) ist die direkte Vorgängerversion.

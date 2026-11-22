@@ -1,0 +1,329 @@
+\section{Was davon bei den Massen ankommt}
+\label{sec:mass}
+
+Die bisherige Konstruktion legt fest, wie man Zustände auswählt und unter welchen Bedingungen sie eine innere Symmetrie tragen. Das kann man schon für einen vorgegebenen Zustandsraum prüfen. Jetzt kommt eine andere Anforderung hinzu. Aus diesen Zuständen sollen konkrete Massen folgen. An den drei geladenen Leptonen können wir fragen, welche Eigenschaft eine gemeinsame Auslese haben müsste.
+
+\subsection{Die Normbedingung im Raum der Massenwurzeln}
+
+Für drei nichtnegative Massenwurzeln \(x_i=\sqrt{m_i}\), \(i=1,2,3\), mit \(x\ne0\) definieren wir
+\begin{equation}
+ K(x)=\frac{\sum_i x_i^2}{(\sum_i x_i)^2}.
+ \label{eq:koide}
+\end{equation}
+Die physikalische Anwendung betrifft die drei geladenen Leptonen. Für die folgende Identität genügt ein beliebiger positiver Summenwert. Mit \(a=(\sum_i x_i)/3>0\) schreiben wir \(x=a(1,1,1)+d\), wobei \(\sum_i d_i=0\). Die beiden Anteile sind orthogonal. Folglich
+\begin{equation}
+ K(x)=\frac{3a^2+\|d\|^2}{9a^2}
+      =\frac13+\frac{\|d\|^2}{9a^2},
+ \qquad
+ K(x)=\frac23\ \Longleftrightarrow\ \|d\|^2=3a^2 .
+ \label{eq:equal-norm}
+\end{equation}
+Die Koide-Bedingung verlangt gleiche quadratische Normen des konstanten Anteils und der Abweichung. Ein zyklischer Basiswechsel erhält beide Normen und lässt ihr Verhältnis frei. Als Beispiel ergeben \(x=(1,2,3)\) den Wert \(7/18\) und drei gleiche Wurzeln den Wert \(1/3\). Die Rechnung verlegt die physikalische Frage damit auf die Auswahl der Normrelation \cite{physics}.
+
+Eine für den Vergleich mit dem Spektrum nützliche Koordinate auf der
+Nullsummenebene ist
+\begin{equation}
+ x_k=a\bigl[1+r\cos(\theta+2\pi k/3)\bigr],
+ \qquad k=0,1,2,\qquad r\geq0 .
+ \label{eq:koide-radius-phase}
+\end{equation}
+Die beiden Fourier-Vektoren mit Komponenten \(\cos(2\pi k/3)\)
+und \(\sin(2\pi k/3)\) sind orthogonal und haben beide die
+quadratische Norm \(3/2\). Damit gilt
+\(\|d\|^2=\tfrac32a^2r^2\), und \eqref{eq:equal-norm} wird zu
+\[
+ K=\frac13+\frac{r^2}{6},\qquad K=\frac23\ \Longleftrightarrow\ r=\sqrt2 .
+\]
+Die Normrelation wählt einen Radius im Raum der normierten Wurzeln.
+Entlang dieses Radius bleiben \(\theta\) und die gemeinsame
+Normierung \(a\) als Modellgrößen zu bestimmen. Zusätzlich muss jeder
+der drei Ausdrücke in eckigen Klammern nichtnegativ sein. Ist einer dieser Ausdrücke
+negativ, liefert die Hauptwurzel der quadrierten Größe ihren
+Betrag. Dann ändert sich der Nenner in \eqref{eq:koide}, und die
+Radiusformel kann für dieses Spektrum nicht verwendet werden
+\cite{companion,physics}.
+
+\subsection{Der Test am Kompensator}
+
+Auf dem euklidischen Wurzelraum sei \(e=(1,1,1)/\sqrt3\) und \(C_m=(\id+J_m)/2\) mit orthogonaler Involution \(J_m\). Angenommen, \(x=\alpha C_m e\) mit \(\alpha>0\) sei nichtnegativ und von null verschieden. Dann gilt \(\langle e,C_m e\rangle=\|C_m e\|^2\). Setzt man \(h=\langle e,J_m e\rangle\), folgt
+\begin{equation}
+ K(x)=\frac{1}{3\|C_m e\|^2}
+      =\frac{2}{3(1+h)},\qquad
+ K(x)=\frac23\ \Longleftrightarrow\ h=0.
+ \label{eq:hc-criterion}
+\end{equation}
+Der Test verlangt also, dass \(e\) und \(J_me\) orthogonal sind. Die Projektoraxiome erlauben auch \(J_m=\id\), mit \(h=1\). Um die Orthogonalität physikalisch zu begründen, muss \(J_m\) aus dem gemeinsamen Träger folgen.
+
+Dafür betrachtet die Physik-Ausgabe eine Koisometrie \(B:H\to\mathbb R^3\) mit \(BB^*=\id_3\) und \(J\)-invariantem Kern \cite{physics}. Da \(J\) selbstadjungiert ist, bleibt auch \((\ker B)^\perp=\operatorname{im} B^*\) invariant. \(B\) überträgt die Involution dieses orthogonalen Komplements als \(J_m=BJB^*\) auf den Wurzelraum, sodass \(BC=C_mB\). Ein unabhängig bestimmter Ausgangszustand \(f_0\) mit \(Bf_0=e\) und das physikalische Wurzelgesetz \(x=\alpha BCf_0\) würden die Bedingung auf
+\[
+ \langle B^*e,J B^*e\rangle=0
+\]
+zurückführen. Das benennt eine konkrete Prüfung am Träger. Die Auswahl von \(B\), \(f_0\) und des Wurzelgesetzes geht als eigene Voraussetzung ein. Ein rein ungerader Zustand liegt im Kern von \(C\) und liefert über diese direkte lineare Auslese keine von null verschiedenen Wurzeln.
+
+Ein vollständig bestimmter Vergleich zeigt, welche Information in
+der Wahl von \(J_m\) steckt. Wähle
+\(v=(2,-1,-1)/\sqrt6\) und lasse \(J_m\) die orthonormalen
+Vektoren \(e\) und \(v\) vertauschen. Auf ihrem orthogonalen
+Komplement wirke \(J_m\) als Identität. Dann ergibt sich
+\[
+ C_m e=\frac12(e+v),\qquad
+ x=\frac{\alpha}{2\sqrt3}
+       \left(1+\sqrt2,\ 1-\frac1{\sqrt2},\ 1-\frac1{\sqrt2}\right).
+\]
+Das sind drei positive Hauptwurzeln im Vergleich, von denen zwei
+gleich sind. Der Faktor vor der Klammer ist ihr
+Mittelwert \(a\). Die erste Komponente hat die Richtung ausgewählt,
+die in \eqref{eq:koide-radius-phase} der Phase \(\theta=0\)
+entspricht. Hier ist also \(K=2/3\) bereits erreicht, bevor überhaupt
+drei verschiedene Werte auftreten. Im Companion dient die
+Konstruktion als Beispiel für die Realisierbarkeit von
+\(\langle e,J_m e\rangle=0\). Für eine physikalische Erklärung
+braucht man eine Regel, durch die der Träger gerade eine solche
+Richtung und eine bestimmte Aufspaltung auswählt \cite{companion,physics}.
+
+\subsection{Die Koide-Überlappung}
+
+Die Überlappungsdarstellung setzt drei normierte Zustände \(v_i\) mit Gram-Matrix \(G_{ij}=\langle v_i,v_j\rangle\) an. In diesem Modell sind die Wurzeln \(x_i=s\lambda_i(G)\) mit \(s>0\). Da \(G\) positiv semidefinit ist und \(\Tr G=3\) gilt, ergibt sich
+\[
+ \Tr G^2=3+2\sum_{i<j}|\langle v_i,v_j\rangle|^2.
+\]
+Definieren wir \(\rho^2=\frac13\sum_{i<j}|\langle v_i,v_j\rangle|^2\), dann folgt
+\begin{equation}
+ K=\frac{\Tr G^2}{(\Tr G)^2}
+   =\frac{1+2\rho^2}{3},
+ \qquad K=\frac23\ \Longleftrightarrow\ \rho^2=\frac12 .
+ \label{eq:overlap}
+\end{equation}
+Die Gleichung setzt das Wurzelgesetz für das Spektrum voraus. Sie bestimmt den Mittelwert der drei quadratischen Überlappungen. Paarweise gleiche Überlappungen sind eine zusätzliche Spezialisierung.
+
+
+\subsubsection{Ein durchgehendes Beispiel mit veränderlicher Phase}
+
+Wie kann bei festem \(K\) aus dem Beispiel mit einer doppelten
+Wurzel ein Spektrum mit drei verschiedenen Wurzeln werden? Für die
+im Companion untersuchte Vergleichsfamilie seien alle drei
+paarweisen quadratischen Überlappungen gleich \(1/2\). Schreibe
+\(U(z_1,z_2,z_3)=(z_2,z_3,z_1)\) und setze
+\begin{equation}
+ G(\varphi)=I_3+\frac1{\sqrt2}\left(
+   e^{i\varphi/3}U+e^{-i\varphi/3}U^*\right).
+ \label{eq:koide-circulant-gram}
+\end{equation}
+Das Produkt \(G_{12}G_{23}G_{31}=e^{i\varphi}/(2\sqrt2)\)
+speichert die Bargmann-Phase \(\varphi\). Bei Umphasierung der
+drei Zustände, \(v_j\mapsto e^{i\alpha_j}v_j\), wird
+\(G_{ij}\) mit \(e^{i(\alpha_j-\alpha_i)}\) multipliziert.
+Im Produkt heben sich diese Faktoren auf. Die Phase bleibt also
+ein Merkmal des Tripels, auch wenn man die Phasen seiner drei
+Vektorrepräsentanten frei wählt. Die zirkulante Darstellung
+verteilt diese Phase gleichmäßig auf die drei gerichteten
+Einträge \cite{physics,companion}.
+
+Die Fourier-Basis diagonalisiert \(U\). Mit
+\(\omega=e^{2\pi i/3}\) gehört zum Eigenwert \(\omega^k\) von
+\(U\) die Eigenzahl
+\begin{equation}
+ \lambda_k(\varphi)=1+\sqrt2\cos\left(\frac{\varphi}{3}
+                                     +\frac{2\pi k}{3}\right)
+ \label{eq:koide-gram-spectrum}
+\end{equation}
+von \(G\). Für positiv semidefinites \(G\) sind dies
+die in \eqref{eq:overlap} verwendeten Wurzeln in Einheiten von
+\(s\). Ihr Mittelwert ist eins. Für \(\varphi=0\) ergibt sich
+genau das normierte Wurzeltripel aus dem Projektorvergleich. In
+der zirkulanten Familie entspricht die Änderung von \(\varphi\)
+einer Änderung von \(\theta=\varphi/3\) in
+\eqref{eq:koide-radius-phase}. Der Radius bleibt dabei \(\sqrt2\).
+Somit kann man an diesem Beispiel direkt verfolgen, wie dieselbe
+quadratische Überlappung unterschiedliche Wurzelspektren zulässt.
+
+\subsubsection{Warum der Oktant am Rand liegt}
+
+Für eine Realisierung durch drei Zustände muss \(G\) positiv
+semidefinit sein. Die Determinantenentwicklung liefert
+\begin{equation}
+ \det G=1-\tfrac32+2\operatorname{Re}(G_{12}G_{23}G_{31})
+       =\tfrac12(\sqrt2\cos\varphi-1).
+ \label{eq:det}
+\end{equation}
+Alle \(2\times2\)-Hauptminoren sind gleich \(1/2>0\).
+Im Hauptwertbereich der Phase ist \(G\) daher für
+\(|\varphi|<\pi/4\) positiv definit. Bei \(|\varphi|=\pi/4\)
+hat die Matrix Rang zwei, und für \(|\varphi|>\pi/4\) erhält
+man keine Gram-Matrix von Zustandsvektoren. Die Determinante
+zeigt damit, an welcher Stelle der formale Ausdruck für das
+Spektrum in \eqref{eq:koide-gram-spectrum} seine Interpretation
+als drei nichtnegative Hauptwurzeln verliert.
+
+\input{figures/koide-phase}
+
+Bei \(\varphi=\pi/4\) erhält man
+\[
+ \left(\lambda_0,\lambda_1,\lambda_2\right)
+  =\left(\frac{3+\sqrt3}{2},\,0,\,\frac{3-\sqrt3}{2}\right).
+\]
+Den Rand kann man direkt in \(\mathbb C^2\) realisieren. Wähle
+\(v_1=(1,0)\), \(v_2=(1,1)/\sqrt2\) und
+\(v_3=(1,i)/\sqrt2\). Die drei Überlappungen haben den
+Betrag \(1/\sqrt2\) und ihr gerichtetes Produkt ist
+\((1+i)/4\). Es sind die drei Spin-\(\tfrac12\)-Zustände
+eines Bloch-Oktanten, den die Physik-Ausgabe diskutiert.
+Die positive Matrix im Inneren des Phasenintervalls hat
+hingegen Rang drei und verlangt eine Realisierung in
+mindestens drei komplexen Dimensionen. Eine mögliche
+Realisierung liefern dann die drei Spalten von \(G^{1/2}\).
+Für \(0<|\varphi|<\pi/4\) sind alle drei Wurzeln positiv
+und verschieden. Der Wert in \eqref{eq:overlap} ist an
+Rand und Innerem derselbe. Die Rechnung legt daher die
+zulässige Phasenfamilie offen, während die Physik erklären
+müsste, welcher Wert in dieser Familie tatsächlich
+ausgewählt wird. Die Interpretation des Defizits
+\(\pi/4-|\varphi|\) als Kern in Abschnitt~5.8 der
+Physik-Ausgabe bleibt eine bedingte Konstruktion
+\cite{physics,companion}.
+
+\subsubsection{Welches Vorzeichen der Oktantschritt hat}
+
+Der Oktant legt den Betrag der Phase fest, nicht ihr Vorzeichen. Durchläuft
+man dieselben drei Zustände in umgekehrter Reihenfolge,
+\(v_1\to v_3\to v_2\to v_1\), bleiben Anfangs- und Endstrahl und alle drei
+Übergangswahrscheinlichkeiten \(\tfrac12\) gleich. Das gerichtete Produkt
+wird aber zu \((1-i)/4\), der Schritt also zu \(-\pi/4\) statt \(+\pi/4\).
+Beträge und Endpunkte entscheiden das Vorzeichen daher nicht. Auch eine
+gleichmäßige Verteilung der aufsummierten Phasen sagt nichts: Die beiden
+konstanten Schrittfolgen \(\pm1\) modulo acht durchlaufen in einem Zyklus
+alle acht Phasen \cite{h116}.
+
+Der Kompensator liefert das Vorzeichen ebenfalls nicht. Auf den
+geschlossenen ungeraden Generationszuständen gilt \(JS=-S\), also
+\(CS=(S+JS)/2=0\). Eine reelle Projektion vom Rang fünf, die eine reelle
+Richtung der komplexen Nullgeraden der Oktant-Auslese entfernt, gibt es
+zwar. Die beiden reellen Richtungen \(n\) und \(in\) dieser Geraden liefern
+aber dieselben Ränge und dieselbe Auslese, und \(J\) wählt nicht zwischen
+ihnen \cite{h115}.
+
+Übrig bleibt die Auswahl des geordneten Rückwegs. Ein Modell mit zwei
+Fenstern macht den Zeitpunkt sichtbar. Das erste Fenster hält die
+zulässigen Orientierungen als Maske in einem vorläufigen Zustand, das
+zweite prüft sie mit einer zweiten Maske, und ein Vorzeichen entsteht erst,
+wenn genau eine Orientierung übrig bleibt. Von den sechzehn Maskenpaaren
+ergeben drei \(+\pi/4\), drei \(-\pi/4\), neun sind gesperrt und eines
+bleibt mehrdeutig. Die vorhandenen Regeln des Companion vertragen sich mit
+diesem Zeitpunkt, enthalten aber keine Größe, die zwischen den beiden
+Vorzeichen entscheidet \cite{h117}. Alle drei Rechnungen waren vorab
+festgelegt, ihr Ausgang stand aber analytisch fest; sie gelten deshalb
+nicht als blinde Tests.
+
+\subsubsection{Was sich beim Kombinieren von Präparationen ändert}
+
+Die Phase kann nur dann als Eigenschaft einer Auslese
+verwendet werden, wenn feststeht, an welcher Stelle der
+Auslese sie eingeht. Betrachten wir zwei der oben
+beschriebenen positiven Tripel mit \(\theta_\pm=\theta_0\pm h\)
+im selben positiv zulässigen Intervall, demselben \(a\)
+und derselben Zuordnung der Komponenten in einem
+festen Materieframe. Wenn die beiden Wurzeln einer
+Komponente zuerst zu gleichen Teilen gemittelt werden,
+folgt mit der Addition der beiden Kosinuswerte
+\begin{equation}
+ \bar x_k=a\bigl[1+\sqrt2\cos h\,
+                      \cos(\theta_0+2\pi k/3)\bigr],\qquad
+ K(\bar x)=\frac{1+\cos^2 h}{3}.
+ \label{eq:koide-mixture}
+\end{equation}
+Die Präparationen dürfen also einzeln \(K=2/3\) erfüllen,
+während die gemittelte Wurzelauslese für eine echte
+Phasendifferenz einen kleineren Radius hat. Würde man die
+beiden Massen \(x_{+k}^2,x_{-k}^2\) unmittelbar mitteln,
+ergäbe sich pro Komponente
+\[
+ \frac{x_{+k}^2+x_{-k}^2}{2}
+   =\bar x_k^{\,2}+\frac{(x_{+k}-x_{-k})^2}{4}.
+\]
+Das zweite Ergebnis enthält einen Varianzterm. Beide
+Verfahren gehen von denselben Präparationen aus und
+unterscheiden sich in ihrer Operationsreihenfolge.
+
+Noch einmal eine eigene Möglichkeit ist die kohärente
+Addition zweier Pfadbeiträge \(B_1+e^{i\phi}B_2\) zu
+einem Übergangsoperator \(B\). Im Produkt \(B^*B\)
+entstehen dann die Kreuzterme
+\(e^{i\phi}B_1^*B_2+e^{-i\phi}B_2^*B_1\).
+Eine relative Phase kann deshalb im Spektrum des
+Operators wirken. Ein gemeinsamer Phasenfaktor vor
+\(B\) fällt aus \(B^*B\) heraus. Für eine native
+Zustandspräparation müsste man angeben, welche dieser
+Operationen physikalisch realisiert wird. Die
+Phasenmittelung ist im Companion ein ausdrücklich
+bedingter Vergleich \cite{companion,physics}.
+
+\subsection{Eine Vergleichsdynamik mit leichter und schwerer Komponente}
+
+Die Kompression aus Abschnitt \ref{sec:matter} kann mit einem Übergangsoperator zu einem zusätzlichen Raum verbunden werden. Als konkreten Vergleich betrachten wir einen Übergang \(B_{\mathrm{lh}}\) zwischen zwei endlichdimensionalen Hilberträumen mit ihren deklarierten positiven Metriken. Der schwere Block habe die konstante Lücke \(\Delta>0\) und die Kopplung das Gewicht \(\mu>0\). In orthonormalen Basen lautet der hermitesche Blockoperator
+\[
+ \Omega=
+ \begin{pmatrix}
+ 0 & \mu B_{\mathrm{lh}}^* \\
+ \mu B_{\mathrm{lh}} & \Delta\id
+ \end{pmatrix}.
+\]
+Die im Companion behandelte Form mit gewichteten Metriken geht durch einen Metrikwechsel in diese Form über \cite{companion,repo}. Gehört \(\sigma_i>0\) zu den Singulärwerten des Übergangs, reduziert sich der zugehörige Teil auf die Matrix mit Diagonale \(0,\Delta\) und Nebendiagonale \(\mu\sigma_i\). Die negative Eigenzahl \(-m_i\) liefert
+\begin{equation}
+ m_i(m_i+\Delta)=\mu^2\sigma_i^2 .
+ \label{eq:gap}
+\end{equation}
+Für den Vergleich sind \(\sigma_i\) dimensionslos und \(\mu,\Delta,m_i\) haben die Dimension einer Masse. Für \(\mu\sigma_i\ll\Delta\) ist \(m_i\) in führender Ordnung \(\mu^2\sigma_i^2/\Delta\). Diese Näherung hängt von der Lücke ab. Der leichte Eigenzustand hat bei von null verschiedener Kopplung auch eine Komponente im schweren Block.
+
+Das zugehörige Eigenwertproblem lässt sich mit nur zwei
+Komponenten verfolgen. Seien \(u_i,w_i\) normierte
+Singularvektoren mit \(B_{\mathrm{lh}}u_i=\sigma_iw_i\)
+und \(B_{\mathrm{lh}}^*w_i=\sigma_iu_i\). Für den Eigenzustand
+zur Eigenzahl \(-m_i\) sind die Koeffizienten in dieser Basis
+proportional zu
+\[
+ \left(1,-\frac{\mu\sigma_i}{\Delta+m_i}\right).
+\]
+Damit ist der quadrierte Anteil der schweren Komponente
+\(m_i/(\Delta+2m_i)\), nach Einsetzen von \eqref{eq:gap}
+in die Normierung. Ein frei gewählter Übergang liefere etwa
+\(q_i=\sigma_i^2\). Mit der dimensionslosen Kopplung
+\(\eta=\mu/\Delta\) folgt exakt
+\begin{equation}
+ m_i=\frac{\Delta}{2}\left(\sqrt{1+4\eta^2q_i}-1\right).
+ \label{eq:koide-scale-gap}
+\end{equation}
+Bei festem \(q_i,\eta\) multipliziert eine Änderung von
+\(\Delta\) alle \(m_i\) mit demselben Faktor. Ändert man
+\(\eta\) bei festem \(q_i\), ändern sich im Allgemeinen auch
+die Massenverhältnisse. Der Parameter für
+die relative Wirkung der Kopplung und die absolute
+Massenskala haben damit getrennte Aufgaben. Der Anteil
+der schweren Komponente im Eigenzustand hängt von der
+dimensionslosen Wahl ab und bleibt bei einer gemeinsamen
+Skalierung von Lücke und Kopplung gleich
+\cite{companion,repo}.
+
+Die rechte Seite von \eqref{eq:gap} setzt den Übergangsoperator voraus. Die Gram-Auslese in \eqref{eq:overlap} setzt dagegen ein Gesetz für die \emph{Wurzeln} der Massen voraus. Eine Identifikation der Ergebnisse würde deshalb eine Abbildung benötigen, die aus dem Übergang und seinen Skalen genau das Wurzelspektrum erzeugt. So wird die native Operatoridentifikation zu einer konkreten Anforderung an zwei explizite Modelle.
+
+\subsection{Was ein Massengesetz zusätzlich festlegen muss}
+
+Im Gram-Beispiel stehen damit drei unterschiedliche Entscheidungen
+an. Die Wahl der Überlappungen fixiert die Normrelation. Die Phase
+bestimmt innerhalb des gezeigten Intervalls, welches Verhältnis
+der Wurzeln erreicht wird. Der Faktor \(s\) gibt den Wurzeln ihre
+Einheit und setzt die absolute Massenskala über \(s^2\). Der
+Projektorvergleich liefert ein Kriterium für die Normrelation.
+Die Blockdynamik liefert ein Beispiel dafür, wie in einer
+anderen Auslese ein dimensionaler Parameter eingeht. Um diese
+Stücke zu verbinden, müsste der gemeinsame Träger die
+Zustandsauswahl aus Abschnitt \ref{sec:matter} und einen
+nativen Operator liefern, dessen Wurzelspektrum gerade diese
+Eigenschaften besitzt. Die Auswahl muss für einen Test vor dem
+Vergleich mit den Zielmassen feststehen.
+
+Im folgenden Abschnitt geht es um die nächste Stufe dieser
+Frage. Ein vorgegebener Massenterm lässt sich in eine
+dynamische Gleichung einsetzen. Wie der native Massenoperator
+diesen Term liefern und wie derselbe Materiezustand in einer
+geometrischen Quelle auftreten würde, wird damit zu einer
+konkreten Anforderung an die Kopplung.
