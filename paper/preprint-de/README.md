@@ -4,6 +4,14 @@
 
 Eigenständiger deutscher LaTeX-Entwurf über den gemeinsamen mathematischen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie. Die Fassung ist als einspaltiger Fachartikel in fünf Abschnitte gegliedert. Abschnitt 4.4 verfolgt im linearen OP5-Vergleich eine präparierte Materiequelle bis zum geometrischen Achsenkontrast. Die Quellenidentifikation, die vollständige gewöhnliche Bilanz zweiter Ordnung und die Apparaturantwort sind offene physikalische Schritte.
 
+## Stand im Repository
+
+Am 22. November 2026 aus dem Codex-Arbeitsordner übernommen (Überarbeitungsentwurf vom 20.11., 21:55) und ergänzt um
+Abschnitt 3.3.3 „Welches Vorzeichen der Oktantschritt hat“ (H115–H117) und Abschnitt 5.4 „Was an einer einzigen Zahl hängt“
+(Wurzelkarte, Zufallsabschätzung, Rovelli–Speziale). Der Artikel wird vor jeder Übergabe auf den Forschungsstand gebracht
+(`AGENTS.md`). Eine neue Zenodo-Version entsteht nur mit Freigabe des Autors. Beim Übernehmen wurden die Zeilenenden auf LF
+gesetzt; die Hashes in `baseline.json` beziehen sich auf den Codex-Stand.
+
 ## Querverweise
 
 - [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Die Arbeitsgrundlage ist der bestätigte [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026.

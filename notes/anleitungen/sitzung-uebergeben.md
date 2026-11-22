@@ -13,6 +13,15 @@ Datei: `llm/Uebergabe.md`. Sie muss für jedes Modell lesbar sein, also keine mo
 - letzter Build: Seiten, Labels, Overfull, harte Werte, Guard-Linter;
 - offene Autorentscheidungen und Arbeitsannahmen (mit Uhrzeit des Autorzitats).
 
+## 1a. Artikel nachziehen (Dauerauftrag vom 22.11.2026)
+Vor dem Schreiben der Übergabe prüfen, ob seit dem letzten Abgleich neue Befunde dazugekommen sind. Wenn ja, im selben Arbeitsblock
+nachziehen (Zweig und PR):
+- Physik-Paper: `qam/editions/v5_physics_article.tex` und `v5_expanded_*.tex`; danach `python -m unittest qam.store.test_editions`.
+- Wiki: `wiki/Gesamtbild.md` (Stand-Zeile, Werdegang) und `wiki/Forschungsstand.md`.
+- Deutscher Preprint: `paper/preprint-de/` (Zenodo 10.5281/zenodo.24405552); Bau nach `paper/preprint-de/README.md`, Seiten mit neuen
+  Abschnitten ansehen.
+In der Übergabe je Artikel eine Zeile: Stand (Datum, Commit oder PR).
+
 ## 2. Datei neu schreiben (überschreiben, nicht fortschreiben)
 Ziel: **unter ~60 Zeilen**, damit der Einstieg wenig Token kostet. Geschichte gehört in `AGENTS.md`, Runden und
 Ergebnis-Notizen, nicht hierher.

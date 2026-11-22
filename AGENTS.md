@@ -97,6 +97,11 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   OP-Bezug, Merge, Release) das OP-Register #17 und die berührten OP-Issues ohne Rückfrage aktualisieren, im selben Schritt
   wie das Wiki. Fehlt einem offenen Problem ein Issue, eines anlegen und in #17 verlinken. Ehrlicher Status: kein OP als
   geschlossen darstellen.
+- **Artikel vor jeder Übergabe nachziehen** (Dauerauftrag des Autors vom 22.11.2026): Vor jeder Übergabe alle Artikel auf den
+  Forschungsstand bringen, soweit seit dem letzten Abgleich neue Befunde dazugekommen sind: das Physik-Paper
+  (`qam/editions/v5_physics_article.tex` mit `v5_expanded_*.tex`), die Wiki-Seiten Gesamtbild und Forschungsstand sowie den deutschen
+  Preprint (`paper/preprint-de/`, Zenodo-Concept-DOI 10.5281/zenodo.24405552). Inhaltliche Änderungen über Zweig und PR; eine neue
+  Zenodo-Version des Preprints nur mit Freigabe. In der Übergabe vermerken, welcher Artikel auf welchem Stand ist.
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** [Anleitung für LLM-Kontext und Cache](notes/anleitungen/llm-cache-optimieren.md) anwenden.
