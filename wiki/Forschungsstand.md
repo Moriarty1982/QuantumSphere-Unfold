@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Runde r33: Annahme (40) gegen W2 geprüft (22.11.2026, Erkundung)
+
+Auftrag des Autors: „lass uns annahme 40 untersuchen“. Methode vorab (a9b61787), nicht blind, Wolfram exakt. Im Higgs-Sektor von W2 gilt für den Radialmodus 2(∂_t² − Δ)η + 4μ²η = 𝒥_h; die Gleichsetzung δJ_OP5 = δ𝒥_h ist also exakt, wenn das OP5-Vergleichsfeld η ist. Das erzwingt c_h = 1 (gesetzt waren 1/2) und im minimalen W2 g₀ = 0 (keine lineare Metrik-Mischung) sowie g_m = 0 (Kopplung an massive Vektoren quadratisch). Der gerichtete Kontrast hängt damit an einer anderen Annahme: einem unterluminalen, linear an den Higgsradius gekoppelten massiven Vermittler, den W2 nicht enthält. Der kompakte gewöhnliche Teil bleibt unberührt. Physik-Paper 6.9, Preprint B.1 und 5.6 nachgezogen. OP5 offen. Notizen: `notes/research/op5_assumption40_w2_2026_11_22/`, `notes/research/v4_10_0_r33/`.
+
 ### Deutscher Preprint: H113 im Eichteil und Abschnitt „Was offen bleibt“ (22.11.2026)
 
 Anlass: Die Triage-Rezension von AI Physics Review zum Preprint v0.1.0 nennt drei Entwicklungspunkte (native Operatoren, Herleitung der Eichzuordnung, unabhängiges geometrisches Quellgesetz). Der Preprint hat jetzt (a) in 2.4 den Befund H113: Eine farbäquivariante lineare Auslese verschwindet, ein Generationsindex kann nicht in der Farbe sitzen, nur in einer farbneutralen Multiplizität; (b) einen Abschnitt 5.6 „Was nach dieser Fassung offen bleibt“, der die drei Punkte mit ihrem Stand bündelt. Quelle von H113 ist Companion-Runde r30.8; keine neue Runde nötig. Preprint 45 Seiten. Kein Punkt ist geschlossen.

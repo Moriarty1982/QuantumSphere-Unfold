@@ -4674,3 +4674,97 @@ R_{\rm glob}^{(v4100\text{-}r32,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r33 Source-Only: The Source Identification of the OP5 Case Tested Against W2}
+\addcontentsline{toc}{section}{v4.10.0-r33 Source-Only: The OP5 Source Identification and W2}
+\label{sec:v4100-r33-assumption40}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r32 marked the identification \(\delta J_{\rm OP5}=\delta\mathcal J_h\) (r32.0(ii)) as an assumption.  This layer asks whether the
+gravitational and Higgs action W2 derives it.  It is an exploration with a method fixed before the computation; the structure of the
+answer was largely foreseeable, so it is not blind.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r33 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r33 results}
+\label{subsec:v4100-r33-results}
+
+\paragraph{Theoremlet v4.10.0-r33.1 (the Higgs radial mode carries the source).}
+In W2 with \(V=-\mu^2|\Phi|^2+\lambda|\Phi|^4\), unitary gauge \(\Phi=(0,h_{\rm W})\), \(h_{\rm W}=v+\eta\), \(v^2=\mu^2/(2\lambda)\), minimal coupling and a flat
+background, the radial mode obeys
+\[
+ 2(\partial_t^2-\Delta)\eta+4\mu^2\eta=\mathcal J_h,\qquad m_H^2=2\mu^2,
+\]
+with the Yukawa source \(\mathcal J_h=-\sum_iy_i\bar\psi_i\psi_i\) of r32.1.  \emph{Proof.} The Euler--Lagrange equation of
+\(L=(\partial h_{\rm W})^2-V(h_{\rm W})-h_{\rm W}\sum_iy_i\bar\psi_i\psi_i\), with \(V'(v)=0\), \(V''(v)=4\mu^2\).  \(\square\)
+Hence the identification holds exactly if the scalar comparison field of the OP5 model is \(\eta\), with the normalization fixed by the
+kinetic factor two.
+
+\paragraph{Theoremlet v4.10.0-r33.2 (what this forces on the comparison model).}
+The scalar operator \(Z(\Omega^2+c_h^2q-x)+\tfrac32g_0^2(q-x)\) of the OP5 model equals the operator \(2(q-x+m_H^2)\) of \(\eta\) if and only if
+\[
+ c_h^2=1,\qquad Z=2-\tfrac32g_0^2,\qquad \Omega^2=2m_H^2/Z .
+\]
+For minimal coupling the vacuum has no linear mixing of \(\eta\) with the metric (\(V'(v)=0\)), so \(g_0=0\), \(Z=2\), \(\Omega=m_H\); a non-minimal term
+\(\xi R|\Phi|^2\) would give a mixing proportional to \(\xi v\), absent in W2.  The coupling of \(\eta\) to a massive vector of W2 is quadratic in the
+vector, so there is no linear directed mediator: \(g_m=0\).  The data used in r32 (\(Z=1\), \(c_h^2=r_m=\tfrac12\), \(g_0^2=g_m^2=3/100\)) are not of this
+form; their coefficients of \(q\) and \(-x\) differ (\(109/200\) against \(209/200\)), so the comparison scalar is not Lorentz invariant.
+
+\paragraph{Remark v4.10.0-r33.3 (what replaces the assumption).}
+Read through W2, the identification of the sources is no longer the open step.  The directed contrast of r32.4 lives in the mediator
+sector \(g_m^2N_m/d_m\) with a subluminal speed \(r_m=\tfrac12\), which W2 does not contain.  The assumption carrying the contrast is therefore
+the existence of a directed, subluminal massive mediator coupled linearly to the Higgs radius.  The ordinary, compact part (r32.3) does
+not depend on it.  Without such a mediator W2 gives no directed contrast at linear order.
+
+\subsection*{v4.10.0-r33 frames}
+\label{subsec:v4100-r33-frames}
+
+Matter frame M, flat background, units \(c=1\).  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r33 register entries}
+\label{subsec:v4100-r33-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r33\\
+\midrule
+identification \(\delta J_{\rm OP5}=\delta\mathcal J_h\) & follows from W2 for the scalar channel if the comparison field is the Higgs radial mode (r33.1)\\
+comparison data \(c_h^2=r_m=\tfrac12\), \(g_0,g_m\) & not of W2 form; W2 forces \(c_h=1\), \(g_0=g_m=0\) (r33.2)\\
+directed contrast & needs a subluminal directed massive mediator, absent in W2 (r33.3)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r33 notes}
+\label{subsec:v4100-r33-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak assumption40\_\allowbreak w2\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit a9b61787,
+script \texttt{assumption40\_\allowbreak w2.wl}, output in \texttt{run/}); W2 in \texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak r82/}.
+
+\subsection*{v4.10.0-r33 ledger and guard update}
+\label{subsec:v4100-r33-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r33}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; a directed mediator and a common action not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r33,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r33}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

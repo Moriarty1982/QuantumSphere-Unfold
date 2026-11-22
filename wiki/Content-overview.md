@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r32.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r33.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -147,6 +147,8 @@ Layer v4.10.0-r30 records the work of 17 to 22 November 2026. A unitary boost do
 Layer v4.10.0-r31 records the work after v5.3.0. The octant phase is τ·ε·π/4; nothing in the Companion fixes its sign, and time reversal of the field amplitudes (complex conjugation on χ) reverses it while parity keeps it, so the sign is a time orientation of the readout (H118); OP3 rests by the author's decision. In W1 with a Holst term, real and complex boosts leave the Immirzi parameter unchanged; only a duality rotation of the curvature changes it, arctan γ ↦ arctan γ + θ, and since every such rotation preserves A² + B², a frame-dependent γ at equal Newton constant (γ_L) is excluded.
 
 Layer v4.10.0-r32 is the source for the worked OP5 case: an elastically prepared compression of matter produces a Higgs source whose ordinary linear gravitational response vanishes outside the support (retarded solution), while a directed contrast 16𝒜P/(m²R⁴) remains on the same measurement axis if the Higgs source is identified with the OP5 drive; that identification is an assumption without an action. The physics paper (section 6.9) and the German preprint (appendix B) cite this layer.
+
+Layer v4.10.0-r33 tests the source identification of the OP5 case against the Higgs sector of W2: it holds exactly for the scalar channel if the comparison field is the Higgs radial mode, but that reading forces a Lorentz-invariant scalar and, for minimal coupling, excludes the directed mediator on which the contrast depends. The open assumption is now the existence of a subluminal massive mediator coupled linearly to the Higgs radius.
 
 ## Never claimed
 
