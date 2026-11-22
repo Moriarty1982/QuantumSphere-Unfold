@@ -1,0 +1,33 @@
+\section{Woran die Idee sich prüfen lässt}
+\label{sec:tests}
+
+Die Aufgabe eines gemeinsamen Trägers ist erst dann erfüllt, wenn dieselben Zustände, Symmetrien und Kopplungen in den aufeinanderfolgenden Rechnungen wieder auftauchen. Die Beispiele machen diese Anforderung an drei Stellen konkret. Sie zeigen auch, wie sich ein negativer Befund zur jeweils benutzten Annahme zurückverfolgen lässt.
+
+\subsection{Was die Feldauslese erhält}
+
+Beim HC-Feldvergleich sind die Eingaben eine Feldkonfiguration und die deklarierte Involution \(J_{\mathrm B}\). Abbildung \ref{fig:hc-feld} zeigt den Test am lichtartigen Eingang. Das berechnete \(s'\) sagt, welche Feldklasse nach der Projektion erreicht wird. Ein Modell, das aus demselben Projektor wieder ein lichtartiges Feld gewinnen soll, muss angeben, durch welche anschließende Operation die beiden Bedingungen \(s'=0\) und \(\mathbf z'\ne0\) erfüllt werden. Die Feldinvariante macht diese Forderung unabhängig von der Wahl eines Lorentz-Beobachters prüfbar. Die Identifikation eines quantisierten Lichtzustands setzt weitere Struktur voraus \cite{feldkern,feldsektoren}.
+
+Auch die Dynamik der Auslese hat einen eigenen Test. Für ein vorgegebenes Paar \((T,G)\) genügt ein \(z\in\ker T\) mit \((\dot T+TG)z\ne0\), um eine autonome lineare Entwicklung der ausgelesenen Variablen auszuschließen. Die Zustände \(u\) und \(u+z\) ergeben dieselbe Auslese und verschiedene Ableitungen. Die Gleichheit der momentanen Beobachtungsdaten entscheidet so noch nicht, ob zwei Zustände dieselbe Antwort auf eine Störung haben. Diese Prüfung lässt sich an einer konkreten Realisierung durchführen, sobald ihre Auslese und ihr Generator feststehen \cite{physics}.
+
+\subsection{Was bei den Massen getrennt festgelegt werden muss}
+
+Im Gram-Vergleich sind die Beträge der paarweisen Überlappungen und die Phase getrennte Eingaben. Man kann die Phase ändern und alle Beträge festhalten. Die Normrelation bleibt erhalten, während die Determinante und das Spektrum sich ändern. Abbildung \ref{fig:koide-phase} zeigt den Rangverlust an einer konkreten Stelle dieser Familie. Der Versuch, die drei Leptonenmassen aus der Überlappung allein zu bestimmen, lässt daher einen ausrechenbaren Teil des Spektrums frei.
+
+Welche Prüfung folgt daraus? Eine vorgeschlagene Zustandspräparation muss zuerst unabhängig die zugehörige Gram-Matrix liefern. Falls sie Rang zwei hat, liefert diese Wurzelregel eine verschwindende Masse. Den Randfall kann man angeben, bevor man eine Skala wählt. Andererseits liefert ein positiv definites Beispiel zunächst drei positive Wurzeln. Für einen Vergleich mit physikalischen Massen braucht man danach die Identifikation des nativen Operators, die Auswahl der Phase und eine unabhängig bestimmte Normierung. Ein erfolgreicher Test der Normrelation beantwortet in diesem Aufbau genau eine der drei Fragen \cite{physics,companion}.
+
+\subsection{Was ein OP5-Vergleich messen müsste}
+
+Bei OP5 ist die Eingabe das präparierte Profil aus \eqref{eq:op5-profile}. Abbildung \ref{fig:op5-modell} zeigt, wie daran zwei Antwortwege anschließen. Man kann die Erhaltung des mechanischen Tensors prüfen und für den gerichteten Weg den Gezeitenkontrast auf dem Plateau berechnen. Der gewöhnliche Außenbeitrag \eqref{eq:op5-compact} und der Achsenkontrast \eqref{eq:op5-contrast} sind damit am selben Profil getrennt zugänglich. Das Nahachsenverhalten in Abbildung \ref{fig:op5-profil} zeigt außerdem, warum ein auf der Achse verschwindender Profilwert den Gezeitentest offenlässt. Die Auslese benutzt Ableitungen des Profils.
+
+Eine spätere Messung braucht für beide Antwortwege einen Bezug zur realen Präparation. Die Beiträge des Materials, der realen Halterung und der Ansteuerungsenergie bestimmen den gewöhnlichen Hintergrund. Die Empfindlichkeit der Anschlüsse und die effektive Kopplungsdifferenz bestimmen, ob sich der gerichtete Kontrast in einer Übertragungsdifferenz wiederfindet. Die integrierte Spur in \eqref{eq:op5-second} lokalisiert ein konkretes Problem der linearen Kompensation in der nächsten Materialordnung. Für diese Ordnung ist ein vollständiger Tensor am räumlichen Ort der Messung zu bilanzieren \cite{op5-elastic-limit,op5-budget}. Der angegebene Grenzfall liefert damit eine überprüfbare Anforderung an eine Apparatur.
+
+\subsection{Welche Rechnung eine Annahme mitführt}
+
+Für eine Nachrechnung wählt man eine Gleichung und schreibt ihre Eingaben auf. Beim kompakten gewöhnlichen Außenbeitrag sind das der lineare erhaltene mechanische Tensor, der Wellenfaktor des Profils und die retardierten Daten. Die gerichtete Auslese benutzt dieselbe Präparation, dazu den gewählten OP5-Antriebsoperator und die Kopplungsannahme in \eqref{eq:op5-match}. Die Gleichsetzung der Quellen ist der Übergang, durch den beide Wege Antworten auf dieselbe Materieänderung werden \cite{op5-motion,op5}.
+
+QAM hält zu einer Formel ihre Darstellung, ihre Voraussetzungen und die noch offenen Übergänge für ihre Anwendung fest. Die im Companion protokollierten symbolischen Kontrollen gehören jeweils zu den durchgeführten Rechnungen. Eine Änderung der physikalischen Kopplung würde die Anwendung auf das gemeinsame Modell berühren. Die Erhaltungsrechnung für den mechanischen Tensor hat ihre eigenen, im Fallbeispiel sichtbaren Voraussetzungen \cite{qam,op5-motion}.
+
+\paragraph{Wolfram-Rechenkontrolle.}
+Für Fassung 0.1.0 liefen in Wolfram Language 15.0.1 insgesamt 80 exakte Prüfgruppen zum HC, zur Feldalgebra, zu Koide und zum geometrischen Vergleich. Die separate Dixon-Rechnung reproduzierte die Kommutantendimensionen sechs und null für den komplex-linearen und den antilinearen Anteil. Anhang~\ref{app:wolfram-output} stellt die Wolfram-Eingaben und ihre Originalausgaben einander gegenüber. Das Wolfram-Begleitarchiv enthält die Eingabeskripte, die protokollierten Ausgaben, den Prüfbericht und den geprüften Stand. Die Rechnungen kontrollieren die angegebenen mathematischen Identitäten und Testfälle unter ihren jeweiligen Voraussetzungen.
+
+Für die Vereinheitlichungsfrage ergibt sich so eine Folge von konkreten Aufgaben. Zuerst müssen die Zustände und ihre Ladungsdarstellung gewählt werden. Dann braucht die Massenauslese eine native Operatoridentifikation, einen Auswahlmechanismus und eine Skala. Schließlich muss sich dieselbe Materiekonstruktion in einer erhaltenen Quelle niederschlagen, deren Wirkung sich geometrisch beschreiben und prüfen lässt. Die Rechnungen geben an, an welchen Übergängen diese Schritte voneinander abhängen.

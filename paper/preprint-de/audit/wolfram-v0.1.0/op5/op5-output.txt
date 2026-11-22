@@ -1,0 +1,36 @@
+During evaluation of In[1]:= Wolfram kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= PASS | sources of W2 | residual 0
+During evaluation of In[1]:= PASS | direct energy density at fixed v | residual 0
+During evaluation of In[1]:= PASS | rest-energy pressure | residual 0
+During evaluation of In[1]:= PASS | Paired spring first EOM | residual {0, 0, 0}
+During evaluation of In[1]:= PASS | Paired spring second EOM | residual {0, 0, 0}
+During evaluation of In[1]:= PASS | mass-weighted displacement | residual {0, 0, 0}
+During evaluation of In[1]:= PASS | stiffness-weighted displacement | residual {0, 0, 0}
+During evaluation of In[1]:= PASS | linear energy conservation | residual 0
+During evaluation of In[1]:= PASS | linear momentum conservation | residual {0, 0, 0}
+During evaluation of In[1]:= PASS | longitudinal elastic Higgs source | residual 0
+During evaluation of In[1]:= PASS | spring work on imposed rest-position d | residual 0
+During evaluation of In[1]:= PASS | Einstein source transversality | residual {0, 0, 0, 0}
+During evaluation of In[1]:= PASS | Einstein trace and contraction | residual {0, 0}
+During evaluation of In[1]:= PASS | Einstein quotient continued through removable pole | residual 0
+During evaluation of In[1]:= PASS | Fierz-Pauli contraction | residual 0
+During evaluation of In[1]:= PASS | imposed source profile match | residual 0
+During evaluation of In[1]:= PASS | retarded field expression matches forced wave equation in Fourier symbol | residual 0
+During evaluation of In[1]:= PASS | three transverse Laplacians | residual 0
+During evaluation of In[1]:= PASS | axis profile vanishes | residual 0
+During evaluation of In[1]:= PASS | axis massive entry vanishes | residual 0
+During evaluation of In[1]:= PASS | axis tidal contrast per local p | residual 0
+During evaluation of In[1]:= PASS | azimuthal bundle factor after longitudinal integration | residual 0
+During evaluation of In[1]:= PASS | planar kernel interval deficit | residual 0
+During evaluation of In[1]:= PASS | second Piola coefficient | residual {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+During evaluation of In[1]:= PASS | quadratic counter-motion sum | residual {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+During evaluation of In[1]:= PASS | integrated Hessian relation pointwise divergence precursor | residual 0
+During evaluation of In[1]:= PASS | trace coefficient after integration by parts | residual 0
+During evaluation of In[1]:= PASS | positive integrated trace prefactor | residual 0
+During evaluation of In[1]:= PASS | A/B equal-ends quotient control | residual {{0, 0}, {0, 0}}
+During evaluation of In[1]:= PASS | drift quotient spectral-similarity control | residual {{0, 0}, {0, 0}}
+During evaluation of In[1]:= PASS | matched null path control | residual {{0, 0}, {0, 0}}
+During evaluation of In[1]:= PASS | exact phase-error quotient control | residual {{0, 0}, {0, 0}}
+During evaluation of In[1]:= SUMMARY | passed=32 | failed=0
+
+Out[1]= {32, 0}

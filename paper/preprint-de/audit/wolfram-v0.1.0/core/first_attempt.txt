@@ -1,0 +1,25 @@
+Symbol::undefined2: Warning: Global symbols "Pc, T0, A0, T0, Pc, T0, A0, Pc, T0, T0, T0, Pc, Pc, Pc, Pc" are undefined.
+During evaluation of In[1]:= Kernel: 15.0.1 for Linux x86 (64-bit) (July 2, 2026) | Linux-x86-64
+During evaluation of In[1]:= HC polynomial identities modulo J^2-I: PASS residual = {0, 0, 0, 0, 0, 0}
+During evaluation of In[1]:= Generic field ports and bilinear invariant: PASS residual = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, 0, 0, 0}
+During evaluation of In[1]:= Plane wave, its output invariants and port norms: PASS residual = {0, 0, 0, {0, 0, 0}, 0, 0, 0}
+During evaluation of In[1]:= Field Gram disk numerator and area identity: PASS residual = {0, 0}
+During evaluation of In[1]:= Transposed Lorentz norm obligation and transported exchange: PASS residual = 0
+During evaluation of In[1]:= Order of complex field transport and exchange: PASS residual = {0, 0, 0}
+During evaluation of In[1]:= Biquaternion norm and product on the ambient algebra: PASS residual = {{{0, 0}, {0, 0}}, 0, 0}
+During evaluation of In[1]:= Restricted scalar coordinate it: PASS residual = 0
+During evaluation of In[1]:= Null spinor map, inverse coordinates and sample: PASS residual = {0, 0, 0, 0, {0, 0, 0}}
+During evaluation of In[1]:= Null lifting compatibility for either nonzero square: PASS residual = 0
+During evaluation of In[1]:= Exact nontrivial closure seed, isometry and image: PASS residual = {{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}, {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}, {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}}}
+During evaluation of In[1]:= Generic defect residual and vanishing expectation on sample closed states: PASS residual = {{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}}, {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}}
+During evaluation of In[1]:= Rank-one comparison, characteristic polynomial and distinct K: FAIL residual = {-2*(-1 + l)*l^2, 0, 0}
+During evaluation of In[1]:= Counterexample to autonomous HC readout, exact sample: PASS residual = {{0, 0}, {0, 0}}
+During evaluation of In[1]:= Time-dependent readout, exact parametrized 2-to-1 model: PASS residual = {{0}, {0}, {0}}
+During evaluation of In[1]:= Local gauge law, general connection and one time-dependent matrix: PASS residual = {0, 0}
+During evaluation of In[1]:= Full-column source reduction, compatible and incompatible examples: PASS residual = {{{0, 0}, {0, 0}, {0, 0}}, {{0, 0}, {0, 0}}, {0, 0, 0}}
+During evaluation of In[1]:= Cartan subsidiary principal-symbol symmetrizer conditional on positive slice metric: PASS residual = {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}}
+During evaluation of In[1]:= Coframe determinant, exact symbolic triangular family: PASS residual = 0
+During evaluation of In[1]:= SUMMARY: 18/19 checks passed
+General::messages: Messages were generated which may indicate errors.
+
+Out[1]= False

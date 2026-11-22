@@ -1,0 +1,96 @@
+\subsection{Was der Kompensator tun soll}
+\label{sec:carrier}
+
+Stellen wir uns einen Zustand vor, den wir einmal spiegeln. Ein Teil bleibt dabei gleich, ein anderer wechselt das Vorzeichen. Legen wir den ursprünglichen und den gespiegelten Zustand übereinander und bilden den Mittelwert, fällt der zweite Teil heraus. Damit ist die Aufgabe des Kompensators beschrieben. Jetzt brauchen wir eine Regel für die Spiegelung.
+
+Sei \(J:V\to V\) eine lineare Involution auf einem reellen Vektorraum \(V\). Um zu sehen, was der Mittelwert auswählt, schreiben wir \(v=v_++v_-\) mit \(Jv_+=v_+\) und \(Jv_-=-v_-\). Dann ist \(Jv=v_+-v_-\). Addieren und Subtrahieren liefert den gesuchten Anteil und sein Gegenstück:
+\begin{equation}
+ Cv=\frac{v+Jv}{2}=v_+,\qquad
+ P_-v=\frac{v-Jv}{2}=v_-.
+ \label{eq:projections}
+\end{equation}
+Umgekehrt erfüllen diese beiden Ausdrücke für jedes \(v\) die angegebenen Vorzeichenregeln. Damit bestimmt \(J\) die beiden Anteile eindeutig. Aus \(J^2=I\) folgen \(C^2=C\), \(P_-^2=P_-\), \(CP_-=0\) und \(C+P_-=I\). Der erste Operator ist der Heisenberg-Kompensator, kurz HC, in der hier betrachteten Realisierung \cite{physics}. Wenn der Raum ein Skalarprodukt trägt und \(J\) orthogonal ist, sind auch die beiden ausgewählten Räume orthogonal. Die Zerlegung selbst folgt schon aus der Involution.
+
+Der Name greift das Motiv der quantenmechanischen Unschärfe auf. Die Heisenberg-Unschärferelation betrifft die Streuungen von Observablen wie Ort und Impuls \cite{robertson}. Was hier kompensiert wird, ist vorerst genau der Anteil, den \(J\) umkehrt. Eine physikalische Wirkung lässt sich erst beurteilen, sobald wir wissen, was \(v\) beschreibt und welche Operation \(J\) auf diesen Daten ausführt.
+
+\subsection{Was der Kompensator am Lichtfeld auswählt}
+\label{sec:field-compensation}
+
+Kehren wir zur Lichtwelle zurück. In einer Normierung mit \(c=1\) schreiben wir die Felder als \(\mathbf z=\mathbf E+i\mathbf B\). Ein einfacher Kandidat für \(J\) ist der Austausch von elektrischem und magnetischem Feld. In dieser Schreibweise lautet er \(J_{\mathrm B}\mathbf z=i\overline{\mathbf z}\). Das ist eine reell-lineare Involution, mit \(J_{\mathrm B}(\mathbf E+i\mathbf B)=\mathbf B+i\mathbf E\). Setzen wir sie in \eqref{eq:projections} ein, erhalten wir
+\begin{equation}
+ C\mathbf z=(1+i)\frac{\mathbf E+\mathbf B}{2},
+ \qquad
+ P_-\mathbf z=(1-i)\frac{\mathbf E-\mathbf B}{2}.
+ \label{eq:hc-field}
+\end{equation}
+Der HC gleicht die Differenz aus. Im ausgewählten Anteil sind beide Feldvektoren gleich und haben den Wert \((\mathbf E+\mathbf B)/2\) \cite{grundidee,feldsektoren}.
+
+\paragraph{Eine ebene Welle als Eingabe.}
+Nehmen wir an einem Punkt der Welle \(\mathbf E=a\mathbf e_x\) und \(\mathbf B=a\mathbf e_y\), mit \(a>0\) und orthonormalen Raumrichtungen \(\mathbf e_x,\mathbf e_y\). Die Welle hat dort den Feldvektor \(\mathbf z=a(\mathbf e_x+i\mathbf e_y)\). Gleichung \eqref{eq:hc-field} liefert
+\begin{equation}
+ C\mathbf z=\frac a2(1+i)(\mathbf e_x+\mathbf e_y),\qquad
+ P_-\mathbf z=\frac a2(1-i)(\mathbf e_x-\mathbf e_y).
+ \label{eq:field-example}
+\end{equation}
+Im ersten Anteil sind beide Feldvektoren gleich. Im zweiten sind sie entgegengesetzt. Ihre Summe rekonstruiert die Eingabe. Im euklidischen Feldskalarprodukt ist das ursprüngliche Quadrat der Norm \(2a^2\), und jeder der beiden Anteile hat die quadrierte Norm \(a^2\). Das ist die Pythagoras-Identität der reellen orthogonalen Zerlegung. Für eine Aussage über Energietransport wäre zusätzlich die Feldentwicklung zu prüfen \cite{feldsektoren,grundidee}.
+
+\input{figures/hc-feld}
+
+Und ist der ausgewählte Anteil jetzt Licht? Aus \eqref{eq:field-example} folgen für die beiden projizierten Feldvektoren \(|\mathbf E'|^2=|\mathbf B'|^2=a^2/2\) und \(\mathbf E'\cdot\mathbf B'=a^2/2\). Die Projektion erhält in diesem Beispiel also die Gleichheit der Beträge. Die Orthogonalität geht verloren. Ein Kennzeichen für lichtartige Felder muss beide Bedingungen zugleich prüfen.
+
+\subsection{Wie die Sektoren ins Spiel kommen}
+\label{sec:frames}
+
+Die beiden Eigenschaften der Welle lassen sich in einer Zahl zusammenfassen. Mit dem komplex-bilinearen Skalarprodukt ist
+\begin{equation}
+ s(\mathbf z)=\mathbf z\cdot\mathbf z
+ =|\mathbf E|^2-|\mathbf B|^2+2i\,\mathbf E\cdot\mathbf B .
+ \label{eq:field-invariant}
+\end{equation}
+Verschwinden Real- und Imaginärteil, sind die beiden Felder gleich stark und stehen senkrecht aufeinander. Mit \(\mathbf z\ne0\) haben wir dann ein lichtartiges Feld. Diese Kennzeichnung bleibt bei Lorentztransformationen des Feldes erhalten. Für das Bild aus \eqref{eq:hc-field} mit \(\mathbf E'=\mathbf B'\ne0\) ergibt sich \(s=2i|\mathbf E'|^2\). So lässt sich der Befund direkt an derselben Feldgröße ablesen \cite{grundidee,feldkern}.
+
+Hier kommt die Sektorlesart ins Spiel. Auf dem Schnitt mit reellem \(s\) gilt \(\mathbf E\cdot\mathbf B=0\). Positives \(s\) kennzeichnet dort elektrische Dominanz, negatives \(s\) magnetische Dominanz, und \(s=0\) enthält die lichtartigen Felder sowie das Nullfeld. Außerhalb dieses Schnitts kann \(s\) komplex sein. Die Sektoren bezeichnen hier Klassen von Feldkonfigurationen. Die beiden Anteile der HC-Zerlegung aus \eqref{eq:projections} beantworten eine andere Frage, nämlich ob \(J\) einen Anteil erhält oder umkehrt.
+
+Eine Dualitätsvierteldrehung \(\mathbf z\mapsto i\mathbf z\) wechselt das Vorzeichen von \(s\). Sie verbindet damit elektrische und magnetische Dominanz bei reellem \(s\). Der Betrag \(|s|\) bleibt dabei erhalten. Ein Feld mit \(s\ne0\) bleibt daher auch nach dieser Drehung außerhalb der lichtartigen Klasse. Die Austauschoperation \(J_{\mathrm B}\) aus \eqref{eq:hc-field} enthält zusätzlich die komplexe Konjugation \cite{grundidee,feldsektoren}.
+
+\paragraph{Die Feldklassen in einer gemeinsamen Darstellung.}
+Schreiben wir das Felddublett als reelle Matrix \(F=[\,\mathbf E\mid\mathbf B\,]\). In diesen Koordinaten wirkt \(J_{\mathrm B}\) durch Vertauschen der Spalten. Die Gram-Matrix lautet
+\begin{align}
+ G_F=F^{\mathsf T}F
+ &=\begin{pmatrix}
+ |\mathbf E|^2 & \mathbf E\cdot\mathbf B\\
+ \mathbf E\cdot\mathbf B & |\mathbf B|^2
+ \end{pmatrix}, \qquad u_F=\tfrac12\operatorname{tr}G_F,\notag\\
+ G_F&=u_F I_2+\tfrac12\bigl(\operatorname{Re}s\,\sigma_z+
+                           \operatorname{Im}s\,\sigma_x\bigr).
+ \label{eq:field-gram}
+\end{align}
+Die Pauli-Matrizen \(\sigma_x,\sigma_z\) beziehen sich hier auf die beiden Feldspalten. Für \(u_F>0\) kann man die dimensionslose Auslese \(\mathbf b=(\operatorname{Re}s,\operatorname{Im}s)/(2u_F)\) verwenden. Aus \(\det G_F=|\mathbf E\times\mathbf B|^2\) folgt
+\begin{equation}
+ |\mathbf b|^2=1-\frac{\det G_F}{u_F^2}\leq1 .
+ \label{eq:field-disk-gram}
+\end{equation}
+Die nichtverschwindende Eingangswelle aus \eqref{eq:field-example} liegt im Zentrum dieser Scheibe, mit \(G_F=a^2 I_2\). Ihre beiden projizierten Anteile liegen bei \(\mathbf b=(0,1)\) und \((0,-1)\). Ihre Gram-Matrizen haben Rang eins, weil die Spalten jeweils parallel sind. So zeigt dasselbe Beispiel, wo die lichtartige Feldklasse liegt und wohin sie der HC abbildet \cite{feldsektoren}.
+
+Die Unterscheidung zwischen den Operationen lässt sich ebenfalls an \(s\) prüfen. Bei einer Dualitätsdrehung um \(\alpha\) gilt \(s(e^{i\alpha}\mathbf z)=e^{2i\alpha}s(\mathbf z)\). Beim Austausch gilt \(s(J_{\mathrm B}\mathbf z)=-\overline{s(\mathbf z)}\). Die Lorentzwirkung auf den komplexen Feldkoordinaten erfolgt durch \(R\in SO(3,\mathbb C)\) und erhält \(s\) wegen \(R^{\mathsf T}R=I_3\). Diese Erhaltung betrifft \(s\) selbst. Die normierte Länge \(|\mathbf b|=|s|/(2u_F)\) hängt zusätzlich vom im jeweiligen Bezug ausgewerteten \(u_F\) ab \cite{feldkern,feldsektoren}.
+
+\paragraph{Was ein Wechsel des Bezugs mit dem HC macht.}
+Soll dieselbe Austauschregel \(J_{\mathrm B}\) in zwei Lorentzbezügen gelten, muss sie mit \(R\) kommutieren. Die beiden Reihenfolgen ergeben
+\[
+ R J_{\mathrm B}\mathbf z=iR\overline{\mathbf z},\qquad
+ J_{\mathrm B}R\mathbf z=i\overline R\,\overline{\mathbf z}.
+\]
+Die Ausdrücke stimmen für alle \(\mathbf z\) genau dann überein, wenn \(R=\overline R\). Gewöhnliche Raumdrehungen erfüllen das. Ein Boost ändert im Allgemeinen die Form der Austauschregel. Für den transportierten Projektor verwendet man dann \(RCR^{-1}\). Die Frage nach einer physikalischen Auslese umfasst daher auch die Wahl und den Transport der Operation \cite{feldsektoren,grundidee}.
+
+Der Companion verwendet für seine physikalischen Modellbezüge die Namen Materieframe \(M\), Photon-Eigenframe \(P\) und Tachyonframe \(T\). Ein \emph{Frame} gibt dort an, in welchem Modellbezug ein Zustand dargestellt und eine Größe ausgewertet wird. Eine \emph{Auslese} ist die Abbildung, die aus den Zustandsdaten eine solche Größe bestimmt. So ist \eqref{eq:field-invariant} eine Auslese, mit der wir gerade eine Feldklasse bestimmen. Für den Vergleich zwischen Frames muss für jede relevante Größe angegeben werden, wie sie übertragen wird. Aus dem Feldvergleich folgt die Unterscheidung elektrischer, magnetischer und lichtartiger Konfigurationen. Ihre Identifikation mit den Teilchen und Bezügen des Companion bleibt eine eigene physikalische Aufgabe \cite{companion,grundidee}.
+
+Damit können wir die nächste Frage stellen. Welcher gemeinsame Träger kann die Feldzustände, ihre Lorentzwirkung und die algebraischen Operationen aufnehmen und lässt sich zugleich für Materiezustände und ihre Ladungen verwenden?
+
+\subsection{QAM und die Nachvollziehbarkeit der Aussagen}
+\label{sec:qam}
+
+QAM ist die Sprache, mit der der Companion mathematische Objekte und Aussagen registriert. Zu einer Aussage gehören der verwendete Kontext, ihre Voraussetzungen und ihr Status. Sie kann auf eine Herleitung oder auf das Protokoll einer Rechnung verweisen. Ein \emph{Guard} bezeichnet eine noch offene Bedingung, von der ein weitergehender Schluss abhängt. So lässt sich beim Wiederverwenden einer Aussage nachvollziehen, welche Bedingungen für ihre Anwendung gelten \cite{qam}.
+
+Am Kompensator lässt sich das direkt sehen. Die Aussage \(C^2=C\) stützt sich auf die Voraussetzung \(J^2=I\). Für das Ergebnis am elektrischen und magnetischen Feld kommt die Wahl der konkreten Austauschoperation \(J_{\mathrm B}\) hinzu. Ob ein physikalischer Prozess diese Projektion tatsächlich realisiert, bleibt ein Guard. Dieselbe Unterscheidung zwischen Rechnung, Modellannahme und physikalischer Zuordnung wird bei den Leptonenmassen in Abschnitt \ref{sec:mass} wichtig.
+
+Die Formeln stehen im Artikel in ihrer gewöhnlichen mathematischen Schreibweise. In der QAM-Dokumentation können die Werkzeuge die deklarierten Abhängigkeiten und Kontexte prüfen. Die Formel bleibt dabei mathematischer Text. Ihre Herleitung und die physikalische Zuordnung müssen jeweils durch das angegebene Argument oder den Beleg getragen werden.
