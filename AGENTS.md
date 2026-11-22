@@ -91,6 +91,10 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
     - inhaltliche Änderungen (nur über Zweig und PR) und Merges;
     - jeder Zenodo-Schritt (Reservierung, Upload, Veröffentlichung);
     - die Entscheidung, dass eine neue öffentliche Version entsteht.
+- **Zenodo-Vorbereitung:** Bei jeder neuen Veröffentlichung zuerst das Schema der Aussagen-Datenbank
+  aktualisieren und prüfen. Anschließend die Einträge auf den aktuellen Forschungsstand bringen. Erst danach
+  den Release-Kandidaten aus dem aktualisierten Bestand zusammenstellen. Details in
+  `notes/anleitungen/zenodo-release.md`.
 - **Issues nachziehen** (Dauerauftrag des Autors vom 15.11.2026): Nach jeder inhaltlichen Änderung (Runde, Erkundung mit
   OP-Bezug, Merge, Release) das OP-Register #17 und die berührten OP-Issues ohne Rückfrage aktualisieren, im selben Schritt
   wie das Wiki. Fehlt einem offenen Problem ein Issue, eines anlegen und in #17 verlinken. Ehrlicher Status: kein OP als
