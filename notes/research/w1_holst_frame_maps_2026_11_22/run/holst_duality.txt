@@ -1,0 +1,28 @@
+Tatsaechliche Ausgabe von holst_duality.wl (Wolfram-MCP-Kern, 22.11.2026), zweiter Lauf.
+Erster Lauf: Hilfsfunktion rb[] zog die beiden gespiegelten Eintraege eines Bivektors getrennt (nicht antisymmetrisch); die
+Koeffizientenpruefung meldete das ("Warnung: Form nicht von der Gestalt ..."), die Abschnitte (3)-(5) waren ungueltig. rb[] korrigiert,
+Kriterien unveraendert. Die Meldung "Symbol::undefined2" des Kerns betrifft die freien Symbole der symbolischen Rechnung (X, Y, A, B, S, R)
+und ist kein Fehler; die Abschluss-Meldung "General::messages" bezieht sich darauf.
+
+(1) Hodge^2 = -1 auf Bivektoren: True
+    <*S,*R> = -<S,R>: True;  <S,*R> = <*S,R>: True
+(2) Boost x: L invariant: True
+(2) Drehung y: L invariant: True
+(2) komplexer Boost eta + i Pi/2: L invariant: True
+(3) D1: A' = A Cos[t] + B Sin[t],  B' = B Cos[t] - A Sin[t]
+    D2: A' = A Cos[2 t] + B Sin[2 t],  B' = B Cos[2 t] - A Sin[2 t]
+    gamma' (D1) = Tan[al + t] ;  Kontrolle Tan[al + t]: True
+    gamma' (D2) = Tan[al + 2 t] ;  Kontrolle Tan[al + 2 t]: True
+    a'/a (D1) = Cos[al] Sec[al + t] ;  (D2) = Cos[al] Sec[al + 2 t]
+(4) eta = 0.6175215, alpha_M = ArcTan[gamma_M] = 0.233211
+    theta = Pi/4: gamma'(D1) = 1.62306, gamma'(D2) = -4.20994, a'/a(D1) = 1.85479, a'/a(D2) = -4.20994
+        rel. Abweichung gamma' von gamma_T: {11.7415, 34.0492};  a'/a von 1/gamma_L: {2.45862, 8.85028}
+    theta = Pi/2 (J_B): gamma'(D1) = -4.20994, gamma'(D2) = 0.237533, a'/a(D1) = -4.20994, a'/a(D2) = -1.
+        rel. Abweichung gamma' von gamma_T: {34.0492, 0.8647};  a'/a von 1/gamma_L: {8.85028, 2.8647}
+    theta = i Pi/2: gamma'(D1) = 0.0360183 + 0.924999 I, gamma'(D2) = 0.00167396 + 0.996668 I, a'/a(D1) = 0.380479 + 0.0828889 I, a'/a(D2) = 0.0816918 + 0.0193322 I
+        rel. Abweichung gamma' von gamma_T: {7.29684, 7.88611};  a'/a von 1/gamma_L: {0.329077, 0.848435}
+    theta = eta: gamma'(D1) = 1.14002, gamma'(D2) = 9.71787, a'/a(D1) = 1.4754, a'/a(D2) = 9.50473
+        rel. Abweichung gamma' von gamma_T: {7.94944, 75.288};  a'/a von 1/gamma_L: {1.75119, 16.7235}
+    theta = 2 eta: gamma'(D1) = 9.71787, gamma'(D2) = -0.4687, a'/a(D1) = 9.50473, a'/a(D2) = -1.07449
+        rel. Abweichung gamma' von gamma_T: {75.288, 4.67943};  a'/a von 1/gamma_L: {16.7235, 3.00361}
+(5) theta* mit gamma_M -> gamma_T: D1 -0.1065094, D2 -0.05325471;  a'/a dort: 0.9807913
