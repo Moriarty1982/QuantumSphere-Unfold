@@ -313,3 +313,114 @@ The programme has concrete tests for these stages, but a result at
 one stage cannot be silently used as a result at the next. The same
 discipline that separates positive mass readout from a physical mass
 mechanism is needed when a finite source law is proposed as gravity.
+
+\subsection{A worked case: one matter modulation and two geometric responses}
+
+The extraction problem can be followed through one explicit source.
+Let $h_{\rm W}=v+\eta_h$ be a Higgs radius with fixed angles and
+$m_i=y_ih_{\rm W}$. For non-relativistic occupations $n_i$ the rest
+energy is $\epsilon_{\rm mat}=h_{\rm W}\sum_iy_in_i$, and the radial
+source is $\mathcal J_h=-\partial_{h_{\rm W}}\epsilon_{\rm mat}
+=-\sum_iy_in_i$. A small displacement $\mathbf u$ of a homogeneous
+reference changes the occupations by $\delta n_i=-n_{i0}\nabla\cdot\mathbf u$,
+so $\delta\mathcal J_h=(\sum_iy_in_{i0})\nabla\cdot\mathbf u$ and
+$\delta\epsilon_{\rm mat}|_v=-v\,\delta\mathcal J_h$. Compression and
+dilution give source perturbations of opposite sign and change the
+ordinary energy density at the same time.
+
+To switch this source while controlling its ordinary gravitational
+effect, take two superposed isotropic elastic continua with rest
+densities $\rho_1,\rho_2>0$, stiffnesses $C$ and $c_\sigma C$, and the
+operators $A_1=\rho_1\partial_t^2-L$, $A_2=\rho_2\partial_t^2-c_\sigma L$
+with $L\mathbf u=\nabla\cdot\sigma(\mathbf u)$. For a smooth, spatially
+compact field $\mathbf b$ set $\mathbf u=A_2\mathbf b$ and
+$\mathbf w=-A_1\mathbf b$; an internal pair spring with a prescribed
+rest offset $\mathbf d=\mathbf u-\mathbf w+k^{-1}A_1\mathbf u$ makes both
+equations of motion hold during the switching. With
+$\beta_\rho=\rho_2-c_\sigma\rho_1$ the linear source tensor is
+\[
+ \delta T^{00}=-\beta_\rho\nabla\cdot L\mathbf b,\qquad
+ \delta T^{0i}=\beta_\rho(L\dot{\mathbf b})_i,\qquad
+ \delta T^{ij}=-\beta_\rho\sigma_{ij}(\ddot{\mathbf b}).
+\]
+For a gradient $\mathbf b=\nabla S$ the isotropic stress gives
+$L\nabla S=K_L\nabla\Delta S$ with $K_L=\lambda+2\mu$, hence
+$\delta\mathcal J_h=-\delta T^{00}/v=(\beta_\rho K_L/v)\Delta^2S$.
+
+\paragraph{The ordinary part is compact.}
+Choose a smooth compact $V$, zero before the switching, and
+\[
+ S=-\frac{v}{\beta_\rho K_L}D_0\mathcal P V,\qquad D_0=\partial_t^2-\Delta,
+\]
+where $\mathcal P$ is the drive operator of the reduced comparison model
+for the directed channel. Constant-coefficient operators commute, so
+$\delta T=-D_0T_*$ with $T_*$ the separately conserved tensor of
+$\mathbf b_*=(v/(\beta_\rho K_L))\nabla\mathcal PV$. In harmonic gauge
+$D_0\bar\gamma_{\mu\nu}=16\pi G\,\delta T_{\mu\nu}$; with zero initial
+data and no incoming wave the retarded solution is
+$\bar\gamma_{\mu\nu}=-16\pi G\,T_{*,\mu\nu}$. The ordinary linear
+curvature of the prepared source therefore vanishes outside its
+spatial support, also during the switching. This statement uses only
+linearity, constant coefficients and the initial data.
+
+\paragraph{The directed part needs an identification.}
+The comparison model of the open problem OP5 couples a directed massive
+mediator of mass $m$ to a scalar comparison field $h$ through a drive
+$\delta J_{\rm OP5}=\mathcal P\,\delta H$; the form of $\mathcal P$ follows from
+that model, its coefficients are chosen. The calculation then
+\emph{assumes} $\delta J_{\rm OP5}=\delta\mathcal J_h$ in a declared
+normalization. With the profile above this holds for
+$\delta H=-D_0\Delta^2V$. No action of the common carrier derives this
+identification; it would require a coupling $\int h\,\mathcal J_h$ in
+the same action that produces $\mathcal P$. Without it, the mechanics,
+the conservation of $T_*$ and the compact ordinary response remain;
+with a normalization $\delta J_{\rm OP5}=c\,\delta\mathcal J_h$ the directed
+response below scales with $c$.
+
+\paragraph{A contrast on the same measurement axis.}
+On the static plateau $\delta H=\Delta^3V$. With $\xi=r_\perp^2/R^2$, a
+compact cut-off $\chi(\xi)$ equal to one near the axis, a profile $p(z)$
+with positive integral $P$, and
+\[
+ V=-\frac{\mathcal A R^6}{230400}\,p(z)\chi(\xi)\bigl(\xi^5-\kappa\xi^6\bigr),
+ \qquad
+ \kappa=\frac{\int_0^\infty\xi^5\chi\,d\xi}{\int_0^\infty\xi^6\chi\,d\xi},
+\]
+the transverse integral of $V$ vanishes in every slice. Since
+$\Delta_\perp\xi^j=4j^2\xi^{j-1}/R^2$, three transverse Laplacians give
+the factor $230400$, and $\delta H=-\mathcal A\,p(z)\,\xi^2+O(\xi^3)$ near the
+axis: the profile change vanishes on the axis. In the massive comparison
+$f=\Delta_\perp H/m^2$, so $\delta f=-16\mathcal A\,p(z)\,\xi/(m^2R^2)+O(\xi^2)$
+has a non-zero second transverse derivative there. The tidal readout of
+a ray along the axis is
+\[
+ \Delta I=-\frac12\int\partial_e^2(\delta f)(0,z)\,dz
+         =\frac{16\mathcal A P}{m^2R^4},
+\]
+for a transverse unit direction $e$; the factor $-\tfrac12$ is a
+convention of this readout. Averaged over an axis-parallel bundle with
+rotation-symmetric weight the contrast acquires the factor
+$1-36\kappa\langle\xi\rangle$, because the azimuthal mean of $\partial_e^2F$ is
+$\tfrac12\Delta_\perp F$. A planar static comparison with kernel
+$\tfrac m2e^{-m|z|}$ shows the difference: there
+$\int_0^Lf\,dz=\int_0^L\delta\rho\,dz-(f(0)+f(L))/m$, so equal
+integrated density and equal end values leave no leading difference,
+whereas the axial construction measures a transverse curvature
+derivative that equal transverse integrals and equal local end values
+do not exclude.
+
+\paragraph{What remains open.}
+The same prepared source thus has a compact ordinary exterior and,
+under the stated identification, a non-zero directed contrast on the
+same path. Turning the contrast into a measurable delay requires a
+difference of the effective couplings of the two readout channels and
+calibrated ends. At second order the switching does work,
+$\partial_te_{\rm mech}=\nabla\cdot\mathbf F-k\,\mathbf R_{\rm F}\cdot\dot{\mathbf d}$
+with $\mathbf R_{\rm F}=\mathbf u-\mathbf w-\mathbf d$, and for a
+Saint-Venant--Kirchhoff law the summed Piola tensor acquires the
+quadratic term $(1+1/c_\sigma)N(H)$ with
+$N(H)=\tfrac\lambda2\operatorname{tr}(H^2)I+3\mu H^2+\lambda(\operatorname{tr}H)H$;
+a full second-order source balance is a separate task. Every step above
+was checked exactly with Wolfram Language; the identification of the
+sources and the coefficients of $\mathcal P$ are not derived, and the
+vacuum problem OP5 stays open.

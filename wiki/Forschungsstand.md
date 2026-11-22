@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Physik-Paper: OP5-Fallstudie aus dem Preprint übernommen (22.11.2026)
+
+Die im deutschen Preprint hergeleitete OP5-Fallstudie (Anhang B) steht jetzt knapp auf Englisch im Entwicklungsteil Geometrie des Physik-Papers („A worked case: one matter modulation and two geometric responses“), dazu ein Satz im Haupttext. Inhalt: Higgsquelle δ𝒥_h aus der Kompression, elastische Zwei-Komponenten-Präparation mit kompaktem gewöhnlichem Außenbeitrag (retardierte Lösung γ̄ = −16πG T_*), gerichteter Kontrast 16𝒜P/(m²R⁴) auf derselben Achse, Bündelfaktor 1 − 36κ⟨ξ⟩, planare Kontrolle, Bilanz zweiter Ordnung als offene Aufgabe. Die Gleichsetzung der Quellen ist ausdrücklich als Annahme ohne Wirkung benannt. Wirkt erst mit der nächsten Version. OP5 offen.
+
 ### Deutscher Preprint: Anhang B mit Herleitungen zu Abschnitt 4.4 (22.11.2026)
 
 Auf Anregung eines anderen Sprachmodells, vom Autor beauftragt: Die Gleichungen (39)–(51) der OP5-Fallstudie im Preprint sind in einem neuen Anhang B Schritt für Schritt hergeleitet (Quelle der elastischen Verschiebung, Profilwahl, kompakter Außenbeitrag, Achsenprofil mit Faktor 230400, Gezeitenkontrast 16𝒜P/(m²R⁴), Bündelfaktor 1 − 36κ⟨ξ⟩, planare Kontrolle, Energiebilanz, Piola-Tensor zweiter Ordnung) und exakt mit Wolfram geprüft (`paper/preprint-de/audit/anhang-b/`). Offengelegt sind die beiden Annahmen: die gewählten Koeffizienten des Antriebsoperators (39) und die Gleichsetzung (40) der Higgsquelle mit dem OP5-Antrieb. Ohne (40) bleiben Mechanik, Erhaltung und kompakter gewöhnlicher Außenbeitrag gültig; der gerichtete Kontrast skaliert mit der Normierung und braucht eine gemeinsame Wirkung. OP5 bleibt offen. Preprint jetzt 43 Seiten.
