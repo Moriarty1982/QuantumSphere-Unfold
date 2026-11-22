@@ -31,11 +31,9 @@ keinen gemeinsamen Vorfahren mit GitHub — dort nicht arbeiten.
 Vorher prüfen, dass die Vorgängerversion auf Zenodo **veröffentlicht** ist (`https://zenodo.org/records/<id>`); von einem
 unveröffentlichten Entwurf lässt sich keine neue Version abzweigen.
 
-### 0.1. Aussagen-Datenbank auf den aktuellen Stand bringen
+### 0.1. Aussagen-Datenbank und LLM-Kontext abgleichen
 
-1. Zuerst das Datenbankschema der Aussagen-Datenbank für den aktuellen Forschungsstand aktualisieren und die Migration prüfen. [QAM-Datenbank](../../qam/store/README.md)
-2. Danach die Einträge im aktualisierten Schema auf den aktuellen Forschungsstand bringen. Aussagenstatus, Belege und offene Guards mit dem vorgesehenen Quellstand abgleichen.
-3. Erst aus diesem Stand die Editionen für das Release zusammenstellen und den Kandidaten bauen.
+Vor den Metadaten die [Anleitung zur Vorbereitung der Aussagen-Datenbank und des LLM-Kontexts](zenodo-datenbank-vorbereiten.md) ausführen.
 
 ### 1. Metadaten
 

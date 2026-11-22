@@ -3,7 +3,7 @@
 from qsc_mcp_server import (
     FastMCP, audit_qam_batch_report, compare_qam_batch_reports, find_qam_claims, get_qam_receipt,
     list_qam_batch_reports, list_qam_receipts,
-    read_qam_batch_report,
+    read_qam_batch_report, select_qam_context,
 )
 
 
@@ -16,6 +16,7 @@ if __name__ == "__main__":
     server = FastMCP("qsc-qam")
     server.add_tool(find_qam_claims)
     server.add_tool(list_qam_receipts)
+    server.add_tool(select_qam_context)
     server.add_tool(read_qam_receipt)
     server.add_tool(read_qam_batch_report)
     server.add_tool(list_qam_batch_reports)

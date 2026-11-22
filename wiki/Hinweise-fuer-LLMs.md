@@ -12,7 +12,7 @@ Zuerst das [Gesamtbild](https://github.com/Moriarty1982/QuantumSphere-Unfold/wik
 
 **QAM-Autorpräzisierung, 6.11.2026:** QAM ist Frame-Schnittstellensprache, nicht eine physikalische Theorie, aus der alle Frame-Gesetze herzuleiten wären. Ein Physikmapping interpretiert gewöhnliche Tensoren und Gleichungen im dafür festgelegten Frame. Es wird weder automatisch auf andere Frames übertragen noch durch die vorhandenen Buchführungsprüfer vollständig implementiert. Siehe [QAM-Schnittstellenentwurf](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/qam_frame_physics_interface_design_2026_11_06.md). Die früheren OP5-Prüfnotizen behalten ihre ausdrücklich begrenzten Voraussetzungen; Aussagen über gemeinsame physikalische Größen gelten nicht ungeprüft über unterschiedliche Physikmappings hinweg. Die Einheit von M/T/P ist das zu untersuchende Forschungsziel, keine hier vorausgesetzte Schlussfolgerung.
 
-**Neuere Arbeitsentscheidung, 6.11.2026 nach r05:** Die ursprüngliche OP5-Auslöschungsherleitung ist als aktive Grundlage ausgesetzt, nicht die gesamte Kernstruktur widerlegt. Vor einer Fortsetzung die [neue Arbeitsfrage samt Quellen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_neuaufbau_2026_11_06.md) lesen. Zuerst sind Träger, konkrete Route, Auslesung, Invariante und mögliche Messgröße zu bestimmen; ein physikalischer Vakuumterm mit vorgegebener Skala oder Restwert wird nicht vorausgesetzt. H96 bleibt offen, H97 widerlegt, W1/W2 eingefroren; Guards und frühere Tests bleiben unverändert. Die folgende ältere Standangabe ist historisch und wird durch README/AGENTS.md für die aktuelle Baseline v4.10.0 sowie durch die jüngsten Quellen ergänzt. Die neue Notiz ist keine nummerierte Forschungsschicht.
+**Neuere Arbeitsentscheidung, 6.11.2026 nach r05:** Die ursprüngliche OP5-Auslöschungsherleitung ist als aktive Grundlage ausgesetzt, nicht die gesamte Kernstruktur widerlegt. Vor einer Fortsetzung die [neue Arbeitsfrage samt Quellen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_neuaufbau_2026_11_06.md) lesen. Zuerst sind Träger, konkrete Route, Auslesung, Invariante und mögliche Messgröße zu bestimmen; ein physikalischer Vakuumterm mit vorgegebener Skala oder Restwert wird nicht vorausgesetzt. H96 bleibt offen, H97 widerlegt, W1/W2 eingefroren; Guards und frühere Tests bleiben unverändert. Die folgende Standangabe ist historisch. Die aktuelle öffentliche Baseline steht in `AGENTS.md`, der neuere Forschungsstand in den jeweiligen Arbeitsquellen. Die neue Notiz ist keine nummerierte Forschungsschicht.
 
 Am geprüften Stand **5.11.2026 / main a5bf106** ist **v4.9.0** die öffentliche Baseline (Version DOI **10.5281/zenodo.23534954**). Die Forschungsquellen bilden **4.10.0-draft** mit dokumentierten Layern bis **v4.9.0-r85**. Vor einer aktuellen Aussage den neuesten Stand erneut prüfen. [Quellenkarte](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Versionen-und-Quellen).
 
@@ -37,7 +37,10 @@ Wer mit einem KI-Werkzeug im Repository arbeitet (Codex, Claude, ChatGPT und and
 Die Abläufe stehen Schritt für Schritt in
 [`notes/anleitungen/`](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/notes/anleitungen). Sie sind
 modellunabhängig geschrieben und die einzige Quelle; Claude-Skills verweisen nur darauf, ChatGPT und Codex lesen dieselben
-Dateien. Die Übersicht `README.md` dort sagt, welche Anleitung wann gilt:
+Dateien. Die Anleitung zur Kontextauswahl verweist je nach Aufgabe auf den veröffentlichten Stand, aktuelle Forschungsquellen,
+die Dokumentdatenbank oder gespeicherte QAM-Belege. [Kontextauswahl für LLMs](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/anleitungen/llm-cache-optimieren.md)
+
+Die Übersicht `README.md` dort sagt, welche Anleitung wann gilt:
 
 - **Sitzung beginnen und übergeben** (`weitermachen.md`, `sitzung-uebergeben.md`): Stand aus der Übergabedatei und dem
   Repo rekonstruieren, Widersprüche nennen (das Repo geht vor); am Ende die Übergabe kurz neu schreiben, mit dem Modell,
@@ -56,6 +59,8 @@ Dateien. Die Übersicht `README.md` dort sagt, welche Anleitung wann gilt:
 
 Ohne Shell oder GitHub-Zugang nennt ein Modell die Befehle, und der Autor führt sie aus. `AGENTS.md` ist ein offener,
 werkzeugübergreifender Standard. `CLAUDE.md` verweist nur darauf.
+
+Bei der Suche nach gespeicherten Belegen kann `select_qam_context` über den MMA-Kontexthash, den deklarierten Frame und den MMA-Status passende Beleg-IDs ermitteln. Anschließend den ausgewählten Beleg per Hash prüfen und seine Guard-Diagnosen mitführen. [MCP-Anleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/mcp/README.md#select-context-receipts)
 
 ## Vorgehen bei Fachfragen
 

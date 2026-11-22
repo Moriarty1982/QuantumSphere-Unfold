@@ -142,6 +142,40 @@ stdio locally.
 python mcp/check_hdl_stdio.py
 ```
 
+## Select context receipts
+
+`select_qam_context(context_hash, frame, status, limit, backend)` returns
+compact receipt IDs and their metadata for context selection on `qsc-qam`.
+All filters are optional and match exact values. `context_hash` identifies
+a stored MMA input context. `frame` reads the explicit
+`request.arguments.frame` field, with missing declarations returned as
+`null`. `status` is the MMA outcome (`continue`, `guard`, or `reject`).
+Call `read_qam_receipt(receipt_hash, summary=true)` to verify the saved
+receipt and read its guard diagnostics. Request a premise trace separately
+when the task depends on it.
+
+SQLite is the default. `backend="hdl"` sends only interned metadata and
+row IDs to the separate SystemVerilog filter and reads back matching IDs.
+It uses Icarus Verilog and handles snapshots with up to 4096 receipts.
+The CLI exposes both paths and reports filter time, including simulation
+setup and data transfer for HDL:
+
+~~~sh
+python -m qam.tools.readout_db context-receipts --status guard --limit 5
+python -m qam.tools.readout_db context-receipts --status guard --limit 5 --backend hdl
+~~~
+
+The local HDL path uses `iverilog` and `vvp` from PATH or the same Windows
+WSL launcher convention as the tape comparison above. For a read-only
+Docker server with HDL, build with `--build-arg QSC_WITH_HDL=1` and add
+`--tmpfs /tmp` to the run command so Icarus can write its temporary files.
+The mounted snapshot remains read-only.
+
+On one local WSL snapshot of 130 receipts, 11 queries returned identical
+ordered results. The median filter times were 2.647 ms for SQLite and
+39.117 ms for HDL with per-request compilation. These figures describe the
+Icarus prototype on that snapshot.
+
 ## Read-only QAM container
 
 Build from the repository root. Use an existing, consistent SQLite snapshot
@@ -166,7 +200,7 @@ args = ["run", "--rm", "-i", "--read-only", "--network", "none", "--mount", 'typ
 ```
 
 The client starts the container on demand. It exposes `find_qam_claims`,
-`list_qam_receipts`, `read_qam_receipt` (with optional trace or summary),
+`list_qam_receipts`, `select_qam_context`, `read_qam_receipt` (with optional trace or summary),
 `list_qam_batch_reports(limit, request_id, status)`, and
 `read_qam_batch_report(report_hash)`.
 The list shows the most recently stored distinct reports first, with request

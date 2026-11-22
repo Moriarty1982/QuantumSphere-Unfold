@@ -296,6 +296,22 @@ def list_qam_receipts(instruction: str | None = None, status: str | None = None,
 
 
 @mcp.tool()
+def select_qam_context(context_hash: str | None = None, frame: str | None = None,
+                       status: str | None = None, limit: int = 10,
+                       backend: str = "sqlite") -> dict[str, Any]:
+    """Select receipt IDs by stored MMA context, declared request frame and MMA status.
+
+    SQLite is the default. HDL simulates the same metadata filter with Icarus.
+    Use read_qam_receipt to verify a returned ID and retrieve its summary.
+    """
+    args = ["context-receipts", "--limit", _qam_limit(limit), f"--backend={backend}"]
+    for name, value in (("context-hash", context_hash), ("frame", frame), ("status", status)):
+        if value is not None:
+            args.append(f"--{name}={value}")
+    return _qam_command(args)
+
+
+@mcp.tool()
 def get_qam_receipt(receipt_hash: str, trace: bool = False,
                     replay: bool = False, summary: bool = False) -> dict[str, Any]:
     """Read a verified MMA receipt. Summary also supports replay, with comparison fields only."""

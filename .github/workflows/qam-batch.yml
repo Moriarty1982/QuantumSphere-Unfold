@@ -36,5 +36,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y iverilog
           python -m qam.examples.zuse_machine.hdl.check
+          python -m unittest qam.tools.test_receipt_context
+          python -m qam.examples.zuse_machine.hdl.guard_stream_check --rows 4096
           python -m pip install mcp==2.3.0
           python mcp/check_hdl_stdio.py
