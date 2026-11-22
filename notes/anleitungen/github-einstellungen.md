@@ -27,11 +27,10 @@ die Zenodo-Schlüssel bleiben als Repo-Geheimnisse.
    - Falls angeboten: die Freigabepflicht für Workflow-Läufe auf Copilot-PRs ausschalten. Sonst wartet jeder Copilot-PR mit
      seinen Prüfungen auf einen Klick.
    - Firewall: `zenodo.org`, `doi.org`, `ctan.org`, `mirrors.ctan.org` erlauben.
-2. **„Automatically delete head branches“** einschalten (Settings → General → Pull Requests). Erledigt den Dauerauftrag vom 14.11.
-   auf GitHub ohne Zutun.
+2. **Zweige nach Merge automatisch löschen:** am 22.11.2026 per API eingeschaltet (`delete_branch_on_merge`).
 3. **Labels** `release` und `copilot`: am 22.11.2026 angelegt, nichts zu tun.
-4. Optional, ohne laufenden Aufwand: **Ruleset für `main`** nur mit „Restrict deletions“ und „Block force pushes“. Das verhindert
-   versehentliches Löschen oder Überschreiben von `main` und verlangt nie einen Klick.
+4. **Ruleset für `main`** „main: no deletion, no force push“ (ID 27827305): am 22.11.2026 per API angelegt, nur Lösch- und
+   Force-Push-Sperre; normale Pushes und Merges laufen wie bisher.
 
 ## Bewusst nicht
 
