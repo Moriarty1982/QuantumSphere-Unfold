@@ -29,7 +29,7 @@ die Zenodo-Schlüssel bleiben als Repo-Geheimnisse.
    - Firewall: `zenodo.org`, `doi.org`, `ctan.org`, `mirrors.ctan.org` erlauben.
 2. **„Automatically delete head branches“** einschalten (Settings → General → Pull Requests). Erledigt den Dauerauftrag vom 14.11.
    auf GitHub ohne Zutun.
-3. **Labels** `release` und `copilot` anlegen (oder einen Assistenten bitten, sie per `gh label create` anzulegen).
+3. **Labels** `release` und `copilot`: am 22.11.2026 angelegt, nichts zu tun.
 4. Optional, ohne laufenden Aufwand: **Ruleset für `main`** nur mit „Restrict deletions“ und „Block force pushes“. Das verhindert
    versehentliches Löschen oder Überschreiben von `main` und verlangt nie einen Klick.
 
