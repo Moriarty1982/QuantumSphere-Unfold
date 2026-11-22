@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r35.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r36.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -160,6 +160,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Gleichsetzung der Quellen gegen W2 (r33):** Die Annahme (40) des OP5-Falls folgt aus dem Higgs-Sektor von W2, wenn das Vergleichsfeld der Higgs-Radialmodus ist. Das erzwingt aber einen Lorentz-invarianten Skalar und schließt im minimalen W2 den gerichteten Vermittler aus, an dem der Kontrast hängt. Offen ist damit die Existenz eines unterluminalen, linear an den Higgsradius gekoppelten massiven Vermittlers.
 - **Vermittler-Suche (r34):** Kein Vakuumfeld des Companion erfüllt diese Anforderungen. Der gegenläufige Paar-Konnektor aus Materiezustand und Tachyonbild ist massiv, unterluminal (|v| = e^{−2η}) und gerichtet, hat aber keine Wirkung und keine belegte Kopplung an den Higgsradius. Die optische Mode des zweikomponentigen Materials erfüllt alles, koppelt aber nur bei Y₁/ρ₁ ≠ Y₂/ρ₂ und macht den Kontrast zu einer Eigenschaft der Präparation.
 - **Materialweg (r35):** Ein gerichteter Vermittler braucht ein ausgezeichnetes Bezugssystem; im Materialweg liefert es die Probe. Eine einachsige Zweikomponenten-Probe gibt einen gerichteten massiven Term (Masse = optische Lücke), der nur koppelt, wenn die Komponenten verschieden große Higgs-Anteile ihrer Ruhemasse haben. Die Unterluminalität wird für den führenden Kontrast nicht gebraucht; der Zähler bleibt eine Potenz hinter dem Vergleichsmodell zurück. Trägt teilweise.
+- **Vakuumweg (r36):** Ohne Hintergrund gibt keine lineare Kopplung eines neuen Feldes an |Φ|² einen gerichteten Pol. Mit Rahmen und Achse erreicht ein Spin-2-Feld mit positiver Polarisationssumme den Zähler des Vergleichsmodells exakt. Rahmen, Achse und Polarisationsstruktur sind gesetzt; trägt teilweise.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*

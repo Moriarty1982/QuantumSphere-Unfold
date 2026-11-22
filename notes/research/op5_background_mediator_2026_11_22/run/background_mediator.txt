@@ -1,0 +1,16 @@
+Tatsaechliche Ausgabe von background_mediator.wl (Wolfram-MCP-Kern, 22.11.2026).
+Zweiter Lauf. Im ersten Lauf war "D" als Variablenname geschuetzt (Set::wrsym, Part::partd) und die Ersetzung k2^2 -> a - k1^2 griff
+nicht bei vierten Potenzen; beides im Skript korrigiert (Dd, Polardarstellung k1 = Sqrt[a] Cos[ph], k2 = Sqrt[a] Sin[ph]).
+"Symbol::undefined2" betrifft freie Symbole. Bruchdarstellung zeilenweise zusammengezogen.
+
+(1) Spin 0: Zaehler (2 A v)^2, konstant; Pol bei p^2 = M^2 mit konstantem Residuum, nicht gerichtet
+    Spin 1 (Proca, J = p): Zaehler = (k1^2 + k2^2 + k3^2 - w^2)(k1^2 + k2^2 + k3^2 + M^2 - w^2)/M^2;  am Pol: 0
+    Spin 1 Austausch Zaehler/(p^2 - M^2) = -(k1^2 + k2^2 + k3^2 - w^2)/M^2  (Kontaktterm, kein Pol)
+    Spin 2 (Fierz-Pauli, J = p p): Zaehler = (2/3) (p.P.p)^2 = 2 (k1^2 + k2^2 + k3^2 - w^2)^2 (k1^2 + k2^2 + k3^2 + M^2 - w^2)^2/(3 M^4);  Nullstelle am Pol der Ordnung 2
+(2) Spin 1 quer (Summe S): Zaehler = a
+    Spin 2 Bausteine: TT -> x^2, B -> 2 a x, G -> a^2/2, D -> a^2/2, E -> 2 a x
+    Spin 2 quer, spurfrei (G): a^2/2;  quer mit Spur (G + D): a^2
+    Allgemeine Summe = a^2 (de + ga)/2 + 2 a (be + ep) x + al x^2;  gleich N_m fuer {{al -> 2/3, ga -> (4 - 3 de)/3, ep -> (-1 - 3 be)/3}}
+    positive Polarisationssumme mit N_m genau fuer: (0 <= be < 1/3 && (1 + 6 be + 9 be^2)/3 <= de <= 4/3) || (be == 1/3 && de == 4/3)
+    Randpunkt be = 1/3, de = 4/3: {al -> 2/3, ga -> 0, ep -> -(2/3)}, Det = 0
+    (2+1)-Lorentz-Summe: -((-1 + cc) (a - x)^2);  N_m - (2/3)(x - a)^2 = 2 a x/3

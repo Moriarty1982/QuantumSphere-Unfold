@@ -5003,3 +5003,105 @@ R_{\rm glob}^{(v4100\text{-}r35,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r36 Source-Only: A Vacuum Background as Carrier of the Directed OP5 Mediator}
+\addcontentsline{toc}{section}{v4.10.0-r36 Source-Only: A Vacuum Background for the OP5 Mediator}
+\label{sec:v4100-r36-background-mediator}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.10.0-r35 the material route carries the directed contrast of the OP5 case only partially: a density coupling gives the numerator
+\(a_\perp\) instead of \(\tfrac23a_\perp^2\).  This layer follows the author's choice of the vacuum route: a new field \(X\) coupled linearly and gauge
+invariantly to \(|\Phi|^2\), hence to the Higgs radial mode \(\eta\) via \(|\Phi|^2=v^2+2v\eta+\dots\), in a vacuum that may carry a frame \(u\) and an axis
+\(n\).  It is an exploration with a method fixed before the computation and is not blind.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r36 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r36 results}
+\label{subsec:v4100-r36-results}
+
+Signature \((+,-,-,-)\), \(p=(\omega,\mathbf k)\), \(x=\omega^2\), \(a_\perp=k_1^2+k_2^2\), \(u=(1,0,0,0)\), \(n=(0,0,0,1)\), \(T^{\mu\nu}=u^\mu u^\nu\),
+\(S^{\mu\nu}=\operatorname{diag}(0,1,1,0)\).  The numerator of the mediator term is the contraction of the vertex \(1\), \(p^\mu\) or \(p^\mu p^\nu\) with the
+polarization sum.
+
+\paragraph{Theoremlet v4.10.0-r36.1 (no directed pole in a Lorentz-invariant vacuum).}
+For \(X|\Phi|^2\) the pole has a constant numerator.  For \(X_\mu\partial^\mu|\Phi|^2\) with the Proca sum \(P^{\mu\nu}=-\eta^{\mu\nu}+p^\mu p^\nu/M^2\) the numerator is
+\(p^2(p^2-M^2)/M^2\), and the exchange is the contact term \(p^2/M^2\).  For \(X_{\mu\nu}\partial^\mu\partial^\nu|\Phi|^2\) with the Fierz--Pauli sum the numerator is
+\(\tfrac23(p^2)^2(p^2-M^2)^2/M^4\), with a double zero at the pole.  Hence no linear coupling of a new field to \(|\Phi|^2\) gives a directed pole in a
+Lorentz-invariant vacuum.  \emph{Proof.} \(p_\mu P^{\mu\nu}=p^\nu(p^2-M^2)/M^2\); insert into the polarization sums.  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r36.2 (background building blocks).}
+With polarizations restricted by \(T\) and \(S\), a vector transverse to the axis gives the numerator \(a_\perp\).  For a symmetric tensor the blocks
+\(TT\), the time--transverse block \(B\), the transverse traceless block \(G\), the transverse trace block \(D\) and the mixing \(E=TS+ST\) contribute
+\(x^2\), \(2a_\perp x\), \(a_\perp^2/2\), \(a_\perp^2/2\) and \(2a_\perp x\).  \emph{Proof.} Direct contraction with \(p_\mu p_\nu p_\rho p_\sigma\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r36.3 (the numerator \(N_m\) with a positive polarization sum).}
+The sum \(\alpha\,TT+\beta B+\gamma G+\delta D+\varepsilon E\) gives \(N_m=\tfrac23(x^2-a_\perp x+a_\perp^2)\) exactly if
+\[
+ \alpha=\tfrac23,\qquad \gamma=\tfrac{4-3\delta}{3},\qquad \varepsilon=-\tfrac{1+3\beta}{3},
+\]
+and it is positive semidefinite exactly for \(0\le\beta<\tfrac13\), \((1+3\beta)^2/3\le\delta\le\tfrac43\), or \(\beta=\tfrac13\), \(\delta=\tfrac43\).  At that end point
+\(\gamma=0\), \(\varepsilon=-\tfrac23\), and the block of \(TT\) and transverse trace has rank one.  The sum with the metric of the subspace orthogonal to \(n\)
+gives \((1-c)(x-a_\perp)^2\) instead, and \(N_m-\tfrac23(x-a_\perp)^2=\tfrac23a_\perp x\).
+\emph{Proof.} Coefficient comparison in \(x^2,a_\perp x,a_\perp^2\); positivity of the orthogonal blocks \(B,G\) and of the \(2\times2\) block
+\(\bigl(\begin{smallmatrix}\alpha&\sqrt2\varepsilon\\\sqrt2\varepsilon&\delta\end{smallmatrix}\bigr)\), solved exactly.  \(\square\)
+
+\paragraph{Remark v4.10.0-r36.4 (reading).}
+Against the criteria fixed beforehand the vacuum route carries the directed contrast \emph{partially}.  A directed pole needs a background in
+every case (r36.1).  With frame and axis the numerator \(N_m\) is reachable exactly, including the power \(a_\perp^2\) that the material route lacks
+(r35.3); its negative mixed term comes from a coupling between the time--time component and the transverse trace of the field.  Set rather
+than derived are the frame and the axis, the polarization structure (a two-parameter family) and an action producing it.  Candidates for the
+background named by the Companion are the flow and the spin vector of the OP5 seed (spin along the azimuthal direction) and the spacelike
+tachyon image of a matter state at rest; both are readings.
+
+\subsection*{v4.10.0-r36 frames}
+\label{subsec:v4100-r36-frames}
+
+All quantities are given in the matter frame M, the background vectors included.  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r36 register entries}
+\label{subsec:v4100-r36-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r36\\
+\midrule
+directed pole without background & excluded for linear couplings to \(|\Phi|^2\) (r36.1)\\
+\(N_m\) from a vacuum background & reachable with a positive spin-2 sum; structure, frame and axis set (r36.3)\\
+origin of the background & open; OP5 seed and tachyon image as readings\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r36 notes}
+\label{subsec:v4100-r36-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak background\_\allowbreak mediator\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit 9f91c274,
+script \texttt{background\_\allowbreak mediator.wl}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r36 ledger and guard update}
+\label{subsec:v4100-r36-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r36}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; the background and an action for the polarization sum not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r36,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r36}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
