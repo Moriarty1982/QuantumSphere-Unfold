@@ -1,0 +1,16 @@
+During evaluation of In[1]:= kernel = 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= octonion derivation dimensions {all, fixing e7} = {14, 8}
+During evaluation of In[1]:= colour commutant dimension on octonion factor = 6
+During evaluation of In[1]:= right quaternion multiplications commute with all left generators = True
+During evaluation of In[1]:= weak and hypercharge commute with Lorentz and colour = True
+During evaluation of In[1]:= weak cyclic brackets residuals vanish = True
+During evaluation of In[1]:= restricted commutant {unknowns, rank, dimension} = {24, 18, 6}
+During evaluation of In[1]:= full linear generator residuals vanish = True
+During evaluation of In[1]:= linear commutant mutual brackets vanish = True
+During evaluation of In[1]:= hypercharge 6 Y/2 {value, multiplicity} = {{-4, 6}, {-3, 4}, {0, 2}, {1, 12}, {2, 6}, {6, 2}}
+During evaluation of In[1]:= hypercharge spectral projectors {idempotent, orthogonal, sum identity, in commutant} = {True, True, True, True}
+During evaluation of In[1]:= antilinear obstruction {real rotation, purely imaginary paired boost, invertible rotation} = {True, True, True}
+During evaluation of In[1]:= antilinear dimension = 0 (combine AX=XA with AX=-XA and invertible A)
+During evaluation of In[1]:= RESULT: EXACT DIMENSIONS REPRODUCED
+
+Out[1]= Null

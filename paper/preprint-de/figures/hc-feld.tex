@@ -1,0 +1,29 @@
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[>=Latex,x=2.35cm,y=2.35cm, font=\small]
+  \begin{scope}
+    \draw[qs axis,->] (-0.12,0)--(1.25,0);
+    \draw[qs axis,->] (0,-0.12)--(0,1.22);
+    \draw[qs blue,very thick,->] (0,0)--(1,0) node[below=4pt] {\(\mathbf E\)};
+    \draw[qs rust,very thick,->] (0,0)--(0,1) node[left=4pt] {\(\mathbf B\)};
+    \draw[qs axis] (0.11,0)--(.11,.11)--(0,.11);
+    \node[font=\small\bfseries,anchor=south west] at (-.17,1.34) {Eingang};
+    \node[anchor=north west,align=left] at (-.17,-.25)
+      {\(|\mathbf E|=|\mathbf B|\), \(\mathbf E\cdot\mathbf B=0\)\\\(s=0\) bei nichtverschwindendem Feld};
+  \end{scope}
+  \draw[->,thick,qs ink] (1.59,.43)--(2.35,.43)
+     node[midway,above=4pt] {\(C\)};
+  \begin{scope}[xshift=6.45cm]
+    \draw[qs axis,->] (-.12,0)--(1.25,0);
+    \draw[qs axis,->] (0,-.12)--(0,1.22);
+    \draw[qs axis,densely dotted] (.5,0)--(.5,.5)--(0,.5);
+    \draw[qs blue,very thick,->] (0,0)--(.5,.5);
+    \node[anchor=south west,align=left] at (.51,.5) {\(\mathbf E'=\mathbf B'\)};
+    \node[font=\small\bfseries,anchor=south west] at (-.17,1.34) {Nach der Projektion};
+    \node[anchor=north west,align=left] at (-.17,-.25)
+      {\(\mathbf E'=\mathbf B'=(\mathbf E+\mathbf B)/2\)\\\(s'=2i|\mathbf E'|^2\)};
+  \end{scope}
+\end{tikzpicture}
+\caption{Ein lichtartiges Eingangsfeld und sein Bild unter der HC-Projektion. Die Projektion mittelt die beiden Feldvektoren. In der Zeichnung haben die orthogonalen Eingangsvektoren gleiche Länge. Ihre beiden Ausgänge liegen auf demselben Pfeil.}
+\label{fig:hc-feld}
+\end{figure}
