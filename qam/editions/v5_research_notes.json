@@ -32,5 +32,71 @@
     ],
     "guard": "Native mediator",
     "obligation": "Derive a stable intermediary with independent scale and sector maps. The candidate comparison leaves OP1–OP5, C5 and C6/T2 open."
+  },
+  {
+    "id": "op1-area-quantum-boost",
+    "path": "notes/research/op1_area_quantum_boost_2026_11_18/README.md",
+    "title": "Unitary boosts and the area quantum",
+    "excerpt": "Nein, ein unitär wirkender Boost ändert das Flächenspektrum nicht (Rovelli–Speziale).",
+    "assumptions": [
+      "Literature reading of Rovelli and Speziale, gr-qc/0205108; the boost generator is assumed to act unitarily."
+    ],
+    "guard": "Frame-dependent area quantum",
+    "obligation": "Derive a non-unitary frame map or a mean-value reading of the T parameter. OP1 remains open."
+  },
+  {
+    "id": "op1-t-rule-ladder",
+    "path": "notes/research/op1_t_rule_2026_11_18/README.md",
+    "title": "Rule of frame T and the dimension ladder",
+    "excerpt": "Die Leiter T, M, P gilt genau für γ₀ ∈ [1; 1,0757) · γ_T.",
+    "assumptions": [
+      "Moran reading of the counting equation (r29.3) and the nine counting rules of r09."
+    ],
+    "guard": "Counting rule per frame",
+    "obligation": "Justify a unit in the window without reference to T, or another data-free reason for j = 1/2 only. OP1 remains open."
+  },
+  {
+    "id": "op1-chance-estimate",
+    "path": "notes/research/chance_estimate_2026_11_18/README.md",
+    "title": "Chance estimate of the hits of gamma_L",
+    "excerpt": "Nach der vorab festgelegten Lesart (36 · P über 0,3) ist das **mit Zufall verträglich**.",
+    "assumptions": [
+      "Procedure fixed in commit 8557ed7: 16 targets, 8 forms, 2 sigma window, 36 counting-rule pairs."
+    ],
+    "guard": "Data-free assignment of counting rules",
+    "obligation": "Fix the pair DL/ABCK without reference to the data; otherwise the hits carry no evidential weight."
+  },
+  {
+    "id": "qsc-root-map",
+    "path": "notes/research/op_root_map_2026_11_18/README.md",
+    "title": "One number and five translations",
+    "excerpt": "Die **Zahlenwerte** von OP2 bis OP5 lassen sich alle auf die eine Zahl aus OP1 zurückführen",
+    "assumptions": [
+      "Assumption list of r08 and the notes cited in the root map; no computation."
+    ],
+    "guard": "Native mediator",
+    "obligation": "Derive the five translations from one coupling. OP1–OP5, C5 and C6/T2 remain open."
+  },
+  {
+    "id": "op3-compensator-rank-zero",
+    "path": "llm/Ergebnis_H115_Kompensator_Oktant.md",
+    "title": "Direct compensator on closed odd states",
+    "excerpt": "Folglich gilt \\(CS=(S+JS)/2=0\\).",
+    "assumptions": [
+      "Closed generation states with embedding S satisfying JS = -S, as in generation-coupling.tex."
+    ],
+    "guard": "Native phase direction on the null line",
+    "obligation": "Derive an embedding or coupling that fixes the real direction of the octant null line from J."
+  },
+  {
+    "id": "op3-two-windows",
+    "path": "llm/Ergebnis_H117_Zwei_Umlaeufe.md",
+    "title": "Two windows and the orientation of the octant step",
+    "excerpt": "Unter allen 16 Maskenkombinationen gibt es dreimal \\(+45^\\circ\\), dreimal \\(-45^\\circ\\), neun Sperren und einen mehrdeutigen Fall.",
+    "assumptions": [
+      "Binary admissibility masks in two windows; the first window is read as one provisional state."
+    ],
+    "guard": "Native selection of the ordered return",
+    "obligation": "Identify the quantity that decides the sign in the second window. OP3 remains open."
   }
 ]

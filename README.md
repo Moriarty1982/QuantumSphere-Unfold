@@ -1,17 +1,17 @@
 # Quantum Sphaera Companion
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24294648.svg)](https://doi.org/10.5281/zenodo.24294648)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24434403.svg)](https://doi.org/10.5281/zenodo.24434403)
 
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
 ## Current public release
 
-- Public version: `v5.2.0` (2026-11-17)
-- Version DOI: [`10.5281/zenodo.24294648`](https://doi.org/10.5281/zenodo.24294648) ([Zenodo record](https://zenodo.org/records/24294648))
+- Public version: `v5.3.0` (2026-11-22)
+- Version DOI: [`10.5281/zenodo.24434403`](https://doi.org/10.5281/zenodo.24434403) ([Zenodo record](https://zenodo.org/records/24434403))
 - Concept DOI: [`10.5281/zenodo.19210728`](https://doi.org/10.5281/zenodo.19210728)
-- Previous version: `v5.1.0`, DOI `10.5281/zenodo.24237112`.
-- Release package: two English PDFs (full Companion, 1457 pages; selected physics paper, 30 pages), source archive, database snapshot and manifests, available in the Zenodo record.
-- Frozen package source: `8fb6e9378f6e6789697c60d3ba8b748cc2b56de6` (tag `v5.2.0`). Later repository metadata updates do not change the deposited package.
+- Previous version: `v5.2.0`, DOI `10.5281/zenodo.24294648`.
+- Release package: two English PDFs (full Companion, 1465 pages; selected physics paper, 31 pages), source archive, database snapshot and manifests, available in the Zenodo record.
+- Frozen package source: `53e9393a9502a9773300d8876bada7950999f138` (tag `v5.3.0`). Later repository metadata updates do not change the deposited package.
 
 Version 5 introduces the database-backed document architecture: registered
 statements, immutable content versions, dependencies, open guards and ordered
@@ -27,7 +27,14 @@ every Bargmann phase, and the Gram determinant separates the flat octant, with
 one vanishing mass, from three positive masses. A geometric reading as a
 flux-free core is given with its status; nothing in it is derived.
 
-Version 5.2.0 adds the research layers v4.10.0-r15 to r28. The physics paper
+Version 5.3.0 adds the research layers v4.10.0-r29 and r30. The physics paper
+gains two subsections: the sign of the octant step is not fixed by magnitudes
+and endpoints, so a selection of the ordered return is needed in addition; and
+the conditional values rest on one number entering through separately chosen
+identifications, while a frame-dependent area quantum would need a non-unitary
+frame map.
+
+Version 5.2.0 added the research layers v4.10.0-r15 to r28. The physics paper
 gains a subsection on where the missing number of the bent-octant reading
 comes from: symmetric carrier constructions fix the phase, a flux-free core
 escapes this, but its size enters only through the horizon counting rule,
@@ -38,7 +45,7 @@ The package was published by the author and its eight files, checksums,
 version relations and full-document preview were verified against the
 uploaded candidate. The complete argument graph remains under review;
 publication does not close the scientific guards. See
-[the release record](release/v5.2.0/README.md),
+[the release record](release/v5.3.0/README.md),
 [the development history](notes/research/v5_0_0_development.md) and
 [the statement store](qam/store/README.md).
 

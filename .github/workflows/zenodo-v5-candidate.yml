@@ -113,8 +113,20 @@ jobs:
               'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.inveniordm.v1+json'})
           with urllib.request.urlopen(request, timeout=60) as response:
               record = json.load(response)
+          wanted = 'Quantum_Sphaera_Companion_' + tag + '_full.pdf'
           preview = record.get('files', {}).get('default_preview')
-          assert preview == 'Quantum_Sphaera_Companion_' + tag + '_full.pdf', 'Wrong or unset preview'
+          if preview != wanted:
+              # Zenodo does not set the preview on upload; set it on the draft so no manual step is needed.
+              record.setdefault('files', {})['default_preview'] = wanted
+              put = urllib.request.Request(f'{ZENODO_API}/records/{identifier}/draft',
+                  data=json.dumps(record).encode(), method='PUT', headers={
+                  'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.inveniordm.v1+json',
+                  'Content-Type': 'application/json'})
+              with urllib.request.urlopen(put, timeout=60) as response:
+                  record = json.load(response)
+              preview = record.get('files', {}).get('default_preview')
+              print(f'Default preview set to {preview}')
+          assert preview == wanted, 'Wrong or unset preview'
           report = {'deposition_id': identifier, 'published': False, 'files_verified': len(expected),
                     'checksums': actual, 'default_preview': preview,
                     'draft_url': record.get('links', {}).get('self_html')}
