@@ -27,7 +27,12 @@ In preparation (22 November 2026). Not yet published.
 - Local paired build (MiKTeX): full Companion 1466 pages, physics edition 31 pages; zero undefined references, multiply
   defined labels, rerun requests and overfull boxes. Guard linter on round r30 and on the metadata: zero candidates.
   Edition tests passed.
-- The GitHub paired build, package checks and upload are recorded here after they run.
+- GitHub paired build 44992628191 of commit 53e9393a: full Companion 1465 pages, physics edition 31 pages; both with zero
+  undefined references, multiply defined labels, rerun requests and overfull boxes; no tracked changes. Both title pages carry
+  the version DOI 10.5281/zenodo.24434403 and the concept DOI exactly once and no predecessor DOI (`tools/qs.py doi`).
+- Package dry run 44992900612 against draft 24434403: eight files (two PDFs, English sources, database snapshot, README,
+  SHA256SUMS, build and package manifests); metadata validated, no Zenodo mutation.
+- Upload, preview check and publication are recorded here after they run.
 
 ## Scope
 
