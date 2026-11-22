@@ -4879,3 +4879,127 @@ R_{\rm glob}^{(v4100\text{-}r34,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r35 Source-Only: The Optical Mode of the Preparation as the Mediator of the OP5 Case}
+\addcontentsline{toc}{section}{v4.10.0-r35 Source-Only: The Optical Mode as OP5 Mediator}
+\label{sec:v4100-r35-material-mediator}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.10.0-r34 no vacuum field of the Companion carries the directed contrast of the OP5 case.  A backward check of the same day shows
+why this is forced: a propagation coefficient \(r_m\neq1\) and the pairing of a matter momentum with its counter-propagating tachyon image at a
+common rapidity both single out a frame.  Under a boost by \(\xi\) the matter rapidity moves to \(\eta+\xi\), the image to \(\eta-\xi\), and the
+squared mass of the pair connector changes by \(4m^2\cosh(2\eta+\xi)\sinh\xi\).  This layer follows the author's choice of the material route:
+the frame and the axis come from the preparation, and the mediator is the optical mode of the two-component preparation of r32.2.  It is an
+exploration with a method fixed before the computation and is not blind.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r35 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r35 results}
+\label{subsec:v4100-r35-results}
+
+Throughout, \(x=\omega^2\), \(q=|\mathbf k|^2\), \(a_\perp=|\mathbf k_\perp|^2\), \(\mu=\rho_1\rho_2/(\rho_1+\rho_2)\), and the comparison field is the Higgs radial mode of
+W2 (r33.1), coupled to the two components by \(\eta\,(Y_1\nabla\cdot\mathbf u+Y_2\nabla\cdot\mathbf w)\) with \(Y_a=\sum y\,n_0\) of component \(a\) (r32.1).
+
+\paragraph{Theoremlet v4.10.0-r35.1 (isotropic preparation).}
+Integrating out the two continua gives the operator \(2(m_H^2+q-x)+q\,Y^{\mathsf T}M^{-1}Y\), where \(M\) is the plane-wave matrix of the two components.  It has an
+acoustic pole with residue \(q(Y_1+Y_2)^2/(\rho_1+\rho_2)\) and an optical pole at \(\omega_0^2=k(\rho_1+\rho_2)/(\rho_1\rho_2)\) with residue
+\[
+ q\,\mu\Bigl(\frac{Y_1}{\rho_1}-\frac{Y_2}{\rho_2}\Bigr)^2+O(q^2).
+\]
+Both depend on \(q\) only; an isotropic preparation gives no directed term.  \emph{Proof.} Residues of the rational function at the two roots of
+\(\det M=0\), expanded in \(q\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r35.2 (the leading static contrast does not use \(r_m\)).}
+On the static plateau
+\[
+ \frac{g_m^2N_m}{d_m}\Big|_{x=0}=\frac{2g_m^2a_\perp^2}{3m^2}-\frac{2g_m^2r_m\,a_\perp^2\,q}{3m^4}+O(q^2),
+\]
+so the leading term, from which r32.4 obtains the contrast, is independent of \(r_m\).  The subluminal coefficient \(r_m=\tfrac12\) of r32.0 is not
+needed for the leading directed contrast.  \emph{Proof.} Series of \(1/(m^2+r_mq)\) in \(q\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r35.3 (uniaxial preparation).}
+Let the pair spring be rigid along the axis and equal to \(k_\perp\) across it.  Then the axial component carries only the acoustic pole, and the
+transverse optical pole at \(\omega_0^2=k_\perp(\rho_1+\rho_2)/(\rho_1\rho_2)\) has the leading residue
+\[
+ a_\perp\,\mu\Bigl(\frac{Y_1}{\rho_1}-\frac{Y_2}{\rho_2}\Bigr)^2 ,
+\]
+which depends on \(a_\perp\) alone.  The statically induced source of the optical part is \(-a_\perp\mu(Y_1/\rho_1-Y_2/\rho_2)^2\eta/\omega_0^2\), the form
+\(\Delta_\perp\eta/\omega_0^2\) of the comparison field \(f=\Delta_\perp H/m^2\) of r32.4 with \(m^2\leftrightarrow\omega_0^2\).
+\emph{Proof.} With component-wise elastic operators the Cartesian components decouple; the limit of infinite axial spring projects the axial
+component onto equal displacements, and the transverse component gives the residue as in r35.1 with \(q\) replaced by \(a_\perp\).  \(\square\)
+
+\paragraph{Remark v4.10.0-r35.4 (reading).}
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+model input (r32.0) & material counterpart\\
+\midrule
+mass \(m^2\) & optical gap \(\omega_0^2\)\\
+axis, \(P=\operatorname{diag}(1,1,0)\) & uniaxial pair spring\\
+coupling \(g_m^2\) & \(\mu(Y_1/\rho_1-Y_2/\rho_2)^2=\mu(f_1-f_2)^2/v^2\) with \(f_a\) the Higgs fraction of the rest mass\\
+\(r_m=\tfrac12\) & not needed at leading order (r35.2)\\
+numerator \(\tfrac23a_\perp^2\) & \(a_\perp\): one power less\\
+\bottomrule
+\end{tabular}
+\end{center}
+Against the criteria fixed beforehand the material route carries the directed contrast \emph{partially}: mass, axis and coupling are properties
+of the sample and can be varied independently, the coupling exists only if the two components carry different Higgs fractions of their mass,
+and the induced source has the form of \(f\).  The operator of the comparison model contains the back-reaction \(g_m^2\Delta_\perp f\), one power of
+\(a_\perp\) more than a density coupling supplies; a coupling to second derivatives of the displacement would be needed and is expected to be
+suppressed by the square of lattice spacing times wave number (estimate, not computed).  Which power the OP5 readout measures, and the size of
+\(f_1-f_2\), stay open.
+
+\subsection*{v4.10.0-r35 frames}
+\label{subsec:v4100-r35-frames}
+
+All quantities are computed in the matter frame M; the boost check of the pairing rule compares the two rapidities under the same boost and
+no quantity of another frame is used.
+
+\subsection*{v4.10.0-r35 register entries}
+\label{subsec:v4100-r35-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r35\\
+\midrule
+directed mediator needs a distinguished frame & shown for \(r_m\neq1\) and for the pair connector (purpose)\\
+optical mode of a uniaxial preparation & directed, massive, coupled iff \(f_1\neq f_2\); numerator one power short\\
+\(r_m=\tfrac12\) in the leading contrast & not needed (r35.2)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r35 notes}
+\label{subsec:v4100-r35-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak material\_\allowbreak mediator\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit a86479e0,
+script \texttt{material\_\allowbreak mediator.wl}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r35 ledger and guard update}
+\label{subsec:v4100-r35-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r35}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; the second-gradient coupling and the readout power not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r35,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r35}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
