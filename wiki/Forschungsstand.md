@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Spinorband: Wegwahl im zweiten Umlauf (22.11.2026)
+
+Zwei Umläufe tragen als endliches Vergleichsmodell. Der erste hält Kandidaten in einem vorläufigen Zustand fest, der zweite kann bei unterschiedlicher Zulässigkeit entgegengesetzte Oktantphasen wählen. Beide zulässigen Richtungen lassen den Ausgang mehrdeutig. Wolfram, MMA und beide HDL-Steuerungen bestätigen den Vergleich. Eine native vorzeichenempfindliche HC-/Routing-Regel ist offen.
+
 ### Spinorband: Phasenfolge und Rückkehrregel (22.11.2026)
 
 Der Companion führt bereits eine Vernam-artige Heuristik zur Rekonstruktion lokaler Persistenzregeln. Im idealen Oktantvergleich liefern entgegengesetzte Rückwege bei gleichen Überlappungsbeträgen signierte Schritte ±45°. Gleich häufige Gesamtphasen können auch durch konstante Einzelschritte entstehen. Die native Wahl des gerichteten Rückwegs und ihre Phasenauslese bleiben offen.
