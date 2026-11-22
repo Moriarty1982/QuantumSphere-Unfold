@@ -1,6 +1,6 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 22. November 2026, Runden bis v4.10.0-r35; öffentliche Baseline v5.3.0 vom 22.11.2026 (bis r30).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 22. November 2026, Runden bis v4.10.0-r36; öffentliche Baseline v5.3.0 vom 22.11.2026 (bis r30).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
 **Veröffentlichungshinweis vom 22.11.2026:** Öffentliche Baseline ist v5.3.0, DOI 10.5281/zenodo.24434403, mit den Runden bis r30 und den Abschnitten 5.9 und 7.7 im Physik-Paper. Kein OP und kein Guard ist dadurch geschlossen.
 
