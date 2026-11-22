@@ -4,7 +4,9 @@
 
 - [PR #227](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/227) (Zenodo-Übergabe für LLMs, `notes/anleitungen/zenodo-release-uebergabe.md`) auf Freigabe des Autors als 1853a3ff gemergt, Zweig gelöscht. Register #17 ergänzt. Keine offenen PRs.
 - Lokale Arbeitskopie war 597 Commits hinter `main` (Stand 18.11.); vorgespult. Veraltete Verweise auf fünf gemergte `research/`-Zweige entfernt.
-- Keine neue Nummer; zuletzt vergeben H117. Nächste Schritte unverändert (siehe unten): reale OP5-Messdaten, native Rückwegwahl OP3.
+- Keine neue H-Nummer; zuletzt vergeben H117. **Neue Rundennummer v4.10.0-r30** vergeben.
+- **v5.3.0 in Vorbereitung** (Auftrag des Autors: Zielversion v5.3.0, Physik-Paper ergänzen): Draft-[PR #228](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/228), Zweig `release/v5.3.0-prep` (99bbfc9a). Runde r30 (Befunde 17.–22.11.), Physik-Paper 5.9 „Orientation of the octant step“ und 7.7 „One number and several translations“, sechs Katalogeinträge, Metadatenentwurf, Wiki. Schema unverändert v6. Lokaler Bau: 1466/31 Seiten, alle harten Werte 0. Reservierungs-Trockenlauf [44986526110](https://github.com/Moriarty1982/QuantumSphere-Unfold/actions/runs/44986526110) erfolgreich.
+- **Nächster Schritt:** redaktionelle Freigabe der Texte durch den Autor; dann Zenodo-Reservierung (Freigabe), DOI in `qam/editions/v5_release.json`, Metadaten, `CITATION.cff`, `DOI_ROLES`, `release/v5.3.0/README.md`, Neubau, Upload (Freigabe), Vorschau prüfen, Veröffentlichung (Freigabe), Merge und Tag.
 
 ## 22.11.2026 (Codex)
 
