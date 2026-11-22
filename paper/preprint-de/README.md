@@ -13,7 +13,8 @@ Abschnitt 3.3.3 „Welches Vorzeichen der Oktantschritt hat“ (H115–H117) und
 gesetzt; die Hashes in `baseline.json` beziehen sich auf den Codex-Stand.
 
 Nachtrag 22.11.2026: Anhang B (`sections/b-herleitungen-op5.tex`) leitet die Gleichungen (39)–(51) aus Abschnitt 4.4 her und legt die
-Annahmen (39) und (40) offen; Wolfram-Prüfung unter `audit/anhang-b/`.
+Annahmen (39) und (40) offen; Wolfram-Prüfung unter `audit/anhang-b/`. Maßgebliche Quelle ist der Companion, Runde v4.10.0-r32
+(`notes/research/v4_10_0_r32/`); der Anhang gibt sie wieder.
 
 ## Querverweise
 
