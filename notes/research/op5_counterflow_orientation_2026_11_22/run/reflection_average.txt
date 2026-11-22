@@ -1,0 +1,7 @@
+Tatsaechliche Ausgabe von reflection_average.wl (Wolfram-MCP-Kern, 22.11.2026), ein Lauf.
+"Symbol::undefined2" betrifft freie Symbole und ist kein Fehler. Bruchdarstellung zeilenweise zusammengezogen.
+
+(3) Mittel mit Zeitumkehr, c = 1: 2 a^2 - 2 a x + 2 x^2 ;  - 3 N_m = 0
+    Mittel mit Spiegelung x -> -x, c = 1: 2 x^2 + a x (-4 - 4 Cos[2 ph])/4 + a^2 (7 + Cos[4 ph])/4 ;  - 3 N_m = -(a (a - 2 x + a Cos[2 ph]) Sin[ph]^2)
+    Spiegelung, Richtung ph = 0 (k entlang Gegenstrom): 2 (a^2 - a x + x^2) ;  ph = Pi/2: 2 (a^2 + x^2) ;  ph = Pi/4: 3 a^2/2 - a x + 2 x^2
+    Spiegelung, Winkelmittel ueber ph: 7 a^2/4 - a x + 2 x^2 ;  proportional zu N_m? {}
