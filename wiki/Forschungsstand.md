@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Deutscher Preprint: H113 im Eichteil und Abschnitt „Was offen bleibt“ (22.11.2026)
+
+Anlass: Die Triage-Rezension von AI Physics Review zum Preprint v0.1.0 nennt drei Entwicklungspunkte (native Operatoren, Herleitung der Eichzuordnung, unabhängiges geometrisches Quellgesetz). Der Preprint hat jetzt (a) in 2.4 den Befund H113: Eine farbäquivariante lineare Auslese verschwindet, ein Generationsindex kann nicht in der Farbe sitzen, nur in einer farbneutralen Multiplizität; (b) einen Abschnitt 5.6 „Was nach dieser Fassung offen bleibt“, der die drei Punkte mit ihrem Stand bündelt. Quelle von H113 ist Companion-Runde r30.8; keine neue Runde nötig. Preprint 45 Seiten. Kein Punkt ist geschlossen.
+
 ### Runde r32: Durchgerechneter OP5-Fall, Companion als Quelle (22.11.2026)
 
 Auf Wunsch des Autors ist der Companion die maßgebliche Fassung: Die Runde v4.10.0-r32 führt den OP5-Fall mit Beweisen (r32.0 gesetzte Eingaben, r32.1 Higgsquelle, r32.2 elastische Präparation, r32.3 kompakter Außenbeitrag, r32.4 gerichteter Kontrast, r32.5 Bündelfaktor und planare Kontrolle, r32.6 zweite Ordnung, r32.7 Status). Physik-Paper 6.9 und Preprint-Anhang B verweisen jetzt auf diese Runde. Neue Daueranweisung „Hauptpaper bleibt Quelle“: Nachweise aus der Artikelarbeit kommen im selben Arbeitsgang als Runde in den Companion. OP5 offen.
