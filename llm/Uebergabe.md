@@ -1,5 +1,11 @@
 # Übergabe: Stand der letzten Sitzung
 
+## 22.11.2026, später (Claude Opus 5.5)
+
+- [PR #227](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/227) (Zenodo-Übergabe für LLMs, `notes/anleitungen/zenodo-release-uebergabe.md`) auf Freigabe des Autors als 1853a3ff gemergt, Zweig gelöscht. Register #17 ergänzt. Keine offenen PRs.
+- Lokale Arbeitskopie war 597 Commits hinter `main` (Stand 18.11.); vorgespult. Veraltete Verweise auf fünf gemergte `research/`-Zweige entfernt.
+- Keine neue Nummer; zuletzt vergeben H117. Nächste Schritte unverändert (siehe unten): reale OP5-Messdaten, native Rückwegwahl OP3.
+
 ## 22.11.2026 (Codex)
 
 - **QAM und Zenodo-Vorbereitung:** [PR #226](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/226) ist als `41a826f1` auf main. Kontextfilter und HDL-Streaming-Guard sind integriert. Die Zenodo-Anleitung gleicht den LLM-Kontext nach den Datenbankeinträgen ab. QAM-Tests unter Linux und Windows, Lean und TeX bestanden auf dem PR-Stand. [Wiki-Abgleich](https://github.com/Moriarty1982/QuantumSphere-Unfold/actions/runs/44983221905) erfolgreich. [OP3](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues/131#issuecomment-7073941112) und [Register](https://github.com/Moriarty1982/QuantumSphere-Unfold/issues/17#issuecomment-7073938803) fortgeschrieben. Physischer FPGA-Durchsatz und native Rückwegwahl bleiben offen.
