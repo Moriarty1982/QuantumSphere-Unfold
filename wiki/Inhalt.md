@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r37.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r38.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -162,6 +162,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Materialweg (r35):** Ein gerichteter Vermittler braucht ein ausgezeichnetes Bezugssystem; im Materialweg liefert es die Probe. Eine einachsige Zweikomponenten-Probe gibt einen gerichteten massiven Term (Masse = optische Lücke), der nur koppelt, wenn die Komponenten verschieden große Higgs-Anteile ihrer Ruhemasse haben. Die Unterluminalität wird für den führenden Kontrast nicht gebraucht; der Zähler bleibt eine Potenz hinter dem Vergleichsmodell zurück. Trägt teilweise.
 - **Vakuumweg (r36):** Ohne Hintergrund gibt keine lineare Kopplung eines neuen Feldes an |Φ|² einen gerichteten Pol. Mit Rahmen und Achse erreicht ein Spin-2-Feld mit positiver Polarisationssumme den Zähler des Vergleichsmodells exakt. Rahmen, Achse und Polarisationsstruktur sind gesetzt; trägt teilweise.
 - **Stringweg (r37, I1):** Ein zwischen M- und T-System gespannter String mit vom Higgsradius abhängiger Spannung liefert Rahmen, Achse und Polarisationsstruktur selbst. Seine Zwei-Quanten-Zustände treffen die gerichteten Anteile des Zählers exakt; der ungerichtete Anteil ist halb so groß, und bei halber Masse tritt ein zweiter Pol auf. Trägt teilweise; die Spannungsabhängigkeit ist angenommen.
+- **Feldgleichungen (r38):** Ein Tensorfeld quer zur Achse und ein Skalar, beide an den Higgs-Radialmodus gekoppelt, geben Feldgleichungen, deren Austausch den Vermittlerterm des Vergleichsmodells exakt und mit eindeutigen Kopplungen reproduziert. Die nötige Spurkopplung κ = ½ ist der Wert des Strings. Der Ansatz ist geisterfrei; stabil ist er genau für g_m² ≤ 3r_m. Der Skalar bleibt gesetzt; trägt teilweise.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*
