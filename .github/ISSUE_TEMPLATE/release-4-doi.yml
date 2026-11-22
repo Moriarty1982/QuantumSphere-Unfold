@@ -1,0 +1,25 @@
+name: "Release 4: reservierte DOI eintragen (Copilot)"
+description: Nach der Reservierung durch den Autor die DOI überall eintragen und neu bauen.
+title: "Release vX.Y.Z: DOI eintragen"
+labels: ["release", "copilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Erst nach der Reservierung anlegen. Die DOI kommt aus dem Protokoll des Reservierungslaufs.
+  - type: input
+    id: doi
+    attributes:
+      label: Reservierte Version-DOI und Lauf
+      placeholder: 10.5281/zenodo.NNNNNNNN, Lauf NNNNNNNNNNN
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Fertig, wenn
+      value: |
+        - `qam/editions/v5_release.json`: version, date, version_doi
+        - Metadaten (Beschreibung), `CITATION.cff`, `.zenodo.json`, Release-Notiz
+        - `DOI_ROLES` in `tools/qs.py`; DOI-Abschnitt in `AGENTS.md` als reserviert/unveröffentlicht
+        - Neubau: PDF-Namen mit neuer Version; `python tools/qs.py doi <pdf> --version-doi … --version-label …` ohne Beanstandung

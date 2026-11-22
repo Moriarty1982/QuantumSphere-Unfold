@@ -20,6 +20,7 @@ hierher und enthalten keine eigenen Regeln. Wer einen Ablauf ändert, ändert ih
 | Aussagen-Datenbank und LLM-Kontext für eine Zenodo-Veröffentlichung abgleichen | [zenodo-datenbank-vorbereiten.md](zenodo-datenbank-vorbereiten.md) |
 | Neue Version auf Zenodo veröffentlichen | `zenodo-release.md` |
 | Zenodo-Release-Vorbereitung an ein LLM übergeben | [zenodo-release-uebergabe.md](zenodo-release-uebergabe.md) |
+| GitHub-Einstellungen und Copilot-Einrichtung für Releases | [github-einstellungen.md](github-einstellungen.md) |
 
 Regeln, Rundenstand und Projektfakten stehen in `AGENTS.md`; der Stand der letzten Sitzung im lokalen Ordner in
 `llm/Uebergabe.md`, auf GitHub in der jüngsten Runde unter `notes/research/`, den offenen PRs und Actions-Läufen.

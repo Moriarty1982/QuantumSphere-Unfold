@@ -62,6 +62,10 @@ werkzeugübergreifender Standard. `CLAUDE.md` verweist nur darauf.
 
 Bei der Suche nach gespeicherten Belegen kann `select_qam_context` über den MMA-Kontexthash, den deklarierten Frame und den MMA-Status passende Beleg-IDs ermitteln. Anschließend den ausgewählten Beleg per Hash prüfen und seine Guard-Diagnosen mitführen. [MCP-Anleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/mcp/README.md#select-context-receipts)
 
+## Releases mit GitHub Copilot
+
+Für eine Veröffentlichung kann der Autor Teilaufgaben an den Copilot Coding Agent geben: Runde schreiben, Physik-Paper und deutschen Preprint nachziehen, Bau und Metadaten prüfen, reservierte DOI eintragen. Jede Aufgabe hat eine Issue-Vorlage („Release 1“ bis „Release 4“) und endet in einem Draft-PR. Merges, Zenodo-Schritte und die Entscheidung über eine neue Version gibt der Autor im Chat frei; ausgeführt werden sie vom Hauptassistenten. Die Issues legt der Hauptassistent an und weist sie Copilot zu. Copilot rechnet nicht mit Wolfram oder MMA. Einzelheiten: `notes/anleitungen/github-einstellungen.md`.
+
 ## Vorgehen bei Fachfragen
 
 Der [Zwischenabschluss der OP5-Rückverfolgung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/op5_reconstruction_verdict_2026_11_06.md) bündelt die sechs Prüfnotizen. Die historische Auslöschungspflicht ist als Grundlage ausgesetzt. Lokale Ausleseidentitäten, bedingte Erhaltung und die empirische Identifikation q = Ω_M(heute) sind getrennte Aussagen. Die Kaskade setzt q bereits ein; ihre Flussstabilität ist keine unabhängige Herleitung seines Werts. Die Quellenrekonstruktion nicht ohne neue Evidenz als neuen Beweis oder neue physikalische Theorie ausgeben.

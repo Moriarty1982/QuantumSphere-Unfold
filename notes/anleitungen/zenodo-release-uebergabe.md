@@ -4,6 +4,12 @@
 
 Bereite für den Quantum Sphaera Companion einen technisch geprüften Release-Kandidaten vor. Dieser Arbeitsauftrag eignet sich für GitHub Copilot oder ein anderes LLM mit Repository-Zugriff. Liefere die Änderung in einem Draft-PR mit Prüfbericht ab, sobald der Autor eine konkrete Release-Vorbereitung beauftragt hat.
 
+## Mit GitHub Copilot
+
+Die Arbeit ist in vier Issue-Vorlagen geteilt („Release 1“ bis „Release 4“ unter `.github/ISSUE_TEMPLATE/`), je eine pro Draft-PR.
+Copilots Umgebung (TeX Live, Python) richtet `.github/workflows/copilot-setup-steps.yml` ein; Regeln in `.github/copilot-instructions.md`.
+Die Issues legt der Hauptassistent an und weist sie Copilot zu; der Autor gibt Freigaben nur im Chat. Einmalige Einstellungen: [github-einstellungen.md](github-einstellungen.md).
+
 ## Eingaben und Quellen
 
 - Übernimm Zielversion und freigegebenen Quellstand vom Autor. Ermittle Tag und Version-DOI der veröffentlichten Vorgängerversion aus dem Repository. Fehlen Zielversion oder Quellstand, prüfe die Ausgangslage und melde die offenen Angaben. [Projektregeln](../../AGENTS.md)
