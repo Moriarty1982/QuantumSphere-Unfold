@@ -1,5 +1,10 @@
 # Übergabe: Stand der letzten Sitzung
 
+## 22.11.2026 (Codex)
+
+- **Zuletzt vergebene Hypothese H113:** Vorab df52d765, nicht blind. Farbauslese der wörtlichen e4/e5/e6-Diagonale widerlegt. Farbneutrale Restspalte Rang drei; je Zeile schwaches Dublett in der H26-Lesart. Wolfram-Skript und Ausgabe unter llm/h113_dixon_color_raster.*. Ergebnis lokal auf codex/h113-dixon-color-raster. OP3 bleibt offen.
+- **OP5:** PR #220 als cf70cd1f gemergt, Wiki synchronisiert, OP5 #12 und Register #17 fortgeschrieben. OP5 bleibt offen.
+
 ## 21.11.2026 (Codex)
 
 - **Projektregel:** [PR #217](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/217) ist als `570610c88457d6a3867e1ccd6c1d7619b368210a` gemergt. `AGENTS.md` verlangt den selbstständigen HDL/MMA-Vergleich bei Änderungen an der Bandmaschine oder ihrer beschriebenen Übergangssemantik und bei OP-Schlüssen mit einem konkret definierten endlichen Ablauf. Der Zweig ist lokal und auf GitHub gelöscht. Der [Wiki-Abgleich](https://github.com/Moriarty1982/QuantumSphere-Unfold/actions/runs/44894447396) war erfolgreich.

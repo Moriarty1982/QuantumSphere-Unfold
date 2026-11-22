@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**22.11.2026, OP3-Farbauslese:** H113 mit Farbzentrum, Restspalte und bedingter schwacher Verdopplung eingetragen.
+
 **21.11.2026, OP5-Kreuzkontrast und Aktorprüfung:** Schranke am gemessenen Vierfachkontrast und Messvorschrift für lokale Aktorantwort mit gemeinsamem Gegenhub ergänzt.
 
 **12.11.2026, String-Längenmodell:** Stabiles elastisches Vergleichsminimum
