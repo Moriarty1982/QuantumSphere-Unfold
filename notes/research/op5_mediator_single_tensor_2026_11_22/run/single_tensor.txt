@@ -1,0 +1,22 @@
+Tatsaechliche Ausgabe von single_tensor.wl (Wolfram-MCP-Kern, 22.11.2026), ein Lauf.
+"Symbol::undefined2" betrifft freie Symbole; "Solve::svars" bei der Gesamtloesung, weil c frei bleibt (einparametrige Familie).
+Bruchdarstellung zeilenweise zusammengezogen.
+
+(0) Box -> a - x;  J_00 -> -(a c) + (-1 + c) x;  J_11 + J_22 -> a (-1 + 2 c) - 2 c x;  J_0i^2 summiert -> a x
+(1) N(c, w) = a^2 (1 - 2 c + 3 c^2) + a (4 c - 6 c^2 + 2 w0) x + (1 - 2 c + 3 c^2) x^2
+    N = lam N_m identisch fuer: {{w0 -> (-1 - 2 c + 3 c^2)/2, lam -> 3 (1 - 2 c + 3 c^2)/2}}
+    mit w = 1 (Zeit-Quer-Komponenten gekoppelt): {{c -> (1 - Sqrt[10])/3, lam -> 6}, {c -> (1 + Sqrt[10])/3, lam -> 6}}
+    mit w = 0 (entkoppelt): {{c -> -(1/3), lam -> 3}, {c -> 1, lam -> 3}}
+    allgemein w(c), lam(c): {{w0 -> (-1 - 2 c + 3 c^2)/2, lam -> 3 (1 - 2 c + 3 c^2)/2}}
+(2) p^a J_ab = {I (-1 + c) w (k1^2 + k2^2 - w^2), -I (-1 + c) k1 (k1^2 + k2^2 - w^2), -I (-1 + c) k2 (k1^2 + k2^2 - w^2)};  null genau fuer {{c -> 1}}
+(3) c = 1: J_00 -> -a,  J_ij -> (a - 2 x - a Cos[2 ph])/2 (xx), -(a Cos[ph] Sin[ph]) (xy); Spur -> a - 2 x
+    r38: Vertex S = -g_s x, Spur X = g (x - a); Normquadrat (S, X-Spur/Sqrt[2]) = a^2/3 - 2 a x/3 + 2 x^2/3;  Spurfreier Anteil r38: g^2 a^2/2 = a^2/3
+    Einzelfeld c = 1, g'^2 = 1/3: Normquadrat (H_00, H-Spur/Sqrt[2]) = a^2/2 - 2 a x/3 + 2 x^2/3;  spurfreier Anteil: a^2/6
+    Stringvertex (r37, am Pol 2 w1^2 = x/2): k_i k_j - (x/2) delta_ij; Einzelfeld c = 1: -k_i k_j - (x - a) delta_ij
+(4a) kinetische Mischung: Koeffizienten von x in J_00, J_11, J_22, J_12: {0, -1, -1, 0};  Det K = 2 - 2 g'^2 = 2 - 2 gm2/3 > 0 genau fuer gm2 < 3
+(4b) statischer Zaehler g'^2 N(x = 0) = 2 a^2 gm2/3  (Vergleichsmodell: (2/3) gm2 a^2) -> gleiche Schranke gm2 <= 3 r_m
+(4c) g_m^2 = 3/100: alle x-Wurzeln reell und positiv: True, kleinste Wurzel 0.990288, Ausnahmen: {}
+(4c) g_m^2 = 1: alle x-Wurzeln reell und positiv: True, kleinste Wurzel 0.813859, Ausnahmen: {}
+(4c) g_m^2 = 7/5: alle x-Wurzeln reell und positiv: True, kleinste Wurzel 0.772854, Ausnahmen: {}
+(4c) g_m^2 = 8/5: alle x-Wurzeln reell und positiv: False, kleinste Wurzel -1.30969, Ausnahmen: {{100, 0}, {100, 1}}
+     [Parameter (4c): m_H^2 = 2, m^2 = 1, r_m = 1/2, c = 1, w = 0, g'^2 = g_m^2/3; Raster a in {0, 1/2, 1, 2, 5, 20, 100}, k_z^2 in {0, 1, 10}]
