@@ -82,8 +82,6 @@ jobs:
   zenodo-release:
     name: Zenodo release helper
     runs-on: ubuntu-latest
-    # Protected environment: set required reviewers (author) and the Zenodo secrets there.
-    environment: zenodo
 
     steps:
       - name: Check out repository

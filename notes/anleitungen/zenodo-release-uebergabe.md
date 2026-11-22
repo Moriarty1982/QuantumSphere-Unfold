@@ -8,7 +8,7 @@ Bereite für den Quantum Sphaera Companion einen technisch geprüften Release-Ka
 
 Die Arbeit ist in vier Issue-Vorlagen geteilt („Release 1“ bis „Release 4“ unter `.github/ISSUE_TEMPLATE/`), je eine pro Draft-PR.
 Copilots Umgebung (TeX Live, Python) richtet `.github/workflows/copilot-setup-steps.yml` ein; Regeln in `.github/copilot-instructions.md`.
-Einstellungen, die der Autor auf GitHub setzt (Umgebung `zenodo` mit Pflichtprüfer, Ruleset für `main`, Firewall): [github-einstellungen.md](github-einstellungen.md).
+Die Issues legt der Hauptassistent an und weist sie Copilot zu; der Autor gibt Freigaben nur im Chat. Einmalige Einstellungen: [github-einstellungen.md](github-einstellungen.md).
 
 ## Eingaben und Quellen
 

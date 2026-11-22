@@ -11,54 +11,43 @@ Stand 22.11.2026, geprüft über die GitHub-API. Diese Einstellungen setzt der A
 | Zweige nach Merge automatisch löschen | aus |
 | Auto-Merge erlaubt | an |
 | `GITHUB_TOKEN` Standardrechte | nur lesen; darf keine PRs genehmigen |
-| Umgebungen | nur `github-pages`; Zenodo-Lauf ohne Umgebung, Geheimnisse auf Repo-Ebene |
+| Umgebungen | nur `github-pages`; Zenodo-Lauf ohne Umgebung, Geheimnisse auf Repo-Ebene (so beabsichtigt) |
 | Copilot-Einrichtung | fehlte bis zu diesem PR |
 
-## Empfohlen, nach Nutzen geordnet
+## Leitlinie: einmal einrichten, danach ohne Eingriff
 
-1. **Umgebung `zenodo` mit Pflichtprüfer** (Settings → Environments → New environment `zenodo`):
-   - Required reviewers: der Autor; „Prevent self-review“ aus, damit der Autor selbst freigeben kann.
-   - Deployment branches: „Selected branches“ mit `main` und `release/*`.
-   - Die Geheimnisse `ZENODO_TOKEN` und `ZENODO_SANDBOX_TOKEN` hierher verschieben und auf Repo-Ebene löschen.
-   - Wirkung: Der Workflow `zenodo_release.yml` (seit diesem PR `environment: zenodo`) wartet vor jedem Lauf auf den Klick des
-     Autors. Kein Assistent kann ohne diese Freigabe reservieren, hochladen oder veröffentlichen. Auch Trockenläufe brauchen dann den
-     Klick.
+Der Autor will im laufenden Betrieb nicht in GitHub klicken müssen. Freigaben gibt er im Chat („PR NN mergen“, „Reservierung
+freigeben“); die Assistenten führen sie aus. Deshalb gibt es **keine** Pflichtprüfer-Umgebung für Zenodo und keine Regeln, die
+für jeden PR einen Klick verlangen. Die Grenze „Zenodo nur mit Freigabe“ bleibt eine Regel in `AGENTS.md`, keine technische Sperre;
+die Zenodo-Schlüssel bleiben als Repo-Geheimnisse.
 
-2. **Copilot Coding Agent für das Repo einschalten** (Settings → Copilot → Coding agent):
-   - Zugang für dieses Repository erlauben.
-   - Firewall: zusätzlich erlauben `zenodo.org`, `doi.org`, `ctan.org` und `mirrors.ctan.org`. PyPI und die Ubuntu-Paketquellen
-     stehen in der Standardliste.
-   - Optional: MCP-Server `qsc-qam` eintragen, damit Copilot QAM-Belege lesen kann (Startbefehl aus `mcp/README.md`).
+## Einmalig einzurichten
 
-3. **Ruleset für `main`** (Settings → Rules → Rulesets → New branch ruleset, Ziel `main`):
-   - „Restrict deletions“ und „Block force pushes“ an.
-   - „Require a pull request before merging“ an, mit **Bypass für Repository-Admins**. So bleiben die Buchführungs-Commits des
-     Autors und seiner Assistenten direkt auf `main` möglich (Dauerauftrag vom 15.11.), alle anderen Änderungen gehen über PRs.
-   - „Require status checks to pass“: `QAM TeX checks`, `QAM batch checks` und `paired-documents` (Dokumentbau, seit diesem PR auch
-     auf PRs).
+1. **Copilot Coding Agent für das Repo einschalten** (Settings → Copilot → Coding agent).
+   - Falls angeboten: die Freigabepflicht für Workflow-Läufe auf Copilot-PRs ausschalten. Sonst wartet jeder Copilot-PR mit
+     seinen Prüfungen auf einen Klick.
+   - Firewall: `zenodo.org`, `doi.org`, `ctan.org`, `mirrors.ctan.org` erlauben.
+2. **„Automatically delete head branches“** einschalten (Settings → General → Pull Requests). Erledigt den Dauerauftrag vom 14.11.
+   auf GitHub ohne Zutun.
+3. **Labels** `release` und `copilot` anlegen (oder einen Assistenten bitten, sie per `gh label create` anzulegen).
+4. Optional, ohne laufenden Aufwand: **Ruleset für `main`** nur mit „Restrict deletions“ und „Block force pushes“. Das verhindert
+   versehentliches Löschen oder Überschreiben von `main` und verlangt nie einen Klick.
 
-4. **Zweige nach Merge automatisch löschen** (Settings → General → Pull Requests → „Automatically delete head branches“ an). Das
-   erledigt den Dauerauftrag vom 14.11. für GitHub-Zweige von selbst.
+## Bewusst nicht
 
-5. **Workflows auf Copilot-PRs:** GitHub verlangt für Workflows auf PRs des Coding Agents eine Freigabe („Approve and run
-   workflows“). Das ist eine sinnvolle Sperre; beim Durchsehen des Draft-PRs einmal freigeben.
-
-6. **Labels anlegen:** `release` und `copilot` (Issues → Labels). Die Issue-Vorlagen setzen sie; fehlen sie, entfallen sie still.
-
-7. **Copilot Code Review** (optional, Settings → Rules → Ruleset → „Request pull request review from Copilot“): automatische
-   Durchsicht jedes PRs. Ersetzt die fachliche Prüfung nicht.
-
-## Nicht empfohlen
-
-- `GITHUB_TOKEN` auf Schreiben stellen oder „Allow GitHub Actions to create and approve pull requests“ einschalten: Kein Ablauf
-  braucht es, und es würde Freigaben umgehbar machen.
-- Auto-Merge für Release-PRs: Merges bleiben eine Entscheidung des Autors.
+- Umgebung mit Pflichtprüfer für Zenodo: würde jeden Lauf, auch Trockenläufe, an einen Klick binden.
+- „Require a pull request“ oder Pflicht-Statusprüfungen für `main`: würde Übergabe-Commits blockieren bzw. Merges verzögern.
+- Schreibrechte für `GITHUB_TOKEN` oder Auto-Merge für Release-PRs.
 
 ## Ablauf mit Copilot (Kurzform)
 
-1. Autor: Zielversion festlegen; Issue „Release 1: Runde schreiben“ anlegen und Copilot zuweisen.
-2. Copilot: Draft-PR. Autor: Workflows freigeben, lesen, mergen.
+Der Autor sagt im Chat nur, was er will („v5.4.0 vorbereiten“, „freigeben“). Den Rest steuert der Hauptassistent:
+
+1. Hauptassistent: Issue „Release 1: Runde schreiben“ anlegen und Copilot zuweisen; gleichzeitig „Release 2“ vorbereiten.
+2. Copilot: Draft-PR. Hauptassistent: Prüfungen und Inhalt durchsehen, Fehler zurückmelden oder selbst korrigieren, dem Autor eine
+   kurze Zusammenfassung geben. Merge nach „PR NN mergen“ im Chat.
 3. Wie 1–2 mit „Release 2: Artikel nachziehen“ und „Release 3: Bau und Metadaten“.
-4. Autor: Reservierung starten (Workflow `Zenodo Release`, `reserve_only=true`, `dry_run=false`) und in der Umgebung freigeben.
-5. „Release 4: DOI eintragen“ an Copilot. Danach Upload, Vorschau-Prüfung und Veröffentlichung durch den Autor; Tag und
-   GitHub-Release nach `zenodo-release.md`, Register #17 und OP-Issues nachziehen.
+4. Nach „Reservierung freigeben“ im Chat startet der Hauptassistent den Workflow `Zenodo Release` und legt „Release 4: DOI eintragen“
+   für Copilot an.
+5. Upload und Veröffentlichung nach Freigabe im Chat durch den Hauptassistenten. Die Vorschau auf Zenodo prüft der Hauptassistent
+   über die API und meldet sie; Tag, GitHub-Release, Register #17 und OP-Issues zieht er nach `zenodo-release.md` nach.
