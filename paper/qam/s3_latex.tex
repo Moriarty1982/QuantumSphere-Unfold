@@ -3,19 +3,9 @@
 Mathematische Texte entstehen in \LaTeX, und Sprachmodelle schreiben bevorzugt \LaTeX. Die naheliegende Stelle, an der eine Akte geführt
 werden kann, ist deshalb das Dokument selbst: Jede Aussage wird dort deklariert, wo sie im Text steht, und der \TeX-Compiler prüft die
 Regeln, während er das Dokument setzt. QAM stellt dafür drei Pakete bereit, die nur auf dem \LaTeX-Kern aufbauen (expl3, \LaTeX{} ab
-2022-06) und von keinem Anwendungsprojekt abhängen.
-
-\begin{center}
-\begin{tabular}{@{}lp{0.68\textwidth}@{}}
-\toprule
-Paket & Aufgabe\\
-\midrule
-\texttt{qam.sty} & Akte führen, Regeln (R1)--(R4) beim Kompilieren prüfen, Notation und Übersicht setzen, Akte exportieren\\
-\texttt{qam-physics.sty} & Formeln in gewöhnlicher Schreibweise unter einem deklarierten Interpretationsprofil registrieren\\
-\texttt{qam-readout.sty} & erzeugte Belegfragmente der Ausführungsmaschine in das Dokument einbinden\\
-\bottomrule
-\end{tabular}
-\end{center}
+2022-06) und von keinem Anwendungsprojekt abhängen: \texttt{qam.sty} führt die Akte, prüft (R1)--(R4) beim Kompilieren, setzt Notation
+und Übersicht und exportiert die Akte; \texttt{qam-physics.sty} registriert Formeln in gewöhnlicher Schreibweise unter einem deklarierten
+Interpretationsprofil; \texttt{qam-readout.sty} bindet erzeugte Belegfragmente der Ausführungsmaschine ein.
 
 \subsection{Laden und Betriebsarten}
 
@@ -41,7 +31,7 @@ Befehl & Wirkung\\
 \verb|\qamcompose[sym]{k}{g}{h}| & Komposition zweier Abbildungen deklarieren\\
 \verb|\qaminput[sym]{key}{F}{status}| & eingesetzten Wert registrieren\\
 \verb|\qamclaim[sym]{key}{F}{status}| & Behauptung ohne Prämissen registrieren\\
-\verb|\qamthesis[sym]{key}{F}{status}{Wortlaut}| & Ausgangsthese; der Wortlaut geht in den Hash ein\\
+\verb|\qamthesis[sym]{key}{F}{st}{Text}| & Ausgangsthese; der Wortlaut geht in den Hash ein\\
 \verb|\qamderive[sym]{key}{status}{p1,p2,...}| & Herleitung aus Prämissen; Frame und Eingaben werden berechnet\\
 \verb|\qamconvert[sym]{key}{status}{g}{p}| & Überführung von \(p\) über \(g\)\\
 \verb|\qamcompare{a}{b}| & Vergleich, nur im selben Frame\\
@@ -63,22 +53,10 @@ undeklarierte und doppelte Schlüssel, Frames und Abbildungen.
 
 \subsection{Erzeugte Notation}
 
-Die Deklarationen enthalten alles, was für eine kompakte Schreibweise nötig ist, und das Paket setzt sie selbst:
-\begin{center}
-\small
-\begin{tabular}{@{}p{0.30\textwidth}p{0.64\textwidth}@{}}
-\toprule
-Befehl & Ausgabe\\
-\midrule
-\verb|\qam{key}| & Eintrag in QAM-Notation mit Status\\
-\verb|\qam*{key}| & dasselbe ohne Status\\
-\verb|\qamshow{key}| & Kurzform: Status, Frame, Eingaben\\
-\verb|\qamhash{key}|, \verb|\qamhash*{key}| & kurzer bzw.\ voller Hash\\
-\verb|\qamrecordhash| & Hash der ganzen Akte\\
-\verb|\qamledger| & Tabelle aller Einträge in Deklarationsreihenfolge mit Hashes\\
-\bottomrule
-\end{tabular}
-\end{center}
+Die Deklarationen enthalten alles, was für eine kompakte Schreibweise nötig ist, und das Paket setzt sie selbst: \verb|\qam{key}| setzt
+einen Eintrag in QAM-Notation mit Status (\verb|\qam*| ohne), \verb|\qamshow{key}| eine Kurzform aus Status, Frame und Eingaben,
+\verb|\qamhash{key}| den kurzen (\verb|\qamhash*| den vollen) Hash, \verb|\qamrecordhash| den Hash der Akte und \verb|\qamledger| eine
+Tabelle aller Einträge in Deklarationsreihenfolge.
 
 \paragraph{Ein Beispiel, das in diesem Dokument ausgewertet wird.} Der folgende Block steht so im Quelltext dieses Artikels; das Paket
 \texttt{qam.sty} ist geladen und prüft ihn beim Setzen.
@@ -161,20 +139,13 @@ Vor dem Kompilieren schreibt die Maschine ein Fragment,
 \begin{lstlisting}
 python -m qam.tools.readout_db mma KONTEXT.json AUFTRAG.json --tex-output build/ergebnis.tex
 \end{lstlisting}
-und das Dokument bindet es mit \verb|\usepackage{qam-readout}| und \verb|\qamreadout{build/ergebnis.tex}| ein. Das Fragment zeigt den
+Das Dokument lädt \verb|qam-readout| und bindet das Fragment mit \verb|\qamreadout{|\textit{datei}\verb|}| ein. Das Fragment zeigt den
 Ausgang, das Ergebnis oder die Gründe für eine Sperre und den SHA-512-Bezeichner des Belegs. Fehlt das Fragment, erscheint eine
 sichtbare Platzhaltermeldung und eine Warnung. \LaTeX{} ruft dabei weder Python noch die Datenbank auf. Umgekehrt stellt
 \texttt{receipt HASH --tex-output ...} aus einem im Dokument gedruckten Hash den gespeicherten Auftrag und Beleg wieder her.
 
 \subsection{Übersetzen und Testen}
 
-Die Pakete liegen in einem Verzeichnis, das in den Suchpfad von \TeX{} aufgenommen wird, etwa
-\begin{lstlisting}
-TEXINPUTS=pfad/zu/qam/tex: pdflatex dokument.tex
-\end{lstlisting}
-Eine plattformunabhängige Testreihe übersetzt gültige und absichtlich fehlerhafte Beispieldokumente, prüft, dass die gültigen
-übersetzen und die fehlerhaften anhalten, und kontrolliert, falls \texttt{pdftotext} verfügbar ist, die gesetzte Ausgabe:
-\begin{lstlisting}
-python3 qam/tex/tests/run_tests.py --output-dir build/qam-tests
-\end{lstlisting}
-Das sind Softwaretests des Pakets, keine Prüfungen der registrierten Inhalte.
+Die Pakete werden über den Suchpfad eingebunden (\texttt{TEXINPUTS=pfad/zu/qam/tex:}). Die Testreihe \texttt{qam/tex/tests/run\_tests.py}
+übersetzt gültige und absichtlich fehlerhafte Dokumente, prüft, dass genau die gültigen übersetzen, und kontrolliert mit \texttt{pdftotext}
+die gesetzte Ausgabe. Das sind Softwaretests des Pakets, keine Prüfungen registrierter Inhalte.

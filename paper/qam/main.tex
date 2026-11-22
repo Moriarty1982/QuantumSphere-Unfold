@@ -20,6 +20,7 @@
 \lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,breaklines=true,
   frame=single,framesep=4pt,rulecolor=\color{black!30},
   literate={ä}{{\"a}}1 {ö}{{\"o}}1 {ü}{{\"u}}1 {Ä}{{\"A}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1 {ß}{{\ss}}1}
+\setlength{\emergencystretch}{3em}
 \newcommand{\todo}[1]{\textbf{[TODO: #1]}}
 \newcommand{\st}[1]{\textsf{#1}}
 
@@ -43,27 +44,26 @@ Status und Abhängigkeiten festlegt; und Alan Turings Einsicht, dass nicht jede 
 dass ein Prüfsystem neben \glqq gilt\grqq{} und \glqq gilt nicht\grqq{} einen dritten, ehrlich geführten Ausgang braucht. Wir
 beschreiben die registrierte Aussage, die Regeln der Statusvererbung und ihre Prüfung in Lean~4, die operative Guard-Schicht der
 Maschine und ihre Anbindung an Sprachmodelle über das Model Context Protocol. Eine Fallstudie aus dem Projekt \emph{Quantum Sphaera}
-(rund 1450 Seiten Quelltext, mehr als hundert append-only-Runden, 89 abgeschlossene vorab registrierte Tests) zeigt, was die
-Disziplin auffängt und was nicht. QAM sichert die Form einer Akte; es macht ihren Inhalt nicht wahr und ersetzt weder einen
+(rund 1450 Seiten Quelltext, mehr als hundert append-only-Runden, 89 Ergebniszeilen vorab registrierter Tests) zeigt, was die
+Disziplin auffängt und was nicht, und dass dort vor allem die Arbeitsweise skaliert hat, nicht die mechanisch geprüfte Akte. QAM sichert die Form einer Akte; es macht ihren Inhalt nicht wahr und ersetzt weder einen
 Beweisassistenten noch die empirische Prüfung.
 \end{abstract}
 
 \input{s1_einleitung}
 \input{s2_modell}
 \input{s3_latex}
-\input{s4_guards}
+{\sloppy\input{s4_guards}}
 \input{s5_maschine}
 \input{s6_einsatz}
 \input{s7_abgrenzung}
 
-\section*{Verfügbarkeit}
-Die \TeX- und Lean-Quellen von QAM, die Werkzeuge, der Forschungstext, die Runden und die Vorab-Notizen liegen im öffentlichen
-Repository~\cite{repo}. Die Fassungen des Forschungstexts sind auf Zenodo archiviert~\cite{companion}.
 
 \appendix
 \input{a1_lean}
 
+\begingroup\footnotesize
 \begin{thebibliography}{99}
+\setlength{\itemsep}{1pt}
 \bibitem{repo} M.~Brendecke, QuantumSphere-Unfold, \url{https://github.com/Moriarty1982/QuantumSphere-Unfold}.
 \bibitem{companion} M.~Brendecke, \emph{Quantum Sphaera Companion: A Structure-First Mathematical Unfolding}, Zenodo, Concept-DOI
 \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}; Fassung v5.2.0:
@@ -96,4 +96,5 @@ scientific discovery, arXiv:2408.06292 (2024).
 \bibitem{mcp} Model Context Protocol, Specification, \url{https://modelcontextprotocol.io}.
 \bibitem{koide} Y.~Koide, A fermion--boson composite model of quarks and leptons, \emph{Physics Letters B} \textbf{120} (1983) 161--165.
 \end{thebibliography}
+\endgroup
 \end{document}

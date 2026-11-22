@@ -118,12 +118,8 @@ als Eingabe erkannt. Diese Grenzen sind bewusst: Sie halten das Modell klein gen
 
 \subsection{Die Objektebene}
 
-Unterhalb der Buchführung legt QAM eine Objektebene fest, auf die sich Aussagen beziehen können: acht Arten von Objekten als
-markierte Tupel über der gewöhnlichen Mengenlehre, nämlich Zustand \(\langle0,a\rangle\), Schicht \(\langle1,\ell,D\rangle\),
-Operator \(\langle2,\ell_1,\ell_2,G\rangle\), Auslesung \(\langle3,\ell,W,R\rangle\), Zweig \(\langle4,b,B\rangle\), Schale
-\(\langle5,r,s,T\rangle\), Zeuge \(\langle6,u\rangle\) und Tensor \(\langle7,p,q\rangle\). Ein eingesetzter Wert ist in dieser Sprache die
-Auslesung eines Zeugen, \(w=R(u)\) mit \(u=\langle6,\dots\rangle\); eine Wahl während einer Konstruktion ist ein Zweig. Größen in Frames tragen
-den Frame als vorderen Index, \({}^{A}{}_{B}\mathcal T^{i}{}_{j}\), und ein Vergleich über Frames ist nur über ein deklariertes
-Vergleichsobjekt wohlgeformt. Die Objektebene fügt der Mengenlehre keine Axiome hinzu; sie ist in Lean formalisiert
-(Anhang~\ref{app:lean}). Die Ausführungsmaschine (Abschnitt~\ref{sec:maschine}) benutzt Objekte dieser Arten, etwa \texttt{operator} und
-\texttt{state}, als Bausteine ihrer Aufträge.
+Unterhalb der Buchführung legt QAM acht Objektarten als markierte Tupel über der gewöhnlichen Mengenlehre fest: Zustand, Schicht,
+Operator, Auslesung, Zweig, Schale, Zeuge und Tensor, \(\langle0,\dots\rangle\) bis \(\langle7,\dots\rangle\). Ein eingesetzter Wert ist die
+Auslesung eines Zeugen \(\langle6,u\rangle\), eine Wahl während einer Konstruktion ein Zweig; Größen tragen ihren Frame als vorderen Index,
+\({}^{A}{}_{B}\mathcal T^{i}{}_{j}\). Die Objektebene fügt keine Axiome hinzu, ist in Lean formalisiert (Anhang~\ref{app:lean}) und liefert
+die Bausteine der Maschinenaufträge, etwa \texttt{operator} und \texttt{state}.

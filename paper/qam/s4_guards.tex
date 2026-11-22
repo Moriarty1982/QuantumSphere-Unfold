@@ -31,20 +31,10 @@ Verbindung (zwei Prämissen) und Überführung über eine Abbildung. Ein Baum is
 wenn kein Knoten stärker ist als seine Prämissen, Verbindungen nur Prämissen eines Frames verbinden und jede Überführung eine deklarierte
 Abbildung mit passender Quelle benutzt.
 
-\begin{satz}[\texttt{no\_promotion}, \texttt{proved\_only\_from\_proved}]
-In einem wohlgeformten Baum hat die Konklusion höchstens den Status jeder Prämisse. Eine Konklusion mit Status \st{proved} ruht nur auf
-bewiesenen Aussagen.
-\end{satz}
-
-\begin{satz}[\texttt{inputs\_tracked}, \texttt{inputs\_sourced}, \texttt{independent\_iff}]
-Die Eingaben der Konklusion sind genau die Eingaben ihrer Prämissen. Eine Konklusion ist genau dann unabhängig von einer Eingabe, wenn
-keine Prämisse sie verwendet.
-\end{satz}
-
-\begin{satz}[\texttt{frames\_declared}, \texttt{no\_maps\_same\_frame}]
-In einem wohlgeformten Baum erreicht jede Prämisse den Frame der Konklusion über eine Kette deklarierter Abbildungen. Ohne deklarierte
-Abbildungen liegen alle Prämissen im Frame der Konklusion.
-\end{satz}
+Bewiesen ist: In einem wohlgeformten Baum hat die Konklusion höchstens den Status jeder Prämisse, und eine bewiesene Konklusion ruht nur
+auf bewiesenen Aussagen (\texttt{no\_promotion}, \texttt{proved\_only\_from\_proved}); ihre Eingaben sind genau die ihrer Prämissen
+(\texttt{inputs\_tracked}, \texttt{inputs\_sourced}, \texttt{independent\_iff}); jede Prämisse erreicht den Frame der Konklusion über
+deklarierte Abbildungen (\texttt{frames\_declared}, \texttt{no\_maps\_same\_frame}).
 
 \paragraph{Akten.} \texttt{QAM.QamFile} ist der Prüfer für exportierte Akten. Für jede Zeilenart ist bewiesen, was eine erfolgreiche Prüfung
 bedeutet (\texttt{derive\_sound}, \texttt{convert\_sound}, \texttt{indep\_sound}, \texttt{compare\_sound}, für die Hash-Verweise
@@ -116,10 +106,8 @@ ihn direkt, indirekt oder als fehlende Prämisse verwendet haben. Alte Belege we
 
 \subsection{Warum isolieren statt glätten}
 
-Ein Prüfsystem, das nur zwei Ausgänge kennt, muss jede unentschiedene Frage einem der beiden zuschlagen. Nach Turing und Rice
-(Abschnitt~\ref{sec:einleitung}) gibt es solche Fragen grundsätzlich, und in der Forschung ist die Mehrzahl der interessanten Aussagen für
-lange Zeit unentschieden. Der Guard ist der dritte Ausgang, und QAM verlangt, dass er so behandelt wird wie die beiden anderen: gespeichert,
-gehasht, abfragbar und vererbt.
+Der Guard ist der dritte Ausgang, den die Entscheidbarkeitsgrenze verlangt (Abschnitt~\ref{sec:einleitung}), und QAM behandelt ihn wie
+die beiden anderen: gespeichert, gehasht, abfragbar und vererbt.
 
 Für die Arbeit mit Sprachmodellen hat das eine bestimmte Folge. QAM behandelt eine Halluzination nicht als inhaltlichen Fehler, den es
 erkennen müsste; dazu wäre es nicht in der Lage. Es behandelt sie als \emph{Statusfehler}: als Versuch, eine Aussage stärker zu führen, als ihre

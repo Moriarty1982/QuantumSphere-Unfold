@@ -22,8 +22,7 @@ Rechnungen & im System oder als Orakel & als Auftrag mit Beleg\\
 \end{center}
 QAM benutzt Lean an zwei Stellen: für seinen eigenen Prüfer und für die Formalisierung der Objektebene und der Maschine. Die Inhalte der
 Akten formalisiert es nicht. Eine naheliegende Erweiterung ist, einen Lean-Beweis als Beleg einer Aussage mit Status \st{proved} zu
-verknüpfen, so dass dieser Status nicht mehr nur deklariert, sondern belegt ist.
-\todo{prüfen, ob eine solche Verknüpfung bereits besteht oder nur geplant ist}
+verknüpfen, so dass dieser Status nicht mehr nur deklariert, sondern belegt ist. Eine solche Verknüpfung besteht derzeit nicht.
 
 \subsection{Verwandte Ansätze}
 
@@ -39,17 +38,11 @@ und das Problem ist nicht die Suche, sondern eine über Monate ehrliche Akte.
 
 \subsection{Weiterentwicklung}
 
-\begin{itemize}[nosep]
-\item \emph{Typisierte Frame-Abbildungen}, damit die Rechtfertigung einer Abbildung selbst einen Status trägt und der Hinweis
-\texttt{frame-bridge-required} maschinell aufgelöst werden kann.
-\item \emph{Fortschrittssätze} für die speicherverändernden Anweisungen unter benannten Guard-Bedingungen, sowie Kopieren und Zusammenführen
-von Speichern.
-\item \emph{Verifikation der Implementierung}: ein Nachweis, dass der Python-Adapter die in Lean bewiesene Semantik umsetzt, oder eine
-Ausführung, die aus der Lean-Formalisierung erzeugt wird.
-\item \emph{Ein Prüfer, der den Forschungstext liest}: Das Inventar der Satzumgebungen ist die erste Schicht; logische Prämissenkanten
-zwischen ihnen fehlen noch.
-\item \emph{Stärkere Hashes}: MD5 durch eine kollisionsresistente Funktion ersetzen, auch innerhalb der Akte.
-\end{itemize}
+Offen sind: typisierte Frame-Abbildungen, deren Rechtfertigung selbst einen Status trägt, so dass der Hinweis
+\texttt{frame-bridge-required} maschinell aufgelöst werden kann; Fortschrittssätze für die speicherverändernden Anweisungen sowie Kopieren
+und Zusammenführen von Speichern; ein Nachweis, dass der Python-Adapter die in Lean bewiesene Semantik umsetzt; ein Prüfer, der logische
+Prämissenkanten im Forschungstext selbst erkennt, wofür das Inventar der Satzumgebungen die erste Schicht ist; und eine
+kollisionsresistente Hashfunktion anstelle von MD5.
 
 \section{Grenzen und Schluss}\label{sec:grenzen}
 

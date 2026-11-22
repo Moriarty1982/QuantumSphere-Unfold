@@ -8,24 +8,11 @@ python -m qam.tools.readout_db index
 \end{lstlisting}
 alle exportierten Akten in eine lokale SQLite-Datenbank. Dabei werden Eintrags- und Aktenhashes geprüft und die Prämissenkanten in beiden
 Richtungen angelegt. Neuindizieren erneuert diese Kanten, lässt aber gespeicherte Belege, den Rechencache und ausdrücklich registrierte
-Ersetzungen unverändert. Die wichtigsten Abfragen:
-\begin{center}
-\small
-\begin{tabular}{@{}p{0.36\textwidth}p{0.58\textwidth}@{}}
-\toprule
-Abfrage & Ergebnis\\
-\midrule
-\texttt{find TEXT} & Einträge mit Frame, Status und Prämissen\\
-\texttt{premises HASH} & alle Einträge, auf denen ein Eintrag transitiv ruht\\
-\texttt{impact HASH} & alle späteren Einträge und Belege, die den Eintrag verwendet haben, auch als fehlende Prämisse\\
-\texttt{register-replacement ALT NEU --reason} & ausdrückliche Korrektur; der alte Eintrag und alte Belege bleiben bestehen\\
-\texttt{rules NAME --have ...} & Voraussetzungen einer katalogisierten Regel gegen deklarierte Bestandteile abgleichen\\
-\texttt{chains NAME} & mögliche Ketten von zwei bis fünf Regeln vorschlagen (nur Vorschläge)\\
-\bottomrule
-\end{tabular}
-\end{center}
-Wer eine Aussage wiederverwenden will, sucht sie damit nicht im Fließtext, sondern ruft sie mit Status, Frame und Prämissen ab; wer eine
-Aussage korrigiert, erfährt, welche Schlüsse betroffen sind.
+Ersetzungen unverändert. \texttt{find} sucht Einträge mit Frame, Status und Prämissen; \texttt{premises HASH} liefert alles, worauf
+ein Eintrag transitiv ruht; \texttt{impact HASH} alle späteren Einträge und Belege, die ihn verwendet haben, auch als fehlende Prämisse;
+\texttt{register-replacement ALT NEU --reason} verknüpft eine ausdrückliche Korrektur, ohne den alten Eintrag oder alte Belege zu ändern.
+Wer eine Aussage wiederverwenden will, ruft sie so mit Status, Frame und Prämissen ab; wer sie korrigiert, erfährt, welche Schlüsse
+betroffen sind.
 
 \subsection{Aufträge und Belege: MML und MMA}
 
@@ -103,16 +90,11 @@ Stapel & gespeicherte oder direkt übergebene Stapel ausführen, Berichte neu re
 \bottomrule
 \end{tabular}
 \end{center}
-Der schreibgeschützte Server läuft in einem Container, der ohne Netzwerk und mit nur lesend eingebundener Datenbank gestartet wird:
-\begin{lstlisting}
-docker run --rm -i --read-only --network none \
-  --mount "type=bind,source=$qamDb,target=/app/build/qam.sqlite3,readonly" qsc-qam
-\end{lstlisting}
-Alle Server führen nur feste Module mit geprüften Argumenten und einer Zeitgrenze aus; Auftragsdateien müssen in zugelassenen
+Der schreibgeschützte Server läuft in einem Docker-Container mit \texttt{--read-only}, \texttt{--network none} und nur lesend
+eingebundener Datenbank. Alle Server führen nur feste Module mit geprüften Argumenten und einer Zeitgrenze aus; Auftragsdateien müssen in zugelassenen
 Verzeichnissen liegen. Keiner der Server kann einen Status anheben, eine Akte umschreiben oder einen Beleg löschen.
 
-Die Zusammenfassung eines Belegs ist für Sprachmodelle gedacht: Sie nennt den geprüften Hash, die Anweisung, den Ausgang, Fehler,
-Verpflichtungen und deklarierte Guards, bei Routensuchen auch die Zahl der Kandidaten und die verschiedenen offenen Guards. Ein Modell, das
-eine Frage zu einem gespeicherten Ergebnis beantwortet, ruft also zuerst den Beleg ab, prüft ihn per Hash und nennt die offenen Guards in
-seiner Antwort, statt sich auf den Wortlaut eines früheren Gesprächs zu verlassen. In dieser Rollenteilung ist das Sprachmodell wieder das
-Rechenwerk: Es formuliert Aufträge und liest Belege, aber was als Ergebnis gilt, entscheidet die Maschine nach dem Plan.
+Die Zusammenfassung eines Belegs nennt geprüften Hash, Anweisung, Ausgang, Fehler, Verpflichtungen und offene Guards. Ein Modell, das
+eine Frage zu einem gespeicherten Ergebnis beantwortet, ruft den Beleg ab, prüft ihn per Hash und nennt die offenen Guards, statt sich auf
+ein früheres Gespräch zu verlassen. Das Sprachmodell ist wieder das Rechenwerk: Es formuliert Aufträge und liest Belege, aber was als
+Ergebnis gilt, entscheidet die Maschine nach dem Plan.

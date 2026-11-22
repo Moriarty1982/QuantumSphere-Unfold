@@ -68,24 +68,15 @@ das unter Bedingungen sehr wohl gilt.
 QAM führt deshalb den dritten Ausgang als erstklassigen Bestandteil. Auf der Ebene der Akte ist er die Statusordnung
 \(\st{open}<\st{reading}<\st{conditional}<\st{computed}<\st{proved}\) zusammen mit der Regel, dass kein Schluss stärker ist als seine
 schwächste Prämisse. Auf der Ebene der Maschine endet jeder Schritt mit \textsc{cont}, \textsc{reject} oder \textsc{guard}, und ein
-\textsc{guard} wird mit seinen offenen Bedingungen gespeichert. Die Bandmaschine zeigt dieselbe Haltung im Kleinen: Läuft sie in ihr
-Schrittbudget, meldet sie \texttt{step\_limit}, nicht \glqq hält nie\grqq{}, und dieser Stoppgrund steht getrennt von der Entscheidung
-der Maschine, ob der Auftrag überhaupt ausgeführt werden durfte.
+\textsc{guard} wird mit seinen offenen Bedingungen gespeichert.
 
 \subsection{Beiträge und Aufbau}
 
-\begin{enumerate}[nosep]
-\item Abschnitt~\ref{sec:modell} definiert das Modell: die registrierte Aussage mit Frame, Status, Eingaben, Prämissen und Hash, vier
-Wohlgeformtheitsregeln und den Begriff der offenen Bedingung, die an jeden Nachfolger vererbt wird.
-\item Abschnitt~\ref{sec:latex} beschreibt die \LaTeX-Anbindung: Deklarationen im Dokument, Prüfung beim Kompilieren, erzeugte Notation,
-Export der Akte, Interpretationsprofile für Formeln und das Einbinden von Rechenbelegen.
-\item Abschnitt~\ref{sec:guards} beschreibt die Prüfer und zwei getrennte Guard-Ebenen mit genau benannter Prüftiefe: die in Lean bewiesene
-Statusvererbung über ganze Akten und die Guards der Ausführungsmaschine.
-\item Abschnitt~\ref{sec:maschine} beschreibt Datenbank, Auftragssprache, Belege und die Anbindung an Sprachmodelle über das Model Context
-Protocol.
-\item Abschnitt~\ref{sec:fallstudie} zeigt den Einsatz im Projekt \emph{Quantum Sphaera} (rund 1450 Seiten Quelltext) mit einem
-konstruierten und einem protokollierten Beispiel und mit den Fehlern, die QAM \emph{nicht} fing.
-\item Abschnitt~\ref{sec:abgrenzung} grenzt QAM gegen Beweisassistenten ab und nennt offene Weiterentwicklungen.
-\end{enumerate}
+Abschnitt~\ref{sec:modell} definiert das Modell: registrierte Aussage, vier Wohlgeformtheitsregeln und offene Bedingungen, die an jeden
+Nachfolger vererbt werden. Abschnitt~\ref{sec:latex} beschreibt die \LaTeX-Anbindung, Abschnitt~\ref{sec:guards} die Prüfer und zwei
+getrennte Guard-Ebenen mit genau benannter Prüftiefe, Abschnitt~\ref{sec:maschine} Datenbank, Ausführungsmaschine und die Anbindung an
+Sprachmodelle über das Model Context Protocol. Erst Abschnitt~\ref{sec:fallstudie} zeigt den Einsatz im Projekt \emph{Quantum Sphaera}
+(rund 1450 Seiten Quelltext), mit einem konstruierten und einem protokollierten Beispiel und mit den Fehlern, die QAM \emph{nicht} fing.
+Abschnitt~\ref{sec:abgrenzung} grenzt QAM gegen Beweisassistenten ab.
 Durchgängig trennen wir drei Ebenen: was formal festgelegt und geprüft ist, was sich im Einsatz bewährt hat, und was QAM bewusst
 nicht leistet.

@@ -11,10 +11,14 @@ ChatGPT und Codex) wurden von Beginn an eingesetzt und haben den größten Teil 
 geschrieben. Die öffentliche Fassung v5.2.0 vom 17.~November~2026 umfasst 1457 Seiten in der Vollausgabe und 30 Seiten im Physik-Artikel.
 Nach einer früheren Zählung bestehen rund \(85\,\%\) des Forschungstexts aus Protokollen, Registern und Prüfrunden. Seit der ersten
 geprüften Fassung sind die Runden v4.9.0-r01 bis r86 und v4.10.0-r01 bis r29 hinzugekommen. Im Register der vorab festgeschriebenen Tests
-(Vorab-Notizen bis H112) stehen 89 abgeschlossene Tests; eine automatische Auszählung der Ergebnisspalte findet mindestens
-26 widerlegte, 17 bestätigte und 8 nach ihrem eigenen Kriterium ungültige Tests.
-\todo{Auszählung der übrigen Ergebniszeilen im Testregister von Hand abschließen; Zahl der indizierten Akteneinträge und Belege zum Stichtag
-aus der Datenbank ergänzen}
+(Vorab-Notizen bis H112) stehen 89 Ergebniszeilen abgeschlossener Tests; einige fassen mehrere Hypothesen zusammen, andere
+melden Teilergebnisse. 26 Zeilen lauten auf widerlegt, 17 auf bestätigt und 8 auf ungültig nach dem eigenen Kriterium; die übrigen
+38 enthalten gemischte Teilergebnisse, Verträglichkeit, strukturelle Befunde oder Fälle, die keine Entscheidung zuließen.
+
+Die formale Akte deckt davon nur einen kleinen Teil ab. Im Repository liegen zehn exportierte \texttt{.qam}-Akten mit zusammen
+81 Einträgen, vor allem Beispiele und zwei Runden. Der weitaus größere Teil des Projekts benutzt QAM als \emph{Disziplin}: Statussprache,
+Guard-Listen und Register in Notizen und Runden, Belege der Maschine für Rechnungen. Das ist eine wichtige Einschränkung jeder Aussage
+über die \glqq Skalierung\grqq{} auf rund 1450 Seiten: Skaliert hat die Arbeitsweise, nicht die mechanisch geprüfte Akte.
 
 \subsection{Wie QAM im Projekt benutzt wird}
 
@@ -32,8 +36,6 @@ dessen vier offene Bedingungen; ihre Prüfkriterien ändern sich dadurch nicht, 
 \item \emph{Rechnungen als Aufträge.} Suchen und exakte Rechnungen laufen als MML-Aufträge; Ergebnisse werden per Belegshash zitiert.
 Gewichtige Ergebnisse werden mit unabhängig geschriebenem Code nachgerechnet, mit Computeralgebra (Wolfram Language) für symbolische und
 exakte Rechnungen und mit Qiskit für explizit definierte Schaltungen.
-\item \emph{Lesender Zugriff für Modelle.} Fragen zu gespeicherten Belegen beantworten die Modelle über den schreibgeschützten MCP-Server,
-mit Hashprüfung und Angabe der offenen Guards.
 \end{itemize}
 
 \subsection{Konstruiertes Beispiel: ein Projektor und die Koide-Relation}
@@ -148,7 +150,7 @@ zeigt nur, \emph{worauf} eine Aussage ruht; ob das Fundament trägt, muss anders
 
 Drei Beobachtungen aus dem Projekt verallgemeinern wir vorsichtig. Erstens kostet die Disziplin Umfang: Der größte Teil des Texts ist
 Protokoll. Zweitens verschiebt sie die Arbeit der Sprachmodelle: Statt Behauptungen zu formulieren, formulieren sie Aufträge, Prüfnotizen
-und Korrekturrunden, und ihr häufigster Beitrag ist nicht ein neues Ergebnis, sondern die genaue Benennung einer offenen Bedingung.
-Drittens wirkt die Akte vor allem gegen schleichende Verschiebungen über viele Sitzungen: Ein Modell, das eine frühere Bedingung vergessen
-hat, findet sie im Status des Eintrags wieder, den es wiederverwenden will.
-\todo{Aufwand der Buchführung quantifizieren, falls Messdaten vorliegen}
+und Korrekturrunden, und ein großer Teil ihrer Arbeit besteht darin, offene Bedingungen genau zu benennen. Drittens wirkt die Akte
+vor allem gegen schleichende Verschiebungen über viele Sitzungen: Ein Modell, das eine frühere Bedingung vergessen hat, findet sie im
+Status des Eintrags wieder, den es wiederverwenden will. Diese Beobachtungen sind qualitativ; den Zeitaufwand der Buchführung haben wir
+nicht gemessen.
