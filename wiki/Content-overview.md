@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r41.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r42.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -165,6 +165,8 @@ Layer v4.10.0-r39 obtains the scalar as a component of one tensor field on the s
 Layer v4.10.0-r40 tests reasons for that decoupling. No dynamics tested produces it: a Fierz–Pauli field on the subspace does not see the conserved source, and auxiliary time–transverse components add a second pole. It follows exactly if the exchange weights both relative time orientations of its ends equally, because the time–transverse vertices are odd under time reversal. This is the same time reversal that reverses the orientation of the octant (H118). The equal weighting is not derived; the result carries partially.
 
 Layer v4.10.0-r41 finds the weighting nearly realized in the OP5 seed: its counterflow block is, to 8·10⁻⁴, the local time-reversed image of the co-moving blocks, and the densities of the two directions agree to better than 10⁻³. If the ends of the exchange are read out in these currents, the decoupling holds almost exactly. The seed does not distinguish time reversal from reflection; time reversal is chosen because only it gives the mediator term. The result carries partially.
+
+Layer v4.10.0-r42 tests the first derivatives at the seed. There the counterflow block is neither the time-reversed nor the reflected image of the co-moving blocks, nor a plain reversal of the currents. The relation of r41 holds for the values at the seed point only; the jet does not decide the question. The jet does not satisfy all conditions of the model.
 
 ## Never claimed
 

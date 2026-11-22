@@ -5673,3 +5673,94 @@ R_{\rm glob}^{(v4100\text{-}r41,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r42 Source-Only: Time Reversal or Reflection on the First Jet of the OP5 Seed}
+\addcontentsline{toc}{section}{v4.10.0-r42 Source-Only: Counterflow Images on the Seed Jet}
+\label{sec:v4100-r42-counterflow-jet}
+% ============================================================================
+
+\paragraph{Purpose.}
+In v4.10.0-r41 the counterflow block of the OP5 seed is, in its values at the seed point, the time-reversed image of the co-moving blocks,
+but equally their image under the reflection \(x\mapsto-x\).  This layer uses the first jet of the seed, where time reversal reverses \(\partial_t\) and the
+reflection reverses \(\partial_x\), to decide between them.  It is an exploration with a method fixed before the computation; it is partly not blind,
+since a hand sketch expected a third possibility (an internal reversal of the currents).  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r42 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r42 setting}
+\label{subsec:v4100-r42-setting}
+
+For each block the normalized Fierz quantities \(F=(\Phi,\Theta,J^a,K^a)/\phi^2\) and their first derivatives \(\partial_\mu F\) at the seed are taken from the
+70-digit first jet.  Three local images of a block are compared with block 2: time reversal T (components as in r41, \(\partial_t\mapsto-\partial_t\)),
+reflection R (\(x\mapsto-x\), \(\partial_x\mapsto-\partial_x\)) and the internal reversal I (components as under T, no change of coordinates).  An image fits if
+the derivatives agree to \(10^{-2}\) relative to the derivative scale of the source block.  The jet satisfies \(F=0\) and \(g=0\); the completed \(G\)
+and \(dg\) conditions are not solved in it.
+
+\subsection*{v4.10.0-r42 results}
+\label{subsec:v4100-r42-results}
+
+\paragraph{Theoremlet v4.10.0-r42.1 (no image fits).}
+Relative to block 0 the largest deviations of the derivatives of block 2 from the images are \(1.28\) (T), \(1.87\) (R) and \(0.72\) (I); relative to block 1
+they are \(1.07\), \(0.93\) and \(1.07\).  None is below \(10^{-2}\).  Blocks 0 and 1, which move in the same direction, differ in their derivatives by \(4.9\)
+times the derivative scale of block 0.
+\emph{Proof.} Direct evaluation of the bilinears and their derivatives at the seed (script \texttt{counterflow\_\allowbreak jet.py}).  \(\square\)
+
+\paragraph{Remark v4.10.0-r42.2 (reading).}
+Against the criteria fixed beforehand the result is \emph{undecided}, because no image fits.  The time-reversed image found in r41 and with it the
+equal weighting of both orientations are properties of the values at the seed point, not a demonstrated local relation between the fields; the
+hand sketch (I) does not hold either.  Found afterwards and not fixed beforehand: the velocities \(v=J^x/J^0\) have \(\partial_xv=0.717\), \(3.207\), \(-0.246\)
+and \(\partial_tv=-0.494\), \(-2.860\), \(1.102\) for blocks 0, 1, 2, whereas the form \(v=\pm x/t\) would give \(\pm1\) and \(\mp0.6\); the description of the
+counterflow as Hubble-like in k168 is a reading of the values.  A completed jet could have other derivatives; the statement applies to the jet
+at hand.
+
+\subsection*{v4.10.0-r42 frames}
+\label{subsec:v4100-r42-frames}
+
+The seed and its jet are in the matter frame M, in the coordinates of the comparison model.  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r42 register entries}
+\label{subsec:v4100-r42-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r42\\
+\midrule
+counterflow as time-reversed image & holds for the values at the seed (r41.1), not for the first jet (r42.1)\\
+time reversal against reflection & undecided; no image fits the jet\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r42 notes}
+\label{subsec:v4100-r42-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak counterflow\_\allowbreak jet\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit 8006e893,
+script \texttt{counterflow\_\allowbreak jet.py}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r42 ledger and guard update}
+\label{subsec:v4100-r42-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r42}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; the question of time reversal against reflection not decided).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r42,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r42}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
