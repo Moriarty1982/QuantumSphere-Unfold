@@ -5564,3 +5564,112 @@ R_{\rm glob}^{(v4100\text{-}r40,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r41 Source-Only: Equal Weights of Both Time Orientations from the Counterflow of the OP5 Seed}
+\addcontentsline{toc}{section}{v4.10.0-r41 Source-Only: Orientation Weights from the Seed Counterflow}
+\label{sec:v4100-r41-counterflow-orientation}
+% ============================================================================
+
+\paragraph{Purpose.}
+By v4.10.0-r40.4 the time--transverse components of the mediator decouple exactly when the exchange weights both relative time
+orientations of its ends equally, \(p=\tfrac12\) in \(w=2p-1\).  This layer searches backwards for a structure of the Companion that supplies
+such weights.  Two candidates are excluded beforehand: the pair connector of r34 uses the tachyon map, which does not cancel (r40.4), and a
+string between M and T with fully reversed orientation would give \(p=0\).  The remaining candidate is the counterflow of the OP5 seed (k168).
+The layer is an exploration with a method fixed before the computation; it is not blind, because the block densities were known to two
+digits from k168.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r41 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r41 setting}
+\label{subsec:v4100-r41-setting}
+
+At the seed \((t,x,y,z)=(1,\tfrac35,0,0)\) the three spinor blocks have the Fierz quantities \(\Phi\), \(\Theta\), \(J^a\), \(K^a\) of k168, normalized by
+\(\phi^2=(\Phi^2+\Theta^2)^{1/2}\).  Blocks 0 and 1 move with \(+x/t\) and carry spin along \(+e_y\); block 2 moves with \(-x/t\) and carries spin along \(-e_y\).
+Under time reversal the image of a block is \((\Phi,-\Theta,J^0,-J^i,K^0,-K^i)\); under the reflection \(x\mapsto-x\) it is
+\((\Phi,-\Theta,J^0,-J^x,J^y,J^z,-K^0,K^x,-K^y,-K^z)\).  The weight of a direction of flow is its density, measured either by \(\phi^2\) or by
+\(J^0=\psi^\dagger\psi\), and \(p\) is the share of blocks 0 and 1.  The computation uses the 70-digit seed at 40 digits.
+
+\subsection*{v4.10.0-r41 results}
+\label{subsec:v4100-r41-results}
+
+\paragraph{Theoremlet v4.10.0-r41.1 (block 2 as time-reversed image).}
+The largest deviation of the normalized Fierz quantities of block 2 from the time-reversed image of block 0 is \(7.9\times10^{-4}\), and from that of
+block 1 it is \(4.5\times10^{-3}\); blocks 0 and 1 themselves differ by \(3.7\times10^{-3}\).  The reflection \(x\mapsto-x\) gives the same deviations, because
+for \(J\) along \(x\) and \(K\) along \(y\) the two images differ by at most \(2.5\times10^{-4}\).
+\emph{Proof.} Direct evaluation of the bilinears at the seed (script \texttt{counterflow\_\allowbreak weights.py}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r41.2 (weights).}
+With \(\phi^2\) the densities are \(5.96893+0.42636\) against \(6.38448\), so \(p=0.500423\) and \(w=2p-1=8.5\times10^{-4}\); with \(J^0\), \(p=0.500299\) and
+\(w=6.0\times10^{-4}\).  The numerator \(N(1,w)=3N_m+2w\,a_\perp x\) of r39.1 then deviates from \(3N_m\) by at most the relative amount \(|w|\), attained at
+\(x=a_\perp\).
+\emph{Proof.} As r41.1; \(2|w|a_\perp x/(2(x^2-a_\perp x+a_\perp^2))\le|w|\) with equality at \(x=a_\perp\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r41.3 (time reversal, not reflection).}
+Averaging the exchange of the conserved coupling \(J_{ab}\) (\(c=1\)) over a time-reversed vertex gives exactly \(3N_m\).  Averaging over a vertex reflected
+by \(x\mapsto-x\) gives \(3N_m-a_\perp(a_\perp-2x+a_\perp\cos2\varphi)\sin^2\varphi\), where \(\varphi\) is the angle between \(k_\perp\) and the counterflow; this
+equals \(3N_m\) only for \(k_\perp\) along the flow, and its angular mean \(\tfrac74a_\perp^2-a_\perp x+2x^2\) is not proportional to \(N_m\).
+\emph{Proof.} Exact contraction over ordered index pairs (script \texttt{reflection\_\allowbreak average.wl}).  \(\square\)
+
+\paragraph{Remark v4.10.0-r41.4 (reading).}
+The seed contains a current and, to \(8\times10^{-4}\), its local time-reversed image (velocity and spin reversed) with densities equal to
+\(|w|<10^{-3}\), a residue as small as the difference between blocks 0 and 1.  If the ends of the mediator exchange are read out in the currents of
+the blocks, the decoupling of \(H_{0i}\) and with it \(N_m\) follow almost exactly.  Against the criteria fixed beforehand the result carries
+\emph{partially}: the image matches to \(8\times10^{-4}\), not to \(10^{-6}\), and the Fierz quantities at the seed do not distinguish time reversal from
+the reflection \(x\mapsto-x\); time reversal is the reading that gives \(N_m\) (r41.3).  That the ends are read out in the block currents is itself a
+reading, and only one seed point is evaluated.  Found afterwards and not fixed beforehand: the total current of the three blocks has net velocity
+\(9\times10^{-5}\), so equal weights at equal speed mean that the seed rests in the frame of its total current.  The rest frame of r36--r40 would then be
+that frame, and the frame the mediator needs would also supply the equal weighting; this too is a reading.
+
+\subsection*{v4.10.0-r41 frames}
+\label{subsec:v4100-r41-frames}
+
+The seed and all quantities are in the matter frame M, in the coordinates of the comparison model.  Time reversal acts by complex conjugation
+on one vertex; the tachyon map is not used.  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r41 register entries}
+\label{subsec:v4100-r41-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r41\\
+\midrule
+equal orientation weights & present at the seed to \(|w|<10^{-3}\) (r41.2), given the readout in the block currents\\
+time reversal against reflection & not distinguished by the seed; time reversal selected by \(N_m\) (r41.3)\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r41 notes}
+\label{subsec:v4100-r41-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak counterflow\_\allowbreak orientation\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit 10e483e1,
+scripts \texttt{counterflow\_\allowbreak weights.py} and \texttt{reflection\_\allowbreak average.wl}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r41 ledger and guard update}
+\label{subsec:v4100-r41-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r41}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; the readout in the block currents and the choice of time reversal over
+reflection not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r41,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r41}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r40.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r41.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -163,6 +163,8 @@ Layer v4.10.0-r38 gives the mediator a first set of field equations: a tensor fi
 Layer v4.10.0-r39 obtains the scalar as a component of one tensor field on the subspace orthogonal to the axis. With one mass and the identically conserved coupling ∂_a∂_bη − η_ab□_∥η (the version on that subspace of the improvement behind the comparison operator) the exchange is exact again, provided the time–transverse components do not couple, which is a choice. The decomposition differs from that of the string; the result carries partially.
 
 Layer v4.10.0-r40 tests reasons for that decoupling. No dynamics tested produces it: a Fierz–Pauli field on the subspace does not see the conserved source, and auxiliary time–transverse components add a second pole. It follows exactly if the exchange weights both relative time orientations of its ends equally, because the time–transverse vertices are odd under time reversal. This is the same time reversal that reverses the orientation of the octant (H118). The equal weighting is not derived; the result carries partially.
+
+Layer v4.10.0-r41 finds the weighting nearly realized in the OP5 seed: its counterflow block is, to 8·10⁻⁴, the local time-reversed image of the co-moving blocks, and the densities of the two directions agree to better than 10⁻³. If the ends of the exchange are read out in these currents, the decoupling holds almost exactly. The seed does not distinguish time reversal from reflection; time reversal is chosen because only it gives the mediator term. The result carries partially.
 
 ## Never claimed
 

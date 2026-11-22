@@ -1,0 +1,17 @@
+Tatsaechliche Ausgabe von counterflow_weights.py (Python 3.12, mpmath 1.3.0, 40 Stellen, 22.11.2026), ein Lauf,
+Aufruf mit analysis/op5-field-slices/state-sufficiency-2026-10-30. Keine Warnungen.
+
+Punkt (t, x, y, z) = ['1.0', '0.6', '0.0', '0.0']
+Block 0: phi^2 = 5.9689270677967672085, J^0 = 7.4595014129362557242, beta = -0.016642466 Grad
+   normiert (Phi, Theta, J^a, K^a)/phi^2 = ['0.9999999578', '-0.0002904658164', '1.249722325', '0.7495371161', '-2.453940937e-5', '-2.332128478e-5', '-9.311405565e-5', '-0.000122511409', '0.9999999966', '1.958051352e-5']
+Block 1: phi^2 = 0.42636450838983872248, J^0 = 0.53188285824913820947, beta = -0.065265562 Grad
+   normiert (Phi, Theta, J^a, K^a)/phi^2 = ['0.9999993512', '-0.001139098698', '1.247483896', '0.7457970366', '0.0006022592534', '0.001577800874', '4.901831136e-5', '-0.0007270839188', '0.9999994723', '0.0007273734498']
+Block 2: phi^2 = 6.3844759654621017783, J^0 = 7.9818411304481165317, beta = 0.0076325758 Grad
+   normiert (Phi, Theta, J^a, K^a)/phi^2 = ['0.9999999911', '0.0001332135782', '1.250195188', '-0.7503252609', '0.0001053580543', '-5.239318107e-6', '-3.821494919e-5', '-7.674166082e-5', '-0.9999999888', '-0.0001337741093']
+(1) Abweichung Block 2 vom Bild von Block 0: T 0.000788145 , Spiegelung x 0.000788145
+    Abweichung Block 2 vom Bild von Block 1: T 0.00452822 , Spiegelung x 0.00452822
+    Abweichung Block 1 von Block 0 (gleiche Orientierung): 0.00374008
+    groesste Abweichung T gegen Spiegelung am Bild von Block 0: 0.000245023
+(2) Gewicht phi^2: p = 0.50042315365632655472, w = 2p - 1 = 0.000846307312653, groesste relative Abweichung von N_m |w| = 0.000846307
+(2) Gewicht J^0 = psi^+ psi: p = 0.50029872303487001027, w = 2p - 1 = 0.00059744606974, groesste relative Abweichung von N_m |w| = 0.000597446
+    Gesamtstrom der drei Bloecke J^a = ['15.9732254016', '0.00148017305597', '0.000782963991358', '0.000500064945285'] ;  Nettogeschwindigkeit J^x/J^0 = 9.266588424e-5
