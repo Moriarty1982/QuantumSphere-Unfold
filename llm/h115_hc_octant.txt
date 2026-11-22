@@ -1,0 +1,9 @@
+During evaluation of In[1]:= Wolfram: 15.0.1 for Linux x86 (64-bit) (July 2, 2026)
+During evaluation of In[1]:= Bargmann triple product, Gram rank, kernel residual: {1/4 + I/4, 2, {0, 0, 0}}
+During evaluation of In[1]:= Oktant rank and real null pair check: {4, True, 0}
+During evaluation of In[1]:= Odd input rank, antiunitary representative rank, complex-linear projection ranks: {0, 3, {0, 2, 4, 6}}
+During evaluation of In[1]:= Selective projectors: ranks, lost half, preserved half, factorization: {5, 5, True, True, True}
+During evaluation of In[1]:= Quarter-turn exchanges the two choices: True
+During evaluation of In[1]:= Supplementary ambient conjugation, rank and kernel: {5, {{0, 0, 0, 0, 0, 1}}}
+
+Out[1]= Null

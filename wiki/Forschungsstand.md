@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP3: Kompensator und Oktant-Nullrichtung (22.11.2026)
+
+Auf den geschlossenen J-ungeraden Generationszuständen hat der direkte Kompensator Rang null. Eine reelle Spiegelung einer Hälfte der komplexen Oktant-Nullgeraden erzeugt im Vergleich die Kette 6→5→4. Die Gram-Matrix lässt die reelle Phasenrichtung frei. Eine ambient antiunitäre Projektion kann Rang fünf auf einer anders eingebetteten, nicht invarianten Teilstruktur erreichen.
+
 ### OP3: Photon-Eigenpunkt und flacher Oktant (22.11.2026)
 
 Der Photonpunkt hat zum reinen Rand den Bures-Abstand π/4. Das Dublett am Photonpunkt erzwingt dennoch keine Bargmann-Phase des Generationsraums. Werden beide Größen identifiziert und die paarweisen Überlappungen festgehalten, fällt der komplexe Gram-Rang am Photonpunkt von drei auf zwei, reell direkt von sechs auf vier. Eine Fünferzwischenstufe und Stabilität brauchen zusätzliche Struktur.
