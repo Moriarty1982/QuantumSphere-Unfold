@@ -1,0 +1,129 @@
+\section{Prüfer und Guard-Propagation}\label{sec:guards}
+
+Offene Bedingungen werden in QAM auf zwei Ebenen geführt, die verschieden tief geprüft sind. Ebene~A ist die Statusvererbung in der Akte;
+ihre Eigenschaften sind für jede akzeptierte Akte in Lean bewiesen. Ebene~B sind die Guards der Ausführungsmaschine; ihre abstrakte
+Übergangssemantik ist in Lean bewiesen, die tatsächlich laufende Implementierung nicht. Wir halten beide Ebenen getrennt, weil eine
+Vermischung genau die Art von Beförderung wäre, die QAM verhindern soll.
+
+\subsection{Drei Prüfer für die Akte}\label{sec:pruefer}
+
+Die Regeln (R1)--(R4) werden dreimal unabhängig angewandt:
+\begin{enumerate}[nosep]
+\item \texttt{qam.sty} beim Kompilieren (Abschnitt~\ref{sec:latex});
+\item \texttt{qamcheck}, ein in Lean~4 geschriebenes Programm, auf der exportierten Akte. Es prüft jede Zeile gegen die vor ihr stehenden
+und kontrolliert, dass \texttt{sources} genau die eingetragenen Hashes der Prämissen sind und kein Hash doppelt vorkommt:
+\begin{lstlisting}
+cd qam/lean && lake build && lake exe qamcheck ../examples/example.qam
+\end{lstlisting}
+\item \texttt{qamhash.py verify}, das alle Eintragshashes, den Aktenhash und den MD5-Wert der Quelle neu berechnet.
+\end{enumerate}
+Zur Gegenprobe gehören absichtlich fehlerhafte Akten, die abgewiesen werden müssen: eine Beförderung, eine Frame-Vermischung, eine falsche
+Unabhängigkeitserklärung, eine falsche Abbildungsquelle, ein gebrochener Hash-Verweis, ein nachträglich veränderter Eintrag und eine von Hand
+gelöschte Eingabe. Die letzte kann \TeX{} gar nicht erzeugen; sie stellt sicher, dass der Lean-Prüfer nicht nur nachvollzieht, was das
+\TeX-Paket ohnehin verhindert.
+
+\subsection{Ebene A: Statusvererbung, in Lean bewiesen}\label{sec:ebeneA}
+
+Das Lean-Paket \texttt{qam/lean} benutzt nur den Lean-Kern, ohne Mathlib, und hängt von keiner Anwendung ab. Es enthält zwei Module.
+
+\paragraph{Herleitungsbäume.} \texttt{QAM.Provenance} formalisiert Herleitungsbäume mit drei Knotenarten: Schritt (eine Prämisse),
+Verbindung (zwei Prämissen) und Überführung über eine Abbildung. Ein Baum ist wohlgeformt relativ zu einer Menge deklarierter Abbildungen,
+wenn kein Knoten stärker ist als seine Prämissen, Verbindungen nur Prämissen eines Frames verbinden und jede Überführung eine deklarierte
+Abbildung mit passender Quelle benutzt.
+
+\begin{satz}[\texttt{no\_promotion}, \texttt{proved\_only\_from\_proved}]
+In einem wohlgeformten Baum hat die Konklusion höchstens den Status jeder Prämisse. Eine Konklusion mit Status \st{proved} ruht nur auf
+bewiesenen Aussagen.
+\end{satz}
+
+\begin{satz}[\texttt{inputs\_tracked}, \texttt{inputs\_sourced}, \texttt{independent\_iff}]
+Die Eingaben der Konklusion sind genau die Eingaben ihrer Prämissen. Eine Konklusion ist genau dann unabhängig von einer Eingabe, wenn
+keine Prämisse sie verwendet.
+\end{satz}
+
+\begin{satz}[\texttt{frames\_declared}, \texttt{no\_maps\_same\_frame}]
+In einem wohlgeformten Baum erreicht jede Prämisse den Frame der Konklusion über eine Kette deklarierter Abbildungen. Ohne deklarierte
+Abbildungen liegen alle Prämissen im Frame der Konklusion.
+\end{satz}
+
+\paragraph{Akten.} \texttt{QAM.QamFile} ist der Prüfer für exportierte Akten. Für jede Zeilenart ist bewiesen, was eine erfolgreiche Prüfung
+bedeutet (\texttt{derive\_sound}, \texttt{convert\_sound}, \texttt{indep\_sound}, \texttt{compare\_sound}, für die Hash-Verweise
+\texttt{link\_derive\_sound}, \texttt{link\_convert\_sound}, \texttt{link\_leaf\_sound}). Entscheidend sind die Sätze über ganze Akten:
+
+\begin{satz}[\texttt{checked\_good}, \texttt{checked\_no\_promotion\_record}, \texttt{checked\_proved\_record}]
+Jede Akte, die der Prüfer annimmt, erfüllt eine Invariante über alle Einträge. Insbesondere hat kein Eintrag einen höheren Status als ein
+Eintrag, der von ihm aus über Prämissen in beliebig vielen Schritten erreichbar ist, und ein als \st{proved} geführter Eintrag ruht in
+beliebiger Tiefe nur auf bewiesenen Einträgen.
+\end{satz}
+
+\begin{satz}[\texttt{checked\_inputs\_record}, \texttt{checked\_independent\_record}, \texttt{checked\_inputs\_sourced}]
+In einer angenommenen Akte geht keine Eingabe entlang einer Prämissenkette verloren, jede Eingabe eines Eintrags stammt aus einer Prämisse,
+und ein als unabhängig erklärter Eintrag ruht in keiner Tiefe auf einem Eintrag mit Eingabe.
+\end{satz}
+
+Das ist die formale Form der Vererbung offener Bedingungen aus Abschnitt~\ref{sec:offen}: \emph{In einer angenommenen Akte kann eine
+offene Bedingung nicht dadurch verschwinden, dass weitere Schlüsse auf ihr aufbauen.} Die Sätze sind elementar, und das ist beabsichtigt.
+Ihr Wert liegt nicht in mathematischer Tiefe, sondern darin, dass die Regeln präzise genug sind, um von einem Beweisassistenten und vom
+\TeX-Compiler gleichermaßen geprüft zu werden.
+
+\paragraph{Was Ebene A nicht prüft.} Nur Deklariertes wird geprüft. Der Parser, der die Textzeilen einliest, ist nicht verifiziert; Lean
+berechnet kein MD5, das übernimmt das Skript. Ein ohne Prämissen als \st{proved} deklarierter Eintrag wird angenommen.
+
+\subsection{Ebene B: Guards der Ausführungsmaschine}\label{sec:ebeneB}
+
+Rechnungen, Suchen und Simulationen laufen nicht als Fließtext, sondern als Aufträge an eine Maschine (Abschnitt~\ref{sec:maschine}). Für
+diese Ebene ist der Guard ein Ausgang eines Schritts.
+
+\paragraph{Abstrakte Semantik, in Lean bewiesen.} Ein \emph{Speicher} besteht aus Inhalt (Objekte an Adressen, Relationen zwischen
+Adressen), einem Guard-Register (Prädikate, die der Inhalt erfüllen muss), Schnappschüssen und einem Protokoll. Ein Speicher ist
+\emph{zulässig}, wenn jede Relation gespeicherte Adressen benutzt und jeder Guard gilt. Jede Anweisung hat eine Rohwirkung, die undefiniert
+sein kann, und ein Schritt wird so ausgeführt:
+\[
+\mathrm{exec}(s,i)=\begin{cases}
+(s\ \text{mit Eintrag }(i,\textsc{reject}),\ \textsc{reject}) & \text{Rohwirkung undefiniert},\\
+(s'\ \text{mit Eintrag }(i,\textsc{cont}),\ \textsc{cont}) & \text{Rohwirkung } s' \text{ zulässig},\\
+(s\ \text{mit Eintrag }(i,\textsc{guard}),\ \textsc{guard}) & \text{sonst.}
+\end{cases}
+\]
+Ein Ergebnis, das einen Guard verletzt, wird nie übernommen; der alte Inhalt bleibt, das Protokoll hält den Befund fest. Für dieses Modell
+ist in Lean bewiesen (Anhang~\ref{app:lean}): Zulässigkeit bleibt erhalten (\texttt{exec\_preserves}, \texttt{run\_preserves}); kein Schritt
+bleibt stecken (\texttt{exec\_ne\_halt}); \textsc{cont} und \textsc{reject} sind exakt charakterisiert (\texttt{exec\_cont\_iff},
+\texttt{exec\_reject\_iff}); ein Schritt ohne \textsc{cont} lässt Inhalt, Schnappschüsse und Guards unverändert (\texttt{exec\_atomic}); jeder
+Schritt erzeugt genau einen Protokolleintrag (\texttt{exec\_logs}, \texttt{run\_ledger\_length}); und es gibt kein Zertifikat für eine falsche
+Aussage, gleich welche Anweisungen liefen (\texttt{no\_false\_certificate}). Ein Kandidat wird nur durch einen von außen gelieferten Beweis
+zum Zertifikat; keine Anweisung erzeugt eines.
+
+\paragraph{Implementierung, nicht verifiziert.} Die laufende Maschine ist ein Python-Adapter über einer SQLite-Datenbank. Sie folgt
+derselben Dreiteilung: Jeder Auftrag endet mit \texttt{continue}, \texttt{guard} oder \texttt{reject}. Vor der Ausführung prüft sie die
+deklarierten Guards von Kontext, Auftrag und beteiligten Objekten sowie die verknüpften Prämissen der Akte. Eine fehlende Prämisse ergibt
+\texttt{guard} und verhindert die Ausführung. Ein Beleg mit \texttt{guard} wird mit seinen offenen Guards und Verpflichtungen
+gespeichert und ist später abrufbar; er ist ein vollwertiges Ergebnis, kein Fehlschlag. Dass der Adapter die abstrakte Semantik korrekt
+umsetzt, ist nicht bewiesen, sondern durch Tests und für die Bandmaschine durch einen Vergleich mit zwei Hardwarebeschreibungen gestützt
+(Abschnitt~\ref{sec:maschine}).
+
+\paragraph{Weitergabe.} Guards werden auf dieser Ebene auf drei Wegen weitergegeben:
+\begin{enumerate}[nosep]
+\item \emph{Prämissenspur.} Ein Auftrag kann Hashes von Akteneinträgen als Prämissen nennen. Die Maschine folgt deren Quellhashes
+rekursiv und legt eine Momentaufnahme aller erreichten Einträge mit Wortlaut, Status und Frame im Beleg ab. Der Status bleibt dabei
+erhalten: Eine als \st{reading} verknüpfte Zählregel bleibt eine Lesart, auch wenn die Rechnung auf ihr erfolgreich läuft.
+\item \emph{Abhängige Aufträge.} In einem Stapel kann ein Auftrag von anderen abhängen (\texttt{depends\_on}). Endet ein Vorgänger mit
+\texttt{guard}, \texttt{reject} oder ist selbst gesperrt, wird der Nachfolger nicht ausgeführt, sondern als \texttt{blocked} mit
+\texttt{blocked\_by} geführt. Mit \texttt{requires\_match} läuft ein Nachfolger nur, wenn sein Vorgänger mindestens einen Kandidaten gefunden
+hat; ein Ergebnis ohne Kandidaten bleibt dabei eine vollständige Rechnung.
+\item \emph{Rückwärtssuche.} Wird ein Akteneintrag korrigiert, findet die Abfrage nach betroffenen Belegen alle gespeicherten Belege, die
+ihn direkt, indirekt oder als fehlende Prämisse verwendet haben. Alte Belege werden nicht verändert.
+\end{enumerate}
+
+\subsection{Warum isolieren statt glätten}
+
+Ein Prüfsystem, das nur zwei Ausgänge kennt, muss jede unentschiedene Frage einem der beiden zuschlagen. Nach Turing und Rice
+(Abschnitt~\ref{sec:einleitung}) gibt es solche Fragen grundsätzlich, und in der Forschung ist die Mehrzahl der interessanten Aussagen für
+lange Zeit unentschieden. Der Guard ist der dritte Ausgang, und QAM verlangt, dass er so behandelt wird wie die beiden anderen: gespeichert,
+gehasht, abfragbar und vererbt.
+
+Für die Arbeit mit Sprachmodellen hat das eine bestimmte Folge. QAM behandelt eine Halluzination nicht als inhaltlichen Fehler, den es
+erkennen müsste; dazu wäre es nicht in der Lage. Es behandelt sie als \emph{Statusfehler}: als Versuch, eine Aussage stärker zu führen, als ihre
+Prämissen erlauben, oder eine Eingabe als Ergebnis auszugeben. Diese Fehlerart ist mechanisch erkennbar, weil sie sich in der Struktur
+der Akte zeigt und nicht in der Bedeutung des Texts. Ein Sprachmodell kann eine Bedingung im Fließtext weglassen; es kann sie nicht aus der
+Akte entfernen, ohne dass sich Hashes ändern, und es kann den Status eines Schlusses nicht über den seiner Prämissen setzen, ohne dass der
+Compiler anhält.

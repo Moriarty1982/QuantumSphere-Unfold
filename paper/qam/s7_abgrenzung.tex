@@ -1,0 +1,66 @@
+\section{Abgrenzung und Ausblick}\label{sec:abgrenzung}
+
+\subsection{QAM und Beweisassistenten}
+
+Ein Beweisassistent wie Lean~4~\cite{lean4} prüft den \emph{Inhalt} mathematischer Aussagen: Ein in Lean mit Mathlib~\cite{mathlib}
+formalisierter Satz ist bewiesen, relativ zum Kern des Systems. QAM prüft die \emph{Form} einer Akte: welcher Status welcher Aussage zusteht,
+gegeben die Status ihrer Prämissen, welche Eingaben sie trägt und in welchem Frame sie gilt. Die beiden Ansätze beantworten verschiedene
+Fragen und schließen einander nicht aus.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.27\textwidth}p{0.32\textwidth}p{0.32\textwidth}@{}}
+\toprule
+ & Beweisassistent & QAM\\
+\midrule
+prüft & Gültigkeit eines Beweises & Konsistenz von Status, Eingaben, Frames\\
+Eingangsaufwand & vollständige Formalisierung & Deklaration je Aussage\\
+offene Aussagen & \texttt{sorry} oder Axiom & erstklassiger Status mit Vererbung\\
+physikalische Lesarten & außerhalb des Systems & als \st{reading} registrierbar\\
+Rechnungen & im System oder als Orakel & als Auftrag mit Beleg\\
+\bottomrule
+\end{tabular}
+\end{center}
+QAM benutzt Lean an zwei Stellen: für seinen eigenen Prüfer und für die Formalisierung der Objektebene und der Maschine. Die Inhalte der
+Akten formalisiert es nicht. Eine naheliegende Erweiterung ist, einen Lean-Beweis als Beleg einer Aussage mit Status \st{proved} zu
+verknüpfen, so dass dieser Status nicht mehr nur deklariert, sondern belegt ist.
+\todo{prüfen, ob eine solche Verknüpfung bereits besteht oder nur geplant ist}
+
+\subsection{Verwandte Ansätze}
+
+Die für die Maschine bewiesenen Eigenschaften haben die bekannte Form syntaktischer Typkorrektheit, Erhaltung und Fortschritt~\cite{wright,pierce},
+angepasst an eine Maschine, deren Schritte abgewiesen werden können. Die Regel, dass ein Zertifikat seinen Beweis enthält, entspricht der Idee
+beweistragenden Codes~\cite{necula}. Das Protokoll der Maschine ist ein Herkunftsnachweis im Sinn des W3C-PROV-Modells~\cite{prov},
+reduziert auf Anweisungen und Ausgänge; QAM fügt die Typisierung der aufgezeichneten Objekte hinzu. Vorab-Registrierung ist in Teilen der
+empirischen Wissenschaften etabliert~\cite{nosek}; das Projekt überträgt sie auf rechnerische und theoretische Arbeit. Systeme wie
+FunSearch~\cite{funsearch} suchen mathematische Konstruktionen mit Sprachmodellen unter automatischer Bewertung, und es gibt Vorschläge für
+automatisierte Forschungsabläufe~\cite{aiscientist}. Die hier behandelte Lage ist eine andere: Ein Mensch lenkt ein langes, offenes Projekt,
+und das Problem ist nicht die Suche, sondern eine über Monate ehrliche Akte.
+\todo{systematische Literaturrecherche zu Provenienzsystemen, Workflow-Sprachen und LLM-gestützter Formalisierung}
+
+\subsection{Weiterentwicklung}
+
+\begin{itemize}[nosep]
+\item \emph{Typisierte Frame-Abbildungen}, damit die Rechtfertigung einer Abbildung selbst einen Status trägt und der Hinweis
+\texttt{frame-bridge-required} maschinell aufgelöst werden kann.
+\item \emph{Fortschrittssätze} für die speicherverändernden Anweisungen unter benannten Guard-Bedingungen, sowie Kopieren und Zusammenführen
+von Speichern.
+\item \emph{Verifikation der Implementierung}: ein Nachweis, dass der Python-Adapter die in Lean bewiesene Semantik umsetzt, oder eine
+Ausführung, die aus der Lean-Formalisierung erzeugt wird.
+\item \emph{Ein Prüfer, der den Forschungstext liest}: Das Inventar der Satzumgebungen ist die erste Schicht; logische Prämissenkanten
+zwischen ihnen fehlen noch.
+\item \emph{Stärkere Hashes}: MD5 durch eine kollisionsresistente Funktion ersetzen, auch innerhalb der Akte.
+\end{itemize}
+
+\section{Grenzen und Schluss}\label{sec:grenzen}
+
+QAM ersetzt weder einen Beweisassistenten noch die empirische Prüfung. Es prüft nur Deklariertes: Eine als bewiesen deklarierte Aussage
+ohne Prämissen wird angenommen, ein unter neuem Namen deklarierter Fitwert wird nicht als Eingabe erkannt, eine falsche Prämisse bleibt
+falsch. Frames sind Namen, Abbildungen haben keinen Status, Formeln sind Text. Der Parser des Lean-Prüfers ist nicht verifiziert, die
+laufende Maschine ebenfalls nicht. Die Fallstudie ist ein Einzelfall mit einem Autor.
+
+Innerhalb dieser Grenzen leistet QAM eine bestimmte Sache zuverlässig: Es macht sichtbar und überprüfbar, \emph{worauf} jede Aussage ruht, und
+verhindert, dass eine offene Bedingung auf dem Weg durch eine lange Kette von Schlüssen verloren geht. Zuses Trennung von Plan und
+Ausführung liefert dafür die Architektur: Das Sprachmodell rechnet und formuliert, die Akte legt fest, was gilt. Turings Grenze liefert die
+Begründung für den dritten Ausgang: Was nicht entschieden ist, wird nicht geglättet, sondern als Guard geführt, gespeichert und vererbt.
+Die Form einer Akte zu sichern macht ihren Inhalt nicht wahr. Aber sie sorgt dafür, dass man sehen kann, welcher Teil des Inhalts noch nicht
+gesichert ist.

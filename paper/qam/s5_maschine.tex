@@ -1,0 +1,118 @@
+\section{Datenbank, Ausführungsmaschine und Anbindung an Sprachmodelle}\label{sec:maschine}
+
+\subsection{Die Datenbank}\label{sec:datenbank}
+
+Für einen Bestand aus vielen Dokumenten liest
+\begin{lstlisting}
+python -m qam.tools.readout_db index
+\end{lstlisting}
+alle exportierten Akten in eine lokale SQLite-Datenbank. Dabei werden Eintrags- und Aktenhashes geprüft und die Prämissenkanten in beiden
+Richtungen angelegt. Neuindizieren erneuert diese Kanten, lässt aber gespeicherte Belege, den Rechencache und ausdrücklich registrierte
+Ersetzungen unverändert. Die wichtigsten Abfragen:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.36\textwidth}p{0.58\textwidth}@{}}
+\toprule
+Abfrage & Ergebnis\\
+\midrule
+\texttt{find TEXT} & Einträge mit Frame, Status und Prämissen\\
+\texttt{premises HASH} & alle Einträge, auf denen ein Eintrag transitiv ruht\\
+\texttt{impact HASH} & alle späteren Einträge und Belege, die den Eintrag verwendet haben, auch als fehlende Prämisse\\
+\texttt{register-replacement ALT NEU --reason} & ausdrückliche Korrektur; der alte Eintrag und alte Belege bleiben bestehen\\
+\texttt{rules NAME --have ...} & Voraussetzungen einer katalogisierten Regel gegen deklarierte Bestandteile abgleichen\\
+\texttt{chains NAME} & mögliche Ketten von zwei bis fünf Regeln vorschlagen (nur Vorschläge)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Wer eine Aussage wiederverwenden will, sucht sie damit nicht im Fließtext, sondern ruft sie mit Status, Frame und Prämissen ab; wer eine
+Aussage korrigiert, erfährt, welche Schlüsse betroffen sind.
+
+\subsection{Aufträge und Belege: MML und MMA}
+
+Rechnungen werden als \emph{Aufträge} in einer kleinen Auftragssprache (MML) gestellt und von einem Ausführer (MMA) bearbeitet. Ein Aufruf
+besteht aus zwei JSON-Dateien: einem \emph{Kontext}, der die beteiligten QAM-Objekte und Guards deklariert, und einem \emph{Auftrag}, der eine
+Anweisung mit Argumenten nennt:
+\begin{lstlisting}
+python -m qam.tools.readout_db mma KONTEXT.json AUFTRAG.json --summary
+\end{lstlisting}
+MMA prüft zuerst die Guards von Kontext, Auftrag und Objekten und die verknüpften Prämissen, dann führt es aus und speichert einen
+\emph{Beleg}: den vollständigen Auftrag, den Ausgang (\texttt{continue}, \texttt{guard}, \texttt{reject}), das Ergebnis oder die Gründe der
+Sperre, einen Kontexthash, Fingerabdrücke der beteiligten Implementierung und gegebenenfalls die Prämissenspur. Der Beleg ist durch einen
+SHA-512-Hash identifiziert. Ein Zähler in der Datenbank zählt verschiedene Belege je Ausgang; derselbe Beleg zählt nur einmal.
+
+Ein gespeicherter Beleg lässt sich zweifach prüfen. \texttt{receipt HASH} prüft die gespeicherten Hashes; \texttt{receipt HASH --replay}
+rechnet den Auftrag mit dem gespeicherten Kontext und der aktuellen Implementierung ohne Cache neu und meldet getrennt, ob Beleg und
+Ergebnis übereinstimmen. Ein geänderter Implementierungshash kann den Beleg ändern, auch wenn das Ergebnis gleich bleibt. Der Rechencache
+schließt Argumente, Kontext, Prämissenhashes und Implementierungsversionen in seinen Schlüssel ein; Guards werden geprüft, bevor der Cache
+befragt wird.
+
+Die Anweisungen sind bewusst eng: Es gibt keine freie Programmausführung, sondern eine feste Liste. Beispiele:
+\begin{itemize}[nosep]
+\item \texttt{READOUT} führt ein Rezept aus einer zugelassenen Liste aus, mit geprüften Argumentbereichen.
+\item \texttt{SEARCH\_ROUTE} durchsucht einen festen Katalog von Operationen bis zu einer Schrittgrenze und speichert neben den Kandidaten
+die ausgeschlossenen Wege mit Grund und die offenen Guards jedes Kandidaten. Findet sie keinen Weg ohne offene Annahme, endet sie mit
+\texttt{guard}.
+\item \texttt{RUN\_TAPE} führt eine deklarierte Bandmaschine aus (Abschnitt~\ref{sec:band}).
+\end{itemize}
+
+\paragraph{Stapel.} Bis zu 64 unabhängige Aufträge mit eindeutigen Namen laufen in einem Stapel auf ein bis vier Prozessen. Abhängigkeiten
+(\texttt{depends\_on}, \texttt{requires\_match}) werden vor dem Start auf Zyklenfreiheit geprüft; gesperrte Nachfolger erscheinen als
+\texttt{blocked} mit \texttt{blocked\_by} (Abschnitt~\ref{sec:ebeneB}). Der Stapel erzeugt einen gehashten Bericht in Eingabereihenfolge,
+der mit den Einzelbelegen in einer Transaktion gespeichert wird. Berichte können neu gerechnet (\texttt{replay-batch}), verglichen
+(\texttt{compare-batches}) und ohne Neurechnung auf vollständige Verweise geprüft werden (\texttt{audit-batch}).
+
+\subsection{Plan und Ausführung am Beispiel der Bandmaschine}\label{sec:band}
+
+Die Anweisung \texttt{RUN\_TAPE} zeigt die Rollenteilung der Einleitung in ihrer einfachsten Form. Der \emph{Plan} besteht aus zwei
+QAM-Objekten des Kontexts: einem \texttt{operator} mit Zuständen, Haltezustand und einer deterministischen binären Übergangstabelle, und
+einem \texttt{state} mit Band, Kopfposition und Steuerzustand. Jeder Tabelleneintrag legt zu Steuerzustand und gelesenem Bit das zu
+schreibende Bit, die Kopfbewegung \(-1,0,+1\) und den Folgezustand fest. Der Auftrag nennt beide Objekte und setzt die Betriebsart
+(\texttt{fixed} oder \texttt{grow}, bei der rechts eine leere Zelle angefügt wird), Grenzen für Schritte und Zellen (höchstens je 1024) und
+optional eine Ablaufspur.
+
+Das Ergebnis unterscheidet zwei Fragen, die leicht verwechselt werden:
+\begin{itemize}[nosep]
+\item \emph{Durfte der Auftrag ausgeführt werden?} Das ist der MMA-Ausgang, etwa \texttt{continue}.
+\item \emph{Wie endete die Rechnung?} Das ist der Stoppgrund der Bandmaschine: \texttt{halted} (regulärer Halt), \texttt{stuck} (keine
+Regel für Zustand und Bit), \texttt{boundary} (Schritt über eine feste Bandgrenze, der ganze Schritt wird verworfen), \texttt{step\_limit}
+oder \texttt{cell\_limit} (Budget erschöpft).
+\end{itemize}
+Ein erschöpftes Budget ist ausdrücklich kein Nichthalten. Die Maschine behauptet nicht, die Rechnung würde nie enden; sie meldet, dass sie
+innerhalb des Budgets nicht endete, und gibt Band, Kopf und Zustand zurück, mit denen ein neuer Lauf mit größerem Budget fortsetzen kann.
+Das ist die Turing-Grenze in ihrer praktischen Form.
+
+Derselbe Plan wird von mehreren Ausführenden bearbeitet: vom Python-Adapter, von einem Wolfram-Language-Skript, von einer Qiskit-Fassung,
+die jeden Schritt als reversible Schaltung über alle Entscheidungsfälle baut, und von zwei SystemVerilog-Steuerungen. Eine
+Vergleichssuite führt beide Steuerungen auf 209 Referenzfällen gegen MMA aus und vergleicht Stoppgründe, Taktzahlen und eine
+Beispielspur; optional werden Logikzellen synthetisiert. Die binäre Übergangstabelle und das Bandwachstum sind Modellentscheidungen; geprüft
+wird die ausführbare Übergangssemantik, nicht eine Deutung der Maschine.
+
+\subsection{Anbindung an Sprachmodelle über MCP}\label{sec:mcp}
+
+Damit ein Sprachmodell mit der Akte arbeiten kann, ohne sie verändern zu können, stellt QAM seine Abfragen über das Model Context
+Protocol~\cite{mcp} bereit. Es gibt drei Server mit abgestuften Rechten:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.2\textwidth}p{0.42\textwidth}p{0.3\textwidth}@{}}
+\toprule
+Server & Werkzeuge & Rechte\\
+\midrule
+schreibgeschützt & Einträge suchen, Belege auflisten und abrufen (mit Spur oder Zusammenfassung), Kontextauswahl, Stapelberichte auflisten, lesen, vergleichen und prüfen & Container ohne Netz, Datenbank nur lesend eingebunden\\
+vollständig & zusätzlich Index neu bauen, Einzelaufträge und gespeicherte Stapel ausführen & schreibt Belege in die Datenbank\\
+Stapel & gespeicherte oder direkt übergebene Stapel ausführen, Berichte neu rechnen, HDL-Vergleich & schreibt Belege\\
+\bottomrule
+\end{tabular}
+\end{center}
+Der schreibgeschützte Server läuft in einem Container, der ohne Netzwerk und mit nur lesend eingebundener Datenbank gestartet wird:
+\begin{lstlisting}
+docker run --rm -i --read-only --network none \
+  --mount "type=bind,source=$qamDb,target=/app/build/qam.sqlite3,readonly" qsc-qam
+\end{lstlisting}
+Alle Server führen nur feste Module mit geprüften Argumenten und einer Zeitgrenze aus; Auftragsdateien müssen in zugelassenen
+Verzeichnissen liegen. Keiner der Server kann einen Status anheben, eine Akte umschreiben oder einen Beleg löschen.
+
+Die Zusammenfassung eines Belegs ist für Sprachmodelle gedacht: Sie nennt den geprüften Hash, die Anweisung, den Ausgang, Fehler,
+Verpflichtungen und deklarierte Guards, bei Routensuchen auch die Zahl der Kandidaten und die verschiedenen offenen Guards. Ein Modell, das
+eine Frage zu einem gespeicherten Ergebnis beantwortet, ruft also zuerst den Beleg ab, prüft ihn per Hash und nennt die offenen Guards in
+seiner Antwort, statt sich auf den Wortlaut eines früheren Gesprächs zu verlassen. In dieser Rollenteilung ist das Sprachmodell wieder das
+Rechenwerk: Es formuliert Aufträge und liest Belege, aber was als Ergebnis gilt, entscheidet die Maschine nach dem Plan.

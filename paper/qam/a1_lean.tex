@@ -1,0 +1,37 @@
+\section{Lean-Module, Übersetzung und Einsatz von Sprachmodellen}\label{app:lean}
+
+\paragraph{Projektunabhängiges Paket.} \texttt{qam/lean/} ist ein eigenständiges Lake-Paket, das nur den Lean-Kern benutzt (kein Mathlib)
+und in Sekunden übersetzt: \texttt{QAM/Provenance.lean} (Herleitungsbäume: keine Beförderung, Eingaben, Frames) und
+\texttt{QAM/QamFile.lean} (der Prüfer für exportierte Akten, seine zeilen- und aktenweite Korrektheit, die Hash-Verweise) mit dem ausführbaren
+Programm \texttt{qamcheck}.
+
+\paragraph{Objektebene und Maschine.} Im Verzeichnis \texttt{formal/} des Repositorys formalisieren die Module der Bibliothek
+\texttt{QSFormal} die Objektarten und die Maschine; diese Module benutzen ebenfalls nur den Lean-Kern, andere Module derselben Bibliothek
+benutzen Mathlib:
+\begin{itemize}[nosep]
+\item \texttt{QSFormal/QAM.lean}: Disjunktheit der Markierungen (\texttt{qState\_iff\_tag}, \texttt{not\_state\_and\_op}, \texttt{tag\_lt\_eight}),
+Umindizierung und Rückübersetzung (\texttt{back\_shift}, \texttt{shift\_back}), Transport und Ketten (\texttt{first\_transport\_principle},
+\texttt{chain\_clEq}, \texttt{chain\_readout});
+\item \texttt{QSFormal/Models.lean}: zwei triviale Modelle der Transportschemata (\texttt{totalModel}, \texttt{emptyModel}); die Schemata
+sind widerspruchsfrei, legen aber nicht fest, was zulässig heißt;
+\item \texttt{QSFormal/Route.lean}: Wege über mehrere Frames (\texttt{path\_admissible}, \texttt{path\_clEq}, \texttt{loop\_clEq});
+\item \texttt{QSFormal/Store.lean}: Speicher, Anweisungen, Übergangssemantik, Erhaltung (\texttt{exec\_preserves}, \texttt{run\_preserves}),
+Rücksetzen (\texttt{rollback\_restores}), Zertifikate (\texttt{no\_false\_certificate});
+\item \texttt{QSFormal/StoreProgress.lean}: kein Steckenbleiben (\texttt{exec\_ne\_halt}), exakte Statuscharakterisierung, Atomarität
+(\texttt{exec\_atomic}), Fortschritt für \textsc{snapshot}, \textsc{scrub} und \textsc{export}, Vollständigkeit des Protokolls.
+\end{itemize}
+Vereinfachungen gegenüber der vollen Spezifikation: Adressen sind natürliche Zahlen, Relationen tragen keine Zeigerbedingungen, und die
+Anweisungen zum Kopieren und Zusammenführen von Speichern sind nicht formalisiert. Die kontinuierliche Integration übersetzt beide Teile
+und weist \texttt{sorry}, \texttt{admit} und \texttt{native\_decide} zurück.
+
+\paragraph{Dieser Artikel.} Der Artikel lädt \texttt{qam.sty}; die Beispiele in den Abschnitten~\ref{sec:latex} und~\ref{sec:fallstudie}
+werden beim Setzen geprüft. Übersetzung im Verzeichnis \texttt{paper/qam}:
+\begin{lstlisting}
+TEXINPUTS=../../qam/tex: pdflatex main.tex   (zweimal)
+\end{lstlisting}
+
+\paragraph{Einsatz von Sprachmodellen.} Die Ausgangsvermutung der Fallstudie stammt vom Autor. Das Modell QAM, die Werkzeuge, die
+Lean-Formalisierung und große Teile dieses Texts sind im Dialog mit großen Sprachmodellen entstanden (Claude, Anthropic; ChatGPT und Codex,
+OpenAI). Manche Ideen kamen von den Modellen, andere vom Autor; der Autor hat die Fragen gewählt und entschieden, was bleibt. Ergebnisse der
+Modelle wurden nur über die in Abschnitt~\ref{sec:fallstudie} beschriebenen Prüfungen übernommen. Die Verantwortung für den Inhalt trägt
+der Autor.

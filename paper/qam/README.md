@@ -1,26 +1,32 @@
-# QAM methods paper
+# QAM-Artikel
 
-*A typed bookkeeping language for verifiable research with language models: design, Lean verification, and a case study*
+*Vom Plan zum Guard: QAM als Spezifikations- und Abhängigkeitsarchitektur für sprachmodellgestützte Forschung*
 
-Draft, 4 Nov 2026, 12 pages. Publication on Zenodo only (no arXiv). Keywords: logic in computer science, formal verification, Lean 4,
-programming-language semantics, AI-assisted research, reproducibility, research integrity.
+Deutscher Entwurf vom 22.11.2026, 20 Seiten. Er ersetzt den englischen Methodenentwurf vom 4.11.2026 (in der Git-Geschichte erhalten).
+Veröffentlichung nur auf Zenodo. Aufbau: zuerst QAM als eigenständiges, projektunabhängiges Modell, dann die Umsetzung (LaTeX, Lean,
+Maschine, MCP), erst danach der Einsatz im Projekt Quantum Sphaera.
 
 PDF: [`qam_paper_draft.pdf`](qam_paper_draft.pdf).
 
-Build: `TEXINPUTS=../../qam/tex: pdflatex main.tex` twice (the paper uses its own package `qam.sty`) (standard TeX Live; no bibtex, bibliography is inline).
+Übersetzen (der Artikel lädt `qam.sty`; die Beispiele in Abschnitt 3 und 6 werden beim Setzen geprüft):
 
-| file | content |
+```sh
+TEXINPUTS=../../qam/tex: pdflatex main.tex   # zweimal; unter Windows ../../qam/tex;
+```
+
+| Datei | Inhalt |
 |---|---|
-| `main.tex` | preamble, abstract, bibliography |
-| `s1_intro.tex` | three error classes, contributions |
-| `s2_language.tex` | object kinds, relations, two-sided display, witnesses/branches/status, reindexing |
-| `s3_machine.tex` | store, instructions (MML), transition semantics (MMA), certificates |
-| `s4_lean.tex` | theorems of `QSFormal.QAM`, `Models`, `Route`, `Store`, `StoreProgress`, `Provenance` |
-| `s4b_tex.tex` | the LaTeX package `qam.sty`: compile-time checks and generated QAM notation |
-| `s5_case.tex` | case study: process, register, error classes, translation table |
-| `s6_related.tex` | related work |
-| `s7_limits.tex` | limits, cost, next steps, conclusion |
-| `a1_build.tex` | Lean modules, build, disclosure of language-model use |
-| `outline.md` | original outline |
+| `main.tex` | Präambel, Zusammenfassung, Literatur |
+| `s1_einleitung.tex` | stille Übergänge; Zuse (Plan und Rechenwerk), Turing (Entscheidbarkeitsgrenze) |
+| `s2_modell.tex` | Akte, Eintrag, Regeln R1–R4, offene Bedingungen, Hash-Kette, Objektebene |
+| `s3_latex.tex` | LaTeX-Anbindung: Betriebsarten, Deklarationen, erzeugte Notation (live), Export, Profile, Belegfragmente, Tests |
+| `s4_guards.tex` | drei Prüfer; Ebene A (Statusvererbung, Lean) und Ebene B (Guards der Maschine) |
+| `s5_maschine.tex` | Datenbank, MML/MMA, Belege, Stapel, Bandmaschine, MCP-Server |
+| `s6_einsatz.tex` | Einsatz im Projekt: Ablauf, Koide-Beispiel (konstruiert, live geprüft), β-Fall, Fehlerklassen |
+| `s7_abgrenzung.tex` | Abgrenzung zu Beweisassistenten, verwandte Ansätze, Weiterentwicklung, Grenzen und Schluss |
+| `a1_lean.tex` | Lean-Module, Übersetzung, Einsatz von Sprachmodellen |
+| `outline.md` | Gliederung |
 
-Open: final title; an independent referee pass; the related-work survey is short and not systematic.
+Offen (im Text als `[TODO: …]` markiert): Auszählung des Testregisters abschließen, Zahl der indizierten Einträge und Belege,
+Aufwand der Buchführung, Stand einer Lean-Beleg-Verknüpfung, systematische Literaturrecherche; Umfang auf 18 Seiten kürzen;
+unabhängige Gutachterrunde.
