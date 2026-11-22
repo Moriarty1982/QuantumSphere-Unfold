@@ -1,0 +1,30 @@
+Tatsaechliche Ausgabe von llm/h118_octant_orientation.wl (Wolfram Language, Wolfram-MCP-Kern, 22.11.2026).
+Ein erster Lauf scheiterte an einem Klammerfehler in pole[] (Part::partw, Normalize::nlnmt2) und an einer Simplify-Pruefung
+mit komplexen Symbolen; beide Stellen sind im Skript korrigiert, die Kriterien blieben unveraendert. Keine Warnungen im zweiten Lauf.
+Die Ausgabe unten ist die des zweiten Laufs, Bruchdarstellung zeilenweise zusammengezogen.
+
+(0) Pole: Bloch-Vektoren von vz(+1), vx(+1), vy(+1): {{0, 0, 1}, {1, 0, 0}, {0, 1, 0}}
+(1) Tripel {sz,sx,sy} | eps | Phase z->x->y | Phase z->y->x | Rest1 | Rest2
+    {{1, 1, 1}, 1, Pi/4, -Pi/4, 0, 0}
+    {{1, 1, -1}, -1, -Pi/4, Pi/4, 0, 0}
+    {{1, -1, 1}, -1, -Pi/4, Pi/4, 0, 0}
+    {{1, -1, -1}, 1, Pi/4, -Pi/4, 0, 0}
+    {{-1, 1, 1}, -1, -Pi/4, Pi/4, 0, 0}
+    {{-1, 1, -1}, 1, Pi/4, -Pi/4, 0, 0}
+    {{-1, -1, 1}, 1, Pi/4, -Pi/4, 0, 0}
+    {{-1, -1, -1}, -1, -Pi/4, Pi/4, 0, 0}
+    H118a: alle Reste null: True
+    Betrag der Bargmann-Invariante: {1/(2 Sqrt[2])}
+(2) Phase z->x->y nach Abbildung, je Tripel (eps zum Vergleich)
+    R = sz: {Pi/4, -Pi/4, -Pi/4, Pi/4, -Pi/4, Pi/4, Pi/4, -Pi/4}  erhaelt Vorzeichen: True  kehrt um: False
+    T = sx: {Pi/4, -Pi/4, -Pi/4, Pi/4, -Pi/4, Pi/4, Pi/4, -Pi/4}  erhaelt Vorzeichen: True  kehrt um: False
+    J_B = sy: {Pi/4, -Pi/4, -Pi/4, Pi/4, -Pi/4, Pi/4, Pi/4, -Pi/4}  erhaelt Vorzeichen: True  kehrt um: False
+    Theta = i sy K: {-Pi/4, Pi/4, Pi/4, -Pi/4, Pi/4, -Pi/4, -Pi/4, Pi/4}  erhaelt Vorzeichen: False  kehrt um: True
+    K (z -> conj z): {-Pi/4, Pi/4, Pi/4, -Pi/4, Pi/4, -Pi/4, -Pi/4, Pi/4}  erhaelt Vorzeichen: False  kehrt um: True
+    Theta^2 = {-u, -w} fuer {u,w} (erwartet -{u,w})
+    K bildet Pole auf Pole ab: Bloch(K vy(+1)) = {0, -1, 0}, Bloch(K vx(+1)) = {1, 0, 0}, Bloch(K vz(+1)) = {0, 0, 1}
+(3) Zeitumkehr: s+ -> conj s+ ? True   s- -> conj s- ? True
+    Paritaet: s+ -> s- ? True   s- -> s+ ? True   (auf chi also der Tausch der Komponenten = sx, wie die Frame-Abbildung T)
+(4) Im<psi|U psi> = Sqrt[3] (-pm + pp)/2;  unter U -> U^-1: Sqrt[3] (pm - pp)/2;  unter p+ <-> p-: Sqrt[3] (pm - pp)/2
+(5) max |Phase(U) - Phase|, max |Phase(U K) + Phase| ueber 200 Unitaere: {7.77 x 10^-16, 9.99 x 10^-16}
+Out[1]= Null
