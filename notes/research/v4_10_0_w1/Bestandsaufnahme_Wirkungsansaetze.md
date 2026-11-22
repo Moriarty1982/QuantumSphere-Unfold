@@ -87,5 +87,7 @@
 
 - **6.11.2026, Autor: Epoche der Λ-Auslesung „Heute“.** Die Kaskaden-Verzweigung Ω_Λ : Ω_M = (1 − β²) : β² gilt für die heutige Epoche. Daraus folgt die parameterfreie Vorhersage H96 (Ω_M = 0,30185, Vorab-Notiz `Vorab_Notiz_H96_Omega_M_beta2.md`). Offen bleibt das „warum jetzt“.
 
+- **22.11.2026, Autor: Holst-Erkundung** (Wortlaut: „Ja, Holst-Erkundung“): Die eingefrorene Linie W1/W2 wird für eine Erkundung geöffnet, W1 + Holst-Term und die Wirkung der Frame-Abbildungen auf γ (`../w1_holst_frame_maps_2026_11_22/`). Ergebnis: nur eine Dualitätsdrehung der Krümmung ändert γ; kein ausgezeichneter Winkel gibt γ_L.
+
 ## Nächster Schritt (Vorschlag)
 Nach diesen Entscheidungen die kleinste Wirkung aufschreiben, die (W1)–(W8) erfüllt, und zuerst nur ihre Euler–Lagrange-Gleichungen und Identitäten (Bianchi, Ward) symbolisch prüfen, noch ohne Lösung. Ein Test mit Kriterium erst danach, mit Vorab-Notiz.
