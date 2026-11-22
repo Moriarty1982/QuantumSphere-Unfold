@@ -91,17 +91,15 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
     - inhaltliche Änderungen (nur über Zweig und PR) und Merges;
     - jeder Zenodo-Schritt (Reservierung, Upload, Veröffentlichung);
     - die Entscheidung, dass eine neue öffentliche Version entsteht.
-- **Zenodo-Vorbereitung:** Bei jeder neuen Veröffentlichung zuerst das Schema der Aussagen-Datenbank
-  aktualisieren und prüfen. Anschließend die Einträge auf den aktuellen Forschungsstand bringen. Erst danach
-  den Release-Kandidaten aus dem aktualisierten Bestand zusammenstellen. Details in
-  `notes/anleitungen/zenodo-release.md`.
+- **Zenodo-Vorbereitung:** Vor jeder neuen Veröffentlichung die
+  [Anleitung zur Vorbereitung der Aussagen-Datenbank und des LLM-Kontexts](notes/anleitungen/zenodo-datenbank-vorbereiten.md) anwenden.
 - **Issues nachziehen** (Dauerauftrag des Autors vom 15.11.2026): Nach jeder inhaltlichen Änderung (Runde, Erkundung mit
   OP-Bezug, Merge, Release) das OP-Register #17 und die berührten OP-Issues ohne Rückfrage aktualisieren, im selben Schritt
   wie das Wiki. Fehlt einem offenen Problem ein Issue, eines anlegen und in #17 verlinken. Ehrlicher Status: kein OP als
   geschlossen darstellen.
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
-- **Sparsam arbeiten:** Skripte als Dateien ablegen und nur kurze Zusammenfassungen ausgeben.
+- **Sparsam arbeiten:** [Anleitung für LLM-Kontext und Cache](notes/anleitungen/llm-cache-optimieren.md) anwenden.
 - **Ehrlicher Status:** offene Probleme (OP1–OP5, C5, C6/T2) nicht als geschlossen darstellen. Die Guards stehen im
   jeweiligen Ledger der Runde.
 - **Gesamtbild zuerst:** vor inhaltlicher Arbeit `wiki/Gesamtbild.md` lesen (Mindmap, Thesen T1–T15, Dokumentkarte) und jede Einzelfrage dort einordnen.

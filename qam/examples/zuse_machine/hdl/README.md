@@ -45,6 +45,20 @@ Kopf und Schrittzähler unverändert. Die Taktmessung beginnt nach der
 Startflanke. Laden der Regeln und Einlesen der Ergebnisse liegen außerhalb
 der Messung. Yosys zählt generische Zellen vor dem Mapping auf ein FPGA.
 
+## Streaming-Guard für zwei Prüfschritte
+
+Der [Streaming-Guard](guard_stream.sv) prüft beide Zulässigkeitsmasken je
+Kandidat und gibt nur eindeutige Orientierungen aus. Bei freiem Empfänger
+nimmt er einen Kandidaten pro Takt an. Bei Rückstau hält der registrierte
+Ausgabeslot den ausstehenden Treffer stabil.
+
+~~~sh
+python -m qam.examples.zuse_machine.hdl.guard_stream_check --rows 65536
+~~~
+
+Der [Laufbericht](guard-stream-verification.md) dokumentiert den Vergleich
+mit MMA, die Takte, die logische Nutzlast und die generische Synthese.
+
 ## Verwendung im Companion
 
 Der [Laufbericht](verification.md) liefert eine reproduzierbare Tabelle

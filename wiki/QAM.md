@@ -12,6 +12,10 @@ Im gezeigten Lauf waren alle gespeicherten Prämissen vorhanden. Der orange Hinw
 
 **English.** The example binds a laboratory field family and a fixed longitudinal boost to a conditional rule. An MML request supplies the interval for the signed magnetic component. MMA evaluates the exact output interval and records the premise trace and rule hash. If a premise is missing, MMA reports `guard`. The stored example reports neither a closure proof nor a mathematical proof.
 
+## Guard-Prüfung im Datenstrom
+
+Der Streaming-Baustein prüft zwei aufeinanderfolgende Zulässigkeitsmasken pro Kandidat. Bei freiem Ausgang nimmt er einen Kandidaten pro Takt an. Im Icarus-Vergleich lieferten 65.536 synthetische Kandidaten 24.576 eindeutige Ausgaben. Die übrigen Fälle bleiben als Sperren oder Mehrdeutigkeiten in separaten Zählern sichtbar. Der Vergleich mit MMA und der Rückstautest bestanden. [Laufbericht](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/zuse_machine/hdl/guard-stream-verification.md)
+
 ## Frame-Schnittstellensprache und Physikmapping
 
 **Koide-Überlagerung im Materieframe (10.11.2026, bedingte Erkundung).** Bei gemeinsamer Generationsbasis, gleicher mittlerer Massenwurzel und Mittelung der Wurzeln vor dem Quadrieren hängt die resultierende Massenform nur vom gewichteten komplexen Phasenmittel ab. Eine gleich gewichtete Spiegelpaarung verringert den Koide-Radius und lässt die mittlere Phase unverändert. Die aus den Polmassen rekonstruierten Phasen und Gewichte sind Fitwerte. Eine native Präparation, die kohärente Zusammenführung und die Auslesung bleiben Voraussetzungen. Das QAM-Beispiel führt auch die getrennte Mittelung der Massen als Gegenkontrolle. [QAM-Quelle](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/koide-phase-overlap.tex) · [Rechnung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/qam/examples/koide_phase_overlap.py)

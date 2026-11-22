@@ -6,6 +6,11 @@
 !qam/tools/
 !qam/tools/qamhash.py
 !qam/tools/readout_db.py
+!qam/tools/receipt_context.py
+!qam/examples/
+!qam/examples/zuse_machine/
+!qam/examples/zuse_machine/hdl/
+!qam/examples/zuse_machine/hdl/context_filter*.sv
 !scripts/
 !scripts/qsc_audit/
 !scripts/qsc_audit/tensor_grammar_check.py

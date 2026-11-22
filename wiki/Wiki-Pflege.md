@@ -1,5 +1,11 @@
 # Wiki-Pflege
 
+**22.11.2026, QAM-Streaming-Guard:** Zweischritt-Filter, Rückstauprüfung und am MMA-Vergleich gemessene Ausgabemenge eingetragen.
+
+**22.11.2026, QAM-Kontextfilter:** Suche nach Beleg-IDs über MMA-Kontext, Frame und Status samt anschließendem Belegabruf beschrieben.
+
+**22.11.2026, LLM-Kontext:** Verweis auf die aufgabenbezogene Quellenauswahl ergänzt und die historische Baseline in den LLM-Hinweisen gekennzeichnet.
+
 **22.11.2026, Spinorband und zwei Umläufe:** Zweischritt-Wahl, Mehrdeutigkeit und MMA-/HDL-Vergleich ergänzt.
 
 **22.11.2026, Spinorband:** Vernam-Vorarbeit, orientierte Oktant-Phase und Rückkehrregel eingeordnet.

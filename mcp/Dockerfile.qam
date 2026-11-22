@@ -4,7 +4,10 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1
 RUN pip install --no-cache-dir mcp==2.3.0
 COPY mcp/qsc_mcp_server.py mcp/qam_readonly_server.py ./mcp/
-COPY qam/tools/qamhash.py qam/tools/readout_db.py ./qam/tools/
+COPY qam/tools/qamhash.py qam/tools/readout_db.py qam/tools/receipt_context.py ./qam/tools/
+COPY qam/examples/zuse_machine/hdl/context_filter*.sv ./qam/examples/zuse_machine/hdl/
+ARG QSC_WITH_HDL=0
+RUN if [ "$QSC_WITH_HDL" = 1 ]; then apt-get update && apt-get install -y --no-install-recommends iverilog && rm -rf /var/lib/apt/lists/*; fi
 COPY scripts/qsc_audit/tensor_grammar_check.py ./scripts/qsc_audit/
 RUN mkdir build && touch build/qam.sqlite3
 USER 65534:65534

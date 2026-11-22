@@ -9,6 +9,7 @@ hierher und enthalten keine eigenen Regeln. Wer einen Ablauf ändert, ändert ih
 
 | Anlass | Anleitung |
 |---|---|
+| LLM-Kontext sparsam nutzen | [llm-cache-optimieren.md](llm-cache-optimieren.md) |
 | Neue Sitzung, „weitermachen“, „wo waren wir“ | `weitermachen.md` |
 | Ende eines Arbeitsblocks, „übergeben“, vor einer Kontextverdichtung | `sitzung-uebergeben.md` |
 | Ein Test HNN mit Entscheidungskriterium (Vorab-Notiz, Rechnung, Ergebnis) | `hypothese-testen.md` |
@@ -16,6 +17,7 @@ hierher und enthalten keine eigenen Regeln. Wer einen Ablauf ändert, ändert ih
 | Neue Runde v4.9.0-rNN schreiben und einbauen | `qsc-runde-einbauen.md` |
 | Wiki im selben PR nachziehen | `wiki-nachziehen.md` |
 | Querverweise, Theoremnummern, Guards, Ledger, Audit, Manifest | `qs-werkzeug.md` |
+| Aussagen-Datenbank und LLM-Kontext für eine Zenodo-Veröffentlichung abgleichen | [zenodo-datenbank-vorbereiten.md](zenodo-datenbank-vorbereiten.md) |
 | Neue Version auf Zenodo veröffentlichen | `zenodo-release.md` |
 
 Regeln, Rundenstand und Projektfakten stehen in `AGENTS.md`; der Stand der letzten Sitzung im lokalen Ordner in

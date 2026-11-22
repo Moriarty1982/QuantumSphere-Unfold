@@ -1281,6 +1281,8 @@ def receipt_summary(receipt, instruction, request):
 
 
 def main():
+    from qam.tools import receipt_context
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--db", type=Path, default=DEFAULT_DB)
     parser.add_argument("--read-only", action="store_true")
@@ -1346,7 +1348,11 @@ def main():
                                  help="include the stored premise chain in dependency order")
     receipt_command.add_argument("--summary", action="store_true",
                                  help="return only the receipt identity and MMA diagnostics")
+    context_command = commands.add_parser("context-receipts", help="select compact receipt metadata")
+    receipt_context.add_arguments(context_command)
     args = parser.parse_args()
+    if args.command == "context-receipts":
+        args.read_only = True
     if args.command == "receipt" and args.summary and (args.trace or args.tex_output):
         parser.error("--summary cannot be combined with --trace or --tex-output")
     if args.read_only and (args.command in ("index", "mma", "mma-batch", "register-replacement")
@@ -1539,6 +1545,16 @@ def main():
                 print(json.dumps(response))
             if args.replay:
                 return 0 if response["replay"]["receipt_matches"] else 1
+        elif args.command == "context-receipts":
+            try:
+                result = receipt_context.select(
+                    db, context_hash=args.context_hash, frame=args.frame, status=args.status,
+                    limit=args.limit, backend=args.backend, iverilog=args.iverilog, vvp=args.vvp,
+                )
+            except (ValueError, RuntimeError, OSError) as error:
+                print(json.dumps({"error": str(error), "backend": args.backend}))
+                return 2
+            print(json.dumps(result))
         elif args.command == "receipts":
             if args.limit < 1:
                 parser.error("--limit must be positive")
