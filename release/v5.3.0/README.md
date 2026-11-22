@@ -32,7 +32,11 @@ In preparation (22 November 2026). Not yet published.
   the version DOI 10.5281/zenodo.24434403 and the concept DOI exactly once and no predecessor DOI (`tools/qs.py doi`).
 - Package dry run 44992900612 against draft 24434403: eight files (two PDFs, English sources, database snapshot, README,
   SHA256SUMS, build and package manifests); metadata validated, no Zenodo mutation.
-- Upload, preview check and publication are recorded here after they run.
+- Upload 44994733826 into draft 24434403: eight files uploaded; its verification stopped only at the unset preview. The
+  candidate workflow now sets the default preview on the draft itself. Verification run 44995008051: unpublished draft,
+  DOI and version correct, eight files with MD5 equal to the package, default preview
+  `Quantum_Sphaera_Companion_v5_3_0_full.pdf`.
+- Publication is recorded here after it runs.
 
 ## Scope
 
