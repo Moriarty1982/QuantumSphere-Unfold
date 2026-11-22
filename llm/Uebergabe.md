@@ -2,7 +2,8 @@
 
 ## 22.11.2026 (Codex)
 
-- **Zuletzt vergebene Hypothese H113:** Vorab df52d765, nicht blind. Farbauslese der wörtlichen e4/e5/e6-Diagonale widerlegt. Farbneutrale Restspalte Rang drei; je Zeile schwaches Dublett in der H26-Lesart. Wolfram-Skript und Ausgabe unter llm/h113_dixon_color_raster.*. Ergebnis lokal auf codex/h113-dixon-color-raster. OP3 bleibt offen.
+- **Zuletzt vergebene Hypothese H114:** Vorab 7e00f897, nicht blind. P allein bestimmt die Bargmann-Phase nicht. Bures-Identifikation liefert bedingt komplex 3→2 bzw. reell 6→4. Stabilität einer 5→4-Projektion braucht eigene Normaldynamik. Exakte Wolfram-Rechnung und Ausgabe unter llm/h114_photon_octant.*. Lokaler Zweig codex/h114-photon-octant auf H113. OP3 bleibt offen.
+- **Hypothese H113:** Vorab df52d765, nicht blind. Farbauslese der wörtlichen e4/e5/e6-Diagonale widerlegt. Farbneutrale Restspalte Rang drei; je Zeile schwaches Dublett in der H26-Lesart. Wolfram-Skript und Ausgabe unter llm/h113_dixon_color_raster.*. Ergebnis lokal auf codex/h113-dixon-color-raster. OP3 bleibt offen.
 - **OP5:** PR #220 als cf70cd1f gemergt, Wiki synchronisiert, OP5 #12 und Register #17 fortgeschrieben. OP5 bleibt offen.
 
 ## 21.11.2026 (Codex)

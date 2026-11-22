@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### OP3: Photon-Eigenpunkt und flacher Oktant (22.11.2026)
+
+Der Photonpunkt hat zum reinen Rand den Bures-Abstand π/4. Das Dublett am Photonpunkt erzwingt dennoch keine Bargmann-Phase des Generationsraums. Werden beide Größen identifiziert und die paarweisen Überlappungen festgehalten, fällt der komplexe Gram-Rang am Photonpunkt von drei auf zwei, reell direkt von sechs auf vier. Eine Fünferzwischenstufe und Stabilität brauchen zusätzliche Struktur.
+
 ### OP3: Farbauslese des Generationsrasters (22.11.2026)
 
 Die wörtliche Diagonale mit Spalten e₄,e₅,e₆ trägt bei farbneutralen Generationszeilen den Farbtyp des Tripletts und hat unter farbäquivarianten linearen Auslesen in ein Singulett Rang null. Die farbneutrale Restspalte hat drei Richtungen. Im H26-Vergleich ergänzt der schwache Quaternionfaktor in jeder Zeile das Paar aus Neutrino und geladenem Lepton. Die Massenfrage bleibt offen.
