@@ -5436,3 +5436,131 @@ R_{\rm glob}^{(v4100\text{-}r39,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r40 Source-Only: Why the Time--Transverse Components of the Mediator Do Not Couple}
+\addcontentsline{toc}{section}{v4.10.0-r40 Source-Only: Decoupling of the Time--Transverse Components}
+\label{sec:v4100-r40-h0i-decoupling}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r39 obtains the mediator term of the OP5 comparison model from one tensor field \(H_{ab}\) on the subspace \((t,x,y)\) orthogonal to the
+axis, with the identically conserved coupling \(J_{ab}=\partial_a\partial_b\eta-\eta_{ab}\Box_\parallel\eta\), provided the time--transverse components \(H_{0i}\)
+do not couple (\(w=0\)).  This layer tests four candidate reasons for that decoupling.  It is an exploration with a method fixed before the
+computation; it is partly not blind, since candidates K1 and K4 below were sketched by hand when the method was written.  Earlier layers are
+not rewritten; Remark r40.5 corrects a reading of r39.3.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r40 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r40 setting}
+\label{subsec:v4100-r40-setting}
+
+Conventions are those of r39: plane waves with \(\partial_a\to D_a\), \(D=(-i\omega,ik_1,ik_2)\), \(x=\omega^2\), \(a_\perp=k_1^2+k_2^2\),
+\(J_{ab}=D_aD_b-c\,\eta_{ab}D^cD_c\), and \(d_m=m^2+r_mq-x\).  The target is the numerator \(N_m=\tfrac23(x^2-a_\perp x+a_\perp^2)\), reached in r39 by
+\(N(1,0)=3N_m\).  The candidates are: K1, a massive Fierz--Pauli field on the subspace; K2, \(H_{0i}\) as auxiliary fields entering through
+\(E_{ij}=\partial_tH_{ij}-\partial_iH_{0j}-\partial_jH_{0i}\) with a stiffness \(\mu\ge0\); K3, the time-reversal parity of the vertices; K4, an average over
+the relative time orientation of the two ends of the exchange.  Time reversal is \(\omega\mapsto-\omega\) (complex conjugation); the tachyon map
+\(\omega\mapsto i\omega\) is used only as a cross-check and is not identified with it.
+
+\subsection*{v4.10.0-r40 results}
+\label{subsec:v4100-r40-results}
+
+\paragraph{Theoremlet v4.10.0-r40.1 (Fierz--Pauli does not see the source).}
+With the massive spin-2 projector in three dimensions, \(\Pi_{abcd}=\tfrac12(P_{ac}P_{bd}+P_{ad}P_{bc})-\tfrac12P_{ab}P_{cd}\),
+\(P_{ab}=\eta_{ab}-p_ap_b/m^2\), the exchange numerator is
+\[
+ J\cdot\Pi\cdot J=-\frac{(c-1)\,(x-a_\perp)^2\,(a_\perp+m^2-x)\,\bigl((1-c)a_\perp+(1+3c)m^2-(1-c)x\bigr)}{2m^4}.
+\]
+It vanishes identically for \(c=1\) and vanishes on the pole \(x=a_\perp+m^2\) for every \(c\), so only contact terms remain.  It is never
+proportional to \(N_m\).
+\emph{Proof.} Direct contraction and factorization; coefficient comparison in \(x\), \(a_\perp\), \(m^2\) admits only \(\lambda=0\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r40.2 (auxiliary time components add a pole).}
+Let \(H_{00}\) and \(H_{ij}\) be as in r39, with the kinetic term of \(H_{ij}\) written as \(\tfrac12E_{ij}E_{ij}\), and let \(H_{0i}\) carry no time derivative
+and a stiffness term \(-\tfrac12\mu H_{0i}H_{0i}\).  Eliminating all fields at \(c=1\), the exchange differs from the r39 value \(3N_m/d_m\) by
+\[
+ -\frac{2a_\perp x\,d_m}{\mu\,(x-x_\mu)},\qquad x_\mu=(m^2+r_mq)\Bigl(1-\frac{2a_\perp}{\mu}\Bigr),
+\]
+so a finite \(\mu\) adds a second pole at \(x_\mu\).  No finite \(\mu\) removes the difference; it vanishes only in the limit \(\mu\to\infty\), where \(H_{0i}=0\)
+is enforced.  At \(\mu=0\) the exchange is \(3N_m/d_m-x(m^2+r_mq)/d_m\).
+\emph{Proof.} Hermitian kinetic matrix in the basis \((H_{00},H_{01},H_{02},H_{11},H_{12},H_{22})\) at \(k_2=0\), inversion, factorization.  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r40.3 (time-reversal parity).}
+Under \(\omega\mapsto-\omega\) the vertices \(J_{00}\) and \(J_{ij}\) are even and \(J_{0i}\) is odd, for every \(c\).  A coupling \(H^{ab}J_{ab}\) invariant under time
+reversal therefore forbids \(H_{0i}J_{0i}\) exactly when \(H_{0i}\) is even, that is, when \(H\) does not transform under time reversal like a spacetime
+tensor (which would make \(H_{0i}\) odd).
+\emph{Proof.} \(J_{ab}(-\omega)-J_{ab}(\omega)\) is nonzero only in the \(0i\) entries, where \(J_{0i}(-\omega)=-J_{0i}(\omega)\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r40.4 (average over the relative time orientation).}
+Let the exchange connect a vertex with a vertex of the same time orientation with weight \(p\) and with a time-reversed vertex with weight \(1-p\),
+each component of \(H\) with positive norm (\(w=1\) in r39).  Then
+\[
+ p\,N_{\rm same}+(1-p)\,N_{\rm rev}=N(c,\,w=2p-1)
+\]
+identically, and this equals \(\lambda N_m\) exactly for \(p=\tfrac14(3c^2-2c+1)\), \(\lambda=\tfrac32(3c^2-2c+1)\).  For the conserved coupling \(c=1\) this is
+\(p=\tfrac12\), \(\lambda=3\), so \(g'^2=g_m^2/3\) as in r39.  The two pure cases give \(2(x-a_\perp)^2\) (\(p=0\), the Lorentz-covariant contraction) and
+\(2(x^2+a_\perp^2)\) (\(p=1\)).  The tachyon map at one vertex instead of time reversal gives a complex numerator and no cancellation.
+\emph{Proof.} \(N_{\rm same}=\sum J_{ab}(\omega)^2\), \(N_{\rm rev}=\sum J_{ab}(\omega)J_{ab}(-\omega)\) over ordered pairs; by r40.3 they differ only in the sign of the
+\(0i\) terms; coefficient comparison.  \(\square\)
+
+\paragraph{Remark v4.10.0-r40.5 (reading and correction of r39.3).}
+The reading in r39.3 that Fierz--Pauli-like auxiliary time components would have no pole of their own does not hold: Fierz--Pauli on the subspace
+gives zero (r40.1), and auxiliary components with finite stiffness add a pole (r40.2).  No dynamics of \(H_{0i}\) tested here produces the decoupling;
+it is reached only by enforcing \(H_{0i}=0\).  It does follow exactly from a symmetry condition: by r40.4 the weight is \(w=2p-1\), so \(w=0\) means that
+the exchange is even under the relative time reversal of its two ends.  This is the same time reversal (complex conjugation) that reverses the
+orientation of the octant in r31.1 (H118) and that no candidate of the Companion fixes.  An orientation that is not fixed is, however, not yet an
+equal weighting; the condition \(p=\tfrac12\) is named, not derived.  Against the criteria fixed beforehand the result carries \emph{partially}.
+Two ends with independent time orientations would fit a string between M and T (r37, deferred idea I1); whether such a bridge carries both
+orientations with equal weight is open.
+
+\subsection*{v4.10.0-r40 frames}
+\label{subsec:v4100-r40-frames}
+
+All quantities are given in the matter frame M, in the rest frame and with the axis of r36--r39.  The relative time reversal acts on one vertex by
+complex conjugation; the tachyon map is not used for it.  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r40 register entries}
+\label{subsec:v4100-r40-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r40\\
+\midrule
+Fierz--Pauli reading of r39.3 & refuted (r40.1, r40.2)\\
+decoupling of \(H_{0i}\) & equivalent to equal weights of both relative time orientations (r40.4); weights not derived\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r40 notes}
+\label{subsec:v4100-r40-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak mediator\_\allowbreak h0i\_\allowbreak decoupling\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit 0e57242a,
+script \texttt{h0i\_\allowbreak decoupling.wl}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r40 ledger and guard update}
+\label{subsec:v4100-r40-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r40}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; the equal weighting of both time orientations not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r40,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r40}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

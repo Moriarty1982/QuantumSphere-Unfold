@@ -1,0 +1,37 @@
+Tatsaechliche Ausgabe von h0i_decoupling.wl (Wolfram-MCP-Kern, 22.11.2026), zwei Laeufe.
+Lauf 1: alle Teile; K2 fehlerhaft, weil die Definition von Lkin am Zeilenende abbrach (Massen- und mu-Term fehlten,
+"Inverse::sing"). Korrigiert durch Klammern um Lkin; Lauf 2 nur K2 mit der korrigierten Definition. K1, K3, K4 aus Lauf 1.
+"Symbol::undefined2" betrifft freie Symbole und ist kein Fehler. Bruchdarstellung zeilenweise zusammengezogen.
+
+--- Lauf 1 ---
+(0) r39-Basis: N(c, w) = a^2 (1 - 2 c + 3 c^2) + 2 a (2 c - 3 c^2 + w0) x + (1 - 2 c + 3 c^2) x^2
+(K1) Fierz-Pauli-Zaehler J.Pi.J (D = 3, Pol bei x = a + m^2): -(1/2) (-1 + c) (a - x)^2 (a + m2 - x) (a - a c + m2 + 3 c m2 - x + c x) / m2^2
+     bei c = 1: 0;  am Pol x = a + m^2: 0
+     proportional zu N_m fuer ein c (m^2 als freier Parameter)? {{c -> 1, lam -> 0}}
+(K3) J_ab(-w) - J_ab(w) = {{0, -2 k1 w, -2 k2 w}, {-2 k1 w, 0, 0}, {-2 k2 w, 0, 0}};  J_ab(-w) + J_ab(w) fuer 0i: {0, 0}
+(K4) gleiche Orientierung N_same = a^2 (1 - 2 c + 3 c^2) + 2 a (1 + 2 c - 3 c^2) x + (1 - 2 c + 3 c^2) x^2;
+     umgekehrt N_rev = a^2 (1 - 2 c + 3 c^2) - 2 a (1 - 2 c + 3 c^2) x + (1 - 2 c + 3 c^2) x^2
+     Mittel p N_same + (1-p) N_rev = a^2 (1 - 2 c + 3 c^2) + a (-2 + 4 c - 6 c^2 + 4 p) x + (1 - 2 c + 3 c^2) x^2
+     gleich N(c, w = 2p - 1) aus r39? True
+     N = lam N_m: {{p -> (1 - 2 c + 3 c^2)/4, lam -> 3 (1 - 2 c + 3 c^2)/2}}
+     bei c = 1: {{p -> 1/2, lam -> 3}}
+     Lorentz-Fall p = 0 (umgekehrt), c = 1: 2 (a - x)^2;  feste Orientierung p = 1: 2 (a^2 + x^2)
+     Gegenprobe Tachyon-Abbildung an einem Vertex: N = a^2 (1 - 2 c + 3 c^2) + (2 I) a x + (-1 + 2 c - 3 c^2) x^2;  reell? False
+     Mittel Tachyon mit gleicher Orientierung, c = 1: 2 a^2 + I a x
+(K2, Lauf 1: ungueltig, siehe oben)
+
+--- Lauf 2 (K2 korrigiert) ---
+(K2) kinetische Matrix (k2 = 0), Reihenfolge (h00, h01, h02, h11, h12, h22):
+     {{m2 + q r - x, 0, 0, 0, 0, 0}, {0, -2 (2 a - mu), 0, -2 Sqrt[a] Sqrt[x], 0, 0}, {0, 0, -2 (a - mu), 0, -2 Sqrt[a] Sqrt[x], 0},
+      {0, -2 Sqrt[a] Sqrt[x], 0, -2 ((-m2 - q r)/2 + x/2), 0, 0}, {0, 0, -2 Sqrt[a] Sqrt[x], 0, -2 (-m2 - q r + x), 0},
+      {0, 0, 0, 0, 0, -2 ((-m2 - q r)/2 + x/2)}}
+(K2) Austausch mit E_ij, Steifigkeit mu, c = 1:
+     2 (2 a^3 m2 - a^2 m2 mu + 2 a^3 q r - a^2 mu q r - 2 a^2 m2 x - a m2^2 x + a^2 mu x + a m2 mu x - 2 a^2 q r x - 2 a m2 q r x
+        + a mu q r x - a q^2 r^2 x + 2 a m2 x^2 - a mu x^2 - m2 mu x^2 + 2 a q r x^2 - mu q r x^2 + mu x^3)
+     / ((m2 + q r - x) (2 a m2 - m2 mu + 2 a q r - mu q r + mu x))
+     Differenz zum Ziel 3 N_m/d_m (w = 0 aus r39): -2 a (m2 + q r - x)^2 x / ((m2 + q r - x) (2 a m2 - m2 mu + 2 a q r - mu q r + mu x))
+     Grenzwert mu -> Infinity, Differenz: 0
+     mu = 0: -(-2 a^2 + 2 a x + m2 x + q r x - 2 x^2)/(m2 + q r - x)
+     Nenner: (m2 + q r - x) (2 a m2 - m2 mu + 2 a q r - mu q r + mu x)
+     mu, fuer das die Differenz identisch verschwindet: {}
+     allgemeines c: Differenz zu N(c, 0)/d: -2 a x (-a + a c - m2 - q r + x - c x)^2 / ((m2 + q r - x) (2 a m2 - m2 mu + 2 a q r - mu q r + mu x))
