@@ -1,0 +1,96 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r43 Source-Only: Images of the Counterflow in the Family of Completed First Jets}
+\addcontentsline{toc}{section}{v4.10.0-r43 Source-Only: Counterflow Images in the Completed Jet Family}
+\label{sec:v4100-r43-jet-family}
+% ============================================================================
+
+\paragraph{Purpose.}
+In v4.10.0-r42 no image of the co-moving blocks fits the counterflow block in the first derivatives of the stored seed jet.  The completed
+conditions \(R=(F,G,dg)\) of the comparison model, however, have 32 components of which 31 are independent, against 96 real first derivatives at
+fixed \(\psi\); the stored jet is one member of a family.  This layer asks whether the family contains jets in which the counterflow block is a
+local image.  It is an exploration with a method fixed before the computation; it is partly not blind, since a count of equations suggested
+that each image alone is admissible.  Earlier layers are not rewritten; Remark r43.3 corrects a reading of r42.2.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r43 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r43 setting}
+\label{subsec:v4100-r43-setting}
+
+The completed first-jet root of the seed differs from the jet of r42 by \(1.7\times10^{-14}\) and satisfies \(|R|=2\times10^{-40}\); the measures of r42 are
+unchanged on it.  For an image \(X\in\{\mathrm T,\mathrm R,\mathrm I\}\) of r42 the 40 conditions \(m_X=\partial_\mu F_2-X(\partial_\mu F_0)=0\) are linear in the derivatives.
+A damped Newton method of minimal norm (halving, at most 12 steps) solves \(R=0\) and \(m_X=0\) jointly; an image is admissible if \(|R|\le10^{-20}\) and
+the relative image deviation is at most \(10^{-2}\).  The computation runs at 40 digits on the existing reconstruction of \(R\).
+
+\subsection*{v4.10.0-r43 results}
+\label{subsec:v4100-r43-results}
+
+\paragraph{Theoremlet v4.10.0-r43.1 (the jet family).}
+The Jacobian of \(R\) with respect to the 96 derivatives has rank 31 at the completed root, so the linearized family has dimension 65.  The stacked
+matrices \([R;m_X]\) have full rank 71 for \(X=\mathrm T,\mathrm R,\mathrm I\); \([R;m_{\mathrm T};m_{\mathrm R}]\) has rank 79 of 111.
+\emph{Proof.} Central differences at 40 digits and singular values (script \texttt{jet\_\allowbreak family\_\allowbreak images.py}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r43.2 (time-reversed and reflected images are both admissible).}
+For \(X=\mathrm T\) the method reaches \(|R|=1.7\times10^{-40}\) with image deviation \(7\times10^{-41}\) after 9 steps; for \(X=\mathrm R\) it reaches \(|R|=3.0\times10^{-40}\) with
+image deviation \(3\times10^{-41}\) after 8 steps.  In both jets the derivatives change by amounts up to about 3.  For \(X=\mathrm I\) the method stops after
+12 damped steps at \(|R|=0.15\), and for T and R together the line search makes no progress.
+\emph{Proof.} As r43.1; the Newton history is in the output of run 3.  \(\square\)
+
+\paragraph{Remark v4.10.0-r43.3 (reading and correction of r42.2).}
+Against the criteria fixed beforehand the result is \emph{underdetermined}: the family of completed first jets contains a jet in which the
+counterflow block is exactly the time-reversed image of block 0 and another in which it is exactly the reflected image.  The first jet therefore
+does not decide between time reversal and reflection, and the finding of r42 that no image fits describes the stored member of the family,
+not the seed.  The restriction of the equal weighting to the seed point stated in r42.2 holds only in this sense.  That the internal reversal
+and the simultaneous image were not reached is a finding of this procedure, not a proof of impossibility.  Higher orders or a regional
+solution would be needed to decide.
+
+\subsection*{v4.10.0-r43 frames}
+\label{subsec:v4100-r43-frames}
+
+The seed and its jets are in the matter frame M, in the coordinates of the comparison model.  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r43 register entries}
+\label{subsec:v4100-r43-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r43\\
+\midrule
+first jet of the seed & a 65-dimensional family under the completed conditions (r43.1)\\
+counterflow as local image & time-reversed and reflected image each admissible (r43.2); undecided\\
+reading of r42.2 & corrected: applies to the stored jet only\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r43 notes}
+\label{subsec:v4100-r43-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak counterflow\_\allowbreak jet\_\allowbreak family\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 22/} (method note commit 1a23dd7a,
+script \texttt{jet\_\allowbreak family\_\allowbreak images.py}, three runs in \texttt{run/}, run 3 authoritative).
+
+\subsection*{v4.10.0-r43 ledger and guard update}
+\label{subsec:v4100-r43-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r43}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; the question of time reversal against reflection not decided).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r43,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r43}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
