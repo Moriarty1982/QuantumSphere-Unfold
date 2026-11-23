@@ -31,7 +31,7 @@ von r54. Die veröffentlichte Zenodo-Fassung 0.1.0 (24 Seiten) bleibt unverände
 
 ## Wolfram-Rechenkontrolle
 
-Anhang A der PDF stellt die Eingabeskripte und Originalausgaben der vier ausgewerteten Wolfram-Läufe blockweise nebeneinander. [Prüfbericht mit Skripten und Originalausgaben](audit/wolfram-v0.1.0/README.md). Das Begleitarchiv `build/wolfram-begleitmaterial-0.1.0.zip` entsteht beim Bau der Veröffentlichung (nicht im Repository) und enthält zusätzlich den anhand des Manifests verifizierten Stand der geprüften Veröffentlichung. Anhang A deckt die Fassung 0.1.0 ab; die Herleitungen von Anhang B sind unter `audit/anhang-b/` geprüft, die späteren Befunde in den jeweiligen Companion-Runden.
+Anhang A der PDF stellt die Eingabeskripte und Originalausgaben der vier ausgewerteten Wolfram-Läufe blockweise nebeneinander. [Prüfbericht mit Skripten und Originalausgaben](audit/wolfram-v0.1.0/README.md). Das Begleitarchiv `build/wolfram-begleitmaterial-0.1.0.zip` entsteht beim Bau der Veröffentlichung (nicht im Repository) und enthält zusätzlich den anhand des Manifests verifizierten Stand der geprüften Veröffentlichung. Anhang A deckt die Fassung 0.1.0 ab; die Herleitungen von Anhang B sind unter `audit/anhang-b/` geprüft. Anhang C zeigt die Originalausgaben zu den neuen Zahlen in 5.4 und 5.6 (Runden r52–r54); Skripte und Ausgaben liegen unter `audit/anhang-c/`. Die übrigen späteren Befunde belegen die jeweiligen Companion-Runden.
 
 ## Abbildungen
 

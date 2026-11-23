@@ -106,6 +106,36 @@ oder wird nur einer zugelassen, sinkt der Wert auf \(\gamma_1=0{,}1616\), und di
 verlangt also eine Auslese, die die beiden Orientierungen einer Punktierung unterscheidet, ohne eine auszuwählen; warum sie das tut, ist nicht
 hergeleitet.
 
+\subsection{Welche Messungen die Zahl prüfen}
+\label{sec:data}
+
+Aus der Zahl \(\beta\) und ihren Gleichsetzungen folgen Werte, die Messungen prüfen können. Der Companion hält für jede eine Vorab-Notiz
+mit Prüfgröße, Prüfdatum und Entscheidungskriterium fest, bevor die entscheidenden Daten vorliegen \cite{predictions}. Die Tabelle
+nennt die Werte und ihren Stand am 23.~November 2026. Ein Wert gilt erst als geprüft, wenn eine Messung nach dem festgelegten Stichtag
+vorliegt; frühere Daten werden nur zum Vergleich angegeben.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.07\linewidth}p{.25\linewidth}p{.29\linewidth}p{.29\linewidth}@{}}
+\hline
+\textbf{Name} & \textbf{Vorhersage} & \textbf{entscheidende Messung} & \textbf{Vergleich heute}\\
+\hline
+H9 & \(\sin^2\theta_{12}=\beta^2/\cos^2\theta_{13}=0{,}3086\) & JUNO mit Fehler \(\le0{,}004\) & JUNO 2026: \(0{,}3036\pm0{,}0064\), Abstand \(+0{,}8\sigma\) \cite{juno2026}\\
+H96 & \(\Omega_M=\beta^2=0{,}30185\) & erstes \(\Omega_m\) aus DESI DR3 (nur BAO) oder Euclid; widerlegt bei mehr als \(2\sigma\) & DESI DR2: \(0{,}2975\pm0{,}0086\), Abstand \(+0{,}5\sigma\) \cite{desi-dr2}\\
+H102 & \(m_\tau=1777{,}134\)\,MeV aus der Restbiegung der Leptonphase & erste PDG-Ausgabe nach dem 13.~November 2026; widerlegt bei mehr als \(2\sigma\) & PDG 2026: \(1776{,}93\pm0{,}09\)\,MeV, Abstand \(+2{,}3\sigma\); zählt nicht, weil vor der Vorhersage \cite{pdg}\\
+H112 & \(\sin^2\theta_{12}\cos^2\theta_{13}=\Omega_m\), ohne den Wert von \(\beta\) & die Messungen von H9 und H96 zusammen; widerlegt bei mindestens \(3\sigma\) & JUNO gegen DESI DR2: \(-0{,}1\sigma\)\\
+H15 & \(m_W=80{,}3615\pm0{,}0018\)\,GeV & erste Weltmittelung nach dem 21.~Oktober 2026 & PDG 2026: \(80{,}3625\pm0{,}0077\)\,GeV; zählt nicht, weil vor der Vorhersage\\
+\hline
+\end{tabular}
+\end{center}
+
+Am 23.~November 2026 ist keiner dieser Tests entschieden. Drei Einschränkungen gehören zu jedem Treffer. Erstens hängen alle Werte bis
+auf H112 an der Zuordnung der Zählregeln, also an OP1; die Zufallsabschätzung in Abschnitt~\ref{sec:one-number} gilt deshalb auch hier.
+Zweitens sind H9 und H102 nach dem Sehen der älteren Daten gefunden worden; blind sind sie nur gegenüber künftigen Messungen. Drittens
+prüft H112 eine schwächere Aussage: dass an beiden Stellen dieselbe Zahl steht, gleich welche. Er widerlegt erst ab einem Unterschied
+von etwa \(0{,}022\) in \(\beta^2\). Weitere Vorhersagen zum Mischungswinkel \(\theta_{23}\) warten auf die nächste globale Auswertung
+der Neutrinodaten \cite{predictions}.
+
 \subsection{Welche Rechnung eine Annahme mitführt}
 
 Für eine Nachrechnung wählt man eine Gleichung und schreibt ihre Eingaben auf. Beim kompakten gewöhnlichen Außenbeitrag sind das der lineare erhaltene mechanische Tensor, der Wellenfaktor des Profils und die retardierten Daten. Die gerichtete Auslese benutzt dieselbe Präparation, dazu den gewählten OP5-Antriebsoperator und die Kopplungsannahme in \eqref{eq:op5-match}. Die Gleichsetzung der Quellen ist der Übergang, durch den beide Wege Antworten auf dieselbe Materieänderung werden \cite{op5-motion,op5}.
@@ -113,7 +143,7 @@ Für eine Nachrechnung wählt man eine Gleichung und schreibt ihre Eingaben auf.
 QAM hält zu einer Formel ihre Darstellung, ihre Voraussetzungen und die noch offenen Übergänge für ihre Anwendung fest. Die im Companion protokollierten symbolischen Kontrollen gehören jeweils zu den durchgeführten Rechnungen. Eine Änderung der physikalischen Kopplung würde die Anwendung auf das gemeinsame Modell berühren. Die Erhaltungsrechnung für den mechanischen Tensor hat ihre eigenen, im Fallbeispiel sichtbaren Voraussetzungen \cite{qam,op5-motion}.
 
 \paragraph{Wolfram-Rechenkontrolle.}
-Für Fassung 0.1.0 liefen in Wolfram Language 15.0.1 insgesamt 80 exakte Prüfgruppen zum HC, zur Feldalgebra, zu Koide und zum geometrischen Vergleich. Die separate Dixon-Rechnung reproduzierte die Kommutantendimensionen sechs und null für den komplex-linearen und den antilinearen Anteil. Anhang~\ref{app:wolfram-output} stellt die Wolfram-Eingaben und ihre Originalausgaben einander gegenüber. Das Wolfram-Begleitarchiv enthält die Eingabeskripte, die protokollierten Ausgaben, den Prüfbericht und den geprüften Stand. Die Rechnungen kontrollieren die angegebenen mathematischen Identitäten und Testfälle unter ihren jeweiligen Voraussetzungen. Sie betreffen nur den Stand der Fassung 0.1.0. Teile, die danach hinzugekommen oder erweitert worden sind, decken sie nicht ab, darunter die Abschnitte~\ref{sec:octant-sign} und \ref{sec:one-number}, die Erweiterungen in Abschnitt~\ref{sec:open-points} und Anhang~\ref{sec:anhang-b}. Für die Herleitungen in Anhang~\ref{sec:anhang-b} gibt es eine eigene, enger gefasste Prüfung (Abschnitt~\ref{sec:anhang-b-pruefung}); für die übrigen Aussagen gelten die Belege der jeweils genannten Companion-Runden \cite{companion,layers}.
+Für Fassung 0.1.0 liefen in Wolfram Language 15.0.1 insgesamt 80 exakte Prüfgruppen zum HC, zur Feldalgebra, zu Koide und zum geometrischen Vergleich. Die separate Dixon-Rechnung reproduzierte die Kommutantendimensionen sechs und null für den komplex-linearen und den antilinearen Anteil. Anhang~\ref{app:wolfram-output} stellt die Wolfram-Eingaben und ihre Originalausgaben einander gegenüber. Das Wolfram-Begleitarchiv enthält die Eingabeskripte, die protokollierten Ausgaben, den Prüfbericht und den geprüften Stand. Die Rechnungen kontrollieren die angegebenen mathematischen Identitäten und Testfälle unter ihren jeweiligen Voraussetzungen. Sie betreffen nur den Stand der Fassung 0.1.0. Teile, die danach hinzugekommen oder erweitert worden sind, decken sie nicht ab, darunter die Abschnitte~\ref{sec:octant-sign} und \ref{sec:one-number}, die Erweiterungen in Abschnitt~\ref{sec:open-points} und Anhang~\ref{sec:anhang-b}. Für die Herleitungen in Anhang~\ref{sec:anhang-b} gibt es eine eigene, enger gefasste Prüfung (Abschnitt~\ref{sec:anhang-b-pruefung}). Die neuen Zahlen in Abschnitt~\ref{sec:one-number} und das Ergebnis zur Auslese in Abschnitt~\ref{sec:open-points} belegt Anhang~\ref{app:new-calcs} mit den Originalausgaben; für die übrigen Aussagen gelten die Belege der jeweils genannten Companion-Runden \cite{companion,layers}.
 
 Für die Vereinheitlichungsfrage ergibt sich so eine Folge von konkreten Aufgaben. Zuerst müssen die Zustände und ihre Ladungsdarstellung gewählt werden. Dann braucht die Massenauslese eine native Operatoridentifikation, einen Auswahlmechanismus und eine Skala. Schließlich muss sich dieselbe Materiekonstruktion in einer erhaltenen Quelle niederschlagen, deren Wirkung sich geometrisch beschreiben und prüfen lässt. Die Rechnungen geben an, an welchen Übergängen diese Schritte voneinander abhängen.
 

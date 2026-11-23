@@ -1,0 +1,56 @@
+\clearpage
+\section{Rechnungen zu den neuen Abschnitten}
+\label{app:new-calcs}
+
+Anhang~\ref{app:wolfram-output} belegt die Rechnungen der Fassung 0.1.0, Anhang~\ref{sec:anhang-b} die Herleitungen der
+OP5-Fallstudie. Dieser Anhang belegt die Zahlen, die danach in Abschnitt~\ref{sec:one-number} und in Abschnitt~\ref{sec:open-points}
+hinzugekommen sind. Die Rechnungen stammen aus den Companion-Runden v4.10.0-r52 bis v4.10.0-r54 \cite{layers}. Skripte und vollständige
+Originalausgaben liegen unter \texttt{paper/\allowbreak preprint-de/\allowbreak audit/\allowbreak anhang-c/}; die Fenster unten zeigen
+die maßgeblichen Zeilen der Ausgaben unverändert. Zwei Rechnungen liefen in Wolfram Language über den Wolfram-Kern der jeweiligen
+Sitzung, eine in Python mit sympy und numpy.
+
+\newcommand{\neuausgabe}[3]{%
+  \VerbatimInput[firstline=#2,lastline=#3,fontsize=\footnotesize,baselinestretch=.88,%
+    breaklines,breakanywhere,frame=single]{audit/anhang-c/#1}}
+
+\subsection{Zählregeln als Ähnlichkeitsgleichungen (Runde v4.10.0-r53)}
+\label{app:new-counting}
+
+Skript \texttt{op1\_\allowbreak 148\_\allowbreak moran\_\allowbreak overlap.wl}, Wolfram Language, 23.~November 2026. Die
+Zählgleichung
+\[
+ \sum_j g(j)\,e^{-2\pi\gamma\sqrt{j(j+1)}}=1
+\]
+wird mit 30 Stellen gelöst, die Spinsumme bei \(j\le200\) abgeschnitten (Rest etwa \(10^{-130}\)). Die erste Gruppe gibt die Werte der Zählregeln und den Wert \(\gamma_1\) bei zusammenfallenden Extremzuständen,
+die zweite Zeile prüft, dass mit den Gibbs-Gewichten Entropie durch Lyapunov-Exponent gleich \(\gamma\) ist.
+\neuausgabe{op1_148_moran_overlap_stdout.txt}{5}{8}
+\neuausgabe{op1_148_moran_overlap_stdout.txt}{12}{12}
+Die zweite Gruppe zählt in einem abgeschnittenen System (Spins \(j\le1\)) die verschiedenen verketteten Abbildungen und gibt die
+Entropierate durch den Lyapunov-Exponenten für Verkettungen der Länge \(n=1,\dots,4\): für verschiedene Kopien, für gespiegelte mit
+eigenem Zentrum, für identische und für gespiegelte mit gemeinsamem Zentrum.
+\neuausgabe{op1_148_moran_overlap_stdout.txt}{23}{26}
+Ein früher Lauf dieser Gruppe hatte einen Konstruktionsfehler (gemeinsame Fixpunkte) und ist in der Ausgabedatei als verworfen vermerkt.
+
+\subsection{Die Frame-Abbildung \texorpdfstring{\(J_{\mathrm B}\)}{JB} am Flächenoperator (Runde v4.10.0-r52)}
+\label{app:new-jb}
+
+Skript \texttt{k241\_\allowbreak h121\_\allowbreak jb\_\allowbreak area.py}, Python 3.12 mit sympy und numpy, 23.~November 2026;
+Vorab-Notiz zu H121 vor der Rechnung festgeschrieben. Die Zeilen zeigen die Konjugation der Lorentz-Generatoren, die induzierte
+Matrix \(\Gamma'\) bei \(\gamma_M\) und die größte Abweichung der Spektren unter Konjugation.
+\neuausgabe{k241_out.txt}{5}{14}
+\neuausgabe{k241_out.txt}{29}{29}
+
+\subsection{Die Auslese als Extremum (Runde v4.10.0-r54, H122)}
+\label{app:new-readout}
+
+Skript \texttt{h122\_\allowbreak readout\_\allowbreak extremum.wl}, Wolfram Language, 23.~November 2026; Vorab-Notiz zu H122 vor der
+Rechnung festgeschrieben. Die erste Gruppe gilt für das Feld mit parallelem elektrischem und magnetischem Teil: die Auslese eines
+geboosteten Beobachters relativ zum Ruhesystem. Die zweite gilt für die Gezeitenauslese des Vergleichsmodells: eine einzelne Mode, das
+Azimutmittel und das isotrope Mittel unter Boosts des Detektors entlang und quer zur Achse.
+\neuausgabe{h122_readout_extremum.txt}{6}{8}
+\neuausgabe{h122_readout_extremum.txt}{16}{16}
+\neuausgabe{h122_readout_extremum.txt}{27}{27}
+\neuausgabe{h122_readout_extremum.txt}{20}{22}
+Zwei Läufe dieser Rechnung brachen mit einem Serverfehler des Wolfram-Konnektors ab und wurden ohne die Minimierungsteile wiederholt; die
+Ausgabedatei vermerkt das. Die Zeichen in den Fenstern sind die der Skripte: \texttt{et} ist die Rapidität, \texttt{th} und \texttt{t}
+sind Winkel zur Achse, \texttt{b} ist die Geschwindigkeit des Detektors.

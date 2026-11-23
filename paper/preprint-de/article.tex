@@ -71,6 +71,15 @@ Und, was passiert mit unserer Physik, wenn wir einfach mal annehmen, dass es so 
 \input{sections/06-geometry}
 \input{sections/08-tests}
 
+\section*{Zur Arbeitsweise}
+Der Text, viele Rechnungen und die Skripte dazu sind im Dialog mit Sprachmodellen entstanden, vor allem mit Claude (Anthropic) und mit
+Codex und ChatGPT (OpenAI). Die Modelle schlugen Rechenwege vor, schrieben Skripte und Textentwürfe und suchten Literatur. Exakte
+Identitäten und Zahlenwerte sind mit Wolfram Language nachgerechnet, eine Rechnung mit Python und sympy (Anhänge~A bis C); ausgewählte Aussagen der QAM-Ebene des Companion
+sind zusätzlich in Lean formalisiert. Jeder Test mit Entscheidungskriterium wird vor der Rechnung als Vorab-Notiz festgeschrieben und
+versioniert; Erkundungen, deren Ergebnis vorher absehbar war, sind als nicht blind gekennzeichnet. Skripte, Ausgaben und die
+Versionsgeschichte liegen öffentlich im Repository \cite{repo}. Die Wahl der Ansätze, die gesetzten Annahmen und jede Veröffentlichung
+entscheidet der Autor; er trägt die Verantwortung für den Text.
+
 \clearpage
 \begingroup
 \small
@@ -161,11 +170,20 @@ F.~Takahashi u.~a. (Particle Data Group), \emph{Review of Particle Physics}, Int
 G.~M.~Dixon, \emph{Division Algebras: Octonions, Quaternions, Complex Numbers and the Algebraic Design of Physics}, Kluwer, Dordrecht 1994.
 \bibitem{furey}
 C.~Furey, \emph{Charge quantization from a number operator}, Phys. Lett. B 742, 195--199 (2015).
+\bibitem{predictions}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/predictions}{Vorab-Notizen und Ergebnisse der Vorhersagen}, Companion-Begleitordner, Stand 23. November 2026.
+\bibitem{juno2026}
+JUNO Collaboration, \emph{Measurement of Neutrino Oscillation Parameters at JUNO and Indication of the Neutrino Mass Ordering},
+arXiv:2609.37895 (2026).
+\bibitem{desi-dr2}
+DESI Collaboration, \emph{DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints},
+arXiv:2503.14738 (2025).
 \end{thebibliography}
 \endgroup
 \clearpage
 \appendix
 \input{sections/a-wolfram-output}
 \input{sections/b-herleitungen-op5}
+\input{sections/c-neue-rechnungen}
 
 \end{document}

@@ -23,7 +23,9 @@ Vergleichswirkung nicht enthält, und ist im Vakuum nur mit verschwindend kleine
 
 Neu gegenüber 0.1.0: Abschnitt zum Vorzeichen des Oktantschritts; Abschnitt „Was an einer einzigen Zahl hängt“ (Zählregeln eines
 Horizonts, Zufallsabschätzung, Rovelli–Speziale, Holst-Term, Frame-Abbildung J_B, Zählregel als Dimensionsformel); eine Übersicht der
-offenen Probleme und ihrer Zusammenhänge; Anhang B mit den Herleitungen zur OP5-Fallstudie und dem Stand der Vermittlersuche. Alle
+offenen Probleme und ihrer Zusammenhänge; ein Abschnitt zu den Messungen, die die Zahl prüfen (H9, H96, H102, H112, H15, mit
+Datenstand 23.11.2026); ein Hinweis zur Arbeitsweise; Anhang B mit den Herleitungen zur OP5-Fallstudie und dem Stand der
+Vermittlersuche; Anhang C mit den Rechnungen zu den neuen Abschnitten. Alle
 offenen Probleme bleiben offen; der Artikel legt offen, welche Annahmen jede Rechnung mitführt.
 
 ## Kurzfassung (englisch)
