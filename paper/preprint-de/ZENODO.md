@@ -1,6 +1,6 @@
 # Zenodo-Angaben für die nächste Fassung (Entwurf)
 
-**Status:** vorbereitet am 23.11.2026, nicht veröffentlicht. Eine neue Zenodo-Version entsteht nur mit ausdrücklicher Freigabe des Autors
+**Status:** vorbereitet am 23.11.2026; Entwurf 24481107 mit Version-DOI 10.5281/zenodo.24481107 reserviert, nicht veröffentlicht. Eine neue Zenodo-Version entsteht nur mit ausdrücklicher Freigabe des Autors
 (`AGENTS.md`). Concept-DOI 10.5281/zenodo.24405552; vorige Fassung 0.1.0 (20.11.2026, 24 Seiten), DOI 10.5281/zenodo.24405553.
 
 **Umsetzung:** Die Metadaten stehen maschinenlesbar in `release/zenodo/metadata_preprint_de_0_2_0.json`, Paket und Schrittfolge
@@ -43,6 +43,6 @@ small coupling. All open problems remain open; the article states which assumpti
 
 ## Vor dem Release prüfen
 - Kopfzeile in `article.tex` von „Entwurf zu Fassung 0.2.0“ auf „Fassung 0.2.0“ setzen, Datum anpassen.
-- Links der Literatur auf den Release-Commit pinnen (heute: 852dc9b5) und den Commit hier eintragen.
+- Links der Literatur auf den Release-Commit pinnen (erledigt: d2020d17, Merge von PR #268 auf `main`; der frühere Pin 852dc9b5 war ein Zwischencommit des PR-Zweigs).
 - PDF bauen, Seitenzahl in README und hier nachtragen; Begleitarchiv der Wolfram-Prüfungen neu bauen, falls gewünscht.
 - Vorschau-PDF auf Zenodo prüfen (Haupt-PDF als Vorschau, keine Abbildung).

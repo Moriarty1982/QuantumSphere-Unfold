@@ -1,6 +1,7 @@
 # Deutscher Preprint, Fassung 0.2.0: Release-Paket
 
-**Status (23.11.2026):** vorbereitet, nicht reserviert, nicht hochgeladen, nicht veröffentlicht. Jeder Zenodo-Schritt nur mit
+**Status (23.11.2026):** reserviert (Workflow-Lauf 45257076362: Entwurf `deposition_id` 24481107, Version-DOI
+10.5281/zenodo.24481107), PDF mit DOI auf der Titelseite gebaut; nicht hochgeladen, nicht veröffentlicht. Jeder Zenodo-Schritt nur mit
 ausdrücklicher Freigabe des Autors (`AGENTS.md`).
 
 - Quelle: `paper/preprint-de/` (Fassung 0.2.0, 55 Seiten, Build ohne Overfull und ohne undefinierte Verweise).
@@ -22,7 +23,7 @@ ausdrücklicher Freigabe des Autors (`AGENTS.md`).
    ```
    Vorher derselbe Aufruf mit `-f dry_run=true`. Aus dem Protokoll `deposition_id` und `reserved_doi` festhalten.
 2. **Titelseite und PDF:** in `paper/preprint-de/article.tex` `\newcommand{\versiondoi}{10.5281/zenodo.<id>}` setzen, die Literaturlinks
-   auf den Release-Commit pinnen (heute 852dc9b5), dreimal bauen, PDF als `Quantum_Sphaera_Preprint_0.2.0.pdf` hierher kopieren,
+   auf den Release-Commit pinnen (erledigt: d2020d17), dreimal bauen, PDF als `Quantum_Sphaera_Preprint_0.2.0.pdf` hierher kopieren,
    `sha256sum Quantum_Sphaera_Preprint_0.2.0.pdf > SHA256SUMS.txt`, in den Metadaten die Version-DOI in `notes` eintragen.
 3. **Upload** (Freigabe nötig; Entwurf erbt die Datei von 0.1.0, deshalb `replace_files=true`):
    ```

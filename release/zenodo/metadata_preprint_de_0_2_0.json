@@ -44,6 +44,6 @@
       "scheme": "url"
     }
   ],
-  "notes": "Deutschsprachiger Preprint, Fassung 0.2.0. Die Version-DOI wird bei der Reservierung vergeben und vor dem Upload in die Titelseite eingetragen. Reservierung und Upload sind keine Veröffentlichung.",
+  "notes": "Deutschsprachiger Preprint, Fassung 0.2.0. Version-DOI 10.5281/zenodo.24481107 (reserviert am 23.11.2026, auf der Titelseite eingetragen). Quellstand der Literaturlinks: Commit d2020d17 auf main.",
   "publication_date": "2026-11-23"
 }

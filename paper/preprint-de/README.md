@@ -1,6 +1,6 @@
 # Quantum Sphaera – Artikel zur Vereinheitlichung
 
-**Fassung 0.2.0** (zur Veröffentlichung vorbereitet, noch nicht auf Zenodo) · [Veröffentlichte Fassung 0.1.0 auf Zenodo](https://doi.org/10.5281/zenodo.24405553) · [Zenodo-Angaben](ZENODO.md) · [Release-Paket und Schritte](../../release/preprint-de-v0.2.0/README.md)
+**Fassung 0.2.0** (Version-DOI 10.5281/zenodo.24481107 reserviert, noch nicht veröffentlicht) · [Veröffentlichte Fassung 0.1.0 auf Zenodo](https://doi.org/10.5281/zenodo.24405553) · [Zenodo-Angaben](ZENODO.md) · [Release-Paket und Schritte](../../release/preprint-de-v0.2.0/README.md)
 
 Eigenständiger deutscher LaTeX-Entwurf über den gemeinsamen mathematischen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie. Die Fassung ist als einspaltiger Fachartikel in fünf Abschnitte gegliedert. Abschnitt 4.4 verfolgt im linearen OP5-Vergleich eine präparierte Materiequelle bis zum geometrischen Achsenkontrast. Die Quellenidentifikation, die vollständige gewöhnliche Bilanz zweiter Ordnung und die Apparaturantwort sind offene physikalische Schritte.
 
@@ -24,7 +24,7 @@ von r54. Die veröffentlichte Zenodo-Fassung 0.1.0 (24 Seiten) bleibt unverände
 
 ## Querverweise
 
-- [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Grundlage der Fassung 0.1.0 war der [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026; die Links des heutigen Entwurfs sind auf Commit [`852dc9b5`](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4) (Runden bis v4.10.0-r55) gepinnt.
+- [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Grundlage der Fassung 0.1.0 war der [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026; die Links des heutigen Entwurfs sind auf Commit [`d2020d17`](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/d2020d178a483d1baa7be3871ca2e9d597992059) (Merge von PR #268, Runden bis v4.10.0-r55) gepinnt.
 - [Quantum Sphaera Companion v5.3.0](https://doi.org/10.5281/zenodo.24434403). Der Datensatz enthält Vollausgabe und 31-seitige Physik-Ausgabe (Runden bis v4.10.0-r30). Beide sind im Manuskript gesondert zitiert; die späteren Runden zitiert der Entwurf als Forschungsschichten nach v5.3.0.
 - [Quellennachweis pro Abschnitt](SOURCES.md).
 - [Entwurf des eigenständigen QAM-Artikels](../qam/README.md).
