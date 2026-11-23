@@ -1,0 +1,36 @@
+Tatsaechliche Ausgabe von second_jet_images.py (Python 3.12, mpmath 1.3.0, 40 Stellen, 23.11.2026), ein Lauf, Aufruf mit
+analysis/op5-field-slices/state-sufficiency-2026-10-30, der Repo-Wurzel und dem run-Ordner. Keine Warnungen.
+
+Kontrolle: |R(v_root)| = 1.952e-40
+   T Schritt 1: Daempfung 0.5, |R| = 1.003
+   T Schritt 2: Daempfung 1.0, |R| = 0.8384
+   T Schritt 3: Daempfung 1.0, |R| = 0.6088
+   T Schritt 4: Daempfung 1.0, |R| = 0.1201
+   T Schritt 5: Daempfung 1.0, |R| = 0.008291
+   T Schritt 6: Daempfung 1.0, |R| = 6.476e-6
+   T Schritt 7: Daempfung 1.0, |R| = 5.843e-12
+   T Schritt 8: Daempfung 1.0, |R| = 1.626e-23
+   T Schritt 9: Daempfung 1.0, |R| = 2.411e-40
+   R Schritt 1: Daempfung 1.0, |R| = 3.577
+   R Schritt 2: Daempfung 1.0, |R| = 1.524
+   R Schritt 3: Daempfung 1.0, |R| = 0.3007
+   R Schritt 4: Daempfung 1.0, |R| = 0.02056
+   R Schritt 5: Daempfung 1.0, |R| = 0.0001799
+   R Schritt 6: Daempfung 1.0, |R| = 2.429e-9
+   R Schritt 7: Daempfung 1.0, |R| = 1.443e-18
+   R Schritt 8: Daempfung 1.0, |R| = 1.375e-36
+   Zufall 1 Schritt 1: Daempfung 1.0, |R| = 0.08427
+   Zufall 1 Schritt 2: Daempfung 1.0, |R| = 0.0004223
+   Zufall 1 Schritt 3: Daempfung 1.0, |R| = 5.006e-8
+   Zufall 1 Schritt 4: Daempfung 1.0, |R| = 1.074e-15
+   Zufall 1 Schritt 5: Daempfung 1.0, |R| = 2.601e-31
+   Zufall 2 Schritt 1: Daempfung 1.0, |R| = 0.03005
+   Zufall 2 Schritt 2: Daempfung 1.0, |R| = 0.0002152
+   Zufall 2 Schritt 3: Daempfung 1.0, |R| = 7.589e-9
+   Zufall 2 Schritt 4: Daempfung 1.0, |R| = 1.658e-17
+   Zufall 2 Schritt 5: Daempfung 1.0, |R| = 3.108e-35
+gespeichert: |R| = 1.952e-40, Bilder T 1.28, R 1.87, Abstand zum gespeicherten Jet 0.0 | zweiter Jet: Rang 113 von 128, voller Rest 1.54924e-21 (|b| = 28.35)
+T-Jet: |R| = 2.411e-40, Bilder T 6.9e-41, R 2.0, Abstand zum gespeicherten Jet 3.163 | zweiter Jet: Rang 113 von 128, voller Rest 6.57611e-23 (|b| = 34.95)
+R-Jet: |R| = 1.375e-36, Bilder T 1.49, R 4.28e-41, Abstand zum gespeicherten Jet 2.667 | zweiter Jet: Rang 113 von 128, voller Rest 5.31256e-22 (|b| = 37.59)
+Zufall 1: |R| = 2.601e-31, Bilder T 1.48, R 2.13, Abstand zum gespeicherten Jet 0.9729 | zweiter Jet: Rang 113 von 128, voller Rest 2.43275e-23 (|b| = 30.47)
+Zufall 2: |R| = 3.108e-35, Bilder T 1.02, R 1.99, Abstand zum gespeicherten Jet 0.9891 | zweiter Jet: Rang 113 von 128, voller Rest 3.7051e-21 (|b| = 26.88)
