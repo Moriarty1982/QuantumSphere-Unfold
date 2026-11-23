@@ -1,0 +1,19 @@
+Tatsaechliche Ausgabe von jb_medium.py (Python 3.12, sympy, numpy; 23.11.2026), ein Lauf, keine Warnungen.
+
+(E1) J_B = [[0, -I, 0, 0], [-I, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+     J_B eta J_B^T = eta? True
+     Eigenwerte und Eigenvektoren: [(1, 2, [[0, 0, 1, 0], [0, 0, 0, 1]]), (-I, 1, [[1, 1, 0, 0]]), (I, 1, [[-1, 1, 0, 0]])]
+     Bild des reellen zeitartigen Vektors (1,0,0,0): [0, -I, 0, 0] ; Norm 1
+(E2) J_B-invariant: [[-s11, 0, 0, 0], [0, s11, 0, 0], [0, 0, s22, s23], [0, 0, s23, s33]]
+     Vorzeichenwechsel unter J_B: [[s11, s01, 0, 0], [s01, s11, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+     invariant: Geschwindigkeit^2 entlang e = -S^xx/S^tt = 1
+(E3) (i) Medium aus Gegenstroemen entlang e, kappa a = kappa b = 0.3:
+     G_M = [[1.60000000000000, 0, 0, 0], [0, -0.400000000000000, 0, 0], [0, 0, -1, 0], [0, 0, 0, -1]]
+     J_B-Bild G_T = [[0.400000000000000, 0, 0, 0], [0, -1.60000000000000, 0, 0], [0, 0, -1, 0], [0, 0, 0, -1]]
+     M: reell True; r zwischen 0.2500 und 0.6250; groesstes Geschwindigkeitsquadrat 0.803442
+     T = J_B-Bild: reell True; r zwischen 2.5000 und 4.0000; groesstes Geschwindigkeitsquadrat 4.658863
+     (ii) J_B-invariantes Medium, quer zu e verlangsamt (kappa_t = 0.5): invariant? True
+     M = T: reell True; r zwischen 0.5000 und 1.0000; groesstes Geschwindigkeitsquadrat 1.199462
+(E4) Kontrolle, Tachyonbild der Wirkung (Rapiditaet i pi, H79): Lpi = [[-1, 0, 0, 0], [0, -1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+     Bild des Gegenstrom-Mediums gleich G_M? True
+     Bild unter i pi: reell True; r zwischen 0.2500 und 0.6250; groesstes Geschwindigkeitsquadrat 0.803442

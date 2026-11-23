@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r50.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r51.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -183,6 +183,8 @@ Layer v4.10.0-r48 compares this readout with the observer reading of OP1. Both t
 Layer v4.10.0-r49 tests it. The field is unchanged by boosts along its axis, so it can slow propagation only across the axis; along the axis the cone limit fails. Found afterwards: with the luminal Higgs radius of W2 the directed coupling is causally incompatible with every choice of mediator. Three propagations would have to be slowed, which needs a medium with its own rest frame.
 
 Layer v4.10.0-r50 (H120) tests a medium built from light-like streams of the photon frame. One stream leaves its direction luminal; two counter-streams form a medium only near the frame in which they balance and degenerate into one stream towards the photon frame. For any medium the required slowing is at least √(7g_m²/6); since laboratory bounds exclude Lorentz violation above about 10⁻¹³, the directed coupling is practically excluded in vacuum, and an observable contrast would need a material.
+
+Layer v4.10.0-r51 tests the bending by the frame map J_B between M and T. J_B fixes the light-like directions along the M–T axis but gives a medium built from them the opposite sign: what narrows the light cone in M widens it beyond the speed of light in T. No medium is causal in both frames at once; this reading does not carry.
 
 ## Never claimed
 
