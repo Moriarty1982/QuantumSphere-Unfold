@@ -1,0 +1,100 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r52 Source-Only: The Frame Map JB on the Area Operator (H121, OP1)}
+\addcontentsline{toc}{section}{v4.10.0-r52 Source-Only: The Frame Map JB on the Area Operator (H121)}
+\label{sec:v4100-r52-jb-area}
+% ============================================================================
+
+\paragraph{Purpose.}
+OP1 rests on assigning different horizon counting rules to the frames M and T, which is equivalent to a frame-dependent area quantum,
+\(\gamma_M/\gamma_T=\gamma_L=\cosh2\eta_{\rm sym}\).  A unitary boost leaves the area spectrum unchanged (Rovelli--Speziale), and the Holst duality rotation does not
+map \(\gamma_M\) onto \(\gamma_T\) (r31.3, r31.4).  The remaining candidate named in the record is the non-unitary frame map \(J_B\), never tested on the
+area operator.  At the author's request this layer records hypothesis H121, fixed before the computation; H121a and H121b are not blind, H121c
+is blind in its value.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r52 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r52 setting}
+\label{subsec:v4100-r52-setting}
+
+Rotations \(L_i\) and boosts \(K_i\) obey \([L_i,L_j]=\epsilon_{ijk}L_k\), \([L_i,K_j]=\epsilon_{ijk}K_k\), \([K_i,K_j]=-\epsilon_{ijk}L_k\).  The linear simplicity condition is \(K=\gamma L\) and the area
+operator \(\gamma\sqrt{L^2}\) in units of \(8\pi\ell_P^2\).  \(J_B\) acts by conjugation with \(\exp(i\pi/2\,K_x)\), the M--T axis being \(x\).  Data: \(\gamma_M=0.237533\), \(\gamma_T=\ln2/(\pi\sqrt3)=0.127384\),
+\(\gamma_L=1.8647\).
+
+\subsection*{v4.10.0-r52 results}
+\label{subsec:v4100-r52-results}
+
+\paragraph{Theoremlet v4.10.0-r52.1 (H121a confirmed: \(J_B\) is an automorphism).}
+\(J_B\) fixes \(L_x\) and \(K_x\) and maps \(L_y\mapsto iK_z\), \(L_z\mapsto-iK_y\), \(K_y\mapsto-iL_z\), \(K_z\mapsto iL_y\); the images obey the same commutation relations.
+\emph{Proof.} Exact conjugation in the vector representation (script \texttt{k241}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r52.2 (H121b confirmed: conjugation keeps the spectrum).}
+For every operator \(O\) and every invertible \(U\), unitary or not, \(UOU^{-1}\) has the eigenvalues of \(O\), since \(Ov=\lambda v\) implies \((UOU^{-1})(Uv)=\lambda(Uv)\).  Checked for \(J^2\) and
+\(J_z\) in the representations \((\tfrac12,0)\), \((\tfrac12,\tfrac12)\), \((1,0)\) to \(8.9\times10^{-16}\).
+\emph{Proof.} As stated; numerical check in script \texttt{k241}.  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r52.3 (H121c refuted: the induced Barbero--Immirzi parameter).}
+If \(K=\gamma L\) holds before \(J_B\), then afterwards \(K'=\Gamma'L'\) with \(\Gamma'=\operatorname{diag}(\gamma,-1/\gamma,-1/\gamma)\): across the axis \(\gamma\) becomes \(-1/\gamma\), along it \(\gamma\) stays.  At \(\gamma_M\) this
+gives \(-4.2099\) and \(0.2375\), which match neither \(\gamma_T\) (relative deviations \(32.05\) and \(0.865\)) nor, through \(\gamma_M/|\gamma'|\), the number \(\gamma_L\) (\(0.970\) and \(0.464\)).
+\emph{Proof.} Linear substitution in the conjugated generators (script \texttt{k241}).  \(\square\)
+
+\paragraph{Remark v4.10.0-r52.4 (reading).}
+Non-unitarity alone does not change an area spectrum; only a reading of the area in T through the transformed simplicity condition could, and then
+\(J_B\) gives the known duality \(\gamma\leftrightarrow-1/\gamma\) across the axis and leaves \(\gamma\) along it, a direction-dependent change rather than one factor.  With the unitary boost
+(Rovelli--Speziale), the Holst duality rotation (r31.3, r31.4) and now \(J_B\), the last structural candidate for a frame-dependent area quantum named in
+the record does not carry.  OP1 therefore rests on the assignment of the counting rules themselves, U2 for M and the rule \(j=\tfrac12\) for T.  In the
+finite representations checked here the complex boost is even unitary; in the unitary infinite-dimensional representations of the Lorentz group it
+is not, and questions of domain remain open there.
+
+\subsection*{v4.10.0-r52 frames}
+\label{subsec:v4100-r52-frames}
+
+M and T in the sense of convention F; \(J_B\) is the complex boost with rapidity \(i\pi/2\) along the M--T axis.  The tachyon image of an action and time reversal
+are not used.
+
+\subsection*{v4.10.0-r52 register entries}
+\label{subsec:v4100-r52-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r52\\
+\midrule
+H121a, H121b & confirmed (not blind)\\
+H121c (\(J_B\) maps \(\gamma_M\) to \(\gamma_T\)) & refuted: \(\Gamma'=\operatorname{diag}(\gamma,-1/\gamma,-1/\gamma)\)\\
+frame-dependent area quantum & no structural candidate of the record carries\\
+OP1 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r52 notes}
+\label{subsec:v4100-r52-notes}
+
+\texttt{llm/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H121\_\allowbreak JB\_\allowbreak Flaechenoperator.md} (commit c35174df),
+\texttt{llm/\allowbreak Ergebnis\_\allowbreak H121\_\allowbreak JB\_\allowbreak Flaechenoperator.md}, script \texttt{llm/\allowbreak k241\_\allowbreak h121\_\allowbreak jb\_\allowbreak area.py},
+output \texttt{llm/\allowbreak k241\_\allowbreak out.txt}.
+
+\subsection*{v4.10.0-r52 ledger and guard update}
+\label{subsec:v4100-r52-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r52}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; the counting rules of M and T not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r52,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r52}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
