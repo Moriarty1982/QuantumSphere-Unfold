@@ -1,0 +1,31 @@
+Tatsaechliche Ausgabe von llm/k240_h120_null_medium.py (Python 3.12, numpy, sympy; 23.11.2026), ein Lauf, keine Warnungen.
+Vorab-Notiz llm/Vorab_Notiz_H120_Nullmedium.md, Commit d3810e58.
+
+Kontrolle: Vergleichsmodell r = 1/2 ueberall: max = 0.674964
+H120a (ein Strahl l = (1,0,0,1)):
+   kappa w = 0.1: r in Richtung l = 1.000000000000; groesstes Geschwindigkeitsquadrat dort (ueber alpha) = 1.199462
+   kappa w = 1.0: r in Richtung l = 1.000000000000; groesstes Geschwindigkeitsquadrat dort (ueber alpha) = 1.199462
+   kappa w = 10.0: r in Richtung l = 1.000000000000; groesstes Geschwindigkeitsquadrat dort (ueber alpha) = 1.199462
+   kappa w = 100.0: r in Richtung l = 1.000000000000; groesstes Geschwindigkeitsquadrat dort (ueber alpha) = 1.199462
+H120b (zwei Gegenstroeme, konservativ: alle theta x alpha):
+   Parametersaetze mit Kegelgrenze in allen Richtungen: 35 von 49
+      kappa a = 0.1, kappa b = 0.2: max = 0.975221, r zwischen 0.6638 und 0.7894
+      kappa a = 0.1, kappa b = 0.3: max = 0.953873, r zwischen 0.6608 und 0.7692
+      kappa a = 0.1, kappa b = 0.5: max = 0.933695, r zwischen 0.6250 und 0.7500
+      kappa a = 0.1, kappa b = 1.0: max = 0.916234, r zwischen 0.4762 und 0.7333
+      kappa a = 0.1, kappa b = 2.0: max = 0.906498, r zwischen 0.3226 und 0.7240
+      kappa a = 0.2, kappa b = 0.1: max = 0.975221, r zwischen 0.6638 und 0.7894
+   geometrisch bei kappa a = kappa b = 0.3: n || z: 0.803442; n = x: 0.803442
+   Zusatz "nur in P": groesste Verlangsamung max_theta(1 - r) fuer kappa a = kappa b = 0.3 bei Rapiditaet eta:
+      eta = 0.0: max(1 - r) = 0.750000, min(1 - r) = 3.750e-01, Kegelgrenze max = 0.803442
+      eta = 0.6: max(1 - r) = 0.520704, min(1 - r) = 2.491e-01, Kegelgrenze max = 0.934706
+      eta = 1.0: max(1 - r) = 0.692999, min(1 - r) = 1.376e-01, Kegelgrenze max = 1.052429
+      eta = 2.0: max(1 - r) = 0.942479, min(1 - r) = 2.151e-02, Kegelgrenze max = 1.176351
+      eta = 4.0: max(1 - r) = 0.998883, min(1 - r) = 4.472e-04, Kegelgrenze max = 1.198981
+      eta = 8.0: max(1 - r) = 1.000000, min(1 - r) = 1.508e-07, Kegelgrenze max = 1.199461
+H120c: obere Bedingung (mal (1 - r)) mit r = 1 - epsilon: -7*alpha**2*g/6 + 2*alpha*g/3 + epsilon**2 - 2*g/3
+   Koeffizient von g bei epsilon = 0: -(alpha^2/2 + 2/3 (1 - alpha + alpha^2)); Maximum auf [0, 1]: 7/6 bei alpha = 1
+   g = 3/100: kleinstes epsilon bei alpha = 1: 1.870829e-01;  sqrt(7 g/6) = 1.870829e-01
+   g = 1/10000: kleinstes epsilon bei alpha = 1: 1.080123e-02;  sqrt(7 g/6) = 1.080123e-02
+   g = 1/100000000: kleinstes epsilon bei alpha = 1: 1.080123e-04;  sqrt(7 g/6) = 1.080123e-04
+   Laborgrenze epsilon <= 1e-13: g_m^2 <= (6/7) epsilon^2 = 8.571e-27
