@@ -1,6 +1,6 @@
 # Quantum Sphaera – Artikel zur Vereinheitlichung
 
-**Lokaler Überarbeitungsentwurf zu 0.1.0** · [Veröffentlichte Fassung auf Zenodo](https://doi.org/10.5281/zenodo.24405553)
+**Entwurf zu Fassung 0.2.0** · [Veröffentlichte Fassung 0.1.0 auf Zenodo](https://doi.org/10.5281/zenodo.24405553) · [Zenodo-Angaben für die nächste Fassung](ZENODO.md) (vorbereitet, nicht veröffentlicht)
 
 Eigenständiger deutscher LaTeX-Entwurf über den gemeinsamen mathematischen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie. Die Fassung ist als einspaltiger Fachartikel in fünf Abschnitte gegliedert. Abschnitt 4.4 verfolgt im linearen OP5-Vergleich eine präparierte Materiequelle bis zum geometrischen Achsenkontrast. Die Quellenidentifikation, die vollständige gewöhnliche Bilanz zweiter Ordnung und die Apparaturantwort sind offene physikalische Schritte.
 
