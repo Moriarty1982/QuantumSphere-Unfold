@@ -6563,3 +6563,97 @@ R_{\rm glob}^{(v4100\text{-}r50,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r51 Source-Only: A Medium under the Frame Map JB (Reading b)}
+\addcontentsline{toc}{section}{v4.10.0-r51 Source-Only: A Medium under the Frame Map J\_B}
+\label{sec:v4100-r51-jb-medium}
+% ============================================================================
+
+\paragraph{Purpose.}
+The author asked whether the medium required by the OP5 comparison model could work for the photon frame and appear bent in the other
+frames.  Reading (a), ordinary boosts, is recorded in v4.10.0-r50 (H120).  This layer tests reading (b): the bending is the frame map \(J_B\) of
+convention F, the complex boost with rapidity \(i\pi/2\) along the M--T axis, by which T is the image of M.  It is an exploration with a method fixed
+before the computation; it is not blind, since the sign change of light-like contributions under \(J_B\) was seen by hand.  \(J_B\) is kept apart from the
+tachyon image of an action (rapidity \(i\pi\), H79) and from time reversal.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r51 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r51 results}
+\label{subsec:v4100-r51-results}
+
+\paragraph{Theoremlet v4.10.0-r51.1 (the fixed directions of \(J_B\)).}
+With the axis \(e=x\), \(J_B\) maps \((t,x)\mapsto(-ix,-it)\) and fixes \(y,z\); it preserves \(\eta\).  Its eigendirections are the light-like \((1,1,0,0)\) with eigenvalue \(-i\), \((-1,1,0,0)\)
+with \(+i\), and the transverse plane with eigenvalue 1.  A real timelike vector is mapped to \(i\) times a spacelike one.
+\emph{Proof.} Exact evaluation (script \texttt{jb\_\allowbreak medium.py}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r51.2 (invariant and sign-changing propagation tensors).}
+A symmetric tensor \(S^{\mu\nu}\) is invariant under \(J_B\) exactly if its \((t,x)\) block is proportional to the metric, its transverse block arbitrary and the mixed blocks
+zero; the speed along \(e\) is then exactly 1.  It changes sign exactly if its \((t,x)\) block has the form \(\bigl(\begin{smallmatrix}s&q\\q&s\end{smallmatrix}\bigr)\) and all other entries vanish; the light-like
+stream terms \(l_\pm l_\pm\) along \(e\) are of this kind.
+\emph{Proof.} Linear equations \(J_BSJ_B^{\mathsf T}=\pm S\) (script \texttt{jb\_\allowbreak medium.py}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r51.3 (the cone limit in M and T).}
+Two counter-streams along \(e\) with \(\kappa a=\kappa b=0.3\) give in M the effective metric \(\operatorname{diag}(1.6,-0.4,-1,-1)\), squared speeds between \(0.25\) and \(0.625\) and a cone limit of
+\(0.803\); their \(J_B\) image is real, \(\operatorname{diag}(0.4,-1.6,-1,-1)\), with squared speeds between \(2.5\) and \(4\) and a value of \(4.66\).  A \(J_B\)-invariant medium slowed across \(e\) is luminal along \(e\)
+and gives \(1.1995\) in both frames.  Under the boost with rapidity \(i\pi\) (H79) the counter-stream medium is unchanged and gives \(0.803\) in both frames.
+\emph{Proof.} Roots of the dispersion relation over 82 directions and the cone limit of r47 over \(\alpha\in[0,1]\) (script \texttt{jb\_\allowbreak medium.py}).  \(\square\)
+
+\paragraph{Remark v4.10.0-r51.4 (reading).}
+Against the criteria fixed beforehand reading (b) does \emph{not carry}: no medium keeps the cone limit in M and in its \(J_B\) image at once.  The idea is
+met literally but with the wrong sign: the structures of the photon frame are the fixed directions of \(J_B\), and a medium built from them bends from
+narrowing in M into widening in T.  As a reading found afterwards, wider cones suit the tachyon frame T; and by H79 the dynamics in T is governed by
+the tachyon image of the action (\(i\pi\)), under which the medium stays healthy, whereas \(J_B\) belongs to the readout of the register.  The bending by \(J_B\)
+therefore concerns the description in T, not the propagation.  The vacuum bound of r50.3 holds in M independently of the reading.
+
+\subsection*{v4.10.0-r51 frames}
+\label{subsec:v4100-r51-frames}
+
+M and T in the sense of convention F; \(J_B\) is the complex boost with rapidity \(i\pi/2\) along the M--T axis.  The tachyon image of an action (\(i\pi\), H79) is used only
+as a control; time reversal is not used.
+
+\subsection*{v4.10.0-r51 register entries}
+\label{subsec:v4100-r51-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r51\\
+\midrule
+medium bent by \(J_B\) (reading b) & does not carry: narrowing in M becomes widening in T (r51.3)\\
+fixed structures of \(J_B\) & light-like directions along the M--T axis and the transverse plane (r51.1)\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r51 notes}
+\label{subsec:v4100-r51-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak jb\_\allowbreak medium\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 23/} (method note commit 20c34729,
+script \texttt{jb\_\allowbreak medium.py}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r51 ledger and guard update}
+\label{subsec:v4100-r51-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r51}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; a medium healthy in M and T under \(J_B\) not found).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r51,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r51}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
