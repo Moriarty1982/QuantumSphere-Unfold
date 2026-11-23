@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r42.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r43.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -167,6 +167,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Entkopplung der Zeit-Quer-Komponenten (r40):** Keine geprüfte Dynamik erzeugt sie: Fierz–Pauli auf dem Unterraum sieht die erhaltene Quelle nicht, und Hilfsfelder geben einen zweiten Pol. Exakt folgt sie, wenn der Austausch beide relativen Zeitorientierungen seiner Enden gleich gewichtet, denn die Zeit-Quer-Vertizes sind unter Zeitumkehr ungerade. Das ist dieselbe Zeitumkehr, die die Orientierung des Oktanten umkehrt (H118). Die gleichen Gewichte sind nicht hergeleitet; trägt teilweise.
 - **Gewichte aus dem Gegenstrom (r41):** Der OP5-Keim enthält einen Strom und, bis auf 8·10⁻⁴, sein lokales Zeitumkehrbild mit fast gleicher Dichte (Abweichung unter 10⁻³). Werden die Enden des Austauschs in diesen Strömen ausgelesen, ist die Entkopplung damit fast genau erfüllt. Zeitumkehr und Spiegelung unterscheidet der Keim nicht; die Zeitumkehr ist gewählt, weil nur sie den Vermittlerterm gibt. Trägt teilweise.
 - **Erster Jet (r42):** In den ersten Ableitungen ist der Gegenstrom-Block weder Zeitumkehr- noch Spiegelbild der mitlaufenden Blöcke, auch keine bloße Umkehr der Ströme. Die Beziehung aus r41 gilt nur für die Werte am Keimpunkt; der Jet entscheidet die Frage nicht. Er erfüllt allerdings nicht alle Bedingungen des Modells.
+- **Jet-Familie (r43):** Die Modellbedingungen legen nur 31 der 96 ersten Ableitungen fest. In der übrigen Familie gibt es einen Jet mit exaktem Zeitumkehrbild und einen mit exaktem Spiegelbild. Der erste Jet entscheidet also nicht; der Befund aus r42 betraf nur die gespeicherte Lösung.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*

@@ -1,0 +1,14 @@
+Tatsaechliche Ausgabe von jet_family_images.py (Python 3.12, mpmath 1.3.0, 40 Stellen), Aufruf mit
+analysis/op5-field-slices/state-sufficiency-2026-10-30 und der Repo-Wurzel. Lauf 1 (22.11.2026): ungedaempftes Newton-Verfahren, 3 Schritte. Ohne Aussage, weil R nicht konvergiert.
+
+(1) Ausgangsjet: max |v_root - v_prim| = 1.6922e-14 ; |R(v_root)| = 1.9515e-40
+    r42-Mass am vervollstaendigten Jet: T 1.283 , R 1.874 , I 0.7162
+(2) Jacobi-Matrix von R: Rang 31 von 32; Singulaerwerte gross/klein 1.350e+01 3.171e-01 5.143e-16 ; lineare Familie der Dimension 65
+    Rang [R_sel; m_T] = 71 von 71
+    Rang [R_sel; m_R] = 71 von 71
+    Rang [R_sel; m_I] = 71 von 71
+    Rang [R_sel; m_T; m_R] = 79 von 111 (96 Unbekannte)
+(3/4) Bild T: |R| = 3.78013 ; relative Bildabweichung {'T': '1.924e-25', 'R': '2.0', 'I': '0.7393'} ; Aenderung der Ableitungen max 3.122
+(3/4) Bild R: |R| = 0.300668 ; relative Bildabweichung {'T': '1.565', 'R': '4.34e-26', 'I': '2.0'} ; Aenderung der Ableitungen max 2.717
+(3/4) Bild I: |R| = 0.963962 ; relative Bildabweichung {'T': '0.6926', 'R': '2.0', 'I': '1.96e-25'} ; Aenderung der Ableitungen max 2.93
+(3/4) Bild T+R: |R| = 313.918 ; relative Bildabweichung {'T': '5.14e-5', 'R': '4.38e-5', 'I': '2.0'} ; Aenderung der Ableitungen max 9.858e+13

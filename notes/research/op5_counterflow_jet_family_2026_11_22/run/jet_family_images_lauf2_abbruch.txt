@@ -1,0 +1,15 @@
+Tatsaechliche Ausgabe von jet_family_images.py (Python 3.12, mpmath 1.3.0, 40 Stellen), Aufruf mit
+analysis/op5-field-slices/state-sufficiency-2026-10-30 und der Repo-Wurzel. Lauf 2 (22.11.2026): Abbruch durch NameError (STEPS vor der Definition benutzt), vor dem Newton-Teil.
+
+(1) Ausgangsjet: max |v_root - v_prim| = 1.6922e-14 ; |R(v_root)| = 1.9515e-40
+    r42-Mass am vervollstaendigten Jet: T 1.283 , R 1.874 , I 0.7162
+(2) Jacobi-Matrix von R: Rang 31 von 32; Singulaerwerte gross/klein 1.350e+01 3.171e-01 5.143e-16 ; lineare Familie der Dimension 65
+    Rang [R_sel; m_T] = 71 von 71
+    Rang [R_sel; m_R] = 71 von 71
+    Rang [R_sel; m_I] = 71 von 71
+    Rang [R_sel; m_T; m_R] = 79 von 111 (96 Unbekannte)
+Traceback (most recent call last):
+  File "C:\Users\marcb\AppData\Local\Temp\claude\c81a7fb0443078d2\978a9d7e-d613-424a-b567-4a7e63d446c7\scratchpad\qsu\notes\research\op5_counterflow_jet_family_2026_11_22\jet_family_images.py", line 136, in <module>
+    def joint(kinds, steps=STEPS):
+                           ^^^^^
+NameError: name 'STEPS' is not defined
