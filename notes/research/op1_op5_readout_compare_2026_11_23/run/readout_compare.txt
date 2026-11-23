@@ -1,0 +1,17 @@
+Tatsaechliche Ausgabe von readout_compare.wl (Wolfram-MCP-Kern, 23.11.2026), ein Lauf.
+"Symbol::undefined2" betrifft freie Symbole und ist kein Fehler. "Infinity::indet" entsteht beim Grenzwert in (2c) und betrifft nur dessen
+Zwischenschritt; das Ergebnis Infinity (Wachstum wie cosh 4r) ist mit (2b) verträglich. Bruchdarstellung zeilenweise zusammengezogen.
+Hinweis zur Konvention: Mit der im Skript gewählten Vorzeichenkonvention von T_{mu nu} ist T_uu = -(1/2)(E'^2 + B'^2); der Betrag ist die
+Energiedichte im Beobachtersystem.
+
+(1a) phi im Ruhesystem R: 1
+(1b) Beobachter quer zur Achse (x), Rapiditaet r: phi = True  (phi - sech 2r = 0)
+     |E'|^2 + |B'|^2 = (B0^2 + E0^2) Cosh[2 r]  = (E0^2 + B0^2) cosh 2r ? True
+     T_uu = -(1/2) ((B0^2 + E0^2) Cosh[2 r]);  2 T_uu - (|E'|^2 + |B'|^2) = -2 (B0^2 + E0^2) Cosh[2 r]
+     gerade in r? True
+(1c) Beobachter entlang der Achse (z): phi = 1
+(2a) OP5 entlang der Achse: N(r) = (8 a^2 + 4 a k3^2 + 3 k3^4 - 4 k3^2 (a + k3^2) Cosh[2 r] + k3^4 Cosh[4 r])/12 ;  gerade in r? True
+(2b) OP5 quer zur Achse: N(r) = a^2 (114 + 24 Cos[2 ph] + 6 Cos[4 ph] - 16 Cos[2 (ph - I r)] + Cos[4 (ph - I r)] - 16 Cos[2 (ph + I r)]
+       + Cos[4 (ph + I r)] + 4 Cos[2 (ph - (2 I) r)] - 4 Cos[4 ph - (2 I) r] + 4 Cos[2 (ph + (2 I) r)] - 4 Cos[4 ph + (2 I) r]
+       + 8 Cosh[2 r] + 6 Cosh[4 r])/192 ;  gerade in r? True
+(2c) Ruhewert N(0): entlang 2 a^2/3, quer 2 a^2/3;  Grenzwert r -> Infinity relativ zu N(0) quer, ph = 0: Infinity
