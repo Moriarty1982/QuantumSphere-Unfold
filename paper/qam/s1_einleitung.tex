@@ -1,0 +1,84 @@
+\section{Einleitung}\label{sec:einleitung}
+
+\subsection{Das Problem: stille Übergänge}
+
+Ein Sprachmodell kann in einer Sitzung mehr Seiten mathematischen Text erzeugen, als ein Mensch an einem Tag sorgfältig lesen
+kann. Die Fehler, die in einem solchen Bestand gefährlich werden, sind dabei meist nicht die offensichtlichen. Eine falsch
+ausmultiplizierte Klammer fällt bei der nächsten Rechnung auf. Schwerer zu sehen sind Übergänge, die im Fließtext keine Spur
+hinterlassen:
+\begin{itemize}[nosep]
+\item \emph{Beförderung:} Eine Aussage, die nur unter einer Bedingung gilt oder nur numerisch gezeigt wurde, wird drei Seiten
+später als Satz zitiert und als Grundlage weiterverwendet.
+\item \emph{Eingabe als Ergebnis:} Ein Wert, der aus der Literatur eingesetzt oder angepasst wurde, erscheint später als
+Vorhersage.
+\item \emph{Frame-Vermischung:} Zwei Größen werden verglichen oder verrechnet, obwohl sie zu verschiedenen Beschreibungsrahmen
+gehören und keine Abbildung zwischen ihnen erklärt ist.
+\end{itemize}
+Keiner dieser Schritte ist für sich ein Rechenfehler, und alle drei sind für ein Sprachmodell naheliegend. Ein Modell setzt
+einen Text so fort, dass er zusammenhängend wirkt. Eine Bedingung, die vor zwanzig Absätzen genannt wurde, trägt wenig zum
+Zusammenhang des nächsten Satzes bei; die Fortsetzung glättet sie weg. Das ist kein seltenes Versagen, sondern die erwartbare
+Folge eines Verfahrens, das auf flüssige Fortsetzung optimiert ist. Wer mit Sprachmodellen Theorie entwickelt, braucht deshalb
+eine Struktur außerhalb des Texts, die festhält, worauf jede Aussage ruht, und die sich nicht durch Umformulieren ändern lässt.
+
+Dieser Artikel beschreibt eine solche Struktur, QAM. Wir stellen sie zuerst als eigenständiges, von jedem Anwendungsgebiet
+unabhängiges Modell vor, dann ihre Umsetzung in \LaTeX, Lean und einer Ausführungsmaschine, und erst danach ihren Einsatz in einem
+konkreten Forschungsprojekt. Zwei Grundpfeiler der Informatik liefern die Konstruktionsprinzipien. Wir verwenden sie nicht als
+historische Einkleidung, sondern weil sich aus ihnen Entwurfsentscheidungen ableiten, die im System tatsächlich umgesetzt sind.
+
+\subsection{Zuse: Rechenwerk und Plan}
+
+Konrad Zuses Z3 (1941) trennte das Rechenwerk, das binäre Gleitkommaoperationen ausführte, vom Speicher und von einem Programm, das
+von gelochtem Filmstreifen gelesen wurde~\cite{rojas}. Die Maschine führte aus, was der Streifen vorgab; eine bedingte Verzweigung
+besaß sie nicht. Im Plankalkül (entworfen 1942--1945, veröffentlicht 1972~\cite{zuse72,bauer}) ging Zuse den umgekehrten Weg und
+beschrieb Rechenpläne unabhängig von einer Maschine: mit strukturierten, aus Bits aufgebauten Datentypen und mit getrennten
+Variablenklassen für Eingangswerte ($V$), Zwischenwerte ($Z$) und Resultatwerte ($R$)~\cite{bauer}.
+
+Für die Arbeit mit Sprachmodellen übernehmen wir aus beidem eine Rollenteilung:
+\begin{center}
+\begin{tabular}{@{}p{0.22\textwidth}p{0.33\textwidth}p{0.36\textwidth}@{}}
+\toprule
+Rolle & bei Zuse & in einem QAM-Arbeitsablauf\\
+\midrule
+Ausführung & Rechenwerk der Z3 & Sprachmodell, Computeralgebra, Simulator\\
+Plan & Rechenplan im Plankalkül & QAM-Akte und MML-Auftrag: Typen, Frames, Status, Prämissen\\
+Eingang vs.\ Resultat & $V$- und $R$-Variablen & Eingabe (\texttt{input}) vs.\ Herleitung (\texttt{derive}); Prüfung \texttt{\textbackslash qamindependent}\\
+\bottomrule
+\end{tabular}
+\end{center}
+Das Sprachmodell darf also formulieren, umformen und rechnen. Welche Objekte existieren, welchen Status sie haben und wovon sie
+abhängen, legt es nicht durch seinen Text fest, sondern durch Einträge in einer Akte, die eigene Prüfer lesen. Die Analogie hat
+eine Grenze, die wir ausdrücklich nennen: Zuse trennte Plan und Ausführung, um Rechnungen mechanisch ausführbar zu machen; wir
+trennen sie, um die Ausführung durch einen unzuverlässigen Ausführenden kontrollierbar zu machen.
+
+Im Repository ist diese Teilung auch wörtlich umgesetzt (Abschnitt~\ref{sec:maschine}): Die MML-Anweisung \texttt{RUN\_TAPE}
+führt eine binäre Bandmaschine aus, deren Übergangstabelle als QAM-Objekt der Art \texttt{operator} und deren Startkonfiguration als
+\texttt{state} deklariert ist. Zwei SystemVerilog-Steuerungen führen denselben Plan aus und werden an
+209 Referenzfällen gegen die Python-Ausführung verglichen. Der Plan ist das Objekt, die Ausführungen sind austauschbar. Dass gerade eine Bandmaschine gewählt ist, hat einen inhaltlichen
+Grund: Sie ist das ausführbare Gegenstück zu der offenen Frage, ob die mathematische Struktur des Anwendungsprojekts selbst eine
+universelle Maschine trägt (Abschnitt~\ref{sec:traeger}).
+
+\subsection{Turing: die Entscheidbarkeitsgrenze}
+
+Turing zeigte 1936, dass es kein mechanisches Verfahren gibt, das für jede Aussage der Prädikatenlogik entscheidet, ob sie
+beweisbar ist~\cite{turing}. Rice verallgemeinerte später: Jede nichttriviale semantische Eigenschaft von Programmen ist
+unentscheidbar~\cite{rice}. Für ein Prüfsystem, das Forschungstext begleitet, folgt daraus eine nüchterne Entwurfsregel. Es wird
+Aussagen geben, die das System weder bestätigen noch widerlegen kann, und zwar nicht nur aus Mangel an Rechenzeit, sondern
+grundsätzlich. Ein System, das nur die Ausgänge \glqq gilt\grqq{} und \glqq gilt nicht\grqq{} kennt, muss solche Aussagen einem
+der beiden zuschlagen. Beides ist falsch: Das erste ist die Beförderung aus der Fehlerliste oben, das zweite verwirft Wissen,
+das unter Bedingungen sehr wohl gilt.
+
+QAM führt deshalb den dritten Ausgang als erstklassigen Bestandteil. Auf der Ebene der Akte ist er die Statusordnung
+\(\st{open}<\st{reading}<\st{conditional}<\st{computed}<\st{proved}\) zusammen mit der Regel, dass kein Schluss stärker ist als seine
+schwächste Prämisse. Auf der Ebene der Maschine endet jeder Schritt mit \textsc{cont}, \textsc{reject} oder \textsc{guard}, und ein
+\textsc{guard} wird mit seinen offenen Bedingungen gespeichert.
+
+\subsection{Beiträge und Aufbau}
+
+Abschnitt~\ref{sec:modell} definiert das Modell: registrierte Aussage, vier Wohlgeformtheitsregeln und offene Bedingungen, die an jeden
+Nachfolger vererbt werden. Abschnitt~\ref{sec:latex} beschreibt die \LaTeX-Anbindung, Abschnitt~\ref{sec:guards} die Prüfer und zwei
+getrennte Guard-Ebenen mit genau benannter Prüftiefe, Abschnitt~\ref{sec:maschine} Datenbank, Ausführungsmaschine und die Anbindung an
+Sprachmodelle über das Model Context Protocol. Erst Abschnitt~\ref{sec:fallstudie} zeigt den Einsatz im Projekt \emph{Quantum Sphaera}
+(rund 1450 Seiten Quelltext), mit einem konstruierten und einem protokollierten Beispiel und mit den Fehlern, die QAM \emph{nicht} fing.
+Abschnitt~\ref{sec:abgrenzung} grenzt QAM gegen Beweisassistenten ab.
+Durchgängig trennen wir drei Ebenen: was formal festgelegt und geprüft ist, was sich im Einsatz bewährt hat, und was QAM bewusst
+nicht leistet.

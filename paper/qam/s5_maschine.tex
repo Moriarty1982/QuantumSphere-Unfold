@@ -1,0 +1,137 @@
+\section{Datenbank, Ausführungsmaschine und Anbindung an Sprachmodelle}\label{sec:maschine}
+
+\subsection{Die Datenbank}\label{sec:datenbank}
+
+Für einen Bestand aus vielen Dokumenten liest
+\begin{lstlisting}
+python -m qam.tools.readout_db index
+\end{lstlisting}
+alle exportierten Akten in eine lokale SQLite-Datenbank. Dabei werden Eintrags- und Aktenhashes geprüft und die Prämissenkanten in beiden
+Richtungen angelegt. Neuindizieren erneuert diese Kanten, lässt aber gespeicherte Belege, den Rechencache und ausdrücklich registrierte
+Ersetzungen unverändert. \texttt{find} sucht Einträge mit Frame, Status und Prämissen; \texttt{premises HASH} liefert alles, worauf
+ein Eintrag transitiv ruht; \texttt{impact HASH} alle späteren Einträge und Belege, die ihn verwendet haben, auch als fehlende Prämisse;
+\texttt{register-replacement ALT NEU --reason} verknüpft eine ausdrückliche Korrektur, ohne den alten Eintrag oder alte Belege zu ändern.
+Wer eine Aussage wiederverwenden will, ruft sie so mit Status, Frame und Prämissen ab; wer sie korrigiert, erfährt, welche Schlüsse
+betroffen sind.
+
+\subsection{Aufträge und Belege: MML und MMA}
+
+Rechnungen werden als \emph{Aufträge} in einer kleinen Auftragssprache (MML) gestellt und von einem Ausführer (MMA) bearbeitet. Ein Aufruf
+besteht aus zwei JSON-Dateien: einem \emph{Kontext}, der die beteiligten QAM-Objekte und Guards deklariert, und einem \emph{Auftrag}, der eine
+Anweisung mit Argumenten nennt:
+\begin{lstlisting}
+python -m qam.tools.readout_db mma KONTEXT.json AUFTRAG.json --summary
+\end{lstlisting}
+MMA prüft zuerst die Guards von Kontext, Auftrag und Objekten und die verknüpften Prämissen, dann führt es aus und speichert einen
+\emph{Beleg}: den vollständigen Auftrag, den Ausgang (\texttt{continue}, \texttt{guard}, \texttt{reject}), das Ergebnis oder die Gründe der
+Sperre, einen Kontexthash, Fingerabdrücke der beteiligten Implementierung und gegebenenfalls die Prämissenspur. Der Beleg ist durch einen
+SHA-512-Hash identifiziert. Ein Zähler in der Datenbank zählt verschiedene Belege je Ausgang; derselbe Beleg zählt nur einmal.
+
+Ein gespeicherter Beleg lässt sich zweifach prüfen. \texttt{receipt HASH} prüft die gespeicherten Hashes; \texttt{receipt HASH --replay}
+rechnet den Auftrag mit dem gespeicherten Kontext und der aktuellen Implementierung ohne Cache neu und meldet getrennt, ob Beleg und
+Ergebnis übereinstimmen. Ein geänderter Implementierungshash kann den Beleg ändern, auch wenn das Ergebnis gleich bleibt. Der Rechencache
+schließt Argumente, Kontext, Prämissenhashes und Implementierungsversionen in seinen Schlüssel ein; Guards werden geprüft, bevor der Cache
+befragt wird.
+
+Die Anweisungen sind bewusst eng: Es gibt keine freie Programmausführung, sondern eine feste Liste. Beispiele:
+\begin{itemize}[nosep]
+\item \texttt{READOUT} führt ein Rezept aus einer zugelassenen Liste aus, mit geprüften Argumentbereichen.
+\item \texttt{SEARCH\_ROUTE} durchsucht einen festen Katalog von Operationen bis zu einer Schrittgrenze und speichert neben den Kandidaten
+die ausgeschlossenen Wege mit Grund und die offenen Guards jedes Kandidaten. Findet sie keinen Weg ohne offene Annahme, endet sie mit
+\texttt{guard}.
+\item \texttt{RUN\_TAPE} führt eine deklarierte Bandmaschine aus (Abschnitt~\ref{sec:band}).
+\end{itemize}
+
+\paragraph{Stapel.} Bis zu 64 unabhängige Aufträge mit eindeutigen Namen laufen in einem Stapel auf ein bis vier Prozessen. Abhängigkeiten
+(\texttt{depends\_on}, \texttt{requires\_match}) werden vor dem Start auf Zyklenfreiheit geprüft; gesperrte Nachfolger erscheinen als
+\texttt{blocked} mit \texttt{blocked\_by} (Abschnitt~\ref{sec:ebeneB}). Der Stapel erzeugt einen gehashten Bericht in Eingabereihenfolge,
+der mit den Einzelbelegen in einer Transaktion gespeichert wird. Berichte können neu gerechnet (\texttt{replay-batch}), verglichen
+(\texttt{compare-batches}) und ohne Neurechnung auf vollständige Verweise geprüft werden (\texttt{audit-batch}).
+
+\subsection{Plan und Ausführung am Beispiel der Bandmaschine}\label{sec:band}
+
+Die Anweisung \texttt{RUN\_TAPE} zeigt die Rollenteilung der Einleitung in ihrer einfachsten Form. Der \emph{Plan} besteht aus zwei
+QAM-Objekten des Kontexts: einem \texttt{operator} mit Zuständen, Haltezustand und einer deterministischen binären Übergangstabelle, und
+einem \texttt{state} mit Band, Kopfposition und Steuerzustand. Jeder Tabelleneintrag legt zu Steuerzustand und gelesenem Bit das zu
+schreibende Bit, die Kopfbewegung \(-1,0,+1\) und den Folgezustand fest. Der Auftrag nennt beide Objekte und setzt die Betriebsart
+(\texttt{fixed} oder \texttt{grow}, bei der rechts eine leere Zelle angefügt wird), Grenzen für Schritte und Zellen (höchstens je 1024) und
+optional eine Ablaufspur.
+
+Das Ergebnis unterscheidet zwei Fragen, die leicht verwechselt werden:
+\begin{itemize}[nosep]
+\item \emph{Durfte der Auftrag ausgeführt werden?} Das ist der MMA-Ausgang, etwa \texttt{continue}.
+\item \emph{Wie endete die Rechnung?} Das ist der Stoppgrund der Bandmaschine: \texttt{halted} (regulärer Halt), \texttt{stuck} (keine
+Regel für Zustand und Bit), \texttt{boundary} (Schritt über eine feste Bandgrenze, der ganze Schritt wird verworfen), \texttt{step\_limit}
+oder \texttt{cell\_limit} (Budget erschöpft).
+\end{itemize}
+Ein erschöpftes Budget ist ausdrücklich kein Nichthalten. Die Maschine behauptet nicht, die Rechnung würde nie enden; sie meldet, dass sie
+innerhalb des Budgets nicht endete, und gibt Band, Kopf und Zustand zurück, mit denen ein neuer Lauf mit größerem Budget fortsetzen kann.
+Das ist die Turing-Grenze in ihrer praktischen Form.
+
+Derselbe Plan wird von mehreren Ausführenden bearbeitet: vom Python-Adapter, von einem Wolfram-Language-Skript, von einer Qiskit-Fassung,
+die jeden Schritt als reversible Schaltung über alle Entscheidungsfälle baut, und von zwei SystemVerilog-Steuerungen. Eine
+Vergleichssuite führt beide Steuerungen auf 209 Referenzfällen gegen MMA aus und vergleicht Stoppgründe, Taktzahlen und eine
+Beispielspur; optional werden Logikzellen synthetisiert. Die binäre Übergangstabelle und das Bandwachstum sind Modellentscheidungen; geprüft
+wird die ausführbare Übergangssemantik, nicht eine Deutung der Maschine.
+
+\subsection{Warum ein Band: eine Maschine im mathematischen Träger}\label{sec:traeger}
+
+Die Bandmaschine ist kein beliebig gewähltes Testbeispiel. Sie ist das ausführbare Gegenstück zu einer Lesart, die der Forschungstext
+des Projekts~\cite{companion} verfolgt: ob die mathematische Struktur selbst eine Rechenmaschine trägt, also eine virtuelle Maschine,
+die nicht auf Hardware, sondern in einem mathematischen Träger läuft. Der Text gibt dafür eine lokale Übergangssemantik auf Zuständen
+\(\Sigma=(\tau,h,q,\rho,\chi)\) aus Bandausschnitt, Kopfposition, Steuerzustand, Auslesung und Abschlusszertifikat an. Die Primitive
+\texttt{FORWARD} und \texttt{HOPF} bewegen den Kopf, \texttt{PROJECT}, \texttt{COMPARE}, \texttt{DIFF} und \texttt{EXPORT\_BOOL} liefern
+Verzweigungsprädikate, \texttt{COLLAPSE}, \texttt{CLOSE} und \texttt{HCSEL} ändern den Steuerzustand, \texttt{REJECT} hält an.
+
+Die Rolle des Bands erhält die \glqq optimale Linie\grqq{} des zulässigen spinoriellen Transports. Das ist die \emph{spinorielle
+Bandhypothese} (STH): Diese Linie ist ein fortsetzbarer Lese- und Schreibträger, entlang dessen endliche Bandausschnitte verlängert
+werden können, ohne die Zulässigkeit zu verletzen. Der Grund für diese Wahl ist strukturell. Transport entlang einer Linie ist sequentiell
+und eindimensional, und das Band ist in Turings Modell der einfachste Speicher mit lokalem Zugriff; ein Transportschritt ist dann eine
+Kopfbewegung. Das Band ist zugleich als stabilster Bestandteil vorgesehen, um den herum Steuerung, Verzweigung und Rückkehr aufgebaut
+werden.
+
+Die zweite Hypothese trägt Zuses Namen. Die Z3 kannte keine bedingte Verzweigung; Rojas hat gezeigt, dass sie trotzdem im Prinzip
+universell ist, indem Verzweigung und indirekte Adressierung arithmetisch nachgebildet werden, so universell wie ein Rechner mit
+beschränktem Adressraum und um den Preis sehr langer Programme~\cite{rojas98}. Die \emph{bedingte Z3-Hypothese} (Z3H) überträgt das:
+Sobald Verzweigung, beständiger Speicher und Rückkehr auf dem spinoriellen Träger verfügbar sind, kann der Stapel MML--MMA--MCP einen
+gewöhnlichen sequentiellen Steuerkern nachbilden. Die \glqq Tricks\grqq{}, mit denen eine solche Maschine universell würde, sind also benannt.
+
+Bewiesen ist die Universalität nicht, und der Forschungstext sagt das ausdrücklich. Er isoliert einen bedingten Weg mit fünf
+Verpflichtungen in fester Reihenfolge: die Steuerschicht setzt sich über benachbarte Fenster fort (\(U_Q\)), die Verzweigung ist lokal
+eindeutig ausführbar (\(U_B\)), die Rückkehr über den HC-gewählten Abschluss ist fortsetzbar (\(U_L\)), das Band ist global fortsetzbar
+(\(U_T\)), und ein Referenzkern wird explizit simuliert (\(U_S\)). In QAM ist \glqq der Träger ist Turing-vollständig\grqq{} damit eine Aussage
+mit Status \st{conditional} und fünf offenen Bedingungen, und keine Rechnung der Maschine darf eine davon stillschweigend streichen.
+
+Die Ausführung mit \texttt{RUN\_TAPE} prüft etwas anderes, nämlich die Übergangssemantik des Plans. Eine deterministische Maschine mit
+binärem Alphabet und einem einseitig unbeschränkten Band ist im idealisierten Sinn universell; mit höchstens 1024 Schritten und Zellen je
+Auftrag ist der Ausführer aber, wie die Z3 bei Rojas, nur im beschränkten Sinn universell. Die Identifikation des Bands mit dem spinoriellen
+Träger bleibt eine Voraussetzung, die kein Lauf erfüllt.
+
+Hier schließt sich der Bogen zu Turing. Wäre der Träger universell, dann wäre für seine Programme das Halteproblem unentscheidbar. Dass
+\texttt{step\_limit} und \texttt{cell\_limit} als eigene Stoppgründe geführt und nie als \glqq hält nicht\grqq{} gelesen werden, ist deshalb
+keine Bequemlichkeit, sondern folgt aus der Grenze, die das Modell selbst erreichen soll.
+
+\subsection{Anbindung an Sprachmodelle über MCP}\label{sec:mcp}
+
+Damit ein Sprachmodell mit der Akte arbeiten kann, ohne sie verändern zu können, stellt QAM seine Abfragen über das Model Context
+Protocol~\cite{mcp} bereit. Es gibt drei Server mit abgestuften Rechten:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.2\textwidth}p{0.42\textwidth}p{0.3\textwidth}@{}}
+\toprule
+Server & Werkzeuge & Rechte\\
+\midrule
+schreibgeschützt & Einträge suchen, Belege auflisten und abrufen (mit Spur oder Zusammenfassung), Kontextauswahl, Stapelberichte auflisten, lesen, vergleichen und prüfen & Container ohne Netz, Datenbank nur lesend eingebunden\\
+vollständig & zusätzlich Index neu bauen, Einzelaufträge und gespeicherte Stapel ausführen & schreibt Belege in die Datenbank\\
+Stapel & gespeicherte oder direkt übergebene Stapel ausführen, Berichte neu rechnen, HDL-Vergleich & schreibt Belege\\
+\bottomrule
+\end{tabular}
+\end{center}
+Der schreibgeschützte Server läuft in einem Docker-Container mit \texttt{--read-only}, \texttt{--network none} und nur lesend
+eingebundener Datenbank. Alle Server führen nur feste Module mit geprüften Argumenten und einer Zeitgrenze aus; Auftragsdateien müssen in zugelassenen
+Verzeichnissen liegen. Keiner der Server kann einen Status anheben, eine Akte umschreiben oder einen Beleg löschen.
+
+Die Zusammenfassung eines Belegs nennt geprüften Hash, Anweisung, Ausgang, Fehler, Verpflichtungen und offene Guards. Ein Modell, das
+eine Frage zu einem gespeicherten Ergebnis beantwortet, ruft den Beleg ab, prüft ihn per Hash und nennt die offenen Guards, statt sich auf
+ein früheres Gespräch zu verlassen. Das Sprachmodell ist wieder das Rechenwerk: Es formuliert Aufträge und liest Belege, aber was als
+Ergebnis gilt, entscheidet die Maschine nach dem Plan.

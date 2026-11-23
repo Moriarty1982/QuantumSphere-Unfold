@@ -1,0 +1,23 @@
+\section{Lean-Module, Übersetzung und Einsatz von Sprachmodellen}\label{app:lean}
+
+\paragraph{Lean.} Das projektunabhängige Lake-Paket \texttt{qam/lean/} benutzt nur den Lean-Kern und enthält \texttt{QAM/Provenance.lean}
+(Herleitungsbäume) und \texttt{QAM/QamFile.lean} (Prüfer \texttt{qamcheck} mit zeilen- und aktenweiter Korrektheit und Hash-Verweisen). Die
+Objektebene und die Maschine formalisieren die Module \texttt{QAM}, \texttt{Models}, \texttt{Route}, \texttt{Store} und
+\texttt{StoreProgress} der Bibliothek \texttt{QSFormal} im Verzeichnis \texttt{formal/}; sie benutzen ebenfalls nur den Lean-Kern. Bewiesen
+sind dort unter anderem die Disjunktheit der Objektarten, die Umkehrbarkeit der Umindizierung, Transportketten, die Erhaltung der
+Zulässigkeit, Atomarität, Fortschritt für \textsc{snapshot}, \textsc{scrub} und \textsc{export} sowie die Vollständigkeit des Protokolls.
+Die Transportschemata haben zwei triviale Modelle: Sie sind widerspruchsfrei, legen aber nicht fest, was zulässig heißt. Vereinfachungen
+gegenüber der vollen Spezifikation: Adressen sind natürliche Zahlen, Relationen tragen keine Zeigerbedingungen, Kopieren und
+Zusammenführen von Speichern sind nicht formalisiert. Die kontinuierliche Integration übersetzt beide Teile und weist \texttt{sorry},
+\texttt{admit} und \texttt{native\_decide} zurück.
+
+\paragraph{Dieser Artikel und Verfügbarkeit.} Der Artikel lädt \texttt{qam.sty}; die Beispiele in den Abschnitten~\ref{sec:latex}
+und~\ref{sec:fallstudie} werden beim Setzen geprüft (\texttt{TEXINPUTS=../../qam/tex:}, zweimal \texttt{pdflatex main.tex} in
+\texttt{paper/qam}). Quellen, Werkzeuge, Forschungstext, Runden und Vorab-Notizen liegen im öffentlichen Repository~\cite{repo}, die
+Fassungen des Forschungstexts auf Zenodo~\cite{companion}.
+
+\paragraph{Einsatz von Sprachmodellen.} Die Ausgangsvermutung der Fallstudie stammt vom Autor. Das Modell QAM, die Werkzeuge, die
+Lean-Formalisierung und große Teile dieses Texts sind im Dialog mit großen Sprachmodellen entstanden (Claude, Anthropic; ChatGPT und Codex,
+OpenAI). Manche Ideen kamen von den Modellen, andere vom Autor; der Autor hat die Fragen gewählt und entschieden, was bleibt. Ergebnisse der
+Modelle wurden nur über die in Abschnitt~\ref{sec:fallstudie} beschriebenen Prüfungen übernommen. Die Verantwortung für den Inhalt trägt
+der Autor.

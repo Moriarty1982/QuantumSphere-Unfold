@@ -1,0 +1,151 @@
+\section{Die \LaTeX-Anbindung}\label{sec:latex}
+
+Mathematische Texte entstehen in \LaTeX, und Sprachmodelle schreiben bevorzugt \LaTeX. Die naheliegende Stelle, an der eine Akte geführt
+werden kann, ist deshalb das Dokument selbst: Jede Aussage wird dort deklariert, wo sie im Text steht, und der \TeX-Compiler prüft die
+Regeln, während er das Dokument setzt. QAM stellt dafür drei Pakete bereit, die nur auf dem \LaTeX-Kern aufbauen (expl3, \LaTeX{} ab
+2022-06) und von keinem Anwendungsprojekt abhängen: \texttt{qam.sty} führt die Akte, prüft (R1)--(R4) beim Kompilieren, setzt Notation
+und Übersicht und exportiert die Akte; \texttt{qam-physics.sty} registriert Formeln in gewöhnlicher Schreibweise unter einem deklarierten
+Interpretationsprofil; \texttt{qam-readout.sty} bindet erzeugte Belegfragmente der Ausführungsmaschine ein.
+
+\subsection{Laden und Betriebsarten}
+
+\begin{lstlisting}
+\usepackage{qam}                   % Regelverstoß: Fehler, Compiler hält an
+\usepackage[mode=warning]{qam}     % Regelverstoß: nur Warnung
+\usepackage[export]{qam}           % zusätzlich \jobname.qam schreiben
+\end{lstlisting}
+Im Normalfall bricht ein Regelverstoß das Kompilieren ab. Das ist beabsichtigt: Ein Dokument mit einer Beförderung soll nicht als PDF
+entstehen. Die Warnbetriebsart dient dem Einführen in einen bestehenden Text; die dabei exportierte Akte weist der Lean-Prüfer ab, so
+dass der Verstoß nicht unbemerkt bleibt.
+
+\subsection{Deklarationen}
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.46\textwidth}p{0.48\textwidth}@{}}
+\toprule
+Befehl & Wirkung\\
+\midrule
+\verb|\qamframe{F}| & Frame deklarieren\\
+\verb|\qammap[sym]{g}{A}{B}| & Abbildung \(g\colon A\to B\) deklarieren\\
+\verb|\qamcompose[sym]{k}{g}{h}| & Komposition zweier Abbildungen deklarieren\\
+\verb|\qaminput[sym]{key}{F}{status}| & eingesetzten Wert registrieren\\
+\verb|\qamclaim[sym]{key}{F}{status}| & Behauptung ohne Prämissen registrieren\\
+\verb|\qamthesis[sym]{key}{F}{st}{Text}| & Ausgangsthese; der Wortlaut geht in den Hash ein\\
+\verb|\qamderive[sym]{key}{status}{p1,p2,...}| & Herleitung aus Prämissen; Frame und Eingaben werden berechnet\\
+\verb|\qamconvert[sym]{key}{status}{g}{p}| & Überführung von \(p\) über \(g\)\\
+\verb|\qamcompare{a}{b}| & Vergleich, nur im selben Frame\\
+\verb|\qamindependent{key}| & Unabhängigkeitserklärung\\
+\bottomrule
+\end{tabular}
+\end{center}
+Das optionale Argument ist das mathematische Symbol, unter dem der Eintrag im Text erscheint. Frame und Eingabemenge einer Herleitung
+werden nicht angegeben, sondern aus den Prämissen berechnet; der Autor kann sie also nicht falsch angeben. Den Status gibt er an, und
+das Paket prüft ihn gegen (R2). Leerzeichen in Prämissenlisten werden ignoriert.
+
+Bei einem Verstoß meldet der Compiler die betroffene Regel mit den beteiligten Schlüsseln, zum Beispiel:
+\begin{lstlisting}
+! Package qam Error: Promotion: `beta' is declared `proved', but its weakest
+(qam)                premise `gamma' is only `conditional'.
+\end{lstlisting}
+Entsprechende Meldungen gibt es für Frame-Vermischung, für eine Unabhängigkeitserklärung über einem Eintrag mit Eingaben sowie für
+undeklarierte und doppelte Schlüssel, Frames und Abbildungen.
+
+\subsection{Erzeugte Notation}
+
+Die Deklarationen enthalten alles, was für eine kompakte Schreibweise nötig ist, und das Paket setzt sie selbst: \verb|\qam{key}| setzt
+einen Eintrag in QAM-Notation mit Status (\verb|\qam*| ohne), \verb|\qamshow{key}| eine Kurzform aus Status, Frame und Eingaben,
+\verb|\qamhash{key}| den kurzen (\verb|\qamhash*| den vollen) Hash, \verb|\qamrecordhash| den Hash der Akte und \verb|\qamledger| eine
+Tabelle aller Einträge in Deklarationsreihenfolge.
+
+\paragraph{Ein Beispiel, das in diesem Dokument ausgewertet wird.} Der folgende Block steht so im Quelltext dieses Artikels; das Paket
+\texttt{qam.sty} ist geladen und prüft ihn beim Setzen.
+\begin{lstlisting}
+\qamframe{M} \qamframe{T}
+\qammap[G]{G}{M}{T}
+\qaminput[\gamma]{gamma}{M}{computed}
+\qamclaim[\kappa]{counting}{M}{proved}
+\qamderive[\beta]{beta}{computed}{gamma,counting}
+\qamconvert[\beta']{betaT}{conditional}{G}{beta}
+\end{lstlisting}
+\qamframe{M}\qamframe{T}
+\qammap[G]{G}{M}{T}
+\qaminput[\gamma]{gamma}{M}{computed}
+\qamclaim[\kappa]{counting}{M}{proved}
+\qamderive[\beta]{beta}{computed}{gamma,counting}
+\qamconvert[\beta']{betaT}{conditional}{G}{beta}
+Die Befehle \verb|\qam{gamma}|, \verb|\qam{beta}| und \verb|\qam{betaT}| setzen daraus
+\begin{center}
+\qam{gamma}\qquad \qam{beta}\qquad \qam{betaT}
+\end{center}
+und \verb|\qamshow{betaT}| ergibt \qamshow{betaT}. Man liest an der Notation ab, dass \(\beta'\) auf der Eingabe \(\gamma\) ruht, über \(G\)
+aus dem Frame \(M\) gebracht wurde und höchstens bedingt gilt. Hätte der Quelltext \verb|\qamderive{beta}{proved}{gamma,counting}|
+gelautet, wäre dieser Artikel nicht kompiliert worden. Die Übersicht \verb|\qamledger| für diese Einträge:
+\begin{center}
+\small
+\qamledger
+\end{center}
+
+\subsection{Export}
+
+Mit der Option \texttt{export} schreibt das Paket jeden Eintrag als Zeile in \texttt{\textbackslash jobname.qam}. Das Format ist
+zeilenorientiert und für Menschen lesbar:
+\begin{lstlisting}
+% QAM record exported by qam.sty
+% source example.tex md5 31EAB103...
+map G : M -> T
+gamma := <6,gamma>; frame M; status computed; inputs {gamma}; hash C4A2B3DB...; sources {}
+counting := claim; frame M; status proved; inputs {}; hash 8097F8AB...; sources {}
+beta := derive(gamma,counting); frame M; status computed; inputs {gamma};
+        hash B0541AFD...; sources {C4A2B3DB...,8097F8AB...}
+betaT := convert(G,beta); frame T; status conditional; inputs {gamma}; ...
+% record C495463D...
+\end{lstlisting}
+(Hashes gekürzt, die Zeile von \texttt{beta} umbrochen.) Eine Eingabe erscheint als Zeugenobjekt \(\langle6,\cdot\rangle\) der
+Objektebene. Die exportierte Datei ist die Schnittstelle zu allen weiteren Prüfern: Sie wird von Lean geprüft, von einem Skript
+nachgerechnet und von der Datenbank indiziert (Abschnitt~\ref{sec:pruefer}). Damit hängt die Prüfung nicht davon ab, dass man dem
+\TeX-Paket vertraut.
+
+\subsection{Formeln unter einem Interpretationsprofil}\label{sec:profile}
+
+Eine Formel wie die Einsteingleichung oder die Schrödingergleichung bedeutet nur in einem bestimmten Rahmen etwas. Das Paket
+\texttt{qam-physics.sty} macht diesen Rahmen zu einem registrierten Objekt:
+\begin{lstlisting}
+\qamframe{ART}\qamframe{QM}
+\qamprofile{gr}{ART}{L_{\rm ART}}{conditional}
+  {Classical GR with Lorentz metric and Levi-Civita connection, SI units}
+\begin{qamcontext}{gr}
+\[ \qamformula{einstein}{conditional}
+     {G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G_{\rm N}}{c^4}T_{\mu\nu}} \]
+\end{qamcontext}
+\end{lstlisting}
+Ein Profil (\verb|\qamprofile{key}{frame}{sprache}{status}{interpretation}|) ist unveränderlich und als gehashte Prämisse Teil jeder unter ihm
+registrierten Formel: Wer die Interpretation ändert, ändert den Hash der Formel. Innerhalb von \verb|qamcontext| erscheinen Formeln in
+gewöhnlicher Schreibweise. \verb|\qamphys{einstein}| verwendet die gespeicherte Formel wieder und zeigt außerhalb ihres Profils
+automatisch Frame und Sprache an; \verb|\qamphys*| zeigt sie immer. Kontexte lassen sich verschachteln, das äußere Profil wird danach
+wiederhergestellt. Ein Übergang in ein anderes Profil ist nur ausdrücklich möglich,
+\begin{lstlisting}
+\qamphysconvert{key}{status}{abbildung}{quelle}{zielprofil}{zielformel}
+\end{lstlisting}
+mit deklarierter Abbildung und vom Autor angegebener Zielformel. Auch zwei Profile im selben Frame werden nicht stillschweigend
+gemischt. Das Paket prüft Kontext, Profilidentität, Quell- und Ziel-Frame, Doppeldeklarationen und vererbten Status. Die Formel selbst
+ist ein unexpandierter \TeX-Text: Tensoren, Einheiten, Definitionsbereiche und physikalische Gesetze werden nicht geprüft, und eine
+Übersetzung hebt den Status nie an.
+
+\subsection{Belege der Ausführungsmaschine im Dokument}
+
+Ergebnisse der Ausführungsmaschine (Abschnitt~\ref{sec:maschine}) werden nicht abgetippt, sondern als erzeugte Fragmente eingebunden.
+Vor dem Kompilieren schreibt die Maschine ein Fragment,
+\begin{lstlisting}
+python -m qam.tools.readout_db mma KONTEXT.json AUFTRAG.json --tex-output build/ergebnis.tex
+\end{lstlisting}
+Das Dokument lädt \verb|qam-readout| und bindet das Fragment mit \verb|\qamreadout{|\textit{datei}\verb|}| ein. Das Fragment zeigt den
+Ausgang, das Ergebnis oder die Gründe für eine Sperre und den SHA-512-Bezeichner des Belegs. Fehlt das Fragment, erscheint eine
+sichtbare Platzhaltermeldung und eine Warnung. \LaTeX{} ruft dabei weder Python noch die Datenbank auf. Umgekehrt stellt
+\texttt{receipt HASH --tex-output ...} aus einem im Dokument gedruckten Hash den gespeicherten Auftrag und Beleg wieder her.
+
+\subsection{Übersetzen und Testen}
+
+Die Pakete werden über den Suchpfad eingebunden (\texttt{TEXINPUTS=pfad/zu/qam/tex:}). Die Testreihe \texttt{qam/tex/tests/run\_tests.py}
+übersetzt gültige und absichtlich fehlerhafte Dokumente, prüft, dass genau die gültigen übersetzen, und kontrolliert mit \texttt{pdftotext}
+die gesetzte Ausgabe. Das sind Softwaretests des Pakets, keine Prüfungen registrierter Inhalte.

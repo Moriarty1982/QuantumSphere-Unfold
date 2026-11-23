@@ -1,0 +1,125 @@
+\section{Das Modell}\label{sec:modell}
+
+Dieser Abschnitt beschreibt QAM unabhängig von jeder Oberfläche und jedem Anwendungsprojekt. Die Werkzeuge der folgenden Abschnitte
+(\LaTeX-Paket, Lean-Prüfer, Datenbank, Maschine) sind Umsetzungen dieses Modells; sie wenden dieselben Regeln an.
+
+\subsection{Akten, Frames und Abbildungen}
+
+\begin{definition}[Akte]
+Eine \emph{Akte} ist eine endliche, geordnete Folge von Einträgen \(e_1,\dots,e_n\). Sie wird nur am Ende erweitert (\emph{append-only});
+bestehende Einträge werden nie geändert. Eine Korrektur ist ein neuer Eintrag, der den alten ausdrücklich ersetzt.
+\end{definition}
+
+Ein \emph{Frame} ist ein Name für einen Beschreibungsrahmen: eine Konvention, ein Bezugssystem, eine Modellannahme, ein Sektor. Frames
+tragen keine innere Struktur; das Modell kennt nur ihre Namen und erklärte Abbildungen zwischen ihnen. Eine \emph{Abbildung}
+\(g\colon A\to B\) ist ein deklarierter Name mit Quell- und Ziel-Frame; zwei Abbildungen können zu einer dritten komponiert werden. Ein
+ausgezeichneter Frame \(*\) steht für konventionsfreie Aussagen (eine reine Zahl, einen Satz der Mathematik) und ist mit jedem Frame
+verträglich. Braucht eine Anwendung mehrere unabhängige Konventionsachsen, erhält jede Kombination einen eigenen Frame und es werden
+Abbildungen zwischen ihnen erklärt.
+
+\subsection{Die registrierte Aussage}
+
+\begin{definition}[Eintrag]\label{def:eintrag}
+Ein Aussageeintrag ist ein Tupel
+\[
+e=(\mathit{kind},\ \mathit{key},\ \mathit{frame},\ \mathit{status},\ \mathit{inputs},\ \mathit{premises},\ \mathit{statement})
+\]
+mit
+\begin{itemize}[nosep]
+\item \(\mathit{kind}\in\{\texttt{input},\texttt{claim},\texttt{thesis},\texttt{derive},\texttt{convert}\}\);
+\item einem in der Akte eindeutigen Schlüssel \(\mathit{key}\);
+\item einem deklarierten Frame;
+\item einem Status aus der total geordneten Menge
+\[
+\st{open}<\st{reading}<\st{conditional}<\st{computed}<\st{proved};
+\]
+\item der Menge \(\mathit{inputs}\) der eingesetzten Werte, auf denen \(e\) ruht;
+\item der Liste der Prämissen, das heißt früherer Einträge, aus denen \(e\) gewonnen wurde (bei \texttt{convert} zusätzlich die Abbildung);
+\item optional einem Wortlaut.
+\end{itemize}
+\end{definition}
+
+Die fünf Arten haben feste Bedeutungen. Eine \emph{Eingabe} ist ein von außen eingesetzter Wert: ein Messwert, ein Literaturwert, ein
+angepasster Parameter. Ihre Eingabemenge enthält sie selbst. Eine \emph{Behauptung} ist eine Aussage ohne Prämissen in der Akte, etwa ein
+zitierter Satz. Eine \emph{These} ist eine Behauptung, deren Wortlaut Teil ihrer Identität ist; mit ihr beginnt typischerweise eine Arbeit.
+Eine \emph{Herleitung} gewinnt eine Aussage aus Prämissen im selben Frame, eine \emph{Überführung} bringt eine Aussage über eine
+deklarierte Abbildung in einen anderen Frame. Daneben gibt es zwei statuslose Prüfaussagen: den \emph{Vergleich} zweier Einträge und die
+\emph{Unabhängigkeitserklärung}, die behauptet, dass ein Eintrag auf keiner Eingabe ruht.
+
+Die Statusstufen bedeuten: \st{proved} bewiesen; \st{computed} durch eine Rechnung gestützt, aber nicht bewiesen; \st{conditional} unter
+benannten, nicht erfüllten Bedingungen gültig; \st{reading} eine Lesart oder Zuordnung, etwa die Identifikation eines mathematischen
+Objekts mit einer physikalischen Größe; \st{open} offen. Der Status wird vom Autor vergeben. Das Modell prüft nicht, ob ein als
+\st{proved} deklarierter Satz bewiesen ist, sondern nur, ob ein Schluss stärker deklariert ist als das, worauf er ruht.
+
+\subsection{Regeln}
+
+\begin{definition}[Wohlgeformtheit]\label{def:regeln}
+Eine Akte ist \emph{wohlgeformt}, wenn für jeden Eintrag \(e_i\) gilt:
+\begin{enumerate}[nosep,label=(R\arabic*)]
+\item \emph{Deklaration vor Gebrauch.} Jeder Schlüssel, Frame und jede Abbildung, die \(e_i\) nennt, ist in \(e_1,\dots,e_{i-1}\) deklariert;
+kein Schlüssel ist doppelt.
+\item \emph{Keine Beförderung.} Ist \(e_i\) eine Herleitung oder Überführung mit Prämissen \(p_1,\dots,p_m\), so ist
+\(\mathit{status}(e_i)\le\min_j\mathit{status}(p_j)\).
+\item \emph{Eingaben bleiben erhalten.} \(\mathit{inputs}(e_i)=\bigcup_j\mathit{inputs}(p_j)\); eine Eingabe hat \(\mathit{inputs}=\{\mathit{key}\}\),
+eine Behauptung und eine These haben \(\mathit{inputs}=\emptyset\). Eine Unabhängigkeitserklärung für \(e\) ist nur zulässig, wenn
+\(\mathit{inputs}(e)=\emptyset\).
+\item \emph{Keine Frame-Vermischung.} Die Prämissen einer Herleitung und die beiden Seiten eines Vergleichs liegen im selben Frame
+(oder in \(*\)). Eine Überführung \(\mathrm{convert}(g,p)\) mit \(g\colon A\to B\) verlangt \(\mathit{frame}(p)=A\) und hat den Frame \(B\).
+\end{enumerate}
+\end{definition}
+
+Die drei inhaltlichen Regeln entsprechen den drei Fehlerklassen der Einleitung: (R2) verhindert die Beförderung, (R3) verhindert, dass ein
+eingesetzter Wert als Ergebnis gilt, (R4) verhindert die Frame-Vermischung. (R1) macht die Prüfung in einem einzigen Durchlauf
+möglich.
+
+Zwei Folgerungen sind für alles Weitere zentral. Weil (R2) und (R3) bei jedem Schritt gelten, gelten sie auch über beliebig lange Ketten:
+Ein Schluss ist höchstens so stark wie der schwächste Eintrag, den man von ihm aus über Prämissen erreicht, und er trägt jede Eingabe,
+die irgendwo auf diesen Wegen eingesetzt wurde. Diese Aussagen sind in Lean bewiesen (Abschnitt~\ref{sec:ebeneA}).
+
+\subsection{Offene Bedingungen}\label{sec:offen}
+
+Aus den gespeicherten Feldern lässt sich für jede Aussage berechnen, worauf sie letztlich ruht. Wir verwenden in diesem Artikel folgende
+Sprechweise:
+
+\begin{definition}[Offene Bedingungen einer Aussage]\label{def:offen}
+Die \emph{offenen Bedingungen} einer Aussage \(e\) sind die Einträge, die von \(e\) aus über Prämissen erreichbar sind und einen Status
+unterhalb von \st{proved} haben, zusammen mit \(\mathit{inputs}(e)\).
+\end{definition}
+
+Die Definition ist eine Lesart der gespeicherten Struktur, kein zusätzliches Feld; die Datenbankabfrage \texttt{premises}
+(Abschnitt~\ref{sec:datenbank}) liefert genau diese erreichbaren Einträge mit ihrem Status. Nach (R2) ist eine Aussage mit einer offenen
+Bedingung selbst nicht \st{proved}, und nach (R3) bleibt jede eingesetzte Größe sichtbar. Eine offene Bedingung kann deshalb nicht dadurch
+verschwinden, dass weitere Schlüsse auf ihr aufbauen: Sie wird an jeden Nachfolger \emph{vererbt}. In diesem Sinn sind offene
+Bedingungen Objekte des Abhängigkeitsgraphen und nicht Anmerkungen im Text. Abschnitt~\ref{sec:guards} beschreibt, wie dieselbe Idee
+auf der Ebene der Ausführung umgesetzt ist.
+
+\subsection{Identität durch Hash-Kette}
+
+\begin{definition}[Hash eines Eintrags]
+Der Hash eines Eintrags ist
+\[
+h(e)=\mathrm{MD5}\bigl(\mathit{kind};\mathit{key};\mathit{frame};\mathit{status};\mathit{inputs};\mathit{sources};\mathit{statement}\bigr),
+\]
+wobei \(\mathit{sources}\) die Liste der Hashes der Prämissen ist. Der Hash der Akte ist der Hash über die Folge aller Eintragshashes.
+\end{definition}
+
+Weil die Hashes der Prämissen in den Hash eines Schlusses eingehen, nennt jeder Schluss die exakten Fassungen dessen, worauf er ruht.
+Ändert sich ein Wort einer These, ändern sich alle Hashes, die von ihr abhängen; unabhängige Einträge behalten ihre. Gleiche Hashes
+bedeuten gleiche Einträge, nicht wahre. MD5 dient hier dem Erkennen versehentlicher Änderungen; für eine Veröffentlichung kommen
+SHA-256-Summen über Quelle, Ausgabedokument und Akte hinzu.
+
+\subsection{Was das Modell nicht enthält}
+
+Das Modell kennt keine Semantik der Aussagen. Es weiß nicht, was eine Formel bedeutet, ob eine Rechnung richtig ist oder ob ein Frame
+sinnvoll gewählt ist. Abbildungen haben keinen Status: Dass eine Abbildung zwischen zwei Frames physikalisch oder mathematisch
+gerechtfertigt ist, muss als eigene Aussage registriert werden, wenn es eine Bedingung ist. Eine Behauptung, die ohne Prämissen als
+\st{proved} deklariert wird, wird als solche akzeptiert. Ein angepasster Wert, der unter neuem Namen als Behauptung deklariert wird, wird nicht
+als Eingabe erkannt. Diese Grenzen sind bewusst: Sie halten das Modell klein genug, dass seine Regeln vollständig mechanisch prüfbar sind.
+
+\subsection{Die Objektebene}
+
+Unterhalb der Buchführung legt QAM acht Objektarten als markierte Tupel über der gewöhnlichen Mengenlehre fest: Zustand, Schicht,
+Operator, Auslesung, Zweig, Schale, Zeuge und Tensor, \(\langle0,\dots\rangle\) bis \(\langle7,\dots\rangle\). Ein eingesetzter Wert ist die
+Auslesung eines Zeugen \(\langle6,u\rangle\), eine Wahl während einer Konstruktion ein Zweig; Größen tragen ihren Frame als vorderen Index,
+\({}^{A}{}_{B}\mathcal T^{i}{}_{j}\). Die Objektebene fügt keine Axiome hinzu, ist in Lean formalisiert (Anhang~\ref{app:lean}) und liefert
+die Bausteine der Maschinenaufträge, etwa \texttt{operator} und \texttt{state}.
