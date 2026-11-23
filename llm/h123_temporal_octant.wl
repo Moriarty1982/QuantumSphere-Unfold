@@ -5,7 +5,8 @@
 js = Range[1/2, 20, 1/2];
 
 (* Spin-kohaerenter Zustand in Richtung (theta, phi), Basis m = j, j-1, ..., -j; globale Phase irrelevant fuer B *)
-coh[j_, th_, ph_] := Table[Sqrt[Binomial[2 j, j + m]] Cos[th/2]^(j + m) Sin[th/2]^(j - m) Exp[-I m ph], {m, j, -j, -1}];
+pw[x_, 0] := 1; pw[x_, k_] := x^k; (* vermeidet 0^0 an den Polen (Korrektur nach erstem Lauf, Programmierfehler) *)
+coh[j_, th_, ph_] := Table[Sqrt[Binomial[2 j, j + m]] pw[Cos[th/2], j + m] pw[Sin[th/2], j - m] Exp[-I m ph], {m, j, -j, -1}];
 pole[j_, "z", s_] := If[s == 1, coh[j, 0, 0], coh[j, Pi, 0]];
 pole[j_, "x", s_] := If[s == 1, coh[j, Pi/2, 0], coh[j, Pi/2, Pi]];
 pole[j_, "y", s_] := If[s == 1, coh[j, Pi/2, Pi/2], coh[j, Pi/2, -Pi/2]];

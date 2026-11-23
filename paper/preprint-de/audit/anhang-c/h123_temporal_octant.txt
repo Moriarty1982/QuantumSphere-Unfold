@@ -1,0 +1,75 @@
+Ausgabe von llm/h123_temporal_octant.wl (Wolfram-Kern ueber MCP, 23.11.2026; keine lokale Installation).
+Lauf in zwei Teilen (Teil 1: Kontrollen, H123a-c; Teil 2: H123d, Nebenrechnung); D123 aus Teil 1 woertlich in Teil 2 uebernommen.
+Erster Lauf ungueltig (Programmierfehler): 0^0 an den Polen in coh[] gab Indeterminate; Korrektur pw[x,0] = 1, Kriterien unveraendert.
+Warnungen im gueltigen Lauf: Symbol::undefined2 (Linter-Hinweis des MCP-Kerns auf lokal definierte Symbole, kein Rechenfehler);
+General::munfl in Teil 2 (Unterlauf von Exp[-709...] bei der ersten Maschinenauswertung von FindRoot fuer j nahe j_max;
+Summanden < 1e-300, Wurzel mit WorkingPrecision 40 bestimmt).
+
+== Kontrollen ==
+Theta_j^2 = (-1)^(2j) fuer alle j<=20: True
+Frame-Abbildungen erhalten extremale Zustaende, exakt j<=4: True
+Frame-Abbildungen erhalten extremale Zustaende, numerisch j<=20 (1e-12): True
+== H123a ==
+Reste B_tau - 2^(-3j) e^(i tau eps j pi/2), 40 j x 8 x 2 = 640 Faelle, alle 0: True
+umgekehrte Reihenfolge = konjugiert, alle 0: True
+Theta_j konjugiert B, alle 0: True
+Zeitumkehr des Protokolls (Reihenfolge + Theta_j) laesst B fest, alle 0: True
+== H123b ==
+j=1/2  B(+j)=1/4 + I/4  B(-j)=1/4 - I/4  |gleich|=True  unterschieden=True
+j=1  B(+j)=I/8  B(-j)=-1/8*I  |gleich|=True  unterschieden=True
+j=3/2  B(+j)=-1/32 + I/32  B(-j)=-1/32 - I/32  |gleich|=True  unterschieden=True
+j=2  B(+j)=-1/64  B(-j)=-1/64  |gleich|=True  unterschieden=False
+j=5/2  B(+j)=-1/256 - I/256  B(-j)=-1/256 + I/256  |gleich|=True  unterschieden=True
+j=3  B(+j)=-1/512*I  B(-j)=I/512  |gleich|=True  unterschieden=True
+j=7/2  B(+j)=1/2048 - I/2048  B(-j)=1/2048 + I/2048  |gleich|=True  unterschieden=True
+j=4  B(+j)=1/4096  B(-j)=1/4096  |gleich|=True  unterschieden=False
+j=9/2  B(+j)=1/16384 + I/16384  B(-j)=1/16384 - I/16384  |gleich|=True  unterschieden=True
+j=5  B(+j)=I/32768  B(-j)=-1/32768*I  |gleich|=True  unterschieden=True
+j=11/2  B(+j)=-1/131072 + I/131072  B(-j)=-1/131072 - I/131072  |gleich|=True  unterschieden=True
+j=6  B(+j)=-1/262144  B(-j)=-1/262144  |gleich|=True  unterschieden=False
+j=13/2  B(+j)=-1/1048576 - I/1048576  B(-j)=-1/1048576 + I/1048576  |gleich|=True  unterschieden=True
+j=7  B(+j)=-1/2097152*I  B(-j)=I/2097152  |gleich|=True  unterschieden=True
+j=15/2  B(+j)=1/8388608 - I/8388608  B(-j)=1/8388608 + I/8388608  |gleich|=True  unterschieden=True
+j=8  B(+j)=1/16777216  B(-j)=1/16777216  |gleich|=True  unterschieden=False
+j=17/2  B(+j)=1/67108864 + I/67108864  B(-j)=1/67108864 - I/67108864  |gleich|=True  unterschieden=True
+j=9  B(+j)=I/134217728  B(-j)=-1/134217728*I  |gleich|=True  unterschieden=True
+j=19/2  B(+j)=-1/536870912 + I/536870912  B(-j)=-1/536870912 - I/536870912  |gleich|=True  unterschieden=True
+j=10  B(+j)=-1/1073741824  B(-j)=-1/1073741824  |gleich|=True  unterschieden=False
+j=21/2  B(+j)=-1/4294967296 - I/4294967296  B(-j)=-1/4294967296 + I/4294967296  |gleich|=True  unterschieden=True
+j=11  B(+j)=-1/8589934592*I  B(-j)=I/8589934592  |gleich|=True  unterschieden=True
+j=23/2  B(+j)=1/34359738368 - I/34359738368  B(-j)=1/34359738368 + I/34359738368  |gleich|=True  unterschieden=True
+j=12  B(+j)=1/68719476736  B(-j)=1/68719476736  |gleich|=True  unterschieden=False
+j=25/2  B(+j)=1/274877906944 + I/274877906944  B(-j)=1/274877906944 - I/274877906944  |gleich|=True  unterschieden=True
+j=13  B(+j)=I/549755813888  B(-j)=-1/549755813888*I  |gleich|=True  unterschieden=True
+j=27/2  B(+j)=-1/2199023255552 + I/2199023255552  B(-j)=-1/2199023255552 - I/2199023255552  |gleich|=True  unterschieden=True
+j=14  B(+j)=-1/4398046511104  B(-j)=-1/4398046511104  |gleich|=True  unterschieden=False
+j=29/2  B(+j)=-1/17592186044416 - I/17592186044416  B(-j)=-1/17592186044416 + I/17592186044416  |gleich|=True  unterschieden=True
+j=15  B(+j)=-1/35184372088832*I  B(-j)=I/35184372088832  |gleich|=True  unterschieden=True
+j=31/2  B(+j)=1/140737488355328 - I/140737488355328  B(-j)=1/140737488355328 + I/140737488355328  |gleich|=True  unterschieden=True
+j=16  B(+j)=1/281474976710656  B(-j)=1/281474976710656  |gleich|=True  unterschieden=False
+j=33/2  B(+j)=1/1125899906842624 + I/1125899906842624  B(-j)=1/1125899906842624 - I/1125899906842624  |gleich|=True  unterschieden=True
+j=17  B(+j)=I/2251799813685248  B(-j)=-1/2251799813685248*I  |gleich|=True  unterschieden=True
+j=35/2  B(+j)=-1/9007199254740992 + I/9007199254740992  B(-j)=-1/9007199254740992 - I/9007199254740992  |gleich|=True  unterschieden=True
+j=18  B(+j)=-1/18014398509481984  B(-j)=-1/18014398509481984  |gleich|=True  unterschieden=False
+j=37/2  B(+j)=-1/72057594037927936 - I/72057594037927936  B(-j)=-1/72057594037927936 + I/72057594037927936  |gleich|=True  unterschieden=True
+j=19  B(+j)=-1/144115188075855872*I  B(-j)=I/144115188075855872  |gleich|=True  unterschieden=True
+j=39/2  B(+j)=1/576460752303423488 - I/576460752303423488  B(-j)=1/576460752303423488 + I/576460752303423488  |gleich|=True  unterschieden=True
+j=20  B(+j)=1/1152921504606846976  B(-j)=1/1152921504606846976  |gleich|=True  unterschieden=False
+gleicher Betrag fuer alle (sx,sy): True
+D123 (unterschiedene j): {1/2, 1, 3/2, 5/2, 3, 7/2, 9/2, 5, 11/2, 13/2, 7, 15/2, 17/2, 9, 19/2, 21/2, 11, 23/2, 25/2, 13, 27/2, 29/2, 15, 31/2, 33/2, 17, 35/2, 37/2, 19, 39/2}
+nicht unterschiedene j: {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+H123b (alle j unterschieden): False
+== H123c ==
+Einfenster-Auslese unterscheidet j: {1/2, 3/2, 5/2, 7/2, 9/2, 11/2, 13/2, 15/2, 17/2, 19/2, 21/2, 23/2, 25/2, 27/2, 29/2, 31/2, 33/2, 35/2, 37/2, 39/2}
+genau die halbzahligen j: True
+== H123d ==
+Hinweis: fuer 20 < j <= 4000 wird D123 per H123a-Formel fortgesetzt (Trennung genau fuer j nicht in 2N).
+Kontrolle (A,2): gamma_M = 0.2375329580  |gamma_M - 0.237533| < 1e-6: True
+gamma_T (S1/2, g=2) = 0.1273840231; j=1/2 in D123: True
+Restglied-Abschaetzung jenseits j_max (Groessenordnung): 1.81*^-2593
+gamma_M' = 0.2341229108  gamma_L' = 1.837929946  beta' = 0.54337921  m_W' = 80.099432 GeV  Omega_M' = 0.295261
+Fenster beta [0.545,0.570]: False; m_W 80.3692+-2*0.0133: False (Abstand -20.2833 sigma); Omega_M 0.2975+-2*0.0086: True (-0.260352 sigma)
+H123d traegt (alle drei Fenster): False
+== Nebenrechnung (kein Kriterium): gebogenes Dreieck ==
+phi = 2/3: unterschiedene j<=20: 40 von 40 (pi irrational: alle)
+phi = pi/4 - gamma_M/2 = 0.6666316844: kleinster Abstand von 2 j phi zu pi Z ueber j<=20: 0.00245003

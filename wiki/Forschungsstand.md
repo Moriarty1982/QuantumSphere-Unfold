@@ -1,5 +1,18 @@
 # Forschungsstand
 
+### H123 / Runde r56: Zeitlich geordnete Oktant-Auslese auf einer Punktierung (Q1a) (23.11.2026)
+
+Faden „Auslesegesetz Q1a als H123 testen“, Freigabe des Autors „Committen und rechnen“. Vorab-Notiz 1a4662ef, Wolfram exakt, Qiskit-Zyklustest als
+unabhängige Kontrolle; teilweise nicht blind. Gefragt ist, was eine Auslese in drei zeitlich geordneten Fenstern R → T → J_B (Bargmann-Invariante des
+Oktant-Tripels) auf einer Punktierung vom Spin j leistet. **H123a bestätigt (nicht blind):** B = 2^(−3j) e^(iτεjπ/2) für alle j ≤ 20; die Zeitumkehr des
+Protokolls (Reihenfolge umkehren und antiunitäres Θ_j) lässt B fest, wie r31.2 für Spin ½. **H123b widerlegt (erwartet):** Die Auslese gibt beiden
+Orientierungen |j, ±j⟩ denselben Betrag, trennt sie aber nur für j ∉ 2ℕ; für j = 2, 4, … ist B(+j) = B(−j). **H123c bestätigt:** Ein einzelnes
+Fenster (Eigenwert von R_j) trennt nur die halbzahligen j. **H123d trägt nicht:** Die daraus folgende Zählregel (Gewicht 1 auf geraden j) gibt
+γ_M′ = 0,23412, γ_L′ = 1,8379, β′ = 0,5434, m_W′ = 80,099 GeV (−20σ); Leptonfenster und m_W verfehlt, Ω_M = 0,295 im Fenster. Lesart: Das
+Oktantvorzeichen und das Gewicht 2 der Zählung sind in dieser Form nicht derselbe Datensatz; eine Dreiecksauslese, die U2 liefert, braucht einen
+Raumwinkel Ω mit jΩ ∉ πℤ für alle j. Nachträglich: Das gebogene Dreieck der Restbiegung (≈ ⅔) erfüllt das, ist aber aus γ_M gebaut. Auslöser 3 von
+I1 getroffen (als Ausweg genannt, nicht verfolgt). Q1a, OP1, OP3 offen; kein Guard berührt. [Ergebnis](../llm/Ergebnis_H123_Zeitliche_Oktantauslese.md), [Runde](../notes/research/v4_10_0_r56/README.md)
+
 ### Deutscher Preprint 0.2.0 veröffentlicht (23.11.2026)
 
 Auf Freigabe des Autors ist der deutsche Preprint in Fassung 0.2.0 auf Zenodo erschienen: DOI
