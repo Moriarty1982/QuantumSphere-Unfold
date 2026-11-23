@@ -52,9 +52,9 @@ Die Vergleichswirkung setzt ihre Krümmung, Materiedichte und Kopplungskoeffizie
 
 \subsection{Von Daten an einem Punkt zu einer Feldlösung}
 
-Die Cartan-Rechnungen im Companion prüfen endliche Ableitungsdaten an einem Punkt. Nach Eliminierung höherer freier Ableitungen ergeben sich lineare Bedingungen an vorgeschriebene Daten und den Quellenzuwachs. Ist die reduzierte Quellenmatrix \(L\) von vollem Spaltenrang, besitzt \(Lq=b\) für kompatible Daten genau eine Lösung \(q=L^+b\), wobei \(L^+\) die Moore--Penrose-Pseudoinverse ist. Die Kompatibilitätsbedingung lautet \((\id-LL^+)b=0\). Diese Rechnung kann angeben, welche Daten an diesem Punkt eine gemeinsame Fortsetzung der geprüften endlichen Ordnung zulassen.
+Die Cartan-Rechnungen im Companion prüfen endliche Ableitungsdaten an einem Punkt. Nach Eliminierung höherer freier Ableitungen ergeben sich lineare Bedingungen an vorgeschriebene Daten und den Quellenzuwachs. Ist die reduzierte Quellenmatrix \(L\) von vollem Spaltenrang, besitzt \(Lq=b\) für kompatible Daten genau eine Lösung \(q=L^+b\), wobei \(L^+\) die Moore--Penrose-Pseudoinverse ist. Die Kompatibilitätsbedingung lautet \((I-LL^+)b=0\). Diese Rechnung kann angeben, welche Daten an diesem Punkt eine gemeinsame Fortsetzung der geprüften endlichen Ordnung zulassen.
 
-Der Vergleich enthält bereits eine bedingte Aussage zur Fortpflanzung der gravitativen Zwangsbedingungen. Sind die Verbindung kompatibel eliminiert und sowohl Konstitutiv- als auch Sondengleichung in einem offenen Gebiet erfüllt, geben die Ward-Identitäten dort einen symmetrischen und divergenzfreien Coframe-Resttensor. Mit den räumlich projizierten spurmodifizierten Coframe-Gleichungen erhält man unter den angegebenen Regularitäts- und Randbedingungen ein symmetrisch hyperbolisches System für die vier gravitativen Zwangsgrößen. Bei verschwindenden Anfangsdaten und ohne einlaufenden Zwangsfluss bleiben diese Größen null. Die Anwendung setzt die beiden zuerst genannten Feldgleichungen auf dem Gebiet voraus. Ein Verschwinden ihrer Reste an einem einzelnen Punkt reicht dafür nicht aus \cite{companion,repo}.
+Der Vergleich enthält bereits eine bedingte Aussage zur Fortpflanzung der gravitativen Zwangsbedingungen. Sind die Verbindung kompatibel eliminiert und sowohl die Konstitutivgleichung \(E^a{}_\mu=\mathcal C^a{}_\mu\) aus der Variation nach \(\lambda_a{}^\mu\) als auch die Sondengleichung, die Euler-Gleichung der Spinoren, in einem offenen Gebiet erfüllt, geben die Ward-Identitäten dort einen symmetrischen und divergenzfreien Coframe-Resttensor. Mit den räumlich projizierten spurmodifizierten Coframe-Gleichungen erhält man unter den angegebenen Regularitäts- und Randbedingungen ein symmetrisch hyperbolisches System für die vier gravitativen Zwangsgrößen. Bei verschwindenden Anfangsdaten und ohne einlaufenden Zwangsfluss bleiben diese Größen null. Die Anwendung setzt die beiden zuerst genannten Feldgleichungen auf dem Gebiet voraus. Ein Verschwinden ihrer Reste an einem einzelnen Punkt reicht dafür nicht aus \cite{companion,repo}.
 
 Eine Lösung in einem offenen Gebiet erfordert zusätzlich die gleichzeitige Erfüllung der Konstitutiv- und Sondengleichungen, kompatible Flächendaten und eine Kontrolle der Fortpflanzung der Zwangsbedingungen. Das bleibt eine eigene Aufgabe. Entsprechend unterscheidet der Companion die punktweise Prüfung des Cartan-Vergleichs von der allgemeinen Schließung des Feldsystems.
 
@@ -69,7 +69,7 @@ Die beiden Wege in der folgenden Skizze setzen bei derselben Materialvariation a
 
 \subsubsection{Welche Quelle die Massenterme liefern}
 
-Sei \(h_{\rm W}=v+\eta_h\) der Higgsradius der Wirkung W2 bei festen Higgswinkeln und \(v>0\) sein Referenzwert. In der gewählten Normierung gilt \(m_i(h_{\rm W})=y_i h_{\rm W}\). Für nichtrelativistische Besetzungen mit Teilchenzahldichten \(n_i\) behalten wir zunächst die Ruheenergie. Die Materiedichte und ihre radiale Quelle sind dann
+W2 bezeichnet die gemeinsame Vergleichswirkung des Companion: Gravitation nach Einstein und Cartan mit den Spinoren einer Generation und ihren Eichfeldern (W1), ergänzt um ein Higgs-Dublett mit Yukawa-Kopplungen (Runden v4.9.0-r81 und v4.9.0-r82 \cite{companion}). Sei \(h_{\rm W}=v+\eta_h\) der Higgsradius von W2 bei festen Higgswinkeln und \(v>0\) sein Referenzwert. In der gewählten Normierung gilt \(m_i(h_{\rm W})=y_i h_{\rm W}\). Für nichtrelativistische Besetzungen mit Teilchenzahldichten \(n_i\) behalten wir zunächst die Ruheenergie. Dabei setzen wir die Ruheenergie des Materials mit seiner Yukawa-Masse gleich, nehmen also an, dass sie ganz vom Higgsradius getragen wird. Das ist eine Modellannahme dieser Fallstudie; Runde v4.10.0-r35 \cite{layers} führt den Higgsanteil der Ruhemasse als eigene Größe. Die Materiedichte und ihre radiale Quelle sind dann
 \begin{align}
  \epsilon_{\rm mat}(h_{\rm W},n_i)&=h_{\rm W}\sum_i y_i n_i,
  &
@@ -113,9 +113,9 @@ Die beiden Gleichungen für die Feder lassen sich direkt an der gewählten Versc
 \[
  (\rho_1-\rho_2/c_\sigma)\,\ddot{\mathbf u}=0.
 \]
-Gerade bei \(\beta_\rho\ne0\) könnte dieser starre Ansatz also keinen Einschaltvorgang aus dem Ruhezustand tragen. Die zwei Operatoren in \eqref{eq:op5-elastic} lösen dieses Problem, indem die Summenspannung während der Schaltung die Änderung des Gesamtimpulses trägt \cite{op5-motion}.
+Mit \(\beta_\rho=\rho_2-c_\sigma\rho_1\) ist der Vorfaktor \(-\beta_\rho/c_\sigma\). Gerade bei \(\beta_\rho\ne0\) könnte dieser starre Ansatz also keinen Einschaltvorgang aus dem Ruhezustand tragen. Die zwei Operatoren in \eqref{eq:op5-elastic} lösen dieses Problem, indem die Summenspannung während der Schaltung die Änderung des Gesamtimpulses trägt \cite{op5-motion}.
 
-Mit \(\beta_\rho=\rho_2-c_\sigma\rho_1\) lauten die zugehörigen linearen mechanischen Beiträge
+Für die gewählte Verschiebung lauten die zugehörigen linearen mechanischen Beiträge
 \begin{equation}
  \delta T^{00}=-\beta_\rho\nabla\cdot\mathcal L\mathbf b,\qquad
  \delta T^{0i}=\beta_\rho(\mathcal L\dot{\mathbf b})_i,\qquad
@@ -130,13 +130,13 @@ Zur Kontrolle kann man Dichte, Impuls und Spannung aus zwei verschiedenen Linear
  \mathbf u+c_\sigma\mathbf w&=\beta_\rho\ddot{\mathbf b}.
  \label{eq:op5-sum-identities}
 \end{align}
-Die Dichte ist minus die Divergenz der ersten Kombination, der Impuls ihre Zeitableitung. Die Spannungskomponenten des Quellentensors sind minus \(\sigma\) angewandt auf die zweite Kombination. Die Kontinuitätsgleichung kürzt so die Dichteableitung gegen die Impulsdivergenz. In der Impulsbilanz kürzt sich \(\beta_\rho\mathcal L\ddot{\mathbf b}\) gegen die Divergenz der Summenspannung. Für \(\mathbf b=\nabla S\) wird \(\mathcal L\mathbf b=K_L\nabla\Delta S\). Die zwei aus der Quelle stammenden Laplace-Operatoren in \eqref{eq:op5-elas-source} kommen also von der longitudinalen Elastodynamik und der Divergenz in der Dichte. Für \(\mathbf b=\nabla S\) und \(K_L=\lambda+2\mu>0\), mit den Lamé-Koeffizienten \(\lambda,\mu\) der ersten Komponente, wird mit \eqref{eq:op5-density}
+Die Dichte ist minus die Divergenz der ersten Kombination, der Impuls ihre Zeitableitung. Die Spannungskomponenten des Quellentensors sind minus \(\sigma\) angewandt auf die zweite Kombination. Die Kontinuitätsgleichung kürzt so die Dichteableitung gegen die Impulsdivergenz. In der Impulsbilanz kürzt sich \(\beta_\rho\mathcal L\ddot{\mathbf b}\) gegen die Divergenz der Summenspannung. Für \(\mathbf b=\nabla S\) und \(K_L=\lambda+2\mu>0\), mit den Lamé-Koeffizienten \(\lambda,\mu\) der ersten Komponente, wird \(\mathcal L\mathbf b=K_L\nabla\Delta S\). Setzt man wie oben die Ruhedichte des Materials mit seiner Yukawa-Massendichte gleich, wird mit \eqref{eq:op5-density}
 \begin{equation}
  \delta\mathcal J_h=-\frac{\delta T^{00}}{v}
                   =\frac{\beta_\rho K_L}{v}\Delta^2 S .
  \label{eq:op5-elas-source}
 \end{equation}
-Die Konstruktion mit einem direkten Higgsantrieb setzt \(\beta_\rho\ne0\) voraus. Bei \(\beta_\rho=0\) verschwinden in diesem Ansatz sowohl der mechanische Tensor als auch diese Quelle.
+Die zwei Laplace-Operatoren in \eqref{eq:op5-elas-source} kommen von der longitudinalen Elastodynamik und der Divergenz in der Dichte. Die Konstruktion mit einem direkten Higgsantrieb setzt \(\beta_\rho\ne0\) voraus. Bei \(\beta_\rho=0\) verschwinden in diesem Ansatz sowohl der mechanische Tensor als auch diese Quelle.
 
 \subsubsection{Wo die Kopplung an das OP5-Feld eingeht}
 
@@ -148,7 +148,7 @@ Das reduzierte OP5-Modell setzt einen gerichteten massiven Vermittler mit Massen
  &=\frac{[Z(\Omega_0^2+c_h^2q-x)+\tfrac32g_0^2d]d_m-g_m^2N_m}{m^2}.
  \label{eq:op5-drive}
 \end{align}
-Die Koeffizienten und die gerichtete Quellenform sind vorgegeben. Eine in den Notizen geprüfte Wahl ist \(Z=1\), \(r_m=c_h^2=1/2\), \(g_0^2=g_m^2=3/100\), \(m^2,\Omega_0^2>0\). Auf ein Profil \(\delta H\) antwortet das reduzierte Modell bei passender Präparation auf den Antrieb \(\delta J_{\rm OP5}=\mathcal P_{\rm dyn}\delta H\) \cite{op5-channel}. Die Rechenschritte von hier bis zur Bilanz zweiter Ordnung sind in Anhang~\ref{sec:anhang-b} einzeln hergeleitet und mit Wolfram geprüft.
+Die Koeffizienten und die gerichtete Quellenform sind vorgegeben. Eine in den Notizen geprüfte Wahl ist \(Z=1\), \(r_m=c_h^2=1/2\), \(g_0^2=g_m^2=3/100\), \(m^2,\Omega_0^2>0\). Sie dient hier als Rechenbeispiel. Liest man das Vergleichsfeld als Radialmodus des Higgsradius von W2, erzwingt W2 \(c_h=1\), bei minimaler Kopplung \(g_0=0\), und mangels gerichteten Vermittlers \(g_m=0\); \(c_h^2=1/2\) ist also eine Vergleichswahl, die W2 nicht trägt (Runde v4.10.0-r33 \cite{layers}). Die Kegelgrenze der Kausalität verlangt, dass beide Vermittler und der Higgsradius langsamer als das Licht laufen. Mit lichtschnellem Higgsradius ist die gerichtete Kopplung für keine Wahl der Vermittlergeschwindigkeiten verträglich (Runden v4.10.0-r47 und v4.10.0-r49 \cite{layers}). Im Vakuum begrenzen Laborgrenzen der Lorentz-Verletzung, die für Fermionen gemessen und auf den Higgs-Sektor übertragen sind, die Kopplung auf \(g_m^2\lesssim10^{-26}\). Der Beispielwert \(g_m^2=3/100\) ist dort ausgeschlossen und nur in einem Material denkbar, dessen Ruhesystem die Präparation ist (Runden v4.10.0-r50 und v4.10.0-r51 \cite{layers}; Anhang~\ref{sec:anhang-b-annahmen}). Auf ein Profil \(\delta H\) antwortet das reduzierte Modell bei passender Präparation auf den Antrieb \(\delta J_{\rm OP5}=\mathcal P_{\rm dyn}\delta H\) \cite{op5-channel}. Die Rechenschritte von hier bis zur Bilanz zweiter Ordnung sind in Anhang~\ref{sec:anhang-b} einzeln hergeleitet und mit Wolfram geprüft.
 
 Die Wahl der zwei Quellenformen hat im reduzierten Modell eine konkrete Aufgabe. Mit \(p^\mu=(\omega,\mathbf k)\) ist \(d=p_\mu p^\mu\). Am Einstein-Kanal wird die identisch transversale Verbesserung \(S^{\mu\nu}=p^\mu p^\nu-\eta^{\mu\nu}d\) eingesetzt. In vier Dimensionen erfüllen ihre Spur und ihre doppelte Kontraktion
 \[
@@ -159,9 +159,9 @@ Der spurgespiegelte Austauschterm der beiden Quellen ist proportional zu
 \[
  \frac{S:S-(\operatorname{tr}S)^2/2}{d}=-\frac32 d .
 \]
-Nach Kürzung des Pols bleibt der lokale Beitrag, der in den Antriebsoperator \eqref{eq:op5-drive} eingeht. Auf derselben Verbesserung verschwindet auch die erhaltene Fierz--Pauli-Kontraktion \(S:S-(\operatorname{tr}S)^2/3\). Der gerichtete massive Kontrast in dieser Rechnung benutzt deshalb die eigens gewählte, zur Messachse transversale Quellenform mit dem Zähler \(N_m\). Die gemeinsame Herkunft beider Quellenformen aus einer physischen Wirkung bleibt zu zeigen \cite{op5-channel}.
+Nach Kürzung des Pols bleibt der lokale Beitrag, der in den Antriebsoperator \eqref{eq:op5-drive} eingeht. Auf derselben Verbesserung verschwindet auch die erhaltene Fierz--Pauli-Kontraktion \(S:S-(\operatorname{tr}S)^2/3\). Der gerichtete massive Kontrast in dieser Rechnung benutzt deshalb die eigens gewählte, zur Messachse transversale Quellenform mit dem Zähler \(N_m\). Die gemeinsame Herkunft beider Quellenformen aus einer physischen Wirkung bleibt zu zeigen \cite{op5-channel}. Ein erster Feldansatz gibt den Vermittlerterm mit eindeutigen Kopplungen exakt wieder, setzt aber einen zusätzlichen Skalar (Runde v4.10.0-r38 \cite{layers}). Für sich genommen ist der gerichtete Term ein gewöhnlicher Fierz--Pauli-Austausch einer gesetzten, gerichteten und erhaltenen Quelle; offen ist, ob Rahmen und Achse dieser Quelle zu einem Feld oder zur Auslese gehören (Runde v4.10.0-r45 \cite{layers}).
 
-Die Materierechnung liefert \(\delta\mathcal J_h\). Der Vergleich verlangt \(\delta J_{\rm OP5}\). Wir können beide in deklarierter Quellen-Normierung gleichsetzen und ausrechnen, was daraus folgt. Eine Wirkung, die diese Gleichsetzung aus dem gemeinsamen Träger herleitet, liegt noch nicht vor. Gleichung \eqref{eq:op5-match} markiert die zusätzliche Modellannahme; was sie trägt und was ohne sie bestehen bleibt, steht in Anhang~\ref{sec:anhang-b-annahmen}:
+Die Materierechnung liefert \(\delta\mathcal J_h\). Der Vergleich verlangt \(\delta J_{\rm OP5}\). Wir können beide in deklarierter Quellen-Normierung gleichsetzen und ausrechnen, was daraus folgt. Eine Wirkung, die diese Gleichsetzung aus dem gemeinsamen Träger herleitet, liegt noch nicht vor. Am Higgs-Sektor von W2 folgt sie für den skalaren Kanal, wenn das Vergleichsfeld der Higgs-Radialmodus ist; dann fehlt aber der gerichtete Vermittler, an dem der Kontrast hängt (Runde v4.10.0-r33 \cite{layers}). Gleichung \eqref{eq:op5-match} markiert die zusätzliche Modellannahme; was sie trägt und was ohne sie bestehen bleibt, steht in Anhang~\ref{sec:anhang-b-annahmen}:
 \begin{equation}
  \delta J_{\rm OP5}=\delta\mathcal J_h .
  \label{eq:op5-match}
@@ -200,19 +200,19 @@ Im flachen Kern kann man den Achsenterm Schritt für Schritt verfolgen. Mit der 
  \frac{\Delta_\perp\delta H}{-16\mathcal A p(z)/R^2}=\xi+O(\xi^2).
  \label{eq:op5-normalized-axis}
 \end{equation}
-Die Profiländerung selbst ist auf der Achse null. Auch der massive Eintrag \(\delta f(0,z)\) ist null. Die zweite transversale Ableitung dieses Eintrags kann trotzdem von null verschieden sein \cite{op5-motion}.
+Die Profiländerung selbst ist auf der Achse null. Der massive Vergleich benutzt neben dem skalaren Feld \(h=d_mH/m^2\) das Feld \(f=\Delta_\perp H/m^2\), das aus demselben Profil mit dem transversalen Laplace-Operator gebildet wird. Nach \eqref{eq:op5-normalized-axis} ist auch sein Eintrag \(\delta f(0,z)\) auf der Achse null. Die zweite transversale Ableitung dieses Eintrags kann trotzdem von null verschieden sein \cite{op5-motion}.
 
 \input{figures/op5-profil}
 
-Der massive Vergleich liefert \(f=\Delta_\perp H/m^2\). In der geometrischen Optik ergibt sich für eine transversale Einheitsrichtung \(e\) auf derselben Achse der Gezeitenkontrast
+In der geometrischen Optik ergibt sich für eine transversale Einheitsrichtung \(e\) auf derselben Achse der Gezeitenkontrast
 \begin{equation}
  \Delta\mathcal I=-\frac12\int\partial_e^2(\delta f)(0,z)\,dz
                  =\frac{16\mathcal A}{m^2R^4}\int p(z)\,dz .
  \label{eq:op5-contrast}
 \end{equation}
-Der Ausdruck ist ungleich null, obwohl der in \eqref{eq:op5-compact} betrachtete gewöhnliche lineare Außenbeitrag kompakt ist. In der idealisierten Krümmungsauslese multipliziert eine gesetzte Differenz der effektiven Kopplungen der beiden Auslesekanäle diesen Kontrast. Erst mit einer solchen Kopplungsdifferenz und kalibrierten Anschlüssen lässt sich daraus eine Laufzeitdifferenz für einen Messaufbau bestimmen \cite{op5-axis,op5-motion}.
+Der Ausdruck ist ungleich null, obwohl der in \eqref{eq:op5-compact} betrachtete gewöhnliche lineare Außenbeitrag kompakt ist. In der idealisierten Krümmungsauslese multipliziert eine gesetzte Differenz der effektiven Kopplungen der beiden Auslesekanäle diesen Kontrast. Erst mit einer solchen Kopplungsdifferenz und kalibrierten Anschlüssen lässt sich daraus eine Laufzeitdifferenz für einen Messaufbau bestimmen \cite{op5-axis,op5-motion}. Von der Ausleseseite gelesen ist die gerichtete Kopplung die kovariante Auslese des Gezeitenfelds quer zur Messachse eines Detektors mit Ruhesystem \(u\) und Achse \(n\) (Runde v4.10.0-r46 \cite{layers}). Rahmen und Achse wählt diese Auslese nicht selbst aus; sie sind eine Setzung des Detektors (Runde v4.10.0-r54 \cite{layers}).
 
-Die Terminologie der Auslese macht hier einen Unterschied. \(\Delta\mathcal I\) ist ein Integral einer Krümmungskomponente des Vergleichsfelds für eine feste Polarisation. Ein statischer konformer Term geht auf der Achse als integrierte Randableitung ein, und ein rein longitudinaler Anteil hat keine lineare Krümmung. Die Quelle kann so an den Enden identische lokale Vergleichsfelder liefern und auf dem Weg trotzdem den gerichteten Kontrast ändern \cite{op5-axis}. Für die dynamisch präparierte Profilfamilie liefert die Azimutalmittelung über ein rotationssymmetrisch gewichtetes, achsenparalleles Bündel mit konstantem Querschnitt im flachen Kern den Faktor
+Der Kontrast \(\Delta\mathcal I\) ist ein Integral einer Krümmungskomponente des Vergleichsfelds für eine feste Polarisation. Ein statischer konformer Term geht auf der Achse als integrierte Randableitung ein, und ein rein longitudinaler Anteil hat keine lineare Krümmung. Die Quelle kann so an den Enden identische lokale Vergleichsfelder liefern und auf dem Weg trotzdem den gerichteten Kontrast ändern \cite{op5-axis}. Für die dynamisch präparierte Profilfamilie liefert die Azimutalmittelung über ein rotationssymmetrisch gewichtetes, achsenparalleles Bündel mit konstantem Querschnitt im flachen Kern den Faktor
 \begin{equation}
  1-36\kappa\langle\xi\rangle
  \label{eq:op5-beam}
@@ -254,9 +254,11 @@ Für \(\mu>0\), \(3\lambda+2\mu>0\) und eine nichttriviale kompakte longitudinal
  \int\operatorname{tr}N(\mathsf H)\,d^3X
  =\left(\tfrac52\lambda+3\mu\right)\int|\mathsf H|^2\,d^3X>0 .
  \label{eq:op5-second}
-\end{equation} Bei kompaktem \(S_2\) erzwingt die statische Summengleichung nach Testen mit \(X\) eine verschwindende integrierte Spur. Der lineare Dehnungsterm integriert sich dabei zu null. Der positive quadratische Beitrag widerspricht dieser notwendigen Bedingung. Damit scheitert eine kompakte zweite Summenverschiebung unter den angegebenen Material- und Halterungsannahmen \cite{op5-elastic-limit}.
+\end{equation}
 
-Die Spuridentität lässt sich im selben Referenzchart prüfen. Für den Hessian \(\mathsf H\) von \(\varphi\) mit kompakter erster Verschiebung ist
+Bei kompaktem \(S_2\) erzwingt die statische Summengleichung nach Testen mit \(X\) eine verschwindende integrierte Spur. Der lineare Dehnungsterm integriert sich dabei zu null. Der positive quadratische Beitrag widerspricht dieser notwendigen Bedingung. Damit scheitert eine kompakte zweite Summenverschiebung unter den angegebenen Material- und Halterungsannahmen \cite{op5-elastic-limit}.
+
+Die Spuridentität lässt sich im selben Referenzchart prüfen. Für die Hesse-Matrix \(\mathsf H\) von \(\varphi\) mit kompakter erster Verschiebung ist
 \[
  (\Delta\varphi)^2-\operatorname{tr}(\mathsf H^2)
  =\nabla_X\cdot\big[(\Delta\varphi)\nabla_X\varphi
@@ -290,4 +292,4 @@ Auch bei abgeglichenen Enden bleibt eine Anforderung an die Stabilität der Phas
 \end{equation}
 Bezeichne \(r\) eine Schranke für \(\|Q-U\|_2\). Für normales \(U\) liegt jeder gestörte Eigenwert höchstens im Abstand \(r\) zu einem idealen Eigenwert. Sind die Kreise disjunkt, bleibt die Zuordnung erhalten. Für \(r<1\) beträgt die Winkelabweichung jedes zugeordneten Eigenwerts höchstens \(\arcsin r\). Über zwei Frequenzen mit Abstand \(\Delta\omega\) erhält man für die Sekante der differentiellen Phase nach korrekter Entfaltung die Fehlergrenze \(4\arcsin r/\Delta\omega\). Die vier Beiträge stammen von zwei Eigenphasen an jeweils zwei Frequenzen \cite{op5-budget}. Die Kalibrieraufgabe erhält damit eine präzise Form. Das am Modell vorhergesagte Signal muss sich sowohl gegen die verbleibende Endpunktänderung als auch gegen die Phasenfehler behaupten.
 
-Die Fallstudie zeigt damit, welche Schritte sich gemeinsam rechnen lassen. Die W2-Massenparameter bestimmen die radiale Materiequelle. Für das präparierte Profil sind gewöhnliches lineares Außenfeld und gerichteter Achsenkontrast getrennt berechenbar. Dazwischen steht die Kopplungsannahme \eqref{eq:op5-match}. Die native Massenauslese, die physikalische Herleitung der Kopplung, die kalibrierte Auslese und ein Datenvergleich für H96 bleiben weitere Schritte \cite{op5}.
+Die Fallstudie zeigt damit, welche Schritte sich gemeinsam rechnen lassen. Die W2-Massenparameter bestimmen die radiale Materiequelle. Für das präparierte Profil sind gewöhnliches lineares Außenfeld und gerichteter Achsenkontrast getrennt berechenbar. Der gewöhnliche Teil folgt allein aus der linearisierten Einstein-Gleichung. Der gerichtete Teil hängt an der Kopplungsannahme \eqref{eq:op5-match} und an einem gerichteten, unterluminalen massiven Vermittler, den W2 nicht enthält. Mit dem lichtschnellen Higgsradius von W2 verletzt die gerichtete Kopplung die Kegelgrenze, und im Vakuum bleibt nur \(g_m^2\lesssim10^{-26}\); ein beobachtbarer Kontrast verlangt ein Material. Die native Massenauslese, eine Wirkung für Vermittler und Kopplung und die kalibrierte Auslese bleiben weitere Schritte \cite{op5}; OP5 bleibt offen. Den Stand der Vermittlersuche fasst Anhang~\ref{sec:anhang-b-annahmen} zusammen, die Einordnung unter die übrigen offenen Probleme Runde v4.10.0-r55 \cite{crossmap}.

@@ -12,8 +12,9 @@ Abschnitt 3.3.3 „Welches Vorzeichen der Oktantschritt hat“ (H115–H117) und
 (`AGENTS.md`). Eine neue Zenodo-Version entsteht nur mit Freigabe des Autors. Beim Übernehmen wurden die Zeilenenden auf LF
 gesetzt; die Hashes in `baseline.json` beziehen sich auf den Codex-Stand.
 
-Nachtrag 22.11.2026: Anhang B (`sections/b-herleitungen-op5.tex`) leitet die Gleichungen (39)–(51) aus Abschnitt 4.4 her und legt die
-Annahmen (39) und (40) offen; Wolfram-Prüfung unter `audit/anhang-b/`. Maßgebliche Quelle ist der Companion, Runde v4.10.0-r32
+Nachtrag 22.11.2026: Anhang B (`sections/b-herleitungen-op5.tex`) leitet die Gleichungen der OP5-Fallstudie in Abschnitt 4.4 her
+(vom Antriebsoperator bis zur Energiebilanz beim Schalten) und legt die beiden Annahmen offen, den Antriebsoperator und die
+Gleichsetzung der Quellen; Wolfram-Prüfung unter `audit/anhang-b/`. Maßgebliche Quelle ist der Companion, Runde v4.10.0-r32
 (`notes/research/v4_10_0_r32/`); der Anhang gibt sie wieder.
 
 Nachtrag 23.11.2026: Abschnitt 5.4 nennt die Zählregel als Dimensionsformel (Runde v4.10.0-r53, mit Literatureintrag zur OpenAI-Familie 148),
@@ -23,14 +24,14 @@ von r54. Die veröffentlichte Zenodo-Fassung 0.1.0 (24 Seiten) bleibt unverände
 
 ## Querverweise
 
-- [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Die Arbeitsgrundlage ist der bestätigte [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026.
-- [Quantum Sphaera Companion v5.3.0](https://doi.org/10.5281/zenodo.24434403). Der Datensatz enthält Vollausgabe und 31-seitige Physik-Ausgabe. Beide sind im Manuskript gesondert zitiert.
+- [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Grundlage der Fassung 0.1.0 war der [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026; die Links des heutigen Entwurfs sind auf Commit [`852dc9b5`](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4) (Runden bis v4.10.0-r55) gepinnt.
+- [Quantum Sphaera Companion v5.3.0](https://doi.org/10.5281/zenodo.24434403). Der Datensatz enthält Vollausgabe und 31-seitige Physik-Ausgabe (Runden bis v4.10.0-r30). Beide sind im Manuskript gesondert zitiert; die späteren Runden zitiert der Entwurf als Forschungsschichten nach v5.3.0.
 - [Quellennachweis pro Abschnitt](SOURCES.md).
-- [Plan für den eigenständigen QAM-Artikel](QAM-ARTIKELPLAN.md).
+- [Entwurf des eigenständigen QAM-Artikels](../qam/README.md).
 
 ## Wolfram-Rechenkontrolle
 
-Anhang A der PDF stellt die Eingabeskripte und Originalausgaben der vier ausgewerteten Wolfram-Läufe blockweise nebeneinander. [Prüfbericht mit Skripten und Originalausgaben](audit/wolfram-v0.1.0/README.md). Das [Begleitarchiv](build/wolfram-begleitmaterial-0.1.0.zip) enthält zusätzlich den anhand des Manifests verifizierten Stand der geprüften Veröffentlichung.
+Anhang A der PDF stellt die Eingabeskripte und Originalausgaben der vier ausgewerteten Wolfram-Läufe blockweise nebeneinander. [Prüfbericht mit Skripten und Originalausgaben](audit/wolfram-v0.1.0/README.md). Das Begleitarchiv `build/wolfram-begleitmaterial-0.1.0.zip` entsteht beim Bau der Veröffentlichung (nicht im Repository) und enthält zusätzlich den anhand des Manifests verifizierten Stand der geprüften Veröffentlichung. Anhang A deckt die Fassung 0.1.0 ab; die Herleitungen von Anhang B sind unter `audit/anhang-b/` geprüft, die späteren Befunde in den jeweiligen Companion-Runden.
 
 ## Abbildungen
 

@@ -18,7 +18,7 @@ Die physikalische Anwendung betrifft die drei geladenen Leptonen. Für die folge
  K(x)=\frac23\ \Longleftrightarrow\ \|d\|^2=3a^2 .
  \label{eq:equal-norm}
 \end{equation}
-Die Koide-Bedingung verlangt gleiche quadratische Normen des konstanten Anteils und der Abweichung. Ein zyklischer Basiswechsel erhält beide Normen und lässt ihr Verhältnis frei. Als Beispiel ergeben \(x=(1,2,3)\) den Wert \(7/18\) und drei gleiche Wurzeln den Wert \(1/3\). Die Rechnung verlegt die physikalische Frage damit auf die Auswahl der Normrelation \cite{physics}.
+Die Koide-Bedingung \(K=2/3\) \cite{koide} verlangt gleiche quadratische Normen des konstanten Anteils und der Abweichung. Für die gemessenen Massen der geladenen Leptonen weicht \(K\) um weniger als \(0{,}005\,\%\) von \(2/3\) ab \cite{pdg}. Der Companion führt das als empirischen Befund, dessen Herleitung offen ist. Zyklische Symmetrie erhält beide Normen einzeln, legt ihr Verhältnis aber nicht fest. Eine zyklische Struktur allein ergibt also nicht \(K=2/3\). Als Beispiel ergeben \(x=(1,2,3)\) den Wert \(7/18\) und drei gleiche Wurzeln den Wert \(1/3\). Die Rechnung verlegt die physikalische Frage damit auf die Auswahl der Normrelation \cite{physics}.
 
 Eine für den Vergleich mit dem Spektrum nützliche Koordinate auf der
 Nullsummenebene ist
@@ -45,16 +45,16 @@ Radiusformel kann für dieses Spektrum nicht verwendet werden
 
 \subsection{Der Test am Kompensator}
 
-Auf dem euklidischen Wurzelraum sei \(e=(1,1,1)/\sqrt3\) und \(C_m=(\id+J_m)/2\) mit orthogonaler Involution \(J_m\). Angenommen, \(x=\alpha C_m e\) mit \(\alpha>0\) sei nichtnegativ und von null verschieden. Dann gilt \(\langle e,C_m e\rangle=\|C_m e\|^2\). Setzt man \(h=\langle e,J_m e\rangle\), folgt
+Auf dem euklidischen Wurzelraum sei \(e=(1,1,1)/\sqrt3\) und \(C_m=(I+J_m)/2\) mit orthogonaler Involution \(J_m\). Angenommen, \(x=\alpha C_m e\) mit \(\alpha>0\) sei nichtnegativ und von null verschieden. Dann gilt \(\langle e,C_m e\rangle=\|C_m e\|^2\). Setzt man \(h=\langle e,J_m e\rangle\), folgt
 \begin{equation}
  K(x)=\frac{1}{3\|C_m e\|^2}
       =\frac{2}{3(1+h)},\qquad
  K(x)=\frac23\ \Longleftrightarrow\ h=0.
  \label{eq:hc-criterion}
 \end{equation}
-Der Test verlangt also, dass \(e\) und \(J_me\) orthogonal sind. Die Projektoraxiome erlauben auch \(J_m=\id\), mit \(h=1\). Um die Orthogonalität physikalisch zu begründen, muss \(J_m\) aus dem gemeinsamen Träger folgen.
+Der Test verlangt also, dass \(e\) und \(J_me\) orthogonal sind. Die Projektoraxiome erlauben auch \(J_m=I\), mit \(h=1\). Um die Orthogonalität physikalisch zu begründen, muss \(J_m\) aus dem gemeinsamen Träger folgen.
 
-Dafür betrachtet die Physik-Ausgabe eine Koisometrie \(B:H\to\mathbb R^3\) mit \(BB^*=\id_3\) und \(J\)-invariantem Kern \cite{physics}. Da \(J\) selbstadjungiert ist, bleibt auch \((\ker B)^\perp=\operatorname{im} B^*\) invariant. \(B\) überträgt die Involution dieses orthogonalen Komplements als \(J_m=BJB^*\) auf den Wurzelraum, sodass \(BC=C_mB\). Ein unabhängig bestimmter Ausgangszustand \(f_0\) mit \(Bf_0=e\) und das physikalische Wurzelgesetz \(x=\alpha BCf_0\) würden die Bedingung auf
+Dafür betrachtet die Physik-Ausgabe eine Koisometrie \(B:H\to\mathbb R^3\) mit \(BB^*=I_3\) und \(J\)-invariantem Kern \cite{physics}. Da \(J\) selbstadjungiert ist, bleibt auch \((\ker B)^\perp=\operatorname{im} B^*\) invariant. \(B\) überträgt die Involution dieses orthogonalen Komplements als \(J_m=BJB^*\) auf den Wurzelraum, sodass \(BC=C_mB\). Ein unabhängig bestimmter Ausgangszustand \(f_0\) mit \(Bf_0=e\) und das physikalische Wurzelgesetz \(x=\alpha BCf_0\) würden die Bedingung auf
 \[
  \langle B^*e,J B^*e\rangle=0
 \]
@@ -180,7 +180,10 @@ müsste, welcher Wert in dieser Familie tatsächlich
 ausgewählt wird. Die Interpretation des Defizits
 \(\pi/4-|\varphi|\) als Kern in Abschnitt~5.8 der
 Physik-Ausgabe bleibt eine bedingte Konstruktion
-\cite{physics,companion}.
+\cite{physics,companion}. Dieses Defizit ist die Restbiegung der
+Leptonphase. Über sie gelangt die eine Zahl aus
+Abschnitt~\ref{sec:one-number} in das Massenproblem, als eine von fünf
+gesetzten Gleichsetzungen \cite{rootmap,chance}.
 
 \subsubsection{Welches Vorzeichen der Oktantschritt hat}
 \label{sec:octant-sign}
@@ -195,13 +198,15 @@ gleichmäßige Verteilung der aufsummierten Phasen sagt nichts: Die beiden
 konstanten Schrittfolgen \(\pm1\) modulo acht durchlaufen in einem Zyklus
 alle acht Phasen \cite{h116}.
 
-Der Kompensator liefert das Vorzeichen ebenfalls nicht. Auf den
-geschlossenen ungeraden Generationszuständen gilt \(JS=-S\), also
+Der Kompensator liefert das Vorzeichen ebenfalls nicht. Die
+geschlossenen ungeraden Generationszustände sind die drei Zustände
+\(S\) aus \eqref{eq:seed} unter den Zusatzannahmen \([P_c,J]=0\) und
+\(JT_0=-T_0\) (Abschnitt~\ref{sec:matter}). Auf ihnen gilt \(JS=-S\), also
 \(CS=(S+JS)/2=0\). Eine reelle Projektion vom Rang fünf, die eine reelle
 Richtung der komplexen Nullgeraden der Oktant-Auslese entfernt, gibt es
 zwar. Die beiden reellen Richtungen \(n\) und \(in\) dieser Geraden liefern
 aber dieselben Ränge und dieselbe Auslese, und \(J\) wählt nicht zwischen
-ihnen \cite{h115}.
+ihnen (H115, Runde v4.10.0-r30 \cite{h115}).
 
 Übrig bleibt die Auswahl des geordneten Rückwegs. Ein Modell mit zwei
 Fenstern macht den Zeitpunkt sichtbar. Das erste Fenster hält die
@@ -211,14 +216,20 @@ wenn genau eine Orientierung übrig bleibt. Von den sechzehn Maskenpaaren
 ergeben drei \(+\pi/4\), drei \(-\pi/4\), neun sind gesperrt und eines
 bleibt mehrdeutig. Die vorhandenen Regeln des Companion vertragen sich mit
 diesem Zeitpunkt, enthalten aber keine Größe, die zwischen den beiden
-Vorzeichen entscheidet \cite{h117}. Alle drei Rechnungen waren vorab
+Vorzeichen entscheidet \cite{h117}. Alle drei Rechnungen (H115--H117,
+Runde v4.10.0-r30 \cite{companion}) waren vorab
 festgelegt, ihr Ausgang stand aber analytisch fest; sie gelten deshalb
 nicht als blinde Tests. Die Physik-Ausgabe von v5.3.0 fasst sie in Abschnitt~5.9 zusammen \cite{physics}.
-Eine spätere Prüfung ordnet die Orientierung ein: Frame-Abbildungen und
+Eine spätere Prüfung (H118, Runde v4.10.0-r31 \cite{layers}) ordnet die
+Orientierung ein: Frame-Abbildungen und
 Parität erhalten sie, die Zeitumkehr der Feldamplituden wirkt als komplexe
 Konjugation und kehrt sie um. Das Vorzeichen ist also eine Zeitorientierung
 der Auslese, und keine im Companion festgehaltene Struktur legt es fest
-\cite{h118}.
+\cite{h118}. Dieselbe Orientierung tritt bei der Zählung der
+Horizontzustände wieder auf. Dort verlangt das Gewicht 2 der
+Materie-Regel eine Auslese, die die beiden Orientierungen unterscheidet,
+ohne eine auszuwählen (Runde v4.10.0-r53 \cite{layers};
+Abschnitt~\ref{sec:one-number}).
 
 \subsubsection{Was sich beim Kombinieren von Präparationen ändert}
 
@@ -270,7 +281,7 @@ Die Kompression aus Abschnitt \ref{sec:matter} kann mit einem Übergangsoperator
  \Omega=
  \begin{pmatrix}
  0 & \mu B_{\mathrm{lh}}^* \\
- \mu B_{\mathrm{lh}} & \Delta\id
+ \mu B_{\mathrm{lh}} & \Delta I
  \end{pmatrix}.
 \]
 Die im Companion behandelte Form mit gewichteten Metriken geht durch einen Metrikwechsel in diese Form über \cite{companion,repo}. Gehört \(\sigma_i>0\) zu den Singulärwerten des Übergangs, reduziert sich der zugehörige Teil auf die Matrix mit Diagonale \(0,\Delta\) und Nebendiagonale \(\mu\sigma_i\). Die negative Eigenzahl \(-m_i\) liefert
@@ -282,7 +293,7 @@ Für den Vergleich sind \(\sigma_i\) dimensionslos und \(\mu,\Delta,m_i\) haben 
 
 Das zugehörige Eigenwertproblem lässt sich mit nur zwei
 Komponenten verfolgen. Seien \(u_i,w_i\) normierte
-Singularvektoren mit \(B_{\mathrm{lh}}u_i=\sigma_iw_i\)
+Singulärvektoren mit \(B_{\mathrm{lh}}u_i=\sigma_iw_i\)
 und \(B_{\mathrm{lh}}^*w_i=\sigma_iu_i\). Für den Eigenzustand
 zur Eigenzahl \(-m_i\) sind die Koeffizienten in dieser Basis
 proportional zu
@@ -291,8 +302,8 @@ proportional zu
 \]
 Damit ist der quadrierte Anteil der schweren Komponente
 \(m_i/(\Delta+2m_i)\), nach Einsetzen von \eqref{eq:gap}
-in die Normierung. Ein frei gewählter Übergang liefere etwa
-\(q_i=\sigma_i^2\). Mit der dimensionslosen Kopplung
+in die Normierung. Wir schreiben \(q_i=\sigma_i^2\) für die
+quadrierten Singulärwerte eines frei gewählten Übergangs. Mit der dimensionslosen Kopplung
 \(\eta=\mu/\Delta\) folgt exakt
 \begin{equation}
  m_i=\frac{\Delta}{2}\left(\sqrt{1+4\eta^2q_i}-1\right).

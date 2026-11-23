@@ -20,9 +20,15 @@ Sei \(q=it\,1+\mathfrak z\) mit \(\mathfrak z=\sum_k z_k e_k\). Aus \(e_j e_k+e_
  N(q_1q_2)&=N(q_1)N(q_2).
  \label{eq:biquaternion-check}
 \end{align}
-Die Produktidentität gilt für \(q_1,q_2\in\mathbb C\otimes_{\mathbb R}\mathbb H\) mit \(N(q)=q\bar q\) auf der vollen Algebra. Die Familie aus \eqref{eq:biquaternion} ist im Allgemeinen nicht unter Multiplikation abgeschlossen. Beispielsweise ist \(e_1^2=-1\) und hat reellen Skalarteil. Die Identität benutzt \(\overline{q_1q_2}=\bar q_2\bar q_1\) und die Zentralität der Norm. Für die Konjugation \(q\mapsto uqu^{-1}\) mit \(N(u)=1\) bleibt der Skalarteil \(it\,1\) fest. Über die Matrixrealisierung der Biquaternionen ist \(N\) die Determinante und die Norm-eins-Gruppe \(SL(2,\mathbb C)\). Ihre Konjugation auf dem spurfreien Vektorteil ergibt die Abbildung nach \(SO(3,\mathbb C)\), mit Kern \(\{\pm 1\}\) \cite{feldkern}. Auf diesem Teil können wir damit die Lorentz-Feldinvariante aus \eqref{eq:field-invariant} im selben algebraischen Träger behalten.
+Die Rechnung hat drei Schritte.
 
-Dabei treten zwei Nullbedingungen auf. Für das Feld gilt \(s(\mathbf z)=0\), für den gesamten Kern \(N(q)=0\), also \(s(\mathbf z)=t^2\). Auf einem lichtartigen Feld ist \(N(q)=-t^2\). Der Parameter \(t\) bleibt in dieser Feldrepräsentation ein Lorentzskalar. Eine physikalische Deutung des gesamten Kerns muss angeben, welche der beiden Nullbedingungen sie verwendet und welche Rolle der Skalar dabei spielt \cite{feldkern,grundidee}.
+\emph{Erstens die Produktidentität.} Sie gilt für \(q_1,q_2\in\mathbb C\otimes_{\mathbb R}\mathbb H\) mit \(N(q)=q\bar q\) auf der vollen Algebra und benutzt \(\overline{q_1q_2}=\bar q_2\bar q_1\) sowie die Zentralität der Norm. Die Familie aus \eqref{eq:biquaternion} ist dagegen im Allgemeinen nicht unter Multiplikation abgeschlossen. Beispielsweise ist \(e_1^2=-1\) und hat reellen Skalarteil.
+
+\emph{Zweitens die Konjugation.} Für \(q\mapsto uqu^{-1}\) mit \(N(u)=1\) bleibt der Skalarteil \(it\,1\) fest.
+
+\emph{Drittens die Lorentzgruppe.} Über die Matrixrealisierung der Biquaternionen ist \(N\) die Determinante und die Norm-eins-Gruppe \(SL(2,\mathbb C)\). Ihre Konjugation auf dem spurfreien Vektorteil ergibt einen Homomorphismus nach \(SO(3,\mathbb C)\). Die Elemente, die dabei als Identität wirken, sind genau \(\pm1\) \cite{feldkern}. Auf diesem Teil können wir damit die Lorentz-Feldinvariante aus \eqref{eq:field-invariant} im selben algebraischen Träger behalten.
+
+Dabei treten zwei Nullbedingungen auf. Für das Feld gilt \(s(\mathbf z)=0\), für das gesamte Biquaternion \(q\) dagegen \(N(q)=0\), also \(s(\mathbf z)=t^2\). Auf einem lichtartigen Feld ist \(N(q)=-t^2\). Der Parameter \(t\) bleibt in dieser Feldrepräsentation ein Lorentzskalar. Eine physikalische Deutung des gesamten Biquaternions muss angeben, welche der beiden Nullbedingungen sie verwendet und welche Rolle der Skalar dabei spielt \cite{feldkern,grundidee}.
 
 \paragraph{Ein lichtartiges Feld in Spinorkoordinaten.}
 Für \(\psi=(\psi_1,\psi_2)\in\mathbb C^2\) parametrisiert der folgende Ausdruck die lichtartige Feldklasse.
@@ -46,30 +52,32 @@ So erhält der Ansatz einen konkreten algebraischen Kandidaten. Auf seinem Feldt
 
 Ein Generationsindex soll Zustände unterscheiden, die in den relevanten inneren Ladungen übereinstimmen. Aus einem dreidimensionalen Unterraum allein folgt daher zunächst nur die Dimension. Ob die drei Richtungen Farben, Generationen oder eine andere Multiplizität bezeichnen, entscheidet die Wirkung der inneren Symmetrien und der Observablen auf diesen Zuständen.
 
-Eine Vergleichskonstruktion des Companion macht die Wahl des Unterraums explizit \cite{companion,physics}. Sei \(T_0:\mathbb C^3\to\mathcal K\) eine Isometrie in einen komplexen Hilbertraum und \(P_c\) der orthogonale Projektor auf die im Vergleichsmodell zulässigen Zustände. Die Matrix \(A_0=T_0^*P_cT_0\) erfüllt
+Eine Vergleichskonstruktion des Companion macht die Wahl des Unterraums explizit (Companion, Abschnitt „Generation States and a Closure-Defect Coupling“, Proposition „Normalized closed generation seeds“ \cite{companion}; Physik-Ausgabe, Teil „The independent generation space“ \cite{physics}). Sei \(T_0:\mathbb C^3\to\mathcal K\) eine Isometrie in einen komplexen Hilbertraum und \(P_c\) der orthogonale Projektor auf die im Vergleichsmodell zulässigen Zustände. Die Matrix \(A_0=T_0^*P_cT_0\) erfüllt
 \[
  \langle v,A_0v\rangle=\|P_cT_0v\|^2 .
 \]
 Die Bedingung \(A_0>0\) besagt, dass die drei projizierten Ausgangszustände linear unabhängig bleiben. Dann ist
 \begin{equation}
  S=P_cT_0A_0^{-1/2}, \qquad
- S^*S=A_0^{-1/2}T_0^*P_c^2T_0A_0^{-1/2}=\id_3,\qquad P_cS=S .
+ S^*S=A_0^{-1/2}T_0^*P_c^2T_0A_0^{-1/2}=I_3,\qquad P_cS=S .
  \label{eq:seed}
 \end{equation}
-Damit erhält man drei orthonormale Zustände im Bild von \(P_c\). Die Wahl von \(T_0\) und \(P_c\) geht als Voraussetzung ein. \(P_c\) setzt die Zulässigkeit im Vergleichsraum um, \(C\) aus \eqref{eq:projections} die HC-Gradierung.
+Damit erhält man drei orthonormale Zustände im Bild von \(P_c\). Die Wahl von \(T_0\) und \(P_c\) geht als Voraussetzung ein.
+
+\(P_c\) ist im Companion ein eigener Abschlussprojektor des Vergleichsmodells und ausdrücklich nicht der HC-Projektor \(C\) aus \eqref{eq:projections}. \(P_c\) setzt die Zulässigkeit im Vergleichsraum um, \(C\) die HC-Gradierung. Angesetzt wird nur, dass \(P_c\) mit der komplex-linear auf \(\mathcal K\) fortgesetzten Involution \(J\) kommutiert. Sind außerdem die Ausgangszustände ungerade, \(JT_0=-T_0\), so folgt \(JS=-S\) und damit \(CS=0\). Der Companion nennt die drei Zustände dann \emph{geschlossene ungerade Generationszustände}: geschlossen wegen \(P_cS=S\), ungerade wegen \(JS=-S\).
 
 Ein Operator \(O\) auf \(\mathcal K\) lässt sich zu \(S^*OS\) komprimieren, sofern das Bild von \(S\) in seinem Definitionsbereich liegt. Erhält \(O\) dieses Bild, gilt \(OS=S(S^*OS)\). Die Kompression stellt dann die Einschränkung des Operators dar. Im allgemeinen Fall erfasst sie die Matrixelemente zwischen den drei ausgewählten Zuständen, während Übergänge aus ihrem Unterraum heraus zusätzlich zu untersuchen sind. Das betrifft insbesondere die Zuordnung eines Massenspektrums zu einem nativen Operator.
 
 \paragraph{Eine positive Matrix aus der gewählten Zustandsauswahl.}
-Der Companion untersucht eine Abbildung aus dem ausgewählten Zustandsraum in dessen orthogonales Komplement. Sei \(\widehat R\) ein beschränkter, dimensionslos normierter Operator auf \(\mathcal K\). Auf den Zuständen \(\psi_i=S\mathbf e_i\) setzt der Vergleich \(B_\perp=(I-P_c)\widehat R S\) an. Die daraus gebildete Matrix ist
+Der Companion untersucht eine Abbildung aus dem ausgewählten Zustandsraum in dessen orthogonales Komplement. Sei \(\widehat R\) ein beschränkter, dimensionslos normierter Operator auf \(\mathcal K\). Im Companion ist das der vorgeschlagene Taktoperator (\emph{pacer}), geteilt durch eine positive Bezugsgröße derselben Einheit. Seine Wirkung auf dem gemeinsamen Träger, sein Definitionsbereich und die Bezugsgröße werden gesetzt; sie folgen nicht aus dem Träger. Auf den Zuständen \(\psi_i=S\mathbf e_i\) setzt der Vergleich \(B_\perp=(I-P_c)\widehat R S\) an. Die daraus gebildete Matrix ist
 \begin{equation}
  Q_\perp=B_\perp^*B_\perp,\qquad
  (Q_\perp)_{ij}
  =\big\langle (I-P_c)\widehat R\psi_i,(I-P_c)\widehat R\psi_j\big\rangle .
  \label{eq:generation-defect-readout}
 \end{equation}
-Für \(v\in\mathbb C^3\) ist \(\langle v,Q_\perp v\rangle=\|B_\perp v\|^2\). Außerdem gilt \([\widehat R,P_c]\psi_i=(I-P_c)\widehat R\psi_i\). Dessen Erwartungswert in \(\psi_i\) verschwindet wegen der Orthogonalität zum Bild von \(P_c\), auch wenn die Norm des Vektors positiv ist. Eine Auslese durch den Erwartungswert und eine Auslese durch die Übergangsnorm liefern damit unterschiedliche Größen. Bei exakter Kommutation \([\widehat R,P_c]=0\) verschwindet auch die gesamte Matrix \(Q_\perp\) \cite{companion,repo}.
+Für \(v\in\mathbb C^3\) ist \(\langle v,Q_\perp v\rangle=\|B_\perp v\|^2\). Außerdem gilt \([\widehat R,P_c]\psi_i=(I-P_c)\widehat R\psi_i\). Dessen Erwartungswert in \(\psi_i\) verschwindet wegen der Orthogonalität zum Bild von \(P_c\), auch wenn die Norm des Vektors positiv ist. Eine Auslese durch den Erwartungswert und eine Auslese durch die Übergangsnorm liefern damit unterschiedliche Größen. Bei exakter Kommutation \([\widehat R,P_c]=0\) verschwindet auch die gesamte Matrix \(Q_\perp\) (Companion, Proposition „A positive closure-defect readout“ \cite{companion,repo}).
 
-Welche Zahlen würde man bei \(Q_\perp\ne0\) als Massenkandidaten lesen? Setzt man im Vergleich eine Skala \(\kappa>0\) und die effektive Matrix \(\kappa Q_\perp\) an, sind dafür ihre Eigenwerte relevant. Die Diagonale in den ursprünglichen Generationenkoordinaten enthält die drei quadrierten Normen der einzelnen Übergänge. Wie weit beides auseinanderliegen kann, zeigt die im Companion angegebene Rang-eins-Matrix \(Q=\mathbf1\mathbf1^*/3\) mit \(\mathbf1=(1,1,1)^{\mathsf T}\). Ihre Diagonale ist \((1/3,1/3,1/3)\). Aus \(Q\mathbf1=\mathbf1\) und \(Q|_{\mathbf1^\perp}=0\) folgen die Eigenwerte \((1,0,0)\). In der Koide-Kennzahl aus Abschnitt \ref{sec:mass} liefern diese beiden Auswertungen folglich \(1/3\) und \(1\). Der Vergleich macht sichtbar, welche Ausleseregel, welcher Operator und welche Skala feststehen müssen, bevor ein Massenspektrum bestimmt werden kann \cite{companion,repo}.
+Welche Zahlen würde man bei \(Q_\perp\ne0\) als Massenkandidaten lesen? Setzt man im Vergleich eine Skala \(\kappa>0\) und die effektive Massenmatrix \(\kappa Q_\perp\) an, sind dafür ihre Eigenwerte relevant. Der Companion liest diese Eigenwerte \(\kappa q_i\) als Massen \(m_i\), nicht als Massenwurzeln; die Wurzeln sind dann \(\sqrt\kappa\sqrt{q_i}\). Der Ansatz \(\kappa Q_\perp\) als Massenmatrix ist selbst gesetzt. Die Diagonale in den ursprünglichen Generationenkoordinaten enthält die drei quadrierten Normen der einzelnen Übergänge. Wie weit beides auseinanderliegen kann, zeigt die im Companion angegebene Rang-eins-Matrix \(Q=\mathbf1\mathbf1^*/3\) mit \(\mathbf1=(1,1,1)^{\mathsf T}\). Ihre Diagonale ist \((1/3,1/3,1/3)\). Aus \(Q\mathbf1=\mathbf1\) und \(Q|_{\mathbf1^\perp}=0\) folgen die Eigenwerte \((1,0,0)\). In der Koide-Kennzahl aus Abschnitt \ref{sec:mass} liefern diese beiden Auswertungen folglich \(1/3\) und \(1\). Der Vergleich macht sichtbar, welche Ausleseregel, welcher Operator und welche Skala feststehen müssen, bevor ein Massenspektrum bestimmt werden kann (Companion, Proposition „The Gram spectrum and the slot diagonal differ“ \cite{companion,repo}).
 
 Eine physikalische Generationskonstruktion müsste aus dem gemeinsamen Träger den Ausgangsraum auswählen, die Ladungsdarstellung auf ihm bestimmen und zeigen, wie Massen die drei Zustände unterscheiden. Gleichung \eqref{eq:seed} legt dabei offen, an welcher Stelle die Wahl der Zustände eingeht. Der Koide-Test in Abschnitt \ref{sec:mass} setzt daran an, sobald ein Kandidat für die Massenauslese feststeht.
