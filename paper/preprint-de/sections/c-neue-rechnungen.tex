@@ -4,7 +4,7 @@
 
 Anhang~\ref{app:wolfram-output} belegt die Rechnungen der Fassung 0.1.0, Anhang~\ref{sec:anhang-b} die Herleitungen der
 OP5-Fallstudie. Dieser Anhang belegt die Zahlen, die danach in Abschnitt~\ref{sec:one-number} und in Abschnitt~\ref{sec:open-points}
-hinzugekommen sind. Die Rechnungen stammen aus den Companion-Runden v4.10.0-r52 bis v4.10.0-r54 und v4.10.0-r56 \cite{layers}. Skripte und vollständige
+hinzugekommen sind. Die Rechnungen stammen aus den Companion-Runden v4.10.0-r52 bis v4.10.0-r54 und v4.10.0-r57 \cite{layers}. Skripte und vollständige
 Originalausgaben liegen unter \texttt{paper/\allowbreak preprint-de/\allowbreak audit/\allowbreak anhang-c/}; die Fenster unten zeigen
 die maßgeblichen Zeilen der Ausgaben unverändert. Drei Rechnungen liefen in Wolfram Language über den Wolfram-Kern der jeweiligen
 Sitzung, eine in Python mit sympy und numpy, eine Kontrolle als Quantenschaltung mit Qiskit.
@@ -55,7 +55,7 @@ Zwei Läufe dieser Rechnung brachen mit einem Serverfehler des Wolfram-Konnektor
 Ausgabedatei vermerkt das. Die Zeichen in den Fenstern sind die der Skripte: \texttt{et} ist die Rapidität, \texttt{th} und \texttt{t}
 sind Winkel zur Achse, \texttt{b} ist die Geschwindigkeit des Detektors.
 
-\subsection{Die zeitlich geordnete Oktant-Auslese (Runde v4.10.0-r56, H123)}
+\subsection{Die zeitlich geordnete Oktant-Auslese (Runde v4.10.0-r57, H123)}
 \label{app:new-temporal}
 
 Skript \texttt{h123\_\allowbreak temporal\_\allowbreak octant.wl}, Wolfram Language, 23.~November 2026; Vorab-Notiz zu H123 vor der Rechnung
@@ -65,8 +65,8 @@ Gewicht 1 auf den nicht getrennten Spins und ihren Abgleich mit den Datenfenster
 \neuausgabe{h123_temporal_octant.txt}{13}{16}
 \neuausgabe{h123_temporal_octant.txt}{59}{60}
 \neuausgabe{h123_temporal_octant.txt}{67}{71}
-Als unabhängige Kontrolle berechnet eine Quantenschaltung (Zyklustest mit Hilfsqubit, Qiskit, Skript \texttt{k242\_\allowbreak h123\_\allowbreak qiskit\_\allowbreak cycle\_\allowbreak test.py})
+Als unabhängige Kontrolle berechnet eine Quantenschaltung (Zyklustest mit Hilfsqubit, Qiskit, Skript \texttt{k243\_\allowbreak h123\_\allowbreak qiskit\_\allowbreak cycle\_\allowbreak test.py})
 die Invariante für \(j=\tfrac12,1,2\); die größte Abweichung von der Formel ist \(6{,}6\cdot10^{-16}\).
-\neuausgabe{k242_out.txt}{19}{19}
-\neuausgabe{k242_out.txt}{36}{36}
-\neuausgabe{k242_out.txt}{53}{55}
+\neuausgabe{k243_out.txt}{19}{19}
+\neuausgabe{k243_out.txt}{36}{36}
+\neuausgabe{k243_out.txt}{53}{55}
