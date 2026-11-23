@@ -1,0 +1,103 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r50 Source-Only: A Medium from Light-Like Streams (H120) and a Vacuum Bound on the Directed Coupling}
+\addcontentsline{toc}{section}{v4.10.0-r50 Source-Only: Light-Like Medium and Vacuum Bound (H120)}
+\label{sec:v4100-r50-null-medium}
+% ============================================================================
+
+\paragraph{Purpose.}
+By v4.10.0-r47 and r49 the OP5 comparison model needs a medium that slows the Higgs radius and both mediators in every direction.  The author
+asked whether such a medium could be an object of the photon frame P that appears bent in the other frames, and chose to start with ordinary
+boosts (reading a).  Since a boost is only a change of description, the bending is made measurable through invariants \(u\cdot l\) between an
+observer and the light-like vectors \(l\) of the medium.  This layer records hypothesis H120, fixed before the computation.  H120a is not blind;
+H120b and H120c are blind in their values.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r50 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r50 setting}
+\label{subsec:v4100-r50-setting}
+
+All three fields propagate on one effective metric \(G^{\mu\nu}=\eta^{\mu\nu}+\kappa\sum_sw_s\,l_s^\mu l_s^\nu\) with light-like \(l_s\) and \(\kappa>0\): one stream \(l=(1,0,0,1)\), or two
+counter-streams \(l_\pm=(1,0,0,\pm1)\) with weights \(a,b\).  An observer with rapidity \(\eta\) along the stream axis sees the weights \(a\,e^{-2\eta}\) and \(b\,e^{2\eta}\); the
+photon frame is the limit \(\eta\to\infty\).  The cone limit is evaluated as in r47 with \(c_h^2=r_0=r_m=r(\theta)\), the direction-dependent squared speed.
+
+\subsection*{v4.10.0-r50 results}
+\label{subsec:v4100-r50-results}
+
+\paragraph{Theoremlet v4.10.0-r50.1 (one stream, H120a confirmed).}
+For a single light-like stream \(v=1\) is a root in the direction of \(l\) for every \(\kappa\), and there the largest squared characteristic speed is \(1.1995\), for \(\kappa w\) from
+\(0.1\) to \(100\).  A medium made of one stream of the photon frame cannot carry the slowing.
+\emph{Proof.} Substitution in the dispersion relation; \(j_m^2\ge\tfrac12g_m^2>0\) for all \(\alpha\); numerical eigenvalues (script \texttt{k240}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r50.2 (two counter-streams, H120b partially confirmed).}
+Two counter-streams keep the cone limit in all directions for 35 of 49 parameter sets on a conservative grid, for example \(0.803\) at \(\kappa a=\kappa b=0.3\).  For
+an observer moving along the stream axis the largest slowing \(\max_\theta(1-r)\) is \(0.75\), \(0.52\), \(0.69\), \(0.94\) at \(\eta=0,\,0.6,\,1,\,2\) and tends to one, while the
+cone limit gives \(0.80\), \(0.93\), \(1.05\), \(1.18\) and tends to \(1.1995\).  The medium does not vanish towards the photon frame; it degenerates into one stream.
+\emph{Proof.} Numerical roots and eigenvalues (script \texttt{k240}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r50.3 (minimal slowing, H120c confirmed).}
+For a universal slowing \(r=1-\varepsilon\) the upper cone condition (times \(1-r\)) is exactly \(\varepsilon^2-g_m^2\bigl(\tfrac23-\tfrac23\alpha+\tfrac76\alpha^2\bigr)\ge0\) (with \(Z=1\), \(g_0=g_m\)), sharpest at
+\(\alpha=1\).  Hence \(\varepsilon\ge\sqrt{7g_m^2/6}\), confirmed numerically at \(g_m^2=\tfrac3{100},10^{-4},10^{-8}\).
+\emph{Proof.} Symbolic expansion (script \texttt{k240}).  \(\square\)
+
+\paragraph{Remark v4.10.0-r50.4 (reading).}
+In reading (a) the idea takes an inverted form: structures of the photon frame, two light-like counter-streams, form for observers near their
+balance a genuine medium with a rest frame (where the weights are equal, as in r41), whereas in the photon frame itself they are a single stream.
+Thesis T9 (\(\Lambda=0\) in P) is not supported by it.  The bound r50.3 holds for every medium with a universal slowing in vacuum: with a laboratory bound
+\(\varepsilon\le10^{-13}\) on Lorentz violation (H78) it gives \(g_m^2\le\tfrac67\cdot10^{-26}\approx8.6\times10^{-27}\), so the comparison model with \(g_m^2=\tfrac3{100}\) is excluded in vacuum by about
+25 orders of magnitude, and an observable directed contrast needs a material whose rest frame is the preparation.  The bound \(10^{-13}\) concerns
+fermions and is adopted here for the Higgs sector without separate evidence.  Found afterwards and not fixed beforehand: at \(\eta=0.6\), close to the
+rapidity of M (\(\operatorname{artanh}\beta_{\rm sym}=0.618\)), the limit still holds; the rapidity here runs along the stream axis, that of OP1 across the axis of R,
+so this is no confirmation.
+
+\subsection*{v4.10.0-r50 frames}
+\label{subsec:v4100-r50-frames}
+
+Speeds refer to the flat metric of the matter frame M with \(c=1\).  The photon frame P enters as the limit \(\eta\to\infty\) of ordinary boosts (reading a); the
+frame map \(J_B\) (reading b) is not used.  Time reversal and the tachyon map are not used.
+
+\subsection*{v4.10.0-r50 register entries}
+\label{subsec:v4100-r50-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r50\\
+\midrule
+H120a (one light-like stream) & confirmed: cannot carry the slowing\\
+H120b (two counter-streams) & partially confirmed: cone limit holds near balance; not effective only in P\\
+H120c (vacuum bound) & confirmed: \(\varepsilon\ge\sqrt{7g_m^2/6}\); with \(\varepsilon\le10^{-13}\), \(g_m^2\lesssim8.6\times10^{-27}\)\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r50 notes}
+\label{subsec:v4100-r50-notes}
+
+\texttt{llm/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H120\_\allowbreak Nullmedium.md} (commit d3810e58), \texttt{llm/\allowbreak Ergebnis\_\allowbreak H120\_\allowbreak Nullmedium.md},
+script \texttt{llm/\allowbreak k240\_\allowbreak h120\_\allowbreak null\_\allowbreak medium.py}, output \texttt{llm/\allowbreak k240\_\allowbreak out.txt}.
+
+\subsection*{v4.10.0-r50 ledger and guard update}
+\label{subsec:v4100-r50-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r50}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; a material or vacuum medium of the required kind not identified).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r50,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r50}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

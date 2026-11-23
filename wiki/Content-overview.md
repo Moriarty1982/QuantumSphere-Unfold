@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r49.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r50.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -181,6 +181,8 @@ Layer v4.10.0-r47 corrects r46: the slowed propagation is needed after all, not 
 Layer v4.10.0-r48 compares this readout with the observer reading of OP1. Both take the electric part of a field strength in the observer's rest frame, and in both the time orientation drops out. In OP1, however, the rest frame and the axis belong to the field; in the comparison model the axis belongs to the detector. The field rest frame of OP1 is thereby a named, untested candidate for the frame the slowed propagation needs.
 
 Layer v4.10.0-r49 tests it. The field is unchanged by boosts along its axis, so it can slow propagation only across the axis; along the axis the cone limit fails. Found afterwards: with the luminal Higgs radius of W2 the directed coupling is causally incompatible with every choice of mediator. Three propagations would have to be slowed, which needs a medium with its own rest frame.
+
+Layer v4.10.0-r50 (H120) tests a medium built from light-like streams of the photon frame. One stream leaves its direction luminal; two counter-streams form a medium only near the frame in which they balance and degenerate into one stream towards the photon frame. For any medium the required slowing is at least √(7g_m²/6); since laboratory bounds exclude Lorentz violation above about 10⁻¹³, the directed coupling is practically excluded in vacuum, and an observable contrast would need a material.
 
 ## Never claimed
 
