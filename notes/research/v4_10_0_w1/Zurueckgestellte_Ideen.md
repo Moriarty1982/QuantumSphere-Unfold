@@ -117,4 +117,4 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   1. H96 wird an DESI DR3 oder Euclid entschieden.
   2. Eine Regel für die Zeit je Kaskadenschritt oder für die Übersetzung Fluss → Dichte, die aus der Struktur folgt und nicht gesetzt ist.
   3. Q1 oder Q2 liefert einen Vermittler mit eigenem Zustand und eigener Skala.
-- **Stand:** zurückgestellt (23.11.2026).
+- **Stand:** am 23.11.2026 auf Autorwunsch („jetzt weg b“) aufgenommen: Runde v4.10.0-r57, H124. Attraktor β² genau für ε = 3; an DESI DR2 BAO nicht ausgeschlossen (p = 0,072), aber Ω_M heute ≈ 0,50, Δχ² = 7,87 gegen ΛCDM. Offen: CMB, SN, Wachstum; blinder Test an DESI DR3 möglich.
