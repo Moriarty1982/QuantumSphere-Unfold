@@ -5,9 +5,9 @@ Angenommen, das Modell könnte den ausgewählten Materiezuständen Massen zuordn
 
 \subsection{Geschlossene Dynamik ausgelesener Variablen}
 
-Die Zustandszerlegung aus Abschnitt \ref{sec:carrier} lässt sich auf eine zeitabhängige Auslese erweitern. Sei \(u\) ein Zustand eines endlichdimensionalen reellen Vergleichssystems mit \(\dot u=G(t)u\). Die Auslese sei \(r=T(t)u\) mit differenzierbarem surjektivem \(T(t)\). Zu einer Rechtsinversen \(R(t)\) von \(T(t)\) lässt sich jeder Zustand als \(u=Rr+z\) mit \(Tz=0\) schreiben. Dann gilt
+Die Zustandszerlegung aus Abschnitt \ref{sec:carrier} lässt sich auf eine zeitabhängige Auslese erweitern. Sei \(u\) ein Zustand eines endlichdimensionalen reellen Vergleichssystems mit \(\dot u=G(t)u\). Die Auslese sei \(r=T(t)u\) mit differenzierbarem surjektivem \(T(t)\). Zu einer Rechtsinversen \(R(t)\) von \(T(t)\) lässt sich jeder Zustand als \(u=Rr+u_{\ker}\) mit \(Tu_{\ker}=0\) schreiben. Dann gilt
 \begin{align}
- \dot r&=(\dot T+TG)Rr+(\dot T+TG)z,\\
+ \dot r&=(\dot T+TG)Rr+(\dot T+TG)u_{\ker},\\
  \dot r\ \text{ist durch }(t,r)\text{ bestimmt}
       &\quad\Longleftrightarrow\quad (\dot T+TG)\ker T=0 .
  \label{eq:autonomy}
@@ -32,21 +32,21 @@ als Lorentzmetrik definieren. Eine bilineare Auslese für den Coframe muss daher
 Der explizite Einstein--Cartan-Vergleich des Companion setzt Coframe, Lorentzverbindung und ein Spinortripel als unabhängige Felder an. Ein Multiplikator koppelt den Coframe an eine bilineare Spinorauslese \(\mathcal C^a{}_\mu(\Psi,D\Psi)\). Die vorgeschriebene Wirkung hat die Form
 \begin{equation}
  S_{\mathrm{vgl}}=\int\! d^4x\,
- \left[\left|\det E\right|\left(\tfrac c2 R(E,\omega)-u_0\right)
+ \left[\left|\det E\right|\left(\tfrac{c_{\mathrm{vgl}}}2 R(E,\omega)-u_0\right)
  +\mathcal L_{\mathrm D}
  +\lambda_a{}^\mu\bigl(E^a{}_\mu-\mathcal C^a{}_\mu\bigr)\right].
  \label{eq:cartan}
 \end{equation}
-Hier ist \(\mathcal L_{\mathrm D}\) die dort definierte Spinor-Lagrangedichte, \(\omega\) die unabhängige Lorentzverbindung, \(c\) ein Vergleichskoeffizient und \(u_0\) ein konstanter Term. Die Variation nach \(\lambda_a{}^\mu\) liefert \(E^a{}_\mu=\mathcal C^a{}_\mu\). Die Variationen nach Spinoren, Verbindung und Coframe stellen weitere Gleichungen. Insbesondere muss eine algebraisch bestimmte Verbindung mit ihren tatsächlich daraus folgenden Ableitungen eingesetzt werden, wenn man eine reduzierte Feldformulierung prüft \cite{companion,repo}.
+Hier ist \(\mathcal L_{\mathrm D}\) die dort definierte Spinor-Lagrangedichte, \(\omega\) die unabhängige Lorentzverbindung, \(c_{\mathrm{vgl}}\) ein Vergleichskoeffizient und \(u_0\) ein konstanter Term. Die Variation nach \(\lambda_a{}^\mu\) liefert \(E^a{}_\mu=\mathcal C^a{}_\mu\). Die Variationen nach Spinoren, Verbindung und Coframe stellen weitere Gleichungen. Insbesondere muss eine algebraisch bestimmte Verbindung mit ihren tatsächlich daraus folgenden Ableitungen eingesetzt werden, wenn man eine reduzierte Feldformulierung prüft \cite{companion,repo}.
 
-In der konkreten neutralen Spinorrechnung wirken die beiden Vergleichsmatrizen \(Q\) und \(M_{\mathrm D}\) auf die drei Kanäle. Mit \(v=|\det E|\), \(e=E^{-1}\), \(K^a=\beta\Gamma^a\) und \(D_\mu\Psi=\partial_\mu\Psi-\tfrac14\omega_{\mu,ab}\Gamma^a\Gamma^b\Psi\) werden die Auslese und die Dichte durch
+In der konkreten neutralen Spinorrechnung wirken die beiden Vergleichsmatrizen \(Q\) und \(M_{\mathrm D}\) auf die drei Kanäle. Mit \(e=E^{-1}\), \(K_{\mathrm D}^a=\beta_{\mathrm D}\Gamma^a\) und \(D_\mu\Psi=\partial_\mu\Psi-\tfrac14\omega_{\mu,ab}\Gamma^a\Gamma^b\Psi\) werden die Auslese und die Dichte durch
 \begin{align}
- \mathcal C^a{}_\mu&=\operatorname{Im}(\Psi^\dagger QK^aD_\mu\Psi),\\
+ \mathcal C^a{}_\mu&=\operatorname{Im}(\Psi^\dagger QK_{\mathrm D}^aD_\mu\Psi),\\
  \mathcal L_{\mathrm D}
- &=-v\operatorname{Im}(\Psi^\dagger e_a{}^\mu K^aD_\mu\Psi)
-   -v\operatorname{Re}(\Psi^\dagger(M_{\mathrm D}\otimes\beta)\Psi)
+ &=-|\det E|\operatorname{Im}(\Psi^\dagger e_a{}^\mu K_{\mathrm D}^aD_\mu\Psi)
+   -|\det E|\operatorname{Re}(\Psi^\dagger(M_{\mathrm D}\otimes\beta_{\mathrm D})\Psi)
 \end{align}
-festgelegt. Die Matrizen \(\Gamma^a,\beta\) bezeichnen die Dirac-Matrizen in der Vergleichskonvention. Kanal- und Spinindizes werden getrennt kontrahiert. Diese Festlegung macht sichtbar, welche Spinorgröße für die geometrische Auslese eingesetzt wird und an welcher Stelle ein Massenoperator in die Spinordynamik eingeht.
+festgelegt. Die Matrizen \(\Gamma^a,\beta_{\mathrm D}\) bezeichnen die Dirac-Matrizen in der Vergleichskonvention. Kanal- und Spinindizes werden getrennt kontrahiert. Diese Festlegung macht sichtbar, welche Spinorgröße für die geometrische Auslese eingesetzt wird und an welcher Stelle ein Massenoperator in die Spinordynamik eingeht.
 
 Die Vergleichswirkung setzt ihre Krümmung, Materiedichte und Kopplungskoeffizienten als Modellbestandteile an. Sie zeigt, wo eine Mate\-rie\-größe und der Coframe in derselben Variationsrechnung zusammentreffen. Für den nativen Übergang aus Abschnitt \ref{sec:mass} wäre zusätzlich zu bestimmen, welche dieser Eingaben aus dem gemeinsamen Träger folgen und wie die physikalische Quelle an die dortige Massenauslese gekoppelt ist.
 
@@ -148,22 +148,22 @@ Das reduzierte OP5-Modell setzt einen gerichteten massiven Vermittler mit Massen
  &=\frac{[Z(\Omega_0^2+c_h^2q-x)+\tfrac32g_0^2d]d_m-g_m^2N_m}{m^2}.
  \label{eq:op5-drive}
 \end{align}
-Die Koeffizienten und die gerichtete Quellenform sind vorgegeben. Eine in den Notizen geprüfte Wahl ist \(Z=1\), \(r_m=c_h^2=1/2\), \(g_0^2=g_m^2=3/100\), \(m^2,\Omega_0^2>0\). Sie dient hier als Rechenbeispiel. Liest man das Vergleichsfeld als Radialmodus des Higgsradius von W2, erzwingt W2 \(c_h=1\), bei minimaler Kopplung \(g_0=0\), und mangels gerichteten Vermittlers \(g_m=0\); \(c_h^2=1/2\) ist also eine Vergleichswahl, die W2 nicht trägt (Runde v4.10.0-r33 \cite{layers}). Die Kegelgrenze der Kausalität verlangt, dass beide Vermittler und der Higgsradius langsamer als das Licht laufen. Mit lichtschnellem Higgsradius ist die gerichtete Kopplung für keine Wahl der Vermittlergeschwindigkeiten verträglich (Runden v4.10.0-r47 und v4.10.0-r49 \cite{layers}). Im Vakuum begrenzen Laborgrenzen der Lorentz-Verletzung, die für Fermionen gemessen und auf den Higgs-Sektor übertragen sind, die Kopplung auf \(g_m^2\lesssim10^{-26}\). Der Beispielwert \(g_m^2=3/100\) ist dort ausgeschlossen und nur in einem Material denkbar, dessen Ruhesystem die Präparation ist (Runden v4.10.0-r50 und v4.10.0-r51 \cite{layers}; Anhang~\ref{sec:anhang-b-annahmen}). Auf ein Profil \(\delta H\) antwortet das reduzierte Modell bei passender Präparation auf den Antrieb \(\delta J_{\rm OP5}=\mathcal P_{\rm dyn}\delta H\) \cite{op5-channel}. Die Rechenschritte von hier bis zur Bilanz zweiter Ordnung sind in Anhang~\ref{sec:anhang-b} einzeln hergeleitet und mit Wolfram geprüft.
+Die Koeffizienten und die gerichtete Quellenform sind vorgegeben. Eine in den Notizen geprüfte Wahl ist \(Z=1\), \(r_m=c_h^2=1/2\), \(g_0^2=g_m^2=3/100\), \(m^2,\Omega_0^2>0\). Sie dient hier als Rechenbeispiel. Liest man das Vergleichsfeld als Radialmodus des Higgsradius von W2, erzwingt W2 \(c_h=1\), bei minimaler Kopplung \(g_0=0\), und mangels gerichteten Vermittlers \(g_m=0\); \(c_h^2=1/2\) ist also eine Vergleichswahl, die W2 nicht trägt (Runde v4.10.0-r33 \cite{layers}). Die Kegelgrenze der Kausalität verlangt, dass beide Vermittler und der Higgsradius langsamer als das Licht laufen. Mit lichtschnellem Higgsradius ist die gerichtete Kopplung für keine Wahl der Vermittlergeschwindigkeiten verträglich (Runden v4.10.0-r47 und v4.10.0-r49 \cite{layers}). Im Vakuum begrenzen Laborgrenzen der Lorentz-Verletzung, die für Fermionen gemessen und auf den Higgs-Sektor übertragen sind, die Kopplung auf \(g_m^2\lesssim10^{-26}\). Der Beispielwert \(g_m^2=3/100\) ist dort ausgeschlossen und nur in einem Material denkbar, dessen Ruhesystem die Präparation ist (Runden v4.10.0-r50 und v4.10.0-r51 \cite{layers}; Anhang~\ref{sec:anhang-b-annahmen}). Auf ein Profil \(\delta H\) antwortet das reduzierte Modell bei passender Präparation auf den Antrieb \(\delta\mathcal J_{\rm OP5}=\mathcal P_{\rm dyn}\delta H\) \cite{op5-channel}. Die Rechenschritte von hier bis zur Bilanz zweiter Ordnung sind in Anhang~\ref{sec:anhang-b} einzeln hergeleitet und mit Wolfram geprüft.
 
-Die Wahl der zwei Quellenformen hat im reduzierten Modell eine konkrete Aufgabe. Mit \(p^\mu=(\omega,\mathbf k)\) ist \(d=p_\mu p^\mu\). Am Einstein-Kanal wird die identisch transversale Verbesserung \(S^{\mu\nu}=p^\mu p^\nu-\eta^{\mu\nu}d\) eingesetzt. In vier Dimensionen erfüllen ihre Spur und ihre doppelte Kontraktion
+Die Wahl der zwei Quellenformen hat im reduzierten Modell eine konkrete Aufgabe. Mit \(p^\mu=(\omega,\mathbf k)\) ist \(d=p_\mu p^\mu\). Am Einstein-Kanal wird die identisch transversale Verbesserung \(\Pi^{\mu\nu}=p^\mu p^\nu-\eta^{\mu\nu}d\) eingesetzt. In vier Dimensionen erfüllen ihre Spur und ihre doppelte Kontraktion
 \[
- p_\mu S^{\mu\nu}=0,\qquad
- \operatorname{tr}S=-3d,\qquad S:S=3d^2 .
+ p_\mu \Pi^{\mu\nu}=0,\qquad
+ \operatorname{tr}\Pi=-3d,\qquad \Pi:\Pi=3d^2 .
 \]
 Der spurgespiegelte Austauschterm der beiden Quellen ist proportional zu
 \[
- \frac{S:S-(\operatorname{tr}S)^2/2}{d}=-\frac32 d .
+ \frac{\Pi:\Pi-(\operatorname{tr}\Pi)^2/2}{d}=-\frac32 d .
 \]
-Nach Kürzung des Pols bleibt der lokale Beitrag, der in den Antriebsoperator \eqref{eq:op5-drive} eingeht. Auf derselben Verbesserung verschwindet auch die erhaltene Fierz--Pauli-Kontraktion \(S:S-(\operatorname{tr}S)^2/3\). Der gerichtete massive Kontrast in dieser Rechnung benutzt deshalb die eigens gewählte, zur Messachse transversale Quellenform mit dem Zähler \(N_m\). Die gemeinsame Herkunft beider Quellenformen aus einer physischen Wirkung bleibt zu zeigen \cite{op5-channel}. Ein erster Feldansatz gibt den Vermittlerterm mit eindeutigen Kopplungen exakt wieder, setzt aber einen zusätzlichen Skalar (Runde v4.10.0-r38 \cite{layers}). Für sich genommen ist der gerichtete Term ein gewöhnlicher Fierz--Pauli-Austausch einer gesetzten, gerichteten und erhaltenen Quelle; offen ist, ob Rahmen und Achse dieser Quelle zu einem Feld oder zur Auslese gehören (Runde v4.10.0-r45 \cite{layers}).
+Nach Kürzung des Pols bleibt der lokale Beitrag, der in den Antriebsoperator \eqref{eq:op5-drive} eingeht. Auf derselben Verbesserung verschwindet auch die erhaltene Fierz--Pauli-Kontraktion \(\Pi:\Pi-(\operatorname{tr}\Pi)^2/3\). Der gerichtete massive Kontrast in dieser Rechnung benutzt deshalb die eigens gewählte, zur Messachse transversale Quellenform mit dem Zähler \(N_m\). Die gemeinsame Herkunft beider Quellenformen aus einer physischen Wirkung bleibt zu zeigen \cite{op5-channel}. Ein erster Feldansatz gibt den Vermittlerterm mit eindeutigen Kopplungen exakt wieder, setzt aber einen zusätzlichen Skalar (Runde v4.10.0-r38 \cite{layers}). Für sich genommen ist der gerichtete Term ein gewöhnlicher Fierz--Pauli-Austausch einer gesetzten, gerichteten und erhaltenen Quelle; offen ist, ob Rahmen und Achse dieser Quelle zu einem Feld oder zur Auslese gehören (Runde v4.10.0-r45 \cite{layers}).
 
-Die Materierechnung liefert \(\delta\mathcal J_h\). Der Vergleich verlangt \(\delta J_{\rm OP5}\). Wir können beide in deklarierter Quellen-Normierung gleichsetzen und ausrechnen, was daraus folgt. Eine Wirkung, die diese Gleichsetzung aus dem gemeinsamen Träger herleitet, liegt noch nicht vor. Am Higgs-Sektor von W2 folgt sie für den skalaren Kanal, wenn das Vergleichsfeld der Higgs-Radialmodus ist; dann fehlt aber der gerichtete Vermittler, an dem der Kontrast hängt (Runde v4.10.0-r33 \cite{layers}). Gleichung \eqref{eq:op5-match} markiert die zusätzliche Modellannahme; was sie trägt und was ohne sie bestehen bleibt, steht in Anhang~\ref{sec:anhang-b-annahmen}:
+Die Materierechnung liefert \(\delta\mathcal J_h\). Der Vergleich verlangt \(\delta\mathcal J_{\rm OP5}\). Wir können beide in deklarierter Quellen-Normierung gleichsetzen und ausrechnen, was daraus folgt. Eine Wirkung, die diese Gleichsetzung aus dem gemeinsamen Träger herleitet, liegt noch nicht vor. Am Higgs-Sektor von W2 folgt sie für den skalaren Kanal, wenn das Vergleichsfeld der Higgs-Radialmodus ist; dann fehlt aber der gerichtete Vermittler, an dem der Kontrast hängt (Runde v4.10.0-r33 \cite{layers}). Gleichung \eqref{eq:op5-match} markiert die zusätzliche Modellannahme; was sie trägt und was ohne sie bestehen bleibt, steht in Anhang~\ref{sec:anhang-b-annahmen}:
 \begin{equation}
- \delta J_{\rm OP5}=\delta\mathcal J_h .
+ \delta\mathcal J_{\rm OP5}=\delta\mathcal J_h .
  \label{eq:op5-match}
 \end{equation}
 Mit \(D_0=\partial_t^2-\Delta\) wähle eine glatte, räumlich kompakte Funktion \(V\), die vor der Schaltung null ist, und setze
@@ -242,9 +242,9 @@ Die Vorzeichen folgen aus der Federenergie \(k|\mathbf R_{\rm F}|^2/2\). Beim Di
 
 \paragraph{Welche Verschiebung am Plateau fehlt.}
 
-Die lineare Gegenbewegung ist ein Befund für die präparierte Quelle. Um die zweite Ordnung zu prüfen, betrachten die Forschungsnotizen dieselben beiden Hauptkomponenten auf dem Plateau mit einem Saint-Venant--Kirchhoff-Gesetz und ausschließlich innerer Paarfeder. Sei \(\mathsf H=\nabla_X\mathbf u_1\) die symmetrische erste Deformation im Referenzchart, mit \(\mathbf u_1=\nabla_X\varphi\) und \(\mathbf w_1=-\mathbf u_1/c_\sigma\). Für die zweite Summenverschiebung \(S_2=\mathbf u_2+c_\sigma\mathbf w_2\) hat die Summe der Piola-Tensoren den Koeffizienten
+Die lineare Gegenbewegung ist ein Befund für die präparierte Quelle. Um die zweite Ordnung zu prüfen, betrachten die Forschungsnotizen dieselben beiden Hauptkomponenten auf dem Plateau mit einem Saint-Venant--Kirchhoff-Gesetz und ausschließlich innerer Paarfeder. Sei \(\mathsf H=\nabla_X\mathbf u_1\) die symmetrische erste Deformation im Referenzchart, mit \(\mathbf u_1=\nabla_X\varphi\) und \(\mathbf w_1=-\mathbf u_1/c_\sigma\). Für die zweite Summenverschiebung \(\mathbf S_2=\mathbf u_2+c_\sigma\mathbf w_2\) hat die Summe der Piola-Tensoren den Koeffizienten
 \begin{align}
- (P_1+P_2)^{(2)}&=\mathsf C\,\varepsilon(S_2)
+ (P_1+P_2)^{(2)}&=\mathsf C\,\varepsilon(\mathbf S_2)
                      +(1+1/c_\sigma)N(\mathsf H),\\
  N(\mathsf H)&=\tfrac{\lambda}{2}\operatorname{tr}(\mathsf H^2)I
                  +3\mu\mathsf H^2+\lambda(\operatorname{tr}\mathsf H)\mathsf H .
@@ -256,7 +256,7 @@ Für \(\mu>0\), \(3\lambda+2\mu>0\) und eine nichttriviale kompakte longitudinal
  \label{eq:op5-second}
 \end{equation}
 
-Bei kompaktem \(S_2\) erzwingt die statische Summengleichung nach Testen mit \(X\) eine verschwindende integrierte Spur. Der lineare Dehnungsterm integriert sich dabei zu null. Der positive quadratische Beitrag widerspricht dieser notwendigen Bedingung. Damit scheitert eine kompakte zweite Summenverschiebung unter den angegebenen Material- und Halterungsannahmen \cite{op5-elastic-limit}.
+Bei kompaktem \(\mathbf S_2\) erzwingt die statische Summengleichung nach Testen mit \(X\) eine verschwindende integrierte Spur. Der lineare Dehnungsterm integriert sich dabei zu null. Der positive quadratische Beitrag widerspricht dieser notwendigen Bedingung. Damit scheitert eine kompakte zweite Summenverschiebung unter den angegebenen Material- und Halterungsannahmen \cite{op5-elastic-limit}.
 
 Die Spuridentität lässt sich im selben Referenzchart prüfen. Für die Hesse-Matrix \(\mathsf H\) von \(\varphi\) mit kompakter erster Verschiebung ist
 \[
@@ -283,7 +283,7 @@ Die Krümmung in \eqref{eq:op5-contrast} ist eine Größe im Modell. Wie sähe e
 \end{equation}
 Die Eigenphasen sind dann diejenigen der Strecke. Diese Aussage benutzt die Ähnlichkeit und braucht keine diagonalen Anschlüsse. Falls sich die Enden mit dem Profil ändern, kann ein profilsynchroner Phasenterm am Sender denselben Frequenzgang wie ein mit der Laufzeitmatrix kommutierender Zusatz auf der Strecke erzeugen. Der Quotient allein entscheidet in diesem Fall nicht über den Ort des Effekts \cite{op5-budget}.
 
-Ein unabhängiger Nullweg mit bekanntem Einheitskontrast würde im Idealfall die gleichen aktuellen Endmatrizen teilen. Für relative Abweichungen \(S,R\) am Empfangs- und Sendeende lässt sich diese Forderung direkt schreiben. Ist \(C=LF\) die Nullmessung und \(M=LSURF\) die Messung, so ist \(C^{-1}M\) für invertierbares \(S\) ähnlich zu \(U(RS)\). Reziproke Abweichungen mit \(RS=I\) erhalten das Streckenspektrum. Bei \(RS=c_0 I\), \(c_0\ne0\), erhalten beide Eigenwerte denselben Faktor, sodass ihre korrekt entfaltete Phasendifferenz gleich bleibt. Alternativ könnte eine im Messzweig unabhängig begründete Nullstellung \(M_0=LSRF\) die gleichen relativen Anschlüsse wie die Messung verwenden. Dann gilt \(M_0^{-1}M=F^{-1}R^{-1}URF\). Die Voraussetzung ist in beiden Fällen eine kohärent geteilte Endpunktantwort. Die axiale Nullstellung des Feldvergleichs liefert dafür ein Kriterium an das Profil. Sie bestimmt noch nicht den Abgleich eines physischen Messanschlusses \cite{op5-nullpfad,op5-axis}.
+Ein unabhängiger Nullweg mit bekanntem Einheitskontrast würde im Idealfall die gleichen aktuellen Endmatrizen teilen. Für relative Abweichungen \(S,R\) am Empfangs- und Sendeende lässt sich diese Forderung direkt schreiben. Ist \(M_{\mathrm N}=LF\) die Nullmessung und \(\widetilde M=LSURF\) die Messung, so ist \(M_{\mathrm N}^{-1}\widetilde M\) für invertierbares \(S\) ähnlich zu \(U(RS)\). Reziproke Abweichungen mit \(RS=I\) erhalten das Streckenspektrum. Bei \(RS=c_0 I\), \(c_0\ne0\), erhalten beide Eigenwerte denselben Faktor, sodass ihre korrekt entfaltete Phasendifferenz gleich bleibt. Alternativ könnte eine im Messzweig unabhängig begründete Nullstellung \(M_0=LSRF\) die gleichen relativen Anschlüsse wie die Messung verwenden. Dann gilt \(M_0^{-1}\widetilde M=F^{-1}R^{-1}URF\). Die Voraussetzung ist in beiden Fällen eine kohärent geteilte Endpunktantwort. Die axiale Nullstellung des Feldvergleichs liefert dafür ein Kriterium an das Profil. Sie bestimmt noch nicht den Abgleich eines physischen Messanschlusses \cite{op5-nullpfad,op5-axis}.
 
 Auch bei abgeglichenen Enden bleibt eine Anforderung an die Stabilität der Phase. Schreibe die fehlerbehafteten Matrizen in der Feldbasis als \(\widehat M_A=L(I+N_A)F\) und \(\widehat M_B=L(U+N_B+D_{\rm E})F\), mit \(D_{\rm E}\) als Änderung der Endpunktantwort in Stellung B. Für invertierbares \(I+N_A\) ist der Messquotient \(\widehat M_A^{-1}\widehat M_B\) ähnlich zu \(Q=(I+N_A)^{-1}(U+N_B+D_{\rm E})\). Ihr Fehler gegenüber \(U\) ist exakt
 \begin{equation}

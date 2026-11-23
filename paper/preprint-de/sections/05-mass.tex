@@ -54,11 +54,11 @@ Auf dem euklidischen Wurzelraum sei \(e=(1,1,1)/\sqrt3\) und \(C_m=(I+J_m)/2\) m
 \end{equation}
 Der Test verlangt also, dass \(e\) und \(J_me\) orthogonal sind. Die Projektoraxiome erlauben auch \(J_m=I\), mit \(h=1\). Um die Orthogonalität physikalisch zu begründen, muss \(J_m\) aus dem gemeinsamen Träger folgen.
 
-Dafür betrachtet die Physik-Ausgabe eine Koisometrie \(B:H\to\mathbb R^3\) mit \(BB^*=I_3\) und \(J\)-invariantem Kern \cite{physics}. Da \(J\) selbstadjungiert ist, bleibt auch \((\ker B)^\perp=\operatorname{im} B^*\) invariant. \(B\) überträgt die Involution dieses orthogonalen Komplements als \(J_m=BJB^*\) auf den Wurzelraum, sodass \(BC=C_mB\). Ein unabhängig bestimmter Ausgangszustand \(f_0\) mit \(Bf_0=e\) und das physikalische Wurzelgesetz \(x=\alpha BCf_0\) würden die Bedingung auf
+Dafür betrachtet die Physik-Ausgabe eine Koisometrie \(B_m:\mathcal H\to\mathbb R^3\) mit \(B_mB_m^*=I_3\) und \(J\)-invariantem Kern \cite{physics}. Da \(J\) selbstadjungiert ist, bleibt auch \((\ker B_m)^\perp=\operatorname{im} B_m^*\) invariant. \(B_m\) überträgt die Involution dieses orthogonalen Komplements als \(J_m=B_mJB_m^*\) auf den Wurzelraum, sodass \(B_mC=C_mB_m\). Ein unabhängig bestimmter Ausgangszustand \(f_0\) mit \(B_mf_0=e\) und das physikalische Wurzelgesetz \(x=\alpha B_mCf_0\) würden die Bedingung auf
 \[
- \langle B^*e,J B^*e\rangle=0
+ \langle B_m^*e,J B_m^*e\rangle=0
 \]
-zurückführen. Das benennt eine konkrete Prüfung am Träger. Die Auswahl von \(B\), \(f_0\) und des Wurzelgesetzes geht als eigene Voraussetzung ein. Ein rein ungerader Zustand liegt im Kern von \(C\) und liefert über diese direkte lineare Auslese keine von null verschiedenen Wurzeln.
+zurückführen. Das benennt eine konkrete Prüfung am Träger. Die Auswahl von \(B_m\), \(f_0\) und des Wurzelgesetzes geht als eigene Voraussetzung ein. Ein rein ungerader Zustand liegt im Kern von \(C\) und liefert über diese direkte lineare Auslese keine von null verschiedenen Wurzeln.
 
 Ein vollständig bestimmter Vergleich zeigt, welche Information in
 der Wahl von \(J_m\) steckt. Wähle
@@ -236,16 +236,16 @@ Abschnitt~\ref{sec:one-number}).
 Die Phase kann nur dann als Eigenschaft einer Auslese
 verwendet werden, wenn feststeht, an welcher Stelle der
 Auslese sie eingeht. Betrachten wir zwei der oben
-beschriebenen positiven Tripel mit \(\theta_\pm=\theta_0\pm h\)
+beschriebenen positiven Tripel mit \(\theta_\pm=\theta_0\pm\delta\theta\)
 im selben positiv zulässigen Intervall, demselben \(a\)
 und derselben Zuordnung der Komponenten in einem
 festen Materieframe. Wenn die beiden Wurzeln einer
 Komponente zuerst zu gleichen Teilen gemittelt werden,
 folgt mit der Addition der beiden Kosinuswerte
 \begin{equation}
- \bar x_k=a\bigl[1+\sqrt2\cos h\,
+ \bar x_k=a\bigl[1+\sqrt2\cos\delta\theta\,
                       \cos(\theta_0+2\pi k/3)\bigr],\qquad
- K(\bar x)=\frac{1+\cos^2 h}{3}.
+ K(\bar x)=\frac{1+\cos^2\delta\theta}{3}.
  \label{eq:koide-mixture}
 \end{equation}
 Die Präparationen dürfen also einzeln \(K=2/3\) erfüllen,
@@ -276,20 +276,20 @@ bedingter Vergleich \cite{companion,physics}.
 
 \subsection{Eine Vergleichsdynamik mit leichter und schwerer Komponente}
 
-Die Kompression aus Abschnitt \ref{sec:matter} kann mit einem Übergangsoperator zu einem zusätzlichen Raum verbunden werden. Als konkreten Vergleich betrachten wir einen Übergang \(B_{\mathrm{lh}}\) zwischen zwei endlichdimensionalen Hilberträumen mit ihren deklarierten positiven Metriken. Der schwere Block habe die konstante Lücke \(\Delta>0\) und die Kopplung das Gewicht \(\mu>0\). In orthonormalen Basen lautet der hermitesche Blockoperator
+Die Kompression aus Abschnitt \ref{sec:matter} kann mit einem Übergangsoperator zu einem zusätzlichen Raum verbunden werden. Als konkreten Vergleich betrachten wir einen Übergang \(B_{\mathrm{lh}}\) zwischen zwei endlichdimensionalen Hilberträumen mit ihren deklarierten positiven Metriken. Der schwere Block habe die konstante Lücke \(\Delta>0\) und die Kopplung das Gewicht \(\mu_{\mathrm{lh}}>0\). In orthonormalen Basen lautet der hermitesche Blockoperator
 \[
- \Omega=
+ \Omega_{\mathrm{lh}}=
  \begin{pmatrix}
- 0 & \mu B_{\mathrm{lh}}^* \\
- \mu B_{\mathrm{lh}} & \Delta I
+ 0 & \mu_{\mathrm{lh}} B_{\mathrm{lh}}^* \\
+ \mu_{\mathrm{lh}} B_{\mathrm{lh}} & \Delta I
  \end{pmatrix}.
 \]
-Die im Companion behandelte Form mit gewichteten Metriken geht durch einen Metrikwechsel in diese Form über \cite{companion,repo}. Gehört \(\sigma_i>0\) zu den Singulärwerten des Übergangs, reduziert sich der zugehörige Teil auf die Matrix mit Diagonale \(0,\Delta\) und Nebendiagonale \(\mu\sigma_i\). Die negative Eigenzahl \(-m_i\) liefert
+Die im Companion behandelte Form mit gewichteten Metriken geht durch einen Metrikwechsel in diese Form über \cite{companion,repo}. Gehört \(\sigma_i>0\) zu den Singulärwerten des Übergangs, reduziert sich der zugehörige Teil auf die Matrix mit Diagonale \(0,\Delta\) und Nebendiagonale \(\mu_{\mathrm{lh}}\sigma_i\). Die negative Eigenzahl \(-m_i\) liefert
 \begin{equation}
- m_i(m_i+\Delta)=\mu^2\sigma_i^2 .
+ m_i(m_i+\Delta)=\mu_{\mathrm{lh}}^2\sigma_i^2 .
  \label{eq:gap}
 \end{equation}
-Für den Vergleich sind \(\sigma_i\) dimensionslos und \(\mu,\Delta,m_i\) haben die Dimension einer Masse. Für \(\mu\sigma_i\ll\Delta\) ist \(m_i\) in führender Ordnung \(\mu^2\sigma_i^2/\Delta\). Diese Näherung hängt von der Lücke ab. Der leichte Eigenzustand hat bei von null verschiedener Kopplung auch eine Komponente im schweren Block.
+Für den Vergleich sind \(\sigma_i\) dimensionslos und \(\mu_{\mathrm{lh}},\Delta,m_i\) haben die Dimension einer Masse. Für \(\mu_{\mathrm{lh}}\sigma_i\ll\Delta\) ist \(m_i\) in führender Ordnung \(\mu_{\mathrm{lh}}^2\sigma_i^2/\Delta\). Diese Näherung hängt von der Lücke ab. Der leichte Eigenzustand hat bei von null verschiedener Kopplung auch eine Komponente im schweren Block.
 
 Das zugehörige Eigenwertproblem lässt sich mit nur zwei
 Komponenten verfolgen. Seien \(u_i,w_i\) normierte
@@ -298,20 +298,20 @@ und \(B_{\mathrm{lh}}^*w_i=\sigma_iu_i\). Für den Eigenzustand
 zur Eigenzahl \(-m_i\) sind die Koeffizienten in dieser Basis
 proportional zu
 \[
- \left(1,-\frac{\mu\sigma_i}{\Delta+m_i}\right).
+ \left(1,-\frac{\mu_{\mathrm{lh}}\sigma_i}{\Delta+m_i}\right).
 \]
 Damit ist der quadrierte Anteil der schweren Komponente
 \(m_i/(\Delta+2m_i)\), nach Einsetzen von \eqref{eq:gap}
 in die Normierung. Wir schreiben \(q_i=\sigma_i^2\) für die
 quadrierten Singulärwerte eines frei gewählten Übergangs. Mit der dimensionslosen Kopplung
-\(\eta=\mu/\Delta\) folgt exakt
+\(\zeta=\mu_{\mathrm{lh}}/\Delta\) folgt exakt
 \begin{equation}
- m_i=\frac{\Delta}{2}\left(\sqrt{1+4\eta^2q_i}-1\right).
+ m_i=\frac{\Delta}{2}\left(\sqrt{1+4\zeta^2q_i}-1\right).
  \label{eq:koide-scale-gap}
 \end{equation}
-Bei festem \(q_i,\eta\) multipliziert eine Änderung von
+Bei festem \(q_i,\zeta\) multipliziert eine Änderung von
 \(\Delta\) alle \(m_i\) mit demselben Faktor. Ändert man
-\(\eta\) bei festem \(q_i\), ändern sich im Allgemeinen auch
+\(\zeta\) bei festem \(q_i\), ändern sich im Allgemeinen auch
 die Massenverhältnisse. Der Parameter für
 die relative Wirkung der Kopplung und die absolute
 Massenskala haben damit getrennte Aufgaben. Der Anteil
