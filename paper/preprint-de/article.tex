@@ -10,7 +10,10 @@
 \definecolor{qs axis}{HTML}{565F68}
 \definecolor{qs blue}{HTML}{174D75}
 \definecolor{qs rust}{HTML}{99471C}
-\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Entwurf zu Preprint-Fassung 0.2.0}]{hyperref}
+\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Preprint, Fassung 0.2.0}]{hyperref}
+
+% Version-DOI der Fassung 0.2.0: nach der Reservierung auf Zenodo eintragen, z. B. \newcommand{\versiondoi}{10.5281/zenodo.NNNNNNNN}
+\newcommand{\versiondoi}{}
 
 \setlength{\parindent}{1em}
 \raggedbottom
@@ -24,8 +27,9 @@
 \noindent{\large Auf dem Weg zu einem gemeinsamen Rahmen\\
 für Materie, Eichstruktur und Raumzeitgeometrie\par}
 \vspace{0.7em}
-\noindent Marc Brendecke\hfill{\small Entwurf zu Fassung 0.2.0 \enspace$\cdot$\enspace 23. November 2026}\par
-\noindent{\small Vorige Fassung 0.1.0: \href{https://doi.org/10.5281/zenodo.24405553}{doi:10.5281/zenodo.24405553}; alle Fassungen: \href{https://doi.org/10.5281/zenodo.24405552}{doi:10.5281/zenodo.24405552}\par}
+\noindent Marc Brendecke\hfill{\small Fassung 0.2.0 \enspace$\cdot$\enspace 23. November 2026}\par
+\noindent{\small Version-DOI: \ifx\versiondoi\empty wird bei der Reservierung auf Zenodo vergeben\else\href{https://doi.org/\versiondoi}{doi:\versiondoi}\fi\par}
+\noindent{\small Concept-DOI (alle Fassungen): \href{https://doi.org/10.5281/zenodo.24405552}{doi:10.5281/zenodo.24405552}\par}
 \vspace{0.55em}
 \begin{quote}
 \small
@@ -41,7 +45,8 @@ linearisierten Einstein-Gleichung; der gerichtete Kontrast braucht einen Vermitt
 und ist im Vakuum nur mit verschwindend kleiner Kopplung verträglich, verlangt also ein Material. Alle bedingten Zahlenwerte
 hängen an einer einzigen Zahl, deren Herkunft aus den Zählregeln eines Horizonts offen ist. Der Artikel beansprucht keine Lösung
 der offenen Probleme. Er legt offen, welche Annahmen jede Rechnung mitführt und wo eine Herleitung ansetzen müsste. Die
-Rechnungen sind mit Wolfram Language geprüft; maßgebliche Fassung ist der Quantum Sphaera Companion.
+Rechnungen sind mit Wolfram Language geprüft, eine mit Python; maßgebliche Fassung ist der Quantum Sphaera Companion. Diese Fassung 0.2.0
+ersetzt die Fassung 0.1.0 vom 20.~November 2026 (\href{https://doi.org/10.5281/zenodo.24405553}{doi:10.5281/zenodo.24405553}).
 \end{quote}
 \section*{Vorwort}
 Was soll ein Heisenberg-Kompensator eigentlich kompensieren? Und wenn man dann mal endlich erfährt, was er kompensieren soll, fragt man sich ziemlich erstaunt: \glqq Wie verdammt noch mal soll er das machen?\grqq{}

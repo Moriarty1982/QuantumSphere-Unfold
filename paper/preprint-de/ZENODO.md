@@ -3,6 +3,10 @@
 **Status:** vorbereitet am 23.11.2026, nicht veröffentlicht. Eine neue Zenodo-Version entsteht nur mit ausdrücklicher Freigabe des Autors
 (`AGENTS.md`). Concept-DOI 10.5281/zenodo.24405552; vorige Fassung 0.1.0 (20.11.2026, 24 Seiten), DOI 10.5281/zenodo.24405553.
 
+**Umsetzung:** Die Metadaten stehen maschinenlesbar in `release/zenodo/metadata_preprint_de_0_2_0.json`, Paket und Schrittfolge
+(Reservierung, Titelseite mit Version-DOI, Upload, Veröffentlichung) in `release/preprint-de-v0.2.0/README.md`. Fassung 0.2.0 hat
+55 Seiten; der lokale Trockenlauf des Zenodo-Skripts ist bestanden.
+
 ## Vorgeschlagene Metadaten
 - **Titel:** Quantum Sphaera: Auf dem Weg zu einem gemeinsamen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie
 - **Version:** 0.2.0 (Vorschlag)

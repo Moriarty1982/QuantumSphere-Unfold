@@ -1,0 +1,49 @@
+{
+  "title": "Quantum Sphaera: Auf dem Weg zu einem gemeinsamen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc"
+    }
+  ],
+  "description": "<p>Dieser deutschsprachige Preprint fragt, was ein Heisenberg-Kompensator leisten müsste, und folgt dieser Frage vom Photon zu einem gemeinsamen mathematischen Träger für Materie, Eichstruktur und Raumzeitgeometrie. Ein Feldbeispiel präzisiert die Rolle der Projektion, die Biquaternionen dienen als Träger, und ein Vergleich mit der Dixon-Algebra grenzt ein, wo ein Generationsindex sitzen kann. Die Massenauslese wird an der Koide-Relation untersucht; das Vorzeichen des Oktantschritts erweist sich als Zeitorientierung der Auslese, die kein Baustein festlegt. Eine Fallstudie zu OP5 verfolgt eine präparierte Materiequelle bis zum geometrischen Achsenkontrast: Der gewöhnliche Beitrag folgt aus der linearisierten Einstein-Gleichung, der gerichtete Kontrast braucht einen Vermittler, den die Vergleichswirkung nicht enthält, und ist im Vakuum nur mit verschwindend kleiner Kopplung verträglich.</p><p>Neu gegenüber Fassung 0.1.0 (doi:10.5281/zenodo.24405553): eine Zusammenfassung; ein Abschnitt zum Vorzeichen des Oktantschritts; der Abschnitt „Was an einer einzigen Zahl hängt“ (Zählregeln eines Horizonts, Zufallsabschätzung, Rovelli–Speziale, Holst-Term, Frame-Abbildung J_B, Zählregel als Dimensionsformel); ein Abschnitt zu den Messungen, die die Zahl prüfen (H9, H96, H102, H112, H15, Datenstand 23. November 2026, kein Test entschieden); eine Übersicht der offenen Probleme und ihrer Zusammenhänge; ein Hinweis zur Arbeitsweise; Anhang B mit den Herleitungen zur OP5-Fallstudie und dem Stand der Vermittlersuche; Anhang C mit den Originalausgaben der neuen Rechnungen. Umfang 55 Seiten.</p><p><strong>Geltungsbereich.</strong> Der Preprint beansprucht keine Lösung der offenen Probleme des Quantum Sphaera Companion (OP1–OP5, C5, C6/T2); keines ist geschlossen und keine gesperrte Aussage (Guard) aufgehoben. Die Riemann-Hypothese wird nicht behauptet. Maßgebliche Fassung der Herleitungen ist der Companion (v5.3.0, doi:10.5281/zenodo.24434403, und die Forschungsschichten danach).</p><p><strong>English summary.</strong> This German-language preprint asks what a Heisenberg compensator would have to do and follows the question from the photon to a common mathematical carrier for matter, gauge structure and spacetime geometry. A field example fixes the role of the projection, biquaternions serve as the carrier, and a comparison with the Dixon algebra narrows down where a generation index can sit. The mass readout is studied at the Koide relation; the sign of the octant step turns out to be a time orientation of the readout that no ingredient fixes. A case study of OP5 follows a prepared matter source to the geometric axis contrast: the ordinary part follows from the linearized Einstein equation, while the directed contrast needs a mediator that the comparison action lacks and is compatible in vacuum only with a vanishingly small coupling. All open problems remain open; the article states which assumptions each calculation carries.</p>",
+  "version": "0.2.0",
+  "language": "deu",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "mathematische Physik",
+    "Heisenberg-Kompensator",
+    "Koide-Relation",
+    "OP5",
+    "QAM",
+    "Barbero-Immirzi-Parameter",
+    "Horizontzählung"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24405552",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24405553",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24434403",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Deutschsprachiger Preprint, Fassung 0.2.0. Die Version-DOI wird bei der Reservierung vergeben und vor dem Upload in die Titelseite eingetragen. Reservierung und Upload sind keine Veröffentlichung.",
+  "publication_date": "2026-11-23"
+}
