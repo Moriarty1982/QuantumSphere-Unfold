@@ -1,0 +1,98 @@
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r47 Source-Only: The Metric Cone Limit for Luminal Mediators; Correction of r46}
+\addcontentsline{toc}{section}{v4.10.0-r47 Source-Only: Cone Limit for Luminal Mediators}
+\label{sec:v4100-r47-cone-limit}
+% ============================================================================
+
+\paragraph{Purpose.}
+After v4.10.0-r46 the author chose to test a bigravity of the frames M and T as a deliberately new ingredient for the massive spin-2 mediator.
+While checking prior work for the method note, a condition of the bifocal notes on the metric cone limit turned out to decide the question and
+to contradict a statement of r46.  This layer records the check and corrects r46.  It is an exploration; the result follows analytically from the
+cited condition and is not blind, so no hypothesis number is assigned.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r47 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r47 setting}
+\label{subsec:v4100-r47-setting}
+
+In the reduced comparison model the principal part of the coupled system of the Higgs radius and the two mediators is \(K=\operatorname{diag}(A,1,1)\) and
+\[
+ V=\begin{pmatrix} b & j_0 & j_m\\ j_0 & r_0 & 0\\ j_m & 0 & r_m\end{pmatrix},\qquad
+ A=Z-\tfrac23g_m^2,\quad b=Zc_h^2+\tfrac23g_m^2(r_m-\alpha),\quad j_0^2=\tfrac12g_0^2\alpha^2,\quad j_m^2=\tfrac23g_m^2(r_m^2-r_m\alpha+\alpha^2),
+\]
+with \(\alpha=a_\perp/q\in[0,1]\).  The squared characteristic speeds are the eigenvalues of \(K^{-1/2}VK^{-1/2}\); they lie in \((0,1]\) exactly if \(V\succ0\) and \(K-V\succeq0\).  If
+\(r_i=1\), the principal minor of \(K-V\) in channel \(i\) is \(-j_i^2\), so the coupling \(j_i\) must vanish.
+
+\subsection*{v4.10.0-r47 results}
+\label{subsec:v4100-r47-results}
+
+\paragraph{Theoremlet v4.10.0-r47.1 (luminal mediators violate the cone limit).}
+With \(Z=1\) and \(g_0^2=g_m^2=\tfrac3{100}\) the largest squared characteristic speed over \(\alpha\) is \(0.675\) for the set values \(c_h^2=r_0=r_m=\tfrac12\), but \(1.064\) for
+\(r_0=r_m=1\), \(1.199\) for \(r_0=r_m=1\) with \(c_h^2=1\) (as forced by W2, r33), \(1.031\) for \(r_0=1\) alone and \(1.041\) for \(r_m=1\) alone.  At \(r_m=1\),
+\(j_m^2=\tfrac23g_m^2(1-\alpha+\alpha^2)\ge\tfrac12g_m^2>0\) for all \(\alpha\).
+\emph{Proof.} Numerical eigenvalues at 30 digits on a grid in \(\alpha\) and the minor argument (script \texttt{cone\_\allowbreak check.wl}).  \(\square\)
+
+\paragraph{Remark v4.10.0-r47.2 (correction of r46.2 and r46.4).}
+Theoremlet r46.2 is right that the leading static contrast does not depend on \(r_m\), but its statement that \(r_m=1\) is admissible used only the conditions of
+r38.2 and missed the cone limit.  Both mediators of the reduced model must propagate more slowly than the metric speed; the slowed propagation
+therefore remains a set input.  Against the strict criterion of r45 the readout branch carries only \emph{partially}: frame, axis and time
+orientation of the coupling belong to the readout, the slowing does not.  A Lorentz-covariant field propagates luminally in every frame, so a cone
+narrower than the metric one needs a distinguished frame on the field side.  The fork of r45.4 thus does not resolve to one side: the readout side
+carries the frame of the coupling, the field side has to carry the slowing.
+
+\paragraph{Remark v4.10.0-r47.3 (consequences).}
+(a) Already the massless channel with \(r_0=1\) violates the limit: in this reduced model the directed readout coupling of the Higgs radius is not
+compatible with ordinary, luminal gravity.  (b) A bigravity of M and T on proportional backgrounds has two luminal spin-2 states and fails the
+same condition; only a second cone narrower than the metric one could help, whereas H78 gives T a wider cone.  The route chosen by the author is
+therefore closed in this form before a calculation of its own.
+
+\subsection*{v4.10.0-r47 frames}
+\label{subsec:v4100-r47-frames}
+
+All speeds refer to the flat reference metric of the matter frame M with \(c=1\).  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r47 register entries}
+\label{subsec:v4100-r47-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r47\\
+\midrule
+\(r_m=1\) admissible (r46.2) & withdrawn: violates the metric cone limit (r47.1)\\
+readout branch B & carries partially; slowed propagation remains set\\
+bigravity of M and T & fails the cone limit on proportional backgrounds\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r47 notes}
+\label{subsec:v4100-r47-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak cone\_\allowbreak check\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 23/} (script \texttt{cone\_\allowbreak check.wl}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r47 ledger and guard update}
+\label{subsec:v4100-r47-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r47}=(1,1,0)
+\]
+for (status recorded; computation checked in the cited script; the origin of the slowed propagation not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r47,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r47}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

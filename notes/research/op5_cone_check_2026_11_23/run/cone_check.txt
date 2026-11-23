@@ -1,0 +1,9 @@
+Tatsaechliche Ausgabe von cone_check.wl (Wolfram-MCP-Kern, 23.11.2026), ein Lauf.
+"Symbol::undefined2" betrifft freie Symbole und ist kein Fehler. Bruchdarstellung zeilenweise zusammengezogen.
+
+Kontrolle Vergleichsmodell (Z=1, c_h^2=r0=rm=1/2, g^2=3/100): max Geschwindigkeit^2 ueber alpha = 0.674963553055941292728377433908
+luminal r0 = rm = 1, sonst gleich: max Geschwindigkeit^2 = 1.06443890594334935709355652370
+luminal r0 = rm = 1 und c_h^2 = 1 (W2, r33): max Geschwindigkeit^2 = 1.19946160194889191331666155253
+nur masseloser Kanal luminal (r0 = 1, rm = 1/2), c_h^2 = 1/2: max = 1.03051098931241309747735968007
+nur massiver Kanal luminal (r0 = 1/2, rm = 1), c_h^2 = 1/2: max = 1.04064332420840984354490960257
+Hauptminor von K - V im luminalen Kanal i: det = -j_i^2; j_m^2 bei rm = 1: 2 (1 - al + al^2) gm2/3 > 0 fuer alle alpha (Minimum {3/200, {al -> 1/2}})
