@@ -18,6 +18,8 @@ Fast alle offenen Punkte hängen an derselben Lücke: Es gibt keine gemeinsame, 
 
 **Vermittler-Profil, 18.11.2026 (Erkundung):** Keiner der Kandidaten I1, I4, k185 erzeugt die fünf Übersetzungen; I1 berührt zwei (OP1, OP3) unter CT-002 und CT-004, I4 bringt nur eine Skala, k185 setzt η voraus. Ein direkt koppelnder Vermittler ist nach H74 nur mit verstimmten Spektren stabil, was γ_L ≠ 1 erfüllt, aber nicht festlegt. [Notiz](../notes/research/op_mediator_profile_2026_11_18/README.md).
 
+**Querschnittslücken, 23.11.2026 (Erkundung):** Neben der Wurzel (eine Zahl, fünf Übersetzungen) und den eigenen Resten gibt es zwei Lücken quer zu den OP-Nummern. (Q1) Auslese: Rahmen u, Achse n und Zeitorientierung fehlen in OP1 (Lesart B), OP3 (Vorzeichen des Oktantschritts, H118) und OP5 (gerichtete Kopplung); in r45.4 benannt, nach r48 verwandt, nicht gleich. (Q2) Dynamik: keine Skala und kein Vermittler mit eigenem Zustand; I1 berührt als einziger Kandidat OP1, OP3 und OP5. Seit r31 und r52 hängt OP1 allein an den Zählregeln. Die offenen Punkte von Preprint 5.6 und Physik-Paper sind zugeordnet. [Notiz](../notes/research/op_cross_map_2026_11_23/README.md).
+
 Ein erster Test dieser Skizze (H48) zeigt eine Grenze: In der einfachsten Reduktion folgt $\beta_{\mathrm{sym}}$ nicht aus der Dynamik, weil ein eingefrorener Wert immer die Expansionsgeschichte mitträgt. Ein dimensionsloser Strukturwert müsste aus einem dimensionslosen Verhältnis kommen, zum Beispiel aus zwei Zählungen (r63) oder einem Winkel je Ereignis (r27: 28,78° statt 30°).
 
 ## OP1: Woher kommt $\beta_{\mathrm{sym}}$?
