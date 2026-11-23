@@ -63,7 +63,7 @@ Auch die nicht-unitäre Frame-Abbildung \(J_B\) liefert ihn nicht (Runde v4.10.0
 Konjugation, unitär oder nicht, lässt jedes Spektrum fest. Liest man die Fläche über die transformierte Simplizitätsbedingung ab, wird \(\gamma\)
 quer zur Frame-Achse zu \(-1/\gamma\) und bleibt entlang der Achse; das ergibt weder \(\gamma_T\) noch \(\gamma_L\).
 In den Einheiten \(r_j=e^{-2\pi\sqrt{j(j+1)}}\) ist jede Zählregel die Ähnlichkeitsgleichung einer selbstähnlichen Familie auf der Geraden mit
-der Dimension \(\gamma<1\) (Runde v4.10.0-r53). Eine neuere Dimensionsformel über Entropieraten, die exakte Überlappungen zulässt (OpenAI-Manuskriptsammlung, Familie 148, unbegutachtet), zeigt, was das
+der Dimension \(\gamma<1\) (Runde v4.10.0-r53). Eine neuere, noch unbegutachtete Dimensionsformel über Entropieraten, die exakte Überlappungen zulässt \cite{openai148}, zeigt, was das
 Gewicht 2 der Materie-Regel verlangt: Die beiden Extremzustände \(|j,\pm j\rangle\) müssen als verschiedene Abbildungen wirken. Fallen sie zusammen
 oder wird nur einer zugelassen, sinkt der Wert auf \(\gamma_1=0{,}1616\), und die Regel des zweiten Frames fällt auf die Dimension null. Das Gewicht 2
 verlangt also eine Auslese, die die beiden Orientierungen einer Punktierung unterscheidet, ohne eine auszuwählen; warum sie das tut, ist nicht
@@ -85,10 +85,21 @@ Für die Vereinheitlichungsfrage ergibt sich so eine Folge von konkreten Aufgabe
 
 Drei Fragen tragen die weitere Arbeit. Sie sind hier mit ihrem Stand zusammengefasst; die Herleitungen dazu stehen im Companion.
 
+Wie sie zusammenhängen, ordnet Runde v4.10.0-r55 des Companion \cite{crossmap}. Alle bedingten Zahlenwerte hängen an der einen Zahl aus
+Abschnitt~\ref{sec:one-number}. Quer zu den einzelnen Problemen liegen zwei Lücken. Die erste ist die Auslese: Mehrere Stellen brauchen ein
+Bezugssystem, eine Achse und eine Zeitorientierung, die der Companion nicht festlegt. Sie zerfällt in die Frage nach der Orientierung, die
+beim Vorzeichen des Oktantschritts und bei der Zählung der Horizontzustände auftritt, und die Frage nach Bezugssystem und Achse, die die
+Beobachterlesart des Materie-Frames und die gerichtete OP5-Auslese betrifft. Die zweite Lücke ist eine gemeinsame Dynamik mit eigener Skala,
+die bisher fehlt. Daneben hat jedes Problem einen eigenen Rest, der von der Zahl nicht abhängt. Die erste der drei Fragen unten gehört zur
+Orientierung, die zweite zu einem solchen Rest, die dritte zu Bezugssystem und Achse und zur fehlenden Dynamik.
+
 \paragraph{Ein nativer physikalischer Operator.}
 Die Massenauslese braucht einen Operator, der aus dem gemeinsamen Träger folgt und nicht nachträglich gewählt ist. Bisher ist er nicht
 gefunden. Abschnitt~\ref{sec:octant-sign} zeigt, dass der vorhandene Kompensator auf den geschlossenen ungeraden Zuständen verschwindet
-und dass kein Baustein des Companion das Vorzeichen des Oktantschritts festlegt; es ist eine Zeitorientierung der Auslese. Abschnitt
+und dass kein Baustein des Companion das Vorzeichen des Oktantschritts festlegt; es ist eine Zeitorientierung der Auslese. Dieselbe
+Orientierung tritt bei der Zählung der Horizontzustände wieder auf: Das Gewicht 2 der Materie-Regel verlangt eine Auslese, die die beiden
+Orientierungen einer Punktierung unterscheidet, ohne eine auszuwählen (Runde v4.10.0-r53). Ein nativer Operator müsste beides zugleich
+erklären, das Vorzeichen im Einzelfall und die Unterscheidung in der Zählung. Abschnitt
 \ref{sec:one-number} zeigt, dass alle bedingten Zahlenwerte an einer Zahl hängen, die über gesetzte Gleichsetzungen eingeht.
 
 \paragraph{Eine hergeleitete Zuordnung der Eichladungen.}
@@ -108,8 +119,10 @@ gerichteten Anteile exakt, unter eigenen Annahmen zur Spannung. Ein erster Felda
 stabil; der dafür nötige Skalar folgt als Komponente eines einzigen Tensorfelds, wenn dessen Zeit-Quer-Komponenten nicht koppeln. Das gilt genau dann, wenn der Austausch beide Zeitorientierungen gleich gewichtet; der Gegenstrom des OP5-Keims liefert diese Gewichte
 bis auf weniger als \(10^{-3}\), in den Werten am Keimpunkt; die ersten und zweiten Ableitungen legt das Modell nicht so fest, dass sie die Frage entscheiden. Eine Bilanz zeigt allerdings, dass diese
 Frage nur in einer bestimmten Zerlegung des Vermittlers entsteht; liest man Rahmen und Achse als Daten der Auslese, bleiben ein massiver Spin-2-Vermittler, seine Kopplung und eine aus Gründen der
-Kausalität verlangsamte Ausbreitung gesetzt. Die Auslese ist von derselben Art wie in der Beobachterlesart von OP1, verteilt Achse und Ruhesystem
-aber anders. Mit dem lichtschnellen Higgsradius von W2 ist die gerichtete Kopplung für keine Wahl der Vermittler kausal verträglich, und im Vakuum
+Kausalität verlangsamte Ausbreitung gesetzt. Die Auslese ist von derselben Art wie in der Beobachterlesart von OP1, aber nicht gleich gebaut: Dort ist
+das Bezugssystem mit parallelem elektrischem und magnetischem Teil das eindeutige Minimum der Auslese über alle Beobachter, hier ist das
+Ruhesystem der Präparation ein Sattel; Bezugssystem und Achse sind bei OP5 also eine Setzung des Detektors, keine Wahl des Feldes (Runde
+v4.10.0-r54). Mit dem lichtschnellen Higgsradius von W2 ist die gerichtete Kopplung für keine Wahl der Vermittler kausal verträglich, und im Vakuum
 begrenzen Laborgrenzen der Lorentz-Verletzung sie auf \(g_m^2\lesssim10^{-26}\); ein beobachtbarer Kontrast verlangt ein Material. Auch eine Verbiegung durch die Frame-Abbildung zwischen M und T hilft nicht. Offen ist damit, ob es einen solchen Vermittler als
 eigenes Feld gibt (Anhang~\ref{sec:anhang-b-annahmen}). Eine Gravitationswirkung mit Holst-Term liefert den Unterschied der
 Zählregeln zwischen den Frames nicht (Abschnitt~\ref{sec:one-number}).

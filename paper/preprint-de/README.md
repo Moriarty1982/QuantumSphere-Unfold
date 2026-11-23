@@ -16,6 +16,11 @@ Nachtrag 22.11.2026: Anhang B (`sections/b-herleitungen-op5.tex`) leitet die Gle
 Annahmen (39) und (40) offen; Wolfram-Prüfung unter `audit/anhang-b/`. Maßgebliche Quelle ist der Companion, Runde v4.10.0-r32
 (`notes/research/v4_10_0_r32/`); der Anhang gibt sie wieder.
 
+Nachtrag 23.11.2026: Abschnitt 5.4 nennt die Zählregel als Dimensionsformel (Runde v4.10.0-r53, mit Literatureintrag zur OpenAI-Familie 148),
+Anhang B den Strukturunterschied der Auslese zwischen OP1 und OP5 (Runde v4.10.0-r54). Abschnitt 5.6 beginnt mit der Querschnittssicht auf
+die offenen Probleme (Runde v4.10.0-r55), ergänzt beim nativen Operator die Orientierung der Zählung (r53) und beim Quellgesetz das Ergebnis
+von r54. Die veröffentlichte Zenodo-Fassung 0.1.0 (24 Seiten) bleibt unverändert; der Repo-Stand ist deutlich weiter.
+
 ## Querverweise
 
 - [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Die Arbeitsgrundlage ist der bestätigte [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026.
