@@ -96,4 +96,5 @@ Nach dem Commit dieser Notiz wird an Kriterien und Schranken nichts mehr geände
 Runde v4.10.0-r56 und k242 waren parallel im OP5-Faden vergeben worden (PR #271). Die Runde dieses Tests heißt deshalb **v4.10.0-r57**, das
 Qiskit-Skript `llm/k243_h123_qiskit_cycle_test.py` mit Ausgabe `llm/k243_out.txt` (gelaufen unter dem Namen k242, Inhalt unverändert). Kriterien,
 Schranken und Rechnungen sind davon nicht berührt.
-
+**Zweiter Nachtrag, 23.11.2026:** PR #271 belegt inzwischen auch v4.10.0-r57 und k243. Endgültige Nummern dieses Tests: Runde **v4.10.0-r58**,
+Skript `llm/k244_h123_qiskit_cycle_test.py`, Ausgabe `llm/k244_out.txt`. Inhalt unverändert.

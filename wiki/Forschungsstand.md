@@ -1,6 +1,6 @@
 # Forschungsstand
 
-### H123 / Runde r57: Zeitlich geordnete Oktant-Auslese auf einer Punktierung (Q1a) (23.11.2026)
+### H123 / Runde r58: Zeitlich geordnete Oktant-Auslese auf einer Punktierung (Q1a) (23.11.2026)
 
 Faden „Auslesegesetz Q1a als H123 testen“, Freigabe des Autors „Committen und rechnen“. Vorab-Notiz 1a4662ef, Wolfram exakt, Qiskit-Zyklustest als
 unabhängige Kontrolle; teilweise nicht blind. Gefragt ist, was eine Auslese in drei zeitlich geordneten Fenstern R → T → J_B (Bargmann-Invariante des
@@ -11,7 +11,7 @@ Fenster (Eigenwert von R_j) trennt nur die halbzahligen j. **H123d trägt nicht:
 γ_M′ = 0,23412, γ_L′ = 1,8379, β′ = 0,5434, m_W′ = 80,099 GeV (−20σ); Leptonfenster und m_W verfehlt, Ω_M = 0,295 im Fenster. Lesart: Das
 Oktantvorzeichen und das Gewicht 2 der Zählung sind in dieser Form nicht derselbe Datensatz; eine Dreiecksauslese, die U2 liefert, braucht einen
 Raumwinkel Ω mit jΩ ∉ πℤ für alle j. Nachträglich: Das gebogene Dreieck der Restbiegung (≈ ⅔) erfüllt das, ist aber aus γ_M gebaut. Auslöser 3 von
-I1 getroffen (als Ausweg genannt, nicht verfolgt). Q1a, OP1, OP3 offen; kein Guard berührt. [Ergebnis](../llm/Ergebnis_H123_Zeitliche_Oktantauslese.md), [Runde](../notes/research/v4_10_0_r57/README.md)
+I1 getroffen (als Ausweg genannt, nicht verfolgt). Q1a, OP1, OP3 offen; kein Guard berührt. [Ergebnis](../llm/Ergebnis_H123_Zeitliche_Oktantauslese.md), [Runde](../notes/research/v4_10_0_r58/README.md)
 
 ### Deutscher Preprint 0.2.0 veröffentlicht (23.11.2026)
 

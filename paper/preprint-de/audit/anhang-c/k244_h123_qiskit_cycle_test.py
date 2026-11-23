@@ -4,7 +4,7 @@ Zyklustest: Hilfsqubit in |+>, kontrollierte zyklische Vertauschung dreier Regis
 |a>, |b>, |c> (Spin-j-kohaerente Zustaende als |n>^{(x)2j}, symmetrischer Teilraum), Hadamard-Test fuer Re und Im.
 Verglichen wird mit B_tau = 2^(-3j) exp(i tau eps j pi/2) (H123a). Exakt per Zustandsvektor und mit 10^5 Schuessen.
 
-Vorab-Notiz: llm/Vorab_Notiz_H123_Zeitliche_Oktantauslese.md. Aufruf: python3 llm/k243_h123_qiskit_cycle_test.py > llm/k243_out.txt
+Vorab-Notiz: llm/Vorab_Notiz_H123_Zeitliche_Oktantauslese.md. Aufruf: python3 llm/k244_h123_qiskit_cycle_test.py > llm/k244_out.txt
 """
 import itertools
 import numpy as np

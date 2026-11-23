@@ -1,7 +1,7 @@
 # Ergebnis H123: Die zeitliche Oktant-Auslese trennt die Orientierungen einer Punktierung nur für j ∉ 2ℕ; als Zählregel verfehlt sie die Daten
 
 **23. November 2026. Vorab-Notiz `Vorab_Notiz_H123_Zeitliche_Oktantauslese.md` (Commit 1a4662ef). Skripte `h123_temporal_octant.wl`
-(Ausgabe `h123_temporal_octant.txt`) und `k243_h123_qiskit_cycle_test.py` (Ausgabe `k243_out.txt`). Teilweise nicht blind. Status: H123a
+(Ausgabe `h123_temporal_octant.txt`) und `k244_h123_qiskit_cycle_test.py` (Ausgabe `k244_out.txt`). Teilweise nicht blind. Status: H123a
 bestätigt (exakt, nicht blind), H123b widerlegt (wie erwartet, nicht blind), H123c bestätigt (nicht blind), H123d trägt nicht.**
 
 Werkzeuge: Wolfram Language (exakt) über den Wolfram-Kern dieser Sitzung (keine lokale Installation); Qiskit 2.6.2 als unabhängige Kontrolle der
