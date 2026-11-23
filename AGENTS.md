@@ -111,6 +111,10 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** [Anleitung für LLM-Kontext und Cache](notes/anleitungen/llm-cache-optimieren.md) anwenden.
+- **Bilanz der Setzungen:** Nach zwei Runden in Folge mit „trägt teilweise“ zur selben offenen Voraussetzung vor der nächsten Runde
+  eine Bilanz ziehen: je Runde, was gesetzt, was hergeleitet und wohin die offene Wahl gewandert ist. Dabei prüfen, ob das Ziel selbst eine
+  gesetzte Eingabe ist und ob die Frage nur in einer gewählten Zerlegung entsteht; eine stillschweigend gewählte Weggabelung dem Autor vorlegen
+  (Anlass: r45).
 - **Ehrlicher Status:** offene Probleme (OP1–OP5, C5, C6/T2) nicht als geschlossen darstellen. Die Guards stehen im
   jeweiligen Ledger der Runde.
 - **Gesamtbild zuerst:** vor inhaltlicher Arbeit `wiki/Gesamtbild.md` lesen (Mindmap, Thesen T1–T15, Dokumentkarte) und jede Einzelfrage dort einordnen.
