@@ -1,0 +1,8 @@
+Tatsaechliche Ausgabe von fp_directed_source.wl (Wolfram-MCP-Kern, 23.11.2026), ein Lauf.
+"Symbol::undefined2" betrifft freie Symbole und ist kein Fehler. Bruchdarstellung zeilenweise zusammengezogen.
+
+Erhaltung p_mu S^{mu nu} = {0, 0, 0, 0}
+S.S = a^2 - 2 a x + 2 x^2 ;  tr S = -a + 2 x
+Fierz-Pauli-Zaehler S.S - (trS)^2/3 = 2 (a^2 - a x + x^2)/3 ;  minus N_m = 0
+Beitrag der Zeit-Quer-Komponenten -2 S_0i S^0i = -2 a x
+ohne Zeit-Quer-Komponenten waere der Zaehler: 2 (a + x)^2/3
