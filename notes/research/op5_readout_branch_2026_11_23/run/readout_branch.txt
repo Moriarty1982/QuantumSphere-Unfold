@@ -1,0 +1,19 @@
+Tatsaechliche Ausgabe von readout_branch.wl (Wolfram-MCP-Kern, 23.11.2026), ein Lauf.
+"Symbol::undefined2" betrifft freie Symbole und ist kein Fehler. Bruchdarstellung zeilenweise zusammengezogen.
+
+(B1a) kovariante Auslese-Kopplung im Ruhesystem gleich der bifokalen Quelle? True  (Quotient S/S_bif an (0,0): 1)
+      Zerlegung: Pi u u R = -R_uu - E_nn identisch? True
+      Quelle aus h R_uu: {{-k1^2 - k2^2 - k3^2, -(k1*w), -(k2*w), -(k3*w)}, {-(k1*w), -w^2, 0, 0}, {-(k2*w), 0, -w^2, 0}, {-(k3*w), 0, 0, -w^2}}
+      Quelle aus h E_nn: {{k3^2, 0, 0, k3*w}, {0, 0, 0, 0}, {0, 0, 0, 0}, {k3*w, 0, 0, w^2}}
+(B1c) FP-Zaehler: gesamt 2 (a^2 - a x + x^2)/3 ;  R_uu-Anteil 2 (a + k3^2)^2/3 ;  E_nn-Anteil 2 (k3^2 - x)^2/3 ;
+      Kreuzterm 2x -2 (2 a k3^2 + 2 k3^4 + a x - 2 k3^2 x)/3
+      Erhaltung: p_mu S^{mu nu} fuer R_uu-Anteil {0, 0, 0, 0};  E_nn-Anteil {0, 0, 0, 0}
+(B2) Quelle unter u -> -u unveraendert? True;  FP-Zaehler unter w -> -w unveraendert? True
+(B3) statischer Zaehler/Nenner bei x = 0: 2 a^2 gm2/(3 (m2 + q rm)) ;  Reihe in q: 2 a^2 gm2/(3 m2) - 2 a^2 gm2 q rm/(3 m2^2)
+     r38.2 bei r_m = 1, g_m^2 = 3/100: geisterfrei (g_m^2 < 3): True;  statisch stabil (g_m^2 <= 3 r_m): True
+(B4) Bewegung entlang der Achse n: Pruefung u.u = 1, n.n = -1, u.n = 0
+     N(b) = 2 (a^2 - 2 a^2 b^2 + a^2 b^4 - a b^2 k3^2 + a b^4 k3^2 + b^4 k3^4)/(3 (-1 + b)^2 (1 + b)^2)
+     Reihe bis b^2: 2 a (a - b^2 k3^2)/3 ;  b = 0: 2 a^2/3
+(B4) Bewegung quer zur Achse (x): Pruefung u.u = 1, n.n = -1, u.n = 0
+     N(b) = a^2 (8 - 12 b^2 + 7 b^4 + 4 b^4 Cos[2 ph] + b^4 Cos[4 ph])/(12 (-1 + b)^2 (1 + b)^2)
+     Reihe bis b^2: a^2 (2 + b^2 + b^2 Cos[2 ph])/3 ;  b = 0: 2 a^2/3

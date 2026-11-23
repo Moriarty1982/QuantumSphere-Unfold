@@ -6063,3 +6063,111 @@ R_{\rm glob}^{(v4100\text{-}r45,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r46 Source-Only: Frame, Axis and Orientation as Readout Data (Branch B)}
+\addcontentsline{toc}{section}{v4.10.0-r46 Source-Only: The Readout Branch of the Mediator}
+\label{sec:v4100-r46-readout-branch}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r45 found that the recurring candidates for the OP5 mediator are four ways of supplying a frame \(u\), an axis \(n\) and a time
+orientation, and that r35--r44 placed these on the field side (branch H) without saying so.  At the author's choice this layer tests the readout
+side (branch B): \(u\) and \(n\) are the rest frame and measuring axis of the detector.  The strict criterion of r45 applies: the branch counts only if the
+number of set inputs decreases without a new one and if it predicts something beyond \(N_m\).  It is an exploration with a method fixed before the
+computation; it is partly not blind, since the quadratic appearance of \(u\) and the independence of the leading static term from \(r_m\) were
+foreseeable by hand.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r46 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r46 setting}
+\label{subsec:v4100-r46-setting}
+
+The coupling is written covariantly as \(\mathcal L=-h\,\Pi^{\mu\nu}u^\alpha u^\beta R^{(1)}_{\mu\alpha\nu\beta}[\gamma]\) with \(\Pi^{\mu\nu}=-\eta^{\mu\nu}+u^\mu u^\nu-n^\mu n^\nu\), the projector
+transverse to \(n\) in the rest frame of \(u\), and the linearized curvature in the convention of the bifocal notes.  The source \(S^{\mu\nu}\) is the coefficient
+of \(\tfrac12\gamma_{\mu\nu}h\), and the mediator numerator is the Lorentz-covariant Fierz--Pauli contraction \(S_{\mu\nu}S^{\mu\nu}-\tfrac13(S^\mu{}_\mu)^2\).
+
+\subsection*{v4.10.0-r46 results}
+\label{subsec:v4100-r46-results}
+
+\paragraph{Theoremlet v4.10.0-r46.1 (the directed coupling is a transverse tidal readout).}
+In the rest frame \(u=(1,0,0,0)\), \(n=e_z\), the source of \(\mathcal L\) equals the hand-built source of the bifocal notes exactly, and its numerator is \(N_m\).
+Identically \(\Pi^{\mu\nu}u^\alpha u^\beta R_{\mu\alpha\nu\beta}=-R_{uu}-E_{nn}\) with \(E_{nn}=n^\mu u^\alpha n^\nu u^\beta R_{\mu\alpha\nu\beta}\); both partial sources are conserved, with numerators
+\(\tfrac23(a_\perp+k_z^2)^2\) and \(\tfrac23(k_z^2-x)^2\) and a cross term.  \(N_m\) arises from the whole transverse readout, not from one part.
+\emph{Proof.} Exact symbolic evaluation (script \texttt{readout\_\allowbreak branch.wl}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r46.2 (orientation and slowed propagation drop out).}
+The source is invariant under \(u\mapsto-u\) and the numerator under \(\omega\mapsto-\omega\), so the time orientation of the readout does not enter.  The static
+term \(g_m^2\cdot\tfrac23a_\perp^2/(m^2+r_mq)=\tfrac23g_m^2a_\perp^2/m^2-\tfrac23g_m^2a_\perp^2r_mq/m^4+\dots\) has a leading part independent of \(r_m\); with \(r_m=1\) and
+\(g_m^2=\tfrac3{100}\) both conditions of r38.2 hold.
+\emph{Proof.} As r46.1; series in \(q\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r46.3 (dependence on the motion of the detector).}
+For a static source and a detector with velocity \(\beta\), the numerator is \(\tfrac23a_\perp(a_\perp-\beta^2k_z^2)+O(\beta^4)\) for motion along the axis and
+\(\tfrac23a_\perp^2+\tfrac23a_\perp^2\beta^2\cos^2\varphi+O(\beta^4)\) for motion across it, \(\varphi\) the azimuth of \(k_\perp\) relative to the motion.
+\emph{Proof.} Boost of \(u\) and \(n\) with \(u\cdot u=1\), \(n\cdot n=-1\), \(u\cdot n=0\); exact evaluation and series.  \(\square\)
+
+\paragraph{Remark v4.10.0-r46.4 (reading).}
+Against the strict criterion fixed beforehand the branch \emph{carries}.  The set inputs decrease from the directed coupling with frame and axis, the
+slowed propagation \(r_m\), the values \(r_m,g_m,m\) and the open time orientation to the existence of a massive spin-2 mediator of mass \(m\) and its coupling
+\(g_m\) to the Higgs radius through the readout; \(u\) and \(n\) are data of the measurement, and r32.4 already calls the contrast a tidal readout of a ray along
+the axis.  The distinguished frame required in r36 is the detector; no medium, string or seed flow is needed for it, and the questions of r39--r44
+do not arise in this branch.  The branch predicts a dependence of the contrast on the motion of the detector relative to the preparation, of relative
+size \(\beta^2\) and with the angular structure of r46.3, where branch H would tie it to the motion of a medium; for laboratory velocities the effect is
+very small.  Since a massive field with \(r_m=1\) has a group velocity below \(c\), the slowed propagation \(r_m<1\) is not a separate requirement for the leading
+contrast (a reading of r33.3).  The remaining field-side question is now stated without frame or orientation: whether the QSC model contains a
+massive spin-2 degree of freedom coupling linearly to the Higgs radius; W1 and W2 do not (r33, r34).
+
+\subsection*{v4.10.0-r46 frames}
+\label{subsec:v4100-r46-frames}
+
+All quantities are in the matter frame M; \(u\) is the rest frame of the detector and \(n\) its measuring axis.  Time reversal acts as \(u\mapsto-u\) or \(\omega\mapsto-\omega\); the
+tachyon map is not used.  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r46 register entries}
+\label{subsec:v4100-r46-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r46\\
+\midrule
+directed coupling & transverse tidal readout of a detector (\(u\), \(n\)) (r46.1)\\
+time orientation, slowed propagation & not needed for the leading contrast (r46.2)\\
+prediction & dependence on detector motion of order \(\beta^2\) (r46.3)\\
+set inputs & massive spin-2 mediator (\(m\)) and its coupling \(g_m\)\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r46 notes}
+\label{subsec:v4100-r46-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak readout\_\allowbreak branch\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 23/} (method note commit bb7274a1,
+script \texttt{readout\_\allowbreak branch.wl}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r46 ledger and guard update}
+\label{subsec:v4100-r46-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r46}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; the existence of the massive spin-2 mediator and its coupling not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r46,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r46}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

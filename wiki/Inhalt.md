@@ -1,6 +1,6 @@
 # Was im Companion steht
 
-**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r45.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
+**Stand: 5. November 2026, Forschungsfassung 4.10.0-draft mit Runden bis v4.10.0-r46.** Diese Seite gibt den Inhalt des *Quantum Sphaera Companion* wieder: Was wird angenommen, was wird definiert und gezeigt, und wie weit trägt es heute? Die Quellenangaben am Ende jedes Abschnitts dienen zum Nachprüfen; zum Verstehen sollte diese Seite allein reichen. [English version](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Content-overview) · [Startseite](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Home)
 
 ## So ist jede Aussage zu lesen
 
@@ -170,6 +170,7 @@ Der Companion leitet aus dem Frame-Versatz physikalische Größen ab. Der heutig
 - **Jet-Familie (r43):** Die Modellbedingungen legen nur 31 der 96 ersten Ableitungen fest. In der übrigen Familie gibt es einen Jet mit exaktem Zeitumkehrbild und einen mit exaktem Spiegelbild. Der erste Jet entscheidet also nicht; der Befund aus r42 betraf nur die gespeicherte Lösung.
 - **Zweiter Jet (r44):** Beide Bild-Jets lassen sich zu einem zweiten Jet fortsetzen, ebenso zufällige Glieder der Familie. Auch die zweite Ordnung trennt Zeitumkehr und Spiegelung nicht; die am Keim verfügbaren Stufen sind damit ausgeschöpft.
 - **Bilanz (r45):** Der gerichtete Term ist ursprünglich ein gewöhnlicher Fierz–Pauli-Austausch einer gesetzten, gerichteten Quelle; die Zeit-Quer-Komponenten koppeln dort und werden gebraucht. Die Entkopplungsfrage aus r39–r44 entsteht nur in einer bestimmten Zerlegung. Gesetzt bleiben Rahmen, Achse und verlangsamte Ausbreitung der Kopplung. Die wiederkehrenden Kandidaten sind vier Arten, dieses Bezugssystem bereitzustellen; dahinter steht eine Weggabelung zwischen Feldseite und Ausleseseite, die der Autor entscheidet.
+- **Ausleseseite (r46):** Liest man Rahmen und Achse als Ruhesystem und Messachse eines Detektors, ist die gerichtete Kopplung genau dessen Auslese des Gezeitenfelds quer zur Achse. Die Zeitorientierung fällt heraus, die verlangsamte Ausbreitung wird für den führenden Kontrast nicht gebraucht, und es folgt eine Vorhersage: Der Kontrast hängt schwach von der Bewegung des Detektors ab. Gesetzt bleiben nur ein massiver Spin-2-Vermittler und seine Kopplung; nach dem strengen Raster trägt dieser Zweig.
 - **Alte Vorhersagen P1–P6:** keine bestätigt (P1 nicht bestätigt, P2 ausgeschlossen, P3 Zufall, P4 widersprüchlich, P5 korrigiert auf ½, P6 ungetestet).
 
 *Quelle: `thm:dark-energy`, `rem:regularization-B`, `cor:falsifiable`; Runden v4.8.0-r03–r09, v4.9.0-r63–r70.*
