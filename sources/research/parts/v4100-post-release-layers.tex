@@ -6758,3 +6758,155 @@ R_{\rm glob}^{(v4100\text{-}r52,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r53 Source-Only: Counting Rules as a Dimension Formula and Frame Exchange for C5 (OP1, C5)}
+\addcontentsline{toc}{section}{v4.10.0-r53 Source-Only: Counting Rules as a Dimension Formula and Frame Exchange for C5}
+\label{sec:v4100-r53-dimension-exchange}
+% ============================================================================
+
+\paragraph{Purpose.}
+At the author's request this layer records the check of two results from the OpenAI manuscript collection (repository
+\texttt{github.com/openai/math}, commit \texttt{4eaee875}, 30 October 2026) against OP1 and C5: family 148, ``The entropy-rate dimension formula for
+self-similar measures on the line'' (24 September 2026), and family 149, ``Boundedness and persistence of weakly reversible mass-action systems''
+(25 September 2026) with its companion on uniform permanence (5 October 2026).  Both manuscripts are unrefereed; the collection states Lean
+formalizations of both main theorems, which are not checked here.  The layer is an exploration and not blind: the counting values and the
+weight-one case of the Moran reading were known.  No hypothesis number is assigned.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r53 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r53 setting}
+\label{subsec:v4100-r53-setting}
+
+A counting rule of a frame is an equation \(\sum_j g(j)\,e^{-2\pi\gamma a(j)}=1\) with \(a(j)=\sqrt{j(j+1)}\), \(j\in\{\tfrac12,1,\tfrac32,\dots\}\); the weight is
+\(g(j)=2\) for M (Domagala--Lewandowski), \(g(\tfrac12)=2\) and \(g(j)=0\) otherwise for T (ABCK), and \(g(j)=2j+1\) for the full SU(2) count.  With
+\(r_j=e^{-2\pi a(j)}\) it reads \(\sum_j g(j)\,r_j^{\gamma}=1\), the similarity (Moran) equation of a family of \(g(j)\) contractions with ratio \(r_j\) for each \(j\).
+
+Result 148, as stated in its full text: for every finite indexed family \(\varphi_i(x)=r_ix+t_i\) on \(\mathbb R\) with \(0<|r_i|<1\) and every strictly
+positive probability vector \(p\), the self-similar measure satisfies \(\dim_H\mu=\min\{1,h_{\rm RW}/\chi\}\), where \(h_{\rm RW}=\lim_n H(G_n)/n\) is the entropy
+rate of the random compositions \(G_n\), counted by distinct affine maps, and \(\chi=-\sum_ip_i\log|r_i|\).  An exact overlap is an equality of complete
+affine maps for distinct words of equal length; such overlaps are allowed.
+
+Result 149, as stated in its full text: for every finite weakly reversible reaction network (each reaction \(y\to y'\) has a directed path back) with
+positive constant rates and mass-action kinetics \(\dot x=\sum\kappa_{y\to y'}x^y(y'-y)\), every strictly positive solution exists for all \(t\ge0\), and there
+is \(\varepsilon\in(0,1)\) with \(\varepsilon\le x_i(t)\le\varepsilon^{-1}\) for all \(i\) and \(t\ge0\).
+
+C5 as recorded: the selective collar recursion gives \(C5_M^{(n)}=(3/4)^n\) and \(C5_T^{(n)}=1-(3/4)^n\) (r20.4(b)); no purely multiplicative recursion
+with \(q>0\) reaches zero at a finite stage (v4.8.0-r86, r94); form (iii) asks for a witness outside the iteration, and the null-instant candidate
+fails because the score is \(1/2\) where the floor vanishes (r21.12).
+
+\subsection*{v4.10.0-r53 results}
+\label{subsec:v4100-r53-results}
+
+\paragraph{Theoremlet v4.10.0-r53.1 (the counting equation is a dimension formula).}
+(a) With the Gibbs weights \(p_{j,\cdot}=r_j^{\gamma}\) of a counting rule, \(H(p)/\chi=\gamma\) exactly.  (b) For every finite truncation of a counting
+rule realised by distinct maps without exact overlaps, result 148 gives \(\dim_H\mu=\gamma\), since \(\gamma<1\).  (c) In units of the T quantum,
+\(D=\gamma/\gamma_T\) exceeds one for M (\(1.8647\)), and result 148 says nothing there.
+\emph{Proof.} (a) \(-\log p_{j,\cdot}=2\pi\gamma a(j)\) and \(-\log r_j=2\pi a(j)\), hence \(H(p)=\sum p\,2\pi\gamma a=\gamma\chi\).  (b) Without exact overlaps
+\(H(G_n)=nH(p)\), and \(\min\{1,\gamma\}=\gamma\).  (c) The formula saturates at one on the line.  Numerically \(\gamma_M=0.237533\), \(\gamma_T=0.127384\),
+\(\gamma_P=0.274067\), and \(H(p)/\chi=\gamma_M\) to fifteen digits; truncation at \(j\le200\) changes the equation by about \(10^{-130}\).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r53.2 (weight two needs two distinct maps).}
+If the maps of \(|j,+j\rangle\) and \(|j,-j\rangle\) coincide for every \(j\), or only one of them is admitted, the rule of M becomes \(\sum_jr_j^{\gamma}=1\) with
+\(\gamma_1=0.161586\) (\(=1.2685\,\gamma_T\)), and the rule of T leaves one map, whose attractor is a point (dimension 0).  In a truncated system
+(\(j\le1\)) with generic translations the entropy rate stays at \(\gamma=0.2018\) for distinct maps and for reflected copies with their own centre,
+drops to \(0.0966\) at the same Gibbs weights for identical copies, and falls with the word length (\(0.2018\), \(0.1725\), \(0.1628\), \(0.1579\) for
+\(n=1,\dots,4\)) for copies reflected about the same centre.
+\emph{Proof.} Coinciding maps merge their weights in the law of \(G_n\); the maximum of \(h_{\rm RW}/\chi\) over \(p\) is then the root of \(\sum_jr_j^{\gamma}=1\).
+Admitting one state gives the same equation.  The rates are computed by counting distinct composed maps (Wolfram, script in the notes).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r53.3 (order of punctures).}
+Two contractions \(\varphi_a,\varphi_b\) commute exactly when they have the same fixed point.  If all compositions of equal multiset agree, all maps
+share one fixed point and the attractor is that point.
+\emph{Proof.} \(\varphi_a\varphi_b(x)-\varphi_b\varphi_a(x)=t_a(1-r_b)-t_b(1-r_a)\), which vanishes iff \(t_a/(1-r_a)=t_b/(1-r_b)\).  A common fixed point of all maps
+is fixed by the whole system, so the attractor is that point.  \(\square\)
+
+\paragraph{Remark v4.10.0-r53.4 (reading: orientation and U2).}
+\(m\mapsto-m\) reverses the orientation of a puncture.  By r53.2 the weight two of M requires a readout that distinguishes the two orientations
+without selecting one; identifying or selecting gives \(\gamma_1\).  This fits r31.1 (H118: the record does not fix the orientation) and states U2 as a
+question about the readout (cross-section Q1 of the open problems).  By r53.3 a count of punctures without order cannot be represented by exact
+overlaps without collapsing the attractor.  The reading neither derives U2 nor the rule \(j=\tfrac12\) of T; \(\gamma_1\) is no target value.
+
+\paragraph{Theoremlet v4.10.0-r53.5 (frame exchange with a return path keeps \(C5_M\) positive).}
+Model the exchange between the matter and the tachyon frame as a finite mass-action network with positive constant rates.  If the network is weakly
+reversible, then by result 149 there is \(\varepsilon>0\) with \(C5_M(t)\ge\varepsilon\) for all \(t\ge0\).  Examples: \(M\rightleftharpoons T\) gives
+\(C5_M(t)=\tfrac{k_2}{k_1+k_2}+\bigl(x_0-\tfrac{k_2}{k_1+k_2}\bigr)e^{-(k_1+k_2)t}\ge\min\{x_0,\tfrac{k_2}{k_1+k_2}\}\); \(M+T\rightleftharpoons2T\) has the positive equilibrium
+\(k_2/(k_1+k_2)\); a weakly reversible network of three frames starting at \(C5_M=10^{-5}\) never falls below its start (numerical).  The one-way exchange
+\(M\to T\), the continuous counterpart of the collar recursion, is not weakly reversible: \(C5_M=x_0e^{-kt}\) is positive for every finite \(t\) and tends to
+zero.  Hence \(C5_M\to0\) requires an exchange without any return path.
+\emph{Proof.} Result 149 for the first statement; the examples are solved exactly and checked by substitution (residual 0), the three-frame case by
+numerical integration (Wolfram, script in the notes).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r53.6 (no finite zero for mass action; classical).}
+No mass-action network, weakly reversible or not, takes a positive concentration to zero in finite time.  A finite zero of a quantity that is
+continuous in time requires a vector field that is not Lipschitz at zero (e.g.\ \(\dot x=-c\sqrt x\), zero at \(t^*=2\sqrt{x_0}/c\)) or a sign change of a signed
+or complex quantity.  For a score \(S=N^2\) a transversal zero of \(N\) is a double zero of \(S\).
+\emph{Proof.} Every term that consumes species \(i\) contains \(x_i\) as a factor, so on \([0,t]\) one has \(\dot x_i\ge-K x_i\) with \(K\) bounded along the solution, and
+\(x_i(t)\ge x_i(0)e^{-Kt}>0\).  If the field is Lipschitz at zero and zero is an equilibrium, uniqueness forbids reaching it in finite time.  The example
+and \(S'=2NN'\) are checked directly.  \(\square\)
+
+\paragraph{Remark v4.10.0-r53.7 (consequence for form (iii) of C5).}
+A witness outside the iteration cannot be a mass-action dynamics (r53.6), and if it is to approach zero at all it must be one-way (r53.5).  Two
+classes remain: a dynamics that is not Lipschitz at the zero, of which the record contains no example (not searched systematically), and a sign change,
+which for the original score failed (r21.12).  Modelling C5 as a reaction network is a setting; the record defines C5 by a discrete recursion and does
+not state whether the exchange between the frames has a return path (the frame maps are invertible, which does not make a dynamics reversible).
+For a weakly reversible exchange network the lower bound \(\varepsilon\) is a named persistent obstruction in the sense of the return contract of C6/T2,
+for this model class only.
+
+\subsection*{v4.10.0-r53 frames}
+\label{subsec:v4100-r53-frames}
+
+M and T in the sense of convention F; the three-frame example adds P as a third compartment.  \(m\mapsto-m\) is read as orientation reversal of a puncture
+(r31.1); the tachyon image of an action is not used.  The numbers \(\gamma_M\), \(\gamma_T\), \(\gamma_P\) and \(\gamma_1\) are values of different counting rules and are
+not compared across frames.
+
+\subsection*{v4.10.0-r53 register entries}
+\label{subsec:v4100-r53-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r53\\
+\midrule
+counting equation as dimension formula & recorded (r53.1), conditional on result 148\\
+weight two of M & requires two distinct maps for \(|j,\pm j\rangle\); otherwise \(\gamma_1=0.161586\) (r53.2)\\
+U2, rule \(j=\tfrac12\) of T & not derived\\
+\(C5_M\) under weakly reversible exchange & bounded below (r53.5), conditional on result 149 and on the network model\\
+form (iii) of C5 & remaining classes: non-Lipschitz at zero, sign change (r53.7)\\
+OP1, C5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r53 notes}
+\label{subsec:v4100-r53-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak openai\_\allowbreak 148\_\allowbreak 149\_\allowbreak fulltext\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 23/\allowbreak README.md} with the Wolfram scripts
+\texttt{op1\_\allowbreak 148\_\allowbreak moran\_\allowbreak overlap.wl} and \texttt{c5\_\allowbreak 149\_\allowbreak exchange.wl} and their outputs; the screening of the collection in
+\texttt{notes/\allowbreak research/\allowbreak openai\_\allowbreak math\_\allowbreak screening\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 23/}; the Moran reading in
+\texttt{notes/\allowbreak research/\allowbreak op1\_\allowbreak moran\_\allowbreak geometry\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 17/}.
+
+\subsection*{v4.10.0-r53 ledger and guard update}
+\label{subsec:v4100-r53-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r53}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; the counting rules and a C5 witness not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r53,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r53}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
