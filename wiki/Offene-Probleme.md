@@ -42,7 +42,7 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Zufallsabschätzung, 18.11.2026 (Erkundung, nicht blind):** Unter einem vorab festgelegten Katalog (16 Messgrößen, 8 Formen, 2σ) trifft DL/ABCK drei Ziele (sin²θ₁₂, cot θ_W, Ω_m). Bei freier Wahl unter den 36 Zählregel-Paaren erwartet man 0,64–0,81 Paare dieser Güte; der Befund ist damit mit Zufall verträglich. Er wöge nur, wenn die Zuordnung datenfrei begründet wäre, also mit OP1. [Notiz](../notes/research/chance_estimate_2026_11_18/README.md).
 
-**Hopf-Lücke als Nullpunkt, 23.11.2026 (Erkundung, nicht blind, k245):** Mit dem halbklassischen Flächenspektrum j + ½ in beiden Frames ist γ_L exakt 2 und β_sym exakt 1/√3 (Hopf-Wert). Die Lücke zum gemessenen 0,549 lässt sich damit als Quantenkorrektur √(j(j+1)) gegen j + ½ der Spin-½-Punktierung lesen. Die Daten trifft nur das exakte Spektrum; warum M alle Spins und T nur j = ½ zählt, bleibt offen. [Notiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/claude/project-thread-xkxnsg/notes/research/hopf_gap_2026_11_23/README.md)
+**Hopf-Lücke als Nullpunkt, 23.11.2026 (Erkundung, nicht blind, k245):** Mit dem halbklassischen Flächenspektrum j + ½ in beiden Frames ist γ_L exakt 2 und β_sym exakt 1/√3 (Hopf-Wert). Die Lücke zum gemessenen 0,549 lässt sich damit als Quantenkorrektur √(j(j+1)) gegen j + ½ der Spin-½-Punktierung lesen. Die Daten trifft nur das exakte Spektrum; warum M alle Spins und T nur j = ½ zählt, bleibt offen. [Notiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/hopf_gap_2026_11_23/README.md)
 
 **Offen:** warum die Frames gerade diese Zählregeln wählen. **Nächster Schritt:** die U(1)-Auswahl aus der inneren Einheit $J$ herleiten oder ausschließen.
 
