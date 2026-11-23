@@ -1,5 +1,9 @@
 # Übergabe: Stand der letzten Sitzung
 
+## Stand vom 23.11.2026 (Claude Opus 5.5)
+
+- **Sitzungsstart 23.11.:** main = e8c1c12b lokal und auf GitHub, keine offenen PRs, alle Läufe grün. Auf GitHub existiert nur `main`; veraltete lokale Remote-Verweise `github/research/*` per `git remote prune github` entfernt. Lokaler Zweig `claude/qam-fachartikels-entwurf-f58063` ist nicht mehr ausgecheckt (Worktree zealous-fermi auf detached HEAD), wegen Squash-Merge von #233 aber kein Vorfahr von main: bleibt stehen. In `notes/research/v4_10_0_w1/Zurueckgestellte_Ideen.md` ist „I5“ doppelt vergeben (Container/MCP und Außenwirkung).
+
 ## Stand vom 22.11.2026, nachmittags (Claude Opus 5.5)
 
 - **v5.3.0 veröffentlicht** am 22.11.2026: Version-DOI **10.5281/zenodo.24434403**, Record https://zenodo.org/records/24434403, Concept-DOI unverändert, Vorgänger v5.2.0. Paketquellstand 53e9393a9502a9773300d8876bada7950999f138, **Tag und GitHub-Release `v5.3.0`** (latest). Vollausgabe 1465 Seiten, Physik-Paper 31 Seiten. Läufe: Trockenlauf 44986526110, Reservierung 44992518635, Paarbau 44992628191, Paket-Trockenlauf 44992900612, Upload 44994733826, Prüflauf 44995008051, Veröffentlichung 44996657143. Öffentlicher Eintrag geprüft: acht Dateien MD5 gleich, Vorschau Vollausgabe, isNewVersionOf v5.2.0. Release-Notiz `release/v5.3.0/README.md`.
@@ -40,12 +44,17 @@
 - **OP3 ruht (Autorentscheidung 22.11.2026):** H119 (zeitliche Umlaufreihenfolge) nicht angelegt, Nummer frei: Die Identität ist trivial, und r16.4(c) beantwortet die Kernfrage (keine lineare Feldabbildung, also auch keine Zeitverschiebung, Dualitätsdrehung oder Boost, vertauscht die drei Achsen zyklisch; r16.5: Hurwitz-Zyklus wirkt nicht auf χ). Eine Reihenfolge müsste aus dem Ausleseprotokoll kommen (Bandmodell H117); nur mit neuer Idee wieder aufnehmen. Größe (Kern, OP1) und Orientierung (H118) der Oktantphase sind beide als zusätzliche Wahlen festgehalten.
 - **Holst-Erkundung (22.11., Autor: „Ja, Holst-Erkundung“; Dynamik-Linie W1/W2 nur dafür geöffnet):** W1 + Holst-Term. Boosts, auch komplexe (η + iπ/2), lassen γ fest; nur eine Dualitätsdrehung der Krümmung ändert γ (arctan γ ↦ arctan γ + θ, auf Σ und R + 2θ). Kein vorab gelisteter Winkel (π/4, π/2, iπ/2, η, 2η) gibt γ_T; nötig θ* = −0,1065. Methoden-Notiz 1e9a5e2a, [PR #236](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/236) auf Freigabe als 844bf81b gemergt, Zweig gelöscht; Artikel (Physik-Paper 7.7, Preprint 5.4, Wiki) im selben PR; #10, #17 kommentiert.
 - **Nachtrag 0,5 %:** a′/a(D1, π/4) = √2/(1 − γ_M) = 1,8548 gegen γ_L = 1,8647; exakt wäre γ_M = 0,24159 bzw. γ_T = γ_M(1 − γ_M)/√2 = 0,12806 statt 0,12738. Beide γ sind durch die Zählregeln exakt festgelegt, die Relation ist also um 0,53 % falsch; Richtung passt nicht (Dualität vergrößert das Quant, T hat das kleinere). Nicht weiterverfolgen ohne unabhängigen Grund. **Nachtrag (analytisch, [PR #237](https://github.com/Moriarty1982/QuantumSphere-Unfold/pull/237) auf Freigabe gemergt):** Jede Dualitätsdrehung, auch komplex, verzerrt oder mehrfach, erhält A² + B²; reell folgt a_T/a_M = ±0,981 unabhängig vom Weg, γ_L bei gleichem G damit ausgeschlossen.
+- **Datenlage erneut geprüft (23.11.2026, Claude, Autor: „Datenlage prüfen“):** Kein Test entschieden, nichts Neues seit dem 22.11.
+  - H96/H112 (Ω_M): DESI-Papers-Seite, neueste Einträge 4./5.11. (DR2 Milchstraßenmasse, arXiv:2611.05518–05521); kein DR3-BAO; arXiv `ti:DESI AND ti:DR3` leer. Euclid: nur Vorbereitungs- und Softwarepapiere (neuestes 2609.04192), kein gemessenes Ω_m.
+  - H102 (m_τ): pdgLive S035M unverändert 1776,93 ± 0,09 MeV (RPP 2026, IJMPA 41, 2630011), kein Aktualisierungsdatum, keine neue Ausgabe angekündigt.
+  - H9/H112 (sin²θ₁₂): neueste JUNO-Arbeit 2610.23331 (JUNO-TAO, 16.10., ohne θ₁₂); maßgeblich bleibt 2609.37895 (0,3036 ± 0,0064), Schranke σ ≤ 0,004 nicht erreicht.
+  - H42/H46/H100 (NuFIT): nu-fit.org weiter nicht lesbar (HTTPS: SEC_E_UNTRUSTED_ROOT, HTTP: 503; Prüfung nicht abgeschaltet). Indirekt: die 25 neuesten arXiv-Abstracts mit „NuFIT“ (bis 8.11.) nennen höchstens 6.1. Kein Hinweis auf 6.2/7.0.
 - **Datenlage für offene Vorhersagen (geprüft 22.11.2026):** Kein Test entschieden.
   - H96/H112 (Ω_M): DESI hat nur DR1/DR2-Kosmologie veröffentlicht (Papers-Seite, letzte Meldung 4.11. zur Milchstraßenmasse), kein DR3-BAO; arXiv „DESI DR3“ nur Prognosen; kein Euclid-Kosmologie-Ergebnis gefunden.
   - H102 (m_τ): pdgLive zeigt 1776,93 ± 0,09 MeV, Ausgabe 2026 (Int. J. Mod. Phys. A41, 2630011), kein Aktualisierungsdatum nach dem 13.11. erkennbar; die erste PDG-Ausgabe danach steht aus.
   - H9/H112 (sin²θ₁₂): jüngste JUNO-Messung bleibt arXiv:2609.37895 (29.09.2026, 0,3036 ± 0,0064), Schranke σ ≤ 0,004 nicht erreicht.
   - H42/H46/H100 (NuFIT): nu-fit.org nicht lesbar (TLS-Zertifikatsfehler; in Chrome per Website-Berechtigung gesperrt); Websuche findet nichts nach 6.1. Beim nächsten Mal direkt prüfen.
-- **Nächster Schritt:** Forschung außerhalb von OP3: native Rückwegwahl (OP3), reale OP5-Messdaten; OP1 steht bei der Zuordnung der Zählregeln (Vermittler fehlt). Nächste Version erst mit genug Stoff für beide Ausgaben.
+- **Nächster Schritt:** Richtung offen, Wahl des Autors. OP3 ruht (Autorentscheidung); OP1 steht bei den Zählregeln, T-Regel und U2 sind seit 18.11. erkundet (ohne neue Idee wenig Spielraum; I1 nur mit strengem Raster); OP5-Linie am Endpunkt (Material nötig, reale Messdaten fehlen). Datenlage: nächste Prüfung frühestens bei DESI DR3, Euclid DR1, PDG-Update oder lesbarem nu-fit.org. Nächste Nummern: H122 (H119 frei), Runde v4.10.0-r53. Nächste Version erst mit genug Stoff für beide Ausgaben.
 
 ## 22.11.2026 (Codex)
 
