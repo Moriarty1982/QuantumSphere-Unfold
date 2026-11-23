@@ -6362,3 +6362,100 @@ R_{\rm glob}^{(v4100\text{-}r48,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r49 Source-Only: The Field Rest Frame R as Frame of the Slowing, and a No-Go for the Luminal Higgs Radius}
+\addcontentsline{toc}{section}{v4.10.0-r49 Source-Only: Rest Frame R and the Cone Limit}
+\label{sec:v4100-r49-rest-frame-r}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r48 named the rest frame R of the field of OP1 (reading B) as a candidate for the field-side frame that the slowed propagation of
+the OP5 comparison model requires (r47).  This layer tests the candidate.  It is an exploration with a method fixed before the computation; it is
+not blind, since a symmetry argument suggested the outcome beforehand.  A further finding (r49.3) was made afterwards and is marked as such.
+Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r49 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r49 results}
+\label{subsec:v4100-r49-results}
+
+\paragraph{Theoremlet v4.10.0-r49.1 (R is fixed only up to boosts along its axis).}
+A field with \(\mathbf E\parallel\mathbf B\) along \(z\) is invariant under boosts along \(z\) and changes under transverse boosts.  The symmetric tensors invariant under boosts along and
+rotations about \(z\) are exactly \(S=\operatorname{diag}(s_1,s_2,s_2,-s_1)\); the energy-momentum tensor of the field, \(T=\rho\operatorname{diag}(1,1,1,-1)\), is one of them.  For every such
+propagation tensor the speed along the axis is exactly 1; for \(G=\eta^{-1}+\lambda T\) the transverse squared speed is \((1-\lambda\rho)/(1+\lambda\rho)\), equal to \(\tfrac12\) at \(\lambda\rho=\tfrac13\).
+\emph{Proof.} Exact Lorentz transformation and invariance under the generators (script \texttt{rest\_\allowbreak frame\_\allowbreak R.wl}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r49.2 (the cone limit with a slowing from R).}
+With \(r_0(\alpha)=r_m(\alpha)=1-\alpha/2\) and the values of r47, the largest squared characteristic speed is \(1.040\) at \(\alpha=0\) and stays above one at \(\alpha=\tfrac1{20}\) for
+\(c_h^2=\tfrac12\), and is \(0.675\) at \(\alpha=1\).  Near the axis the massive channel couples (\(j_m^2=\tfrac23g_m^2\) at \(\alpha=0\)) while its speed is luminal; the massless channel
+does not couple there (\(j_0=0\)).  For \(c_h^2=1\) the limit is violated at all grid points.
+\emph{Proof.} As r47.1 with direction-dependent speeds.  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r49.3 (no-go for the luminal Higgs radius; found afterwards).}
+For \(c_h^2=1\) the upper condition of the cone limit is identically
+\[
+ A-\frac{j_0^2}{1-r_0}-\frac{j_m^2}{1-r_m}-b=-\tfrac23g_m^2(1+r_m-\alpha)-\frac{j_0^2}{1-r_0}-\frac{j_m^2}{1-r_m}<0
+\]
+for all \(r_0,r_m\in(0,1)\), \(\alpha\in[0,1]\) and \(g_m>0\).  With a luminal Higgs radius the directed coupling violates the metric cone limit for every choice of mediator speeds.
+\emph{Proof.} Substitution of \(A\) and \(b\); all three terms are non-positive and the first is negative (script \texttt{higgs\_\allowbreak luminal\_\allowbreak check.py}, sympy).  \(\square\)
+
+\paragraph{Remark v4.10.0-r49.4 (reading).}
+Against the criteria fixed beforehand the candidate R carries \emph{partially}: it can slow propagation only across its axis, and along the axis the
+massive channel remains luminal and violates the limit.  Along the axis a frame is needed that breaks boosts along it, a timelike rest vector of a
+medium, which a field with \(\mathbf E\parallel\mathbf B\) does not have.  The finding r49.3 concerns the whole comparison model: besides slow mediators the cone limit
+requires a slowed Higgs radius (\(c_h^2<1\), set to \(\tfrac12\) in the model), whereas W2 forces \(c_h^2=1\) (r33).  The identification of the comparison field with
+the radial mode of W2 (r33) and the directed coupling are therefore not causally compatible with any mediator, on either side of the fork of r45.
+Three propagations would have to be slowed, and all three need a medium with its own rest vector.
+
+\subsection*{v4.10.0-r49 frames}
+\label{subsec:v4100-r49-frames}
+
+R is the rest frame of the field of convention F, determined up to boosts along its axis; speeds refer to the flat metric of the matter frame M with
+\(c=1\).  No quantity of another frame is compared.
+
+\subsection*{v4.10.0-r49 register entries}
+\label{subsec:v4100-r49-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r49\\
+\midrule
+R as frame of the slowing & partially: transverse only, luminal along the axis (r49.1, r49.2)\\
+directed coupling with the Higgs radius of W2 & violates the cone limit for all mediator speeds (r49.3)\\
+OP1, OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r49 notes}
+\label{subsec:v4100-r49-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak rest\_\allowbreak frame\_\allowbreak R\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 23/} (method note commit a306f879,
+scripts \texttt{rest\_\allowbreak frame\_\allowbreak R.wl} and \texttt{higgs\_\allowbreak luminal\_\allowbreak check.py}, output in \texttt{run/}).
+
+\subsection*{v4.10.0-r49 ledger and guard update}
+\label{subsec:v4100-r49-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r49}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; a medium with its own rest vector not identified).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r49,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r49}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
