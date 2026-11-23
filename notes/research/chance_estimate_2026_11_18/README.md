@@ -41,7 +41,7 @@ die genauen Ziele (sin²θ_W MS-bar, m_μ/m_τ, Ω_b h²) trifft fast nie ein We
 ## Lesart
 - **Die Treffer allein belegen „eine Zahl“ nicht.** Bei freier Wahl des Zählregel-Paars ist ein Paar mit drei Treffern zu erwarten. Das Gewicht hängt
   daran, ob die Wahl DL für M und ABCK für T ohne Blick auf die Daten begründet wird; das ist OP1 (warum Gewicht 2, warum diese Zuordnung).
-- **Ehrlicher Stand für Außenwirkung (I5):** Mit heutigen Daten keine Signifikanz; tragfähig sind nur die vorab festgelegten Vorhersagen (H9, H15, H96,
+- **Ehrlicher Stand für Außenwirkung (I6, bis 23.11. als I5 geführt):** Mit heutigen Daten keine Signifikanz; tragfähig sind nur die vorab festgelegten Vorhersagen (H9, H15, H96,
   H102, H112). Ein vorab festgelegter Treffer an einem genauen Ziel (etwa H15 mit σ(m_W) ≲ 1 MeV) wöge mehr als alle nachträglichen zusammen.
 - Die Zählung hängt an Katalog und Formen; ein anderer Katalog gäbe andere Zahlen, aber dieselbe Größenordnung, solange er breite Ziele um 0,3 enthält.
 - OP1, OP4, OP5 offen.

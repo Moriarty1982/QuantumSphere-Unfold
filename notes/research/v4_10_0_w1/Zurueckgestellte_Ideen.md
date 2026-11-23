@@ -91,7 +91,8 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
 - **Erster Betriebsumfang:** Einen konsistenten SQLite-Snapshot schreibgeschützt einbinden und bei Bedarf austauschen. Formeln, vorhandene MMA-Belege und Prämissenspuren über MCP abrufen. MML-Ausführung und Replay separat bewerten, sobald regelmäßig neue Rechnungen aus der Ferne gebraucht werden.
 - **Datenbankwahl erneut prüfen:** PostgreSQL bei regelmäßigen konkurrierenden Schreibzugriffen erwägen, Stored Procedures bei gemeinsam durchzusetzenden mehrstufigen Schreiboperationen und SQLAlchemy Core bei mehreren Datenbank-Backends oder vielen gemeinsam gepflegten Abfragen. Für den Leseprototyp genügt Pythons `sqlite3`.
 
-## I5: Außenwirkung – einzelne prüfbare Befunde als kurze englische Notizen
+## I6: Außenwirkung – einzelne prüfbare Befunde als kurze englische Notizen
+- **Nummer:** bis 23.11.2026 versehentlich als zweites „I5“ geführt (I5 ist der MCP-Container vom 8.11.). Ältere Verweise auf „I5“ im Zusammenhang mit Außenwirkung, Veröffentlichung oder Datenentscheid (z. B. `llm/Vorab_Notiz_H121_JB_Flaechenoperator.md`) meinen I6; Listen „I1–I5“ in älteren Notizen umfassen sie mit.
 - **Herkunft:** Vorschlag aus der Sitzung vom 17.11.2026 (Übergabe, Vorschlag 2). Autor, 17.11.2026: zurückstellen, „dafür ist für meinen Geschmack noch etwas zu viel offen“; Material schon sammeln und markieren.
 - **Inhalt:** Zuerst Neuheit prüfen (Literatur), dann 2–3 kurze englische Notizen mit Standardbegriffen (ohne Frames M/T/P, Runden, Projektsprache) und je einem klaren Test. Versand an Journal, arXiv oder Kollegen nur mit Freigabe des Autors.
 - **Material (nur markiert, nicht bearbeitet; vor Verwendung prüfen, ob es noch gilt):**
