@@ -1,0 +1,20 @@
+Tatsaechliche Ausgabe von rest_frame_R.wl (Wolfram-MCP-Kern, 23.11.2026). Erster Aufruf: Serverfehler des Konnektors ohne Ausgabe;
+zweiter Aufruf mit unveraendertem Code wie unten. "Symbol::undefined2" betrifft freie Symbole; "Solve::svars" entsteht, weil die invarianten
+Tensoren eine Familie bilden (freie Parameter s11, s22). Bruchdarstellung zeilenweise zusammengezogen.
+
+(1a) Boost entlang der Achse aendert F? False
+     Boost quer zur Achse aendert F? True
+(1b) invariante symmetrische Tensoren S^{mu nu}: {{s11, 0, 0, 0}, {0, s22, 0, 0}, {0, 0, s22, 0}, {0, 0, 0, -s11}}
+(1c) Energie-Impuls-Tensor des Feldes T^{mu nu} = {{(B0^2 + E0^2)/2, 0, 0, 0}, {0, (B0^2 + E0^2)/2, 0, 0}, {0, 0, (B0^2 + E0^2)/2, 0},
+     {0, 0, 0, (-B0^2 - E0^2)/2}};  invariant? True
+(2a) G = eta^-1 + lam T: Geschwindigkeit^2 entlang der Achse 1, quer -(-2 + B0^2 lam + E0^2 lam)/(2 + B0^2 lam + E0^2 lam)
+(2b) allgemeiner invarianter Tensor: Geschwindigkeit^2 entlang der Achse = -S^33/S^00 = 1
+     quer auf 1/2 verlangsamt fuer lam rho = {{L0 -> 1/3}}
+(3) c_h^2 = 1/2: groesstes Geschwindigkeitsquadrat 1.04005942893543387914544441283 bei alpha = 0;  alpha = 0: 1.04005942893543387914544441283;
+    alpha = 1: 0.674963553055941292728377433908;  Grenze verletzt fuer alpha in {0, 1/20}
+(3) c_h^2 = 1: groesstes Geschwindigkeitsquadrat 1.16471566962990765804098864533 bei alpha = 0;  alpha = 0: 1.16471566962990765804098864533;
+    alpha = 1: 1.06443890594334935709355652370;  Grenze verletzt fuer alpha in {0, 1/20, 1/10, ..., 19/20, 1} (alle 21 Rasterpunkte)
+    bei alpha = 0: j_0^2 = 0, j_m^2 = 1/50 (r = 1 entlang der Achse)
+
+Nachtraeglicher Aufruf (allgemeine Pruefung bei c_h^2 = 1 mit Resolve): zweimal Serverfehler des Konnektors ohne Ausgabe; ersetzt durch
+higgs_luminal_check.py (sympy), Ausgabe in run/higgs_luminal_check.txt.

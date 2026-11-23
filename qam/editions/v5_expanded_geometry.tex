@@ -456,7 +456,13 @@ same kind, the electric part of a field strength relative to the
 observer, even in the rapidity; but there the rest frame and the axis
 belong to the field, here the axis belongs to the detector.  The rest
 frame of the field is thereby a named, untested candidate for the frame
-that the slowed propagation needs.
+that the slowed propagation needs.  Tested (layer v4.10.0-r49), it can
+slow propagation only across its axis: a field with parallel electric
+and magnetic parts is invariant under boosts along the axis, so every
+propagation built from it stays luminal there, and the cone limit fails
+for waves along the axis.  Found afterwards: with a luminal Higgs radius,
+as W2 requires, the directed coupling violates the cone limit for every
+choice of mediator speeds.
 
 \paragraph{A contrast on the same measurement axis.}
 On the static plateau $\delta H=\Delta^3V$. With $\xi=r_\perp^2/R^2$, a

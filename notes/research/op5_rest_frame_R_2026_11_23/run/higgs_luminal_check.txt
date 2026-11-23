@@ -1,0 +1,6 @@
+Tatsaechliche Ausgabe von higgs_luminal_check.py (Python 3.12, sympy, 23.11.2026), ein Lauf. Keine Warnungen.
+
+upper(c_h^2 = 1) = (3*al**2*g0*(rm - 1) + 4*g*(r0 - 1)*(rm - 1)*(al - rm - 1) + 4*g*(r0 - 1)*(al**2 - al*rm + rm**2))/(6*(r0 - 1)*(rm - 1))
+gleich -2g/3 (1 + rm - al) - j0^2/(1 - r0) - jm^2/(1 - rm)? True
+jm^2 >= 0 fuer alle rm, al (Diskriminante von rm^2 - rm al + al^2 in al): -3*rm**2
+Stichprobe (27 Punkte, Z = 1, g = g0 = 3/100): groesster Wert von upper = -1/48 (negativ heisst verletzt)
