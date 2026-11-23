@@ -1,7 +1,9 @@
 # Deutscher Preprint, Fassung 0.2.0: Release-Paket
 
-**Status (23.11.2026):** reserviert (Workflow-Lauf 45257076362: Entwurf `deposition_id` 24481107, Version-DOI
-10.5281/zenodo.24481107), PDF mit DOI auf der Titelseite gebaut; nicht hochgeladen, nicht veröffentlicht. Jeder Zenodo-Schritt nur mit
+**Status (23.11.2026): veröffentlicht.** [Record 24481107](https://zenodo.org/records/24481107), Version-DOI 10.5281/zenodo.24481107, Concept-DOI
+10.5281/zenodo.24405552; [GitHub-Release `preprint-de-v0.2.0`](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/preprint-de-v0.2.0) auf Commit 1db863c8. Workflow-Läufe: Reservierung
+45257076362, Upload 45259754818, Veröffentlichung 45260064080. Zenodo-MD5 2e543a2139e4b09bbee64dd09cebd1c3 stimmt mit dem
+lokalen PDF überein; das Haupt-PDF ist die einzige Datei und damit die Vorschau. Jeder Zenodo-Schritt nur mit
 ausdrücklicher Freigabe des Autors (`AGENTS.md`).
 
 - Quelle: `paper/preprint-de/` (Fassung 0.2.0, 55 Seiten, Build ohne Overfull und ohne undefinierte Verweise).

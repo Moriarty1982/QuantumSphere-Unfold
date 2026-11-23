@@ -1,6 +1,6 @@
 # Quantum Sphaera – Artikel zur Vereinheitlichung
 
-**Fassung 0.2.0** (Version-DOI 10.5281/zenodo.24481107 reserviert, noch nicht veröffentlicht) · [Veröffentlichte Fassung 0.1.0 auf Zenodo](https://doi.org/10.5281/zenodo.24405553) · [Zenodo-Angaben](ZENODO.md) · [Release-Paket und Schritte](../../release/preprint-de-v0.2.0/README.md)
+**Fassung 0.2.0** veröffentlicht am 23. November 2026: [Zenodo](https://zenodo.org/records/24481107), Version-DOI [10.5281/zenodo.24481107](https://doi.org/10.5281/zenodo.24481107), [GitHub-Release](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/preprint-de-v0.2.0) · [Fassung 0.1.0](https://doi.org/10.5281/zenodo.24405553) · Concept-DOI [10.5281/zenodo.24405552](https://doi.org/10.5281/zenodo.24405552) · [Zenodo-Angaben](ZENODO.md) · [Release-Paket und Schritte](../../release/preprint-de-v0.2.0/README.md)
 
 Eigenständiger deutscher LaTeX-Entwurf über den gemeinsamen mathematischen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie. Die Fassung ist als einspaltiger Fachartikel in fünf Abschnitte gegliedert. Abschnitt 4.4 verfolgt im linearen OP5-Vergleich eine präparierte Materiequelle bis zum geometrischen Achsenkontrast. Die Quellenidentifikation, die vollständige gewöhnliche Bilanz zweiter Ordnung und die Apparaturantwort sind offene physikalische Schritte.
 
@@ -20,7 +20,11 @@ Gleichsetzung der Quellen; Wolfram-Prüfung unter `audit/anhang-b/`. Maßgeblich
 Nachtrag 23.11.2026: Abschnitt 5.4 nennt die Zählregel als Dimensionsformel (Runde v4.10.0-r53, mit Literatureintrag zur OpenAI-Familie 148),
 Anhang B den Strukturunterschied der Auslese zwischen OP1 und OP5 (Runde v4.10.0-r54). Abschnitt 5.6 beginnt mit der Querschnittssicht auf
 die offenen Probleme (Runde v4.10.0-r55), ergänzt beim nativen Operator die Orientierung der Zählung (r53) und beim Quellgesetz das Ergebnis
-von r54. Die veröffentlichte Zenodo-Fassung 0.1.0 (24 Seiten) bleibt unverändert; der Repo-Stand ist deutlich weiter.
+von r54. Die veröffentlichte Zenodo-Fassung 0.1.0 (24 Seiten) bleibt unverändert.
+
+Veröffentlichung 23.11.2026: Fassung 0.2.0 (55 Seiten) ist auf Zenodo erschienen, DOI 10.5281/zenodo.24481107. Tag `preprint-de-v0.2.0`
+fixiert den Quellstand des PDFs (Commit 1db863c8); die Repo-Links im Artikel zeigen auf d2020d17 auf `main`. Spätere Änderungen hier
+gehören zur nächsten Fassung.
 
 ## Querverweise
 

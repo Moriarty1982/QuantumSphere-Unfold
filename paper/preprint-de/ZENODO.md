@@ -1,6 +1,6 @@
-# Zenodo-Angaben für die nächste Fassung (Entwurf)
+# Zenodo-Angaben zur Fassung 0.2.0
 
-**Status:** vorbereitet am 23.11.2026; Entwurf 24481107 mit Version-DOI 10.5281/zenodo.24481107 reserviert, nicht veröffentlicht. Eine neue Zenodo-Version entsteht nur mit ausdrücklicher Freigabe des Autors
+**Status:** veröffentlicht am 23.11.2026, [Record 24481107](https://zenodo.org/records/24481107), Version-DOI 10.5281/zenodo.24481107, [GitHub-Release](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/preprint-de-v0.2.0). Eine neue Zenodo-Version entsteht nur mit ausdrücklicher Freigabe des Autors
 (`AGENTS.md`). Concept-DOI 10.5281/zenodo.24405552; vorige Fassung 0.1.0 (20.11.2026, 24 Seiten), DOI 10.5281/zenodo.24405553.
 
 **Umsetzung:** Die Metadaten stehen maschinenlesbar in `release/zenodo/metadata_preprint_de_0_2_0.json`, Paket und Schrittfolge
