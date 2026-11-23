@@ -1,6 +1,6 @@
 # What the Companion contains
 
-**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r43.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
+**State: 5 November 2026, research draft 4.10.0-draft with layers through v4.10.0-r44.** English companion of the German [Inhaltsübersicht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt), which is the master. This page states what the *Quantum Sphaera Companion* assumes, defines and shows, and how far each part currently holds. Source labels at the end of each part are for checking; the page itself should be enough to understand the content. [Home](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/English)
 
 ## How to read each statement
 
@@ -169,6 +169,8 @@ Layer v4.10.0-r41 finds the weighting nearly realized in the OP5 seed: its count
 Layer v4.10.0-r42 tests the first derivatives at the seed. There the counterflow block is neither the time-reversed nor the reflected image of the co-moving blocks, nor a plain reversal of the currents. The relation of r41 holds for the values at the seed point only; the jet does not decide the question. The jet does not satisfy all conditions of the model.
 
 Layer v4.10.0-r43 shows that the model conditions fix only 31 of the 96 first derivatives. The remaining family contains a jet with an exact time-reversed image and one with an exact reflected image. The first jet therefore does not decide; the finding of r42 concerned the stored solution only.
+
+Layer v4.10.0-r44 shows that both image jets extend to a second jet, as do random members of the family. The second order does not separate time reversal from reflection either; the levels available at the seed are exhausted.
 
 ## Never claimed
 
