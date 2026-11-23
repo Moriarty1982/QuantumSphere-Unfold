@@ -1,0 +1,15 @@
+Spektrum                     Variante     gamma_T   gamma_M   gamma_L     beta   beta^2
+sqrt(j(j+1)) (heute)         M fest      0.127384  0.237533  1.864700 0.549406 0.301847
+sqrt(j(j+1)) (heute)         M gleich    0.127384  0.237533  1.864700 0.549406 0.301847
+j + 1/2 (Nullpunkt)          M fest      0.110318  0.237533  2.153170 0.604746 0.365718
+j + 1/2 (Nullpunkt)          M gleich    0.110318  0.220636  2.000000 0.577350 0.333333
+j (ohne Unschaerfe)          M fest      0.220636  0.237533  1.076585 0.192042 0.036880
+j (ohne Unschaerfe)          M gleich    0.220636  0.349699  1.584963 0.475704 0.226294
+sqrt(j) (Querunschaerfe)     M fest      0.156013  0.237533  1.522521 0.455129 0.207142
+sqrt(j) (Querunschaerfe)     M gleich    0.156013  0.366516  2.349267 0.634708 0.402854
+j/2 (Robertson)              M fest      0.441271  0.237533  0.538292      nan      nan
+j/2 (Robertson)              M gleich    0.441271  0.699398  1.584963 0.475704 0.226294
+
+Kontrollen gegen geschlossene Formen:
+  j+1/2: gamma_M - ln2/pi = 0.0  gamma_L - 2 = 0.0
+  j:     gamma_M - ln3/pi = -5.551115123125783e-17  gamma_L - log2(3) = -2.220446049250313e-16
