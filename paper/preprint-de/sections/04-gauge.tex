@@ -1,9 +1,11 @@
 \subsection{Innere Symmetrien auf den Materiezuständen}
 \label{sec:gauge}
 
-Einheitsquaternionen liefern in einer quaternionischen Darstellung eine \(SU(2)\)-Wirkung. Komplexe Multiplikation liefert eine Phasenwirkung. Oktonionische Konstruktionen motivieren Kandidaten für Farbdarstellungen \cite{companion,physics}. Eine physikalische Eichzuordnung muss diese Wirkungen auf denselben Zuständen angeben, die im Massensektor verwendet werden.
+Der bisherige Träger \(\mathbb C\otimes\mathbb H\) liefert zwei innere Wirkungen. Einheitsquaternionen liefern in einer quaternionischen Darstellung eine \(SU(2)\)-Wirkung. Komplexe Multiplikation liefert eine Phasenwirkung. Für eine Farbwirkung nimmt Dixon die Oktonionen als dritten Faktor hinzu und arbeitet auf \(\mathbb C\otimes\mathbb H\otimes\mathbb O\) \cite{dixon}. Hält man eine imaginäre Einheit \(e_7\) fest, ordnet sich der Oktonionraum relativ zu ihr in Singulett und Triplett. Furey gewinnt darauf die Ladungen \(0,\tfrac13,\tfrac23,1\) aus einem Zahloperator \cite{furey}. Der Companion übernimmt beides als Vergleich, nicht als Herleitung (Physik-Ausgabe, Teil „What a representation construction must specify“ \cite{physics}). Eine physikalische Eichzuordnung muss diese Wirkungen auf denselben Zuständen angeben, die im Massensektor verwendet werden.
 
-Für diesen Vergleich arbeiten wir in der komplexifizierten Darstellung einer reellen Gradierung mit komplex-linear fortgesetztem \(J\). In Abschnitt \ref{sec:field-compensation} wirkte \(J_{\mathrm B}\) reell-linear auf dem Feldraum. Eine Übertragung in den Materiesektor braucht eine deklarierte Abbildung. Sei \(\rho(g)\) eine unitäre innere Symmetrie in der hier angesetzten Darstellung. Kommutiert \(\rho(g)\) mit \(J\), so kommutiert sie mit beiden Projektoren aus \eqref{eq:projections}. Ihre Wirkung erhält dann die beiden graduierten Unterräume. Für die durch \(S\) ausgewählte Generationenschar aus \eqref{eq:seed} braucht man zusätzlich die Invarianz ihres Bildes unter \(\rho(g)\). Unter dieser Voraussetzung ist \(S^*\rho(g)S\) eine Darstellung auf dem ausgewählten Zustandsraum. Damit lassen sich die Ladungen direkt auf dem Raum prüfen, der auch die massenrelevanten Zustände enthält.
+Wann verträgt sich eine innere Symmetrie mit dem Kompensator? Dafür brauchen wir zuerst eine gemeinsame Darstellung. In Abschnitt \ref{sec:field-compensation} wirkte \(J_{\mathrm B}\) reell-linear auf dem Feldraum. Im Materiesektor arbeiten wir stattdessen mit einer reellen Gradierung. Ihre Involution \(J\) setzen wir komplex-linear auf die Komplexifizierung fort. Die Übertragung vom Feldraum in den Materiesektor ist eine eigene, deklarierte Abbildung.
+
+Sei nun \(\rho(g)\) eine unitäre innere Symmetrie in dieser Darstellung. Kommutiert \(\rho(g)\) mit \(J\), so kommutiert sie mit beiden Projektoren aus \eqref{eq:projections}. Ihre Wirkung erhält dann die beiden graduierten Unterräume. Für die durch \(S\) ausgewählte Generationenschar aus \eqref{eq:seed} braucht man zusätzlich die Invarianz ihres Bildes unter \(\rho(g)\). Unter dieser Voraussetzung ist \(S^*\rho(g)S\) eine Darstellung auf dem ausgewählten Zustandsraum. Damit lassen sich die Ladungen direkt auf dem Raum prüfen, der auch die massenrelevanten Zustände enthält.
 
 Eine gemeinsame komplexe Phase wirkt in der betreffenden Darstellung mit einem skalaren Generator. Für die elektroschwache Zuordnung braucht man die physikalischen Ladungsgewichte und die chiralen Darstellungen der Felder. Die Phasenwirkung legt diese Daten nicht fest. Ebenso muss eine Farbdarstellung über ihre Wirkung auf den Zuständen identifiziert werden.
 
@@ -12,7 +14,7 @@ Eine gemeinsame komplexe Phase wirkt in der betreffenden Darstellung mit einem s
 
 Eine plausible Ladungszuordnung stellt für die Massenauslese eine weitere Frage. Welche Operationen können zwischen möglichen Generationen unterscheiden und zugleich die vorgegebenen Ladungen erhalten? Dafür betrachten wir die Operatoren, die mit den deklarierten Lorentz- und Eichgeneratoren kommutieren. Ihre Wirkung innerhalb einer Multiplizität kann Zustände unterscheiden, die dieselbe Darstellung der Ladungen tragen.
 
-Der Companion prüft diese Frage am Dixon-Vergleich \(\mathbb C\otimes\mathbb H\otimes\mathbb O\). Er legt die Lorentzwirkung auf dem Quaternionfaktor, die schwachen Generatoren mit Chiralitätsprojektor, den Hyperladungsoperator und die Farbderivationen fest, die die Oktonionrichtung \(e_7\) erhalten. Auf einer Generation erhält man in diesem Vergleich die sechs Weyl-Multipletts \(Q,L,u^c,d^c,e^c,\nu^c\) mit komplexen Dimensionen \(12,4,6,6,2,2\). Der komplex-lineare Kommutant ist
+Der Companion prüft diese Frage am Dixon-Vergleich \(\mathbb C\otimes\mathbb H\otimes\mathbb O\) \cite{dixon}, also an dem um die Oktonionen erweiterten Träger aus Abschnitt \ref{sec:gauge} (Runde v4.10.0-r19 \cite{dixon-commutant}). Er legt die Lorentzwirkung auf dem Quaternionfaktor, die schwachen Generatoren mit Chiralitätsprojektor, den Hyperladungsoperator und die Farbderivationen fest, die die Oktonionrichtung \(e_7\) erhalten. Auf einer Generation erhält man in diesem Vergleich die sechs Weyl-Multipletts \(Q,L,u^c,d^c,e^c,\nu^c\) mit komplexen Dimensionen \(12,4,6,6,2,2\). Der komplex-lineare Kommutant ist
 \begin{equation}
  \operatorname{End}_{\mathrm{Lorentz},\mathrm{Eich}}(\mathcal K_{\rm Gen})
        \cong \mathbb C^6 .
@@ -25,18 +27,19 @@ Diese sechs Skalare liefern Gewichte für verschiedene Multipletts. Ein Generati
  \mathcal K_{\rm Gen}^{\oplus n}
    \cong \bigoplus_{a=1}^{6}(\mathcal K_a\otimes\mathbb C^n).
 \]
-Auf dem \(a\)-ten Summanden ist die Wirkung \(\rho_a(g)\otimes I_n\). Damit kommutiert jeder Operator \(I_{\mathcal K_a}\otimes M_a\) mit \(M_a\in M_n(\mathbb C)\). Das Spektrum kann sich also innerhalb einer Ladungsmultiplizität ändern. Im Kopienvergleich geht die Zahl \(n\) als Eingabe ein \cite{dixon-commutant,dixon-copies}.
+Auf dem \(a\)-ten Summanden ist die Wirkung \(\rho_a(g)\otimes I_n\). Damit kommutiert jeder Operator \(I_{\mathcal K_a}\otimes M_a\) mit \(M_a\in M_n(\mathbb C)\). Das Spektrum kann sich also innerhalb einer Ladungsmultiplizität ändern. Die Zahl \(n\) ist dabei gesetzt, nicht hergeleitet. Drei Generationen erhält man in diesem Vergleich nur, indem man \(n=3\) setzt \cite{dixon-commutant,dixon-copies}. Die Herkunft der Zahl drei bleibt Teil des offenen Problems OP3 zu Generationen und Koide-Relation (Abschnitt~\ref{sec:open-points}).
 
 Was folgt daraus für die Feldoperationen aus Abschnitt \ref{sec:frames}? In der deklarierten Materiedarstellung wirkt die Multiplikation mit \(i\) zentral. Die komplexe Konjugation und der Austausch \(J_{\mathrm B}\) kommutieren dort mit Teilen der angesetzten Generatoren nicht. Ein ladungserhaltender Generationsoperator, der aus dem HC hervorgehen soll, braucht deshalb eine explizite Übertragung auf die Multiplizität. Seine Wirkung auf das elektromagnetische Dublett allein lässt diese Übertragung offen \cite{dixon-commutant}.
 
 Kann die Farbe selbst den Generationsindex tragen? Eine Prüfung im Companion verneint das für lineare Auslesen. Legt man drei
 farbtriviale Generationsrichtungen neben die komplexe Linie aus \(1,e_7\) und das Farbtriplett mit den Spalten \(e_4,e_5,e_6\), so wirkt
-das nichttriviale Farbzentrum auf dem farbigen Teil als Faktor \(z=(-1+i\sqrt3)/2\). Eine farbäquivariante lineare Auslese \(T\) in ein
-Singulett erfüllt dort \(zT=T\) und verschwindet deshalb, auch auf den drei Diagonalplätzen. Mit einem dualen Farbindex bleibt nur die
+das nichttriviale Farbzentrum auf dem farbigen Teil als Faktor \(\omega=(-1+i\sqrt3)/2\). Eine farbäquivariante lineare Auslese \(\ell\) in ein
+Singulett erfüllt dort \(\omega\ell=\ell\) und verschwindet deshalb, auch auf den drei Diagonalplätzen. Mit einem dualen Farbindex bleibt nur die
 Spur als invariante Auslese, vom Rang eins. Die farbneutrale Restspalte hat dagegen Rang drei und trägt in der Lesart des Companion je
-Zeile ein schwaches Dublett. Ein Generationsindex kann also nicht in der Farbe sitzen; er muss in einer farbneutralen Multiplizität
-liegen, wie sie der Kopienvergleich oben ansetzt. Die physikalische Zuordnung der Ladungen ist damit nicht hergeleitet, aber ein
-Kandidat ist ausgeschlossen \cite{h113}.
+Zeile ein schwaches Dublett. Für lineare farbäquivariante Auslesen kann ein Generationsindex also nicht in der Farbe sitzen; er muss
+dann in einer farbneutralen Multiplizität liegen, wie sie der Kopienvergleich oben ansetzt. Nichtlineare Auslesen erfasst die Prüfung
+nicht. Die physikalische Zuordnung der Ladungen ist damit nicht hergeleitet, aber für diese Klasse von Auslesen ist ein Kandidat
+ausgeschlossen (H113, Runde v4.10.0-r30 \cite{h113,companion}).
 
 Damit ist die Prüfung der in \eqref{eq:seed} konstruierten Zustände konkreter. Neben ihrer Anzahl und Orthogonalität ist die Darstellung der Ladungen auf ihrem Bild anzugeben. Erst für den so spezifizierten Raum kann das Spektrum eines Massenoperators als Aussage über Generationen gelesen werden.
 

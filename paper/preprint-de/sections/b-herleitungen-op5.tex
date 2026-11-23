@@ -4,8 +4,10 @@
 
 Dieser Anhang begründet die Gleichungen \eqref{eq:op5-drive} bis \eqref{eq:op5-drive-energy} und die anschließende Gleichung für den
 Piola-Tensor. Maßgebliche Quelle ist der Companion: Die Forschungsschicht v4.10.0-r32 führt jeden Schritt mit Beweis
-\cite{companion,repo}; dieser Anhang gibt sie auf Deutsch wieder. Jeder Rechenschritt ist exakt mit Wolfram Language nachgeprüft; Skript und Originalausgabe liegen im Quellrepository
-unter \texttt{paper/\allowbreak preprint-de/\allowbreak audit/\allowbreak anhang-b/}. Zuerst wird offengelegt, welche Gleichungen keine Herleitung haben, sondern Annahmen
+\cite{layers,repo}; dieser Anhang gibt sie auf Deutsch wieder. Die Rechenschritte der Abschnitte~\ref{sec:anhang-b-quelle} und
+\ref{sec:anhang-b-achse} bis \ref{sec:anhang-b-piola} sind exakt mit Wolfram Language nachgeprüft; Skript und Originalausgabe liegen im Quellrepository
+unter \texttt{paper/\allowbreak preprint-de/\allowbreak audit/\allowbreak anhang-b/}. Was diese Prüfung nicht abdeckt, steht in
+Abschnitt~\ref{sec:anhang-b-pruefung}. Zuerst wird offengelegt, welche Gleichungen keine Herleitung haben, sondern Annahmen
 sind.
 
 \subsection{Was angenommen und was hergeleitet ist}
@@ -15,79 +17,84 @@ Zwei Eingaben des Abschnitts sind gesetzt.
 \begin{itemize}
  \item \textbf{Der Antriebsoperator \eqref{eq:op5-drive}.} Seine Form folgt aus dem reduzierten OP5-Vergleichsmodell mit einem
  gerichteten massiven Vermittler und dem Einstein-Kanal; der Einstein-Beitrag \(\tfrac32 g_0^2 d\) ist im Haupttext an der
- transversalen Verbesserung \(S^{\mu\nu}\) nachvollzogen. Die Koeffizienten \(Z\), \(r_m\), \(c_h\), \(g_0\), \(g_m\), \(\Omega_0\) und \(m\) sind
+ transversalen Verbesserung \(\Pi^{\mu\nu}\) nachvollzogen. Die Koeffizienten \(Z\), \(r_m\), \(c_h\), \(g_0\), \(g_m\), \(\Omega_0\) und \(m\) sind
  dagegen gewählt. Die im Text genannte Wahl ist eine in den Notizen geprüfte, keine abgeleitete.
  \item \textbf{Die Gleichsetzung \eqref{eq:op5-match}.} Sie setzt die radiale Higgsquelle \(\delta\mathcal J_h\) der Materie mit dem
- Antrieb \(\delta J_{\rm OP5}\) des Vergleichsfelds gleich, in der Normierung, in der beide dieselbe Einheit tragen. Begründet wäre sie
+ Antrieb \(\delta\mathcal J_{\rm OP5}\) des Vergleichsfelds gleich, in der Normierung, in der beide dieselbe Einheit tragen. Begründet wäre sie
  durch eine Wirkung, in der der Higgsradius \(h_{\rm W}\) mit dem Koeffizienten eins an das Vergleichsfeld \(h\) koppelt, also durch einen
  Term der Form \(\int h\,\mathcal J_h\) in derselben Wirkung, aus der auch \eqref{eq:op5-drive} folgt. Eine solche Wirkung liegt nicht vor.
 \end{itemize}
 Die Gleichsetzung trägt nur die gerichtete Hälfte der Rechnung. Ohne sie gelten weiterhin die mechanische Konstruktion, die Erhaltung
 des präparierten Tensors \eqref{eq:op5-tensor} und die Kompaktheit des gewöhnlichen Außenbeitrags \eqref{eq:op5-compact}; der Tensor
 \(\delta T\) hängt nur von der Verschiebung ab. Ohne sie entfällt dagegen die Aussage, dass dieselbe Präparation den gerichteten Kontrast
-\eqref{eq:op5-contrast} antreibt. Mit einer anderen Normierung \(\delta J_{\rm OP5}=c\,\delta\mathcal J_h\) skaliert der Kontrast mit \(c\);
-seine Form und sein Vorzeichen bleiben. Ob \(c\neq0\) ist, entscheidet erst eine gemeinsame Wirkung.
+\eqref{eq:op5-contrast} antreibt. Mit einer anderen Normierung \(\delta\mathcal J_{\rm OP5}=c_{\mathrm Q}\,\delta\mathcal J_h\) skaliert der Kontrast mit \(c_{\mathrm Q}\);
+seine Form und sein Vorzeichen bleiben. Ob \(c_{\mathrm Q}\neq0\) ist, entscheidet erst eine gemeinsame Wirkung.
 
-Eine Prüfung am Higgs-Sektor der Wirkung W2 verschiebt die Frage. Ist das Vergleichsfeld der Radialmodus \(\eta\) des Higgs-Dubletts, so gilt
-\(2(\partial_t^2-\Delta)\eta+4\mu^2\eta=\mathcal J_h\), und die Gleichsetzung folgt für den skalaren Kanal exakt. Diese Lesart erzwingt aber
+\subsection{Stand der Vermittlersuche}
+\label{sec:anhang-b-vermittler}
+
+Eine Prüfung am Higgs-Sektor der Wirkung W2 verschiebt die Frage. Ist das Vergleichsfeld der Radialmodus \(\eta_h\) des Higgs-Dubletts, so gilt
+\(2(\partial_t^2-\Delta)\eta_h+4\mu_H^2\eta_h=\mathcal J_h\), und die Gleichsetzung folgt für den skalaren Kanal exakt. Diese Lesart erzwingt aber
 \(c_h=1\) statt der gesetzten \(1/2\), und bei minimaler Kopplung gibt es weder eine Einstein-Mischung (\(g_0=0\)) noch einen linear
 gekoppelten gerichteten Vermittler (\(g_m=0\)). Der gerichtete Kontrast beruht damit auf einer anderen Annahme: einem unterluminalen
 massiven Vermittler mit linearer Kopplung an den Higgsradius, den W2 nicht enthält. Quelle ist der Companion, Runde v4.10.0-r33
-\cite{companion,repo}. Eine Suche im Companion (Runde v4.10.0-r34) findet kein Vakuumfeld mit diesen Eigenschaften. Der gegenläufige
-Paar-Konnektor aus einem Materiezustand und seinem Tachyonbild ist massiv, unterluminal und gerichtet, hat aber weder Wirkung noch eine
-belegte Kopplung an den Higgsradius. Die optische Mode des zweikomponentigen Materials erfüllt alle Anforderungen; mit ihr wäre der
-gerichtete Kontrast eine Eigenschaft der Präparation. Runde v4.10.0-r35 rechnet diesen Weg durch: Bei einachsiger Präparation entsteht ein
-gerichteter Term mit der optischen Lücke als Masse und dem Gewicht \(\mu(Y_1/\rho_1-Y_2/\rho_2)^2\). Er koppelt nur, wenn die beiden Komponenten
-verschieden große Higgs-Anteile ihrer Ruhemasse haben. Das führende Glied des Kontrasts braucht \(r_m\) nicht; der Zähler ist aber \(a_\perp\),
-eine Potenz weniger als im Vergleichsmodell. Runde v4.10.0-r36 prüft den Weg über einen Vakuumhintergrund: Ohne Hintergrund gibt
-keine lineare Kopplung eines neuen Feldes an \(|\Phi|^2\) einen gerichteten Pol. Mit Rahmen und Achse erreicht ein Spin-2-Feld mit positiver
-Polarisationssumme den Zähler des Vergleichsmodells exakt; Rahmen, Achse und Polarisationsstruktur sind dann gesetzt. Runde v4.10.0-r37
-nimmt dafür einen zwischen den beiden Systemen gespannten String, dessen Spannung vom Higgsradius abhängt. Er liefert Rahmen, Achse und
-Polarisationsstruktur selbst; seine Zwei-Quanten-Zustände geben die beiden gerichteten Anteile des Zählers im exakten Verhältnis. Der
-ungerichtete Anteil ist halb so groß, und bei der halben Masse tritt ein zweiter Pol auf. Ein erster Ansatz für Feldgleichungen
-(Runde v4.10.0-r38) koppelt ein Tensorfeld quer zur Achse und einen Skalar an den Higgs-Radialmodus. Sein Austausch gibt den Vermittlerterm
-des Vergleichsmodells exakt, mit eindeutigen Kopplungen; die nötige Spurkopplung ist genau der Wert des Strings. Der Ansatz ist geisterfrei,
-und seine statische Energie ist genau dann positiv, wenn \(g_m^2\le3r_m\). Der Skalar bleibt gesetzt. Runde v4.10.0-r39 gewinnt ihn als
-Komponente eines einzigen Tensorfelds auf dem Unterraum senkrecht zur Achse: Mit einer Masse und der identisch erhaltenen Kopplung
-\(\partial_a\partial_b\eta-\eta_{ab}\Box_\parallel\eta\) ist der Austausch wieder exakt, sofern die Zeit-Quer-Komponenten nicht koppeln. Diese Kopplung ist die
-Fassung der Verbesserung, aus der die Form des Vergleichsoperators stammt, auf diesem Unterraum. Runde v4.10.0-r40 prüft Gründe für die
-Entkopplung: Fierz--Pauli auf dem Unterraum sieht die erhaltene Quelle nicht, und Zeit-Quer-Komponenten als Hilfsfelder geben einen zweiten Pol.
-Exakt folgt die Entkopplung, wenn der Austausch beide relativen Zeitorientierungen seiner Enden gleich gewichtet, denn ihre Vertizes sind unter
-Zeitumkehr ungerade. Die gleichen Gewichte sind nicht hergeleitet. Der OP5-Keim liefert sie fast genau (Runde v4.10.0-r41): Sein
-Gegenstrom-Block ist bis auf \(8\cdot10^{-4}\) das lokale Zeitumkehrbild der mitlaufenden Blöcke, mit auf besser als \(10^{-3}\) gleicher Dichte.
-Das gilt, wenn die Enden des Austauschs in den Blockströmen ausgelesen werden; Zeitumkehr und Spiegelung unterscheidet der Keim nicht.
-Die Beziehung gilt nur für die Werte am Keimpunkt: In den ersten Ableitungen ist der Gegenstrom-Block weder Zeitumkehr- noch Spiegelbild
-der mitlaufenden Blöcke (Runde v4.10.0-r42). Dieser Jet ist aber nur ein Glied einer 65-dimensionalen Familie, die die Modellbedingungen
-zulassen; sie enthält einen Jet mit exaktem Zeitumkehrbild und einen mit exaktem Spiegelbild. Der erste Jet entscheidet also nicht
-(Runde v4.10.0-r43). Beide Jets lassen sich auch zu einem zweiten Jet fortsetzen, ebenso zufällige Glieder der Familie; auch die zweite
-Ordnung entscheidet nicht (Runde v4.10.0-r44). Eine Bilanz dieser Kette (Runde v4.10.0-r45) zeigt: Der gerichtete Term selbst ist ein
-gewöhnlicher Fierz--Pauli-Austausch einer gesetzten, gerichteten und erhaltenen Quelle, und die Zeit-Quer-Komponenten koppeln dort und werden
-gebraucht. Die Entkopplungsfrage entsteht nur in einer bestimmten Zerlegung. Gesetzt bleiben Rahmen, Achse und verlangsamte Ausbreitung der
-Kopplung; offen ist, ob sie zu einem Feld gehören oder zur Auslese. Auf der Seite der Auslese (Runde v4.10.0-r46) ist die gerichtete Kopplung die
-kovariante Auslese des Gezeitenfelds quer zur Messachse eines Detektors mit Ruhesystem \(u\) und Achse \(n\). Die Zeitorientierung fällt dann heraus,
-die verlangsamte Ausbreitung wird für den führenden Kontrast nicht gebraucht, und der Kontrast hängt in der Ordnung \(\beta^2\) von der Bewegung des
-Detektors relativ zur Präparation ab. Die verlangsamte Ausbreitung wird aber für die Kausalität gebraucht: Mit lichtschnellen Vermittlern hat das
-gekoppelte System Charakteristiken schneller als die metrische Lichtgeschwindigkeit, schon bei gewöhnlicher Gravitation (Runde v4.10.0-r47). Sie
-bleibt deshalb gesetzt, zusammen mit einem massiven Spin-2-Vermittler und seiner Kopplung an den Higgsradius, und braucht ein ausgezeichnetes
-Bezugssystem auf der Feldseite. Eine Bigravitation der Frames M und T mit proportionalen Hintergründen scheitert an derselben Bedingung. Verglichen mit der
-Beobachterlesart von OP1 (Runde v4.10.0-r48) ist die Auslese von derselben Art, der elektrische Teil einer Feldstärke relativ zum Beobachter,
-gerade in der Rapidität; dort gehören Ruhesystem und Achse aber dem Feld, hier die Achse dem Detektor. Fragt man, ob die Auslese ihren Rahmen
-selbst festlegt (Runde v4.10.0-r54), unterscheiden sich beide in der Struktur: Bei OP1 ist das Bezugssystem mit parallelem elektrischem und
-magnetischem Teil das eindeutige Minimum der Auslese über alle Beobachter, entartet genau entlang der Achse; hier ist das Ruhesystem der Präparation
-ein Sattel der Gezeitenauslese unter Boosts des Detektors, und die Achse ist keine Entartungsrichtung. Bei OP1 wählt das Feld Rahmen und Achse aus,
-hier sind sie eine äußere Setzung des Detektors. Das Ruhesystem des Feldes ist damit ein
-benannter, ungeprüfter Kandidat für das Bezugssystem, das die verlangsamte Ausbreitung braucht. Geprüft (Runde v4.10.0-r49), kann es nur
-quer zu seiner Achse verlangsamen: Ein Feld mit parallelem elektrischem und magnetischem Teil ist unter Boosts entlang der Achse invariant, jede
-daraus gebaute Ausbreitung bleibt dort lichtschnell, und für Wellen entlang der Achse bricht die Kegelgrenze. Nachträglich gefunden: Mit einem
-lichtschnellen Higgsradius, wie W2 ihn verlangt, verletzt die gerichtete Kopplung die Kegelgrenze für jede Wahl der Vermittlergeschwindigkeiten. Ein Medium aus lichtartigen Strahlen
-des Photon-Frames (Runde v4.10.0-r50) hält die Grenze nur nahe dem Bezugssystem, in dem sich zwei Gegenströme ausgleichen; ein einzelner Strahl
-oder der Grenzfall des Photon-Frames lässt eine Richtung lichtschnell. Für jedes Medium mit universeller Verlangsamung \(\varepsilon\) verlangt die
-Grenze \(\varepsilon\ge\sqrt{7g_m^2/6}\); Laborgrenzen der Lorentz-Verletzung schließen die gerichtete Kopplung im Vakuum damit oberhalb von
-\(g_m^2\approx10^{-26}\) aus. Ein beobachtbarer gerichteter Kontrast braucht ein Material, dessen Ruhesystem die Präparation ist. Verbiegt man ein solches Medium
-stattdessen mit der Frame-Abbildung \(J_B\) zwischen M und T (Runde v4.10.0-r51), wechselt es das Vorzeichen: \(J_B\) hält die lichtartigen
-Richtungen entlang der M--T-Achse bis auf Phasen \(\mp i\) fest, aus einer Verengung in M wird in T eine Weitung über die Lichtgeschwindigkeit
-hinaus, und die unter \(J_B\) invarianten Medien bleiben entlang der Achse lichtschnell. Die Dynamik in T folgt dem Tachyonbild der Wirkung, unter
-dem das Medium unverändert bleibt; \(J_B\) betrifft die Auslese.
+\cite{layers,repo}.
+
+Die Bezeichnungen weichen an einigen Stellen vom Companion ab: Der Higgs-Radialmodus heißt hier \(\eta_h\), der Massenparameter des
+Higgs-Potentials \(\mu_H\), die reduzierte Dichte \(\rho_{\rm red}\). Die Suche nach diesem Vermittler fassen die beiden folgenden Tabellen zusammen. Quelle sind die Runden v4.10.0-r33 bis v4.10.0-r54 des
+Companion \cite{layers}, in den Tabellen kurz r33 bis r54. Die erste Tabelle führt die Ansätze auf der Feldseite bis zur Bilanz in r45, die
+zweite die Ausleseseite und die Bedingungen der Kausalität. \glqq Trägt teilweise\grqq{} heißt: Gemessen an den vorab festgelegten Kriterien ist
+ein Teil der Anforderungen erfüllt, der Rest bleibt gesetzt.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.07\linewidth}p{.25\linewidth}p{.43\linewidth}p{.15\linewidth}@{}}
+\hline
+\textbf{Runde} & \textbf{Ansatz} & \textbf{Ergebnis} & \textbf{Status} \\
+\hline
+r33 & Vergleichsfeld als Higgs-Radialmodus von W2 & Gleichsetzung folgt für den skalaren Kanal; W2 erzwingt \(c_h=1\) und bei minimaler Kopplung \(g_0=g_m=0\); der gerichtete Vermittler fehlt & verschiebt die Frage \\
+r34 & Suche im Companion nach einem Vakuumfeld & keines gefunden; der gegenläufige Paar-Konnektor aus einem Materiezustand und seinem Tachyonbild ist massiv, unterluminal und gerichtet, hat aber weder Wirkung noch eine belegte Kopplung an den Higgsradius; die optische Mode des Materials erfüllt alle Anforderungen & kein Vakuumfeld \\
+r35 & optische Mode des zweikomponentigen Materials & bei einachsiger Präparation ein gerichteter Term mit der optischen Lücke als Masse und dem Gewicht \(\rho_{\rm red}(Y_1/\rho_1-Y_2/\rho_2)^2\); koppelt nur bei verschieden großen Higgs-Anteilen der Ruhemassen; Zähler \(a_\perp\), eine Potenz weniger als im Vergleichsmodell & trägt teilweise \\
+r36 & Vakuumhintergrund & ohne Hintergrund kein gerichteter Pol; mit Rahmen und Achse erreicht ein Spin-2-Feld mit positiver Polarisationssumme den Zähler exakt; Rahmen, Achse und Polarisationsstruktur sind gesetzt & trägt teilweise \\
+r37 & gespannter String zwischen den Systemen, Spannung abhängig vom Higgsradius & liefert Rahmen, Achse und Polarisationsstruktur selbst; Zwei-Quanten-Zustände geben die gerichteten Anteile im exakten Verhältnis; ungerichteter Anteil halb so groß, zweiter Pol bei der halben Masse & trägt teilweise \\
+r38 & Feldgleichungen: Tensorfeld quer zur Achse, Skalar am Higgs-Radialmodus & Austausch gibt den Vermittlerterm exakt, mit eindeutigen Kopplungen; Spurkopplung gleich dem Wert des Strings; geisterfrei, statische Energie genau für \(g_m^2\le3r_m\) positiv; der Skalar bleibt gesetzt & trägt teilweise \\
+r39 & Skalar als Komponente eines Tensorfelds senkrecht zur Achse & mit der identisch erhaltenen Kopplung \(\partial_a\partial_b\eta_h-\eta_{ab}\Box_\parallel\eta_h\) wieder exakt, sofern die Zeit-Quer-Komponenten nicht koppeln & trägt teilweise \\
+r40 & Gründe für diese Entkopplung & Fierz--Pauli auf dem Unterraum sieht die erhaltene Quelle nicht; Hilfsfelder geben einen zweiten Pol; exakt bei gleicher Gewichtung beider Zeitorientierungen, die nicht hergeleitet ist & trägt teilweise \\
+r41 & gleiche Gewichte aus dem Gegenstrom des OP5-Keims & Gegenstrom-Block bis auf \(8\cdot10^{-4}\) lokales Zeitumkehrbild der mitlaufenden Blöcke, Dichte auf besser als \(10^{-3}\) gleich; nur für die Werte am Keimpunkt; Zeitumkehr und Spiegelung nicht unterschieden & trägt teilweise \\
+r42--r44 & erste und zweite Ableitungen (Jets) am Keim & gespeicherter Jet weder Zeitumkehr- noch Spiegelbild; die Modellbedingungen lassen eine 65-dimensionale Familie zu, mit einem Jet für jedes der beiden Bilder; auch die zweite Ordnung entscheidet nicht & unentschieden \\
+r45 & Bilanz der Kette r39--r44 & gerichteter Term ist ein gewöhnlicher Fierz--Pauli-Austausch einer gesetzten, gerichteten und erhaltenen Quelle; die Entkopplungsfrage entsteht nur in einer bestimmten Zerlegung; Weggabelung Feldseite gegen Ausleseseite & Bilanz \\
+\hline
+\end{tabular}
+\end{center}
+In der Zeile r35 ist \(\rho_{\rm red}=\rho_1\rho_2/(\rho_1+\rho_2)\) die reduzierte Dichte der beiden Komponenten, und
+\(Y_a=\sum_i y_i n_{i0}\) summiert die Yukawa-Kopplungen über die Arten der Komponente \(a\); \(vY_a\) ist der vom Higgsradius getragene
+Teil ihrer Ruhedichte.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.07\linewidth}p{.25\linewidth}p{.43\linewidth}p{.15\linewidth}@{}}
+\hline
+\textbf{Runde} & \textbf{Ansatz} & \textbf{Ergebnis} & \textbf{Status} \\
+\hline
+r46 & Rahmen, Achse und Zeitorientierung als Daten der Auslese & gerichtete Kopplung ist die kovariante Auslese des Gezeitenfelds quer zur Messachse eines Detektors mit Ruhesystem \(u\) und Achse \(n\); die Zeitorientierung fällt heraus; der führende Kontrast braucht keine verlangsamte Ausbreitung und hängt in der Ordnung \(\beta^2\) von der Bewegung des Detektors ab & trägt; durch r47 teilweise zurückgenommen \\
+r47 & Kegelgrenze der Metrik & mit lichtschnellen Vermittlern Charakteristiken schneller als die metrische Lichtgeschwindigkeit, schon bei gewöhnlicher Gravitation; die verlangsamte Ausbreitung bleibt gesetzt und braucht ein ausgezeichnetes Bezugssystem auf der Feldseite; eine Bigravitation der Frames M und T mit proportionalen Hintergründen scheitert an derselben Bedingung & Korrektur von r46; trägt teilweise \\
+r48 & Vergleich mit der Beobachterlesart von OP1 & Auslese derselben Art: elektrischer Teil einer Feldstärke relativ zum Beobachter, gerade in der Rapidität; bei OP1 gehören Ruhesystem und Achse dem Feld, hier die Achse dem Detektor; das Ruhesystem \(R\) des OP1-Feldes wird als ungeprüfter Kandidat für das Bezugssystem der verlangsamten Ausbreitung benannt & verwandt, nicht gleich \\
+r49 & \(R\) als Bezugssystem der Verlangsamung & ein Feld mit parallelem elektrischem und magnetischem Teil ist unter Boosts entlang der Achse invariant; jede daraus gebaute Ausbreitung bleibt dort lichtschnell, für Wellen entlang der Achse bricht die Kegelgrenze. Nachträglich gefunden: Mit lichtschnellem Higgsradius, wie W2 ihn verlangt, verletzt die gerichtete Kopplung die Kegelgrenze für jede Wahl der Vermittlergeschwindigkeiten & trägt teilweise; No-go für W2 \\
+r50 & Medium aus lichtartigen Strahlen des Photon-Frames & hält die Grenze nur nahe dem Bezugssystem, in dem sich zwei Gegenströme ausgleichen; ein einzelner Strahl lässt eine Richtung lichtschnell; universelle Verlangsamung \(\varepsilon_c\ge\sqrt{7g_m^2/6}\); Laborgrenzen der Lorentz-Verletzung schließen die gerichtete Kopplung im Vakuum oberhalb von \(g_m^2\approx10^{-26}\) aus & Material nötig \\
+r51 & Medium, verbogen mit \(J_{\mathrm B}\) zwischen M und T & \(J_{\mathrm B}\) hält die lichtartigen Richtungen entlang der M--T-Achse bis auf Phasen \(\mp i\) fest; aus einer Verengung in M wird in T eine Weitung über die Lichtgeschwindigkeit hinaus; die unter \(J_{\mathrm B}\) invarianten Medien bleiben entlang der Achse lichtschnell; die Dynamik in T folgt dem Tachyonbild der Wirkung, \(J_{\mathrm B}\) betrifft die Auslese & trägt nicht \\
+r54 & Legt die Auslese ihren Rahmen selbst fest? & bei OP1 ist das Bezugssystem mit parallelem elektrischem und magnetischem Teil das eindeutige Minimum der Auslese über alle Beobachter, entartet genau entlang der Achse; bei OP5 ist das Ruhesystem der Präparation ein Sattel der Gezeitenauslese unter Boosts des Detektors, und die Achse ist keine Entartungsrichtung & trägt nicht \\
+\hline
+\end{tabular}
+\end{center}
+
+Der Stand nach r54 lässt sich in wenigen Sätzen sagen. Gesetzt bleiben ein massiver Spin-2-Vermittler, seine Kopplung an den Higgsradius
+und eine verlangsamte Ausbreitung; diese braucht ein ausgezeichnetes Bezugssystem auf der Feldseite (r47). Das Ruhesystem \(R\) des
+OP1-Feldes kann diese Rolle nur quer zu seiner Achse übernehmen (r48, r49). Mit dem lichtschnellen Higgsradius von W2 ist die gerichtete
+Kopplung für keine Wahl der Vermittlergeschwindigkeiten kausal verträglich (r49, nachträglich gefunden). Im Vakuum ist sie oberhalb von
+\(g_m^2\approx10^{-26}\) ausgeschlossen; ein beobachtbarer gerichteter Kontrast braucht ein Material, dessen Ruhesystem die Präparation ist
+(r50). Eine Verbiegung des Mediums mit \(J_{\mathrm B}\) hilft nicht (r51). Zuletzt unterscheiden sich die Auslesen von OP1 und OP5 in ihrer Struktur
+(r54): Bei OP1 wählt das Feld Rahmen und Achse aus, bei OP5 sind sie eine äußere Setzung des Detektors. Offen bleibt, ob es den gerichteten
+Vermittler als eigenes Feld gibt.
 
 \subsection{Die Quelle der elastischen Verschiebung}
 \label{sec:anhang-b-quelle}
@@ -164,7 +171,7 @@ Vergleichsfelds für eine feste Polarisation. Einsetzen gibt \(\Delta\mathcal I=
 \label{sec:anhang-b-buendel}
 
 Integriert man über \(z\), fallen alle Beiträge mit einer Längsableitung als Randterme weg, weil \(p\) kompakt ist; es bleibt
-\(\int\delta f\,dz=-\mathcal A P\,\Delta_\perp(\xi^2-4\kappa\xi^3)/m^2\) mit \(P=\int p\,dz\). Für eine radiale Funktion \(F(r)\) ist das Mittel
+\(\int\delta f\,dz=-\tfrac{\mathcal A}{m^2}\Bigl(\int p\,dz\Bigr)\Delta_\perp(\xi^2-4\kappa\xi^3)\). Für eine radiale Funktion \(F(r)\) ist das Mittel
 von \(\partial_e^2F\) über den Azimut eines Strahls im Abstand \(r\) gleich \(\tfrac12\Delta_\perp F\), weil
 \(\partial_x^2F=F''\cos^2\phi+(F'/r)\sin^2\phi\). Mit \(\Delta_\perp\xi=4/R^2\), \(\Delta_\perp\xi^2=16\xi/R^2\) und \(\Delta_\perp\xi^3=36\xi^2/R^2\) folgt
 für das Verhältnis zum Achsenwert
@@ -208,13 +215,24 @@ Der quadratische Anteil in \(\mathsf H\) ist \(\mathsf C(\tfrac12\mathsf H^{\mat
 \]
 Die zweite Komponente mit Steifigkeit \(c_\sigma\mathsf C\) und \(\mathbf w_1=-\mathbf u_1/c_\sigma\) trägt \(c_\sigma N(-\mathsf H/c_\sigma)=N(\mathsf H)/c_\sigma\),
 weil \(N\) quadratisch ist. Die linearen Anteile zweiter Ordnung addieren sich zu \(\mathsf C\varepsilon(\mathbf u_2)+c_\sigma\mathsf C\varepsilon(\mathbf w_2)
-=\mathsf C\varepsilon(S_2)\). Zusammen ergibt das die Gleichung für \((P_1+P_2)^{(2)}\).
+=\mathsf C\varepsilon(\mathbf S_2)\). Zusammen ergibt das die Gleichung für \((P_1+P_2)^{(2)}\).
 
 \subsection{Was die Prüfung abdeckt}
 \label{sec:anhang-b-pruefung}
 
-Exakt geprüft sind: die Identität \(\mathcal L\nabla S=K_L\nabla\Delta S\) und \(\nabla\cdot\mathcal L\nabla S=K_L\Delta^2S\); die Faktoren \(4j^2\) und
-230400; der Achsenwert \(16\mathcal A P/(m^2R^4)\); der Bündelfaktor \(1-36\kappa\xi\); die planare Identität an einem Beispielprofil
-(sie ist linear in \(\delta\rho\)) samt Ausläufern und Gesamtintegral; die Energiebilanz im eindimensionalen Fall; der quadratische
-Piola-Anteil \(N(\mathsf H)\) und der Faktor \(1/c_\sigma\). Nicht geprüft und nicht prüfbar ohne eine gemeinsame Wirkung sind die Koeffizienten von
+Skript und Ausgabe liegen unter \texttt{paper/\allowbreak preprint-de/\allowbreak audit/\allowbreak anhang-b/}. Die Ausgabe stammt aus zwei
+Läufen vom 22.~November 2026 in einem Wolfram-Kern; eine Versionsnummer ist darin nicht vermerkt. Ihre Blocknummern (B.1) bis (B.8) folgen nicht
+der Nummerierung dieses Anhangs; die Zuordnung steht unten in Klammern.
+
+Exakt geprüft sind: die Identität \(\mathcal L\nabla S=K_L\nabla\Delta S\) und \(\nabla\cdot\mathcal L\nabla S=K_L\Delta^2S\) (Abschnitt~\ref{sec:anhang-b-quelle};
+Block B.1); die Faktoren \(4j^2\) und 230400 (Abschnitt~\ref{sec:anhang-b-achse}; B.3); der Achsenwert \(\tfrac{16\mathcal A}{m^2R^4}\int p\,dz\)
+(Abschnitt~\ref{sec:anhang-b-kontrast}; B.4); der Bündelfaktor \(1-36\kappa\xi\) (Abschnitt~\ref{sec:anhang-b-buendel}; B.5); die planare Identität an
+einem Beispielprofil (sie ist linear in \(\delta\rho\)) samt Ausläufern und Gesamtintegral (Abschnitt~\ref{sec:anhang-b-planar}; B.6); die Energiebilanz
+im eindimensionalen Fall (Abschnitt~\ref{sec:anhang-b-energie}; B.7); der quadratische Piola-Anteil \(N(\mathsf H)\) und der Faktor \(1/c_\sigma\)
+(Abschnitt~\ref{sec:anhang-b-piola}; B.8).
+
+Ohne eigene Prüfausgabe sind die Wahl des Profils (Abschnitt~\ref{sec:anhang-b-profil}) und die Kompaktheit des gewöhnlichen Außenbeitrags
+(Abschnitt~\ref{sec:anhang-b-kompakt}); beide Schritte sind im Text vollständig ausgeschrieben. Die Vermittlersuche in
+Abschnitt~\ref{sec:anhang-b-vermittler} ist hier nicht nachgerechnet; ihre Rechnungen und Skripte nennen die jeweiligen Runden des
+Companion \cite{layers}. Nicht geprüft und nicht prüfbar ohne eine gemeinsame Wirkung sind die Koeffizienten von
 \eqref{eq:op5-drive} und die Gleichsetzung \eqref{eq:op5-match}.

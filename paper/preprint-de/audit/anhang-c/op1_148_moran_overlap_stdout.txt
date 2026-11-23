@@ -1,0 +1,27 @@
+Wolfram Language (MCP WolframLanguageEvaluator), 23.11.2026. Tatsaechlich erzeugte Ausgaben, unveraendert uebernommen.
+
+=== Lauf 1 ===
+Warnung (Linter des Auswerters, kein Rechenfehler): Symbol::undefined2: Warning: Global symbols "F, F, F, F, H, H" are undefined.
+gamma_M (Gewicht 2, DL)       = 0.237532957966
+gamma_T (nur j=1/2, Gewicht 2) = 0.127384023141
+gamma_P (Gewicht 2j+1, GM/ENP) = 0.274066858233
+gamma_1 (|j,+j> und |j,-j> exakt ueberlappt, Gewicht 1) = 0.161585774188
+T mit exakter Ueberlappung: eine Abbildung, Attraktor ein Punkt, Dimension 0
+Verhaeltnisse: gM/gT = 1.864699765  g1/gT = 1.268493255  g1/gM = 0.6802667536
+Abbruchkontrolle jmax=200: Rest der Summe bei gM ~ 1.05*10^-130
+Summe p = 1.00000000000000   H(p)/chi = 0.237532957965921   gamma_M = 0.237532957965921
+Gewicht 2 mit p_M, aber +-j identifiziert: h/chi = H(p_merged)/chi = 0.153695148947  (<= gamma_1 = 0.161585774188 als Maximum ueber p)
+Maximum ueber p im ueberlappten System (p = r^gamma_1): h/chi = 0.161585774188
+General::messages: Messages were generated which may indicate errors.  (nur die Linter-Warnung oben)
+
+=== Verworfener Zwischenlauf (Konstruktionsfehler) ===
+Translationen t = 0 fuer je eine Kopie mehrerer Skalen: Diese Abbildungen teilen den Fixpunkt 0 und vertauschen, dadurch exakte
+Ueberlappungen auch im Fall "verschieden" (Rate faellt 0.2018 -> 0.1918 bei n = 1..4). Nicht verwertet; Lauf 2 mit allgemeinen Translationen.
+
+=== Lauf 2 ===
+gamma (abgeschnitten, j<=1) = 0.2017842877
+verschieden: H(G_n)/(n chi), n=1..4: {0.2017842877, 0.2017842877, 0.2017842877, 0.2017842877}
+gespiegelt: H(G_n)/(n chi), n=1..4: {0.2017842877, 0.2017842877, 0.2017842877, 0.2017842877}
+identisch: H(G_n)/(n chi), n=1..4: {0.09657209853, 0.09657209853, 0.09657209853, 0.09657209853}
+gespiegelt, gleiches Zentrum: H(G_n)/(n chi), n=1..4: {0.2017842877, 0.1725440756, 0.1627973382, 0.1579239696}
+Fixpunkt phi_+ (j=1/2): 0.35509215  Fixpunkt phi_- gleiches Zentrum: 0.35509215

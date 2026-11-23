@@ -1,0 +1,30 @@
+Tatsaechliche Ausgabe von llm/k241_h121_jb_area.py (Python 3.12, sympy, numpy, scipy; 23.11.2026), ein Lauf, keine Warnungen.
+Vorab-Notiz llm/Vorab_Notiz_H121_JB_Flaechenoperator.md, Commit c35174df.
+
+(0) Vertauschungsrelationen [L,L] = eps L, [L,K] = eps K, [K,K] = -eps L: True True True
+(H121a) J_B = exp(i pi/2 K_x) = [[0, I, 0, 0], [I, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+        J_B Lx J_B^-1 = (1) Lx
+        J_B Ly J_B^-1 = (I) Kz
+        J_B Lz J_B^-1 = (-I) Ky
+        J_B Kx J_B^-1 = (1) Kx
+        J_B Ky J_B^-1 = (-I) Lz
+        J_B Kz J_B^-1 = (I) Ly
+        Bilder erfuellen dieselben Vertauschungsrelationen (Automorphismus): True
+(H121c) aus K = gamma L folgt K' = Gamma' L' mit Gamma' = [[gamma, 0, 0], [0, -1/gamma, 0], [0, 0, -1/gamma]]
+         eingesetzt gamma_M = 0.237533: Diagonale von Gamma' = [0.23753300, -4.2099414, -4.2099414]
+         Vergleich mit gamma_T = 0.12738402 und gamma_L = 18647/10000
+           gamma' = -4.2099414: |gamma'| gegen gamma_T: relative Abweichung 32.05
+           gamma' = -4.2099414: gamma_M/|gamma'| gegen gamma_L: relative Abweichung 0.9697
+           gamma' = -4.2099414: gamma_M/|gamma'| gegen gamma_T: relative Abweichung 0.5571
+           gamma' = 0.23753300: |gamma'| gegen gamma_T: relative Abweichung 0.8647
+           gamma' = 0.23753300: gamma_M/|gamma'| gegen gamma_L: relative Abweichung 0.4637
+           gamma' = 0.23753300: gamma_M/|gamma'| gegen gamma_T: relative Abweichung 6.850
+         Querkomponenten: L'_y = ( [[0, 0, 0, 0, 0, I]] ) -> |L'_quer| = gamma |L_quer| auf K = gamma L
+(H121b) (0.5,0) J^2: Eigenwerte vorher [0.75 0.75], Abweichung nachher 2.24e-16; Bild hermitesch: True; U unitaer: True
+(H121b) (0.5,0) J_z: Eigenwerte vorher [-0.5  0.5], Abweichung nachher 5.55e-17; Bild hermitesch: True; U unitaer: True
+(H121b) (0.5,0.5) J^2: Eigenwerte vorher [0. 2. 2. 2.], Abweichung nachher 4.44e-16; Bild hermitesch: True; U unitaer: True
+(H121b) (0.5,0.5) J_z: Eigenwerte vorher [-1.  0.  0.  1.], Abweichung nachher 1.11e-16; Bild hermitesch: True; U unitaer: True
+(H121b) (1,0) J^2: Eigenwerte vorher [2. 2. 2.], Abweichung nachher 5.55e-17; Bild hermitesch: True; U unitaer: True
+(H121b) (1,0) J_z: Eigenwerte vorher [-1.  0.  1.], Abweichung nachher 8.88e-16; Bild hermitesch: True; U unitaer: True
+        groesste Abweichung der Spektren: 8.88e-16 (Kriterium <= 1e-10)
+(Kontrolle) reeller Boost eta_sym: Gamma' bei gamma_M = [[0.237533, 0, 0], [0, 0.163057, -0.570685], [0, 0.570685, 0.163057]]

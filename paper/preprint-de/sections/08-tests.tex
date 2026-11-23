@@ -7,7 +7,7 @@ Die Aufgabe eines gemeinsamen Trägers ist erst dann erfüllt, wenn dieselben Zu
 
 Beim HC-Feldvergleich sind die Eingaben eine Feldkonfiguration und die deklarierte Involution \(J_{\mathrm B}\). Abbildung \ref{fig:hc-feld} zeigt den Test am lichtartigen Eingang. Das berechnete \(s'\) sagt, welche Feldklasse nach der Projektion erreicht wird. Ein Modell, das aus demselben Projektor wieder ein lichtartiges Feld gewinnen soll, muss angeben, durch welche anschließende Operation die beiden Bedingungen \(s'=0\) und \(\mathbf z'\ne0\) erfüllt werden. Die Feldinvariante macht diese Forderung unabhängig von der Wahl eines Lorentz-Beobachters prüfbar. Die Identifikation eines quantisierten Lichtzustands setzt weitere Struktur voraus \cite{feldkern,feldsektoren}.
 
-Auch die Dynamik der Auslese hat einen eigenen Test. Für ein vorgegebenes Paar \((T,G)\) genügt ein \(z\in\ker T\) mit \((\dot T+TG)z\ne0\), um eine autonome lineare Entwicklung der ausgelesenen Variablen auszuschließen. Die Zustände \(u\) und \(u+z\) ergeben dieselbe Auslese und verschiedene Ableitungen. Die Gleichheit der momentanen Beobachtungsdaten entscheidet so noch nicht, ob zwei Zustände dieselbe Antwort auf eine Störung haben. Diese Prüfung lässt sich an einer konkreten Realisierung durchführen, sobald ihre Auslese und ihr Generator feststehen \cite{physics}.
+Auch die Dynamik der Auslese hat einen eigenen Test. Für ein vorgegebenes Paar \((T(t),\allowbreak G(t))\) genügt ein \(u_{\ker}\in\ker T\) mit \((\dot T+TG)u_{\ker}\ne0\), um eine autonome lineare Entwicklung der ausgelesenen Variablen auszuschließen. Die Zustände \(u\) und \(u+u_{\ker}\) ergeben dieselbe Auslese und verschiedene Ableitungen. Die Gleichheit der momentanen Beobachtungsdaten entscheidet so noch nicht, ob zwei Zustände dieselbe Antwort auf eine Störung haben. Diese Prüfung lässt sich an einer konkreten Realisierung durchführen, sobald ihre Auslese und ihr Generator feststehen \cite{physics}.
 
 \subsection{Was bei den Massen getrennt festgelegt werden muss}
 
@@ -24,22 +24,59 @@ Eine spätere Messung braucht für beide Antwortwege einen Bezug zur realen Prä
 \subsection{Was an einer einzigen Zahl hängt}
 \label{sec:one-number}
 
-Die bedingten Zahlenwerte des Companion gehen auf eine einzige
-dimensionslose Zahl zurück, die Geschwindigkeit \(\beta=0{,}5494\) des
-Materie-Frames, gleichwertig den Frame-Faktor \(\gamma_L=1{,}8647\). In die
+Die Zahl stammt aus der Zählung der Zustände eines Horizonts in der
+Schleifenquantengravitation. Eine Horizont-Zählregel ist eine Gleichung
+\[
+ \sum_j g(j)\,e^{-2\pi\gamma\sqrt{j(j+1)}}=1,\qquad j=\tfrac12,1,\tfrac32,\dots,
+\]
+deren Lösung \(\gamma\) den Barbero-Immirzi-Parameter festlegt; \(g(j)\) ist das
+Gewicht des Spins \(j\). Der Materie-Frame M zählt jeden Spin mit dem Gewicht
+\(g(j)=2\), nach der Regel von Domagala und Lewandowski. Das ergibt \(\gamma_M=0{,}237533\). Der
+Tachyon-Frame T zählt nur \(j=\tfrac12\), ebenfalls mit dem Gewicht 2, nach der
+Regel von Ashtekar, Baez, Corichi und Krasnov. Das ergibt
+\(\gamma_T=\ln2/(\pi\sqrt3)=0{,}127384\) (Runden v4.10.0-r52 und v4.10.0-r53
+\cite{layers}). Der Quotient ist der Frame-Faktor
+\(\gamma_L=\gamma_M/\gamma_T=1{,}8647\). Schreibt man \(\gamma_L=\cosh2\eta\)
+und \(\beta=\tanh\eta\), gehört dazu die Geschwindigkeit \(\beta=0{,}5494\)
+(Rapidität \(\eta=0{,}6175\)). OP1, das erste offene Problem des Companion,
+ist die Frage, warum \(\beta\) diesen Wert hat; gleichwertig: warum M und T
+nach verschiedenen Regeln zählen. In der Beobachterlesart ist M ein
+Beobachter, der sich relativ zum Ruhesystem eines Feldes mit parallelem
+elektrischem und magnetischem Teil bewegt. OP1 fragt dann, warum er sich mit
+\(\beta=0{,}5494\) bewegt; \(\gamma_L\) ist in dieser Lesart das Verhältnis
+der Energiedichten des Feldes, gemessen von M und im Ruhesystem (Runde
+v4.10.0-r29 \cite{companion}).
+
+Das Zeichen \(\gamma\) hat in diesem Abschnitt drei Bedeutungen. Erstens ist
+\(\gamma_L\) ein Frame-Faktor; er hat die Form eines Lorentz-Faktors,
+\(\cosh2\eta\), und ist größer als eins. Zweitens sind \(\gamma_M\),
+\(\gamma_T\) und das \(\gamma\) des Holst-Terms unten Werte des
+Barbero-Immirzi-Parameters. Drittens ist derselbe Wert in geeigneten Einheiten
+die Dimension einer selbstähnlichen Menge; \(\gamma_1\) am Ende des Abschnitts
+ist eine solche Dimension.
+
+Die bedingten Zahlenwerte des Companion gehen auf diese eine
+dimensionslose Zahl zurück. In die
 offenen Probleme gelangt sie über fünf getrennte Gleichsetzungen: einen
 Spektralversatz, die Restbiegung der Leptonphase, \(|U_{e2}|^2=\beta^2\) in
 der Neutrinomischung, \(\Omega_M=\beta^2\) für den Materieanteil und
-\(\cot\theta_W=\gamma_L\). Vier davon wurden gewählt, als die Daten schon
-bekannt waren. Jedes Problem behält daneben einen eigenen Rest, der von der
+\(\cot\theta_W=\gamma_L\). Vier davon wurden erst gewählt, als die Daten schon
+bekannt waren (Bemerkung v4.10.0-r30.6 \cite{companion}). Jedes Problem behält daneben einen eigenen Rest, der von der
 Zahl nicht abhängt \cite{rootmap}.
 
 Wie viel die Treffer wiegen, prüft eine Zufallsabschätzung nach einem vorab
-festgelegten Verfahren. Gegen einen festen Katalog von sechzehn Zielen
-trifft das gewählte Paar von Horizont-Zählregeln dreimal. Unter den
-sechsunddreißig möglichen Paaren erwartet man aber \(0{,}6\) bis \(0{,}8\)
-solche Paare. Solange das Paar gewählt und nicht hergeleitet ist, sind die
-Treffer mit Zufall verträglich \cite{chance}.
+festgelegten Verfahren. Der Katalog umfasst sechzehn Ziele, acht Formen und
+ein Fenster von \(2\sigma\). Das Paar aus der Regel von M und der Regel von T
+trifft dreimal, als einziges der sechsunddreißig möglichen Paare von
+Zählregeln. Für ein zufälliges \(\gamma_L\) liegt die Wahrscheinlichkeit für
+mindestens drei Treffer bei \(0{,}018\) bis \(0{,}023\). Über alle
+sechsunddreißig Paare erwartet man daher \(0{,}6\) bis \(0{,}8\) Paare mit
+mindestens drei Treffern. Nur wenn das Paar ohne Blick auf die Daten
+festgelegt worden wäre, läge die Wahrscheinlichkeit bei etwa \(2\,\%\).
+Solange das Paar gewählt und nicht hergeleitet ist, sind die
+Treffer mit Zufall verträglich. Nachträglich angemerkt: Die beiden getroffenen
+Ziele nahe \(0{,}30\) sind stark korreliert; zwei der drei Treffer sind daher
+fast einer (Bemerkung v4.10.0-r30.5 \cite{chance,companion}).
 
 Die Zahl selbst beruht darauf, zwei Frames verschiedene Zählregeln
 zuzuordnen. Das ist gleichwertig mit einem frame-abhängigen Flächenquant.
@@ -53,21 +90,51 @@ Lorentz-Transformationen, selbst ein komplexer Boost, lassen den
 Barbero-Immirzi-Parameter fest, und nur eine Dualitätsdrehung der Krümmung um
 einen Winkel \(\theta\) ändert ihn nach \(\arctan\gamma\mapsto\arctan\gamma+\theta\).
 Kein im Companion ausgezeichneter Winkel bildet den Wert des Materie-Frames
-auf den des zweiten Frames ab \cite{holst}. Mehr noch: Jede Dualitätsdrehung,
+auf den des zweiten Frames ab (Runde v4.10.0-r31 \cite{holst,layers}). Mehr noch: Jede Dualitätsdrehung,
 reell oder komplex und in beliebiger Folge, erhält die Quadratsumme der
 Einstein- und Holst-Koeffizienten. Für reelle Ergebnisse unterscheiden sich die
 Flächenquanten beider Frames dann um
 \(\sqrt{(1+\gamma_T^2)/(1+\gamma_M^2)}\approx0{,}98\), nicht um den bei gleicher
 Gravitationskonstante nötigen Faktor \(\gamma_T/\gamma_M\).
-Auch die nicht-unitäre Frame-Abbildung \(J_B\) liefert ihn nicht (Runde v4.10.0-r52): Sie ist ein Automorphismus der Lorentz-Algebra, und eine
+Auch die nicht-unitäre Frame-Abbildung \(J_{\mathrm B}\) liefert ihn nicht (Runde v4.10.0-r52 \cite{layers}): Sie ist ein Automorphismus der Lorentz-Algebra, und eine
 Konjugation, unitär oder nicht, lässt jedes Spektrum fest. Liest man die Fläche über die transformierte Simplizitätsbedingung ab, wird \(\gamma\)
 quer zur Frame-Achse zu \(-1/\gamma\) und bleibt entlang der Achse; das ergibt weder \(\gamma_T\) noch \(\gamma_L\).
 In den Einheiten \(r_j=e^{-2\pi\sqrt{j(j+1)}}\) ist jede Zählregel die Ähnlichkeitsgleichung einer selbstähnlichen Familie auf der Geraden mit
-der Dimension \(\gamma<1\) (Runde v4.10.0-r53). Eine neuere Dimensionsformel über Entropieraten, die exakte Überlappungen zulässt (OpenAI-Manuskriptsammlung, Familie 148, unbegutachtet), zeigt, was das
+der Dimension \(\gamma<1\) (Runde v4.10.0-r53 \cite{layers}). Eine neuere, noch unbegutachtete Dimensionsformel über Entropieraten, die exakte Überlappungen zulässt \cite{openai148}, zeigt, was das
 Gewicht 2 der Materie-Regel verlangt: Die beiden Extremzustände \(|j,\pm j\rangle\) müssen als verschiedene Abbildungen wirken. Fallen sie zusammen
 oder wird nur einer zugelassen, sinkt der Wert auf \(\gamma_1=0{,}1616\), und die Regel des zweiten Frames fällt auf die Dimension null. Das Gewicht 2
 verlangt also eine Auslese, die die beiden Orientierungen einer Punktierung unterscheidet, ohne eine auszuwählen; warum sie das tut, ist nicht
 hergeleitet.
+
+\subsection{Welche Messungen die Zahl prüfen}
+\label{sec:data}
+
+Aus der Zahl \(\beta\) und ihren Gleichsetzungen folgen Werte, die Messungen prüfen können. Der Companion hält für jede eine Vorab-Notiz
+mit Prüfgröße, Prüfdatum und Entscheidungskriterium fest, bevor die entscheidenden Daten vorliegen \cite{predictions}. Die Tabelle
+nennt die Werte und ihren Stand am 23.~November 2026. Ein Wert gilt erst als geprüft, wenn eine Messung nach dem festgelegten Stichtag
+vorliegt; frühere Daten werden nur zum Vergleich angegeben.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.07\linewidth}p{.25\linewidth}p{.29\linewidth}p{.29\linewidth}@{}}
+\hline
+\textbf{Name} & \textbf{Vorhersage} & \textbf{entscheidende Messung} & \textbf{Vergleich heute}\\
+\hline
+H9 & \(\sin^2\theta_{12}=\beta^2/\cos^2\theta_{13}=0{,}3086\) & JUNO mit Fehler \(\le0{,}004\) & JUNO 2026: \(0{,}3036\pm0{,}0064\), Abstand \(+0{,}8\sigma\) \cite{juno2026}\\
+H96 & \(\Omega_M=\beta^2=0{,}30185\) & erstes \(\Omega_m\) aus DESI DR3 (nur BAO) oder Euclid; widerlegt bei mehr als \(2\sigma\) & DESI DR2: \(0{,}2975\pm0{,}0086\), Abstand \(+0{,}5\sigma\) \cite{desi-dr2}\\
+H102 & \(m_\tau=1777{,}134\)\,MeV aus der Restbiegung der Leptonphase & erste PDG-Ausgabe nach dem 13.~November 2026; widerlegt bei mehr als \(2\sigma\) & PDG 2026: \(1776{,}93\pm0{,}09\)\,MeV, Abstand \(+2{,}3\sigma\); zählt nicht, weil vor der Vorhersage \cite{pdg}\\
+H112 & \(\sin^2\theta_{12}\cos^2\theta_{13}=\Omega_m\), ohne den Wert von \(\beta\) & die Messungen von H9 und H96 zusammen; widerlegt bei mindestens \(3\sigma\) & JUNO gegen DESI DR2: \(-0{,}1\sigma\)\\
+H15 & \(m_W=80{,}3615\pm0{,}0018\)\,GeV & erste Weltmittelung nach dem 21.~Oktober 2026 & PDG 2026: \(80{,}3625\pm0{,}0077\)\,GeV; zählt nicht, weil vor der Vorhersage\\
+\hline
+\end{tabular}
+\end{center}
+
+Am 23.~November 2026 ist keiner dieser Tests entschieden. Drei Einschränkungen gehören zu jedem Treffer. Erstens hängen alle Werte bis
+auf H112 an der Zuordnung der Zählregeln, also an OP1; die Zufallsabschätzung in Abschnitt~\ref{sec:one-number} gilt deshalb auch hier.
+Zweitens sind H9 und H102 nach dem Sehen der älteren Daten gefunden worden; blind sind sie nur gegenüber künftigen Messungen. Drittens
+prüft H112 eine schwächere Aussage: dass an beiden Stellen dieselbe Zahl steht, gleich welche. Er widerlegt erst ab einem Unterschied
+von etwa \(0{,}022\) in \(\beta^2\). Weitere Vorhersagen zum Mischungswinkel \(\theta_{23}\) warten auf die nächste globale Auswertung
+der Neutrinodaten \cite{predictions}.
 
 \subsection{Welche Rechnung eine Annahme mitführt}
 
@@ -76,19 +143,51 @@ Für eine Nachrechnung wählt man eine Gleichung und schreibt ihre Eingaben auf.
 QAM hält zu einer Formel ihre Darstellung, ihre Voraussetzungen und die noch offenen Übergänge für ihre Anwendung fest. Die im Companion protokollierten symbolischen Kontrollen gehören jeweils zu den durchgeführten Rechnungen. Eine Änderung der physikalischen Kopplung würde die Anwendung auf das gemeinsame Modell berühren. Die Erhaltungsrechnung für den mechanischen Tensor hat ihre eigenen, im Fallbeispiel sichtbaren Voraussetzungen \cite{qam,op5-motion}.
 
 \paragraph{Wolfram-Rechenkontrolle.}
-Für Fassung 0.1.0 liefen in Wolfram Language 15.0.1 insgesamt 80 exakte Prüfgruppen zum HC, zur Feldalgebra, zu Koide und zum geometrischen Vergleich. Die separate Dixon-Rechnung reproduzierte die Kommutantendimensionen sechs und null für den komplex-linearen und den antilinearen Anteil. Anhang~\ref{app:wolfram-output} stellt die Wolfram-Eingaben und ihre Originalausgaben einander gegenüber. Das Wolfram-Begleitarchiv enthält die Eingabeskripte, die protokollierten Ausgaben, den Prüfbericht und den geprüften Stand. Die Rechnungen kontrollieren die angegebenen mathematischen Identitäten und Testfälle unter ihren jeweiligen Voraussetzungen.
+Für Fassung 0.1.0 liefen in Wolfram Language 15.0.1 insgesamt 80 exakte Prüfgruppen zum HC, zur Feldalgebra, zu Koide und zum geometrischen Vergleich. Die separate Dixon-Rechnung reproduzierte die Kommutantendimensionen sechs und null für den komplex-linearen und den antilinearen Anteil. Anhang~\ref{app:wolfram-output} stellt die Wolfram-Eingaben und ihre Originalausgaben einander gegenüber. Das Wolfram-Begleitarchiv enthält die Eingabeskripte, die protokollierten Ausgaben, den Prüfbericht und den geprüften Stand. Die Rechnungen kontrollieren die angegebenen mathematischen Identitäten und Testfälle unter ihren jeweiligen Voraussetzungen. Sie betreffen nur den Stand der Fassung 0.1.0. Teile, die danach hinzugekommen oder erweitert worden sind, decken sie nicht ab, darunter die Abschnitte~\ref{sec:octant-sign} und \ref{sec:one-number}, die Erweiterungen in Abschnitt~\ref{sec:open-points} und Anhang~\ref{sec:anhang-b}. Für die Herleitungen in Anhang~\ref{sec:anhang-b} gibt es eine eigene, enger gefasste Prüfung (Abschnitt~\ref{sec:anhang-b-pruefung}). Die neuen Zahlen in Abschnitt~\ref{sec:one-number} und das Ergebnis zur Auslese in Abschnitt~\ref{sec:open-points} belegt Anhang~\ref{app:new-calcs} mit den Originalausgaben; für die übrigen Aussagen gelten die Belege der jeweils genannten Companion-Runden \cite{companion,layers}.
 
 Für die Vereinheitlichungsfrage ergibt sich so eine Folge von konkreten Aufgaben. Zuerst müssen die Zustände und ihre Ladungsdarstellung gewählt werden. Dann braucht die Massenauslese eine native Operatoridentifikation, einen Auswahlmechanismus und eine Skala. Schließlich muss sich dieselbe Materiekonstruktion in einer erhaltenen Quelle niederschlagen, deren Wirkung sich geometrisch beschreiben und prüfen lässt. Die Rechnungen geben an, an welchen Übergängen diese Schritte voneinander abhängen.
 
 \subsection{Was nach dieser Fassung offen bleibt}
 \label{sec:open-points}
 
+Der Companion führt seine offenen Probleme unter festen Namen. Ein Guard ist dort eine ausdrücklich gesperrte Aussage: Sie darf nicht
+als bewiesen verwendet werden, solange ihr Nachweis fehlt. Die folgende Tabelle nennt die Probleme mit einer Zeile; keines ist
+geschlossen, und kein Guard ist aufgehoben \cite{companion,layers}.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.12\linewidth}p{.55\linewidth}p{.27\linewidth}@{}}
+\hline
+\textbf{Name} & \textbf{Frage} & \textbf{im Artikel}\\
+\hline
+OP1 & Woher kommt die Zahl \(\beta=0{,}5494\), also warum zählen die Frames M und T die Horizontzustände nach verschiedenen Regeln? & Abschnitt~\ref{sec:one-number}\\
+OP2 & Existiert der Dirac-artige Operator auf dem antisymmetrischen Sektor als selbstadjungierter Operator, ohne die zurückgezogene Riemann-Arbeit, und liegt sein Spektralversatz bei \(\beta\)? & nur als Gleichsetzung in Abschnitt~\ref{sec:one-number}\\
+OP3 & Welche Übergänge der Hülle sind zulässig, woher kommen drei Generationen, und was legt Phase und Vorzeichen der Leptonphase fest? & Abschnitte~\ref{sec:charged-multiplicity} und \ref{sec:octant-sign}\\
+OP4 & Woher kommen die Mischungswinkel der Neutrinos und der Quarks? & nur als Gleichsetzung in Abschnitt~\ref{sec:one-number}\\
+OP5 & Wie fügen sich Vakuumbilanz und kosmologische Konstante in den Rahmen, und welche Materiequelle treibt welches geometrische Feld? & Fallstudie in Abschnitt~\ref{sec:op5-coupling}, Anhang~\ref{sec:anhang-b-annahmen}\\
+C5 & Kann die verbleibende Obstruktion in endlich vielen Schritten exakt null werden, statt nur unter eine Detektorschwelle zu fallen? & nicht behandelt\\
+C6/T2 & Schließen alle Auslesungen zugleich, global und nicht nur lokal? & nicht behandelt; durch Guards gesperrt\\
+\hline
+\end{tabular}
+\end{center}
+
 Drei Fragen tragen die weitere Arbeit. Sie sind hier mit ihrem Stand zusammengefasst; die Herleitungen dazu stehen im Companion.
+
+Wie sie zusammenhängen, ordnet Runde v4.10.0-r55 des Companion \cite{crossmap,layers}. Alle bedingten Zahlenwerte hängen an der einen Zahl aus
+Abschnitt~\ref{sec:one-number}. Quer zu den einzelnen Problemen liegen zwei Lücken. Die erste ist die Auslese: Mehrere Stellen brauchen ein
+Bezugssystem, eine Achse und eine Zeitorientierung, die der Companion nicht festlegt. Sie zerfällt in die Frage nach der Orientierung, die
+beim Vorzeichen des Oktantschritts und bei der Zählung der Horizontzustände auftritt, und die Frage nach Bezugssystem und Achse, die die
+Beobachterlesart des Materie-Frames und die gerichtete OP5-Auslese betrifft. Die zweite Lücke ist eine gemeinsame Dynamik mit eigener Skala,
+die bisher fehlt. Daneben hat jedes Problem einen eigenen Rest, der von der Zahl nicht abhängt. Die erste der drei Fragen unten gehört zur
+Orientierung, die zweite zu einem solchen Rest, die dritte zu Bezugssystem und Achse und zur fehlenden Dynamik.
 
 \paragraph{Ein nativer physikalischer Operator.}
 Die Massenauslese braucht einen Operator, der aus dem gemeinsamen Träger folgt und nicht nachträglich gewählt ist. Bisher ist er nicht
 gefunden. Abschnitt~\ref{sec:octant-sign} zeigt, dass der vorhandene Kompensator auf den geschlossenen ungeraden Zuständen verschwindet
-und dass kein Baustein des Companion das Vorzeichen des Oktantschritts festlegt; es ist eine Zeitorientierung der Auslese. Abschnitt
+und dass kein Baustein des Companion das Vorzeichen des Oktantschritts festlegt; es ist eine Zeitorientierung der Auslese. Dieselbe
+Orientierung tritt bei der Zählung der Horizontzustände wieder auf: Das Gewicht 2 der Materie-Regel verlangt eine Auslese, die die beiden
+Orientierungen einer Punktierung unterscheidet, ohne eine auszuwählen (Runde v4.10.0-r53 \cite{layers}). Ein nativer Operator müsste beides zugleich
+erklären, das Vorzeichen im Einzelfall und die Unterscheidung in der Zählung. Abschnitt
 \ref{sec:one-number} zeigt, dass alle bedingten Zahlenwerte an einer Zahl hängen, die über gesetzte Gleichsetzungen eingeht.
 
 \paragraph{Eine hergeleitete Zuordnung der Eichladungen.}
@@ -98,21 +197,14 @@ Generationsindex sitzen kann: nicht in der Farbe, sondern in einer farbneutralen
 \paragraph{Ein unabhängig begründetes geometrisches Quellgesetz.}
 Für den gewöhnlichen Teil ist es vorhanden: Der präparierte Beitrag in Abschnitt~\ref{sec:op5-coupling} folgt allein aus der
 linearisierten Einstein-Gleichung und ist außerhalb seines Trägers kompakt (Anhang~\ref{sec:anhang-b-kompakt}). Der gerichtete Kontrast
-braucht zusätzlich die Gleichsetzung der Higgsquelle mit dem Antrieb des Vergleichsfelds. Am Higgs-Sektor der Wirkung W2 folgt sie für
-den skalaren Kanal, wenn das Vergleichsfeld der Higgs-Radialmodus ist; dann fehlt aber der gerichtete Vermittler, an dem der Kontrast
-hängt. Ein Vakuumfeld mit den nötigen Eigenschaften findet sich im Companion nicht; die optische Mode des Materials erfüllt sie, macht den
-Kontrast aber zu einer Eigenschaft der Präparation. Durchgerechnet trägt dieser Weg teilweise: Masse, Richtung und Kopplung
-kommen aus der Probe, der Zähler bleibt eine Potenz hinter dem Vergleichsmodell zurück. Ein Vakuumhintergrund erreicht den Zähler,
-setzt aber Rahmen, Achse und Polarisationsstruktur. Ein gespannter String zwischen den Systemen liefert diese drei selbst und trifft die
-gerichteten Anteile exakt, unter eigenen Annahmen zur Spannung. Ein erster Feldansatz reproduziert den Vermittlerterm exakt und
-stabil; der dafür nötige Skalar folgt als Komponente eines einzigen Tensorfelds, wenn dessen Zeit-Quer-Komponenten nicht koppeln. Das gilt genau dann, wenn der Austausch beide Zeitorientierungen gleich gewichtet; der Gegenstrom des OP5-Keims liefert diese Gewichte
-bis auf weniger als \(10^{-3}\), in den Werten am Keimpunkt; die ersten und zweiten Ableitungen legt das Modell nicht so fest, dass sie die Frage entscheiden. Eine Bilanz zeigt allerdings, dass diese
-Frage nur in einer bestimmten Zerlegung des Vermittlers entsteht; liest man Rahmen und Achse als Daten der Auslese, bleiben ein massiver Spin-2-Vermittler, seine Kopplung und eine aus Gründen der
-Kausalität verlangsamte Ausbreitung gesetzt. Die Auslese ist von derselben Art wie in der Beobachterlesart von OP1, verteilt Achse und Ruhesystem
-aber anders. Mit dem lichtschnellen Higgsradius von W2 ist die gerichtete Kopplung für keine Wahl der Vermittler kausal verträglich, und im Vakuum
-begrenzen Laborgrenzen der Lorentz-Verletzung sie auf \(g_m^2\lesssim10^{-26}\); ein beobachtbarer Kontrast verlangt ein Material. Auch eine Verbiegung durch die Frame-Abbildung zwischen M und T hilft nicht. Offen ist damit, ob es einen solchen Vermittler als
-eigenes Feld gibt (Anhang~\ref{sec:anhang-b-annahmen}). Eine Gravitationswirkung mit Holst-Term liefert den Unterschied der
-Zählregeln zwischen den Frames nicht (Abschnitt~\ref{sec:one-number}).
+braucht zusätzlich die Gleichsetzung der Higgsquelle mit dem Antrieb des Vergleichsfelds; am Higgs-Sektor der Wirkung W2 folgt sie nur für
+den skalaren Kanal, und dann fehlt der gerichtete Vermittler, an dem der Kontrast hängt (Runde v4.10.0-r33 \cite{layers}). Die Suche nach
+diesem Vermittler in den Runden v4.10.0-r34 bis v4.10.0-r54 trägt nur teilweise: Gesetzt bleiben ein massiver Spin-2-Vermittler, seine
+Kopplung an den Higgsradius und eine aus Gründen der Kausalität verlangsamte Ausbreitung, und Bezugssystem und Achse sind bei OP5 eine
+Setzung des Detektors, keine Wahl des Feldes \cite{layers}. Mit dem lichtschnellen Higgsradius von W2 ist die gerichtete Kopplung für keine
+Wahl der Vermittler kausal verträglich, und im Vakuum begrenzen Laborgrenzen der Lorentz-Verletzung sie auf \(g_m^2\lesssim10^{-26}\); ein
+beobachtbarer Kontrast verlangt ein Material. Offen ist damit, ob es einen solchen Vermittler als eigenes Feld gibt; die einzelnen Schritte
+stehen in Anhang~\ref{sec:anhang-b-vermittler}.
 
 Keiner dieser Punkte ist durch die vorliegende Fassung geschlossen. Sie legt offen, an welcher Stelle eine Herleitung ansetzen müsste.
 

@@ -1,0 +1,33 @@
+H122, tatsaechliche Ausgaben (Wolfram-MCP-Kern, 23.11.2026). In jedem Block meldet der Linter "Symbol::undefined2" fuer
+Hilfssymbole und "General::messages"; das sind keine Rechenfehler. Zwei Laeufe brachen mit "The connector's server returned an error"
+ab (Block 3 mit zusaetzlichem Minimize/Reduce-ForAll; Block 5 mit Minimize ueber drei Variablen) und wurden ohne diese Teile wiederholt.
+
+=== Block 1 (OP1) ===
+(a) Q_F - Q_F(0) = 2 (B0^2 + E0^2) Sin[th]^2 Sinh[et]^2
+(a) entlang z (th=0): B0^2 + E0^2 ; quer (th=Pi/2): (B0^2 + E0^2) Cosh[2 et]
+(a) Hessesche in (eta*d) bei 0: 4 (B0^2 + E0^2) Sin[th]^2
+
+=== Block 2 (OP5, modeweise) ===
+Kontrolle Rahmen: u.u = 1, n.n = -1, u.n = 0
+Kontrolle N(0) = 2 (k1^2 + k2^2)^2/3
+Kontrolle r46.3 entlang, Reihe: 2 (k1^2 + k2^2) (k1^2 + k2^2 - b^2 k3^2)/3
+(b,i) N - N0 entlang (t=0): 2 b^2 k3^2 (-k1^2 + b^2 k1^2 - k2^2 + b^2 k2^2 + b^2 k3^2)/(3 (-1 + b)^2 (1 + b)^2)
+(b,i) N - N0 quer (t=Pi/2): -2 b^2 k1^2 (-k1^2 - k2^2 + b^2 k2^2)/(3 (-1 + b)^2 (1 + b)^2)
+(b,i) Mode k=(1,0,1), b=1/2: entlang -0.148148 ; quer 0.296296
+
+=== Block 3 (OP5, isotropes Mittel, |k| = 1) ===
+Kontrolle: Grade der Monome in k: {4}
+(b,iii) isotrop (K=1): N0 = 16/45 ; N - N0 = b^2 (8 + 13 b^2 - 24 Cos[2 t] + 24 b^2 Cos[2 t] + 3 b^2 Cos[4 t])/(180 (-1 + b)^2 (1 + b)^2)
+(b,iii) entlang (t=0): 2 b^2 (-2 + 5 b^2)/(45 (-1 + b)^2 (1 + b)^2) ; quer (t=Pi/2): -2 (-2 + b) b^2 (2 + b)/(45 (-1 + b)^2 (1 + b)^2)
+(b,iii) b=1/2, t = 0, Pi/6, Pi/4, Pi/3, Pi/2: {-0.0148148, 0.00462963, 0.0259259, 0.0490741, 0.0740741}
+
+=== Block 4 (OP5, Azimutmittel ueber k_perp, a = k1^2 + k2^2) ===
+(Der allgemeine Ausdruck in t ist lang und hier nicht wiedergegeben; N0 = 2 a^2/3.)
+(b,ii) entlang (t=0): 2 b^2 k3^2 (-a + a b^2 + b^2 k3^2)/(3 (-1 + b)^2 (1 + b)^2) ; quer (t=Pi/2): -(1/12) a^2 (-2 + b) b^2 (2 + b)/((-1 + b)^2 (1 + b)^2)
+(b,ii) a=1, k3=1, b=1/2: entlang -0.148148 ; quer 0.138889
+(b,ii) a=1, k3=0 (Moden quer zur Achse), b=1/2: entlang 0. ; quer 0.138889
+
+=== Block 5 (nachtraeglich: k3 = 0, Azimutmittel) ===
+(Zusatz) k3 = 0, Azimutmittel, bei t = 0: 0
+(Zusatz) Reihe in b bis b^2: b^2 Sin[t]^2/3
+(Zusatz) Raster t = 0..Pi/2 (Schritt Pi/16) x b = 0.1,0.3,0.5,0.7,0.9,0.99: Minimum 0., Minimum ohne t=0: 0.000127566, Zeile t=0: {0., 0., 0., 0., 0., 0.}

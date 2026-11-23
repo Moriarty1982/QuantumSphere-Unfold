@@ -10,7 +10,7 @@
 \definecolor{qs axis}{HTML}{565F68}
 \definecolor{qs blue}{HTML}{174D75}
 \definecolor{qs rust}{HTML}{99471C}
-\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Überarbeitungsentwurf zu Preprint 0.1.0}]{hyperref}
+\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Entwurf zu Preprint-Fassung 0.2.0}]{hyperref}
 
 \setlength{\parindent}{1em}
 \raggedbottom
@@ -24,9 +24,25 @@
 \noindent{\large Auf dem Weg zu einem gemeinsamen Rahmen\\
 für Materie, Eichstruktur und Raumzeitgeometrie\par}
 \vspace{0.7em}
-\noindent Marc Brendecke\hfill{\small Überarbeitung zu 0.1.0 \enspace$\cdot$\enspace 22. November 2026}\par
-\noindent{\small Veröffentlichte Fassung \href{https://doi.org/10.5281/zenodo.24405553}{doi:10.5281/zenodo.24405553}\par}
+\noindent Marc Brendecke\hfill{\small Entwurf zu Fassung 0.2.0 \enspace$\cdot$\enspace 23. November 2026}\par
+\noindent{\small Vorige Fassung 0.1.0: \href{https://doi.org/10.5281/zenodo.24405553}{doi:10.5281/zenodo.24405553}; alle Fassungen: \href{https://doi.org/10.5281/zenodo.24405552}{doi:10.5281/zenodo.24405552}\par}
 \vspace{0.55em}
+\begin{quote}
+\small
+\noindent\textbf{Zusammenfassung.}
+Der Artikel fragt, was ein Heisenberg-Kompensator leisten müsste, und folgt dieser Frage vom Photon zu einem gemeinsamen
+mathematischen Träger für Materie, Eichstruktur und Raumzeitgeometrie. Ein Feldbeispiel zeigt, was die Projektion des
+Kompensators an einem Lichtfeld auswählt; ihr Bild ist nicht lichtartig. Als Träger dienen die Biquaternionen. Ein Vergleich mit
+der Dixon-Algebra grenzt ein, wo ein Generationsindex sitzen kann; die Zahl der Generationen bleibt eine Eingabe. Bei den Massen
+trennt der Artikel die Koide-Bedingung von der Phase: Die Überlappung legt das Spektrum nicht fest, und das Vorzeichen des
+Oktantschritts ist eine Zeitorientierung der Auslese, die kein Baustein des Companion festlegt. Eine Fallstudie zum offenen
+Problem OP5 verfolgt eine präparierte Materiequelle bis zum geometrischen Achsenkontrast. Der gewöhnliche Beitrag folgt aus der
+linearisierten Einstein-Gleichung; der gerichtete Kontrast braucht einen Vermittler, den die Vergleichswirkung nicht enthält,
+und ist im Vakuum nur mit verschwindend kleiner Kopplung verträglich, verlangt also ein Material. Alle bedingten Zahlenwerte
+hängen an einer einzigen Zahl, deren Herkunft aus den Zählregeln eines Horizonts offen ist. Der Artikel beansprucht keine Lösung
+der offenen Probleme. Er legt offen, welche Annahmen jede Rechnung mitführt und wo eine Herleitung ansetzen müsste. Die
+Rechnungen sind mit Wolfram Language geprüft; maßgebliche Fassung ist der Quantum Sphaera Companion.
+\end{quote}
 \section*{Vorwort}
 Was soll ein Heisenberg-Kompensator eigentlich kompensieren? Und wenn man dann mal endlich erfährt, was er kompensieren soll, fragt man sich ziemlich erstaunt: \glqq Wie verdammt noch mal soll er das machen?\grqq{}
 
@@ -55,6 +71,15 @@ Und, was passiert mit unserer Physik, wenn wir einfach mal annehmen, dass es so 
 \input{sections/06-geometry}
 \input{sections/08-tests}
 
+\section*{Zur Arbeitsweise}
+Der Text, viele Rechnungen und die Skripte dazu sind im Dialog mit Sprachmodellen entstanden, vor allem mit Claude (Anthropic) und mit
+Codex und ChatGPT (OpenAI). Die Modelle schlugen Rechenwege vor, schrieben Skripte und Textentwürfe und suchten Literatur. Exakte
+Identitäten und Zahlenwerte sind mit Wolfram Language nachgerechnet, eine Rechnung mit Python und sympy (Anhänge~A bis C); ausgewählte Aussagen der QAM-Ebene des Companion
+sind zusätzlich in Lean formalisiert. Jeder Test mit Entscheidungskriterium wird vor der Rechnung als Vorab-Notiz festgeschrieben und
+versioniert; Erkundungen, deren Ergebnis vorher absehbar war, sind als nicht blind gekennzeichnet. Skripte, Ausgaben und die
+Versionsgeschichte liegen öffentlich im Repository \cite{repo}. Die Wahl der Ansätze, die gesetzten Annahmen und jede Veröffentlichung
+entscheidet der Autor; er trägt die Verantwortung für den Text.
+
 \clearpage
 \begingroup
 \small
@@ -73,67 +98,92 @@ M.~Brendecke, \emph{QuantumSphere-Unfold}, Quellrepository.
 \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/v5.3.0}{Release-Tag v5.3.0}.
 \bibitem{grundidee}
 M.~Brendecke, \emph{Mit dem heutigen Wissen rückwärts bis zur Grundidee}, Forschungsnotiz, 6. November 2026.
-\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/qsc_back_to_basic_idea_2026_11_06.md}{Feldlesart und Frame-Zuordnung}.
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/qsc_back_to_basic_idea_2026_11_06.md}{Feldlesart und Frame-Zuordnung}.
 \bibitem{feldkern}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/paper/short/p2_kernel.tex}{Kern und Lorentzstruktur}, Kurzentwurf zum Companion.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/paper/short/p2_kernel.tex}{Kern und Lorentzstruktur}, Kurzentwurf zum Companion.
 \bibitem{feldsektoren}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/paper/short/p3_frames.tex}{Dualitätssektoren und Kompensator}, Kurzentwurf zum Companion.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/paper/short/p3_frames.tex}{Dualitätssektoren und Kompensator}, Kurzentwurf zum Companion.
 \bibitem{robertson}
 H.~P. Robertson, \emph{The Uncertainty Principle}, Phys. Rev. 34, 163--164 (1929).
 \href{https://doi.org/10.1103/PhysRev.34.163}{doi:10.1103/PhysRev.34.163}.
 
 \bibitem{qam}
 \emph{QAM-Dokumentation im Companion-Quellrepository}.
-\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/qam/README.md}{QAM und seine Prüfwerkzeuge}.
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/qam/README.md}{QAM und seine Prüfwerkzeuge}.
 \bibitem{op5-density}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_W2_Dichteantrieb.md}{W2-Dichteantrieb und sein gravitativer Begleitterm}, OP5-Forschungsnotiz, 20. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_W2_Dichteantrieb.md}{W2-Dichteantrieb und sein gravitativer Begleitterm}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{op5-channel}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Luminaler_Einstein_Kanal.md}{Luminaler Einstein-Kanal und gerichteter massiver Kontrast}, OP5-Forschungsnotiz, 20. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Luminaler_Einstein_Kanal.md}{Luminaler Einstein-Kanal und gerichteter massiver Kontrast}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{op5-motion}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dynamische_Gegenbewegung.md}{Dynamische Gegenbewegung mit kompakter linearer Gravitation}, OP5-Forschungsnotiz, 20. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Dynamische_Gegenbewegung.md}{Dynamische Gegenbewegung mit kompakter linearer Gravitation}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{op5-axis}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gleicher_Messweg_Nullprofil.md}{Nullprofil und Krümmungsschaltung im selben Messweg}, OP5-Forschungsnotiz, 20. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Gleicher_Messweg_Nullprofil.md}{Nullprofil und Krümmungsschaltung im selben Messweg}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{op5-elastic-limit}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Hyperelastische_Halterung.md}{Hyperelastische Halterung in zweiter Ordnung}, OP5-Forschungsnotiz, 20. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Hyperelastische_Halterung.md}{Hyperelastische Halterung in zweiter Ordnung}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{op5-reservoir}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Reservoir_Quadrupolabgleich.md}{Reservoirabgleich der direkten Dichtebeiträge}, OP5-Forschungsnotiz, 20. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Reservoir_Quadrupolabgleich.md}{Reservoirabgleich der direkten Dichtebeiträge}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{dixon-commutant}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/sources/research/parts/v4100-post-release-layers.tex#L2582}{Kommutant einer Generation}, Companion, Runde v4.10.0-r19.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/sources/research/parts/v4100-post-release-layers.tex#L2582}{Kommutant einer Generation}, Companion, Runde v4.10.0-r19.
 \bibitem{dixon-copies}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op3_dixon_copies_2026_11_16/README.md}{Zwei und vier Dixon-Kopien}, OP3-Forschungsnotiz, 16. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op3_dixon_copies_2026_11_16/README.md}{Zwei und vier Dixon-Kopien}, OP3-Forschungsnotiz, 16. November 2026.
 \bibitem{op5-budget}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_AB_Fehlerbudget.md}{A/B-Fehlerbudget}, OP5-Forschungsnotiz.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_AB_Fehlerbudget.md}{A/B-Fehlerbudget}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{op5-nullpfad}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Nullpfad_Abgleich.md}{Nullpfad-Abgleich}, OP5-Forschungsnotiz.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Nullpfad_Abgleich.md}{Nullpfad-Abgleich}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{op5-feder}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Feder_Reservoirbilanz.md}{Federarbeit und Reservoirbilanz}, OP5-Forschungsnotiz.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op5_bifocal_response_2026_11_18/OP5_J_Feder_Reservoirbilanz.md}{Federarbeit und Reservoirbilanz}, OP5-Forschungsnotiz, 20. November 2026.
 \bibitem{op5}
-M.~Brendecke, \emph{OP5-Forschungsübergabe nach PR 211}, 20. November 2026.
-\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/f2a4e687273f2ec7f4124d490e696e07c00f387a/llm/Uebergabe.md}{GitHub-Forschungsstand}.
+M.~Brendecke, \emph{OP5-Fallstudie und Vermittlersuche}, Companion, Forschungsschichten v4.10.0-r32 bis v4.10.0-r54, 22.--23. November 2026.
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/sources/research/parts/v4100-post-release-layers.tex}{Schichtdatei auf GitHub}.
 \bibitem{h113}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/llm/Ergebnis_H113_Farbauslese_Generationsraster.md}{H113: Farbauslese des Generationsrasters}, Testergebnis, 22. November 2026; im Companion Runde v4.10.0-r30.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/llm/Ergebnis_H113_Farbauslese_Generationsraster.md}{H113: Farbauslese des Generationsrasters}, Testergebnis, 22. November 2026; im Companion Runde v4.10.0-r30.
 \bibitem{h115}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/llm/Ergebnis_H115_Kompensator_Oktant.md}{H115: Kompensator und Nullrichtung des flachen Oktanten}, Testergebnis, 22. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/llm/Ergebnis_H115_Kompensator_Oktant.md}{H115: Kompensator und Nullrichtung des flachen Oktanten}, Testergebnis, 22. November 2026; im Companion Runde v4.10.0-r30.
 \bibitem{h116}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/llm/Ergebnis_H116_Spinorband_Phasenquelle.md}{H116: Phasenauslese und Rückkehrquelle des Spinorbands}, Testergebnis, 22. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/llm/Ergebnis_H116_Spinorband_Phasenquelle.md}{H116: Phasenauslese und Rückkehrquelle des Spinorbands}, Testergebnis, 22. November 2026; im Companion Runde v4.10.0-r30.
 \bibitem{h117}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/llm/Ergebnis_H117_Zwei_Umlaeufe.md}{H117: Zwei Umläufe und die Wahl der Oktant-Orientierung}, Testergebnis, 22. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/llm/Ergebnis_H117_Zwei_Umlaeufe.md}{H117: Zwei Umläufe und die Wahl der Oktant-Orientierung}, Testergebnis, 22. November 2026; im Companion Runde v4.10.0-r30.
 \bibitem{h118}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/llm/Ergebnis_H118_Oktant_Orientierung.md}{H118: Orientierung des Oktanten}, Testergebnis, 22. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/llm/Ergebnis_H118_Oktant_Orientierung.md}{H118: Orientierung des Oktanten}, Testergebnis, 22. November 2026; im Companion Runde v4.10.0-r31.
 \bibitem{holst}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/w1_holst_frame_maps_2026_11_22/README.md}{W1 mit Holst-Term und die Frame-Abbildungen}, Forschungsnotiz, 22. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/w1_holst_frame_maps_2026_11_22/README.md}{W1 mit Holst-Term und die Frame-Abbildungen}, Forschungsnotiz, 22. November 2026; im Companion Runde v4.10.0-r31.
 \bibitem{rootmap}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/notes/research/op_root_map_2026_11_18/README.md}{Wurzelkarte der offenen Probleme}, Forschungsnotiz, 18. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/op_root_map_2026_11_18/README.md}{Wurzelkarte der offenen Probleme}, Forschungsnotiz, 18. November 2026; im Companion Runde v4.10.0-r30.
 \bibitem{chance}
-M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1368ae1febea0ce1a497878ddeb84060fc96af55/notes/research/chance_estimate_2026_11_18/README.md}{Zufallsabschätzung der Treffer von \(\gamma_L\)}, Forschungsnotiz, 18. November 2026.
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/chance_estimate_2026_11_18/README.md}{Zufallsabschätzung der Treffer von \(\gamma_L\)}, Forschungsnotiz, 18. November 2026; im Companion Runde v4.10.0-r30.
 \bibitem{rovelli}
 C.~Rovelli und S.~Speziale, \emph{Reconcile Planck-scale discreteness and the Lorentz-Fitzgerald contraction}, Phys. Rev. D 67, 064019 (2003).
 \href{https://doi.org/10.1103/PhysRevD.67.064019}{doi:10.1103/PhysRevD.67.064019}.
+\bibitem{openai148}
+OpenAI, \emph{The entropy-rate dimension formula for self-similar measures on the line}, Manuskript, 24. September 2026, unbegutachtet;
+\href{https://github.com/openai/math/tree/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-entropy-rate-dimension-formula-for-self-similar-measures-on-the-line-September-24-2026}{OpenAI-Manuskriptsammlung, Familie 148}.
+\bibitem{crossmap}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/v4_10_0_r55/README.md}{Wie die offenen Probleme zusammenhängen}, Companion, Runde v4.10.0-r55, 23. November 2026.
+\bibitem{layers}
+M.~Brendecke, \emph{Quantum Sphaera Companion, Forschungsschichten nach v5.3.0}, Runden v4.10.0-r31 bis v4.10.0-r55, 22.--23. November 2026;
+noch in keiner veröffentlichten Fassung. \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/sources/research/parts/v4100-post-release-layers.tex}{Schichtdatei auf GitHub}.
+\bibitem{koide}
+Y.~Koide, \emph{A fermion-boson composite model of quarks and leptons}, Phys. Lett. B 120, 161--165 (1983).
+\bibitem{pdg}
+F.~Takahashi u.~a. (Particle Data Group), \emph{Review of Particle Physics}, Int. J. Mod. Phys. A 41, 2630011 (2026).
+\bibitem{dixon}
+G.~M.~Dixon, \emph{Division Algebras: Octonions, Quaternions, Complex Numbers and the Algebraic Design of Physics}, Kluwer, Dordrecht 1994.
+\bibitem{furey}
+C.~Furey, \emph{Charge quantization from a number operator}, Phys. Lett. B 742, 195--199 (2015).
+\bibitem{predictions}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/852dc9b5ebe27acf82bac51634f2be1ebc1e6bb4/notes/research/predictions}{Vorab-Notizen und Ergebnisse der Vorhersagen}, Companion-Begleitordner, Stand 23. November 2026.
+\bibitem{juno2026}
+JUNO Collaboration, \emph{Measurement of Neutrino Oscillation Parameters at JUNO and Indication of the Neutrino Mass Ordering},
+arXiv:2609.37895 (2026).
+\bibitem{desi-dr2}
+DESI Collaboration, \emph{DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints},
+arXiv:2503.14738 (2025).
 \end{thebibliography}
 \endgroup
 \clearpage
 \appendix
 \input{sections/a-wolfram-output}
 \input{sections/b-herleitungen-op5}
+\input{sections/c-neue-rechnungen}
 
 \end{document}
