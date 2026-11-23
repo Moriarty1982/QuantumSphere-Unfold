@@ -1,0 +1,110 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r54 Source-Only: Does the Readout Fix Its Own Frame? (H122, Q1b)}
+\addcontentsline{toc}{section}{v4.10.0-r54 Source-Only: Does the Readout Fix Its Own Frame? (H122)}
+\label{sec:v4100-r54-readout-frame}
+% ============================================================================
+
+\paragraph{Purpose.}
+The cross-section Q1 of the open problems asks for one readout law that supplies the frame \(u\), the axis \(n\) and the time orientation used by
+OP1 (reading B), OP3 and OP5.  At the author's choice this layer takes the branch Q1b, frame and axis, and asks whether the readout fixes its own
+frame: as an extremum of the readout, which is quadratic in \(u\), over all observers, degenerate exactly under boosts along the axis.  Layer r48.2
+called the readouts of OP1 and OP5 related, not the same; this layer sharpens that comparison.  Hypothesis H122 was fixed before the computation
+(commit \texttt{d861db0e}); H122a and the mode-wise parts of H122b and H122c are not blind, the exact all-order statements and the averages are.
+Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r54 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r54 setting}
+\label{subsec:v4100-r54-setting}
+
+OP1: a field strength with \(\mathbf E\parallel\mathbf B\) along \(z\) in its rest frame \(R\), read by an observer \(u\) obtained from \(R\) by a boost of rapidity \(\eta\) in an arbitrary
+direction at polar angle \(\theta\) to the axis; readout \(Q_F(u)=|\mathbf E'|^2+|\mathbf B'|^2\).  OP5: the transverse tidal readout of r46,
+\(\mathcal L=-h\,\Pi^{\mu\nu}u^\alpha u^\beta R^{(1)}_{\mu\alpha\nu\beta}[\gamma]\), with the Fierz--Pauli numerator \(N\) of its source; static modes \(k=(0,k_1,k_2,k_3)\) in the rest
+frame \(u_p\) of the preparation; the detector frame \((u,n)\) is the image of \((u_p,e_z)\) under a pure boost of velocity \(b\) in a direction at angle \(t\) to the axis.
+Three stages: single modes, the mean over the azimuth of \(k_\perp\), and the isotropic mean over directions of \(k\).
+
+\subsection*{v4.10.0-r54 results}
+\label{subsec:v4100-r54-results}
+
+\paragraph{Theoremlet v4.10.0-r54.1 (H122a confirmed: in OP1 the field fixes the frame).}
+\(Q_F(u)-Q_F(R)=2(E_0^2+B_0^2)\sin^2\theta\,\sinh^2\eta\ge0\), with equality exactly for boosts along the axis; the Hessian at \(\eta=0\) is \(4(E_0^2+B_0^2)\sin^2\theta\), with kernel exactly
+the axis.  The frame \(\mathbf E\parallel\mathbf B\) is the unique minimum of the readout up to boosts along the axis, and the axis is the degenerate direction.
+\emph{Proof.} Exact Lorentz transformation of \(\mathbf E,\mathbf B\) (script \texttt{h122}).  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r54.2 (H122b refuted: in OP5 the preparation frame is a saddle).}
+\(N(b,t)-N(0)\) changes sign with the direction of the detector boost in all three stages: for the mode \(k=(1,0,1)\) at \(b=\tfrac12\) it is \(-0.148\) along the
+axis and \(+0.296\) across it; in the azimuthal mean (\(a=k_3=1\)) \(-0.148\) and \(+0.139\); in the isotropic mean (\(|k|=1\)) exactly
+\(2b^2(5b^2-2)/(45(1-b^2)^2)\) along the axis, negative for \(b^2<\tfrac25\), and \(2b^2(4-b^2)/(45(1-b^2)^2)>0\) across it.
+\emph{Proof.} Exact symbolic evaluation with the functions of r46; averages by the angular moments of the quartic numerator.  \(\square\)
+
+\paragraph{Theoremlet v4.10.0-r54.3 (H122c refuted: in OP5 the axis is no degenerate direction).}
+Along the axis \(N\) changes for every mode and every azimuthal mean with \(k_3\ne0\) (term proportional to \(b^2k_3^2\)), and in the isotropic mean as in r54.2.
+In the isotropic mean no direction keeps \(N=N(0)\) for all \(b\): this would require \(8-24\cos2t=0\) and \(13+24\cos2t+3\cos4t=0\) at once.
+\emph{Proof.} Coefficients in \(b\) of the exact isotropic expression \(b^2(8+13b^2-24\cos2t+24b^2\cos2t+3b^2\cos4t)/(180(1-b^2)^2)\).  \(\square\)
+
+\paragraph{Remark v4.10.0-r54.4 (reading; does not carry).}
+Against the criterion fixed beforehand H122 does not carry.  In OP1 frame and axis belong to the field: the readout selects them as an extremum.
+In OP5 they are an external setting of the detector: the readout does not select them.  This sharpens r48.2 from ``related, not the same'' to a
+structural difference.  The assignment named in r48.2 (measuring axis along \(\mathbf E\parallel\mathbf B\), velocity referred to \(R\)) is compatible with the OP5 readout
+but not selected by it.  A common law for frame and axis therefore needs an additional setting.  Found after the fact and not part of the
+criterion: for a preparation whose modes are all transverse to the axis (\(k_3=0\)), the azimuthal mean gives \(N-N(0)=a^2b^2\sin^2t/3+O(b^4)\), zero exactly along
+the axis and positive elsewhere on a grid \(t\in[0,\tfrac\pi2]\), \(b\in[0.1,0.99]\); this preparation has the structure of OP1, with the axis as a property of the
+preparation.  It is a new setting that would need its own pre-registered test; the ray along the axis of r32.4 is the opposite case (\(k\parallel n\), \(N=0\)).
+The vanishing of the isotropic second-order term at \(\cos^2t=\tfrac23\) is the ordinary quadrupole structure and is not weighted.
+
+\subsection*{v4.10.0-r54 frames}
+\label{subsec:v4100-r54-frames}
+
+OP1 in the matter frame M with the field rest frame \(R\); OP5 in the matter frame M with the preparation frame \(u_p\) and the detector frame \((u,n)\).  The two
+readouts are compared only in their structure (extremum and degenerate direction), not in their values; no quantity of another frame is used.
+Time orientation drops out of both readouts (r46.2, r48.2) and is not tested here (branch Q1a).
+
+\subsection*{v4.10.0-r54 register entries}
+\label{subsec:v4100-r54-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r54\\
+\midrule
+H122a (OP1 frame as extremum) & confirmed (not blind)\\
+H122b (OP5 preparation frame as extremum) & refuted: saddle in all three stages\\
+H122c (OP5 axis as degenerate direction) & refuted\\
+common readout law for frame and axis (Q1b) & not supplied by the readout; needs an additional setting\\
+OP1, OP5, Q1 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r54 notes}
+\label{subsec:v4100-r54-notes}
+
+\texttt{llm/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H122\_\allowbreak Auslese\_\allowbreak Extremum.md} (commit d861db0e),
+\texttt{llm/\allowbreak Ergebnis\_\allowbreak H122\_\allowbreak Auslese\_\allowbreak Extremum.md}, script \texttt{llm/\allowbreak h122\_\allowbreak readout\_\allowbreak extremum.wl},
+output \texttt{llm/\allowbreak h122\_\allowbreak readout\_\allowbreak extremum.txt}.
+
+\subsection*{v4.10.0-r54 ledger and guard update}
+\label{subsec:v4100-r54-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r54}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited script; a common readout law for frame and axis not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r54,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r54}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
