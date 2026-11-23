@@ -1,0 +1,24 @@
+Wolfram Language (MCP WolframLanguageEvaluator), 23.11.2026. Tatsaechlich erzeugte Ausgaben, unveraendert uebernommen.
+
+Versuch 1 (ganzer Block mit Assuming/Module) und Versuch 2: "The connector's server returned an error." Keine Ausgabe.
+
+DSolve (a):
+Part::pkspec1: -- Message text not found -- (#1)
+Part::pkspec1: -- Message text not found -- (Internal`ProcessEquations`ProcessEquationsDump`i)
+General::messages: Messages were generated which may indicate errors.
+Out = {{x[t] -> (E^(-(k1*t) - k2*t)*(-k2 + E^((k1 + k2)*t)*k2 + k1*x0 + k2*x0))/(k1 + k2)}}
+(Die internen Meldungen betreffen die Gleichungsaufbereitung; die Loesung ist unten per Einsetzen geprueft: Rest 0.)
+
+(a) M<->T: Grenzwert = k2/(k1 + k2) ; Kontrolle Dgl: 0 ; s1(0) = x0
+(a) Untergrenze: min(x0, k2/(k1+k2)) > 0, da s1 monoton zwischen x0 und k2/(k1+k2): s1 = k2/(k1+k2) + (x0 - k2/(k1+k2)) E^(-(k1+k2) t) -> 0
+(b) M->T: C5_M = x0 E^(-k t), > 0 fuer jedes endliche t, Grenzwert 0
+(c) M+T<->2T: Gleichgewichte von (1-x)(-k1 x + k2 (1-x)) = 0: {{x -> 1}, {x -> k2/(k1 + k2)}}
+(d) M+T->2T: Kontrolle Dgl x' = -k x (1-x): 0 ; s4(0) = x0 ; Grenzwert 0
+
+(c) k1=2,k2=1,x0=1e-6: min x = 1.00000*10^-6, x(40) = 0.3333333333 (k2/(k1+k2) = 1/3)
+Drei-Frame-Netz, schwach reversibel: min M = 0.00001, M(60) = 0.25873, Summe(60) = 1.
+Summe(0) = 1.
+
+x' = -c Sqrt[x]: Loesung (Sqrt[x0] - c t/2)^2 fuer t <= t*, Kontrolle: 0 ; Nullzeit t* = {{t -> 2 Sqrt[x0]/c}}
+x' = -c x: x0 E^(-c t) == 0 loesbar fuer endliches t? False
+S = N^2 bei N = t - t0: S(t0) = 0, S'(t0) = 0 (doppelte Nullstelle, kein monotoner Abstieg ueber t0 hinaus)
