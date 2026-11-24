@@ -27,7 +27,7 @@ fixiert den Quellstand des PDFs (Commit 1db863c8); die Repo-Links im Artikel zei
 gehören zur nächsten Fassung.
 
 Nachtrag 23.11.2026 (nach 0.2.0, Entwurf): Abschnitt 5.6 nennt den Negativ-Schluss für den Rest von OP5 (Runde v4.10.0-r56, Λ als Eingabe),
-mit neuem Literatureintrag `lambdainput`; der Kopf lautet „Entwurf nach Fassung 0.2.0“. Der Link auf die Rundennotiz zeigt bis zum Merge auf `main`.
+mit neuem Literatureintrag `lambdainput`; der Kopf lautet „Entwurf nach Fassung 0.2.0“. Der Link auf die Rundennotiz ist auf den Merge-Commit 1f7318f5 von PR #271 gepinnt. Abschnitt 5.6 nennt außerdem den Attraktor-Weg (Runde v4.10.0-r57, H124).
 
 ## Querverweise
 
