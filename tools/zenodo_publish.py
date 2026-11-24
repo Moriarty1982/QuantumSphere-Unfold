@@ -264,6 +264,34 @@ def read_default_preview(api_base: str, token: str, deposition_id: str) -> Optio
     return files.get("default_preview") if isinstance(files, dict) else None
 
 
+RDM_HEADERS = {"Accept": "application/vnd.inveniordm.v1+json", "Content-Type": "application/json"}
+
+
+def rdm_request(method: str, url: str, token: str, payload: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    """Call the InvenioRDM records API (needed for files.default_preview)."""
+    data = json.dumps(payload).encode("utf-8") if payload is not None else None
+    headers = dict(RDM_HEADERS, Authorization=f"Bearer {token}")
+    req = urllib.request.Request(url, data=data, headers=headers, method=method)
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            body = resp.read().decode("utf-8")
+            return json.loads(body) if body else {}
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise ZenodoError(f"HTTP {exc.code} from {url}: {body[:1000]}") from exc
+
+
+def set_default_preview(api_base: str, token: str, record_id: str, name: str) -> Optional[str]:
+    """Set files.default_preview on the record's open draft and return the value Zenodo reports."""
+    url = f"{api_base}/records/{record_id}/draft"
+    draft = rdm_request("GET", url, token)
+    if (draft.get("files") or {}).get("default_preview") == name:
+        return name
+    draft.setdefault("files", {})["default_preview"] = name
+    draft = rdm_request("PUT", url, token, draft)
+    return (draft.get("files") or {}).get("default_preview")
+
+
 def publish_deposition(api_base: str, token: str, deposition_id: str) -> Dict[str, Any]:
     return request_json("POST", f"{api_base}/deposit/depositions/{deposition_id}/actions/publish", token, payload={})
 
@@ -365,11 +393,11 @@ def main() -> int:
     note("Files uploaded.")
 
     if args.default_preview:
-        current = read_default_preview(api_base, token, deposition_id)
-        if current and current != args.default_preview:
-            raise ZenodoError(f"Draft preview is {current}, not {args.default_preview}; set it in the Zenodo draft "
-                              "before publishing")
-        note(f"Draft preview: {current or 'not set explicitly; ' + args.default_preview + ' was uploaded first'}")
+        # Uploading files resets the preview, so set it explicitly on every run, also right before publishing.
+        current = set_default_preview(api_base, token, deposition_id, args.default_preview)
+        if current != args.default_preview:
+            raise ZenodoError(f"Draft preview is {current}, not {args.default_preview}; not publishing")
+        note(f"Draft preview set: {current}")
 
     if args.sleep_after_upload > 0:
         time.sleep(args.sleep_after_upload)
