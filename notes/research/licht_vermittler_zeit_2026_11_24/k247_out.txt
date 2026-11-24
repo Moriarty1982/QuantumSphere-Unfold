@@ -1,0 +1,8 @@
+Lauf 24.11.2026 im Wolfram-Kern der Sitzung (keine lokale Installation). Meldung: Linter-Hinweis "Global symbols ... are undefined"
+(statusloser Kern, Definitionen im selben Aufruf), kein Rechenfehler.
+Lambda(i pi) auf k: {-1, -nx, ny, nz}
+unitaer S K S^dagger: {1, nx, -ny, -nz}
+holomorph S K S: {-1, -nx, ny, nz}
+B_M = 1/4 + I/4   Arg/(pi/4) = 1
+B nach gemeinsamer Abbildung S: 1/4 + I/4   gleich: True
+umgekehrte Reihenfolge: 1/4 - I/4   = Conjugate: True
