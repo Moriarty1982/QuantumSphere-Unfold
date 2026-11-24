@@ -1,0 +1,13 @@
+k250, Wolfram Language (Wolfram-MCP-Kernel), 24.11.2026. Tatsaechliche Print-Ausgaben (2D-Formeln linearisiert).
+Warnung im Lauf: Symbol::undefined2 (Lint-Hinweis zu grossgeschriebenen globalen Namen im ersten Lauf, Namen danach
+klein geschrieben); General::messages als Folge davon. Kein Rechenfehler, keine symbolischen Nullreste ausser dem letzten Print.
+
+Eigenwerte: {0, (-3a - 3b - Sqrt[9a^2 - 6ab + 9b^2])/6, (-3a - 3b + Sqrt[9a^2 - 6ab + 9b^2])/6}
+Eigenvektoren: {{0,-1,1}, {(3a - b + Sqrt[9a^2 - 6ab + 9b^2])/(2b), 1, 1}, {-(1/2)(-3a + b + Sqrt[9a^2 - 6ab + 9b^2])/b, 1, 1}}
+Bargmann (x reell): (2(-1)^(2/3) + x^2)^3
+Im(x^2+2w) fuer reelles x: Sqrt[3]
+Ueberlapp |<v|Sv>|^2/|v|^4: (4 - 2x^2 + x^4)/(2 + x^2)^2
+Ueberlapp = 1/2 loesen: {{x -> -1 + Sqrt[3]}, {x -> 1 + Sqrt[3]}}
+a=b: Grundzustand {{1 + Sqrt[3], 1, 1}, {1 - Sqrt[3], 1, 1}, {0, -1, 1}}
+konjugiertes S: Im(x^2+2 w^2) = -Sqrt[3]
+U (I/2) U^dagger - I/2 = {{0, 0}, {0, 0}}
