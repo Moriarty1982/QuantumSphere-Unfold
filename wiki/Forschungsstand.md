@@ -1,5 +1,18 @@
 # Forschungsstand
 
+### H123 / Runde r58: Zeitlich geordnete Oktant-Auslese auf einer Punktierung (Q1a) (23.11.2026)
+
+Faden „Auslesegesetz Q1a als H123 testen“, Freigabe des Autors „Committen und rechnen“. Vorab-Notiz 1a4662ef, Wolfram exakt, Qiskit-Zyklustest als
+unabhängige Kontrolle; teilweise nicht blind. Gefragt ist, was eine Auslese in drei zeitlich geordneten Fenstern R → T → J_B (Bargmann-Invariante des
+Oktant-Tripels) auf einer Punktierung vom Spin j leistet. **H123a bestätigt (nicht blind):** B = 2^(−3j) e^(iτεjπ/2) für alle j ≤ 20; die Zeitumkehr des
+Protokolls (Reihenfolge umkehren und antiunitäres Θ_j) lässt B fest, wie r31.2 für Spin ½. **H123b widerlegt (erwartet):** Die Auslese gibt beiden
+Orientierungen |j, ±j⟩ denselben Betrag, trennt sie aber nur für j ∉ 2ℕ; für j = 2, 4, … ist B(+j) = B(−j). **H123c bestätigt:** Ein einzelnes
+Fenster (Eigenwert von R_j) trennt nur die halbzahligen j. **H123d trägt nicht:** Die daraus folgende Zählregel (Gewicht 1 auf geraden j) gibt
+γ_M′ = 0,23412, γ_L′ = 1,8379, β′ = 0,5434, m_W′ = 80,099 GeV (−20σ); Leptonfenster und m_W verfehlt, Ω_M = 0,295 im Fenster. Lesart: Das
+Oktantvorzeichen und das Gewicht 2 der Zählung sind in dieser Form nicht derselbe Datensatz; eine Dreiecksauslese, die U2 liefert, braucht einen
+Raumwinkel Ω mit jΩ ∉ πℤ für alle j. Nachträglich: Das gebogene Dreieck der Restbiegung (≈ ⅔) erfüllt das, ist aber aus γ_M gebaut. Auslöser 3 von
+I1 getroffen (als Ausweg genannt, nicht verfolgt). Q1a, OP1, OP3 offen; kein Guard berührt. [Ergebnis](../llm/Ergebnis_H123_Zeitliche_Oktantauslese.md), [Runde](../notes/research/v4_10_0_r58/README.md)
+
 ### H124 / Runde r57: Die Kaskade mit Attraktor Ω_M = β² (23.11.2026)
 
 Auftrag des Autors: „jetzt weg b“ (Attraktor-Weg nach r56; Idee I7 aufgenommen). W1/W2 bleiben eingefroren; gerechnet wird an der einzigen Dynamik des Bestands für das Verhältnis, der Kaskade r31 mit Brücke 3 aus r05.5. **r57.1 (Rückwärtssuche, Wolfram exakt):** dΩ_M/dN = (1 − Ω_M)(εβ² − 3Ω_M) hat die abstoßende Materie-Ära Ω_M = 1 und den Attraktor εβ²/3. Er ist genau für ε = 3 gleich β², also Γ = 3H, ein Kaskadenschritt je Volumen-e-Faltung; am Attraktor w_eff = −0,698, Kopplung δ = 0,906. ε = 3 folgt aus der Attraktorforderung, nicht aus der Struktur. **r57.2 (H124, Vorab-Notiz 7b2b665, nicht blind):** An DESI DR2 BAO mit freiem Ω_M heute ist das Modell nicht ausgeschlossen (χ² = 18,42, p = 0,072, Schwelle 24,72), liegt aber Δχ² = 7,87 hinter ΛCDM und verlangt Ω_M heute ≈ 0,50. **Folge:** β² liegt in der Zukunft; das „warum heute“ bleibt unerklärt, die Epoche bleibt Eingabe wie in r56, der Wert von Λ ebenso. CMB, Supernovae und Wachstum sind nicht geprüft. OP5 und H96 offen. [Ergebnis](../notes/research/predictions/Ergebnis_H124_Kaskaden_Attraktor_DESI_DR2.md).
