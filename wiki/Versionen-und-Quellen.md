@@ -34,7 +34,7 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 | Direkter Vorgänger | v5.1.0, DOI 10.5281/zenodo.24237112 | Historische Veröffentlichung |
 | Ältere Veröffentlichungen | v5.0.0, DOI 10.5281/zenodo.24152615; v4.11.0, DOI 10.5281/zenodo.24108818 | Historische Veröffentlichung |
 | Forschung | nach v4.10.0; neue Layer `v4.10.0-rNN` | Nachträgliche Forschung und Korrekturen |
-| Deutscher Preprint | Fassung 0.2.0, 23.11.2026, DOI 10.5281/zenodo.24481107 (Concept 10.5281/zenodo.24405552) | Deutschsprachiger Fachartikel; gibt den Companion verkürzt wieder |
+| Deutscher Preprint | Fassung 0.2.0, 23.11.2026, DOI 10.5281/zenodo.24481107 (Concept 10.5281/zenodo.24405552); Fassung 0.3.0 vorbereitet (24.11.2026, nicht veröffentlicht) | Deutschsprachiger Fachartikel; gibt den Companion verkürzt wieder |
 | Vorherige Veröffentlichung | v4.9.0, DOI 10.5281/zenodo.23534954 | Historischer Vergleich |
 | Ältere Veröffentlichung | v4.8.0, DOI 10.5281/zenodo.23365244 | Historischer Vergleich |
 | Ältere Veröffentlichung | v4.7.0, DOI 10.5281/zenodo.20232911 | Herkunft und ältere Argumente |

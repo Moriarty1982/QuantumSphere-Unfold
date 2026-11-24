@@ -1,6 +1,6 @@
 # Quantum Sphaera – Artikel zur Vereinheitlichung
 
-**Fassung 0.2.0** veröffentlicht am 23. November 2026: [Zenodo](https://zenodo.org/records/24481107), Version-DOI [10.5281/zenodo.24481107](https://doi.org/10.5281/zenodo.24481107), [GitHub-Release](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/preprint-de-v0.2.0) · [Fassung 0.1.0](https://doi.org/10.5281/zenodo.24405553) · Concept-DOI [10.5281/zenodo.24405552](https://doi.org/10.5281/zenodo.24405552) · [Zenodo-Angaben](ZENODO.md) · [Release-Paket und Schritte](../../release/preprint-de-v0.2.0/README.md)
+**Fassung 0.3.0 in Vorbereitung** (58 Seiten, nicht reserviert, nicht veröffentlicht; [Release-Paket](../../release/preprint-de-v0.3.0/README.md)). **Fassung 0.2.0** veröffentlicht am 23. November 2026: [Zenodo](https://zenodo.org/records/24481107), Version-DOI [10.5281/zenodo.24481107](https://doi.org/10.5281/zenodo.24481107), [GitHub-Release](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/preprint-de-v0.2.0) · [Fassung 0.1.0](https://doi.org/10.5281/zenodo.24405553) · Concept-DOI [10.5281/zenodo.24405552](https://doi.org/10.5281/zenodo.24405552) · [Zenodo-Angaben](ZENODO.md) · [Release-Paket und Schritte](../../release/preprint-de-v0.2.0/README.md)
 
 Eigenständiger deutscher LaTeX-Entwurf über den gemeinsamen mathematischen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie. Die Fassung ist als einspaltiger Fachartikel in fünf Abschnitte gegliedert. Abschnitt 4.4 verfolgt im linearen OP5-Vergleich eine präparierte Materiequelle bis zum geometrischen Achsenkontrast. Die Quellenidentifikation, die vollständige gewöhnliche Bilanz zweiter Ordnung und die Apparaturantwort sind offene physikalische Schritte.
 
@@ -28,6 +28,10 @@ gehören zur nächsten Fassung.
 
 Nachtrag 23.11.2026 (nach 0.2.0, Entwurf): Abschnitt 5.6 nennt den Negativ-Schluss für den Rest von OP5 (Runde v4.10.0-r56, Λ als Eingabe),
 mit neuem Literatureintrag `lambdainput`; der Kopf lautet „Entwurf nach Fassung 0.2.0“. Der Link auf die Rundennotiz ist auf den Merge-Commit 1f7318f5 von PR #271 gepinnt. Abschnitt 5.6 nennt außerdem den Attraktor-Weg (Runde v4.10.0-r57, H124).
+
+Vorbereitung 24.11.2026 (Fassung 0.3.0): Neuer Abschnitt 5.7 „Drehsinn und Turm der Hilbert-Shifts“ nach der Sammelrunde v4.10.0-r59 des
+Companion (Erkundungen k245–k274, nicht blind; Tests H125 und H126). Titelseite auf „Fassung 0.3.0“, Version-DOI leer bis zur Reservierung.
+Änderungsliste, Metadaten und Schritte im [Release-Paket](../../release/preprint-de-v0.3.0/README.md).
 
 ## Querverweise
 

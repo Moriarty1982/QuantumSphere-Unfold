@@ -147,6 +147,53 @@ Für Fassung 0.1.0 liefen in Wolfram Language 15.0.1 insgesamt 80 exakte Prüfgr
 
 Für die Vereinheitlichungsfrage ergibt sich so eine Folge von konkreten Aufgaben. Zuerst müssen die Zustände und ihre Ladungsdarstellung gewählt werden. Dann braucht die Massenauslese eine native Operatoridentifikation, einen Auswahlmechanismus und eine Skala. Schließlich muss sich dieselbe Materiekonstruktion in einer erhaltenen Quelle niederschlagen, deren Wirkung sich geometrisch beschreiben und prüfen lässt. Die Rechnungen geben an, an welchen Übergängen diese Schritte voneinander abhängen.
 
+\subsection{Drehsinn und Turm der Hilbert-Shifts}
+\label{sec:handedness-tower}
+
+Nach Fassung 0.2.0 sind zwei Fragen in einer Reihe von Erkundungen und zwei Tests weiterverfolgt worden; Runde v4.10.0-r59 des Companion
+fasst sie mit ihrem Status zusammen \cite{towerlayer}. Bis auf die beiden Tests H125 und H126 sind alle Schritte Erkundungen, deren Ergebnis
+vor der Rechnung absehbar war; sie sind nicht blind und prüfen nichts.
+
+\paragraph{Woher der Drehsinn kommt.}
+Abschnitt~\ref{sec:octant-sign} und Runde v4.10.0-r58 führen das Vorzeichen des Oktantschritts auf das Produkt \(\tau\varepsilon\) aus der
+Zeitrichtung der Auslese und dem Umlaufsinn der Bahn zurück. Fünf Erkundungen haben gefragt, ob ein weiterer Baustein diesen Drehsinn
+festlegt: der Nullpunkt der Fläche einer Punktierung, die Restdrehung einer Scheibe aus drei Bögen als Holonomie, das Licht als Vermittler
+zwischen den Frames, eine Störung des Lichtgewichts und die Drehrate einer Scheibe als Ursprung von \(\Lambda\). Jede Rechnung setzt den
+Drehsinn voraus, keine legt ihn fest. Zwei Nebenergebnisse sind exakt: Mit dem halbklassischen Spektrum \(j+\tfrac12\) statt
+\(\sqrt{j(j+1)}\) wird die Zählung geschlossen lösbar und gibt genau den Hopf-Wert \(\beta_{\rm sym}=1/\sqrt3\), verfehlt aber die Daten;
+und der größte Formzyklus der Drei-Bogen-Scheibe dreht sie um genau \(-\pi\), sodass die Restdrehung \(\gamma_M\cdot\tfrac12\) wird, wenn man
+\(\gamma_M\) als Kopplung einsetzt, nicht herleitet. Die Verknüpfung von \(\Lambda\) mit einer Drehrate ist nur eine Umbenennung, wie die
+Epoche in Runde v4.10.0-r56. Am Ende ist die offene Wahl bei \(\varepsilon\) angekommen, also bei der Wahl der imaginären Einheit; über
+\(\mathbb C\) ist das eine Konvention.
+
+\paragraph{Ein relatives Vorzeichen (H125).}
+Messbar ist dagegen ein Drehsinn zweier Sektoren relativ zueinander. Test H125 wurde vor der Rechnung festgelegt. Seine erste Stufe, eine
+Strukturrechnung mit vorab erwartetem Ausgang, ist bestätigt: Die Familien-\(su(2)\) der Sedenionen (Runde v4.10.0-r14.4) ist auf den
+Leptonen relativ zum Lorentz-Spin das komplex konjugierte Dublett, auf den Quarks nicht; die Bargmann-Invarianten sind
+\(\tfrac14-\tfrac i4\) und \(\tfrac14+\tfrac i4\), in allen \(24+24\) zulässigen Zuordnungen. Die Wahl \(i\mapsto-i\) konjugiert beide Sektoren
+zugleich und lässt das relative Vorzeichen stehen. Die zweite Stufe ist blind gegenüber künftigen Daten: Unter der Setzung, dass die
+CP-Phase in beiden Sektoren auf dieselbe Weise aus der Familienstruktur entsteht, folgt \(\operatorname{sign}J_{\rm PMNS}=-\operatorname{sign}J_{\rm CKM}\),
+also \(\sin\delta_{\rm PMNS}<0\). Entschieden wird mit der ersten Auswertung, die das Vorzeichen auf mindestens \(3\sigma\) festlegt,
+spätestens Ende 2035. Ein einzelnes Vorzeichen hat die Grundwahrscheinlichkeit \(\tfrac12\); eine Bestätigung stützte vor allem die Setzung.
+
+\paragraph{Der Turm der Hilbert-Shifts.}
+Die zweite Frage war, ob der Feldwert eine Erzeugungsregel von einem Hilbert-Shift zum nächsten hat. Liest man den Feldwert auf der
+Stufe \(n\) als Element der Cayley--Dickson-Algebra der Dimension \(2^n\), mit der Grundbahn \(\psi(t)=\exp(u\omega t)\psi_0\), dann ist die erste
+Stufe eine reelle Schwingung, die zweite die Ellipse mit der Fläche als \(U(1)\)-Ladung, die dritte die Hopf-Sphäre mit der ersten
+Holonomie und \(SU(2)\), die vierte die Oktonionen mit \(G_2\) und \(su(3)\) als Stabilisator einer Einheit. Danach kommt keine stetige
+Symmetrie hinzu; die Kreisbahn schließt nicht mehr für jede Richtung, und Nullteiler treten auf. Neu ist bei den Sedenionen eine diskrete
+Symmetrie \(S_3\), die drei Oktonionen-Kopien vertauscht, und die Zahl verträglicher Achsen folgt der Bott-Periode. Die Algebra ist bekannt;
+neu ist nur die Zuordnung zum Turm, und sie ist eine Lesart. Rückwärts gelesen sind die meisten Wahlen oberhalb der ersten Stufe erzwungen
+oder Konvention: Im Turm-Modell ist unter den erreichbaren Farbzahlen nur \(N_c=3\) anomaliefrei, ein Vorzeichenwechsel in der
+Grundgleichung führt auf gespaltene statt kompakte Symmetrien, und eine CP-Phase gibt es erst ab drei Generationen. Mit einem Faktor
+\(\exp(u\pi/4)\) in Kopienform erfüllt ein Zustand die Koide-Bedingung genau; die Phase \(\delta\) bleibt frei, und drei vollständige
+Generationen passen in diese Algebra nicht. Ein Test, die Neutrino-Mischung aus der nicht-assoziativen Kopplung zweier Oktonion-Richtungen
+zu gewinnen (H126), ist nach dem vorab festgelegten Kriterium nicht prüfbar, weil die Konstruktion überall entartet. Ein nichtlinearer
+Zusatz in der Grundgleichung bringt eine Skala, ändert die Struktur aber nicht.
+
+Keine dieser Rechnungen leitet \(\beta\), eine Masse, einen Mischungswinkel oder \(\Lambda\) her. Gesetzt bleiben der Rahmen der
+Chiralität, die Unterscheidung von M und T, die Zahl der Generationen und jede Skala. OP1, OP3, OP4 und OP5 bleiben offen.
+
 \subsection{Was nach dieser Fassung offen bleibt}
 \label{sec:open-points}
 
@@ -162,8 +209,8 @@ geschlossen, und kein Guard ist aufgehoben \cite{companion,layers}.
 \hline
 OP1 & Woher kommt die Zahl \(\beta=0{,}5494\), also warum zählen die Frames M und T die Horizontzustände nach verschiedenen Regeln? & Abschnitt~\ref{sec:one-number}\\
 OP2 & Existiert der Dirac-artige Operator auf dem antisymmetrischen Sektor als selbstadjungierter Operator, ohne die zurückgezogene Riemann-Arbeit, und liegt sein Spektralversatz bei \(\beta\)? & nur als Gleichsetzung in Abschnitt~\ref{sec:one-number}\\
-OP3 & Welche Übergänge der Hülle sind zulässig, woher kommen drei Generationen, und was legt Phase und Vorzeichen der Leptonphase fest? & Abschnitte~\ref{sec:charged-multiplicity} und \ref{sec:octant-sign}\\
-OP4 & Woher kommen die Mischungswinkel der Neutrinos und der Quarks? & nur als Gleichsetzung in Abschnitt~\ref{sec:one-number}\\
+OP3 & Welche Übergänge der Hülle sind zulässig, woher kommen drei Generationen, und was legt Phase und Vorzeichen der Leptonphase fest? & Abschnitte~\ref{sec:charged-multiplicity}, \ref{sec:octant-sign} und \ref{sec:handedness-tower}\\
+OP4 & Woher kommen die Mischungswinkel der Neutrinos und der Quarks? & Gleichsetzung in Abschnitt~\ref{sec:one-number}; relatives CP-Vorzeichen in Abschnitt~\ref{sec:handedness-tower}\\
 OP5 & Wie fügen sich Vakuumbilanz und kosmologische Konstante in den Rahmen, und welche Materiequelle treibt welches geometrische Feld? & Fallstudie in Abschnitt~\ref{sec:op5-coupling}, Anhang~\ref{sec:anhang-b-annahmen}\\
 C5 & Kann die verbleibende Obstruktion in endlich vielen Schritten exakt null werden, statt nur unter eine Detektorschwelle zu fallen? & nicht behandelt\\
 C6/T2 & Schließen alle Auslesungen zugleich, global und nicht nur lokal? & nicht behandelt; durch Guards gesperrt\\

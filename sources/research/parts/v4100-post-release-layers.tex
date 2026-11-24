@@ -7482,3 +7482,240 @@ R_{\rm glob}^{(v4100\text{-}r58,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r59 Source-Only: The Handedness Series and the Hilbert-Shift Tower (k245--k274, H125, H126)}
+\addcontentsline{toc}{section}{v4.10.0-r59 Source-Only: The Handedness Series and the Hilbert-Shift Tower (k245--k274, H125, H126)}
+\label{sec:v4100-r59-handedness-tower}
+% ============================================================================
+
+\paragraph{Purpose.}
+Between 23 and 24 November 2026 a series of explorations and two tests followed r58: where the handedness (the sign \(\tau\varepsilon\) of
+r58.4) can come from, and whether the field value of the photon-clock picture has a generation rule from one Hilbert shift to the next.
+They were recorded as research notes with scripts and outputs, not as layers.  The author's standing rule that a finding used in an article
+enters the Companion as a layer (``the main paper stays the source'') requires them here before the German preprint cites them.  This layer
+therefore collects them, each with its status as recorded at the time.  It adds no new computation; every statement below is checked in the
+cited scripts.  All items are explorations and \emph{not blind}, except H125 and H126, which were fixed in advance notes before the computation.
+Earlier layers are not rewritten; where an item rereads an earlier layer (r13, r14.4, r43) the earlier text stands.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r59 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r59 setting}
+\label{subsec:v4100-r59-setting}
+
+Part A (r59.1--r59.6) follows the handedness: the orientation of the octant step, which r31 identified as a time orientation of the readout
+and r58 as the product \(\tau\varepsilon\) of the time direction \(\tau\) of the readout and the orbit orientation \(\varepsilon\).
+Part B (r59.7--r59.14) follows the Hilbert-shift tower HS\((n)\): the field value \(\psi\) lives in the Cayley--Dickson algebra \(A_n\) of
+dimension \(2^n\) (the carrier sizes of the atlas), each shift adjoins one imaginary unit, and the basic orbit is
+\(\psi(t)=\exp(u\omega t)\psi_0\) with a unit imaginary \(u\).  The assignment of the algebras to the shifts is a reading; the algebra itself is
+standard and only recomputed.  Frame convention F (M, T, P) holds throughout.
+
+\subsection*{v4.10.0-r59 results, part A: the handedness}
+\label{subsec:v4100-r59-results-a}
+
+\paragraph{Theoremlet v4.10.0-r59.1 (Hopf gap as zero point; k245, not blind).}
+Replace the area spectrum \(\sqrt{j(j+1)}\) of a puncture in both frames by the semiclassical spectrum \(j+\tfrac12\).  Then the counting
+equations close: \(e^{-\pi\gamma_M}=\tfrac12\), \(\gamma_M=\ln2/\pi\), \(\gamma_T=\ln2/(2\pi)\), hence \(\gamma_L=2\) and \(\beta_{\rm sym}=1/\sqrt3\) exactly,
+the Hopf value of \texttt{rem:bsym-hopf-gap}.  Without the zero point (spectrum \(j\)) the ratio is \(\log_23\).  The uncertainty enters only as a
+zero point, not as a factor.  Reading (not checked): the Hopf construction is the semiclassical limit and the gap \(1/\sqrt3\to0.549\) the quantum
+correction of the smallest puncture.  With \(j+\tfrac12\) the data are missed (\(\beta^2=\tfrac13\), \(m_W\)); the result was known before the computation.
+\emph{Check.} Wolfram exact, Python control (\texttt{k245}).
+
+\paragraph{Theoremlet v4.10.0-r59.2 (residual rotation as a holonomy; k246, not blind).}
+For a three-arc disc with vanishing angular momentum:
+(a) on the circle model of 12 November (fixed radius, shape-independent masses) the curvature of the mechanical connection vanishes exactly;
+(b) radial and tangential waves with phase offset give a residual rotation \(-4\pi ab/(a^2+2)\) per cycle, maximal exactly at the Koide amplitude
+\(a=\sqrt2\) (a restatement of the known \(45^\circ\));
+(c) with arc masses \(m\propto\ell^p\) the largest shape cycle in which each arc empties once turns the disc by exactly \(-\pi\), for every tested \(p>0\).
+Reading \(\gamma_M\) as the coupling of the connection (Ashtekar--Barbero) gives \(\Delta\Phi=\gamma_M\cdot\tfrac12\), the I1 bridge; \(\gamma_M\) itself does not
+arise from the geometry (the curvature contains only \(\pi\) and \(\sqrt2\)).  The open choice moves from ``one light crossing'' to ``largest shape
+cycle''; the handedness is set.  \emph{Check.} Wolfram exact, numerical control; a wrong sympy integral (\(-1.26\) instead of \(-\pi\)) was found
+and corrected on the way (\texttt{k246}).
+
+\paragraph{Theoremlet v4.10.0-r59.3 (light as mediator; k247--k249, not blind).}
+(a) A light signal fixes the time direction \(\tau\) in M; under the tachyon map with holomorphic adjoint, T reads the opposite sense,
+\(\tau_T=-\tau_M\) (k247, Wolfram exact).
+(b) In the three-well model the threshold to rotation is \(\tfrac23\) of the pendulum frequency, a pure geometric number without a Companion
+constant (k248).
+(c) In the Julia picture \(c=-1+i\gamma\) the cycle lies on the axis for \(\gamma=0\) (area zero); for \(\gamma\neq0\) an attracting 3-cycle captures every
+outer wave and its area has the sign of \(\gamma\) (k249).
+(d) The photon point P does not meet the mediator profile of r30.7 (conditions A4, A5).
+The handedness is derived nowhere; only threshold and modulus would be derivable, with a definite outer field.  The accompanying picture
+``time as residual rotation'' is a reading, not a result.
+
+\paragraph{Theoremlet v4.10.0-r59.4 (handedness from the light weight; k250, not blind).}
+The weights \(a,b\) of the light state are diagonal (\(\langle\sigma_z\rangle\)); under orientation reversal (\(\omega\mapsto\omega^2\), \(z\mapsto\bar z\)) they are
+unchanged while an orbit sense flips, and under the exchange M\(\leftrightarrow\)T (r81.6(b)) \(a-b\) changes sign.  So \(a-b\) has the parity of \(\tau\),
+not of \(\varepsilon\).  For the reference choice r14.2 with \(a\neq b\) the ground state \((x,1,1)\) of \(-(aQ+bR)\) is real and positive for all \(a,b>0\);
+the Bargmann invariant \((x^2+2\omega)^3\) has the same phase sign for every real \(x\) (\(\operatorname{Im}=\sqrt3\)), fixed by \(\omega\) alone, and \(K=\tfrac23\)
+holds only at \(a=b\).  At the photon point \(\rho=I/2\) no unitary dynamics disturbs \(a=b\).  Balance over r59.1--r59.4: the handedness is set
+everywhere; the open choice has arrived at \(\varepsilon\), the choice of \(i\), which over \(\mathbb C\) is a convention.  \emph{Check.} Wolfram symbolic (\texttt{k250}).
+
+\paragraph{Theoremlet v4.10.0-r59.5 (\(\Lambda\) and the rotation rate; k251, not blind).}
+(a) Spatial vorticity cannot carry \(\Lambda\): Gödel has \(\Lambda=-\omega^2\) (wrong sign), \(2\omega^2\) dilutes as \(a^{-4}\), and the CMB bound
+\((\omega/H)_0<4.7\cdot10^{-11}\) allows at most \(10^{-21}\) of \(\Lambda\).  The rotational energy of an internal field is not \(w=-1\).
+(b) In Euclidean de Sitter time is an angle with period \(2\pi/\Omega\) and \(\Lambda=3\Omega^2\) (Gibbons--Hawking, r06).  In the co-rotating frame of a
+string with eigenfrequency \(\omega_0\), \(\ddot r=(\Omega^2-\omega_0^2)r\), compared with \(\ddot r=(\Lambda/3)r\) in the de Sitter patch, gives the form
+correspondence \(\Lambda/3\leftrightarrow\Omega^2-\omega_0^2\).  The orbit sense enters only as \(s^2=1\).
+Verdict: the link is conventional; without an independent fixing of \(\Omega\) or of the string length \(\ell\) it renames \(\Lambda\), as the epoch does
+in r56.4.  r56 is unchanged.  \emph{Check.} Wolfram exact (\texttt{k251}).
+
+\paragraph{Theoremlet v4.10.0-r59.6 (H125: relative CP sign of leptons and quarks; stage A confirmed, not blind; stage B open).}
+Advance note committed before the computation (\texttt{76f7a6c}).  The neutral family \(su(2)\) of r14.4 (under CT-003) satisfies
+\([R_{e_7},R_{e_8}]=-2R_{e_{15}}\) on the lepton block \(H_n\) and \(+2R_{e_{15}}\) on the coloured block; the cause is the non-associativity of the sedenion
+right multiplication.  Relative to the Lorentz spin (left action of \(\mathbb H\), Bargmann invariant \(\tfrac14+\tfrac i4\)) the lepton doublet is the
+complex conjugate one: the Bargmann invariant of the octant projectors is \(\tfrac14-\tfrac i4\) on the leptons against \(\tfrac14+\tfrac i4\) on the quarks, in
+all \(24+24\) assignments of full rank.  The relative sign survives \(i\mapsto-i\), which conjugates both sectors at once; it is the first item of
+the series that does not set a sign.  Stage B (blind against future data): under the setting S1 (CP arises in both sectors in the same way from
+the family structure) \(\operatorname{sign}J_{\rm PMNS}=-\operatorname{sign}J_{\rm CKM}\), i.e.\ \(\sin\delta_{\rm PMNS}<0\); decided by the first analysis
+fixing the sign at \(\ge3\sigma\), deadline 31 December 2035.  Prior probability \(\tfrac12\); a confirmation would mainly support S1.
+\emph{Check.} Block computation in numpy on the infrastructure of \texttt{search.py} (deviation from the advance note, stated there); Wolfram exact
+for the algebraic core \(B=\tfrac14+\tfrac{is}4\) for \([J_x,J_y]=isJ_z\) (\texttt{k252}).
+
+\subsection*{v4.10.0-r59 results, part B: the Hilbert-shift tower}
+\label{subsec:v4100-r59-results-b}
+
+\paragraph{Theoremlet v4.10.0-r59.7 (a generation rule for the tower; k253, not blind).}
+(a) HS(0): a real oscillation on a line; embedded in HS(1) it is \(\psi=ae^{i\omega t}+be^{-i\omega t}\) with \(a=b\) (two equal counter-circular parts,
+area zero), exactly the time-reversal invariant subfamily.
+(b) HS(1): all ellipses with \(a\neq b\); the area \(\pi(a^2-b^2)\) is the \(U(1)\) charge (Wolfram exact); the two circular parts are the sym/antisym
+split of the compensator and the half axes \(a\pm b\) the periapsis splitting.  The sense \(u=\pm i\) stays set.
+(c) HS(2): \(\mathbb H=\mathbb C^2\), states on the Hopf sphere, Berry phase \(\gamma=-\Omega/2\): the first holonomy, \(SU(2)\), chirality from left
+against right multiplication.  HS(3): \(\operatorname{Der}(\mathbb O)=g_2\), stabilizer of a unit \(su(3)\).
+(d) \(\dim\operatorname{Der}(A_n)=0,0,3,14,14,14\) for \(n=0,\dots,5\) (Python; Wolfram equal up to \(n=4\)), stabilizer \(0,1,8,8,8\); the circular orbit
+closes for every \(u\) only up to \(\mathbb O\) (\(\max|L_u^2+1|\approx10^{-16}\), for the sedenions \(0.85\)), and zero divisors appear (Hurwitz).
+HS(6) \(=\mathbb C\otimes\mathbb H\otimes\mathbb O\) carries \(U(1)\), \(SU(2)\), \(SU(3)\) once each on a division level (Dixon).
+The groups are symmetries of the field value, not gauge fields; hypercharge and couplings are not derived; ``simpler'' holds algebraically,
+not dynamically.
+
+\paragraph{Theoremlet v4.10.0-r59.8 (what HS(4) adds; k254, not blind).}
+(a) At the sedenions alternativity, the Moufang identity and norm multiplicativity fail; flexibility and power associativity survive up to
+\(n=6\).  The kernel of \(L_a\) on a zero divisor is four-dimensional and its \(G_2\) orbit eleven-dimensional (Moreno).
+(b) New is a discrete symmetry: exactly six \(G_2\)-compatible automorphisms (\(S_3\), standard representation on the two copies of the 7, sign on
+\(e_8\); Wolfram exact).  Each reflection fixes an octonion subalgebra; the three copies meet only in \(\mathbb R\) and are permuted by \(S_3\).
+(c) The largest set of mutually anticommuting unit imaginaries is \(1,3,7,8,9\) for \(n=1,\dots,5\), the Radon--Hurwitz numbers \(\rho(2^n)-1\);
+continued \(0,1,3,7\,|\,8,9,11,15\,|\,16,\dots\) (Bott periodicity): HS\((n+4)\) has eight axes more than HS\((n)\).  The tower becomes periodic with
+period four; HS(6) has \(11=1+3+7\) axes.  Literature algebra, recomputed.
+
+\paragraph{Theoremlet v4.10.0-r59.9 (r13 reread: the \(S_3\) cycle as a generation step; k255, not blind).}
+The r13 result (``the cycle acts under the charge only as a phase'') holds in the eigenbasis of the charge axis \(e_8\) and stands.  In the basis
+of the three octonion copies the same \(120^\circ\) rotation is a permutation: on \(V_w=\operatorname{span}\{1,w\otimes f_1,w\otimes f_2\}\) \(S_3\) carries the
+permutation representation \(1\oplus2\); the states \(g_k=1/\sqrt3+\sqrt{2/3}\,w\otimes f_k\) are orthonormal, lie in one copy each at the magic angle to
+the unit, and are permuted cyclically; in the eigenbasis \(\psi=\operatorname{diag}(1,\omega,\bar\omega)\), the r13 phase.  For
+\(\Psi=\alpha+\beta\,w\otimes n(\delta)\) the Koide ratio is \(K=(\alpha^2+\beta^2)/(3\alpha^2)\) (Wolfram exact), so \(K=\tfrac23\) exactly for \(\beta=\alpha\), i.e.\
+\(\Psi=\exp(u\pi/4)\) (eighth turn, \(\rho^2=\tfrac12\) as in r12, phase \(\pi/4\) as in H123); then the Brannen form \(1+\sqrt2\cos(\delta-2\pi k/3)\) follows,
+with \(\delta\) free.  Limit: the copy charges do not commute and average to \(\tfrac12\mathbb 1\); three generations do not fit into \(\mathbb C\otimes\mathbb S\).
+The sedenions supply a generation label and a mixing geometry, the particle content only with three orthogonal carriers.
+
+\paragraph{Theoremlet v4.10.0-r59.10 (mixing from the copy geometry; k256, not blind).}
+With the \(S_3\) of the copies as residual symmetry every mixing pattern is fixed before computation: both sectors \(\mathbb Z_3\) give no mixing;
+neutrinos \(\mathbb Z_3\) give trimaximal mixing (as H39a, refuted); neutrinos with the copy reflection give \(\theta_{13}=0\) (excluded).  Dictionary
+(flavour = copy basis): the TM2 column \((1,1,1)/\sqrt3\) is the real unit, the TM1 column \((2,-1,-1)/\sqrt6\) the imaginary copy axis; exactly
+conjugation composed with the copy reflection keeps the TM1 column and returns the CP reading H8.  Nothing beyond known patterns (H4, H8, H39).
+
+\paragraph{Theoremlet v4.10.0-r59.11 (H126: PMNS from the coupling of two octonion directions; not testable).}
+Advance note committed before the computation (\texttt{0a1bd3aa}).  Electron and neutrino directions at angle \(\chi\), neutrino state in Koide form,
+mass matrix \(M_{jk}=\langle g_j,\Psi_\nu(\Psi_\nu g_k)\rangle\) with \(e_8\) as \(i\).  Structure check (Wolfram exact): \(MM^\dagger\) has eigenvalues
+\(\{0,2\cos^2\chi,2\cos^2\chi\}\) for all \(\chi,\delta_\nu\), degenerate everywhere, and the non-associativity contributes exactly zero
+(\(M-M_{\rm assoc}\equiv0\)).  By the criterion fixed in advance H126 is \emph{not testable}; the data comparison does not count.  The pairing reads only
+\(1\) and \(e_8\), so the associator drops out.  A new attempt needs another pairing, a new number and a new advance note.  (\texttt{k257})
+
+\paragraph{Theoremlet v4.10.0-r59.12 (the tower read backwards; k270--k272, not blind).}
+(a) Three colours: the tower offers \(N_c=0,1,3,3,4\) ladders per level (Radon--Hurwitz with one unit fixed).  In the tower model (charge \(k/N_c\),
+even sectors left as in r43) only \(N_c=2\) and \(3\) are anomaly free with singlet and fundamental representations; the tower reaches only
+\(N_c=3\), first at \(\mathbb O\) (sympy and Wolfram).  HS(2) alone is anomalous (\(\operatorname{Tr}Y^3=\tfrac34\), one doublet, Witten); the tower must
+reach colour.
+(b) Handedness: on \(\mathbb C\) a genuine bit; from \(\mathbb H\) on it can be turned away by an inner rotation (convention).  What remains a bit is
+left/right, which r43 selects by anomaly, up to the frame mirror.
+(c) Varying the origin field \(\ddot\psi=g\omega^2\psi\) over all 27 sign patterns of the three shifts: only \((-,-,-)\) gives compact \(G_2/SU(3)\)
+without zero divisors; every \(+1\) gives split octonions (leaks from that level, \(sl(3,\mathbb R)\) or \(su(2,1)\) instead of \(SU(3)\)), every \(0\) a
+degenerate algebra.  Amplitude, frequency and phase do not act above.  Set remain the r43 frame and M against T; masses, Koide \(\delta\) and the
+number of generations are open.
+
+\paragraph{Theoremlet v4.10.0-r59.13 (three generations backwards; k273, not blind).}
+A CP phase exists only from \(N=3\) on (\(N=2\): \(J\equiv0\), Wolfram exact); at \(N=3\) every quartet invariant is \(J\cdot\varepsilon\varepsilon\), and \(J\) is a
+Bargmann quadrilateral of flavour and mass projectors.  Three is the smallest number with flavour holonomy.  The tower has a cross product only
+on \(\operatorname{Im}\mathbb H\) and \(\operatorname{Im}\mathbb O\), a three-dimensional \(\varepsilon\) only on \(\operatorname{Im}\mathbb H\).  Reading: the
+generation plane is a further HS(2) level acting \emph{as a vector} (automorphisms \(SO(3)\)).  The doubling units \(e_8,e_{16},e_{32}\) above colour
+commute with colour and charge (universality) but act as spin \(\tfrac12\), i.e.\ as a doublet: the known exchange of spin \(\tfrac12\) and spin 1, seen
+from the backward side.  Open: a tower level with adjoint HS(2) action (candidate: triality, not computed).
+
+\paragraph{Theoremlet v4.10.0-r59.14 (a nonlinear origin field; k274, not blind).}
+With \(\ddot\psi=-\omega^2\psi-\lambda|\psi|^2\psi\) a scale appears (Duffing period \(T\approx2\pi(1-3\lambda A^2/8)\), Wolfram exact via \(K(m)\)); the structure
+stays: the term is \(G_2\)-equivariant, the circular orbits \(\exp(u\Omega t)\psi_0\) with \(\Omega^2=\omega^2+\lambda|\psi_0|^2\) are exact up to HS(3)
+(residual \(\le5\cdot10^{-13}\)) and break from HS(4) on.  At HS(1) every genuine ellipse precesses (Bertrand); only the line and the circle stay
+closed, and the precession follows the orbit sense, so \(\lambda\) selects no handedness.  For \(\lambda<0\) the restoring force changes sign at
+\(|\psi|=\omega/\sqrt{|\lambda|}\); beyond it the field lies in the split case of r59.12(c) (reading as a dynamical M/T boundary, not computed).
+
+\paragraph{Remark v4.10.0-r59.15 (balance of the settings).}
+Over r59.1--r59.5 the handedness was set at every step; the open choice moved from the light crossing (r58) to the largest shape cycle (r59.2),
+to the time direction of the readout (r59.3), and finally to \(\varepsilon\), the choice of \(i\), which is a convention (r59.4).  What is not a
+convention is a relative sign of two sectors (r59.6, under CT-003 and the setting S1).  The tower (r59.7--r59.14) makes most choices above HS(0)
+forced or conventional; what stays set is the r43 frame, the distinction of M and T, the number of generations and every scale.  No item
+derives \(\beta\), a mass, a mixing angle or \(\Lambda\).
+
+\subsection*{v4.10.0-r59 frames}
+\label{subsec:v4100-r59-frames}
+
+Part A works in M (light signal, puncture counting) and compares with T only through the tachyon map with holomorphic adjoint (r59.3(a)) or
+through \(\gamma_L\) (r59.1); time reversal is complex conjugation, not \(z\mapsto iz\) (r51, r81).  Part B works on the field value in M; the
+split case of r59.12(c) and r59.14 is named as a possible reading of T and not computed as such.
+
+\subsection*{v4.10.0-r59 register entries}
+\label{subsec:v4100-r59-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r59\\
+\midrule
+r59.1--r59.5, r59.7--r59.10, r59.12--r59.14 & explorations, not blind; recorded\\
+H125 stage A (relative orientation of the family \(su(2)\)) & confirmed (not blind)\\
+H125 stage B (\(\sin\delta_{\rm PMNS}<0\) under S1) & open, blind against future data, deadline 2035\\
+H126 (PMNS from two octonion directions) & not testable (construction degenerate)\\
+handedness (absolute) & a convention (choice of \(i\))\\
+OP1, OP3, OP4, OP5, Q1a & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r59 notes}
+\label{subsec:v4100-r59-notes}
+
+{\raggedright
+\texttt{notes/\allowbreak research/\allowbreak hopf\_\allowbreak gap\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 23/} (k245),
+\texttt{holonomie\_\allowbreak restdrehung\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/} (k246),
+\texttt{licht\_\allowbreak vermittler\_\allowbreak zeit\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/} (k247--k249),
+\texttt{drehsinn\_\allowbreak lichtgewicht\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/} (k250),
+\texttt{lambda\_\allowbreak drehrate\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/} (k251),
+\texttt{h125\_\allowbreak relatives\_\allowbreak cp\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/} (k252) with
+\texttt{predictions/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H125\_\allowbreak Relatives\_\allowbreak CP\_\allowbreak Vorzeichen.md} and the result note,
+\texttt{hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/} with subfolders \texttt{hs4/} (k254), \texttt{r13/} (k255),
+\texttt{mischung/} (k256), \texttt{h126/} (k257, with \texttt{predictions/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H126\_\allowbreak Kopplung\_\allowbreak zweier\_\allowbreak Richtungen.md}),
+\texttt{rueckwaerts/} (k270--k274).  Each folder holds scripts and their actual outputs.
+\par}
+
+\subsection*{v4.10.0-r59 ledger and guard update}
+\label{subsec:v4100-r59-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r59}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no new computation in this layer; handedness, generations and scales not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r59,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r59}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

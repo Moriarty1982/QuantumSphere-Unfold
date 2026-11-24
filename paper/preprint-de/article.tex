@@ -10,10 +10,11 @@
 \definecolor{qs axis}{HTML}{565F68}
 \definecolor{qs blue}{HTML}{174D75}
 \definecolor{qs rust}{HTML}{99471C}
-\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Preprint, Fassung 0.2.0}]{hyperref}
+\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Preprint, Fassung 0.3.0}]{hyperref}
 
-% Version-DOI der Fassung 0.2.0: nach der Reservierung auf Zenodo eintragen, z. B. \newcommand{\versiondoi}{10.5281/zenodo.NNNNNNNN}
-\newcommand{\versiondoi}{10.5281/zenodo.24481107}
+% Version-DOI der Fassung 0.3.0: nach der Reservierung auf Zenodo eintragen, z. B. \newcommand{\versiondoi}{10.5281/zenodo.NNNNNNNN}
+% (Fassung 0.2.0: 10.5281/zenodo.24481107)
+\newcommand*{\versiondoi}{}
 
 \setlength{\parindent}{1em}
 \raggedbottom
@@ -27,7 +28,7 @@
 \noindent{\large Auf dem Weg zu einem gemeinsamen Rahmen\\
 für Materie, Eichstruktur und Raumzeitgeometrie\par}
 \vspace{0.7em}
-\noindent Marc Brendecke\hfill{\small Entwurf nach Fassung 0.2.0 \enspace$\cdot$\enspace 23. November 2026}\par
+\noindent Marc Brendecke\hfill{\small Fassung 0.3.0 \enspace$\cdot$\enspace 24. November 2026}\par
 \noindent{\small Version-DOI: \ifx\versiondoi\empty wird bei der Reservierung auf Zenodo vergeben\else\href{https://doi.org/\versiondoi}{doi:\versiondoi}\fi\par}
 \noindent{\small Concept-DOI (alle Fassungen): \href{https://doi.org/10.5281/zenodo.24405552}{doi:10.5281/zenodo.24405552}\par}
 \vspace{0.55em}
@@ -39,14 +40,16 @@ mathematischen Träger für Materie, Eichstruktur und Raumzeitgeometrie. Ein Fel
 Kompensators an einem Lichtfeld auswählt; ihr Bild ist nicht lichtartig. Als Träger dienen die Biquaternionen. Ein Vergleich mit
 der Dixon-Algebra grenzt ein, wo ein Generationsindex sitzen kann; die Zahl der Generationen bleibt eine Eingabe. Bei den Massen
 trennt der Artikel die Koide-Bedingung von der Phase: Die Überlappung legt das Spektrum nicht fest, und das Vorzeichen des
-Oktantschritts ist eine Zeitorientierung der Auslese, die kein Baustein des Companion festlegt. Eine Fallstudie zum offenen
+Oktantschritts ist eine Zeitorientierung der Auslese, die kein Baustein des Companion festlegt. Eine Reihe von Erkundungen zeigt,
+dass dieser Drehsinn über \(\mathbb C\) eine Konvention ist; festgelegt ist nur ein relatives Vorzeichen zwischen Leptonen und Quarks,
+dessen Folge \(\sin\delta_{\rm PMNS}<0\) als offene Vorhersage gegen künftige Daten steht. Eine Fallstudie zum offenen
 Problem OP5 verfolgt eine präparierte Materiequelle bis zum geometrischen Achsenkontrast. Der gewöhnliche Beitrag folgt aus der
 linearisierten Einstein-Gleichung; der gerichtete Kontrast braucht einen Vermittler, den die Vergleichswirkung nicht enthält,
 und ist im Vakuum nur mit verschwindend kleiner Kopplung verträglich, verlangt also ein Material. Alle bedingten Zahlenwerte
 hängen an einer einzigen Zahl, deren Herkunft aus den Zählregeln eines Horizonts offen ist. Der Artikel beansprucht keine Lösung
 der offenen Probleme. Er legt offen, welche Annahmen jede Rechnung mitführt und wo eine Herleitung ansetzen müsste. Die
-Rechnungen sind mit Wolfram Language geprüft, eine mit Python; maßgebliche Fassung ist der Quantum Sphaera Companion. Diese Fassung 0.2.0
-ersetzt die Fassung 0.1.0 vom 20.~November 2026 (\href{https://doi.org/10.5281/zenodo.24405553}{doi:10.5281/zenodo.24405553}).
+Rechnungen sind mit Wolfram Language geprüft, einzelne mit Python; maßgebliche Fassung ist der Quantum Sphaera Companion. Diese Fassung 0.3.0
+ersetzt die Fassung 0.2.0 vom 23.~November 2026 (\href{https://doi.org/10.5281/zenodo.24481107}{doi:10.5281/zenodo.24481107}).
 \end{quote}
 \section*{Vorwort}
 Was soll ein Heisenberg-Kompensator eigentlich kompensieren? Und wenn man dann mal endlich erfährt, was er kompensieren soll, fragt man sich ziemlich erstaunt: \glqq Wie verdammt noch mal soll er das machen?\grqq{}
@@ -166,8 +169,10 @@ OpenAI, \emph{The entropy-rate dimension formula for self-similar measures on th
 M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/d2020d178a483d1baa7be3871ca2e9d597992059/notes/research/v4_10_0_r55/README.md}{Wie die offenen Probleme zusammenhängen}, Companion, Runde v4.10.0-r55, 23. November 2026.
 \bibitem{lambdainput}
 M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/1f7318f54a718cfe889a0902d40144ce2b70974a/notes/research/v4_10_0_r56/README.md}{\(\Lambda\) als Eingabe (Negativ-Schluss des OP5-Rests)}, Companion, Runde v4.10.0-r56, 23. November 2026.
+\bibitem{towerlayer}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r59/README.md}{Die Drehsinn-Reihe und der Hilbert-Shift-Turm}, Companion, Runde v4.10.0-r59 (Erkundungen k245--k274, Tests H125 und H126), 24. November 2026.
 \bibitem{layers}
-M.~Brendecke, \emph{Quantum Sphaera Companion, Forschungsschichten nach v5.3.0}, Runden v4.10.0-r31 bis v4.10.0-r58, 22.--23. November 2026;
+M.~Brendecke, \emph{Quantum Sphaera Companion, Forschungsschichten nach v5.3.0}, Runden v4.10.0-r31 bis v4.10.0-r59, 22.--24. November 2026;
 noch in keiner veröffentlichten Fassung. \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/d2020d178a483d1baa7be3871ca2e9d597992059/sources/research/parts/v4100-post-release-layers.tex}{Schichtdatei auf GitHub}.
 \bibitem{koide}
 Y.~Koide, \emph{A fermion-boson composite model of quarks and leptons}, Phys. Lett. B 120, 161--165 (1983).
