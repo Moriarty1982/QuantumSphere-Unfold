@@ -1,6 +1,6 @@
 # Deutscher Preprint, Fassung 0.3.0: Release-Paket
 
-**Status (24.11.2026): vorbereitet, nicht reserviert, nicht veröffentlicht.** Jeder Zenodo-Schritt nur mit ausdrücklicher Freigabe des
+**Status (24.11.2026): reserviert, nicht hochgeladen, nicht veröffentlicht.** Zenodo-Entwurf 24497991, reservierte Version-DOI 10.5281/zenodo.24497991 (Workflow-Lauf 45383898146, Trockenlauf 45383778585). PDF mit DOI auf der Titelseite gebaut (58 Seiten, 0 Overfull, 0 undefiniert), SHA256 5dd0fecb03fbc594… in `SHA256SUMS.txt`. Jeder Zenodo-Schritt nur mit ausdrücklicher Freigabe des
 Autors (`AGENTS.md`). Concept-DOI 10.5281/zenodo.24405552; Vorgänger 0.2.0, Record 24481107, DOI 10.5281/zenodo.24481107.
 
 - Quelle: `paper/preprint-de/` (Fassung 0.3.0, 58 Seiten, lokaler Build mit TeX Live 2023: 0 Overfull, keine undefinierten Verweise).
@@ -69,7 +69,7 @@ wieder. Kein offenes Problem ist geschlossen, kein Guard aufgehoben.
 3. **Upload** (Freigabe nötig; der Entwurf erbt die Datei von 0.2.0, deshalb `replace_files=true`):
    ```
    gh workflow run "Zenodo Release" --repo Moriarty1982/QuantumSphere-Unfold --ref claude/project-thread-ncot1p \
-     -f environment=production -f deposition_id=<id> -f reserve_only=false -f replace_files=true \
+     -f environment=production -f deposition_id=24497991 -f reserve_only=false -f replace_files=true \
      -f publish=false -f confirm_publish=false -f dry_run=false \
      -f metadata=release/zenodo/metadata_preprint_de_0_3_0.json -f files_glob='release/preprint-de-v0.3.0/*.pdf' \
      -f default_preview=Quantum_Sphaera_Preprint_0.3.0.pdf
