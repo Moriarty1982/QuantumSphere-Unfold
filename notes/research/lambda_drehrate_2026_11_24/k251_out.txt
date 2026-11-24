@@ -1,0 +1,33 @@
+k251 Ausgaben (Wolfram-MCP-Kernel, 24.11.2026, drei Laeufe). Rueckgabewert jeweils Null.
+Warnungen: nur Symbol::undefined2 (Linter-Hinweis auf globale Symbole) und der Sammelhinweis General::messages; keine Fehlermeldung
+einer Rechnung. Symbolische Nullreste: keine offenen (Solve/Reduce liefern geschlossene Loesungen).
+
+Teil 1
+Goedel: Ricci-Skalar R = a^-2
+Goedel: Loesung {{lam -> 1/(2 a^2), rho -> 1/(a^2 k)}}
+Goedel: omega^2 = 1/(2 a^2)
+Goedel: Lambda/omega^2 = 1          [lam/omega^2; physikalisch Lambda = -lam, also Lambda = -omega^2]
+Goedel: 8piG rho/omega^2 = 2
+
+Teil 2
+deSitter (beschleunigt, physikalisch Lambda>0): lam = {{lam -> -3 H^2}}  => physikalisches Lambda = -lam = 3H^2
+Oberflaechengravitation kappa = H  Periode von tE = 2Pi/kappa = 2 Pi/H
+AdS f(r)=1+r^2/L^2 Nullstellen fuer r>0: False
+Raychaudhuri-Term 2 omega^2 mit omega ~ a^-2 skaliert wie a^-4 (Lambda: a^0, Strahlung: a^-4)
+w = (fd^2 + f^2 Om^2 - 2 V)/(fd^2 + f^2 Om^2 + 2 V);  w=-1 genau wenn f > 0 && Om == 0 && fd == 0
+Kreisbahn V=m^2 f^2/2: Om=m, fd=0 -> w = 0
+Ladung Q=f^2 Om a^3 erhalten -> Rotationsenergie f^2 Om^2/2 = Q Om/(2 a^3) skaliert wie a^-3 bei festem Om
+Omega aus Lambda=3 Omega^2/c^2: 1.81995 x 10^-18 1/s;  Omega/H0 = 0.833207
+Omega fuer Lambda = Omega^2/c^2: 3.15224 x 10^-18 1/s; /H0 = 1.44316
+CMB-Schranke (omega/H)_0 < 4.7e-11 -> Lambda_rot/Lambda_obs < 2.12128 x 10^-21
+Planck-Frequenz/Omega: 1.01923 x 10^61  ln = 140.477
+3(1-beta^2) = 2.09446  2Pi/3 = 2.0944  1-2Pi/9 = 0.301868  Abstand zu beta^2 = 0.0000216992
+
+Teil 3
+mitrotierend: rdd = r (Om^2 - w0^2)  (s^2=1: Umlaufsinn faellt heraus)
+dS radial (c=1): rdd = Lam r/3  -> Vergleich: Lam/3 <-> Om^2 - w0^2
+Lam>0 genau wenn w0 > 0 && Om > w0
+Lam = 3 Pi^2 (-1 + rr^2)/l^2  -> Dimension nur ueber l
+l fuer rr^2-1=1: 5.17501 x 10^26 m = 3.77048 Hubble-Radien
+l = Planck-Laenge: rr^2-1 = 9.75432 x 10^-124
+Om^2-w0^2 = d^2 + 2 d w0  Schwebung (Om-w0)^2 = d^2 >= 0 immer, Vorzeichen nicht waehlbar
