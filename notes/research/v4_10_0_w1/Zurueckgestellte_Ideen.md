@@ -108,3 +108,13 @@ Ideen des Autors oder aus Sitzungen, die nicht jetzt verfolgt werden, aber wiede
   3. Die Moran-Lesart bekommt einen blinden Test.
   4. Der Autor fragt nach Veröffentlichung einzelner Ergebnisse oder nach Rückmeldung von außen.
 - **Stand:** zurückgestellt (17.11.2026); nur gesammelt.
+
+## I7: OP5-Attraktor-Weg – Ω_M → β² als Attraktor einer Dynamik
+- **Herkunft:** Entscheidungsvorlage „OP5: Negativ-Schluss oder Attraktor-Weg“ vom 23.11.2026; der Autor wählte den Negativ-Schluss (Runde v4.10.0-r56), der Attraktor-Weg wird zurückgestellt.
+- **Inhalt:** Eine Dynamik, deren Attraktor Ω_M = β² ist, würde die Epochen-Setzung „heute“ ersetzen und eine Funktion Ω_M(z) statt einer Zahl liefern. Doppelt bedingt: liegt in Q2 (Dynamik, W1/W2 auftauen) und braucht die OP5-Übersetzung (K1, E1). Legt auch bei Erfolg den Absolutwert von Λ nicht fest (r56.4: die Auslesung tauscht Λ nur gegen die Epoche).
+- **Gegenbefunde:** H48 (r70.3, eingefrorener Wert hängt an der Expansionsgeschichte), H97 (ε = 1 an DESI DR2 ausgeschlossen; ε ≲ 0,4 frei), I3/H95 (Mischungen erreichen nicht zugleich dunkle Materie und w ≈ −0,7), r23.4 (Kaskaden-Attraktor hängt an der Kopplung). Vorwissen, nicht gerechnet: Ein Skalierungs-Attraktor mit konstantem Ω_M ≈ 0,3 über lange Zeit verträgt sich nicht mit einer Materie-Ära; wird er erst spät erreicht, kehrt das „warum jetzt“ zurück.
+- **Auslöser:**
+  1. H96 wird an DESI DR3 oder Euclid entschieden.
+  2. Eine Regel für die Zeit je Kaskadenschritt oder für die Übersetzung Fluss → Dichte, die aus der Struktur folgt und nicht gesetzt ist.
+  3. Q1 oder Q2 liefert einen Vermittler mit eigenem Zustand und eigener Skala.
+- **Stand:** am 23.11.2026 auf Autorwunsch („jetzt weg b“) aufgenommen: Runde v4.10.0-r57, H124. Attraktor β² genau für ε = 3; an DESI DR2 BAO nicht ausgeschlossen (p = 0,072), aber Ω_M heute ≈ 0,50, Δχ² = 7,87 gegen ΛCDM. Offen: CMB, SN, Wachstum; blinder Test an DESI DR3 möglich.
