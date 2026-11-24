@@ -1,0 +1,19 @@
+Kopienbasis-Vektoren der Standardspalten (V_w-Koordinaten 1, w f1, w f2):
+  (1,1,1)/sqrt3 [TM2-Spalte]: Zustand = [ 1. -0.  0.]
+  (2,-1,-1)/sqrt6 [TM1-Spalte]: Zustand = [-0.  1. -0.]
+  (0,1,-1)/sqrt2: Zustand = [-0.  0.  1.]
+(a) beide Sektoren Z3 (zirkulant): U = F^dagger F = [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]]
+(b) Leptonen Kopienbasis, Neutrinos Z3: |U|^2 = [[0.333333, 0.333333, 0.333333], [0.333333, 0.333333, 0.333333], [0.333333, 0.333333, 0.333333]] (trimaximal, vgl. H39a)
+(c) Leptonen Z3 (U_e = F), Neutrinos Z2 = Tausch g1<->g2, freier Winkel phi im festen 2D-Raum:
+   phi=  0.00: Spalte (0,1,-1)/sqrt2 -> |U_ei|^2 = [0.0, 0.5, 0.5]; min_k |U_ek|^2 = 0.0000
+   phi= 20.00: Spalte (0,1,-1)/sqrt2 -> |U_ei|^2 = [0.0, 0.5, 0.5]; min_k |U_ek|^2 = 0.0000
+   phi= 35.26: Spalte (0,1,-1)/sqrt2 -> |U_ei|^2 = [0.0, 0.5, 0.5]; min_k |U_ek|^2 = 0.0000
+   phi= 45.00: Spalte (0,1,-1)/sqrt2 -> |U_ei|^2 = [0.0, 0.5, 0.5]; min_k |U_ek|^2 = 0.0000
+   phi= 70.00: Spalte (0,1,-1)/sqrt2 -> |U_ei|^2 = [0.0, 0.5, 0.5]; min_k |U_ek|^2 = 0.0000
+   phi= 90.00: Spalte (0,1,-1)/sqrt2 -> |U_ei|^2 = [0.0, 0.5, 0.5]; min_k |U_ek|^2 = 0.0000
+(d) Leptonen Z3, Neutrinos mit erhaltener Spalte = reelle Eins (1,1,1)/sqrt3: |F^dag (1,1,1)/sqrt3|^2 = [1.0, 0.0, 0.0]
+    erhaltene Spalte = imaginaere Kopienachse (2,-1,-1)/sqrt6: |F^dag c|^2 = [0.0, 0.5, 0.5]
+(e) Welche Z2 erhaelt welche Spalte? Koordinaten (1, w f0, w f0_perp) auf V_w; Flavourbasis = Kopienbasis (Koide-Amplituden):
+   Spiegelung S0: Eigenwert -1 hat Dimension 1; als Spalte in Kopienbasis: [[0.0, 0.707107, -0.707107]]
+   Konjugation K: Eigenwert -1 hat Dimension 2; als Spalte in Kopienbasis: [[0.816497, -0.408248, -0.408248], [0.0, 0.707107, -0.707107]]
+   K * S0: Eigenwert -1 hat Dimension 1; als Spalte in Kopienbasis: [[0.816497, -0.408248, -0.408248]]
