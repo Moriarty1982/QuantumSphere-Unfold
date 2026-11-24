@@ -1,0 +1,6 @@
+O_0 (Winkel 0): abgeschlossen 0.0e+00, alternativ 9.8e-15, normmultiplikativ 3.6e-15
+O_120: abgeschlossen 3.9e-16, alternativ 2.0e-14, normmultiplikativ 3.6e-15
+O_240: abgeschlossen 3.9e-16, alternativ 7.1e-15, normmultiplikativ 3.6e-15
+dim(O_0 (Winkel 0) ∩ O_120) = 1
+dim(O_0 (Winkel 0) ∩ O_240) = 1
+dim(O_120 ∩ O_240) = 1
