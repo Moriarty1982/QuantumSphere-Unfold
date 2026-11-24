@@ -125,6 +125,14 @@ Erst `dry_run=true`, dann nach Freigabe:
 Den Entwurf auf Zenodo vom Nutzer prüfen lassen. **Dabei ausdrücklich die Vorschau prüfen:** Zenodo muss das Haupt-PDF als Vorschau zeigen, nicht ein Neben-PDF (bei v4.10.0 war es die Abbildung `op5-slices-9x9.pdf`, weil `tools/zenodo_publish.py` keine Vorschau setzte und die Abbildung zuerst hochlud; vom Autor von Hand korrigiert). Abhilfe: Vorschau im Entwurf setzen (InvenioRDM-Feld `files.default_preview`) oder das Haupt-PDF zuerst hochladen. Veröffentlichen nur auf ausdrückliches Wort, mit `publish=true` und
 `confirm_publish=true`.
 
+**Vorschau nach jedem Hochladen kontrollieren** (Auftrag des Autors vom 24.11.2026): Nach jedem Lauf, der Dateien hochlädt,
+also auch nach dem Veröffentlichen, die Vorschau des Entwurfs bzw. des veröffentlichten Records prüfen und bei Bedarf
+korrigieren. Anlass: Bei v5.4.0 hat der erneute Upload im Veröffentlichungslauf die gesetzte Vorschau gelöscht, und der Record
+zeigte `build-manifest.json`. Seit PR #288 setzt `tools/zenodo_publish.py` `files.default_preview` nach jedem Upload selbst.
+Kontrolle danach: die Record-Seite öffnen (die Vorschau steht oben im Dateibereich) oder den Workflow
+`zenodo-fix-preview.yml` mit `apply=false` starten (meldet `default_preview`). Ist sie falsch, denselben Workflow mit
+`apply=true` starten. Das ist ein Metadaten-Edit, Dateien, DOI und Version bleiben gleich. Das Ergebnis in der Release-Notiz festhalten.
+
 ### 7. Danach
 
 Tag `vX.Y.Z` und GitHub-Release auf dem Release-Commit, mit Version-DOI und Record-Link in der Release-Notiz (Regel in

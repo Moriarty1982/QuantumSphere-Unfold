@@ -96,6 +96,8 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
     - inhaltliche Änderungen (nur über Zweig und PR) und Merges;
     - jeder Zenodo-Schritt (Reservierung, Upload, Veröffentlichung);
     - die Entscheidung, dass eine neue öffentliche Version entsteht.
+- **Zenodo-Vorschau prüfen** (Auftrag des Autors vom 24.11.2026): Nach jedem Hochladen auf Zenodo, auch nach dem Veröffentlichen,
+  die Vorschau kontrollieren und bei Bedarf korrigieren (`zenodo-fix-preview.yml`; Einzelheiten in `notes/anleitungen/zenodo-release.md`).
 - **Zenodo-Vorbereitung:** Vor jeder neuen Veröffentlichung die
   [Anleitung zur Vorbereitung der Aussagen-Datenbank und des LLM-Kontexts](notes/anleitungen/zenodo-datenbank-vorbereiten.md) anwenden.
 - **Issues nachziehen** (Dauerauftrag des Autors vom 15.11.2026): Nach jeder inhaltlichen Änderung (Runde, Erkundung mit
