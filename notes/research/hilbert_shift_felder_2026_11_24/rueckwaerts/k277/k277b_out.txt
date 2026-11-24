@@ -1,0 +1,15 @@
+Ausgabe k277b (Wolfram Language, MCP-Kernel, 24.11.2026). Print-Ausgaben:
+
+X hermitesch: True
+Y = C X: {{0, -v3, -v2}, {-v3, 0, -v1}, {-v2, -v1, 0}}
+det X = 0,  Tr X^2 = 2 (v1^2 + v2^2 + v3^2)
+det Y = -2 v1 v2 v3,  Tr Y = 0,  Tr Y^2 = 2 v1^2 + 2 v2^2 + 2 v3^2
+Tr(X o Y) = 0
+Tr((X o Y)^2) = 2 v1^2 v2^2 + 2 v1^2 v3^2 + 2 v2^2 v3^2
+Tr(X^2 o Y^2) = 2 v1^4 + 2 v2^4 + 2 v3^4
+Tr((Y^2)^2) = 2 (v1^2 + v2^2 + v3^2)^2
+Kontrolle Tr((XoY)^2) - (s^2 - Sum v^4) = 0
+Extrema von v1 v2 v3 auf der Einheitssphaere: 8 Loesungen, Betraege: {{1/Sqrt[3], 1/Sqrt[3], 1/Sqrt[3]}}
+
+Warnungen: Symbol::undefined2 (Linter-Hinweis auf global gesetzte Symbole X, Y, M; kein Rechenfehler), General::messages (Folge davon).
+Rueckgabewert Null. Alle Gleichungen symbolisch exakt (Nullreste exakt 0).
