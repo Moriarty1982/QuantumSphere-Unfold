@@ -1,0 +1,41 @@
+name: Zenodo preview of a published record
+
+# Metadata-only edit of a published record: sets files.default_preview, files and DOI stay unchanged.
+on:
+  workflow_dispatch:
+    inputs:
+      record_id:
+        description: "Published Zenodo record id, e.g. 24500009"
+        required: true
+        type: string
+      file_name:
+        description: "File to show as preview"
+        required: true
+        type: string
+      apply:
+        description: "true = edit and publish the record; false = only report"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Report or fix the preview
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          RECORD: ${{ inputs.record_id }}
+          FILE: ${{ inputs.file_name }}
+          APPLY: ${{ inputs.apply }}
+        run: |
+          args=(--record "$RECORD" --file "$FILE")
+          if [[ "$APPLY" == "true" ]]; then args+=(--apply); fi
+          python tools/zenodo_fix_preview.py "${args[@]}"
