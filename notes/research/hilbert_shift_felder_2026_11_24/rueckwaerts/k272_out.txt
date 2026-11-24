@@ -1,0 +1,32 @@
+Muster (g1,g2,g3) | e^2: -1/0/+1 | Norm: -/+/0 | Nullteiler | dim Der, Spurform | Stab(e7) | Stab(e1)
+(-1, -1, -1)  | 7/0/0 | 0/8/0 | nein | 14 (14-,0+,00) kompakt | 8 (8-,0+,00) kompakt | 8 (8-,0+,00) kompakt
+(-1, -1, 0)   | 3/4/0 | 0/4/4 | ja | 15 (6-,1+,80) NICHT halbeinfach | 11 (3-,0+,80) NICHT halbeinfach | 9 (4-,1+,40) NICHT halbeinfach
+(-1, -1, 1)   | 3/0/4 | 4/4/0 | ja | 14 (6-,8+,00) nicht kompakt | 8 (3-,5+,00) nicht kompakt | 8 (4-,4+,00) nicht kompakt
+(-1, 0, -1)   | 3/4/0 | 0/4/4 | ja | 15 (6-,1+,80) NICHT halbeinfach | 11 (3-,0+,80) NICHT halbeinfach | 9 (4-,1+,40) NICHT halbeinfach
+(-1, 0, 0)    | 1/6/0 | 0/2/6 | ja | 18 (4-,4+,100) NICHT halbeinfach | 16 (3-,3+,100) NICHT halbeinfach | 12 (4-,4+,40) NICHT halbeinfach
+(-1, 0, 1)    | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 9 (2-,3+,40) NICHT halbeinfach
+(-1, 1, -1)   | 3/0/4 | 4/4/0 | ja | 14 (6-,8+,00) nicht kompakt | 8 (3-,5+,00) nicht kompakt | 8 (4-,4+,00) nicht kompakt
+(-1, 1, 0)    | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 9 (2-,3+,40) NICHT halbeinfach
+(-1, 1, 1)    | 3/0/4 | 4/4/0 | ja | 14 (6-,8+,00) nicht kompakt | 8 (4-,4+,00) nicht kompakt | 8 (4-,4+,00) nicht kompakt
+(0, -1, -1)   | 3/4/0 | 0/4/4 | ja | 15 (6-,1+,80) NICHT halbeinfach | 11 (3-,0+,80) NICHT halbeinfach | 11 (3-,0+,80) NICHT halbeinfach
+(0, -1, 0)    | 1/6/0 | 0/2/6 | ja | 18 (4-,4+,100) NICHT halbeinfach | 16 (3-,3+,100) NICHT halbeinfach | 12 (1-,1+,100) NICHT halbeinfach
+(0, -1, 1)    | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach
+(0, 0, -1)    | 1/6/0 | 0/2/6 | ja | 18 (4-,4+,100) NICHT halbeinfach | 16 (3-,3+,100) NICHT halbeinfach | 12 (1-,1+,100) NICHT halbeinfach
+(0, 0, 0)     | 0/7/0 | 0/1/7 | ja | 21 (3-,6+,120) NICHT halbeinfach | 20 (3-,5+,120) NICHT halbeinfach | 14 (1-,3+,100) NICHT halbeinfach
+(0, 0, 1)     | 0/6/1 | 1/1/6 | ja | 18 (2-,6+,100) NICHT halbeinfach | 16 (2-,4+,100) NICHT halbeinfach | 12 (0-,2+,100) NICHT halbeinfach
+(0, 1, -1)    | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach
+(0, 1, 0)     | 0/6/1 | 1/1/6 | ja | 18 (2-,6+,100) NICHT halbeinfach | 16 (2-,4+,100) NICHT halbeinfach | 12 (0-,2+,100) NICHT halbeinfach
+(0, 1, 1)     | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach
+(1, -1, -1)   | 3/0/4 | 4/4/0 | ja | 14 (6-,8+,00) nicht kompakt | 8 (3-,5+,00) nicht kompakt | 8 (3-,5+,00) nicht kompakt
+(1, -1, 0)    | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 9 (1-,4+,40) NICHT halbeinfach
+(1, -1, 1)    | 3/0/4 | 4/4/0 | ja | 14 (6-,8+,00) nicht kompakt | 8 (4-,4+,00) nicht kompakt | 8 (3-,5+,00) nicht kompakt
+(1, 0, -1)    | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 9 (1-,4+,40) NICHT halbeinfach
+(1, 0, 0)     | 0/6/1 | 1/1/6 | ja | 18 (2-,6+,100) NICHT halbeinfach | 16 (2-,4+,100) NICHT halbeinfach | 12 (2-,6+,40) NICHT halbeinfach
+(1, 0, 1)     | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 9 (1-,4+,40) NICHT halbeinfach
+(1, 1, -1)    | 3/0/4 | 4/4/0 | ja | 14 (6-,8+,00) nicht kompakt | 8 (4-,4+,00) nicht kompakt | 8 (3-,5+,00) nicht kompakt
+(1, 1, 0)     | 1/4/2 | 2/2/4 | ja | 15 (2-,5+,80) NICHT halbeinfach | 11 (1-,2+,80) NICHT halbeinfach | 9 (1-,4+,40) NICHT halbeinfach
+(1, 1, 1)     | 3/0/4 | 4/4/0 | ja | 14 (6-,8+,00) nicht kompakt | 8 (3-,5+,00) nicht kompakt | 8 (3-,5+,00) nicht kompakt
+
+Skalierung: psi -> lam psi, t -> t/w, Phase t -> t + t0 kommutieren mit der linearen Regel psi' = u w psi.
+   lam=0.5: |(lam x)(lam y) - lam^2 xy| = 0.0e+00  -> Struktur (Der, Stab, Nullteiler) haengt nicht von Amplitude/Frequenz/Phase ab
+   lam=3.0: |(lam x)(lam y) - lam^2 xy| = 4.0e-15  -> Struktur (Der, Stab, Nullteiler) haengt nicht von Amplitude/Frequenz/Phase ab

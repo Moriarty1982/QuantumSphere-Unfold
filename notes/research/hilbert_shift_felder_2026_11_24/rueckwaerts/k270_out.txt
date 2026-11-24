@@ -1,0 +1,68 @@
+==============================================================================
+A  HS(3): Was muss das Oktonion-Feld festhalten, damit genau SU(3) bleibt?
+   e1*e2 = [0. 0. 0. 1. 0. 0. 0. 0.]   e1*e4 = [0. 0. 0. 0. 0. 1. 0. 0.]
+   fest: nichts                                        dim Stab = 14  Spurform: 14 neg, 0 pos
+   fest: eine Einheit u = e7                           dim Stab =  8  Spurform: 8 neg, 0 pos
+   fest: zwei Einheiten e7, e1                         dim Stab =  3  Spurform: 3 neg, 0 pos
+   fest: assoziatives Tripel e1,e2,e3 (Quaternionen)   dim Stab =  3  Spurform: 3 neg, 0 pos
+   fest: nicht-assoziatives Tripel e1,e2,e4            dim Stab =  0  
+   Lesart: 14 = G2, 8 = SU(3), 3 = SU(2) (Stab eines Quaternion-Blocks), 0 = nichts.
+   SU(3) ungebrochen <=> genau eine Einheit fest. Zwei feste Einheiten erzwingen die dritte (e7 e1)
+==============================================================================
+B  Leiterzahl je Stufe und J = iL_u als Paritaet (-1)^N
+   n=1 dim= 2: antikommutierende L_e:  1 -> eine Einheit fest, Leitern N_c = 0
+   n=2 dim= 4: antikommutierende L_e:  3 -> eine Einheit fest, Leitern N_c = 1
+   n=3 dim= 8: antikommutierende L_e:  7 -> eine Einheit fest, Leitern N_c = 3
+   n=4 dim=16: antikommutierende L_e:  8 -> eine Einheit fest, Leitern N_c = 3   (ungerader Rest: eine Achse ohne Partner)
+   n=5 dim=32: antikommutierende L_e:  9 -> eine Einheit fest, Leitern N_c = 4
+   C(x)O: Eigenwerte N = [0. 1. 1. 1. 2. 2. 2. 3.]
+   |J - (+1)(-1)^N| = 5.0e-16
+   |J - (-1)(-1)^N| = 2.0e+00
+   -> J = iL_u ist (bis aufs Vorzeichen) die Fock-Paritaet: C = (1+J)/2 waehlt die geraden oder ungeraden Sektoren.
+==============================================================================
+C  Anomalien mit Turm-Ladungen fuer allgemeines N_c (exakt)
+   N_c=0: Sektoren (k, dim, Seite) = [(0, 1, 'L')]
+          nur Singuletts/Fundamentale: True;  schwache Dubletts: 1 (UNGERADE -> globale SU(2)-Anomalie (Witten))
+          Tr Y = 0 -> s = 0;  (Tr Y, Tr Y^3, SU(2)^2U(1), SU(Nc)^2U(1)) = [0, 0, 0, 0]
+   N_c=1: Sektoren (k, dim, Seite) = [(0, 1, 'L'), (1, 1, 'R')]
+          nur Singuletts/Fundamentale: True;  schwache Dubletts: 1 (UNGERADE -> globale SU(2)-Anomalie (Witten))
+          Tr Y = 0 -> s = -1/2;  (Tr Y, Tr Y^3, SU(2)^2U(1), SU(Nc)^2U(1)) = [0, 3/4, -1/2, 0]
+   N_c=2: Sektoren (k, dim, Seite) = [(0, 1, 'L'), (1, 2, 'R'), (2, 1, 'L')]
+          nur Singuletts/Fundamentale: True;  schwache Dubletts: 2 (gerade)
+          Tr Y = 0 -> s = -1/2;  (Tr Y, Tr Y^3, SU(2)^2U(1), SU(Nc)^2U(1)) = [0, 0, 0, 0]
+   N_c=3: Sektoren (k, dim, Seite) = [(0, 1, 'L'), (1, 3, 'R'), (2, 3, 'L'), (3, 1, 'R')]
+          nur Singuletts/Fundamentale: True;  schwache Dubletts: 4 (gerade)
+          Tr Y = 0 -> s = -1/2;  (Tr Y, Tr Y^3, SU(2)^2U(1), SU(Nc)^2U(1)) = [0, 0, 0, 0]
+   N_c=4: Sektoren (k, dim, Seite) = [(0, 1, 'L'), (1, 4, 'R'), (2, 6, 'L'), (3, 4, 'R'), (4, 1, 'L')]
+          nur Singuletts/Fundamentale: False;  schwache Dubletts: 8 (gerade)
+          Tr Y = 0 -> s = -1/2;  (Tr Y, Tr Y^3, SU(2)^2U(1), SU(Nc)^2U(1)) = [0, 0, 0, 0]
+   N_c=5: Sektoren (k, dim, Seite) = [(0, 1, 'L'), (1, 5, 'R'), (2, 10, 'L'), (3, 10, 'R'), (4, 5, 'L'), (5, 1, 'R')]
+          nur Singuletts/Fundamentale: False;  schwache Dubletts: 16 (gerade)
+          Tr Y = 0 -> s = -1/2;  (Tr Y, Tr Y^3, SU(2)^2U(1), SU(Nc)^2U(1)) = [0, 0, 0, 0]
+   N_c=7: Sektoren (k, dim, Seite) = [(0, 1, 'L'), (1, 7, 'R'), (2, 21, 'L'), (3, 35, 'R'), (4, 35, 'L'), (5, 21, 'R'), (6, 7, 'L'), (7, 1, 'R')]
+          nur Singuletts/Fundamentale: False;  schwache Dubletts: 64 (gerade)
+          Tr Y = 0 -> s = -1/2;  (Tr Y, Tr Y^3, SU(2)^2U(1), SU(Nc)^2U(1)) = [0, 0, 0, 0]
+   SM mit N_c Farben (Anomaliefreiheit): Q_u = 1/2 + 1/(2N_c); Turm: u im Sektor N_c-1 -> Q_u = (N_c-1)/N_c
+   Loesung von 1/2 + 1/(2N_c) = (N_c-1)/N_c: [3]
+==============================================================================
+D  HS(1): C = (1 + iL_u)/2 auf der komplexifizierten Ellipse
+   C+^2 - C+ = 0.0e+00,  C+ C- = 0.0e+00,  Rang C+ = 1
+   a=1.0 b=1.0: Gewicht im C+-Bild 2.000, im C--Bild 2.000, Differenz/2 = +0.000, Flaeche/pi = +0.000
+   a=1.0 b=0.5: Gewicht im C+-Bild 0.500, im C--Bild 2.000, Differenz/2 = -0.750, Flaeche/pi = +0.750
+   a=1.0 b=0.0: Gewicht im C+-Bild 0.000, im C--Bild 2.000, Differenz/2 = -1.000, Flaeche/pi = +1.000
+   a=0.0 b=1.0: Gewicht im C+-Bild 2.000, im C--Bild 0.000, Differenz/2 = +1.000, Flaeche/pi = -1.000
+   -> HS(0) (a=b): gleiche Gewichte in beiden Bildern. Ladung a^2-b^2 = halbe Gewichtsdifferenz.
+      Das Bild von C (eine Generation, r42) ist der reine Kreisanteil b = 0.
+   Einschraenkung von C=(1+iL_e7)/2 auf span(1,e7) gleich C+ der HS(1)-Ebene: 0.0e+00
+==============================================================================
+E  Drehsinn-Bit: u -> -u durch Automorphismus? links <-> rechts?
+   HS(1) C: Automorphismen {id, conj}; conj hat det -1.0 -> Bit echt (nicht wegdrehbar)
+   HS(2) H: j i j^-1 = [ 0. -1.  0.  0.]  -> i -> -i durch innere Drehung (Weg exp(theta j), theta 0..pi/2)
+      theta=0.000: q i q^-1 = [0. 1. 0. 0.]
+      theta=0.785: q i q^-1 = [ 0.  0.  0. -1.]
+      theta=1.571: q i q^-1 = [ 0. -1.  0. -0.]
+   H: [L_a, R_b] max = 0.0e+00 (zwei vertauschende SU(2))
+   H: phi L_a phi^-1 = L_phi(a) (Abw. 3.3e-16): Automorphismen lassen links links -> Seitenwahl ist ein echtes Bit
+   H: Konjugation K: K L_a K = -R_a (Abw. 0.0e+00): erst die Anti-Automorphie tauscht die Seiten
+   HS(3) O: (a,b)->(a,-b) Automorphismus (Abw. 0.0e+00), schickt e7 -> -1 e7; G2 zusammenhaengend
+   -> Das Drehsinn-Bit von HS(1) wird ab HS(2) wegdrehbar (Konvention); als echtes Bit bleibt links/rechts.
