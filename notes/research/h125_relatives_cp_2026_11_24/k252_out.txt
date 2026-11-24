@@ -1,0 +1,8 @@
+A0  Bloecke invariant: True
+A0  R^2 = -1: [True, True, True]
+A1  Leptonen H_n: [R7,R8] = -2.000000 R15 (Rest 0.0e+00);  A3  B = +0.250000-0.250000i (Rang 2)
+A1  farbig (Quarks): [R7,R8] = +2.000000 R15 (Rest 0.0e+00);  A3  B = +0.250000+0.250000i (Rang 6)
+A2  B_Leptonen = conj(B_Quarks): True;  Im-Vorzeichen -1 / +1
+Ref Linkswirkung (i,j,k): [L_i,L_j] = 2 L_k; B = +0.250000+0.250000i
+A3  Leptonen H_n: 24 Zuordnungen, det [-1], Vorzeichen Im B der Zielgeneratoren [-1], alle gleich B des Blocks: True
+A3  farbig (Quarks): 24 Zuordnungen, det [1], Vorzeichen Im B der Zielgeneratoren [1], alle gleich B des Blocks: True
