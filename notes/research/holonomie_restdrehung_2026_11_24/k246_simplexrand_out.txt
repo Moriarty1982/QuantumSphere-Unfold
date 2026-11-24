@@ -1,0 +1,13 @@
+m_i ~ l_i^0: Holonomie des Simplexrandes = +0.000000000000  (/pi = +0.00000000)
+m_i ~ l_i^0.5: Holonomie des Simplexrandes = -3.141592653590  (/pi = -1.00000000)
+m_i ~ l_i^1: Holonomie des Simplexrandes = -3.141592653590  (/pi = -1.00000000)
+m_i ~ l_i^2: Holonomie des Simplexrandes = -3.141592653590  (/pi = -1.00000000)
+m_i ~ l_i^3: Holonomie des Simplexrandes = -3.141592653590  (/pi = -1.00000000)
+m_i ~ l_i^4: Holonomie des Simplexrandes = -3.141592653590  (/pi = -1.00000000)
+m_i ~ l_i^10: Holonomie des Simplexrandes = -3.141592653590  (/pi = -1.00000000)
+-- Lage der Masse im Bogen (Anteil f), p=2 --
+f=0.0: Holonomie = -3.1415926536  (/pi = -1.000000)
+f=0.3: Holonomie = -3.1415926536  (/pi = -1.000000)
+f=0.5: Holonomie = -3.1415926536  (/pi = -1.000000)
+f=0.7: Holonomie = -3.1415926536  (/pi = -1.000000)
+f=1.0: Holonomie = -3.1415926536  (/pi = -1.000000)
