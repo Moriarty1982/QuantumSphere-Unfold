@@ -98,5 +98,49 @@
     ],
     "guard": "Native selection of the ordered return",
     "obligation": "Identify the quantity that decides the sign in the second window. OP3 remains open."
+  },
+  {
+    "id": "op5-lambda-input",
+    "path": "notes/research/v4_10_0_r56/README.md",
+    "title": "Lambda as an input within the record",
+    "excerpt": "Das „warum heute“ ist dieselbe Eingabe wie der Wert von Λ, keine zweite.",
+    "assumptions": [
+      "The named class of constructions of layer r56 (frame maps and readouts, W1/W2 under G1 and G2, semiclassical route, comparison model, cascade)."
+    ],
+    "guard": "Absolute value of Lambda",
+    "obligation": "A construction with its own length or a dimensionless number near 1e-122 would escape the result. OP5 remains open."
+  },
+  {
+    "id": "op5-cascade-attractor",
+    "path": "notes/research/predictions/Ergebnis_H124_Kaskaden_Attraktor_DESI_DR2.md",
+    "title": "Cascade attractor Omega_M = beta^2 against DESI DR2",
+    "excerpt": "# Ergebnis H124: Kaskade mit Attraktor Ω_M = β² (ε = 3) an DESI DR2 BAO nicht ausgeschlossen, aber mit Ω_M heute ≈ 0,50 und Δχ² = 7,9 gegen ΛCDM",
+    "assumptions": [
+      "Feedback cascade with bridge 3 of r05.5; epsilon = 3 is chosen so that the attractor equals beta^2; only BAO data."
+    ],
+    "guard": "Why the ratio is seen today",
+    "obligation": "Explain the epoch; CMB, supernovae and growth not checked. OP5 and H96 remain open."
+  },
+  {
+    "id": "op3-temporal-octant-readout",
+    "path": "llm/Ergebnis_H123_Zeitliche_Oktantauslese.md",
+    "title": "Temporally ordered octant readout on a puncture",
+    "excerpt": "| H123d | γ_M′ = 0,2341229, γ_L′ = 1,837930, β′ = 0,543379, m_W′ = 80,0994 GeV (−20,3σ), Ω_M′ = 0,2953 (−0,26σ) | alle drei Fenster | trägt nicht (β und m_W verfehlt) |",
+    "assumptions": [
+      "Setting S123: three windows R, T, J_B in temporal order; the origin of the time direction tau is not derived."
+    ],
+    "guard": "Native readout supplying weight two at every spin",
+    "obligation": "Find a readout that separates both orientations of a puncture for every j. Q1a, OP1 and OP3 remain open."
+  },
+  {
+    "id": "op4-relative-cp-sign",
+    "path": "notes/research/predictions/Ergebnis_H125_Relatives_CP_Vorzeichen.md",
+    "title": "Relative CP sign of leptons and quarks",
+    "excerpt": "Vorhersage unter S1: sign(J_PMNS) = −sign(J_CKM), also sin δ_PMNS < 0.",
+    "assumptions": [
+      "Setting S1: CP violation arises in the same way from the family structure in both sectors; CT-003 and the Lorentz reading of r33.2."
+    ],
+    "guard": "Derivation of the CP bridge S1",
+    "obligation": "Derive S1 from an action; the sign is decided by a determination at 3 sigma (deadline 2035). OP3 and OP4 remain open."
   }
 ]
