@@ -568,7 +568,7 @@ def cmd_audit(args):
 # ------------------------------------------------------------------------ doi
 
 DOI_ROLES = [
-    ("Version DOI (v5.4.0)", "NEWDOI"),
+    ("Version DOI (v5.4.0)", "10.5281/zenodo.24500009"),
     ("Previous DOI (v5.3.0)", "10.5281/zenodo.24434403"),
     ("Previous DOI (v5.2.0)", "10.5281/zenodo.24294648"),
     ("Previous DOI (v5.1.0)", "10.5281/zenodo.24237112"),
