@@ -13,6 +13,10 @@ Oktantvorzeichen und das Gewicht 2 der Zählung sind in dieser Form nicht dersel
 Raumwinkel Ω mit jΩ ∉ πℤ für alle j. Nachträglich: Das gebogene Dreieck der Restbiegung (≈ ⅔) erfüllt das, ist aber aus γ_M gebaut. Auslöser 3 von
 I1 getroffen (als Ausweg genannt, nicht verfolgt). Q1a, OP1, OP3 offen; kein Guard berührt. [Ergebnis](../llm/Ergebnis_H123_Zeitliche_Oktantauslese.md), [Runde](../notes/research/v4_10_0_r58/README.md)
 
+### Hopf-Lücke als Nullpunkt der Fläche (Erkundung, 23.11.2026)
+
+Frage des Autors: Was passiert, wenn man in der Zählung statt ½ die Heisenberg-Unschärfe einsetzt? Die Fläche einer Punktierung ist heute √(j(j+1)) = √(j² + j); der Zusatz j ist bereits die Querunschärfe ΔJ_x² + ΔJ_y². Setzt man in beiden Frames das halbklassische Spektrum j + ½ ein (Nullpunkt ħ/2 wie beim Oszillator), wird die Zählgleichung geschlossen lösbar: M mit e^{−πγ} = ½, also γ_M = ln 2/π, T mit γ_T = ln 2/(2π). Damit ist γ_L **exakt 2** und β_sym **exakt 1/√3**, der Hopf-Wert aus `rem:bsym-hopf-gap`. Ohne Nullpunkt (Spektrum j) gibt es log₂ 3 = 1,585. Lesart (ungeprüft): Die Hopf-Konstruktion ist der halbklassische Grenzfall, und die Hopf-Lücke 1/√3 → 0,549 ist die Quantenkorrektur der kleinsten Punktierung (Spin ½, 13 % der Fläche). Als Faktor fällt die Unschärfe heraus, nur als Nullpunkt wirkt sie. Nicht blind (Hopf-Wert bekannt), keine H-Nummer, Skript k245 (Wolfram exakt, Python-Kontrolle). Mit j + ½ werden die Daten verfehlt (β² = ⅓, m_W); OP1 bleibt offen, kein Guard berührt. [Notiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/hopf_gap_2026_11_23/README.md)
+
 ### Deutscher Preprint 0.2.0 veröffentlicht (23.11.2026)
 
 Auf Freigabe des Autors ist der deutsche Preprint in Fassung 0.2.0 auf Zenodo erschienen: DOI

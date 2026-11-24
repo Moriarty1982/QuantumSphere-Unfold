@@ -1,0 +1,13 @@
+Wolfram Language (Wolfram-Kern der Sitzung, 23.11.2026), Skript k245_hopf_gap.wl, tatsaechliche Ausgabe:
+
+--- exakt (y = Exp[-Pi gam]) ---
+jplushalf: y_M = {1/2}, gamma_M = Log[2]/Pi, gamma_T = Log[2]/(2 Pi), gamma_L = 2, beta = 1/Sqrt[3], beta^2 = 0.333333333333
+j: y_M = {1/3}, gamma_M = Log[3]/Pi, gamma_T = Log[2]/Pi, gamma_L = Log[3]/Log[2], beta = Sqrt[Log[3/2]/Log[6]], beta^2 = 0.226294385531
+--- numerisch, heute sqrt(j(j+1)) ---
+gamma_M = 0.237532957966, gamma_T = 0.127384023141, gamma_L = 1.86469976461, beta = 0.549405640975
+--- Abstand der Spektren (Langer) ---
+j+1/2 - Sqrt[j(j+1)] Reihe: 1/(8 j) - 1/(16 j^2) + 5/(128 j^3)
+bei j = 1/2: 0.133974596216
+
+Meldungen: General::munfl (Unterlauf bei Summanden um Exp[-1000] bis Exp[-2500] in FindRoot, Summe bis n = 4000);
+aendert das Ergebnis nicht (Python k245 gibt dieselben Werte). Keine symbolischen Nullreste, keine weiteren Warnungen.
