@@ -1,0 +1,6 @@
+(7) Drehung 120: A L_e8 A^-1 = +L_e8: True, = -L_e8: False
+(7) Spiegelung diag(1,-1): A L_e8 A^-1 = +L_e8: False, = -L_e8: True
+(7) Spiegelung 60: A L_e8 A^-1 = +L_e8: False, = -L_e8: True
+(8) g_0: |g| = 1.000000, Abstand zur Kopie O_0: 0.0e+00, g^2 = [-0.333333] (Realteil)
+(8) g_1: |g| = 1.000000, Abstand zur Kopie O_119: 1.6e-16, g^2 = [-0.333333] (Realteil)
+(8) g_2: |g| = 1.000000, Abstand zur Kopie O_239: 1.2e-16, g^2 = [-0.333333] (Realteil)

@@ -1,0 +1,5 @@
+Q_S hermitesch: True ; Spektrum auf C(x)S: {0.0: 1, 0.333333: 7, 0.666667: 7, 1.0: 1}
+Q_S auf C(x)O_0 (eine Generation erwartet): {0.0: 1, 0.333333: 3, 0.666667: 3, 1.0: 1} ; O_0 invariant: True
+[Q_S, psi] = 0.750 ; [Q^(0), Q^(1)] = 0.241
+Qbar = (1/3) sum Q^(k): [Qbar, psi] = 2.8e-17 ; Spektrum: {0.5: 16}
+Erlaubt (N3): {0, 1/3, 2/3, 1}; Qbar in diesem Spektrum: False
