@@ -1,0 +1,9 @@
+k243_attraktor_fixpunkte.wl, Wolfram-MCP-Kernel, 23.11.2026, vor der Vorab-Notiz H124 (Kandidatenableitung, keine Daten).
+(A1) dOmega/dN aus den Bilanzen = -((b2 eps - 3 om) (-1 + om))
+(A2) Fixpunkte: {{o -> 1}, {o -> b2 eps/3}}
+(A3) Stabilitaet (Ableitung) bei o=1: 3 - b2 eps, bei o=b2 eps/3: -3 + b2 eps
+(A4) Attraktor = beta^2 genau fuer eps = {{eps -> 3}}
+(A5) w_eff am Attraktor (eps=3): -1 + Omega = -0.698153; Wechselwirkung delta = eps b2 = 0.90554
+(A6) Bahn Omega_M(N) fuer eps=3: geschlossene Form mit Log-Termen (DSolve, Inverse-Funktions-Warnung); gleichwertig
+     (Omega - b2)/(1 - Omega) proportional zu exp(-3(1 - b2) N).
+Warnungen: Part::pkspec1, DSolve::ifun (Inverse functions are being used). Symbolische Ergebnisse A1-A4 exakt.

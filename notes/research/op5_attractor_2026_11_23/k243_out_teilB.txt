@@ -1,0 +1,12 @@
+k243_test_h124.py, ausgefuehrt am 23.11.2026 mit python3 -I (numpy, scipy), nach Commit 7b2b665 der Vorab-Notiz H124. Tatsaechliche Ausgabe:
+Kontrolle LCDM: Om = 0.2970, h r_d = 101.56 Mpc, chi2 = 10.55; Gueltigkeit erfuellt: True
+H124 Kaskade eps=3, Om0 frei in (beta^2, 1): Om0 = 0.5006, h r_d = 95.49, chi2_min = 18.42, p(11) = 7.23e-02 -> nicht ausgeschlossen (Schwelle 24.72)
+  Vergleich LCDM frei: chi2 = 10.55; Delta chi2 = 7.87
+Erkundung (nachtraeglich erlaubt): eps bei freiem Om0 (Om0 > eps b2/3, sonst Bahn nicht aus der Materie-Aera)
+  eps = 0.1: Attraktor 0.0101, bestes Om0 = 0.3042, chi2 = 10.29, p(11) = 0.505
+  eps = 0.2: Attraktor 0.0201, bestes Om0 = 0.3114, chi2 = 10.05, p(11) = 0.526
+  eps = 0.3: Attraktor 0.0302, bestes Om0 = 0.3185, chi2 = 9.85, p(11) = 0.544
+  eps = 0.5: Attraktor 0.0503, bestes Om0 = 0.3327, chi2 = 9.54, p(11) = 0.573
+  eps = 1.0: Attraktor 0.1006, bestes Om0 = 0.3677, chi2 = 9.35, p(11) = 0.589
+  eps = 2.0: Attraktor 0.2012, bestes Om0 = 0.4357, chi2 = 11.78, p(11) = 0.38
+  eps = 3.0: Attraktor 0.3018, bestes Om0 = 0.5006, chi2 = 18.42, p(11) = 0.0723

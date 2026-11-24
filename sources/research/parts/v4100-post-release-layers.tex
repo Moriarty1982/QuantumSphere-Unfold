@@ -7129,6 +7129,232 @@ R_{\rm glob}^{(v4100\text{-}r55,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r56 Source-Only: \texorpdfstring{\(\Lambda\)}{Lambda} as an Input (Negative Closure of the OP5 Remainder)}
+\addcontentsline{toc}{section}{v4.10.0-r56 Source-Only: Lambda as an Input (Negative Closure of the OP5 Remainder)}
+\label{sec:v4100-r56-lambda-input}
+% ============================================================================
+
+\paragraph{Purpose.}
+r55.4 lists the absolute value of \(\Lambda\) as the own remainder of OP5, and r55.6 names two ways to treat it: a negative closure (\(\Lambda\) as an
+input) or an attractor dynamics \(\Omega_M\to\beta^2\).  The author chose the negative closure on 23 November 2026.  The layer collects the
+statements of r03, r05, r06 and r69 into one statement with an explicit class of constructions and checks the two mechanisms behind it with
+Wolfram Language.  It is an exploration and \emph{not blind}: the outcome was clear analytically before the computation.  It has no H number and no
+criterion.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r56 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r56 results}
+\label{subsec:v4100-r56-results}
+
+\paragraph{Definition v4.10.0-r56.1 (the class \(\mathcal K\)).}
+\(\mathcal K\) consists of the constructions of the record that bear on a vacuum term:
+\begin{enumerate}[leftmargin=2em]
+\item[(K1)] the frame maps M, T, P as passive invertible maps and the readouts built from them (dimensionless ratios such as \(\beta_{\rm sym}\), \(\gamma_L\),
+\(\Omega_M=\beta^2\)) (r69, r05.4);
+\item[(K2)] the reduced actions of W1/W2 under G1 and G2, with the weights \(a\), \(b\) of the two readings (v4.9.0-r84, r03.5, r04);
+\item[(K3)] the semiclassical route from relative entropy (r06.1, r06.3);
+\item[(K4)] the OP5 comparison model including its affine branch (r69);
+\item[(K5)] the Markov cascade of v4.9.0-r31 and the bridges to cosmic time with \(\Gamma=\varepsilon H\) (r05.5).
+\end{enumerate}
+\(\mathcal K\) is a list of the record, not a class of all conceivable extensions.
+
+\paragraph{Theoremlet v4.10.0-r56.2 (the constant drops out of every equation of motion in \(\mathcal K\)).}
+Exploration, analytic, checked with Wolfram Language (\texttt{k242}).
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] In (K2) the shift \(V\to V+c\) of the M reading \(\mathcal L=a(\tfrac12X-V)\) leaves the field equation unchanged (difference \(0\), exact) and adds
+\((\rho,p)=(ac,-ac)\), \(w=-1\), to the source.  This is the free \(\Lambda=aV_{\min}\) of r03.5; under G1 the same holds with \(a+b\).
+\item[(b)] Whenever the metric equations hold only in their trace-free part, as in (K3) (\(\Lambda\) enters through \(\nabla^a(\Lambda g_{ab})=0\), r06.3), the
+Bianchi identity and \(\nabla^aT_{ab}=0\) give \(R+\kappa T=4\Lambda\) with \(\Lambda\) constant and arbitrary.  In flat FLRW the trace-free equation
+\(\dot H=-\tfrac\kappa2(\rho+p)\) and \(\dot\rho=-3H(\rho+p)\) give \(\tfrac{d}{dt}(H^2-\kappa\rho/3)=0\) (exact); the constant is the integration constant.
+\item[(c)] In (K1) a common energy offset is unobservable at fixed background, and a passive invertible frame change only rescales a balance defect
+(r69).  In (K4) a branch solves the field equations for every constant (r69).  In (K5) the flux fractions are \(\beta^2\), \(1-\beta^2\) for every rate;
+the bridge fixes the rate only by setting \(\varepsilon\) (refuted for \(\varepsilon=1\), H97; free for \(\varepsilon\lesssim0.4\)).
+\end{enumerate}
+No construction in \(\mathcal K\) has an equation that selects a value of the constant.
+
+\paragraph{Theoremlet v4.10.0-r56.3 (no scale in \(\mathcal K\)).}
+Exploration.  All numbers that \(\mathcal K\) fixes are dimensionless and of order one (\(\beta_{\rm sym}^2=0.3018466\), \(\gamma_L=1.8647\), branching
+fractions).  \(\Lambda\) has dimension length\({}^{-2}\).  \(\mathcal K\) contains no length of its own: W1/W2 fix no scale (r55.3), cone data fix neither an absolute
+scale nor the weight of a vacuum term (r69), and the Planck length enters only through \(G\), from outside.  Measured in Planck units the value
+would be \(\Lambda\ell_P^2=2.85\times10^{-122}\) (input: Planck 2018, \(H_0=67.4\) km\,s\(^{-1}\)Mpc\(^{-1}\), \(\Omega_\Lambda=0.6847\)), i.e.\ \(-\ln(\Lambda\ell_P^2)=279.9\).
+No construction of \(\mathcal K\) supplies a dimensionless number of that size.
+
+\paragraph{Theoremlet v4.10.0-r56.4 (the readout trades \(\Lambda\) for the epoch).}
+Exploration, checked with Wolfram Language.  With \(\rho_M\propto x^{-3}\) (\(x=a/a_0\)) and \(\rho_\Lambda=3\Lambda/\kappa\), the condition \(\Omega_M(x)=\beta^2\) has for every
+\(\Lambda>0\) exactly one positive solution,
+\[
+x_*^3=\frac{\kappa\rho_{M0}(1-\beta^2)}{3\beta^2\Lambda},\qquad \Lambda=3(1-\beta^2)H_*^2=2.0944603\,H_*^2 .
+\]
+So the readout \(\Omega_M=\beta^2\) (H96) holds at one epoch for every value of \(\Lambda\); it does not fix \(\Lambda\).  It fixes \(\Lambda\) in units of the Hubble
+rate at that epoch.  Of the pair (value of \(\Lambda\), epoch of the readout) exactly one datum is free.  The author's decision of 6 November 2026
+(epoch ``today'', r05.3) supplies it.
+
+\paragraph{Corollary v4.10.0-r56.5 (negative closure of the OP5 remainder, under \(\mathcal K\)).}
+Within \(\mathcal K\) the absolute value of \(\Lambda\) is an input, as in general relativity and in unimodular gravity.  Equivalently, the epoch of
+the readout is an input; H96 converts one into the other.  The statement is a no-go for the record, not for every extension: a construction
+outside \(\mathcal K\) with its own length, or with a dimensionless number near \(10^{-122}\), would escape it.
+\begin{itemize}[leftmargin=2em]
+\item \emph{What is set:} the list \(\mathcal K\); \(\Lambda\) or, equivalently, the epoch ``today''.
+\item \emph{What is derived:} that no equation of \(\mathcal K\) fixes the constant (r56.2), that \(\mathcal K\) has no scale (r56.3), and the exchange of
+\(\Lambda\) and epoch under the readout (r56.4).
+\item \emph{Where the open choice goes:} to the epoch.  The coincidence ``why now'' is the same input as the value of \(\Lambda\), not a second one.
+\end{itemize}
+OP5 is not closed by this layer.  The core closure stays local under the guards (r05.3(i)); the readout H96 stays open and is decided by data;
+the attractor route (\(\Omega_M\to\beta^2\) as attractor, Q2) is deferred as idea I7 with triggers.
+
+\paragraph{Proof and measurement sources.}
+Script \texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r56/\allowbreak llm/\allowbreak k242\_\allowbreak lambda\_\allowbreak input.wl} with output
+\texttt{k242\_\allowbreak out.txt} (exact symbolic zeros in r56.2(a),(b); DSolve warnings recorded there).  Qiskit was not used: no quantum circuit or
+state simulation is involved.  Statements (K1), (K4), (K5) and r56.3 are read from r69, r05.5, r55.3 and H97.  \(\square\)
+
+\subsection*{v4.10.0-r56 frames}
+\label{subsec:v4100-r56-frames}
+
+\begin{itemize}[leftmargin=2em]
+\item r56.2 and r56.4 are made in frame M (matter-frame observer, weights \(a\)); under G1 the weight is \(a+b\).
+\item Frame T: under G2 it contributes no vacuum term after the bang (r03.5); nothing new.
+\item Frame P: \(\Lambda_{\rm fundamental}=0\) of Theorem~\ref{thm:dark-energy} is a readout statement in P and does not fix the absolute value seen in M.
+No quantity of different frames is compared.
+\end{itemize}
+
+\subsection*{v4.10.0-r56 register entries}
+\label{subsec:v4100-r56-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r56\\
+\midrule
+absolute value of \(\Lambda\) (OP5 remainder) & input under \(\mathcal K\) (r56.5); no-go for the record, not for extensions\\
+epoch of the readout & equivalent input; exchanged with \(\Lambda\) by H96 (r56.4)\\
+H96 (\(\Omega_M=\beta^2\) today) & open, unchanged\\
+attractor route & deferred (idea I7)\\
+OP5 & open; core closure local under the guards\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r56 notes}
+\label{subsec:v4100-r56-notes}
+
+\texttt{notes/\allowbreak research/\allowbreak v4\_10\_0\_r56/\allowbreak README.md}; layers r03, r05, r06, r55 and v4.9.0-r69, r70.
+
+\subsection*{v4.10.0-r56 ledger and guard update}
+\label{subsec:v4100-r56-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r56}=(1,1,0)
+\]
+for (class \(\mathcal K\) stated; both mechanisms checked; no open problem closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r56,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r56}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r57 Source-Only: The Cascade with Attractor \texorpdfstring{\(\Omega_M=\beta^2\)}{Omega\_M = beta\^2} (H124)}
+\addcontentsline{toc}{section}{v4.10.0-r57 Source-Only: The Cascade with Attractor Omega\_M = beta\^2 (H124)}
+\label{sec:v4100-r57-cascade-attractor}
+% ============================================================================
+
+\paragraph{Purpose.}
+After r56 the author took up the attractor route (deferred as idea I7): a dynamics whose attractor is \(\Omega_M=\beta_{\rm sym}^2\).  W1/W2 stay frozen; the only
+dynamics for the ratio in the record is the cascade of v4.9.0-r31 with the bridge of r05.5.  A backward search fixes its rate, and one pre-registered,
+not blind test (H124) compares the result with DESI DR2 BAO.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r57 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.3.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24434403}{10.5281/zenodo.24434403} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r57 results}
+\label{subsec:v4100-r57-results}
+
+\paragraph{Theoremlet v4.10.0-r57.1 (the attractor fixes the rate).}
+Exploration, Wolfram Language exact (\texttt{k243}, part A).  For the bridge of r05.5 (vacuum decays into matter at rate \(\beta^2\Gamma\), \(\Gamma=\varepsilon H\)), flat and
+without radiation,
+\[
+\frac{d\Omega_M}{dN}=(1-\Omega_M)(\varepsilon\beta^2-3\Omega_M),\qquad N=\ln a .
+\]
+The fixed points are \(\Omega_M=1\) (matter era, repelling for \(\varepsilon\beta^2<3\)) and \(\Omega_M^*=\varepsilon\beta^2/3\) (attracting).  Hence \(\Omega_M^*=\beta^2\) exactly
+for \(\varepsilon=3\), i.e.\ \(\Gamma=3H\), one cascade step per e-fold of volume.  On the attractor \(w_{\rm eff}=-1+\beta^2=-0.698\) and the coupling is
+\(\delta=\varepsilon\beta^2=0.906\).  The orbit runs from the matter era to \(\beta^2\), \((\Omega_M-\beta^2)/(1-\Omega_M)\propto e^{-3(1-\beta^2)N}\); today \(\Omega_M>\beta^2\).  The
+value \(\varepsilon=3\) follows from the demand ``attractor \(=\beta^2\)'', not from the structure.
+
+\paragraph{Theoremlet v4.10.0-r57.2 (H124: not excluded by BAO, with \(\Omega_M\) today \(\approx0.50\)).}
+Pre-registered (commit \texttt{7b2b665}), not blind.  Model of r57.1 with \(\varepsilon=3\), radiation included, \(\Omega_{M0}\in(\beta^2,1)\) and \(hr_d\) free; the 13 DESI DR2
+BAO values of H97; refuted if \(\chi^2_{\min}>24.72\) (\(p<0.01\), 11 degrees of freedom).  Validity holds (flat \(\Lambda\)CDM: \(\Omega_m=0.2970\), \(hr_d=101.56\) Mpc,
+\(\chi^2=10.55\)).  Result: \(\chi^2_{\min}=18.42\), \(p=0.072\), at \(\Omega_{M0}=0.5006\), \(hr_d=95.49\) Mpc.  \textbf{Not excluded.}  Against flat \(\Lambda\)CDM with the same
+number of free parameters the model is worse by \(\Delta\chi^2=7.87\).  \emph{Exploration afterwards:} with \(\Omega_{M0}\) free, BAO allows small \(\varepsilon\) as well as
+\(\Lambda\)CDM (\(\varepsilon=1\): \(\chi^2=9.35\)); \(\chi^2\) rises only towards \(\varepsilon=3\).
+
+\paragraph{Consequence.}
+The cascade has an attractor \(\beta^2\) at one rate and is compatible with BAO alone, but the fit puts \(\Omega_M\) today near \(0.50\): the value \(\beta^2\) lies in the
+future, so the attractor does not explain ``why now'' and the epoch remains an input (as in r56).  The absolute value of \(\Lambda\) is not fixed either
+(r56.4).  CMB, supernovae and growth are not tested; a coupling of \(0.906\) is expected to be under strong pressure there (prior knowledge, not
+computed).  OP5 is not closed; H96 stays open.
+
+\paragraph{Proof and measurement sources.}
+\texttt{notes/\allowbreak research/\allowbreak op5\_\allowbreak attractor\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 23/} (\texttt{k243\_\allowbreak attraktor\_\allowbreak fixpunkte.wl},
+\texttt{k243\_\allowbreak test\_\allowbreak h124.py} with outputs); pre-registration and result H124 in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  Qiskit was not used:
+no quantum circuit is involved.  \(\square\)
+
+\subsection*{v4.10.0-r57 frames}
+\label{subsec:v4100-r57-frames}
+
+All quantities are matter-frame quantities (observer in M, as in r05.4 and H97).  No quantity of different frames is compared.
+
+\subsection*{v4.10.0-r57 register entries}
+\label{subsec:v4100-r57-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r57\\
+\midrule
+cascade attractor \(\varepsilon\beta^2/3\) & exact (r57.1); \(=\beta^2\) for \(\varepsilon=3\)\\
+H124 (\(\varepsilon=3\), DESI DR2 BAO) & not excluded, \(\Omega_{M0}=0.50\), \(\Delta\chi^2=7.87\) against \(\Lambda\)CDM\\
+``why now'' & not explained; epoch remains an input\\
+H96 & open, unchanged\\
+OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r57 ledger and guard update}
+\label{subsec:v4100-r57-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r57}=(1,1,0)
+\]
+for (attractor derived; test run and recorded; no open problem closed).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r57,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r57}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
 
 % ============================================================================
 \clearpage
