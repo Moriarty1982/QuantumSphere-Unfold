@@ -11,7 +11,7 @@ on:
         required: true
         type: string
       target:
-        description: "Volle Commit-SHA, auf die der Tag zeigt (muss in main enthalten sein)"
+        description: "Volle Commit-SHA, auf die der Tag zeigt (Paketquellstand; in main oder im Kopf eines PRs)"
         required: true
         type: string
       title:
@@ -50,7 +50,10 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$TARGET" =~ ^[0-9a-f]{40}$ ]] || { echo "target muss eine volle SHA sein"; exit 1; }
-          git merge-base --is-ancestor "$TARGET" origin/main || { echo "target ist nicht in main"; exit 1; }
+          # Paketquellstände liegen oft auf dem Zweig eines squash-gemergten PRs; dessen Kopf bleibt unter refs/pull erhalten.
+          git fetch -q origin '+refs/pull/*/head:refs/remotes/pull/*'
+          git cat-file -e "$TARGET^{commit}" || { echo "target ist kein Commit dieses Repos"; exit 1; }
+          git branch -r --contains "$TARGET" | grep -qE 'origin/main$|pull/[0-9]+$' || { echo "target liegt weder in main noch in einem PR"; exit 1; }
           if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null; then
             echo "Tag $TAG existiert bereits"; exit 1
           fi
