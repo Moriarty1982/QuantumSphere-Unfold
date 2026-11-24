@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Trialität und drei Generationen: Albert-Algebra (24.11.2026, Erkundung, nicht blind, k275)
+
+Anschluss an k273 (Lücke Spin ½ gegen Spin 1). In der Albert-Algebra H₃(𝕆) (Träger der Trialität, drei Plätze; dim Der = 52 = f₄) ist der Kommutant von G₂ eine **so(3), die auf den drei Plätzen als Vektor wirkt** (ε eingebaut über den antisymmetrischen Teil); der Kommutant der Farbe ist su(3)′ ⊃ so(3). Farbtripletts: alle Spin 1 (su(3)′-Fundamentale), und die so(3) vertauscht dort **exakt** mit der Ladungsstruktur (L_e₇, R_e₇ je Platz). Farbsinguletts: 1 ⊕ 3 ⊕ 5; in span(1, e₇) mischt L_e₇ die Eins (Spin 2/0) mit e₇ (Spin 1) und bricht die so(3) (Python und Wolfram gleich). **Rest mit Ladung: genau A₄** (12 der 24 Oktaeder-Elemente, die geraden; Ikosaeder bricht) – die Slot-Symmetrie, die r33/r55 bisher gesetzt hatten. Lesart: Quarks tragen die Familien-SO(3) exakt, Leptonen nur A₄ (vgl. kleine CKM, große PMNS, H125); nicht gerechnet. Nicht gezeigt: dass die Plätze Generationen sind, die Einbettung in den Turm, Massen. OP3/OP4 offen, kein Guard berührt. [Notiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/hilbert_shift_felder_2026_11_24/rueckwaerts/trialitaet/README.md)
+
 ### Veröffentlichung v5.4.0 (24.11.2026)
 
 Companion v5.4.0 ist veröffentlicht, DOI [10.5281/zenodo.24500009](https://doi.org/10.5281/zenodo.24500009), neue Version von v5.3.0 (Concept-DOI 10.5281/zenodo.19210728). Das Paket enthält die Runden v4.10.0-r31 bis r59. Das Physik-Paper steht damit auf r59: durchgerechneter OP5-Fall, Ergänzungen im Grenzen-Teil aus r52–r58 und ein Absatz zur Händigkeitsserie (H125: Vorzeichen der leptonischen CP-Phase unter einer Setzung, prüfbar bis etwa 2035; Cayley-Dickson-Turm legt keine Zahl fest). Zwei überbreite Formelzeilen in r38 und r46 wurden nur umbrochen. Kein OP und kein Guard ist geschlossen. Der deutsche Preprint steht auf Fassung 0.3.0 (DOI 10.5281/zenodo.24497991).
