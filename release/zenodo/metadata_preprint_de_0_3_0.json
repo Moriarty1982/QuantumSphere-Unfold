@@ -46,6 +46,6 @@
       "scheme": "url"
     }
   ],
-  "notes": "Deutschsprachiger Preprint, Fassung 0.3.0. Version-DOI nach der Reservierung eintragen. Quellstand der Literaturlinks: beim Release eintragen.",
+  "notes": "Deutschsprachiger Preprint, Fassung 0.3.0. Version-DOI 10.5281/zenodo.24497991 (reserviert am 24.11.2026, auf der Titelseite eingetragen). Quellstand der Literaturlinks: Commit 73d6a5d7 auf main (Merge von PR #285).",
   "publication_date": "2026-11-24"
 }

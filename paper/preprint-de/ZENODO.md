@@ -1,6 +1,6 @@
 # Zenodo-Angaben zur Fassung 0.3.0
 
-**Status:** vorbereitet am 24.11.2026, nicht reserviert, nicht veröffentlicht. Eine neue Zenodo-Version entsteht nur mit ausdrücklicher
+**Status:** veröffentlicht am 24.11.2026, [Record 24497991](https://zenodo.org/records/24497991) (Lauf 45385257914). Davor reserviert am 24.11.2026 (Entwurf 24497991, Version-DOI 10.5281/zenodo.24497991, auf der Titelseite eingetragen); PDF auf den Entwurf hochgeladen (Lauf 45384234654), nicht veröffentlicht. Eine neue Zenodo-Version entsteht nur mit ausdrücklicher
 Freigabe des Autors (`AGENTS.md`). Concept-DOI 10.5281/zenodo.24405552; vorige Fassung 0.2.0 (23.11.2026, 55 Seiten),
 [Record 24481107](https://zenodo.org/records/24481107), DOI 10.5281/zenodo.24481107; davor 0.1.0, DOI 10.5281/zenodo.24405553.
 
@@ -25,6 +25,6 @@ Neu gegenüber Fassung 0.2.0 (doi:10.5281/zenodo.24481107): Abschnitt 5.7 „Dre
 This German-language preprint asks what a Heisenberg compensator would have to do and follows the question from the photon to a common mathematical carrier for matter, gauge structure and spacetime geometry. A field example fixes the role of the projection, biquaternions serve as the carrier, and a comparison with the Dixon algebra narrows down where a generation index can sit. The mass readout is studied at the Koide relation; the sign of the octant step turns out to be a time orientation of the readout that no ingredient fixes. A case study of OP5 follows a prepared matter source to the geometric axis contrast: the ordinary part follows from the linearized Einstein equation, while the directed contrast needs a mediator that the comparison action lacks and is compatible in vacuum only with a vanishingly small coupling. A series of explorations finds the handedness of the readout to be a convention; only a relative sign between leptons and quarks is fixed, and its consequence sin δ_PMNS < 0 stands as an open prediction against future data. All open problems remain open; the article states which assumptions each calculation carries.
 
 ## Vor dem Release prüfen
-- Literaturlinks `towerlayer` und `lambdainput` sowie SOURCES.md auf den Merge-Commit dieses PR pinnen (heute `main` bzw. 1f7318f5).
+- Literaturlinks pinnen (erledigt: `towerlayer` und SOURCES 5.7 auf 73d6a5d7, Merge von PR #285; `lambdainput` auf 1f7318f5).
 - Nach der Reservierung `\versiondoi` setzen, PDF bauen, Seitenzahl hier und im Release-README prüfen.
 - Vorschau-PDF auf Zenodo prüfen (Haupt-PDF als Vorschau, keine Abbildung).
