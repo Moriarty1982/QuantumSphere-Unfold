@@ -1,0 +1,10 @@
+Wolfram-MCP-Kern, 24.11.2026 (Print-Ausgaben, Rueckgabewert Null; Warnung Symbol::undefined2 zu R, Psi ist ein Linter-Hinweis)
+Gram der g_k: {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+Winkel g_k zur reellen Eins: cos^2 = {1/3, 1/3, 1/3} (magischer Winkel ArcCos[1/Sqrt[3]] = 54.735610 Grad)
+psi g_k = g_{k+1}: {0}
+Eigenwerte von psi: {1, (-1 + I Sqrt[3])/2, (-1 - I Sqrt[3])/2} (r13: Phase diag(1, w, wbar) in der Eigenbasis)
+Amplituden c_k = {(al + Sqrt[2] be Cos[de])/Sqrt[3], al/Sqrt[3] - be Cos[de]/Sqrt[6] + be Sin[de]/Sqrt[2], al/Sqrt[3] - be Cos[de]/Sqrt[6] - be Sin[de]/Sqrt[2]}
+Koide K = (al^2 + be^2)/(3 al^2) ; K = 2/3 genau fuer {{be -> ConditionalExpression[al, al > 0]}}
+Brannen-Form bei be = al: c_k/(al/Sqrt[3]) = {1 + Sqrt[2] Cos[de], 1 - Cos[de]/Sqrt[2] + Sqrt[3/2] Sin[de], 1 - Cos[de]/Sqrt[2] - Sqrt[3/2] Sin[de]}
+   (= 1 + Sqrt[2] Cos[de - 2 Pi k/3], k = 0, 1, 2)
+Psi bei be = al normiert: (1 + u)/Sqrt[2] = Exp[u Pi/4], Winkel zur Eins = Pi/4

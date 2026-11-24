@@ -1,0 +1,20 @@
+(1) psi Automorphismus: 1.1e-16; psi e8 = e8: True; [psi, L_e8] = 0.0e+00
+(2) psi P_0 psi^-1 = P_120: 2.2e-16
+(2) psi P_120 psi^-1 = P_240: 3.9e-16
+(2) psi P_240 psi^-1 = P_0: 4.6e-16
+(3) Abgeschlossenheit von O_theta (max |(1-P) xy|):
+    theta =   0 Grad: 0.000e+00
+    theta =  15 Grad: 6.830e-01
+    theta =  30 Grad: 8.660e-01
+    theta =  45 Grad: 5.000e-01
+    theta =  60 Grad: 3.331e-16
+    theta =  90 Grad: 1.000e+00
+    theta = 120 Grad: 6.661e-16
+    theta = 135 Grad: 5.000e-01
+    theta = 180 Grad: 3.674e-16
+(4) Summe der Projektoren auf Im O_k = [1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 0. ] (Rahmen)
+    Hauptwinkel Im O_0 / Im O_120: cos = [0.5 0.5 0.5 0.5 0.5 0.5 0.5] -> [60. 60. 60. 60. 60. 60. 60.] Grad
+(5) min. Singulaerwert/|a|: Rang-1-Elemente w(x)n (alle Winkel, 500 Stichproben) = 1.0000; Rang-2 (verschraenkt): min 0.0085, Median 0.3238
+    Nullteiler (e1+e10)/sqrt2 als Tensor in 7 x R^2: Rang 2
+(6) Produkt x*y (x in Im O_0, y in Im O_120), Anteil von |xy|^2: Re 0.0321, e8 0.0964, Im O_0 0.2179, Im O_120 0.2179, Im O_240 0.8715
+    Assoziator ueber drei Kopien |(xy)z - x(yz)| / |x||y||z| = 1.6722

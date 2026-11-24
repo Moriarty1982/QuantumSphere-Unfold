@@ -1,0 +1,9 @@
+Wolfram-MCP-Kern, 24.11.2026 (Print-Ausgaben, Rueckgabewert Null, keine Warnungen; ein erster Lauf mit falscher Solve-Syntax wurde verworfen)
+Anzahl G2-vertraeglicher Automorphismen von S: 6
+  lam = -1, M = {{-1/2, -Sqrt[3]/2}, {-Sqrt[3]/2, 1/2}}, Ordnung 2, det M = -1
+  lam = -1, M = {{-1/2, Sqrt[3]/2}, {Sqrt[3]/2, 1/2}}, Ordnung 2, det M = -1
+  lam = -1, M = {{1, 0}, {0, -1}}, Ordnung 2, det M = -1
+  lam = 1, M = {{-1/2, -Sqrt[3]/2}, {Sqrt[3]/2, -1/2}}, Ordnung 3, det M = 1
+  lam = 1, M = {{-1/2, Sqrt[3]/2}, {-Sqrt[3]/2, -1/2}}, Ordnung 3, det M = 1
+  lam = 1, M = {{1, 0}, {0, 1}}, Ordnung 1, det M = 1
+abgeschlossen: True; kommutativ: False; Charakter Spur: {0, 0, 0, -1, -1, 2}
