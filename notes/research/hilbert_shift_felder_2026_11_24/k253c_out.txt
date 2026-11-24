@@ -1,0 +1,5 @@
+n=1 dim= 2: max |L_u^2 + 1| ueber 200 zufaellige u = 0.00e+00
+n=2 dim= 4: max |L_u^2 + 1| ueber 200 zufaellige u = 4.44e-16
+n=3 dim= 8: max |L_u^2 + 1| ueber 200 zufaellige u = 4.44e-16
+n=4 dim=16: max |L_u^2 + 1| ueber 200 zufaellige u = 8.51e-01
+n=5 dim=32: max |L_u^2 + 1| ueber 200 zufaellige u = 7.36e-01

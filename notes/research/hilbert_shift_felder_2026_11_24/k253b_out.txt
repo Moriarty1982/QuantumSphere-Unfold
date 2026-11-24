@@ -1,0 +1,9 @@
+Wolfram-MCP-Kern, 24.11.2026 (Print-Ausgaben; Rueckgabewert Null; Warnung Symbol::undefined2 ueber globale Hilfssymbole
+Lz, N0, E0, D0 ist ein Linter-Hinweis, keine Rechenwarnung; General::messages folgt daraus)
+HS(1) umlaufene Flaeche A = (a^2 - b^2) Pi
+HS(1) Drehimpuls/U(1)-Ladung L = (a^2 - b^2) w
+HS(1) Grenzfall b=a (HS(0), Linie): A = 0, Bahn = {2 a Cos[t w], 0}
+Bewegungsgleichung psi'' + w^2 psi = 0
+Zeitumkehr: psi(-t) - (b e^{iwt} + a e^{-iwt}) = 0
+HS(2) Berry-Phase um Breitenkreis: gamma = -2 Pi Sin[th/2]^2 ; Raumwinkel Omega = 2 Pi (1 - Cos[th]) ; |gamma|/Omega = 1/2
+Wolfram dim Der(A_n), n=0..4: {0, 0, 3, 14, 14}
