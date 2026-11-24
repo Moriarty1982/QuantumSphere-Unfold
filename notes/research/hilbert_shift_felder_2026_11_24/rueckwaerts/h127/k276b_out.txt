@@ -1,0 +1,14 @@
+Ausgabe k276b (Wolfram Language, MCP-Kernel, 24.11.2026). Print-Ausgaben woertlich:
+
+so(3) antisymmetrisch: {{0,...,0}} == 0 && ... == 0   [unausgewertete Form: drei 9x9-Nullmatrizen == 0, also wahr; AllTrue verglich Matrix mit Skalar 0]
+Kommutator [T1,T2] = T3: True
+C^2 auf Offdiagonalen = -1: True
+Summe der Komponenten = C: True
+Casimir-Eigenwerte (Multiplizitaet): {{20, 9}, {12, 21}, {6, 30}, {2, 18}, {0, 3}}
+w_l fuer l = 0..4 (exakt): {0, 0, 0, 1, 0}
+||C||^2 = 6
+zyklisch: rho C rho^T == C: True;  ungerade: rho C rho^T == -C: True
+
+Warnungen: Symbol::undefined2 (Linter-Hinweis auf lokal gesetzte Symbole X, B, Rodd, Rcyc, Cm; kein Rechenfehler),
+General::messages (Folge davon). Rueckgabewert Null.
+Lesart: End(1+3+5) = 3x l0 + 6x l1 + 6x l2 + 3x l3 + 1x l4 (81). C liegt exakt und ganz im Spin-3-Teil.
