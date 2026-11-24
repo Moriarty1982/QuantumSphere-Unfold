@@ -1,0 +1,17 @@
+=== delta_e-Anpassung ===
+Orientierung +1: delta_e = 4.411016 rad, Restfehler 3.60e-11, Zeilen (e,mu,tau) = Kopien [np.int64(1), np.int64(0), np.int64(2)]
+Orientierung -1: delta_e = 4.411016 rad, Restfehler 3.60e-11, Zeilen (e,mu,tau) = Kopien [np.int64(2), np.int64(0), np.int64(1)]
+=== Stufe A ===
+A1: entartete Punkte 16380/16380 (1.000)
+A3: ||M - M_assoz||/||M|| min 0.000e+00, Median 9.787e-17, max 1.423e-01
+A2: chi=0, dnu=0: Eigenwerte [-0.  2.  2.], |U|^2 (Kopienzeilen) = [[0.3333, 0.2166, 0.4501], [0.3333, 0.5219, 0.1448], [0.3333, 0.2615, 0.4052]]
+A2: chi=0, dnu=45: Eigenwerte [0. 2. 2.], |U|^2 (Kopienzeilen) = [[0.3333, 0.6425, 0.0242], [0.3333, 0.0895, 0.5772], [0.3333, 0.268, 0.3986]]
+A2: chi=180, dnu=0: Eigenwerte [-0.  2.  2.], |U|^2 (Kopienzeilen) = [[0.3333, 0.2166, 0.4501], [0.3333, 0.5219, 0.1448], [0.3333, 0.2615, 0.4052]]
+A2: chi=180, dnu=45: Eigenwerte [-0.  2.  2.], |U|^2 (Kopienzeilen) = [[0.3333, 0.3169, 0.3498], [0.3333, 0.0688, 0.5978], [0.3333, 0.6143, 0.0524]]
+=== Stufe B ===
+Orientierung +1: Gitter-Minimum chi2 = 858.409 bei chi = 100.50 Grad, dnu = 294.50 Grad; Anteil chi2 <= 5.99: 0.0000
+Orientierung -1: Gitter-Minimum chi2 = 858.409 bei chi = 138.50 Grad, dnu = 173.50 Grad; Anteil chi2 <= 5.99: 0.0000
+Verfeinert (Orientierung +1): chi2_min = 858.409 bei chi = 100.500 Grad, dnu = 294.500 Grad
+  sin2th12 = 0.6591, sin2th13 = 0.02225, sin2th23 = 0.4634, delta_CP = 250.2 Grad
+  Beitraege: s12: 855.955, s13: 0.033, s23: 0.259, d: 2.162
+URTEIL: widerlegt; Anteil der Ebene mit chi2 <= 5.99 = 0.0000 (scharf)

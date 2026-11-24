@@ -1,0 +1,7 @@
+Wolfram-MCP-Kern, 24.11.2026. Print-Ausgaben; Rueckgabewert Null. Warnungen: Symbol::undefined2 (Linter-Hinweis zu globalen
+Hilfssymbolen) und N::meprec (Praezisionsgrenze bei der numerischen Auswertung der Punkte; die Restimaginaerteile liegen bei 1e-39 bis 1e-138).
+Eigenwerte von M M^dag (symbolisch): {0, 2 Cos[c]^2, 2 Cos[c]^2}
+M - M_assoz (symbolisch): {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+Punkt {30, 0}: Eigenwerte {1.5, 1.5, 8.5e-79}   (Imaginaerteile < 1e-96)
+Punkt {90, 45}: Eigenwerte {0, 0, 0}
+Punkt {137, 200}: Eigenwerte {1.0697564737441253008, 1.0697564737441253008, 4.8e-39}   (Imaginaerteile < 1e-38)
