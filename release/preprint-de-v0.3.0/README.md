@@ -1,6 +1,6 @@
 # Deutscher Preprint, Fassung 0.3.0: Release-Paket
 
-**Status (24.11.2026): reserviert, nicht hochgeladen, nicht veröffentlicht.** Zenodo-Entwurf 24497991, reservierte Version-DOI 10.5281/zenodo.24497991 (Workflow-Lauf 45383898146, Trockenlauf 45383778585). PDF mit DOI auf der Titelseite gebaut (58 Seiten, 0 Overfull, 0 undefiniert), SHA256 5dd0fecb03fbc594… in `SHA256SUMS.txt`. Jeder Zenodo-Schritt nur mit ausdrücklicher Freigabe des
+**Status (24.11.2026): hochgeladen, nicht veröffentlicht.** Zenodo-Entwurf 24497991, reservierte Version-DOI 10.5281/zenodo.24497991 (Trockenlauf 45383778585, Reservierung 45383898146, Upload 45384234654; geerbte Datei 0.2.0 entfernt, 674987 Bytes, SHA256 wie unten). PDF mit DOI auf der Titelseite gebaut (58 Seiten, 0 Overfull, 0 undefiniert), SHA256 5dd0fecb03fbc594… in `SHA256SUMS.txt`. Jeder Zenodo-Schritt nur mit ausdrücklicher Freigabe des
 Autors (`AGENTS.md`). Concept-DOI 10.5281/zenodo.24405552; Vorgänger 0.2.0, Record 24481107, DOI 10.5281/zenodo.24481107.
 
 - Quelle: `paper/preprint-de/` (Fassung 0.3.0, 58 Seiten, lokaler Build mit TeX Live 2023: 0 Overfull, keine undefinierten Verweise).
