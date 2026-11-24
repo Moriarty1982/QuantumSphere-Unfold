@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Restdrehung als Holonomie der Drei-Sektor-Scheibe (24.11.2026, Erkundung, nicht blind, k246)
+
+Anschluss an das Gedankenexperiment „Zeit als Restdrehung“ (Zeit = aufsummierte Drehung nach einem Formzyklus, wie bei der fallenden Katze). Gefragt war, ob ΔΦ = γ_M·A (I1-Brücke, A = ½) die Holonomie eines konkreten Formzyklus von drei Bögen auf dem Kreis ist. Der mechanische Zusammenhang folgt aus Drehimpuls null. **Kreismodell vom 12.11. (fester Radius, formunabhängige Massen):** Krümmung exakt null, kein Zyklus hinterlässt eine Drehung. **Radiale und tangentiale Welle mit Phasenversatz:** Restdrehung je Zyklus exakt −4πab/(a² + 2); die Kopplung ist genau bei der Koide-Amplitude a = √2 (K = ⅔) maximal, eine Umschreibung des bekannten 45°-Winkels. **Massen an den Bögen (m ∝ ℓ^p):** Der größte Formzyklus, bei dem jeder Bogen einmal leer wird, dreht die Scheibe um genau −π, für jedes geprüfte p > 0. Liest man γ_M als Kopplung des Zusammenhangs (Ashtekar–Barbero, γK), folgt ΔΦ = γ_M · ½. γ_M selbst entsteht aus der Geometrie nicht (die Krümmung enthält nur π und √2) und bleibt eingesetzt; die offene Wahl wandert von „eine Lichtquerung“ zu „größter Formzyklus“. Drehsinn gesetzt. Wolfram exakt, numerische Kontrolle; ein falsches sympy-Integral (−1,26 statt −π) wurde dabei gefunden. OP3 offen, kein Guard berührt, CT-001/CT-002 unverändert. [Notiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/holonomie_restdrehung_2026_11_24/README.md)
+
 ### H123 / Runde r58: Zeitlich geordnete Oktant-Auslese auf einer Punktierung (Q1a) (23.11.2026)
 
 Faden „Auslesegesetz Q1a als H123 testen“, Freigabe des Autors „Committen und rechnen“. Vorab-Notiz 1a4662ef, Wolfram exakt, Qiskit-Zyklustest als
