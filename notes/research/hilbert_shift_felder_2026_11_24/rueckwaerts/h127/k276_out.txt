@@ -1,0 +1,33 @@
+==============================================================================
+Kontrolle Spurform: Tr(X o Y) - x^T g y = 8.9e-16
+L_Y selbstadjungiert (Spurform): max|L - L^T| = 1.1e-16
+so(3) antisymmetrisch in Spurform-Koordinaten: 2.2e-16
+[C, P_s] = 0.0e+00, [so(3), P_s] = 0.0e+00
+==============================================================================
+Stufe A: A0 = P_s C P_s, Anteile w_l
+   l =  0: w_l = 0.0000000000
+   l =  1: w_l = 0.0000000000
+   l =  2: w_l = 0.0000000000
+   l =  3: w_l = 1.0000000000
+   l =  4: w_l = 0.0000000000
+   ||A0||^2 = 6.000000
+   w_3 = 1.0000000000, fuehrende Komponente l = 3, Kontrolle max w_l (l nicht in [3, 6, 7, 9, 10]) = 4.2e-31
+   -> Stufe A: bestaetigt
+   Nachkontrolle: rho(zykl.) A0 rho^T - A0 = 0.0e+00;  rho(ungerade) A0 rho^T + A0 = 0.0e+00
+==============================================================================
+Stufe B: Leckordnung, C_eff^(n) = P_t K^n(A0) P_t
+   Kontrolle K aequivariant: |K(R Z R^T) - R K(Z) R^T| = 3.2e-14
+   n = 0 (Kontrolle P_t C P_t): ||.|| = 4.2426, b_0 = 3.7e-15
+   n = 1: ||C_eff|| = 0.000000e+00, b_1 = 0.000e+00, ||A_n|| gesamt = 1.3597e-16, Anteil Singulettblock 1.3597e-16
+   n = 2: ||C_eff|| = 0.000000e+00, b_2 = 0.000e+00, ||A_n|| gesamt = 7.5481e-33, Anteil Singulettblock 7.5481e-33
+   n = 3: ||C_eff|| = 0.000000e+00, b_3 = 0.000e+00, ||A_n|| gesamt = 4.1900e-49, Anteil Singulettblock 4.1900e-49
+   Leckordnung n_q = None
+   -> Stufe B: widerlegt (Quarks tragen SO(3) effektiv exakt)
+==============================================================================
+Nachkontrolle (nach der Auswertung angehaengt, kein Kriterium): warum ist K(A0) = 0?
+   K(zufaellig antisym.) = 20.007, K(zufaellig sym.) = 26.073  (K ist nicht trivial 0)
+   Rang von K auf Lambda^2(27) (dim 351 = 52 + 273 unter F4): 52
+   K(T) = c T fuer T in so(3) c f4: c = 1.500000, Rest 4.4e-16
+   K(C) gesamt = 2.6e-16, K(P_t C P_t) = 2.5e-16
+   -> Auf Lambda^2 ist K = (3/2) * Projektor auf f4 (Schur: Lambda^2 27 = 52 + 273, Rang 52). C = L_e7 je Platz ist
+      orthogonal zu f4, also K(C) = 0 und alle A_n = 0. Das Ergebnis von Stufe B folgt aus der Wahl von K, nicht aus den Quarks.
