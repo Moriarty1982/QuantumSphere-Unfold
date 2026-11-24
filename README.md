@@ -1,17 +1,17 @@
 # Quantum Sphaera Companion
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24434403.svg)](https://doi.org/10.5281/zenodo.24434403)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24500009.svg)](https://doi.org/10.5281/zenodo.24500009)
 
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
 ## Current public release
 
-- Public version: `v5.3.0` (2026-11-22)
-- Version DOI: [`10.5281/zenodo.24434403`](https://doi.org/10.5281/zenodo.24434403) ([Zenodo record](https://zenodo.org/records/24434403))
+- Public version: `v5.4.0` (2026-11-24)
+- Version DOI: [`10.5281/zenodo.24500009`](https://doi.org/10.5281/zenodo.24500009) ([Zenodo record](https://zenodo.org/records/24500009))
 - Concept DOI: [`10.5281/zenodo.19210728`](https://doi.org/10.5281/zenodo.19210728)
-- Previous version: `v5.2.0`, DOI `10.5281/zenodo.24294648`.
-- Release package: two English PDFs (full Companion, 1465 pages; selected physics paper, 31 pages), source archive, database snapshot and manifests, available in the Zenodo record.
-- Frozen package source: `53e9393a9502a9773300d8876bada7950999f138` (tag `v5.3.0`). Later repository metadata updates do not change the deposited package.
+- Previous version: `v5.3.0`, DOI `10.5281/zenodo.24434403`.
+- Release package: two English PDFs (full Companion, 1537 pages; selected physics paper, 36 pages), source archive, database snapshot and manifests, available in the Zenodo record.
+- Frozen package source: `122eb34315a7870106a3e7a8d8fcbf74c438449d` (tag `v5.4.0`). Later repository metadata updates do not change the deposited package.
 
 Version 5 introduces the database-backed document architecture: registered
 statements, immutable content versions, dependencies, open guards and ordered
@@ -27,7 +27,16 @@ every Bargmann phase, and the Gram determinant separates the flat octant, with
 one vanishing mass, from three positive masses. A geometric reading as a
 flux-free core is given with its status; nothing in it is derived.
 
-Version 5.3.0 adds the research layers v4.10.0-r29 and r30. The physics paper
+Version 5.4.0 adds the research layers v4.10.0-r31 to r59, most of them
+explorations rather than blind tests. The physics paper gains a worked OP5
+case (an elastic preparation with a compact ordinary response and a directed
+contrast that rests on an assumed source identification), additions to the
+limits section (Holst term and frame map, counting rules as a dimension
+formula, readout gaps, the cosmological constant as an input within the
+record, a cascade compared with DESI DR2), and a short account of the
+handedness series. No open problem is closed.
+
+Version 5.3.0 added the research layers v4.10.0-r29 and r30. The physics paper
 gains two subsections: the sign of the octant step is not fixed by magnitudes
 and endpoints, so a selection of the ordered return is needed in addition; and
 the conditional values rest on one number entering through separately chosen
@@ -45,7 +54,7 @@ The package was published by the author and its eight files, checksums,
 version relations and full-document preview were verified against the
 uploaded candidate. The complete argument graph remains under review;
 publication does not close the scientific guards. See
-[the release record](release/v5.3.0/README.md),
+[the release record](release/v5.4.0/README.md),
 [the development history](notes/research/v5_0_0_development.md) and
 [the statement store](qam/store/README.md).
 
