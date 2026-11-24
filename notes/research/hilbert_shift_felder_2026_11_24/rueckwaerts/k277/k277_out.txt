@@ -1,0 +1,26 @@
+==============================================================================
+A  No-go fuer die Quarks (12 Elemente in A4)
+   C = L_e7 je Platz A4-invariant auf allen 27: max|rho C rho^T - C| = 0.0e+00
+   Operatoren auf den Tripletts (18): A4-invariant dim 36, SO(3)-invariant dim 36
+   max|[so(3), A]| ueber eine Basis der A4-invarianten Operatoren: 1.2e-15
+   -> A4-invariant = SO(3)-invariant auf den Tripletts (Spin 1 x Spin 1 = l 0,1,2; A4 hat in l = 1, 2 kein Invariantes).
+      Jede SO(3)-aequivariante Konstruktion aus C bleibt dort SO(3)-invariant, gleich welcher Ordnung.
+==============================================================================
+B  Flavon v in den e7-Anteilen: X(v), Y = C X(v)
+   |det Y + 2 v1 v2 v3| <= 4.4e-16;  |Tr Y^2 - 2|v|^2| <= 1.8e-15;  det X, Tr Y <= 0.0e+00;  Tr(X o Y) <= 0.0e+00  (50 Stichproben)
+   -> Der xyz-Term ist die kubische Norm der Albert-Algebra nach der Ladungsdrehung: N(C X(v)) = -2 v1 v2 v3.
+==============================================================================
+C  Gemischte Invarianten vom Grad 4 (Anpassung an |v|^4 und sum v^4)
+   Tr((XoY)^2)    = +1.0000 |v|^4 -1.0000 sum v^4  (Rest 1.4e-14)
+   Tr(X^2 o Y^2)  = -0.0000 |v|^4 +2.0000 sum v^4  (Rest 5.7e-14)
+   Tr((X^2)^2)    = +2.0000 |v|^4 -0.0000 sum v^4  (Rest 2.8e-14)
+   Tr((Y^2)^2)    = +2.0000 |v|^4 -0.0000 sum v^4  (Rest 2.8e-14)
+   -> Invarianten nur aus Y haengen nur von |v|^2 und xyz ab; gemischte bringen sum v^4 (freier Koeffizient).
+==============================================================================
+D  Ausrichtung des Minimums (|v| auf der Schale frei, 40 Startpunkte je Fall)
+   nur Y: kappa=+0.50, lambda=0.2: Minima {'(1,1,1)-Typ, Rest Z3': 40}; globales Minimum (1,1,1)-Typ, Rest Z3, V = -1.554281
+   nur Y: kappa=-0.50, lambda=0.2: Minima {'(1,1,1)-Typ, Rest Z3': 40}; globales Minimum (1,1,1)-Typ, Rest Z3, V = -1.554281
+   nur Y: kappa=+0.05, lambda=0.1: Minima {'(1,1,1)-Typ, Rest Z3': 40}; globales Minimum (1,1,1)-Typ, Rest Z3, V = -2.577390
+   gemischt: kappa=0.2, lambda=0.5, lambda'=+0.30: Minima {'(1,1,1)-Typ, Rest Z3': 40}; globales Minimum (1,1,1)-Typ, Rest Z3, V = -0.447135
+   gemischt: kappa=0.2, lambda=0.5, lambda'=-0.15: Minima {'(1,0,0)-Typ, Rest Z2': 40}; globales Minimum (1,0,0)-Typ, Rest Z2, V = -0.714286
+   -> Nur aus Y: Z3-Ausrichtung erzwungen (fuer jedes kappa != 0). Mit sum v^4: Z3 oder Z2 je nach lambda' (Literatur).

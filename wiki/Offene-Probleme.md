@@ -56,6 +56,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Quark-No-go und xyz, 24.11.2026 (Erkundung, nicht blind, k277):** Solange A₄ exakt gilt, spüren die Quarks die Ladungsbrechung auf keinem SO(3)-verträglichen Weg (entartete Massen, V_CKM = 𝟙). Der kubische A₄-Term ist die Albert-Norm des ladungsgedrehten Flavons, N(CX) = −2v₁v₂v₃. Daraus allein folgt die ℤ₃-Ausrichtung. ℤ₂ braucht einen freien Koeffizienten. OP3 bleibt offen.
+
 **Test H127, 24.11.2026 (blind, k276):** Die Ladungsbrechung der Familien-SO(3) aus k275 ist auf dem farbneutralen Teil H₃(ℂ) reiner Spin 3 (xyz-Tensor, exakt), also das Objekt, das A₄-Flavon-Modelle ansetzen (Stufe A bestätigt). Die Leckordnung in die Quarks (Stufe B) bleibt offen, weil die vorab gewählte Kopplung nur den f₄-Anteil weitergibt und L_e₇ senkrecht auf f₄ steht. OP3 bleibt offen.
 
 **Trialität und drei Generationen, 24.11.2026 (Erkundung, nicht blind, k275):** In der Albert-Algebra H₃(𝕆) wirkt der Kommutant von G₂ als SO(3)-Vektor auf den drei Plätzen. Auf den Quark-Anteilen verträgt er sich exakt mit der Ladung, in der Leptonen-Ebene span(1, e₇) nicht; übrig bleibt genau A₄. Die Lücke Spin ½ gegen Spin 1 (k273) ist damit für Quarks geschlossen, für Leptonen auf eine Stelle eingegrenzt. OP3 bleibt offen. [Notiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/hilbert_shift_felder_2026_11_24/rueckwaerts/trialitaet/README.md)
