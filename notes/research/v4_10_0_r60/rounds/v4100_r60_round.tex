@@ -1,0 +1,164 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r60 Source-Only: Triality, the Family Symmetry and Its Breaking to \texorpdfstring{\(A_4\)}{A4} (k275--k277, H127)}
+\addcontentsline{toc}{section}{v4.10.0-r60 Source-Only: Triality, the Family Symmetry and Its Breaking to \texorpdfstring{\(A_4\)}{A4} (k275--k277, H127)}
+\label{sec:v4100-r60-triality-a4}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r59.13 left one candidate open: a tower level on which \(\operatorname{Im}\mathbb H\) acts as a vector on matter, so that three generations
+carry spin 1 rather than spin \(\tfrac12\); triality was named but not computed.  On 24 November 2026 one exploration (k275), one test with an
+advance note (H127, k276) and one further exploration (k277) followed.  They were recorded as research notes with scripts and outputs.  This
+layer collects them, each with its status as recorded at the time, on the author's decision to bring the Companion up to date before further
+computation (the articles follow later).  It adds no new computation; every statement below is checked in the cited scripts.  k275 and k277 are
+explorations and \emph{not blind}; H127 was fixed in an advance note before the computation.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r60 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r60 setting}
+\label{subsec:v4100-r60-setting}
+
+The carrier is the Albert algebra \(H_3(\mathbb O)\) of Hermitian \(3\times3\) octonion matrices with the Jordan product \(X\circ Y=\tfrac12(XY+YX)\);
+its three off-diagonal octonions \(x_1=X_{23}\), \(x_2=X_{31}\), \(x_3=X_{12}\) are the three slots, and \(\operatorname{Aut}=F_4\supset\operatorname{Spin}(8)\) carries
+triality.  Colour is the diagonal \(SU(3)_c\) (stabiliser of \(e_7\) in \(G_2\)), charge the slot-wise left multiplication
+\(C=L_{e_7}\) (with \(R_{e_7}\), as in r35/r42).  ``Colour triplets'' are the \(e_1,\dots,e_6\) components (18 real dimensions), ``colour singlets'' the
+diagonal and the \(1,e_7\) components (9), which form \(H_3(\mathbb C)\) with \(\mathbb C=\operatorname{span}(1,e_7)\).  Reading the three slots as
+generations is a reading, not derived.  All metrics are the trace form \(\operatorname{Tr}(X\circ Y)\).  Frame convention F holds throughout.
+
+\subsection*{v4.10.0-r60 results}
+\label{subsec:v4100-r60-results}
+
+\paragraph{Theoremlet v4.10.0-r60.1 (the family \(SO(3)\) from triality; k275, not blind).}
+(a) \(\dim\operatorname{Der}H_3(\mathbb O)=52\) (\(f_4\)); \(su(3)_c\) and \(g_2\) lie in \(f_4\).  The commutant of \(su(3)_c\) in \(f_4\) is \(su(3)'\) (dimension 8),
+the commutant of \(g_2\) is the real \(so(3)\) acting by \(X\mapsto RXR^{\mathsf T}\), contained in \(su(3)'\).
+(b) Under this \(so(3)\) every colour triplet is spin 1 (six vectors); the colour singlets decompose as \(1\oplus3\oplus5\): the \(e_7\) parts are the
+vector, diagonal and real parts spin \(0\oplus2\) (Wolfram exact).  The \(\varepsilon\) is built in, because the antisymmetric part of a real \(3\times3\)
+matrix is a vector through \(\varepsilon\).
+(c) \([so(3),L_{e_7}]\) vanishes exactly on the colour triplets and equals 2 on the colour singlets, where \(L_{e_7}\) mixes the real unit
+(spin 2/0) with \(e_7\) (spin 1).  The part of \(su(3)'\) commuting with charge is abelian of dimension 2 (slot phases, no generation change).
+(d) Of the 24 signed permutations with determinant \(+1\) exactly 12 commute with charge, all with even slot permutation; they form \(A_4\).  The odd
+ones exchange \(x_{ij}\) with \(\bar x_{ij}\), and conjugation turns \(L_{e_7}\) into \(-R_{e_7}\).  Since the residual Lie algebra is zero and every finite
+subgroup of \(SO(3)\) containing \(A_4\) is \(A_4\), \(S_4\) or \(A_5\) (an icosahedral rotation breaks), the remnant is exactly \(A_4\), with the slots in its
+three-dimensional irreducible representation.
+Thus the gap ``spin \(\tfrac12\) against spin 1'' of r59.13 is closed for the quarks; for the leptons it is located in \(\operatorname{span}(1,e_7)\).  The
+\(A_4\) that r33 and r55 (H39) set as a slot symmetry is here the remnant of the family \(SO(3)\) under charge.  Literature: \(F_4\supset G_2\times SO(3)\),
+\(F_4\supset SU(3)\times SU(3)\) (Dynkin; Dubois-Violette--Todorov; Boyle).  (\texttt{k275}, \texttt{k275b})
+
+\paragraph{Theoremlet v4.10.0-r60.2 (H127: the charge breaking is pure spin 3; test).}
+Advance note committed before the computation (\texttt{ba473c5}, 24 November 2026, 15:59 UTC).  Let \(P_s,P_t\) project onto singlets and triplets
+and \(A_0=P_sCP_s\in\operatorname{End}(H_3(\mathbb C))\).  Disclosed in advance: on \(H_3(\mathbb C)\) one has \(L_{e_7}=R_{e_7}\), so the odd elements of
+\(S_4\) send \(A_0\) to \(-A_0\); nonzero components can sit only at spins \(l\in\{3,6,7,9,10\}\).
+\emph{Stage A (confirmed).}  The prediction was that \(l=3\) is present and leading.  Result: \(\operatorname{End}(1\oplus3\oplus5)\) decomposes as
+\(3\times l_0+6\times l_1+6\times l_2+3\times l_3+1\times l_4\), and \(A_0\) lies \emph{entirely} in the spin-3 part, \(w_3=1\) and \(w_{l\neq3}=0\) (Wolfram exact,
+\(\|A_0\|^2=6\)).  The breaking \(SO(3)\to A_4\) is a single spin-3 tensor of type \(xyz\) (\(t_{ijk}=|\varepsilon_{ijk}|\)), the object that \(A_4\)
+flavon models set by hand.
+\emph{Stage B (refuted by the wording; open in content).}  With the coupling \(K(A)=\sum_aL_{Y_a}AL_{Y_a}\) over a trace-orthonormal basis the effective
+triplet operator \(P_tK^n(A_0)P_t\) vanishes for \(n=1,2,3\).  Post-hoc check: on \(\Lambda^2(27)=52\oplus273\) the map \(K\) is \(\tfrac32\) times the
+projector onto \(f_4\) (rank 52, \(K(T)=1.5\,T\) for \(T\in so(3)\)), and \(C\) is orthogonal to \(f_4\).  The outcome follows from the choice of \(K\); the
+reading ``quarks keep \(SO(3)\) effectively exactly'' given in the advance note is not covered by it.  This is recorded as a defect of the advance
+note.  (\texttt{k276}, \texttt{k276b})
+
+\paragraph{Theoremlet v4.10.0-r60.3 (no-go for the quarks; k277, not blind).}
+On the colour triplets the \(A_4\)-invariant and the \(SO(3)\)-invariant operators coincide (both of dimension 36; every \(A_4\)-invariant commutes
+with \(so(3)\) to \(10^{-15}\)).  Reason: spin \(1\otimes1\) has \(l=0,1,2\) only, and \(A_4\) has no invariant at \(l=1\) or \(l=2\).  Since \(C\) is
+\(A_4\)-invariant on all 27 dimensions, every \(SO(3)\)-equivariant construction from \(C\), at any order and with any \(SO(3)\)-compatible coupling, is
+\(SO(3)\)-invariant on the quarks.  With exact \(A_4\) the quarks therefore have degenerate masses and \(V_{\rm CKM}=\mathbb 1\): the leading-order
+statement H39d is derived, not read.  Quark mixing requires that \(A_4\) itself breaks.  Stage B of r60.2 was empty for every coupling, not only for
+the chosen one.  (\texttt{k277})
+
+\paragraph{Theoremlet v4.10.0-r60.4 (the cubic term is the Albert norm; k277, not blind).}
+Place a flavon \(v\) in the \(e_7\) parts of the three slots (there it is spin 1): \(X(v)\) is imaginary antisymmetric, \(\det X=0\),
+\(\operatorname{Tr}X^2=2|v|^2\).  Its charge rotation \(Y=C\,X(v)\) is real symmetric with zero diagonal and entries \(-v_k\), and
+\[
+N(Y)=\det Y=-2\,v_1v_2v_3,\qquad \operatorname{Tr}Y=0,\qquad \operatorname{Tr}Y^2=2|v|^2
+\]
+(Wolfram exact).  The \(A_4\) cubic invariant \(xyz\) is the cubic norm of the Albert algebra after the charge rotation.
+Mixed invariants of \(X\) and \(Y\) bring in \(\sum v_i^4\): \(\operatorname{Tr}((X\circ Y)^2)=2\sum_{i<j}v_i^2v_j^2\), \(\operatorname{Tr}(X^2\circ Y^2)=2\sum v_i^4\),
+while \(\operatorname{Tr}((Y^2)^2)=2|v|^4\).  (\texttt{k277}, \texttt{k277b})
+
+\paragraph{Theoremlet v4.10.0-r60.5 (vacuum alignment; k277, not blind).}
+(a) A potential built only from \(Y\) depends only on \(|v|^2\) and \(xyz\) (the invariants of one element of a cubic Jordan algebra are \(\operatorname{Tr}\),
+\(\operatorname{Tr}(\cdot)^2\), \(N\)).  The extrema of \(xyz\) on the sphere lie exactly at \(|v_i|=1/\sqrt3\) (8 solutions, Wolfram), so as soon as the
+potential depends on \(xyz\) the minimum is of type \((1,1,1)\) with residual group \(\mathbb Z_3\), the reading \(G_D=\mathbb Z_3\) of the Dirac sectors in
+H39.  Numerical minimisation agrees for \(\kappa=\pm0.5,0.05\).
+(b) With mixed terms the potential is the general \(A_4\) potential \(-\mu^2|v|^2+\kappa\,xyz+\lambda|v|^4+\lambda'\sum v_i^4\); \(\lambda'=+0.3\) gives
+\(\mathbb Z_3\), \(\lambda'=-0.15\) gives \((1,0,0)\) with residual \(\mathbb Z_2\) (the neutrino reading).  This is the known phase diagram (Altarelli--Feruglio);
+the coefficients are free.
+Hence no blind test of the alignment is possible at present; it needs a principle that fixes the coefficients (a candidate is the tower dynamics
+of r59.14 with the cubic norm as natural third-order term, not computed).  The number H128 stays unassigned.
+
+\paragraph{Remark v4.10.0-r60.6 (balance of the settings).}
+Derived in this layer: the family \(SO(3)\) (commutant of \(G_2\) in \(F_4\)), its breaking to exactly \(A_4\) by charge, the spin-3 form of that breaking,
+the quark no-go under exact \(A_4\) and the cubic invariant as Albert norm.  Set remain: the slots as generations, the flavon in the \(e_7\) parts,
+the potential coefficients, every mass and every scale.  The open choice has moved from ``which slot symmetry'' (r33, r55) to ``which alignment'',
+i.e.\ to the coefficients of a potential.  No item derives \(\beta\), a mass, a mixing angle or \(\Lambda\).
+
+\subsection*{v4.10.0-r60 frames}
+\label{subsec:v4100-r60-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r60.1--r60.5 (Albert algebra, charge, flavon) & M (field value, matter readout) & none across frames\\
+H39 readings (\(\mathbb Z_3\), \(\mathbb Z_2\)) & M & only as reading, no new map\\
+T, P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r60 register entries}
+\label{subsec:v4100-r60-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r60\\
+\midrule
+r60.1, r60.3--r60.5 & explorations, not blind; recorded\\
+H127 stage A (charge breaking is spin 3) & confirmed\\
+H127 stage B (leak order into the quarks) & refuted by the wording; empty for every \(SO(3)\)-equivariant coupling (r60.3)\\
+\(A_4\) as slot symmetry (r33, r55) & derived as remnant of the family \(SO(3)\) under charge\\
+H39d (\(V_{\rm CKM}=\mathbb 1\) at leading order) & derived under exact \(A_4\)\\
+vacuum alignment \(\mathbb Z_3\) / \(\mathbb Z_2\) & coefficient dependent; no blind test (H128 unassigned)\\
+OP1, OP3, OP4, OP5, Q1a & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r60 notes}
+\label{subsec:v4100-r60-notes}
+
+{\raggedright
+\texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/\allowbreak rueckwaerts/} with subfolders
+\texttt{trialitaet/} (k275, k275b), \texttt{h127/} (k276, k276b) and \texttt{k277/} (k277, k277b);
+\texttt{predictions/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H127\_\allowbreak Ladungsbrechung\_\allowbreak Spin.md} and
+\texttt{predictions/\allowbreak Ergebnis\_\allowbreak H127\_\allowbreak Ladungsbrechung\_\allowbreak Spin.md}.  Each folder holds scripts and their actual outputs.
+\par}
+
+\subsection*{v4.10.0-r60 ledger and guard update}
+\label{subsec:v4100-r60-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r60}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no new computation in this layer; generations, alignment and scales not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r60,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r60}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
