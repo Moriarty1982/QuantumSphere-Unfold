@@ -1,0 +1,4 @@
+gamma=0.0: kein endlicher Zyklus gefunden (Zyklus ueber unendlich)
+gamma=0.05: Periode 3, Flaeche +9.902754, Einfang innen 1.0000, aussen 1.0000
+gamma=-0.05: Periode 3, Flaeche -9.902754, Einfang innen 1.0000, aussen 1.0000
+gamma=0.237533: Periode 3, Flaeche +1.717962, Einfang innen 1.0000, aussen 1.0000
