@@ -1,0 +1,42 @@
+==============================================================================
+A  Albert-Algebra H3(O)
+   Jordan-Identitaet (X^2 o Y) o X = X^2 o (Y o X): Abw. 5.7e-14
+   dim Der(H3(O)) = 52  (f4: 52)
+   su(3)_c: 8 Generatoren, in f4 (max Rest 9.9e-16); g2 diagonal: 14, in f4 (4.2e-15)
+==============================================================================
+B  Kommutant der Farbe in f4 und die reelle SO(3)
+   Kommutant von su(3)_c in f4: dim 8
+   Kommutant von g2 in f4: dim 3  (F4 > G2 x SO(3): erwartet 3)
+   reelle so(3): in f4 (Rest 2.9e-15), im Kommutanten von g2 (2.9e-15), in su(3)' (2.9e-15)
+==============================================================================
+C  Zerlegung der Materie
+   Farbsinguletts (9): su(3)'-invariant (Leck 3.7e-16), Casimir {np.float64(-0.0): np.int64(1), np.float64(0.5): np.int64(8)};  so(3) (Leck 0.0e+00), Casimir j(j+1): {np.float64(-0.0): np.int64(1), np.float64(2.0): np.int64(3), np.float64(6.0): np.int64(5)}
+   Farbtripletts (18): su(3)'-invariant (Leck 5.9e-16), Casimir {np.float64(0.222222): np.int64(18)};  so(3) (Leck 0.0e+00), Casimir j(j+1): {np.float64(2.0): np.int64(18)}
+   Lesart: so(3)-Casimir 2 = Spin 1 (Vektor), 6 = Spin 2, 0 = Singulett.
+   nur e7-Anteile (3): so(3)-Leck 0.0e+00, Casimir {np.float64(2.0): np.int64(3)};  Diagonale + Re-Anteile (6): Leck 0.0e+00, Casimir {np.float64(-0.0): np.int64(1), np.float64(6.0): np.int64(5)}
+==============================================================================
+D  Ladungsstruktur je Platz gegen die Generations-Symmetrie
+   so(3) reell : max|[T, L_e7]| = 2.000, max|[T, R_e7]| = 2.000
+   su(3)'      : max|[T, L_e7]| = 0.296, max|[T, R_e7]| = 0.296
+   Unteralgebra von su(3)', die mit L_e7 und R_e7 (je Platz) vertauscht: dim 2
+      abelsch: True (max Kommutator 1.2e-16)
+      Eigenwerte (Im) eines Generators: [-0.3844 -0.3113 -0.2319 -0.1525 -0.0794 -0.0731 -0.      0.0731  0.0794
+  0.1525  0.2319  0.3113  0.3844]
+      Eigenwerte (Im) eines Generators: [-0.4017 -0.2641 -0.2219 -0.1797 -0.1375 -0.0422  0.      0.0422  0.1375
+  0.1797  0.2219  0.2641  0.4017]
+   Unteralgebra von so(3) reell, die mit L_e7, R_e7 vertauscht: dim 0
+   zyklische Platzvertauschung (R = Permutation, det +1): Automorphismus 4.4e-16, [P, L_e7] = 0.0e+00
+==============================================================================
+E  Wo genau bricht die Ladung die Familien-SO(3)?
+   Farbtripletts e1..e6 (18): max|[T, L_e7]| = 0.0e+00, max|[T, R_e7]| = 0.0e+00
+   Farbsinguletts (9): max|[T, L_e7]| = 2.0e+00, max|[T, R_e7]| = 2.0e+00
+   -> Auf den Quark-Anteilen vertauscht die Familien-SO(3) exakt mit der Ladungsstruktur; gebrochen wird sie nur
+      in der farbneutralen Ebene span(1, e7), wo L_e7 den Spin-2/Singulett-Teil (1) mit dem Vektor-Teil (e7) mischt.
+   die 2-dim. Restalgebra in su(3)': Kopplung zwischen verschiedenen Plaetzen max 3.0e-16 (0 = nur Phasen je Platz, kein Generationswechsel)
+==============================================================================
+F  Welche endliche Untergruppe der Familien-SO(3) uebersteht die Ladung?
+   vorzeichenbehaftete Permutationen mit det +1 (Oktaedergruppe, 24 Elemente): 12 vertauschen mit L_e7, R_e7, davon mit gerader Platzpermutation 12
+   abgeschlossen: True; Elementordnungen [1, 2, 3] -> A4 (Tetraedergruppe)
+   5-zaehlige Ikosaeder-Drehung: |[R, L_e7]| = 1.309 -> A5 bricht
+   -> Mit der Ladung bleibt von der Familien-SO(3) genau die Tetraedergruppe A4 (endlich, Lie-Algebra 0).
+      Die drei Plaetze tragen ihre dreidimensionale irreduzible Darstellung (Vektor von SO(3) eingeschraenkt).

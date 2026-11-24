@@ -1,0 +1,8 @@
+Tatsaechliche Ausgabe (Wolfram-MCP-Kernel, 24.11.2026).
+Erster Aufruf (nur Casimir, mit fehlerhafter Definition der i-Multiplikation, die identisch null war): {{6,6,6,6,6,0},{2,2,2},{0,0,0}}
+mit Warnung Symbol::undefined2; der dritte Eintrag war wegen der Null-Abbildung bedeutungslos und wurde verworfen.
+Korrigierter Aufruf (Skript oben), keine Warnungen:
+{1, {2, 2, 2}, {0, 0, 0}}
+Casimir aus dem ersten Aufruf (unveraendert gueltig): Sym = {6,6,6,6,6,0} (Spin 2 + Singulett), Antisym = {2,2,2} (Spin 1).
+Lesart: In der farbneutralen Ebene vertauscht L_e7 nicht mit der Familien-so(3) (Kommutator 2); auf einem Farbtriplett-Paar
+vertauscht es exakt (0). Stimmt mit k275 Teil E (Python) ueberein.
