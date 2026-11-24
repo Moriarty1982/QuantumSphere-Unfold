@@ -1,0 +1,4 @@
+Schwelle omega_c = 2.0000000000188045  analytisch 2*sqrt(K/I) = 2 ; omega_lib = 3 ; Verhaeltnis 0.6666666666729348
+eta=0.05: Rueckhalt tau_r = 0.0640, in Einheiten 3K: 0.0213, Stewart-McCumber 4/(pi Q) = 0.0212
+eta=0.1: Rueckhalt tau_r = 0.1273, in Einheiten 3K: 0.0424, Stewart-McCumber 4/(pi Q) = 0.0424
+eta=0.2: Rueckhalt tau_r = 0.2603, in Einheiten 3K: 0.0868, Stewart-McCumber 4/(pi Q) = 0.0849
