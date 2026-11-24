@@ -1,0 +1,4 @@
+k252 Wolfram-Kontrolle (Wolfram-MCP-Kernel, 24.11.2026), tatsaechliche Print-Ausgaben (2D linearisiert). Keine Warnungen.
+s = 1: [Jx,Jy] - i s Jz = {{0, 0}, {0, 0}};  B = Tr(Px Py Pz) = 1/4 + I/4
+s = -1: [Jx,Jy] - i s Jz = {{0, 0}, {0, 0}};  B = Tr(Px Py Pz) = 1/4 - I/4
+Konjugation: B(s=-1) == Conjugate[B(s=+1)]: True

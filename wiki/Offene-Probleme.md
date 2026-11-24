@@ -169,6 +169,8 @@ Die im Zweischritt-Test angegebene geometrische Verschärfung senkt beide Obergr
 
 ## OP4: Herkunft der Mischungswinkel
 
+**H125, 24.11.2026 (Vorab 76f7a6c):** Die Familien-su(2) aus r14.4 ist auf den Leptonen relativ zum Lorentz-Spin das komplex konjugierte Dublett ([R_e7, R_e8] = −2R_e15), auf den Quarks nicht (+2R_e15); die Bargmann-Invarianten sind 1/4 ∓ i/4 (Stufe A, nicht blind, k252). Das relative Vorzeichen ist frei von der Konvention i ↦ −i. Unter der Setzung S1 folgt sin δ_PMNS < 0 bei J_CKM > 0; offen bis zu einer 3σ-Bestimmung (Frist 2035). [Ergebnis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/predictions/Ergebnis_H125_Relatives_CP_Vorzeichen.md)
+
 Mehrere Konstruktionen treffen die Mischungsdaten, aber als Anpassung (r54, r56). Die Lesart je Teilchenart (r55) mit Maskenkorrektur (r57) passt und liefert die offenen Vorhersagen H42 und H46. Nach r61 war OP4 in der alten Form falsch gestellt, weil es Frames vermischt.
 
 **Nachtrag 15.11.2026 (Erkundung, nicht blind):** Der Dreierzyklus der Dirac-Auslesung aus r55 ist gleichwertig zur Verschiebung um ein Drittel der Periode der Feldinvariante (r16.9): Slotzustände = gleich gewichtete Auslesungen zu drei Zeitpunkten, Fourier-Moden = Masseneigenzustände. Die ℤ₂ der Neutrinos (TM2) hat keine Frame-Herkunft; eine Zahl folgt nicht. H9 wartet auf eine JUNO-Messung mit σ ≤ 0,004. Die ℤ₂ lässt sich als Fermionparität von Spin(8) lesen (Vektor-Slot fest); das begründet TM2, gibt aber keine neue Zahl.
