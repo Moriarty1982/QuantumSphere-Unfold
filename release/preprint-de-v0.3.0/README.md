@@ -54,10 +54,10 @@ wieder. Kein offenes Problem ist geschlossen, kein Guard aufgehoben.
 
 ## Schritte
 
-0. **PR mergen** (Freigabe nötig), danach die Literaturlinks `towerlayer`, `lambdainput` und SOURCES.md auf den Merge-Commit pinnen.
+0. **PR mergen** (erledigt: #285 als 73d6a5d7, Freigabe des Autors 24.11.); Literaturlinks auf 73d6a5d7 gepinnt.
 1. **Reservierung** (Freigabe nötig; legt einen unveröffentlichten, verwerfbaren Entwurf an):
    ```
-   gh workflow run "Zenodo Release" --repo Moriarty1982/QuantumSphere-Unfold --ref <Zweig> \
+   gh workflow run "Zenodo Release" --repo Moriarty1982/QuantumSphere-Unfold --ref claude/project-thread-ncot1p \
      -f environment=production -f new_version_of=24481107 -f reserve_only=true -f replace_files=false \
      -f publish=false -f confirm_publish=false -f dry_run=false \
      -f metadata=release/zenodo/metadata_preprint_de_0_3_0.json -f files_glob='release/preprint-de-v0.3.0/*'
@@ -68,7 +68,7 @@ wieder. Kein offenes Problem ist geschlossen, kein Guard aufgehoben.
    die Version-DOI und den Quellcommit in `notes` eintragen.
 3. **Upload** (Freigabe nötig; der Entwurf erbt die Datei von 0.2.0, deshalb `replace_files=true`):
    ```
-   gh workflow run "Zenodo Release" --repo Moriarty1982/QuantumSphere-Unfold --ref <Zweig> \
+   gh workflow run "Zenodo Release" --repo Moriarty1982/QuantumSphere-Unfold --ref claude/project-thread-ncot1p \
      -f environment=production -f deposition_id=<id> -f reserve_only=false -f replace_files=true \
      -f publish=false -f confirm_publish=false -f dry_run=false \
      -f metadata=release/zenodo/metadata_preprint_de_0_3_0.json -f files_glob='release/preprint-de-v0.3.0/*.pdf' \
