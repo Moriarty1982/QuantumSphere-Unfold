@@ -1,0 +1,6 @@
+n=0 dim= 1 | komm 0.0e+00 assoz 0.0e+00 altern 0.0e+00 |xy|-|x||y| 0.0e+00 | Nullteiler(e1+e10)(e4-e15) None | dim Der=0 | dim Stab(e_last)=None | dim Lie<L_e_i>=None
+n=1 dim= 2 | komm 0.0e+00 assoz 4.4e-16 altern 0.0e+00 |xy|-|x||y| 0.0e+00 | Nullteiler(e1+e10)(e4-e15) None | dim Der=0 | dim Stab(e_last)=0 | dim Lie<L_e_i>=1
+n=2 dim= 4 | komm 2.4e+00 assoz 4.4e-16 altern 8.9e-16 |xy|-|x||y| 0.0e+00 | Nullteiler(e1+e10)(e4-e15) None | dim Der=3 | dim Stab(e_last)=1 | dim Lie<L_e_i>=3
+n=3 dim= 8 | komm 1.0e+01 assoz 2.1e+01 altern 1.8e-15 |xy|-|x||y| 1.8e-15 | Nullteiler(e1+e10)(e4-e15) None | dim Der=14 | dim Stab(e_last)=8 | dim Lie<L_e_i>=28
+n=4 dim=16 | komm 1.1e+01 assoz 3.8e+01 altern 9.6e+00 |xy|-|x||y| 2.3e-01 | Nullteiler(e1+e10)(e4-e15) 0.0 | dim Der=14 | dim Stab(e_last)=8 | dim Lie<L_e_i>=120
+n=5 dim=32 | komm 1.8e+01 assoz 7.3e+01 altern 3.4e+01 |xy|-|x||y| 3.2e+00 | Nullteiler(e1+e10)(e4-e15) 0.0 | dim Der=14 | dim Stab(e_last)=8 | dim Lie<L_e_i>=None
