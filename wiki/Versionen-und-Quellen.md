@@ -12,6 +12,14 @@ Vorzeichen des Oktantschritts, zur einen Zahl β_sym und ihren Übersetzungen, z
 Probleme und die Anhänge B und C. Kein offenes Problem ist geschlossen. [GitHub-Release `preprint-de-v0.2.0`](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/preprint-de-v0.2.0); Quelle unter
 `paper/preprint-de/`. Der Companion bleibt bei v5.3.0.
 
+Veröffentlichungsnachtrag vom **24.11.2026**: v5.4.0 ist veröffentlicht, DOI 10.5281/zenodo.24500009 ([Record](https://zenodo.org/records/24500009)).
+Neu sind die Runden v4.10.0-r31 bis r59, überwiegend Erkundungen; Vorab-Tests sind als solche geführt und als nicht blind
+markiert, wo das Ergebnis absehbar war. Im Physik-Paper: der durchgerechnete OP5-Fall im Geometrie-Teil (gewöhnliche Antwort kompakt,
+gerichteter Kontrast nur unter angenommener Quellenidentifikation), Ergänzungen im Grenzen-Teil (Holst-Term und Frame-Abbildung,
+Zählregeln als Dimensionsformel, Auslese-Lücken, Λ als Eingabe im Bestand, Kaskade gegen DESI DR2) und ein Absatz zur
+Händigkeitsserie (r59). Zwei englische Ausgaben (1537/36 Seiten); Paketquellstand 122eb34315a7870106a3e7a8d8fcbf74c438449d.
+Kein offenes Problem ist geschlossen.
+
 Veröffentlichungsnachtrag vom **22.11.2026**: v5.3.0 ist veröffentlicht, DOI 10.5281/zenodo.24434403.
 Neu sind die Runden v4.10.0-r29 und r30 und im Physik-Paper zwei Abschnitte: Orientierung des Oktantschritts (Vorzeichen
 durch Beträge und Endpunkte nicht festgelegt) und eine Zahl mit mehreren Übersetzungen (frame-abhängiges Flächenquant nur
@@ -35,8 +43,8 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 | Ebene | Stand | Verwendung |
 |---|---|---|
-| Öffentliche Baseline | v5.3.0, 22.11.2026, DOI 10.5281/zenodo.24434403 | Publiziertes Zwei-Dokument-Paket und Zitation |
-| Direkter Vorgänger | v5.1.0, DOI 10.5281/zenodo.24237112 | Historische Veröffentlichung |
+| Öffentliche Baseline | v5.4.0, 24.11.2026, DOI 10.5281/zenodo.24500009 | Publiziertes Zwei-Dokument-Paket und Zitation |
+| Direkter Vorgänger | v5.3.0, DOI 10.5281/zenodo.24434403; davor v5.2.0, DOI 10.5281/zenodo.24294648; v5.1.0, DOI 10.5281/zenodo.24237112 | Historische Veröffentlichung |
 | Ältere Veröffentlichungen | v5.0.0, DOI 10.5281/zenodo.24152615; v4.11.0, DOI 10.5281/zenodo.24108818 | Historische Veröffentlichung |
 | Forschung | nach v4.10.0; neue Layer `v4.10.0-rNN` | Nachträgliche Forschung und Korrekturen |
 | Deutscher Preprint | Fassung 0.2.0, 23.11.2026, DOI 10.5281/zenodo.24481107 (Concept 10.5281/zenodo.24405552); **Fassung 0.3.0, 24.11.2026, DOI 10.5281/zenodo.24497991** ([Record](https://zenodo.org/records/24497991)) | Deutschsprachiger Fachartikel; gibt den Companion verkürzt wieder |
@@ -49,7 +57,8 @@ Stand: **2.11.2026**, geprüft gegen Commit [`cf48496c95b6c9ec3f6a3c196df2c8c2c8
 
 - [README am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/README.md): öffentliche Baseline und Scope Guard.
 - [CITATION.cff am geprüften Commit](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/cf48496c95b6c9ec3f6a3c196df2c8c2c84e3d0b/CITATION.cff): Zitiermetadaten.
-- [Zenodo v5.3.0](https://zenodo.org/records/24434403) ist das aktuelle Paket; [GitHub-Release v5.3.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.3.0).
+- [Zenodo v5.4.0](https://zenodo.org/records/24500009) ist das aktuelle Paket; [GitHub-Release v5.4.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.4.0).
+- [Zenodo v5.3.0](https://zenodo.org/records/24434403) ist die direkte Vorgängerversion; [GitHub-Release v5.3.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.3.0).
 - [Zenodo v5.1.0](https://zenodo.org/records/24237112) ist die direkte Vorgängerversion; [GitHub-Release v5.1.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.1.0).
 - [Zenodo v5.0.0](https://zenodo.org/records/24152615) ist eine ältere Version; [GitHub-Release v5.0.0](https://github.com/Moriarty1982/QuantumSphere-Unfold/releases/tag/v5.0.0).
 - [Zenodo v4.11.0](https://zenodo.org/records/24108818) ist die direkte Vorgängerversion.

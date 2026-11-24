@@ -1,0 +1,64 @@
+name: GitHub Release anlegen
+
+# Legt Tag und GitHub-Release serverseitig an (ohne git push eines Tags).
+# Nur per Hand starten; ein bestehender Tag wird nicht überschrieben.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag, z. B. preprint-de-v0.3.0 oder v5.4.0"
+        required: true
+        type: string
+      target:
+        description: "Volle Commit-SHA, auf die der Tag zeigt (Paketquellstand; in main oder im Kopf eines PRs)"
+        required: true
+        type: string
+      title:
+        description: "Titel des Releases"
+        required: true
+        type: string
+      notes_file:
+        description: "Pfad zur Release-Beschreibung im Repo (Markdown)"
+        required: true
+        type: string
+      assets:
+        description: "Optional: Leerzeichen-getrennte Dateipfade im Repo, die angehängt werden"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prüfen und anlegen
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ inputs.tag }}
+          TARGET: ${{ inputs.target }}
+          TITLE: ${{ inputs.title }}
+          NOTES: ${{ inputs.notes_file }}
+          ASSETS: ${{ inputs.assets }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$TARGET" =~ ^[0-9a-f]{40}$ ]] || { echo "target muss eine volle SHA sein"; exit 1; }
+          # Paketquellstände liegen oft auf dem Zweig eines squash-gemergten PRs; dessen Kopf bleibt unter refs/pull erhalten.
+          git fetch -q origin '+refs/pull/*/head:refs/remotes/pull/*'
+          git cat-file -e "$TARGET^{commit}" || { echo "target ist kein Commit dieses Repos"; exit 1; }
+          git branch -r --contains "$TARGET" | grep -qE 'origin/main$|pull/[0-9]+$' || { echo "target liegt weder in main noch in einem PR"; exit 1; }
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null; then
+            echo "Tag $TAG existiert bereits"; exit 1
+          fi
+          test -f "$NOTES"
+          files=()
+          for f in $ASSETS; do test -f "$f"; files+=("$f"); done
+          gh release create "$TAG" --target "$TARGET" --title "$TITLE" --notes-file "$NOTES" "${files[@]}"
+          gh release view "$TAG"

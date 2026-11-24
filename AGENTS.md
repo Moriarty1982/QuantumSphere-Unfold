@@ -5,10 +5,13 @@ unabhängig vom Werkzeug. `CLAUDE.md` verweist nur hierauf. Regeln werden **hier
 
 ## Was dieses Repository ist
 Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematischen Unfold der Paper-Reihe „Quantum
-Sphaera“. Die öffentliche Baseline ist **v5.3.0** vom 2026-11-22
-(Version-DOI 10.5281/zenodo.24434403, Concept-DOI 10.5281/zenodo.19210728;
-Vorgänger v5.2.0, 10.5281/zenodo.24294648; davor v5.1.0, 10.5281/zenodo.24237112).
-v5.3.0 bringt die Runden v4.10.0-r29 und r30 und im Physik-Paper die Abschnitte 5.9 (Orientierung des Oktantschritts) und
+Sphaera“. Die öffentliche Baseline ist **v5.4.0** vom 2026-11-24
+(Version-DOI 10.5281/zenodo.24500009, Concept-DOI 10.5281/zenodo.19210728;
+Vorgänger v5.3.0, 10.5281/zenodo.24434403; davor v5.2.0, 10.5281/zenodo.24294648).
+v5.4.0 bringt die Runden v4.10.0-r31 bis r59 (überwiegend Erkundungen) und im Physik-Paper den durchgerechneten OP5-Fall,
+Ergänzungen im Grenzen-Teil (r52–r58) und die Händigkeitsserie (r59) (1537/36 Seiten); Paketquellstand
+122eb34315a7870106a3e7a8d8fcbf74c438449d, Tag v5.4.0.
+v5.3.0 brachte die Runden v4.10.0-r29 und r30 und im Physik-Paper die Abschnitte 5.9 (Orientierung des Oktantschritts) und
 7.7 (eine Zahl, mehrere Übersetzungen) (1465/31 Seiten); Paketquellstand 53e9393a9502a9773300d8876bada7950999f138, Tag v5.3.0.
 v5.2.0 bringt die Runden v4.10.0-r15 bis r28 und im Physik-Paper den Abschnitt 5.8 zur Herkunft der fehlenden Zahl
 (1457/30 Seiten); Paketquellstand 8fb6e9378f6e6789697c60d3ba8b748cc2b56de6, Tag v5.2.0.
