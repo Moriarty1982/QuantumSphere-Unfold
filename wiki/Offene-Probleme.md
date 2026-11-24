@@ -56,6 +56,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 ## OP3: Zulässige Hüllen-Übergänge
 
+**Restdrehung als Holonomie, 24.11.2026 (Erkundung, nicht blind, k246):** Die Lepton-Phase ΔΦ = γ_M·A ist im Kreismodell mit festen Gewichten keine Holonomie (Krümmung null). Mit Massen an den Bögen dreht der größte Formzyklus die Scheibe um genau −π, also A = ½ aus einer Rechnung statt aus der Wahl „eine Lichtquerung“. γ_M tritt nur als Kopplung des Zusammenhangs ein und bleibt eingesetzt; die Wahl des Zyklus bleibt offen. [Notiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/holonomie_restdrehung_2026_11_24/README.md)
+
 **H117 (22.11.2026).** Zwei Umläufe tragen als endliches Vergleichsmodell. Der erste hält Kandidaten in einem vorläufigen Zustand fest, der zweite kann bei unterschiedlicher Zulässigkeit entgegengesetzte Oktantphasen wählen. Beide zulässigen Richtungen lassen den Ausgang mehrdeutig. Wolfram, MMA und beide HDL-Steuerungen bestätigen den Vergleich. Eine native vorzeichenempfindliche HC-/Routing-Regel ist offen.
 
 **H116 (22.11.2026).** Der Companion führt bereits eine Vernam-artige Heuristik zur Rekonstruktion lokaler Persistenzregeln. Im idealen Oktantvergleich liefern entgegengesetzte Rückwege bei gleichen Überlappungsbeträgen signierte Schritte ±45°. Gleich häufige Gesamtphasen können auch durch konstante Einzelschritte entstehen. Die native Wahl des gerichteten Rückwegs und ihre Phasenauslese bleiben offen.

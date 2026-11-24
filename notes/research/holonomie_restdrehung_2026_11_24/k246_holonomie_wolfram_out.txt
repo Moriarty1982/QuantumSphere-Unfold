@@ -1,0 +1,11 @@
+Ausgabe der Wolfram-Language-Auswertung (Wolfram-MCP-Kernel, 24.11.2026), Print-Zeilen woertlich:
+Modell B Holonomie: -4 a b Pi/(2 + a^2)
+k(a)=2 a/(2 + a^2)  Max: {1/Sqrt[2], {a -> Sqrt[2]}}
+Modell C F(2pi/3,2pi/3)=-(1/Pi)
+F Koide=-0.0514425866660
+Fluss Simplex=-Pi = -3.14159265359
+Warnungen: Symbol::undefined2 (Hinweis auf globale Symbole L, F; ohne Einfluss, die Werte sind gesetzt),
+Infinity::indet (0*Infinity) zweimal bei Maximize ueber a>0 (Randverhalten a->Infinity; Maximum unveraendert,
+von sympy bestaetigt). Kein symbolischer Nullrest zu pruefen; Rueckgabe Null.
+Abgleich: sympy-symbolisches Doppelintegral gab -1.2589 (falsch, Zweigfehler bei atan/log);
+numerisches Doppelintegral und Randintegral (Stokes) geben -3.14159265359 = -pi wie Wolfram.
