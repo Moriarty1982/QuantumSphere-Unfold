@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### H126: PMNS aus der Kopplung zweier Oktonion-Richtungen (24.11.2026, Test, nicht prüfbar, k257)
+
+Vorab-Notiz 0a1bd3aa (vor der Rechnung). Elektron- und Neutrino-Richtung mit Winkel χ, Neutrino-Zustand in Koide-Form, Massenmatrix M_jk = ⟨g_j, Ψ_ν(Ψ_ν g_k)⟩ mit e₈ als i. **Strukturprüfung (Wolfram exakt):** MM† hat für alle χ, δ_ν die Eigenwerte {0, 2cos²χ, 2cos²χ}, ist also überall entartet, und die Nicht-Assoziativität trägt exakt null bei (M − M_assoz ≡ 0). Nach dem festgelegten Kriterium ist H126 **nicht prüfbar**; der Datenvergleich zählt nicht. Grund: Die Paarung liest nur 1 und e₈; mit e₈ als i ist jedes V_w zweidimensional komplex (wie r13), der Assoziator fällt aus den gelesenen Komponenten heraus. Ein neuer Versuch bräuchte eine andere Paarung (neue Nummer, neue Vorab-Notiz). OP3/OP4 offen, kein Guard berührt. [Ergebnis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/predictions/Ergebnis_H126_Kopplung_zweier_Richtungen.md)
+
 ### Mischungsmatrix aus der Kopiengeometrie? (24.11.2026, Erkundung, nicht blind, k256)
 
 Anschluss an k255. Mit der S₃ der Kopien als Restsymmetrie stehen alle Mischungsmuster vor der Rechnung fest: beide Sektoren ℤ₃ → keine Mischung; Neutrinos ℤ₃ → trimaximal (wie H39a, widerlegt); Neutrinos mit Kopienspiegelung → θ₁₃ = 0 (ausgeschlossen). **Wörterbuch** (Flavour = Kopienbasis): TM2-Spalte (1,1,1)/√3 = reelle Eins, TM1-Spalte (2,−1,−1)/√6 = imaginäre Kopienachse; genau Konjugation ∘ Kopienspiegelung hält die TM1-Spalte (Majorana-artig) und gibt mit CP-Lesart H8 zurück. Nichts jenseits bekannter Muster (H4, H8, H39). Ein blinder Test braucht eine neue Zutat; vorgesehen ist H126 (nicht-assoziative Kopplung zweier Oktonion-Richtungen mit Winkel χ, Vorab-Notiz zur Freigabe). OP3/OP4 offen, kein Guard berührt. [Notiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/hilbert_shift_felder_2026_11_24/mischung/README.md)

@@ -1,0 +1,6 @@
+chi=30, dnu=0: Eigenwerte MM^dag = [-0.   1.5  1.5], rang M = 2, Nicht-Assoz. = 3.205e-17
+chi=60, dnu=45: Eigenwerte MM^dag = [-0.   0.5  0.5], rang M = 2, Nicht-Assoz. = 5.929e-17
+chi=90, dnu=45: Eigenwerte MM^dag = [-0.  0.  0.], rang M = 0, Nicht-Assoz. = 2.445e-01
+chi=100.5, dnu=294.5: Eigenwerte MM^dag = [-0.          0.06641957  0.06641957], rang M = 2, Nicht-Assoz. = 3.089e-16
+chi=137, dnu=200: Eigenwerte MM^dag = [0.         1.06975647 1.06975647], rang M = 2, Nicht-Assoz. = 4.744e-18
+Anteil mit Nicht-Assoziativitaet > 1e-9: 180/16380
