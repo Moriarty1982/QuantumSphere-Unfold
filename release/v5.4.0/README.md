@@ -38,6 +38,12 @@ Published on Zenodo on 24 November 2026.
 - Upload 45394362273 into draft 24500009, with verification: unpublished draft, DOI and version correct, files with MD5
   equal to the package, default preview `Quantum_Sphaera_Companion_v5_4_0_full.pdf`.
 - Publication run 45394967543 on the author's approval ("wenn es dann klappt, darfst du sofort selbst veröffentlichen").
+- After publication the record showed `build-manifest.json` as preview: the publication run uploads the files again, which
+  cleared the preview set in the draft. Fixed on the author's approval by a metadata-only edit (run 45397571661,
+  `zenodo-fix-preview.yml`): `default_preview` is now `Quantum_Sphaera_Companion_v5_4_0_full.pdf`; files, DOI and version
+  unchanged. Since PR #288 `tools/zenodo_publish.py` sets the preview after every upload.
+- GitHub release: `preprint-de-v0.3.0` was created by `github-release.yml`; `v5.4.0` was refused for the Actions token
+  ("Resource not accessible by integration") and is created by the author.
 
 ## Scope
 
