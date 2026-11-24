@@ -1,0 +1,33 @@
+==============================================================================
+A  CP-Phase und Generationenzahl
+   N=2: Winkel 1, CP-Phasen 0
+   N=3: Winkel 3, CP-Phasen 1
+   N=4: Winkel 6, CP-Phasen 3
+   N=5: Winkel 10, CP-Phasen 6
+   N=2: max |Im(V11 V22 V12* V21*)| ueber 200 Zufallsmatrizen = 1.7e-16  (J = 0 identisch)
+   N=3: J = -0.0006; Im(V_ij V_kl V*_il V*_kj) = J sum eps eps, Abw. 1.1e-16  (eine Phase, getragen von eps_ijk)
+   Bargmann-Viereck Tr(P1 Q1 P2 Q2) = 0.0041-0.0006j; Im = -0.0006 gegen J = -0.0006  (|Im B| = |J|: True)
+   N=4: 36 Quartette, davon linear unabhaengig (ueber 40 Stichproben) 9: nicht mehr J * eps eps
+==============================================================================
+B  Kreuzprodukt x × y = Im(xy) auf Im A_n
+   n=1 (Im-Dim  1): max | |x×y|^2 - (|x|^2|y|^2 - (x.y)^2) | = 1.8e-15
+   n=2 (Im-Dim  3): max | |x×y|^2 - (|x|^2|y|^2 - (x.y)^2) | = 1.1e-14
+   n=3 (Im-Dim  7): max | |x×y|^2 - (|x|^2|y|^2 - (x.y)^2) | = 5.7e-14
+   n=4 (Im-Dim 15): max | |x×y|^2 - (|x|^2|y|^2 - (x.y)^2) | = 3.4e+02
+   n=5 (Im-Dim 31): max | |x×y|^2 - (|x|^2|y|^2 - (x.y)^2) | = 1.1e+03
+   -> echtes Kreuzprodukt nur auf Im H (3) und Im O (7); eps_ijk genau auf Im H.
+==============================================================================
+C  HS(2) als Traeger: Vektor (Automorphismen) gegen Dublett (Multiplikation)
+   Aut: x -> q x q*, auf Im H: R^T R = 1 (Abw. 2.2e-16), det R = +1.000  -> Vektor (Spin 1), drei reelle Richtungen
+   Tripelprodukt Re(x(yz)) = -det[x,y,z]: -1.8266 gegen -1.8266; invariant unter Aut: True
+   Mult: (L_i/2)^2 summiert = [-0.75 -0.75 -0.75 -0.75] = -j(j+1) mit j = 1/2 -> Dublett (2 komplexe Zustaende)
+   -> Drei Generationen als Triplett verlangen Im H unter Automorphismen (adjungiert), nicht unter Multiplikation.
+      Die reelle Eins ist dabei Singulett: H = 1 + 3; eine vierte Richtung waere kein Mitglied der Familie.
+==============================================================================
+D  Zweite Bott-Periode: Achsen ueber dem Oktonion-Block
+   n=4: Block e1..e7 + 1 antikommutierende Achsen ['e8'] (gesamt 8); [Extra, Block-Bilineare] max 0.0e+00
+   n=5: Block e1..e7 + 2 antikommutierende Achsen ['e8', 'e16'] (gesamt 9); [Extra, Block-Bilineare] max 0.0e+00
+   n=6: Block e1..e7 + 3 antikommutierende Achsen ['e8', 'e16', 'e32'] (gesamt 10); [Extra, Block-Bilineare] max 0.0e+00
+          so(3) aus den drei Extra-Achsen: Casimir [-0.75] -> j = 1/2 (Dublett)
+   Radon-Hurwitz erlaubt 8, 9, 11 Achsen fuer n = 4, 5, 6. Mit festem Block und Basis-Einheiten (exakte Cliquensuche) sind es 8, 9, 10;
+   eine elfte Achse waere nur in einer Nicht-Basis-Richtung moeglich (hier nicht gesucht).
