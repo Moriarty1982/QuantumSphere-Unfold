@@ -1,0 +1,36 @@
+==============================================================================
+A  HS(0) Duffing: Periode T(A) (linear: 2 pi = 6.2832)
+   lam=+0.0: A=0.1: T=6.2832, A=0.5: T=6.2832, A=1.0: T=6.2832, A=1.3: T=6.2832
+   lam=+0.5: A=0.1: T=6.2714, A=0.5: T=6.0088, A=1.0: T=5.3667, A=1.3: T=4.9313
+   lam=-0.5: A=0.1: T=6.2950, A=0.5: T=6.6017, A=1.0: T=8.0086, A=1.3: T=11.1840
+   lam=-0.5: Rueckstellkraft -w^2 psi - lam psi^3 wechselt das Vorzeichen bei |psi| = w/sqrt(|lam|) = 1.4142
+==============================================================================
+B  HS(1) mit lam |psi|^2 psi: Ladung und Praezession der Ellipse a e^{iwt} + b e^{-iwt} (Startwerte des linearen Falls)
+   lam=+0.0 a=1.0 b=1.0 (Linie  ): L=+0.000 (Drift 0.0e+00)
+   lam=+0.0 a=1.0 b=0.0 (Kreis  ): L=+1.000 (Drift 1.7e-11), Radius schwankt um 8.3e-12 (exakter Kreis)
+   lam=+0.0 a=1.0 b=0.5 (Ellipse): L=+0.750 (Drift 1.2e-11), Drehung der Hauptachse je Halbumlauf = +0.0000 rad
+   lam=+0.0 a=0.5 b=1.0 (Ellipse): L=-0.750 (Drift 1.2e-11), Drehung der Hauptachse je Halbumlauf = -0.0000 rad
+   lam=+0.0 a=0.7 b=0.6 (Ellipse): L=+0.130 (Drift 2.2e-12), Drehung der Hauptachse je Halbumlauf = +0.0000 rad
+   lam=+0.3 a=1.0 b=1.0 (Linie  ): L=+0.000 (Drift 0.0e+00)
+   lam=+0.3 a=1.0 b=0.0 (Kreis  ): L=+1.140 (Drift 5.1e-11), Radius schwankt um 2.0e-11 (exakter Kreis)
+   lam=+0.3 a=1.0 b=0.5 (Ellipse): L=+0.750 (Drift 4.4e-11), Drehung der Hauptachse je Halbumlauf = -0.1011 rad
+   lam=+0.3 a=0.5 b=1.0 (Ellipse): L=-0.750 (Drift 4.4e-11), Drehung der Hauptachse je Halbumlauf = +0.1011 rad
+   lam=+0.3 a=0.7 b=0.6 (Ellipse): L=+0.130 (Drift 5.5e-12), Drehung der Hauptachse je Halbumlauf = -0.0203 rad
+   lam=-0.3 a=1.0 b=1.0 (Linie  ): flieht (Startradius ueber der Schwelle)
+   lam=-0.3 a=1.0 b=0.0 (Kreis  ): L=+0.837 (Drift 2.7e-12), Radius schwankt um 2.1e-12 (exakter Kreis)
+   lam=-0.3 a=1.0 b=0.5 (Ellipse): L=+0.750 (Drift 1.9e-12), Drehung der Hauptachse je Halbumlauf = +0.5321 rad
+   lam=-0.3 a=0.5 b=1.0 (Ellipse): L=-0.750 (Drift 1.9e-12), Drehung der Hauptachse je Halbumlauf = -0.5321 rad
+   lam=-0.3 a=0.7 b=0.6 (Ellipse): L=+0.130 (Drift 7.8e-13), Drehung der Hauptachse je Halbumlauf = +0.0556 rad
+   -> Linie und Kreis bleiben geschlossen; jede echte Ellipse praezediert (Bertrand). Der Sinn der Praezession folgt
+      dem Umlaufsinn (a<->b kehrt beide um) und dem Vorzeichen von lam; einen Drehsinn waehlt die Nichtlinearitaet nicht.
+==============================================================================
+C  Kreisbahn exp(u W t) psi0, W^2 = w^2 + lam |psi0|^2, als Loesung der nichtlinearen Gleichung
+   n=1 (dim  2): max Residuum = 2.3e-14
+   n=2 (dim  4): max Residuum = 4.5e-13
+   n=3 (dim  8): max Residuum = 1.5e-13
+   n=4 (dim 16): max Residuum = 7.3e+01
+==============================================================================
+D  Nichtlinearterm und Automorphismen (O): |g psi| = |psi|
+   D ist Derivation: |D(xy) - D(x)y - xD(y)| = 1.8e-15
+   g = exp(tD): |g psi| - |psi| = 0.0e+00;  g(|psi|^2 psi) - |g psi|^2 g psi = 3.6e-15
+   -> Der Nichtlinearterm ist G2-aequivariant: Symmetrien, Stabilisatoren und Lecks bleiben; es aendern sich nur Frequenzen.

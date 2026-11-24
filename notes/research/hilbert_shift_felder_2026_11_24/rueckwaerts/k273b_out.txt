@@ -1,0 +1,5 @@
+Tatsaechliche Ausgabe (Wolfram-MCP-Kernel, 24.11.2026), keine Warnungen.
+Teil 1 (2x2, in einem ersten Aufruf zusammen mit einer fehlerhaften 3x3-Konstruktion berechnet; dort war die 3x3-Matrix
+mit symbolischen c_i, s_i nicht unitaer, deshalb verworfen): 0
+Teil 2: {True, Cos[x1]*Cos[x2]^2*Cos[x3]*Sin[d]*Sin[x1]*Sin[x2]*Sin[x3], {0}}
+Lesart: N = 2 hat keine CP-Phase; N = 3 hat genau eine, J = c12 c13^2 c23 s12 s13 s23 sin(delta), und jede Quartett-Invariante ist J * eps eps.

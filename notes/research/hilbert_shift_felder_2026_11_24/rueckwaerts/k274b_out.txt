@@ -1,0 +1,8 @@
+Tatsaechliche Ausgabe (Wolfram-MCP-Kernel, 24.11.2026):
+{{{0.5, {6.271439189142375, 6.008794252858732, 5.366659355191768, 4.9312720399132886}},
+  {-0.5, {6.295001375649894, 6.601653658054859, 8.008619043648848, 11.184039659476777}}},
+ (2 - (3*A^2*lam)/4)*Pi, {}}
+Warnung: Symbol::undefined2 (T, A als globale Symbole nicht definiert) und General::messages; Rueckgabewerte unberuehrt.
+Die Schwellen-Loesung ist leer, weil lam symbolisch ohne Vorzeichen bleibt (psi = 1/Sqrt[-lam] nur fuer lam < 0); nicht weiter verfolgt.
+Vergleich k274 (numerisch): 6.2714, 6.0088, 5.3667, 4.9313 und 6.2950, 6.6017, 8.0086, 11.1840 -> uebereinstimmend auf 4 Stellen.
+Kleine Amplitude: T = 2 pi (1 - 3 lam A^2/8): die Periode haengt von der Amplitude ab, eine Skala lam A^2/w^2 entsteht.
