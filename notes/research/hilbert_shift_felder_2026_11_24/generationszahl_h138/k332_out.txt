@@ -1,0 +1,54 @@
+=== H149a: theta = pi/4 <=> Re Psi^2 = 0 <=> lichtartig <=> Tausch-Fixpunkt ===
+Re Psi^2 = cos(2*theta)   (exakt cos 2 theta)
+Minkowski x0^2 - |x|^2 = cos(2*theta) ; Differenz zu Re Psi^2: 0
+J(Psi) = sin(theta) + U * cos(theta)  -> theta -> pi/2 - theta
+J(J(Psi)) - Psi = 0
+Fixpunkte J(Psi) = Psi in [0, pi): [pi/4]
+Anteile HS(0) = cos^2, Kopie = sin^2; gleich bei [-pi/4, pi/4]
+Oktonionen explizit (U in e1/e2 und e3/e7, 7 Werte delta): max Fehler 3.3e-16
+
+=== H149b: V(N, Re Psi) sieht delta nicht; V(N) sieht auch theta nicht ===
+N(Psi) = 1 , Re Psi = cos(theta)
+allgemeines V(N, Re) bis Grad 4 ( 14 Koeffizienten): dV/ddelta = 0
+V(N): dV/dtheta = 0 , dV/ddelta = 0
+exp(alpha U) Psi = cos(theta+alpha) + U sin(theta+alpha): True
+
+=== H149c: allgemeines Potential 4. Ordnung, wann ist theta = pi/4 stationaer? ===
+dV/dtheta bei pi/4 = -(2*a - 2*c + mu0sq - mu1sq)/2
+Koeffizienten (mu0^2, mu1^2, a, b, c): [-1/2, 1/2, -1, 0, 1] -> genau eine lineare Bedingung
+mit Tausch (mu1 = mu0, c = a): dV/dtheta bei pi/4 = 0
+   zweite Ableitung bei pi/4 = 2*(2*a - b)  (Vorzeichen frei: Minimum fuer 2*(2*a - b) > 0)
+   zweite Ableitung bei 0 = -2*(2*a - b)  (Gegenstueck theta = 0, K = 1/3)
+   mit k291 (mu = 0): V = a*sin(theta)**4 + a*cos(theta)**4 - b*cos(4*theta)/8 + b/8
+   V - [(2a - b)/8 cos 4theta + (3a + b)/4 ... konst.]: Rest = 0  -> V = konst. + (2a - b)/8 * Re Psi^4, Extrema bei theta = 0 und pi/4 (mod pi/2)
+   HC Materie-Frame tan th = beta^2: theta = 0.293044, K = 1/(3cos^2) = 0.363680
+   HC Tachyon-Frame tan th = beta^-2: theta = 1.277753, K = 1/(3cos^2) = 3.994676
+   Tausch-Fixpunkt mu = 1: theta = 0.785398, K = 1/(3cos^2) = 0.666667
+
+=== H149d: delta sieht nur die kubische Norm N(W) = c0 c1 c2 ===
+Tr W = sqrt(3)*cos(theta)
+Tr W^2 = 1
+N(W) = sqrt(6)*sin(theta)*cos(3*delta)/24 - sqrt(6)*sin(3*theta)*cos(3*delta)/72 + sqrt(3)*cos(theta)/24 + 5*sqrt(3)*cos(3*theta)/72
+N(W) - (A + B cos 3delta) = 0
+bei theta = pi/4: A = -sqrt(6)/72 , B = sqrt(3)/36
+dN/ddelta = sqrt(6)*(4*sin(delta)**2 - 3)*sin(delta)*sin(theta)**3/6
+Abtastung V = sum alpha_k N^k (Grad 2 und 3, alpha in -3..3): 966 Minima, davon 126 mit drei verschiedenen Massen;
+   Treffer innerhalb 1 % von 2/9: 0 []
+   vorkommende reduzierte delta (drei verschiedene Massen): [np.float64(0.2617), np.float64(0.2618), np.float64(0.2619)]
+   N(W) = 0 bei cos 3delta = 0.707107 = 1/sqrt2 -> delta = 0.261799 = pi/12 (masseloses Elektron, H101); Massen dort: [0.       0.066987 0.933013]
+   noetig: cos 3delta = cos(2/3) = 0.785887, N* = 0.003790; fuer V = alpha N + beta N^2: alpha/beta = -0.007581
+
+=== H149e: strukturelle Kandidaten fuer delta (vorab fest) ===
+delta_fit (theta = pi/4, aus m_mu/m_e) = 0.222222047
+   pi/12                  = 0.261799, relativ 17.81 %  -> kein Treffer
+   artanh(beta_sym)/3     = 0.205793, relativ 7.39 %  -> kein Treffer
+   gamma_M                = 0.237533, relativ 6.89 %  -> kein Treffer
+   arctan(beta_sym^2)     = 0.293044, relativ 31.87 %  -> kein Treffer
+   Treffer: 0
+
+=== Nicht gewertet: bekannte Beziehungen und vorab gesehener Zahlentreffer ===
+   CT-002: pi/12 - gamma_M/6 = 0.222211 (relativ 5.2e-05)
+   H1: K/3 = 1/(9 cos^2 pi/4) = 0.222222 (relativ 7.9e-07)
+   delta aus drei Massen (Brannen, Tau +- 0.09 MeV): 0.222225 +- 0.000006
+   arccos(pi/4)/3 = 0.222486: Abstand 41.6 sigma (Massen-delta), 0.119 % von 2/9
+   -4 cos(2/3) = -3.143549 gegen -pi = -3.141593

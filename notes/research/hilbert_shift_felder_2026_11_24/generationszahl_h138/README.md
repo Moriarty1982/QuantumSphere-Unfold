@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H148; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H149; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -40,7 +40,11 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
 - **H148** (Vorab 8887b23): Warum liegen die Massen daneben? Die Gram-Auslesung misst die starre 120°-Überlappung (|a|² ¼ bzw. 1/16), Koide braucht
   ½ = cos²(π/4). Mit dem freien Mischwinkel θ aus H147 gibt die Amplituden-Auslesung (r13/k255) K = 1/(3cos²θ), also K = ⅔ genau bei θ = π/4
   (Wolfram exakt); mit δ = 2/9 (angepasst) Lepton-Verhältnisse auf 2·10⁻⁵. Der komplexe Ladungszustand gibt K ≈ 0,34.
+- **H149** (Vorab 42f0900): Was legt θ = π/4 und δ = 2/9 fest? θ = π/4 ist der Fixpunkt des Tauschs HS(0)-Einheit ↔ Kopienrichtung (= Materie- ↔
+  Tachyon-Frame, k297) und dort ist Ψ lichtartig; ein tauschsymmetrisches Potential ist dort stets stationär, Minimum oder Maximum entscheidet das
+  Vorzeichen von 2a − b (Gegenstück θ = 0, K = ⅓). Der HC bricht den Tausch (K = 0,364). δ sieht nur die kubische Norm N(W) über cos 3δ; ohne
+  Anpassung nur δ = 0, π/3 (entartet) oder π/12 (N(W) = 0, masseloses Elektron, H101). δ = 2/9 bleibt Fit bzw. CT-002.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H148; Skripte k321–k331 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H149; Skripte k321–k332 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.
