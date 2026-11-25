@@ -154,6 +154,8 @@ Ob Schleifen die Skala selbst erzeugen (Test H129): `Ergebnis_H129_Schleifen_Ska
 
 Ob der HC die Tauschsymmetrie bricht: `HC_Tauschsymmetrie_k297.md` (k297, ja: Tausch = Orientierungsumkehr μ → 1/μ; HC-Bedingung als Potential ist die flache Richtung).
 
+Eichfelder auf der HC-Richtung (Test H132): `Ergebnis_H132_Eichfelder_HC.md` (k298, widerlegt: kein masseloses Eichfeld; für g_L = g_R ist m₋/m₊ = β_sym²).
+
 ## Dateien
 `k290_rekursive_feldgleichung.py` (`k290_out.txt`), `k290b_gegenprobe.wl` (`k290b_out.txt`, Wolfram über den Cloud-Kernel, Ausgaben und Warnungen dort festgehalten).
 Aufruf: `python k290_rekursive_feldgleichung.py > k290_out.txt`, Laufzeit etwa 20 Sekunden.

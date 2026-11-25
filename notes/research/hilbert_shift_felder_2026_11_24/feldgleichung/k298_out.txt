@@ -1,0 +1,24 @@
+== A  U(1) links x U(1) rechts ==
+  Massenmatrix in (L, R): [[f**2*g_L**2, -f**2*g_L*g_R*cos(2*theta)], [-f**2*g_L*g_R*cos(2*theta), f**2*g_R**2]]
+  Vergleich mit dem Ueberschlag [[gL^2 f^2, -+ gL gR (A-B)], ...]: Diagonale True True ; Nebendiagonale / (gL gR (A - B)) = -1
+  K-a: Determinante = -f**4*g_L**2*g_R**2*(cos(4*theta) - 1)/2  = 4 gL^2 gR^2 A B ? True
+  Eigenwerte: [f**2*(g_L**2 + g_R**2 - sqrt(g_L**4 + 4*g_L**2*g_R**2*cos(2*theta)**2 - 2*g_L**2*g_R**2 + g_R**4))/2, f**2*(g_L**2 + g_R**2 + sqrt(g_L**4 + 4*g_L**2*g_R**2*cos(2*theta)**2 - 2*g_L**2*g_R**2 + g_R**4))/2]
+  K-b: m-^2/m+^2 mit c = cos 2 theta: (g_L**2 + g_R**2 - sqrt(-4*g_L**2*g_R**2*(1 - c**2) + (g_L**2 + g_R**2)**2))/(g_L**2 + g_R**2 + sqrt(-4*g_L**2*g_R**2*(1 - c**2) + (g_L**2 + g_R**2)**2))
+    gL = gR: (1 - Abs(c))/(Abs(c) + 1) ; fuer mu < 1 also mu**2 ;  mit c = (1-mu^2)/(1+mu^2): (mu**2 - Abs(mu**2 - 1) + 1)/(mu**2 + Abs(mu**2 - 1) + 1)
+    Ableitung nach gR bei gR = 2 gL, c = 1/2 (ungleich null heisst: haengt an den Kopplungen): -18*sqrt(13)/(13*g_L*(5*sqrt(13) + 19))
+  leichtes Feld fuer kleines mu (in Einheiten f^2): m-^2 = 4*g_L**2*g_R**2*mu**2/(g_L**2 + g_R**2)  ; Vergleich 4 e^2 mu^2 mit e = gL gR/sqrt(gL^2+gR^2): True
+  exakt fuer gL = gR = g: m+^2 = g^2 f^2 (1 + c) = 2 g^2 f^2/(1 + mu^2), m-^2 = 2 g^2 f^2 mu^2/(1 + mu^2)
+  bei theta = 0 (kein Anhang) masselos: [[g_R/g_L, 1]]  (Kombination, unter der psi1 neutral ist)
+
+== B  SU(2) links x U(1) rechts auf demselben Vakuum ==
+  Massenquadrate: {f**2*g**2/4: 2, f**2*(g**2 + gprime**2)/4: 1, 0: 1}  (haengen nicht von theta ab)
+  masselose Richtung: [[gprime*cos(2*theta)/g, 0, -gprime*sin(2*theta)/g, 1]]
+  Aenderung von V unter der Linksdrehung um i: 0
+  Aenderung von V unter der Linksdrehung um j: -4*eta*(mu**2 + 1)*(x0*x2 - x1*x3)*(mu**2*x0**2 + mu**2*x1**2 - x2**2 - x3**2)
+  Aenderung von V unter der Linksdrehung um k: -4*eta*(mu**2 + 1)*(x0*x3 + x1*x2)*(mu**2*x0**2 + mu**2*x1**2 - x2**2 - x3**2)
+
+== C  Schleifen-Skala mit Eichfeldern (ohne Kriterium) ==
+  gL = gR = g: Summe m^4/f^4 = m_H^4 + 3 (m+^4 + m-^4) = 4*(16*eta**2*mu**8 + 32*eta**2*mu**6 + 16*eta**2*mu**4 + 3*g**4*mu**4 + 3*g**4)/(mu**2 + 1)**2
+  Masse der Groessenmode: m_s^2 = Summe/(8 pi^2) f^2 = (16*eta**2*mu**8 + 32*eta**2*mu**6 + 16*eta**2*mu**4 + 3*g**4*mu**4 + 3*g**4)/(2*pi**2*(mu**2 + 1)**2) * f^2
+  Zahlen mit mu = 0.3018: m-/m+ = 0.3018;  m+^2 = 1.8331 g^2 f^2;  m-^2 = 0.1669 g^2 f^2;  m_H^2 = 0.7285 eta f^2
+  m_s^2/f^2 = 0.006722 eta^2 + 0.1287 g^4

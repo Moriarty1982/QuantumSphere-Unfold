@@ -1,5 +1,13 @@
 # Forschungsstand
 
+### H132: Auf der HC-Richtung bleibt kein Eichfeld masselos (25.11.2026, Test, teilweise nicht blind, k298)
+
+Frage nach k297: Bleibt mit den Eichfeldern der Symmetrie des HC-Potentials (U(1) links × U(1) rechts) auf der HC-Richtung ψ₀ = f(cos θ + sin θ·j), tan θ = β_sym², ein masseloses Eichfeld, und hängt das Massenverhältnis nur an β_sym? Vorab-Notiz vor der Rechnung committet, mit einem Überschlag, der das Ergebnis weitgehend festlegte. **Urteil: widerlegt.** Die Determinante der Massenmatrix ist 4g_L²g_R²·A·B, also ungleich null, sobald Vorstufe und Anhang beide da sind. Das Verhältnis hängt allgemein an g_R/g_L; für gleiche Kopplungen ist es exakt m₋/m₊ = μ = β_sym² = 0,3018 (trägt teilweise). Für kleines μ ist m₋² = 4e²μ²f²: Der Anhang gibt dem sonst masselosen Feld eine Masse proportional zu seiner Amplitude.
+
+Mit SU(2) links × U(1) rechts (wie k291) bleibt auf jeder Richtung ein Feld masselos, aber das HC-Potential η(B − μ²A)² ist nicht SU(2)-invariant. Masseloses Licht und das HC-Potential vertragen sich in dieser Übersetzung nicht, dieselbe Spannung wie in H129. Offen ist eine Übersetzung des HC, die mit SU(2) links verträglich ist (die quadratische Strafe war eine Setzung). Gegenprobe in Wolfram Language (k298b). OP1, OP3, OP4, OP5 bleiben offen.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H132_Eichfelder_HC.md`, Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H132_Eichfelder_HC_Richtung.md`.
+
 ### Der HC gibt die Form vor, die Schleife die Größe (25.11.2026, Erkundung, nicht blind, k297)
 
 Anschluss an H129: Bricht der HC die Tauschsymmetrie zwischen Vorstufe und Anhang? Ja. Der Tausch (Rechtsmultiplikation mit j) vertauscht die beiden Kreisanteile a und b und wirkt auf den Beltrami-Koeffizienten des HC als μ → 1/μ. Das ist die Orientierungsumkehr, die r23 als Tachyon-Frame führt. Der HC mit μ = β_sym² < 1 zeichnet die Vorstufe als den größeren Teil aus (91,65 % der Norm, Anhang 8,35 %). Die Tauschsymmetrie ist also die bekannte Wahl zwischen Materie-Frame und Tachyon-Frame; hergeleitet wird diese Wahl nicht.
