@@ -1,0 +1,24 @@
+k290b_gegenprobe.wl, Wolfram Language (Cloud-Kernel ueber MCP, 25.11.2026). Tatsaechliche Print-Ausgaben:
+
+W1 Normrekursion (Rest, n=1,2,3): {0, 0, 0}
+W2 sigma Automorphismus (n=1,2,3): {{0}, {0}, {0}}
+W3 u(ux) + N(u) x fuer imaginaeres u (n=1,2,3): {{0}, {0}, {0}}
+W3 n=4, rationales Beispiel wie k290: 3595/8019
+W4 K1 auf R: 0 | auf C: -(g0 (-(x1 y0) + x0 y1)^2)
+W4 K2 auf C: 0 | K2(e1,e2) auf H: 4 g0 g1
+W4 Assoziator auf H: {0} | K3(e1,e2,e4) auf O: -4 g0 g1 g2
+W4 K4 auf O: 0 | Sedenionen (e1+e10)(e4-e15) = {0}, K4 = -4
+W5 dim Symmetrie-Algebra, Terme {N,K1}:        n=1,2,3: {1, 6, 28}
+W5 dim Symmetrie-Algebra, Terme {N,K1,K2}:     n=1,2,3: {1, 3, 21}
+W5 dim Symmetrie-Algebra, Terme {N,K1,K2,K3}:  n=1,2,3: {1, 3, 14}
+W5 dazu Re(psi):                               n=1,2,3: {0, 3, 14}
+W5 dazu feste Einheit u = l:                   n=1,2,3: {0, 1, 8}
+W6 Euler-Lagrange von L1 auf H, aufgeloest: psi' - w u psi = {0, 0, 0, 0}
+W7 Tr(W.Conjugate[W]) - (Tr W^2 - 4|v|^2) = 0
+
+Rueckgabewert: Null (nur Print-Ausgaben).
+Warnungen des Kernels: "Symbol::undefined2: Global symbols X, L, W are undefined" (Hinweis des Werkzeugs auf
+lokale Variablen in Table/Module/With, keine Rechenwarnung) und "General::messages: Messages were generated which
+may indicate errors" (dieselbe Meldung). Symbolische Nullreste: W1, W2, W3 (n<=3), W4 (Nullstellen), W6, W7.
+Exakter Rang an rationalen Zufallspunkten: W5 (SeedRandom[290]). n = 4 ist in Wolfram nicht gerechnet (nur das
+rationale Beispiel W3 und der Nullteiler W4); die Symmetrie-Dimensionen fuer n = 4 stehen nur in k290_out.txt.

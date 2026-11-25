@@ -1,0 +1,42 @@
+== A  masselose Welle (Box psi = 0, kein Massenterm) ==
+  Box psi = [(a + b)*(k**2 - omega**2)*cos(k*x - omega*t), (a - b)*(-k**2 + omega**2)*sin(k*x - omega*t)]  => null genau fuer [-k, k]
+  an festem Ort: psi'' + omega^2 psi = [0, 0] (Regel aus k253, omega = |k|)
+  HS(0), a = b: [2*a*cos(k*x - omega*t), 0]  (reelle Welle, lineare Polarisation)
+  Ladungsdichte psi0 psi1' - psi1 psi0' = omega*(a - b)*(a + b)  (Drehsinn, null bei a = b)
+
+== B  Feld fester Norm ==
+  S^1 (HS(1)): K1(d_x psi, d_y psi) = 0  (Zielraum eindimensional, keine Flaeche)
+  S^1: kinetischer Term = 1/2 f^2 (d theta)^2, also ein masseloses Phasenfeld: Derivative(theta(x, y, z), x)**2
+  S^3 (HS(2)), Igel, bei r = x:  sum N(d_i U) = Derivative(F(x), x)**2 + 2*sin(F(x))**2/x**2
+                               sum K1(d_i U, d_j U) = (2*x**2*Derivative(F(x), x)**2 + sin(F(x))**2)*sin(F(x))**2/x**4
+  Kommutator der Stroeme (Skyrme-Term) = 4 * K1 ? True
+  Windungsdichte det(L) = sin(F(x))**2*Derivative(F(x), x)/x**2  => Windungszahl = -(1/2 pi^2) * 4 pi * Integral = [F - sin(2F)/2]/pi von 0 bis unendlich
+
+== C  Derrick-Skalierung x -> x/s in D Raumdimensionen ==
+  E(s) = E0/s**D + E2*s**(2 - D) + E4*s**(4 - D) ;  dE/ds bei s=1: -D*E0 + E2*(2 - D) + E4*(4 - D)
+  D=1: stationaer verlangt Eq(-E0 + E2 + 3*E4, 0)
+  D=2: stationaer verlangt Eq(-2*E0 + 2*E4, 0)
+  D=3: stationaer verlangt Eq(-3*E0 - E2 + E4, 0)
+  D=3: E4 = E2 + 3 E0. Ohne Term vierter Ordnung in den Ableitungen (E4 = 0) gibt es keine ruhende, lokalisierte Loesung.
+
+== D  Igel auf S^3: E = 4 pi f sqrt(c1) * I,  I = Int rho^2 [ 1/2 (F'^2 + 2 s^2/rho^2) + s^2/rho^2 (2 F'^2 + s^2/rho^2) ] ==
+  Gitter 200, R=12.0: I = 8.2232, I2 = 4.0881, I4 = 4.1351 (Derrick: I2 = I4), E = 4 pi I = 103.336 f sqrt(c1), Schranke 6 sqrt(2) pi^2 = 83.746, Verhaeltnis 1.2339
+  Gitter 400, R=16.0: I = 8.2137, I2 = 4.0966, I4 = 4.1171 (Derrick: I2 = I4), E = 4 pi I = 103.216 f sqrt(c1), Schranke 6 sqrt(2) pi^2 = 83.746, Verhaeltnis 1.2325
+  Literaturwert des Verhaeltnisses fuer den Skyrme-Igel: 1,2315
+
+== E  geeichte U(1) bei fester Norm f (HS(1)) ==
+  1/2 f^2 (d theta + e A)^2, Eichung theta = 0: A**2*e**2*f**2/2  => m_A = e f; ohne feste Norm (f = 0 im Vakuum): m_A = 0
+
+== F  Homotopie (Standard, nicht gerechnet): pi_3 der Zielsphaere ==
+  S^0: 0   S^1: 0   S^3: Z   S^7: 0   => Knoten mit Windungszahl in drei Raumdimensionen nur fuer S^3, also HS(2)
+
+== G  Protomasse bei HS(1): invariante Masse E^2 - P^2 einer masselosen Welle ==
+  Energiedichte: k**2*(A**2 + B**2)  Impulsdichte: k**2*(A - B)*(A + B)  E^2 - P^2 = 4*A**2*B**2*k**4
+  => eine einzelne laufende Welle (B = 0) ist lichtartig; erst zwei Laufrichtungen geben E^2 - P^2 > 0.
+     Diese Protomasse ist nicht gebunden: nach C (Derrick, E4 = 0 auf S^1 und fuer die freie Welle) zerlaeuft sie.
+
+== H  HS(2) mit fester Norm f: SU(2) links und U(1) rechts geeicht ==
+  1/2 N(W psi - psi B) im Vakuum psi = f: f**2*(B**2*gprime**2 - 2*B*W3*g*gprime + W1**2*g**2 + W2**2*g**2 + W3**2*g**2)/8
+  Massenquadrate: {f**2*g**2/4: 2, f**2*(g**2 + gprime**2)/4: 1, 0: 1}
+  => ein Eichfeld bleibt masselos (g' W3 + g B), drei werden massiv; m_W^2/m_Z^2 = g^2/(g^2+g'^2)
+  zum Vergleich HS(1) allein (E): das eine Eichfeld wird massiv, m_A = e f, es bleibt kein masseloses uebrig.
