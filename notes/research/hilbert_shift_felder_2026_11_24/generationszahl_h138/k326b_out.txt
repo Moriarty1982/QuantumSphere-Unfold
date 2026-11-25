@@ -1,0 +1,8 @@
+k326b, Wolfram-Kernel (MCP), 25.11.2026, tatsaechliche Print-Ausgaben (drei Aufrufe, Definitionen wie k326b_gegenprobe.wl):
+Klasse 2 (0,1,3,5,7) [1,2,4,6,8]: {11, 1, {0, 1/3, 1/3, 1/3, 1/2, 1/2, 1/2, 2/3, 2/3, 2/3, 1}}
+Klasse 3 (0,1,2,3,4) [1,2,3,4,5]: {11, 0, {1/3, 1/3, 1/3, 1/2, 1/2, 1/2, 2/3, 2/3, 2/3, (5 - Sqrt[10])/10, (5 + Sqrt[10])/10}}
+Klasse 4 (0,1,3,4,8) [1,2,4,5,9]: {11, 0, {1/10, 1/3, 1/3, 1/3, 1/2, 1/2, 1/2, 2/3, 2/3, 2/3, 9/10}}
+Klasse 1 (0,1,2,3,6) [1,2,3,4,7]: {18, 1, {0, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/2, 1/2, 2/3, 2/3, 2/3, 2/3, 2/3, 2/3, 1, (10 - Sqrt[10])/20, (10 + Sqrt[10])/20}}
+Format: {dim Kern, dim R0, exaktes Spektrum der gestauchten Ladung auf dem Kern}.
+Meldungen: Symbol::undefined2-Warnung (Variablennamen in Module), General::messages; keine Fehler in den Ergebnissen.
+Abgleich mit k326 (Python, numerisch): alle vier Klassen stimmen (0.341886 = (10-Sqrt[10])/20, 0.183772 = (5-Sqrt[10])/10, 0.1/0.9).

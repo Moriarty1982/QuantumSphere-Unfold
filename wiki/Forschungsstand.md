@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### Fünf Kopien: keine zweite Generation, nur mehr Leck (25.11.2026, Test H143, teilweise nicht blind, k326)
+
+Auf HS(5) wurden alle 126 Auswahlen von fünf der neun Oktonion-Kopien gerechnet, jeweils mit allen 16 relativen Orientierungen. Der Rest (Kern der Abbildung der getrennten Träger in A₅) enthält höchstens **eine** vollständige, ladungsstabile Generation (0, ⅓³, ⅔³, 1), und zwar in 45 Auswahlen. Jede dieser 45 enthält genau eine der 9 Vierer-Auswahlen aus H142; eine neue Generation durch die fünfte Kopie gibt es nicht. Die fünfte Kopie bringt nur einen weiteren Quark-Satz (⅓³, ⅔³ ohne Leptonen) oder leckende Zustände mit Ladung ½ oder irrationalen Ladungen wie (5 ∓ √10)/10 (Wolfram exakt). Exakt bestätigt ist die Regel: Zahl der Rest-Generationen = Zahl der Relationen Σ c_k v_k = 0 mit Σ c_k = 0 (alle 2016 Fälle). Keine gemeinsame Ladung, keine Nullteiler.
+
+Einordnung: Die Generationszahl im Rest ist eine lineare Eigenschaft der Kopienrichtungen und hängt über die Orientierung am offenen Vorzeichen. Nach Abzählen wären zwei Rest-Generationen erst ab sechs Kopien denkbar (nicht gerechnet). Massen und Mischung nicht berührt; OP3, OP4 offen. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H143_Fuenf_Kopien_HS5.md`.
+
 ### Noch eine Generation mehr: Mit vier Kopien schließt der Rest auch die Leptonen (25.11.2026, Test H142, teilweise nicht blind, k325)
 
 In den Sedenionen gibt es keine vierte Kopie, deshalb wurden auf HS(5) alle 126 Auswahlen von vier der neun Oktonion-Kopien gerechnet (getrennte Träger, Rest = Kern der Abbildung in A₅). Farbe und Ladungsspektrum je Kopie sind gleich (H142a). Eine gemeinsame Ladung gibt es weiterhin nicht (H142c). Bei linear unabhängigen Richtungen bleiben nur drei Singuletts übrig (H142d). **H142b widerlegt:** In 9 Auswahlen enthält der Rest eine vollständige Generation mit den Ladungen 0, ⅓³, ⅔³, 1 (Wolfram exakt). Sie zerfällt unter der Farbe in 1 ⊕ 1 ⊕ 3 ⊕ 3̄ und ist unter der Ladung exakt stabil. Dazu kommen zwei leckende Singuletts mit ½. Kennzeichen ist die Wechselrelation v₁ − v₂ + v₃ − v₄ = 0, bei der sich auch die reellen Anteile aufheben. Bei drei Kopien (f₀ + f₁₂₀ + f₂₄₀ = 0) geht das nicht, deshalb trägt der Rest in H141 nur Quarks.

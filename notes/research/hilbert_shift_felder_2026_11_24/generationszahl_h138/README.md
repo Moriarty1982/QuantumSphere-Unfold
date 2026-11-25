@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H142; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H143; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -19,7 +19,11 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   keine Nullteiler.
 - **H142** (Vorab 1bc8fb4, Nachtrag f578bff): Vier Kopien auf HS(5). In 9 von 126 Auswahlen (Wechselrelation v₁ − v₂ + v₃ − v₄ = 0) ist der Rest
   eine vollständige, ladungsstabile Generation (0, ⅓³, ⅔³, 1; 1 ⊕ 1 ⊕ 3 ⊕ 3̄) plus zwei leckende Singuletts. b widerlegt; keine gemeinsame Ladung.
+- **H143** (Vorab 5a68040): Fünf Kopien auf HS(5). Höchstens eine vollständige Rest-Generation (45 von 126 Auswahlen), und jede stammt aus einer
+  der 9 Vierer-Relationen von H142. Regel exakt bestätigt: Zahl der Rest-Generationen = Zahl der Relationen Σ c_k v_k = 0 mit Σ c_k = 0 (alle
+  126 × 16 Orientierungen). Die fünfte Kopie bringt nur einen weiteren Quark-Satz oder Leck (½, irrationale Ladungen); keine Nullteiler, keine
+  gemeinsame Ladung.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138, H139; Skripte k321 (+ b, c), k322 (+ b, c) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H143; Skripte k321–k326 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.
