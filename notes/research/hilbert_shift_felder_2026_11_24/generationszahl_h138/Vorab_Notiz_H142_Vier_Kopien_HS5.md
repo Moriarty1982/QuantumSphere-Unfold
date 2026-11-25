@@ -33,3 +33,12 @@ Summenabbildung Φ: V → ℂ⊗A₅, Kern K, Kokern, gestauchte Ladung auf K, L
   aber getrennt geladene Kopien, und jede weitere Kopie verkleinert nur den Rest.
 - b widerlegt: Mit vier Kopien schließen sich die Leptonen; das wäre ein Hinweis auf eine Vierer- statt Dreierstruktur und bekäme einen eigenen Folgetest.
 - Was in keinem Fall folgt: Massen, Mischung, Vorzeichen. OP3, OP4 offen; kein Guard berührt. Vergeben: H142, k325.
+
+## Nachtrag 25.11.2026 (nach einem Vorlauf, vor dem gewerteten Lauf)
+Der erste Lauf (`k325_vorlauf_out.txt`) bestand die Kontrolle nicht: Die drei Sedenion-Kopien gaben im Kern nicht ⅓³, ½³, ⅔³. Ursache: Die
+Richtungen v stammen aus Wolfram mit willkürlichem Vorzeichen (±v ist dieselbe Kopie), die Ladungsrichtung u_v = e₇ ⊗ v hängt aber vom Vorzeichen
+ab (Drehsinn). Im Vorlauf war Kopie 0 gegenüber H141 umgedreht. **Korrektur des Aufbaus:** Die Orientierung jeder Kopie wird durch die
+Automorphismen transportiert, v = a ⊗ b mit a, b ∈ {f₀, f₁₂₀, f₂₄₀} (wie H140/H141 mit f_k = ψ^k f₀). Das ist keine Vorzeichensetzung, sondern
+die von der Symmetrie mitgebrachte Orientierung. Zusätzlich wird berichtet, was bei **freien** Vorzeichen (alle 2³ relativen Orientierungen je
+Auswahl) passiert, ohne eine davon zu wählen. Kriterien unverändert; der gewertete Lauf gilt damit als teilweise nicht blind (Vorlauf gesehen:
+bei gemischten Orientierungen traten in 5 Auswahlen 0 und 1 im Kern auf).
