@@ -1,0 +1,39 @@
+Ladungen der Oktonion-Kopie: [0.0, 0.333333, 0.666667, 1.0]
+Messwert K_l = 0.666664, m_tau/m_e = 3477.4
+
+=== H146a: drei Kopien, alle 84 Auswahlen ===
+Lepton q=0: max K = 0.593750; Klassen (sqrt m, K, Anzahl, Beispiel):
+   sqrt m = (np.float64(0.375), np.float64(0.375), np.float64(2.25)), K = 0.59375, m_max/m_min(>0) = 36.000, 6 Auswahlen, z. B. ['f0(x)f0', 'f120(x)f120', 'f240(x)f240']
+   sqrt m = (np.float64(0.232321), np.float64(0.75), np.float64(2.017679)), K = 0.520833, m_max/m_min(>0) = 75.427, 36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f240']
+   sqrt m = (np.float64(0.375), np.float64(0.840635), np.float64(1.784365)), K = 0.447917, m_max/m_min(>0) = 22.641, 36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0']
+   sqrt m = (np.float64(0.75), np.float64(0.75), np.float64(1.5)), K = 0.375, m_max/m_min(>0) = 4.000, 6 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240']
+   Sedenion-Tripel (0,1,2): sqrt m = [0.75 0.75 1.5 ]
+Farbe q=1/3: max K = 0.500000; Klassen (sqrt m, K, Anzahl, Beispiel):
+   sqrt m = (np.float64(-0.0), np.float64(1.5), np.float64(1.5)), K = 0.5, m_max/m_min(>0) = 1.000, 6 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240']
+   sqrt m = (np.float64(0.40693), np.float64(0.75), np.float64(1.84307)), K = 0.458333, m_max/m_min(>0) = 20.514, 36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0']
+   sqrt m = (np.float64(0.316987), np.float64(1.183013), np.float64(1.5)), K = 0.416667, m_max/m_min(>0) = 22.392, 36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f240']
+   sqrt m = (np.float64(0.75), np.float64(0.75), np.float64(1.5)), K = 0.375, m_max/m_min(>0) = 4.000, 6 Auswahlen, z. B. ['f0(x)f0', 'f120(x)f120', 'f240(x)f240']
+   Sedenion-Tripel (0,1,2): sqrt m = [-0.   1.5  1.5]
+Farbe q=2/3: max K = 0.500000; Klassen (sqrt m, K, Anzahl, Beispiel):
+   sqrt m = (np.float64(-0.0), np.float64(1.5), np.float64(1.5)), K = 0.5, m_max/m_min(>0) = 1.000, 6 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240']
+   sqrt m = (np.float64(0.40693), np.float64(0.75), np.float64(1.84307)), K = 0.458333, m_max/m_min(>0) = 20.514, 36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0']
+   sqrt m = (np.float64(0.316987), np.float64(1.183013), np.float64(1.5)), K = 0.416667, m_max/m_min(>0) = 22.392, 36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f240']
+   sqrt m = (np.float64(0.75), np.float64(0.75), np.float64(1.5)), K = 0.375, m_max/m_min(>0) = 4.000, 6 Auswahlen, z. B. ['f0(x)f0', 'f120(x)f120', 'f240(x)f240']
+   Sedenion-Tripel (0,1,2): sqrt m = [-0.   1.5  1.5]
+Lepton q=1: max K = 0.593750; Klassen (sqrt m, K, Anzahl, Beispiel):
+   sqrt m = (np.float64(0.375), np.float64(0.375), np.float64(2.25)), K = 0.59375, m_max/m_min(>0) = 36.000, 6 Auswahlen, z. B. ['f0(x)f0', 'f120(x)f120', 'f240(x)f240']
+   sqrt m = (np.float64(0.232321), np.float64(0.75), np.float64(2.017679)), K = 0.520833, m_max/m_min(>0) = 75.427, 36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f240']
+   sqrt m = (np.float64(0.375), np.float64(0.840635), np.float64(1.784365)), K = 0.447917, m_max/m_min(>0) = 22.641, 36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0']
+   sqrt m = (np.float64(0.75), np.float64(0.75), np.float64(1.5)), K = 0.375, m_max/m_min(>0) = 4.000, 6 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240']
+   Sedenion-Tripel (0,1,2): sqrt m = [0.75 0.75 1.5 ]
+
+=== H146b, c: vier Kopien mit H142-Relation (9 Auswahlen) ===
+kleinster Eigenwert |lambda_0| max 6.1e-16; naechster min 0.7500
+Eigenvektor zum Eigenwert 0 = c: min |<e0, c>| = 1.000000000
+   q = 0.3333: sqrt m = (np.float64(0.0), np.float64(1.0), np.float64(1.5), np.float64(1.5)), K der drei massiven = 0.34375
+   q = 0.6667: sqrt m = (np.float64(0.0), np.float64(1.0), np.float64(1.5), np.float64(1.5)), K der drei massiven = 0.34375
+   q = 0.0000: sqrt m = (np.float64(0.0), np.float64(0.75), np.float64(0.75), np.float64(2.5)), K der drei massiven = 0.460937
+   q = 1.0000: sqrt m = (np.float64(0.0), np.float64(0.75), np.float64(0.75), np.float64(2.5)), K der drei massiven = 0.460937
+   q = 0.0000: sqrt m = (np.float64(-0.0), np.float64(0.75), np.float64(0.75), np.float64(2.5)), K der drei massiven = 0.460938
+   q = 1.0000: sqrt m = (np.float64(-0.0), np.float64(0.75), np.float64(0.75), np.float64(2.5)), K der drei massiven = 0.460938
+H146c: max |K - 2/3| ueber alle = 0.3229, min |K - 2/3| = 0.2057; max m_max/m_min = 11.111
