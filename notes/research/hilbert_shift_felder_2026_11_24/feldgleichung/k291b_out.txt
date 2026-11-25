@@ -1,0 +1,19 @@
+k291b_gegenprobe.wl, Wolfram Language (Cloud-Kernel ueber MCP, 25.11.2026, in zwei Aufrufen V1-V7 und V8-V9). Tatsaechliche Print-Ausgaben:
+
+V1 Summe N(d_i U) am Punkt (x,0,0): 2 Sin[F[x]]^2/x^2 + F'[x]^2
+V2 Summe K1: (Sin[F[x]]^4 + 2 x^2 Sin[F[x]]^2 F'[x]^2)/x^4
+V3 Skyrme-Term minus 4*K1: 0
+V4 U^+ U - 1: {{0, 0}, {0, 0}}
+V5 K1 auf S^1: 0
+V6 Derrick D=3: {{E4 -> 3 E0 + E2}}
+V7 Steigung im Ursprung: 1.41954, I = 8.19597, Verhaeltnis zur Schranke: 1.22983
+V8 Massenterm: f^2 (b^2 gp^2 + g^2 w1^2 + g^2 w2^2 - 2 b g gp w3 + g^2 w3^2)/8
+V8 Massenquadrate: {0, f^2 g^2/4, f^2 g^2/4, f^2 (g^2 + gp^2)/4}
+V8 Nullvektor: {{0, 0, gp/g, 1}}
+V9 Energiedichte, Impulsdichte, E^2-P^2: {(A^2 + B^2) k^2, (A - B) (A + B) k^2, 4 A^2 B^2 k^4}
+
+Rueckgabewert: Null. Warnungen: "Symbol::undefined2" (Hinweis des Werkzeugs auf nicht vordefinierte Symbole) und
+"General::messages" (dieselbe Meldung); keine Rechenwarnung.
+Symbolische Nullreste: V3, V4, V5. Numerisch: V7 (Schiessverfahren bis rho = 12, Anpassung an den Abfall 1/rho^2).
+V7 gibt das Verhaeltnis 1,2298, die Gitterminimierung in k291 gibt 1,2325 (von oben), der Literaturwert ist 1,2315.
+Die Abweichungen von 0,1 bis 0,2 Prozent sind Abschneide- und Gitterfehler; beide Rechnungen sind nicht auf mehr Stellen ausgelegt.

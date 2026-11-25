@@ -1,0 +1,11 @@
+k292b_gegenprobe.wl, Wolfram Language (Cloud-Kernel ueber MCP, 25.11.2026). Tatsaechliche Print-Ausgaben:
+
+X1 mu, K: {b/a, (a + b)/(a - b), g}
+X2 N - (a^2+b^2+2ab Cos[2wt]): 0, Zeitmittel: a^2 + b^2
+X3 Euler-Lagrange-Rest bei theta = w t: -2 a b w^2 Sin[2 t w]
+X4 psi - e^{iwt}(a + b j): {{0, 0}, {0, 0}}, N = a^2 + b^2
+X5 psi' - w i psi: {{0, 0}, {0, 0}}, Ladung links: (a^2 + b^2) w, rechts: (a - b) (a + b) w
+
+Rueckgabewert: Null. Warnung "Symbol::undefined2" (Hinweis des Werkzeugs), keine Rechenwarnung.
+Im ersten Lauf stand in X5 das Skalarprodukt ohne ComplexExpand und blieb unvereinfacht; die Zeile oben ist der zweite Lauf mit der
+hier abgelegten Definition von ip. Symbolische Nullreste: X2, X4, X5 (erste Angabe).

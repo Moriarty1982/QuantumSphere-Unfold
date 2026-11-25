@@ -1,0 +1,34 @@
+(* k291b (Erkundung, nicht blind): unabhaengige Gegenprobe zu k291 in Wolfram Language, Quaternionen als 2x2-Matrizen. *)
+s = PauliMatrix /@ {1, 2, 3}; r = Sqrt[x^2 + y^2 + z^2]; n = {x, y, z}/r;
+U = Cos[F[r]] IdentityMatrix[2] + I Sin[F[r]] (n . s);
+Ud = Cos[F[r]] IdentityMatrix[2] - I Sin[F[r]] (n . s);
+dU = D[U, #] & /@ {x, y, z}; L = (Ud . #) & /@ dU;
+at[e_] := FullSimplify[e /. {y -> 0, z -> 0}, x > 0];
+nq[m_] := Det[m];
+e2 = at[Sum[nq[dU[[i]]], {i, 3}]];
+k1 = Sum[nq[dU[[i]]] nq[dU[[j]]] - (-Tr[L[[i]] . L[[j]]]/2)^2, {i, 3}, {j, i + 1, 3}];
+sk = Sum[nq[L[[i]] . L[[j]] - L[[j]] . L[[i]]], {i, 3}, {j, i + 1, 3}];
+Print["V1 Summe N(d_i U) am Punkt (x,0,0): ", e2];
+Print["V2 Summe K1: ", at[k1]];
+Print["V3 Skyrme-Term minus 4*K1: ", at[sk - 4 k1]];
+Print["V4 U^+ U - 1: ", FullSimplify[Ud . U - IdentityMatrix[2]]];
+th = t1[x, y]; u1 = {Cos[th], Sin[th]};
+Print["V5 K1 auf S^1: ", Simplify[(D[u1, x] . D[u1, x]) (D[u1, y] . D[u1, y]) - (D[u1, x] . D[u1, y])^2]];
+Print["V6 Derrick D=3: ", Solve[D[s0^(2 - 3) E2 + s0^(4 - 3) E4 + s0^(-3) E0, s0] == 0 /. s0 -> 1, E4]];
+dens = rho^2 (1/2 (F1'[rho]^2 + 2 Sin[F1[rho]]^2/rho^2) + Sin[F1[rho]]^2/rho^2 (2 F1'[rho]^2 + Sin[F1[rho]]^2/rho^2));
+el = D[dens, F1[rho]] - D[D[dens, F1'[rho]], rho];
+sol[a_?NumericQ] := NDSolveValue[{el == 0, F1[10^-3] == Pi - a 10^-3, F1'[10^-3] == -a}, F1, {rho, 10^-3, 12}, MaxSteps -> 10^5];
+aa = a /. FindRoot[sol[a][12] 12^2 - (sol[a][8] 8^2), {a, 1.9, 2.1}];
+ff = sol[aa];
+Print["V7 Steigung im Ursprung: ", aa, ", I = ", NIntegrate[dens /. F1 -> ff, {rho, 10^-3, 12}], ", Verhaeltnis zur Schranke: ", 4 Pi NIntegrate[dens /. F1 -> ff, {rho, 10^-3, 12}]/(6 Sqrt[2] Pi^2)];
+(* Eichfeldmassen auf HS(2) und Protomasse der Welle *)
+Wm = I g/2 (w1 s[[1]] + w2 s[[2]] + w3 s[[3]]); Bm = I gp/2 b s[[3]];
+vac = f IdentityMatrix[2]; dv = Wm . vac - vac . Bm; m2 = Simplify[1/2 Det[dv]];
+Print["V8 Massenterm: ", Factor[m2]];
+Print["V8 Massenquadrate: ", Factor[Eigenvalues[D[m2, {{w1, w2, w3, b}, 2}]]]];
+Print["V8 Nullvektor: ", NullSpace[D[m2, {{w1, w2, w3, b}, 2}]]];
+p1 = om t - k x; p2 = om t + k x;
+psi = {A Cos[p1] + B Cos[p2], A Sin[p1] + B Sin[p2]};
+av[e_] := Simplify[(k om/(4 Pi^2)) Integrate[Integrate[Expand[e], {x, 0, 2 Pi/k}], {t, 0, 2 Pi/om}]] /. om -> k;
+ed = av[Total[1/2 (D[psi, t]^2 + D[psi, x]^2)]]; pd = av[-Total[D[psi, t] D[psi, x]]];
+Print["V9 Energiedichte, Impulsdichte, E^2-P^2: ", {Factor[ed], Factor[pd], Factor[ed^2 - pd^2]}];
