@@ -1,0 +1,14 @@
+Ausgabe von k298b_gegenprobe.wl (Wolfram-Cloud-Kernel, 25.11.2026), Print-Zeilen in InputForm bzw. Standardform.
+Warnungen des Kernels: Symbol::undefined2 (betrifft nur die Auswertungsumgebung), MinValue::lpsub und MaxValue::lpsub (je zweimal, aus der
+Auswertung von Min/Max mit symbolischen Argumenten in Y2/Y4; die Zeilen sind unten von Hand gelesen), General::messages.
+
+Y1 Massenmatrix (L, R): {{f^2*gL^2, -(f^2*gL*gR*Cos[2*th])}, {-(f^2*gL*gR*Cos[2*th]), f^2*gR^2}} ; Det - 4 gL^2 gR^2 A B: 0
+Y2 gL = gR, tan th = mu: Eigenwerte {-(f^2*gL^2*(-1 + Cos[2*ArcTan[mu]])), f^2*gL^2*(1 + Cos[2*ArcTan[mu]])} ; Verhaeltnis Piecewise[{{1, f*gL*Cos[2*ArcTan[mu]] == 0}, {mu^(-2), f^2*gL^2*Cos[2*ArcTan[mu]] < 0}}, mu^2]
+Y3 kleines mu: SeriesData[mu, 0, {(4*f^2*gL^2*gR^2)/(gL^2 + gR^2)}, 2, 4, 1]
+Y4 Verhaeltnis haengt an gR/gL (gR = 2 gL, cos 2th = 1/2): Min[0.697224 f^2 gL^2, 4.30278 f^2 gL^2]/Max[0.697224 f^2 gL^2, 4.30278 f^2 gL^2] gegen gL = gR: Min[0.5 f^2 gL^2, 1.5 f^2 gL^2]/Max[0.5 f^2 gL^2, 1.5 f^2 gL^2]
+Y5 SU(2) x U(1): Eigenwerte {0, (f^2*g^2)/4, (f^2*g^2)/4, (f^2*(g^2 + gp^2))/4}
+Y6 Aenderung von V unter Linksdrehung um j: -4*eta*(1 + mu^2)*(x0*x2 - x1*x3)*(mu^2*x0^2 + mu^2*x1^2 - x2^2 - x3^2)
+Y7 Zahlen mu = (1.8644-1)/(2.8644): {0.301773, 1.83307, 0.166932, 0.301773}
+
+Gelesen: Y2 fuer 0 < mu < 1 (cos 2 th > 0) Verhaeltnis mu^2. Y3: m-^2 = 4 f^2 gL^2 gR^2 mu^2/(gL^2 + gR^2) + O(mu^4).
+Y4: 0.697224/4.30278 = 0.1620 gegen 0.5/1.5 = 0.3333, das Verhaeltnis haengt also an gR/gL. Alles wie in k298_out.txt.
