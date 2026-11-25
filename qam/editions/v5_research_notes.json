@@ -142,5 +142,63 @@
     ],
     "guard": "Derivation of the CP bridge S1",
     "obligation": "Derive S1 from an action; the sign is decided by a determination at 3 sigma (deadline 2035). OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-albert-sedenion-collapse",
+    "path": "notes/research/predictions/Ergebnis_H128_Kollaps_Hilbert_Shift_Familiensymmetrie.md",
+    "title": "Derivations of the Albert-type algebra over the sedenions",
+    "excerpt": "| H128a: dim Der(H₃(𝕊)) | **22** (Lücke 1,5·10¹³); Anteil außerhalb von g₂ ⊕ so(3): 0,16 | = 17 | **widerlegt** |",
+    "assumptions": [
+      "H_3(S) is a construction on three copies, not a step of the tower; the three places are read as generations (setting).",
+      "The mass form K is a canonical but chosen quadratic form; its sign in a potential is not fixed."
+    ],
+    "guard": "Sign of the mass form from the field equation",
+    "obligation": "Derive the sign of K and the identification of places with generations from the field equation; dimension 22 is numerical (singular-value gap), an exact rank is missing. OP3 remains open."
+  },
+  {
+    "id": "op3-charge-direction-doubling-unit",
+    "path": "notes/research/predictions/Ergebnis_H130_Ladungsrichtung_Verdopplungseinheit.md",
+    "title": "Charge direction orthogonal to the doubling unit",
+    "excerpt": "# Ergebnis H130: Die Ladungsrichtung liegt senkrecht zur Verdopplungseinheit, das Verhältnis 9/10 ist festgelegt",
+    "assumptions": [
+      "The carrier is a colour-stable octonion subalgebra of the sedenions on which su(3)_c acts as 1 + 1 + 3 + 3bar."
+    ],
+    "guard": "Why the carrier is an octonion subalgebra",
+    "obligation": "Derive the requirement of an alternative, colour-stable carrier from the tower or the field equation. OP3 remains open."
+  },
+  {
+    "id": "op4-s4-generalised-cp-tm2",
+    "path": "notes/research/predictions/Ergebnis_H131_S4_Ladung_CP_Mischung.md",
+    "title": "S4 with the charge as generalised CP: one class, TM2 without CP violation",
+    "excerpt": "# Ergebnis H131: Eine einzige Klasse, aber mit δ = 0 oder 180°: TM2 ohne CP-Verletzung, θ₂₃ nicht maximal",
+    "assumptions": [
+      "Copy k sits on place k of H_3(S); Z3 for charged leptons, Z2 with CP for Majorana neutrinos on the complex triplet (settings)."
+    ],
+    "guard": "Carrier and residual symmetries of the neutrino sector",
+    "obligation": "Derive the carrier (complex triplet or real part, k262) and the residual symmetries; the reading stands poorly against data. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op4-neutrino-carrier-real-part",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/setzungen_k262/README.md",
+    "title": "The carrier of the neutrinos decides between TM2 and TM1",
+    "excerpt": "# Welche Setzung aus H131 trägt die Spannung? (Erkundung k262, nicht blind, 25.11.2026)",
+    "assumptions": [
+      "Majorana neutrinos on the real part of the entries, with a real mass form; Z3 for charged leptons and one odd Z2 (settings).",
+      "Exploration, not blind."
+    ],
+    "guard": "Carrier of the neutral field",
+    "obligation": "Decide from the mass form or the field equation whether the neutral field lives on the real part; the choice of the odd Z2 and the sign of sin delta remain open. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op4-frame-correction-tm1-juno",
+    "path": "notes/research/predictions/Ergebnis_H134_Frame_Rapiditaet_TM1_JUNO.md",
+    "title": "Frame correction makes the TM1 class compatible with JUNO, without a prediction",
+    "excerpt": "# Ergebnis H134: Mit der Frame-Korrektur ist die TM1-Klasse mit JUNO verträglich, aber ohne Vorhersage",
+    "assumptions": [
+      "Frame map for mixing: mask D = exp(eps W_l) with eps = artanh(beta_sym) (r57, H45), a reading without derivation from an action; beta_sym is inserted (OP1).",
+      "Partly not blind: the data were known; the rotation phi is free."
+    ],
+    "guard": "Rotation angle and frame map of the mixing",
+    "obligation": "Fix the free rotation phi from the algebra and derive the mask from an action; only then does a prediction for theta23 and delta follow. OP3 and OP4 remain open."
   }
 ]
