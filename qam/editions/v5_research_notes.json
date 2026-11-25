@@ -321,5 +321,93 @@
     ],
     "guard": "Coupling of the appended stage to the current",
     "obligation": "A feedback would have to run through the current of the rotating solution; such terms bring a new scale. Decide between the scale-free picture and a set scale."
+  },
+  {
+    "id": "op4-two-direction-coupling-untestable",
+    "path": "notes/research/predictions/Ergebnis_H126_Kopplung_zweier_Richtungen.md",
+    "title": "Coupling of two directions is degenerate everywhere (H126 not testable)",
+    "excerpt": "**H126 ist nicht prüfbar.**",
+    "assumptions": [
+      "e8 taken as the imaginary unit; the pairing reads only the components along 1 and e8; mass operator H = MM† as fixed in the pre-registration."
+    ],
+    "guard": "Non-associative mass operator for mixing",
+    "obligation": "A new attempt needs a pairing or mass operator that reads components outside span{1, e8}; this is a new hypothesis with its own pre-registration. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-charge-breaking-pure-spin-three",
+    "path": "notes/research/predictions/Ergebnis_H127_Ladungsbrechung_Spin.md",
+    "title": "Charge breaking of the family SO(3) is pure spin 3",
+    "excerpt": "**w₃ = 1 exakt**",
+    "assumptions": [
+      "Three places of H3(C) identified with generations (set); C = L_e7 on each place; leakage coupling K(A) = Σ_a L_{Y_a} A L_{Y_a}."
+    ],
+    "guard": "Leakage order of the breaking into the quarks",
+    "obligation": "Stage B was refuted by wording only, because K factors through f4 and cannot pass the breaking on. A coupling that does not factor through f4 needs a new pre-registration. OP3 remains open."
+  },
+  {
+    "id": "qam-band-circuit-superposition-classical",
+    "path": "notes/research/predictions/Ergebnis_H137_Bandschaltung_Ueberlagerungen.md",
+    "title": "The band circuit carries superpositions linearly but computes classically",
+    "excerpt": "**Die Schaltung ist ein klassisch-reversibles Orakel** |x, 0⟩ ↦ |x, f(x)⟩.",
+    "assumptions": [
+      "Implementation FiniteBand of the reversible Qiskit step circuit, example program and a set reversible program R, band lengths 2 and 3; not blind."
+    ],
+    "guard": "Amplitude-mixing step in the carrier",
+    "obligation": "A quantum computer in the carrier needs a reversible rule table or a history band, a non-permutation (Hadamard-like) step and a cell-cell coupling not running through the head; whether the tower supplies the mixing step is open. Q1a and U_Q, U_B, U_L, U_T, U_S remain open."
+  },
+  {
+    "id": "op3-three-sedenion-copies-per-doubling",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H138_Kopienzahl_im_Turm.md",
+    "title": "Exactly three octonion copies per doubling (Im z³ = 0)",
+    "excerpt": "t₂(3t₁² − t₂²) = 0, also **Im((t₁ + i t₂)³) = 0**.",
+    "assumptions": [
+      "A copy is a unital, G2-stable, eight-dimensional subalgebra with common unit (set); HS(6) not fully counted."
+    ],
+    "guard": "Copies as generations",
+    "obligation": "Show that the three copies are generations (not shown; only two independent directions, no common charge). Sign open until the field equation. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-zero-divisors-beyond-three-copies",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H139_Nullteiler_jenseits_drei_Kopien.md",
+    "title": "States beyond the three copies are zero divisors (flat copy profile)",
+    "excerpt": "ist det L_x = (c − s)⁴(c + s)⁴(c² + s²)⁴",
+    "assumptions": [
+      "Sedenions as HS(4) with the copy decomposition A4 = R² ⊕ 7 ⊗ R²; part a refuted by wording (no inner zero divisors); part c not blind."
+    ],
+    "guard": "Physical role of zero-divisor families",
+    "obligation": "It is not shown that zero divisors represent or forbid a fourth generation. Sign open until the field equation. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-copies-no-common-charge",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H140_Kopien_als_Generationen.md",
+    "title": "Sedenion copies share colour but have no common charge",
+    "excerpt": "Leck(βL_x + γR_x) = (12\\|β\\|² + 12\\|γ\\|² − 18 Re β̄γ)(\\|x\\|² + x₈²) ≥ 3\\|x\\|²",
+    "assumptions": [
+      "Charge of k85 form per copy; family of candidate common charges α + βL_x + γR_x; su(2)_L commutes by construction (not computed)."
+    ],
+    "guard": "Charge conservation in the copy product",
+    "obligation": "Check separate carriers C⊗(O0 ⊕ O120 ⊕ O240) with charge per copy and whether the product between copies conserves it; needs a new pre-registration. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-remainder-quark-set",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H141_Vierte_Generation_Rest.md",
+    "title": "The missing nine states form a quark set without leptons",
+    "excerpt": "**Erkundung (gestauchte Ladung auf K, Wolfram exakt):** Spektrum {⅓, ⅓, ⅓, ½, ½, ½, ⅔, ⅔, ⅔}.",
+    "assumptions": [
+      "Three copies as separate carriers mapped by the sum into C⊗S; kernel of that map as the candidate fourth generation (set)."
+    ],
+    "guard": "Physical meaning of the remainder",
+    "obligation": "Not a closed sector and no common charge; whether a stable quark set without leptons means anything physically is not shown. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-four-copies-full-generation",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H142_Vier_Kopien_HS5.md",
+    "title": "With four copies on HS(5) the remainder can hold a full generation",
+    "excerpt": "Kennzeichen: Die vier Richtungen erfüllen eine Relation v₁ − v₂ + v₃ − v₄ = 0",
+    "assumptions": [
+      "Orientation of copies transported by automorphisms (signs free otherwise); k85 charge; choice of four of the nine octonionic copies on HS(5)."
+    ],
+    "guard": "Orientation sign and physical status of the kernel generation",
+    "obligation": "No common conserved charge; two singlets with charge 1/2 leak; whether the kernel generation is a physical state is not shown; sign open until the field equation. OP3 and OP4 remain open."
   }
 ]
