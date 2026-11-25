@@ -1,5 +1,14 @@
 # Forschungsstand
 
+### Runde r61: Korrekturen zu r56.4 und r07.4 (25.11.2026, Erkundung, nicht blind, k320)
+
+Anlass ist die Gegenprüfung des englischen Artikels „One Object, Three Frames“. Dabei sind in zwei älteren Runden Formelversehen aufgefallen; Marc hat ihre Korrektur beauftragt. Die alten Runden bleiben unverändert (append-only).
+
+- **r61.1 (zu r56.4):** Die Vakuumdichte ist ρ_Λ = Λ/κ, nicht 3Λ/κ, so wie es r56.2 selbst verwendet. Mit 3Λ/κ passten die beiden Formeln von r56.4 nicht zusammen. Richtig ist x*³ = κρ_M0(1−β²)/(β²Λ). Nur dieser Ausdruck ändert sich, um den Faktor 3. Λ = 3(1−β²)H*² = 2,0944603 H*², die Eindeutigkeit der Epoche, der Tausch von Λ gegen die Epoche (H96), r56.5, r57.1 und r59.5 bleiben, wie sie sind.
+- **r61.2 (zu r07.4):** β_sym = √((γ_L−1)/(γ_L+1)) = 0,5494056. In r07.4(c) fehlte die Wurzel; so geschrieben ist der Ausdruck β² = 0,30185, und „Ω_M = β²“ gäbe wörtlich 0,091. Keine Zahl im Bestand wurde mit der falschen Form gerechnet, und die Aussage von r07.4 (der Vorfaktor des Flächengesetzes kürzt sich) bleibt bestehen.
+
+Wolfram exakt (k320). Kein Test, keine Zahl und kein Status ändert sich; kein Guard berührt. [Runde](../notes/research/v4_10_0_r61_korrekturen/README.md)
+
 ### Rückwirkung über den HC-Winkel: hält κ ≈ 1,2 nicht fest (25.11.2026, Test H136, teilweise nicht blind, k305)
 
 Nach H135 blieb eine Möglichkeit offen: κ könnte am HC-Winkel θ hängen, und die Schleife des HS(3)-Anhangs könnte θ zurückstellen. **Ergebnis: widerlegt.**
