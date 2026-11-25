@@ -1,0 +1,26 @@
+== 1  Die Ellipse als quasikonforme Abbildung z -> a z + b conj(z) ==
+  Beltrami-Koeffizient mu = b/a ;  K = (1+mu)/(1-mu) = (a + b)/(a - b) = Verhaeltnis der Halbachsen
+  mit mu = beta_sym^2 = (gamma_L - 1)/(gamma_L + 1):  K = gamma_L
+  Zahlen: gamma_L = 1.8644, mu = b/a = 0.30177, beta_sym = 0.5493
+  Skalierung psi -> lambda psi: mu bleibt b/a (der HC legt die Form fest, nicht die Groesse)
+  C ist linear: C(lambda f) - lambda C(f) = 0 fuer jede Involution J; eine lineare Abbildung kann keine Amplitude auszeichnen.
+
+== 2  Norm auf der HS(1)-Ellipse ==
+  N(psi) = a**2 - 4*a*b*sin(omega*t)**2 + 2*a*b + b**2  = a^2 + b^2 + 2ab cos(2wt) ? True
+  Schwankung: zwischen (a - b)**2 und (a + b)**2 ; Zeitmittel: Piecewise((a**2 + b**2, (omega > 0) | (omega < 0)), (a**2 + 2*a*b + b**2, True))
+  feste Norm verlangt 2ab = 0, also mu = 0 und K = 1 (gamma_L = 1). Mit gamma_L = 1,8644 schwankt N um den Faktor K^2 = 3.476
+
+== 3  Lesart B mit verformtem Kreis (Feld auf der Ellipse festgehalten) ==
+  L = 1/2 |psi'|^2 auf der Ellipse; Euler-Lagrange-Rest fuer die harmonische Bewegung theta = w t: -2*a*b*omega**2*sin(2*omega*t)
+  => die Regel psi'' = -w^2 psi loest die Gleichung des festgehaltenen Felds nur fuer ab = 0.
+
+== 4  HS(2): der gegenlaeufige Anteil im Anhang ==
+  psi = a e^{iwt} + (b j) e^{-iwt} = [a*cos(omega*t), a*sin(omega*t), b*cos(omega*t), b*sin(omega*t)]
+  gleich e^{iwt}(a + b j)? True
+  N(psi) = a**2 + b**2  (fest, gleich dem Zeitmittel aus 2)
+  Regel erster Ordnung psi' - w i psi = [0, 0, 0, 0]  (beide Anteile drehen jetzt gleichsinnig von links)
+  Ladung der Linksdrehung  <psi', i psi> = omega*(a**2 + b**2)
+  Ladung der Rechtsdrehung <psi', psi i> = omega*(a - b)*(a + b)  (die Ladung w(a^2 - b^2) von HS(1))
+  Schatten in C (psi_1 + conj(chi)): [(a + b)*cos(omega*t), (a - b)*sin(omega*t)]  = Ellipse aus k253
+  Punkt auf der Hopf-Sphaere: cos(Breite) = (a**2 - b**2)/(a**2 + b**2) ; a = b ist der Aequator (HS(0)), b = 0 der Pol
+  mit mu = b/a = 0.30177: cos = 0.8331, Winkel vom Pol = 33.58 Grad (nur ausgerechnet, keine Zuordnung)
