@@ -158,6 +158,8 @@ Eichfelder auf der HC-Richtung (Test H132): `Ergebnis_H132_Eichfelder_HC.md` (k2
 
 Eine SU(2)-verträgliche Fassung des HC: `HC_SU2_vertraeglich_k299.md` (k299, Bedingung an den Strom J = ψ̄Dψ; Fassung F hält Licht masselos und ρ = 1, Fassung S verschiebt ρ und fällt gegen die Messung durch).
 
+Die Schleifen-Skala von 9,8 GeV, die Ähnlichkeit mit g und Fassung F am Knoten: `Skala_9_8_GeV_und_Igel_k300.md` (k300, k301).
+
 ## Dateien
 `k290_rekursive_feldgleichung.py` (`k290_out.txt`), `k290b_gegenprobe.wl` (`k290b_out.txt`, Wolfram über den Cloud-Kernel, Ausgaben und Warnungen dort festgehalten).
 Aufruf: `python k290_rekursive_feldgleichung.py > k290_out.txt`, Laufzeit etwa 20 Sekunden.
