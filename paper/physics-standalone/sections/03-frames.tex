@@ -1,0 +1,258 @@
+\section{Frames and their maps}
+\label{sec:A-frames}
+
+The word ``frame'' carries the conjecture of Section~\ref{sec:A-intro}. This section fixes what it
+means in the construction, which maps connect the frames, and what such maps can and cannot deliver.
+The maps and their properties are \Established; the identification of frames with physical
+observers of matter, light and tachyons is a \Reading.
+
+\subsection{The field doublet and its state disk}
+\label{sec:A-doublet}
+
+Write the field as the real $3\times2$ matrix $F=[\,\mathbf E\mid\mathbf B\,]$ and form its Gram matrix
+$G=F^{\mathsf T}F$ (\rndold{r04}). With $u=\tfrac12\operatorname{tr}G=\tfrac12(|\mathbf E|^2+|\mathbf B|^2)$ and
+$s$ from \eqref{eq:A-s},
+\begin{equation}
+G=u\,\mathbf 1+\tfrac12\bigl(\operatorname{Re}s\;\sigma_z+\operatorname{Im}s\;\sigma_x\bigr),
+\qquad \det G=|\mathbf E\times\mathbf B|^2,\qquad u^2-\det G=\tfrac14|s|^2 .
+\label{eq:A-gram}
+\end{equation}
+For $u>0$ the normalised matrix $\rho=G/\operatorname{tr}G=\tfrac12(\mathbf 1+b_1\sigma_z+b_2\sigma_x)$
+defines the \emph{state vector}
+\begin{equation}
+b=\frac{(\operatorname{Re}s,\operatorname{Im}s)}{2u},\qquad
+|b|^2=1-\frac{\det G}{u^2}\le1 .
+\label{eq:A-disk}
+\end{equation}
+The states fill a disk, not a sphere, because $G$ is real symmetric. Light-like fields ($s=0$) are
+the centre $b=0$. The rim $|b|=1$ is reached exactly when $\mathbf E\parallel\mathbf B$. A boost leaves
+$s$ fixed and changes $u$, so it moves $b$ along its own direction; for a non-null field it reaches
+the rim in the frame where $\mathbf E\parallel\mathbf B$ and tends to the centre as the rapidity grows
+(\rndold{r04}, r04.2). This is the Stokes formalism of polarisation optics, applied to the pair
+$(\mathbf E,\mathbf B)$ instead of two polarisation components; the same three bases of the field
+doublet appear in the literature \cite{A-Golat2024}.
+
+\subsection{Convention F}
+\label{sec:A-convention}
+
+Since round \rndold{r22} every statement of the Companion carries the frame in which it holds. The
+convention, completed in \rndold{r24} and corrected in \rndold{r28}, names four frames.
+\begin{itemize}
+\item \textbf{M}, the matter frame: the doublet state with eigenvalues $p_+=1/(1+x)$ in the compensator
+  port and $p_-=x/(1+x)$ in the partner port, where $x=\bsym^2$.
+\item \textbf{T}, the tachyon frame: the image of M under the tachyon map $z\mapsto iz$. It exchanges
+  $p_+$ and $p_-$, sends $x\mapsto1/x$ and the frame factor $\gamma=(1+x)/(1-x)$ to $-\gamma$.
+\item \textbf{P}, the photon eigenframe: the fixed point $b=0$, $p_+=p_-=\tfrac12$.
+\item \textbf{R}, the reference frame: the pure state $|b|=1$, offset $\bsym=0$. It is the frame in
+  which the Companion main text works; where older chapters say ``photon frame'' they mostly mean R.
+\end{itemize}
+A statement is \emph{frame-free} if M and T give the same value; otherwise it carries its frame. At P
+a readout is evaluated separately and may be degenerate, and a degenerate value is not a global
+statement. Quantities that depend on the state only through $|b|$ or the unordered pair of eigenvalues
+(visibility, entropy) are frame-free; quantities that distinguish the two ports are matter-only
+(\rndold{r22}, r22.1). The positions of M and T depend on the value of $\bsym$, which is inserted
+(Section~\ref{sec:beta}); the convention itself does not.
+
+\subsection{Three maps on the frame plane}
+\label{sec:A-maps}
+
+On the complex amplitude $z$, and in the Dixon algebra on its $\mathbb C$ factor (\rndold{r51}),
+three involutive operations act. We write them as
+\begin{equation}
+\begin{aligned}
+&D\colon z\mapsto iz &&\text{(tachyon map)},\\
+&\vartheta\colon z\mapsto\bar z &&\text{(time reversal of the amplitudes)},\\
+&J_B=D\circ\vartheta\colon z\mapsto i\bar z &&\text{(exchange of $\mathbf E$ and $\mathbf B$)}.
+\end{aligned}
+\label{eq:A-maps}
+\end{equation}
+On the frame plane $D$ is a rotation by $90^\circ$ and $\vartheta$ a reflection
+(Figure~\ref{fig:A-frame-plane}). Strictly, $D$ squares to $-1$ on $z$; it is an involution on states,
+where it acts as $\rho\mapsto\sigma_y\rho\sigma_y$. In the matrix picture $\vartheta$ is $F\mapsto F\sigma_z$,
+$J_B$ is $F\mapsto F\sigma_x$, and $D$ is the rotation by $\pi/2$ in the column plane.
+
+\begin{proposition}[Frame maps; v4.8.0-r06, \rndold{r04}, \rndold{r28}, \rnd{r07}]
+\label{prop:A-maps}
+\begin{enumerate}
+\item[(a)] $s(Dz)=-s(z)$, $s(\vartheta z)=\overline{s(z)}$, and $s(J_Bz)=-\overline{s(z)}$. On the disk, $D$ sends
+  $b\mapsto-b$, $\vartheta$ reverses $b_2$, and $J_B$ reverses $b_1$. All three keep $|b|$ and the null class.
+\item[(b)] $D$ commutes with every $L\in SO(3,\mathbb C)$, that is, with all proper Lorentz transformations
+  of the field.
+\item[(c)] $\vartheta$ and $J_B$ commute with $L\in SO(3,\mathbb C)$ if and only if $L=\bar L$, that is, for
+  spatial rotations only. A boost changes the form of the exchange rule.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) $s$ is complex bilinear: $s(iz)=i^2s(z)$, $s(\bar z)=\overline{s(z)}$, and $s(i\bar z)=-\overline{s(z)}$. The
+statements on $b$ follow from \eqref{eq:A-disk}, since $u$ is unchanged by all three maps. (b) $L$ is
+complex linear, so $L(iz)=iLz$. (c) $L\vartheta z=L\bar z$ and $\vartheta Lz=\bar L\bar z$; these agree for all
+$z$ iff $L=\bar L$. Real elements of $SO(3,\mathbb C)$ are the rotations. The same holds for $J_B=D\vartheta$
+by (b).
+\end{proof}
+
+Three consequences need to be stated plainly, because earlier text of the Companion confused them.
+
+\paragraph{The tachyon map is not time reversal.}
+Both $D$ and $J_B$ reverse $\operatorname{Re}s$ and so send matter-type to tachyon-type configurations;
+$\vartheta$ keeps $\operatorname{Re}s$. Convention~F as first written used $J_B$; round \rndold{r28}
+corrected the tachyon map to $z\mapsto iz$, which in addition exchanges the compensator ports, and round \rndold{r51} showed that the charges $Q$ and $B-L$ and the chirality projectors of
+the Dixon construction are fixed by $D$, so they are the same in M and T, whereas charge conjugation is
+the time-reversal part $\vartheta$ \Established. Where earlier layers wrote ``frame T'' for charge conjugation,
+time reversal was meant. The two maps must not be interchanged.
+
+\paragraph{The tachyon map is electromagnetic duality, not a Wick rotation.}
+With $z=\mathbf E+i\mathbf B$, $Dz$ is the duality rotation $\mathbf E\mapsto-\mathbf B$,
+$\mathbf B\mapsto\mathbf E$, a map of field space and not of spacetime. By (b) it commutes with every
+boost; a boost stays a boost with real rapidity. A remark in \rnd{r06} had asked whether $z\mapsto iz$
+turns boosts into rotations and coincides with the Wick rotation $t\mapsto i\tau_E$; \rnd{r07} (Correction
+r07.1) answered this in the negative \Established.
+
+\paragraph{The names are a reading.}
+That the orbit related by $D$ to a matter-type configuration is a physical tachyon, and that the null
+class is light in the particle sense, is the working assignment \eqref{eq:A-assignment}. The maps
+themselves are symmetries of the free Maxwell field (duality, Lorentz transformations) or a discrete
+transformation of it (time reversal).
+
+\input{figures/F3-frame-plane}
+
+\subsection{Exactly two classes of fields}
+\label{sec:A-classes}
+
+If one divides out not only the Lorentz group and duality but also the overall scale, the sector
+structure collapses to a single predicate.
+
+\begin{proposition}[Two classes; \rnd{r21}, r21.8]
+\label{prop:A-classes}
+Let $SO(3,\mathbb C)$ act on $z$ and let $\lambda\in\mathbb C\setminus\{0\}$ act by $z\mapsto\lambda z$ (duality
+phase and dilation).
+\begin{enumerate}
+\item[(a)] All non-null fields form one orbit: for $s(z_1),s(z_2)\neq0$ there are $\lambda$ and $L$ with
+  $z_2=\lambda Lz_1$.
+\item[(b)] The non-zero null fields form one orbit, already of $SO(3,\mathbb C)$ alone.
+\item[(c)] Each class has a distinguished representative. A non-null field is taken by a finite boost to
+  the frame with $\mathbf E\parallel\mathbf B$, where $\phi:=|b|=1$; this is R. A null field has $\phi=0$ in
+  every frame; this is P. On the first class boosts reach every $\phi\in(0,1]$; on the second only $0$.
+\item[(d)] The rapidity $\eta_R$ of the boost from a field to R satisfies $\phi=\operatorname{sech}2\eta_R$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) Choose $\lambda$ with $\lambda^2s(z_1)=s(z_2)$; then $\lambda z_1$ and $z_2$ have the same $s$ and lie on
+one $SO(3,\mathbb C)$-orbit by Proposition~\ref{prop:A-orbits}(a). (b) is Proposition~\ref{prop:A-orbits}(a)
+for the null cone. (c) and (d): $s$ is fixed and $\phi=|s|/2u$; along the boost line $u$ takes every value
+in $[|s|/2,\infty)$, with the minimum where $\det G=0$, i.e.\ $\mathbf E\parallel\mathbf B$; for $s=0$,
+$\phi=0$ identically. The relation (d) was checked numerically on 1000 fields in \rnd{r21}.
+\end{proof}
+
+Below every frame-dependent readout there is therefore one frame-free predicate: whether a field is
+null or not \Established. The port shares, the offset and the value of $\phi$ are readouts of a
+frame above it. This is the precise sense in which matter and tachyon are ``one'' and light is
+``another'': the first two lie in one class, light in the other, and no finite boost connects them.
+
+\subsection{The collapse state, typed}
+\label{sec:A-collapse}
+
+The oldest formulation of the conjecture calls the common object the \emph{collapse state}
+$z^-=0$ (\texttt{thm:unity}). Round \rnd{r22} typed all 93 occurrences of $z^-$ in the main text against
+Convention~F \Reading. As a point, $z^-=0$ is in about two thirds of the places the zero of the offset,
+that is R. The role of the frame-invariant object, which the same theorem ascribes to $z^-=0$, belongs to
+P, and the main text places P, without naming it so, at the other end of its coordinate, $z^-\to\infty$
+at $\beta\to1$, the horizon. The coordinate thus runs from R to P along the line
+$\phi=\operatorname{sech}2\eta_R$ of Proposition~\ref{prop:A-classes}(d). The null class, the answer to
+the question whether a field is null at the lowest level, is the horizon end of the main-text coordinate,
+not its origin.
+
+The same split resolves where the main-text ``cascade'' leads (\rnd{r23}). Two cascades carry one name.
+The compensator cascade ends at R: every image $Cz$ with $\mathbf E+\mathbf B\neq0$ has $\phi=1$
+(Section~\ref{sec:A-field-example}). The transport of the null axis keeps null fields null and so carries
+P without leading there. No finite cascade in the source leads to P; only limits (boosts, dephasing over
+many frequencies, weak coupling to a reservoir) or, for an instant, free time evolution reach it.
+
+\subsection{Frame maps give equalities, not values}
+\label{sec:A-equalities}
+
+A symmetry between frames can show that two frames agree. It cannot supply the number on which they
+agree. The clearest example in the Companion concerns gravity.
+
+Dorau and Much derived the semiclassical Einstein equations from quantum relative entropy
+\cite{A-DorauMuch2026}, a quantum field theoretic form of Jacobson's argument
+\cite{A-Jacobson1995}. Near a point, with a local Rindler horizon, the relative entropy of a coherent
+excitation equals an energy flux; with the Raychaudhuri equation and the area law $S_{\rm rel}=\delta A/4$,
+which is assumed, one obtains $G_{ab}+\Lambda g_{ab}=8\pi\langle{:}T_{ab}{:}\rangle$, with $\Lambda$ an
+integration constant. Round \rnd{r06} recorded this; round \rnd{r07} mapped the chain onto the frames
+\Exploration{} (not blind):
+
+\begin{proposition}[Frame-blind gravity for the Maxwell field; \rnd{r07}, r07.2]
+\label{prop:A-frameblind}
+For the free Maxwell field the relative-entropy chain gives in frame T the same Einstein equation as in
+frame M, with the same coupling, sign and inputs.
+\end{proposition}
+
+\begin{proof}[Sketch]
+The duality rotation is a symmetry of the free Maxwell field: it maps the algebra of the Rindler wedge
+onto itself and fixes the vacuum. It commutes with boosts (Proposition~\ref{prop:A-maps}(b)), hence with
+the modular group of the vacuum. Relative entropy is invariant under such an automorphism. The
+energy--momentum tensor is Hermitian in $z$ (energy density $\tfrac12|z|^2$, Poynting vector
+$(\bar z\times z)/2i$), so the null flux $T_{ab}\xi^a\xi^b$ is unchanged, while the bilinear invariants
+$|\mathbf E|^2-|\mathbf B|^2$ and $\mathbf E\cdot\mathbf B$ change sign. The commutation and the invariance of
+the tensor were checked numerically on 2000 random fields and boosts (script
+\texttt{k217\_dualitaet\_gravitation.py}).
+\end{proof}
+
+Gravity couples to the Hermitian tensor; the frames differ in the bilinear invariants. For the Maxwell
+field gravity is therefore frame-blind. This is textbook duality invariance in a new bookkeeping, not
+new physics. Its limits are explicit: for massive fields the tachyon image of the action has no stable
+Hadamard ground state, and the premises of the chain fail; for interacting fields duality is in general
+not a symmetry.
+
+The more important lesson is structural (\rnd{r07}, r07.4). The frame map is a symmetry that fixes the
+reference state, and every link of the chain is invariant under it; such an argument yields equalities
+between frames and nothing about the shared value. The prefactor of the area law is an absolute number.
+The two horizon countings the Companion uses are each calibrated to the area law, and their ratio
+$\gamma_L=\gamma_{\rm BI}/\gamma_{\rm string}=1.864700$ is independent of the normalisation, which cancels.
+Every quantity the Companion builds from the two countings, including $\bsym$ (Section~\ref{sec:beta}), is exactly the
+part in which the normalisation drops out. Neither Newton's constant nor $\Lambda$ follows
+\Established.
+
+\subsection{Orientation of the octant}
+\label{sec:A-orientation}
+
+One further property of the maps is used in Section~\ref{sec:B-koide}. On the Lorentz-invariant doublet
+$\chi=(\sqrt{s_+},\sqrt{s_-})$ built from the helicity parts $F_\pm=\mathbf E\pm i\mathbf B$ of a field with
+complex amplitudes (\rnd{r16}), the eigenstates of the frame maps form octant triples of three states with
+pairwise overlap $\tfrac12$; the eight triples split into two orbits, one for each sign of the Bargmann phase
+$\pm\pi/4$. The pre-registered test H118 (\rnd{r31}, partly not blind) found that the three frame maps, acting
+linearly on the complex amplitudes, preserve this orientation, and so does parity, which exchanges $s_+$
+and $s_-$. Time reversal of the complex field amplitudes, $\mathbf E\mapsto\bar{\mathbf E}$,
+$\mathbf B\mapsto-\bar{\mathbf B}$, acts on $\chi$ as complex conjugation and reverses it. None of nine candidates listed beforehand
+selects one orientation. The sign of the octant step is therefore a time orientation of the readout and is
+not fixed by the construction \Open. Section~\ref{sec:B-koide} returns to this.
+
+\subsection{Summary}
+\label{sec:A-frames-summary}
+
+\begin{table}[h]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X l l@{}}
+\toprule
+statement & status & source\\
+\midrule
+natural norm $N(q)=-t^2+s(z)$; Lorentz action on $z$ (Reading~B) & \Established & v4.8.0-r06\\
+compensator $C=\tfrac12(1+J)$ is an orthogonal projection & \Established & v4.8.0-r04\\
+orbits and sector rule by the sign of $s$ & \Established & v4.8.0-r06, r07\\
+names matter / light / tachyon for $s>0$, $=0$, $<0$ & \Reading & v4.8.0-r07\\
+image of $C$ never light-like; lies at R & \Established & \rnd{r23}\\
+$z\mapsto iz$ is duality, commutes with boosts; not a Wick rotation & \Established & \rnd{r07}\\
+tachyon map $\neq$ time reversal; charges frame-free between M and T & \Established & \rndold{r28}, \rndold{r51}\\
+two classes of non-zero fields, representatives P and R & \Established & \rnd{r21}\\
+collapse state: point R, invariant-object role P & \Reading & \rnd{r22}\\
+gravity frame-blind for the free Maxwell field & \Exploration{} (not blind) & \rnd{r07}\\
+values (area-law prefactor, $G$, $\Lambda$) from frame maps & not obtainable & \rnd{r07}\\
+orientation of the octant & \Open & \rnd{r31}\\
+physical unity of matter, light and tachyon & \Open{} (conjecture) & \texttt{thm:unity}\\
+\bottomrule
+\end{tabularx}
+\caption{Status of the results of Sections~\ref{sec:A-carrier} and~\ref{sec:A-frames}.}
+\label{tab:A-summary}
+\end{table}

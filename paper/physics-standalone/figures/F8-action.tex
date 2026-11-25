@@ -1,0 +1,71 @@
+% F8: scheme of the action W1/W2 as layered sector planes (2.5D), vector, readable in black and white.
+% Content from Companion rounds v4.9.0-r81, r82, r84, r86 and v4.10.0-r01. No numbers beyond those in Section 7.
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[font=\small,>={Stealth[length=2.2mm]},
+  plane/.style={draw=black,line width=0.6pt},
+  fld/.style={align=center,inner sep=1.5pt,font=\footnotesize},
+  eqbox/.style={draw,rounded corners=2pt,align=left,inner sep=3pt,text width=4.1cm,fill=white},
+  tag/.style={anchor=south east,font=\scriptsize\sffamily,inner sep=1pt},
+  chk/.style={line width=0.9pt},                % derived and checked
+  set/.style={line width=0.9pt,dashed},         % set by author decision
+  unc/.style={line width=0.9pt,densely dotted}  % not derived in the Companion
+]
+% geometry of a sector plane: width W, depth offset (dx,dy); shadow offset (sx,sy) for the second reading
+\def\W{7.0}\def\dx{1.5}\def\dy{0.95}\def\sx{0.5}\def\sy{0.38}
+\newcommand{\actsectorplane}[3]{% #1 = y offset, #2 = fill gray level, #3 = name
+  \draw[dashed,line width=0.45pt,fill=white] (\sx,#1+\sy) -- (\W+\sx,#1+\sy) -- (\W+\dx+\sx,#1+\dy+\sy) -- (\dx+\sx,#1+\dy+\sy) -- cycle;
+  \fill[black!#2] (0,#1) -- (\W,#1) -- (\W+\dx,#1+\dy) -- (\dx,#1+\dy) -- cycle;
+  \draw[plane] (0,#1) -- (\W,#1) -- (\W+\dx,#1+\dy) -- (\dx,#1+\dy) -- cycle;
+  \draw[line width=1.4pt] (0,#1) -- (\W,#1);   % heavier front edge: depth cue
+  \node[anchor=north west,font=\small\bfseries,inner sep=2pt] at (0,#1) {#3};}
+% the three sectors, back planes lighter
+\actsectorplane{0}{15}{Higgs sector (W2)}
+\actsectorplane{2.5}{10}{fermion sector}
+\actsectorplane{5.0}{5}{gravity sector}
+\node[anchor=south west,align=left,font=\footnotesize] at (0,5.0+\dy+\sy+0.05)
+  {dashed planes: the same fields in the second reading\\
+   (tachyon part, \textsc{c}\,4.9-r84): weight $a-b$ on derivative\\
+   terms, $a+b$ on potentials and masses};
+% field contents at the plane centres
+\node[fld] (G) at (0.5*\W+0.5*\dx,5.0+0.5*\dy) {tetrad $e^a{}_\mu$,\enspace connection $\omega=\tilde\omega+K$\\[1pt] $-\tfrac1{2\kappa}\,e\,R(e,\omega)$, torsion in $K$};
+\node[fld] (F) at (0.5*\W+0.5*\dx,2.5+0.5*\dy) {$\Psi$: 16 Weyl states,\enspace $A$: $U(1)_J$\\[1pt] $\tfrac12(\Psi^\dagger i\bar\sigma^\mu D_\mu\Psi+\mathrm{c.c.})-\tfrac14F^2$};
+\node[fld] (H) at (0.5*\W+0.5*\dx,0.5*\dy) {Higgs doublet $\Phi$\\[1pt] $V=-\mu^2|\Phi|^2+\lambda|\Phi|^4$};
+% couplings between the planes
+\draw[chk,<->] (2.8,2.5+\dy+0.05) -- node[right,align=left,font=\footnotesize]{$D_\mu$: spin\\connection} (2.8,4.95);
+\draw[chk,<->] (5.9,2.5+\dy+0.05) -- node[right,align=left,font=\footnotesize]{contact term\\$+\tfrac{3}{16}\kappa\,j\cdot j$} (5.9,4.95);
+\draw[set,<->] (4.3,\dy+0.05) -- node[right,align=left,font=\footnotesize]{Yukawa via the\\connectors} (4.3,2.45);
+% variations and field equations (right column)
+\begin{scope}[xshift=10.35cm]
+\node[eqbox,anchor=north west] (E1) at (0,6.95) {$\delta\omega$:\enspace Cartan equation,\\ $K_{cab}=\tfrac\kappa4\varepsilon_{cabd}j^d$};
+\node[eqbox,anchor=north west] (E2) at (0,5.55) {$\delta e$:\enspace $\tilde G_{\mu\nu}=\kappa\,T^{\rm eff}_{\mu\nu}$,\\ compatible with Bianchi};
+\node[eqbox,anchor=north west] (E3) at (0,4.15) {$\delta\psi^\dagger$:\enspace Weyl equation with\\ $+\tfrac{3\kappa}{8}j_a\bar\sigma^a\psi$;\enspace $\partial_\mu j^\mu=0$};
+\node[eqbox,anchor=north west] (E4) at (0,2.75) {$\delta A$:\enspace Maxwell equation};
+\node[eqbox,anchor=north west] (E5) at (0,1.55) {$\delta\Phi$:\enspace Higgs equation\\ (not derived in the Companion)};
+\end{scope}
+\draw[chk,->] (\W+\dx-0.3,5.0+0.75*\dy) to[out=10,in=180] (E1.west);
+\draw[chk,->] (\W+0.3,5.0+0.2*\dy) to[out=0,in=180] (E2.west);
+\draw[chk,->] (\W+\dx-0.3,2.5+0.75*\dy) to[out=15,in=180] (E3.west);
+\draw[chk,->] (\W+0.3,2.5+0.2*\dy) to[out=0,in=180] (E4.west);
+\draw[unc,->] (\W+0.6,0.5*\dy) to[out=0,in=180] (E5.west);
+% status tags above the boxes
+\node[tag,text=st-est] at (E1.north east) {established};
+\node[tag,text=st-est] at (E2.north east) {established};
+\node[tag,text=st-est] at (E3.north east) {established};
+\node[tag,text=st-open] at (E5.north east) {open};
+% legend
+\begin{scope}[yshift=-0.95cm]
+\draw[chk] (0,0) -- (0.8,0); \node[anchor=west,font=\footnotesize] at (0.85,0) {derived and checked (H88--H90)};
+\draw[set] (5.6,0) -- (6.4,0); \node[anchor=west,font=\footnotesize] at (6.45,0) {set by author decision};
+\draw[unc] (10.4,0) -- (11.2,0); \node[anchor=west,font=\footnotesize] at (11.25,0) {not derived};
+\end{scope}
+\end{tikzpicture}
+\caption{The action W1/W2 as three sector planes \Conditional. Gravity (tetrad and independent connection with torsion,
+corrected sign of $R$), the fermions stored in the Dixon carrier with the gauge field of $U(1)_J$, and the Higgs doublet of
+W2. Vertical arrows are couplings: the spin connection in $D_\mu$, the contact term left by eliminating torsion, and the
+Yukawa couplings through the connectors, whose form and the sign of $-\mu^2$ are set, not derived. The right column shows
+which field equation follows from which variation; the first three were derived independently in Wolfram Language and
+in a jet computation (\rndold{r86}, \rnd{r01}). The dashed planes behind are the tachyon part as a second reading of the
+same fields (\rndold{r84}). Line styles carry the status in black and white.}
+\label{fig:act-scheme}
+\end{figure}

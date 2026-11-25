@@ -1,0 +1,89 @@
+% F1: overview map of the construction, status at Companion round v4.10.0-r60.
+% 2.5D: three stacked layers (carrier, frames and sectors, readouts) drawn as slanted planes with shadows.
+% Node fill and edge colour carry the status; a text tag and the line style repeat it for black-and-white print.
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  box/.style={draw=black!70, rounded corners=1.2pt, align=center, inner sep=2.2pt, text width=#1},
+  box/.default=3.2cm,
+  est/.style={fill=st-est!14},
+  cond/.style={fill=st-cond!16},
+  read/.style={fill=st-read!14},
+  open/.style={fill=st-open!16},
+  ref/.style={fill=st-ref!14},
+  eest/.style={-{Stealth[length=2mm]}, very thick, draw=st-est},
+  econd/.style={-{Stealth[length=2mm]}, thick, dashed, draw=st-cond!90!black},
+  eopen/.style={-{Stealth[length=2mm]}, thick, densely dotted, draw=st-open},
+  eread/.style={-{Stealth[length=2mm]}, thick, dash dot, draw=st-read},
+]
+% ---------- layer planes (drawn first, back to front) ----------
+\newcommand{\qsplane}[3]{% #1 = y offset, #2 = height, #3 = label
+  \fill[black!22] (0.15,#1-0.15) -- (13.15,#1-0.15) -- (14.35,#1+#2-0.15) -- (1.35,#1+#2-0.15) -- cycle;
+  \filldraw[fill=white, draw=black!55] (0,#1) -- (13,#1) -- (14.2,#1+#2) -- (1.2,#1+#2) -- cycle;
+  \node[anchor=south west, font=\footnotesize\bfseries, text=black!65] at (1.25,#1+#2-0.42) {#3};}
+\qsplane{7.2}{4.0}{3 \;Readouts}
+\qsplane{3.6}{2.6}{2 \;Frames and sectors}
+\qsplane{0}{2.6}{1 \;Carrier}
+
+% ---------- layer 1: carrier ----------
+\node[box=3.8cm, est] (kern) at (4.0,1.05)
+  {biquaternion kernel\\ $q\in\mathbb C\otimes\mathbb H$, $z\in\mathbb C^3$\\ $N(q)=-t^2+s(z)$\quad\textsf{[established]}};
+\node[box=3.8cm, est] (comp) at (9.4,1.05)
+  {compensator $C=\tfrac12(1+J)$\\ orthogonal projection\\ \textsf{[established]}};
+
+% ---------- layer 2: frames and sectors ----------
+\node[box=2.8cm, est] (sect) at (2.9,4.75)
+  {sectors by the sign of\\ $s=z_1^2+z_2^2+z_3^2$\\ \textsf{[established]}};
+\node[box=2.8cm, est] (maps) at (6.25,4.75)
+  {frame maps $z\mapsto iz$,\\ $z\mapsto\bar z$, $J_B$\\ \textsf{[established]}};
+\node[box=2.8cm, est] (class) at (9.6,4.75)
+  {two field classes:\\ null ($P$) / non-null ($R$)\\ \textsf{[established]}};
+\node[box=2.1cm, read] (unity) at (12.75,4.75)
+  {one object,\\ three frames\\ \textsf{[conjecture]}};
+
+% ---------- layer 3: readouts ----------
+\node[box=3.2cm, cond] (part) at (3.1,8.25)
+  {particles from $\mathbb C\otimes\mathbb H\otimes\mathbb O$;\\ Albert algebra, $A_4$\\ \textsf{[conditional]}, Sec.~4};
+\node[box=3.2cm, est] (koide) at (6.9,8.25)
+  {Koide as geometry: octant\\ $K=\tfrac23\Leftrightarrow$ overlap $\tfrac12$\\ \textsf{[est.]}; $K$ not derived\\ Sec.~5};
+\node[box=3.2cm, open] (beta) at (10.7,8.25)
+  {$\beta_{\rm sym}\approx0.549$ inserted;\\ counting rule (OP1)\\ \textsf{[open]}, Sec.~6};
+\node[box=3.2cm, cond] (act) at (3.9,10.15)
+  {common action W1/W2\\ \textsf{[conditional]}, Sec.~7};
+\node[box=2.6cm, read] (bang) at (7.6,10.15)
+  {Big Bang as transition\\ \textsf{[exploration]}};
+\node[box=3.2cm, open] (lam) at (11.4,10.15)
+  {$\Lambda$ an input; OP5\\ \textsf{[open]}, Sec.~8};
+
+% ---------- edges ----------
+\draw[eest] (kern) -- (sect);
+\draw[eest] (kern) -- (maps);
+\draw[eest] (comp) -- (class);
+\draw[eread] (class) -- (unity);
+\draw[eread] (sect.south) to[out=-20,in=-150] (unity.south);
+\draw[econd] (kern.west) to[out=160,in=200] (part.west);
+\draw[econd] (maps) -- (koide);
+\draw[eopen] (maps.north east) -- (beta.south west);
+\draw[econd] (act) -- (bang);
+\draw[eopen] (act.north) to[out=25,in=155] (lam.north);
+\draw[eopen] (beta) -- (lam);
+\end{tikzpicture}
+
+\smallskip
+\begin{tabular}{@{}l@{\quad}l@{\quad}l@{\quad}l@{}}
+\tikz\draw[-{Stealth[length=1.6mm]},very thick,st-est] (0,0)--(0.7,0); established &
+\tikz\draw[-{Stealth[length=1.6mm]},thick,dashed,st-cond!90!black] (0,0)--(0.7,0); conditional &
+\tikz\draw[-{Stealth[length=1.6mm]},thick,densely dotted,st-open] (0,0)--(0.7,0); open &
+\tikz\draw[-{Stealth[length=1.6mm]},thick,dash dot,st-read] (0,0)--(0.7,0); reading
+\end{tabular}
+\caption{Overview of the construction at Companion round \rnd{r60}. The bottom layer is
+the carrier (Section~\ref{sec:A-carrier}), the middle layer the sectors, frame maps and the two field
+classes (Section~\ref{sec:A-frames}), the top layer the physical readouts treated in Sections~4--8.
+Fill colour, text tag and line style give the status of each node and link. Green: proved
+mathematics. Yellow: holds under named choices or settings. Orange: open. Blue: a reading,
+conjecture or exploration. The established links into layer~2 are algebra; every arrow into
+layer~3 carries a choice or an open step, and no arrow yields a mass, a scale or a value of
+$\Lambda$.}
+\label{fig:A-overview}
+\end{figure}

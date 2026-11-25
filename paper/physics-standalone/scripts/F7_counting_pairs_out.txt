@@ -1,0 +1,17 @@
+rules:
+  A,2        gamma = 0.237532957966
+  A,2j+1     gamma = 0.274066858233
+  H,2        gamma = 0.189138418126
+  H,2j+1     gamma = 0.222865260235
+  I,2        gamma = 0.137726864676
+  I,2j+1     gamma = 0.190205620344
+  S1/2,2     gamma = 0.127384023141
+  S1,2       gamma = 0.078006464520
+  S1,2j+1    gamma = 0.123637321077
+pairs: 36
+beta windows: lepton (0.545, 0.57), m_W (0.54897, 0.55020), Omega_M (0.52943, 0.56098)
+  H,2j+1     / S1,2j+1    gamma_L = 1.802573 beta = 0.53514  L0 W0 O1
+  A,2        / S1/2,2     gamma_L = 1.864700 beta = 0.54941  L1 W1 O1
+  A,2        / S1,2j+1    gamma_L = 1.921208 beta = 0.56156  L1 W0 O0
+all three: [('A,2', 'S1/2,2')]
+wrote /home/user/QuantumSphere-Unfold/paper/physics-standalone/figures/F7-counting-pairs.pdf

@@ -1,0 +1,4 @@
+flat octant (spin 1/2): overlaps [0.5 0.5 0.5], |Bargmann phase| 0.785398, det G 0.000000, K 0.666666666667
+  solid angle 1.570796 (pi/2 = 1.570796); phase = Omega/2
+spin-1 triangle: overlaps [0.5 0.5 0.5], |Bargmann phase| 0.679042, det G 0.050253, K 0.666666666667
+  psi 38.6763 deg, cos(side) 0.414214 (sqrt2-1 = 0.414214), solid angle 0.679042; phase = Omega for spin 1
