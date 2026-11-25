@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H147; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H148; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -37,7 +37,10 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
 - **H147** (Vorab 61e5ff3): HS(0)-Linie als Graviton? Neutral und masselos, aber Spin 0 (Skalar, Dilaton-artig). Spin 2 nur im äußeren
   Tensorprodukt oder antisymmetrisch über die Ableitungen; das Algebrenprodukt löscht ihn. Zwei Skalare c ⊗ e₀, c ⊗ e₇ mit freiem Mischwinkel
   unter der Ladungsdrehung (Erkundung).
+- **H148** (Vorab 8887b23): Warum liegen die Massen daneben? Die Gram-Auslesung misst die starre 120°-Überlappung (|a|² ¼ bzw. 1/16), Koide braucht
+  ½ = cos²(π/4). Mit dem freien Mischwinkel θ aus H147 gibt die Amplituden-Auslesung (r13/k255) K = 1/(3cos²θ), also K = ⅔ genau bei θ = π/4
+  (Wolfram exakt); mit δ = 2/9 (angepasst) Lepton-Verhältnisse auf 2·10⁻⁵. Der komplexe Ladungszustand gibt K ≈ 0,34.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H147; Skripte k321–k330 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H148; Skripte k321–k331 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

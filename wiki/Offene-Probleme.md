@@ -92,6 +92,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Tests H146, H147, 25.11.2026 (k329, k330):** Die Kopien geben in der Gram-Auslesung weder Koide 2/3 noch die Massenhierarchie (OP3 offen), aber eine exakt masselose Rest-Generation. Deren HS(0)-Linie ist ein neutraler, masseloser Skalar (Dilaton-artig), kein Spin-2-Graviton; Spin 2 bietet die Algebra nur antisymmetrisch. OP5 und die Gravitationsfragen offen.
 
+**Test H148, 25.11.2026 (k331):** Für OP3: K = ⅔ folgt exakt aus dem Mischwinkel π/4 zwischen reeller Einheit (HS(0)) und Kopienrichtung (Amplituden-Auslesung); offen bleiben, warum θ = π/4, die Phase δ = 2/9 und die Skala. OP3 offen.
+
 **Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
 
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.
