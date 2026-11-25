@@ -1,0 +1,26 @@
+theta0 = 16.794 Grad, 1/cos(2 theta0) = 1.2004, kappa* = 1.2039
+
+=== Stufe 1 (K-a): Invarianten auf a = psi1 + chi·j ===
+SU(2) links × U(1) rechts: Invarianten Grad 2: 1, Grad 4: 1; A1 − B (haengt an theta) invariant: False
+U(1) links × U(1) rechts: Invarianten Grad 2: 2, Grad 4: 3; A1 − B (haengt an theta) invariant: True
+
+=== Modell U: Tiefe des Vakuums als Funktion von theta ===
+--- Stufe 2: mit HC-Strafe eta, Verschiebung von theta durch die Schleife des Anhangs (fuehrende Ordnung) ---
+ln(v²/Lambda²) = -0.0900; dV1/dtheta = -0.00713·(k2 − k1)·v⁴; d²V0/dtheta² = 0.7287·eta·v⁴
+  eta = 0.1, k2 − k1 = -0.5: Verschiebung -2.803 Grad; Regel 1/cos2theta aendert sich um -0.06804
+  eta = 0.1, k2 − k1 = +0.5: Verschiebung +2.803 Grad; Regel 1/cos2theta aendert sich um +0.08987
+  eta = 1.0, k2 − k1 = -0.5: Verschiebung -0.280 Grad; Regel 1/cos2theta aendert sich um -0.00769
+  eta = 1.0, k2 − k1 = +0.5: Verschiebung +0.280 Grad; Regel 1/cos2theta aendert sich um +0.00791
+  eta = 6.6, k2 − k1 = -0.5: Verschiebung -0.042 Grad; Regel 1/cos2theta aendert sich um -0.00118
+  eta = 6.6, k2 − k1 = +0.5: Verschiebung +0.042 Grad; Regel 1/cos2theta aendert sich um +0.00118
+  Die Verschiebung ist klein gegen theta0 und proportional zu (k2 − k1)/eta: sie haengt an zwei freien Zahlen.
+
+--- Stufe 3 (K-b, K-c): Schleifen allein (eta = 0) ---
+Loesungen k2 − k1 mit dF/dtheta(theta0) = 0: [-1.39864]
+  k1 = 1.3207, k2 = -0.0780 (beide in (0, π): False); kappa_eff(theta0) = 1.2039
+  d²F/dtheta² bei theta0 = +0.00109  ->  Minimum (instabil)
+  kappa_eff > 0 nur fuer theta < 76.0°; F(0) = 0.07340, F(theta0) = 0.07339, F(45°) = 0.07436, F(70°) = 0.08760
+  groesstes F im zulaessigen Bereich bei 67.5°, kleinstes bei 76.0°
+  Steigung d kappa_eff/d theta = -0.7737; Regel: +1.5944; Verhaeltnis -0.485
+Kontrolle ohne theta-Abhaengigkeit des Top: dF/dtheta(theta0) fuer k2 − k1 = −0,5 / 0 / +0,5: [np.float64(-0.016187), np.float64(0.0), np.float64(0.016187)] (nur k1 = k2 ist stationaer, und dann ist F flach)
+Welche Steigung haette die Regel noetig? k2 − k1 = 2.882 ; dort dF/dtheta(theta0) = 0.138578
