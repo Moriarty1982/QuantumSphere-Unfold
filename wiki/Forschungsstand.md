@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Rückwärtssuche nach einer Regel für κ ≈ 1,2: keine Regel, ein Zahlentreffer (25.11.2026, Erkundung, nicht blind, k303)
+
+Nach H133 ist der Wert der Kopplung κ zwischen Vorstufe und HS(3)-Anhang frei, nötig wäre κ* = 1,204. Die Rückwärtssuche hält zuerst die notwendige Bedingung fest: 16κ² = 8π²·m_h²/v² − (3/8)g⁴ − (3/16)(g² + g′²)² + 3y_t⁴. Eine Regel für κ ist im skalenfreien Bild also eine Vorhersage der Higgs-Masse.
+
+**Regeln mit einem Prinzip dahinter treffen nicht.** Die volle Norm gibt κ = 0 (kein Minimum), Sp M⁴ = 0 gibt m_h = 0, die Veltman-Bedingung gibt κ ≈ 0,6 und m_h zwischen 32 und 49 GeV, die gesättigte Unitaritätsgrenze gibt κ = π und 345 GeV, und einen festen Punkt von κ mit Eichfeldern und Top gibt es nicht. Auch die Eichfelder der eigenen su(2) des Anhangs tragen nicht (24 GeV statt 312 GeV).
+
+**Ein Zahlentreffer.** Unter 42 Kandidaten aus den HC-Zahlen liegt genau einer im Fenster: κ = 1/cos 2θ = (γ_L + 1/γ_L)/2 = 1,2004, das sind −0,29 % zum Ziel und m_h = 124,8 GeV. Bei dieser Suche ist etwa ein Zufallstreffer zu erwarten, die Ein-Schleifen-Formel ist nur auf einige Prozent genau, und γ_L ist eingesetzt (OP1). Der Treffer ist deshalb kein Beleg. Als Lesart: 1/cos 2θ ist auf der HC-Richtung das Verhältnis von Linksladung zu Rechtsladung (k292). Eine Herleitung dafür fehlt; erst mit ihr wäre ein blinder Test möglich (H134 frei).
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Rueckwaertssuche_kappa_k303.md`, Skripte `k303_rueckwaerts_kappa.py`, `k303b_gegenprobe.wl`.
+
 ### Der Anhang von HS(3): Form der Kopplung festgelegt, Wert frei (25.11.2026, Test H133, teilweise nicht blind, k302)
 
 Nach k300 fehlen der Schleifen-Skala schwere Bosonen, und der Anhang ℍ → 𝕆 bringt vier neue reelle Felder mit. H133 fragte, ob der Turm ihre Kopplung an die Vorstufe so festlegt, dass 125 GeV herauskommen. **Ergebnis: nicht bestätigt. Die Form ist festgelegt, der Wert nicht.**
