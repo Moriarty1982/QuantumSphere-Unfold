@@ -1,0 +1,19 @@
+Der(H3(S)): dim 22 (Luecke 1.5e+13)
+A: Kommutant von g2 in Der: dim 8; g2 + Kommutant spannt dim 22; so(3) liegt im Kommutanten: Rang bleibt 8
+   abgeschlossen (Rest 3.7e-16); Killing-Form Eigenwerte von -0.300 bis -0.300 (negativ definit -> kompakt halbeinfach, dim 8 -> su(3))
+   Kommutant auf H3(C_e8): Leck aus dem Teilraum 9.2e-16; Rang der eingeschraenkten Wirkung 8
+   Kommutant auf H3(C_e7): Leck aus dem Teilraum 2.5e-01; Rang der eingeschraenkten Wirkung 3
+B: u = e7: Stabilisator von H3(C_u) in Der: dim 11; wirksame Dimension auf H3(C_u): 3; zusammen mit so(3): Rang 3
+B: u = e8: Stabilisator von H3(C_u) in Der: dim 22; wirksame Dimension auf H3(C_u): 8; zusammen mit so(3): Rang 8
+B: u = e15: Stabilisator von H3(C_u) in Der: dim 11; wirksame Dimension auf H3(C_u): 3; zusammen mit so(3): Rang 3
+C: r(u) fuer u = cos(t) e7 + sin(t) e8:
+   t =  0 Grad: r = 0.9000000000   (1 - cos^2(t)/10 = 0.9000000000)
+   t = 15 Grad: r = 0.9066987298   (1 - cos^2(t)/10 = 0.9066987298)
+   t = 30 Grad: r = 0.9250000000   (1 - cos^2(t)/10 = 0.9250000000)
+   t = 45 Grad: r = 0.9500000000   (1 - cos^2(t)/10 = 0.9500000000)
+   t = 60 Grad: r = 0.9750000000   (1 - cos^2(t)/10 = 0.9750000000)
+   t = 75 Grad: r = 0.9933012702   (1 - cos^2(t)/10 = 0.9933012702)
+   t = 90 Grad: r = 1.0000000000   (1 - cos^2(t)/10 = 1.0000000000)
+   Zufallseinheiten: r, 1 - (1 - u8^2)/10, Streuung: 0.90504784, 0.90504784, 8.5e-13; 0.93836622, 0.93836622, 1.2e-12; 0.90075460, 0.90075460, 2.5e-12; 0.90047097, 0.90047097, 3.6e-12; 0.90349383, 0.90349383, 4.1e-12; 0.92532126, 0.92532126, 4.2e-12
+D: Ladung u = e7: 12 von 24 Wuerfeldrehungen vertauschen mit L_u, R_u je Platz; [so(3), Ladung] max 2.00
+D: Ladung u = e8: 12 von 24 Wuerfeldrehungen vertauschen mit L_u, R_u je Platz; [so(3), Ladung] max 2.00
