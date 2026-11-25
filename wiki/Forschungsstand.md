@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Der HC gibt die Form vor, die Schleife die Größe (25.11.2026, Erkundung, nicht blind, k297)
+
+Anschluss an H129: Bricht der HC die Tauschsymmetrie zwischen Vorstufe und Anhang? Ja. Der Tausch (Rechtsmultiplikation mit j) vertauscht die beiden Kreisanteile a und b und wirkt auf den Beltrami-Koeffizienten des HC als μ → 1/μ. Das ist die Orientierungsumkehr, die r23 als Tachyon-Frame führt. Der HC mit μ = β_sym² < 1 zeichnet die Vorstufe als den größeren Teil aus (91,65 % der Norm, Anhang 8,35 %). Die Tauschsymmetrie ist also die bekannte Wahl zwischen Materie-Frame und Tachyon-Frame; hergeleitet wird diese Wahl nicht.
+
+Schreibt man die HC-Bedingung B = μ²A als Potential, V = η(B − μ²A)² = ημ⁴A² − 2ημ²AB + ηB², dann sind das genau die nach k295 zulässigen skalenfreien Terme, mit κ < 0 und genau auf der Stabilitätsgrenze κ = −2√(λ_Aλ_B). Auf der Richtung B = μ²A ist V = 0 für jede Größe f: Die Form ist fest, die Größe frei (k292, k272). Massen: zwei Phasen und die Größenmode null, die Formmode m_H² = 8ημ²f². Die Schleife legt dann die Größe fest (f² = e·M²/(8ημ²)) und gibt der Größenmode m_s² = (ημ²/π²)·m_H², mit μ = β_sym² also 0,00923·η·m_H². Das ist die Klasse (iv) aus H129, die einzige, in der immer eine Skala entsteht.
+
+Mit dem HC als Bedingung sind zwei Vorzeichen nicht mehr frei: κ < 0 und die erzeugte Skala als feste Amplitude. Frei bleiben η, die Zahl β_sym (OP1) und die Wahl des Frames. Unter dem Fluss ist das Verhältnis nicht fest (16π²·dρ/dt = 64λ_Aρ(ρ − 1) für ρ = μ⁻⁴): Die Schleifen erzeugen β_sym nicht. Die quadratische Strafe ist eine Setzung (einfachste Übersetzung der linearen Projektion). Eine Schleife, ohne Eichfelder. Gegenprobe in Wolfram Language (k297b). OP1, OP3, OP4, OP5 bleiben offen.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/HC_Tauschsymmetrie_k297.md`.
+
 ### H129: Schleifen können die Skala erzeugen, legen aber den Anhang nicht fest (25.11.2026, Test, teilweise nicht blind, k296)
 
 Frage nach k295: Erzeugt der skalenfreie Ansatz V = λ_A·A² + κ·A·B + λ_B·B² (μ² = 0) bei einer Schleife von selbst eine Skala im Anhang? Vorab-Notiz mit Kriterien vor der Rechnung committet; die Tauschsymmetrie Vorstufe ↔ Anhang und ein Überschlag waren dort offengelegt. **Urteil: nicht bestätigt.** Die Skala entsteht auf 67,8 % des Gitters (2668 von 3936 Punkten, „trägt teilweise“), im Anhang aber nur bei 29,5 % davon, genau so oft wie in der Vorstufe (widerlegt).

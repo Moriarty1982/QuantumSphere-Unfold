@@ -1,0 +1,12 @@
+Ausgabe von k297b_gegenprobe.wl (Wolfram-Cloud-Kernel, 25.11.2026), Print-Zeilen in InputForm.
+Warnungen des Kernels: Symbol::undefined2 (betrifft nur die Auswertungsumgebung) und General::messages. Keine weiteren Meldungen.
+
+W1 Koeffizienten (A^2, A B, B^2): {eta*mu^4, -2*eta*mu^2, eta}
+W2 V, Gradient, Hesse-Eigenwerte auf der flachen Richtung: {0, {0, 0, 0, 0}, {0, 0, -4*eta*(-(f^2*mu^2) + Sqrt[f^4*mu^4]), 4*eta*(f^2*mu^2 + Sqrt[f^4*mu^4])}}
+W3 Tausch: V(A<->B) - eta mu^4 (B - A/mu^2)^2 = 0
+W4 Minimum phi^2 = (E*M^2)/(8*eta*mu^2) ; m_s^2/m_H^2 = (eta*mu^2)/Pi^2 ; V1 = -1/128*(E^2*M^4)/Pi^2
+W5 d rho/dt auf der flachen Flaeche: 64*lA*(-1 + rho)*rho ; d(kappa + 2 Sqrt[lamA lamB])/dt: 32*lA^2*(1 + Sqrt[rho])^2*Sqrt[rho]
+W6 Zahlen: {0.301773, 0.0910672, 120.58, 0.728538, 0.00922704, 33.5848}
+
+Hinweis zu W2: ohne Annahme f, mu > 0 bleibt Sqrt[f^4 mu^4] stehen; fuer f, mu > 0 sind die Eigenwerte {0, 0, 0, 8 eta f^2 mu^2}, wie in k297_out.txt.
+W5: 32 lA^2 Sqrt[rho] (1 + Sqrt[rho])^2 = 32 lA^2 (rho^(3/2) + 2 rho + Sqrt[rho]), gleich der sympy-Zeile.
