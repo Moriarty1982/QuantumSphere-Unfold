@@ -1,0 +1,27 @@
+[Kontrolle] Rang Phi = 15, dim Kern = 9, dim Kokern = 1
+Kokern-Vektor (gerundet): [0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+Kokern e8 Nullteiler? smin(L_e8) = 1.000
+
+=== H141a: Farbe und S3 auf dem Kern ===
+su(3)-Leck aus K: 1.3e-16; Casimir auf K: {np.float64(-0.44444444): np.int64(6), np.float64(0.0): np.int64(3)}
+psi_V orthogonal: 2.2e-16; Phi psi_V = psi Phi: 7.5e-16; psi-Leck aus K: 2.6e-16
+  Spur von psi auf K: 6.0 (9 Dim.; Spur 0 bei 3 x Standard, 9 bei trivial)
+  Spur psi auf Singuletts: -0.0  auf Farbteil: 6.0
+
+=== H141b: Ladung und Produkt auf dem Kern ===
+Ladungs-Leck ||(1-P_K) Q_V P_K|| = 0.5000
+Produkt-Leck (max ueber 200 Paare, normierte Faktoren ~ |K-Koeff| ~ 3): 8.9414
+  Singulaerwerte des Lecks je Kernrichtung: [0.  0.  0.  0.  0.  0.  0.5 0.5 0.5]
+
+=== H141c: Nullteiler ===
+min smin(L_x_k) ueber Komponenten von 500 Kernelementen: 1.0000
+
+=== H141d: gemeinsame Ladung ueber K-Komplement ===
+[Q_V, P_K] = 0.3333  (0 hiesse: Phi Q_V Phi^+ gemeinsame Ladung)
+
+=== Erkundung: gestauchte Ladung auf K ===
+Spektrum P_K Q_V P_K: [0.333333+0.j 0.333333+0.j 0.333333-0.j 0.5     -0.j 0.5     -0.j
+ 0.5     -0.j 0.666667+0.j 0.666667-0.j 0.666667-0.j]
+  auf Singuletts: [0.5+0.j 0.5-0.j 0.5-0.j]
+  auf Farbteil:   [0.333333+0.j 0.333333+0.j 0.333333+0.j 0.666667-0.j 0.666667-0.j
+ 0.666667-0.j]

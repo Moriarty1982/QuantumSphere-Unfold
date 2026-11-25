@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### Vierte „Generation“ aus den fehlenden Zuständen: ein Quark-Satz ohne Leptonen (25.11.2026, Test H141, teilweise nicht blind, k324)
+
+Frage des Autors nach H140: Was passiert, wenn eine vierte Generation die restlichen Zustände hält? Nimmt man die drei Kopien als getrennte Träger (24 Zustände) und bildet sie in die Sedenionen ab, bleiben 15 im Bild, und 9 heben sich auf (Kern), dazu fehlt e₈. Der Kern zerfällt unter der Farbe in 1 ⊕ 1 ⊕ 1 ⊕ 3 ⊕ 3̄ (H141a bestätigt). Er ist kein abgeschlossener Sektor: Die Ladung leckt (exakt ½) und das Produkt führt hinaus (H141b bestätigt). Seine Zustände sind keine Nullteiler (H141c bestätigt), und eine gemeinsame Ladung entsteht auch mit ihm nicht. Wolfram exakt: Die auf den Rest gestauchte Ladung hat das Spektrum ⅓³, ½³, ⅔³. Der Farbteil ist ladungsstabil und trägt genau die Quarkladungen ⅓ und ⅔; die drei Singuletts haben nur den Mittelwert ½ und lecken.
+
+Einordnung: Der Rest ist ein stabiler Quark-Satz ohne Leptonen, kein vollwertiges viertes Mitglied. Ob das physikalisch etwas bedeutet, ist nicht gezeigt. OP3 und OP4 bleiben offen, kein Guard berührt. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H141_Vierte_Generation_Rest.md)
+
 ### Sind die drei Sedenion-Kopien Generationen? Gleiche Farbe, aber keine gemeinsame Ladung (25.11.2026, Test H140, teilweise nicht blind, k323)
 
 Frage des Autors im Anschluss an H138/H139. Geprüft wurde (1), ob alle drei Kopien dieselbe Eichdarstellung tragen, und (2), ob die Kopienvertauschung S₃ mit der Eichgruppe vertauscht. **Farbe:** su(3) ist für alle drei Kopien exakt dieselbe und vertauscht mit S₃; jede Kopie zerfällt in 1 ⊕ 1 ⊕ 3 ⊕ 3̄ (H140a bestätigt). **Ladung:** Jede Kopie hat mit ihrer eigenen Ladung Q_k (k85-Form) genau das Spektrum einer Generation (H140b bestätigt), aber S₃ verschiebt Q_k nach Q_{k+1}. Eine gemeinsame Ladung α + βL_x + γR_x, die alle drei Kopien erhält, gibt es exakt nicht: Das Leck ist (12|β|² + 12|γ|² − 18 Re β̄γ)(|x|² + x₈²) ≥ 3|x|² (Wolfram; H140c bestätigt). Zusammen überdecken die Kopien nur 15 statt 24 komplexe Zustände. su(2)_L vertauscht auf ℂ⊗ℍ⊗𝕊 per Konstruktion (nicht gerechnet).
