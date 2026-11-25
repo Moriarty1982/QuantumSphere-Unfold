@@ -1,0 +1,6 @@
+Ausgabe k282b_exakt.wl (Wolfram Language, 25.11.2026). Warnung: Symbol::undefined2 (Vorab-Hinweis des Evaluators, kein Rechenfehler). Rueckgabewert Null.
+Ein vierter Print (Wuerfeldrehung auf N) wurde verworfen: Die Kontrolle zeigte, dass meine Ersetzungsregel falsch war. Die Gruppenordnung steht in k282 C (Python).
+
+Tr W^2 - (|d|^2 + 2(1+c^2)(|s|^2+|v|^2)) = 0
+Tr(W sigma W) - (|d|^2 + 2[(1-c^2)(|s|^2-|v|^2) - 4 c s.v]) = 0
+c = 0: Tr W^2 - Tr(W sigma W) = 4 (v1^2 + v2^2 + v3^2)

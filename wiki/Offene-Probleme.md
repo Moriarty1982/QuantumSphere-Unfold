@@ -64,6 +64,10 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Beide Felder als ein Element, 25.11.2026 (Erkundung, nicht blind, k281):** Als ein Element der Albert-Algebra gelesen, füllen die beiden Felder den ganzen spurfreien Teil von H₃(ℂ). Das Potential ist dann SU(3)-invariant und das Vakuum eine entartete Bahn ohne Restgruppe. Die Ausrichtungen aus k278 bis k280 beruhen also auf der Einschränkung auf Teilräume, und die ist gesetzt. Offen: ein Grund, der Spin 1 und Spin 2 trennt. OP3 bleibt offen.
 
+**Test H128, 25.11.2026 (teilweise nicht blind, k283):** Über den Sedenionen hat die Albert-Algebra H₃(𝕊) die Symmetrie g₂ ⊕ su(3) (Dimension 22, H128a mit 17 widerlegt). Für ein Feld in der Ladungsebene (e₇) bleibt davon die Familien-SO(3), und die algebraweite Massenform trennt Spin 1 und Spin 2 im Verhältnis 9/10 (H128b bestätigt für e₇, widerlegt für e₈). Das Vorzeichen, mit dem diese Form im Potential steht, legt der Turm nicht fest; es bleibt offen bis zur Feldgleichung. SO(3) → A₄ kommt weiter nur aus der Ladung. OP3 und OP4 bleiben offen.
+
+**Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
+
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.
 
 **Quark-No-go und xyz, 24.11.2026 (Erkundung, nicht blind, k277):** Solange A₄ exakt gilt, spüren die Quarks die Ladungsbrechung auf keinem SO(3)-verträglichen Weg (entartete Massen, V_CKM = 𝟙). Der kubische A₄-Term ist die Albert-Norm des ladungsgedrehten Flavons, N(CX) = −2v₁v₂v₃. Daraus allein folgt die ℤ₃-Ausrichtung. ℤ₂ braucht einen freien Koeffizienten. OP3 bleibt offen.
