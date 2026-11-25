@@ -1,0 +1,13 @@
+Wolfram Language (WolframLanguageEvaluator, 25.11.2026), Skript k283b_exakt.wl. Tatsaechliche Ausgabe:
+
+Symbol::undefined2: Warning: Global symbols "T, B, A2, P, J, L, ..." are undefined.
+{0.631176, <|n -> 3, dim -> 27, K(S, x1 reell) -> 36, K(S, diag(1,-1,0)) -> 36, K(V, u=e7) -> 36, Mischterm K(S,V) -> 0, Tr L^2 (S, V e7) -> {6, 6}|>}
+{7.18321, <|n -> 4, dim -> 51, K(S, x1 reell) -> 120, K(S, diag(1,-1,0)) -> 120, K(V, u=e7) -> 108, Mischterm K(S,V) -> 0, Tr L^2 (S, V e7) -> {10, 10}, K(V, u=e8) -> 120, K(V, u=e15) -> 108, K(V, u=(e1+e10)/sqrt2) -> 108|>}
+General::messages: Messages were generated which may indicate errors.
+Out[1]= Null
+
+Einordnung: Die Warnung Symbol::undefined2 ist ein Hinweis des Evaluators auf die lokalen Symbole des Module (vor der Auswertung), kein Rechenfehler;
+alle Werte sind exakte ganze Zahlen (Rueckgabewerte, keine symbolischen Reste). r_3 = 36/36 = 1, r_4(e7) = 108/120 = 9/10, r_4(e8) = 1, r_4(e15) = 9/10.
+Die Feldvektoren haben hier Normquadrat 2, die Werte sind daher das Doppelte von k283_out.txt (60, 54).
+Nicht gelaufen: Ein erster Aufruf, der zusaetzlich den Rang der Derivationsbedingung modulo zweier Primzahlen rechnen sollte, lief in die Zeitgrenze
+des Evaluators (60 s) und gab nichts zurueck. Die Dimension 22 ist deshalb nur numerisch belegt (Singulaerwertluecke 1.5e13, Probe 3.7e-16).

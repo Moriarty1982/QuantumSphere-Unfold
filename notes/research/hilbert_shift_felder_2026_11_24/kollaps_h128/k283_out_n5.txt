@@ -1,0 +1,42 @@
+n = 0: A_n dim 1, H3(A_n) dim 6; Jordan-Identitaet Rest 2.8e-17
+   dim Der(H3(A_n)) = 3  (Luecke 7.5e+13, Probe auf allen Basispaaren 5.0e-16)
+   Der(A_n) + so(3): dim 3 (Derivationsprobe 0.0e+00); Anteil von Der ausserhalb davon: 5.0e-16
+n = 1: A_n dim 2, H3(A_n) dim 9; Jordan-Identitaet Rest 3.6e-15
+   dim Der(H3(A_n)) = 8  (Luecke 4.9e+13, Probe auf allen Basispaaren 3.8e-16)
+   Der(A_n) + so(3): dim 3 (Derivationsprobe 0.0e+00); Anteil von Der ausserhalb davon: 3.9e-01
+   u = e1: K(Spin 2) = 2.250000000000  K(Spin 1) = 2.250000000000  r = 1.000000000000  r-1 = -2.220e-16
+      Kontrollen: Mischterm/Nebendiag. 2.5e-17  Streuung im Spin-Raum 2.0e-16  Tr(L_W^2): V/S - 1 = -4.4e-16
+n = 2: A_n dim 4, H3(A_n) dim 15; Jordan-Identitaet Rest 5.3e-15
+   dim Der(H3(A_n)) = 21  (Luecke 4.2e+13, Probe auf allen Basispaaren 6.1e-16)
+   Der(A_n) + so(3): dim 6 (Derivationsprobe 1.6e-16); Anteil von Der ausserhalb davon: 3.3e-01
+   u = e3: K(Spin 2) = 6.000000000000  K(Spin 1) = 6.000000000000  r = 1.000000000000  r-1 = -1.110e-16
+      Kontrollen: Mischterm/Nebendiag. 9.3e-18  Streuung im Spin-Raum 1.5e-16  Tr(L_W^2): V/S - 1 = -3.3e-16
+n = 3: A_n dim 8, H3(A_n) dim 27; Jordan-Identitaet Rest 1.1e-14
+   dim Der(H3(A_n)) = 52  (Luecke 2.7e+13, Probe auf allen Basispaaren 2.5e-15)
+   Der(A_n) + so(3): dim 17 (Derivationsprobe 3.8e-15); Anteil von Der ausserhalb davon: 1.9e-01
+   u = e7: K(Spin 2) = 18.000000000000  K(Spin 1) = 18.000000000000  r = 1.000000000000  r-1 = -2.220e-16
+      Kontrollen: Mischterm/Nebendiag. 1.7e-16  Streuung im Spin-Raum 2.0e-16  Tr(L_W^2): V/S - 1 = -1.1e-16
+n = 4: A_n dim 16, H3(A_n) dim 51; Jordan-Identitaet Rest 5.4e+01
+   dim Der(H3(A_n)) = 22  (Luecke 1.5e+13, Probe auf allen Basispaaren 3.7e-16)
+   Der(A_n) + so(3): dim 17 (Derivationsprobe 2.0e-15); Anteil von Der ausserhalb davon: 1.6e-01
+   u = e7: K(Spin 2) = 60.000000000000  K(Spin 1) = 54.000000000000  r = 0.900000000000  r-1 = -1.000e-01
+      Kontrollen: Mischterm/Nebendiag. 3.6e-16  Streuung im Spin-Raum 2.4e-16  Tr(L_W^2): V/S - 1 = -2.2e-16
+   u = e8: K(Spin 2) = 60.000000000000  K(Spin 1) = 60.000000000000  r = 1.000000000000  r-1 = -1.110e-16
+      Kontrollen: Mischterm/Nebendiag. 3.6e-16  Streuung im Spin-Raum 2.4e-16  Tr(L_W^2): V/S - 1 = -2.2e-16
+   u = e15: K(Spin 2) = 60.000000000000  K(Spin 1) = 54.000000000000  r = 0.900000000000  r-1 = -1.000e-01
+      Kontrollen: Mischterm/Nebendiag. 3.6e-16  Streuung im Spin-Raum 2.4e-16  Tr(L_W^2): V/S - 1 = -2.2e-16
+   u = (e1+e10)/sqrt2 [Erkundung]: K(Spin 2) = 60.000000000000  K(Spin 1) = 54.000000000000  r = 0.900000000000  r-1 = -1.000e-01
+      Kontrollen: Mischterm/Nebendiag. 3.6e-16  Streuung im Spin-Raum 2.4e-16  Tr(L_W^2): V/S - 1 = -2.2e-16
+n = 5: A_n dim 32, H3(A_n) dim 99; Jordan-Identitaet Rest 9.3e+01
+   dim Der(H3(A_n)) = 22  (Luecke 9.1e+12, Probe auf allen Basispaaren 1.1e-15)
+   Der(A_n) + so(3): dim 17 (Derivationsprobe 3.5e-15); Anteil von Der ausserhalb davon: 1.4e-01
+   u = e7: K(Spin 2) = 216.000000000000  K(Spin 1) = 174.000000000000  r = 0.805555555556  r-1 = -1.944e-01
+      Kontrollen: Mischterm/Nebendiag. 9.0e-16  Streuung im Spin-Raum 1.3e-16  Tr(L_W^2): V/S - 1 = -2.2e-16
+   u = e8: K(Spin 2) = 216.000000000000  K(Spin 1) = 174.000000000000  r = 0.805555555556  r-1 = -1.944e-01
+      Kontrollen: Mischterm/Nebendiag. 9.0e-16  Streuung im Spin-Raum 1.3e-16  Tr(L_W^2): V/S - 1 = -2.2e-16
+   u = e16: K(Spin 2) = 216.000000000000  K(Spin 1) = 216.000000000000  r = 1.000000000000  r-1 = -1.110e-16
+      Kontrollen: Mischterm/Nebendiag. 9.0e-16  Streuung im Spin-Raum 1.3e-16  Tr(L_W^2): V/S - 1 = -2.2e-16
+   u = e31: K(Spin 2) = 216.000000000000  K(Spin 1) = 174.000000000000  r = 0.805555555556  r-1 = -1.944e-01
+      Kontrollen: Mischterm/Nebendiag. 9.0e-16  Streuung im Spin-Raum 1.3e-16  Tr(L_W^2): V/S - 1 = -2.2e-16
+   u = (e1+e10)/sqrt2 [Erkundung]: K(Spin 2) = 216.000000000000  K(Spin 1) = 174.000000000000  r = 0.805555555556  r-1 = -1.944e-01
+      Kontrollen: Mischterm/Nebendiag. 9.0e-16  Streuung im Spin-Raum 1.3e-16  Tr(L_W^2): V/S - 1 = -2.2e-16

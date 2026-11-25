@@ -938,3 +938,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 
 **24.11.2026, Runde v4.10.0-r60:** Trialität, Familien-SO(3) und A₄ (k275–k277, H127) in Forschungsstand, Forschungslinie, Gesamtbild, Inhalt, Content-overview, Vorhersagen-und-Tests und Offene-Probleme eingetragen. Artikel ziehen später nach (Entscheidung des Autors).
+
+**25.11.2026, Test H128:** Kollaps beim Hilbert-Shift HS(4) (k283) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
