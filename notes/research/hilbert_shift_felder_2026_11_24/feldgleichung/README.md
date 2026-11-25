@@ -150,6 +150,8 @@ Wettbewerb mit einem Amplituden-Potential: `Schwelle_feste_Norm_k294.md` (k294, 
 
 Wo das Amplituden-Potential eintritt: `Potential_im_Anhang_k295.md` (k295, die erste Skala μ² steht im Anhang von HS(2), ihr Vorzeichen bleibt frei).
 
+Ob Schleifen die Skala selbst erzeugen (Test H129): `Ergebnis_H129_Schleifen_Skala.md` (k296, Skala teilweise, Richtung nicht festgelegt).
+
 ## Dateien
 `k290_rekursive_feldgleichung.py` (`k290_out.txt`), `k290b_gegenprobe.wl` (`k290b_out.txt`, Wolfram über den Cloud-Kernel, Ausgaben und Warnungen dort festgehalten).
 Aufruf: `python k290_rekursive_feldgleichung.py > k290_out.txt`, Laufzeit etwa 20 Sekunden.

@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### H129: Schleifen können die Skala erzeugen, legen aber den Anhang nicht fest (25.11.2026, Test, teilweise nicht blind, k296)
+
+Frage nach k295: Erzeugt der skalenfreie Ansatz V = λ_A·A² + κ·A·B + λ_B·B² (μ² = 0) bei einer Schleife von selbst eine Skala im Anhang? Vorab-Notiz mit Kriterien vor der Rechnung committet; die Tauschsymmetrie Vorstufe ↔ Anhang und ein Überschlag waren dort offengelegt. **Urteil: nicht bestätigt.** Die Skala entsteht auf 67,8 % des Gitters (2668 von 3936 Punkten, „trägt teilweise“), im Anhang aber nur bei 29,5 % davon, genau so oft wie in der Vorstufe (widerlegt).
+
+Die β-Funktionen sind 16π²·dλ_A/dt = 4(κ² + 20λ_A²), 16π²·dκ/dt = 16κ(κ + 2λ_A + 2λ_B), dλ_B entsprechend. Für κ < 0 entsteht immer eine Skala mit beiden Anteilen (der Fall a, b ≠ 0 aus k292). Für großes κ > 0 wird die kleinere der Kopplungen λ_A, λ_B zuerst null, und dieser Teil bekommt die feste Amplitude. Für 0 < κ ≲ 2√(λ_Aλ_B) fließt alles zum Potential der vollen Norm λ(A + B)², ohne Skala. Der Zusatzterm K₂ zeichnet bei einer Schleife die drei imaginären Richtungen aus (z = 24·c₂·J gegen 0), nicht den Anhang; K₁ behandelt alle vier gleich.
+
+Was bleibt: Wo eine Skala entsteht, entsteht sie als feste Amplitude (wie μ² < 0), nie als gewöhnliche Masse. Dieses eine Vorzeichen folgt aus der Rechnung, solange man skalenfrei rechnet. Welcher Teil kondensiert, bleibt eine freie Zahl. Ohne die Kopplung κ gibt es keine Schleifen-Skala, mit κ > 0 wird die Vorstufe massiv (m² = κ⟨B⟩); „Licht bleibt masselos“ aus k295 und „Skala von selbst“ schließen sich in diesem Modell aus. Eine Schleife, ohne Eichfelder, nur ℂ → ℍ. Gegenprobe in Wolfram Language (k296b) stimmt genau. OP1, OP3, OP4, OP5 bleiben offen.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H129_Schleifen_Skala.md`, Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H129_Schleifen_erzeugen_Skala_im_Anhang.md`.
+
 ### Die erste Skala steht im Anhang von HS(2) (25.11.2026, Erkundung, nicht blind, k295)
 
 Anschluss an k294: Tritt das Amplituden-Potential erst bei HS(2) ein? In der vollen Norm geht das nicht. λ(N − f²)² ist auf der Vorstufe nicht null und enthält dort den Massenterm −2λf²·N(ψ₁). Verlangt man die Rekursion (der Anhang verschwindet ohne χ) und die Vorgabe „keine Masse auf HS(1)“ zusammen, bleiben bis zur vierten Ordnung genau drei Terme: B, A·B und B² mit A = N(ψ₁), B = N(χ) (17 Monome, 3 invariant unter Links- und Rechtsdrehung um i, 5 nur unter der Linksdrehung). Im Potential V = λ_A·A² + κ·A·B + λ_B·B² + μ²·B ist μ² die einzige Größe mit Massendimension. Die Skala f tritt also zum ersten Mal im Anhang von HS(2) auf (Lesart A aus k291).
