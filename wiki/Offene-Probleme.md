@@ -58,6 +58,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Ein-Feld-Prinzip, 24.11.2026 (Erkundung, nicht blind, k278):** Mit einem einzigen Flavon-Feld in der Albert-Algebra gibt es keinen Σv⁴-Term, für jede Ladungsmischung a. Die Ausrichtung ist dann ℤ₃ oder keine. ℤ₂ für die Neutrinos verlangt ein zweites, unabhängiges Feld. OP3/OP4 offen.
 
+**Zweites Feld im Spin-2-Teil, 25.11.2026 (Erkundung, nicht blind, k279):** Ein Ein-Feld-Potential im Spin-2-Teil hat als Vakuum drei Kreise gleicher Tiefe, mit Restgruppe ℤ₂ fast überall und V₄ an einzelnen Punkten. ℤ₂ ist damit möglich, aber nicht festgelegt; die flache Richtung ist exakt. Offen bleibt, was sie aufhebt (Kopplung an das erste Feld) und ob der freie Winkel mit einem Mischungswinkel zusammenhängt. OP3 bleibt offen.
+
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.
 
 **Quark-No-go und xyz, 24.11.2026 (Erkundung, nicht blind, k277):** Solange A₄ exakt gilt, spüren die Quarks die Ladungsbrechung auf keinem SO(3)-verträglichen Weg (entartete Massen, V_CKM = 𝟙). Der kubische A₄-Term ist die Albert-Norm des ladungsgedrehten Flavons, N(CX) = −2v₁v₂v₃. Daraus allein folgt die ℤ₃-Ausrichtung. ℤ₂ braucht einen freien Koeffizienten. OP3 bleibt offen.

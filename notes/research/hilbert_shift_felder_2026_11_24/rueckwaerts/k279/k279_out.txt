@@ -1,0 +1,32 @@
+==============================================================================
+A  Invarianten des Spin-2-Felds Z_b = S + b C S (Albert-Algebra gegen Formel)
+   b=0.0000: |N - Formel| <= 3.6e-15, |Tr Z^2 - Formel| <= 3.6e-15, |Tr Z| <= 2.2e-16
+   b=0.5000: |N - Formel| <= 1.8e-15, |Tr Z^2 - Formel| <= 3.6e-15, |Tr Z| <= 2.2e-16
+   b=1.0000: |N - Formel| <= 3.6e-15, |Tr Z^2 - Formel| <= 3.6e-15, |Tr Z| <= 2.2e-16
+   b=1.7321: |N - Formel| <= 2.8e-14, |Tr Z^2 - Formel| <= 1.4e-14, |Tr Z| <= 2.2e-16
+   b=4.0000: |N - Formel| <= 2.8e-14, |Tr Z^2 - Formel| <= 5.7e-14, |Tr Z| <= 4.4e-16
+   Lesart: Platz k (Slot k) gehoert zur Diagonale k, also s_k = X_{k+1,k+2}.
+==============================================================================
+B  Zerlegung N = [(1+g) det(D+T) + (1-g) det(D-T)]/2 mit t = sqrt(1+b^2) s, g = cos 3phi
+   b=0.5: gamma = +0.1789 = cos(3 arctan b) = +0.1789;  |N - Zerlegung| <= 1.8e-15
+   b=1.0: gamma = -0.7071 = cos(3 arctan b) = -0.7071;  |N - Zerlegung| <= 1.1e-14
+   b=2.0: gamma = -0.9839 = cos(3 arctan b) = -0.9839;  |N - Zerlegung| <= 2.8e-14
+   gamma = +-1 genau bei b = 0 und b = +-sqrt(3): dann ist N = det(D+-T), also SO(3)-invariant (volle Entartung).
+   Auf der Schale |a|^2 + 2|t|^2 = 1 ist max det = 1/sqrt(54) (Eigenwerte (2,-1,-1)/sqrt 6), also max N = 1/sqrt(54) fuer |gamma| < 1,
+   erreicht genau auf der det-Bahn mit t1 t2 t3 = 0 (dann ist D-T zu D+T konjugiert).
+==============================================================================
+C  Maxima von N auf der Schale Tr Z^2 = 1 (60 Zufallsstarts je b), Stabilisator in A4
+   b=0.0000 (gamma +1.000): N_max = 0.136083 (1/sqrt54 = 0.136083), erreicht in 60/60 (min 0.1361); Stabilisatoren {'trivial': 60}; ein s_k = 0 in 0/60; Achse |u| Streuung 0.93
+   b=0.2500 (gamma +0.742): N_max = 0.136083 (1/sqrt54 = 0.136083), erreicht in 60/60 (min 0.1361); Stabilisatoren {'Z2': 60}; ein s_k = 0 in 60/60; Achse |u| Streuung 1.00
+   b=0.5000 (gamma +0.179): N_max = 0.136083 (1/sqrt54 = 0.136083), erreicht in 60/60 (min 0.1361); Stabilisatoren {'Z2': 60}; ein s_k = 0 in 60/60; Achse |u| Streuung 1.00
+   b=1.0000 (gamma -0.707): N_max = 0.136083 (1/sqrt54 = 0.136083), erreicht in 60/60 (min 0.1361); Stabilisatoren {'Z2': 60}; ein s_k = 0 in 60/60; Achse |u| Streuung 1.00
+   b=1.7321 (gamma -1.000): N_max = 0.136083 (1/sqrt54 = 0.136083), erreicht in 60/60 (min 0.1361); Stabilisatoren {'trivial': 60}; ein s_k = 0 in 0/60; Achse |u| Streuung 0.92
+   b=2.0000 (gamma -0.984): N_max = 0.136083 (1/sqrt54 = 0.136083), erreicht in 60/60 (min 0.1361); Stabilisatoren {'Z2': 59, 'trivial': 1}; ein s_k = 0 in 60/60; Achse |u| Streuung 1.00
+   b=4.0000 (gamma -0.671): N_max = 0.136083 (1/sqrt54 = 0.136083), erreicht in 60/60 (min 0.1361); Stabilisatoren {'Z2': 60}; ein s_k = 0 in 60/60; Achse |u| Streuung 0.99
+   Lesart: Fuer |gamma| < 1 liegen alle Maxima auf derselben Hoehe, aber nicht an einem Punkt: Achse u auf den drei Grosskreisen u_k = 0.
+   Generisch Z2 (Drehung um die Koordinatenachse senkrecht zum Kreis), an den Achsen u = e_k Klein V4. Kein isoliertes Z2-Vakuum.
+==============================================================================
+D  Flache Richtung: N entlang des Grosskreises u = (cos th, sin th, 0) auf der Schale
+   b=0.5: N = 0.136083, 0.136083, 0.136083, 0.136083, 0.136083, 0.136083, 0.136083  | Stabilisator-Ordnung 4, 2, 2, 2, 2, 2, 4
+   b=2.0: N = 0.136083, 0.136083, 0.136083, 0.136083, 0.136083, 0.136083, 0.136083  | Stabilisator-Ordnung 4, 2, 2, 2, 2, 2, 4
+   -> N konstant entlang des Kreises: exakt flache Richtung. Ein Ein-Feld-Potential waehlt zwischen Z2- und V4-Punkten nicht.
