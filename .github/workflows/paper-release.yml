@@ -1,0 +1,150 @@
+name: Paper release (standalone papers)
+
+# Release pipeline for the standalone papers (QAM paper, physics paper "One Object, Three Frames").
+# All arguments come from release/papers/<paper>.json, so no stale defaults can slip into a Zenodo run.
+# Stages: build (typeset + audit + payload as artifact, no API), reserve, upload, publish (Zenodo), preview (check/fix).
+# Without execute=true every Zenodo stage is a dry run. Every executed Zenodo stage needs the author's explicit approval.
+on:
+  workflow_dispatch:
+    inputs:
+      paper:
+        description: "Paper (file name in release/papers/)"
+        required: true
+        type: choice
+        options:
+          - qam-standalone
+          - physics-standalone
+      stage:
+        description: "build | reserve | upload | publish | preview"
+        required: true
+        default: build
+        type: choice
+        options:
+          - build
+          - reserve
+          - upload
+          - publish
+          - preview
+      execute:
+        description: "Really call Zenodo (false = dry run). Needs the author's approval."
+        required: true
+        default: false
+        type: boolean
+      confirm_publish:
+        description: "Second switch for stage=publish (final, DOI becomes public)"
+        required: true
+        default: false
+        type: boolean
+      environment:
+        description: "Zenodo environment"
+        required: true
+        default: production
+        type: choice
+        options:
+          - production
+          - sandbox
+      final:
+        description: "stage=build: release build (DOI on title page required, payload into release/...)"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paper-release-${{ inputs.paper }}
+  cancel-in-progress: false
+
+env:
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Read configuration
+        id: cfg
+        run: |
+          set -euo pipefail
+          cfg="release/papers/${{ inputs.paper }}.json"
+          test -f "$cfg"
+          echo "lean=$(python -c "import json;print(json.load(open('$cfg')).get('lean_check',''))")" >> "$GITHUB_OUTPUT"
+          echo "payload=$(python -c "import json;print(json.load(open('$cfg'))['payload_dir'])")" >> "$GITHUB_OUTPUT"
+          if [[ "${{ inputs.stage }}" == "publish" && "${{ inputs.execute }}" == "true" && "${{ inputs.confirm_publish }}" != "true" ]]; then
+            echo "::error::publish with execute=true needs confirm_publish=true"; exit 2
+          fi
+
+      - name: Install LaTeX and poppler
+        if: inputs.stage == 'build'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended texlive-pictures lmodern poppler-utils >/dev/null
+
+      - name: Install poppler (title-page check)
+        if: inputs.stage == 'upload' || inputs.stage == 'publish'
+        run: sudo apt-get install -y -qq poppler-utils >/dev/null
+
+      - name: Build and audit
+        if: inputs.stage == 'build'
+        run: |
+          args=(build --paper "${{ inputs.paper }}")
+          if [[ "${{ inputs.final }}" == "true" ]]; then args+=(--final --out build/paper-release/final); fi
+          python tools/paper_release.py "${args[@]}"
+
+      - uses: leanprover/lean-action@v1
+        if: inputs.stage == 'build' && steps.cfg.outputs.lean != ''
+        with:
+          lake-package-directory: qam/lean
+          build: false
+          test: false
+          lint: false
+
+      - name: Lean checker on the paper's QAM record
+        if: inputs.stage == 'build' && steps.cfg.outputs.lean != ''
+        working-directory: qam/lean
+        run: |
+          lake build
+          lake exe qamcheck "../../build/paper-release/${{ inputs.paper }}/tree/${{ steps.cfg.outputs.lean }}"
+
+      - name: Metadata and payload check
+        if: inputs.stage == 'build' || inputs.stage == 'reserve'
+        run: python tools/paper_release.py check --paper "${{ inputs.paper }}"
+
+      - uses: actions/upload-artifact@v4
+        if: inputs.stage == 'build'
+        with:
+          name: ${{ inputs.paper }}-payload
+          path: |
+            build/paper-release/${{ inputs.paper }}/payload
+            build/paper-release/final
+          if-no-files-found: ignore
+
+      - name: Zenodo ${{ inputs.stage }}
+        if: inputs.stage == 'reserve' || inputs.stage == 'upload' || inputs.stage == 'publish'
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_SANDBOX_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
+        run: |
+          args=(zenodo --paper "${{ inputs.paper }}" --stage "${{ inputs.stage }}" --environment "${{ inputs.environment }}")
+          if [[ "${{ inputs.execute }}" == "true" ]]; then args+=(--execute); fi
+          if [[ "${{ inputs.confirm_publish }}" == "true" ]]; then args+=(--confirm-publish); fi
+          python tools/paper_release.py "${args[@]}"
+
+      - name: Preview of the published record
+        if: inputs.stage == 'preview'
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          args=(preview --paper "${{ inputs.paper }}")
+          if [[ "${{ inputs.execute }}" == "true" ]]; then args+=(--apply); fi
+          python tools/paper_release.py "${args[@]}"

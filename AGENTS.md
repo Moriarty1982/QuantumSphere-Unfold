@@ -78,6 +78,7 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   - `wiki-nachziehen.md`: Ordner `wiki/` im selben PR nachziehen.
   - `qs-werkzeug.md`: `tools/qs.py` (Querverweise, Guards, Ledger, Audit, Manifest).
   - `zenodo-release.md`: neue Version auf Zenodo.
+  - `paper-release.md`: eigenständige Papers (QAM-Paper, Physik-Paper) als eigene Zenodo-Records.
 - **Modellunabhängig arbeiten:** Ohne Shell oder GitHub-Zugang nennt das Modell die Befehle, und der Autor führt sie aus.
 - **Vorab-Notizen:** Jeder Test mit Entscheidungskriterium wird vor der Rechnung festgeschrieben und committet.
   Erkundungen ohne Vorab-Notiz heißen „Erkundung“.

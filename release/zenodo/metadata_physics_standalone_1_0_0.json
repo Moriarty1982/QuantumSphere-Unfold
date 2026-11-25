@@ -1,0 +1,46 @@
+{
+  "title": "One Object, Three Frames: The Quantum Sphaera Construction",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc"
+    }
+  ],
+  "description": "<p>The Quantum Sphaera construction starts from a conjecture: matter, light and a tachyon sector are one object seen from three frames. Its carrier is a biquaternion kernel built from three complex kernels, split by a compensator C = (1+J)/2 into symmetric and antisymmetric parts; the sign of the field invariant s = z₁² + z₂² + z₃² separates the sectors. This article reports what the construction establishes, what it assumes, and where it stops. The carrier, the compensator, the sector rule and the frame maps are established mathematics; the tachyon map z ↦ iz is electromagnetic duality, distinct from time reversal, and frame maps yield equalities, not values. On ℂ⊗ℍ⊗𝕆 one generation and the Standard Model gauge group follow under named choices; the Albert algebra carries a family SO(3) that the charge operator breaks exactly to A₄, and, under a placeholder charge axis, a relative CP sign of leptons and quarks is fixed, with the open consequence sin δ_PMNS &lt; 0. Koide's relation is equivalent to a mean overlap 1/2 of three states, whose extremal configuration is the octant; the overlap itself is an input, so K = 2/3 is not derived. All conditional numbers rest on one frame offset, β_sym ≈ 0.549, whose origin in the counting rules of a horizon is open. A common action of Einstein–Cartan type with Dixon-stored fermions and a Higgs field gives consistent field equations but no scale; within the present stock no equation selects Λ.</p><p><strong>Scope.</strong> No lepton masses, no absolute scale and no value of Λ are derived, and no blind prediction has so far been confirmed against measurement data. The open problems OP1–OP5 and the testable statements are listed in the article with their status; none of them is presented as settled. The authoritative source of every statement is the Quantum Sphaera Companion (concept doi:10.5281/zenodo.19210728; baseline v5.4.0, doi:10.5281/zenodo.24500009, and the research rounds up to v4.10.0-r61 in the public repository). This standalone article does not replace the physics paper bundled with Companion v5.4.0.</p>",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "biquaternions",
+    "Dixon algebra",
+    "Albert algebra",
+    "Koide relation",
+    "CP violation",
+    "Einstein-Cartan",
+    "cosmological constant",
+    "mathematical physics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24500009",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "First version of a new record (own concept DOI). Version DOI is entered after the reservation by tools/paper_release.py stamp.",
+  "publication_date": "2026-11-25"
+}

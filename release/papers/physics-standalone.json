@@ -1,0 +1,21 @@
+{
+  "id": "physics-standalone",
+  "title": "One Object, Three Frames: The Quantum Sphaera Construction",
+  "version": "1.0.0",
+  "source_dir": "paper/physics-standalone",
+  "main": "article.tex",
+  "build": ["pdflatex", "pdflatex", "pdflatex"],
+  "texinputs": [],
+  "build_needs": [],
+  "pdf_name": "Quantum_Sphaera_One_Object_Three_Frames_v1.0.0.pdf",
+  "source_archive": "Quantum_Sphaera_One_Object_Three_Frames_v1.0.0_source.tar.gz",
+  "source_extra": [],
+  "extra_files": [],
+  "lean_check": "",
+  "metadata": "release/zenodo/metadata_physics_standalone_1_0_0.json",
+  "payload_dir": "release/physics-standalone-v1.0.0",
+  "tag": "physics-paper-v1.0.0",
+  "new_version_of": "",
+  "deposition_id": "",
+  "version_doi": ""
+}
