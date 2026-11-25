@@ -1,0 +1,21 @@
+== A  beta-Funktionen (t = ln mu, Faktor 16 pi^2 links) ==
+  1/2 Tr[(d^2V)^2] liegt wieder in der Form A^2, A B, B^2 (Nullrest): True
+  16 pi^2 d lamA/dt = 4*(kappa**2 + 20*lambda_A**2) ;  16 pi^2 d kappa/dt = 16*kappa*(kappa + 2*lambda_A + 2*lambda_B) ;  16 pi^2 d lamB/dt = 4*(kappa**2 + 20*lambda_B**2)
+  symmetrisch lamA = lamB = lam, r = kappa/lam: 16 pi^2 dr/dt = -4*lambda*r*(r - 2)**2  (ins Infrarote mit umgekehrtem Vorzeichen)
+  O(4)-Punkt kappa = 2 lam: beta_kappa - 2 beta_lam = 0
+
+== B  Fluss ins Infrarote, tau = ln(mu0/mu)/(16 pi^2) von 0 bis 1e4 ==
+  Gitterpunkte: 3936 ; Klassen: {'i': 1268, 'ii': 787, 'ii=iii': 158, 'iii': 787, 'iv': 936}
+  K-a: Anteil mit Skala = 2668/3936 = 0.6778
+  K-b: Anteil Anhang unter den Punkten mit Skala = 787/2668 = 0.2950 (Gleichstaende lamA = lamB: 158; mit halben Gleichstaenden 0.3246)
+  Fenster ohne Skala: kappa/sqrt(lamA lamB) von 0.100 bis 2.683; kappa > 0 bei allen: True
+  Gildener-Weinberg (Massenquadrate >= 0 quer zur flachen Richtung, Summe m^4 > 0): {'ii': '787/787', 'iii': '787/787', 'iv': '936/936'}
+  tau beim Ereignis (Median, Maximum): {'ii': (0.14812055693127107, 9440.553025287032), 'iii': (0.14812055693127163, 9440.55302528613), 'iv': (0.1010380827507527, 368.8758252768805)}
+  nachtraeglich (nicht im Kriterium): Skala schon bei tau <= 0.25, also ln(mu0/mu) <= 39.5: 1568/3936 = 0.3984
+  Teilgitter lamA, lamB in {0.1, 0.3, 0.5} fuer die Gegenprobe k296b: {'i': 123, 'ii': 52, 'ii=iii': 43, 'iii': 52, 'iv': 91}
+  Kontrolle symmetrischer Fall lam = 0.2: Klasse fuer kappa/lam = -1.0 -> iv; 0.5 -> i (kappa/lam am Ende 1.130); 1.0 -> i (kappa/lam am Ende 1.408); 1.9 -> i (kappa/lam am Ende 1.909); 2.0 -> i (kappa/lam am Ende 2.000); 2.1 -> i (kappa/lam am Ende 2.112); 3.0 -> ii=iii; 
+
+== C  kinetische Normierung aus den Zusatztermen (eine Kontraktion, <d_mu x_a d_nu x_b> = delta delta J) ==
+  K1: delta L_E = sum_a z_a (d x_a)^2 mit z_a = [9*J*c1, 9*J*c1, 9*J*c1, 9*J*c1] ; gleich fuer alle mu: True ; gemischte Terme: 0  => delta Z_a = 2 z_a
+  K2: delta L_E = sum_a z_a (d x_a)^2 mit z_a = [0, 24*J*c2, 24*J*c2, 24*J*c2] ; gleich fuer alle mu: True ; gemischte Terme: 0  => delta Z_a = 2 z_a
+  K-c: Anhang (x2, x3) gegen Vorstufe (x0, x1) siehe z_a oben.

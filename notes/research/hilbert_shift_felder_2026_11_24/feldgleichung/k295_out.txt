@@ -1,0 +1,30 @@
+== 1  Ein Potential in der vollen Norm kann nicht erst bei HS(2) eintreten ==
+  V = lambda (N - f^2)^2 mit N = A + B; bei chi = 0: lambda*(-A + f**2)**2  (nicht null: verletzt Delta[psi,0] = 0 oder setzt das Potential schon bei HS(1) voraus)
+  darin steckt fuer die Vorstufe der Massenterm -2*f**2*lambda * A (ungleich null)
+
+== 2  Welche Terme bis zur vierten Ordnung sind zulaessig? ==
+  Monome (Grad 2 und 4, gerade in chi, null bei chi = 0): 17
+  invariant unter Links- und Rechtsdrehung um i: 3 Terme
+    sind es B, A*B, B^2 ? True ; allgemeine Form: x2**2*(c16*x0**2 + c2 + c7*x2**2)
+  invariant nur unter der Linksdrehung (Regel psi' = w i psi): 5 Terme (dazu kommen Real- und Imaginaerteil von (psi1 conj(chi))^2 und B mal dem Rest)
+
+== 3  Vakuum von V = lamA A^2 + kappa A B + lamB B^2 + mu2 B  (kein Term mu2_A A: keine Masse der Vorstufe) ==
+  stationaer in A und B (beide ungleich null):  A = -kappa*mu2/(kappa**2 - 4*lambda_A*lambda_B) ,  B = 2*lambda_A*mu2/(kappa**2 - 4*lambda_A*lambda_B)
+    Verhaeltnis A/B = -kappa/(2*lambda_A)  (positiv nur fuer kappa < 0);  Norm f^2 = A + B = -mu2*(kappa - 2*lambda_A)/(kappa**2 - 4*lambda_A*lambda_B)
+    Wert des Potentials dort: lambda_A*mu2**2/(kappa**2 - 4*lambda_A*lambda_B)
+  Rand A = 0:  B = -mu2/(2*lambda_B)  (positiv nur fuer mu2 < 0),  V = -mu2**2/(4*lambda_B) ,  dV/dA dort = -kappa*mu2/(2*lambda_B)
+  Rand B = 0:  V = lamA A^2, Minimum bei A = 0; dV/dB bei A = B = 0: mu2  => chi = 0 ist instabil genau fuer mu2 < 0
+
+== 4  Massen der kleinen Schwingungen (Felder psi1 = (a + h1) e^{i..}, chi = (b + h2) e^{i..}) ==
+  beide ungleich null: Massenmatrix der Radialmoden hat Determinante 32*kappa*lambda_A*mu2**2/(kappa**2 - 4*lambda_A*lambda_B) und Spur -8*lambda_A*mu2*(kappa - 2*lambda_B)/(kappa**2 - 4*lambda_A*lambda_B)
+    die zwei Phasen sind masselos (V haengt nur von A und B ab)
+  Rand A = 0:  m^2(psi1) = 2 dV/dA = -kappa*mu2/lambda_B  (beide Komponenten von psi1);  m^2(Radialmode von chi) = -4*mu2
+    fuer kappa = 0 bleibt psi1 masselos, obwohl chi eine feste Amplitude hat
+
+== 5  Die Loesung im Anhang ist am Minimum exakt, mit festen Amplituden ==
+  Reste der Feldgleichung: [2*(2*a**2*lambda_A + b**2*kappa), 2*(2*a**2*lambda_A + b**2*kappa), 2*(a**2*kappa + 2*b**2*lambda_B + mu2), 2*(a**2*kappa + 2*b**2*lambda_B + mu2)]
+  => null genau dann, wenn dV/dA = dV/dB = 0: a und b sind durch das Potential festgelegt (in k272 waren sie frei)
+
+== 6  Instabilitaet der Loesung ohne Anhang ==
+  kleines chi auf konstantem Hintergrund A: omega^2 = q^2 + 2 (mu2 + kappa A);  instabil fuer q^2 < -2*A*kappa - 2*mu2  (lange Wellen)
+  Vergleich mit dem Potential der vollen Norm aus k294: lamA = lamB = lambda, kappa = 2 lambda, mu2 = -2 lambda f^2, dazu mu2_A = -2 lambda f^2 (verboten)

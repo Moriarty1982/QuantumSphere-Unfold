@@ -1,0 +1,11 @@
+Ausgabe von k296b_gegenprobe.wl (Wolfram-Cloud-Kernel, 25.11.2026), Print-Zeilen in InputForm.
+Warnungen des Kernels: Symbol::undefined2 (globale Symbole "undefiniert", betrifft nur die Auswertungsumgebung) und General::messages.
+Keine NDSolve-Meldungen.
+
+V1 beta (lamA, kappa, lamB), Faktor 16 pi^2: {4*(ka^2 + 20*lA^2), 16*ka*(ka + 2*lA + 2*lB), 4*(ka^2 + 20*lB^2)}
+V2 symmetrisch: 16 pi^2 dr/dt = -4*lam*(-2 + r)^2*r
+V3 Teilgitter: <|"i" -> 123, "ii" -> 52, "iii" -> 52, "ii=iii" -> 43, "iv" -> 91|> ; Punkte 361
+V4 K1: z_a = {9*J, 9*J, 9*J, 9*J} ; K2: z_a = {0, 24*J, 24*J, 24*J}
+   K2 haengt nur von den Imaginaerteilen ab: True
+
+Vergleich mit k296_out.txt: beta-Funktionen gleich; Teilgitter gleich (123, 52, 43, 52, 91 von 361); z_a gleich (dort mit den Faktoren c1, c2).
