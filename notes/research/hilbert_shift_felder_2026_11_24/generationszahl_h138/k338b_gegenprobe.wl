@@ -1,0 +1,27 @@
+(* k338b (H155): unabhaengige Gegenprobe in Wolfram Language (Vorab-Notiz 9d6b6ca). *)
+ck = Table[p/Sqrt[3] + Sqrt[2/3] (u Cos[2 Pi k/3] + w Sin[2 Pi k/3]), {k, 0, 2}];
+nw = Expand[Times @@ ck];
+Print["N(W) Rest gegen Formel: ", Simplify[nw - (p^3/(3 Sqrt[3]) - p (u^2 + w^2)/(2 Sqrt[3]) + (u^3 - 3 u w^2)/(3 Sqrt[6]))]];
+Print["theta=pi/4 Rest: ", FullSimplify[(nw /. {p -> Cos[Pi/4], u -> Sin[Pi/4] Cos[d], w -> Sin[Pi/4] Sin[d]}) - (2 Cos[3 d] - Sqrt[2])/(24 Sqrt[3])]];
+v2 = mA p^2 + mB (u^2 + w^2) + lA p^4 + ka p^2 (u^2 + w^2) + lB (u^2 + w^2)^2;
+hh = D[v2, {{p, u, w}, 2}]; rr = Expand[Tr[hh.hh]/2];
+b2 = {Coefficient[rr, p, 2] /. {p -> 0, u -> 0, w -> 0}, Coefficient[rr, u, 2] /. {p -> 0, u -> 0, w -> 0}, Coefficient[rr, p, 4] /. {u -> 0, w -> 0}, Coefficient[Coefficient[rr, p, 2], u, 2] /. {w -> 0}, Coefficient[rr, u, 4] /. {p -> 0, w -> 0}};
+Print["16pi^2 beta (mA,mB,lA,ka,lB), n_B=2: ", Factor[b2]];
+s = {mA -> m, mB -> m, lA -> l, lB -> l, ka -> k}; a0 = -m/(2 l + k);
+Print["erste Ordnung im Fenster: ", Simplify[(-(b2[[1]] - b2[[2]]) - 2 a0 (b2[[3]] - b2[[5]])) /. s]];
+Print["Eigenwerte H155a: ", Simplify[Eigenvalues[D[v2 /. s, {{p, u, w}, 2}] /. {p -> Sqrt[a0], u -> Sqrt[a0], w -> 0}]]];
+Print["R* = ", N[R /. First@Solve[Sqrt[2]/2 - 6 Sqrt[3] R == Cos[2/3], R], 10]];
+Print["Sum m_l/v: R = ", N[-1.88310/246.22, 8], "; delta = ", N[ArcCos[Sqrt[2]/2 + 6 Sqrt[3] 1.88310/246.22]/3, 8]];
+kmin[g_] := Module[{ab = LinearSolve[{{2 g[[3]], g[[4]]}, {g[[4]], 2 g[[5]]}}, {-g[[1]], -g[[2]]}]}, (ab[[1]] + ab[[2]])/(3 ab[[1]])];
+win[g0_, L_] := Module[{sol}, sol = First@NDSolve[Join[Table[{x1, x2, x3, x4, x5}[[i]]'[t] == -(b2[[i]] /. {mA -> x1[t], mB -> x2[t], lA -> x3[t], ka -> x4[t], lB -> x5[t]})/(16 Pi^2), {i, 5}], Thread[Through[{x1, x2, x3, x4, x5}[0]] == g0]], {x1, x2, x3, x4, x5}, {t, 0, L}, WorkingPrecision -> 30, PrecisionGoal -> 20, AccuracyGoal -> 25]; kmin[Through[{x1, x2, x3, x4, x5}[L]] /. sol] - 2/3];
+Print["Fenster ln(246.22/91.1876), lam=0.1, k=-0.05: ", N[win[{-1, -1, 1/10, -5/100, 1/10}, Log[24622/9118.76]], 4], " (Python -1.42e-05)"];
+Print["Fenster ln(91.1876/9.78), lam=0.2, k=0.2: ", N[win[{-1, -1, 2/10, 2/10, 2/10}, Log[91.1876/9.78]], 4], " (Python -5.68e-04)"];
+vz = v2 + z nw /. {mA -> -1, mB -> -1, lA -> 1/5, lB -> 1/5, ka -> -1/5, z -> -1/100};
+mn = FindMinimum[vz, {{p, -22/10}, {u, 22/10}, {w, 0}}, WorkingPrecision -> 30];
+cc = ck /. mn[[2]];
+Print["H155b k=-0.2, zeta=-0.01: K - 2/3 = ", N[Total[cc^2]/Total[cc]^2 - 2/3, 5], "; m^2_U' = ", N[D[vz, w, w] /. mn[[2]], 5], " (Python 1.581e-03, 0.02747)"];
+rs = (Sqrt[6] - 2 Sqrt[3] Cos[2/3])/36;
+v6 = v2 + rs nw + nw^2 /. {mA -> -3/20, mB -> -3/20, lA -> 1/10, lB -> 1/10, ka -> 1/10};
+mn6 = FindMinimum[v6, {{p, 7/10}, {u, -48/100}, {w, -52/100}}, WorkingPrecision -> 30];
+c6 = ck /. mn6[[2]]; zz = 2/3 Sum[c6[[k + 1]] Exp[-2 Pi I k/3], {k, 0, 2}]; dd = Mod[Arg[zz], 2 Pi/3];
+Print["Nachtraeglich lam=0.1, k=0.1, zeta=R*, Lam=v: K - 2/3 = ", N[Total[c6^2]/Total[c6]^2 - 2/3, 4], "; delta = ", N[Min[dd, 2 Pi/3 - dd], 8]];
