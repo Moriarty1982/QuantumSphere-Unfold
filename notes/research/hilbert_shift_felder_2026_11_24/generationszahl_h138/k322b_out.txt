@@ -1,0 +1,7 @@
+k322b, Wolfram-Kernel (MCP), 25.11.2026, tatsaechliche Print-Ausgaben:
+Basis-Diagonalen als Nullteiler: 84
+Profile (M^T M, Singulett) verschieden: {{{{1, 0}, {0, 1}}, {0, 0}}}      (unnormiert, |x|^2 = 2; normiert also M^T M = 1/2 * 1)
+Typ der Paare (i<8, j>8 ?): {{True, True}}      (immer ein Index im Oktonion-Block, einer im e8-Block, nie j = i + 8)
+det L_x fuer x = c e1 + s e10: (c - s)^4 (c + s)^4 (c^2 + s^2)^4
+det L_x fuer x = c e1 + s e9 (paralleles Paar, Rang 1): (c^2 + s^2)^8
+Meldungen: Symbol::undefined2-Warnung (Variablennamen), General::messages; keine Fehler in den Ergebnissen.

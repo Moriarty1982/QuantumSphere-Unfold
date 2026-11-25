@@ -19,6 +19,7 @@ hierher und enthalten keine eigenen Regeln. Wer einen Ablauf ändert, ändert ih
 | Querverweise, Theoremnummern, Guards, Ledger, Audit, Manifest | `qs-werkzeug.md` |
 | Aussagen-Datenbank und LLM-Kontext für eine Zenodo-Veröffentlichung abgleichen | [zenodo-datenbank-vorbereiten.md](zenodo-datenbank-vorbereiten.md) |
 | Neue Version auf Zenodo veröffentlichen | `zenodo-release.md` |
+| Eigenständiges Paper (QAM-Paper, Physik-Paper „One Object, Three Frames“) auf Zenodo veröffentlichen | [paper-release.md](paper-release.md) |
 | Zenodo-Release-Vorbereitung an ein LLM übergeben | [zenodo-release-uebergabe.md](zenodo-release-uebergabe.md) |
 | GitHub-Einstellungen und Copilot-Einrichtung für Releases | [github-einstellungen.md](github-einstellungen.md) |
 

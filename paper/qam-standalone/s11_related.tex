@@ -1,0 +1,105 @@
+\section{Related work, limitations and outlook}\label{sec:related}
+
+\subsection{QAM and proof assistants}
+
+A proof assistant such as Lean~4~\cite{lean4} checks the \emph{content} of mathematical statements: a theorem formalised in Lean with
+Mathlib~\cite{mathlib} is proved, relative to the kernel of the system. QAM checks the \emph{form} of a record: which status a statement
+may have given the status of its premises, which inputs it carries and in which frame it holds. The two answer different questions and do
+not exclude each other.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.25\textwidth}p{0.33\textwidth}p{0.33\textwidth}@{}}
+\toprule
+ & Proof assistant & QAM\\
+\midrule
+checks & validity of a proof & consistency of status, inputs, frames\\
+cost of entry & full formalisation & one declaration per statement\\
+open statements & \texttt{sorry} or an axiom & a first-class status, inherited\\
+physical interpretations & outside the system & recordable as \st{reading}\\
+calculations & inside the system or as an oracle & as a request with a receipt\\
+\bottomrule
+\end{tabular}
+\end{center}
+QAM uses Lean for its own checker and for the abstract machine. It does not formalise the content of records. A natural extension is to
+link a Lean proof to an entry with status \st{proved}, so that this status is evidenced rather than declared. No such link exists yet.
+
+\subsection{Related approaches}
+
+\paragraph{Dependency graphs of mathematical texts.} Closest are the \emph{blueprints} of large Lean formalisation projects. The tool
+\texttt{leanblueprint}~\cite{blueprint} reads a \LaTeX{} text in which theorems and definitions state their dependencies, builds a
+dependency graph and tracks the formalisation state of each node. KnowTeX~\cite{knowtex} extracts dependency graphs from annotated
+\LaTeX{} sources, and LeanMarathon~\cite{leanmarathon} uses an evolving blueprint as scaffolding for formalisation by several
+language-model agents; its diagnosis (statements shift, dependencies tangle, context is lost) agrees with ours. The difference lies in the
+status. There it measures progress towards formalisation, and the goal is a complete proof in the assistant. In QAM it measures the
+epistemic strength of a statement, including interpretations that cannot be formalised, and a status above that of the premises is an
+error.
+
+\paragraph{Language models and formal mathematics.} Autoformalisation translates informal mathematics into the language of a proof
+assistant~\cite{autoformal}, and language models are used as proof search engines in Lean~\cite{leandojo}. Both answer
+hallucination~\cite{halluc} with a complete checker for content. QAM starts one step earlier, with statements that are not (yet)
+formalisable, and checks only their structure.
+
+\paragraph{Assumption management.} Truth maintenance systems keep a justification for every inference~\cite{doyle79}; de Kleer's
+assumption-based system labels every inference with the sets of assumptions under which it holds~\cite{atms}. QAM's input sets are a
+restricted form of such labels, without the management of contradictions. In safety cases written in the Goal Structuring
+Notation~\cite{gsn}, claims are linked to evidence, assumptions and explicitly undeveloped goals; an undeveloped goal plays the role of
+a guard.
+
+\paragraph{Lattices and provenance.} The status rule is a lattice model in the sense of Denning's information flow~\cite{denning76},
+read in the opposite direction: instead of confidentiality flowing upwards, certainty can only flow downwards. The propagation of inputs
+corresponds to provenance tracking in databases, as captured in general by provenance semirings~\cite{semiring}. The executor's log is a
+provenance record in the sense of the W3C PROV model~\cite{prov}. Tools such as noWorkflow~\cite{noworkflow} capture the provenance of
+script executions, and workflow languages such as CWL~\cite{cwl} and Snakemake~\cite{snakemake} describe computations reproducibly. They
+record \emph{how} a result came about; QAM adds \emph{as what} it may be cited.
+
+\paragraph{Types and proof-carrying code.} The properties proved for the machine have the form of syntactic type
+soundness~\cite{wright94,pierce}; the rule that a certificate contains its proof is the idea of proof-carrying code~\cite{necula}.
+
+\subsection{Limitations}
+
+QAM checks only what is declared. A statement declared \st{proved} without premises is accepted; a fitted value declared again under a
+new name is not recognised as an input; a false premise stays false. Frames are names, maps carry no status, and formulas are text. The
+parser of the Lean checker is not verified, and neither is the running executor; MD5 protects against accidental change only. The tape
+comparison covers a finite set of cases of one instruction. And the system has so far been used in one project, with one author: there
+is no controlled study of whether it reduces errors, only the experience that it makes certain errors visible.
+
+\subsection{Outlook: a quantum computer in the physics itself?}
+
+\emph{This subsection is speculation. Nothing in it is established, and QAM would record every claim in it as \st{open}.}
+
+If a mathematical structure can carry a classical tape (Section~\ref{sec:tape}), one may ask whether it could carry a quantum computer:
+a machine whose tape holds superpositions of configurations and whose steps act on them coherently. The question is natural for a
+carrier built from spinors, because a two-component spinor is exactly the state space of a qubit. It also has a long history: Feynman
+proposed simulating physics with quantum systems~\cite{feynman82}, and Deutsch defined a universal quantum computer as a physical
+system obeying quantum mechanics~\cite{deutsch85}.
+
+What exists today is modest. The tape machine is classical and deterministic. Its Qiskit version builds each step as a \emph{reversible}
+circuit, and reversibility is a precondition for coherent execution, since unitary evolution is reversible and an irreversible step
+would have to dissipate information~\cite{bennett73}. A check confirms that the circuit followed by its inverse restores a superposition of two inputs.
+But in the machine runs the circuit is applied to basis states only: every step is read out and the result
+fed into the next one, so no superposition survives from step to step. The spinor tape hypothesis, as stated, concerns classical reading
+and writing along the carrier.
+
+At least four further conditions would be needed, each of which would be an open obligation in a QAM record:
+\begin{enumerate}[label=\arabic*.,nosep,leftmargin=2em]
+\item the carrier admits superpositions of distinct tape configurations as states, not only definite ones;
+\item each machine step acts on those states as a unitary map, including head movement and control;
+\item no step implicitly reads out the state: branch predicates must be applied coherently, as controlled operations, not as
+measurements;
+\item the coherence survives long enough, or can be protected well enough, for a computation of useful length.
+\end{enumerate}
+The third condition conflicts directly with the present design, in which branch predicates are \emph{read} (Section~\ref{sec:tape}). A
+quantum version would need a different branching primitive. The fourth is the hardest problem of experimental quantum computing and has
+no reason to be easier in a mathematical carrier that is meant to describe physics.
+
+What QAM can contribute here is bookkeeping, not an answer. It would hold ``the carrier supports a quantum computer'' as an \st{open}
+entry with these four conditions, separate from the conditional classical claim and from the executable checks of the classical plan, and
+it would prevent any successful classical run from being cited as evidence for the quantum claim.
+
+\subsection{Conclusion}
+
+QAM does one thing reliably: it makes visible and checkable what each statement rests on, and it prevents an open condition from being
+lost along a long chain of reasoning. Zuse's separation of plan and execution supplies the architecture: the language model calculates and
+formulates, and the record decides what holds. Turing's boundary supplies the reason for the third outcome: what is not decided is not
+smoothed away but kept as a guard, stored and inherited. Securing the form of a record does not make its content true. But it ensures
+that one can see which part of the content is not yet secured.

@@ -1,5 +1,40 @@
 # Forschungsstand
 
+### Noch eine Generation mehr: Mit vier Kopien schließt der Rest auch die Leptonen (25.11.2026, Test H142, teilweise nicht blind, k325)
+
+In den Sedenionen gibt es keine vierte Kopie, deshalb wurden auf HS(5) alle 126 Auswahlen von vier der neun Oktonion-Kopien gerechnet (getrennte Träger, Rest = Kern der Abbildung in A₅). Farbe und Ladungsspektrum je Kopie sind gleich (H142a). Eine gemeinsame Ladung gibt es weiterhin nicht (H142c). Bei linear unabhängigen Richtungen bleiben nur drei Singuletts übrig (H142d). **H142b widerlegt:** In 9 Auswahlen enthält der Rest eine vollständige Generation mit den Ladungen 0, ⅓³, ⅔³, 1 (Wolfram exakt). Sie zerfällt unter der Farbe in 1 ⊕ 1 ⊕ 3 ⊕ 3̄ und ist unter der Ladung exakt stabil. Dazu kommen zwei leckende Singuletts mit ½. Kennzeichen ist die Wechselrelation v₁ − v₂ + v₃ − v₄ = 0, bei der sich auch die reellen Anteile aufheben. Bei drei Kopien (f₀ + f₁₂₀ + f₂₄₀ = 0) geht das nicht, deshalb trägt der Rest in H141 nur Quarks.
+
+Einordnung: Die Orientierung der Kopien wird durch die Automorphismen transportiert. Ein Vorlauf mit willkürlichen Vorzeichen ist offengelegt; bei freien Vorzeichen ändern sich die Fälle, das Vorzeichen bleibt offen bis zur Feldgleichung. Ob die Rest-Generation ein physikalischer Zustand ist, ist nicht gezeigt. OP3 und OP4 bleiben offen, kein Guard berührt. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H142_Vier_Kopien_HS5.md)
+
+### Vierte „Generation“ aus den fehlenden Zuständen: ein Quark-Satz ohne Leptonen (25.11.2026, Test H141, teilweise nicht blind, k324)
+
+Frage des Autors nach H140: Was passiert, wenn eine vierte Generation die restlichen Zustände hält? Nimmt man die drei Kopien als getrennte Träger (24 Zustände) und bildet sie in die Sedenionen ab, bleiben 15 im Bild, und 9 heben sich auf (Kern), dazu fehlt e₈. Der Kern zerfällt unter der Farbe in 1 ⊕ 1 ⊕ 1 ⊕ 3 ⊕ 3̄ (H141a bestätigt). Er ist kein abgeschlossener Sektor: Die Ladung leckt (exakt ½) und das Produkt führt hinaus (H141b bestätigt). Seine Zustände sind keine Nullteiler (H141c bestätigt), und eine gemeinsame Ladung entsteht auch mit ihm nicht. Wolfram exakt: Die auf den Rest gestauchte Ladung hat das Spektrum ⅓³, ½³, ⅔³. Der Farbteil ist ladungsstabil und trägt genau die Quarkladungen ⅓ und ⅔; die drei Singuletts haben nur den Mittelwert ½ und lecken.
+
+Einordnung: Der Rest ist ein stabiler Quark-Satz ohne Leptonen, kein vollwertiges viertes Mitglied. Ob das physikalisch etwas bedeutet, ist nicht gezeigt. OP3 und OP4 bleiben offen, kein Guard berührt. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H141_Vierte_Generation_Rest.md)
+
+### Sind die drei Sedenion-Kopien Generationen? Gleiche Farbe, aber keine gemeinsame Ladung (25.11.2026, Test H140, teilweise nicht blind, k323)
+
+Frage des Autors im Anschluss an H138/H139. Geprüft wurde (1), ob alle drei Kopien dieselbe Eichdarstellung tragen, und (2), ob die Kopienvertauschung S₃ mit der Eichgruppe vertauscht. **Farbe:** su(3) ist für alle drei Kopien exakt dieselbe und vertauscht mit S₃; jede Kopie zerfällt in 1 ⊕ 1 ⊕ 3 ⊕ 3̄ (H140a bestätigt). **Ladung:** Jede Kopie hat mit ihrer eigenen Ladung Q_k (k85-Form) genau das Spektrum einer Generation (H140b bestätigt), aber S₃ verschiebt Q_k nach Q_{k+1}. Eine gemeinsame Ladung α + βL_x + γR_x, die alle drei Kopien erhält, gibt es exakt nicht: Das Leck ist (12|β|² + 12|γ|² − 18 Re β̄γ)(|x|² + x₈²) ≥ 3|x|² (Wolfram; H140c bestätigt). Zusammen überdecken die Kopien nur 15 statt 24 komplexe Zustände. su(2)_L vertauscht auf ℂ⊗ℍ⊗𝕊 per Konstruktion (nicht gerechnet).
+
+Einordnung: In ℂ⊗𝕊 sind die Kopien drei gleichwertige Lesarten einer Generation, keine drei Generationen. Ein möglicher Weg sind getrennte Träger ℂ⊗(O₀ ⊕ O₁₂₀ ⊕ O₂₄₀) mit Ladung je Kopie; dann entscheidet die Kopplung zwischen den Kopien (Ladungserhaltung im Produkt). Nicht gerechnet. Massen, Mischung und Vorzeichen nicht berührt. OP3 und OP4 bleiben offen, kein Guard berührt. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H140_Kopien_als_Generationen.md)
+
+### Generationszahl aus den Sedenionen: drei Kopien je Verdopplung, darüber nur Nullteiler-Familien (25.11.2026, Tests H138, H139, k321, k322)
+
+Frage des Autors: Erklären die Sedenionen, warum für die Generationen nur 3–4 Kopien entstehen? Gezählt wurden die G₂-stabilen Oktonion-Kopien mit gemeinsamer Eins auf HS(4) bis HS(6). **In 𝕊 gibt es genau drei**, weil die Abschlussbedingung für die Kopienrichtung z = t₁ + i t₂ exakt Im(z³) = 0 ist (Wolfram). Eine vierte Kopie ist dort ausgeschlossen; die drei spannen aber nur zwei unabhängige Richtungen auf (wie K28, Gillard–Gresnigt). Höher wächst die Zahl: HS(5) 15 abgeschlossene Kopien, davon 9 = 3 × 3 oktonionisch (je Verdopplung eine Dreierwahl), HS(6) mindestens 207, davon mindestens 79 oktonionisch. **H138a und H138b widerlegt** (Vorhersage 3^k Kopien und höchstens drei orthogonale). Oktonionische Kopien sind auf keiner Stufe paarweise orthogonal; orthogonale Mengen (2 bei HS(5), mindestens 5 bei HS(6)) bestehen nur aus nicht alternativen Algebren.
+
+Marcs Vermutung, darüber hinaus gebe es nur Nullteiler, wurde als H139 vorab festgelegt. **Bestätigt (H139b, c):** Nullteiler von 𝕊 sind genau die Elemente mit gleichem Gewicht in allen Kopienrichtungen; exakt gilt für x = c e₁ + s e₁₀ det L_x = (c − s)⁴(c + s)⁴(c² + s²)⁴, alle 84 Basis-Nullteiler haben dieses flache Profil. Die Überschuss-Algebren auf HS(5) und HS(6) haben Imaginärteile aus lauter Nullteilern (Familien von Nullteilern). **H139a nach Wortlaut widerlegt:** Diese Nullteiler annihilieren Elemente außerhalb, nicht innerhalb der Algebra.
+
+Einordnung: „3 statt 4“ ist innerhalb einer Verdopplung erzwungen (unter der Setzung G₂-Stabilität). Dass die drei Kopien Generationen sind, ist nicht gezeigt (k255), die Generationszahl bleibt eine Eingabe. Vorzeichen nicht berührt. OP3 und OP4 bleiben offen, kein Guard berührt. [Notizen](../notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/README.md)
+
+### Runde r61: Korrekturen zu r56.4 und r07.4 (25.11.2026, Erkundung, nicht blind, k320)
+
+Anlass ist die Gegenprüfung des englischen Artikels „One Object, Three Frames“. Dabei sind in zwei älteren Runden Formelversehen aufgefallen; Marc hat ihre Korrektur beauftragt. Die alten Runden bleiben unverändert (append-only).
+
+- **r61.1 (zu r56.4):** Die Vakuumdichte ist ρ_Λ = Λ/κ, nicht 3Λ/κ, so wie es r56.2 selbst verwendet. Mit 3Λ/κ passten die beiden Formeln von r56.4 nicht zusammen. Richtig ist x*³ = κρ_M0(1−β²)/(β²Λ). Nur dieser Ausdruck ändert sich, um den Faktor 3. Λ = 3(1−β²)H*² = 2,0944603 H*², die Eindeutigkeit der Epoche, der Tausch von Λ gegen die Epoche (H96), r56.5, r57.1 und r59.5 bleiben, wie sie sind.
+- **r61.2 (zu r07.4):** β_sym = √((γ_L−1)/(γ_L+1)) = 0,5494056. In r07.4(c) fehlte die Wurzel; so geschrieben ist der Ausdruck β² = 0,30185, und „Ω_M = β²“ gäbe wörtlich 0,091. Keine Zahl im Bestand wurde mit der falschen Form gerechnet, und die Aussage von r07.4 (der Vorfaktor des Flächengesetzes kürzt sich) bleibt bestehen.
+
+Wolfram exakt (k320). Kein Test, keine Zahl und kein Status ändert sich; kein Guard berührt. [Runde](../notes/research/v4_10_0_r61_korrekturen/README.md)
+
 ### Rückwirkung über den HC-Winkel: hält κ ≈ 1,2 nicht fest (25.11.2026, Test H136, teilweise nicht blind, k305)
 
 Nach H135 blieb eine Möglichkeit offen: κ könnte am HC-Winkel θ hängen, und die Schleife des HS(3)-Anhangs könnte θ zurückstellen. **Ergebnis: widerlegt.**

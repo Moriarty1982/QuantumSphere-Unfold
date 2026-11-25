@@ -1,0 +1,9 @@
+max |det - closed form| on [0, pi/2]: 6.66e-16
+max |eigenvalues - 1+sqrt2 cos(phi/3+2pi k/3)|: 1.78e-15
+max |Bargmann phase - phi|: 3.33e-16
+zero of det G: 0.785398163397448, pi/4 = 0.785398163397448
+phi=0: det G 0.207107, roots [0.292893 0.292893 2.414214], K 0.666666666667, root ratios [1.   1.   8.24]
+leptons phi=2/3: det G 0.055706, roots [0.04035  0.580212 2.379438], K 0.666666666667, root ratios [ 1.   14.38 58.97]
+spin-1 triangle: det G 0.050253, roots [0.036073 0.585786 2.378141], K 0.666666666667, root ratios [ 1.   16.24 65.93]
+flat octant pi/4: det G 0.000000, roots [0.       0.633975 2.366025], K 0.666666666667, root ratios None
+bend pi/4 - 2/3 = 0.118731

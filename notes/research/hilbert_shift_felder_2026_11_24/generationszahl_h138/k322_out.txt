@@ -1,0 +1,35 @@
+=== Kontrolle ===
+(e1+e10)(e4-e15) = 0.0
+
+=== H139b: Nullteiler von S und ihr Kopienprofil ===
+Basis-Diagonalen e_i +- e_j, die Nullteiler sind: 84 (Paare i<j: 42)
+  max |M^T M - 1/2|: 1.1e-16, max Singulett-Anteil (1, e8): 0.0e+00
+  500 Nullteiler aus G2-Bahn und Kernen: max |M^T M - 1/2| = 5.8e-15, max Singulett-Anteil = 5.5e-15
+  Gewicht von (e1+e10)/sqrt2 auf den Kopien 0, 60, 120 Grad: [0.5 0.5 0.5]
+
+=== H139c: Umkehrung ===
+  flaches Profil: max kleinster Singulaerwert 2.5e-16 (Kriterium < 1e-10)
+  generisches (nicht flaches) Profil: min kleinster Singulaerwert 5.736e-03 (Kriterium > 1e-6)
+  Stichprobe: Flachheit d = |M^T M - 1/2|, smin(L_x):
+    t = 0.00: d = 0.000, smin = 0.0000
+    t = 0.01: d = 0.010, smin = 0.0141
+    t = 0.10: d = 0.100, smin = 0.1421
+    t = 0.30: d = 0.300, smin = 0.4472
+    t = 0.50: d = 0.500, smin = 1.0000
+
+=== H139a: HS(5), Nullteiler in den 15 abgeschlossenen O_v ===
+  O_v  1 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v  2 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v  3 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v  4 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v  5 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v  6 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v  7 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v  8 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v  9 (oktonionisch    ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.00e+00
+  O_v 10 (nicht alternativ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.34e-19
+  O_v 11 (nicht alternativ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 6.82e-20
+  O_v 12 (nicht alternativ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 2.61e-20
+  O_v 13 (nicht alternativ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 1.29e-19
+  O_v 14 (nicht alternativ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 7.78e-20
+  O_v 15 (nicht alternativ): innerer Nullteiler min smin = 1.00e+00, Nullteiler von A5 min smin = 4.73e-20

@@ -1,0 +1,97 @@
+\section{A worked example first}\label{sec:example}
+
+Before defining anything, we look at a small calculation that has all the features QAM is meant to manage: two frames of description,
+a map between them, an assumption about the set-up, a measurement, and an exact result. The physics is elementary and fully derived
+here; the reader needs only the transformation law of electric and magnetic fields under a Lorentz boost. We use units with $c=1$.
+
+\subsection{A field configuration and its Gram register}
+
+In a laboratory frame, which we call \emph{Lab}, consider an electric field and a magnetic field of the form
+\begin{equation}\label{eq:prep}
+E = 2\,e_x,\qquad B = t\,e_y + u\,e_z,\qquad t^2+u^2 = 1 .
+\end{equation}
+The magnetic field has unit length and lies in the $yz$-plane; the number $t\in[-1,1]$ fixes its orientation. Put the two fields
+side by side as the columns of a $3\times2$ matrix $F=[E\mid B]$. Its Gram matrix and the normalised Gram matrix are
+\[
+G = F^{\mathsf T}F = \begin{pmatrix} |E|^2 & E\cdot B\\ E\cdot B & |B|^2\end{pmatrix},\qquad
+\rho = \frac{G}{\tr G}.
+\]
+We call $\rho$ the \emph{Gram register}: a positive matrix with unit trace that records the relative strengths of the two fields and
+the angle between them, but forgets their overall scale and their orientation in space. For every field~\eqref{eq:prep} we have
+$E\cdot B=0$, $|E|^2=4$ and $|B|^2=1$, so
+\begin{equation}\label{eq:rho-lab}
+\rho = \diag\bigl(\tfrac45,\tfrac15\bigr)\qquad\text{for every } t\in[-1,1].
+\end{equation}
+
+\subsection{The same fields seen by a moving observer}
+
+A second observer moves with speed $v$ along the $z$-axis. We call that observer's frame \emph{Boosted}. With
+$\gamma=(1-v^2)^{-1/2}$ the fields transform as
+\[
+\begin{aligned}
+E'_x&=\gamma(E_x-vB_y), & E'_y&=\gamma(E_y+vB_x), & E'_z&=E_z,\\
+B'_x&=\gamma(B_x+vE_y), & B'_y&=\gamma(B_y-vE_x), & B'_z&=B_z .
+\end{aligned}
+\]
+For the fields~\eqref{eq:prep} this gives
+\[
+E' = \gamma\,(2-vt)\,e_x,\qquad B' = \gamma\,(t-2v)\,e_y + u\,e_z .
+\]
+We fix $v=\tfrac14$, so $\gamma^2=\tfrac{16}{15}$. The two boosted fields are still orthogonal. With
+\[
+A(t) = \bigl(2-\tfrac t4\bigr)^2
+\]
+we find $|E'|^2=\gamma^2A(t)$ and, using $u^2=1-t^2$,
+\[
+|B'|^2 = \gamma^2\bigl(t-\tfrac12\bigr)^2 + 1 - t^2 = \gamma^2\Bigl(A(t)-\tfrac{45}{16}\Bigr).
+\]
+The common factor $\gamma^2$ cancels in the normalisation, and the Gram register in the boosted frame is
+\begin{equation}\label{eq:rho-boosted}
+\rho' = \diag(p,\,1-p),\qquad p(t)=\frac{A(t)}{2A(t)-\frac{45}{16}}=\frac{(8-t)^2}{2(8-t)^2-45}.
+\end{equation}
+The denominator is at least $2\cdot 49-45=53$, so $p$ is well defined on $[-1,1]$.
+
+\subsection{The point of the example}
+
+Evaluate~\eqref{eq:rho-boosted} at the two ends of the range. For $t=1$ we get $p=49/53$, and for $t=-1$ we get $p=81/117=9/13$.
+Both fields had the \emph{same} Gram register~\eqref{eq:rho-lab} in the Lab frame, but they have \emph{different} Gram registers in
+the Boosted frame. Hence there is no function $f$ with $\rho'=f(\rho)$: a map from Lab registers to Boosted registers does not exist.
+The boost acts on the fields; the register has forgotten the orientation that the boost needs.
+
+This is precisely the kind of fact that is easy to lose in prose. A sentence such as ``the boost maps the Lab register to the Boosted
+register'' sounds harmless and is false. In QAM, the map between the two frames is declared on the full description of the
+fields, and every statement about the Boosted frame names the Lab statement and the map it came from. Section~\ref{sec:frames}
+shows how; it also shows how adding the missing orientation and scale to the register restores a well-defined map.
+
+\subsection{A measurement narrows the prediction}
+
+Suppose we know nothing about $t$. Then all values of $p$ between the two endpoints can occur. To see that they all do, note that
+$A$ decreases as $t$ grows (since $2-t/4>0$) and that
+\[
+\frac{dp}{dA} = -\frac{45/16}{\bigl(2A-45/16\bigr)^2} < 0,
+\]
+so $p$ is continuous and strictly increasing in $t$. Its range over $t\in[-1,1]$ is therefore the interval $[9/13,\,49/53]$, of width
+about $0.232$.
+
+Now suppose a measurement in the Lab frame tells us that $t=B\cdot e_y$ lies in $[-\tfrac14,\tfrac14]$. By monotonicity, the
+prediction for the boosted frame is the image of the endpoints:
+\begin{equation}\label{eq:interval}
+p(-\tfrac14)=\frac{(33/4)^2}{2(33/4)^2-45}=\frac{121}{162},\qquad
+p(\tfrac14)=\frac{(31/4)^2}{2(31/4)^2-45}=\frac{961}{1202},
+\end{equation}
+so $p\in[121/162,\,961/1202]$, an interval of width about $0.0526$, roughly a fifth of the original one. This is a deterministic
+constraint: no probability distribution over $t$ is assumed.
+
+\subsection{What the example asks of a record}
+
+The calculation is short, but a record of it has to keep several things apart:
+\begin{itemize}[leftmargin=1.5em]
+\item The preparation~\eqref{eq:prep} and the boost speed $v=\frac14$ are \emph{assumptions} about the set-up. Every conclusion
+holds only under them.
+\item The interval $t\in[-\frac14,\frac14]$ is a \emph{measured input}. The narrowed prediction~\eqref{eq:interval} rests on it and
+must never be cited as if it followed from the theory alone.
+\item Statements~\eqref{eq:rho-lab} and~\eqref{eq:rho-boosted} live in \emph{different frames}. They may be compared only through
+the declared map that the boost provides, and that map acts on fields, not on registers.
+\end{itemize}
+These are exactly the three silent transitions of Section~\ref{sec:intro}. The rest of the article shows how QAM records them and
+what it can and cannot guarantee about the record.

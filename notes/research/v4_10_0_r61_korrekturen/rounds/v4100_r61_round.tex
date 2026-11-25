@@ -1,0 +1,107 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r61 Source-Only: Corrections to r56.4 (Normalization of \texorpdfstring{\(\rho_\Lambda\)}{rho Lambda}) and r07.4 (Square Root in \texorpdfstring{\(\beta_{\rm sym}\)}{beta sym}) (k320)}
+\addcontentsline{toc}{section}{v4.10.0-r61 Source-Only: Corrections to r56.4 (Normalization of \texorpdfstring{\(\rho_\Lambda\)}{rho Lambda}) and r07.4 (Square Root in \texorpdfstring{\(\beta_{\rm sym}\)}{beta sym}) (k320)}
+\label{sec:v4100-r61-corrections}
+% ============================================================================
+
+\paragraph{Purpose.}
+While the English article ``One Object, Three Frames'' (\texttt{paper/\allowbreak physics-standalone/}) was checked against the Companion on
+25 November 2026, two formula slips were found in earlier layers.  On the author's request this layer corrects them.  Earlier layers are not
+rewritten; the corrections below replace the two displayed formulas wherever r56.4 and r07.4 are used.  Both are corrections of
+presentation: no number, no test result and no status in the record changes.  This layer is an exploration and \emph{not blind}; no hypothesis
+number is assigned.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r61 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\paragraph{Theoremlet v4.10.0-r61.1 (correction to r56.4: normalization of the vacuum density).}
+Exploration, checked with Wolfram Language (\texttt{k320}).  In flat FLRW with \(H^2=\kappa\rho/3\), \(\kappa=8\pi G\), a cosmological constant
+contributes \(\rho_\Lambda=\Lambda/\kappa\), so that \(H^2=\kappa\rho_M/3+\Lambda/3\); this is also the form used in r56.2 (\texttt{k242}, part A).
+r56.4 wrote \(\rho_\Lambda=3\Lambda/\kappa\).  With that normalization the relation to the Hubble rate would be \(\Lambda=(1-\beta^2)H_*^2\), not the
+stated \(\Lambda=3(1-\beta^2)H_*^2\); the two displayed formulas of r56.4 do not hold together.  With \(\rho_\Lambda=\Lambda/\kappa\) the condition
+\(\Omega_M(x)=\beta^2\) has for every \(\Lambda>0\) exactly one positive solution,
+\[
+x_*^3=\frac{\kappa\rho_{M0}(1-\beta^2)}{\beta^2\Lambda},\qquad \Lambda=3(1-\beta^2)H_*^2=2.0944603\,H_*^2 .
+\]
+Only the expression for \(x_*^3\) changes, by the factor 3 in its denominator.  The second formula, its number \(2.0944603\), the uniqueness of the
+epoch and the exchange of \(\Lambda\) and epoch under the readout H96 stand as stated.  Corollary r56.5 and the later uses of r56.4 (r57.1, r59.5,
+\texttt{k251}) rely only on these and are unchanged.  \texttt{k242}, part C, used the normalization of r56.4 for \(x_*\); its printed relation
+\(\Lambda=3(1-\beta^2)H_*^2\) was computed with \(\Omega_\Lambda=1-\beta^2\) directly and is correct.
+
+\paragraph{Theoremlet v4.10.0-r61.2 (correction to r07.4: square root in \(\beta_{\rm sym}\)).}
+Exploration, checked with Wolfram Language (\texttt{k320}).  r07.4(c) wrote \(\beta_{\rm sym}=(\gamma_L-1)/(\gamma_L+1)\).  The symmetric-frame
+offset is
+\[
+\beta_{\rm sym}=\sqrt{\frac{\gamma_L-1}{\gamma_L+1}}=0.5494056,\qquad \beta_{\rm sym}^2=\frac{\gamma_L-1}{\gamma_L+1}=0.3018466
+\]
+(\texttt{thm:symmetric-frame}).  Without the root the expression is \(\beta_{\rm sym}^2\), and ``\(\Omega_M=\beta_{\rm sym}^2\)'' read literally from
+r07.4 would give \(0.0911\) instead of the value \(0.30185\) of H96.  No number in the record was computed from the formula as written in r07.4;
+all values of \(\beta_{\rm sym}\), \(\beta_{\rm sym}^2\) and H96 use the root.  The statement of r07.4(c) is unaffected: every function of
+\(\gamma_L=\kappa_{\rm DL/M}/\kappa_{\rm ABCK}\), with or without the root, is independent of the area-law prefactor \(N\) (\texttt{k320}, part E).
+
+\subsection*{v4.10.0-r61 what depends on the corrections}
+\label{subsec:v4100-r61-impact}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+place & effect\\
+\midrule
+r56.4, formula for \(x_*^3\) & replaced by r61.1 (factor 3)\\
+r56.4, \(\Lambda=3(1-\beta^2)H_*^2\); r56.5; r57.1; r59.5 & unchanged\\
+H96, H124, all values of \(\beta_{\rm sym}\) & unchanged\\
+r07.4(c), formula for \(\beta_{\rm sym}\) & replaced by r61.2 (square root); conclusion unchanged\\
+\texttt{k242} part C & normalization of \(x_*\) as in r56.4; its \(\Lambda/H_*^2\) value correct\\
+physics paper v5.4.0, preprint 0.3.0 & neither formula quoted; no change needed\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r61 frames}
+\label{subsec:v4100-r61-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r61.1 (cosmological readout) & M (matter-frame observer, as r56.4) & none across frames\\
+r61.2 (\(\beta_{\rm sym}\), counting ratio) & M and T through \(\gamma_L\), as r07.4 & unchanged\\
+P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r61 notes}
+\label{subsec:v4100-r61-notes}
+
+{\raggedright
+\texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak r61\_\allowbreak korrekturen/\allowbreak llm/\allowbreak k320\_\allowbreak korrektur\_\allowbreak r56\_\allowbreak r07.wl}
+with its actual output \texttt{k320\_\allowbreak out.txt}.
+\par}
+
+\subsection*{v4.10.0-r61 ledger and guard update}
+\label{subsec:v4100-r61-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r61}=(1,1,0)
+\]
+for (corrections recorded; computations checked in \texttt{k320}; no new physical statement).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r61,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r61}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

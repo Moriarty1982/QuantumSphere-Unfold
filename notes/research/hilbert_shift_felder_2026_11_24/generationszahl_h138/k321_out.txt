@@ -1,0 +1,77 @@
+[Kontrolle] dim Der(O) = 14
+  [n=4] Start 0, bisher 0 Loesungen
+  [n=4] Start 100, bisher 3 Loesungen
+  [n=4] Start 200, bisher 3 Loesungen
+  [n=4] Start 300, bisher 3 Loesungen
+  [n=4] Start 400, bisher 3 Loesungen
+  [n=4] Start 500, bisher 3 Loesungen
+  [n=4] Start 600, bisher 3 Loesungen
+  [n=4] Start 700, bisher 3 Loesungen
+  [n=4] Start 800, bisher 3 Loesungen
+  [n=4] Start 900, bisher 3 Loesungen
+  [n=4] Start 1000, bisher 3 Loesungen
+  [n=4] Start 1100, bisher 3 Loesungen
+  [n=4] Start 1200, bisher 3 Loesungen
+  [n=4] Start 1300, bisher 3 Loesungen
+  [n=4] Start 1400, bisher 3 Loesungen
+  [n=4] Start 1500, bisher 3 Loesungen
+  [n=4] Start 1600, bisher 3 Loesungen
+  [n=4] Start 1700, bisher 3 Loesungen
+  [n=4] Start 1800, bisher 3 Loesungen
+  [n=4] Start 1900, bisher 3 Loesungen
+
+=== n = 4 (dim 16, m = 2 Bloecke) ===
+[Kontrolle] Derivationsdefekt blockweise G2: 5.1e-14
+N_4 (Kopien bis auf +-v) = 3
+  v = [-1., -0.]  Defekt 3.5e-15, min Hesse 3.780e+02, Alternator 7.1e-15, Norm 1.8e-15
+  v = [-0.5     , -0.866025]  Defekt 7.2e-16, min Hesse 3.780e+02, Alternator 7.1e-15, Norm 1.8e-15
+  v = [-0.5     ,  0.866025]  Defekt 2.3e-15, min Hesse 3.780e+02, Alternator 7.1e-15, Norm 1.8e-15
+r_4 (Rang Imaginaerteile / 7) = 2.000  (obere Schranke m = 2)
+davon oktonionisch (alternativ und normmultiplikativ): 3, nicht alternativ: 0
+  oktonionisch: Rang/7 = 2.000, groesste orthogonale Menge = 1
+o_4 (groesste paarweise orthogonale Menge) = 1
+  auftretende Winkel zwischen Kopien (Grad, mod +-): [np.float64(60.0)]
+  [n=5] Start 0, bisher 0 Loesungen
+  [n=5] Start 100, bisher 15 Loesungen
+  [n=5] Start 200, bisher 15 Loesungen
+  [n=5] Start 300, bisher 15 Loesungen
+  [n=5] Start 400, bisher 15 Loesungen
+  [n=5] Start 500, bisher 15 Loesungen
+  [n=5] Start 600, bisher 15 Loesungen
+  [n=5] Start 700, bisher 15 Loesungen
+  [n=5] Start 800, bisher 15 Loesungen
+  [n=5] Start 900, bisher 15 Loesungen
+  [n=5] Start 1000, bisher 15 Loesungen
+  [n=5] Start 1100, bisher 15 Loesungen
+  [n=5] Start 1200, bisher 15 Loesungen
+  [n=5] Start 1300, bisher 15 Loesungen
+  [n=5] Start 1400, bisher 15 Loesungen
+  [n=5] Start 1500, bisher 15 Loesungen
+  [n=5] Start 1600, bisher 15 Loesungen
+  [n=5] Start 1700, bisher 15 Loesungen
+  [n=5] Start 1800, bisher 15 Loesungen
+  [n=5] Start 1900, bisher 15 Loesungen
+
+=== n = 5 (dim 32, m = 4 Bloecke) ===
+[Kontrolle] Derivationsdefekt blockweise G2: 5.7e-14
+N_5 (Kopien bis auf +-v) = 15
+  v = [-0.353553, -0.612372, -0.612372,  0.353553]  Defekt 2.0e-15, min Hesse 8.400e+01, Alternator 1.8e+01, Norm 4.6e+00
+  v = [-0.25    ,  0.433013,  0.433013, -0.75    ]  Defekt 6.2e-16, min Hesse 4.200e+01, Alternator 8.9e-15, Norm 3.6e-15
+  v = [-0.25    ,  0.433013, -0.433013,  0.75    ]  Defekt 3.6e-16, min Hesse 4.200e+01, Alternator 1.1e-14, Norm 3.6e-15
+  v = [ 0.5     ,  0.      ,  0.866025, -0.      ]  Defekt 2.3e-15, min Hesse 4.200e+01, Alternator 7.1e-15, Norm 3.6e-15
+  v = [ 0.5     ,  0.      , -0.866025,  0.      ]  Defekt 2.3e-15, min Hesse 4.200e+01, Alternator 7.1e-15, Norm 1.8e-15
+  v = [ 0.5     , -0.866025,  0.      ,  0.      ]  Defekt 7.2e-16, min Hesse 4.200e+01, Alternator 7.1e-15, Norm 1.8e-15
+  v = [ 1., -0.,  0.,  0.]  Defekt 5.1e-15, min Hesse 4.200e+01, Alternator 6.4e-14, Norm 3.6e-15
+  v = [ 0.353553, -0.612372, -0.612372, -0.353553]  Defekt 1.7e-15, min Hesse 8.400e+01, Alternator 2.2e+01, Norm 6.4e+00
+  v = [0.25    , 0.433013, 0.433013, 0.75    ]  Defekt 5.1e-16, min Hesse 4.200e+01, Alternator 1.1e-14, Norm 3.6e-15
+  v = [-0.5     , -0.866025,  0.      ,  0.      ]  Defekt 7.2e-16, min Hesse 4.200e+01, Alternator 4.4e-15, Norm 3.6e-15
+  v = [ 0.25    ,  0.433013, -0.433013, -0.75    ]  Defekt 5.4e-16, min Hesse 4.200e+01, Alternator 1.1e-14, Norm 1.8e-15
+  v = [ 0.353553,  0.612372, -0.612372,  0.353553]  Defekt 2.0e-15, min Hesse 8.400e+01, Alternator 2.1e+01, Norm 5.3e+00
+  v = [-0.353553,  0.612372, -0.612372, -0.353553]  Defekt 2.7e-15, min Hesse 8.400e+01, Alternator 1.9e+01, Norm 4.3e+00
+  v = [ 0.707107,  0.      , -0.      ,  0.707107]  Defekt 2.0e-15, min Hesse 8.400e+01, Alternator 2.5e+01, Norm 4.6e+00
+  v = [ 0.707107,  0.      ,  0.      , -0.707107]  Defekt 3.2e-15, min Hesse 8.400e+01, Alternator 2.8e+01, Norm 5.5e+00
+r_5 (Rang Imaginaerteile / 7) = 4.000  (obere Schranke m = 4)
+davon oktonionisch (alternativ und normmultiplikativ): 9, nicht alternativ: 6
+  oktonionisch: Rang/7 = 4.000, groesste orthogonale Menge = 1
+o_5 (groesste paarweise orthogonale Menge) = 2
+  auftretende Winkel zwischen Kopien (Grad, mod +-): [np.float64(45.0), np.float64(60.0), np.float64(69.2952), np.float64(75.5225), np.float64(90.0)]
