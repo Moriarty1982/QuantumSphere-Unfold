@@ -1,0 +1,17 @@
+k332b_gegenprobe.wl, ausgefuehrt am 25.11.2026 ueber den Wolfram-Cloud-Kernel (MCP-Evaluator). Print-Ausgaben woertlich, Rueckgabewert Null, keine Warnungen.
+
+Re Psi^2: Cos[2 t]
+J(Psi) = U conj(Psi): I Cos[t] + Sin[t]  ; J^2 - 1: 0
+Fixpunkt: {{t -> -2 ArcTan[1 - Sqrt[2]]}}            (= Pi/4)
+dV/ddelta fuer V(N, Re): 0
+dV/dtheta bei pi/4: (-2 a + 2 cc - m0 + m1)/2
+mit Tausch: 0 ; zweite Ableitung: 4 a - 2 b
+k291 (m0 = 0): V - konst = (2 a - b) Cos[4 t]/8
+HC: K(arctan beta^2) = 0.36368 ; K(arctan beta^-2) = 3.99468
+Tr W: Sqrt[3] Cos[t] ; Tr W^2: 1
+N(W) bei theta = pi/4: -(1/24) (Sqrt[2] - 2 Cos[3 d])/Sqrt[3]
+N(W) = 0 bei: d == Pi/12
+Massen bei delta = pi/12: {(2 + Sqrt[3])/4, (2 - Sqrt[3])/4, 0}
+delta_fit: 0.222222
+Kandidaten relativ: {0.178098, -0.0739318, 0.0688993, 0.318697}
+CT-002 relativ: -0.0000517169 ; arccos(pi/4)/3 = 0.22248574 ; -4 cos(2/3) = -3.1435490
