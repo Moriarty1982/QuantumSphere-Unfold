@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Der HC als Bedingung an den Strom verträgt sich mit SU(2) (25.11.2026, Erkundung, nicht blind, k299)
+
+Anschluss an H132. Unter SU(2) links ist der Winkel zwischen Vorstufe und Anhang Eichung, ein Potential kann nur von der vollen Norm abhängen, und die Fassung η(B − μ²A)² aus k297 ist deshalb nicht möglich. Invariant ist der Strom J = ψ̄·Dψ. Auf der Lösung ψ = e^{iωt}(a + b·j) ist J_i = ω(a² − b²) und |J_⊥| = 2abω, das Verhältnis 2μ/(1 − μ²) = (K − 1/K)/2 ist die Form der Ellipse in eichinvarianter Schreibweise (mit γ_L: 0,664).
+
+Zwei Fassungen. **F (Form der Bewegung):** P = η₂(|J_⊥|² − τ²J_i²)²/N², invariant unter SU(2) links und U(1) rechts. Im Vakuum vierter Ordnung in den Eichfeldern, also keine Massen: Licht bleibt masselos, ρ = 1, Spektrum wie k291. Die Lösung mit b = μa bleibt exakt, Abweichungen kosten Energie nur am drehenden Feld. **S (Stauchung):** Zusatzterm ξ·J_i²/(2N), die entlang der Hopf-Faser gestauchte S³. Licht bleibt masselos, aber m_Z² bekommt den Faktor 1 + ξ und ρ = 1/(1 + ξ). Für jede naheliegende Zuordnung (1 + ξ = γ_L^{±1}, γ_L^{±2}, 1 + μ², 1/cos²2θ) liegt ρ zwischen 0,29 und 3,5 statt bei 1,0004 ± 0,0002 (Messwert aus dem Gedächtnis). Fassung S fällt durch, falls das Feld das elektroschwache ist.
+
+Die Spannung aus H129 und H132 löst sich in Fassung F: Der HC ist dann eine Bedingung an die Bewegung, nicht an das Vakuum. Verloren geht das Bild aus k297 (HC als flache Richtung, Schleife gibt die Skala). Die Skala käme nur aus V(N) und den Eichfeld-Schleifen, das gäbe den bekannten Coleman–Weinberg-Wert von etwa 9,8 GeV statt 125 GeV. Beide Fassungen sind Setzungen. Gegenprobe in Wolfram Language (k299b). OP1, OP3, OP4, OP5 bleiben offen.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/HC_SU2_vertraeglich_k299.md`.
+
 ### Welche Setzung aus H131 trägt die Spannung? Der Träger der Neutrinos (25.11.2026, Erkundung, nicht blind, k262)
 
 Anschluss an H131. Die 24 Elemente aus k260 mischen den Realteil s_k und die Ladungsrichtung v_k der drei Einträge nicht. Auf s wirkt eine reelle vorzeichenbehaftete Permutation A, auf v wirkt +A (12 gerade Elemente) oder −A (12 ungerade). Auf s allein ist die Gruppe also die volle S₄, linear und reell; antilinear werden die ungeraden Elemente erst auf dem komplexen Triplett z = s + i·v. Gerechnet sind alle 900 Paare von Untergruppen (G_e, G_ν) in zwei Lesarten.
