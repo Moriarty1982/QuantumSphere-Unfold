@@ -138,6 +138,10 @@ Vier Eigenschaften machen daraus eine echte Rekursion, und alle vier sind geprü
   liegen, weil die Tabelle aus k282 vorab feststeht.
 - **Bauart entscheiden:** D_μψ oder Ströme. Die Stromvariante hält bei HS(2) links und rechts getrennt und ist damit die, die zu r43 passt.
 
+## Nachtrag (25.11.2026, k291)
+Auf Hinweis des Autors, dass es auf HS(0) und HS(1) keine Masse im strengeren Sinn gibt: `Masse_zuerst_k291.md`. Dort werden μ₀ = μ₁ = 0 gesetzt, ω als
+Wellenfrequenz gelesen und zwei Lesarten (Urknall bei HS(2) oder Protomasse bei HS(1)) geführt.
+
 ## Dateien
 `k290_rekursive_feldgleichung.py` (`k290_out.txt`), `k290b_gegenprobe.wl` (`k290b_out.txt`, Wolfram über den Cloud-Kernel, Ausgaben und Warnungen dort festgehalten).
 Aufruf: `python k290_rekursive_feldgleichung.py > k290_out.txt`, Laufzeit etwa 20 Sekunden.
