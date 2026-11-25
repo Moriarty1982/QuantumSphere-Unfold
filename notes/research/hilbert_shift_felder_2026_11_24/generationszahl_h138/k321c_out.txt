@@ -1,0 +1,4 @@
+Kopien gelesen: 207, oktonionisch 79; groesste orthogonale Menge 5, davon oktonionisch 0
+oktonionisch: min smin(L_x) imaginaeres Element = 3.660e-01
+nicht alternativ: max smin = 1.0e-06, Anteil Nullteiler (< 1e-10): 0.680
+Mitglieder der orthogonalen Menge, smin: ['1.0e-06', '1.0e-06', '7.1e-18', '2.5e-17', '1.9e-18']

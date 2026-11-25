@@ -1,5 +1,13 @@
 # Forschungsstand
 
+### Generationszahl aus den Sedenionen: drei Kopien je Verdopplung, darüber nur Nullteiler-Familien (25.11.2026, Tests H138, H139, k321, k322)
+
+Frage des Autors: Erklären die Sedenionen, warum für die Generationen nur 3–4 Kopien entstehen? Gezählt wurden die G₂-stabilen Oktonion-Kopien mit gemeinsamer Eins auf HS(4) bis HS(6). **In 𝕊 gibt es genau drei**, weil die Abschlussbedingung für die Kopienrichtung z = t₁ + i t₂ exakt Im(z³) = 0 ist (Wolfram). Eine vierte Kopie ist dort ausgeschlossen; die drei spannen aber nur zwei unabhängige Richtungen auf (wie K28, Gillard–Gresnigt). Höher wächst die Zahl: HS(5) 15 abgeschlossene Kopien, davon 9 = 3 × 3 oktonionisch (je Verdopplung eine Dreierwahl), HS(6) mindestens 207, davon mindestens 79 oktonionisch. **H138a und H138b widerlegt** (Vorhersage 3^k Kopien und höchstens drei orthogonale). Oktonionische Kopien sind auf keiner Stufe paarweise orthogonal; orthogonale Mengen (2 bei HS(5), mindestens 5 bei HS(6)) bestehen nur aus nicht alternativen Algebren.
+
+Marcs Vermutung, darüber hinaus gebe es nur Nullteiler, wurde als H139 vorab festgelegt. **Bestätigt (H139b, c):** Nullteiler von 𝕊 sind genau die Elemente mit gleichem Gewicht in allen Kopienrichtungen; exakt gilt für x = c e₁ + s e₁₀ det L_x = (c − s)⁴(c + s)⁴(c² + s²)⁴, alle 84 Basis-Nullteiler haben dieses flache Profil. Die Überschuss-Algebren auf HS(5) und HS(6) haben Imaginärteile aus lauter Nullteilern (Familien von Nullteilern). **H139a nach Wortlaut widerlegt:** Diese Nullteiler annihilieren Elemente außerhalb, nicht innerhalb der Algebra.
+
+Einordnung: „3 statt 4“ ist innerhalb einer Verdopplung erzwungen (unter der Setzung G₂-Stabilität). Dass die drei Kopien Generationen sind, ist nicht gezeigt (k255), die Generationszahl bleibt eine Eingabe. Vorzeichen nicht berührt. OP3 und OP4 bleiben offen, kein Guard berührt. [Notizen](../notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/README.md)
+
 ### Runde r61: Korrekturen zu r56.4 und r07.4 (25.11.2026, Erkundung, nicht blind, k320)
 
 Anlass ist die Gegenprüfung des englischen Artikels „One Object, Three Frames“. Dabei sind in zwei älteren Runden Formelversehen aufgefallen; Marc hat ihre Korrektur beauftragt. Die alten Runden bleiben unverändert (append-only).

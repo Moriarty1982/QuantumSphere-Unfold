@@ -1,0 +1,19 @@
+k321b, Wolfram-Kernel (MCP WolframLanguageEvaluator), 25.11.2026; tatsaechliche Print-Ausgaben, zwei Aufrufe (ohne/mit Alternator-Teil), gekuerzt nur in der Darstellung:
+
+n=4 Gleichungen: {t2 (3 t1^2 - t2^2), -(t2 (3 t1^2 - t2^2))}
+n=4 Loesungen: (t1 == -1 && t2 == 0) || (t1 == -1/2 && t2 == -Sqrt[3]/2) || (t1 == -1/2 && t2 == Sqrt[3]/2) || (t1 == 1/2 && t2 == -Sqrt[3]/2) || (t1 == 1/2 && t2 == Sqrt[3]/2) || (t1 == 1 && t2 == 0)
+n=5 Zahl Gleichungen: 12
+n=5 Zahl reeller Loesungen (mit +-): 30
+N_5 = 15
+{{-1, 0, 0, 0}, {-1/2, 0, -1/2*Sqrt[3], 0}, {-1/2, 0, Sqrt[3]/2, 0}, {-1/2, -1/2*Sqrt[3], 0, 0}, {-1/2, Sqrt[3]/2, 0, 0}, {-1/4, -1/4*Sqrt[3], -1/4*Sqrt[3], -3/4}, {-1/4, -1/4*Sqrt[3], Sqrt[3]/4, 3/4}, {-1/4, Sqrt[3]/4, -1/4*Sqrt[3], 3/4}, {-1/4, Sqrt[3]/4, Sqrt[3]/4, -3/4}, {-(1/Sqrt[2]), 0, 0, -(1/Sqrt[2])}, {-(1/Sqrt[2]), 0, 0, 1/Sqrt[2]}, {-1/2*1/Sqrt[2], -1/2*Sqrt[3/2], -1/2*Sqrt[3/2], 1/(2*Sqrt[2])}, {-1/2*1/Sqrt[2], -1/2*Sqrt[3/2], Sqrt[3/2]/2, -1/2*1/Sqrt[2]}, {-1/2*1/Sqrt[2], Sqrt[3/2]/2, -1/2*Sqrt[3/2], -1/2*1/Sqrt[2]}, {-1/2*1/Sqrt[2], Sqrt[3/2]/2, Sqrt[3/2]/2, 1/(2*Sqrt[2])}}
+Winkel (Grad) vorkommend: {45, 60, 90, ArcCos[1/4], ArcCos[1/(2 Sqrt[2])]}
+o_5 = groesste orthogonale Menge: 2  Beispiel: {{-(1/Sqrt[2]), 0, 0, -(1/Sqrt[2])}, {-(1/Sqrt[2]), 0, 0, 1/Sqrt[2]}}
+Zahl orthogonaler Basen (4er-Cliquen): 0
+Rang Spann v (=r_5): 4
+Minimalpolynom (letztes GB-Element): -1 + t1^2 + t2^2 + t3^2 + t4^2
+exakter Alternator je Kopie: {0, 0, 0, 0, 0, 0, 0, 0, 0, 1/Sqrt[2], 1/Sqrt[2], Sqrt[3/2]/2, Sqrt[3/2]/2, Sqrt[3/2]/2, Sqrt[3/2]/2}
+oktonionisch: 9  nicht alternativ: 6
+oktonionische v: {{-1, 0, 0, 0}, {-1/2, 0, -1/2*Sqrt[3], 0}, {-1/2, 0, Sqrt[3]/2, 0}, {-1/2, -1/2*Sqrt[3], 0, 0}, {-1/2, Sqrt[3]/2, 0, 0}, {-1/4, -1/4*Sqrt[3], -1/4*Sqrt[3], -3/4}, {-1/4, -1/4*Sqrt[3], Sqrt[3]/4, 3/4}, {-1/4, Sqrt[3]/4, -1/4*Sqrt[3], 3/4}, {-1/4, Sqrt[3]/4, Sqrt[3]/4, -3/4}}
+Rang oktonionische v: 4   |v.w| unter oktonionischen: {1/4, 1/2}
+Meldungen: Symbol::undefined2-Warnung (lokale Variablennamen, erster Aufruf), General::messages; keine Fehler in den Ergebnissen.
+n=6: Aufruf nach 60 s vom MCP-Werkzeug abgebrochen, kein Ergebnis.
