@@ -1,0 +1,152 @@
+\section{What the rules guarantee}\label{sec:properties}
+
+The rules of Definition~\ref{def:rules} are local: each one looks at a single entry and its immediate premises. What one wants to know
+about a long record is global: whether a conclusion fifty steps down a chain still carries every condition and every input from the top.
+This section shows that the local rules are enough. The proofs are short, and that is the point: the rules are precise enough to be
+checked by a compiler and by a proof assistant alike. Appendix~\ref{app:lean} lists the corresponding machine-checked statements.
+
+\subsection{Checking a record in one pass}
+
+We model a checker that reads a record line by line. Its state $S$ is a finite map from keys to the stored information
+$S(k)=(\mathit{frame},\mathit{status},\mathit{inputs},\mathit{prem})$, together with the declared maps. Reading a line either fails or
+extends the state:
+\begin{itemize}[leftmargin=1.5em]
+\item an \emph{input} $k$ is accepted if $k$ is new, and stored with $\mathit{inputs}=\{k\}$ and no premises;
+\item a \emph{claim} or \emph{thesis} $k$ is accepted if $k$ is new, and stored with no inputs and no premises;
+\item a \emph{derivation} $k$ with premises $p_1,\dots,p_m$ ($m\ge1$) is accepted if $k$ is new, every $p_j$ is stored, lies in the
+frame of $k$ or in $*$, has status at least that of $k$, and the declared inputs of $k$ are exactly the union of the inputs of the $p_j$;
+\item a \emph{conversion} $k=\mathrm{convert}(g,p)$ is accepted if $k$ is new, $g\colon A\to B$ is declared, $p$ is stored in frame $A$,
+$k$ is in frame $B$, $k$ is not stronger than $p$, and the inputs of $k$ are those of $p$;
+\item a \emph{comparison} or \emph{declaration of independence} is accepted if (R4), respectively (R3), holds for it; it does not change the state;
+\item a \emph{map declaration} is accepted if the name of the map is new.
+\end{itemize}
+A record is \emph{accepted} if every line is accepted in turn, starting from the empty state. This is exactly the procedure of the
+Lean checker of Section~\ref{sec:latex}, and it is the reason for rule (R1): because nothing may be used before it is declared, a single
+pass suffices.
+
+\subsection{An invariant of accepted records}
+
+\begin{definition}[Good state]\label{def:good}
+A state $S$ is \emph{good} if for every stored key $k$ with $S(k)=(f,s,I,P)$:
+\begin{enumerate}[label=(\alph*),nosep,leftmargin=2em]
+\item every premise $p\in P$ is stored, with $S(p)=(f',s',I',P')$ such that $s\le s'$ and $I'\subseteq I$;
+\item every $x\in I$ either is $k$ itself and $P$ is empty (that is, $k$ is an input), or lies in the inputs of some premise $p\in P$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Accepted records are good]\label{thm:good}
+The state reached after an accepted record is good.
+\end{theorem}
+
+\begin{proof}
+By induction on the number of lines. The empty state is good because it stores nothing. Suppose $S$ is good and a line is accepted,
+giving $S'$. Comparisons, declarations of independence and map declarations leave the stored keys unchanged, so $S'$ is good. Otherwise
+exactly one new key $k$ is added, and since $k$ was new, no earlier entry changes; the earlier entries still satisfy (a) and (b) in $S'$
+because their premises are still stored with the same information. For the new key, (a) and (b) are exactly what the acceptance test
+checked: an input has $I=\{k\}$ and no premises; a claim has neither; a derivation or conversion has stored premises of at least its
+status whose inputs are contained in $I$, and every element of $I$ comes from some premise.
+\end{proof}
+
+\subsection{No promotion, at any distance}
+
+Say that $a$ is an \emph{ancestor} of $k$ if $a$ can be reached from $k$ by following premises one or more times.
+
+\begin{theorem}[No promotion]\label{thm:nopromotion}
+In an accepted record, if $a$ is an ancestor of $k$ then $\mathit{status}(k)\le\mathit{status}(a)$.
+\end{theorem}
+
+\begin{proof}
+Induction on the length of the path from $k$ to $a$. For a direct premise this is part (a) of Theorem~\ref{thm:good}. For a longer path
+$k\to m\to\dots\to a$, the induction hypothesis gives $\mathit{status}(m)\le\mathit{status}(a)$, part (a) gives
+$\mathit{status}(k)\le\mathit{status}(m)$, and the order on statuses is transitive.
+\end{proof}
+
+\begin{corollary}[Proved rests only on proved]\label{cor:proved}
+In an accepted record, every ancestor of an entry with status \st{proved} has status \st{proved}. Equivalently, an entry with an ancestor
+below \st{proved} is not \st{proved}.
+\end{corollary}
+
+\begin{proof}
+\st{proved} is the top of the order, so $\st{proved}\le\mathit{status}(a)$ forces $\mathit{status}(a)=\st{proved}$.
+\end{proof}
+
+For the example: the narrowed prediction~\eqref{eq:interval} has the conditional preparation as an ancestor, two steps up. By
+Theorem~\ref{thm:nopromotion} it can be at most \st{conditional}, however many further conclusions are later drawn from it.
+
+\subsection{Inputs are never lost and never invented}
+
+\begin{theorem}[Inputs]\label{thm:inputs}
+In an accepted record:
+\begin{enumerate}[label=(\roman*),nosep,leftmargin=2em]
+\item if $a$ is an ancestor of $k$, then $\mathit{inputs}(a)\subseteq\mathit{inputs}(k)$;
+\item every input of $k$ is $k$ itself (if $k$ is an input) or an input of one of its premises;
+\item if $\mathit{inputs}(k)=\emptyset$, then no ancestor of $k$ has an input, and in particular no ancestor is an input entry.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Induction on the path, using part (a) of Theorem~\ref{thm:good} and transitivity of $\subseteq$. (ii) is part (b) of
+Theorem~\ref{thm:good}. (iii) follows from (i): an ancestor with a non-empty input set would force $\mathit{inputs}(k)\neq\emptyset$;
+and an input entry $a$ has $\mathit{inputs}(a)=\{a\}\neq\emptyset$.
+\end{proof}
+
+Part (iii) is what makes the declaration of independence meaningful. If a record declares that a result is independent of all inputs and
+the record is accepted, then no measured or fitted value occurs anywhere above that result. In the example, the measurement is an
+ancestor of the narrowed prediction, so the prediction carries it in its input set, and a declaration that the prediction is
+independent of inputs is rejected.
+
+\subsection{Frames change only through declared maps}
+
+To state the frame property we look at a single conclusion and the tree of steps that produced it. A \emph{derivation tree} has
+leaves (entries without premises) and three kinds of inner node: a step from one premise, a join of two premises, and a conversion
+through a map $g$ into a frame $b$. A tree is \emph{well formed} relative to a set $D$ of declared maps if no node is stronger than
+its children, the two children of a join lie in the same frame, and every conversion uses a map in $D$ whose source is the frame of its
+child.
+
+\begin{theorem}[Frames]\label{thm:frames}
+In a well-formed tree, the frame of every leaf reaches the frame of the root through a chain of declared maps. If no maps are
+declared, every leaf lies in the frame of the root.
+\end{theorem}
+\noindent The tree model has no convention-free frame; leaves in $*$, which the record checker admits as premises of any frame, are
+excluded here. The frame property is proved for trees; the record checker enforces the corresponding local condition on every line.
+
+
+\begin{proof}
+Induction on the tree. A leaf reaches its own frame through the empty chain. A step keeps the frame of its child. For a join, both
+children have the same frame, which is the frame of the join, and the induction hypothesis applies to each side. For a conversion
+through $g\colon a\to b$, every leaf of the child reaches $a$ by induction, and appending $g$ gives a chain to $b$. If $D$ is empty, the
+only chains are empty, so every leaf lies in the frame of the root.
+\end{proof}
+
+Theorem~\ref{thm:frames} is the formal content of rule (R4): there is no way to arrive in the Boosted frame from a Lab statement except
+through $\mathit{lorentz}_z$ or another declared map.
+
+\subsection{The hash chain binds conclusions to premises}
+
+The checker also reads the hash and the list of source hashes recorded for every entry. It accepts the hash part of a line if the
+entry's hash has not occurred before and, for a derivation or conversion, if the recorded sources are exactly the hashes recorded
+earlier for its premises, in order; leaves must have no sources.
+
+\begin{proposition}[Hash links]\label{prop:links}
+In a record accepted by the hash check, the sources of every derivation and conversion are the hashes of its premises as they were
+recorded, and no hash occurs twice. If, in addition, the hashes are computed as in Definition~\ref{def:hash} and no MD5 collision
+occurs among the entries involved, then changing any field of an entry changes its hash and the hash of every entry of which it is an
+ancestor, and leaves the hash of every other entry unchanged.
+\end{proposition}
+
+\begin{proof}
+The first sentence is what the check tests, line by line. For the second, an entry's hash is computed from its own fields and the
+hashes of its premises. Changing a field changes the hashed string and therefore, absent a collision, the hash. By induction along the
+paths from the changed entry, every descendant receives a different source list and hence a different hash. An entry that is not a
+descendant has the same fields and, by induction on the record, the same premise hashes, and hence the same hash.
+\end{proof}
+
+The proposition separates what is proved from what is assumed. That the links are consistent is checked. That a changed statement
+yields a changed hash is a property of the hash function, which is assumed and not proved; MD5 is chosen to detect accidental change
+and gives no protection against deliberate collisions.
+
+\subsection{What the proofs do not say}
+
+All results above are relative to what is declared. A record that declares a premise-free claim as \st{proved} is accepted, and so are
+its consequences. A checked record shows that the stated statuses, inputs and frames are mutually consistent. It does not show that
+any statement is true.

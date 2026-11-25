@@ -1,0 +1,15 @@
+k320_korrektur_r56_r07.wl, ausgefuehrt am 25.11.2026 ueber den Wolfram-MCP-Kernel (zustandslos), Skript wortgleich eingefuegt.
+Tatsaechliche Print-Ausgaben:
+
+(A) x*^3 mit rho_L = L/kappa: -((-1 + bb) kappa rhoM0)/(bb L)      [= kappa rhoM0 (1 - bb)/(bb L)]
+(A) Lambda/H*^2 mit rho_L = L/kappa: 3 - 3 bb
+(B) x*^3 mit rho_L = 3L/kappa: Root[-(kappa rhoM0) + bb kappa rhoM0 + 3 bb L #1^3 & , 1]^3      [= kappa rhoM0 (1 - bb)/(3 bb L)]
+(B) Lambda/H*^2 mit rho_L = 3L/kappa: 1 - bb
+(C) (gamma_L-1)/(gamma_L+1) = 0.3018465584; 3(1-beta^2) = 2.094460325; (1-beta^2) = 0.6981534416
+(D) Sqrt[(gL-1)/(gL+1)] = 0.5494056411; ohne Wurzel = 0.3018465584; Quadrat davon = 0.09111134484
+(E) D[Sqrt[(N k1/(N k2) - 1)/(N k1/(N k2) + 1)], N] = 0
+
+Symbolische Ergebnisse (A), (B), (E) sind exakte Simplify/FullSimplify-Ergebnisse. Die Klammern [...] sind die von Hand
+umgeschriebene Form derselben Ausdruecke.
+Warnung (kein Fehler im Ergebnis): Symbol::undefined2 fuer das globale Symbol L; General::messages als Sammelhinweis darauf.
+Rueckgabewert der Zelle: Null.

@@ -18,6 +18,9 @@ v5.2.0 bringt die Runden v4.10.0-r15 bis r28 und im Physik-Paper den Abschnitt 5
 v5.1.0 brachte die Runden v4.10.0-r12 bis r14, das Gegenterm-Register und einen Abschnitt zum gebogenen Oktanten im
 Physik-Paper (1412/29 Seiten); Paketquellstand dfdb41387264e728a13a9a51a8636fd532011ff2, Tag v5.1.0.
 
+Eigenständiger Physik-Artikel „One Object, Three Frames“ 1.0.0 vom 2026-11-25 als eigener Record: Version-DOI 10.5281/zenodo.24539644
+(Quelle `paper/physics-standalone/`, Ablauf `notes/anleitungen/paper-release.md`).
+
 Version 5 enthält die datenbankgestützte Dokumentarchitektur und zwei englische
 Ausgaben (1402/28 Seiten). Der veröffentlichte Paketquellstand ist
 539b75bfce29ce20bb9aa7e59c251727b49faa45, Tag v5.0.0. Nachfolgende Arbeit ist
@@ -78,6 +81,7 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   - `wiki-nachziehen.md`: Ordner `wiki/` im selben PR nachziehen.
   - `qs-werkzeug.md`: `tools/qs.py` (Querverweise, Guards, Ledger, Audit, Manifest).
   - `zenodo-release.md`: neue Version auf Zenodo.
+  - `paper-release.md`: eigenständige Papers (QAM-Paper, Physik-Paper) als eigene Zenodo-Records.
 - **Modellunabhängig arbeiten:** Ohne Shell oder GitHub-Zugang nennt das Modell die Befehle, und der Autor führt sie aus.
 - **Vorab-Notizen:** Jeder Test mit Entscheidungskriterium wird vor der Rechnung festgeschrieben und committet.
   Erkundungen ohne Vorab-Notiz heißen „Erkundung“.

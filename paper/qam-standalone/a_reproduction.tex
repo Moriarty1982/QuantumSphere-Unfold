@@ -1,0 +1,43 @@
+\section{Reproducing the results}\label{app:repro}
+
+All commands are run from the root of the repository~\cite{repo}. They need Python~3.10 or later; the \TeX{} steps need \LaTeX{}
+2022-06 or later, the Lean steps the toolchain named in \texttt{qam/lean/lean-toolchain}, and the hardware comparison Icarus Verilog.
+
+\paragraph{This article and its record.}
+\begin{lstlisting}
+cd paper/qam-standalone
+TEXINPUTS=../../qam/tex: pdflatex main.tex     # three times
+python3 ../../qam/tools/qamhash.py verify main.qam
+\end{lstlisting}
+
+\paragraph{Lean checker on a record.}
+\begin{lstlisting}
+cd qam/lean && lake build && lake exe qamcheck ../examples/gram-range-rule.qam
+\end{lstlisting}
+
+\paragraph{The \TeX{} test suite.}
+\begin{lstlisting}
+python3 qam/tex/tests/run_tests.py
+\end{lstlisting}
+
+\paragraph{Index, request, receipt, replay (Sections~\ref{sec:requests} and~\ref{sec:graph}).}
+\begin{lstlisting}
+python -m qam.tools.readout_db index
+python -m qam.tools.readout_db mma scripts/qsc_audit/examples/framework_context.json \
+    qam/examples/gram_range_mml.json --summary
+python -m qam.tools.readout_db receipt RECEIPT_HASH --replay --summary
+python -m qam.tools.readout_db --read-only premises 7C36EDC97D94E61FF80542EC521D2BC9
+python -m qam.tools.readout_db --read-only impact   BE014772A536438E3767BBAE3EBC7AE5
+python -m qam.tools.readout_db --read-only rules boosted-gram-range \
+    --have preparation:E2x-B-unit-yz --have boost:z:1/4
+\end{lstlisting}
+The two hashes are those of the rule and of the preparation in the hand-authored record \texttt{qam/examples/gram-range-rule.qam}.
+The guarded run of Section~\ref{sec:requests} is the same request against an empty database (\texttt{--db} pointing to a new file);
+the rejected runs change \texttt{a} and \texttt{b} to \texttt{1/2} and \texttt{-1/2}, or the boost to \texttt{z:1/3}.
+
+\paragraph{Tape machine and hardware comparison (Section~\ref{sec:tape}).}
+\begin{lstlisting}
+python -m qam.tools.readout_db mma qam/examples/zuse_machine/mma_context.json \
+    qam/examples/zuse_machine/run_tape_mml.json --summary
+python -m qam.examples.zuse_machine.hdl.check --report build/hdl-comparison.md
+\end{lstlisting}

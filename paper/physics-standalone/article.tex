@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[hmargin=24mm,vmargin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,tabularx,array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage[hidelinks,pdftitle={One Object, Three Frames: The Quantum Sphaera Construction},pdfauthor={Marc Brendecke}]{hyperref}
+
+% Status colours (same as the figures)
+\definecolor{st-est}{HTML}{3A7A3A}   % established
+\definecolor{st-cond}{HTML}{A08000}  % conditional
+\definecolor{st-read}{HTML}{55559A}  % reading
+\definecolor{st-ref}{HTML}{9A3030}   % refuted
+\definecolor{st-open}{HTML}{B0601A}  % open
+
+% Status tags used in the running text
+\newcommand{\Established}{\textsf{\textcolor{st-est}{[established]}}}
+\newcommand{\Conditional}{\textsf{\textcolor{st-cond}{[conditional]}}}
+\newcommand{\Reading}{\textsf{\textcolor{st-read}{[reading]}}}
+\newcommand{\Refuted}{\textsf{\textcolor{st-ref}{[refuted]}}}
+\newcommand{\Open}{\textsf{\textcolor{st-open}{[open]}}}
+\newcommand{\Exploration}{\textsf{\textcolor{st-read}{[exploration]}}}
+
+% Companion references: \rnd{r12} = round v4.10.0-r12; \rndold{r84} = round v4.9.0-r84
+\newcommand{\rnd}[1]{\textsc{c}\,#1}
+\newcommand{\rndold}[1]{\textsc{c}\,4.9-#1}
+
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\bsym}{\beta_{\mathrm{sym}}}
+
+\setlength{\parindent}{1em}
+\raggedbottom
+\emergencystretch=3em
+
+\InputIfFileExists{release-info}{}{\def\releaseline{Draft\enspace$\cdot$\enspace November 2026}}
+\begin{document}
+\thispagestyle{plain}
+\noindent{\LARGE\bfseries One Object, Three Frames:\\[0.2em] The Quantum Sphaera Construction\par}
+\vspace{0.7em}
+\noindent Marc Brendecke\hfill{\small\releaseline}\par
+\vspace{0.8em}
+\input{sections/00-abstract}
+\tableofcontents
+\input{sections/01-introduction}
+\input{sections/02-carrier}
+\input{sections/03-frames}
+\input{sections/04-particles}
+\input{sections/05-koide}
+\input{sections/06-beta}
+\input{sections/07-action}
+\input{sections/08-lambda-op5}
+\input{sections/09-open}
+\input{sections/10-conclusion}
+\appendix
+\input{sections/A-ledger}
+\input{sections/B-reproduction}
+
+\begin{thebibliography}{99}
+\input{refs/references}
+\IfFileExists{refs/A.tex}{\input{refs/A}}{}
+\IfFileExists{refs/B.tex}{\input{refs/B}}{}
+\IfFileExists{refs/C.tex}{\input{refs/C}}{}
+\IfFileExists{refs/D.tex}{\input{refs/D}}{}
+\end{thebibliography}
+\end{document}

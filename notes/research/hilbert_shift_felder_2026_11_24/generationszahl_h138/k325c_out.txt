@@ -1,0 +1,28 @@
+Auswahlen mit 0 und 1 im Kern: 9
+  (0, 1, 5, 8) = ['f0(x)f0', 'f0(x)f120', 'f120(x)f240', 'f240(x)f240']
+     Spektrum [0.       0.333333 0.333333 0.333333 0.5      0.5      0.666667 0.666667
+ 0.666667 1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 4.2e-15; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}
+  (0, 2, 4, 7) = ['f0(x)f0', 'f0(x)f240', 'f120(x)f120', 'f240(x)f120']
+     Spektrum [0.       0.333333 0.333333 0.333333 0.5      0.5      0.666667 0.666667
+ 0.666667 1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 1.0e-15; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}
+  (0, 3, 7, 8) = ['f0(x)f0', 'f120(x)f0', 'f240(x)f120', 'f240(x)f240']
+     Spektrum [-0.        0.333333  0.333333  0.333333  0.5       0.5       0.666667
+  0.666667  0.666667  1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 4.1e-15; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}
+  (0, 4, 5, 6) = ['f0(x)f0', 'f120(x)f120', 'f120(x)f240', 'f240(x)f0']
+     Spektrum [0.       0.333333 0.333333 0.333333 0.5      0.5      0.666667 0.666667
+ 0.666667 1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 8.7e-16; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}
+  (1, 2, 3, 6) = ['f0(x)f120', 'f0(x)f240', 'f120(x)f0', 'f240(x)f0']
+     Spektrum [0.       0.333333 0.333333 0.333333 0.5      0.5      0.666667 0.666667
+ 0.666667 1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 1.0e-15; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}
+  (1, 3, 5, 7) = ['f0(x)f120', 'f120(x)f0', 'f120(x)f240', 'f240(x)f120']
+     Spektrum [0.       0.333333 0.333333 0.333333 0.5      0.5      0.666667 0.666667
+ 0.666667 1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 2.1e-15; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}
+  (1, 4, 6, 8) = ['f0(x)f120', 'f120(x)f120', 'f240(x)f0', 'f240(x)f240']
+     Spektrum [-0.        0.333333  0.333333  0.333333  0.5       0.5       0.666667
+  0.666667  0.666667  1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 1.4e-15; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}
+  (2, 3, 4, 8) = ['f0(x)f240', 'f120(x)f0', 'f120(x)f120', 'f240(x)f240']
+     Spektrum [0.       0.333333 0.333333 0.333333 0.5      0.5      0.666667 0.666667
+ 0.666667 1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 2.0e-15; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}
+  (2, 5, 6, 7) = ['f0(x)f240', 'f120(x)f240', 'f240(x)f0', 'f240(x)f120']
+     Spektrum [0.       0.333333 0.333333 0.333333 0.5      0.5      0.666667 0.666667
+ 0.666667 1.      ]; Leck des 8er-Teils (0,1/3,2/3,1): 1.4e-15; Leck der 1/2-Singuletts: 0.500; su(3) im 8er-Teil (Singulett False / Farbe True): {0.0: 2, 1.0: 6}

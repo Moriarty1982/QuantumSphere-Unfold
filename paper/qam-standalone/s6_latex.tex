@@ -1,0 +1,153 @@
+\section{The record in \LaTeX, and three independent checkers}\label{sec:latex}
+
+Mathematical texts are written in \LaTeX, and language models write \LaTeX{} readily. The natural place to keep a record is therefore the
+document itself: each statement is declared where it appears in the text, and the \TeX{} compiler applies the rules while it typesets.
+The package \texttt{qam.sty} does this. It uses only the \LaTeX{} kernel (expl3, \LaTeX{} 2022-06 or later) and depends on no
+application.
+
+\subsection{Declaring the example}
+
+The following block is part of the source of this article. It records the interval prediction of Section~\ref{sec:example}. The frames
+and the map were declared in Section~\ref{sec:frames}; the optional first argument of each command is the symbol under which the entry
+is displayed.
+
+\begin{lstlisting}
+\qamthesis[\mathcal P]{preparation}{Lab}{conditional}
+  {E=2e_x, B=t e_y+u e_z, t^2+u^2=1, c=1, boost v=1/4 along z}
+\qaminput[t_I]{measurement}{Lab}{conditional}
+\qamconvert[p]{range-rule}{conditional}{lorentz-z}{preparation}
+\qamderive[\mathcal P_I]{measured-preparation}{conditional}{preparation,measurement}
+\qamconvert[p_I]{narrowed-range}{conditional}{lorentz-z}{measured-preparation}
+\end{lstlisting}
+\qamthesis[\mathcal P]{preparation}{Lab}{conditional}
+  {E=2e_x, B=t e_y+u e_z, t^2+u^2=1, c=1, boost v=1/4 along z}
+\qaminput[t_I]{measurement}{Lab}{conditional}
+\qamconvert[p]{range-rule}{conditional}{lorentz-z}{preparation}
+\qamderive[\mathcal P_I]{measured-preparation}{conditional}{preparation,measurement}
+\qamconvert[p_I]{narrowed-range}{conditional}{lorentz-z}{measured-preparation}
+
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[node distance=10mm and 14mm,
+  box/.style={draw,rounded corners=2pt,align=center,font=\small,minimum width=30mm,minimum height=9mm,fill=white},
+  inp/.style={box,dashed},
+  arr/.style={-{Stealth[length=2mm]},thick}]
+\node[box] (P) at (0,0) {$\mathcal P$: preparation\\[-1pt]\footnotesize thesis, conditional};
+\node[inp] (T) at (6.4,0) {$t_I$: measurement\\[-1pt]\footnotesize input, conditional};
+\node[box] (PI) at (4.2,-1.9) {$\mathcal P_I$: restricted preparation\\[-1pt]\footnotesize derive, conditional, inputs $\{t_I\}$};
+\node[box] (p) at (0,-4.6) {$p$: general rule\\[-1pt]\footnotesize convert, conditional};
+\node[box] (pI) at (4.2,-4.6) {$p_I$: narrowed prediction\\[-1pt]\footnotesize convert, conditional, inputs $\{t_I\}$};
+\draw[arr] (P) -- (PI); \draw[arr] (T) -- (PI);
+\draw[arr] (P) -- node[left,font=\footnotesize]{$\Lambda_z$} (p);
+\draw[arr] (PI) -- node[right,font=\footnotesize]{$\Lambda_z$} (pI);
+\begin{scope}[on background layer]
+\node[fill=black!5,rounded corners,fit=(P)(T)(PI),inner sep=4mm,label={[font=\footnotesize]north west:frame Lab}] {};
+\node[fill=black!10,rounded corners,fit=(p)(pI),inner sep=4mm,label={[font=\footnotesize]south west:frame Boosted}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{The record of the interval prediction. Arrows point from a premise to what is obtained from it; the two arrows labelled
+$\Lambda_z$ are conversions through the declared boost map, the only way from the Lab frame to the Boosted frame. The dashed box is an
+input. Its key travels down to every entry below it, so $p_I$ carries it, while $p$ does not.}
+\label{fig:record}
+\end{figure}
+
+\noindent Figure~\ref{fig:record} shows the resulting graph. The thesis $\mathcal P$ is the preparation~\eqref{eq:prep} with $v=\frac14$; as a thesis, its wording is part of its
+hash, so a change of the set-up changes every hash below it; the input $t_I$ is the measured interval
+$t\in[-\frac14,\frac14]$; $p$ is the general rule~\eqref{eq:rho-boosted} in the Boosted frame; $\mathcal P_I$ is the preparation
+restricted by the measurement; and $p_I$ is the narrowed prediction~\eqref{eq:interval}. The author states the status of each entry.
+The frame and the inputs of a derivation are not stated but computed from the premises, so they cannot be stated wrongly.
+
+From these declarations the package typesets a compact notation. \verb|\qam{narrowed-range}| and \verb|\qam{range-rule}| give
+\begin{center}
+\qam{narrowed-range}\qquad\qquad \qam{range-rule}
+\end{center}
+Here $\Lambda_z$ is the symbol declared for the boost map, the left superscript is the frame, ``$\Leftarrow$'' reads ``derived
+from'', $R(w)$ is the readout of a witness $w$ (a value put in by hand), and $W$ lists the witnesses an entry rests on. Similarly,
+\verb|\qamshow{narrowed-range}| gives the short form \qamshow{narrowed-range}. One reads off that $p_I$ was carried from Lab to Boosted,
+rests on the measured input $t_I$ and holds at most conditionally, while the general rule $p$ rests on no input.
+
+The package also prints a ledger of all entries. For the five entries above it reads:
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+key & QAM notation & hash\\
+\midrule
+\texttt{preparation} & \qam*{preparation} & \texttt{\qamhash{preparation}}\\
+\texttt{measurement} & \qam*{measurement} & \texttt{\qamhash{measurement}}\\
+\texttt{range-rule} & \qam*{range-rule} & \texttt{\qamhash{range-rule}}\\
+\texttt{measured-preparation} & \qam*{measured-preparation} & \texttt{\qamhash{measured-preparation}}\\
+\texttt{narrowed-range} & \qam*{narrowed-range} & \texttt{\qamhash{narrowed-range}}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The full record of the article, including the entries of Section~\ref{sec:frames}, is reproduced in Appendix~\ref{app:record}.
+
+\subsection{What happens when a rule is broken}
+
+By default a violation stops the compiler. This is deliberate: a document containing a promotion should not come out as a PDF. Had the
+last line above declared the prediction \st{proved}, typesetting would have stopped with
+\begin{lstlisting}
+! Package qam Error: Promotion: `narrowed-range' is declared `proved', but its
+(qam)                weakest premise `measured-preparation' is only
+(qam)                `conditional'.
+\end{lstlisting}
+A declaration that the prediction is independent of inputs, \verb|\qamindependent{narrowed-range}|, stops with
+\begin{lstlisting}
+! Package qam Error: `narrowed-range' is cited as independent of inputs, but
+(qam)                it rests on: measurement.
+\end{lstlisting}
+and a direct comparison of the prediction with the preparation,
+\begin{center}\verb|\qamcompare{narrowed-range}{preparation}|,\end{center}
+stops with
+\begin{lstlisting}
+! Package qam Error: Frame mixing: `narrowed-range' (frame Boosted) and
+(qam)                `preparation' (frame Lab) are compared without a
+(qam)                declared map.
+\end{lstlisting}
+These messages were produced by compiling the three variants; they are quoted, not paraphrased. Further messages cover keys, frames and
+maps that are used before they are declared or declared twice, unknown status names, a conversion whose map starts in the wrong frame,
+and a derivation without premises. A warning mode (\texttt{mode=warning}) turns errors into warnings so that the package can be
+introduced into an existing text; the record exported in that mode is then rejected by the Lean checker, so the violation cannot pass
+unnoticed.
+
+\subsection{The exported record}
+
+With the option \texttt{export}, the package writes every entry as one line of a plain text file. For the example, the lines of the
+prediction and its ancestors read (hashes shortened, lines wrapped)
+\begin{lstlisting}
+map lorentz-z : Lab -> Boosted
+preparation := thesis; frame Lab; status conditional; inputs {};
+    hash 839F0699...; sources {}; statement E=2e_x, B=t e_y+u e_z, ...
+measurement := <6,measurement>; frame Lab; status conditional;
+    inputs {measurement}; hash C2DEF159...; sources {}
+measured-preparation := derive(preparation,measurement); frame Lab;
+    status conditional; inputs {measurement}; hash 16E7B1C0...;
+    sources {839F0699...,C2DEF159...}
+narrowed-range := convert(lorentz-z,measured-preparation); frame Boosted;
+    status conditional; inputs {measurement}; hash 3F78DEBD...;
+    sources {16E7B1C0...}
+\end{lstlisting}
+An input is written as \texttt{<6,measurement>}: the format tags every value put in by hand as a \emph{witness}, one of a small
+set of tagged object kinds that the request language of Section~\ref{sec:requests} also uses. Appendix~\ref{app:record} reproduces the full exported record of this article. The exported file is the interface to every other
+checker. Checking does not depend on trusting the \TeX{} package.
+
+\subsection{Three checkers}
+
+Three programs, written independently of one another, check an exported record. Two of them apply the rules of
+Definition~\ref{def:rules}; the third checks the hashes:
+\begin{enumerate}[leftmargin=1.5em]
+\item the \TeX{} package, while the document is typeset;
+\item \texttt{qamcheck}, a program written in Lean~4, on the exported file. It performs the one-pass check of
+Section~\ref{sec:properties}, including the hash links, and its correctness properties are proved in Lean (Appendix~\ref{app:lean});
+\item \texttt{qamhash.py}, a short Python script that recomputes every entry hash, the record hash and the MD5 of the source file.
+\end{enumerate}
+Lean does not compute MD5; the script does. Lean checks that the links between the recorded hashes are consistent. For a release, a
+manifest of SHA-256 sums over the source, the PDF and the record is written in addition.
+
+A checker that only ever sees good records is not tested. The repository therefore contains deliberately broken records that must be
+rejected: a promotion, a frame mixing, a false declaration of independence, a conversion whose map starts in the wrong frame, a broken hash
+link, an entry whose statement was edited after export, and an input that was deleted by hand. The last cannot be produced by the \TeX{}
+package at all. It ensures that the Lean checker does more than repeat what the package already prevents. The \TeX{} package has its
+own test suite of 34 small documents, each of which must either compile or stop with a specific error.

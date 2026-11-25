@@ -1,0 +1,66 @@
+% F3: the frame plane and the state disk.  Tachyon map z -> iz (rotation by 90 deg) against time reversal z -> conj z
+% (reflection) and J_B = i conj z.  2.5D: two stacked panels with shadows; the lower panel is the readout disk b.
+% All positions are exact consequences of the maps: b(iz) = -b(z), b(conj z) = (b1,-b2), b(J_B z) = (-b1,b2)
+% (Companion v4.9.0-r04.2(b),(c), v4.9.0-r28).
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize,
+  vec/.style={-{Stealth[length=2.2mm]}, line width=0.9pt},
+  panel/.style={fill=white, draw=black!55},
+  shadow/.style={fill=black!22},
+]
+% ---------------- upper panel: the frame plane ----------------
+\begin{scope}
+  \fill[shadow] (-2.95,-2.45) rectangle (3.05,2.65);
+  \filldraw[panel] (-3.1,-2.3) rectangle (2.9,2.8);
+  \node[anchor=north west, font=\footnotesize\bfseries, text=black!65] at (-3.05,2.75) {frame plane (the $\mathbb C$ factor)};
+  \draw[-{Stealth[length=1.6mm]}, black!60] (-2.4,0) -- (2.5,0) node[below left] {$\operatorname{Re}$};
+  \draw[-{Stealth[length=1.6mm]}, black!60] (0,-2.0) -- (0,2.3) node[below right] {$\operatorname{Im}$};
+  \draw[black!25] (0,0) circle (1.8);
+  % z at 30 deg, iz at 120 deg, conj z at -30 deg, J_B z = i conj z at 60 deg
+  \draw[vec, black] (0,0) -- (30:1.8) node[right] {$z$};
+  \draw[vec, black, dashed] (0,0) -- (120:1.8) node[above left] {$iz$};
+  \draw[vec, black, densely dotted] (0,0) -- (-30:1.8) node[right] {$\bar z$};
+  \draw[vec, black!60, dash dot] (0,0) -- (60:1.8) node[above right] {$J_Bz=i\bar z$};
+  \draw[-{Stealth[length=1.5mm]}, black] (30:0.75) arc (30:120:0.75);
+  \node at (75:1.02) {$90^\circ$};
+  \draw[{Stealth[length=1.5mm]}-{Stealth[length=1.5mm]}, black!70] (30:1.35) arc (30:-30:1.35);
+  \node[right] at (8:1.38) {\scriptsize mirror};
+\end{scope}
+% ---------------- lower panel: the state disk ----------------
+\begin{scope}[xshift=7.2cm, yshift=-0.9cm]
+  \fill[shadow] (-2.85,-2.45) rectangle (3.15,2.65);
+  \filldraw[panel] (-3.0,-2.3) rectangle (3.0,2.8);
+  \node[anchor=north west, font=\footnotesize\bfseries, text=black!65] at (-2.95,2.75) {state disk $b=(\operatorname{Re}s,\operatorname{Im}s)/2u$};
+  \fill[black!6] (0,0) circle (1.8);
+  \draw[black!60] (0,0) circle (1.8);
+  \draw[black!45] (-2.1,0) -- (2.1,0) node[below left] {$b_1$};
+  \draw[black!45] (0,-2.0) -- (0,2.15) node[below right] {$b_2$};
+  \node[font=\scriptsize, text=black!70, align=center] at (1.45,-2.08) {$b_1>0$: matter};
+  \node[font=\scriptsize, text=black!70, align=center] at (-1.45,-2.08) {$b_1<0$: tachyon};
+  % P at centre; a boost moves b radially to the rim (frame R)
+  \fill (0,0) circle (1.6pt) node[above left=-1pt] {$P$};
+  \draw[-{Stealth[length=1.5mm]}, black!70] (1.2,0.709) -- (1.503,0.888);
+  \draw[fill=white] (1.550,0.916) circle (1.6pt) node[above=1pt] {$R$};
+  % sample state b and its images
+  \fill (1.1,0.65) circle (1.5pt) node[above left=0pt and -2pt] {$b$};
+  \fill (-1.1,-0.65) circle (1.5pt) node[left=1pt] {$-b$};
+  \fill (1.1,-0.65) circle (1.5pt) node[below=1pt] {$(b_1,-b_2)$};
+  \fill (-1.1,0.65) circle (1.5pt) node[above=1pt] {$(-b_1,b_2)$};
+  \draw[-{Stealth[length=1.6mm]}, dashed] (1.03,0.61) -- (-1.03,-0.61);
+  \draw[-{Stealth[length=1.6mm]}, densely dotted] (1.1,0.57) -- (1.1,-0.57);
+  \draw[-{Stealth[length=1.6mm]}, dash dot, black!60] (1.02,0.65) -- (-1.02,0.65);
+\end{scope}
+% connector between the panels
+\draw[black!45, densely dashed, -{Stealth[length=1.6mm]}] (2.95,0.6) to[out=0,in=180] (4.15,0.1);
+\end{tikzpicture}
+\caption{The frame maps on the frame plane (left) and on the readout disk of the field doublet (right).
+The tachyon map $z\mapsto iz$ (dashed) is a rotation by $90^\circ$; on the disk it is the point
+reflection $b\mapsto-b$. Time reversal of the amplitudes $z\mapsto\bar z$ (dotted) is a mirror image;
+on the disk it reverses $b_2$. Their composite $J_B z=i\bar z$ (dash-dotted) reverses $b_1$. Light-like
+fields sit at the centre $P$ in every frame; a boost moves a non-null state along its own direction
+and reaches the rim $|b|=1$, the frame $R$ with $\mathbf E\parallel\mathbf B$, at a finite rapidity.
+\Established{} for the maps and their action \cite{QSC} (\rndold{r04}, \rndold{r28}, \rndold{r51}).}
+\label{fig:A-frame-plane}
+\end{figure}

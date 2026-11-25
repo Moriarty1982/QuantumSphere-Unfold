@@ -1,0 +1,280 @@
+% Section 4 (group B): particles from C (x) H (x) O. Sources: Companion thm:SM, thm:octonion-SU3, thm:three-generations,
+% rounds v4.9.0-r34, r35, r37, r40--r43, r48, r49; v4.10.0-r13, r14.4, r18.4, r19, r25--r27, r59, r60.
+\section{Particles from \texorpdfstring{$\mathbb C\otimes\mathbb H\otimes\mathbb O$}{C x H x O}: a conditional construction}
+\label{sec:B-particles}
+
+The carrier of Section~\ref{sec:A-carrier} has a natural extension to the Dixon algebra
+$W=\mathbb C\otimes\mathbb H\otimes\mathbb O\cong\mathbb C^{32}$ \cite{Dixon1994}. The Companion states in its main text that
+this extension ``generates'' the Standard Model gauge group (\cite{QSC}, \texttt{thm:SM}) and that the three generations
+sit on three octonion units (\cite{QSC}, \texttt{thm:three-generations}). Both statements carry status notes in the
+Companion today. The first is too strong: the complex scalar alone generates a global phase, not electromagnetism. The
+second places colour and generation on the same object, because the cyclic map $e_4\to e_5\to e_6$ is a colour rotation.
+This section reports what survives the later rounds. The result is \Conditional{} throughout: once a small number of named
+choices is made, one generation and its gauge quantum numbers follow, while the number of generations, the masses and the
+mixing do not.
+
+\subsection{One generation under named choices}
+\label{sec:B-one-generation}
+
+\paragraph{Colour and charge.}
+Let $L_a$ and $R_a$ denote left and right multiplication by $e_a$ on $\mathbb O$, and let $i$ be the $\mathbb C$ factor of $W$,
+read as the quantum-mechanical unit (the ``outer'' unit, as opposed to the ``inner'' unit $L_{e_7}$). Colour is the
+stabiliser $SU(3)_c=\operatorname{Stab}_{G_2}(e_7)$ of one imaginary unit (\cite{QSC}, \texttt{thm:octonion-SU3}). Following
+Furey \cite{Furey2015}, put
+\begin{equation}
+ \alpha_a=\tfrac12\bigl(L_{e_a}+i\,L_{e_7e_a}\bigr)\quad(a=4,5,6),\qquad
+ N=\sum_a\alpha_a^\dagger\alpha_a,\qquad Q=\tfrac13N .
+ \label{eq:B-number-operator}
+\end{equation}
+The Clifford relations of the $L_a$ give $\alpha_a^2=0$ and $\{\alpha_a,\alpha_b^\dagger\}=\delta_{ab}$, so $N$ is a number
+operator with eigenvalues $0,1,2,3$ of multiplicities $1,3,3,1$. Every element of $SU(3)_c$ commutes with $Q$; the
+eigenspaces $Q=0$ and $Q=1$ are colour singlets spanned by $1\pm ie_7$, the eigenspaces $Q=\tfrac13$ and $Q=\tfrac23$ are
+conjugate colour triplets (\rndold{r34}). On $\mathbb C\otimes\mathbb O$ the same sectors are the joint eigenspaces of the
+commuting involutions $iL_{e_7}$ and $iR_{e_7}$,
+\begin{equation}
+ P_{(\ell,r)}=\tfrac14\,(1+\ell\,iL_{e_7})(1+r\,iR_{e_7}),\qquad 6Q=3-iL_{e_7}-2\,iR_{e_7},
+ \label{eq:B-sectors}
+\end{equation}
+with ranks $1,3,3,1$; these tables are derived from the octonion product in Lean~4 (\rndold{r48}). \Established{} as
+algebra. It reproduces Furey's charge pattern in the Companion's conventions and is a consistency check, not a prediction.
+
+One property is specific to the frame picture of Section~\ref{sec:A-frames}. The time-reversal part $T$ of the frame maps is complex
+conjugation of the $\mathbb C$ factor, and $TQT^{-1}=1-Q$ (\rndold{r34}). The spectrum and the colour structure are
+frame-free, but which state carries which charge is not: a charge statement has to name its frame.
+
+\paragraph{Weak isospin, chirality and hypercharge.}
+The quaternion factor offers two commuting copies of $\mathfrak{su}(2)$, from the left and from the right. The distribution
+used from \rndold{r41} on places the Lorentz group on the left ($L_q$ for rotations, $iL_q$ for boosts) and the weak
+$SU(2)$ on the right, $T_a=-\tfrac i2R_{e_a}$. With $Y/2=Q-\tfrac12$ and $Q_{\rm em}=T_3+Y/2$ this gives the hypercharges of
+the left-handed doublets and their conjugates, but every state is then a weak doublet and the right-handed singlets are
+missing. The missing half is supplied by a projector of the compensator form of Section~\ref{sec:A-carrier} (\rndold{r42}):
+\begin{equation}
+ C_{\rm ch}=\tfrac12(1+J),\quad J=i\,L_{e_7},\qquad
+ T_a'=C_{\rm ch}T_a,\qquad
+ \tfrac Y2=Q-\tfrac12+(1-C_{\rm ch})T_3 .
+ \label{eq:B-chirality}
+\end{equation}
+$C_{\rm ch}$ is a Hermitian projector of rank $16$ that commutes with colour, the Lorentz group, the right action of $\mathbb H$
+and $Q$. Under $(SU(3)_c,SU(2)',Y/2)$ the space splits into
+\begin{equation}
+ (3,2,\tfrac16)\oplus(1,2,-\tfrac12)\oplus(\bar3,1,-\tfrac23)\oplus(\bar3,1,\tfrac13)\oplus(1,1,1)\oplus(1,1,0),
+ \label{eq:B-content}
+\end{equation}
+that is $Q_L,L_L,u^c,d^c,e^c,\nu^c$ with complex dimensions $12,4,6,6,2,2$: sixteen Weyl states with two Lorentz
+components each, and $Q_{\rm em}=T_3'+Y/2$. The weak $SU(2)'$ acts only on the image of $C_{\rm ch}$; in the model this is
+chirality. All four anomaly traces ($\operatorname{Tr}Y$, $\operatorname{Tr}Y^3$, $SU(2)^2U(1)$, $SU(3)^2U(1)$) vanish.
+
+\paragraph{Which choices are forced.}
+Round \rndold{r43} asks why this projector and this offset. Fix the setting: $C=\tfrac12(1+J)$ with $J$ Hermitian,
+$J^2=1$, $J\neq\pm1$, acting on $\mathbb C\otimes\mathbb O$, commuting with colour and $Q$, of rank 16, with image one
+singlet and one triplet; $Q_{\rm em}=T_3+Q+s$. Then:
+
+\begin{proposition}[\rndold{r43}]\label{prop:B-anomaly-choice}
+Under this setting there are exactly four chirality projectors, $J=\pm iL_{e_7}$ and $J=\pm iR_{e_7}$. For each,
+$\operatorname{Tr}Y=0$ holds exactly for $s=-\tfrac12$. At $s=-\tfrac12$ all four anomaly traces vanish exactly for
+$J=\pm iL_{e_7}$, while $J=\pm iR_{e_7}$ give $\operatorname{Tr}Y^3=\pm\tfrac32$. The two admissible choices are frame images
+of each other, $T(iL_{e_7})T^{-1}=-iL_{e_7}$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+The commutant of colour and $Q$ on $\mathbb C\otimes\mathbb O$ consists of scalars on the four $Q$-sectors, since each is
+colour-irreducible with its own charge. A Hermitian involution there is a sign per sector, and the rank and image conditions
+leave four. The traces are exact fractions over the sixteen states (script \texttt{k84}).
+\end{proof}
+
+Gravitational anomaly cancellation fixes the hypercharge offset, and the remaining anomalies select left against right
+multiplication. What is left is the Standard Model and its frame mirror. The hypercharge offset also has a clean reading
+(\rndold{r49}): on one generation $2(Q-\tfrac12)=B-L$, hence
+\begin{equation}
+ \tfrac Y2=\tfrac{B-L}{2}+T_3^R,\qquad Q_{\rm em}=T_3^L+T_3^R+\tfrac{B-L}{2},\qquad T_3^L=C\,T_3,\ T_3^R=(1-C)\,T_3 ,
+ \label{eq:B-BL}
+\end{equation}
+the left-right symmetric charge formula. The axis $e_7$ carries $B-L$, not the electric charge: no combination of
+$1$, $iL_{e_7}$, $iR_{e_7}$ and their product acts as $Q_{\rm em}$ on a generation (it misses by the $T_3$ splitting inside a
+doublet). The photon needs the weak isospin from $\mathbb H$ as well.
+
+Table~\ref{tab:B-choices} separates what is set from what follows. None of this is a prediction: that the Standard Model
+content is anomaly free is known, and similar constructions on $\mathbb C\otimes\mathbb H\otimes\mathbb O$ exist in the
+literature \cite{Dixon1994,Furey2015}. What the Companion adds is the placement on the frames and sides of its own carrier,
+and the observation that, in this structure, anomaly cancellation alone decides between left and right.
+
+\begin{table}[t]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+set (choices) & follows (under the choices)\\
+\midrule
+$\mathbb C$ factor as the quantum-mechanical unit; colour as $\operatorname{Stab}_{G_2}(e_7)$ &
+charge spectrum $0,\tfrac13,\tfrac23,1$ with multiplicities $1,3,3,1$; singlets and conjugate triplets (\rndold{r34}, \rndold{r48})\\
+Lorentz group on the left of $\mathbb H$, weak $SU(2)$ on the right &
+doublet structure; $T$ acts as charge conjugation $Q_{\rm em}\mapsto-Q_{\rm em}$ (\rndold{r41})\\
+chirality projector of compensator form on $\mathbb C\otimes\mathbb O$; $Q_{\rm em}=T_3+Q+s$ &
+$J=\pm iL_{e_7}$ and $s=-\tfrac12$ from anomaly cancellation; sixteen Weyl states \eqref{eq:B-content} (\rndold{r42}, \rndold{r43})\\
+--- & $e_7$ carries $B-L$; charge formula \eqref{eq:B-BL} (\rndold{r49})\\
+number of generations; symmetry breaking; couplings & not addressed\\
+\bottomrule
+\end{tabularx}
+\caption{One generation on $\mathbb C\otimes\mathbb H\otimes\mathbb O$: choices and consequences. Status \Conditional.}
+\label{tab:B-choices}
+\end{table}
+
+\paragraph{No ban on a fourth generation.}
+The search for a second threefold structure outside $\mathbb O$ led to triality (\rndold{r37}): the three slots of
+$\mathbb O^3$ carry the three inequivalent eight-dimensional representations of $\mathrm{Spin}(8)$, the cyclic slot shift is
+the outer triality automorphism, and what it fixes is $G_2\supset SU(3)_c$. Generation would then be what the traversal
+permutes and colour what it fixes. That there are exactly three slots rests on $\operatorname{Out}(\mathrm{Spin}(8))=S_3$.
+This excludes a fourth slot with a new eight-dimensional representation, not a repetition of one of the three. The
+structure therefore does not forbid a fourth generation, and that the slots \emph{are} the generations is a \Reading.
+
+\subsection{A generation qubit needs copies}
+\label{sec:B-commutant}
+
+Before asking where three generations could sit, one can ask which operators on one generation could distinguish
+generations at all. They must commute with the gauge and Lorentz generators.
+
+\begin{proposition}[Commutant of one generation, \rnd{r19}]\label{prop:B-commutant}
+On $W=\mathbb C\otimes\mathbb H\otimes\mathbb O$ with the Lorentz generators $L_q$, $iL_q$, the weak generators $T_a'$, the
+hypercharge of \eqref{eq:B-chirality} and the eight colour derivations, the complex-linear operators commuting with all
+generators form a commutative algebra $\cong\mathbb C^6$, one phase per multiplet of \eqref{eq:B-content}. No antilinear
+operator commutes with all generators. On $n$ copies of the generation the commutant has dimension $6n^2$ and contains
+$M_n(\mathbb C)$ acting on the copy index.
+\end{proposition}
+
+\begin{proof}
+The six multiplets in \eqref{eq:B-content} are irreducible, pairwise inequivalent and of complex type, each with
+multiplicity one. By Schur's lemma a commuting complex-linear operator is a scalar on each. On $n$ copies each multiplet
+$\mathcal K_a$ appears as $\mathcal K_a\otimes\mathbb C^n$, and the commutant is $\bigoplus_a\mathrm{id}_{\mathcal K_a}\otimes M_n(\mathbb C)$.
+The explicit computation (\rnd{r19}.1, \rnd{r25}.1) confirms this on the concrete carrier, including the absence of an
+antilinear part.
+\end{proof}
+
+The consequence is \Established: on one generation there is no pair of anticommuting symmetric operators, hence no qubit
+with three mutually unbiased bases, whether built from the frame maps or from anything else. Of the frame maps,
+$R\colon z\mapsto iz$ is central and $T$, $J_B$ map a generation to its conjugate. A generation index exists only when the
+carrier contains the generation several times, and the number of copies is then an input (\rnd{r19}.2). The reading ``three
+generations are the three frame maps'' of Section~\ref{sec:B-koide} therefore takes the number three as input on any
+charged carrier.
+
+\subsection{Three routes to a generation index}
+\label{sec:B-routes}
+
+Three carriers were examined for a neutral generation structure with an order-three cycle and a reference state at the
+``magic'' angle $\arccos(1/\sqrt3)$, the profile that would produce the Koide octant of Section~\ref{sec:B-koide}.
+Figure~\ref{fig:B-routes} summarises what each delivers. All items are explorations, \Exploration, except where a test
+is named.
+
+\paragraph{Route A: sedenions with charge axis $e_8$.}
+On $\mathbb C\otimes\mathbb S$ (sedenions $\mathbb S$, cycle $\psi$ of order three) a backward search over all charges with
+$[Q,\psi]=0$, $[Q,\mathfrak{su}(3)_c]=0$, $\bar Q=1-Q$ and spectrum $\{0,\tfrac13,\tfrac23,1\}$ gives, up to two signs,
+\begin{equation}
+ Q_*=P_0\bigl(\tfrac12-\tfrac i2L_{e_8}\bigr)P_0+\tfrac23P_3+\tfrac13P_{\bar3}
+ \label{eq:B-Qstar}
+\end{equation}
+with charge axis $e_8$, the only $\psi$-fixed imaginary direction (\rnd{r13}.1). The axis is an assumption, registered
+as placeholder CT-003; everything below inherits it. The kernel $N=\operatorname{span}(1+ie_8,\,e_7-ie_{15})$ is a colour-
+and charge-neutral qubit, on which $\psi$ acts as $\operatorname{diag}(1,\omega)$. The quaternion algebra
+$\mathbb H_n=\operatorname{span}(1,e_7,e_8,e_{15})$ acts on $N$ from the right; its 24 Hurwitz units act as the binary
+tetrahedral group $2T$, whose four threefold axes lie at $|\cos|=1/\sqrt3$ to the $\psi$ axis. An eigenstate of an
+order-three Hurwitz unit has orbit overlap $\rho^2=\tfrac12$, hence $K=\tfrac23$ and Bargmann phase $\pi/4$ (\rnd{r13}.2).
+The target was known in advance: this is a construction, not a derivation. The decisive negative is the content: under
+$(Q_*,\text{colour},\psi)$ the space carries exactly two complete generations, and $\psi$ acts inside each as a phase, not as a
+generation step (\rnd{r13}.3). The Majorana vector on $N$ is not fixed, and two flavours do not give three masses
+(\rnd{r13}.5). A test of the inherited charge (H103a) was \Refuted.
+
+\paragraph{Route B: triality slots.}
+On $(\mathbb O^3,\tau)$ with $\tau(x,y,z)=(y,z,x)$ there are three slots and a cycle. With the slot charge every species
+splits $\tau$-symmetrically as $2+1$, and on the doublet $\tau=\operatorname{diag}(\omega,\bar\omega)$. But a real slot vector
+lies on the equator of that doublet and gives $\rho^2=\tfrac14$, $K=\tfrac12$; and no operation at hand supplies a twofold
+axis at the magic angle (of $10\,368$ monomial slot operations with twelfth roots of unity, $72$ preserve the splitting, and
+they rotate only about the $\tau$ axis or perpendicular to it) (\rnd{r13}.6). The two routes are complementary: the
+quaternion group needs a doublet made of two slots (route A), the slot cycle needs three slots and turns the doublet into a
+Fourier pair (route B). With the present inventory the profile cannot be met.
+
+\paragraph{Dixon copies on the Hilbert-shift tower.}
+Proposition~\ref{prop:B-commutant} suggests copies. Read as stages of the Companion's Hilbert-shift tower, two Dixon
+algebras form a stage HS(7) and four form HS(8) (\rnd{r25}). The duplication rule above HS(6) is a setting; under it both
+stages are admissible, and all copy operations are free of leakage and debt (\rnd{r26}, with the correction \rnd{r27}).
+Two copies give a copy qubit, whose three unbiased states form the flat octant of Section~\ref{sec:B-koide}, with one
+massless generation. Four copies give $\mathbb C^4=\mathrm{Sym}^2\oplus\Lambda^2$, a triplet and a singlet; the spin-one
+triangle of Section~\ref{sec:B-koide} lies in the triplet, and the only equivariant map from three triplet vectors to the
+singlet is the triple product $\det V$, with $|\det V|^2=\det G$. The singlet is occupied exactly when all three masses are
+positive. This is a \Reading: the number of copies is set, and that the generations are read out as states with overlap
+$\tfrac12$ remains the Koide input.
+
+\input{figures/F4-routes}
+
+\subsection{The Albert algebra and \texorpdfstring{$A_4$}{A4}}
+\label{sec:B-albert}
+
+Round \rnd{r60} takes the carrier $H_3(\mathbb O)$ of Hermitian $3\times3$ octonion matrices with the Jordan product
+$X\circ Y=\tfrac12(XY+YX)$. Its three off-diagonal octonions are the slots, $\operatorname{Aut}=F_4\supset\mathrm{Spin}(8)$
+carries triality, colour is the diagonal $SU(3)_c$, and charge is the slot-wise $C=L_{e_7}$. Reading the slots as
+generations is a reading; the following statements are algebra (Wolfram exact, scripts \texttt{k275}--\texttt{k277}).
+
+\begin{proposition}[\rnd{r60}.1, .3, .4]\label{prop:B-albert}
+\begin{enumerate}
+\item[(a)] The commutant of $G_2$ in $F_4$ is the real $SO(3)$ acting by $X\mapsto RXR^{\mathsf T}$. Under it every colour
+triplet is spin $1$; the colour singlets decompose as $1\oplus3\oplus5$.
+\item[(b)] Charge breaks this family $SO(3)$ to exactly $A_4$, with the slots in its three-dimensional irreducible
+representation.
+\item[(c)] On the colour triplets every $A_4$-invariant operator is $SO(3)$-invariant. Hence, with exact $A_4$, quark masses
+are degenerate and $V_{\rm CKM}=I$.
+\item[(d)] For a flavon $v$ in the $e_7$ parts of the slots, $Y=C\,X(v)$ is real symmetric with zero diagonal and entries
+$-v_k$, and its cubic Albert norm is $N(Y)=\det Y=-2\,v_1v_2v_3$, with $\operatorname{Tr}Y=0$, $\operatorname{Tr}Y^2=2|v|^2$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+(b) Of the 24 signed permutations of determinant $+1$, exactly the 12 with even slot permutation commute with charge; the
+odd ones exchange $x_{ij}$ with $\bar x_{ij}$, and conjugation turns $L_{e_7}$ into $-R_{e_7}$. The residual Lie algebra is
+zero, and every finite subgroup of $SO(3)$ containing $A_4$ is $A_4$, $S_4$ or $A_5$; an icosahedral rotation breaks.
+(c) Spin $1\otimes1$ contains $l=0,1,2$ only, and $A_4$ has no invariant at $l=1$ or $l=2$. Since $C$ is $A_4$-invariant, any
+$SO(3)$-equivariant construction from $C$ stays $SO(3)$-invariant on the triplets. (d) A real symmetric matrix with zero
+diagonal and off-diagonal entries $a,b,c$ has determinant $2abc$.
+\end{proof}
+
+The $A_4$ that earlier rounds set by hand as a slot symmetry is here the remnant of a derived family symmetry. The test
+H127 asked which spin carries the breaking. Stage~A was \textbf{confirmed}: the charge part
+$A_0=P_sCP_s$ lies entirely in the spin-3 component ($w_3=1$, $w_{l\neq3}=0$), a single tensor of type $xyz$, the object that
+$A_4$ flavon models introduce by hand. Stage~B (a leak into the quarks at some order) was \Refuted{} by its wording, and by
+(c) it is empty for every $SO(3)$-compatible coupling. Quark mixing therefore requires that $A_4$ itself breaks.
+
+The vacuum alignment is not fixed. A potential built only from $Y$ depends on $|v|^2$ and $v_1v_2v_3$, and its minimum is of
+type $(1,1,1)$ with residual $\mathbb Z_3$; with the mixed quartic invariants the potential is the general $A_4$ potential,
+and the minimum depends on the coefficient of $\sum_iv_i^4$: the two sample values computed give type $(1,1,1)$ and type $(1,0,0)$ (residual $\mathbb Z_2$). This is
+the known $A_4$ phase diagram, and the coefficients are free. No blind test of the alignment is possible at present
+(\rnd{r60}.5). Set remain the slots as generations, the flavon placement, the coefficients, every mass and every scale.
+
+\subsection{A relative CP sign between leptons and quarks}
+\label{sec:B-cp}
+
+On route A the right multiplications obey the quaternion relations with opposite orientation on the neutral and on the
+coloured part (\rnd{r13}.4), a consequence of the non-associativity of the sedenion product. In terms of the neutral family
+$\mathfrak{su}(2)$ (\rnd{r14}.4, under CT-003):
+\begin{equation}
+ [R_{e_7},R_{e_8}]=-2R_{e_{15}}\ \text{on the lepton block},\qquad [R_{e_7},R_{e_8}]=+2R_{e_{15}}\ \text{on the coloured block}.
+ \label{eq:B-cp}
+\end{equation}
+For three projectors onto the $+1$ eigenstates of generators with $[J_x,J_y]=isJ_z$, $s=\pm1$, the Bargmann invariant is
+$\operatorname{tr}(P_xP_yP_z)=\tfrac14+\tfrac{is}{4}$. Relative to the Lorentz spin (left action of $\mathbb H$, invariant
+$\tfrac14+\tfrac i4$) the lepton doublet is the complex-conjugate one: $\tfrac14-\tfrac i4$ on leptons against
+$\tfrac14+\tfrac i4$ on quarks, in all $24+24$ assignments of full rank. This is H125 stage~A, \textbf{confirmed} but
+\emph{not blind} (\rnd{r59}.6). The relative sign survives $i\mapsto-i$, which conjugates both sectors at once; it is the
+first sign in this series that is not a convention.
+
+Stage~B is a prediction against future data. Under the setting S1 (CP arises in both sectors in the same way from the
+family structure) one has $\operatorname{sign}J_{\rm PMNS}=-\operatorname{sign}J_{\rm CKM}$, that is
+$\sin\delta_{\rm PMNS}<0$. It is decided by the first analysis that fixes the sign at $\ge3\sigma$, with deadline
+31~December~2035; the prior probability is $\tfrac12$, and a confirmation would mainly support S1. \Open.
+
+The absolute handedness is different. Every attempt to fix it in \rnd{r59}.1--.4 set it somewhere, and the open choice
+ended at the choice of $i$, which over $\mathbb C$ is a convention (\rnd{r59}.4, \rnd{r59}.15). The orientation of the
+Koide octant in Section~\ref{sec:B-koide-orientation} is of the same kind.
+
+\paragraph{Summary of the section.}
+Under named choices one generation with its charges, chirality and anomaly freedom follows from $\mathbb C\otimes\mathbb H
+\otimes\mathbb O$; this is a consistency result in a known line of work. The number of generations is not derived: one
+generation admits no generation qubit, route~A gives two generations, route~B gives three slots without the Koide
+reference, copies give whatever number is set, and the Albert algebra gives a derived family $SO(3)$ broken to $A_4$ with
+the slots read as generations. Masses, mixing angles and scales are not derived anywhere in this section. OP3 and OP4 remain
+\Open.
