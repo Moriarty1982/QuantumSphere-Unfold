@@ -2,7 +2,7 @@
 
 **Nachtrag 25.11.2026 (abends):** H138 abgeschlossen (a und b widerlegt). H139 abgeschlossen (a nach Wortlaut widerlegt, b und c bestätigt). H140 abgeschlossen (a, b, c bestätigt; Kopien in ℂ⊗𝕊 keine drei Generationen). H141 abgeschlossen (a, b, c bestätigt; keine gemeinsame Ladung). H142 abgeschlossen (a, c, d bestätigt, b widerlegt). Kein neuer offener Test.
 
-**Nachtrag 25.11.2026:** H128 abgeschlossen (H128a widerlegt, H128b für e₇ bestätigt, für e₈ widerlegt). H130 abgeschlossen (a und b bestätigt). H131 abgeschlossen (a bestätigt, b widerlegt). H134 abgeschlossen (a und c bestätigt, b widerlegt). Kein neuer offener Test.
+**Nachtrag 25.11.2026:** H128 abgeschlossen (H128a widerlegt, H128b für e₇ bestätigt, für e₈ widerlegt). H130 abgeschlossen (a und b bestätigt). H131 abgeschlossen (a bestätigt, b widerlegt). H134 abgeschlossen (a und c bestätigt, b widerlegt). H137 abgeschlossen (Bandschaltung auf Überlagerungen, nicht blind: a und d1 bestätigt, b, c und d2 widerlegt). Kein neuer offener Test.
 
 **Nachtrag 24.11.2026 (v4.10.0-r60):** H127 abgeschlossen (Stufe A bestätigt, Stufe B nach Wortlaut widerlegt). Für die Vakuumausrichtung gibt es keinen blinden Test; H128 bleibt frei.
 

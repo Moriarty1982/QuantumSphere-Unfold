@@ -23,7 +23,7 @@ ZuseTrace[program, Last[program["examples"]], True]
 
 Mit `True` hängt Wolfram bei Bedarf rechts eine Nullzelle an und arbeitet mit derselben Übergangstabelle weiter. Links bleibt die Grenze bei Adresse null. Mit `False` ist das Band fest.
 
-Qiskit baut für jede Bandlänge eine reversible Einzelschrittschaltung. Alle Entscheidungsfälle stehen in der Schaltung, wirksam wird nur der Fall mit passendem Zustand, Kopf und Lesebit. Die Schaltung erhält die Eingabe und XOR-verknüpft das Ergebnis mit einem separaten Register. `FiniteBand(program, cells).circuit` liefert die Schaltung für eigene Experimente. Der Python-Treiber liest das Ergebnis jedes Schritts aus und verwendet es als Basiszustand für den nächsten Schritt. Der Statevector-Beispiellauf ist auf 18 Qubits begrenzt.
+Qiskit baut für jede Bandlänge eine reversible Einzelschrittschaltung. Alle Entscheidungsfälle stehen in der Schaltung, wirksam wird nur der Fall mit passendem Zustand, Kopf und Lesebit. Die Schaltung erhält die Eingabe und XOR-verknüpft das Ergebnis mit einem separaten Register. `FiniteBand(program, cells).circuit` liefert die Schaltung für eigene Experimente. Der Python-Treiber liest das Ergebnis jedes Schritts aus und verwendet es als Basiszustand für den nächsten Schritt. Der Statevector-Beispiellauf ist auf 18 Qubits begrenzt. Auf Überlagerungen von Bandkonfigurationen wirkt die Schaltung linear und phasentreu, aber als klassisch-reversibles Orakel: Die Eingabe bleibt als Kopie stehen, und der Folgezustand allein ist nicht kohärent ([Test H137](../../../notes/research/predictions/Ergebnis_H137_Bandschaltung_Ueberlagerungen.md)).
 
 ## Mit QAM, MML und MMA rechnen
 
