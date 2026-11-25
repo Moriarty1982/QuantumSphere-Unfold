@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.6cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,array}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,calc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[export]{qam}
+\usepackage{qam-physics}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,breaklines=true,
+  frame=single,framesep=4pt,rulecolor=\color{black!30},xleftmargin=6pt,xrightmargin=6pt}
+\setlength{\emergencystretch}{3em}
+\newcommand{\st}[1]{\textsf{#1}}
+\newcommand{\cont}{\textsf{continue}}
+\newcommand{\guard}{\textsf{guard}}
+\newcommand{\reject}{\textsf{reject}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\tr}{\operatorname{tr}}
+
+\title{What a Conclusion Rests On:\\[2pt]
+\large Checked Bookkeeping of Status, Inputs and Frames in Long Research Records}
+\author{Marc Brendecke\\ \small Independent researcher, Bochum}
+\date{Draft, \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+When a research project is carried out over months with the help of language models, its written record grows faster than anyone
+can check the dependencies inside it. The costly mistakes are then rarely wrong calculations. They are silent transitions: a result
+that holds only under a condition is later cited as proved, a value that was put in by hand is later presented as derived, or two
+quantities from different frames of reference are compared as if they were the same kind of thing. This article presents QAM, a small
+typed bookkeeping language for such records, together with the tools that check it. Every statement in a QAM record carries a frame,
+a status on a five-step scale from \st{open} to \st{proved}, the inputs it rests on and the exact versions of its premises. Four rules,
+stated in the article and proved there, guarantee that no conclusion is stronger than what it rests on, that no input disappears along
+a chain of reasoning, and that frames change only through declared maps. Calculations are submitted as requests to an executor that
+answers with one of three outcomes (\cont, \guard\ or \reject) and stores a hashed receipt; a premise graph in SQLite answers what
+a result rests on and what depends on a given premise. A single worked example from elementary electrodynamics, a field
+configuration observed before and after a Lorentz boost, runs through the whole article. QAM secures the form of a record. It does
+not make its content true, and it replaces neither a proof assistant nor an experiment.
+\end{abstract}
+
+\input{s1_introduction}
+\input{s2_example}
+\input{s3_model}
+\input{s4_properties}
+\input{s5_frames}
+\input{s6_latex}
+\input{s7_requests}
+\input{s8_graph}
+\input{s9_tape}
+\input{s10_llm}
+\input{s11_related}
+
+\appendix
+\input{a_lean}
+\input{a_reproduction}
+\input{a_record}
+
+\input{references}
+\end{document}

@@ -1,0 +1,27 @@
+\section{The record of this article}\label{app:record}
+
+Typesetting this article with the option \texttt{export} writes its QAM record to \texttt{main.qam}. The listing below is that record from
+the previous typesetting run, without its two comment lines (which carry the MD5 of the source and the record hash). Long lines are
+wrapped. The script \texttt{qamhash.py} recomputes every hash in it, and the Lean checker accepts it.
+
+{\footnotesize
+\IfFileExists{record_snapshot.qam}
+  {\lstinputlisting[basicstyle=\ttfamily\scriptsize]{record_snapshot.qam}}
+  {\noindent[Record snapshot not yet generated; run \texttt{make} in \texttt{paper/qam-standalone}.]}
+}
+
+For comparison, the hand-authored record used by the executor in Section~\ref{sec:requests} contains one map and two entries:
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
+map lorentz-z : Lab -> Boosted
+gram-preparation := claim; frame Lab; status conditional; inputs {};
+  hash BE014772A536438E3767BBAE3EBC7AE5; sources {};
+  statement E=2 e_x, B=t e_y+u e_z, t^2+u^2=1, c=1, boost v=1/4 along z
+gram-range-rule := convert(lorentz-z,gram-preparation); frame Boosted;
+  status conditional; inputs {}; hash 7C36EDC97D94E61FF80542EC521D2BC9;
+  sources {BE014772A536438E3767BBAE3EBC7AE5};
+  statement For -1<=a<=b<=1 and t in [a,b], the exact image is diag(p,1-p)
+  with p in [p(a),p(b)], p(t)=(8-t)^2/(2(8-t)^2-45)
+\end{lstlisting}
+In that record the measured interval is not an entry: it enters as an argument of the request and is stored in the receipt. The record
+of this article is stricter and declares the measurement as an input, so that the narrowed prediction carries it in its input set. Both
+are legitimate choices; the second makes the dependence visible to the record checkers, the first only to the receipt.

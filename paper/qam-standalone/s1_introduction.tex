@@ -1,0 +1,73 @@
+\section{Introduction}\label{sec:intro}
+
+\subsection{Silent transitions}
+
+A language model can produce more pages of mathematical text in an afternoon than a careful reader can check in a week. The errors
+that matter in such a body of text are usually not the obvious ones. A sign error or a wrongly expanded bracket tends to surface at the
+next calculation that uses it. Much harder to see are steps that leave no trace in the prose at all. We call them \emph{silent
+transitions}, and three kinds recur:
+\begin{itemize}[leftmargin=1.5em]
+\item \emph{Promotion.} A statement that holds only under a stated condition, or that was only checked numerically, is cited a few
+pages later as if it were a theorem, and further results are built on it.
+\item \emph{An input read as a result.} A value that was taken from the literature, fitted to data or simply chosen reappears later
+as a prediction of the theory.
+\item \emph{Frame mixing.} Two quantities are compared or combined although they belong to different frames of description (different
+observers, conventions, units, or model assumptions), and no map between those frames has been stated.
+\end{itemize}
+None of these is an arithmetic error, and each is a natural thing for a language model to do. A model continues a text so that it reads
+coherently. A condition that was mentioned twenty paragraphs earlier contributes little to the coherence of the next sentence, so the
+continuation smooths it away. This is not a rare malfunction but the expected behaviour of a system trained to continue text fluently.
+Human authors do the same under time pressure; language models simply do it at scale.
+
+We call the underlying problem \emph{premise drift}: over a long record, the premises on which a statement actually rests
+drift away from the premises the text claims for it. Rewording does not reveal drift, because rewording is exactly how it happens.
+What is needed is a structure outside the prose that records what each statement rests on and that cannot be changed by
+rephrasing.
+
+\subsection{What this article offers}
+
+This article describes such a structure, called QAM, and the software that checks it. QAM grew out of a long, language-model-assisted
+research project in mathematical physics~\cite{repo}, but nothing in it depends on that project, and this article assumes no
+knowledge of it. Everything needed to understand the system, including the proofs of its properties, is contained here.
+
+The contributions are:
+\begin{enumerate}[leftmargin=1.5em]
+\item A \emph{model} of research records (Section~\ref{sec:model}): an append-only sequence of typed entries, each with a frame, a
+status, a set of inputs and a list of premises, and four rules that every entry must satisfy.
+\item \emph{Proofs} of what the rules guarantee for whole records (Section~\ref{sec:properties}): no conclusion is ever stronger than
+anything it rests on, however long the chain; inputs are never lost and never invented; frames change only through declared maps;
+and a hash chain binds every conclusion to the exact versions of its premises. The core statements are also machine-checked in Lean~4
+(Appendix~\ref{app:lean}).
+\item \emph{Frames as an interface} (Section~\ref{sec:frames}): ordinary formulas are written in ordinary notation, but each one is
+registered under a declared frame and interpretation, and moving it to another frame requires an explicit, declared step.
+\item \emph{Tools} that check a record independently of one another: a \LaTeX{} package that refuses to typeset a record that breaks
+the rules, a Lean program that checks the exported record against the same rules, and a script that recomputes all hashes (Section~\ref{sec:latex}).
+\item An \emph{execution layer} (Sections~\ref{sec:requests}--\ref{sec:tape}): calculations are submitted as requests to an executor
+that answers with one of three outcomes and stores a hashed receipt; a premise graph answers what a result rests on and what
+depends on a premise; and a small tape machine is executed both in software and in two hardware descriptions as a cross-check.
+\end{enumerate}
+
+\subsection{Two design principles}
+
+Two old ideas from computing shaped the design, and we state them because they explain decisions that would otherwise look
+arbitrary.
+
+The first is Konrad Zuse's separation of the arithmetic unit from the plan it executes~\cite{rojas97,bauer72}. Zuse's Z3 carried out
+whatever the punched film prescribed; his Plankalk\"ul described computations independently of any machine, with separate classes of
+variables for inputs and results. QAM adopts the same division of roles. The language model, like a computer algebra system or a
+simulator, is the \emph{arithmetic unit}: it may formulate, transform and calculate. Which statements exist, what status they have and
+what they rest on is the \emph{plan}, and the plan is a record that separate checkers read. Inputs and derived results are different
+kinds of entry, just as Zuse's input and result variables were.
+
+The second is Alan Turing's insight that not every question can be decided mechanically~\cite{turing36}. A checking system that knows
+only ``valid'' and ``invalid'' must therefore either reject everything it cannot decide or quietly accept it. QAM gives the undecided
+case its own outcome, the \emph{guard}: an open condition that is stored, hashed and inherited by everything built on it, rather than
+smoothed away.
+
+\subsection{How to read this article}
+
+Section~\ref{sec:example} introduces a small worked example from electrodynamics that is used throughout. Sections~\ref{sec:model}
+and~\ref{sec:properties} give the model and prove its properties. Sections~\ref{sec:frames} to~\ref{sec:llm} describe the tools, each
+introduced on the same example. Section~\ref{sec:related} relates QAM to proof assistants, truth maintenance and provenance, and
+collects the limitations. Commands for reproducing every result are collected in Appendix~\ref{app:repro}; the text itself avoids them
+where it can.

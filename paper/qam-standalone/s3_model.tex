@@ -1,0 +1,125 @@
+\section{The model}\label{sec:model}
+
+This section defines QAM without reference to any tool. The \LaTeX{} package, the Lean checker and the database of later sections
+are implementations of this model and apply the same rules.
+
+\subsection{Records, frames and maps}
+
+\begin{definition}[Record]
+A \emph{record} is a finite sequence of entries $e_1,\dots,e_n$. It is extended only at the end (\emph{append-only}); an existing
+entry is never changed. A correction is a new entry that names the entry it replaces.
+\end{definition}
+
+A \emph{frame} is the name of a frame of description: an observer, a convention, a choice of units, a model assumption, a sector of a
+theory. Frames have no internal structure in the model. QAM knows only their names and the maps declared between them. A \emph{map}
+$g\colon A\to B$ is a declared name with a source frame and a target frame; two maps can be declared to compose to a third. One
+frame, written $*$, is reserved for convention-free statements such as a pure number or a theorem of mathematics; it is compatible
+with every frame. If an application has several independent convention axes (say, an observer and a choice of units), each
+combination gets a frame of its own, with maps between them.
+
+In the example of Section~\ref{sec:example} there are two frames, Lab and Boosted, and one map, the boost along $z$, which we
+call $\mathit{lorentz}_z\colon\mathrm{Lab}\to\mathrm{Boosted}$.
+
+\subsection{Entries}
+
+\begin{definition}[Entry]\label{def:entry}
+A statement entry is a tuple
+\[
+e=(\mathit{kind},\ \mathit{key},\ \mathit{frame},\ \mathit{status},\ \mathit{inputs},\ \mathit{premises},\ \mathit{statement})
+\]
+where
+\begin{itemize}[nosep,leftmargin=1.5em]
+\item $\mathit{kind}$ is one of \texttt{input}, \texttt{claim}, \texttt{thesis}, \texttt{derive}, \texttt{convert};
+\item $\mathit{key}$ is a name that is unique in the record;
+\item $\mathit{frame}$ is a declared frame;
+\item $\mathit{status}$ is taken from the totally ordered set
+\[
+\st{open}<\st{reading}<\st{conditional}<\st{computed}<\st{proved};
+\]
+\item $\mathit{inputs}$ is the set of input keys the entry rests on;
+\item $\mathit{premises}$ is the list of earlier entries it was obtained from (for \texttt{convert}, together with the map used);
+\item $\mathit{statement}$ is an optional text.
+\end{itemize}
+\end{definition}
+
+The five kinds have fixed meanings. An \emph{input} is a value put in from outside: a measurement, a value from the literature, a
+fitted parameter. A \emph{claim} is a statement without premises in the record, such as a cited theorem or an assumption. A
+\emph{thesis} is a claim whose wording is part of its identity; a piece of work typically starts from one. A \emph{derivation} obtains
+a statement from premises in the same frame, and a \emph{conversion} carries a statement into another frame through a declared map.
+Two further entries carry no status: a \emph{comparison} of two entries, and a \emph{declaration of independence}, which asserts
+that an entry rests on no input.
+
+The status levels mean, from strongest to weakest: \st{proved}, established by proof; \st{computed}, supported by a calculation but
+not proved; \st{conditional}, valid under named conditions that are not discharged; \st{reading}, an interpretation or assignment,
+for instance the identification of a mathematical object with a physical quantity; \st{open}, not established. The author assigns
+the status. The model does not check whether something declared \st{proved} has in fact been proved. It checks only whether a
+conclusion is declared stronger than what it rests on.
+
+In the example, the preparation~\eqref{eq:prep} together with the boost speed is a thesis (a claim with fixed wording) in Lab with status \st{conditional}: it is an
+assumption about the experiment. The measured interval for $t$ is an input in Lab. The narrowed prediction~\eqref{eq:interval} is
+obtained by first deriving, in Lab, a statement from the preparation and the measurement, and then converting it to Boosted through
+$\mathit{lorentz}_z$.
+
+\subsection{Rules}
+
+\begin{definition}[Well-formed record]\label{def:rules}
+A record is \emph{well formed} if every entry $e_i$ satisfies:
+\begin{enumerate}[nosep,label=(R\arabic*),leftmargin=2.5em]
+\item \emph{Declaration before use.} Every key, frame and map that $e_i$ mentions is declared in $e_1,\dots,e_{i-1}$, and no key is
+declared twice.
+\item \emph{No promotion.} If $e_i$ is a derivation or conversion with premises $p_1,\dots,p_m$, then
+$\mathit{status}(e_i)\le\min_j\mathit{status}(p_j)$.
+\item \emph{Inputs are preserved.} An input has $\mathit{inputs}=\{\mathit{key}\}$; a claim and a thesis have
+$\mathit{inputs}=\emptyset$; for a derivation or conversion, $\mathit{inputs}(e_i)=\bigcup_j\mathit{inputs}(p_j)$. A declaration of
+independence for $e$ is admissible only if $\mathit{inputs}(e)=\emptyset$.
+\item \emph{No frame mixing.} The premises of a derivation and the two sides of a comparison lie in the same frame (or in $*$). A
+conversion $\mathrm{convert}(g,p)$ with $g\colon A\to B$ requires $\mathit{frame}(p)=A$ and has frame $B$.
+\end{enumerate}
+\end{definition}
+
+The three substantive rules answer the three silent transitions: (R2) prevents promotion, (R3) prevents an input from passing as a
+result, and (R4) prevents frame mixing. (R1) makes it possible to check a record in a single pass from top to bottom.
+
+In the example, (R2) forbids declaring the narrowed prediction \st{proved}, because it rests on a \st{conditional} preparation. (R3)
+makes the measured input appear in the input set of the prediction, so that a declaration that the prediction is independent of
+inputs is rejected. (R4) forbids comparing the Lab register~\eqref{eq:rho-lab} directly with the Boosted register~\eqref{eq:rho-boosted}.
+Section~\ref{sec:latex} shows the actual error messages.
+
+\subsection{Open conditions}\label{sec:open}
+
+The stored fields determine, for every statement, what it ultimately rests on. We use the following terminology.
+
+\begin{definition}[Open conditions]\label{def:open}
+The \emph{open conditions} of an entry $e$ are the entries reachable from $e$ along premises whose status is below \st{proved},
+together with $\mathit{inputs}(e)$.
+\end{definition}
+
+This is a reading of the stored structure, not an additional field. Section~\ref{sec:properties} proves that open conditions are
+\emph{inherited}: a statement that rests on anything below \st{proved} is not \st{proved} itself, and every input remains visible however
+many steps are taken.
+An open condition therefore cannot disappear because further conclusions are built on top of it. Open conditions are objects of the
+dependency graph, not remarks in the prose.
+
+\subsection{Identity through a hash chain}
+
+\begin{definition}[Entry hash]\label{def:hash}
+The hash of an entry is
+\[
+h(e)=\mathrm{MD5}\bigl(\mathit{kind};\mathit{key};\mathit{frame};\mathit{status};\mathit{inputs};\mathit{sources};\mathit{statement}\bigr),
+\]
+where $\mathit{sources}$ is the list of the hashes of the premises of $e$. The hash of the record is the MD5 of the sequence of all
+entry hashes.
+\end{definition}
+
+Because the hashes of the premises enter the hash of a conclusion, every conclusion names the exact versions of what it rests on. If
+one word of a thesis changes, every hash that depends on it changes; independent entries keep theirs. Equal hashes mean equal
+entries, not true ones. MD5 serves here to detect accidental change, not deliberate forgery; a release adds SHA-256 sums over the
+source, the typeset document and the exported record.
+
+\subsection{What the model leaves out}
+
+The model has no semantics for statements. It does not know what a formula means, whether a calculation is right, or whether a frame
+was chosen sensibly. Maps carry no status: if the justification of a map between two frames is itself a condition, it must be recorded
+as an entry of its own. A claim declared \st{proved} without premises is accepted as such. A fitted value that is declared again under
+a new name as a claim is not recognised as an input. These limits are deliberate. They keep the model small enough that its rules can
+be checked completely and mechanically, by a compiler as well as by a proof assistant.
