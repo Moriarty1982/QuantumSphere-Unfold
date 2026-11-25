@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H149; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H150; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -44,7 +44,10 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   Tachyon-Frame, k297) und dort ist Ψ lichtartig; ein tauschsymmetrisches Potential ist dort stets stationär, Minimum oder Maximum entscheidet das
   Vorzeichen von 2a − b (Gegenstück θ = 0, K = ⅓). Der HC bricht den Tausch (K = 0,364). δ sieht nur die kubische Norm N(W) über cos 3δ; ohne
   Anpassung nur δ = 0, π/3 (entartet) oder π/12 (N(W) = 0, masseloses Elektron, H101). δ = 2/9 bleibt Fit bzw. CT-002.
+- **H150** (Vorab fc17ee9): Vorzeichen von 2a − b = 2λ − κ aus der Feldgleichung? Nicht allein. Skala gesetzt: Koide-Minimum für −2λ < κ < 2λ, mit Abschneidung
+  und ungleicher Komponentenzahl (1 gegen 2) wandert θ nach cos 2θ = c_L/f². Skalenfrei: Kondensat am Koide-Punkt nur für κ < 0 (Klasse iv), dann 2a − b > 0;
+  mit 1 gegen 2 Komponenten verschiebt der Fluss K auf ≈ 0,672. HC-Form: κ < 0 aus Beschränktheit, Minimum bei tan θ = μ.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H149; Skripte k321–k332 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H150; Skripte k321–k333 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

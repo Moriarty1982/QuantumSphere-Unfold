@@ -974,3 +974,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H148:** Diagnose der Massenwerte (k331) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **25.11.2026, Test H149:** Was θ = π/4 und δ = 2/9 festlegt (k332) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H150:** Vorzeichen von 2a − b aus der Feldgleichung (k333) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
