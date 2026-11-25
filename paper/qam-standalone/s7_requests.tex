@@ -1,0 +1,122 @@
+\section{Calculations as requests}\label{sec:requests}
+
+A record says what each statement rests on. It does not perform calculations. In a project carried out with language models, the
+calculations are the part most likely to be invented: a model asked for a number will produce one. QAM therefore separates the request
+for a calculation from its execution and from the stored result. Requests are written in a small request language, MML; they are
+executed by an executor, MMA; and every execution leaves a \emph{receipt}.
+
+\subsection{Three outcomes}
+
+The central design decision is that an execution has three possible outcomes, not two:
+\begin{itemize}[leftmargin=1.5em]
+\item \cont: the request was admissible and was carried out; the receipt contains the result.
+\item \guard: the request was well formed, but a condition it depends on is not available, for example a premise that is not in the
+record. Nothing is computed. The receipt names the missing condition as an obligation.
+\item \reject: the request itself is not admissible, for example because an argument lies outside the declared range.
+\end{itemize}
+A \guard\ is not a failure. It is the third outcome required by the decidability boundary of Section~\ref{sec:intro}: the honest answer
+when a precondition is open. It is stored, hashed and retrievable like any other result.
+
+\subsection{The example as a request}
+
+The interval calculation of Section~\ref{sec:example} is available as an allowlisted recipe. A request names the recipe, the frames, the
+preparation, the boost and the measured interval:
+\begin{lstlisting}
+{ "id": "gram_boost_interval", "instruction": "READOUT", "guards": [],
+  "arguments": { "recipe": "em.gram-boost-range",
+                 "preparation": "E2x-B-unit-yz", "frame": "Lab",
+                 "target_frame": "Boosted", "boost": "z:1/4",
+                 "a": "-1/4", "b": "1/4" } }
+\end{lstlisting}
+Before computing, the executor looks up the analytic rule the recipe depends on, by the hash of its record entry, and follows the
+premises of that entry recursively. We ran the request three times, changing one thing each time:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.34\textwidth}p{0.12\textwidth}p{0.45\textwidth}@{}}
+\toprule
+Request & Outcome & Receipt states\\
+\midrule
+as above, rule indexed & \cont & target interval $[121/162,\ 961/1202]$\\
+rule not in the database & \guard & obligation: missing premise (the rule's hash)\\
+interval with $a>b$ & \reject & error: endpoints must satisfy $-1\le a\le b\le 1$\\
+boost $z{:}1/3$ instead of $z{:}1/4$ & \reject & error: the recipe requires the declared preparation and boost\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first row reproduces the hand calculation~\eqref{eq:interval} with exact rational arithmetic. The second shows the guard: the same
+request against a database in which the rule is not recorded is not executed, because the result would rest on something the record does
+not contain. The third and fourth show that the recipe accepts only the situation for which the rule was derived; it does not
+extrapolate to another boost speed.
+
+\subsection{What a receipt contains}
+
+A receipt is a structured document identified by its SHA-512 hash. It contains the full request; the outcome; the result or the reasons
+for blocking it; a hash of the context in which the request was evaluated; hashes of the implementation that executed it; and, when the
+request depends on record entries, a \emph{premise trace}: a snapshot of every entry reached from the named premises, in dependency
+order, with its statement, status and frame. For the example, the trace contains two entries, the preparation in Lab and the rule obtained
+from it by conversion into Boosted, both \st{conditional}.
+
+Two fields deserve attention. The receipt for the successful run sets
+\begin{lstlisting}
+"closure_proved": false,
+"mathematical_relations_proved": false,
+\end{lstlisting}
+A successful calculation is not a proof that the rule it applies is correct. The rule has the status recorded for it, here
+\st{conditional}, and the receipt does not change that. In the same spirit, a premise linked with status \st{reading} stays a reading
+even when every calculation built on it succeeds.
+
+A stored receipt can be checked in two ways. Verification recomputes the stored hashes. \emph{Replay} reruns the request with the stored
+context and the current implementation, bypassing any cache, and reports separately whether the receipt and the result agree. For the
+example, replay reports that both match. A changed implementation can change the receipt hash while the result stays the same; the
+report keeps the two apart.
+
+\subsection{The abstract machine}
+
+The executor follows an abstract semantics that is small enough to state completely. A \emph{store} consists of its content (objects at
+addresses and relations between addresses), a register of guards (predicates that the content must satisfy), a list of snapshots and a
+log. A store is \emph{admissible} if every relation uses stored addresses and every guard holds. Each instruction $i$ has a raw effect,
+which may be undefined, and is executed as
+\[
+\mathrm{exec}(s,i)=\begin{cases}
+(s \text{ with log entry } (i,\reject),\ \reject) & \text{if the raw effect is undefined},\\
+(s' \text{ with log entry } (i,\cont),\ \cont) & \text{if the raw effect } s' \text{ is admissible},\\
+(s \text{ with log entry } (i,\guard),\ \guard) & \text{otherwise.}
+\end{cases}
+\]
+A result that would violate a guard is never adopted; the old content stays, and the log records what happened.
+
+\begin{proposition}[Machine properties]\label{prop:machine}
+For every store $s$ and instruction $i$:
+\begin{enumerate}[label=(\roman*),nosep,leftmargin=2em]
+\item if $s$ is admissible, so is the store after $\mathrm{exec}(s,i)$, and hence after any sequence of instructions;
+\item the outcome is never a halt: every step ends in \cont, \guard\ or \reject;
+\item if the outcome is not \cont, content, snapshots and guards are unchanged;
+\item every step adds exactly one log entry, which records the instruction and its outcome.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+All four follow by inspecting the three cases of $\mathrm{exec}$. In the first and third case the content is that of $s$, which is
+admissible by assumption; in the second it is $s'$, which is admissible by the case condition. The sequence statement follows by
+induction. Every case prepends exactly one log entry and returns one of the three outcomes.
+\end{proof}
+
+A further rule concerns certificates. The executor can label a result as a \emph{candidate} for a theorem, but a certificate for a
+statement $P$ is defined to contain a proof of $P$. Since no instruction produces proofs, no sequence of instructions yields a
+certificate for a false statement; a candidate becomes a certificate only through a proof supplied from outside the machine. In Lean
+this is a one-line consequence of the type of certificates (Appendix~\ref{app:lean}).
+
+\paragraph{Implementation.} The running executor is a Python adapter over an SQLite database. It follows the same three-way
+semantics and checks the declared guards of the context, the request and the objects involved, as well as the linked premises, before
+any computation. That the adapter implements the abstract semantics correctly is not proved; it is supported by tests. For one
+instruction, the hardware comparison of Section~\ref{sec:tape} checks the adapter's results against independent implementations,
+which supports the results of that instruction but not the guard semantics as such.
+
+\subsection{Batches}
+
+For the finite permutation search used in one of the project's recipes, up to 64 requests can be run as a batch on one to four worker
+processes. A request may be declared to depend on others; the dependency
+graph is checked for cycles before the start. If a predecessor ends with \guard\ or \reject, or is itself blocked, its dependents are
+not executed but listed as \emph{blocked}, with the predecessor that blocked them. A batch produces a hashed report in input order,
+stored in the same database transaction as the individual receipts. Reports can be rerun, compared with earlier reports and audited for
+consistent links without being rerun.

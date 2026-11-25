@@ -1,0 +1,41 @@
+name: QAM paper (standalone)
+
+# Typesets paper/qam-standalone (which checks its own QAM record while compiling),
+# recomputes the record hashes and runs the verified Lean checker qamcheck on the exported record.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ["paper/qam-standalone/**", "qam/tex/**", "qam/lean/**", ".github/workflows/qam-paper.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern >/dev/null
+      - name: Build article and verify hashes
+        working-directory: paper/qam-standalone
+        run: sh build.sh
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: qam/lean
+          build: false
+          test: false
+          lint: false
+      - name: qamcheck on the article's record
+        working-directory: qam/lean
+        run: |
+          lake build
+          lake exe qamcheck ../../paper/qam-standalone/main.qam
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qam-standalone-pdf
+          path: |
+            paper/qam-standalone/main.pdf
+            paper/qam-standalone/main.qam
