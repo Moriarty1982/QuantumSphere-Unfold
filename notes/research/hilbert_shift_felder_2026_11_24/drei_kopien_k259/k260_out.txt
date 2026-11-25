@@ -1,0 +1,32 @@
+==============================================================================
+A  S3 auf den Sedenionen
+   Drehung um 120 Grad in den Ebenen (e_i, e_i+8), e8 fest: Automorphismus-Rest 8.8e-15; um 90 Grad (Gegenprobe): 1.9e+01
+   Spiegelung (a, b) -> (a, -b): Rest 0.0e+00
+   Kopie 0: Ladungsrichtung u_0 = +1.0000 e7 +0.0000 e15
+   Kopie 1: Ladungsrichtung u_1 = -0.5000 e7 +0.8660 e15
+   Kopie 2: Ladungsrichtung u_2 = -0.5000 e7 -0.8660 e15
+   Wirkung auf die Kopien (Kopie k -> ...): {'1': (0, 1, 2), 'r': (1, 2, 0), 'r2': (2, 0, 1), 's': (0, 2, 1), 'sr': (2, 1, 0), 'sr2': (1, 0, 2)}
+==============================================================================
+B  Teilraum W: Kopie k auf Platz k
+   dim W = 27; Abschlussdefekt max 0.3062
+   Leck in den Sedenion-Komponenten [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] der Nebendiagonale (also nicht nur e8), Diagonale: 0.0e+00
+   W + e8 je Platz (30 Dim.): Abschlussdefekt 0.3062
+==============================================================================
+C  Symmetrie von W
+   (24 Wuerfeldrehungen) x S3 = 144 Automorphismen von H3(S) (Rest 1.1e-14); davon erhalten W: 24
+   davon reine Wuerfeldrehungen (ohne S3-Anteil): 4; je Wuerfeldrehung hoechstens ein passendes S3-Element: True
+   abgeschlossen: True; Elementordnungen {1: 1, 2: 9, 3: 8, 4: 6}  (S4: 1x1, 9x2, 8x3, 6x4)
+   Derivationen von H3(S) (dim 22), die W erhalten: dim 14; zusammen mit g2 Rang 14 -> stetig bleibt nur g2
+==============================================================================
+D  Ladung je Platz in der Richtung der Kopie
+   von den 24 Elementen vertauschen 12 mit L_u und R_u je Platz; bis auf Vorzeichen und Tausch L <-> R: 24
+   Ordnungen der vertauschenden Elemente: {1: 1, 2: 3, 3: 8}  (A4: 1x1, 3x2, 8x3)
+==============================================================================
+E  Massenform K auf dem farbneutralen Feld in W (Eintrag k in span(1, u_k))
+   K diagonal: [60. 60. 60. 60. 60. 54. 54. 54.]; groesstes Nebendiagonalelement 2.2e-14
+   zum Vergleich alle drei Plaetze mit u = e7 (H128): [60. 60. 60. 60. 60. 54. 54. 54.]
+   Tr(Z^3) fuer Z = (v1 + v2 + v3)/sqrt3: drei Kopien +0.000000, gleiche Richtung +0.000000
+   mit Realteil gemischt (Winkel 0.7): drei Kopien +0.377039, gleiche Richtung -0.206103
+==============================================================================
+F  Vollstaendigkeit der Parametrisierung aus H130
+   Kommutant von su(3)_c auf dem Triplett-Teil T (12 Dim.): dim 8 (= M_2(C); stabile 6-dim. Teilraeume = Punkte von CP^1 = V(a,b,c,d))
