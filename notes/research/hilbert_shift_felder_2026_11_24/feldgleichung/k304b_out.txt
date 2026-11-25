@@ -1,0 +1,10 @@
+Ausgabe von k304b_gegenprobe.wl (Wolfram Language, Lauf vom 25.11.2026 ueber den Wolfram-Auswerter, zustandsloser Kernel).
+Warnungen: Infinity::indet (0*Infinity, beim Grenzwert bzw. am Rand kappa_min, wo B = 0 ist; das Ergebnis des Grenzwerts ist davon nicht betroffen
+und stimmt mit e^3/(16 Pi^2) ueberein); General::messages (Sammelhinweis). Rueckgabewert: Null. Symbolische Reste: "ohne SM" ergibt exakt E^3/(16 Pi^2).
+
+F_inf = 0.127193  Limes k->Infinity: 0.127193
+F/F_inf bei 0.6, 1.2039, 3.1416, 10: {0.105166, 0.57698, 0.897968, 0.985617}
+kmin = 0.416318  Nullstellen von F'(k) auf (kmin, 40): {}
+min F' auf Gitter: 6.86475*10^-44
+ohne SM: F = E^3/(16 Pi^2)
+Fluss t=-5,-2,3: {{-0.443143, 1.20533, -0.443143}, {-0.130898, 1.04376, -0.130898}, {0.57342, 2.83902, 0.57342}}

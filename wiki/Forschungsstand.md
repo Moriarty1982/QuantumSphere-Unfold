@@ -1,5 +1,19 @@
 # Forschungsstand
 
+### Ist κ ≈ 1,2 selbststabilisierend? In den geprüften Lesarten nein (25.11.2026, Test H135, teilweise nicht blind, k304)
+
+Frage des Autors zum Zahlentreffer aus k303: Könnte das System bei diesem Wert selbststabilisierend sein, sodass der Wert unter vielen Möglichkeiten nur oft genug auftreten muss? Geprüft wurden zwei vorab festgelegte Lesarten. **Ergebnis: widerlegt in beiden.**
+
+**Fluss.** Der Ein-Schleifen-Fluss der Skalare ist homogen vom Grad 2, feste Werte ungleich null gibt es nicht. Von κ = 1,2 aus wächst κ zu großen Skalen bis zum Pol bei 1,4·10⁴ GeV, und benachbarte Startwerte laufen auseinander. Es gibt keinen Einzugsbereich.
+
+**Vakuumtiefe.** Wäre κ beweglich, liefe es dorthin, wo das Vakuum am tiefsten ist. Bei fester Skala Λ ist die Tiefe proportional zu F(κ) = B·exp(−2A/B). Ohne Eichfelder und Top ist F für jedes κ gleich e³/(16π²). Mit ihnen steigt F monoton von 0 bei κ = 0,416 gegen diesen Wert (58 % bei κ = 1,2, 90 % bei κ = π). Es gibt kein inneres Maximum, κ liefe zu immer größeren Werten.
+
+**Häufigkeit.** Ein Vakuum entsteht für jedes κ zwischen 0,416 und der Unitaritätsgrenze π, bei gleichverteiltem κ in 87 % der Fälle. Das System startet also fast immer, aber m_h liegt dann irgendwo zwischen 0 und 345 GeV, und nur 2,7 % der Werte geben 120 bis 130 GeV.
+
+Was fehlt, ist eine Rückwirkung. Sie entstünde, wenn der HC die SU(2) bricht und der HS(3)-Anhang an Vorstufe und HS(2)-Anhang verschieden koppelt; dann verschiebt seine Schleife den HC-Winkel θ, und κ = 1/cos 2θ könnte ein fester Punkt dieser Schleife sein. Das ist nicht gerechnet. Kein Guard berührt.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H135_Kappa_selbststabilisierend.md`, Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H135_Kappa_selbststabilisierend.md`, Skripte `k304_test_h135.py`, `k304b_gegenprobe.wl`.
+
 ### Rückwärtssuche nach einer Regel für κ ≈ 1,2: keine Regel, ein Zahlentreffer (25.11.2026, Erkundung, nicht blind, k303)
 
 Nach H133 ist der Wert der Kopplung κ zwischen Vorstufe und HS(3)-Anhang frei, nötig wäre κ* = 1,204. Die Rückwärtssuche hält zuerst die notwendige Bedingung fest: 16κ² = 8π²·m_h²/v² − (3/8)g⁴ − (3/16)(g² + g′²)² + 3y_t⁴. Eine Regel für κ ist im skalenfreien Bild also eine Vorhersage der Higgs-Masse.
