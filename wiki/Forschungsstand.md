@@ -1,5 +1,17 @@
 # Forschungsstand
 
+### Rückwirkung über den HC-Winkel: hält κ ≈ 1,2 nicht fest (25.11.2026, Test H136, teilweise nicht blind, k305)
+
+Nach H135 blieb eine Möglichkeit offen: κ könnte am HC-Winkel θ hängen, und die Schleife des HS(3)-Anhangs könnte θ zurückstellen. **Ergebnis: widerlegt.**
+
+**Mit geeichter SU(2) gibt es die Rückwirkung nicht.** Auf der Vorstufe ist dann nur A = A₁ + B invariant; A₁ − B, also cos 2θ, ist es nicht. Ein ruhender Winkel ist Eichung (k299), keine Schleife hängt an ihm.
+
+**Ohne SU(2) (nur U(1) links und rechts) gibt es sie, sie stabilisiert aber nicht.** Koppelt der Anhang verschieden an die beiden Teile, (κ₁A₁ + κ₂B)·C, und sollen die Schleifen allein den Winkel θ₀ = 16,8° halten und zugleich κ_eff = 1,204 liefern, dann gibt es genau eine Lösung: κ₁ = 1,321, κ₂ = −0,078. Sie braucht eine negative Kopplung, θ₀ ist dort ein Minimum der Vakuumtiefe (der Winkel liefe weg), und die Steigung dκ_eff/dθ = −0,77 hat das falsche Vorzeichen gegenüber der Regel κ = 1/cos 2θ (+1,59). Mit HC-Strafe η verschiebt die Schleife den Winkel nur um 0,0098·(κ₂ − κ₁)/η.
+
+**Bilanz zum Wert von κ.** H133: Form festgelegt, Wert frei. k303: keine Regel mit Prinzip, ein Zahlentreffer. H135: kein fester Punkt, Tiefe monoton. H136: keine stabilisierende Rückwirkung. Der Zahlentreffer κ = (γ_L + 1/γ_L)/2 bleibt eine unerklärte Auffälligkeit. Offen ist nur noch eine Kopplung des Anhangs an den Strom der drehenden Lösung; sie bringt eine neue Skala mit und verlässt das skalenfreie Bild. Kein Guard berührt.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H136_Rueckwirkung_HC_Winkel.md`, Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H136_Rueckwirkung_HC_Winkel.md`, Skripte `k305_test_h136.py`, `k305b_gegenprobe.wl`.
+
 ### Ist κ ≈ 1,2 selbststabilisierend? In den geprüften Lesarten nein (25.11.2026, Test H135, teilweise nicht blind, k304)
 
 Frage des Autors zum Zahlentreffer aus k303: Könnte das System bei diesem Wert selbststabilisierend sein, sodass der Wert unter vielen Möglichkeiten nur oft genug auftreten muss? Geprüft wurden zwei vorab festgelegte Lesarten. **Ergebnis: widerlegt in beiden.**

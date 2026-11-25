@@ -1,0 +1,9 @@
+Ausgabe von k305b_gegenprobe.wl (Wolfram Language, Lauf vom 25.11.2026 ueber den Wolfram-Auswerter, zustandsloser Kernel).
+Warnungen: Symbol::undefined2 (globale Symbole Lm, Rm, X "undefined", harmlos: im Skript definiert bzw. lokal); General::messages (Sammelhinweis).
+Rueckgabewert: Null. Symbolische Nullreste: A1+B unter L_j gibt 0; A1-B unter L_i und R_i gibt {0, 0}; A1-B unter L_j ist nicht null.
+
+k2-k1 = -1.39864  k1 = 1.32066  k2 = -0.077979
+zweite Ableitung: 0.00109494
+Steigung kappa_eff: -0.773742  Regel: 1.59437  1/cos(2 th0) = 1.20042
+Vorzeichen von dF auf k2-k1 = -3 ... 3 (Schritt 0.25): {-1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+A1-B unter L_j: -4 x[1] x[3] + 4 x[2] x[4]   A1+B unter L_j: 0   A1-B unter L_i, R_i: {0, 0}
