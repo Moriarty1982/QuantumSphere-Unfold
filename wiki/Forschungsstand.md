@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### Was die SU(3)-Entartung aufhebt: Konjugation und Einheit des Verdopplungsschritts (25.11.2026, Erkundung, nicht blind, k282)
+
+Anschluss an k281, mit einer Bilanz der Setzungen für k275 bis k281 (`rueckwaerts/bilanz/`). Die beiden einfachsten Terme, die die Entartung aufheben, sind die zwei Strukturabbildungen des Schritts ℝ → ℂ: Tr(W∘σW) mit der Konjugation σ (e₇ → −e₇) und Tr((CW)∘(CW)) mit der Einheit C. Exakt gilt Tr((CW)²) = Tr W² − |d|² und für c = 0 Tr(W∘σW) = Tr W² − 4|v|². In su(3) erhält Tr W² alles, zusammen mit dem σ-Term nur so(3), zusammen mit dem C-Term nichts Kontinuierliches; die Ladungsmischung c ≠ 0 lässt von den 24 Würfeldrehungen 12 (A₄). Das ist die Kette aus r60, jetzt für das Potential. Der σ-Term koppelt das Feld an sein Konjugiertes (Majorana-Typ).
+
+Die Vorzeichen der beiden Terme bleiben frei und entscheiden über das Vakuum (40 Starts je Punkt): Spin 1 leicht gibt ℤ₃, negativer Diagonalterm gibt V₄, Spin 1 schwer allein gibt ℤ₂ mit der flachen Richtung aus k279. Ein isoliertes ℤ₂-Vakuum trat in keinem der acht Vorzeichenfälle auf. Offen: ob der Turm die Vorzeichen festlegt. Ablage: `notes/research/hilbert_shift_felder_2026_11_24/rueckwaerts/k282/`.
+
 ### Beide Felder als ein Element: keine Ausrichtung (25.11.2026, Erkundung, nicht blind, k281)
 
 Frage aus k280: Legt die Algebra das Vorzeichen der Kopplung fest? Das naheliegende Prinzip ist, beide Felder als Teile eines Elements W = Z_v(a) + Z_S(b) zu lesen. Dann füllen sie für ab ≠ −1 den ganzen spurfreien Teil von H₃(ℂ) (3 + 5 = 8 Dimensionen), und jedes Potential V = f(Tr W², N(W)) ist SU(3)-invariant. Das Vakuum ist die ganze Bahn W = (3ψψ⁺ − 1)/√6, ein ℂP². Numerisch erreichen 60 von 60 Starts je (a, b) dieselbe Höhe 1/√54 an verschiedenen Punkten, ohne Restgruppe in A₄ und ohne feste Mischungsspalte. Die Zwei-Feld-Vakua aus k280 liegen für beide Vorzeichen auf der Bahn und sind nicht ausgezeichnet. Das ℤ₃-Vakuum aus k278 ist im vollen Raum ein Sattel, außer bei a = ±1/√3.
