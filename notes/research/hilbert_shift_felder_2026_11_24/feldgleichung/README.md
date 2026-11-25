@@ -160,6 +160,8 @@ Eine SU(2)-verträgliche Fassung des HC: `HC_SU2_vertraeglich_k299.md` (k299, Be
 
 Die Schleifen-Skala von 9,8 GeV, die Ähnlichkeit mit g und Fassung F am Knoten: `Skala_9_8_GeV_und_Igel_k300.md` (k300, k301).
 Die Kopplung des HS(3)-Anhangs (Test H133): `Ergebnis_H133_Anhang_HS3_Kopplung.md` (k302).
+Die Rückwärtssuche nach einer Regel für κ ≈ 1,2: `Rueckwaertssuche_kappa_k303.md` (k303).
+Ist κ ≈ 1,2 selbststabilisierend (Test H135): `Ergebnis_H135_Kappa_selbststabilisierend.md` (k304).
 
 ## Dateien
 `k290_rekursive_feldgleichung.py` (`k290_out.txt`), `k290b_gegenprobe.wl` (`k290b_out.txt`, Wolfram über den Cloud-Kernel, Ausgaben und Warnungen dort festgehalten).

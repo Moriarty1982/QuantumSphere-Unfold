@@ -1,0 +1,41 @@
+=== Teil 1: Ziel und notwendige Bedingung ===
+Ziel: kappa* = 1.2039  (m_S = 382.1 GeV); Fenster ±20 % der Summe: 1.0768 bis 1.3188
+in Kopplungen: g² = 0.4262, g'² = 0.1225, y_t² = 0.9828, m_h²/v² = 0.2586
+notwendige Bedingung: 16·kappa² = 8π²·m_h²/v² − (3/8)·g⁴ − (3/16)·(g²+g'²)² + 3·y_t⁴
+  Anteile: [20.4151, -0.0681, -0.0564, 2.8977]  Summe/16 = 1.4493  kappa*² = 1.4493
+kleinstes kappa mit positivem m_s²: 0.4163 (m_S = 224.7 GeV)
+Empfindlichkeit: d ln m_h / d ln kappa bei kappa* = 1.136
+  m_t -0.7 GeV: kappa* = 1.2026
+  m_t +0.7 GeV: kappa* = 1.2051
+  m_h -0.2 GeV: kappa* = 1.2022
+  m_h +0.2 GeV: kappa* = 1.2055
+
+=== Teil 2: Regeln mit einem Prinzip dahinter ===
+Regel                                                   kappa   m_S/GeV   m_h/GeV  im Fenster
+R1 volle Norm (auch S-a + su(3))                       0.0000       0.0     -46.1  False
+V1 Veltman, skalenfrei (ohne m_h-Term)                 0.6058     271.0      48.8  False
+V2 Veltman mit gemessenem m_h                          0.5088     248.4      32.4  False
+V3 Veltman, m_h selbstkonsistent                       0.5923     268.0      46.7  False
+S4 Sp M⁴ = 0 (Bosonen = Fermionen)                     0.4163     224.7       0.0  False
+U  Unitaritaetsgrenze gesaettigt, kappa = 4π/√(NM)     3.1416     617.2     345.1  False
+(negatives m_h bedeutet m_s² < 0: kein Minimum)
+
+--- fester Punkt von kappa mit Eichfeldern und Top (Formel der Zwei-Dublett-Modelle aus dem Gedaechtnis, lambda_3 = 4·kappa) ---
+Anhang als Dublett geeicht: Nullstellen von β(lambda_3) bei lambda_A = lambda_C = 0: []
+Anhang ungeeicht: Nullstellen von β(lambda_3) bei lambda_A = lambda_C = 0: [-0.94881, 0]
+Ziel waere lambda_3 = 4.8154
+
+--- Variante: Eichfelder der eigenen su(2) des Anhangs statt Skalare ---
+drei Vektorfelder (9 Freiheitsgrade): noetig m = 311.9 GeV; mit gleicher Kopplung g und Anhang-Wert mu·v: m = 24.3 GeV; noetig waere ein Anhang-Wert von 3.88·v
+
+=== Teil 3: reine Zahlen des HC als Kopplung (Zahlensuche, kein Prinzip) ===
+mu = 0.3018, gamma_L = 1.8645; 14 Zahlen × 3 Normierungen = 42 Kandidaten
+  kappa            = 1/cos2θ   : kappa = 1.2004, Abweichung -0.29 %, m_h = 124.8 GeV
+Kandidaten reichen von 0.023 bis 10.979 (ln-Spanne 6.18).
+  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, Fenster ±20 % der Summe: 1.24
+  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, ±5 % (grobe Genauigkeit der Ein-Schleifen-Formel): 0.68
+  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, ±0,3 %: 0.04
+bester Treffer: kappa = 1/cos2θ = (1+mu²)/(1−mu²) = (gamma_L + 1/gamma_L)/2 = 1.20042; Ziel 1.20385; m_h = 124.79 GeV
+  dasselbe mit Tribonacci (1,8393): kappa = 1.1915, m_h = 123.7 GeV; mit Silberzahl (√2+1): kappa = 1.4142, m_h = 149.8 GeV
+  Empfindlichkeit an gamma_L: gamma_L = 1,86 gibt m_h = 124.60, 1,87 gibt 125.03 GeV
+  Lesart: 1/cos2θ = (a²+b²)/(a²−b²) = Linksladung/Rechtsladung auf der HC-Richtung (k292).
