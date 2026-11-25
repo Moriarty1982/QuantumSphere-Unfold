@@ -41,6 +41,6 @@
       "scheme": "url"
     }
   ],
-  "notes": "First version of a new record (own concept DOI). Version DOI is entered after the reservation by tools/paper_release.py stamp.",
+  "notes": "Version DOI 10.5281/zenodo.24539644 (reserved on Zenodo, deposition 24539644; shown on the title page). First version of a new record (own concept DOI). Version DOI is entered after the reservation by tools/paper_release.py stamp.",
   "publication_date": "2026-11-25"
 }

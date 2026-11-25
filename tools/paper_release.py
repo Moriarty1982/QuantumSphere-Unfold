@@ -35,7 +35,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TOOLS = ROOT / "tools"
 sys.path.insert(0, str(TOOLS))
 from zenodo_publish import (  # noqa: E402
-    ZENODO_API, SANDBOX_API, ZenodoError, load_json, normalize_metadata, read_default_preview, validate_metadata,
+    ZENODO_API, SANDBOX_API, ZenodoError, load_json, normalize_metadata, rdm_request, validate_metadata,
 )
 
 COMPANION_CONCEPT_DOI = "10.5281/zenodo.19210728"
@@ -470,7 +470,9 @@ def cmd_zenodo(args: argparse.Namespace) -> int:
         api = ZENODO_API if args.environment == "production" else SANDBOX_API
         token = os.environ.get("ZENODO_TOKEN" if args.environment == "production" else "ZENODO_SANDBOX_TOKEN", "")
         if args.stage == "upload":
-            current = read_default_preview(api, token, cfg["deposition_id"])
+            # read through the InvenioRDM API: the plain records API omits files.default_preview
+            draft = rdm_request("GET", f"{api}/records/{cfg['deposition_id']}/draft", token)
+            current = (draft.get("files") or {}).get("default_preview")
             ok = current == cfg["pdf_name"]
             lines.append(f"- draft preview: {current} ({'ok' if ok else 'WRONG'})")
             if not ok:

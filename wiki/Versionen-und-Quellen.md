@@ -1,5 +1,10 @@
 # Versionen und Quellen
 
+Veröffentlichungsnachtrag vom **25.11.2026**: Der eigenständige englische Physik-Artikel „One Object, Three Frames: The Quantum Sphaera
+Construction“ ist als eigener Record in Fassung 1.0.0 erschienen ([Zenodo](https://zenodo.org/records/24539644), DOI 10.5281/zenodo.24539644).
+49 Seiten; er berichtet, was die Konstruktion festlegt, was sie annimmt und wo sie endet, nach dem Companion bis Runde v4.10.0-r61. Er ersetzt
+nicht das Physik-Paper im Companion-Record v5.4.0. Kein offenes Problem ist geschlossen. Quelle `paper/physics-standalone/`, Tag `physics-paper-v1.0.0`.
+
 Veröffentlichungsnachtrag vom **24.11.2026**: Der deutsche Preprint ist in Fassung 0.3.0 erschienen ([Zenodo](https://zenodo.org/records/24497991),
 DOI 10.5281/zenodo.24497991, Concept-DOI 10.5281/zenodo.24405552, Vorgänger 0.2.0 10.5281/zenodo.24481107). 58 Seiten; neu ist Abschnitt 5.7
 „Drehsinn und Turm der Hilbert-Shifts“ nach Runde v4.10.0-r59 (Erkundungen k245–k274, nicht blind; Tests H125 und H126), dazu r56–r58 in 5.8
