@@ -104,6 +104,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H153, 25.11.2026 (k336):** Für OP3: Eine Normierung von A und B wählt nur den Startstrahl des Flusses; K bleibt startabhängig, δ bleibt 0 oder π/3. K = ⅔ exakt folgt nur, wenn die Schleife allein über die Unteralgebra {1, U} läuft; ob die Algebra das erzwingt, ist offen (bisher Setzung). OP3 offen.
 
+**Test H154, 25.11.2026 (k337):** Für OP3: Die Algebra erzwingt nicht, dass nur {1, U} im Fluss läuft; n_B = 1 bleibt eine Setzung (U′ kein Freiheitsgrad oder schwer, dann mit Skala). Die Abweichung von ⅔ ist Messrauschen (0,43σ, ganz aus m_τ); ⅔ exakt verlangt m_τ = 1776,969 MeV. OP3 offen.
+
 **Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
 
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.

@@ -1,0 +1,10 @@
+(Ausgabe von k337b_gegenprobe.wl, Wolfram-Kernel ueber MCP, 25.11.2026; keine Meldungen oder Warnungen.)
+beta(1,2)-beta(1,1) = {2 ka^2, 8 ka lb, 8 lb^2}
+Erzeuger mit invariantem span{1,U}: {{0, -a1, 0}, {a1, 0, 0}, {0, 0, 0}}; G e_y2 = {0, 0, 0}
+dV unter dieser U(1): -2 a1 p u (-(ka p^2) + 2 la p^2 + ka u^2 - 2 lb u^2 + ka w^2 - 2 lb w^2)
+K(theta,delta) = Sec[t]^2/3; dK/ddelta = 0
+K_pol = 0.6666644634 +- 5.08096*10^-6; (2/3-K)/sigma = 0.433629
+m_tau fuer 2/3: 1776.9690270830136204
+QED gemeinsame Skala M_Z: K = 0.66784
+Eichung e0^2=0.2, lam=0.1, k/lam=-0.2: K = 0.86246825 (Python 0.862468)
+Eichung e0^2=1, lam=0.2, k/lam=-1.5: K = 0.65712524 (Python 0.657125)
