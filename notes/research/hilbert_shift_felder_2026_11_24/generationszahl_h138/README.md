@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H145; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H147; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -31,7 +31,13 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   orientierten Kopien). Aber K = (D⁰ ⊗ e₀) ⊕ (R ⊗ Im𝕆) exakt, und die Rest-Generation ist R⁰ ⊗ ℂ𝕆: eine ganze Oktonion-Kopie über einer reellen,
   ladungsfreien, zeitumkehrfesten Linie (HS(0)-Merkmale). Die Rest-Leptonen entstehen dort, wo die aufgehobenen reellen Einheiten (HS(0) der
   Kopien) mit einer Relation zusammenfallen. Gemischte Vorzeichen = gespiegelte Kopien (Anti-Isomorphismus); c nach Wortlaut widerlegt.
+- **H146** (Vorab dbc2a69): Massen aus der Kopien-Struktur (Gram-Auslesung)? Nein: Überlappungen ¼, ⅝, −½ geben höchstens K = 19/32
+  (Leptonen) bzw. ½ (Farbe) und keine Hierarchie. Mit vier Kopien ist die Rest-Linie c der exakte Nullvektor der Gram-Matrix: die
+  Rest-Generation ist masselos, die drei übrigen haben K = 59/128 bzw. 11/32. Frame-unabhängig (Form S).
+- **H147** (Vorab 61e5ff3): HS(0)-Linie als Graviton? Neutral und masselos, aber Spin 0 (Skalar, Dilaton-artig). Spin 2 nur im äußeren
+  Tensorprodukt oder antisymmetrisch über die Ableitungen; das Algebrenprodukt löscht ihn. Zwei Skalare c ⊗ e₀, c ⊗ e₇ mit freiem Mischwinkel
+  unter der Ladungsdrehung (Erkundung).
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H145; Skripte k321–k328 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H147; Skripte k321–k330 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

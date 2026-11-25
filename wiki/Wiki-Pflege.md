@@ -968,3 +968,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H144:** Rest-Generation und Sektoren (k327) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **25.11.2026, Test H145:** Rest-Generation als HS(0) (k328) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Tests H146, H147:** Massen aus den Kopien (k329) und HS(0)-Linie als Graviton (k330) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.

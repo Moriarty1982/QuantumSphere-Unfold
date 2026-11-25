@@ -1,0 +1,6 @@
+k330c, Wolfram-Kernel (MCP), 25.11.2026, tatsaechliche Print-Ausgaben (2D-Ausgabe hier in Zeilenform):
+dim g2, su3, so3: {14, 8, 3}
+Casimir auf O (8), Eigenwerte: {0, 0, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2}; auf W3: {1/2, 1/2, 1/2}
+ad-Casimir auf su3, Eigenwerte: {1/2, 1/2, 1/2, 3/2, 3/2, 3/2, 3/2, 3/2}
+Meldungen: Symbol::undefined2-Warnung (Variablennamen), General::messages; keine Fehler in den Ergebnissen.
+Lesart: Normierung Spin 1 = 1/2 (auf W3), also O = 2 x Spin 0 + 2 x Spin 1; su3 = Spin 1 (1/2) + Spin 2 (3/2 = 3 x 1/2, wie 6/2).
