@@ -152,6 +152,8 @@ Wo das Amplituden-Potential eintritt: `Potential_im_Anhang_k295.md` (k295, die e
 
 Ob Schleifen die Skala selbst erzeugen (Test H129): `Ergebnis_H129_Schleifen_Skala.md` (k296, Skala teilweise, Richtung nicht festgelegt).
 
+Ob der HC die Tauschsymmetrie bricht: `HC_Tauschsymmetrie_k297.md` (k297, ja: Tausch = Orientierungsumkehr μ → 1/μ; HC-Bedingung als Potential ist die flache Richtung).
+
 ## Dateien
 `k290_rekursive_feldgleichung.py` (`k290_out.txt`), `k290b_gegenprobe.wl` (`k290b_out.txt`, Wolfram über den Cloud-Kernel, Ausgaben und Warnungen dort festgehalten).
 Aufruf: `python k290_rekursive_feldgleichung.py > k290_out.txt`, Laufzeit etwa 20 Sekunden.

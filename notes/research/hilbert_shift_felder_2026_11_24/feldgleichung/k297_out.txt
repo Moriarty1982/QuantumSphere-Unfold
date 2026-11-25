@@ -1,0 +1,30 @@
+== 1  Tausch und Beltrami-Koeffizient ==
+  psi = a e^{iwt} + (b j) e^{-iwt}: psi1 = a e^{iwt}, chi = b e^{iwt}; Schatten z = psi1 + conj(chi) = a e^{iwt} + b e^{-iwt}
+  Abbildung u -> a u + b conj(u): mu = b/a, K = (a+b)/(a-b)
+  Tausch psi -> psi j: (psi1, chi) -> (-chi, psi1), also a <-> b:  mu -> a/b = 1/mu,  K -> -1 * K (Orientierung kehrt um)
+  invariant nur fuer mu = 1 (a = b, lineare Polarisation, HS(0))
+
+== 2  HC-Bedingung als Potential ==
+  eta (B - mu^2 A)^2 = lamA A^2 + kappa A B + lamB B^2 mit lamA = eta*mu**4 , kappa = -2*eta*mu**2 , lamB = eta
+  kein Term in A oder B allein (keine Skala, keine Masse der Vorstufe); kappa < 0; kappa + 2 sqrt(lamA lamB) = 0  (genau die Stabilitaetsgrenze, Klasse (iv) aus H129)
+  unter dem Tausch A <-> B: eta (A - mu^2 B)^2 = eta mu^4 (B - A/mu^2)^2, also mu -> 1/mu, eta -> eta mu^4
+
+== 3  flache Richtung, Spektrum, Loesung ==
+  Punkt A = f^2/(1+mu^2), B = mu^2 f^2/(1+mu^2): V = 0 , Gradient = [0, 0, 0, 0]  fuer jedes f
+  Massenquadrate: {8*eta*f**2*mu**2: 1, 0: 3}  (zwei Phasen, eine Groessenmode, eine schwere Formmode)
+  Bewegungsgleichung fuer psi = e^{iwt}(a + b j), geteilt durch das Feld: [4*a**2*eta*mu**4 - 4*b**2*eta*mu**2 - omega**2, 4*a**2*eta*mu**4 - 4*b**2*eta*mu**2 - omega**2, -4*a**2*eta*mu**2 + 4*b**2*eta - omega**2, -4*a**2*eta*mu**2 + 4*b**2*eta - omega**2]
+    mit b = mu a: [-omega**2, -omega**2, -omega**2, -omega**2]  => loest sie nur als Welle (omega = |k|), nicht als ruhende Drehung; Groesse a frei
+
+== 4  Skala aus der Schleife ==
+  V1(phi) = m_H^4/(64 pi^2) (ln(m_H^2/M^2) - 3/2), m_H^2 = 8*eta*mu**2*phi**2 ;  Minimum bei phi^2 = [E*M**2/(8*eta*mu**2)]
+  Masse der Groessenmode: m_s^2 = E*M**2*eta*mu**2/pi**2 ;  m_s^2/m_H^2 = eta*mu**2/pi**2 ;  V1 am Minimum = -M**4*exp(2)/(128*pi**2) (< 0)
+
+== 5  Fluss (beta-Funktionen aus k296) ==
+  auf der flachen Flaeche, rho = lamB/lamA = mu^-4:  16 pi^2 d rho/dt = 64*lambda_A*rho*(rho - 1) ;  16 pi^2 d(kappa + 2 sqrt(lamA lamB))/dt = 32*lambda_A**2*(rho**(3/2) + sqrt(rho) + 2*rho)
+  => rho ist nur bei rho = 1 fest (und bei 0, unendlich). Fuer rho > 1 (mu < 1) waechst rho mit t: ins Ultraviolette wird der Anhang kleiner (mu -> 0),
+     ins Infrarote laeuft mu langsam auf 1 zu. Der Abstand zur flachen Flaeche waechst mit t: von oben (stabil) kommend wird sie ins Infrarote durchquert, dort entsteht die Skala.
+
+== 6  Zahlen (beta_sym^2 und gamma_L eingesetzt, nicht hergeleitet) ==
+  mu = (gamma_L - 1)/(gamma_L + 1) = 0.3018;  B/A = mu^2 = 0.0911;  Anteil des Anhangs an der Norm = 0.0835
+  lamB/lamA = mu^-4 = 120.6;  m_H^2 = 0.7285 eta f^2;  m_s^2/m_H^2 = 0.009227 eta
+  Winkel auf der Hopf-Sphaere: cos = (1 - mu^2)/(1 + mu^2) = 0.8331, also 33.58 Grad vom Pol (k292: 33,6)
