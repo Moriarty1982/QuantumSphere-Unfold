@@ -1,0 +1,42 @@
+(* k302b: Gegenprobe zu k302 (H133) in Wolfram Language, unabhaengig aufgebaut.
+   Aufruf: wolframscript -file k302b_gegenprobe.wl > k302b_out.txt *)
+qm[p_, q_] := {p[[1]] q[[1]] - p[[2]] q[[2]] - p[[3]] q[[3]] - p[[4]] q[[4]], p[[1]] q[[2]] + p[[2]] q[[1]] + p[[3]] q[[4]] - p[[4]] q[[3]], p[[1]] q[[3]] - p[[2]] q[[4]] + p[[3]] q[[1]] + p[[4]] q[[2]], p[[1]] q[[4]] + p[[2]] q[[3]] - p[[3]] q[[2]] + p[[4]] q[[1]]};
+qc[p_] := {p[[1]], -p[[2]], -p[[3]], -p[[4]]};
+om[x_, y_] := Join[qm[x[[1 ;; 4]], y[[1 ;; 4]]] - qm[qc[y[[5 ;; 8]]], x[[5 ;; 8]]], qm[y[[5 ;; 8]], x[[1 ;; 4]]] + qm[x[[5 ;; 8]], qc[y[[1 ;; 4]]]]];
+e = IdentityMatrix[8];
+L[u_] := Transpose[Table[om[u, e[[k]]], {k, 8}]];
+R[u_] := Transpose[Table[om[e[[k]], u], {k, 8}]];
+comm[a_, b_] := a . b - b . a;
+close[g_] := Module[{b = g, n, new},
+   b = Select[RowReduce[Flatten /@ b], AnyTrue[#, # != 0 &] &]; b = Partition[#, 8] & /@ b;
+   While[True, new = Join[b, Flatten[Table[comm[b[[i]], b[[j]]], {i, Length[b]}, {j, i + 1, Length[b]}], 1]];
+    new = Select[RowReduce[Flatten /@ new], AnyTrue[#, # != 0 &] &]; new = Partition[#, 8] & /@ new;
+    If[Length[new] == Length[b], Break[]]; b = new]; b];
+gL = close[{L[e[[2]]], L[e[[3]]], L[e[[4]]]}];
+gSa = close[{L[e[[2]]], L[e[[3]]], L[e[[4]]], R[e[[2]]]}];
+Print["Abschluss der L: ", Length[gL], "  mit R_i: ", Length[gSa]];
+Print["[L_i,L_j]-2L_k = 0 ? ", comm[L[e[[2]]], L[e[[3]]]] == 2 L[e[[4]]], "   [L_j,R_i]=0 ? ", comm[L[e[[3]]], R[e[[2]]]] == 0 L[e[[2]]]];
+xs = Array[x, 8];
+inv[g_, d_] := Module[{mons, c, p, eqs, sol}, mons = MonomialList[(Total[xs])^d, xs] /. {n_Integer m_ :> m}; mons = DeleteDuplicates[mons]; c = Array[cc, Length[mons]]; p = c . mons;
+   eqs = Flatten[Table[CoefficientList[(X . xs) . D[p, {xs}], xs], {X, g}]]; eqs = DeleteCases[eqs, 0];
+   Length[mons] - MatrixRank[Normal[CoefficientArrays[eqs, c][[2]]]]];
+Print["S-a Invarianten Grad 2, 4: ", inv[gSa, 2], ", ", inv[gSa, 4]];
+dm = Array[dd, {8, 8}];
+eqd = Flatten[Table[dm . om[e[[i]], e[[j]]] - om[dm . e[[i]], e[[j]]] - om[e[[i]], dm . e[[j]]], {i, 8}, {j, 8}]];
+ns = NullSpace[Normal[CoefficientArrays[eqd, Flatten[dm]][[2]]]];
+g2 = Partition[#, 8] & /@ ns;
+Print["dim Der(O): ", Length[g2]];
+st = NullSpace[Transpose[Table[gg[[All, 2]], {gg, g2}]]];
+su3 = Table[Sum[s[[k]] g2[[k]], {k, Length[g2]}], {s, st}];
+Print["dim Stabilisator von i: ", Length[su3]];
+Print["g2 Invarianten Grad 2, 4: ", inv[g2, 2], ", ", inv[g2, 4]];
+Print["su3 Invarianten Grad 2, 4: ", inv[su3, 2], ", ", inv[su3, 4]];
+both = close[Join[gSa, su3]];
+Print["S-a und S-c zusammen: dim ", Length[both], ", Invarianten Grad 4: ", inv[both, 4]];
+beta[n_, m_] := Module[{xv = Array[xx, n], yv = Array[yy, m], A, C, V, H, tr, sol}, A = xv . xv; C = yv . yv; V = lA A^2 + k A C + lC C^2; H = D[V, {Join[xv, yv], 2}]; tr = Expand[Tr[H . H]/2];
+   sol = SolveAlways[tr == bA A^2 + bK A C + bC C^2, Join[xv, yv]]; Factor[{bA, bK, bC} /. First[sol]]];
+Do[Print["beta ", nm, ": ", InputForm[beta @@ nm]], {nm, {{4, 4}, {2, 6}, {1, 7}}}];
+{bA4, bK4, bC4} = beta[4, 4];
+Do[sol = NDSolve[{a'[t] == (bA4 /. {lA -> a[t], k -> kk[t], lC -> c[t]})/(16 Pi^2), kk'[t] == (bK4 /. {lA -> a[t], k -> kk[t], lC -> c[t]})/(16 Pi^2), c'[t] == (bC4 /. {lA -> a[t], k -> kk[t], lC -> c[t]})/(16 Pi^2), a[0] == 0, kk[0] == 1.2039, c[0] == c0, WhenEvent[Max[Abs[a[t]], Abs[kk[t]], Abs[c[t]]] > 4 Pi, tp = t; "StopIntegration"]}, {a, kk, c}, {t, 0, 50}];
+ Print["S-a lC(v)=", c0, ": t = ", tp, ", Pol bei ", 246.22 Exp[tp], " GeV"], {c0, {0, 0.5, 1.}}];
+Print["feste Strahlen (4,4): ", InputForm[Solve[{(bK4 lA - k bA4)/k == 0, (bK4 lC - k bC4)/k == 0} /. lA -> 1, {k, lC}, Reals]]];

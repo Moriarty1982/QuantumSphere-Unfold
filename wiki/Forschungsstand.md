@@ -1,5 +1,19 @@
 # Forschungsstand
 
+### Der Anhang von HS(3): Form der Kopplung festgelegt, Wert frei (25.11.2026, Test H133, teilweise nicht blind, k302)
+
+Nach k300 fehlen der Schleifen-Skala schwere Bosonen, und der Anhang ℍ → 𝕆 bringt vier neue reelle Felder mit. H133 fragte, ob der Turm ihre Kopplung an die Vorstufe so festlegt, dass 125 GeV herauskommen. **Ergebnis: nicht bestätigt. Die Form ist festgelegt, der Wert nicht.**
+
+**Form.** Mit ψ = a + b·ℓ, A = N(a), C = N(b) wirkt die Linksmultiplikation mit einer Einheit p von ℍ als p(a + bℓ) = pa + (bp)ℓ, die Rechtsmultiplikation als (a + bℓ)q = aq + (b·q̄)ℓ. Auf dem Anhang b sind beides Rechtsmultiplikationen und vertauschen nicht. Die Linksmultiplikationen bilden auf 𝕆 keine SU(2) mehr (Abschluss Dimension 6), zusammen mit der Rechts-U(1) entsteht su(2) ⊕ u(1) auf a und eine eigene su(2) nur auf b (Dimension 7). Invariant sind nur A und C, im Grad 4 nur A², AC, C². Es gibt also genau einen gemischten Term κ·A·C, und die vier neuen Felder haben dieselbe Masse m² = 2κv². Terme, die in einem gewöhnlichen Modell mit zwei Dubletts die Massen aufspalten, sind durch die Nicht-Assoziativität verboten.
+
+**Wert.** Nötig wären vier Felder bei 382 GeV, also κ ≈ 1,20. Keine Regel des Turms liefert das: Die volle Norm gibt masselose neue Felder, die HC-Strafe gibt κ = −2ημ² mit freiem η, und der Fluss mit einer Schleife (16π²·dκ/dt = 16κ(κ + 3λ_A + 3λ_C)) hat als feste Strahlen nur κ = 0 und die volle Norm. Nachträglich gefunden: Verlangt man die fortgesetzte schwache Wirkung und die Farb-su(3) zugleich, erzeugen beide so(8), und es bleibt nur die volle Norm, also wieder masselose Felder.
+
+**Tragfähigkeit.** Mit κ = 1,20 überschreiten die Kopplungen 4π bei 1,4·10⁴ GeV (günstigster Fall λ_C(v) = 0), sonst schon unter 3 TeV. Das Bild wäre höchstens bis etwa 14 TeV gültig.
+
+Andere Lesarten der Symmetrie geben 6 entartete Felder bei 345 GeV (su(3), ein farbiges Triplett) oder 7 bei 332 GeV (g₂). Grenzen: eine Schleife, Fluss nur mit Skalaren, Massen aus dem Gedächtnis, keine Beschleuniger-Schranken geprüft. Kein Guard berührt.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H133_Anhang_HS3_Kopplung.md`, Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H133_Anhang_HS3_Kopplung.md`, Skripte `k302_test_h133.py`, `k302b_gegenprobe.wl`.
+
 ### Die Schleifen-Skala von 9,8 GeV: es fehlen schwere Bosonen (25.11.2026, Erkundungen, nicht blind, k300, k301)
 
 Frage des Autors nach k299: Sind die 9,8 GeV statt 125 GeV schlimm, und warum klingt die Zahl nach g? Die Formel m_s² = [Σ_Bosonen n·m⁴ − Σ_Fermionen n·m⁴]/(8π²v²) enthält nur gemessene Massen und v, keine Setzung dieses Fadens. Mit W und Z allein kommt 9,78 GeV heraus (Faktor 12,8 in der Masse, 164 im Massenquadrat). Mit dem Top-Quark wird die Summe negativ (m_s² = −2129 GeV²), es gibt dann kein Minimum. Für 125,2 GeV fehlen an Bosonen 8,52·10¹⁰ GeV⁴, das sind zum Beispiel vier reelle Felder bei 382 GeV (eines: 540, acht: 321). Vier reelle Komponenten bringt der nächste Anhang ℍ → 𝕆 mit. Das ist eine Bedingung unter zwei Voraussetzungen (Skala nur aus Schleifen, Feld = elektroschwaches Feld), keine Vorhersage. Massen aus dem Gedächtnis eingesetzt.

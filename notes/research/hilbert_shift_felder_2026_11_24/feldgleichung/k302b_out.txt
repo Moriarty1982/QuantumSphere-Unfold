@@ -1,0 +1,19 @@
+Ausgabe von k302b_gegenprobe.wl (Wolfram Language, Lauf vom 25.11.2026 ueber den Wolfram-Auswerter, zustandsloser Kernel).
+Warnungen: Symbol::undefined2 (globale Symbole L, R, X, A, V, H "undefined", harmlos: es sind die im Skript definierten Namen bzw. lokale Variablen);
+General::messages (Sammelhinweis dazu). Rueckgabewert: Null. Symbolische Nullreste: keine eigenen; die Vergleiche sind Wahrheitswerte.
+
+Abschluss der L: 6  mit R_i: 7
+[L_i,L_j]-2L_k = 0 ? False   [L_j,R_i]=0 ? False
+S-a Invarianten Grad 2, 4: 2, 3
+dim Der(O): 14
+dim Stabilisator von i: 8
+g2 Invarianten Grad 2, 4: 2, 3
+su3 Invarianten Grad 2, 4: 4, 9
+S-a und S-c zusammen: dim 28, Invarianten Grad 4: 1
+beta {4, 4}: {8*(k^2 + 12*lA^2), 16*k*(k + 3*lA + 3*lC), 8*(k^2 + 12*lC^2)}
+beta {2, 6}: {4*(3*k^2 + 20*lA^2), 16*k*(k + 2*lA + 4*lC), 4*(k^2 + 28*lC^2)}
+beta {1, 7}: {2*(7*k^2 + 36*lA^2), 8*k*(2*k + 3*lA + 9*lC), 2*(k^2 + 60*lC^2)}
+S-a lC(v)=0: t = 4.05862, Pol bei 14254.7 GeV
+S-a lC(v)=0.5: t = 2.45299, Pol bei 2861.83 GeV
+S-a lC(v)=1.: t = 1.41033, Pol bei 1008.84 GeV
+feste Strahlen (4,4): {{k -> 0, lC -> 1}, {k -> 2, lC -> 1}}
