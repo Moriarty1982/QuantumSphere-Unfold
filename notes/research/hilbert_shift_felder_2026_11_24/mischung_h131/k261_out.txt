@@ -1,0 +1,19 @@
+==============================================================================
+Teil 1  Gruppe auf dem Triplett
+   Elemente, die W erhalten: 24; Triplett-Teilraum erhalten (Rest 1.1e-15); linear 12, antilinear 12
+   alle Matrizen reell und ganzzahlig: True
+   Determinanten linear [(1, 12)], antilinear [(-1, 12)]
+   Kontrolle (i) Gruppe unter gemischter Verknuepfung abgeschlossen: True
+   Ordnungen linear [(1, 1), (2, 3), (3, 8)]; X X* fuer antilineare: Ordnung [(1, 6), (2, 6)]
+   Beispiele antilinear X: [[[-1, 0, 0], [0, 0, -1], [0, 1, 0]], [[-1, 0, 0], [0, 0, 1], [0, -1, 0]], [[1, 0, 0], [0, 0, -1], [0, -1, 0]]]
+==============================================================================
+Teil 2  Kontrolle (ii): ohne CP
+   8 x 3 Kombinationen (T, S): trimaximale Spalte, groesste Abweichung 2.2e-13; |J| bis 0.096 (frei); kleinste Zeilendifferenz 0.254 (keine Zeilengleichheit)
+==============================================================================
+Teil 2  mit CP: alle zulaessigen (T, S, X)
+   zulaessige Kombinationen: 96; ausgeschlossene Paare (S, X): {'X S != S X': 24}
+   Klasse ('X X* = 1', 'Spalte trimaximal', 'J = 0', 'Zeilen verschieden'): 48 Kombinationen; dim(H_e) 3, dim(m_nu) 4; max |J| 0.0000; Zeilengleichheit 2.9e-01; Spaltenrest 2.4e-11
+      Vertreter: T = [[0, 1, 0], [0, 0, 1], [1, 0, 0]], S = [[1, 0, 0], [0, -1, 0], [0, 0, -1]], X = [[1, 0, 0], [0, 0, -1], [0, -1, 0]]
+   Klasse ('entartet oder leer', 'X X* = S'): 48 Kombinationen; dim(H_e) 3, dim(m_nu) 4; max |J| 0.0962; Zeilengleichheit 2.9e-01; Spaltenrest 5.6e-13
+      Vertreter: T = [[0, 1, 0], [0, 0, 1], [1, 0, 0]], S = [[1, 0, 0], [0, -1, 0], [0, 0, -1]], X = [[-1, 0, 0], [0, 0, -1], [0, 1, 0]]
+   Klassen ohne die Art von X X*: [('Spalte trimaximal', 'J = 0', 'Zeilen verschieden')]

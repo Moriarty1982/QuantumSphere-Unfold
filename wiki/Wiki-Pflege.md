@@ -944,3 +944,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H130:** Ladungsrichtung und Verdopplungseinheit (k258) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **25.11.2026, Erkundungen k259, k260:** Vollständigkeit zu H130 und drei Kopien auf drei Plätzen in Forschungsstand und Offene-Probleme eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H131:** S₄ mit Ladung als verallgemeinerter CP (k261) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
