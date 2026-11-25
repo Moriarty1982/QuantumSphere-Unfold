@@ -1,0 +1,107 @@
+=== H153a: Normierung als Umparametrisierung (symbolisch) ===
+   16 pi^2 beta (1,2): [4*(ka**2 + 18*lA**2), 8*ka*(2*ka + 3*lA + 4*lB), 2*(ka**2 + 40*lB**2)]
+   16 pi^2 beta (1,1): [2*(ka**2 + 36*lA**2), 8*ka*(2*ka + 3*lA + 3*lB), 2*(ka**2 + 36*lB**2)]
+   (1) GW-Bedingung nach Umskalierung * a b: k + 2*lam  (= k + 2 lam: dieselbe Form in den Hut-Kopplungen)
+   (2) K am GW-Punkt haengt nur am physikalischen Verhaeltnis lA/lB; Start-Verhaeltnis nach Umskalierung: b**2/a**2 => K0 = (a + b)/(3*a)
+   (3) konjugierter Hut-Fluss minus naiver Hut-Fluss (Null nur fuer a = b = 1):
+       lA: -4*(a**2*b**2*k**2 + 18*a**2*b**2*lam**2 - a**2*k**2 - 18*b**2*lam**2)/(a**2*b**2)
+       ka: -8*k*(2*a**2*b**2*k + 7*a**2*b**2*lam - 4*a**2*lam - 2*a*b*k - 3*b**2*lam)/(a**2*b**2)
+       lB: -2*(a**2*b**2*k**2 + 40*a**2*b**2*lam**2 - 40*a**2*lam**2 - b**2*k**2)/(a**2*b**2)
+       a = b = 1: [0, 0, 0]
+   (4) beta(Bhat = s|y|^2) minus konjugierter Fluss: [0, 0, 0] (Nullrest = kovariant)
+
+=== H153b: N1-N3 im (1,2)-Fluss, Gitter 4 x 6 ===
+   Kontrolle H150d (Start 0.2, -0.2, 0.2, ohne Normierung): (np.float64(0.13414518939718637), np.float64(0.6719410420114866), np.float64(0.7893229344555857), np.float64(1.0318966233864224))
+
+   N1: GW erreicht 24/24
+      lam=0.05  k/lam=-1.9: tau=0.03036 lA/lB=3.735435 K=0.977576 theta-pi/4=+0.161831
+      lam=0.05  k/lam=-1.5: tau=0.23110 lA/lB=2.744491 K=0.885550 theta-pi/4=+0.124880
+      lam=0.05  k/lam=-1.0: tau=1.00080 lA/lB=1.764392 K=0.776101 theta-pi/4=+0.070739
+      lam=0.05  k/lam=-0.5: tau=6.97466 lA/lB=1.195242 K=0.697757 theta-pi/4=+0.022286
+      lam=0.05  k/lam=-0.2: tau=107.82866 lA/lB=1.076906 K=0.679247 theta-pi/4=+0.009261
+      lam=0.05  k/lam=-0.1: tau=1088.13179 lA/lB=1.069092 K=0.677990 theta-pi/4=+0.008351
+      lam=0.1   k/lam=-1.9: tau=0.01518 lA/lB=3.735435 K=0.977576 theta-pi/4=+0.161831
+      lam=0.1   k/lam=-1.5: tau=0.11555 lA/lB=2.744491 K=0.885550 theta-pi/4=+0.124880
+      lam=0.1   k/lam=-1.0: tau=0.50040 lA/lB=1.764392 K=0.776101 theta-pi/4=+0.070739
+      lam=0.1   k/lam=-0.5: tau=3.48733 lA/lB=1.195242 K=0.697757 theta-pi/4=+0.022286
+      lam=0.1   k/lam=-0.2: tau=53.91433 lA/lB=1.076906 K=0.679247 theta-pi/4=+0.009261
+      lam=0.1   k/lam=-0.1: tau=544.06589 lA/lB=1.069092 K=0.677990 theta-pi/4=+0.008351
+      lam=0.2   k/lam=-1.9: tau=0.00759 lA/lB=3.735435 K=0.977576 theta-pi/4=+0.161831
+      lam=0.2   k/lam=-1.5: tau=0.05778 lA/lB=2.744491 K=0.885550 theta-pi/4=+0.124880
+      lam=0.2   k/lam=-1.0: tau=0.25020 lA/lB=1.764392 K=0.776101 theta-pi/4=+0.070739
+      lam=0.2   k/lam=-0.5: tau=1.74366 lA/lB=1.195242 K=0.697757 theta-pi/4=+0.022286
+      lam=0.2   k/lam=-0.2: tau=26.95717 lA/lB=1.076906 K=0.679247 theta-pi/4=+0.009261
+      lam=0.2   k/lam=-0.1: tau=272.03295 lA/lB=1.069092 K=0.677990 theta-pi/4=+0.008351
+      lam=0.3   k/lam=-1.9: tau=0.00506 lA/lB=3.735435 K=0.977576 theta-pi/4=+0.161831
+      lam=0.3   k/lam=-1.5: tau=0.03852 lA/lB=2.744491 K=0.885550 theta-pi/4=+0.124880
+      lam=0.3   k/lam=-1.0: tau=0.16680 lA/lB=1.764392 K=0.776101 theta-pi/4=+0.070739
+      lam=0.3   k/lam=-0.5: tau=1.16244 lA/lB=1.195242 K=0.697757 theta-pi/4=+0.022286
+      lam=0.3   k/lam=-0.2: tau=17.97144 lA/lB=1.076906 K=0.679247 theta-pi/4=+0.009261
+      lam=0.3   k/lam=-0.1: tau=181.35530 lA/lB=1.069092 K=0.677990 theta-pi/4=+0.008351
+   N1: K min 0.677990 max 0.977576 Mittel 0.782370 Std 1.14e-01 -> startabhaengig; 3sigma-Treffer 0/24; |theta - pi/4| < 0,01: 8/24
+
+   N2: GW erreicht 24/24
+      lam=0.05  k/lam=-1.9: tau=0.00337 lA/lB=3.735435 K=0.977576 theta-pi/4=+0.161831
+      lam=0.05  k/lam=-1.5: tau=0.02568 lA/lB=2.744491 K=0.885550 theta-pi/4=+0.124880
+      lam=0.05  k/lam=-1.0: tau=0.11120 lA/lB=1.764392 K=0.776101 theta-pi/4=+0.070739
+      lam=0.05  k/lam=-0.5: tau=0.77496 lA/lB=1.195242 K=0.697757 theta-pi/4=+0.022286
+      lam=0.05  k/lam=-0.2: tau=11.98096 lA/lB=1.076906 K=0.679247 theta-pi/4=+0.009261
+      lam=0.05  k/lam=-0.1: tau=120.90353 lA/lB=1.069092 K=0.677990 theta-pi/4=+0.008351
+      lam=0.1   k/lam=-1.9: tau=0.00169 lA/lB=3.735435 K=0.977576 theta-pi/4=+0.161831
+      lam=0.1   k/lam=-1.5: tau=0.01284 lA/lB=2.744491 K=0.885550 theta-pi/4=+0.124880
+      lam=0.1   k/lam=-1.0: tau=0.05560 lA/lB=1.764392 K=0.776101 theta-pi/4=+0.070739
+      lam=0.1   k/lam=-0.5: tau=0.38748 lA/lB=1.195242 K=0.697757 theta-pi/4=+0.022286
+      lam=0.1   k/lam=-0.2: tau=5.99048 lA/lB=1.076906 K=0.679247 theta-pi/4=+0.009261
+      lam=0.1   k/lam=-0.1: tau=60.45177 lA/lB=1.069092 K=0.677990 theta-pi/4=+0.008351
+      lam=0.2   k/lam=-1.9: tau=0.00084 lA/lB=3.735435 K=0.977576 theta-pi/4=+0.161831
+      lam=0.2   k/lam=-1.5: tau=0.00642 lA/lB=2.744491 K=0.885550 theta-pi/4=+0.124880
+      lam=0.2   k/lam=-1.0: tau=0.02780 lA/lB=1.764392 K=0.776101 theta-pi/4=+0.070739
+      lam=0.2   k/lam=-0.5: tau=0.19374 lA/lB=1.195242 K=0.697757 theta-pi/4=+0.022286
+      lam=0.2   k/lam=-0.2: tau=2.99524 lA/lB=1.076906 K=0.679247 theta-pi/4=+0.009261
+      lam=0.2   k/lam=-0.1: tau=30.22588 lA/lB=1.069092 K=0.677990 theta-pi/4=+0.008351
+      lam=0.3   k/lam=-1.9: tau=0.00056 lA/lB=3.735435 K=0.977576 theta-pi/4=+0.161831
+      lam=0.3   k/lam=-1.5: tau=0.00428 lA/lB=2.744491 K=0.885550 theta-pi/4=+0.124880
+      lam=0.3   k/lam=-1.0: tau=0.01853 lA/lB=1.764392 K=0.776101 theta-pi/4=+0.070739
+      lam=0.3   k/lam=-0.5: tau=0.12916 lA/lB=1.195242 K=0.697757 theta-pi/4=+0.022286
+      lam=0.3   k/lam=-0.2: tau=1.99683 lA/lB=1.076906 K=0.679247 theta-pi/4=+0.009261
+      lam=0.3   k/lam=-0.1: tau=20.15059 lA/lB=1.069092 K=0.677990 theta-pi/4=+0.008351
+   N2: K min 0.677990 max 0.977576 Mittel 0.782370 Std 1.14e-01 -> startabhaengig; 3sigma-Treffer 0/24; |theta - pi/4| < 0,01: 8/24
+
+   N3: GW erreicht 24/24
+      lam=0.05  k/lam=-1.9: tau=0.01094 lA/lB=0.463355 K=0.560234 theta-pi/4=-0.095570
+      lam=0.05  k/lam=-1.5: tau=0.08381 lA/lB=0.565779 K=0.584061 theta-pi/4=-0.070955
+      lam=0.05  k/lam=-1.0: tau=0.36962 lA/lB=0.766848 K=0.625233 theta-pi/4=-0.033159
+      lam=0.05  k/lam=-0.5: tau=2.70204 lA/lB=0.997411 K=0.666235 theta-pi/4=-0.000324
+      lam=0.05  k/lam=-0.2: tau=44.44987 lA/lB=1.063379 K=0.677068 theta-pi/4=+0.007681
+      lam=0.05  k/lam=-0.1: tau=461.80712 lA/lB=1.067756 K=0.677774 theta-pi/4=+0.008194
+      lam=0.1   k/lam=-1.9: tau=0.00547 lA/lB=0.463355 K=0.560234 theta-pi/4=-0.095570
+      lam=0.1   k/lam=-1.5: tau=0.04190 lA/lB=0.565779 K=0.584061 theta-pi/4=-0.070955
+      lam=0.1   k/lam=-1.0: tau=0.18481 lA/lB=0.766848 K=0.625233 theta-pi/4=-0.033159
+      lam=0.1   k/lam=-0.5: tau=1.35102 lA/lB=0.997411 K=0.666235 theta-pi/4=-0.000324
+      lam=0.1   k/lam=-0.2: tau=22.22494 lA/lB=1.063379 K=0.677068 theta-pi/4=+0.007681
+      lam=0.1   k/lam=-0.1: tau=230.90356 lA/lB=1.067756 K=0.677774 theta-pi/4=+0.008194
+      lam=0.2   k/lam=-1.9: tau=0.00273 lA/lB=0.463355 K=0.560234 theta-pi/4=-0.095570
+      lam=0.2   k/lam=-1.5: tau=0.02095 lA/lB=0.565779 K=0.584061 theta-pi/4=-0.070955
+      lam=0.2   k/lam=-1.0: tau=0.09240 lA/lB=0.766848 K=0.625233 theta-pi/4=-0.033159
+      lam=0.2   k/lam=-0.5: tau=0.67551 lA/lB=0.997411 K=0.666235 theta-pi/4=-0.000324
+      lam=0.2   k/lam=-0.2: tau=11.11247 lA/lB=1.063379 K=0.677068 theta-pi/4=+0.007681
+      lam=0.2   k/lam=-0.1: tau=115.45178 lA/lB=1.067756 K=0.677774 theta-pi/4=+0.008194
+      lam=0.3   k/lam=-1.9: tau=0.00182 lA/lB=0.463355 K=0.560234 theta-pi/4=-0.095570
+      lam=0.3   k/lam=-1.5: tau=0.01397 lA/lB=0.565779 K=0.584061 theta-pi/4=-0.070955
+      lam=0.3   k/lam=-1.0: tau=0.06160 lA/lB=0.766848 K=0.625233 theta-pi/4=-0.033159
+      lam=0.3   k/lam=-0.5: tau=0.45034 lA/lB=0.997411 K=0.666235 theta-pi/4=-0.000324
+      lam=0.3   k/lam=-0.2: tau=7.40831 lA/lB=1.063379 K=0.677068 theta-pi/4=+0.007681
+      lam=0.3   k/lam=-0.1: tau=76.96785 lA/lB=1.067756 K=0.677774 theta-pi/4=+0.008194
+   N3: K min 0.560234 max 0.677774 Mittel 0.631767 Std 4.62e-02 -> startabhaengig; 3sigma-Treffer 0/24; |theta - pi/4| < 0,01: 12/24
+
+   Mittelwerte: {'N1': np.float64(0.78237), 'N2': np.float64(0.78237), 'N3': np.float64(0.631767)}
+
+=== H153c: N4, (1,1)-Fluss, symmetrischer Start ===
+   24/24 mit GW-Punkt; max |K - 2/3| = 0.00e+00; max |theta - pi/4| = 0.00e+00 -> bestaetigt
+   Abstand 2/3 zum Messwert 0,666661: 5.67e-06 (sigma 7e-6: 0.81 sigma)
+   Symbolisch: beta_lA - beta_lB bei lA = lB: 0 (Tausch-Symmetrie)
+
+=== H153d: delta mit xi != 0 (Ansatz H152, ohne C-Kopplung) ===
+   N1: GW 12/12; delta auf 0 oder pi/3: 12/12; delta-Werte [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0472, 1.0472, 1.0472, 1.0472]; K [0.8691, 0.8691, 0.81468, 0.81468, 0.8691, 0.8691, 0.81468, 0.81468, 0.8691, 0.8691, 0.81468, 0.81468]
+   N2: GW 12/12; delta auf 0 oder pi/3: 12/12; delta-Werte [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0472, 1.0472, 1.0472, 1.0472, 1.0472, 1.0472]; K [0.8691, 0.8691, 0.81468, 0.81468, 0.8691, 0.8691, 0.81468, 0.81468, 0.8691, 0.8691, 0.81468, 0.81468]
+   N3: GW 12/12; delta auf 0 oder pi/3: 12/12; delta-Werte [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0472, 1.0472, 1.0472, 1.0472, 1.0472, 1.0472]; K [0.6407, 0.6407, 0.72008, 0.72008, 0.6407, 0.6407, 0.72008, 0.72008, 0.6407, 0.6407, 0.72008, 0.72008]

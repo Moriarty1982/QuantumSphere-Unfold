@@ -1,0 +1,44 @@
+=== H150a: volle Norm / geeichte U(1) ===
+V(N) = lambda N^2 -> a = c = lambda, b = 2 lambda: 2a - b = 0
+   n_A = n_B = 1: beta_kappa - 2 beta_lambda bei kappa = 2 lambda: 0
+      beta =  [2*(kappa**2 + 36*lambda_A**2), 8*kappa*(2*kappa + 3*lambda_A + 3*lambda_B), 2*(kappa**2 + 36*lambda_B**2)]
+   n_A = n_B = 2: beta_kappa - 2 beta_lambda bei kappa = 2 lambda: 0
+      beta =  [4*(kappa**2 + 20*lambda_A**2), 16*kappa*(kappa + 2*lambda_A + 2*lambda_B), 4*(kappa**2 + 20*lambda_B**2)]
+   n_A = 1, n_B = 2: beta_kappa - beta_A - beta_B bei vollem Norm-Punkt: 0  (volle Norm bleibt auch dort erhalten)
+
+=== H150b: Skala als Setzung (mu^2 < 0 gesetzt), Baumgraph ===
+V_4 auf N = 1: True -> V_4 = lambda - (2 lambda - kappa) cos^2 sin^2
+   radiale Stabilitaet: Richtung pi/4: kappa/4 + lambda/2 > 0 <=> kappa > -2 lambda; Richtung 0: lambda > 0
+   Raster r in [-1.9, 4]: Minimum bei pi/4 genau fuer r < 2, sonst bei 0 oder pi/2: True
+   quadratisch divergente Korrekturen (Koeffizient von x^2 bzw. y^2 in Tr d^2V):
+   n_A = 1, n_B = 1: dmu_A^2 ~ 2*(kappa + 6*lambda_A), dmu_B^2 ~ 2*(kappa + 6*lambda_B); auf der Tausch-Linie Differenz 0
+   n_A = 2, n_B = 2: dmu_A^2 ~ 4*(kappa + 4*lambda_A), dmu_B^2 ~ 4*(kappa + 4*lambda_B); auf der Tausch-Linie Differenz 0
+   n_A = 1, n_B = 2: dmu_A^2 ~ 4*(kappa + 3*lambda_A), dmu_B^2 ~ 2*(kappa + 8*lambda_B); auf der Tausch-Linie Differenz 2*kappa - 4*lambda
+   n_A = 1, n_B = 7: dmu_A^2 ~ 2*(7*kappa + 6*lambda_A), dmu_B^2 ~ 2*(kappa + 18*lambda_B); auf der Tausch-Linie Differenz 12*kappa - 24*lambda
+   -> mit n_A != n_B entsteht ein tauschungerader Massenterm (mu0^2 != mu1^2, H149c) proportional Lambda^2.
+   n_A = 1, n_B = 2 mit Abschneidung: dV/dtheta / sin 2theta = f**2*(kappa - 2*lambda)*(C*f**2 - c_L)  (C = cos 2theta)
+   stationaer bei cos 2theta = [c_L/f**2]  -> unabhaengig von lambda, kappa; Koide nur fuer c_L/f^2 -> 0 (skalenfrei)
+
+=== H150c: skalenfrei, Fluss auf der Tausch-Linie ===
+   n = 1: 580 Startpunkte, Klassen {'iv': 190, 'i': 390}, Abweichungen von der Vorhersage: 400
+   n = 2: 580 Startpunkte, Klassen {'iv': 190, 'i': 254, 'ii/iii': 136}, Abweichungen von der Vorhersage: 128
+   n = 2, r0 = 1: tau = 0: r = 1.000000, (2a - b)/a = 1.000e+00
+   n = 2, r0 = 1: tau = 1: r = 1.127043, (2a - b)/a = 8.730e-01
+   n = 2, r0 = 1: tau = 10: r = 1.212179, (2a - b)/a = 7.878e-01
+   n = 2, r0 = 1: tau = 100: r = 1.287279, (2a - b)/a = 7.127e-01
+   n = 2, r0 = 1: tau = 10000: r = 1.407917, (2a - b)/a = 5.921e-01
+
+=== H150d: reelle Einheit (n_A = 1) gegen Kopien-Ebene (n_B = 2), Start auf der Tausch-Linie ===
+   beta (1, 2): [4*(kappa**2 + 18*lambda_A**2), 8*kappa*(2*kappa + 3*lambda_A + 4*lambda_B), 2*(kappa**2 + 40*lambda_B**2)]
+   Klassen {'iv': 190}; K am GW-Punkt: min 0.6667, Median 0.6719, max 0.6778; Anteil |K - 2/3| < 1 %: 0.579
+   Urteil: Koide verschoben
+   Zusatz n_B = 7 (ganze Im O): K Median 0.6966, Bereich 0.6670 .. 0.7235, Anteil in 1 %: 0.231
+
+=== H150e: gleiche Komponentenzahl (n = 2), abseits der Tausch-Linie (Gitter wie H129) ===
+   Klasse (iv) abseits der Linie: 836 Punkte; |ln(lA/lB)| kleiner am Ende: 836/836 = 1.000; |K - 2/3| < 1 %: 223/836 = 0.267
+   Urteil: anziehend
+
+=== H150f: HC-Form eta (B - mu^2 A)^2 ===
+   a = eta*mu**4, b = -2*eta*mu**2, c = eta; 2a - b = 2*eta*mu**2*(mu**2 + 1); tauschungerade 2(a - c) = 2*eta*(mu - 1)*(mu + 1)*(mu**2 + 1)
+   Beschraenktheit verlangt eta >= 0 (V -> eta * B^2 fuer A = 0); dann kappa = b = -2*eta*mu**2 <= 0
+   Minimum (V = 0) bei tan^2 theta = mu^2, also tan theta = mu; Kontrolle V(arctan mu) = 0

@@ -1,0 +1,19 @@
+(Ausgabe von k336b_gegenprobe.wl, Wolfram-Kernel ueber MCP, 25.11.2026; keine Meldungen/Warnungen. Ein erster Lauf mit SolveAlways
+ fuer den Fall B = s|y|^2 lieferte keine vollstaendige Loesung (unaufgeloeste bK, bB) und eine falsche Domain-Auslese; ersetzt durch
+ direkte Koeffizienten mit Restpruefung, unten der zweite Lauf.)
+beta(1,2) = {4 (ka^2 + 18 la^2), 8 ka (2 ka + 3 la + 4 lb), 2 (ka^2 + 40 lb^2)}  Rest 0
+beta(1,1) = {2 (ka^2 + 36 la^2), 8 ka (2 ka + 3 la + 3 lb), 2 (ka^2 + 36 lb^2)}  Rest 0
+beta(Bhat = s|y|^2) Rest 0; minus konjugiert: {0, 0, 0}
+Tausch (1,1) bei la = lb: 0
+N1 lam=0.2 k/lam=-1.9: tau, K = {0.007588996099, 0.9775757409}
+N1 lam=0.2 k/lam=-0.5: tau, K = {1.743664106, 0.6977570115}
+N1 lam=0.2 k/lam=-0.1: tau, K = {272.0329466, 0.6779897600}
+N2 lam=0.2 k/lam=-1.9: tau, K = {0.0008432217888, 0.9775757409}
+N2 lam=0.2 k/lam=-0.5: tau, K = {0.1937404562, 0.6977570115}
+N2 lam=0.2 k/lam=-0.1: tau, K = {30.22588296, 0.6779897600}
+N3 lam=0.2 k/lam=-1.9: tau, K = {0.002734711620, 0.5602339789}
+N3 lam=0.2 k/lam=-0.5: tau, K = {0.6755092395, 0.6662348059}
+N3 lam=0.2 k/lam=-0.1: tau, K = {115.4517788, 0.6777742055}
+N4 lam=0.2 k/lam=-1.9: tau, K = {0.00422008415736, 0.666666666667}; K - 2/3 = 0.*10^-30
+N4 lam=0.2 k/lam=-0.5: tau, K = {0.686461652253, 0.666666666667}; K - 2/3 = 0.*10^-29
+N4 lam=0.2 k/lam=-0.1: tau, K = {47.7248460499, 0.666666666667}; K - 2/3 = 0.*10^-29

@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H149; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H154; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -44,7 +44,19 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   Tachyon-Frame, k297) und dort ist Ψ lichtartig; ein tauschsymmetrisches Potential ist dort stets stationär, Minimum oder Maximum entscheidet das
   Vorzeichen von 2a − b (Gegenstück θ = 0, K = ⅓). Der HC bricht den Tausch (K = 0,364). δ sieht nur die kubische Norm N(W) über cos 3δ; ohne
   Anpassung nur δ = 0, π/3 (entartet) oder π/12 (N(W) = 0, masseloses Elektron, H101). δ = 2/9 bleibt Fit bzw. CT-002.
+- **H150** (Vorab fc17ee9): Vorzeichen von 2a − b = 2λ − κ aus der Feldgleichung? Nicht allein. Skala gesetzt: Koide-Minimum für −2λ < κ < 2λ, mit Abschneidung
+  und ungleicher Komponentenzahl (1 gegen 2) wandert θ nach cos 2θ = c_L/f². Skalenfrei: Kondensat am Koide-Punkt nur für κ < 0 (Klasse iv), dann 2a − b > 0;
+  mit 1 gegen 2 Komponenten verschiebt der Fluss K auf ≈ 0,672. HC-Form: κ < 0 aus Beschränktheit, Minimum bei tan θ = μ.
+- **H151** (Vorab 8fc75b5, Nachträge 4676bce, ed80585): Hängt die Verschiebung mit 2/9 oder einer Setzung zusammen? Nein. Der Fluss ist in der Kopien-Ebene invariant
+  und erzeugt δ nicht; die Verschiebung ist startabhängig (ΔK 0 … 0,011), fester Grenzwert nur K* = 1/3 + √10/9; 48 Vergleiche mit Funktionen von 2/9 ohne Treffer,
+  540 mit allen Setzungen im Zufallsbereich. Frame-Differenz: Form S ändert K nicht, ein Boost hält den Lichtkegel fest und erreicht ⅔ nie.
+- **H152** (Vorab c76928c): erweiterter skalenfreier Ansatz mit allen Z₃-invarianten Quartiken (neu nur ξφC₃, die skalenfreie kubische Norm) und HS(3)-Rückwirkung.
+  K startabhängig (0,662 … 0,818), δ landet immer auf 0 oder π/3 (zwei gleiche Massen), ⅔ nur über gewählte Startwerte erreichbar.
+- **H153** (Vorab fd4c7f3): 1:2-Normierung. Normierungen von A und B (je Komponente, Spur 1/3 : 2/3, dritte Kopie) sind Umparametrisierungen (Nullrest): sie wählen nur
+  den Startstrahl, K bleibt startabhängig, δ bleibt 0 oder π/3. Nur die Einschränkung der Schleife auf die Unteralgebra {1, U} gibt K = ⅔ und θ = π/4 exakt; das ist eine Setzung.
+- **H154** (Vorab 5ef018d): Die Algebra erzwingt die Schleife über {1, U} nicht: Keine Symmetrie nimmt U′ aus der Schleife, Goldstone und Eichung ändern daran nichts.
+  Die Abweichung von ⅔ ist Messrauschen: mit m_τ = 1776,93 ± 0,09 MeV 0,43σ (Fehler ganz aus m_τ); laufende Massen verschlechtern K, Frame und δ tragen nichts bei.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H149; Skripte k321–k332 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H154; Skripte k321–k337 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

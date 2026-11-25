@@ -1,0 +1,67 @@
+=== H151a: der Fluss ist O(n_B)-invariant in der Kopien-Ebene, delta bleibt frei ===
+V(Drehung in der Kopien-Ebene) - V = 0
+beta-Funktionen enthalten nur lambda_A, kappa, lambda_B (keine Richtung in der Ebene): [4*kappa**2 + 72*lambda_A**2, 16*kappa**2 + 24*kappa*lambda_A + 32*kappa*lambda_B, 2*kappa**2 + 80*lambda_B**2]
+
+=== H151b: Fixstrahlen fuer n_A = 1, n_B = 2 ===
+   Fixstrahl lambda_A/lambda_B = 10/9 = 1.111111, kappa/lambda_B = 0 = 0.000000; kappa + 2 sqrt(lA lB) = 2.1082
+   Fixstrahl lambda_A/lambda_B = 1 = 1.000000, kappa/lambda_B = 2 = 2.000000; kappa + 2 sqrt(lA lB) = 4.0000
+   Fixstrahl lambda_A/lambda_B = (-11553*3**(1/3)*(27 + 2*sqrt(183))**(2/3) - 854*3**(5/6)*sqrt(61)*(27 + 2*sqrt(183))**(2/3) - 1461*(27 + 2*sqrt(183))**(1/3) - 108*sqrt(183)*(27 + 2*sqrt(183))**(1/3) + 31782*3**(1/6)*sqrt(61) + 143313*3**(2/3))/(9*(-487*3**(1/3)*(27 + 2*sqrt(183))**(2/3) - 36*3**(5/6)*sqrt(61)*(27 + 2*sqrt(183))**(2/3) + 108*3**(1/6)*sqrt(61) + 487*3**(2/3) + 324*sqrt(183)*(27 + 2*sqrt(183))**(1/3) + 4383*(27 + 2*sqrt(183))**(1/3))) = 0.800806, kappa/lambda_B = -2*(81 + 6*sqrt(183))**(1/3)/3 + 2/(81 + 6*sqrt(183))**(1/3) + 6 = 2.731269; kappa + 2 sqrt(lA lB) = 4.5210
+   Strahl kappa = 0: lambda_A/lambda_B = 10/9; Grenzwert K = (1 + sqrt(lA/lB))/3 = 1/3 + sqrt(10)/9 = 0.684698
+   Start lambda = 0.2, kappa0/lambda = -0.1: GW bei tau = 157.4, lambda_A/lambda_B = 1.068169, K = 0.677841
+   Start lambda = 0.2, kappa0/lambda = -0.01: GW bei tau = 6.854e+05, lambda_A/lambda_B = 1.068227, K = 0.677850
+   Start lambda = 0.2, kappa0/lambda = -0.001: GW bei tau = 1e+06, lambda_A/lambda_B = 1.110990, K = 0.684678
+   Start lambda = 0.2, kappa0/lambda = -0.0001: GW bei tau = 1e+06, lambda_A/lambda_B = 1.111110, K = 0.684697
+   Start lambda = 0.2, kappa0/lambda = -1e-05: GW bei tau = 1e+06, lambda_A/lambda_B = 1.111111, K = 0.684698
+   Start auf dem Strahl kappa = 0 (kappa0 = -1e-6): lambda_A/lambda_B am GW = 1.111111, K = 0.684698
+
+=== H151b: Fixstrahlen fuer n_A = 1, n_B = 7 ===
+   Fixstrahl lambda_A/lambda_B = 5/3 = 1.666667, kappa/lambda_B = 0 = 0.000000; kappa + 2 sqrt(lA lB) = 2.5820
+   Fixstrahl lambda_A/lambda_B = 1 = 1.000000, kappa/lambda_B = 2 = 2.000000; kappa + 2 sqrt(lA lB) = 4.0000
+   Fixstrahl lambda_A/lambda_B = (-3854*(9 + sqrt(83))**(1/3) - 423*sqrt(83)*(9 + sqrt(83))**(1/3) - 201*2**(1/3)*(9 + sqrt(83))**(2/3) - 22*2**(1/3)*sqrt(83)*(9 + sqrt(83))**(2/3) + 842*2**(2/3)*sqrt(83) + 7671*2**(2/3))/(3*(-82*2**(1/3)*(9 + sqrt(83))**(2/3) - 9*2**(1/3)*sqrt(83)*(9 + sqrt(83))**(2/3) + 9*2**(2/3)*sqrt(83) + 82*2**(2/3) + 27*sqrt(83)*(9 + sqrt(83))**(1/3) + 246*(9 + sqrt(83))**(1/3))) = 1.634758, kappa/lambda_B = -2*(486 + 54*sqrt(83))**(1/3)/3 + 12/(486 + 54*sqrt(83))**(1/3) + 6 = 0.591614; kappa + 2 sqrt(lA lB) = 3.1488
+   Strahl kappa = 0: lambda_A/lambda_B = 5/3; Grenzwert K = (1 + sqrt(lA/lB))/3 = 1/3 + sqrt(15)/9 = 0.763665
+   Start lambda = 0.2, kappa0/lambda = -0.1: GW bei tau = 1e+06, lambda_A/lambda_B = 1.624341, K = 0.758165
+   Start lambda = 0.2, kappa0/lambda = -0.01: GW bei tau = 1e+06, lambda_A/lambda_B = 1.666550, K = 0.763650
+   Start lambda = 0.2, kappa0/lambda = -0.001: GW bei tau = 1e+06, lambda_A/lambda_B = 1.666666, K = 0.763665
+   Start lambda = 0.2, kappa0/lambda = -0.0001: GW bei tau = 1e+06, lambda_A/lambda_B = 1.666667, K = 0.763665
+   Start lambda = 0.2, kappa0/lambda = -1e-05: GW bei tau = 1e+06, lambda_A/lambda_B = 1.666667, K = 0.763665
+   Start auf dem Strahl kappa = 0 (kappa0 = -1e-6): lambda_A/lambda_B am GW = 1.666667, K = 0.763665
+
+=== H151c/d: Zahlenvergleich mit delta und allen Setzungen ===
+   Setzungen: {'S1 delta': 0.222222, 'S2 theta': 0.785398, 'S3 beta_sym': np.float64(0.549406), 'S4 gamma_L': 1.8647, 'S5 eps': np.float64(0.61753), 'S6 mu': np.float64(0.301847), 'S7 kappa_hit': 1.20049, 'S8 kappa*': 1.2039, 'S9 rho^2': 0.5, 'S10 gamma_M': 0.237533, 'S11a gamma_M/6': 0.039589, 'S11b gamma_M/2': 0.118766, 'S12 gamma_T': 0.127384, 'S13a 1/2': 0.5, 'S13b 1/7': 0.142857}
+   X: dK* (n_B=2)              = 0.018031
+   X: theta*-pi/4 (n_B=2)      = 0.013169
+   X: tan^2 theta*-1 (n_B=2)   = 0.054093
+   X: dK* (n_B=7)              = 0.096998
+   X: theta*-pi/4 (n_B=7)      = 0.063680
+   X: tan^2 theta*-1 (n_B=7)   = 0.290994
+   H151c: 6 x 8 = 48 Vergleiche, Treffer < 0,5 %: 0 []
+   naechste: [('tan^2 theta*-1 (n_B=2)', 'delta/4', '2.63%'), ('tan^2 theta*-1 (n_B=2)', 'delta^2', '9.54%'), ('tan^2 theta*-1 (n_B=2)', 'sin^2 delta', '11.36%')]
+   H151d: 6 x 90 = 540 Vergleiche, Treffer < 0,5 %: 2
+      theta*-pi/4 (n_B=2) ~ S11a gamma_M/6 [s/3]: -0.2102%
+      theta*-pi/4 (n_B=2) ~ S11b gamma_M/2 [s/9]: -0.2102%
+   Look-elsewhere analytisch: p je Paar = 0.00109, Erwartung 0.59 (H151c: 0.052)
+   empirisch (10^4 Saetze, X log-gleich in [1e-3, 10]): Mittel 0.58, 99-%-Quantil 3; beobachtet 2 -> nicht auffaellig
+   Gitter (nicht gewertet, aus H150): K 0,6667 .. 0,6778, Median 0,6719 -> dK 0 .. 0,0111, Median 0,0053
+
+=== H151e: Frame-Differenz ===
+   Boost erhaelt phi^2 - chi^2: True
+   lichtartiger Punkt t = pi/4: chi'/phi' = 1
+   Form S: K = Tr(G^2)/(Tr G)^2 ist unter G -> S G S^-1 invariant (Spuren); keine Aenderung.
+   n_B = 2: vor dem Boost K = 0.684698, Re Psi^2 = -0.026334 (Seite: raumartig, tan > 1)
+      eps = +artanh beta_sym = +0.61753: tan theta' = 1.007689, K' = 0.671812, K' - 2/3 = +0.005146
+      eps = -artanh beta_sym = -0.61753: tan theta' = 1.094863, K' = 0.732908, K' - 2/3 = +0.066242
+      eps = +artanh beta_sym^2 = +0.31155: tan theta' = 1.014225, K' = 0.676218, K' - 2/3 = +0.009551
+      eps = -artanh beta_sym^2 = -0.31155: tan theta' = 1.050350, K' = 0.701078, K' - 2/3 = +0.034412
+      eps = +ln gamma_L = +0.62310: tan theta' = 1.007604, K' = 0.671755, K' - 2/3 = +0.005088
+      eps = -ln gamma_L = -0.62310: tan theta' = 1.095977, K' = 0.733722, K' - 2/3 = +0.067055
+      K' = 2/3 verlangt (sin - cos)(cosh eps - sinh eps) = 0, also e^(-eps) = 0: fuer kein endliches eps
+   n_B = 7: vor dem Boost K = 0.763665, Re Psi^2 = -0.127017 (Seite: raumartig, tan > 1)
+      eps = +artanh beta_sym = +0.61753: tan theta' = 1.037790, K' = 0.692336, K' - 2/3 = +0.025669
+      eps = -artanh beta_sym = -0.61753: tan theta' = 1.561694, K' = 1.146296, K' - 2/3 = +0.479629
+      eps = +artanh beta_sym^2 = +0.31155: tan theta' = 1.070815, K' = 0.715548, K' - 2/3 = +0.048882
+      eps = -artanh beta_sym^2 = -0.31155: tan theta' = 1.269904, K' = 0.870885, K' - 2/3 = +0.204219
+      eps = +ln gamma_L = +0.62310: tan theta' = 1.037363, K' = 0.692041, K' - 2/3 = +0.025374
+      eps = -ln gamma_L = -0.62310: tan theta' = 1.569779, K' = 1.154736, K' - 2/3 = +0.488069
+      K' = 2/3 verlangt (sin - cos)(cosh eps - sinh eps) = 0, also e^(-eps) = 0: fuer kein endliches eps
+   H151e Setzungsvergleich: 12 x 90 = 1080 Vergleiche, Treffer 1; Zufall Mittel 1.15, 99-%-Quantil 5
+      n_B=7 -ln gamma_L ~ S10 gamma_M [sqrt s]: +0.1427%

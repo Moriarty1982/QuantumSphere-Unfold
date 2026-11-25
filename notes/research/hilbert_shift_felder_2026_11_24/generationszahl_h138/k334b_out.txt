@@ -1,0 +1,10 @@
+k334b_gegenprobe.wl, 25.11.2026, Wolfram-Cloud-Kernel (MCP-Evaluator). Print-Ausgaben woertlich (linearisiert), Rueckgabewert Null.
+Warnung: Symbol::undefined2 (K2, K7, Kb als "undefiniert" gemeldet; harmlos, Werte vollstaendig).
+
+Fixstrahlen (1,2): {{x -> 1.000000, k -> 2.000000}, {x -> 1.111111, k -> 0}, {x -> 0.8008064, k -> 2.731269}}
+Fixstrahlen (1,7): {{x -> 1.000000, k -> 2.000000}, {x -> 1.666667, k -> 0}, {x -> 1.634758, k -> 0.5916141}}
+K-Grenzwerte: {(1 + Sqrt[10]/3)/3, 0.6846975178, (1 + Sqrt[5/3])/3, 0.7636648162}
+theta*-pi/4 (n_B=2) = 0.01316854182 ; gamma_M/18 = 0.0131963 ; relativ -0.00210138
+Boost: Cos[2 t] ; bei pi/4: 1
+n_B=2 Boost +-artanh beta: {0.671812, 0.732908}
+n_B=7 -ln gamma_L, K'-2/3 = 0.488069 ; Sqrt[gamma_M] = 0.487373

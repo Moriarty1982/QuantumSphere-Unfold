@@ -1,0 +1,24 @@
+(* k337b (H154): unabhaengige Gegenprobe in Wolfram Language (Vorab-Notiz 5ef018d). *)
+coef[rr_, xv_, yv_] := {Coefficient[rr, xv[[1]], 4] /. Thread[Join[xv, yv] -> 0], Coefficient[Coefficient[rr, xv[[1]], 2], yv[[1]], 2] /. Thread[Join[xv, yv] -> 0], Coefficient[rr, yv[[1]], 4] /. Thread[Join[xv, yv] -> 0]};
+bet[nA_, nB_] := Module[{xv = Array[xx, nA], yv = Array[yy, nB], vv, hh}, vv = la Total[xv^2]^2 + ka Total[xv^2] Total[yv^2] + lb Total[yv^2]^2; hh = D[vv, {Join[xv, yv], 2}]; coef[Expand[Tr[hh.hh]/2], xv, yv]];
+b12 = bet[1, 2]; b11 = bet[1, 1];
+Print["beta(1,2)-beta(1,1) = ", Factor[b12 - b11]];
+gen = {{0, -a1, -a2}, {a1, 0, -a3}, {a2, a3, 0}};
+s = Solve[{(gen.{1, 0, 0})[[3]] == 0, (gen.{0, 1, 0})[[3]] == 0}, {a2, a3}];
+g1 = gen /. First[s]; Print["Erzeuger mit invariantem span{1,U}: ", g1, "; G e_y2 = ", g1.{0, 0, 1}];
+vV = la p^4 + ka p^2 (u^2 + w^2) + lb (u^2 + w^2)^2;
+Print["dV unter dieser U(1): ", Factor[Grad[vV, {p, u, w}].(g1.{p, u, w})]];
+c = Table[Cos[t]/Sqrt[3] + Sqrt[2/3] Sin[t] Cos[d + 2 Pi k/3], {k, 0, 2}];
+kk = FullSimplify[Total[c^2]/Total[c]^2]; Print["K(theta,delta) = ", kk, "; dK/ddelta = ", FullSimplify[D[kk, d]]];
+kf[m_] := Total[m]/Total[Sqrt[m]]^2;
+m0 = {0.51099895000`20, 105.6583755`20, 1776.93`20};
+gr = Table[D[kf[{x1, x2, x3}], {x1, x2, x3}[[i]]], {i, 3}] /. Thread[{x1, x2, x3} -> m0];
+sk = Sqrt[Total[(gr {1.5*^-10, 2.3*^-6, 0.09})^2]];
+Print["K_pol = ", N[kf[m0], 10], " +- ", N[sk, 4], "; (2/3-K)/sigma = ", N[(2/3 - kf[m0])/sk, 4]];
+Print["m_tau fuer 2/3: ", x /. FindRoot[kf[{0.51099895000`20, 105.6583755`20, x}] == 2/3, {x, 1777}, WorkingPrecision -> 20]];
+al = 1/137.035999; mz = 91187.6;
+Print["QED gemeinsame Skala M_Z: K = ", N[kf[m0 (1 - al/Pi (1 + 3/4 Log[mz^2/m0^2]))], 8]];
+bg = {b12[[1]], b12[[2]] - 6 e2 ka, b12[[3]] - 12 e2 lb + 3/2 e2^2, 2 e2^2/3};
+flowg[g0_] := Module[{sol, te}, sol = First@NDSolve[{fa'[t] == -(bg[[1]] /. {la -> fa[t], ka -> fk[t], lb -> fb[t], e2 -> fe[t]}), fk'[t] == -(bg[[2]] /. {la -> fa[t], ka -> fk[t], lb -> fb[t], e2 -> fe[t]}), fb'[t] == -(bg[[3]] /. {la -> fa[t], ka -> fk[t], lb -> fb[t], e2 -> fe[t]}), fe'[t] == -(bg[[4]] /. {e2 -> fe[t]}), fa[0] == g0[[1]], fk[0] == g0[[2]], fb[0] == g0[[3]], fe[0] == g0[[4]], WhenEvent[fk[t] + 2 Sqrt[fa[t] fb[t]] == 0, "StopIntegration"]}, {fa, fk, fb, fe}, {t, 0, 10^4}, WorkingPrecision -> 30, PrecisionGoal -> 15, AccuracyGoal -> 20]; te = (fa /. sol)["Domain"][[1, 2]]; N[(1 + Sqrt[(fa /. sol)[te]/(fb /. sol)[te]])/3, 8]];
+Print["Eichung e0^2=0.2, lam=0.1, k/lam=-0.2: K = ", flowg[{1/10, -2/100, 1/10, 2/10}], " (Python 0.862468)"];
+Print["Eichung e0^2=1, lam=0.2, k/lam=-1.5: K = ", flowg[{2/10, -3/10, 2/10, 1}], " (Python 0.657125)"];

@@ -1,0 +1,16 @@
+k333b_gegenprobe.wl, 25.11.2026, Wolfram-Cloud-Kernel (MCP-Evaluator), zwei Aufrufe. Print-Ausgaben woertlich (linearisiert), Rueckgabewert Null.
+Warnung Teil 1: Symbol::undefined2 (lokale Module-Variablen A, B, V, H, Vq, AA, BB als "undefiniert" gemeldet; harmlos, Ergebnisse vollstaendig).
+Ein erster Versuch von Teil 2 innerhalb von Teil 1 hatte einen Formfehler in NDSolve (Derivative auf la[s] statt la); Teil 2 wurde korrigiert neu ausgefuehrt.
+
+n = {1, 1}: {2 (k^2 + 36 la^2), 8 k (2 k + 3 la + 3 lb), 2 (k^2 + 36 lb^2), 2 k + 12 la, 2 k + 12 lb}
+n = {2, 2}: {4 (k^2 + 20 la^2), 16 k (k + 2 la + 2 lb), 4 (k^2 + 20 lb^2), 4 k + 16 la, 4 k + 16 lb}
+n = {1, 2}: {4 (k^2 + 18 la^2), 8 k (2 k + 3 la + 4 lb), 2 (k^2 + 40 lb^2), 4 k + 12 la, 2 k + 16 lb}
+n = {1, 7}: {2 (7 k^2 + 36 la^2), 8 k (2 k + 3 la + 9 lb), 2 (k^2 + 60 lb^2), 14 k + 12 la, 2 k + 36 lb}
+n=1 symmetrisch, 16pi^2 dr/dt * lambda: -2 l^2 (-6 + r) (-2 + r) r
+n=2 symmetrisch: -4 l^2 (-2 + r)^2 r
+Abschneidung: stationaer bei cos 2t = {{c -> cL/f^2}}
+HC: {{2, 0} -> eta m^4, {1, 1} -> -2 eta m^2, {0, 2} -> eta}
+(1,2) Start (1/5,-1/5,1/5): {0.1341451894, 0.6719410420}
+(1,7) Start (1/5,-1/5,1/5): {0.2745226645, 0.7027531152}
+(2,2) Start (1/5,-1/5,1/5): {0.1524959611, 0.6666666667}
+(Python k333 fuer denselben Start: (1,2) tau 0.13414518936, K 0.67194104202; (1,7) tau 0.27452266435, K 0.70275311524.)

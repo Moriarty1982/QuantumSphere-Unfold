@@ -96,6 +96,16 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H149, 25.11.2026 (k332):** Für OP3: θ = π/4 ist der Fixpunkt des Tauschs Materie- ↔ Tachyon-Frame (Ψ lichtartig); ein tauschsymmetrisches Potential ist dort stationär, Minimum oder Maximum hängt am Vorzeichen von 2a − b (offen). δ = 2/9 legt kein Term ohne Anpassung fest; die kubische Norm wählt ohne Anpassung nur π/12 (masseloses Elektron). OP3 offen.
 
+**Test H150, 25.11.2026 (k333):** Für OP3: Ob θ = π/4 ein Minimum ist, hängt am Vorzeichen von 2λ − κ, und die Feldgleichung legt es nur fest, wenn man skalenfrei rechnet und die Skala durch Kondensation (κ < 0) entstehen lässt. Mit der tatsächlichen Komponentenzahl landet der Fluss bei K ≈ 0,672 statt ⅔. OP3 offen, Vorzeichen offen.
+
+**Test H151, 25.11.2026 (k334):** Für OP3: Die Koide-Verschiebung des Flusses hängt weder mit δ = 2/9 noch mit einer anderen Setzung noch mit der Frame-Differenz zusammen; sie folgt aus der ungleichen Komponentenzahl. δ bleibt Eingabe. OP3 offen.
+
+**Test H152, 25.11.2026 (k335):** Für OP3: Der vollständige skalenfreie Ansatz wählt die Brannen-Phase δ = 0 oder π/3 (zwei gleiche Massen), nie 2/9; K bleibt startabhängig. Eine Phase dazwischen bräuchte einen nicht skalenfreien Term sechster Ordnung. OP3 offen.
+
+**Test H153, 25.11.2026 (k336):** Für OP3: Eine Normierung von A und B wählt nur den Startstrahl des Flusses; K bleibt startabhängig, δ bleibt 0 oder π/3. K = ⅔ exakt folgt nur, wenn die Schleife allein über die Unteralgebra {1, U} läuft; ob die Algebra das erzwingt, ist offen (bisher Setzung). OP3 offen.
+
+**Test H154, 25.11.2026 (k337):** Für OP3: Die Algebra erzwingt nicht, dass nur {1, U} im Fluss läuft; n_B = 1 bleibt eine Setzung (U′ kein Freiheitsgrad oder schwer, dann mit Skala). Die Abweichung von ⅔ ist Messrauschen (0,43σ, ganz aus m_τ); ⅔ exakt verlangt m_τ = 1776,969 MeV. OP3 offen.
+
 **Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
 
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.
