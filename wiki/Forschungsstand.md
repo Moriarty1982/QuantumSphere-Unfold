@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### Der gegenläufige Anteil wandert nicht von selbst in den Anhang (25.11.2026, Erkundung, nicht blind, k293)
+
+Anschluss an k292: Muss der gegenläufige Kreisanteil bei HS(2) in die neue Richtung j wandern, sodass die Norm fest wird? Verglichen wurden zwei Lösungen der freien Gleichung mit verschiedenen Laufrichtungen, ψ = a·e^{ip₁} + b·e^{−ip₂} (Anteil in ℂ) und ψ = a·e^{ip₁} + (b·j)·e^{−ip₂} (Anteil im Anhang). Die freie Energie ist gleich. Die gemittelte Energie des Flächenterms K₁ ist im Anhang doppelt so groß (a²b²k²k′²·W gegen die Hälfte, mit W = 4 − (1 + cos α)²), und der Kommutatorterm K₂ trägt nur dort bei (2·a²b²k²k′²·W). Der Unterschied ist (½c₁ + 2c₂)·a²b²k²k′²·W und verschwindet für parallele Wellen. Mit positiven Koeffizienten kostet das Wandern also Energie, und das positive c₁, das die Ruhemasse bei HS(2) braucht (k291), spricht dagegen.
+
+Der Übergang zur festen Norm folgt damit nicht aus den Zusatztermen. Der einzige Baustein des Ansatzes, der ihn bevorzugt, ist ein Potential, das Schwankungen der Norm bestraft: Die Lösung in ℂ hat die Streuung 2a²b², die im Anhang keine. Welche Lösung gewinnt, hängt an freien Koeffizienten. Das Ergebnis ließ sich beim Festlegen des Kriteriums ablesen, deshalb Erkundung; H129 bleibt frei. Gerechnet in erster Ordnung auf ebenen Wellen, sympy und Wolfram unabhängig. Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Anhang_Energie_k293.md`.
+
 ### Der HC legt die Form der HS(1)-Ellipse fest, nicht die Amplitude (25.11.2026, Erkundung, nicht blind, k292)
 
 Frage des Autors: Gilt eher Lesart A (Amplitude f entsteht bei HS(2)) oder B (f liegt schon bei HS(1) fest, etwa durch den HC)? Der HC ist im Bestand eine quasikonforme Projektion mit Beltrami-Koeffizient μ = β_sym² und Dilatation γ_L. Die HS(1)-Ellipse a·e^{iωt} + b·e^{−iωt} ist die Abbildung z → a·z + b·z̄ mit μ = b/a und K = (a + b)/(a − b). Der HC legt also b/a = 0,3018 und das Achsenverhältnis 1,8644 fest und lässt die Größe frei; als lineare Abbildung kann er keine Amplitude auszeichnen. Die Norm ist bei HS(1) nicht fest, N = a² + b² + 2ab·cos 2ωt, und ein auf der Ellipse festgehaltenes Feld verträgt sich mit der Regel ψ̈ = −ω²ψ nur für ab = 0. Das spricht für A: Das Licht von HS(1) bleibt masselos.
