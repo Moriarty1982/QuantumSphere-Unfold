@@ -950,3 +950,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Erkundung k262:** Träger der Neutrinos (komplexes Triplett oder Realteil) in Forschungsstand und Offene-Probleme eingetragen. Artikel unverändert.
 
 **25.11.2026, Test H134:** Frame-Korrektur auf die TM1-Klasse (k263) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Quanten-Coprozessor (Plan und Baustufe 0):** Die deutsche und die englische Inhaltsübersicht nennen Bauplan, Band als Eingabe, GPU- und FPGA-Ausführung, die Grenze der Kompression und die geprüfte Zwei-Qubit-Einheit. Kein Forschungsbefund, Artikel unverändert.
