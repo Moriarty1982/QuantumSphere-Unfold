@@ -1,0 +1,9 @@
+k335b_gegenprobe.wl, 25.11.2026, Wolfram-Cloud-Kernel (MCP-Evaluator). Print-Ausgaben woertlich (linearisiert), Rueckgabewert Null.
+Warnung: Symbol::undefined2 (B, Q, C3, V, H, Vs als "undefiniert" gemeldet; harmlos).
+
+beta: {lA -> 4 (ka^2 + 2 kC^2 + 18 lA^2), ka -> 4 (4 ka^2 + 4 kBC kC + 6 ka lA + 8 ka lB + 9 xi^2), lB -> 2 ka^2 + 8 kBC^2 + 80 lB^2 + 9 xi^2,
+       xi -> 24 (ka + 2 lB) xi, kC -> 8 (ka kBC + 2 kC^2 + 3 kC lA + 6 kC lC), kBC -> 4 (4 kBC^2 + ka kC + 8 kBC lB + 12 kBC lC), lC -> 2 (2 kBC^2 + kC^2 + 48 lC^2)}
+delta-Abhaengigkeit auf der Kugel: xi Cos[3 d] Cos[t] Sin[t]^3
+Massen bei delta = 0: {(Cos[t] + Sqrt[2] Sin[t])^2/3, (Cos[t]/Sqrt[3] - Sin[t]/Sqrt[6])^2, (Cos[t]/Sqrt[3] - Sin[t]/Sqrt[6])^2}
+       bei delta = pi/3: {(Cos[t]/Sqrt[3] + Sin[t]/Sqrt[6])^2, (Cos[t]/Sqrt[3] + Sin[t]/Sqrt[6])^2, (Cos[t] - Sqrt[2] Sin[t])^2/3}
+(Alle sieben beta-Funktionen stimmen mit k335_out.txt ueberein.)

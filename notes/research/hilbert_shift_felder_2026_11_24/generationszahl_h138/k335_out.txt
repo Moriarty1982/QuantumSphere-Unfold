@@ -1,0 +1,35 @@
+=== H152a: Vollstaendigkeit der Invarianten und Schliessen der beta-Funktionen ===
+   Dimension der Z3xZ2-invarianten Quartiken in (phi, y): 4 (erwartet 4: phi^4, phi^2 B, B^2, phi C3)
+   Rang der Basis {phi^4, phi^2 B, B^2, phi C3}: 4 ; zusammen mit allen Mitteln: 4
+   1/2 Tr(d^2V)^2 liegt in der Basis (Nullrest): True
+   16 pi^2 beta_lA = 4*(2*kC**2 + ka**2 + 18*lA**2)
+   16 pi^2 beta_ka = 4*(4*kBC*kC + 4*ka**2 + 6*ka*lA + 8*ka*lB + 9*xi**2)
+   16 pi^2 beta_lB = 8*kBC**2 + 2*ka**2 + 80*lB**2 + 9*xi**2
+   16 pi^2 beta_xi = 24*xi*(ka + 2*lB)
+   16 pi^2 beta_kC = 8*(kBC*ka + 2*kC**2 + 3*kC*lA + 6*kC*lC)
+   16 pi^2 beta_kBC = 4*(4*kBC**2 + 8*kBC*lB + 12*kBC*lC + kC*ka)
+   16 pi^2 beta_lC = 2*(2*kBC**2 + kC**2 + 48*lC**2)
+
+=== H152b-e: Gitter ===
+   144 Startpunkte: GW 144, sonst {}
+   lam=0.1 k/l=-1.5 xi/l=-0.4 kC=0.0: tau=0.0078 K=0.706676 delta=0.00000 theta-pi/4=+0.02832 |C|=-0.000 m/m3=[0.01016 0.01016 1.     ]
+   lam=0.1 k/l=-1.5 xi/l=-0.4 kC=0.2: tau=0.0063 K=0.702825 delta=0.00000 theta-pi/4=+0.02574 |C|=0.000 m/m3=[0.01054 0.01054 1.     ]
+   lam=0.1 k/l=-1.5 xi/l=-0.2 kC=0.0: tau=0.0314 K=0.690030 delta=0.00000 theta-pi/4=+0.01693 |C|=0.000 m/m3=[0.01189 0.01189 1.     ]
+   lam=0.1 k/l=-1.5 xi/l=-0.2 kC=0.2: tau=0.0251 K=0.678513 delta=0.00000 theta-pi/4=+0.00873 |C|=0.000 m/m3=[0.01322 0.01322 1.     ]
+   lam=0.1 k/l=-1.5 xi/l=-0.1 kC=0.0: tau=0.0463 K=0.679801 delta=0.00000 theta-pi/4=+0.00966 |C|=0.000 m/m3=[0.01306 0.01306 1.     ]
+   lam=0.1 k/l=-1.5 xi/l=-0.1 kC=0.2: tau=0.0367 K=0.665464 delta=0.00000 theta-pi/4=-0.00090 |C|=-0.000 m/m3=[0.01488 0.01488 1.     ]
+   lam=0.1 k/l=-1.5 xi/l=+0.1 kC=0.0: tau=0.0463 K=0.679801 delta=1.04720 theta-pi/4=+0.00966 |C|=0.000 m/m3=[0.06591 1.      1.     ]
+   lam=0.1 k/l=-1.5 xi/l=+0.1 kC=0.2: tau=0.0367 K=0.665464 delta=1.04720 theta-pi/4=-0.00090 |C|=-0.000 m/m3=[0.05824 1.      1.     ]
+   lam=0.1 k/l=-1.5 xi/l=+0.2 kC=0.0: tau=0.0314 K=0.690030 delta=1.04720 theta-pi/4=+0.01693 |C|=0.000 m/m3=[0.07148 1.      1.     ]
+   lam=0.1 k/l=-1.5 xi/l=+0.2 kC=0.2: tau=0.0251 K=0.678513 delta=1.04720 theta-pi/4=+0.00873 |C|=-0.000 m/m3=[0.06521 1.      1.     ]
+   lam=0.1 k/l=-1.5 xi/l=+0.4 kC=0.0: tau=0.0078 K=0.706676 delta=1.04720 theta-pi/4=+0.02832 |C|=-0.000 m/m3=[0.08071 1.      1.     ]
+   lam=0.1 k/l=-1.5 xi/l=+0.4 kC=0.2: tau=0.0063 K=0.702825 delta=1.04720 theta-pi/4=+0.02574 |C|=0.000 m/m3=[0.07856 1.      1.     ]
+
+   H152b: K ueber das Gitter: min 0.661509, max 0.818225, Streuung (Std) 4.21e-02 -> startabhaengig
+   H152c: drei verschiedene Massen: 0/144; davon delta in 1 % von 2/9: 0
+          reduzierte delta (gerundet) und Haeufigkeit: {np.float64(0.0): 73, np.float64(1.047): 71}
+   H152d: K innerhalb 3 sigma von 0,666661: 0/144; 2/3 im Bereich [min, max]: True
+   H152e: |theta - pi/4| < 0,01: 20/144; theta - pi/4 von -0.0039 bis +0.0932
+   Anteil des Kondensats in C (|C| > 0,01): 0/144
+
+   Kontrolle xi = 0, kC = 0 (H150d-Start 0.2, -0.2, 0.2): GW, tau = 0.134145, K = 0.671941 (H150/H151: tau 0.134145, K 0.671941)

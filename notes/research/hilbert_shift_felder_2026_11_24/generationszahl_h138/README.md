@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H151; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H152; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -50,7 +50,9 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
 - **H151** (Vorab 8fc75b5, Nachträge 4676bce, ed80585): Hängt die Verschiebung mit 2/9 oder einer Setzung zusammen? Nein. Der Fluss ist in der Kopien-Ebene invariant
   und erzeugt δ nicht; die Verschiebung ist startabhängig (ΔK 0 … 0,011), fester Grenzwert nur K* = 1/3 + √10/9; 48 Vergleiche mit Funktionen von 2/9 ohne Treffer,
   540 mit allen Setzungen im Zufallsbereich. Frame-Differenz: Form S ändert K nicht, ein Boost hält den Lichtkegel fest und erreicht ⅔ nie.
+- **H152** (Vorab c76928c): erweiterter skalenfreier Ansatz mit allen Z₃-invarianten Quartiken (neu nur ξφC₃, die skalenfreie kubische Norm) und HS(3)-Rückwirkung.
+  K startabhängig (0,662 … 0,818), δ landet immer auf 0 oder π/3 (zwei gleiche Massen), ⅔ nur über gewählte Startwerte erreichbar.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H151; Skripte k321–k334 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H152; Skripte k321–k335 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.
