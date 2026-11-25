@@ -1,0 +1,11 @@
+Ausgabe von k300b_gegenprobe.wl (Wolfram-Cloud-Kernel, 25.11.2026).
+Warnungen des Kernels: Symbol::undefined2 (betrifft nur die Auswertungsumgebung), Infinity::indet (0*Infinity, bei einem der Grenzwerte in U4;
+die ausgegebenen Grenzwerte 5/2 und 5/3 stimmen mit der sympy-Rechnung ueberein), General::messages.
+
+U1 m_s nur Eichfelder: 9.77943 GeV ; Faktor 12.8024 ; mit Top m_s^2 = -2129.25
+U2 fehlende Summe: 8.52238*10^10 ; Massen fuer n = 1, 2, 4, 8: {540.307, 454.342, 382.054, 321.268}
+U3 <S_i> = (p + 2*s)/3 ; <S_i^2> = (3*p^2 + 4*p*s + 8*s^2)/15 ; bestes T = (5*(p + 2*s)^2)/(3*p^2 + 4*p*s + 8*s^2)
+U4 T(q): (5*(2 + q)^2)/(8 + 4*q + 3*q^2) ; Extremum {{q -> 1}} ; Grenzen q->0, q->Infinity, q=1: {5/2, 5/3, 3}
+U5 HC: T = 1.44092
+
+Nicht gegengeprueft in Wolfram: das numerische Igel-Profil und die Integrale aus k301 (dort zwei Gitter, T* = 2,908 und 2,910).

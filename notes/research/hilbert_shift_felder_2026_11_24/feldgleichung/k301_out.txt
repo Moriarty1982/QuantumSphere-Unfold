@@ -1,0 +1,19 @@
+== 1  Stroeme des Igels ==
+  Probeprofil F = pi exp(-r/1.2), zwei Punkte:
+    S_ges - (p + 2 s) = -0.e-112 ;  S_i - (p c + s (1 - c)) = -0.e-116 ;  Re J = 0: [0.e-115, 0.e-114, 0.e-115]
+    S_ges - (p + 2 s) = -0.e-113 ;  S_i - (p c + s (1 - c)) = -0.e-113 ;  Re J = 0: [0.e-116, 0.e-115, 0.e-117]
+
+== 2  Winkelmittel ==
+  <S_i> = p/3 + 2*s/3  (= S_ges/3);  <S_i^2> = (3*p**2 + 4*p*s + 8*s**2)/15
+  <(S_ges - T S_i)^2> = (3*T**2*p**2 + 4*T**2*p*s + 8*T**2*s**2 - 10*T*p**2 - 40*T*p*s - 40*T*s**2 + 15*p**2 + 60*p*s + 60*s**2)/15
+  punktweise bestes T: 5*(p + 2*s)**2/(3*p**2 + 4*p*s + 8*s**2) ;  p = s: 3 ;  s = 0: 5/3 ;  p = 0: 5/2
+  als Funktion von q = p/s: 5*(q + 2)**2/(3*q**2 + 4*q + 8) ;  Maximum bei q = [1] ;  also 5/3 <= T* <= 3
+  kleinster Wert von <(S_ges - T S_i)^2>/S_ges^2 bei p = s: T**2/9 - 2*T/3 + 1  => null nur fuer T = 3
+
+== 3  Profil und Integrale (Laengeneinheit und Energieeinheit wie k291) ==
+  Gitter 200, R=12.0: E_Igel = 4 pi * 8.2232;  Int S_ges^2 = 162.307, Int S_ges <S_i> = 54.102, Int <S_i^2> = 18.604
+    T* = 2.9080 (tau*^2 = 1.9080);  I_P(T*) = 4.976;  I_P(3) = 5.133;  HC-Wert T = 1.4409: I_P = 45.020 = 9.05 x Minimum
+  Gitter 400, R=16.0: E_Igel = 4 pi * 8.2137;  Int S_ges^2 = 161.475, Int S_ges <S_i> = 53.825, Int <S_i^2> = 18.499
+    T* = 2.9097 (tau*^2 = 1.9097);  I_P(T*) = 4.861;  I_P(3) = 5.012;  HC-Wert T = 1.4409: I_P = 44.768 = 9.21 x Minimum
+  HC: mu = 0.3018, tau^2 = 0.4409, T = 1/cos^2(2 theta) = 1.4409; liegt unter der Schranke 5/3 = 1.6667
+  Energie in erster Ordnung: Delta E = eta2 f^4 I_P / l, l = Laengeneinheit von k291 (proportional sqrt(c1)/f)

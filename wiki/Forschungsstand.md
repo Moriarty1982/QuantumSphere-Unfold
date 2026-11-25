@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Die Schleifen-Skala von 9,8 GeV: es fehlen schwere Bosonen (25.11.2026, Erkundungen, nicht blind, k300, k301)
+
+Frage des Autors nach k299: Sind die 9,8 GeV statt 125 GeV schlimm, und warum klingt die Zahl nach g? Die Formel m_s² = [Σ_Bosonen n·m⁴ − Σ_Fermionen n·m⁴]/(8π²v²) enthält nur gemessene Massen und v, keine Setzung dieses Fadens. Mit W und Z allein kommt 9,78 GeV heraus (Faktor 12,8 in der Masse, 164 im Massenquadrat). Mit dem Top-Quark wird die Summe negativ (m_s² = −2129 GeV²), es gibt dann kein Minimum. Für 125,2 GeV fehlen an Bosonen 8,52·10¹⁰ GeV⁴, das sind zum Beispiel vier reelle Felder bei 382 GeV (eines: 540, acht: 321). Vier reelle Komponenten bringt der nächste Anhang ℍ → 𝕆 mit. Das ist eine Bedingung unter zwei Voraussetzungen (Skala nur aus Schleifen, Feld = elektroschwaches Feld), keine Vorhersage. Massen aus dem Gedächtnis eingesetzt.
+
+Die Ähnlichkeit mit g = 9,81 m/s² ist ein Zufall der Einheiten: Sie besteht nur in GeV und m/s² (dieselbe Masse ist 10,4 Protonmassen, dieselbe Beschleunigung 32,2 ft/s²), g ist GM/R² der Erde und keine Naturkonstante, und ohne Einheiten verglichen liegen die Größen um den Faktor 4,5·10³² auseinander.
+
+Fassung F des HC am ruhenden Knoten aus k291 (k301): Der Knoten verteilt seinen Strom gleichmäßig auf die drei inneren Richtungen (⟨S_i⟩ = S_ges/3). Das T, bei dem er am wenigsten kostet, liegt immer zwischen 5/3 und 3, mit dem Profil bei 2,91. Der HC-Wert T = 1/cos²2θ = 1,441 liegt darunter; dort kostet der Knoten das 9,2-fache des Minimums. In Fassung F würde der HC den Knoten also verformen. Die verformte Lösung ist nicht gerechnet. OP1, OP3, OP4, OP5 bleiben offen.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Skala_9_8_GeV_und_Igel_k300.md`.
+
 ### Der HC als Bedingung an den Strom verträgt sich mit SU(2) (25.11.2026, Erkundung, nicht blind, k299)
 
 Anschluss an H132. Unter SU(2) links ist der Winkel zwischen Vorstufe und Anhang Eichung, ein Potential kann nur von der vollen Norm abhängen, und die Fassung η(B − μ²A)² aus k297 ist deshalb nicht möglich. Invariant ist der Strom J = ψ̄·Dψ. Auf der Lösung ψ = e^{iωt}(a + b·j) ist J_i = ω(a² − b²) und |J_⊥| = 2abω, das Verhältnis 2μ/(1 − μ²) = (K − 1/K)/2 ist die Form der Ellipse in eichinvarianter Schreibweise (mit γ_L: 0,664).
