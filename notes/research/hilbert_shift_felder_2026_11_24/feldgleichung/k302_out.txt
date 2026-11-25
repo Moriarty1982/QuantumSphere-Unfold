@@ -1,0 +1,75 @@
+=== Teil 1: Lesart S-a, Links-ℍ und Rechts-i auf 𝕆 ===
+p(a+bl) = pa + (bp)l: True
+(a+bl)q = aq + (b conj q)l: True
+[L_i, L_j] = 2 L_k auf 𝕆? False
+[L_i, L_j] = 2 L_k auf dem Block a? True
+[L_i, L_j] = -2 L_k auf dem Block b? True
+[L_j, R_i] = 0 auf 𝕆? False  auf Block a? True
+Dimension Spann(L_i, L_j, L_k): 3  Abschluss nur der L: 6
+Dimension der erzeugten Lie-Algebra (L_i, L_j, L_k, R_i): 7
+blockdiagonal in (a, b): True
+Rang der Einschraenkung auf a: 4  auf b: 3
+Dimension der Teilalgebra, die nur auf b wirkt: 3
+Invarianten vom Grad 2: 2
+  A, C im Raum: True True
+Invarianten vom Grad 4: 3
+  A², AC, C² im Raum: [np.True_, np.True_, np.True_]
+Kommutant auf Block b (1 reell, 2 komplex, 4 quaternionisch): 4
+Kommutant auf Block a: 2
+
+=== Teil 2: Lesarten S-b (g2) und S-c (su(3), u = i) ===
+Dimension Der(𝕆): 14  alle antisymmetrisch: True
+Dimension des Stabilisators von i: 8
+S-b g2: Invarianten vom Grad 2: 2
+S-b g2: Invarianten vom Grad 4: 3
+S-b g2: Kommutant auf dem grossen Block: 1
+S-c su(3): Invarianten vom Grad 2: 4
+S-c su(3): Invarianten vom Grad 4: 9
+S-c su(3): Kommutant auf dem grossen Block: 2
+S-b: x0²·N(Im) invariant: True
+S-c: x0²·T invariant: True  A·C (4+4) invariant: False
+S-a: x0²·T (2+6) invariant: False
+Dimension der von S-a und S-c zusammen erzeugten Algebra: 28 (so(8) hat 28, so(7) 21)
+  gemeinsame Invarianten Grad 4: 1
+
+=== Teil 3: noetige Massen und Kopplungen ===
+fehlende Bosonen-Summe: 8.5224e+10 GeV^4
+S-a: n = 4, m = 382.1 GeV, kappa = m²/(2v²) = 1.2039  (Fenster ±20 % der Summe: m von 361.3 bis 399.9 GeV)
+S-c: n = 6, m = 345.2 GeV, kappa = m²/(2v²) = 0.9829  (Fenster ±20 % der Summe: m von 326.5 bis 361.3 GeV)
+S-b: n = 7, m = 332.2 GeV, kappa = m²/(2v²) = 0.9100  (Fenster ±20 % der Summe: m von 314.2 bis 347.7 GeV)
+Regel R1 (volle Norm, kappa = 2·lambda_A): neue Felder sind Goldstone-Richtungen, m = 0, Summe 0.
+Regel R2 (HC-Strafe eta(C - mu²A)², mu = 0.3018): kappa = -2·eta·mu² = -0.1822·eta, negativ, eta frei.
+
+=== Teil 4: Fluss mit einer Schleife, V = lA·A² + k·A·C + lC·C² ===
+(N, M) = (2, 2): 16π² dlA/dt = 4*(kappa**2 + 20*lambda_A**2);  16π² dk/dt = 16*kappa*(kappa + 2*lambda_A + 2*lambda_C);  16π² dlC/dt = 4*(kappa**2 + 20*lambda_C**2);  Nullrest: 0
+(N, M) = (4, 4): 16π² dlA/dt = 8*(kappa**2 + 12*lambda_A**2);  16π² dk/dt = 16*kappa*(kappa + 3*lambda_A + 3*lambda_C);  16π² dlC/dt = 8*(kappa**2 + 12*lambda_C**2);  Nullrest: 0
+(N, M) = (2, 6): 16π² dlA/dt = 4*(3*kappa**2 + 20*lambda_A**2);  16π² dk/dt = 16*kappa*(kappa + 2*lambda_A + 4*lambda_C);  16π² dlC/dt = 4*(kappa**2 + 28*lambda_C**2);  Nullrest: 0
+(N, M) = (1, 7): 16π² dlA/dt = 2*(7*kappa**2 + 36*lambda_A**2);  16π² dk/dt = 8*kappa*(2*kappa + 3*lambda_A + 9*lambda_C);  16π² dlC/dt = 2*(kappa**2 + 60*lambda_C**2);  Nullrest: 0
+Kontrolle (2, 2) gegen H129: 4(k² + 20 lA²) und 16k(k + 2lA + 2lC).
+
+--- feste Strahlen (R3): beta_k·lA = k·beta_A und beta_k·lC = k·beta_C, lA = 1 ---
+(4, 4): reelle Loesungen (kappa/lA, lC/lA): [('0', '1'), ('2', '1')]
+        Zahlen: [(0.0, 1.0), (2.0, 1.0)]
+(2, 6): reelle Loesungen (kappa/lA, lC/lA): [('2', '1'), ('-44*sqrt(1383)*(108*sqrt(1383) + 4031)**(2/3)/21609 - 388*(108*sqrt(1383) + 4031)**(1/3)/1323 + 22/27 + 4*sqrt(1383)*(108*sqrt(1383) + 4031)**(1/3)/441 + 4660*(108*sqrt(1383) + 4031)**(2/3)/64827', '98/(81*(108*sqrt(1383) + 4031)**(1/3)) + 13/81 + 2*(108*sqrt(1383) + 4031)**(1/3)/81')]
+        Zahlen: [(2.0, 1.0), (0.1554, 0.7157)]
+(1, 7): reelle Loesungen (kappa/lA, lC/lA): [('2', '1'), ('-6*sqrt(83)*(54*sqrt(83) + 541)**(2/3)/1369 - 94*(54*sqrt(83) + 541)**(1/3)/777 + 2/3 + 6*sqrt(83)*(54*sqrt(83) + 541)**(1/3)/259 + 806*(54*sqrt(83) + 541)**(2/3)/28749', '74/(63*(54*sqrt(83) + 541)**(1/3)) + 11/63 + 2*(54*sqrt(83) + 541)**(1/3)/63')]
+        Zahlen: [(2.0, 1.0), (0.3619, 0.6117)]
+Der Punkt (2, 1) ist die volle Norm (A + C)². Skalenfrei verlangt lA = 0 an der Skala; ein festes Verhaeltnis kappa/lA
+legt dort keinen Wert von kappa fest.
+
+--- Pol der Kopplungen, Start mu = v, lA = 0 ---
+S-a (4,4), kappa(v) = 1.204, lC(v) = 0.0: t = 4.059, Pol bei 1.426e+04 GeV, Kopplungen dort [ 4.15 12.57  4.15]
+S-a (4,4), kappa(v) = 1.204, lC(v) = 0.5: t = 2.453, Pol bei 2.862e+03 GeV, Kopplungen dort [ 1.51 10.92 12.57]
+S-a (4,4), kappa(v) = 1.204, lC(v) = 1.0: t = 1.410, Pol bei 1.009e+03 GeV, Kopplungen dort [ 0.42  5.71 12.57]
+S-c (2,6), kappa(v) = 0.983, lC(v) = 0.0: t = 5.214, Pol bei 4.525e+04 GeV, Kopplungen dort [12.57 12.38  1.45]
+S-c (2,6), kappa(v) = 0.983, lC(v) = 0.5: t = 2.469, Pol bei 2.908e+03 GeV, Kopplungen dort [ 1.98 11.53 12.57]
+S-c (2,6), kappa(v) = 0.983, lC(v) = 1.0: t = 1.269, Pol bei 8.761e+02 GeV, Kopplungen dort [ 0.43  5.31 12.57]
+S-b (1,7), kappa(v) = 0.910, lC(v) = 0.0: t = 5.789, Pol bei 8.043e+04 GeV, Kopplungen dort [12.57  7.65  0.41]
+S-b (1,7), kappa(v) = 0.910, lC(v) = 0.5: t = 2.428, Pol bei 2.792e+03 GeV, Kopplungen dort [ 2.12 11.63 12.57]
+S-b (1,7), kappa(v) = 0.910, lC(v) = 1.0: t = 1.200, Pol bei 8.176e+02 GeV, Kopplungen dort [ 0.43  5.18 12.57]
+S-a mit kappa·0.5: Pol bei 1.066e+06 GeV
+S-a mit kappa·2.0: Pol bei 1.631e+03 GeV
+S-a: Anfangssteigungen je e-Faltung (durch 16π²): [0.07342061509200917, 0.14684123018401835, 0.07342061509200917]
+
+=== Urteil nach den Kriterien der Vorab-Notiz ===
+K-a, K-b, K-c: siehe Ergebnis-Notiz; die Zahlen oben entscheiden.
