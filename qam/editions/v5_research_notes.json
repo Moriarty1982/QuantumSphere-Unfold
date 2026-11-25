@@ -200,5 +200,126 @@
     ],
     "guard": "Rotation angle and frame map of the mixing",
     "obligation": "Fix the free rotation phi from the algebra and derive the mask from an action; only then does a prediction for theta23 and delta follow. OP3 and OP4 remain open."
+  },
+  {
+    "id": "qsc-tower-recursive-lagrangian",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/README.md",
+    "title": "Recursive Lagrangian ansatz for the Hilbert-shift tower",
+    "excerpt": "Die offenen Vorzeichen aus k282 sind im Ansatz **freie Parameter** und werden von der Rekursion allein nicht festgelegt.",
+    "assumptions": [
+      "Ansatz L_{n+1} = L_n + Delta_n with Delta_n even in the appended half field and zero without it; one new term per stage; exploration, not blind."
+    ],
+    "guard": "Signs of the mass terms of the tower",
+    "obligation": "Derive the open signs from the final field equation instead of setting them. OP1 to OP5 remain open."
+  },
+  {
+    "id": "qsc-tower-appendix-potential-terms",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Potential_im_Anhang_k295.md",
+    "title": "Potential of the appended stage: three admissible terms, one scale",
+    "excerpt": "Terme übrig: B, A·B und B² mit A = N(ψ₁) und B = N(χ). Die einzige Größe mit Massendimension ist dann der Koeffizient μ² von B.",
+    "assumptions": [
+      "Recursion (Delta = 0 without appended field), no mass on HS(1), invariance under U(1) left and right, terms up to fourth order; exploration, not blind."
+    ],
+    "guard": "Sign and origin of mu^2",
+    "obligation": "Derive the sign of mu^2 and the scale; the recursion does not fix them. OP1 to OP5 remain open."
+  },
+  {
+    "id": "qsc-tower-loop-scale-not-in-appendix",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H129_Schleifen_Skala.md",
+    "title": "Loops can generate the scale but do not place it in the appended stage",
+    "excerpt": "H129 ist **nicht bestätigt**. K-a (Skala entsteht von selbst) **trägt teilweise** (67,8 % des Gitters),",
+    "assumptions": [
+      "Scale-free quartic potential on C -> H with couplings lambda_A, kappa, lambda_B; one loop, scalars only; partly not blind."
+    ],
+    "guard": "Origin of the scale of the tower",
+    "obligation": "Derive the scale and its location from the field equation instead of setting mu^2. OP1 to OP5 remain open."
+  },
+  {
+    "id": "qsc-tower-hc-breaks-swap-symmetry",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/HC_Tauschsymmetrie_k297.md",
+    "title": "The HC breaks the swap of base and appended stage",
+    "excerpt": "Bedingung als Potential, V = η(B − μ²A)², dann ist das genau ein zulässiges skalenfreies Potential aus k295, es hat κ < 0 und liegt genau auf der flachen",
+    "assumptions": [
+      "The quadratic penalty form of the HC is a setting; mu = beta_sym^2 is inserted (OP1); exploration, not blind."
+    ],
+    "guard": "Derivation of the HC as a term of the action",
+    "obligation": "Derive the form in which the HC enters the action; under SU(2) left the penalty form fails (H132). OP1 remains open."
+  },
+  {
+    "id": "qsc-tower-no-massless-gauge-field-on-hc",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H132_Eichfelder_HC.md",
+    "title": "No massless gauge field on the HC direction",
+    "excerpt": "- **K-a:** Determinante = 4g_L²g_R²·A·B. Ungleich null, sobald Vorstufe und Anhang beide da sind. **Widerlegt.**",
+    "assumptions": [
+      "Gauged U(1) left x U(1) right on the vacuum f(cos theta + sin theta j) with tan theta = beta_sym^2 (inserted); classical mass matrix; partly not blind."
+    ],
+    "guard": "Gauge-compatible form of the HC",
+    "obligation": "State the HC as a condition compatible with SU(2) left (k299, current condition) and derive it; beta_sym is an input (OP1 open)."
+  },
+  {
+    "id": "qsc-tower-hc-current-condition",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/HC_SU2_vertraeglich_k299.md",
+    "title": "HC as a condition on the current, compatible with SU(2)",
+    "excerpt": "J_i = ω(a² − b²) und |J_⊥| = 2abω. Das Verhältnis |J_⊥|/J_i = 2μ/(1 − μ²) ist die Form der Ellipse in eichinvarianter Schreibweise.",
+    "assumptions": [
+      "Rotating solution of k292; version F (shape of the motion) is a setting; version S (squashing) is excluded by the measured rho if the field is the electroweak one (value from memory); exploration, not blind."
+    ],
+    "guard": "Dynamics selecting the current ratio",
+    "obligation": "Derive version F from an action and compute the deformed knot (k301: the hedgehog is not a solution). OP1 remains open."
+  },
+  {
+    "id": "qsc-tower-loop-scale-missing-bosons",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Skala_9_8_GeV_und_Igel_k300.md",
+    "title": "Loop scale of 9.8 GeV: heavy bosons are missing",
+    "excerpt": "1. **Die Zahl:** Nur W und Z (je drei Polarisationen): Summe 4,58·10⁸ GeV⁴, m_s = 9,78 GeV. Gemessen 125,2 GeV. Faktor 12,8 in der Masse, 164 im Massenquadrat.",
+    "assumptions": [
+      "Scale-free picture, one loop; measured masses and v from memory; with the top quark the sum is negative; exploration, not blind."
+    ],
+    "guard": "Source of the missing bosonic sum",
+    "obligation": "Identify bosons contributing 8.5e10 GeV^4 or give up the scale-free reading; the four appended fields of HS(3) fit only with an inserted coupling (H133)."
+  },
+  {
+    "id": "qsc-tower-hs3-appendix-coupling-form",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H133_Anhang_HS3_Kopplung.md",
+    "title": "Appended stage of HS(3): form of the coupling fixed, value free",
+    "excerpt": "- Invarianten: Grad 2 genau A und C, Grad 4 genau A², AC, C². **Es gibt einen einzigen gemischten Term κ·A·C.**",
+    "assumptions": [
+      "Reading S-a: gauge action of HS(2) continued to the octonions by Cayley-Dickson; scale-free picture, one loop, scalars only; measured masses from memory."
+    ],
+    "guard": "Value of the coupling kappa",
+    "obligation": "Derive kappa (needed about 1.20 for 125 GeV) or drop the scale-free reading; decide which symmetry reading (S-a, su(3), g_2) the tower means. OP1 to OP5 remain open."
+  },
+  {
+    "id": "qsc-tower-kappa-backward-search",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Rueckwaertssuche_kappa_k303.md",
+    "title": "Backward search for a rule fixing kappa: no rule, one numerical hit",
+    "excerpt": "- **Genau ein Kandidat liegt im Fenster: κ = 1/cos 2θ = (1 + μ²)/(1 − μ²) = (γ_L + 1/γ_L)/2 = 1,2004.** Abweichung vom Ziel −0,29 %, das gäbe m_h = 124,8 GeV.",
+    "assumptions": [
+      "One of 42 candidates, about one chance hit expected; candidate list chosen after the hit was noticed; gamma_L inserted (OP1); one-loop formula accurate to a few per cent; not blind."
+    ],
+    "guard": "Derivation of the numerical hit",
+    "obligation": "Derive kappa = (gamma_L + 1/gamma_L)/2 from the tower or record it as coincidence; it is no evidence as it stands."
+  },
+  {
+    "id": "qsc-tower-kappa-not-self-stabilising",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H135_Kappa_selbststabilisierend.md",
+    "title": "The coupling kappa near 1.2 is not a self-stabilising point",
+    "excerpt": "**H135 widerlegt**, in beiden vorab festgelegten Lesarten.",
+    "assumptions": [
+      "Two readings fixed beforehand: fixed point of the one-loop flow, and vacuum depth at fixed scale; whether kappa is dynamical in the tower is not shown."
+    ],
+    "guard": "Mechanism selecting kappa",
+    "obligation": "Find a mechanism that selects kappa, or treat the scale as a setting. gamma_L is an input (OP1 open)."
+  },
+  {
+    "id": "qsc-tower-no-feedback-through-hc-angle",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H136_Rueckwirkung_HC_Winkel.md",
+    "title": "No stabilising feedback through the HC angle",
+    "excerpt": "eine Lösung: **κ₁ = 1,321, κ₂ = −0,078.**",
+    "assumptions": [
+      "Model without gauged SU(2); top couples only to psi_1 (set); one loop; with gauged SU(2) a static angle is gauge and no feedback exists."
+    ],
+    "guard": "Coupling of the appended stage to the current",
+    "obligation": "A feedback would have to run through the current of the rotating solution; such terms bring a new scale. Decide between the scale-free picture and a set scale."
   }
 ]
