@@ -1,0 +1,42 @@
+==============================================================================
+A  Gemischte Invarianten: Albert-Algebra gegen 3x3-Matrizen und Formel
+   a=1.0, b=0.5: |I11 Algebra - Matrix| <= 8.9e-16, |I11 - 2(b-a) v.s| <= 4.4e-16, I21 <= 3.6e-15, I12 <= 1.1e-14
+   a=0.3, b=2.0: |I11 Algebra - Matrix| <= 8.9e-16, |I11 - 2(b-a) v.s| <= 3.6e-15, I21 <= 1.8e-15, I12 <= 7.1e-15
+   a=0.7, b=0.7: |I11 Algebra - Matrix| <= 2.5e-16, |I11 - 2(b-a) v.s| <= 4.4e-16, I21 <= 1.8e-15, I12 <= 1.8e-15
+   -> I11 verschwindet genau fuer a = b. Sonst mischt schon die Bilinearform Spin 1 und die Nebendiagonale von Spin 2 (beide A4-Tripletts).
+==============================================================================
+B  Kopplung entlang der flachen Richtung (v = (1,1,1)/sqrt 3 v0, Kreis u3 = 0), a = 1, b = 0.5
+   I11(th) = -0.5477 sin 2th, Rest 5.6e-17
+   I21(th) = +1.0954 sin 2th, Rest 4.4e-16
+   I12(th) = -0.2236 sin 2th, Rest 5.6e-17
+   -> Extrema bei th = pi/4 und 3pi/4, fuer jede der drei Kopplungen. Dort ist d1 = d2 (gleiche Diagonale im Block) und u = (1, +-1, 0)/sqrt 2.
+==============================================================================
+C  Volles Minimum von V = V1 + V2 + eps I11 (a = 1, b = 0.5; 40 Zufallsstarts je eps)
+   eps=0: V_min = -0.575640, 40/40 Starts im globalen Minimum
+       1x Rest (Z_v, Z_S, beide) = ('Z3', 'Z2', 'trivial'); Blockwinkel 27.98 Grad; |s_klein/s_gross| = 0.0000; Streuung |v_k| 0.0000; sgn(s v v) = +1; Spalte |U^+ u|^2 = (0.471, 0.471, 0.057)
+       1x Rest (Z_v, Z_S, beide) = ('Z3', 'Z2', 'trivial'); Blockwinkel 24.40 Grad; |s_klein/s_gross| = 0.0000; Streuung |v_k| 0.0000; sgn(s v v) = -1; Spalte |U^+ u|^2 = (0.584, 0.208, 0.208)
+       1x Rest (Z_v, Z_S, beide) = ('Z3', 'Z2', 'trivial'); Blockwinkel 86.67 Grad; |s_klein/s_gross| = 0.0000; Streuung |v_k| 0.0000; sgn(s v v) = -1; Spalte |U^+ u|^2 = (0.372, 0.314, 0.314)
+   eps=0.0001: V_min = -0.575658, 40/40 Starts im globalen Minimum
+      33x Rest (Z_v, Z_S, beide) = ('trivial', 'trivial', 'trivial'); Blockwinkel 45.00 Grad; |s_klein/s_gross| = 0.0001; Streuung |v_k| 0.0003; sgn(s v v) = -1; Spalte |U^+ u|^2 = (0.667, 0.167, 0.167)
+       4x Rest (Z_v, Z_S, beide) = ('trivial', 'trivial', 'trivial'); Blockwinkel 45.01 Grad; |s_klein/s_gross| = 0.0001; Streuung |v_k| 0.0003; sgn(s v v) = -1; Spalte |U^+ u|^2 = (0.667, 0.167, 0.167)
+   eps=0.001: V_min = -0.575816, 40/40 Starts im globalen Minimum
+      40x Rest (Z_v, Z_S, beide) = ('trivial', 'trivial', 'trivial'); Blockwinkel 45.00 Grad; |s_klein/s_gross| = 0.0013; Streuung |v_k| 0.0027; sgn(s v v) = -1; Spalte |U^+ u|^2 = (0.668, 0.166, 0.166)
+   eps=0.01: V_min = -0.577436, 40/40 Starts im globalen Minimum
+      40x Rest (Z_v, Z_S, beide) = ('trivial', 'trivial', 'trivial'); Blockwinkel 45.00 Grad; |s_klein/s_gross| = 0.0127; Streuung |v_k| 0.0263; sgn(s v v) = -1; Spalte |U^+ u|^2 = (0.675, 0.162, 0.162)
+   eps=0.03: V_min = -0.581257, 40/40 Starts im globalen Minimum
+      40x Rest (Z_v, Z_S, beide) = ('trivial', 'trivial', 'trivial'); Blockwinkel 45.00 Grad; |s_klein/s_gross| = 0.0367; Streuung |v_k| 0.0761; sgn(s v v) = -1; Spalte |U^+ u|^2 = (0.691, 0.154, 0.154)
+   eps=0.1: V_min = -0.596728, 40/40 Starts im globalen Minimum
+      40x Rest (Z_v, Z_S, beide) = ('trivial', 'trivial', 'trivial'); Blockwinkel 45.00 Grad; |s_klein/s_gross| = 0.1090; Streuung |v_k| 0.2242; sgn(s v v) = -1; Spalte |U^+ u|^2 = (0.739, 0.131, 0.131)
+   eps=-0.001: V_min = -0.575816, 40/40 Starts im globalen Minimum
+      40x Rest (Z_v, Z_S, beide) = ('trivial', 'trivial', 'trivial'); Blockwinkel 45.00 Grad; |s_klein/s_gross| = 0.0009; Streuung |v_k| 0.0027; sgn(s v v) = +1; Spalte |U^+ u|^2 = (0.5, 0.5, 0.0)
+   eps=-0.01: V_min = -0.577429, 40/40 Starts im globalen Minimum
+      40x Rest (Z_v, Z_S, beide) = ('trivial', 'trivial', 'trivial'); Blockwinkel 45.00 Grad; |s_klein/s_gross| = 0.0088; Streuung |v_k| 0.0264; sgn(s v v) = +1; Spalte |U^+ u|^2 = (0.5, 0.5, 0.0)
+   Lesart: eps = 0 laesst den Winkel frei (k279). Fuer eps != 0 waehlt die Kopplung den Blockwinkel 45 Grad, bricht aber zugleich
+   die Z2 des zweiten Felds in erster Ordnung in eps (kleine Nebendiagonalen ~ eps). Gemeinsame Restgruppe: keine.
+==============================================================================
+D  Lesart als Mischung (Setzung: Massenmatrix des zweiten Sektors ~ reeller Teil von Z_S, erster Sektor Z3-diagonal)
+   u = (1,+1,0)/sqrt 2: |U_w^+ u|^2 = [0.6667 0.1667 0.1667]
+   u = (1,-1,0)/sqrt 2: |U_w^+ u|^2 = [0.  0.5 0.5]
+   -> (2/3, 1/6, 1/6) ist die erste Spalte der tribimaximalen Matrix (TM1); (0, 1/2, 1/2) ist ihre dritte Spalte (theta13 = 0).
+      Welche auftritt, haengt am Vorzeichen von eps (b - a) kappa1 cN(a) kappa2 (in C: eps > 0 gibt die erste, eps < 0 die dritte).
+      Die anderen beiden Eigenwerte sind entartet (2, -1, -1): nur diese eine Spalte ist festgelegt, und nur in nullter Ordnung in eps.
