@@ -1,0 +1,25 @@
+==============================================================================
+Kontrollen (i)
+   dim Der(S) = 14, dim su(3)_c = Stab(e7) = 8
+   Singuletts: dim 4, getragen von den Einheiten [np.int64(0), np.int64(7), np.int64(8), np.int64(15)]
+   V(a,b,c,d) + span(1,u) ist su(3)_c-stabil: Rest 1.0e-14 (20 Zufallspunkte)
+==============================================================================
+Suche: Abschlussdefekt = 0, 600 Zufallsstarts
+   600 von 600 Starts enden in einer abgeschlossenen Unteralgebra (D < 1e-20)
+   Klassen: u8^2, u7^2, u15^2, Gewicht der ersten Kopie in V, oktonionisch, flache Richtungen  ->  Anzahl
+   (np.float64(0.0), np.float64(0.25), np.float64(0.75), np.float64(0.25), np.True_, 0)  ->  255
+   (np.float64(0.0), np.float64(1.0), np.float64(0.0), np.float64(1.0), np.True_, 0)  ->  127
+   (np.float64(0.0), np.float64(1.0), np.float64(0.0), np.float64(1.0), np.True_, 2)  ->  1
+   (np.float64(1.0), np.float64(0.0), np.float64(0.0), np.float64(0.5), np.False_, 0)  ->  217
+   oktonionisch: 383 Loesungen; Werte u8^2: [np.float64(0.0)]; groesster Alternativ-/Normrest dort 3.6e-14
+   abgeschlossen, aber nicht oktonionisch: 217; Werte u8^2: [np.float64(1.0)]
+   r = 1 - (1 - u8^2)/10 je Wert: {np.float64(0.0): np.float64(0.9)}
+==============================================================================
+Kontrolle (ii): bekannte Kopien
+   O_0: u = +1.000 e7 +0.000 e15, V = cos x + sin x e8: Defekt 0.0e+00, alternativ 1.1e-14, Norm 3.6e-15
+   O_120: u = -0.500 e7 +0.866 e15, V = cos x + sin x e8: Defekt 2.3e-29, alternativ 1.4e-14, Norm 3.6e-15
+   O_240: u = -0.500 e7 -0.866 e15, V = cos x + sin x e8: Defekt 1.0e-28, alternativ 1.4e-14, Norm 1.8e-15
+==============================================================================
+Gezielt: u = e8 mit V = {x + s (Jx) e8}
+   s = +1: Defekt 3.3e-30, alternativ 1.5e+01, Norm 3.6e+00
+   s = -1: Defekt 3.3e-30, alternativ 1.6e+01, Norm 3.6e+00

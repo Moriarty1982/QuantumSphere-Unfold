@@ -1,0 +1,14 @@
+Wolfram Language (WolframLanguageEvaluator, 25.11.2026), Skript k258b_exakt.wl. Tatsaechliche Ausgabe:
+
+Symbol::undefined2: Warning: Global symbols "B, B, B, B, B, B, B" are undefined.
+O_0   (u = e7): abgeschlossen True; Alternator identisch 0: True; Normdefekt identisch 0: True; Alternator-Komponenten ungleich 0: 0
+O_120 (u = -e7/2 + Sqrt[3] e15/2): abgeschlossen True; Alternator identisch 0: True; Normdefekt identisch 0: True; Alternator-Komponenten ungleich 0: 0
+O_240 (u = -e7/2 - Sqrt[3] e15/2): abgeschlossen True; Alternator identisch 0: True; Normdefekt identisch 0: True; Alternator-Komponenten ungleich 0: 0
+B_+   (u = e8, V = x + (e7 x) e8): abgeschlossen True; Alternator identisch 0: False; Normdefekt identisch 0: False; Alternator-Komponenten ungleich 0: 12
+B_-   (u = e8, V = x - (e7 x) e8): abgeschlossen True; Alternator identisch 0: False; Normdefekt identisch 0: False; Alternator-Komponenten ungleich 0: 12
+General::messages: Messages were generated which may indicate errors.
+Out[1]= Null
+
+Einordnung: Die Warnung Symbol::undefined2 betrifft das Musterargument B der Funktion check (Hinweis des Evaluators vor der Auswertung), kein Rechenfehler.
+Alternator (xx)y - x(xy) und Normdefekt |xy|^2 - |x|^2|y|^2 mit symbolischen Koeffizienten: "identisch 0" ist ein symbolischer Nullrest nach Simplify.
+Ein erster Aufruf scheiterte an einem Tippfehler (Klammer) mit ToExpression::sntx und rechnete nichts.
