@@ -23,6 +23,34 @@ andere Zahl gemeint ist, wird nachgefragt. Vergeben: H151, Skripte k334 (Python)
   wenn er gegen δ aus den Massen (0,222225 ± 0,000006) innerhalb 3σ bleibt, sofern die Größe exakt ist. Vorhersage: kein Treffer (es gibt keinen Mechanismus, s. a).
 - Nicht gewertet: Median und Spannweite von ΔK auf dem Gitter (gitterabhängig) werden nur berichtet.
 
+## Nachtrag vor der Rechnung (Autor 25.11., 20:17 UTC): alle von Hand eingesetzten Werte
+„sonst prüfe nochmal einen zusammenhang zu allen werten die wir bisher von hand einsetzen müssen.“ Committet vor jeder Rechnung zu H151.
+
+**Liste der Setzungen** (dimensionslos; Quellen: Ledger/Wiki, k297, k303, CT-002, H45, H149):
+| Nr. | Setzung | Wert |
+|---|---|---|
+| S1 | Brannen-Phase δ | 2/9 = 0,222222 |
+| S2 | Mischwinkel θ | π/4 |
+| S3 | Frame-Versatz β_sym (β² = (γ_L − 1)/(γ_L + 1)) | 0,549400 |
+| S4 | γ_L | 1,864700 |
+| S5 | ε = artanh β_sym (Maske H45) | 0,617564 (aus S3) |
+| S6 | HC-Koeffizient μ = β_sym² | 0,301837 |
+| S7 | κ-Treffer (γ_L + 1/γ_L)/2 (k303) | 1,200 (aus S4) |
+| S8 | Ziel κ* (k303) | 1,2039 |
+| S9 | Überlappung ρ² (Koide) | ½ |
+| S10 | γ_M (Immirzi, Platzhalter CT-001/002) | 0,237533 |
+| S11 | CT-002-Verschiebung γ_M/6 bzw. ΔΦ = γ_M/2 | 0,039589 bzw. 0,118767 |
+| S12 | γ_T | 0,127384 |
+| S13 | Komponentenzahl 1 : 2 bzw. 1 : 7 | ½ bzw. 1/7 |
+
+Nicht vergleichbar und deshalb ausgelassen: die Skala 9,8 GeV (k300, dimensionsbehaftet; ein Verhältnis zu einer anderen Skala wäre eine weitere Setzung) und der freie
+Drehwinkel der Mischung (H131/H134, ohne festen Wert).
+
+- **H151d (gewertet):** Jede feste Größe X aus H151c wird gegen jede Setzung s (S1–S13, mit S11 zweifach) in den Formen s, s², √s, 1/s, s/3, s/9 verglichen.
+  *Kriterium:* relative Abweichung < 0,5 %. *Look-elsewhere:* erwartete Zahl zufälliger Treffer = Σ über alle Paare der Wahrscheinlichkeit, dass eine
+  log-gleichverteilte Zahl im Intervall [10⁻³, 10] in das 1-%-Fenster fällt; zusätzlich empirisch mit 10⁴ Zufallssätzen gleicher Größe. Ein Treffer gilt nur als
+  auffällig, wenn die beobachtete Trefferzahl über dem 99-%-Quantil der Zufallsverteilung liegt. Vorhersage: nicht auffällig.
+
 ## Grenzen
 - Eine Schleife, ohne Eichfelder. Die Komponentenzahl der Kopienrichtung (2 oder 7) ist eine Lesart.
 - OP3 offen; kein Vorzeichen gesetzt; kein Guard berührt.
