@@ -1,0 +1,29 @@
+== 1  Die Zahl ==
+  nur Eichfelder: Summe = 4.5779e+08 GeV^4, m_s = 9.78 GeV
+  gemessen: 125.2 GeV. Faktor in der Masse 12.8, im Massenquadrat 164
+  Die Formel enthaelt nur m_W, m_Z und v (oder g, g', v). Keine Setzung dieses Fadens geht ein.
+
+== 2  Empfindlichkeit ==
+  alle Eichfeldmassen -5%: m_s = 8.83 GeV
+  alle Eichfeldmassen +5%: m_s = 10.78 GeV
+  m_s waechst wie (Masse)^2/v: fuer 125 GeV muessten die Eichfeldmassen um den Faktor 3.58 groesser sein
+
+== 3  Mit dem Top-Quark ==
+  Fermionen zaehlen negativ: 12 m_t^4 = 1.0650e+10 GeV^4, das 23.3-fache der Eichfelder
+  Summe = -1.0192e+10 GeV^4 < 0: m_s^2 = -2129 GeV^2, also kein Minimum mehr
+
+== 4  Was fehlt ==
+  fuer m_s = 125.2 GeV noetig: Summe = 7.5032e+10 GeV^4; es fehlen an Bosonen 8.5224e+10 GeV^4
+  1 reelle(s) Zusatzfeld(er) gleicher Masse: m = 540 GeV
+  2 reelle(s) Zusatzfeld(er) gleicher Masse: m = 454 GeV
+  4 reelle(s) Zusatzfeld(er) gleicher Masse: m = 382 GeV
+  8 reelle(s) Zusatzfeld(er) gleicher Masse: m = 321 GeV
+  ohne Top gerechnet (nur zum Vergleich): es fehlten 7.4574e+10 GeV^4, ein Feld mit 523 GeV
+
+== 5  Die Aehnlichkeit mit g = 9,81 m/s^2 ==
+  m_s = 9.779 GeV gegen g = 9.80665 m/s^2: Abweichung der Ziffern 0.28%
+  dieselbe Masse in anderen Einheiten: 1.567e-09 J, 1.743e-26 kg, 10.42 Protonmassen
+  dieselbe Beschleunigung in anderen Einheiten: 32.17 ft/s^2, 981 Gal
+  g als Energie in natuerlichen Einheiten: hbar g / c = 2.15e-23 eV; Verhaeltnis zu m_s: 4.5e+32
+  mit g = 0.652, g' = 0.357, v = 246 (k299): 9.79 GeV; die dritte Ziffer haengt an den Eingaben
+  bekannte halbe Erklaerung fuer g selbst: pi^2 = 9.8696 (das Sekundenpendel ist fast einen Meter lang); das betrifft den Meter, nicht das GeV

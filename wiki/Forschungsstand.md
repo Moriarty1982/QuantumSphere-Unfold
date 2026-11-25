@@ -10,6 +10,65 @@ Anlass war der Einwand des Autors zu k262, gemessen werde im verschobenen Frame.
 
 „TM1 nach JUNO disfavorisiert“ gilt also nur für die unkorrigierte Spalte. Es bleibt eine Verträglichkeit mit freier Drehung φ und diskreten Wahlen, keine Vorhersage: Auch der Hopf-Wert von ε und die Klasse mit θ₁₃ = 0 treffen. In allen Treffern liegt θ₂₃ im oberen Oktanten (0,536 bis 0,583), während die TM2-Lesart mit derselben Korrektur [0,491; 0,498] gibt (H46). Kontrolle (i) war auf dem festgelegten 2°-Raster leer; ein nachträglicher Lauf mit 0,5° erfüllt sie und gibt dieselben Entscheidungen. OP3 und OP4 bleiben offen, kein Guard ist berührt. [Ergebnis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/predictions/Ergebnis_H134_Frame_Rapiditaet_TM1_JUNO.md)
 
+### Ist κ ≈ 1,2 selbststabilisierend? In den geprüften Lesarten nein (25.11.2026, Test H135, teilweise nicht blind, k304)
+
+Frage des Autors zum Zahlentreffer aus k303: Könnte das System bei diesem Wert selbststabilisierend sein, sodass der Wert unter vielen Möglichkeiten nur oft genug auftreten muss? Geprüft wurden zwei vorab festgelegte Lesarten. **Ergebnis: widerlegt in beiden.**
+
+**Fluss.** Der Ein-Schleifen-Fluss der Skalare ist homogen vom Grad 2, feste Werte ungleich null gibt es nicht. Von κ = 1,2 aus wächst κ zu großen Skalen bis zum Pol bei 1,4·10⁴ GeV, und benachbarte Startwerte laufen auseinander. Es gibt keinen Einzugsbereich.
+
+**Vakuumtiefe.** Wäre κ beweglich, liefe es dorthin, wo das Vakuum am tiefsten ist. Bei fester Skala Λ ist die Tiefe proportional zu F(κ) = B·exp(−2A/B). Ohne Eichfelder und Top ist F für jedes κ gleich e³/(16π²). Mit ihnen steigt F monoton von 0 bei κ = 0,416 gegen diesen Wert (58 % bei κ = 1,2, 90 % bei κ = π). Es gibt kein inneres Maximum, κ liefe zu immer größeren Werten.
+
+**Häufigkeit.** Ein Vakuum entsteht für jedes κ zwischen 0,416 und der Unitaritätsgrenze π, bei gleichverteiltem κ in 87 % der Fälle. Das System startet also fast immer, aber m_h liegt dann irgendwo zwischen 0 und 345 GeV, und nur 2,7 % der Werte geben 120 bis 130 GeV.
+
+Was fehlt, ist eine Rückwirkung. Sie entstünde, wenn der HC die SU(2) bricht und der HS(3)-Anhang an Vorstufe und HS(2)-Anhang verschieden koppelt; dann verschiebt seine Schleife den HC-Winkel θ, und κ = 1/cos 2θ könnte ein fester Punkt dieser Schleife sein. Das ist nicht gerechnet. Kein Guard berührt.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H135_Kappa_selbststabilisierend.md`, Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H135_Kappa_selbststabilisierend.md`, Skripte `k304_test_h135.py`, `k304b_gegenprobe.wl`.
+
+### Rückwärtssuche nach einer Regel für κ ≈ 1,2: keine Regel, ein Zahlentreffer (25.11.2026, Erkundung, nicht blind, k303)
+
+Nach H133 ist der Wert der Kopplung κ zwischen Vorstufe und HS(3)-Anhang frei, nötig wäre κ* = 1,204. Die Rückwärtssuche hält zuerst die notwendige Bedingung fest: 16κ² = 8π²·m_h²/v² − (3/8)g⁴ − (3/16)(g² + g′²)² + 3y_t⁴. Eine Regel für κ ist im skalenfreien Bild also eine Vorhersage der Higgs-Masse.
+
+**Regeln mit einem Prinzip dahinter treffen nicht.** Die volle Norm gibt κ = 0 (kein Minimum), Sp M⁴ = 0 gibt m_h = 0, die Veltman-Bedingung gibt κ ≈ 0,6 und m_h zwischen 32 und 49 GeV, die gesättigte Unitaritätsgrenze gibt κ = π und 345 GeV, und einen festen Punkt von κ mit Eichfeldern und Top gibt es nicht. Auch die Eichfelder der eigenen su(2) des Anhangs tragen nicht (24 GeV statt 312 GeV).
+
+**Ein Zahlentreffer.** Unter 42 Kandidaten aus den HC-Zahlen liegt genau einer im Fenster: κ = 1/cos 2θ = (γ_L + 1/γ_L)/2 = 1,2004, das sind −0,29 % zum Ziel und m_h = 124,8 GeV. Bei dieser Suche ist etwa ein Zufallstreffer zu erwarten, die Ein-Schleifen-Formel ist nur auf einige Prozent genau, und γ_L ist eingesetzt (OP1). Der Treffer ist deshalb kein Beleg. Als Lesart: 1/cos 2θ ist auf der HC-Richtung das Verhältnis von Linksladung zu Rechtsladung (k292). Eine Herleitung dafür fehlt; erst mit ihr wäre ein blinder Test möglich (H135 frei).
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Rueckwaertssuche_kappa_k303.md`, Skripte `k303_rueckwaerts_kappa.py`, `k303b_gegenprobe.wl`.
+
+### Der Anhang von HS(3): Form der Kopplung festgelegt, Wert frei (25.11.2026, Test H133, teilweise nicht blind, k302)
+
+Nach k300 fehlen der Schleifen-Skala schwere Bosonen, und der Anhang ℍ → 𝕆 bringt vier neue reelle Felder mit. H133 fragte, ob der Turm ihre Kopplung an die Vorstufe so festlegt, dass 125 GeV herauskommen. **Ergebnis: nicht bestätigt. Die Form ist festgelegt, der Wert nicht.**
+
+**Form.** Mit ψ = a + b·ℓ, A = N(a), C = N(b) wirkt die Linksmultiplikation mit einer Einheit p von ℍ als p(a + bℓ) = pa + (bp)ℓ, die Rechtsmultiplikation als (a + bℓ)q = aq + (b·q̄)ℓ. Auf dem Anhang b sind beides Rechtsmultiplikationen und vertauschen nicht. Die Linksmultiplikationen bilden auf 𝕆 keine SU(2) mehr (Abschluss Dimension 6), zusammen mit der Rechts-U(1) entsteht su(2) ⊕ u(1) auf a und eine eigene su(2) nur auf b (Dimension 7). Invariant sind nur A und C, im Grad 4 nur A², AC, C². Es gibt also genau einen gemischten Term κ·A·C, und die vier neuen Felder haben dieselbe Masse m² = 2κv². Terme, die in einem gewöhnlichen Modell mit zwei Dubletts die Massen aufspalten, sind durch die Nicht-Assoziativität verboten.
+
+**Wert.** Nötig wären vier Felder bei 382 GeV, also κ ≈ 1,20. Keine Regel des Turms liefert das: Die volle Norm gibt masselose neue Felder, die HC-Strafe gibt κ = −2ημ² mit freiem η, und der Fluss mit einer Schleife (16π²·dκ/dt = 16κ(κ + 3λ_A + 3λ_C)) hat als feste Strahlen nur κ = 0 und die volle Norm. Nachträglich gefunden: Verlangt man die fortgesetzte schwache Wirkung und die Farb-su(3) zugleich, erzeugen beide so(8), und es bleibt nur die volle Norm, also wieder masselose Felder.
+
+**Tragfähigkeit.** Mit κ = 1,20 überschreiten die Kopplungen 4π bei 1,4·10⁴ GeV (günstigster Fall λ_C(v) = 0), sonst schon unter 3 TeV. Das Bild wäre höchstens bis etwa 14 TeV gültig.
+
+Andere Lesarten der Symmetrie geben 6 entartete Felder bei 345 GeV (su(3), ein farbiges Triplett) oder 7 bei 332 GeV (g₂). Grenzen: eine Schleife, Fluss nur mit Skalaren, Massen aus dem Gedächtnis, keine Beschleuniger-Schranken geprüft. Kein Guard berührt.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H133_Anhang_HS3_Kopplung.md`, Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H133_Anhang_HS3_Kopplung.md`, Skripte `k302_test_h133.py`, `k302b_gegenprobe.wl`.
+
+### Die Schleifen-Skala von 9,8 GeV: es fehlen schwere Bosonen (25.11.2026, Erkundungen, nicht blind, k300, k301)
+
+Frage des Autors nach k299: Sind die 9,8 GeV statt 125 GeV schlimm, und warum klingt die Zahl nach g? Die Formel m_s² = [Σ_Bosonen n·m⁴ − Σ_Fermionen n·m⁴]/(8π²v²) enthält nur gemessene Massen und v, keine Setzung dieses Fadens. Mit W und Z allein kommt 9,78 GeV heraus (Faktor 12,8 in der Masse, 164 im Massenquadrat). Mit dem Top-Quark wird die Summe negativ (m_s² = −2129 GeV²), es gibt dann kein Minimum. Für 125,2 GeV fehlen an Bosonen 8,52·10¹⁰ GeV⁴, das sind zum Beispiel vier reelle Felder bei 382 GeV (eines: 540, acht: 321). Vier reelle Komponenten bringt der nächste Anhang ℍ → 𝕆 mit. Das ist eine Bedingung unter zwei Voraussetzungen (Skala nur aus Schleifen, Feld = elektroschwaches Feld), keine Vorhersage. Massen aus dem Gedächtnis eingesetzt.
+
+Die Ähnlichkeit mit g = 9,81 m/s² ist ein Zufall der Einheiten: Sie besteht nur in GeV und m/s² (dieselbe Masse ist 10,4 Protonmassen, dieselbe Beschleunigung 32,2 ft/s²), g ist GM/R² der Erde und keine Naturkonstante, und ohne Einheiten verglichen liegen die Größen um den Faktor 4,5·10³² auseinander.
+
+Fassung F des HC am ruhenden Knoten aus k291 (k301): Der Knoten verteilt seinen Strom gleichmäßig auf die drei inneren Richtungen (⟨S_i⟩ = S_ges/3). Das T, bei dem er am wenigsten kostet, liegt immer zwischen 5/3 und 3, mit dem Profil bei 2,91. Der HC-Wert T = 1/cos²2θ = 1,441 liegt darunter; dort kostet der Knoten das 9,2-fache des Minimums. In Fassung F würde der HC den Knoten also verformen. Die verformte Lösung ist nicht gerechnet. OP1, OP3, OP4, OP5 bleiben offen.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Skala_9_8_GeV_und_Igel_k300.md`.
+
+### Der HC als Bedingung an den Strom verträgt sich mit SU(2) (25.11.2026, Erkundung, nicht blind, k299)
+
+Anschluss an H132. Unter SU(2) links ist der Winkel zwischen Vorstufe und Anhang Eichung, ein Potential kann nur von der vollen Norm abhängen, und die Fassung η(B − μ²A)² aus k297 ist deshalb nicht möglich. Invariant ist der Strom J = ψ̄·Dψ. Auf der Lösung ψ = e^{iωt}(a + b·j) ist J_i = ω(a² − b²) und |J_⊥| = 2abω, das Verhältnis 2μ/(1 − μ²) = (K − 1/K)/2 ist die Form der Ellipse in eichinvarianter Schreibweise (mit γ_L: 0,664).
+
+Zwei Fassungen. **F (Form der Bewegung):** P = η₂(|J_⊥|² − τ²J_i²)²/N², invariant unter SU(2) links und U(1) rechts. Im Vakuum vierter Ordnung in den Eichfeldern, also keine Massen: Licht bleibt masselos, ρ = 1, Spektrum wie k291. Die Lösung mit b = μa bleibt exakt, Abweichungen kosten Energie nur am drehenden Feld. **S (Stauchung):** Zusatzterm ξ·J_i²/(2N), die entlang der Hopf-Faser gestauchte S³. Licht bleibt masselos, aber m_Z² bekommt den Faktor 1 + ξ und ρ = 1/(1 + ξ). Für jede naheliegende Zuordnung (1 + ξ = γ_L^{±1}, γ_L^{±2}, 1 + μ², 1/cos²2θ) liegt ρ zwischen 0,29 und 3,5 statt bei 1,0004 ± 0,0002 (Messwert aus dem Gedächtnis). Fassung S fällt durch, falls das Feld das elektroschwache ist.
+
+Die Spannung aus H129 und H132 löst sich in Fassung F: Der HC ist dann eine Bedingung an die Bewegung, nicht an das Vakuum. Verloren geht das Bild aus k297 (HC als flache Richtung, Schleife gibt die Skala). Die Skala käme nur aus V(N) und den Eichfeld-Schleifen, das gäbe den bekannten Coleman–Weinberg-Wert von etwa 9,8 GeV statt 125 GeV. Beide Fassungen sind Setzungen. Gegenprobe in Wolfram Language (k299b). OP1, OP3, OP4, OP5 bleiben offen.
+
+Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/HC_SU2_vertraeglich_k299.md`.
+
+
 ### Welche Setzung aus H131 trägt die Spannung? Der Träger der Neutrinos (25.11.2026, Erkundung, nicht blind, k262)
 
 Anschluss an H131. Die 24 Elemente aus k260 mischen den Realteil s_k und die Ladungsrichtung v_k der drei Einträge nicht. Auf s wirkt eine reelle vorzeichenbehaftete Permutation A, auf v wirkt +A (12 gerade Elemente) oder −A (12 ungerade). Auf s allein ist die Gruppe also die volle S₄, linear und reell; antilinear werden die ungeraden Elemente erst auf dem komplexen Triplett z = s + i·v. Gerechnet sind alle 900 Paare von Untergruppen (G_e, G_ν) in zwei Lesarten.

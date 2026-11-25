@@ -1,0 +1,10 @@
+Ausgabe von k299b_gegenprobe.wl (Wolfram-Cloud-Kernel, 25.11.2026), Print-Zeilen in InputForm.
+Warnungen des Kernels: Symbol::undefined2 (betrifft nur die Auswertungsumgebung) und General::messages. Keine weiteren Meldungen.
+
+Z1 J_t auf der Loesung: {0, (a^2 - b^2)*w, 0, 2*a*b*w}
+Z2 Fassung S, Massenquadrate: {0, (f^2*g^2)/4, (f^2*g^2)/4, (f^2*(g^2 + gp^2)*(1 + xi))/4} ; Nullvektor: {{(gp*Cos[2*th])/g, 0, -((gp*Sin[2*th])/g), 1}}
+Z3 Fassung F, Aenderung von P unter Linksdrehung um i, j, k: {0, 0, 0}
+Z4 P im Vakuum: zweite Ableitungen bei null: {0}
+Z5 Zahlen: {0.287688, 0.536366, 1.8644, 3.47599} ; m_s (GeV): 9.78858
+
+Alles wie in k299_out.txt.

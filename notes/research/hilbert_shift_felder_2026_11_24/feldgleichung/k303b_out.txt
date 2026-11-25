@@ -1,0 +1,12 @@
+Ausgabe von k303b_gegenprobe.wl (Wolfram Language, Lauf vom 25.11.2026 ueber den Wolfram-Auswerter, zustandsloser Kernel).
+Warnungen: Symbol::undefined2 (globales Symbol M "undefined", harmlos: im Skript gesetzt); General::messages (Sammelhinweis). Rueckgabewert: Null.
+Symbolischer Nullrest: die Identitaet (gL+1/gL)/2 = (1+m^2)/(1-m^2) gibt 0. Der numerische Rest der notwendigen Bedingung ist 0. (Gleitkomma).
+
+kappa* = 1.20385  m_S = 382.054
+kmin = 0.416318
+Veltman V1, V2, V3: {0.605752, 0.508792, 0.592267}  m_h: {48.7706, 32.4187, 46.6915}
+Unitaritaet: 3.14159 m_h = 345.137
+1/cos2theta = 1.20042 = (gL+1/gL)/2 = 1.20042  Abweichung -0.285138 %  m_h = 124.794
+symbolisch (gL+1/gL)/2 - (1+m^2)/(1-m^2) mit gL=(1+m)/(1-m): 0
+16 kappa*^2 - (8 Pi^2 mh^2/v^2 - 3/8 g2^2 - 3/16 (g2+gp2)^2 + 3 yt2^2) = 0.
+beta(l3) geeicht, Nullstellen: {}

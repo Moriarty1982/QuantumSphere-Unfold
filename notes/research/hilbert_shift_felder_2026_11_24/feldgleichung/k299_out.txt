@@ -1,0 +1,33 @@
+== 1  Invarianten ==
+  Linksdrehung um i: delta N = 0 , delta (B - mu^2 A) = 0 ? True , delta J = [0, 0, 0, 0]
+  Linksdrehung um j: delta N = 0 , delta (B - mu^2 A) = 0 ? False , delta J = [0, 0, 0, 0]
+  Linksdrehung um k: delta N = 0 , delta (B - mu^2 A) = 0 ? False , delta J = [0, 0, 0, 0]
+  Rechtsdrehung um i: delta J_i = 0 , delta |J_s|^2 = 0 , delta J_j = -2*v0*x3 + 2*v1*x2 - 2*v2*x1 + 2*v3*x0 (dreht in J_k)
+  Re J = 1/2 dN: True ;  N(J) = N(psi) N(d psi): True
+
+== 2  Strom auf der Loesung psi = e^{iwt}(a + b j) ==
+  J_t = [0, omega*(a**2 - b**2), 0, 2*a*b*omega]  => J_i = w(a^2 - b^2), |J_s| = 2 a b w
+  |J_s|/J_i mit b = mu a: -2*mu/(mu**2 - 1) ;  mit K = (1+mu)/(1-mu): (K - 1/K)/2 = -2*mu/(mu**2 - 1)
+
+== 3  Fassung S: L = 1/2 N(D psi) + xi (J_i)^2/(2 N), SU(2) links (g) x U(1) rechts (g') ==
+  Massenquadrate: {f**2*g**2/4: 2, f**2*(g**2 + gprime**2)*(xi + 1)/4: 1, 0: 1}  (unabhaengig von theta)
+  masselose Richtung: [[gprime*cos(2*theta)/g, 0, -gprime*sin(2*theta)/g, 1]]
+  m_W^2 = g^2 f^2/4 und m_Z^2 = (g^2+g'^2)(1+xi) f^2/4 im Spektrum: True True ;  rho = m_W^2 (g^2+g'^2)/(m_Z^2 g^2) = 1/(xi + 1)
+  Energie der Drehung e^{iwt}(a + b j), a = f cos th, b = f sin th: f**2*omega**2*(xi*cos(2*theta)**2 + 1)/2 ;  dE/dth = 0 bei th = [pi/4, pi/2, 3*pi/4]
+
+== 4  Fassung F: P = eta2 (|J_s|^2 - tau^2 J_i^2)^2 / N^2, tau = 2 mu/(1 - mu^2) ==
+  Linksdrehung um i: delta P = 0;  Linksdrehung um j: delta P = 0;  Linksdrehung um k: delta P = 0;  Rechtsdrehung um i: delta P = 0
+  im Vakuum mit Eichfeldern: Grad in den Feldern = 4 , zweite Ableitungen bei null alle null: True  => keine Massen, rho = 1
+  auf der Loesung mit b = mu a: |J_s|^2 - tau^2 J_i^2 = 0  (doppelte Nullstelle von P: die Loesung bleibt exakt)
+  Abweichung b = (mu + d) a, P bis d^2: 64*a**4*d**2*mu**2*omega**4/((mu - 1)**2*(mu + 1)**2)
+
+== 5  Zahlen (gamma_L eingesetzt; Messwerte aus dem Gedaechtnis, nicht nachgeschlagen) ==
+  mu = 0.3018; |J_s|/J_i = 0.6640; J_i/|J| = cos 2 theta = 0.8331
+  Fassung S, 1 + xi = gamma_L^2          : rho = 0.2877
+  Fassung S, 1 + xi = gamma_L            : rho = 0.5364
+  Fassung S, 1 + xi = 1/gamma_L          : rho = 1.8644
+  Fassung S, 1 + xi = 1/gamma_L^2        : rho = 3.4760
+  Fassung S, 1 + xi = 1 + mu^2           : rho = 0.9165
+  Fassung S, 1 + xi = 1/cos^2(2 theta)   : rho = 0.6940
+  gemessen: rho_0 etwa 1,0004 +- 0,0002 => |xi| unter etwa 0,001; keine der Zuordnungen passt
+  Fassung F, Skala nur aus V(N) und Eichfeld-Schleifen: m_s^2 = 3 (2 g^4 + (g^2+g'^2)^2) f^2/(128 pi^2); mit g = 0.652, g' = 0.357, f = 246 GeV: m_s = 9.8 GeV
