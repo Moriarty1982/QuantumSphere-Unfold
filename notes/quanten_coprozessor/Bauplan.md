@@ -92,7 +92,8 @@ Auslesen.
 **Steuerbefehle.** Neben den Gattern liest der Kopf Steuerzellen: `MEASURE q → Bit` (Projektion, Ergebnis in ein
 klassisches Bandbit), `JUMP_IF Bit, ±d` (Verzweigung, die Rolle *Branch* aus 19P), `LOOP`/`RETURN` (die Rolle
 *Loop/Return* aus 19Q) und `HALT`. Damit ist das Band ein Programm mit Verzweigung und Schleife, und die
-Übergangstabelle der Bandmaschine entscheidet, was beim Lesen einer Zelle geschieht. Die Messung macht den Lauf
+Übergangstabelle der Bandmaschine entscheidet, was beim Lesen einer Zelle geschieht. Die Steuerung selbst bleibt klassisch; dass die
+vorhandene Bandschaltung Überlagerungen nur als Orakel mit Kopie der Eingabe trägt, zeigt Test H137 (Abschnitt 9). Die Messung macht den Lauf
 zufallsabhängig; der Beleg hält dann den Zufallsstartwert fest, oder MMA verlangt alle Zweige.
 
 **Ablauf.**
@@ -277,7 +278,13 @@ an der bei jedem Takt der neue Zustand aus dem alten und dem Befehl entsteht.
 
 - Grafikkarte vorhanden, und ist es eine NVIDIA-Karte?
 - Soll Stufe 3 beliebige Drehwinkel enthalten (dann nicht mehr exakt) oder bei Clifford+T bleiben?
-- Ergebnis des parallelen Threads zur Bandschaltung mit Überlagerungen: Es bestimmt, ob die Bandmaschine selbst
-  (Stufe 2) reversibel auf Überlagerungen laufen soll oder nur das Rechenwerk.
+- Erledigt durch Test H137 (Bandschaltung auf Überlagerungen, PR #317): Die Qiskit-Bandschaltung ist ein
+  klassisch-reversibles Orakel $\lvert x,0\rangle \mapsto \lvert x,f(x)\rangle$. Sie ist auf Überlagerungen linear
+  und phasentreu, aber der Folgezustand allein ist nicht kohärent, weil die Eingabe als Kopie stehen bleibt, und das
+  Beispielprogramm ist nicht injektiv. Mit umkehrbarer Regeltabelle und Bennett-Schritt entsteht ein sauberer unitärer
+  Schritt. Es fehlen ein Amplituden mischender Schritt (Hadamard-artig) und eine Kopplung zwischen Zellen ohne Kopf.
+  **Folge für den Plan:** Die Bandmaschine bleibt in Stufe 2 die *klassische* Steuerung, die das Band liest; die
+  Überlagerungen trägt das Rechenwerk. Genau die beiden fehlenden Bausteine liefert es schon: `H` mischt Amplituden,
+  `CX` koppelt Qubits ohne Kopf. Eine reversible Steuerung (Bennett) bleibt eine spätere Option.
 - Die Spinorband-Hypothese STH und die HC-Rückkehr bleiben Voraussetzungen des Companion. Der Coprozessor ist ein
   Werkzeug und kein Beleg für sie.
