@@ -1,0 +1,4 @@
+sin^2(theta13) = 0.0215: sin^2(theta12) = 0.3407; sin^2(theta23) = 0.3958 (t > 0) oder 0.6042 (t < 0); delta = 0 oder 180 Grad, J = 0
+sin^2(theta13) = 0.022: sin^2(theta12) = 0.3408; sin^2(theta23) = 0.3945 (t > 0) oder 0.6055 (t < 0); delta = 0 oder 180 Grad, J = 0
+sin^2(theta13) = 0.0225: sin^2(theta12) = 0.3410; sin^2(theta23) = 0.3933 (t > 0) oder 0.6067 (t < 0); delta = 0 oder 180 Grad, J = 0
+Stichprobe: 8788 Zuordnungen mit sin^2(theta13) < 0.2; groesste Abweichung von der Formel 8.9e-16
