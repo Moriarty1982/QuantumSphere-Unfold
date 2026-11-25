@@ -82,6 +82,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H141, 25.11.2026 (k324):** Die 9 Zustände, die drei getrennte Kopien gegenüber ℂ⊗𝕊 zu viel haben, bilden 1 ⊕ 1 ⊕ 1 ⊕ 3 ⊕ 3̄: einen ladungsstabilen Quark-Satz (⅓, ⅔) und drei leckende Singuletts (½). Kein abgeschlossener vierter Sektor, keine gemeinsame Ladung. OP3 und OP4 bleiben offen.
 
+**Test H142, 25.11.2026 (k325):** Mit vier Kopien auf HS(5) ist der Rest in 9 von 126 Auswahlen eine vollständige, ladungsstabile Generation (0, ⅓³, ⅔³, 1), wenn die vier Richtungen eine Wechselrelation erfüllen. Eine gemeinsame Ladung entsteht nicht, die Orientierung der Kopien ist durch die Symmetrie transportiert, das Vorzeichen bleibt offen. OP3 und OP4 bleiben offen.
+
 **Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
 
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.

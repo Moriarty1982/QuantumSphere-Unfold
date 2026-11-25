@@ -1,0 +1,37 @@
+=== H142a ===
+su(3) gleich fuer alle 9 (min cos): 1.000000000000
+  Kopie 0: v = [1. 0. 0. 0.], Leck 0.0e+00, Generationsspektrum: True
+  Kopie 1: v = [-0.5    0.866 -0.     0.   ], Leck 8.4e-17, Generationsspektrum: True
+  Kopie 2: v = [-0.5   -0.866 -0.    -0.   ], Leck 2.1e-16, Generationsspektrum: True
+  Kopie 3: v = [-0.5   -0.     0.866  0.   ], Leck 8.4e-17, Generationsspektrum: True
+  Kopie 4: v = [ 0.25  -0.433 -0.433  0.75 ], Leck 8.0e-17, Generationsspektrum: True
+  Kopie 5: v = [ 0.25   0.433 -0.433 -0.75 ], Leck 1.7e-16, Generationsspektrum: True
+  Kopie 6: v = [-0.5   -0.    -0.866 -0.   ], Leck 2.1e-16, Generationsspektrum: True
+  Kopie 7: v = [ 0.25  -0.433  0.433 -0.75 ], Leck 1.6e-16, Generationsspektrum: True
+  Kopie 8: v = [0.25  0.433 0.433 0.75 ], Leck 1.8e-16, Generationsspektrum: True
+
+=== Kontrolle: drei Sedenion-Kopien in A5 ===
+{'rank_v': np.int64(2), 'dimK': 9, 'cok': 17, 'cas': (np.int64(3), np.int64(6)), 'spec': (np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667)), 'leak': 0.5, 'lepton': False}
+
+=== H142b-d: alle 126 Viererauswahlen ===
+Rang v 3, dim K 10, Casimir (Singulett, Farbe) (np.int64(4), np.int64(6)), Spektrum K (np.float64(0.25), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.5), np.float64(0.5), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(0.75)), Ladungs-Leck 0.5, Leptonen 0/1 im Kern: False
+   36 Auswahlen, davon mit allen drei Sedenion-Kopien: 6; min Leck^2 gemeinsame Ladung (Beispiel (0, 1, 2, 3)): 4.1771
+Rang v 4, dim K 3, Casimir (Singulett, Farbe) (np.int64(3),), Spektrum K (np.float64(0.5), np.float64(0.5), np.float64(0.5)), Ladungs-Leck 0.5, Leptonen 0/1 im Kern: False
+   81 Auswahlen, davon mit allen drei Sedenion-Kopien: 0; min Leck^2 gemeinsame Ladung (Beispiel (0, 1, 3, 4)): 3.5000
+Rang v 3, dim K 10, Casimir (Singulett, Farbe) (np.int64(4), np.int64(6)), Spektrum K (np.float64(0.0), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.5), np.float64(0.5), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(1.0)), Ladungs-Leck 0.5, Leptonen 0/1 im Kern: True
+   9 Auswahlen, davon mit allen drei Sedenion-Kopien: 0; min Leck^2 gemeinsame Ladung (Beispiel (0, 1, 5, 8)): 5.0000
+
+=== Zusatz: freie Vorzeichen (alle 2^3 relativen Orientierungen je Auswahl, nicht gewertet) ===
+Auswahl-Orientierungs-Paare mit 0 und 1 im Kern: 27 von 1008
+   (0, 1, 5, 8) (1, 1, 1, 1) (np.float64(0.0), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.5), np.float64(0.5), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(1.0))
+   (0, 1, 5, 8) (1, -1, 1, -1) (np.float64(0.0), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(1.0))
+   (0, 1, 5, 8) (1, -1, -1, 1) (np.float64(-0.0), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(1.0))
+   (0, 2, 4, 7) (1, 1, 1, 1) (np.float64(0.0), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.5), np.float64(0.5), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(1.0))
+   (0, 2, 4, 7) (1, -1, 1, -1) (np.float64(0.0), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(1.0))
+   (0, 2, 4, 7) (1, -1, -1, 1) (np.float64(0.0), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(1.0))
+Zum Vergleich drei Kopien (84 Auswahlen x 4 Orientierungen): mit 0 und 1 im Kern: 0
+Drei Sedenion-Kopien, alle Orientierungen:
+   (1, 1, 1) (np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667))
+   (1, 1, -1) (np.float64(0.028595), np.float64(0.444444), np.float64(0.444444), np.float64(0.444444), np.float64(0.5), np.float64(0.555556), np.float64(0.555556), np.float64(0.555556), np.float64(0.971405))
+   (1, -1, 1) (np.float64(0.028595), np.float64(0.444444), np.float64(0.444444), np.float64(0.444444), np.float64(0.5), np.float64(0.555556), np.float64(0.555556), np.float64(0.555556), np.float64(0.971405))
+   (1, -1, -1) (np.float64(0.028595), np.float64(0.444444), np.float64(0.444444), np.float64(0.444444), np.float64(0.5), np.float64(0.555556), np.float64(0.555556), np.float64(0.555556), np.float64(0.971405))

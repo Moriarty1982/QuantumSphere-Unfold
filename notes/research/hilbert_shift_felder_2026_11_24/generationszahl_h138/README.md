@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H141; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H142; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -17,6 +17,8 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
 - **H141** (Vorab 589b1c3): Die fehlenden 9 Zustände (Kern von C₀ ⊕ C₁₂₀ ⊕ C₂₄₀ → ℂ⊗𝕊) sind 1 ⊕ 1 ⊕ 1 ⊕ 3 ⊕ 3̄. Ihr Farbteil ist
   ladungsstabil mit den Quarkladungen ⅓, ⅔; die drei Singuletts haben Ladung ½ und lecken. Kein abgeschlossener Sektor, keine gemeinsame Ladung,
   keine Nullteiler.
+- **H142** (Vorab 1bc8fb4, Nachtrag f578bff): Vier Kopien auf HS(5). In 9 von 126 Auswahlen (Wechselrelation v₁ − v₂ + v₃ − v₄ = 0) ist der Rest
+  eine vollständige, ladungsstabile Generation (0, ⅓³, ⅔³, 1; 1 ⊕ 1 ⊕ 3 ⊕ 3̄) plus zwei leckende Singuletts. b widerlegt; keine gemeinsame Ladung.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
 Dateien: Vorab- und Ergebnis-Notizen H138, H139; Skripte k321 (+ b, c), k322 (+ b, c) mit Ausgaben. Aufruf aus diesem Ordner.

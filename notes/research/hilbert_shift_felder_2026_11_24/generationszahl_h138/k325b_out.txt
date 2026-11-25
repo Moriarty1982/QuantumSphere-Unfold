@@ -1,0 +1,4 @@
+k325b, Wolfram-Kernel (MCP), 25.11.2026, tatsaechliche Print-Ausgaben:
+Auswahl (0,1,5,8) [Indizes 1-basiert 1,2,6,9]: dim Kern, Spektrum: {10, {0, 1/3, 1/3, 1/3, 1/2, 1/2, 2/3, 2/3, 2/3, 1}}
+Kontrolle Sedenion-Tripel + f120(x)f0 (0,1,2,3): {10, {1/4, 1/3, 1/3, 1/3, 1/2, 1/2, 2/3, 2/3, 2/3, 3/4}}
+Meldungen: Symbol::undefined2-Warnung (Variablennamen), General::messages; keine Fehler in den Ergebnissen.

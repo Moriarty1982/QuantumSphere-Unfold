@@ -27,9 +27,12 @@ def derivations(Ct):
 C8 = np.array([[mul(np.eye(8)[i], np.eye(8)[j]) for j in range(8)] for i in range(8)])
 G2 = [np.kron(np.eye(4), D) for D in derivations(C8)]
 r3 = np.sqrt(3)
-VS = np.array([[-1,0,0,0],[-.5,0,-r3/2,0],[-.5,0,r3/2,0],[-.5,-r3/2,0,0],[-.5,r3/2,0,0],
-               [-.25,-r3/4,-r3/4,-.75],[-.25,-r3/4,r3/4,.75],[-.25,r3/4,-r3/4,.75],[-.25,r3/4,r3/4,-.75]])  # k321b, oktonionisch
-SED = [0, 3, 4]    # die drei Sedenion-Kopien (t3 = t4 = 0)
+# Orientierung durch Automorphismen transportiert (Nachtrag Vorab-Notiz): v = a (x) b, a, b aus f_0, f_120, f_240.
+# Dieselben 9 Kopien wie k321b (bis auf Vorzeichen); Vorlauf mit den Wolfram-Vorzeichen: k325_vorlauf_out.txt.
+F = [np.array([np.cos(t), np.sin(t)]) for t in (0, 2*np.pi/3, 4*np.pi/3)]
+VS = np.array([np.kron(a, b) for a in F for b in F])
+SED = [0, 1, 2]    # a = f_0: die drei Sedenion-Kopien (t3 = t4 = 0), wie H141
+SIGNS = np.ones(9)
 def emb(a, v):
     x = np.zeros(N)
     for k in range(4): x[8*k+1:8*k+8] = v[k]*a
@@ -37,7 +40,8 @@ def emb(a, v):
 e7 = np.zeros(7); e7[6] = 1
 B = [np.array([E[0]] + [emb(np.eye(7)[i], v) for i in range(7)]) for v in VS]
 P = [b.T @ b for b in B]
-Q = [0.5*np.eye(N) - 1j/6*Lm(emb(e7, v)) - 1j/3*Rm(emb(e7, v)) for v in VS]
+Qof = lambda v: 0.5*np.eye(N) - 1j/6*Lm(emb(e7, v)) - 1j/3*Rm(emb(e7, v))
+Q = [Qof(v) for v in VS]
 # Farbe
 GV = np.array([g.ravel() for g in G2])
 def stab(u):
@@ -66,12 +70,13 @@ def common_charge(idx):
     r = minimize_scalar(f, bounds=(p0 - 0.01, p0 + 0.01), method='bounded', options={'xatol': 1e-12})
     return min(r.fun, min(vals))
 # Casimir auf V
-def run(idx, verbose=False):
+def run(idx, sg=None):
     m = len(idx)
+    Qs = [Q[k] if sg is None or sg[j] > 0 else Qof(-VS[k]) for j, k in enumerate(idx)]
     Phi = np.hstack([B[k].T for k in idx])
     u_, s_, vt_ = np.linalg.svd(Phi); r = int(np.sum(s_ > 1e-10)); Kb = vt_[r:]; PK = Kb.T @ Kb
     blk = lambda Ms: np.block([[Ms[a] if a == b else np.zeros((8, 8)) for b in range(m)] for a in range(m)])
-    QV = blk([B[k] @ Q[k] @ B[k].T for k in idx])
+    QV = blk([B[k] @ q @ B[k].T for k, q in zip(idx, Qs)])
     SV = [blk([B[k] @ g @ B[k].T for k in idx]) for g in Sg]
     Km = np.array([[np.trace(a @ b) for b in SV] for a in SV]); Ki = np.linalg.inv(Km)
     Cas = -sum(Ki[i, j] * SV[i] @ SV[j] for i in range(8) for j in range(8))
@@ -93,3 +98,17 @@ for key, lst in classes.items():
     cc = common_charge(lst[0])
     print(f"Rang v {key[0]}, dim K {key[1]}, Casimir (Singulett, Farbe) {key[2]}, Spektrum K {key[3]}, Ladungs-Leck {key[4]}, Leptonen 0/1 im Kern: {key[5]}")
     print(f"   {len(lst)} Auswahlen, davon mit allen drei Sedenion-Kopien: {sum(set(SED) <= set(l) for l in lst)}; min Leck^2 gemeinsame Ladung (Beispiel {lst[0]}): {cc:.4f}")
+
+print("\n=== Zusatz: freie Vorzeichen (alle 2^3 relativen Orientierungen je Auswahl, nicht gewertet) ===")
+cnt = {}; lep = []
+for idx in itertools.combinations(range(9), 4):
+    for sg in itertools.product([1, -1], repeat=3):
+        r = run(idx, (1,) + sg)
+        if r.get('lepton'): lep.append((idx, (1,) + sg, r['spec']))
+print(f"Auswahl-Orientierungs-Paare mit 0 und 1 im Kern: {len(lep)} von {126*8}")
+for l in lep[:6]: print("  ", l[0], l[1], l[2])
+q3 = sum(1 for idx in itertools.combinations(range(9), 3) for sg in itertools.product([1, -1], repeat=2) if run(idx, (1,) + sg).get('lepton'))
+print(f"Zum Vergleich drei Kopien (84 Auswahlen x 4 Orientierungen): mit 0 und 1 im Kern: {q3}")
+print("Drei Sedenion-Kopien, alle Orientierungen:")
+for sg in itertools.product([1, -1], repeat=2):
+    print("  ", (1,) + sg, run(SED, (1,) + sg).get('spec'))
