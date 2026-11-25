@@ -1,0 +1,8 @@
+k294b_gegenprobe.wl, Wolfram Language (Cloud-Kernel ueber MCP, 25.11.2026). Tatsaechliche Print-Ausgaben:
+
+Z1 Streuung von N: 2 a^2 b^2 Cos[th]^2
+Z2 freie Energie: a^2 k^2 + b^2 kp^2
+Z3 K1/w - (1+Sin[th]^2)/2, K2/w - 2 Sin[th]^2: {0, 0}
+Z4 Schwelle: {{Q -> 4 lam/(c1 + 4 c2)}}
+
+Rueckgabewert: Null. Warnung "Symbol::undefined2" (Hinweis des Werkzeugs), keine Rechenwarnung. Symbolische Nullreste: Z3.

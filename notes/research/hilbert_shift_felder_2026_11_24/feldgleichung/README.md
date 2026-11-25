@@ -146,6 +146,8 @@ Zur Frage, welche der beiden Lesarten gilt: `HC_feste_Norm_k292.md` (k292, eher 
 
 Ob der gegenläufige Anteil bei HS(2) in den Anhang wandern muss: `Anhang_Energie_k293.md` (k293, die Zusatzterme sprechen dagegen).
 
+Wettbewerb mit einem Amplituden-Potential: `Schwelle_feste_Norm_k294.md` (k294, scharfe Schwelle in der Wellenzahl).
+
 ## Dateien
 `k290_rekursive_feldgleichung.py` (`k290_out.txt`), `k290b_gegenprobe.wl` (`k290b_out.txt`, Wolfram über den Cloud-Kernel, Ausgaben und Warnungen dort festgehalten).
 Aufruf: `python k290_rekursive_feldgleichung.py > k290_out.txt`, Laufzeit etwa 20 Sekunden.
