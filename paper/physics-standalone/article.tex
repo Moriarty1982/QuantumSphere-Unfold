@@ -44,11 +44,12 @@
 \raggedbottom
 \emergencystretch=3em
 
+\InputIfFileExists{release-info}{}{\def\releaseline{Draft\enspace$\cdot$\enspace November 2026}}
 \begin{document}
 \thispagestyle{plain}
 \noindent{\LARGE\bfseries One Object, Three Frames:\\[0.2em] The Quantum Sphaera Construction\par}
 \vspace{0.7em}
-\noindent Marc Brendecke\hfill{\small Draft \enspace$\cdot$\enspace November 2026}\par
+\noindent Marc Brendecke\hfill{\small\releaseline}\par
 \vspace{0.8em}
 \input{sections/00-abstract}
 \tableofcontents
