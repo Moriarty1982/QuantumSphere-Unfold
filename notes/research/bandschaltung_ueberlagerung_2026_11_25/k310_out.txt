@@ -1,0 +1,18 @@
+{"k310":"control_iv_aer_vs_quantum_info","qubits":14,"max_abs_diff":5.411945995162255e-14}
+{"k310":"control_i_trace","example":"room","trace":[{"tape":[1,1,0],"head":0,"state":"scan","status":"running"},{"tape":[1,1,0],"head":1,"state":"scan","status":"running"},{"tape":[1,1,0],"head":2,"state":"scan","status":"running"},{"tape":[1,1,1],"head":2,"state":"halt","status":"halted"}]}
+{"k310":"control_i_trace","example":"edge","trace":[{"tape":[1,1],"head":0,"state":"scan","status":"running"},{"tape":[1,1],"head":1,"state":"scan","status":"running"},{"tape":[1,1],"head":1,"state":"scan","status":"boundary"}]}
+{"k310":"H137c_P","n":2,"qubits":10,"domain":16,"image":12,"collisions":4,"expected_collisions":4}
+{"k310":"H137c_P_examples","n":2,"colliding_input_codes":[[0,9],[4,14]]}
+{"k310":"H137a_P","n":2,"unitarity":{"method":"Operator","max_dev_UdagU":9.992007221626409e-15,"max_dev_UUdag":9.992007221626409e-15,"permutation_matrix":true},"min_fidelity_200":0.9999999999999891}
+{"k310":"H137b_P","n":2,"max_offdiag_rho_out":6.092774739287235e-16,"purity_min":0.14515673506591253,"purity_max":0.9484325905130128,"purity_matches_prediction":true}
+{"k310":"H137b_phase_on_collision_pair","n":2,"out_purity":0.9999999999999858,"in_offdiag":[0.49999999999999645,0.7]}
+{"k310":"H137c_P","n":3,"qubits":14,"domain":48,"image":36,"collisions":12,"expected_collisions":12}
+{"k310":"H137c_P_examples","n":3,"colliding_input_codes":[[0,33],[8,42]]}
+{"k310":"H137a_P","n":3,"unitarity":{"method":"basis permutation (only X-type gates; Operator for nq <= 10)","bijective":true},"min_fidelity_200":0.9999999999998042}
+{"k310":"H137b_P","n":3,"max_offdiag_rho_out":1.458960066249162e-15,"purity_min":0.15385811421120385,"purity_max":0.9999999999996165,"purity_matches_prediction":true}
+{"k310":"H137b_phase_on_collision_pair","n":3,"out_purity":0.9999999999996294,"in_offdiag":[0.49999999999990735,0.7000000000000015]}
+{"k310":"H137c_R_control","n":2,"collisions":0,"bennett_unitary_dev":{"method":"basis permutation (only X-type gates; Operator for nq <= 10)","bijective":true},"ancilla_clean_all_basis":true,"min_fidelity_200":0.9999999999998124,"min_purity_config_register":0.9999999999996246}
+{"k310":"H137d_R","n":2,"S_cells_vs_head_state_bits":1.0000000000000766,"negativity_cell0_cell1":4.5880340672177635e-17,"rho_cell0_cell1_diag":[0.0,0.5,0.5,0.0],"rho_cell0_cell1_max_offdiag":3.831824666913096e-17}
+{"k310":"H137d_R_state","amplitudes":{"01001":[0.707106781187,0.0],"01110":[0.707106781187,0.0]}}
+{"k310":"H137c_R_control","n":3,"collisions":0,"bennett_unitary_dev":{"method":"basis permutation (only X-type gates; Operator for nq <= 10)","bijective":true},"ancilla_clean_all_basis":true,"min_fidelity_200":0.9999999999999991,"min_purity_config_register":0.9999999999999992}
+{"k310":"H137d_R","n":3,"S_cells_vs_head_state_bits":1.0,"negativity_cell0_cell1":0.0,"rho_cell0_cell1_diag":[0.0,0.5,0.5,0.0],"rho_cell0_cell1_max_offdiag":0.0}

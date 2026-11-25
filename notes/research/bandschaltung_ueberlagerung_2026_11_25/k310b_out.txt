@@ -1,0 +1,10 @@
+Wolfram Language Kernel über den Evaluator (MCP), 25.11.2026. Tatsächliche Print-Ausgaben von k310b_gegenprobe.wl.
+Erster Lauf: Kollisionszeilen wie unten; der H137d-Teil lief mit einem Klammerfehler in SparseArray (Regelliste verschachtelt) und gab
+unausgewertete Ausdrücke aus. Nach Korrektur (Zeile 19, jetzige Fassung) zweiter Lauf des H137d-Teils. Keine Warnungen.
+
+P n=2 {domain, image, collisions} = {16, 12, 4}  expected collisions n 2^(n-1) = 4
+P n=3 {domain, image, collisions} = {48, 36, 12}  expected collisions n 2^(n-1) = 12
+R n=2 {domain, image, collisions} = {24, 24, 0}
+R n=3 {domain, image, collisions} = {72, 72, 0}
+R n=2 H137d: S(cells|head,state) = 1 bits; rho(cell0,cell1) = {{0, 0, 0, 0}, {0, 1/2, 0, 0}, {0, 0, 1/2, 0}, {0, 0, 0, 0}}; negativity = 0
+R n=3 H137d: S(cells|head,state) = 1 bits; rho(cell0,cell1) = {{0, 0, 0, 0}, {0, 1/2, 0, 0}, {0, 0, 1/2, 0}, {0, 0, 0, 0}}; negativity = 0

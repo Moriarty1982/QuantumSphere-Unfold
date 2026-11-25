@@ -1,5 +1,18 @@
 # Forschungsstand
 
+### Bandschaltung auf Überlagerungen: linear und phasentreu, aber klassisch (25.11.2026, Test H137, nicht blind, k310)
+
+Die reversible Qiskit-Schrittschaltung der Bandmaschine aus 19K–19L (`qam/examples/zuse_machine/machine_qiskit.py`) war bisher nur auf Basiszuständen gelaufen. Test H137 lässt sie auf Überlagerungen von Bandkonfigurationen laufen (Bandlängen 2 und 3, Qiskit; Gegenprobe in Wolfram exakt). Alle Ausgänge entsprechen der vorab offengelegten Erwartung, weil die Schaltung nur aus Toffoli-artigen Gattern besteht.
+
+- **H137a bestätigt:** Die Schaltung ist unitär (eine Permutation der Basis) und bildet jede Überlagerung Σ a_c |c⟩ phasentreu auf Σ a_c |c, f(c)⟩ ab (Treue 1 auf 10⁻¹³ in 400 Zufallsfällen).
+- **H137b widerlegt:** Der Folgezustand allein ist nicht kohärent. Die Eingabe bleibt als Kopie stehen und wirkt als Wegmarke; im Ausgaberegister verschwinden alle Nebendiagonalelemente (unter 2·10⁻¹⁵).
+- **H137c widerlegt:** Für das Beispielprogramm gibt es keinen unitären Schritt auf dem Band allein: Beim Lesen der Null fällt `scan` mit einer schon haltenden Konfiguration zusammen (4 bzw. 12 Kollisionen, n·2ⁿ⁻¹). Mit einer umkehrbaren Regeltabelle geht es über den Bennett-Schritt (Orakel, Tausch, inverses Orakel): Hilfsregister kehrt auf |0⟩ zurück, Reinheit 1.
+- **H137d:** Mit dem Kopf in Überlagerung entsteht Verschränkung zwischen Band und Kopf (1 Bit), aber keine zwischen zwei Zellen (reduzierter Zustand diag(0, ½, ½, 0), Negativität 0).
+
+Für einen Quantenrechner im Träger fehlen damit (a) eine umkehrbare Regeltabelle oder ein Protokollband mit Rückrechnung, (b) mindestens ein Schritt, der Amplituden mischt statt sie zu verschieben (Hadamard-artig), und (c) eine Kopplung zwischen Zellen, die nicht über den Kopf läuft. (b) ist der eigentlich fehlende Baustein; ob der Turm ihn liefert (Holonomie ab HS(2), Oktantphasen aus H116/H118), ist offen. Kein OP berührt; Q1a und die Verpflichtungen U_Q, U_B, U_L, U_T, U_S bleiben offen.
+
+Ablage: `notes/research/predictions/Ergebnis_H137_Bandschaltung_Ueberlagerungen.md`, Vorab-Notiz `notes/research/predictions/Vorab_Notiz_H137_Bandschaltung_Ueberlagerungen.md`, Skripte `notes/research/bandschaltung_ueberlagerung_2026_11_25/k310_test_h137.py` und `k310b_gegenprobe.wl` mit Ausgaben.
+
 ### Rückwirkung über den HC-Winkel: hält κ ≈ 1,2 nicht fest (25.11.2026, Test H136, teilweise nicht blind, k305)
 
 Nach H135 blieb eine Möglichkeit offen: κ könnte am HC-Winkel θ hängen, und die Schleife des HS(3)-Anhangs könnte θ zurückstellen. **Ergebnis: widerlegt.**
