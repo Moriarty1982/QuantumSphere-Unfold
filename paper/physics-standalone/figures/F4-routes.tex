@@ -1,0 +1,76 @@
+% F4: what the generation carriers deliver (Companion v4.10.0-r13, r19, r25, r26, r59, r60; v4.9.0-r37).
+% Cell colours: status colours of the article; grey = not examined / not supplied.
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,
+  cell/.style={draw=white,line width=1.2pt,minimum width=3.2cm,minimum height=1.5cm,text width=3.0cm,
+               align=center,font=\scriptsize,inner sep=2pt,anchor=north west},
+  head/.style={cell,font=\scriptsize\bfseries,fill=black!8},
+  rowh/.style={cell,minimum width=2.6cm,text width=2.4cm,align=left,font=\scriptsize\bfseries,fill=black!8},
+  est/.style={cell,fill=st-est!22},
+  cond/.style={cell,fill=st-cond!22},
+  read/.style={cell,fill=st-read!20},
+  ref/.style={cell,fill=st-ref!20},
+  open/.style={cell,fill=st-open!22},
+  na/.style={cell,fill=black!4,text=black!60}]
+\def\cw{3.2}\def\rh{1.5}\def\hx{2.6}\def\hh{1.25}
+\newcommand{\C}[4]{\node[#3] at ({\hx+(#1)*\cw},{-\hh-(#2-1)*\rh}) {#4};}
+\newcommand{\Hd}[2]{\node[head,minimum height=\hh cm] at ({\hx+(#1)*\cw},0) {#2};}
+\newcommand{\Rw}[2]{\node[rowh] at (0,{-\hh-(#1-1)*\rh}) {#2};}
+% header row
+\node[rowh,minimum height=\hh cm] at (0,0) {carrier};
+\Hd{0}{Route A\\ sedenions $\mathbb C\otimes\mathbb S$,\\ axis $e_8$ (CT-003)}
+\Hd{1}{Route B\\ triality slots $\mathbb O^3$,\\ cycle $\tau$}
+\Hd{2}{Dixon copies\\ HS(7), HS(8)\\ ($n=2,4$ copies, set)}
+\Hd{3}{Albert algebra\\ $H_3(\mathbb O)$, slots\\ $x_1,x_2,x_3$}
+
+% row 1: family symmetry
+\Rw{1}{family symmetry}
+\C{0}{1}{cond}{$\mathfrak{su}(2)_\ell\oplus\mathfrak{su}(2)_q$ from the right action of $\mathbb H_n$ (\rnd{r13}.4)}
+\C{1}{1}{est}{$S_3$ on the slots (\rndold{r37})}
+\C{2}{1}{est}{$M_n(\mathbb C)$ on the copy index (\rnd{r19}, \rnd{r25})}
+\C{3}{1}{est}{$SO(3)$ derived; charge breaks it to exactly $A_4$, pure spin 3 (\rnd{r60})}
+% row 2: three generations
+\Rw{2}{three generations?}
+\C{0}{2}{ref}{no: exactly two (\rnd{r13}.3)}
+\C{1}{2}{read}{three slots, read as generations; fourth not forbidden (\rndold{r37})}
+\C{2}{2}{cond}{only as many as copies are set (\rnd{r19}.2)}
+\C{3}{2}{read}{three slots, read as generations (\rnd{r60})}
+% row 3: cycle on a neutral qubit
+\Rw{3}{order-3 cycle on a neutral qubit?}
+\C{0}{3}{cond}{$\psi=\mathrm{diag}(1,\omega)$ on $N$, but a phase inside the generations (\rnd{r13}.1, .3)}
+\C{1}{3}{est}{$\tau=\mathrm{diag}(\omega,\bar\omega)$ on the slot doublet (\rnd{r13}.6)}
+\C{2}{3}{na}{not supplied: frame maps do not act on copies (\rnd{r25})}
+\C{3}{3}{na}{not examined}
+% row 4: magic angle
+\Rw{4}{reference at the magic angle?}
+\C{0}{4}{cond}{yes: Hurwitz units give $2T$, axes at $|\!\cos|=1/\sqrt3$; a construction (\rnd{r13}.2)}
+\C{1}{4}{ref}{no operation at hand supplies it (\rnd{r13}.6)}
+\C{2}{4}{na}{not examined}
+\C{3}{4}{na}{not examined}
+% row 5: K = 2/3
+\Rw{5}{$K=2/3$?}
+\C{0}{5}{cond}{orbit overlap $\tfrac12$, phase $\pi/4$; target known in advance (\rnd{r13}.2)}
+\C{1}{5}{ref}{real slot vector: $\rho^2=\tfrac14$, $K=\tfrac12$ (\rnd{r13}.6)}
+\C{2}{5}{cond}{for chosen states only: flat octant ($n=2$), spin-1 triangle ($n=4$)}
+\C{3}{5}{na}{not addressed}
+% row 6: mixing
+\Rw{6}{mixing?}
+\C{0}{6}{open}{Majorana vector on $N$ not fixed; no three masses (\rnd{r13}.5)}
+\C{1}{6}{open}{TM2 under an assumed $\mathbb Z_2$; $\theta_{23}$ free (\rnd{r18}.4)}
+\C{2}{6}{na}{not addressed}
+\C{3}{6}{open}{exact $A_4$: $V_{\rm CKM}=I$; alignment depends on coefficients (\rnd{r60})}
+% legend
+\begin{scope}[yshift=-10.7cm,font=\scriptsize]
+\foreach \c/\t/\x in {st-est/{exact or derived}/0,st-cond/{setting or construction}/2.9,st-read/reading/6.4,st-ref/no/8.2,st-open/open/9.5,black/{not examined}/11.0}{
+  \fill[\c!22] (\x,0) rectangle ++(0.35,0.25);
+  \node[anchor=west] at (\x+0.4,0.125) {\t};}
+\end{scope}
+\end{tikzpicture}
+\caption{Four candidate carriers for a generation index, and what each delivers. Cell colours give the status in the
+Companion: green exact or derived, yellow under a named setting or a construction whose target was known, purple a
+reading, red a negative answer, orange open, grey not examined. No column delivers three generations, an order-three cycle,
+the magic-angle reference, $K=2/3$ and a mixing pattern at once. Route~A and route~B are complementary
+(\rnd{r13}.6): the quaternion group needs a doublet made of two slots, the slot cycle needs three slots.}
+\label{fig:B-routes}
+\end{figure}

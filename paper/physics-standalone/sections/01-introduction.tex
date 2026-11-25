@@ -1,0 +1,95 @@
+\section{Introduction}
+\label{sec:A-intro}
+
+\subsection{The conjecture}
+\label{sec:A-conjecture}
+
+The Quantum Sphaera construction starts from one conjecture: \emph{matter, light and a tachyon
+sector are one object, seen from three frames.} In the Companion~\cite{QSC} this is the central
+statement \texttt{thm:unity}. The object is a biquaternion kernel built from three complex kernels,
+and a projector, the Heisenberg compensator, splits every state into a part that an involution keeps
+and a part that it reverses. Matter, light and the tachyon sector are meant to be sectors of this one
+kernel, and the frames are meant to be the views in which each sector is seen.
+
+The conjecture has a history that a reader should know. In its first form, ``the same object'' meant
+unitary equivalence, and the equivalence was argued from a Stone--von Neumann theorem taken from an
+earlier Riemann-hypothesis manuscript of the author. That justification was withdrawn in round
+v4.8.0-r04, and the statement has the status of a conjecture since then \Open. What survives today
+is more modest and more precise. On the complex three-vector $z=\mathbf E+i\mathbf B$ the Lorentz
+group and the electromagnetic duality rotation act, and their orbits are the shells $|s|=r>0$ of the
+invariant $s=z\cdot z$, the punctured null cone and the origin (v4.8.0-r07; \rnd{r16}). A matter-type
+and a tachyon-type configuration with the same $|s|$ lie on one orbit; light lies on another and is
+reached from the first only as a limit (\rnd{r21}). So ``one object'' holds in the sense of an active
+symmetry between matter and tachyon \Established, while the physical identification of the sectors
+with matter, light and tachyons, and the claim that they are one physical state, remain a \Reading.
+Sections~\ref{sec:A-carrier} and~\ref{sec:A-frames} make this precise.
+
+\subsection{What this article does}
+\label{sec:A-what}
+
+This article reports the construction as it stands at Companion round v4.10.0-r60. It does not
+present a deductive framework. For each result it says which of five kinds it is:
+\begin{itemize}
+\item \Established: mathematics with a proof, or a computation that anyone can repeat.
+\item \Conditional: holds under named choices, settings or assumptions, which are stated with it.
+\item \Reading: an interpretation of established mathematics. It may guide work but carries no proof
+  weight; \Exploration{} marks results of explorations without a pre-registered criterion.
+\item \Open: a question that is posed and not answered.
+\item \Refuted: a pre-registered test whose criterion failed. Refuted tests appear only where they ground
+  a result of the section in which they stand.
+\end{itemize}
+The tags are attached in the text where a statement is made. Figure~\ref{fig:A-overview} shows the
+construction as a map with the same colours.
+
+\paragraph{How the evidence is organised.}
+The Companion grows in \emph{rounds}. A round is appended to the source and never rewritten;
+corrections come as new rounds that name what they correct. We cite round v4.10.0-r$NN$ as
+\rnd{r$NN$} and round v4.9.0-r$NN$ as \rndold{r$NN$}; rounds of the earlier v4.8.0 line are cited
+by their full name, and labels of the Companion main text in typewriter font, e.g.\
+(\cite{QSC}, \texttt{prop:compensator}). A test with a decision criterion is written down and committed
+as a pre-registered note before the computation, and receives a number H$NN$. When the outcome could
+be seen analytically before the computation, the Companion marks the test \emph{not blind}; such a test
+checks a computation, not a prediction. Work without a pre-registered criterion is called an
+exploration. The bookkeeping of statements, their premises and the guards that block unproved
+conclusions is described in a separate article on the QAM language; here we use only its outcome, the
+status of each statement.
+
+\paragraph{What is not derived.}
+We state this up front because it shapes every later section. The construction derives no particle
+mass, no absolute scale and no value of the cosmological constant $\Lambda$. Where a number appears,
+such as the frame offset $\bsym\approx0.549$, it is inserted, and we say so. The Koide value $K=2/3$
+is not derived: Section~\ref{sec:B-koide} shows that it is equivalent to an overlap $\tfrac12$ between three states,
+and that overlap is an input. Against external measurements there is, so far, no confirmed blind
+prediction. A review at round \rnd{r05} counted about 20 confirmed, 19 refuted, 9 invalid, 4 open and
+28 mixed test outcomes since v4.8.0, 29 of them marked not blind; the confirmed tests without that
+mark all check inner mathematics \cite{QSC}. The predictions that are still pending, with their
+deadlines, are listed in Section~\ref{sec:open}.
+
+\paragraph{What the construction does supply.}
+It supplies exact statements about a carrier and its symmetries: a projector and its image, a sign
+rule for three sectors, two field classes under the Lorentz group, duality and scale, the action of
+three frame maps, conditions under which three readout states form an octant, and conditional
+constructions of one particle generation. It also supplies exclusions: several routes from the
+structure to numbers are closed by proofs or refuted tests. We regard both as results.
+
+\input{figures/F1-overview}
+
+\subsection{Plan of the article}
+\label{sec:A-plan}
+
+Section~\ref{sec:A-carrier} defines the carrier: the biquaternion kernel, the involution $J$ and the
+compensator $C=\tfrac12(1+J)$, the sector rule by the sign of $s=z_1^2+z_2^2+z_3^2$, and what $C$
+does to a light field. All of it is established mathematics; the names of the sectors are a reading.
+Section~\ref{sec:A-frames} introduces the frames M, T, P and R of Convention~F and the maps between
+them. The tachyon map $z\mapsto iz$ is the electromagnetic duality rotation, not a Wick rotation and
+not time reversal $z\mapsto\bar z$. Under the Lorentz group, duality and scale there are exactly two
+classes of non-zero fields, and frame maps, being symmetries, give equalities between frames and no
+values. Section~\ref{sec:B-particles} constructs particles from $\mathbb C\otimes\mathbb H\otimes\mathbb O$ under named
+choices, up to the family symmetry of the Albert algebra and its breaking to $A_4$. Section~\ref{sec:B-koide} treats
+the Koide relation as geometry of three states and shows why it is not a derivation. Section~\ref{sec:beta} is about
+the frame offset $\bsym$ and the counting rule behind it, the open problem OP1. Section~\ref{sec:act} presents the
+common action W1/W2, which holds under author decisions and supplies no scale, together with a short
+exploration of the Big Bang as a transition. Section~\ref{sec:lop5} collects the negative results on $\Lambda$ and
+the open problem OP5. Section~\ref{sec:open} lists the open problems and the testable statements with their status,
+and Section~\ref{sec:concl} concludes. Appendix~\ref{sec:ledger} gives the status ledger of every statement, Appendix~\ref{sec:repro} the scripts
+that reproduce the numbers.

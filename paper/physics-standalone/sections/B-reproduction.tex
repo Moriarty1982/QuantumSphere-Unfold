@@ -1,0 +1,70 @@
+% Appendix B (group D): reproduction. Every path below was checked to exist in the repository on 25 November 2026.
+\section{Reproduction}
+\label{sec:repro}
+
+\paragraph{Source version.} The article reports the Quantum Sphaera Companion \cite{QSC}. The public baseline is v5.4.0
+(24~November 2026, Version DOI \href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009}, Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}, tag \texttt{v5.4.0}); it contains the research rounds
+up to v4.10.0-r59. Round v4.10.0-r60 is in the source-only research layer of the public repository
+\url{https://github.com/Moriarty1982/QuantumSphere-Unfold}. Nothing after r60 is used. In that repository:
+\begin{itemize}
+\item \nolinkurl{sources/research/v480-companion.tex} is the entry point of the Companion (historical file name);
+\item \nolinkurl{sources/research/parts/v490-post-release-layers.tex} holds the rounds v4.9.0-r01 to r86, cited here as
+  \textsc{c}\,4.9-rNN;
+\item \nolinkurl{sources/research/parts/v4100-post-release-layers.tex} holds the rounds v4.10.0-r01 to r60, cited as
+  \textsc{c}\,rNN, with labels \texttt{sec:v4100-rNN-\dots}.
+\end{itemize}
+Each round ends with a ``Proof and measurement sources'' paragraph that names its scripts, and with a ledger and guard
+update.
+
+\paragraph{Where the scripts live.} The notes of a round are in \nolinkurl{notes/research/v4_10_0_rNN/}. The folder name
+follows the working sequence, not the round label: \nolinkurl{v4_10_0_w1/} holds the notes of v4.9.0-r81,
+\nolinkurl{v4_10_0_r82/} to \nolinkurl{v4_10_0_r86/} those of v4.9.0-r82 to r86, and \nolinkurl{v4_10_0_r01/} onwards those
+of v4.10.0-r01 onwards. Scripts and their recorded outputs are in the subfolder \nolinkurl{llm/} or, for later rounds, in a
+topic folder that the round's \texttt{README.md} names (for example \nolinkurl{notes/research/op5_attractor_2026_11_23/} for
+H124 and \nolinkurl{notes/research/h125_relatives_cp_2026_11_24/} for H125). Pre-registration notes and result notes of all
+tests are in \nolinkurl{notes/research/predictions/} as \nolinkurl{Vorab_Notiz_H*.md} and \nolinkurl{Ergebnis_H*.md}; the commit
+of a pre-registration note can be compared with the date of the computation. Table~\ref{tab:repro-act} lists the scripts
+behind the numbers of Section~\ref{sec:act}.
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}X l@{}}
+\toprule
+result & script (path under \nolinkurl{notes/research/}) & tool\\
+\midrule
+$\mathrm{Im}\,S$ identity of the complex reading & \nolinkurl{v4_10_0_w1/llm/k170_imS_identitaet.py} & Python\\
+vacuum decay of an independent T field (H76) & \nolinkurl{v4_10_0_r83/llm/k191_vakuumzerfall.py} & Python\\
+second reading on FRW (H80, H81) & \nolinkurl{v4_10_0_r84/llm/k196_zweite_lesart_frw.py} & Python\\
+masses under the second reading (H82) & \nolinkurl{v4_10_0_r85/llm/k197_massen_zweite_lesart.py} & Python\\
+CPT assignment at the Big Bang (H86) & \nolinkurl{v4_10_0_r85/llm/k201_cpt_zuordnung.py} & Python\\
+admixture, second system (H87) & \nolinkurl{v4_10_0_r86/llm/k202_wolfram_gegenprobe.wl} & Wolfram\\
+field equations of W1 (H88) & \nolinkurl{v4_10_0_r86/llm/k203_w1_feldgleichungen.wl} & Wolfram\\
+energy--momentum tensor of W1 (H89) & \nolinkurl{v4_10_0_r86/llm/k204_w1_einstein.wl} & Wolfram\\
+non-linear Einstein--Cartan equation, sign (H90) & \nolinkurl{v4_10_0_r01/llm/k205_w1_einstein_nichtlinear.py},
+  output \nolinkurl{k205_out.json} & Python (jets)\\
+weak-field sign check & \nolinkurl{v4_10_0_r01/llm/k205b_schwachfeld.wl} & Wolfram\\
+fermions at the Big Bang & \nolinkurl{v4_10_0_r03/llm/k209_fermionen_urknall.py}, output \nolinkurl{k209_out.txt} & Python (sympy)\\
+the two senses of rotation & \nolinkurl{v4_10_0_r03/llm/k211_symmetrie_drehsinne.py}, output \nolinkurl{k211_out.txt} & Python\\
+branch gas on FRW (H95) & \nolinkurl{v4_10_0_r04/llm/k212_zweiggas_frw.py}, output \nolinkurl{k212_out.json} & Python\\
+\bottomrule
+\end{tabularx}
+\caption{Scripts behind Section~\ref{sec:act}. The Wolfram files of \texttt{v4\_10\_0\_r86/\allowbreak llm/\allowbreak } have no separate output
+files; their results and the disclosed errors of the checking code are recorded in
+\texttt{predictions/\allowbreak Ergebnis\_H87\_*}, \texttt{Ergebnis\_H88\_*} and \texttt{Ergebnis\_H89\_*}.}
+\label{tab:repro-act}
+\end{table}
+
+\paragraph{Tools.} Numerical work uses Python (NumPy, SciPy, sympy for symbolic steps). Wolfram Language is used for exact
+and symbolic derivations and as an independent second system, as in the derivation of the field equations of W1 and the
+recomputation of the Big Bang admixture (\rndold{r86}). A separate Wolfram audit archive with input scripts and recorded
+outputs for the algebraic core, the Dixon carrier, the Koide geometry and the OP5 comparison model is in
+\nolinkurl{paper/preprint-de/audit/wolfram-v0.1.0/}. Round labels, cross references, guards and the ledger are checked with
+\nolinkurl{tools/qs.py}.
+
+\paragraph{Rebuilding.} The article is self-contained in \nolinkurl{paper/physics-standalone/}: \texttt{article.tex} with
+\nolinkurl{sections/}, the TikZ figures in \nolinkurl{figures/} and the bibliography in \nolinkurl{refs/}. Run \texttt{pdflatex
+article.tex} twice in that directory; scripts that generate figure data are in \nolinkurl{scripts/}. The Companion is built
+from \nolinkurl{sources/research/v480-companion.tex} with that directory as working directory and several pdfLaTeX runs, as
+described in \nolinkurl{sources/research/README.md}.

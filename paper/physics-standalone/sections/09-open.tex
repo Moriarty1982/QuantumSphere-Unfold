@@ -1,0 +1,124 @@
+% Section 9 (group D): open problems and testable statements.
+% Sources: Companion rounds v4.10.0-r05, r08, r18, r21, r28, r30, r31, r55, r56, r59, r60;
+% wiki/Vorhersagen-und-Tests.md, wiki/Offene-Probleme.md, wiki/Gesamtbild.md.
+\section{Open problems and testable statements}
+\label{sec:open}
+
+\subsection{The open problems}
+\label{sec:open-problems}
+
+The Companion names five open problems OP1--OP5 and two closure questions, C5 and C6/T2. None of them is closed
+\cite{QSC}. Their present formulation is best read through one observation of \rnd{r30} and \rnd{r55}: every number that
+OP2--OP5 supply today is a function of the single number of OP1, $\bsym=0.5494$, but it enters each problem through a
+separately set identification, four of them chosen after the data were known (\rnd{r30}, remark r30.6). Each problem
+also keeps a remainder that does not depend on the number (\rnd{r55}, remark r55.4).
+
+\paragraph{OP1: the origin of $\bsym$.} \Open\ The frame offset is set, not derived:
+\begin{equation}
+\bsym=\sqrt{\frac{\gamma_L-1}{\gamma_L+1}}=0.5494,\qquad \gamma_L=\frac{\gamma_M}{\gamma_T}=1.8647,
+\label{eq:open-beta}
+\end{equation}
+where $\gamma_M=0.237533$ is the
+Barbero--Immirzi value of the counting rule with all spins and weight two (assigned to frame M) and
+$\gamma_T=\ln2/(\pi\sqrt3)=0.127384$ that of the rule with $j=\tfrac12$ only (assigned to frame T). The assignment is
+equivalent to a frame-dependent area quantum (\rnd{r10}). Unitary boosts leave the area spectrum fixed, the Holst duality
+rotation does not map $\gamma_M$ to the needed value, and the non-unitary frame map $J_B$ is a conjugation that leaves every
+spectrum fixed (\rnd{r30}, \rnd{r31}, \rnd{r52}). OP1 therefore rests on the counting rules alone: why M reads only the
+extremal states of a puncture (the premise called U2) and why T counts only $j=\tfrac12$. A solution would supply the
+number but none of the five identifications (\rnd{r55}, r55.1). Section~\ref{sec:beta} gives the details.
+
+\paragraph{OP2: the Dirac operator on the antisymmetric sector.} \Open\ Existence and self-adjointness of the operator $D_-$
+on the antisymmetric sector were derived from the Riemann work, which has not been a source of proof since v4.8.0-r04.
+Its own remainder is that proof; its identification with the frame offset (spectral offset $=\bsym$) is one of the five
+set translations (\rnd{r30}, r30.6).
+
+\paragraph{OP3: generations and the residual bend.} \Open\ The Companion does not derive three generations, has no ban on
+a fourth, and does not derive Koide's $K=2/3$; the overlap $\tfrac12$ is an input (Section~\ref{sec:B-koide}). Its number-dependent part is
+the residual bend $\Phi_e=\pi/4-\gamma_M/2$ of the lepton phase, tested by H102. The orientation of the octant step is a
+time orientation of the readout that no candidate of the Companion fixes (H118); on this the author decided to let OP3
+rest until a new idea appears (\rnd{r31}, r31.2). The Albert-algebra route gives a family $SO(3)$ broken by charge
+exactly to $A_4$, with $V_{\mathrm{CKM}}=\mathbf 1$ for exact $A_4$, but no numbers (\rnd{r60}; Section~\ref{sec:B-particles}).
+
+\paragraph{OP4: the origin of the mixing angles.} \Open\ Several constructions reproduce the mixing data, but as fits.
+The translations of the number are $|U_{e2}|^2=\bsym^2$ (H9) and the mask parameter $\varepsilon=\eta$ (H46). The own
+remainder is the $\mathbb Z_2$ of the neutrinos (TM2), $\delta_{\mathrm{CP}}$, the CKM matrix and the assignment of gauge
+charges (\rnd{r55}). One sign is fixed by the structure: the relative orientation of the family $su(2)$ on leptons and
+quarks (H125 stage A, not blind), which under a setting S1 becomes the prediction $\sin\delta_{\mathrm{PMNS}}<0$
+(\rnd{r59}).
+
+\paragraph{OP5: the cosmological constant and the vacuum balance.} \Open\ By an author decision OP5 has three parts
+(\rnd{r05}, r05.3): the core closure of the source--return route, locally closed under the guards and not claimed
+globally; the $\Lambda$ readout $\Omega_M=\bsym^2$ (H96, open); and the action programme W1/W2, frozen
+(Section~\ref{sec:act}). The own remainder, the absolute value of $\Lambda$, is an input for the named class of
+constructions of the Companion: no equation in it selects $\Lambda$ and the class has no scale of its own; the readout
+$\Omega_M=\bsym^2$ only trades $\Lambda$ for the epoch (\rnd{r56}). This is a negative result for the Companion as it
+stands, not for every extension (Section~\ref{sec:lop5}).
+
+\paragraph{C5.} \Open\ In its old form C5 asked, in the measure of one frame, about a passage between two frames. It was
+restated in \rnd{r21} as three questions. The transfer question $C5_{\mathrm{tr}}$, typed by frame, is a relocation: an
+empty compensator port is a full partner port, since $C5_M+C5_T=1$; nothing vanishes. The frame-free photon-point
+question $C5_P$ has a positive answer as a statement about fields: free time evolution reaches $|s|=0$ at a finite time
+on a codimension-one family. Only the bridge question $C5_{\mathrm{br}}$, whether reaching the photon point discharges the
+obstruction, is open; under the original definition of the score its answer is negative (r21.12), and the assertion
+$C5=0$ is not made.
+
+\paragraph{C6/T2 and the guards.} The global closure of all readouts, C6/T2, is \emph{not claimed}. The Companion
+asserts only local, frame-typed closures (thesis T15). Its five guards are unchanged: every round up to \rnd{r60} records
+$R_{\mathrm{glob}}=(0,1,1,1,1)$, $\Gamma_{\mathrm{guard}}=(1,1,1,1,1)$ and the end bound $\beta_4=1/256$ unspent, and states that it
+implies no exact finite C5 zero closure, no exact all-readout terminality, no C6/T2, no global photon-clock theorem and no
+global all-readout closure.
+
+\subsection{Testable statements}
+\label{sec:open-tests}
+
+The Companion fixes each prediction in a pre-registration note (hypothesis, data, decision criterion) committed before
+the decisive data exist; a value counts as tested only with a measurement after the stated cutoff, and earlier data are
+given for comparison only. Table~\ref{tab:open-tests} lists the predictions that are open, together with H2. The status is
+that of 25~November 2026. None of the open tests is decided.
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.25\textwidth}@{}}
+\toprule
+& statement & decisive data; refuted if & status and remarks\\
+\midrule
+H2 & normal ordering, $\sum m_\nu=0.0592$\,eV (neutrinos as light-like triple) & mass ordering and $\sum m_\nu$ &
+  compatible, weakly discriminating; ordering not yet determined (\rnd{r18})\\
+H9 & $\sin^2\theta_{12}=\bsym^2/\cos^2\theta_{13}=0.3086$ & JUNO with $\sigma\le0.004$ &
+  open; found after the fact; JUNO 2026: $0.3036\pm0.0064$ (\rnd{r31})\\
+H15 & $m_W=80.3615\pm0.0018$\,GeV & first world average after 21.10.2026 &
+  open; PDG 2026 ($80.3625\pm0.0077$) predates H15 and does not count (\rnd{r04})\\
+H42 & $\sin^2\theta_{23}\le0.54$ (normal ordering) & first global analysis or DUNE/Hyper-K result after 24.10.2026; refuted if the
+  $2\sigma$ interval lies wholly above $0.54$ & open; independent of $\gamma_L$ (\rnd{r08})\\
+H46 & $\sin^2\theta_{23}\in[0.49,0.50]$ under $\varepsilon=\eta$ & same data; refuted if the $2\sigma$ interval misses $[0.49,0.50]$ &
+  open\\
+H96 & $\Omega_M=\bsym^2=0.30185$ today & first flat-$\Lambda$CDM $\Omega_m$ from DESI DR3 (BAO alone) or Euclid; refuted beyond $2\sigma$ &
+  open; DESI DR2 $0.2975\pm0.0086$ known, does not count (\rnd{r05})\\
+H100 & $R=\Delta m^2_{21}/\Delta m^2_{31}$ in the next NuFIT fit: A $0.030839$, B $0.030087$, C $0.030375$ & first NuFIT version after 6.1;
+  confirmed if A is refuted and B or C compatible ($|z|\le2$); lapses without a new version by end of 2027 & open (\rnd{r12})\\
+H102 & $m_\tau=1777.134$\,MeV from $\Phi_e=\pi/4-\gamma_M/2$ (exact Koide: $1776.969$) & first PDG edition after 13.11.2026, at the
+  latest end of 2028; refuted if $|z|>2$ & open; $+2.3\sigma$ against the current PDG value $1776.93\pm0.09$ (\rnd{r28})\\
+H112 & $\sin^2\theta_{12}\cos^2\theta_{13}=\Omega_m$, the same number at both places, whatever it is & data of H9 and H96 together;
+  refuted if $|z|\ge3$; deadline 31.12.2029 & open; weak (refutes only from $|\Delta\beta^2|\gtrsim0.022$)\\
+H125 & $\sin\delta_{\mathrm{PMNS}}<0$ (relative CP sign of leptons and quarks, under S1) & first analysis fixing the sign at $\ge3\sigma$;
+  deadline 31.12.2035 & open; stage A confirmed, \emph{not blind}; prior probability $\tfrac12$ (\rnd{r59})\\
+\bottomrule
+\end{tabularx}
+\caption{Pre-registered predictions that are open, and H2, status of 25 November 2026 (wiki page ``Vorhersagen und
+Tests'' and the cited rounds). H15, H46 and H96 rest on one common core, the assignment of counting rules to the frames;
+H102 is a joint test of the core reading, the $U(1)$ counting and the area spectrum $\sqrt{j(j+1)}$.}
+\label{tab:open-tests}
+\end{table}
+
+Three qualifications belong to every entry. First, the values of H9, H15, H46, H96 and H102 depend on the number of OP1, and
+the chance estimate of Section~\ref{sec:beta} applies to them: as long as the pair of counting rules is chosen rather than derived, its
+hits are compatible with chance. H15, H46 and H96 are not three independent tests; together with H42 the four older
+predictions form two independent groups (\rnd{r08}). Second, H9 and H102 were found after the older data were seen; they
+are blind only against future measurements. Third, H112 tests the weaker statement that the same number stands at both
+places.
+
+\Open\ \textbf{No blind prediction of the Companion has so far been confirmed against measurement data.} The confirmed
+tests without the mark ``not blind'' all check inner mathematics (\rnd{r05}, remark r05.2), and no later test up to
+\rnd{r60} has changed this. The predictions above are the places where that can change.
