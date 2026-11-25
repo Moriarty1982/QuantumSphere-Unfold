@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H150; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H151; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -47,7 +47,10 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
 - **H150** (Vorab fc17ee9): Vorzeichen von 2a − b = 2λ − κ aus der Feldgleichung? Nicht allein. Skala gesetzt: Koide-Minimum für −2λ < κ < 2λ, mit Abschneidung
   und ungleicher Komponentenzahl (1 gegen 2) wandert θ nach cos 2θ = c_L/f². Skalenfrei: Kondensat am Koide-Punkt nur für κ < 0 (Klasse iv), dann 2a − b > 0;
   mit 1 gegen 2 Komponenten verschiebt der Fluss K auf ≈ 0,672. HC-Form: κ < 0 aus Beschränktheit, Minimum bei tan θ = μ.
+- **H151** (Vorab 8fc75b5, Nachträge 4676bce, ed80585): Hängt die Verschiebung mit 2/9 oder einer Setzung zusammen? Nein. Der Fluss ist in der Kopien-Ebene invariant
+  und erzeugt δ nicht; die Verschiebung ist startabhängig (ΔK 0 … 0,011), fester Grenzwert nur K* = 1/3 + √10/9; 48 Vergleiche mit Funktionen von 2/9 ohne Treffer,
+  540 mit allen Setzungen im Zufallsbereich. Frame-Differenz: Form S ändert K nicht, ein Boost hält den Lichtkegel fest und erreicht ⅔ nie.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H150; Skripte k321–k333 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H151; Skripte k321–k334 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.
