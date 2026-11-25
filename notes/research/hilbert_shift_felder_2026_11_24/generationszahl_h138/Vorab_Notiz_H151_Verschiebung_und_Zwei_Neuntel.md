@@ -51,6 +51,16 @@ Drehwinkel der Mischung (H131/H134, ohne festen Wert).
   log-gleichverteilte Zahl im Intervall [10⁻³, 10] in das 1-%-Fenster fällt; zusätzlich empirisch mit 10⁴ Zufallssätzen gleicher Größe. Ein Treffer gilt nur als
   auffällig, wenn die beobachtete Trefferzahl über dem 99-%-Quantil der Zufallsverteilung liegt. Vorhersage: nicht auffällig.
 
+## Zweiter Nachtrag (Autor 25.11., 20:18 UTC): Frame-Differenz als Quelle
+„eine andere quelle könnte die frame differenz sein“. Eingetragen, nachdem k334 für H151a–d gelaufen war, aber vor jeder Rechnung zu H151e.
+
+- **H151e (gewertet, teilweise nicht blind):** Überträgt man den Zustand am GW-Punkt vom verschobenen Frame in den Materie-Frame, gibt es zwei Formen:
+  (i) Form S (r57, für geladene Leptonen): Ähnlichkeitstransformation, K bleibt exakt (nicht blind, H146/H148).
+  (ii) Frame-Boost mit Rapidität ε = artanh β_sym auf der Ebene (φ, χ) (Vorstufe, Kopienrichtung), der die Form φ² − χ² = ReΨ² erhält.
+  Vorhersage: Ein Boost hält den lichtartigen Punkt θ = π/4 fest und führt keinen Zustand über ihn hinweg; der Fluss-Punkt mit K > ⅔ (tan θ > 1) bleibt auf seiner Seite.
+  Die Abweichung verschwindet also durch keine Rapidität, und δ entsteht nicht (O(n_B)-Invarianz, H151a). Zusätzlich wird K nach dem Boost mit ±ε berechnet und gegen ⅔ und die
+  Setzungsliste geprüft (gleiche Regeln wie H151d). *Kriterium:* Verschwindet |K − ⅔| für ein ε aus {±artanh β_sym, ±artanh β_sym², ±ln γ_L}? Bestätigt, wenn für keines.
+
 ## Grenzen
 - Eine Schleife, ohne Eichfelder. Die Komponentenzahl der Kopienrichtung (2 oder 7) ist eine Lesart.
 - OP3 offen; kein Vorzeichen gesetzt; kein Guard berührt.
