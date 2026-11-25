@@ -1,0 +1,46 @@
+{
+  "title": "What a Conclusion Rests On: Checked Bookkeeping of Status, Inputs and Frames in Long Research Records",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc"
+    }
+  ],
+  "description": "<p>When a research project is carried out over months with the help of language models, its written record grows faster than anyone can check the dependencies inside it. The costly mistakes are then rarely wrong calculations. They are silent transitions: a result that holds only under a condition is later cited as proved, a value that was put in by hand is later presented as derived, or two quantities from different frames of reference are compared as if they were the same kind of thing. This article presents QAM, a small typed bookkeeping language for such records, together with the tools that check it. Every statement in a QAM record carries a frame, a status on a five-step scale from open to proved, the inputs it rests on and the exact versions of its premises. Four rules, stated in the article and proved there, guarantee that no conclusion is stronger than what it rests on, that no input disappears along a chain of reasoning, and that frames change only through declared maps. Calculations are submitted as requests to an executor that answers with one of three outcomes (continue, guard or reject) and stores a hashed receipt; a premise graph in SQLite answers what a result rests on and what depends on a given premise. A single worked example from elementary electrodynamics, a field configuration observed before and after a Lorentz boost, runs through the whole article.</p><p>The article is self-contained: model, rules and proofs, the LaTeX package, the Lean checker, requests and receipts, the premise graph, the tape machine with its HDL comparison and the MCP interface are all described in it. The article's own QAM record is checked while it is typeset and is included as a separate file; the source archive contains the LaTeX sources and the two style files.</p><p><strong>Scope.</strong> QAM secures the form of a record. It does not make its content true, and it replaces neither a proof assistant nor an experiment. The spinor tape is stated as a conditional hypothesis with open obligations, and the outlook on a quantum computer in the carrier is marked as speculation. The article makes no physical claim; the open problems of the Quantum Sphaera Companion (OP1–OP5, C5, C6/T2) are not addressed and remain open.</p>",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "QAM",
+    "research records",
+    "provenance",
+    "formal bookkeeping",
+    "Lean",
+    "LaTeX",
+    "premise graph",
+    "language models",
+    "Quantum Sphaera"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24500009",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "First version of a new record (own concept DOI). Version DOI is entered after the reservation by tools/paper_release.py stamp.",
+  "publication_date": "2026-11-25"
+}

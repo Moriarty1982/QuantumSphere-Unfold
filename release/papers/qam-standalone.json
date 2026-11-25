@@ -1,0 +1,36 @@
+{
+  "id": "qam-standalone",
+  "title": "What a Conclusion Rests On: Checked Bookkeeping of Status, Inputs and Frames in Long Research Records",
+  "version": "1.0.0",
+  "source_dir": "paper/qam-standalone",
+  "main": "main.tex",
+  "build": [
+    "sh",
+    "build.sh"
+  ],
+  "texinputs": [
+    "qam/tex"
+  ],
+  "build_needs": [
+    "qam/tools/qamhash.py"
+  ],
+  "pdf_name": "QAM_What_a_Conclusion_Rests_On_v1.0.0.pdf",
+  "source_archive": "QAM_What_a_Conclusion_Rests_On_v1.0.0_source.tar.gz",
+  "source_extra": [
+    "qam/tex/qam.sty",
+    "qam/tex/qam-physics.sty"
+  ],
+  "extra_files": [
+    {
+      "from": "paper/qam-standalone/main.qam",
+      "name": "QAM_What_a_Conclusion_Rests_On_v1.0.0_record.qam"
+    }
+  ],
+  "lean_check": "paper/qam-standalone/main.qam",
+  "metadata": "release/zenodo/metadata_qam_standalone_1_0_0.json",
+  "payload_dir": "release/qam-standalone-v1.0.0",
+  "tag": "qam-paper-v1.0.0",
+  "new_version_of": "",
+  "deposition_id": "",
+  "version_doi": ""
+}
