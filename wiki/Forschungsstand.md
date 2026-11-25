@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### Trägt die Rest-Generation die anderen Sektoren? Nein, sie sieht aus wie eine Kopien-Generation (25.11.2026, Test H144, teilweise nicht blind, k327)
+
+Frage des Autors: Hält die Rest-Generation aus H142/H143 die Generationen der anderen Sektoren (Licht, Tachyon), während die Kopien den Materiesektor bilden? Gesetzt wurde, dass der Faktor ℂ der Zustände der C-Faktor der Frames ist (x = E + iB, wie r51); Sektorgröße s = Σ x_a² über den Imaginärteil (T3) bzw. über alle Koordinaten. Ergebnis: Die Rest-Generation hat dieselbe Signatur wie eine einzelne Kopie, Quarks lichtartig (s = 0), Leptonen |s| = ½ (Wolfram exakt). Die vorab erwartete „Rest = Lichtsektor“-Lesart ist widerlegt (H144c). Die Frame-Abbildungen wirken innerhalb jedes Trägers und verbinden Kopien und Rest nicht; die Zeitumkehr z ↦ z̄ bildet den Rest auf sich ab mit q ↦ 1 − q und ist dasselbe wie der globale Vorzeichenwechsel der Orientierung. Die Sektorgröße folgt aus der Ladung (N(x, y) = 0 außer q + q′ = 1), deshalb lässt sich auch das Leck nicht als Sektorwechsel lesen.
+
+Einordnung: Das Urteil hängt nicht am Frame (|s| ist unter z ↦ iz und z ↦ z̄ gleich), wohl aber an der Setzung „ℂ = C-Faktor“. Das offene globale Vorzeichen ist die Wahl der Zeitrichtung. T1 bleibt Vermutung; OP3, OP4 offen. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H144_Rest_als_Sektoren.md`.
+
 ### Fünf Kopien: keine zweite Generation, nur mehr Leck (25.11.2026, Test H143, teilweise nicht blind, k326)
 
 Auf HS(5) wurden alle 126 Auswahlen von fünf der neun Oktonion-Kopien gerechnet, jeweils mit allen 16 relativen Orientierungen. Der Rest (Kern der Abbildung der getrennten Träger in A₅) enthält höchstens **eine** vollständige, ladungsstabile Generation (0, ⅓³, ⅔³, 1), und zwar in 45 Auswahlen. Jede dieser 45 enthält genau eine der 9 Vierer-Auswahlen aus H142; eine neue Generation durch die fünfte Kopie gibt es nicht. Die fünfte Kopie bringt nur einen weiteren Quark-Satz (⅓³, ⅔³ ohne Leptonen) oder leckende Zustände mit Ladung ½ oder irrationalen Ladungen wie (5 ∓ √10)/10 (Wolfram exakt). Exakt bestätigt ist die Regel: Zahl der Rest-Generationen = Zahl der Relationen Σ c_k v_k = 0 mit Σ c_k = 0 (alle 2016 Fälle). Keine gemeinsame Ladung, keine Nullteiler.

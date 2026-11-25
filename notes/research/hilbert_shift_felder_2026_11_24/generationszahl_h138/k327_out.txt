@@ -1,0 +1,61 @@
+=== Kopie f0(x)f0 allein ===
+  q = 0.000000: dim 1, Takagi N [0.], Takagi s [0.5]
+  q = 0.333333: dim 3, Takagi N [0. 0. 0.], Takagi s [0. 0. 0.]
+  q = 0.666667: dim 3, Takagi N [0. 0. 0.], Takagi s [0. 0. 0.]
+  q = 1.000000: dim 1, Takagi N [0.], Takagi s [0.5]
+
+=== drei Kopien (H141/H140-Klassen): transportierte Orientierung ===
+6 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240']: dim K 9, dim W 6
+   a: max |P_W - P_conjW| 1.4e-15; Spektrum gespiegelt: True; max dim(W in 2 Traegern) 0
+   b: max Takagi N je q in W: {0.333333: 2.6e-15, 0.666667: 4.9e-15}
+   c: Takagi s je q in W: {0.333333: (np.float64(0.0), np.float64(0.0), np.float64(0.0)), 0.666667: (np.float64(0.0), np.float64(0.0), np.float64(0.0))}
+   d: Rest K-W gestauchte Ladungen (np.float64(0.5), np.float64(0.5), np.float64(0.5))
+      |N| je Zustand (np.float64(0.454322), np.float64(0.723824), np.float64(0.566172)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.718139), np.float64(0.100329), np.float64(0.181531))
+78 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0']: dim K 2, dim W 0
+   d: Rest K-W gestauchte Ladungen (np.float64(0.5), np.float64(0.5))
+      |N| je Zustand (np.float64(1.0), np.float64(1.0)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.0), np.float64(0.0))
+
+=== vier Kopien (H142): transportierte Orientierung ===
+36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240', 'f120(x)f0']: dim K 10, dim W 6
+   a: max |P_W - P_conjW| 2.1e-15; Spektrum gespiegelt: True; max dim(W in 2 Traegern) 0
+   b: max Takagi N je q in W: {0.333333: 3.4e-15, 0.666667: 5.7e-15}
+   c: Takagi s je q in W: {0.333333: (np.float64(0.0), np.float64(0.0), np.float64(0.0)), 0.666667: (np.float64(0.0), np.float64(0.0), np.float64(0.0))}
+   d: Rest K-W gestauchte Ladungen (np.float64(0.25), np.float64(0.5), np.float64(0.5), np.float64(0.75))
+      |N| je Zustand (np.float64(0.0), np.float64(0.999995), np.float64(0.999995), np.float64(0.0)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.5), np.float64(0.0), np.float64(0.0), np.float64(0.5))
+81 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0', 'f120(x)f120']: dim K 3, dim W 0
+   d: Rest K-W gestauchte Ladungen (np.float64(0.5), np.float64(0.5), np.float64(0.5))
+      |N| je Zustand (np.float64(0.756852), np.float64(0.777489), np.float64(0.977555)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.0), np.float64(0.0), np.float64(0.0))
+9 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f240', 'f240(x)f240']: dim K 10, dim W 8
+   a: max |P_W - P_conjW| 2.0e-15; Spektrum gespiegelt: True; max dim(W in 2 Traegern) 0
+   b: max Takagi N je q in W: {0.0: 3.3e-16, 0.333333: 3.2e-15, 0.666667: 5.6e-15, 1.0: 1.6e-15}
+   c: Takagi s je q in W: {0.0: (np.float64(0.5),), 0.333333: (np.float64(0.0), np.float64(0.0), np.float64(0.0)), 0.666667: (np.float64(0.0), np.float64(0.0), np.float64(0.0)), 1.0: (np.float64(0.5),)}
+   d: Rest K-W gestauchte Ladungen (np.float64(0.5), np.float64(0.5))
+      |N| je Zustand (np.float64(0.368713), np.float64(0.368713)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.0), np.float64(0.0))
+
+=== fuenf Kopien (H143): transportierte Orientierung ===
+72 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240', 'f120(x)f0', 'f120(x)f120']: dim K 11, dim W 6
+   a: max |P_W - P_conjW| 5.0e-16; Spektrum gespiegelt: True; max dim(W in 2 Traegern) 0
+   b: max Takagi N je q in W: {0.333333: 3.1e-15, 0.666667: 5.1e-15}
+   c: Takagi s je q in W: {0.333333: (np.float64(0.0), np.float64(0.0), np.float64(0.0)), 0.666667: (np.float64(0.0), np.float64(0.0), np.float64(0.0))}
+   d: Rest K-W gestauchte Ladungen (np.float64(0.183772), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.816228))
+      |N| je Zustand (np.float64(0.0), np.float64(0.98423), np.float64(0.929719), np.float64(0.918463), np.float64(0.0)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.5), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.5))
+9 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240', 'f120(x)f0', 'f240(x)f0']: dim K 18, dim W 14
+   a: max |P_W - P_conjW| 9.9e-16; Spektrum gespiegelt: True; max dim(W in 2 Traegern) 0
+   b: max Takagi N je q in W: {-0.0: 3e-16, 0.333333: 3e-15, 0.666667: 5.7e-15, 1.0: 1.1e-15}
+   c: Takagi s je q in W: {-0.0: (np.float64(0.5),), 0.333333: (np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)), 0.666667: (np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)), 1.0: (np.float64(0.5),)}
+   d: Rest K-W gestauchte Ladungen (np.float64(0.341886), np.float64(0.5), np.float64(0.5), np.float64(0.658114))
+      |N| je Zustand (np.float64(0.0), np.float64(0.958363), np.float64(0.958363), np.float64(0.0)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.5), np.float64(0.0), np.float64(0.0), np.float64(0.5))
+9 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0', 'f120(x)f120', 'f240(x)f240']: dim K 11, dim W 6
+   a: max |P_W - P_conjW| 2.1e-15; Spektrum gespiegelt: True; max dim(W in 2 Traegern) 0
+   b: max Takagi N je q in W: {0.333333: 2.2e-15, 0.666667: 3.9e-15}
+   c: Takagi s je q in W: {0.333333: (np.float64(0.0), np.float64(0.0), np.float64(0.0)), 0.666667: (np.float64(0.0), np.float64(0.0), np.float64(0.0))}
+   d: Rest K-W gestauchte Ladungen (np.float64(0.1), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.9))
+      |N| je Zustand (np.float64(0.0), np.float64(0.599591), np.float64(0.393897), np.float64(0.185632), np.float64(0.0)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.5), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.5))
+36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0', 'f120(x)f240', 'f240(x)f120']: dim K 11, dim W 8
+   a: max |P_W - P_conjW| 7.4e-15; Spektrum gespiegelt: True; max dim(W in 2 Traegern) 0
+   b: max Takagi N je q in W: {0.0: 3.3e-16, 0.333333: 3.4e-15, 0.666667: 5.1e-15, 1.0: 1.4e-15}
+   c: Takagi s je q in W: {0.0: (np.float64(0.5),), 0.333333: (np.float64(0.0), np.float64(0.0), np.float64(0.0)), 0.666667: (np.float64(0.0), np.float64(0.0), np.float64(0.0)), 1.0: (np.float64(0.5),)}
+   d: Rest K-W gestauchte Ladungen (np.float64(0.5), np.float64(0.5), np.float64(0.5))
+      |N| je Zustand (np.float64(0.812623), np.float64(0.921048), np.float64(0.819532)); min Takagi N auf K-W 1.0000; |s| je Zustand (np.float64(0.0), np.float64(0.0), np.float64(0.0))
+
+Sedenion-Tripel (0,1,2) einzeln: {'dimK': 9, 'dimW': 6, 'rest_q': (np.float64(0.5), np.float64(0.5), np.float64(0.5)), 'N_rest_einzeln': (np.float64(0.454322), np.float64(0.723824), np.float64(0.566172)), 'N_rest_takagi_min': 0.9999999999999998, 's_rest_einzeln': (np.float64(0.718139), np.float64(0.100329), np.float64(0.181531))}

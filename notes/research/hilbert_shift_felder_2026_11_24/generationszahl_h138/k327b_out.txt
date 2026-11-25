@@ -1,0 +1,8 @@
+k327b, Wolfram-Kernel (MCP), 25.11.2026, tatsaechliche Print-Ausgaben (zwei Aufrufe):
+Aufruf 1 (Einzelkopie, und ein erster Versuch fuer die Rest-Leptonen mit fehlerhafter Eigenvektor-Konstruktion, Residuum |Qx - qx| = Sqrt[3] != 0, verworfen):
+  Einzelkopie [1]: {{0, 1/2}, {1, 1/2}}
+Aufruf 2 (Eigenvektor direkt aus NullSpace[Join[Phi, QV - q I]], wie im Skript):
+  H142-Auswahl [1,2,6,9] {q, dim Eigenraum in K, N/|x|^2, s/|x|^2}: {{0, 1, 0, 1/2}, {1, 1, 0, 1/2}}
+  H143-Auswahl [1,2,4,6,8]: {{0, 1, 0, 1/2}, {1, 1, 0, 1/2}}
+Meldungen: Symbol::undefined2-Warnung (Variablennamen in Module), General::messages; keine Fehler in den Ergebnissen von Aufruf 2.
+Lesart: Rest-Leptonen exakt N = 0 und |s| = 1/2, wie die Leptonen einer einzelnen Kopie (s = 1/2; die Phase des Eigenvektors ist frei).

@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H143; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H144; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -23,7 +23,11 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   der 9 Vierer-Relationen von H142. Regel exakt bestätigt: Zahl der Rest-Generationen = Zahl der Relationen Σ c_k v_k = 0 mit Σ c_k = 0 (alle
   126 × 16 Orientierungen). Die fünfte Kopie bringt nur einen weiteren Quark-Satz oder Leck (½, irrationale Ladungen); keine Nullteiler, keine
   gemeinsame Ladung.
+- **H144** (Vorab 54682ea): Trägt die Rest-Generation die anderen Sektoren? Nein, unter der Sektorregel (ℂ als C-Faktor der Frames) hat sie
+  dieselbe Signatur wie eine Kopien-Generation: Quarks s = 0, Leptonen |s| = ½ (Wolfram exakt). Frame-Abbildungen wirken trägerweise und
+  verbinden Kopien und Rest nicht; z ↦ z̄ bildet den Rest auf sich ab mit q ↦ 1 − q, das ist der globale Vorzeichenwechsel der Orientierung.
+  Die Signatur folgt der Ladung, nicht dem Leck. c widerlegt; d trivial erfüllt.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H143; Skripte k321–k326 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H144; Skripte k321–k327 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.
