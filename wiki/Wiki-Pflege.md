@@ -950,3 +950,11 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Erkundung k262:** Träger der Neutrinos (komplexes Triplett oder Realteil) in Forschungsstand und Offene-Probleme eingetragen. Artikel unverändert.
 
 **25.11.2026, Test H134:** Frame-Korrektur auf die TM1-Klasse (k263) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Tests H138, H139:** Generationszahl aus den Sedenionen (k321, k322) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert (Marc 24.11.: Artikel später nachziehen).
+
+**25.11.2026, Test H140:** Kopien als Generationen (k323) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H141:** Vierte Generation aus dem Rest (k324) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H142:** Vier Kopien auf HS(5) (k325) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
