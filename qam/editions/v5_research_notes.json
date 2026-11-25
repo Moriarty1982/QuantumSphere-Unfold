@@ -409,5 +409,71 @@
     ],
     "guard": "Orientation sign and physical status of the kernel generation",
     "obligation": "No common conserved charge; two singlets with charge 1/2 leak; whether the kernel generation is a physical state is not shown; sign open until the field equation. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-five-copies-no-second-generation",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H143_Fuenf_Kopien_HS5.md",
+    "title": "A fifth copy brings no second remainder generation",
+    "excerpt": "Alle 45 Fünferauswahlen mit einer Rest-Generation enthalten **genau eine** der 9 Viererauswahlen von H142",
+    "assumptions": [
+      "Five of the nine octonionic copies on HS(5) as separate carriers; orientation transported by automorphisms; k85 charge; kernel as remainder."
+    ],
+    "guard": "Physical status of remainder states",
+    "obligation": "No common charge; leaking states with charge 1/2 and irrational values remain; whether the rule n_gen = dim R0 holds for six or more copies is not computed. Orientation sign open until the field equation; OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-remainder-no-own-sector",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H144_Rest_als_Sektoren.md",
+    "title": "The remainder generation carries no sector of its own",
+    "excerpt": "Rest-Leptonen (q = 0, 1): **\\|s\\| = ½**, genau wie die Leptonen einer einzelnen Kopie",
+    "assumptions": [
+      "The factor C of C⊗A5 is the C factor of the frames (set, as r51); sector size N or s summed over the carriers; k85 charge; transported orientation."
+    ],
+    "guard": "Sector assignment of generations",
+    "obligation": "Other sector assignments (e.g. via the copy index, HS(8)) are not tested. Criterion d was trivial. T1 remains a conjecture. Orientation sign open until the field equation; OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-remainder-built-on-hs0",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H145_Rest_als_HS0.md",
+    "title": "The remainder generation is a real coefficient line times one octonion copy",
+    "excerpt": "Die Rest-Generation ist **R⁰ ⊗ ℂ𝕆**",
+    "assumptions": [
+      "Transported (equal) orientation of all copies; with mixed signs a copy carries the opposite octonion and only the corrected form holds; k85 charge."
+    ],
+    "guard": "Orientation of the copies",
+    "obligation": "The remainder is not closed under the product and is no HS(0) of its own; mixed orientations are anti-isomorphic copies. Orientation sign open until the field equation; OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-copies-give-no-masses",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H146_Massen_aus_Kopien.md",
+    "title": "Copy structure gives a massless remainder generation but no Koide value",
+    "excerpt": "die drei massiven: Leptonen √m = (¾, ¾, 5/2), K = 59/128 = 0,461",
+    "assumptions": [
+      "Gram readout (r14–r16, H101): sqrt(m_k) are eigenvalues of the Gram matrix of generation states; scale free; not blind for a and b."
+    ],
+    "guard": "Mass readout from the copies",
+    "obligation": "Koide 2/3, Brannen phase, hierarchy and scale remain inputs; the copy overlaps are fixed small rationals. OP3 remains open."
+  },
+  {
+    "id": "op5-hs0-line-scalar-not-graviton",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H147_Rest_als_Graviton.md",
+    "title": "The HS(0) line is a massless neutral scalar, not a spin-2 graviton",
+    "excerpt": "Sie ist aber ein **Skalar** (Spin 0) unter jeder Drehgruppe, die hier wirkt",
+    "assumptions": [
+      "Spatial SO(3) set as a subgroup of colour SU(3) (reading A) or principal subgroup of G2 (reading B, representation theory only); Gram readout for masslessness."
+    ],
+    "guard": "Symmetric spin-2 coupling and mixing angle",
+    "obligation": "A symmetric spin-2 coupling needs the metric as an extra rule (W1/W2); coupling strength, Newton constant, fifth-force bounds and the free mixing angle between e0 and e7 are open. OP5 remains open."
+  },
+  {
+    "id": "op3-koide-needs-pi-over-four-mixing",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H148_Warum_Massen_daneben.md",
+    "title": "Koide requires the mixing angle π/4 between HS(0) unit and copy direction",
+    "excerpt": "Amplituden-Auslesung: K = 1/(3 cos²θ) (Wolfram exakt, Sec²θ/3), also K = ⅔ genau bei θ = π/4",
+    "assumptions": [
+      "Amplitude readout of r13/k255 with signed amplitudes; state cos θ·e0 + sin θ·e7; δ = 2/9 fitted from m_mu/m_e; not blind for a and the formula in c."
+    ],
+    "guard": "Origin of θ = π/4 and δ = 2/9",
+    "obligation": "θ = π/4 is set by the Koide requirement, not derived; δ, scale and quarks remain open; a potential or the field equation must fix θ. OP3 remains open; sign open."
   }
 ]
