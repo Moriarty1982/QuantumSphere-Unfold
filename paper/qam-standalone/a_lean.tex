@@ -1,0 +1,47 @@
+\section{The Lean formalisation}\label{app:lean}
+
+Two Lean~4 packages accompany QAM. The record checker \texttt{qam/lean} uses only the Lean core library, without Mathlib, and builds in seconds. The modules of the abstract machine import nothing from Mathlib either, although the package \texttt{formal} that contains them depends on it for other modules.
+
+\paragraph{The record checker} (\texttt{qam/lean}). The module \texttt{QAM.Provenance} formalises derivation trees with status, frame
+and inputs (Section~\ref{sec:properties}, frames). The module \texttt{QAM.QamFile} contains the one-pass checker \texttt{qamcheck} for
+exported records and the proofs of what an accepted record satisfies. The table maps the results of Section~\ref{sec:properties} to the
+Lean names.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.36\textwidth}p{0.56\textwidth}@{}}
+\toprule
+Result in this article & Lean theorem(s)\\
+\midrule
+Theorem~\ref{thm:good} (good invariant) & \texttt{good\_empty}, \texttt{good\_step}, \texttt{good\_run}, \texttt{checked\_good}\\
+per-line soundness & \texttt{derive\_sound}, \texttt{convert\_sound}, \texttt{indep\_sound}, \texttt{compare\_sound}\\
+Theorem~\ref{thm:nopromotion} & \texttt{checked\_no\_promotion\_record}; for trees \texttt{no\_promotion}\\
+Corollary~\ref{cor:proved} & \texttt{checked\_proved\_record}; for trees \texttt{proved\_only\_from\_proved}\\
+Theorem~\ref{thm:inputs} (i)--(iii) & \texttt{checked\_inputs\_record}, \texttt{checked\_inputs\_sourced}, \texttt{checked\_independent\_record};
+for trees \texttt{inputs\_tracked}, \texttt{inputs\_sourced}, \texttt{independent\_iff}\\
+Theorem~\ref{thm:frames} & \texttt{frames\_declared}, \texttt{no\_maps\_same\_frame}\\
+Proposition~\ref{prop:links} (links) & \texttt{link\_derive\_sound}, \texttt{link\_convert\_sound}, \texttt{link\_leaf\_sound}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The second half of Proposition~\ref{prop:links}, that a changed entry changes its hash, is a property of MD5 and is not formalised. Lean does
+not compute MD5; the script \texttt{qamhash.py} does. The parser that turns text lines into the checker's input is not verified.
+
+\paragraph{The abstract machine} (\texttt{formal/QSFormal}). The module \texttt{Store} formalises the store, its admissibility, the
+instruction set (store, link, snapshot, rollback, scrub, export) and the three-way execution of Section~\ref{sec:requests}; the module
+\texttt{StoreProgress} adds the progress statements.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.36\textwidth}p{0.56\textwidth}@{}}
+\toprule
+Proposition~\ref{prop:machine} & Lean theorem(s)\\
+\midrule
+(i) admissibility preserved & \texttt{exec\_preserves}, \texttt{run\_preserves}, \texttt{exec\_cont\_admissible}\\
+(ii) no halt & \texttt{exec\_ne\_halt}; outcomes characterised by \texttt{exec\_cont\_iff}, \texttt{exec\_reject\_iff}\\
+(iii) atomicity & \texttt{exec\_atomic}\\
+(iv) one log entry per step & \texttt{exec\_logs}, \texttt{run\_ledger\_length}\\
+no certificate for a false statement & \texttt{no\_false\_certificate}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The formalisation simplifies the running system: addresses are natural numbers, and cloning and merging of stores are not included.
+That the Python executor implements this semantics is not proved.

@@ -1,0 +1,45 @@
+\section{The premise graph}\label{sec:graph}
+
+A single document can be checked in one pass. A project consists of many documents, written over months, and the questions a researcher
+asks of it are graph questions: \emph{What does this result rest on? If this assumption changes, what else is affected? Has anything
+ever been computed from this premise?} QAM answers them with a local SQLite database.
+
+\subsection{Indexing}
+
+Indexing reads all exported records of a project into the database. It recomputes and verifies every entry hash and record hash on the
+way, and checks the hash of the source file where it is available. A record that fails this verification is skipped as a whole, with a message. For every entry
+the database stores the edges to its premises, indexed in both directions. In the repository from which the examples are taken, indexing reports 81
+hash-verified entries, among them the two entries of the example rule.
+
+Re-indexing rebuilds the entries and edges in one transaction but leaves stored receipts, the calculation cache and recorded replacements
+untouched. A receipt therefore remains valid evidence of what was computed at the time, even after the record has moved on.
+
+\subsection{Questions as recursive queries}
+
+Three queries cover the questions above. Each is a recursive query over the edge table.
+\begin{itemize}[leftmargin=1.5em]
+\item \emph{Premises.} Starting from the hash of an entry, follow the premise edges to their end and return every entry reached,
+with its statement, status and frame. For the example rule the answer is the rule itself and the preparation, both
+\st{conditional}. These are exactly its open conditions in the sense of Definition~\ref{def:open}.
+\item \emph{Impact.} Starting from the hash of an entry, follow the edges in the other direction and return every entry that depends
+on it, together with every stored receipt whose premise trace contains it, either as a resolved or as a missing premise. For the
+preparation of the example, the answer is the rule and the receipt of the successful run.
+\item \emph{Chains.} A catalogue of rules records, for each recipe, the declarations it requires and the quantity it produces. The
+query matches outputs of one rule to requirements of another and suggests paths of two to five rules. These are suggestions: execution
+still checks values, frames and premises. The interval rule currently has no registered downstream rule.
+\end{itemize}
+
+\subsection{Corrections without overwriting}
+
+The record is append-only, so an error is corrected by a new entry, and the database links the two by recording a \emph{replacement}
+from the old hash to the new one, with a stated reason. A trigger rejects replacements that would form a cycle. Old entries and old
+receipts are not changed. The impact query then shows what was built on the superseded entry, so the correction can be propagated
+deliberately rather than by search and replace.
+
+\subsection{Checking readiness before running}
+
+The rule catalogue can also be asked whether a calculation is ready to run. For the interval recipe, the catalogue lists two required
+declarations (the preparation and the boost) and one optional declaration (the measurement). Given the two required ones, the database
+answers that the recipe is ready for validation and that its rule is indexed; the concrete values and the full premise chain are then
+checked by the executor at run time. The division of labour is deliberate: the database answers questions about structure, and only
+the executor computes.

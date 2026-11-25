@@ -1,0 +1,93 @@
+\section{Frames as an interface}\label{sec:frames}
+
+The model of Section~\ref{sec:model} treats statements as opaque. In practice, most statements in a scientific record are formulas,
+and a formula means something only within a frame: the same symbols denote different things for different observers, in different
+units, or under different model assumptions. QAM therefore treats a frame as an \emph{interface} with two sides. On the right stands
+the formula in ordinary notation, exactly as a physicist or mathematician would write it. On the left stand its roles: the frame, the
+language or theory in which it is to be read, and its status. Inside a declared context the left side is implicit and the text looks like
+any other paper. Outside that context, or when a formula is carried to another frame, the left side becomes visible.
+
+\subsection{Profiles and contexts}
+
+A \emph{profile} fixes one interpretation within one frame. It consists of a key, a frame, a language, a status and a short description
+of the interpretation; once declared it cannot be changed. A \emph{context} selects a profile as the default for a stretch of text.
+Formulas registered inside the context are stored with the profile as a premise. Because the profile is hashed together with its
+description (Definition~\ref{def:hash}), changing the interpretation changes the hash of every formula registered under it.
+
+The following lines appear in the source of this article. They register the two frames of the example, a profile for each, and the
+first formula; the package checks them while the article is typeset.
+
+\begin{lstlisting}
+\qamframe{Lab}\qamframe{Boosted}
+\qamprofile{lab}{Lab}{L_{\rm EM}}{conditional}{Laboratory fields and their Gram readouts}
+\qamprofile{boosted}{Boosted}{L_{\rm EM}}{conditional}{Fields of an observer boosted along z, c=1}
+\begin{qamcontext}{lab}
+\[ \qamformula{field-pair}{conditional}{F_b=[2e_x\mid b\,e_y],\quad b\in\{+1,-1\}} \]
+\end{qamcontext}
+\end{lstlisting}
+
+\qamframe{Lab}\qamframe{Boosted}
+\qamprofile{lab}{Lab}{L_{\rm EM}}{conditional}{Laboratory fields and their Gram readouts}
+\qamprofile{boosted}{Boosted}{L_{\rm EM}}{conditional}{Fields of an observer boosted along z, c=1}
+\noindent Inside the context the formula prints as an ordinary display:
+\begin{qamcontext}{lab}
+\[
+\qamformula{field-pair}{conditional}{F_b=[2e_x\mid b\,e_y],\quad b\in\{+1,-1\}}
+\]
+\[
+\qamformula[field-pair]{gram-input}{conditional}{\rho(F_b)=\operatorname{diag}(4/5,1/5)}
+\]
+\end{qamcontext}
+These are the two fields of the example with $t=b$ and $u=0$. Both have the same Gram register, as the second display records.
+Outside the context, a reference to the stored formula shows its roles automatically; \verb|\qamphys{gram-input}| prints
+\[
+\qamphys{gram-input}
+\]
+so that a reader who meets the formula elsewhere sees in which frame and language it was stated.
+
+\subsection{Explicit conversion}
+
+A formula is carried to another frame only by an explicit step that names the declared map, the source formula, the target profile and
+the target formula. The target formula is supplied by the author; QAM does not compute it.
+
+\qammap[\Lambda_z]{lorentz-z}{Lab}{Boosted}
+\begin{lstlisting}
+\qammap[\Lambda_z]{lorentz-z}{Lab}{Boosted}
+\[ \qamphysconvert{boosted-fields}{conditional}{lorentz-z}{field-pair}{boosted}
+     {F'_b=\gamma\,[(2-vb)\,e_x\mid(b-2v)\,e_y]} \]
+\end{lstlisting}
+prints, with both sides of the interface visible,
+\[
+\qamphysconvert{boosted-fields}{conditional}{lorentz-z}{field-pair}{boosted}
+  {F'_b=\gamma\,[(2-vb)\,e_x\mid(b-2v)\,e_y]}
+\]
+and the Gram registers in the new frame are then registered inside the Boosted context:
+\begin{qamcontext}{boosted}
+\[
+\qamformula[boosted-fields]{gram-output}{conditional}
+  {\rho(F'_{+1})\big|_{v=1/4}=\operatorname{diag}(49,4)/53,\qquad \rho(F'_{-1})\big|_{v=1/4}=\operatorname{diag}(9,4)/13}
+\]
+\end{qamcontext}
+The record now states, in a form the checkers can follow, what Section~\ref{sec:example} found by hand: the conversion runs from
+\texttt{field-pair}, the fields, and not from \texttt{gram-input}, the register. A conversion from the register would require a map
+that does not exist, and nothing in the record claims one.
+
+\subsection{Repairing the map by enriching the description}
+
+The register lost exactly two pieces of information: the overall scale $n=\tr G$ and the orientation of the fields in space. Write
+$D=(\rho,n,O)$ with $O\in SO(3)$, and reconstruct the fields as $F=O\,F_0(n\rho)$, where $F_0(G)$ is the upper-triangular
+$3\times2$ matrix with $F_0^{\mathsf T}F_0=G$ (a Cholesky factor padded with a zero row). For the two fields above,
+$G=\diag(4,1)$, $F_0=[2e_x\mid e_y]$, $n=5$ and $O=\diag(1,b,b)$, so $D_b=(\diag(\frac45,\frac15),5,\diag(1,b,b))$ and indeed
+$OF_0=F_b$. The two inputs now differ in their orientation component. The composite ``reconstruct, boost, encode'' is a well-defined
+map on such descriptions wherever the boosted field again has rank two, which holds for both fields at $v=\frac14$. In QAM it is
+declared as a second map from Lab to Boosted, and the corresponding entries are conversions through it. The normalised output is
+unchanged, because a common scale cancels in $\rho$; what has changed is that the record now contains a map that exists.
+
+\subsection{What is checked and what is not}
+
+The package checks that a context is open when a formula is registered, that profiles and formulas are not declared twice, that a
+conversion uses a declared map whose source and target match the profiles involved, that two profiles in the same frame are not mixed
+without an explicit step, and that status never rises (no target is stronger than its source or its target profile). It does not check
+the formulas. They are stored as \TeX{} text, not as expressions of a computer algebra system, so the boost law, units, domains and the
+truth of a conversion are not verified. Section~\ref{sec:requests} shows how calculations whose results matter are instead submitted to
+an executor and stored with a receipt.
