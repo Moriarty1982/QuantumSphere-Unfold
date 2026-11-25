@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Test H134: Mit der Frame-Korrektur ist die TM1-Klasse mit JUNO verträglich, aber ohne Vorhersage (25.11.2026, teilweise nicht blind, k263)
+
+Anlass war der Einwand des Autors zu k262, gemessen werde im verschobenen Frame. JUNO selbst benutzt keine Frames; der Einwand trifft die Vorhersageseite, die ohne erklärte Abbildung neben die Messung gestellt war. Frame-Abbildungen, die mit der Gruppe vertauschen (z ↦ iz, z ↦ z̄, der HC-Schatten z ↦ z + μ z̄ mit μ = β_sym²), können eine von der Restsymmetrie festgelegte Spalte nicht verschieben. Wirksam ist nur die Maske D = exp(ε W_l) mit ε = artanh β_sym = 0,6174 aus r57 und H45, die die Plätze unterscheidet und bisher nur auf TM2 angewandt war. Sie wurde unverändert auf die TM1-Klasse aus k262 angewandt, gegen JUNO 2026 (sin²θ₁₂ = 0,3036 ± 0,0064).
+
+- **H134a bestätigt:** Wirkt die Maske auch auf die Neutrinos (Variante B), gibt es 56 Treffer mit θ₁₂ im JUNO-2σ-Bereich und θ₁₃, θ₂₃ in 3σ (32 davon in 1σ). Wirkt sie nur auf die geladenen Leptonen (Variante A), gibt es keinen, und θ₁₂ wird schlechter (≥ 0,346).
+- **H134b widerlegt:** θ₂₃ und δ sind unter der Bedingung an θ₁₂ und θ₁₃ nicht scharf (Breiten 0,64 und 0,93).
+- **H134c bestätigt:** Die Korrektur kann die Spannung ganz aufheben (Variante B).
+
+„TM1 nach JUNO disfavorisiert“ gilt also nur für die unkorrigierte Spalte. Es bleibt eine Verträglichkeit mit freier Drehung φ und diskreten Wahlen, keine Vorhersage: Auch der Hopf-Wert von ε und die Klasse mit θ₁₃ = 0 treffen. In allen Treffern liegt θ₂₃ im oberen Oktanten (0,536 bis 0,583), während die TM2-Lesart mit derselben Korrektur [0,491; 0,498] gibt (H46). Kontrolle (i) war auf dem festgelegten 2°-Raster leer; ein nachträglicher Lauf mit 0,5° erfüllt sie und gibt dieselben Entscheidungen. OP3 und OP4 bleiben offen, kein Guard ist berührt. [Ergebnis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/predictions/Ergebnis_H134_Frame_Rapiditaet_TM1_JUNO.md)
+
 ### Ist κ ≈ 1,2 selbststabilisierend? In den geprüften Lesarten nein (25.11.2026, Test H135, teilweise nicht blind, k304)
 
 Frage des Autors zum Zahlentreffer aus k303: Könnte das System bei diesem Wert selbststabilisierend sein, sodass der Wert unter vielen Möglichkeiten nur oft genug auftreten muss? Geprüft wurden zwei vorab festgelegte Lesarten. **Ergebnis: widerlegt in beiden.**
@@ -57,6 +67,7 @@ Zwei Fassungen. **F (Form der Bewegung):** P = η₂(|J_⊥|² − τ²J_i²)²/
 Die Spannung aus H129 und H132 löst sich in Fassung F: Der HC ist dann eine Bedingung an die Bewegung, nicht an das Vakuum. Verloren geht das Bild aus k297 (HC als flache Richtung, Schleife gibt die Skala). Die Skala käme nur aus V(N) und den Eichfeld-Schleifen, das gäbe den bekannten Coleman–Weinberg-Wert von etwa 9,8 GeV statt 125 GeV. Beide Fassungen sind Setzungen. Gegenprobe in Wolfram Language (k299b). OP1, OP3, OP4, OP5 bleiben offen.
 
 Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/HC_SU2_vertraeglich_k299.md`.
+
 
 ### Welche Setzung aus H131 trägt die Spannung? Der Träger der Neutrinos (25.11.2026, Erkundung, nicht blind, k262)
 
