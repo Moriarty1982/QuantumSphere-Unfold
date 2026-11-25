@@ -1,0 +1,16 @@
+Ausgabe von k262b_exakt.wl (Wolfram Language, MCP-Auswerter, 25.11.2026). Print-Ausgaben in Reihenfolge:
+
+T^3 = 1: True; A^2 = 1: True; det A = -1
+m (reell, A-invariant): {{f, b, c}, {b, d, -b}, {c, -b, f}}; freie Parameter: {b, c, d, f}
+Eigenwerte von T: {1, (-1 + I Sqrt[3])/2, (-1 - I Sqrt[3])/2}
+Ue unitaer: True
+Eigenwerte von A: {-1, 1, 1}
+einfacher Eigenvektor w = {1/Sqrt[2], 0, 1/Sqrt[2]}; m.w proportional w: True
+|U_alpha1|^2 = {2/3, 1/6, 1/6}
+X = Ue^dagger Ue^* = {{1, 0, 0}, {0, 0, 1}, {0, 1, 0}}  (Betraege: {{1, 0, 0}, {0, 0, 1}, {0, 1, 0}})
+X^T m' X - Conjugate[m'] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}      (symbolischer Nullrest)
+Zahlenbeispiel {b -> 1, c -> 17/10, d -> 3/10, f -> 1/5}: |U|^2 = {{0.077184169, 0.66666667, 0.25614916}, {0.46140792, 0.16666667, 0.37192542}, {0.46140792, 0.16666667, 0.37192542}}
+
+Rueckgabewert: Null.
+Warnungen: Solve::svars (Gleichungen legen nicht alle Variablen fest; erwartet, vier Parameter bleiben frei).
+Symbol::undefined2 und General::messages sind Hinweise des Auswerters zu Grossbuchstaben-Symbolen (T, A, Ue, X, U, P), kein Rechenfehler.

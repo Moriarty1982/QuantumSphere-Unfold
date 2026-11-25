@@ -1,5 +1,14 @@
 # Forschungsstand
 
+### Welche Setzung aus H131 trägt die Spannung? Der Träger der Neutrinos (25.11.2026, Erkundung, nicht blind, k262)
+
+Anschluss an H131. Die 24 Elemente aus k260 mischen den Realteil s_k und die Ladungsrichtung v_k der drei Einträge nicht. Auf s wirkt eine reelle vorzeichenbehaftete Permutation A, auf v wirkt +A (12 gerade Elemente) oder −A (12 ungerade). Auf s allein ist die Gruppe also die volle S₄, linear und reell; antilinear werden die ungeraden Elemente erst auf dem komplexen Triplett z = s + i·v. Gerechnet sind alle 900 Paare von Untergruppen (G_e, G_ν) in zwei Lesarten.
+
+- **Lesart A (wie H131, Neutrinos auf z):** Keine Klasse hat die feste Spalte (2/3, 1/6, 1/6). Feste Spalten sind nur (1/3, 1/3, 1/3), (0, 1/2, 1/2), (1/4, 1/4, 1/2) und (0, 0, 1).
+- **Lesart B (Majorana-Neutrinos auf s, reelle Massenform):** ℤ₃ mit einer ungeraden ℤ₂ gibt zwei Klassen zu je 12 Paaren. Die eine hat die TM1-Spalte (2/3, 1/6, 1/6) mit sin²θ₂₃ = 0,5 und |sin δ| = 1 (bei sin²θ₁₃ = 0,022 ist sin²θ₁₂ = 0,3183), die andere die Spalte (0, 1/2, 1/2), also θ₁₃ = 0 (ausgeschlossen). Wolfram exakt: Spalte {2/3, 1/6, 1/6}, und die μτ-Spiegelung gilt für jede reelle Form.
+
+Die Spannung aus H131 sitzt damit nicht in der Gruppe und nicht in „Kopie k auf Platz k“, sondern in der Wahl des Trägers der Neutrinos. Lesart B ist das Muster von H8 (und k256), jetzt aus derselben Gruppe wie H131. Eine Rettung ist das nicht: H8 und TM1 (H4) stehen im Register als „nach JUNO disfavorisiert“; ein eigener Datenvergleich ist nicht gerechnet. Offen bleiben diskret die Wahl der ungeraden ℤ₂ (dieselbe Zweiteilung wie in k280) und das Vorzeichen von sin δ. Der Träger ist eine Setzung wie die übrigen (Plätze als Generationen, ℤ₃, ℤ₂, Majorana). OP3 und OP4 bleiben offen, kein Guard ist berührt. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/setzungen_k262/README.md`.
+
 ### Test H131: S₄ mit der Ladung als verallgemeinerter CP gibt eine einzige Klasse, aber ohne CP-Verletzung (25.11.2026, teilweise nicht blind, k261)
 
 Anschluss an k260. Die 24 Elemente der Würfelgruppe wirken auf das Triplett der drei Plätze als 12 lineare (A₄) und 12 antilineare Abbildungen; die antilinearen sind Platzvertauschungen mit Vorzeichen zusammen mit der Konjugation der Ladung. Angesetzt wie in H39: ℤ₃ für die geladenen Leptonen, ℤ₂ und eine CP-Abbildung X für Majorana-Neutrinos (Vorab-Notiz 875e6d4). **H131a bestätigt:** Alle 48 zulässigen, nicht entarteten Kombinationen fallen in eine Klasse; die übrigen 48 (X der Ordnung 4) erzwingen zwei gleiche Neutrinomassen. **H131b widerlegt:** In dieser Klasse ist J = 0. Die CP aus der Ladung gibt δ = 0 oder 180° und kein maximales θ₂₃. Wolfram exakt: Die Majorana-Matrix ist in der Basis der geladenen Leptonen reell.
