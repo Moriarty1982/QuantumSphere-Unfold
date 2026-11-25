@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H144; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H145; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -27,7 +27,11 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   dieselbe Signatur wie eine Kopien-Generation: Quarks s = 0, Leptonen |s| = ½ (Wolfram exakt). Frame-Abbildungen wirken trägerweise und
   verbinden Kopien und Rest nicht; z ↦ z̄ bildet den Rest auf sich ab mit q ↦ 1 − q, das ist der globale Vorzeichenwechsel der Orientierung.
   Die Signatur folgt der Ladung, nicht dem Leck. c widerlegt; d trivial erfüllt.
+- **H145** (Vorab 6e5a6b5): Ist der Rest wieder ein HS(0)? Nicht als Algebra (nicht abgeschlossen, kein Produkt auf der Linie bei gleich
+  orientierten Kopien). Aber K = (D⁰ ⊗ e₀) ⊕ (R ⊗ Im𝕆) exakt, und die Rest-Generation ist R⁰ ⊗ ℂ𝕆: eine ganze Oktonion-Kopie über einer reellen,
+  ladungsfreien, zeitumkehrfesten Linie (HS(0)-Merkmale). Die Rest-Leptonen entstehen dort, wo die aufgehobenen reellen Einheiten (HS(0) der
+  Kopien) mit einer Relation zusammenfallen. Gemischte Vorzeichen = gespiegelte Kopien (Anti-Isomorphismus); c nach Wortlaut widerlegt.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H144; Skripte k321–k327 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H145; Skripte k321–k328 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

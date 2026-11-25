@@ -1,0 +1,6 @@
+k328c, Wolfram-Kernel (MCP), 25.11.2026, tatsaechliche Print-Ausgaben:
+iota fuer Kopie 5 (f120(x)f120) exakt Algebren-Isomorphismus, max Fehler: 0
+dim K, dim Formel, Rang der Vereinigung: {10, 10, 10}
+R, R0 (exakt): {{{-1, -1, 1, 1}}, {{-1, -1, 1, 1}}}; Summe c^3: 0
+Anteil von (c o c)(x)w in K (exakt, w beliebig): {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+Meldungen: Symbol::undefined2-Warnung (Variablennamen), General::messages; keine Fehler in den Ergebnissen.

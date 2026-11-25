@@ -1,0 +1,17 @@
+H145a: iota_k Algebren-Isomorphismus, max Produktfehler ueber 9 Kopien: 1.3e-15
+   Q in Oktonion-Koordinaten fuer alle 9 Kopien gleich: True
+
+=== H145a: Zerlegung, alle Auswahlen von 3, 4, 5 Kopien und alle relativen Orientierungen ===
+m = 3: 336 Faelle; max Abstand Projektor K 3.4e-15, Projektor W 3.3e-01; dim K != (m-1) + 7 dim R: 0
+m = 4: 1008 Faelle; max Abstand Projektor K 1.7e-14, Projektor W 3.3e-01; dim K != (m-1) + 7 dim R: 0
+m = 5: 2016 Faelle; max Abstand Projektor K 2.7e-15, Projektor W 5.0e-01; dim K != (m-1) + 7 dim R: 0
+
+=== H145b, c, d: Generationsklassen (n_gen >= 1), alle Orientierungen ===
+387 Faelle mit n_gen >= 1
+H145b: max |QV(c (x) y) - c (x) Q8 y| = 1.7e+00 (Q wirkt nur auf y, trivial auf c)
+H145c: max |sum c_k^3| / |c|^3 (induziertes Produkt auf der Linie) = 2.7e-01
+H145d: Anteil von x*y ausserhalb K (relativ), min 0.1709, max 1.0000
+Beispiel: Auswahl ['f0(x)f0', 'f0(x)f120', 'f120(x)f240', 'f240(x)f240'], Orientierung (1, 1, 1, 1), Koeffizienten c (normiert) [-1. -1.  1.  1.]
+
+Koeffizienten c der Rest-Generation (normiert auf max |c_k| = 1), transportierte Orientierung, alle Generationsklassen:
+[(np.float64(-1.0), np.float64(-1.0), np.float64(-0.0), np.float64(1.0), np.float64(1.0)), (np.float64(-1.0), np.float64(-1.0), np.float64(1.0), np.float64(1.0))]

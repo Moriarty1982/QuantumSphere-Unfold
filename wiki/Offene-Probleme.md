@@ -88,6 +88,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H144, 25.11.2026 (k327):** Die Rest-Generation trägt unter der Sektorregel (ℂ als C-Faktor der Frames) keinen eigenen Sektor: gleiche Signatur wie eine Kopien-Generation (Quarks s = 0, Leptonen |s| = ½). Die Zeitumkehr z ↦ z̄ ist der globale Vorzeichenwechsel der Orientierung; das offene Vorzeichen ist damit die Wahl der Zeitrichtung. OP3, OP4 offen.
 
+**Test H145, 25.11.2026 (k328):** Die Rest-Generation ist eine ganze Oktonion-Kopie über einer reellen, ladungsfreien Linie (HS(0)-Merkmale), aber kein eigenes HS(0) als Algebra; ein neuer Turm wächst nicht. Die Zerlegung K = (D⁰ ⊗ e₀) ⊕ (R ⊗ Im𝕆) erklärt die Zählregel aus H143. OP3, OP4 offen.
+
 **Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
 
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.
