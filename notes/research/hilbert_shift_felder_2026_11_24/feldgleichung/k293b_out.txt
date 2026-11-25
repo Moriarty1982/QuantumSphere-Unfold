@@ -1,0 +1,8 @@
+k293b_gegenprobe.wl, Wolfram Language (Cloud-Kernel ueber MCP, 25.11.2026). Tatsaechliche Print-Ausgaben:
+
+Y1 S_C {<N>, <H2>, <H4 K1>, <H4 K2>}: {a^2 + b^2, a^2 k^2 + b^2 kp^2, a^2 b^2 k^2 kp^2 (3 + Cos[al]) Sin[al/2]^2, 0}
+Y2 S_J {<N>, <H2>, <H4 K1>, <H4 K2>}: {a^2 + b^2, a^2 k^2 + b^2 kp^2, 2 a^2 b^2 k^2 kp^2 (3 + Cos[al]) Sin[al/2]^2, 4 a^2 b^2 k^2 kp^2 (3 + Cos[al]) Sin[al/2]^2}
+Y3 Unterschied / (a^2 b^2 k^2 kp^2 (4 - (1+Cos[al])^2)): {1/2, 2}
+
+Rueckgabewert: Null. Warnung "Symbol::undefined2" (Hinweis des Werkzeugs), keine Rechenwarnung.
+Es ist (3 + Cos[al]) Sin[al/2]^2 = (4 - (1 + Cos[al])^2)/2, die Werte stimmen mit k293_out.txt ueberein.

@@ -1,0 +1,17 @@
+S_C: <N> = a**2 + b**2, Streuung von N = 2*a**2*b**2
+      freie Energie <H2> = a**2*k**2 + b**2*kprime**2
+      <H4[K1]> = -a**2*b**2*k**2*kprime**2*(-sin(alpha)**2 + 2*cos(alpha) - 2)/2
+      <H4[K2]> = 0
+S_J: <N> = a**2 + b**2, Streuung von N = 0
+      freie Energie <H2> = a**2*k**2 + b**2*kprime**2
+      <H4[K1]> = -a**2*b**2*k**2*kprime**2*(-sin(alpha)**2 + 2*cos(alpha) - 2)
+      <H4[K2]> = -2*a**2*b**2*k**2*kprime**2*(-sin(alpha)**2 + 2*cos(alpha) - 2)
+
+Unterschied S_J - S_C:
+  freie Energie: 0
+  K1: -a**2*b**2*k**2*kprime**2*(-sin(alpha)**2 + 2*cos(alpha) - 2)/2
+  K2: -2*a**2*b**2*k**2*kprime**2*(-sin(alpha)**2 + 2*cos(alpha) - 2)
+  Winkelfaktor 4 - (1 + cos alpha)^2 = -(cos(alpha) - 1)*(cos(alpha) + 3) ; bei alpha = 0: 0 , bei alpha = pi: 4
+  K1-Unterschied / (a^2 b^2 k^2 k'^2 * Winkelfaktor) = 1/2
+  K2-Unterschied / (a^2 b^2 k^2 k'^2 * Winkelfaktor) = 2
+  Verhaeltnis <H4[K1]>(S_J) / <H4[K1]>(S_C) = 2

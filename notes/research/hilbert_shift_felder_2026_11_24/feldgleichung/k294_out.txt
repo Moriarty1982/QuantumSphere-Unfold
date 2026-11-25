@@ -1,0 +1,19 @@
+== 1  Mittelwerte als Funktion des Winkels theta ==
+  <N> = a**2 + b**2 ;  Streuung von N = -2*a**2*b**2*(sin(theta) - 1)*(sin(theta) + 1)  (mit a^2 + b^2 = f^2 ist <V> = lambda * Streuung)
+  freie Energie = a**2*k**2 + b**2*kprime**2  (haengt nicht von theta ab)
+  <H4[K1]> / (a^2 b^2 k^2 k'^2 W) = (1 + sin^2 theta)/2 ? True ;  <H4[K2]> / (...) = 2*sin(theta)**2
+
+== 2  Energie in s = sin^2(theta), geteilt durch a^2 b^2 ==
+  E(s) ist linear in s; dE/ds haengt nicht von s ab: True  => das Minimum liegt immer an einem Ende, s = 0 (in C) oder s = 1 (im Anhang)
+  E(0) = 0 + 2 lambda + (c1/2) k^2 k'^2 W
+  Schwelle dE/ds = 0 mit Q = k^2 k'^2 W:  Q = 4*lambda/(c1 + 4*c2)
+  Probe: dE/ds - [ -2 lambda + (c1/2 + 2 c2) k^2 k'^2 W ] = 0
+
+== 3  Schwelle in Groessen aus k291 ==
+  Radialmode: V = lambda (N - f^2)^2 mit N = (f + h)^2  =>  m_r^2 = 8*f**2*lambda
+  gleiche Wellenzahl, entgegengesetzte Richtung (W = 4), c = ctilde / f^4 (psi = f U):  k_c^4 = f**2*m_r**2/(8*(ctilde1 + 4*ctilde2))
+  mit der Knotengroesse r0 = sqrt(ctilde1)/f:  (k_c r0)^4 = ctilde1**2*m_r**2/(8*f**2*(ctilde1 + 4*ctilde2))  = (m_r r0)^2 / (8 (1 + 4 c2/c1))
+
+== 4  Genauigkeit der beiden Enden in der Gleichung mit Potential (ohne K-Terme): Box psi + 4 lambda (N - f^2) psi ==
+  Anhang (theta = pi/2): N - f^2 = 0;  Rest null? True
+  C (theta = 0): N - f^2 = 2*a*b*cos(-k*t + k*x - kprime*t + kprime*x*cos(alpha) + kprime*y*sin(alpha));  Rest null? False

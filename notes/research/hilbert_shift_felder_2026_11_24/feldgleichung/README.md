@@ -144,6 +144,14 @@ Wellenfrequenz gelesen und zwei Lesarten (Urknall bei HS(2) oder Protomasse bei 
 
 Zur Frage, welche der beiden Lesarten gilt: `HC_feste_Norm_k292.md` (k292, eher A; die Skala wird von HS(1) geerbt).
 
+Ob der gegenläufige Anteil bei HS(2) in den Anhang wandern muss: `Anhang_Energie_k293.md` (k293, die Zusatzterme sprechen dagegen).
+
+Wettbewerb mit einem Amplituden-Potential: `Schwelle_feste_Norm_k294.md` (k294, scharfe Schwelle in der Wellenzahl).
+
+Wo das Amplituden-Potential eintritt: `Potential_im_Anhang_k295.md` (k295, die erste Skala μ² steht im Anhang von HS(2), ihr Vorzeichen bleibt frei).
+
+Ob Schleifen die Skala selbst erzeugen (Test H129): `Ergebnis_H129_Schleifen_Skala.md` (k296, Skala teilweise, Richtung nicht festgelegt).
+
 ## Dateien
 `k290_rekursive_feldgleichung.py` (`k290_out.txt`), `k290b_gegenprobe.wl` (`k290b_out.txt`, Wolfram über den Cloud-Kernel, Ausgaben und Warnungen dort festgehalten).
 Aufruf: `python k290_rekursive_feldgleichung.py > k290_out.txt`, Laufzeit etwa 20 Sekunden.
