@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### Beide Felder als ein Element: keine Ausrichtung (25.11.2026, Erkundung, nicht blind, k281)
+
+Frage aus k280: Legt die Algebra das Vorzeichen der Kopplung fest? Das naheliegende Prinzip ist, beide Felder als Teile eines Elements W = Z_v(a) + Z_S(b) zu lesen. Dann füllen sie für ab ≠ −1 den ganzen spurfreien Teil von H₃(ℂ) (3 + 5 = 8 Dimensionen), und jedes Potential V = f(Tr W², N(W)) ist SU(3)-invariant. Das Vakuum ist die ganze Bahn W = (3ψψ⁺ − 1)/√6, ein ℂP². Numerisch erreichen 60 von 60 Starts je (a, b) dieselbe Höhe 1/√54 an verschiedenen Punkten, ohne Restgruppe in A₄ und ohne feste Mischungsspalte. Die Zwei-Feld-Vakua aus k280 liegen für beide Vorzeichen auf der Bahn und sind nicht ausgezeichnet. Das ℤ₃-Vakuum aus k278 ist im vollen Raum ein Sattel, außer bei a = ±1/√3.
+
+Folgerung: Die Ausrichtungen aus k278 bis k280 (ℤ₃, ℤ₂, 45°, TM1-Spalte) entstehen dadurch, dass die Felder von Hand auf Teilräume eingeschränkt wurden. Das ist eine Setzung. Gebraucht wird ein Term, der Spin 1 und Spin 2 trennt (SO(3)- oder A₄-invariant, nicht SU(3)-invariant), etwa getrennte Massen. Das Ergebnis stand vor der Rechnung fest, deshalb Erkundung; H128 bleibt frei. Ablage: `notes/research/hilbert_shift_felder_2026_11_24/rueckwaerts/k281/`.
+
 ### Kopplung der beiden Felder: Winkel 45°, ℤ₂ geht in erster Ordnung verloren (25.11.2026, Erkundung, nicht blind, k280)
 
 Anschluss an k278 und k279. Die niedrigsten gemischten Invarianten des Spin-1-Felds Z_v und des Spin-2-Felds Z_S sind exakt (Wolfram) I₁₁ = Tr(Z_v∘Z_S) = 2(b − a)·Σvₖsₖ sowie I₂₁ = Tr(Z_v²Z_S) und I₁₂ = Tr(Z_vZ_S²). Im ℤ₃-Vakuum v ∝ (1,1,1) und auf der flachen Richtung u = (cos θ, sin θ, 0) sind alle drei ∝ sin 2θ. Die Kopplung hebt die flache Richtung aus k279 also eindeutig auf: **θ = π/4**, Achse u = (1, ±1, 0)/√2, ein 2×2-Block mit gleicher Diagonale (maximale Mischung zweier Plätze). Der V₄-Punkt wird nicht gewählt. Das volle Minimum von V₁ + V₂ + ε·I₁₁ bestätigt 45,00° in 40 von 40 Starts für jedes ε ≠ 0. Dieselbe Kopplung bricht aber die ℤ₂ in erster Ordnung (kleine Nebendiagonalen ∝ ε), und eine gemeinsame Restgruppe gibt es nicht. Das ist das Ausrichtungsproblem der Literatur.
