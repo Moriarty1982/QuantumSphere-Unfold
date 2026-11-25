@@ -958,3 +958,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H141:** Vierte Generation aus dem Rest (k324) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **25.11.2026, Test H142:** Vier Kopien auf HS(5) (k325) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Quanten-Coprozessor (Plan und Baustufe 0):** Die deutsche und die englische Inhaltsübersicht nennen Bauplan, Band als Eingabe, GPU- und FPGA-Ausführung, die Grenze der Kompression und die geprüfte Zwei-Qubit-Einheit. Kein Forschungsbefund, Artikel unverändert.

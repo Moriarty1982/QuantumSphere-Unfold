@@ -32,6 +32,8 @@ Der Companion beschreibt Zustände, Schichten, Operatoren, Auslesungen und Zweig
 
 **Hardwarevergleich.** Zwei SystemVerilog-Steuerungen ergeben in 209 begrenzten Testfällen dieselben Spuren und Stopmeldungen wie MMA. Bei der Addition von eins zu sieben braucht die direkte Regelwahl vier Takte, der zyklische Durchlauf der sechs Tabellenadressen 24. Die Messung beginnt nach dem Laden der Startkonfiguration. [Simulation und Laufbericht](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/qam/examples/zuse_machine/hdl)
 
+**Quanten-Coprozessor (Plan).** Ein klassischer Beschleuniger soll Quantenschaltungen exakt nachrechnen: Er bekommt ein Band mit Befehlen als Eingabe, rechnet darauf selbstständig und setzt die MMA-Guards in der Hardware durch, auf der Grafikkarte für Größe und in HDL/FPGA für einen exakten, prüfbaren Kern. Die erste Baustufe rechnet zwei Qubits exakt in $\mathbb Z[e^{i\pi/4}]/\sqrt2^{k}$ und stimmt in 2005 Fällen mit einer exakten Referenz und mit Qiskit überein, in sechs Fällen exakt mit Wolfram. Ein allgemeiner Zustand aus n Qubits bleibt exponentiell groß; Turm und Dixon-Algebra komprimieren nur strukturierte Zustände (Produkte, Symmetrie-Unterräume). [Bauplan](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/quanten_coprozessor/Bauplan.md) · [Baustufe 0](https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/qam/examples/coprocessor)
+
 Der lokale MCP-Aufruf `run_qam_hdl_check` wiederholt den Vergleich und liefert Stopgründe, Taktzahlen und die Beispielspur als Daten. Mit Yosys ergänzt er die generischen Zellzahlen. [MCP-Anleitung](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/mcp/README.md#hdl-and-mma-comparison-in-codex)
 
 ## 2. Der Grundbaustein: drei komplexe Kerne

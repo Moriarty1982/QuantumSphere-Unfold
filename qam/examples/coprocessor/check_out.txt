@@ -1,0 +1,3 @@
+W=16: 2005 Faelle, HDL = exakte Referenz in allen Faellen; Status {'continue': 1999, 'guard': 1, 'reject': 5}; Gatter-Takte 41275; max |HDL - Qiskit| bei continue = 3.13e-15
+W=4: 2005 Faelle, HDL = exakte Referenz in allen Faellen; Status {'continue': 1996, 'guard': 4, 'reject': 5}; Gatter-Takte 41275; max |HDL - Qiskit| bei continue = 1.24e-15
+W=3: 2005 Faelle, HDL = exakte Referenz in allen Faellen; Status {'continue': 1995, 'guard': 5, 'reject': 5}; Gatter-Takte 41275; max |HDL - Qiskit| bei continue = 1.24e-15

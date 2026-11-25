@@ -1,0 +1,13 @@
+Wolfram Language Kernel ueber den Evaluator, 25.11.2026. Skript: qstep2_exakt.wl
+(Zustand exakt per Kronecker-Matrizen, Vergleich mit der HDL-Ausgabe in Z[w]/sqrt(2)^k).
+Print-Ausgaben vollstaendig, Rueckgabewert Null, keine Warnungen:
+
+Fall 1: Gatter 2, k 1, exakte Differenz {0, 0, 0, 0}
+Fall 2: Gatter 3, k 2, exakte Differenz {0, 0, 0, 0}
+Fall 5: Gatter 40, k 12, exakte Differenz {0, 0, 0, 0}
+Fall 9: Gatter 9, k 0, exakte Differenz {0, 0, 0, 0}
+Fall 10: Gatter 21, k 2, exakte Differenz {0, 0, 0, 0}
+Fall 11: Gatter 6, k 1, exakte Differenz {0, 0, 0, 0}
+
+Hinweis: Ein erster Lauf mit w = Exp[I Pi/4] und FullSimplify lief in das 60-s-Zeitlimit
+des Evaluators; die gespeicherte Fassung verwendet w = (1+I)/Sqrt[2] und ComplexExpand.
