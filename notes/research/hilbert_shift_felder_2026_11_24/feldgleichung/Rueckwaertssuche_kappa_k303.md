@@ -51,7 +51,7 @@ derselben Kopplung g und dem HC-Wert des Anhangs μ·v kommen 24 GeV heraus. Nö
 2. Es gibt **einen Zahlentreffer**: κ = (γ_L + 1/γ_L)/2. Er ist nach der Zählung oben mit Zufall verträglich und beruht auf einer eingesetzten Zahl.
    Er ist ein Kandidat für eine Regel, mehr nicht.
 3. Prüfbar würde er erst durch eine Herleitung: Wenn der Turm aus eigenem Grund κ = Linksladung/Rechtsladung verlangt, wäre das ein blinder Test wert
-   (H134 ist frei). Ohne Herleitung bleibt es eine Auffälligkeit.
+   (H135 ist frei; H134 ist an den Parallel-Thread vergeben). Ohne Herleitung bleibt es eine Auffälligkeit.
 
 ## Grenzen
 Eine Schleife, skalenfreies Bild, Lesart S-a aus k302 (vier Felder). Massen und v aus dem Gedächtnis wie in k300. Die Kandidatenliste in Abschnitt 3
