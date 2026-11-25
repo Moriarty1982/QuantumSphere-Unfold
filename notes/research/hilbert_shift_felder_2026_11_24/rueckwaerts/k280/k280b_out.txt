@@ -1,0 +1,14 @@
+Ausgabe k280b_kopplung_exakt.wl (Wolfram Language, 25.11.2026). Warnung: Symbol::undefined2 (Vorab-Hinweis des Evaluators zu den erst im Skript
+definierten Symbolen H, Zv, ZS, T, Uw; kein Rechenfehler). Rueckgabewert Null (nur Print).
+
+I11 = Tr(Zv ZS) = -2 (a - b) (s1 v1 + s2 v2 + s3 v3)
+I21 = Tr(Zv^2 ZS) = 2 (-1 + a^2 + 2 a b) (s3 v1 v2 + s2 v1 v3 + s1 v2 v3) - (1 + a^2) a1 (v1 - v3)(v1 + v3) - (1 + a^2) a2 (v2 - v3)(v2 + v3)
+I12 = Tr(Zv ZS^2) = 2 (a a1 s1 - a1 b s1 - a s2 s3 - 2 b s2 s3 + a b^2 s2 s3) v1 + 2 (a a2 s2 - a2 b s2 - a s1 s3 - 2 b s1 s3 + a b^2 s1 s3) v2
+                    + 2 (-(a s1 s2) - 2 b s1 s2 + a b^2 s1 s2 - a a1 s3 - a a2 s3 + a1 b s3 + a2 b s3) v3
+auf dem Kreis u3 = 0, v = v0 (1,1,1):
+  I11 = Sqrt[6] (-a + b) v0 Cos[th] Sin[th] / Sqrt[1 + b^2]
+  I21 = Sqrt[6] (-1 + a^2 + 2 a b) v0^2 Cos[th] Sin[th] / Sqrt[1 + b^2]
+  I12 = (-a + b) v0 Cos[th] Sin[th] / Sqrt[1 + b^2]
+  d/dth = 0: I11 {{th -> Pi/4}, {th -> 3 Pi/4}}; I21 bei a = b: Sqrt[6] (-1 + 3 b^2) v0^2 Cos[th] Sin[th] / Sqrt[1 + b^2]
+Spalte |Uw^+ (1, e^{i chi}, 0)/Sqrt2|^2: chi = 0: {2/3, 1/6, 1/6}, chi = Pi: {0, 1/2, 1/2},
+  allgemein: {(1 + Cos[chi])/3, (2 - Cos[chi] + Sqrt[3] Sin[chi])/6, (2 - Cos[chi] - Sqrt[3] Sin[chi])/6}

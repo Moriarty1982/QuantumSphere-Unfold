@@ -1,0 +1,29 @@
+==============================================================================
+A  Ein Element W = Z_v(a) + Z_S(b)
+   a=1.0, b=0.5: |Tr W^2 Algebra - Matrix| <= 7.1e-15, |N| <= 8.9e-15; det der Abbildung (s,v)->w = 1.500 = 1 + ab
+   a=0.3, b=2.0: |Tr W^2 Algebra - Matrix| <= 7.1e-15, |N| <= 1.4e-14; det der Abbildung (s,v)->w = 1.600 = 1 + ab
+   a=0.7, b=0.7: |Tr W^2 Algebra - Matrix| <= 3.6e-15, |N| <= 8.9e-15; det der Abbildung (s,v)->w = 1.490 = 1 + ab
+   -> Fuer ab != -1 ist jede spurfreie hermitesche 3x3-Matrix ein W. V = f(Tr W^2, det W) ist dann SU(3)-invariant (W -> U W U^+).
+==============================================================================
+B  Maxima von N(W) auf der Schale Tr W^2 = 1 (60 Zufallsstarts je (a, b)), erwartet 1/sqrt 54 auf der Bahn (3 psi psi^+ - 1)/sqrt 6
+   a=1.0, b=0.5: N_max = 1/sqrt 54 in 60/60; Eigenwerte*sqrt6 = [-1. -1.  2.] (Streuung 6.8e-08);
+      Ordnung der Restgruppe in A4: {1: 60}; Tr Z_v^2 (Spin-1-Anteil) von 0.10 bis 1.08; groesste Spalte |U_w^+ psi|^2 von 0.41 bis 0.98
+   a=0.3, b=2.0: N_max = 1/sqrt 54 in 60/60; Eigenwerte*sqrt6 = [-1. -1.  2.] (Streuung 1.4e-07);
+      Ordnung der Restgruppe in A4: {1: 60}; Tr Z_v^2 (Spin-1-Anteil) von 0.01 bis 0.80; groesste Spalte |U_w^+ psi|^2 von 0.35 bis 0.99
+   a=0.7, b=0.7: N_max = 1/sqrt 54 in 60/60; Eigenwerte*sqrt6 = [-1. -1.  2.] (Streuung 6.5e-08);
+      Ordnung der Restgruppe in A4: {1: 60}; Tr Z_v^2 (Spin-1-Anteil) von 0.10 bis 0.93; groesste Spalte |U_w^+ psi|^2 von 0.36 bis 0.98
+   -> Alle Starts erreichen dieselbe Hoehe, aber an verschiedenen Punkten: keine Restgruppe, kein fester Anteil, keine feste Spalte.
+==============================================================================
+C  Liegen die Zwei-Feld-Vakua aus k280 (v ~ (1,1,1) plus S auf dem Kreis bei 45 Grad) auf der Bahn?
+   a=1.0, b=0.5, u = (1,+1,0)/sqrt2: max ueber das Mischungsverhaeltnis von N/q^1.5 = 0.136083 (Bahn: 0.136083)
+   a=1.0, b=0.5, u = (1,-1,0)/sqrt2: max ueber das Mischungsverhaeltnis von N/q^1.5 = 0.136083 (Bahn: 0.136083)
+   a=0.3, b=2.0, u = (1,+1,0)/sqrt2: max ueber das Mischungsverhaeltnis von N/q^1.5 = 0.136083 (Bahn: 0.136083)
+   a=0.3, b=2.0, u = (1,-1,0)/sqrt2: max ueber das Mischungsverhaeltnis von N/q^1.5 = 0.136083 (Bahn: 0.136083)
+   -> Ja, bei passendem Mischungsverhaeltnis, und zwar fuer beide Vorzeichen. Sie sind Punkte der entarteten Bahn, aber nicht ausgezeichnet.
+==============================================================================
+D  Einzelfeld-Vakuum aus k278 (v = (1,1,1), S = 0) im vollen Raum: Hoehe und Hesse-Matrix von -N/q^1.5
+   a=0.5000: N/q^1.5 = 0.133888 = 0.9839/sqrt 54; negative Hesse-Eigenwerte: 3 (kleinster -0.0115)
+   a=0.5774: N/q^1.5 = 0.136083 = 1.0000/sqrt 54; negative Hesse-Eigenwerte: 0 (kleinster -0.0000)
+   a=1.0000: N/q^1.5 = 0.096225 = 0.7071/sqrt 54; negative Hesse-Eigenwerte: 3 (kleinster -0.0540)
+   a=3.7000: N/q^1.5 = 0.095598 = 0.7025/sqrt 54; negative Hesse-Eigenwerte: 3 (kleinster -0.0116)
+   -> Ausser bei a = +-1/sqrt 3 (dort liegt (1,1,1) selbst auf der Bahn) ist das Z3-Vakuum im vollen Raum ein Sattel (drei instabile Richtungen).

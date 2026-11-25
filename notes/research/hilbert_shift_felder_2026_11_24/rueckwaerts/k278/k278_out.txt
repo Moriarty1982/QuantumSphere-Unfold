@@ -1,0 +1,30 @@
+==============================================================================
+A  Ein Feld Z_a = X(v) + a C X(v): Invarianten
+   a=+0.0: Tr Z^2 = 2.0000|v|^2 (Achse 1.6e-15);  N(Z) = -0.0000 v1v2v3 (Rest 0.0e+00);  Tr(Z^2 o Z^2) = +2.0000|v|^4 +0.0000 sum v^4 (Rest 1.4e-14)
+   a=+0.5: Tr Z^2 = 2.5000|v|^2 (Achse 2.9e-15);  N(Z) = +2.7500 v1v2v3 (Rest 4.4e-16);  Tr(Z^2 o Z^2) = +3.1250|v|^4 +0.0000 sum v^4 (Rest 5.7e-14)
+   a=+1.0: Tr Z^2 = 4.0000|v|^2 (Achse 3.2e-15);  N(Z) = +4.0000 v1v2v3 (Rest 8.9e-16);  Tr(Z^2 o Z^2) = +8.0000|v|^4 +0.0000 sum v^4 (Rest 5.7e-14)
+   a=-2.0: Tr Z^2 = 10.0000|v|^2 (Achse 1.2e-14);  N(Z) = +4.0000 v1v2v3 (Rest 8.9e-16);  Tr(Z^2 o Z^2) = +50.0000|v|^4 +0.0000 sum v^4 (Rest 9.1e-13)
+   a=+3.7: Tr Z^2 = 29.3800|v|^2 (Achse 1.9e-14);  N(Z) = -79.1060 v1v2v3 (Rest 1.4e-14);  Tr(Z^2 o Z^2) = +431.5922|v|^4 -0.0000 sum v^4 (Rest 7.3e-12)
+   Lesart: N(Z_a) = 2(3a - a^3) xyz, Tr(Z^2 o Z^2) isotrop. Ein Element einer kubischen Jordan-Algebra hat nur die
+   Invarianten Tr, Tr(.)^2, N; jede Potenzspur ist ein Polynom darin (Cayley-Hamilton Z^3 - T Z^2 + S Z - N = 0).
+   Kontrolle Cayley-Hamilton: |Z^3 - T Z^2 + S Z - N 1| = 4.4e-16
+==============================================================================
+B  Zwei unabhaengige Felder
+   X und CX getrennt: Tr((X o Y)^2) = +1.0000|v|^4 -1.0000 sum v^4 (Rest 1.4e-14)  -> sum v^4 moeglich
+   zwei Flavons v, w (w fest): Tr((Z_v o Z_w)^2) haengt von der Richtung von v relativ zu w ab (Streuung bei |v| = 1: 21.551)
+==============================================================================
+C  Dynamik (k274-artig, gedaempft) auf dem Ein-Feld-Raum: Ausrichtung des Endzustands
+   Nach A ist V(v) = -mu^2/2 c2(a)|v|^2 + kappa cN(a) v1v2v3 + lam/4 c4(a)|v|^4 exakt; c2 = 2(1+a^2), cN = 2(3a - a^3), c4 = 2(1+a^2)^2.
+   Kontrolle a=0.5: |Tr Z^2 - c2|v|^2| = 0.0e+00, |N - cN xyz| = 0.0e+00, |Tr Z^4 - c4|v|^4| = 0.0e+00
+   Kontrolle a=1.0: |Tr Z^2 - c2|v|^2| = 0.0e+00, |N - cN xyz| = 0.0e+00, |Tr Z^4 - c4|v|^4| = 1.8e-15
+   Kontrolle a=3.7: |Tr Z^2 - c2|v|^2| = 1.4e-14, |N - cN xyz| = 0.0e+00, |Tr Z^4 - c4|v|^4| = 9.1e-13
+   a=1.0, mu^2=1.0, kappa=+0.3, lam=0.2: {'(1,1,1), Rest Z3': 20}
+   a=0.5, mu^2=1.0, kappa=-0.4, lam=0.1: {'(1,1,1), Rest Z3': 20}
+   a=2.0, mu^2=1.0, kappa=+0.05, lam=0.3: {'(1,1,1), Rest Z3': 20}
+   a=3.7, mu^2=1.0, kappa=+0.01, lam=0.05: {'(1,1,1), Rest Z3': 20}
+==============================================================================
+D  Ohne wirksamen xyz-Term: kappa = 0, oder cN(a) = 0 bei a in {0, +-sqrt(3)}
+   a=1.0000, kappa=0.0: |v| = 1.5811 ... 1.5811; Endrichtungen {'andere': 12}; Streuung der Richtung 0.88
+   a=1.7321, kappa=0.5: |v| = 1.1180 ... 1.1180; Endrichtungen {'andere': 12}; Streuung der Richtung 0.86
+   a=0.0000, kappa=0.5: |v| = 2.2361 ... 2.2361; Endrichtungen {'andere': 12}; Streuung der Richtung 0.97
+   -> Ein Feld gibt nur Z3 (cN kappa != 0) oder keine Ausrichtung (entartete Schale). Z2 braucht ein zweites, unabhaengiges Feld.

@@ -1,0 +1,11 @@
+Ausgabe k278b (Wolfram Language, MCP-Kernel, 24.11.2026). Print-Ausgaben:
+
+hermitesch: True
+Tr Z^2 = 2 (1 + a^2) (v1^2 + v2^2 + v3^2)
+N(Z) = det Z = -2 a (-3 + a^2) v1 v2 v3
+Tr Z^4 = 2 (1 + a^2)^2 (v1^2 + v2^2 + v3^2)^2
+Nullstellen von N in a: {{a -> 0}, {a -> -Sqrt[3]}, {a -> Sqrt[3]}}
+Tr Z^4 - (Tr Z^2)^2/2 = 0
+
+Warnungen: Symbol::undefined2 (Linter-Hinweis auf global gesetzte Symbole Z, Za; kein Rechenfehler), General::messages (Folge davon).
+Rueckgabewert Null. Alle Gleichungen symbolisch exakt.
