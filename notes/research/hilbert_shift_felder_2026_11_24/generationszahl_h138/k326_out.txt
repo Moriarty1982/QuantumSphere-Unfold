@@ -1,0 +1,27 @@
+=== Kontrolle: Vierer-Teilauswahlen (transportierte Orientierung) ===
+Auswahlen mit n_gen >= 1: 9 ; Regel n_gen = dim R0 in allen 126: True
+Spektrum W bei n_gen = 1 (Beispiel): (np.float64(0.0), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(1.0))
+
+=== H143b/c/d: alle 126 Fuenferauswahlen, transportierte Orientierung ===
+Rang v 3, dim K 18, dim W 14, n_gen (EW 0) 1, EW 1 1, dim R0 1
+   Spektrum W (np.float64(-0.0), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(1.0))
+   su(3) in W (Singulett, Farbe) (2, 12); Rest K/W: Spektrum (np.float64(0.341886), np.float64(0.5), np.float64(0.5), np.float64(0.658114)), Leck 0.5
+   9 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240', 'f120(x)f0', 'f240(x)f0']; min smin Kern-Komponenten 0.0112; min Leck^2 gemeinsame Ladung 6.0000
+Rang v 4, dim K 11, dim W 8, n_gen (EW 0) 1, EW 1 1, dim R0 1
+   Spektrum W (np.float64(0.0), np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667), np.float64(1.0))
+   su(3) in W (Singulett, Farbe) (2, 6); Rest K/W: Spektrum (np.float64(0.5), np.float64(0.5), np.float64(0.5)), Leck 0.5
+   36 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0', 'f120(x)f240', 'f240(x)f120']; min smin Kern-Komponenten 0.0031; min Leck^2 gemeinsame Ladung 5.8776
+Rang v 4, dim K 11, dim W 6, n_gen (EW 0) 0, EW 1 0, dim R0 0
+   Spektrum W (np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667))
+   su(3) in W (Singulett, Farbe) (0, 6); Rest K/W: Spektrum (np.float64(0.183772), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.816228)), Leck 0.5
+   72 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f0(x)f240', 'f120(x)f0', 'f120(x)f120']; min smin Kern-Komponenten 0.0025; min Leck^2 gemeinsame Ladung 5.5000
+Rang v 4, dim K 11, dim W 6, n_gen (EW 0) 0, EW 1 0, dim R0 0
+   Spektrum W (np.float64(0.333333), np.float64(0.333333), np.float64(0.333333), np.float64(0.666667), np.float64(0.666667), np.float64(0.666667))
+   su(3) in W (Singulett, Farbe) (0, 6); Rest K/W: Spektrum (np.float64(0.1), np.float64(0.5), np.float64(0.5), np.float64(0.5), np.float64(0.9)), Leck 0.5
+   9 Auswahlen, z. B. ['f0(x)f0', 'f0(x)f120', 'f120(x)f0', 'f120(x)f120', 'f240(x)f240']; min smin Kern-Komponenten 0.0098; min Leck^2 gemeinsame Ladung 5.5000
+H143b: Auswahlen mit n_gen >= 1: 45 ; mit n_gen >= 2: 0 ; max n_gen: 1
+
+=== H143a: Regel n_gen = dim R0, alle 126 x 16 Orientierungen ===
+Abweichungen: 0 []
+Faelle mit #EW0 != #EW1: 0
+Verteilung n_gen ueber 2016 Faelle: {0: 1656, 1: 360}

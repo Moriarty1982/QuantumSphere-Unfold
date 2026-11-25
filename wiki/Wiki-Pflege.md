@@ -962,3 +962,13 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H142:** Vier Kopien auf HS(5) (k325) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **25.11.2026, Quanten-Coprozessor (Plan und Baustufe 0):** Die deutsche und die englische Inhaltsübersicht nennen Bauplan, Band als Eingabe, GPU- und FPGA-Ausführung, die Grenze der Kompression und die geprüfte Zwei-Qubit-Einheit. Kein Forschungsbefund, Artikel unverändert.
+
+**25.11.2026, Test H143:** Fünf Kopien auf HS(5) (k326) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H144:** Rest-Generation und Sektoren (k327) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H145:** Rest-Generation als HS(0) (k328) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Tests H146, H147:** Massen aus den Kopien (k329) und HS(0)-Linie als Graviton (k330) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H148:** Diagnose der Massenwerte (k331) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.

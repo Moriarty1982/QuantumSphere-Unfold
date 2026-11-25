@@ -1,0 +1,7 @@
+k331b, Wolfram-Kernel (MCP), 25.11.2026, tatsaechliche Print-Ausgaben (2D-Ausgabe hier in Zeilenform):
+a(t*)^2: 1/2; t* in Grad: 26.22419855
+Eigenwerte bei t*: {1 + Sqrt[2], 1 - 1/Sqrt[2], 1 - 1/Sqrt[2]}; K: 2/3
+Gram der g_k: {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+K signiert: Sec[th]^2/3
+Komplexer Zustand: |c|^2 bei th = Pi/4: {(2 + Cos[2 d])/6, (4 - Cos[2 d] - Sqrt[3] Sin[2 d])/12, (4 - Cos[2 d] + Sqrt[3] Sin[2 d])/12}
+Meldungen: Symbol::undefined2-Warnung (Variablenname G), General::messages; keine Fehler in den Ergebnissen.

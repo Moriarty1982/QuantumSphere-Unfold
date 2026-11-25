@@ -1,0 +1,6 @@
+k329b, Wolfram-Kernel (MCP), 25.11.2026, tatsaechliche Print-Ausgaben (2D-Ausgabe hier in Zeilenform uebertragen):
+Sedenion-Tripel [1,2,3]: Lepton {3/4, 3/4, 3/2}, K 3/8; Farbe {0, 3/2, 3/2}, K 1/2
+Max K drei Kopien: Lepton 19/32, Farbe 1/2
+H142-Auswahl [1,2,6,9]: Lepton {{5/2, 3/4, 3/4, 0}, {{1, 1, 1, 1}, {0, 0, -1, 1}, {-1, 1, 0, 0}, {-1, -1, 1, 1}}}; Farbe {{3/2, 3/2, 1, 0}, {{0, 0, -1, 1}, {-1, 1, 0, 0}, {1, 1, 1, 1}, {-1, -1, 1, 1}}}
+K der drei massiven: Lepton 59/128, Farbe 11/32
+Meldungen: keine.

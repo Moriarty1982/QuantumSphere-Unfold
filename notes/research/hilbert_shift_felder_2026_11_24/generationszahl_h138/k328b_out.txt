@@ -1,0 +1,9 @@
+=== (1) transportierte Orientierung (gewertet) ===
+m = 3: max Abstand Projektor W zur Formel 1.1e-15; Auswahlen mit n_gen >= 1: 0
+m = 4: max Abstand Projektor W zur Formel 2.8e-15; Auswahlen mit n_gen >= 1: 9; b: max |QV(c(x)y) - c(x)Q8 y| 5.2e-16; c: max |sum c^3|/|c|^3 2.5e-16; d: min Anteil (c(x)y)(c(x)y') ausserhalb K 1.0000
+m = 5: max Abstand Projektor W zur Formel 3.7e-15; Auswahlen mit n_gen >= 1: 45; b: max |QV(c(x)y) - c(x)Q8 y| 7.1e-16; c: max |sum c^3|/|c|^3 4.4e-16; d: min Anteil (c(x)y)(c(x)y') ausserhalb K 0.7084
+
+=== (2) gemischte Orientierungen (nachtraeglich) ===
+m = 3: 252 Faelle; Abstand W zur Vorab-Formel max 0.33; zur berichtigten Formel max 0.0e+00; |sum c^3|/|c|^3 bei n_gen >= 1: min nan, max nan, Faelle 0
+m = 4: 882 Faelle; Abstand W zur Vorab-Formel max 0.33; zur berichtigten Formel max 3.1e-15; |sum c^3|/|c|^3 bei n_gen >= 1: min 0.000, max 0.000, Faelle 18
+m = 5: 1890 Faelle; Abstand W zur Vorab-Formel max 0.50; zur berichtigten Formel max 3.6e-15; |sum c^3|/|c|^3 bei n_gen >= 1: min 0.000, max 0.265, Faelle 315
