@@ -1,0 +1,10 @@
+Ausgabe von k263b_kontrolle.wl (Wolfram Language, MCP-Auswerter, 25.11.2026). Print-Ausgaben in Reihenfolge:
+
+Massenverhaeltnisse geladene Leptonen (Wurzeln der Eigenwerte, normiert): {0.000279464, 0.0588733, 1.}
+|Eigenwerte| Neutrinos, normiert: {0.0594906, 0.181638, 1.}; Quadratdifferenzen-Verhaeltnis: 0.029558
+sin^2 12 = 0.3089342468, sin^2 23 = 0.5470933659, sin^2 13 = 0.02132455156, sin delta = 0.5755814801
+eps = 0, TM1 exakt: sin^2 12 bei sin^2 13 = 0.02023 und 0.02376: {0.319568, 0.317108}
+
+Rueckgabewert: Null. Keine Warnungen.
+Vergleich: Python (k263c_out.txt) sin^2 12 = 0.3089342468, sin^2 23 = 0.5470933659, sin^2 13 = 0.0213245516, sin delta = 0.5755814801 (gleich auf alle gezeigten Stellen).
+Sollwerte: m_e/m_tau = 0.000279464, m_mu/m_tau = 0.0588733; Dm21/Dm31 = 0.029558.

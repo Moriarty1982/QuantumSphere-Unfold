@@ -1,0 +1,44 @@
+==============================================================================
+Kontrollen
+   (iii) Massen der geladenen Leptonen: groesster relativer Rest 3.5e-13; Zweige je eps: eps = 0: 24, eps = artanh(beta_sym): 24, eps = artanh(1/sqrt3): 24
+   (ii) TM2-Lesart, Variante A, eps = artanh(beta_sym), Bereiche von k100: 120 Treffer (H45: 120); sin^2 23 in [0.4913, 0.4975]
+   Klasse der sechs ungeraden Z2 bei eps = 0: {'p=0,+': 'TM1', 'p=0,-': 'theta13=0', 'p=1,+': 'TM1', 'p=1,-': 'theta13=0', 'p=2,+': 'TM1', 'p=2,-': 'theta13=0'}
+   Raster in phi: 2.0 Grad (90 Werte)
+   (i) eps = 0, TM1-Klasse: auf diesem Raster KEIN Fall mit theta13 in 3 sigma (Fenster in phi etwa 1,3 Grad breit); Kontrolle (i) hier nicht auswertbar
+==============================================================================
+eps = artanh(beta_sym) (0.6174)
+   Variante A, Klasse TM1: Faelle 38880; theta13 in 3 sigma: 448; Treffer (13, 23 in 3 sigma, 12 in JUNO 2 sigma): 0
+      Richtung (13, 23 in 3 sigma): sin^2 12 in [0.3480, 0.6520]; naechster Wert zu 0.3036: 0.3480 (Abstand 0.0444; ohne Korrektur 0.0136)
+   Variante A, Klasse theta13=0: Faelle 38880; theta13 in 3 sigma: 288; Treffer (13, 23 in 3 sigma, 12 in JUNO 2 sigma): 0
+      Richtung (13, 23 in 3 sigma): sin^2 12 in [0.0361, 0.9639]; naechster Wert zu 0.3036: 0.3480 (Abstand 0.0444; ohne Korrektur 0.0136)
+   Variante B: 24896 angepasste Neutrino-Matrizen
+   Variante B, Klasse TM1: Faelle 298752; theta13 in 3 sigma: 24568; Treffer (13, 23 in 3 sigma, 12 in JUNO 2 sigma): 56; davon 12 in JUNO 1 sigma: 32
+      Treffer: sin^2 12 in [0.2920, 0.3139], sin^2 23 in [0.5403, 0.5634], |sin delta| in [0.523, 0.705]
+      Schaerfe (13 in 3 sigma, 12 in JUNO 2 sigma): sin^2 23 in [0.1328, 0.7681] (Breite 0.6353), |sin delta| in [0.002, 0.934] (Breite 0.932)
+      Richtung (13, 23 in 3 sigma): sin^2 12 in [0.0000, 0.5834]; naechster Wert zu 0.3036: 0.3036 (Abstand 0.0000; ohne Korrektur 0.0136)
+   Variante B, Klasse theta13=0: Faelle 298752; theta13 in 3 sigma: 8360; Treffer (13, 23 in 3 sigma, 12 in JUNO 2 sigma): 0
+      Richtung (13, 23 in 3 sigma): sin^2 12 in [0.0000, 0.9643]; naechster Wert zu 0.3036: 0.3312 (Abstand 0.0276; ohne Korrektur 0.0136)
+==============================================================================
+eps = artanh(1/sqrt3) (0.6585)
+   Variante A, Klasse TM1: Faelle 38880; theta13 in 3 sigma: 272; Treffer (13, 23 in 3 sigma, 12 in JUNO 2 sigma): 0
+      Richtung (13, 23 in 3 sigma): sin^2 12 in [0.3645, 0.6355]; naechster Wert zu 0.3036: 0.3645 (Abstand 0.0609; ohne Korrektur 0.0136)
+   Variante A, Klasse theta13=0: Faelle 38880; theta13 in 3 sigma: 352; Treffer (13, 23 in 3 sigma, 12 in JUNO 2 sigma): 0
+      Richtung (13, 23 in 3 sigma): sin^2 12 in [0.3670, 0.6330]; naechster Wert zu 0.3036: 0.3670 (Abstand 0.0634; ohne Korrektur 0.0136)
+   Variante B: 24064 angepasste Neutrino-Matrizen
+   Variante B, Klasse TM1: Faelle 288768; theta13 in 3 sigma: 19224; Treffer (13, 23 in 3 sigma, 12 in JUNO 2 sigma): 64; davon 12 in JUNO 1 sigma: 8
+      Treffer: sin^2 12 in [0.3082, 0.3163], sin^2 23 in [0.5047, 0.5893], |sin delta| in [0.168, 0.607]
+      Schaerfe (13 in 3 sigma, 12 in JUNO 2 sigma): sin^2 23 in [0.3171, 0.6352] (Breite 0.3181), |sin delta| in [0.026, 0.962] (Breite 0.936)
+      Richtung (13, 23 in 3 sigma): sin^2 12 in [0.0015, 0.6059]; naechster Wert zu 0.3036: 0.3082 (Abstand 0.0046; ohne Korrektur 0.0136)
+   Variante B, Klasse theta13=0: Faelle 288768; theta13 in 3 sigma: 9560; Treffer (13, 23 in 3 sigma, 12 in JUNO 2 sigma): 16; davon 12 in JUNO 1 sigma: 0
+      Treffer: sin^2 12 in [0.2918, 0.2948], sin^2 23 in [0.5327, 0.5341], |sin delta| in [0.983, 0.984]
+      Schaerfe (13 in 3 sigma, 12 in JUNO 2 sigma): sin^2 23 in [0.5327, 0.6366] (Breite 0.1039), |sin delta| in [0.636, 0.984] (Breite 0.348)
+      Richtung (13, 23 in 3 sigma): sin^2 12 in [0.0000, 1.0000]; naechster Wert zu 0.3036: 0.2948 (Abstand 0.0088; ohne Korrektur 0.0136)
+==============================================================================
+Entscheidung (eps = artanh(beta_sym), Klasse TM1)
+   H134a (Treffer in A oder B): bestaetigt
+   H134b (Schaerfe): widerlegt
+   H134c (Richtung): bestaetigt (kleinster Abstand 0.0000)
+
+real	4m36.560s
+user	17m51.990s
+sys	0m0.264s

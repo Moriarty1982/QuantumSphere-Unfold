@@ -948,3 +948,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H131:** S₄ mit Ladung als verallgemeinerter CP (k261) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **25.11.2026, Erkundung k262:** Träger der Neutrinos (komplexes Triplett oder Realteil) in Forschungsstand und Offene-Probleme eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H134:** Frame-Korrektur auf die TM1-Klasse (k263) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
