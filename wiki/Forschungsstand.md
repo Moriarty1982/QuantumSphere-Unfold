@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### Drei Oktonion-Kopien auf drei Plätzen: S₄, mit der Ladung A₄ (25.11.2026, Erkundung, nicht blind, k259, k260)
+
+Anschluss an H130. **Vollständigkeit (k259):** Die Abschlussbedingung für farbstabile Unteralgebren der Sedenionen ist ein Polynomsystem; Wolfram (Reduce über ℝ) gibt als vollständige Lösungsmenge genau die drei Oktonion-Kopien O_0, O_120, O_240 und die zwei nicht alternativen Algebren B_±. H130 hängt damit nicht mehr an Zufallsstarts. **Kopien auf Plätzen (k260):** Legt man die Kopie k auf den Platz k von H₃(𝕊), dann bleibt von (Würfeldrehungen) × S₃ eine Gruppe mit 24 Elementen und den Ordnungen von S₄; stetig bleibt nur g₂. Jede Platzvertauschung braucht die passende Vertauschung der Kopien. Mit der Ladung je Platz in der Richtung der jeweiligen Kopie vertauschen 12 Elemente, das ist A₄; die anderen 12 erhalten die Ladung bis auf Vorzeichen und den Tausch von Links- und Rechtsmultiplikation. Die Massenform K bleibt 60 zu 54.
+
+Einordnung: Eine endliche Familiengruppe entsteht hier schon ohne die Ladung, aus den drei Kopien, die HS(4) mitbringt. Die Zuordnung „Kopie k auf Platz k“ ist aber eine Setzung, und der zugehörige Teilraum ist keine Unteralgebra (Abschlussdefekt 0,31). Eine Mischungsmatrix ist nicht gerechnet. OP3 und OP4 bleiben offen, kein Guard ist berührt. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/drei_kopien_k259/README.md`.
+
 ### Test H130: Die Ladungsrichtung liegt senkrecht zur Verdopplungseinheit, 9/10 ist festgelegt (25.11.2026, teilweise nicht blind, k258)
 
 Anschluss an H128. Offen war, was den Winkel zwischen Ladungsrichtung u und Verdopplungseinheit e₈ festlegt, von dem das Massenverhältnis r = 1 − (1 − u₈²)/10 abhängt. Vorab festgelegte Forderung (3137c5f): Eine Generation soll in 𝕊 so gebaut werden können wie bei HS(3), also mit einem oktonionischen Träger, auf dem die Farbe su(3)_c als 1 ⊕ 1 ⊕ 3 ⊕ 3̄ wirkt. Die Suche (600 Zufallsstarts, alle konvergent) findet genau drei Klassen abgeschlossener farbstabiler Unteralgebren: die Kopie O_0 mit u = e₇, die Kopien O_120 und O_240 mit u = −½e₇ ± (√3/2)e₁₅, und zwei Algebren B_± mit u = e₈. Wolfram exakt: Die drei Kopien sind alternativ und normmultiplikativ, B_± sind es nicht. **H130a und H130b bestätigt:** Oktonionische Träger gibt es nur bei u₈ = 0.
