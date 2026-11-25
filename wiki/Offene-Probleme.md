@@ -72,6 +72,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H131, 25.11.2026 (teilweise nicht blind, k261):** S₄ aus k260 mit der Ladung als verallgemeinerter CP legt bei ℤ₃ (geladene Leptonen) und ℤ₂ mit CP (Majorana-Neutrinos) eine einzige Klasse fest: TM2 mit δ = 0 oder 180°, sin²θ₂₃ = 0,395 oder 0,605. Das passt schlecht zu den Daten (H39: Spalte 3,6σ von JUNO) und nicht zu H8. Die Spannung trifft die Setzungen dieser Lesart. OP3 und OP4 bleiben offen.
 
+**Träger der Neutrinos, 25.11.2026 (Erkundung, nicht blind, k262):** Auf dem Realteil der drei Einträge wirkt die Gruppe aus k260 als volle S₄, linear. Majorana-Neutrinos dort geben mit ℤ₃ und einer ungeraden ℤ₂ die TM1-Spalte mit θ₂₃ = 45° und |sin δ| = 1 (Muster von H8) oder θ₁₃ = 0; auf dem komplexen Triplett (H131) ist TM1 mit keinem Paar von Untergruppen erreichbar. Die Spannung aus H131 liegt also am Träger, der eine Setzung ist. Beide Lesarten stehen laut Register schlecht gegen JUNO. OP3 und OP4 bleiben offen.
+
 **Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
 
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.

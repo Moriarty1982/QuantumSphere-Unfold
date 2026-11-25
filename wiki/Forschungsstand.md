@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Welche Setzung aus H131 trägt die Spannung? Der Träger der Neutrinos (25.11.2026, Erkundung, nicht blind, k262)
+
+Anschluss an H131. Die 24 Elemente aus k260 mischen den Realteil s_k und die Ladungsrichtung v_k der drei Einträge nicht. Auf s wirkt eine reelle vorzeichenbehaftete Permutation A, auf v wirkt +A (12 gerade Elemente) oder −A (12 ungerade). Auf s allein ist die Gruppe also die volle S₄, linear und reell; antilinear werden die ungeraden Elemente erst auf dem komplexen Triplett z = s + i·v. Gerechnet sind alle 900 Paare von Untergruppen (G_e, G_ν) in zwei Lesarten.
+
+- **Lesart A (wie H131, Neutrinos auf z):** Keine Klasse hat die feste Spalte (2/3, 1/6, 1/6). Feste Spalten sind nur (1/3, 1/3, 1/3), (0, 1/2, 1/2), (1/4, 1/4, 1/2) und (0, 0, 1).
+- **Lesart B (Majorana-Neutrinos auf s, reelle Massenform):** ℤ₃ mit einer ungeraden ℤ₂ gibt zwei Klassen zu je 12 Paaren. Die eine hat die TM1-Spalte (2/3, 1/6, 1/6) mit sin²θ₂₃ = 0,5 und |sin δ| = 1 (bei sin²θ₁₃ = 0,022 ist sin²θ₁₂ = 0,3183), die andere die Spalte (0, 1/2, 1/2), also θ₁₃ = 0 (ausgeschlossen). Wolfram exakt: Spalte {2/3, 1/6, 1/6}, und die μτ-Spiegelung gilt für jede reelle Form.
+
+Die Spannung aus H131 sitzt damit nicht in der Gruppe und nicht in „Kopie k auf Platz k“, sondern in der Wahl des Trägers der Neutrinos. Lesart B ist das Muster von H8 (und k256), jetzt aus derselben Gruppe wie H131. Eine Rettung ist das nicht: H8 und TM1 (H4) stehen im Register als „nach JUNO disfavorisiert“; ein eigener Datenvergleich ist nicht gerechnet. Offen bleiben diskret die Wahl der ungeraden ℤ₂ (dieselbe Zweiteilung wie in k280) und das Vorzeichen von sin δ. Der Träger ist eine Setzung wie die übrigen (Plätze als Generationen, ℤ₃, ℤ₂, Majorana). OP3 und OP4 bleiben offen, kein Guard ist berührt. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/setzungen_k262/README.md`.
+
+
 ### H132: Auf der HC-Richtung bleibt kein Eichfeld masselos (25.11.2026, Test, teilweise nicht blind, k298)
 
 Frage nach k297: Bleibt mit den Eichfeldern der Symmetrie des HC-Potentials (U(1) links × U(1) rechts) auf der HC-Richtung ψ₀ = f(cos θ + sin θ·j), tan θ = β_sym², ein masseloses Eichfeld, und hängt das Massenverhältnis nur an β_sym? Vorab-Notiz vor der Rechnung committet, mit einem Überschlag, der das Ergebnis weitgehend festlegte. **Urteil: widerlegt.** Die Determinante der Massenmatrix ist 4g_L²g_R²·A·B, also ungleich null, sobald Vorstufe und Anhang beide da sind. Das Verhältnis hängt allgemein an g_R/g_L; für gleiche Kopplungen ist es exakt m₋/m₊ = μ = β_sym² = 0,3018 (trägt teilweise). Für kleines μ ist m₋² = 4e²μ²f²: Der Anhang gibt dem sonst masselosen Feld eine Masse proportional zu seiner Amplitude.
@@ -17,6 +27,7 @@ Schreibt man die HC-Bedingung B = μ²A als Potential, V = η(B − μ²A)² = �
 Mit dem HC als Bedingung sind zwei Vorzeichen nicht mehr frei: κ < 0 und die erzeugte Skala als feste Amplitude. Frei bleiben η, die Zahl β_sym (OP1) und die Wahl des Frames. Unter dem Fluss ist das Verhältnis nicht fest (16π²·dρ/dt = 64λ_Aρ(ρ − 1) für ρ = μ⁻⁴): Die Schleifen erzeugen β_sym nicht. Die quadratische Strafe ist eine Setzung (einfachste Übersetzung der linearen Projektion). Eine Schleife, ohne Eichfelder. Gegenprobe in Wolfram Language (k297b). OP1, OP3, OP4, OP5 bleiben offen.
 
 Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/HC_Tauschsymmetrie_k297.md`.
+
 ### Test H131: S₄ mit der Ladung als verallgemeinerter CP gibt eine einzige Klasse, aber ohne CP-Verletzung (25.11.2026, teilweise nicht blind, k261)
 
 Anschluss an k260. Die 24 Elemente der Würfelgruppe wirken auf das Triplett der drei Plätze als 12 lineare (A₄) und 12 antilineare Abbildungen; die antilinearen sind Platzvertauschungen mit Vorzeichen zusammen mit der Konjugation der Ladung. Angesetzt wie in H39: ℤ₃ für die geladenen Leptonen, ℤ₂ und eine CP-Abbildung X für Majorana-Neutrinos (Vorab-Notiz 875e6d4). **H131a bestätigt:** Alle 48 zulässigen, nicht entarteten Kombinationen fallen in eine Klasse; die übrigen 48 (X der Ordnung 4) erzwingen zwei gleiche Neutrinomassen. **H131b widerlegt:** In dieser Klasse ist J = 0. Die CP aus der Ladung gibt δ = 0 oder 180° und kein maximales θ₂₃. Wolfram exakt: Die Majorana-Matrix ist in der Basis der geladenen Leptonen reell.

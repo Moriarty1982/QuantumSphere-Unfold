@@ -1,0 +1,67 @@
+==============================================================================
+Teil 1  Wirkung der 24 Elemente auf s (Realteil) und v (Ladungsrichtung)
+   24 Elemente; s und v mischen nicht (Rest 0.0e+00); auf s wirkt A, auf v wirkt +A (12 Elemente) oder -A (12 Elemente)
+   det A: gerade [(1, 12)], ungerade [(-1, 12)]
+   die 24 Matrizen A sind paarweise verschieden: True -> auf s allein wirkt die ganze S4 linear und reell
+   Untergruppen: 30 (S4 hat 30)
+==============================================================================
+Teil 2  Lesart A (H131): Neutrinos auf z, ungerade Elemente antilinear; alle Paare von Untergruppen
+   Neutrinos entartet: 352 Paare
+   feste Spalten [(0.0, 0.0, 1.0), (0.0, 0.0, 1.0), (0.0, 0.0, 1.0)] | J = 0 | Zeilen verschieden | dim m_nu 6: 1 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.0, 1.0), (0.0, 0.5, 0.5), (0.0, 0.5, 0.5)] | J = 0 | zwei Zeilen gleich | dim m_nu 4: 3 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.0, 1.0), (0.0, 0.5, 0.5), (0.0, 0.5, 0.5)] | J = 0 | zwei Zeilen gleich | dim m_nu 6: 3 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.0, 1.0)] | J = 0 | Zeilen verschieden | dim m_nu 4: 6 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.0, 1.0)] | J = 0 | Zeilen verschieden | dim m_nu 6: 3 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.0, 1.0)] | J = 0 | Zeilen verschieden | dim m_nu 8: 9 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten [(0.0, 0.5, 0.5), (0.25, 0.25, 0.5), (0.25, 0.25, 0.5)] | J = 0 | zwei Zeilen gleich | dim m_nu 4: 6 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.5, 0.5)] | J = 0 | zwei Zeilen gleich | dim m_nu 8: 6 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten [(0.3333, 0.3333, 0.3333), (0.3333, 0.3333, 0.3333), (0.3333, 0.3333, 0.3333)] | J frei | zwei Zeilen gleich | dim m_nu 6: 8 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.3333, 0.3333, 0.3333)] | J = 0 | Zeilen verschieden | dim m_nu 4: 24 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.3333, 0.3333, 0.3333)] | J frei | Zeilen verschieden | dim m_nu 8: 24 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten keine | J = 0 | Zeilen verschieden | dim m_nu 4: 12 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten keine | J = 0 | Zeilen verschieden | dim m_nu 6: 36 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 1, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=2, ungerade 1, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten keine | J = 0 | Zeilen verschieden | dim m_nu 8: 6 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten keine | J frei | Zeilen verschieden | dim m_nu 12: 22 Paare; kleinstes Beispiel G_e (|G|=1, ungerade 0, Ordnungen [(1, 1)]), G_nu (|G|=1, ungerade 0, Ordnungen [(1, 1)])
+   feste Spalten keine | J frei | Zeilen verschieden | dim m_nu 4: 15 Paare; kleinstes Beispiel G_e (|G|=1, ungerade 0, Ordnungen [(1, 1)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten keine | J frei | Zeilen verschieden | dim m_nu 6: 97 Paare; kleinstes Beispiel G_e (|G|=1, ungerade 0, Ordnungen [(1, 1)]), G_nu (|G|=2, ungerade 1, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten keine | J frei | Zeilen verschieden | dim m_nu 8: 21 Paare; kleinstes Beispiel G_e (|G|=1, ungerade 0, Ordnungen [(1, 1)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten keine | J frei | zwei Zeilen gleich | dim m_nu 6: 6 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=2, ungerade 1, Ordnungen [(1, 1), (2, 1)])
+   geladene Leptonen entartet: 240 Paare
+   Klassen mit fester Spalte (2/3, 1/6, 1/6): 0
+==============================================================================
+Teil 3  Lesart B: Neutrinos auf s (reell), alle 24 Elemente linear; alle Paare von Untergruppen
+   Neutrinos entartet: 352 Paare
+   feste Spalten [(0.0, 0.0, 1.0), (0.0, 0.0, 1.0), (0.0, 0.0, 1.0)] | J = 0 | Zeilen verschieden | dim m_nu 3: 1 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.0, 1.0), (0.0, 0.5, 0.5), (0.0, 0.5, 0.5)] | J = 0 | zwei Zeilen gleich | dim m_nu 3: 6 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.0, 1.0)] | J = 0 | Zeilen verschieden | dim m_nu 3: 9 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.0, 1.0)] | J = 0 | Zeilen verschieden | dim m_nu 4: 9 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten [(0.0, 0.5, 0.5), (0.1667, 0.1667, 0.6667), (0.3333, 0.3333, 0.3333)] | J = 0 | zwei Zeilen gleich | dim m_nu 3: 24 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.5, 0.5), (0.25, 0.25, 0.5), (0.25, 0.25, 0.5)] | J = 0 | zwei Zeilen gleich | dim m_nu 3: 6 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.0, 0.5, 0.5)] | J = 0 | zwei Zeilen gleich | dim m_nu 4: 36 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=2, ungerade 1, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten [(0.1667, 0.1667, 0.6667)] | J frei | zwei Zeilen gleich | dim m_nu 4: 24 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=2, ungerade 1, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten [(0.25, 0.25, 0.5)] | J frei | Zeilen verschieden | dim m_nu 4: 12 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=2, ungerade 1, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten [(0.3333, 0.3333, 0.3333), (0.3333, 0.3333, 0.3333), (0.3333, 0.3333, 0.3333)] | J frei | zwei Zeilen gleich | dim m_nu 3: 8 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten [(0.3333, 0.3333, 0.3333)] | J frei | zwei Zeilen gleich | dim m_nu 4: 24 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten keine | J = 0 | Zeilen verschieden | dim m_nu 3: 12 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=4, ungerade 2, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten keine | J = 0 | Zeilen verschieden | dim m_nu 4: 24 Paare; kleinstes Beispiel G_e (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten keine | J = 0 | Zeilen verschieden | dim m_nu 6: 1 Paare; kleinstes Beispiel G_e (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)]), G_nu (|G|=1, ungerade 0, Ordnungen [(1, 1)])
+   feste Spalten keine | J frei | Zeilen verschieden | dim m_nu 3: 22 Paare; kleinstes Beispiel G_e (|G|=1, ungerade 0, Ordnungen [(1, 1)]), G_nu (|G|=4, ungerade 0, Ordnungen [(1, 1), (2, 3)])
+   feste Spalten keine | J frei | Zeilen verschieden | dim m_nu 4: 69 Paare; kleinstes Beispiel G_e (|G|=1, ungerade 0, Ordnungen [(1, 1)]), G_nu (|G|=2, ungerade 0, Ordnungen [(1, 1), (2, 1)])
+   feste Spalten keine | J frei | Zeilen verschieden | dim m_nu 6: 13 Paare; kleinstes Beispiel G_e (|G|=1, ungerade 0, Ordnungen [(1, 1)]), G_nu (|G|=1, ungerade 0, Ordnungen [(1, 1)])
+   feste Spalten keine | J frei | zwei Zeilen gleich | dim m_nu 6: 8 Paare; kleinstes Beispiel G_e (|G|=3, ungerade 0, Ordnungen [(1, 1), (3, 2)]), G_nu (|G|=1, ungerade 0, Ordnungen [(1, 1)])
+   geladene Leptonen entartet: 240 Paare
+   Klassen mit fester Spalte (2/3, 1/6, 1/6): 2
+   TM1-Klasse im Einzelnen: feste Spalten [(0.1667, 0.1667, 0.6667)] | J frei | zwei Zeilen gleich | dim m_nu 4
+      G_e erzeugt von: [[[0, 0, 1], [-1, 0, 0], [0, -1, 0]]]
+      G_nu: [([[0, 0, -1], [0, 1, 0], [-1, 0, 0]], 'ungerade')]
+   TM1-Klasse im Einzelnen: feste Spalten [(0.0, 0.5, 0.5), (0.1667, 0.1667, 0.6667), (0.3333, 0.3333, 0.3333)] | J = 0 | zwei Zeilen gleich | dim m_nu 3
+      G_e erzeugt von: [[[0, 0, 1], [-1, 0, 0], [0, -1, 0]]]
+      G_nu: [([[-1, 0, 0], [0, -1, 0], [0, 0, 1]], 'gerade'), ([[0, -1, 0], [-1, 0, 0], [0, 0, 1]], 'ungerade'), ([[0, 1, 0], [1, 0, 0], [0, 0, 1]], 'ungerade')]
+==============================================================================
+Teil 4  Lesart B mit Z3 und einer ungeraden Z2: Zaehlung und Winkel
+   Z3 x ungerade Z2 (4 x 6): 12 Paare -> feste Spalten [(0.0, 0.5, 0.5)] | J = 0 | zwei Zeilen gleich | dim m_nu 4
+   Z3 x ungerade Z2 (4 x 6): 12 Paare -> feste Spalten [(0.1667, 0.1667, 0.6667)] | J frei | zwei Zeilen gleich | dim m_nu 4
+   Z3 x gerade Z2 (4 x 3): 12 Paare -> feste Spalten [(0.3333, 0.3333, 0.3333)] | J frei | zwei Zeilen gleich | dim m_nu 4
+   TM1-Klasse, 2000 Stichproben: sin^2(theta23) in [0.500000, 0.500000]; |sin delta| in [1.000000, 1.000000]
+   sin^2(theta12) - (1 - 2/(3 cos^2 theta13)): groesste Abweichung 7.2e-13; sin^2(theta13) frei in [0.0000, 0.1666]
+   bei sin^2(theta13) = 0,022: sin^2(theta12) = 0.3183
