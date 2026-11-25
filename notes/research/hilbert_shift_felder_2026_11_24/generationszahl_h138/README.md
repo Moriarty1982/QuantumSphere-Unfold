@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138, H139; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138, H139, H140; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -11,6 +11,9 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
 - Orthogonale, also unabhängige Kopien sind nie oktonionisch. Zwischen den Kopien gilt exakt: Nullteiler von 𝕊 sind genau die Elemente mit
   gleichem Gewicht in allen Kopienrichtungen (det L_x = (c − s)⁴(c + s)⁴(c² + s²)⁴). Die Überschuss-Algebren auf HS(5) und HS(6) haben
   Imaginärteile aus lauter Nullteilern (H139b, c bestätigt; H139a nach Wortlaut widerlegt, weil die Nullteiler nach außen, nicht innen wirken).
+- **H140** (Vorab 94694e6): Alle drei Kopien haben dieselbe Farbe su(3) (S₃-symmetrisch) und je eine Generation mit gleichem Spektrum,
+  aber jede ihre eigene Ladung; eine gemeinsame Ladung α + βL_x + γR_x gibt es exakt nicht (Leck ≥ 3|x|²), und es gibt nur 15 statt 24 Zustände.
+  In ℂ⊗𝕊 sind die Kopien keine drei Generationen, sondern drei gleichwertige Lesarten einer.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
 Dateien: Vorab- und Ergebnis-Notizen H138, H139; Skripte k321 (+ b, c), k322 (+ b, c) mit Ausgaben. Aufruf aus diesem Ordner.

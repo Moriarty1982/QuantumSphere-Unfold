@@ -1,0 +1,33 @@
+[Kontrolle] psi, eps Automorphismen: 8.9e-15 0.0e+00
+[Kontrolle] psi bildet Kopie k auf k+1 ab: ['1.1e-16', '5.6e-17', '6.1e-16']
+[Kontrolle] psi u_k = u_{k+1}: ['0.0e+00', '1.1e-16', '7.5e-16']
+
+=== H140a: Farbe ===
+dim su(3)_k: [8, 8, 8]
+Hauptwinkel-cos min (1 = gleich): su3_0~su3_120 1.000000000000  su3_0~su3_240 1.000000000000
+max |[su3, psi]|, |[su3, eps]|: 5.7e-16
+  Kopie 0: Casimir-Eigenwerte {np.float64(-0.66666667): np.int64(6), np.float64(0.0): np.int64(2)}; Leck der Farbe aus C_k: 0.0e+00
+  Kopie 1: Casimir-Eigenwerte {np.float64(-0.66666667): np.int64(6), np.float64(0.0): np.int64(2)}; Leck der Farbe aus C_k: 2.9e-16
+  Kopie 2: Casimir-Eigenwerte {np.float64(-0.66666667): np.int64(6), np.float64(0.0): np.int64(2)}; Leck der Farbe aus C_k: 2.9e-16
+
+=== H140b: Ladung je Kopie ===
+  Q_0 auf C_0: Leck 0.0e+00, Spektrum [0.         0.33333333 0.33333333 0.33333333 0.66666667 0.66666667
+ 0.66666667 1.        ]
+     [Q_0, su3] auf C_0: 1.9e-16
+  Q_1 auf C_1: Leck 8.4e-17, Spektrum [0.         0.33333333 0.33333333 0.33333333 0.66666667 0.66666667
+ 0.66666667 1.        ]
+     [Q_1, su3] auf C_1: 1.4e-16
+  Q_2 auf C_2: Leck 2.1e-16, Spektrum [0.         0.33333333 0.33333333 0.33333333 0.66666667 0.66666667
+ 0.66666667 1.        ]
+     [Q_2, su3] auf C_2: 1.4e-16
+  psi Q_k psi^-1 = Q_{k+1}: ['9.7e-17', '1.2e-16', '4.0e-16']
+  |psi Q_0 psi^-1 - Q_0| = 0.750;  |[Q_0, Q_1]| = 0.241
+  Q_0 bildet C_120 in sich ab? Leck 0.375
+
+=== H140c: gemeinsame Ladung a + b L_x + c R_x ===
+  min Leck^2 ueber 500 Starts: 3.0000e+00  (Kriterium: > 1e-3 heisst keine gemeinsame Ladung)
+  bestes x (gerundet): [ 0.    -0.123 -0.296  0.035  0.466  0.304  0.374  0.024 -0.    -0.075
+  0.419  0.504 -0.075 -0.041 -0.058 -0.03 ]
+
+=== H140d: Dimension ===
+  dim(C_0 + C_120 + C_240) = 15 (3 Generationen braeuchten 24)
