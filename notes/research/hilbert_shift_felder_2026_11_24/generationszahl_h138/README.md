@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H152; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H153; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -52,7 +52,9 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   540 mit allen Setzungen im Zufallsbereich. Frame-Differenz: Form S ändert K nicht, ein Boost hält den Lichtkegel fest und erreicht ⅔ nie.
 - **H152** (Vorab c76928c): erweiterter skalenfreier Ansatz mit allen Z₃-invarianten Quartiken (neu nur ξφC₃, die skalenfreie kubische Norm) und HS(3)-Rückwirkung.
   K startabhängig (0,662 … 0,818), δ landet immer auf 0 oder π/3 (zwei gleiche Massen), ⅔ nur über gewählte Startwerte erreichbar.
+- **H153** (Vorab fd4c7f3): 1:2-Normierung. Normierungen von A und B (je Komponente, Spur 1/3 : 2/3, dritte Kopie) sind Umparametrisierungen (Nullrest): sie wählen nur
+  den Startstrahl, K bleibt startabhängig, δ bleibt 0 oder π/3. Nur die Einschränkung der Schleife auf die Unteralgebra {1, U} gibt K = ⅔ und θ = π/4 exakt; das ist eine Setzung.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H152; Skripte k321–k335 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H153; Skripte k321–k336 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

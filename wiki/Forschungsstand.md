@@ -1,5 +1,11 @@
 # Forschungsstand
 
+### Eine Normierung wählt nur die Startlinie; K = ⅔ exakt nur, wenn die Schleife über die Unteralgebra {1, U} läuft (25.11.2026, Test H153, k336)
+
+Auf Wunsch des Autors wurde geprüft, ob eine aus der Algebra begründete 1:2-Normierung den skalenfreien Fluss auf Koide zieht. Drei Normierungen von A = φ² und B = |y|² (je Komponente; nach der Spur der Auslesung 1/3 : 2/3; über alle drei Kopien) sind Umparametrisierungen: Der Fluss in den umgeschriebenen Kopplungen ist exakt der konjugierte (Nullrest, Python und Wolfram). Sie ändern nur, welcher Start „symmetrisch“ heißt. Weil die β-Funktionen homogen sind, zählt nur der Startstrahl, deshalb geben die ersten beiden dasselbe K. Ergebnis auf je 24 Starts: K 0,678 … 0,978 bzw. 0,560 … 0,678, kein Treffer innerhalb 3σ, θ nicht stabil bei π/4; mit der kubischen Norm (ξ ≠ 0) landet δ weiter auf 0 oder π/3. Läuft die Schleife dagegen nur über die von Ψ erzeugte Unteralgebra {1, U} ≅ ℂ, ist der Tausch eine exakte Symmetrie des Flusses, und jeder symmetrische Start mit κ < 0 endet bei θ = π/4 und K = ⅔ exakt (0,81σ vom Messwert).
+
+Einordnung: Die Normierung allein legt K nicht fest. Die offene Frage verschiebt sich auf die Freiheitsgrade: Erzwingt die Algebra, dass nur {1, U} in der Schleife läuft? Das friert δ ein und ist bisher eine Setzung. OP3 offen, kein Vorzeichen gesetzt. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H153_Normierung_1_zu_2.md`.
+
 ### Der vollständige skalenfreie Ansatz: δ landet auf 0 oder π/3, K bleibt startabhängig (25.11.2026, Test H152, k335)
 
 Auf Wunsch des Autors wurde der nach einem Kopplungsterm abgeschnittene Fluss aus H150 vervollständigt: alle Terme vierter Ordnung, die die drei Kopien (Z₃ ⋊ Z₂) zulassen, und die Rückwirkung von HS(3) über vier Felder C (wie H133). Neu ist genau ein Term, ξ·φ·C₃(y), die skalenfreie Form der kubischen Norm; die β-Funktionen schließen (Python und Wolfram gleich). Auf der Kugel geht der neue Term wie ξ cos θ sin³θ cos 3δ, sein Minimum liegt deshalb immer bei δ = 0 oder π/3: In allen 144 Gitterpunkten sind zwei Massen gleich (73-mal δ = 0, 71-mal π/3). K am Gildener–Weinberg-Punkt streut von 0,662 bis 0,818 und hängt von den Startwerten ab; ⅔ liegt im Bereich, ist aber nur mit gewählten Startkopplungen erreichbar. θ liegt nur in 20 von 144 Fällen innerhalb 0,01 von π/4.

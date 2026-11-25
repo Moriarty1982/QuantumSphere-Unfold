@@ -980,3 +980,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H151:** Koide-Verschiebung gegen 2/9, Setzungen und Frame (k334) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **25.11.2026, Test H152:** Erweiterter skalenfreier Ansatz (k335) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**25.11.2026, Test H153:** 1:2-Normierung (k336) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
