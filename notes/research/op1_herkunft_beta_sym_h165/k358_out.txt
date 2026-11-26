@@ -1,0 +1,82 @@
+== 0. Eingaben ==
+gamma_L (Wurzel) = 1.8646997646094 ; beta exakt = 0.54940564097453 ; gamma_T = 0.127384023141 ; gamma_M = 0.23753295796592
+beta alt7 = 0.5493482 (gamma_L = 1.864440817 ); beta alt4 = 0.5493 (gamma_L = 1.864223586 )
+rel. Aenderung beta: exakt/alt7 - 1 = 0.0001046 ; exakt/alt4 - 1 = 0.0001923
+
+== 1. Abgeleitete Zahlen ==
+Groesse                                           alt4 0.5493  alt7 0.5493482          exakt   exakt-alt7       rel.  dlnX/dlnb  Fundstelle
+beta_sym                                               0.5493       0.5493482    0.549405641      5.74e-5   0.000105        1.0  OP2 Versatz, r66
+beta^2 = Omega_M (H96) = |U_e2|^2                  0.30173049     0.301783445    0.301846558      6.31e-5   0.000209        2.0  H96, H9, H112, OP4, OP5
+1 - beta^2 = Omega_Lambda                          0.69826951     0.698216555    0.698153442     -6.31e-5   -9.04e-5    -0.8647  r05
+Omega_Lambda/Omega_M                               2.31421594      2.31363439     2.31294153    -0.000693  -0.000299     -2.865  r05
+gamma_L = cot theta_W                              1.86422359      1.86444082     1.86469976     0.000259   0.000139      1.328  H15, r61
+1/gamma_L                                         0.536416344     0.536353844    0.536279362     -7.45e-5  -0.000139     -1.328  r66
+gamma_L^2                                          3.47532958      3.47613956     3.47710521     0.000966   0.000278      2.657  Frame-Potenzen
+gamma_L^3                                          6.47879137      6.48105649     6.48375727       0.0027   0.000417      3.985  Frame-Potenzen
+gamma_L^5 (Vakuumquotient)                         22.5159353      22.5290569     22.5447062       0.0156   0.000695      6.642  H159, r69.3
+gamma_L^(-3/2) (Photon-Planck)                    0.392873741     0.392805081    0.392723262     -8.18e-5  -0.000208     -1.993  r63 alt
+epsilon = eta = artanh beta (Maske)               0.617378283     0.617447313    0.617529585      8.23e-5   0.000133      1.274  H45, H46, H134
+2 eta                                              1.23475657      1.23489463     1.23505917     0.000165   0.000133      1.274  r63
+tanh 2 eta                                        0.843953498     0.843993219    0.844040548      4.73e-5    5.61e-5     0.5363  r63
+coth 2 eta (Spiegel-Boden)                         1.18489941      1.18484364      1.1847772     -6.64e-5   -5.61e-5    -0.5363  r63.4
+1/beta (Tachyon)                                   1.82049882      1.82033909     1.82014877     -0.00019  -0.000105       -1.0  r24.2
+theta_H [Grad]                                     66.6380066      66.6446165      66.652494      0.00788   0.000118       1.13  r61, r66
+pi - theta_H [Grad]                                113.361993      113.355383     113.347506     -0.00788   -6.95e-5    -0.6647  H164
+2 alpha = 2 arctan beta [Grad]                     57.5599846      57.5642275     57.5692837      0.00506    8.78e-5       0.84  r66
+Besetzung 1/(1+beta^2)                            0.768208172     0.768176922    0.768139681     -3.72e-5   -4.85e-5    -0.4637  r66, H73
+Besetzung beta^2/(1+beta^2)                       0.231791828     0.231823078    0.231860319      3.72e-5   0.000161      1.536  r66, H73
+(1+beta)/2                                            0.77465       0.7746741     0.77470282      2.87e-5    3.71e-5     0.3546  r66
+w = -beta^2/3 (H73)                               -0.10057683    -0.100594482   -0.100615519      -2.1e-5   0.000209        2.0  H73
+tau*/delta = beta/(1+beta) (H81)                  0.354547215     0.354567295    0.354591223      2.39e-5    6.75e-5     0.6454  H81
+HC-Winkel arctan(beta^2) [Grad]                    16.7901639      16.7929448     16.7962591      0.00331   0.000197      1.887  k297, k298
+K = (1+beta^4)/3                                   0.36368043     0.363691083    0.363703782      1.27e-5    3.49e-5      0.334  r63, H155
+kappa = (gamma_L+1/gamma_L)/2                      1.20031996      1.20039733     1.20048956      9.22e-5    7.68e-5      0.735  r64.4
+2^(1-gamma_L)                                     0.549341966     0.549259256    0.549160679     -9.86e-5  -0.000179     -1.717  H165
+Hopf-Luecke beta [%]                               5.10654819       5.0973261     5.08633806       -0.011   -0.00216     -20.66  r61
+Hopf-Luecke gamma_L [%]                            7.28326875      7.27076887     7.25587239      -0.0149   -0.00205     -19.64  r61
+sin^2 theta_W = 1/(1+gamma_L^2)                    0.22344723     0.223406796    0.223358611     -4.82e-5  -0.000216     -2.063  H15
+m_W = m_Z gamma_L/sqrt(1+gamma_L^2) [GeV]          80.3569005      80.3589925     80.3614855      0.00249     3.1e-5     0.2967  H15
+sin^2 theta_12 = beta^2/(1-s13), s13=0.02215      0.308565209     0.308619364    0.308683907      6.45e-5   0.000209        2.0  H9 (NuFIT 6.0)
+sin^2 theta_12 = beta^2/(1-s13), s13=0.02248      0.308669378      0.30872355    0.308788115      6.46e-5   0.000209        2.0  H9 (NuFIT 6.1)
+
+Nach Empfindlichkeit geordnet (|d ln X / d ln beta|, die sechs groessten):
+     20.66  Hopf-Luecke beta [%]
+     19.64  Hopf-Luecke gamma_L [%]
+     6.642  gamma_L^5 (Vakuumquotient)
+     3.985  gamma_L^3
+     2.865  Omega_Lambda/Omega_M
+     2.657  gamma_L^2
+
+== 2. Abstand zur Messung (Messwerte aus dem Bestand; keiner zaehlt als neue Pruefung) ==
+Vorhersage                           Messung                        Wert       alt7      exakt   z alt7  z exakt  Delta z
+H96 Omega_M = beta^2                 DESI DR2 BAO       0.2975 +- 0.0086  0.3017834  0.3018466    0.498    0.505   0.0073
+H96 Omega_M = beta^2                 Planck 2018          0.315 +- 0.007  0.3017834  0.3018466    -1.89    -1.88    0.009
+H15 m_W [GeV]                        PDG 2024           80.3692 +- 0.013   80.35899   80.36149   -0.761   -0.575     0.19
+H15 m_W [GeV]                        PDG 2026          80.3625 +- 0.0077   80.35899   80.36149   -0.444   -0.128     0.32
+H9 sin^2 theta_12 (s13 = 0.02215)    JUNO 2026          0.3036 +- 0.0064  0.3086194  0.3086839    0.784    0.794     0.01
+H9 sin^2 theta_12 (s13 = 0.02215)    NuFIT 6.1          0.3088 +- 0.0067  0.3086194  0.3086839   -0.027  -0.0173   0.0096
+H9 sin^2 theta_12 (s13 = 0.02248)    JUNO 2026          0.3036 +- 0.0064  0.3087236  0.3087881    0.801    0.811     0.01
+H9 sin^2 theta_12 (s13 = 0.02248)    NuFIT 6.1          0.3088 +- 0.0067  0.3087236  0.3087881  -0.0114 -0.00177   0.0096
+
+== 3. Schwellen und Fenster ==
+alt4   Leptonfenster [0.545; 0.570]: True;  m_W in 2 sigma (PDG 2024, k218): True;  Omega_M in 2 sigma (DESI DR2): True;  eta im Trefferfenster [0.611; 0.647] (r61): True, Abstand zum unteren Rand 0.006378
+alt7   Leptonfenster [0.545; 0.570]: True;  m_W in 2 sigma (PDG 2024, k218): True;  Omega_M in 2 sigma (DESI DR2): True;  eta im Trefferfenster [0.611; 0.647] (r61): True, Abstand zum unteren Rand 0.006447
+exakt  Leptonfenster [0.545; 0.570]: True;  m_W in 2 sigma (PDG 2024, k218): True;  Omega_M in 2 sigma (DESI DR2): True;  eta im Trefferfenster [0.611; 0.647] (r61): True, Abstand zum unteren Rand 0.00653
+Wie weit duerfte beta wandern, bis ein Urteil kippt (Abstand in Einheiten der Aenderung exakt - alt7 = 5.744e-5):
+  Leptonfenster unten 0.545                        beta = 0.545; Abstand von exakt   -0.00441 =    -76.7 Schritte
+  Leptonfenster oben 0.570                         beta = 0.57; Abstand von exakt     0.0206 =    358.5 Schritte
+  Omega_M 2 sigma oben (DESI): beta = sqrt(0.3147) beta = 0.56098128; Abstand von exakt     0.0116 =    201.5 Schritte
+  m_W 2 sigma unten (PDG 2026, 80.3471)            beta = 0.54907422; Abstand von exakt  -0.000331 =    -5.77 Schritte
+  m_W 2 sigma oben (PDG 2026, 80.3779)             beta = 0.5497839; Abstand von exakt   0.000378 =    6.585 Schritte
+  Maske: eta = 0.611 (unterer Rand r61)            beta = 0.54483064; Abstand von exakt   -0.00457 =   -79.65 Schritte
+  Maske: eta = 0.647 (oberer Rand r61)             beta = 0.56964692; Abstand von exakt     0.0202 =    352.4 Schritte
+  H9 JUNO 2 sigma oben (0.3164, s13 = 0.02248)     beta = 0.55613607; Abstand von exakt    0.00673 =    117.2 Schritte
+
+== 4. H102: m_tau aus Phi_e = pi/4 - gamma_M/2 (Funktionen aus predictions/k224_test_h102.py) ==
+exaktes Koide: m_tau = 1776.9690 MeV
+  gamma_M = 0.2375 (gerundet)                    m_tau = 1777.0552 MeV; z gegen PDG 1776.93 +- 0.09: +1.391; Abstand zu Koide +0.0862 MeV
+  gamma_M = 0.237533 (Wortlaut H102)             m_tau = 1777.1343 MeV; z gegen PDG 1776.93 +- 0.09: +2.270; Abstand zu Koide +0.1652 MeV
+  gamma_M exakt = 0.237532957966                 m_tau = 1777.1342 MeV; z gegen PDG 1776.93 +- 0.09: +2.268; Abstand zu Koide +0.1651 MeV
+  gamma_M aus alt7: gamma_L(0.5493482)*gamma_T   m_tau = 1777.0551 MeV; z gegen PDG 1776.93 +- 0.09: +1.390; Abstand zu Koide +0.0861 MeV
+  d m_tau / d gamma_M = 2396.337 MeV; d ln m_tau / d ln gamma_M = 0.32030
+  gamma_M, das m_tau = 1776.93 traefe (linear): 0.237448; fuer exaktes Koide: 0.237464

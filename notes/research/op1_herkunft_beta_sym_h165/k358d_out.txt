@@ -1,0 +1,15 @@
+Ausgabe von k358d_gegenprobe.wl (Wolfram Language Evaluator, 26.11.2026).
+Warnung vor der Auswertung: Symbol::undefined2: Warning: Global symbols "G, G, G, G, G, G, G" are undefined.
+  (Hinweis des Vorab-Pruefers; G wird im selben Aufruf definiert, die Werte unten stimmen mit k358 ueberein.)
+Meldung am Ende: General::messages: Messages were generated which may indicate errors.
+Rueckgabewert: Null (alle Ergebnisse ueber Print).
+
+gammaL = 1.864699764609  beta = 0.5494056409745
+gammaL^5: 22.54470620 gegen 22.52905685
+mW: 80.3614855 gegen 80.3589925
+beta^2: 0.3018465583 gegen 0.3017834448
+symbolisch dln gammaL/dln beta = -4 b^2/(-1 + b^4) = 1.32842
+symbolisch dln mW/dln beta = -2 b^2 (-1 + b^2)/(1 + b^2 + b^4 + b^6) = 0.296714
+dln artanh/dln beta = 1.27434
+dln Hopfluecke(beta) = -20.6605
+z mW PDG2026: -0.444033 -> -0.128428

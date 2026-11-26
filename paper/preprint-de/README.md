@@ -33,6 +33,11 @@ Vorbereitung 24.11.2026 (Fassung 0.3.0): Neuer Abschnitt 5.7 „Drehsinn und Tur
 Companion (Erkundungen k245–k274, nicht blind; Tests H125 und H126). Titelseite auf „Fassung 0.3.0“, Version-DOI leer bis zur Reservierung.
 Änderungsliste, Metadaten und Schritte im [Release-Paket](../../release/preprint-de-v0.3.0/README.md).
 
+Nachtrag 26.11.2026 (nach 0.3.0, Entwurf): Abschnitt 5.4 nennt das Zählpostulat (Runde v4.10.0-r67: Gewicht 2 je Spin, Fläche √(j(j+1)),
+ein Bit bei j = ½; daraus β = 0,5494056410), die Zwei-Auslesen-Lesart (r66, H164) und den widerlegten Test H165, mit neuem Literatureintrag
+`countingpostulate` (gepinnt auf den Merge-Commit 3fc66afd von PR #337). Der Kopf lautet „Entwurf nach Fassung 0.3.0“. Die veröffentlichte
+Zenodo-Fassung 0.3.0 bleibt unverändert; eine neue Version entsteht nur mit Freigabe des Autors.
+
 ## Querverweise
 
 - [QuantumSphere-Unfold auf GitHub](https://github.com/Moriarty1982/QuantumSphere-Unfold). Grundlage der Fassung 0.1.0 war der [`main`-Stand nach PR #211](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/f2a4e687273f2ec7f4124d490e696e07c00f387a) vom 20. November 2026; die Links des heutigen Entwurfs sind auf Commit [`d2020d17`](https://github.com/Moriarty1982/QuantumSphere-Unfold/commit/d2020d178a483d1baa7be3871ca2e9d597992059) (Merge von PR #268, Runden bis v4.10.0-r55) gepinnt.
