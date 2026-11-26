@@ -988,3 +988,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H155:** Skala als Setzung (k338) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **26.11.2026, Test H156:** Gleiche Massenterme (k339) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**26.11.2026, Runden v4.10.0-r62 und r63:** Sedenion-Kopien und Rest-Generation (H138–H147) sowie Koide-Punkt als Fixpunkt des Frame-Tauschs (H148–H156) in Forschungsstand, Forschungslinie, Gesamtbild, Inhalt, Content-overview, Vorhersagen-und-Tests und Offene-Probleme eingetragen. Physik-Paper und Preprint noch nicht nachgezogen.
