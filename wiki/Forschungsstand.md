@@ -9,6 +9,7 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - **Bezugswert (r67.2):** Ab r67 gilt dieser Wert. Die 0,5493482 in älteren Runden kommt aus gerundeten Eingaben und bleibt dort stehen. Unterschied 1,05·10⁻⁴ in β, 7·10⁻⁴ in γ_L⁵. Kein Urteil kippt: H96, die m_W-Beziehung, H98 und H102 rechnen schon mit dem ungerundeten Wert, und das Leptonfenster enthält beide.
 - **Was das Postulat leistet und was nicht:** Es gibt jetzt eine Rechnung, die zeigt, woher die Zahl kommt. Es fehlt der Grund, warum die Zählung diese Form hat. Statt „zwei Literaturwerte“ steht „eine Regel mit drei benannten Teilen“. **OP1 bleibt offen**, jetzt in der Form „leite das Zählpostulat her“.
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
+- **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
 ### Woher β_sym kommt: eine Gleichung, drei Zutaten; die Überlapp-Schließung erzwingt den Hopf-Wert, nicht den gemessenen (26.11.2026, Test H165, k356; Runde r66)
 

@@ -6,7 +6,10 @@ The numerical values that the construction offers for OP2--OP5 go back to one di
 This section states how the number is defined, what it rests on, and what has been tried to derive it.  The short answer is that the
 number is inserted, not derived: it is fixed by the ratio of two values of the Barbero--Immirzi parameter of loop quantum gravity, read as a Lorentz
 factor.  Why two frames should use two different horizon counting rules is open problem OP1 \Open.  The structural routes to a frame-dependent
-area quantum that the Companion has examined are closed; what remains is a choice.
+area quantum that the Companion has examined are closed; what remains is a choice.  Since 26 November 2026 the choice has a name and a status:
+the author adopted the counting rule as a \emph{postulate} (\rnd{r67}), in the same sense as the exchange symmetry of Section~\ref{sec:B-koide}.
+With it the number is computed from one rule with three named parts instead of being taken as the ratio of two literature values
+(Section~\ref{sec:beta-postulate}).  The reason for the rule is still missing, and OP1 stays \Open.
 
 \subsection{The number and its algebra}
 \label{sec:beta-number}
@@ -39,7 +42,7 @@ The algebra is \Established.  The physical content is the insertion
  \label{eq:beta-values}
 \end{equation}
 which is \Conditional\ on reading a ratio of two values of one gravitational parameter as a Lorentz factor between the real projections of the
-matter frame M and the tachyon frame T (\rndold{r61}, Theoremlet~61.1(c)).  (The main body of the Companion uses the rounded input $0.2375$, which gives $\bsym=0.549348$; \rndold{r63}.)  The ratio
+matter frame M and the tachyon frame T (\rndold{r61}, Theoremlet~61.1(c)).  (The main body of the Companion uses the rounded input $0.2375$, which gives $\bsym=0.549348$; \rndold{r63}.  From \rnd{r67} on the reference value is $\bsym=0.5494056410$, $\gamma_L=1.8646997646$; no recorded verdict depends on the difference.)  The ratio
 $\gamma_L$ is $1/b_M$ in the register of Convention~F and the mutual Lorentz factor of two flux-opposed observers M and $\bar{\mathrm M}$; it is not a
 boost between M and T, since a boost preserves $s=(E+iB)^2$ while the map to T reverses $\operatorname{Re}s$ (\rnd{r29}, Remark~29.4, read with $D$; \rnd{r64}.7).  In the
 observer reading of the register (\rnd{r29}, Theoremlet~29.5), OP1 asks why M moves with $\bsym=0.5494$ relative to the rest frame of the field.
@@ -293,6 +296,56 @@ the root of~\eqref{eq:beta-counting} is $\gamma_M'=0.2341229$, hence $\gamma_L'=
 from PDG 2025) and $\Omega_M'=0.2953$.  The lepton and $m_W$ windows are missed; H123d does not carry \Refuted\ (\rnd{r58}, Theoremlet~58.3).  The
 readout sees the octant sign, not a weight two at every $j$.  Where the time direction $\tau$ comes from remains open.
 
+\subsection{The counting rule as a postulate, and the two-readout reading}
+\label{sec:beta-postulate}
+
+\paragraph{The postulate (\rnd{r67}).}  (C1) In the matter frame M every spin $j\ge\tfrac12$ of a puncture counts with weight two, the extremal
+doublet $m=\pm j$.  (C2) The area of a puncture is proportional to $\sqrt{j(j+1)}$.  (C3) The frame T counts only $j=\tfrac12$, and one such
+puncture carries one bit.  The assignment of the two rules to M and T is part of the postulate.  It is adopted by the author as a working
+assumption and is not derived \Conditional.
+
+\begin{proposition}[the number that follows; \rnd{r67}, Theoremlet~67.1]
+\label{prop:beta-postulate}
+Under (C1)--(C3), with $k=2j$ and $c_k=\sqrt{k(k+2)/3}$, the factor $\gamma_L$ is the unique positive root of
+\begin{equation}
+ \sum_{k\ge1}2^{\,1-\gamma_Lc_k}=1,\qquad\text{so}\qquad \gamma_L=1.8646997646,\quad \bsym=0.5494056410 .
+ \label{eq:beta-postulate}
+\end{equation}
+If (C2) is replaced by the semiclassical area $j+\tfrac12$ in both frames, the sum is geometric and $\gamma_L=2$, $\bsym=1/\sqrt3$ exactly.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:beta-counting} with $g=2$ and $\gamma=\gamma_M$, written in units of the T quantum $\gamma_T=\ln2/(\pi\sqrt3)$, is
+\eqref{eq:beta-postulate} with $\gamma_L=\gamma_M/\gamma_T$; the left side decreases strictly in $\gamma_L$.  With $c_k=(k+1)/2$ and
+$x=2^{-\gamma_L/2}$ the sum is $2x^2/(1-x)$, which equals $1$ at $x=\tfrac12$.
+\end{proof}
+
+The proposition is \Established\ as a computation (root and ratio agree to $39$ digits, \texttt{mpmath} and Wolfram Language).  It shows where the
+number comes from once the rule is granted.  It also shows where the physics sits: the difference between the Hopf value $1/\sqrt3$ of the
+Companion (\texttt{thm:bsym-hopf}) and $\bsym$ is the difference between the area $j+\tfrac12$ and the Casimir area.  The value is not
+fitted to data, but the windows of Section~\ref{sec:beta-dependence} were known when the rule was chosen, so the postulate is not a blind
+prediction.
+
+\paragraph{The two-readout reading (\rnd{r66}; tests H161, H164).}  Read the Hopf sphere of \texttt{thm:bsym-hopf} as the celestial sphere of light
+directions; this reading is set \Reading.  Two null directions at angle $\theta$ have spinor overlap $\cos(\theta/2)$, and the boost with velocity
+$\cos(\theta/2)$ along their bisector makes them antipodal.  For the pure Hopf state $K_1$ at the polar angle $\theta_H=2\arcsin\bsym$ and the
+antipode $S$ of the photon pole this gives $|\langle K_1|S\rangle|=\bsym$: the angle reading and the velocity reading of $\bsym$ are one statement.
+The boost has the rapidity $\eta$ of~\eqref{eq:beta-values}, and it carries the angle between the pole and $K_1$ from $\theta_H$ to $2\alpha$ with
+$\cos2\alpha=1/\gamma_L$, so that the populations along the image of the pole are $(1,\bsym^2)/(1+\bsym^2)$, those of the matter state of Convention~F.
+The equal mixture of the two readouts is not the matter state (Bloch length $\bsym$ against $1/\gamma_L$).  All of this holds identically in
+$\beta$ and derives no value.
+
+\paragraph{The overlap closure forces the Hopf value (\rnd{r67}; test H165).}  With spin $j$ carried by $2j$ symmetrised qubits, the coherent states
+of the pair have overlap $\bsym^{2j}$, and
+\begin{equation}
+ \sum_{j\ge1/2}2\,|\langle j;K_1|j;S\rangle|^2=\frac{2\beta^2}{1-\beta^2}=\gamma_L-1
+\end{equation}
+for every $\beta$.  The closure ``sum $=1$'' holds exactly at $\beta=1/\sqrt3$.  The two-readout picture by itself therefore yields the Hopf value
+and not $\bsym$; four further closures and thirteen number candidates fixed in advance give no identity either.  The pre-registered test H165
+is \Refuted\ (predominantly not blind).  Two near coincidences at $5\cdot10^{-4}$ remain unexplained and are not used
+($2^{1-\gamma_L}=0.549161$ against $\bsym$; \rnd{r67}, Remark~67.4).  A survey made for this test lists $37$ attempts in the Companion to derive
+$\bsym$; none succeeds.
+
 \subsection{One number, five translations}
 \label{sec:beta-translations}
 
@@ -321,4 +374,4 @@ None of the candidates in the Companion meets this profile (\rnd{r30}, Remark~30
 \Established: the algebra of Proposition~\ref{prop:beta-symmetric}, the counting roots, Propositions~\ref{prop:beta-saturation},
 \ref{prop:beta-holst} and \ref{prop:beta-octant}.  \Conditional: $\bsym=0.5494$ as a frame offset, on the U(1) counting per frame, and the
 equivalence with a frame-dependent area quantum.  \Reading: saturation, irreducibility, crossings, dimension.  \Refuted: H104, H121c, H123b (separation at every $j$), H123d.
-\Open: OP1, i.e.\ why M counts all spins with weight two and T only $j=\tfrac12$.  The predictions H15, H46 and H96 inherit this status.
+\Open: OP1, i.e.\ why M counts all spins with weight two and T only $j=\tfrac12$, and why with the Casimir area; since \rnd{r67} this rule is a named postulate, which closes nothing.  The predictions H15, H46 and H96 inherit this status.
