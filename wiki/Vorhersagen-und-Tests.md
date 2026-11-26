@@ -1,5 +1,7 @@
 # Vorhersagen und Tests
 
+**Nachtrag 26.11.2026 (H162, k360):** H162 abgeschlossen (a, b, c, d bestätigt; weitgehend nicht blind). Weg A (zwei Generationen), die Familien-su(2) und H125 Stufe A gelten für jede Ladungsachse u in Im H_n, auch für e₇; e₈ ist nur durch [Q, ψ] = 0 ausgezeichnet, e₇ dadurch, dass die Ladung die oktonionische Ladung einer Kopie fortsetzt. H125 Stufe B bleibt offen. Kein neuer offener Test. [Ergebnis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/predictions/Ergebnis_H162_Ladungsachse_e7_WegA_CP.md)
+
 **Nachtrag 26.11.2026 (v4.10.0-r64):** H105 und H128–H136 stehen als Runde r64 im Companion, je mit dem Status aus der Ergebnis-Notiz; kein Status ändert sich. Festgehalten ist die Frame-Regel: vor „von Daten disfavorisiert“ wird die Vorhersage in den Materie-Frame übertragen (für Mischung die Maske mit ε = artanh β_sym, H45). Das Urteil „steht gegen die Daten schlecht da“ in der Zeile H131 gilt deshalb nur für die nicht übertragene Spalte (H134). H130 stützt den Platzhalter CT-003 (Ladungsachse e₈) nicht; H125 Stufe A bleibt „bedingt unter CT-003“.
 
 **Nachtrag 26.11.2026 (v4.10.0-r62, r63):** H138–H156 stehen als Runden r62 (H138–H147) und r63 (H148–H156) im Companion, je mit dem Status aus der Ergebnis-Notiz. Offene bedingte Vorhersage aus r63.5: Gilt K = ⅔ exakt für Polmassen, dann m_τ = 1776,969 MeV (heute 1776,93 ± 0,09 MeV, 0,43σ). Sie hängt am Postulat der Frame-Gleichberechtigung und an der gesetzten Skala. H157 läuft und ist nicht Teil der Runden.

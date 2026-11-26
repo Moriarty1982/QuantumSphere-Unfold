@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Test H162: Weg A und das relative CP-Vorzeichen hängen nicht an der Achse e₈ (26.11.2026, k360, weitgehend nicht blind)
+
+Offener Punkt aus r64.2: H130 stützt die Ladungsachse e₈ (CT-003) nicht. Bestehen Weg A und H125 Stufe A auf e₇? Gerechnet wurde die Ladung in der Form von r13.1 mit beliebiger Achse, Q_u = P₀(½ − (i/2)L_u)P₀ + ⅔P₃ + ⅓P₃̄.
+
+- **H162a bis c bestätigt:** Für u = e₇ (und für jede Einheit u in Im H_n) trägt ℂ⊗𝕊 zwei vollständige Generationen, die Rechtsmultiplikationen R_e7, R_e8, R_e15 vertauschen mit Ladung und Farbe, und die Familien-su(2) ist auf Leptonen und Quarks entgegengesetzt orientiert (Bargmann ¼ − i/4 gegen ¼ + i/4, 24 + 24 Zuordnungen). Grund: H_n ist assoziativ, der farbige Teil der Ladung hängt nicht von u ab.
+- **H162d bestätigt:** Q_{e7} setzt die oktonionische Ladung Q₈ der Kopie 𝕆₀ exakt fort; Q_* (e₈) tut das nicht (Leck² = ½).
+- **Was e₈ auszeichnet,** ist allein [Q, ψ] = 0. Unter e₇ ist ψ keine Symmetrie der Ladung; die Aussagen von r13.1 bis r13.3 über ψ auf dem neutralen Kern gelten dort nicht in dieser Form.
+
+Damit lässt sich „bedingt unter CT-003“ für Weg A und H125 Stufe A abschwächen zu „bedingt unter der Form Q_u“. Es bleiben zwei Generationen, die Wahl der Achse bleibt eine Setzung (ψ-fest oder kopientreu), H125 Stufe B bleibt offen. Wolfram exakt für a, b, d. Noch keine Runde im Companion. [Ergebnis](../notes/research/predictions/Ergebnis_H162_Ladungsachse_e7_WegA_CP.md)
+
 ### Runde r64 und Berichtigung des Physik-Artikels „One Object, Three Frames“ (26.11.2026, Sammelrunde zu H105 und H128–H136, keine neue Rechnung)
 
 Der veröffentlichte Artikel 1.0.0 wurde Satz für Satz gegen den Companion, das Testregister und die Notizen nach r60 geprüft und im Repo berichtigt (die Zenodo-Fassung 1.0.0 ist unverändert; eine neue Fassung gibt es nur mit Marcs Freigabe). Weil der berichtigte Artikel jetzt auch auf H105 und H128–H136 verweist, stehen diese Befunde als Runde v4.10.0-r64 im Companion, je mit dem Status aus der Ergebnis-Notiz. H137 (Bandschaltung) gehört zur QAM-Linie und ist nicht enthalten.
