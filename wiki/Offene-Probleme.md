@@ -144,6 +144,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H178, 26.11.2026:** Für OP3 und OP4. J legt θ = 45° nur in der farblosen Ebene fest (J² = +1 dort, J² = −1 auf den Farbrichtungen); für Felder mit Farbanteil ist der Winkel frei. Damit ist erklärt, warum K = ⅔ nur bei den Leptonen gilt. Die Größe der Quarkabweichung bleibt angepasst (zwei Koeffizienten, gesetzter Farbanteil). OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/farbe_h178/`.
 
+**Erkundung k378, 26.11.2026:** Für OP3 und OP4. Ein Farbtriplett hat keinen gebrochenen Farbanteil (sin²α = 1); die Setzung aus H178c ist zurückgenommen. Die Farbe erklärt den Unterschied zwischen Up und Down nicht und verschiebt bei gleich ausgerichteten Kopien auch δ nicht. ρ_d, ρ_u und die Abstände x vom masselosen Punkt bleiben unerklärt. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/farbanteil_k378/`.
+
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
 **Runde r65, 26.11.2026:** H162 und k361 stehen als Runde v4.10.0-r65 im Companion. Für OP3/OP4: Weg A und das relative CP-Vorzeichen gelten für jede Ladungsachse und beide Ladungstypen; die Frage aus r64.2 ist damit beantwortet. Offen bleiben die Wahl der Achse (ψ-fest oder kopientreu), die Setzung der Seite und die dritte Generation. OP3 und OP4 bleiben offen.
