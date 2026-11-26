@@ -1,0 +1,6 @@
+delta* = 0.2222220470731 ; m_mu/m_e dort: 206.7682827
+        2x = gd - arctan: x = 0.0396329814661, delta = 0.222166406333, delta - delta* = -5.5641e-5 (-1.391e+5 sigma_delta), m_mu/m_e = 206.123777 (-1.401e+5 sigma), m_tau/m_mu = 16.822663
+    tan 2x = gd - arctan: x = 0.0395502870876, delta = 0.222249100712, delta - delta* = 2.7054e-5 (6.763e+4 sigma_delta), m_mu/m_e = 207.082676 (6.835e+4 sigma), m_tau/m_mu = 16.815824
+ tan x = (gd - arctan)/2: x = 0.0396122495264, delta = 0.222187138273, delta - delta* = -3.4909e-5 (-8.727e+4 sigma_delta), m_mu/m_e = 206.363592 (-8.798e+4 sigma), m_tau/m_mu = 16.820948
+zum Vergleich delta = 2/9: delta - delta* = 1.7515e-7 ; m_mu/m_e = 206.770316
+Schwelle 1e-4 (wie H167, H168) statt 1e-3: kein Treffer (naechster 6.9e-4).

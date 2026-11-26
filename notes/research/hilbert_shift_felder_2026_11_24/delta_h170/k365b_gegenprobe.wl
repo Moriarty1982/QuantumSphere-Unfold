@@ -1,0 +1,28 @@
+(* k365b (H170): unabhaengige Gegenprobe. j als Symbol modulo j^2 + 1, k = I j. *)
+red[e_] := PolynomialRemainder[Expand[e], j^2 + 1, j];
+P = (1 + I j)/2; Pb = (1 - I j)/2; k = I j;
+Print["a1 Bahn: ", NestList[Simplify[-I #] &, I, 4], "; Fixpunkte: ", Solve[-I c == c, c]];
+Print["b1 k^2 - 1: ", red[k^2 - 1], "; (a + b j)(a - b j): ", red[(a + b j) (a - b j)], "; (a + b k)(a - b k): ", red[(a + b k) (a - b k)]];
+Print["b2 1 + Tanh[e] k - (Cosh[e] + k Sinh[e])/Cosh[e]: ", FullSimplify[CoefficientList[red[1 + Tanh[e] k - (Cosh[e] + k Sinh[e])/Cosh[e]], j]]];
+Print["b3 (Cosh+k Sinh) P - Exp[e] P: ", FullSimplify[CoefficientList[red[(Cosh[e] + k Sinh[e]) P - Exp[e] P], j]], "; Pb: ", FullSimplify[CoefficientList[red[(Cosh[e] + k Sinh[e]) Pb - Exp[-e] Pb], j]]];
+Print["b4 Addition: ", Simplify[CoefficientList[red[(1 + c1 k) (1 + c2 k) - (1 + c1 c2) (1 + (c1 + c2)/(1 + c1 c2) k)], j]]];
+Print["b5 2(1+a^2), 2(3a-a^3), bei a = I cp: ", Factor[{2 (1 + a^2), 2 (3 a - a^3)} /. a -> I cp], "; 1 + k - 2P: ", red[1 + k - 2 P]];
+G[c_] := (c s - v)^2; F[c_] := G[c]/(1 + c^2); n = s^2 + v^2;
+Print["c1 G[I] + (s + I v)^2: ", Expand[G[I] + (s + I v)^2]];
+Print["c2 Re, Im: ", Simplify[ComplexExpand[Re[G[I]]] - (2 F[0] - n)], " ", Simplify[ComplexExpand[Im[G[I]]] - (2 F[1] - n)], "; Im = ", ComplexExpand[Im[G[I]]]];
+pol = {s -> r Cos[d], v -> r Sin[d]};
+Print["c3 2 F[c] - n + r^2 Cos[2(d - ArcTan[c])]: ", FullSimplify[(2 F[c] - n /. pol) + r^2 Cos[2 (d - ArcTan[c])], c \[Element] Reals]];
+Print["c4 Re[Exp[-2 I chi] G_i] + r^2 Cos[2(d - chi)]: ", FullSimplify[ComplexExpand[Re[Exp[-2 I chi] (-r^2 Exp[2 I d])]] + r^2 Cos[2 (d - chi)]]];
+Print["d1 Re[-I G[I]] - (2 F[1] - n): ", Simplify[ComplexExpand[Re[-I G[I]]] - (2 F[1] - n)]];
+Print["d2 -I G_i(d) - G_i(d - Pi/4): ", FullSimplify[-I (-r^2 Exp[2 I d]) + r^2 Exp[2 I (d - Pi/4)]], "; Exp[-I Pi/4]^2 + I: ", Simplify[Exp[-I Pi/4]^2 + I]];
+fold[x_] := Module[{y = Mod[x, 2 Pi/3]}, Min[y, 2 Pi/3 - y]];
+Print["d3 Minima gefaltet (q, Vorzeichen +/-): ", Table[{q, Union[Table[fold[q Pi/4 + kk Pi], {kk, 0, 1}]], Union[Table[fold[q Pi/4 + Pi/2 + kk Pi], {kk, 0, 1}]]}, {q, 0, 3}]];
+be = 0.5494056410`25; ds = 0.2222220470731`25; e0 = ArcTanh[be]; gd = ArcSin[be]; at = ArcTan[be]; x = Pi/12 - ds;
+Print["e1 eps0, gd, arctan, x: ", N[{e0, gd, at, x}, 12]];
+base = {gd - Pi/6, Pi/6 - at, e0 - gd, e0 - Pi/6, Pi/4 - e0, gd - at, Pi/4 - gd};
+cands = Flatten[{#, #/2, 2 #} & /@ base]; targets = {x, 2 x, Tan[x], Tan[2 x]};
+rel = Sort[Flatten[Table[{Abs[cc/tt - 1], tt, cc}, {tt, targets}, {cc, cands}], 1]];
+Print["e2 Vergleiche: ", Length[rel], "; Treffer < 10^-3: ", Count[rel, {u_, _, _} /; u < 10^-3], "; < 10^-4: ", Count[rel, {u_, _, _} /; u < 10^-4]];
+Print["e3 beste vier: ", N[rel[[1 ;; 4]], 8]];
+ratio[dd_] := Module[{m = Sort[Table[(1 + Sqrt[2] Cos[dd + 2 Pi kk/3])^2, {kk, 0, 2}]]}, m[[2]]/m[[1]]];
+Print["f1 m_mu/m_e bei delta*, bei 2x = gd - at, bei tan 2x = gd - at: ", N[{ratio[ds], ratio[Pi/12 - (gd - at)/2], ratio[Pi/12 - ArcTan[gd - at]/2]}, 10]];
