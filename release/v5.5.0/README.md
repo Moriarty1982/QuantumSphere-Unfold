@@ -1,10 +1,12 @@
-# Quantum Sphaera Companion v5.5.0 — PREPARED, NOT RESERVED, NOT PUBLISHED
+# Quantum Sphaera Companion v5.5.0 — DOI RESERVED, NOT UPLOADED, NOT PUBLISHED
 
-Status on 26 November 2026: preparation only. No Zenodo draft exists, no version DOI is reserved, nothing is uploaded or
-published, and no tag exists. `qam/editions/v5_release.json` still names v5.4.0 and stays so until a DOI is reserved.
+Status on 26 November 2026: the version DOI is reserved (approved by the author on 26 November 2026). Zenodo draft 24563811
+is a new version of record 24500009; it is unpublished and holds no files. Nothing is uploaded or published, and no tag
+exists. The DOI resolves only after publication. For every later run use `deposition_id=24563811`, never `new_version_of`
+again. Runs of the workflow "Zenodo Release": dry run 45842058182, reservation 45842937765.
 
 - Target version: v5.5.0 (full Companion and physics paper, one package).
-- Version DOI: not reserved.
+- Version DOI: https://doi.org/10.5281/zenodo.24563811 (reserved, unpublished).
 - Concept DOI: https://doi.org/10.5281/zenodo.19210728
 - Predecessor: v5.4.0, DOI 10.5281/zenodo.24500009, record https://zenodo.org/records/24500009.
 - Metadata draft: `release/zenodo/metadata_v5_5_0.json` (publication date provisional).
@@ -54,6 +56,17 @@ Only what was actually run, locally in a container (TeX Live 2023, pdflatex), on
 The check "paired-documents" runs on the PR of this preparation. Not done: `tools/qs.py doi` on the PDFs (needs the reserved DOI), any Zenodo step, `CITATION.cff`, `.zenodo.json`, the DOI section of `AGENTS.md`, `DOI_ROLES` in `tools/qs.py`. The schema
 of the assertion database was not changed; no migration was needed for the checks above. No visual check of the PDFs.
 
+## DOI stamping (26 November 2026)
+
+Entered: `qam/editions/v5_release.json` (version 5.5.0, date, version DOI), the metadata description, `.zenodo.json` (copy of
+the metadata file), `CITATION.cff`, `DOI_ROLES` in `tools/qs.py`, the DOI section of `AGENTS.md` (as reserved and
+unpublished), `sources/research/parts/working-preamble.tex` (version, date, DOI, PDF title). The publication date
+2026-11-26 in these files is provisional and is set to the actual date before publication. Rebuild after stamping (local container, `python -m qam.tools.build_v5_documents`): status `candidate-built`,
+`build_complete` true; full Companion 1572 pages, physics edition 38 pages; `pytest qam/store/test_editions.py`: 3 passed.
+`python tools/qs.py doi` on both PDFs: the version DOI 10.5281/zenodo.24563811 occurs exactly once, on the title page; no
+previous DOI on a title page; the expired DOI does not occur. The release files themselves come from the paired build on
+GitHub, not from this local build.
+
 ## Scope
 
 This minor version changes content, not the status of the open physical questions. OP1 to OP5, C5 and C6/T2 remain open.
@@ -67,8 +80,8 @@ hashes do not prove physical interpretation.
 
 1. Commit, PR and merge of this preparation (content changes go through branch and PR).
 2. Paired build on GitHub (check "paired-documents" on the PR).
-3. Reservation of the version DOI on Zenodo (`new_version_of=24500009`, `reserve_only=true`, `dry_run=false`).
-4. DOI stamping as in `.github/ISSUE_TEMPLATE/release-4-doi.yml`: `qam/editions/v5_release.json`, metadata description,
+3. Done on 26 November 2026: reservation of the version DOI (draft 24563811).
+4. Done on 26 November 2026 (see "DOI stamping" below): DOI stamping as in `.github/ISSUE_TEMPLATE/release-4-doi.yml`: `qam/editions/v5_release.json`, metadata description,
    `CITATION.cff`, `.zenodo.json`, this note, `DOI_ROLES` in `tools/qs.py`, DOI section of `AGENTS.md`; rebuild and
    `tools/qs.py doi` on both PDFs.
 5. Upload into the draft with `replace_files=true` and `default_preview` set to the full PDF; check of the draft and its

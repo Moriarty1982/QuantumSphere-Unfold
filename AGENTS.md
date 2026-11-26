@@ -8,6 +8,10 @@ Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematisch
 Sphaera“. Die öffentliche Baseline ist **v5.4.0** vom 2026-11-24
 (Version-DOI 10.5281/zenodo.24500009, Concept-DOI 10.5281/zenodo.19210728;
 Vorgänger v5.3.0, 10.5281/zenodo.24434403; davor v5.2.0, 10.5281/zenodo.24294648).
+**Reserviert, unveröffentlicht (26.11.2026):** v5.5.0 mit den Runden v4.10.0-r60 bis r68, Zenodo-Entwurf 24563811, Version-DOI
+10.5281/zenodo.24563811 (löst erst nach der Veröffentlichung auf); Upload und Veröffentlichung nur mit Freigabe des Autors. Ebenso
+reserviert: Physik-Artikel 1.1.0 (Entwurf 24563808, 10.5281/zenodo.24563808; Concept-DOI des Records 10.5281/zenodo.24539643) und
+deutscher Preprint 0.4.0 (Entwurf 24563916, 10.5281/zenodo.24563916). Bis zur Veröffentlichung bleibt v5.4.0 die öffentliche Baseline.
 v5.4.0 bringt die Runden v4.10.0-r31 bis r59 (überwiegend Erkundungen) und im Physik-Paper den durchgerechneten OP5-Fall,
 Ergänzungen im Grenzen-Teil (r52–r58) und die Händigkeitsserie (r59) (1537/36 Seiten); Paketquellstand
 122eb34315a7870106a3e7a8d8fcbf74c438449d, Tag v5.4.0.

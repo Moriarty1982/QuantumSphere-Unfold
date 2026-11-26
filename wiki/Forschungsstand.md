@@ -6,7 +6,7 @@
 - **Layout:** Drei Tabellen und eine Formelzeile in r60, r62 und r67 passen jetzt auf die Seite; der Inhalt ist unverändert.
 - **Physik-Ausgabe des Companion** (`qam/editions/`): neuer Abschnitt „Family symmetry, octonion copies and the Koide point on the tower“ (r60 bis r65) und Ergänzungen zu „One number and several translations“ (r64, r66, r67, r68). Katalog der Forschungsnotizen: elf neue Einträge (H149 bis H156, H162, Entscheidung r67, k358), zusammen 61.
 - **Deutscher Preprint:** neuer Abschnitt 5.8 „Familiensymmetrie, Kopien und der Koide-Punkt“ (r60 bis r65, Tests getrennt von Erkundungen), Titelseite „Fassung 0.4.0“ ohne DOI.
-- **Vorbereitet, nicht reserviert, nicht veröffentlicht:** Companion v5.5.0, Physik-Artikel 1.1.0, Preprint 0.4.0 (siehe „Versionen und Quellen“). Zenodo-Schritte nur mit ausdrücklicher Freigabe des Autors.
+- **DOIs reserviert (26.11.2026), nichts hochgeladen, nichts veröffentlicht:** Companion v5.5.0 (10.5281/zenodo.24563811), Physik-Artikel 1.1.0 (10.5281/zenodo.24563808), Preprint 0.4.0 (10.5281/zenodo.24563916); die DOIs lösen erst nach der Veröffentlichung auf (siehe „Versionen und Quellen“). Zenodo-Schritte nur mit ausdrücklicher Freigabe des Autors.
 
 ### Die Zählregel ist jetzt Postulat; β_sym = 0,5494056410 ist die daraus berechnete Zahl (26.11.2026, Runde r67)
 
