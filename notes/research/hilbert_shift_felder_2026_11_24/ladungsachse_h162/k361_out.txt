@@ -1,0 +1,19 @@
+1  Rang von (L_e7, L_e8, L_e15, R_e7, R_e8, R_e15) auf H_n: 6 (so(4) hat Dimension 6); |[L_x, R_y]| max = 0.0e+00
+   A = a.L + b.R: A^2 = -(|a|^2 + |b|^2) + 2 (a.L)(b.R), Rest 1.1e-14; (a.L)(b.R) ist spurfrei und ungleich null fuer a, b != 0,
+   also A^2 = -1 genau fuer (|a|, |b|) = (1, 0) oder (0, 1): L_u oder R_u.
+2  Q^R, u = e7: Spektrum {0: 2, 0.3333: 6, 0.6667: 6, 1: 2}; |[Q,su3]| 7.1e-16; |Qquer-(1-Q)| 8.7e-16; |[Q,psi]| 1.732; O_0: Leck 0.000, |Q - Q_8| 0.000
+3  Q^R, u = e7: Kommutator mit Q auf H_n: L_x 4.0e-34, R_x 2.00; farbig: R_x 7.3e-16, L_x 0.00; L_x mischt neutral/farbig: 0.0e+00
+   Familie Leptonen = L_x auf H_n: [L7,L8] = +2.0000 L15, Bargmann 0.2500+0.2500j;  Familie Quarks = R_x: [R7,R8] = +2.0000 R15, Bargmann 0.2500+0.2500j
+2  Q^R, u = e8: Spektrum {0: 2, 0.3333: 6, 0.6667: 6, 1: 2}; |[Q,su3]| 6.5e-16; |Qquer-(1-Q)| 8.7e-16; |[Q,psi]| 0.000; O_0: Leck 0.707, |Q - Q_8| 0.707
+3  Q^R, u = e8: Kommutator mit Q auf H_n: L_x 4.0e-34, R_x 2.00; farbig: R_x 7.3e-16, L_x 0.00; L_x mischt neutral/farbig: 0.0e+00
+   Familie Leptonen = L_x auf H_n: [L7,L8] = +2.0000 L15, Bargmann 0.2500+0.2500j;  Familie Quarks = R_x: [R7,R8] = +2.0000 R15, Bargmann 0.2500+0.2500j
+2  Q^R, u zufaellig: Spektrum {0: 2, 0.3333: 6, 0.6667: 6, 1: 2}; |[Q,su3]| 7.0e-16; |Qquer-(1-Q)| 8.7e-16; |[Q,psi]| 1.609; O_0: Leck 0.267, |Q - Q_8| 1.362
+3  Q^R, u zufaellig: Kommutator mit Q auf H_n: L_x 4.0e-34, R_x 2.00; farbig: R_x 7.3e-16, L_x 0.00; L_x mischt neutral/farbig: 0.0e+00
+   Familie Leptonen = L_x auf H_n: [L7,L8] = +2.0000 L15, Bargmann 0.2500+0.2500j;  Familie Quarks = R_x: [R7,R8] = +2.0000 R15, Bargmann 0.2500+0.2500j
+4  Q^R, u = e7: Verflechter Dimension 20; Zuordnungen vollen Rangs: Leptonen 24 mit det [1], Quarks 24 mit det [1]
+4  Q^R, u = e8: Verflechter Dimension 20; Zuordnungen vollen Rangs: Leptonen 24 mit det [1], Quarks 24 mit det [1]
+5  Nachtrag (Linksmultiplikationen auf dem farbigen Teil):
+   |[L_x, su3_c]| max = 0.0 ; |[L_x, P3]| max = 0.0
+   L_x^2 = -1 farbig: [True, True, True]
+   [L7,L8] = -2.0000 L15 farbig, Rest 0.00e+00; Bargmann farbig 0.2500-0.2500j
+   Dimension der Lie-Algebra aus L_x und Kommutatoren: 6
