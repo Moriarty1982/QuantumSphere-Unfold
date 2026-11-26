@@ -1,5 +1,17 @@
 # Forschungsstand
 
+### Zwei Lesarten des M-Zustands: Die Higgs-Zahl hängt nicht am Zustand der übrigen Ablesungen (26.11.2026, Test H181, k383)
+Vorab-Notiz 84d53c8; Teil 1 nicht blind, Maskenscan blind. Anlass: Weggabelung nach r70 (κ-Treffer Zufall oder doch b/a = β_sym²).
+- **Urteil: H181 widerlegt.** Mit einem gemeinsamen Wörterbuch (cot θ_W = cosh 2η, Ω_M = tanh² η, Maske ε = η, κ = cosh 2η) trägt der Zustand
+  b/a = β_sym m_W (80,361 GeV, −0,2σ), Ω_M (0,3018), sin²θ₁₂ (0,3087) und die Maske, gibt aber m_h = 201 GeV. Der Zustand b/a = β_sym² gibt
+  m_h = 124,8 GeV und verfehlt alles andere: m_W = 70,06 GeV, Ω_M = 0,091, sin²θ₁₂ = 0,093, Maske ohne Treffer.
+- **Der κ-Treffer trennt die Lesarten nicht (Erkundung).** Auch für b/a = β_sym liegen zwei einfache Funktionen im 5-%-Fenster: cosh η = 1,1968
+  (124,4 GeV) und coth 2η = 1,1848 (122,9 GeV). Das stützt die Einordnung als Zufallstreffer (k303, r64.4).
+- **Zwei M-Zustände?** Die Amplituden-Lesart ließe sich nur mit einem zweiten Wörterbuch halten (cot θ_W als Achsenverhältnis, Ω_M als
+  Amplitudenverhältnis). Dann kommen alle Zahlen wieder heraus, die Portgewichte wären aber 91,65 : 8,35 und widersprächen Konvention F. Eine
+  Messgröße, die das von der Gewichts-Lesart trennt, gibt es im Bestand nicht; die Maske (ε = 0,6175 gegen ln γ_L = 0,6231) verschiebt sin²θ₂₃ nur um 0,0003.
+- OP1 bis OP5 offen, kein Guard berührt. [Notiz](../notes/research/hilbert_shift_felder_2026_11_24/zwei_lesarten_h181/Ergebnis_H181_Zwei_Lesarten_des_M_Zustands.md).
+
 ### Portgewichte gegen Amplituden, der HC auf der Zustandskugel (26.11.2026, Runde r70, Erkundung k382, nicht blind)
 
 Anlass war eine Zeichnung der Frames, die der Autor am 26.11.2026 angefragt hat. Dabei fiel auf, dass r69.4 für den Materie-Frame zwei Angaben nebeneinanderstellt, die nicht denselben Zustand beschreiben. Runde **v4.10.0-r70** stellt das richtig. Kein Test mit Kriterium, keine H-Nummer, kein Status eines offenen Problems geändert.

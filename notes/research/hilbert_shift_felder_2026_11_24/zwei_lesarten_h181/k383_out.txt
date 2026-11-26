@@ -43,3 +43,13 @@ Urteil H181 (Teil 1): Lesart A verfehlt 4 von Q1 bis Q4 -> widerlegt
     kappa = cosh(2eta) = 1.20049 (-0.283 %), m_h = 124.797 GeV
 
 === Teil 2 (blind): Maskenscan, unveraenderter Code k105 mit drei Werten von eps ===
+Variante A, eps = eta_A = artanh(beta_sym^2) (0.3116): 0 Treffer
+Variante A, eps = eta_W = artanh(beta_sym) (0.6175): 168 Treffer; sin^2 23 in [0.4908, 0.4975] (Breite 0.0067), |sin delta| in [0.169, 0.998] (Breite 0.829)
+Variante A, eps = 2 eta_A = ln gamma_L (0.6231): 232 Treffer; sin^2 23 in [0.4911, 0.4977] (Breite 0.0066), |sin delta| in [0.179, 0.999] (Breite 0.820)
+Variante B, eps = eta_A = artanh(beta_sym^2) (0.3116): 0 Treffer
+Variante B, eps = eta_W = artanh(beta_sym) (0.6175): 1552 Treffer; sin^2 23 in [0.4908, 0.4975] (Breite 0.0067), |sin delta| in [0.168, 0.999] (Breite 0.831)
+Variante B, eps = 2 eta_A = ln gamma_L (0.6231): 1936 Treffer; sin^2 23 in [0.4911, 0.4977] (Breite 0.0066), |sin delta| in [0.177, 0.999] (Breite 0.822)
+
+H45a (Treffer bei eps = artanh(beta_sym)): widerlegt
+H45b (scharf): widerlegt
+H45c (Treffer beim Hopf-Wert): nein

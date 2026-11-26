@@ -1032,3 +1032,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Erkundung k380:** HS-Stufe der Sektoren; Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert.
 
 **26.11.2026, Test H180 (k381):** K der Neutrinos; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
+
+**26.11.2026, Test H181 (k383):** Zwei Lesarten des M-Zustands; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein neuer Befund für Physik-Artikel oder Preprint; r70 bleibt).
