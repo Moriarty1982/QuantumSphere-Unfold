@@ -1,0 +1,44 @@
+== H168a: Minima des Spin-1-Terms je Ladungsmischung ==
+c = 0: chi = 0.000000; Minima chi + k pi/2, gefaltet: [np.float64(0.0), np.float64(0.523598775598), np.float64(1.047197551197)]
+    delta = 0.000000: Wurzeln [0.292893 0.292893 2.414214]
+    delta = 0.523599: Wurzeln [-0.224745  1.        2.224745]
+    delta = 1.047198: Wurzeln [-0.414214  1.707107  1.707107]
+c = 1: chi = 0.785398; Minima chi + k pi/2, gefaltet: [np.float64(0.261799387799), np.float64(0.785398163397)]
+    delta = 0.261799: Wurzeln [0.       0.633975 2.366025]
+    delta = 0.785398: Wurzeln [-0.366025  1.366025  2.      ]
+pi/6 - pi/12 = 0.261799387799 = pi/12 = 0.261799387799
+
+== H168b: gemeinsamer Versatz ==
+x = pi/12 - delta* = 0.0395773407; delta_e = pi/12 - x = 0.2222220471; delta_nu(H99) = delta* + pi/12 = 0.4840214349; pi/6 - x = 0.4840214349; Differenz 0.0e+00
+als Mischung: chi_e = pi/4 - x -> c_e = 0.9238205206; chi_nu = -x -> c_nu = -0.0395980179
+
+== H168c: gemeinsame Skala? ==
+R_obs = 0.030016 +- 0.000457
+  delta_nu = pi/6 (kein Versatz): R = 0.040721; Abstand +23.40 sigma
+  delta_nu = pi/6 - x (gleicher Versatz, H99): R = 0.030839; Abstand +1.80 sigma
+  delta_nu = pi/12 (Oktant): R = 0.005155; Abstand -54.34 sigma
+  Neutrinomassen bei pi/6 - x (meV): [ 0.379  8.808 50.111]; Summe der Wurzeln 0.29824 eV^(1/2)
+  (Summe sqrt m_nu / Summe sqrt m_l)^2 = 3.15e-11: Versatz aus Ordnung 6 bei gemeinsamem Lambda waere x_nu = 1.2e-12
+
+== H168d: acht Kandidaten (blind) ==
+  delta_nu = 0     - x (gefaltet 0.039577): Wurzeln [0.245  0.3419 2.4131], R = 0.000297, -65.0 sigma
+  delta_nu = 0     + x (gefaltet 0.039577): Wurzeln [0.245  0.3419 2.4131], R = 0.000297, -65.0 sigma
+  delta_nu = pi/12 - x (gefaltet 0.222222): Wurzeln [0.0404 0.5802 2.3794], R = 0.003535, -57.9 sigma
+  delta_nu = pi/12 + x (gefaltet 0.301377): Wurzeln [-0.0388  0.6883  2.3505], R = 0.007354, -49.5 sigma
+  delta_nu = pi/6  - x (gefaltet 0.484021): Wurzeln [-0.1958  0.944   2.2518], R = 0.030839, +1.8 sigma
+  delta_nu = pi/6  + x (gefaltet 0.563176): Wurzeln [-0.2518  1.056   2.1958], R = 0.053318, +50.9 sigma
+  delta_nu = pi/4  - x (gefaltet 0.745821): Wurzeln [-0.3505  1.3117  2.0388], R = 0.170608, +307.3 sigma
+  delta_nu = pi/4  + x (gefaltet 0.824976): Wurzeln [-0.3794  1.4198  1.9596], R = 0.274518, +534.5 sigma
+innerhalb 3 sigma: ['pi/6 - x']
+Daten verlangen (Zweig zwischen pi/12 und pi/6): delta_nu = 0.480240, x_nu = pi/6 - delta_nu = 0.043359 +- 0.002128; x = 0.039577; (-0.003782, -1.78 sigma)
+H168d: bestaetigt
+
+== H168e: native Zahlen gegen den Versatz (blind) ==
+360 Vergleiche; Treffer (relativ < 1e-4): 0
+  gamma_M * 1/6          gegen tan x : relativ 2.32e-04
+  gamma_M * 1/3          gegen 2x    : relativ 2.90e-04
+  gamma_M * 1/6          gegen x     : relativ 2.90e-04
+  gamma_M * 1/2          gegen 3x    : relativ 2.90e-04
+  gamma_M * 1/3          gegen tan 2x: relativ 1.80e-03
+  1-beta^2 * 1/6         gegen 3x    : relativ 2.00e-02
+H168e: bestaetigt (kein Treffer)

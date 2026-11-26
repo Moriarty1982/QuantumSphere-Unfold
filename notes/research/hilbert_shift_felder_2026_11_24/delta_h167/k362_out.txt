@@ -1,0 +1,50 @@
+== H167a: die zwei Terme auf dem Zirkulantensektor ==
+Tr(W o sigma W) = -3*(-a**2 + 2*c**2*s**2 - 2*c**2*v**2 + 8*c*s*v - 2*s**2 + 2*v**2) ; minus (3a^2 + 6 Re z^2): 0
+k282-Form: 3 a^2 + 6[(1-c^2)(s^2-v^2) - 4 c s v] - Tr(W o sigma W) = 0
+z - r e^{i delta} mit s, v = r cos/sin(delta - chi)/sqrt(1+c^2): 0
+Re z^2 - r^2 cos 2 delta = 0
+(1+c^2) v^2 - r^2 sin^2(delta - chi) = 0
+V_delta - (X cos 2d + Y sin 2d) = 0  mit X = alpha - alphap cos 2chi, Y = -alphap sin 2chi; Minima: 2 delta = atan2(Y, X) + pi (mod 2 pi)
+  alphap = 0, alpha = +1, c = 0.7: Minima delta = 1.570796, 4.712389; gefaltet 0.523599, 0.523599
+  alphap = 0, alpha = -1, c = 0.7: Minima delta = 3.141593, 6.283185; gefaltet 1.047198, 0.000000
+  alpha = 0, alphap = +1, c = 1: Minima delta = 0.785398, 3.926991; gefaltet 0.785398, 0.261799
+  alpha = 0, alphap = -1, c = 1: Minima delta = 2.356194, 5.497787; gefaltet 0.261799, 0.785398
+  alpha = 0, alphap = +1, c = 0: Minima delta = 0.000000, 3.141593; gefaltet 0.000000, 1.047198
+  pi/12 = 0.261799, pi/6 = 0.523599, pi/4 = 0.785398
+det W bei K = 2/3 (a = 1, r = 1/sqrt2): sqrt(2)*exp(3*I*x)/4 - 1/2 + sqrt(2)*exp(-3*I*x)/4 ; bei delta = pi/12: -1/2 - (-1)**(3/4)*sqrt(2)/4 + (-1)**(1/4)*sqrt(2)/4 ; bei pi/4: -1/2 - (-1)**(1/4)*sqrt(2)/4 + (-1)**(3/4)*sqrt(2)/4
+
+== H167b: wo die Skala eintritt ==
+quadratischer Term r^2 cos 2d unter A <-> B: (-A**2 + B**2)*cos(2*delta)/2 (ungleich 0: nicht J-symmetrisch)
+Ordnung 4, A^2 r^2 cos 2d unter A <-> B: 0 (J-symmetrisch, dimensionslos)
+V bis Ordnung 4: V(A) - V(-A) = 0 ; V(delta + pi) - V(delta) = 0
+Ordnung 6, A^3 B^3 cos 3d: V(delta + pi) + V(delta) = 0 (ungerade: hebt die Entartung)
+Numerische Kontrolle am vollen V(A, B, delta), mu2 = -1, lam = 1, kap = 0.5:
+  alpha = 0.0, alphap = 0.1, c = 1.0: K - 2/3 = -1.2e-09; delta = 0.7853982, Abstand zur Formel (mod pi) = 2.4e-08
+  alpha = 0.03, alphap = 0.2, c = 1.0: K - 2/3 = +2.2e-10; delta = 0.8598431, Abstand zur Formel (mod pi) = 1.7e-09
+  alpha = 0.1, alphap = -0.15, c = 0.6: K - 2/3 = -5.0e-10; delta = 1.9007205, Abstand zur Formel (mod pi) = 4.8e-09
+Zweige (alpha = 0, alphap = 0.1, c = 1): Spektren (Wurzeln, Summe 3) und Massenverhaeltnisse
+  delta = 0.785398 (gefaltet 0.785398): Wurzeln [-0.366025  1.366025  2.      ], m_klein/m_gross = 0.033494, m_mittel/m_gross = 0.466506
+  delta = 3.926991 (gefaltet 0.261799): Wurzeln [-0.        0.633975  2.366025], m_klein/m_gross = 0.000000, m_mittel/m_gross = 0.071797
+  mit Ordnung 6, beta3 = +0.02: globales Minimum bei delta gefaltet = 0.82433, K - 2/3 = -3.4e-09
+  mit Ordnung 6, beta3 = -0.02: globales Minimum bei delta gefaltet = 0.22286, K - 2/3 = -5.0e-09
+
+== H167c: Elektronmasse gegen alpha/alphap (c = 1, Oktant-Zweig) ==
+Exponent von m_e/m_tau in alpha/alphap: 2.0013; Exponent von |delta - pi/12|: 1.0000
+analytisch: delta - pi/12 = -(1/2) arctan(rho) fuer rho > 0 (Kontrolle bei rho = 0.01: -0.00499983 gegen -0.00499983)
+
+== H167d: Zielverhaeltnisse rho* = alpha/alphap fuer delta* (c = 1) ==
+  rho* = -2.0998653833 mit Vorzeichen(alphap) = +1
+  rho* = -1.4530941754 mit Vorzeichen(alphap) = -1
+  rho* = -0.0793204104 mit Vorzeichen(alphap) = -1
+  rho* = +0.0793204104 mit Vorzeichen(alphap) = +1
+  rho* = +1.4530941754 mit Vorzeichen(alphap) = +1
+  rho* = +2.0998653833 mit Vorzeichen(alphap) = -1
+d2: Oktant-Zweig |rho*| = 0.0793204104 (tan(pi/6 - 2 delta*) = 0.0793204104)
+d1: 42 Kandidaten gegen 6 Zielverhaeltnisse: Treffer 0; naechster: +1/(4pi) gegen +0.079320, relativ 3.24e-03
+    Zufallserwartung grob: 0.017 (Kandidaten ueber etwa drei Groessenordnungen gestreut)
+
+== Kontrolle zu c (alpha = 0) ==
+c* = tan(delta* + pi/6) = 0.9238205206, Kehrwert 1.0824613414; cos(pi/8) = 0.9238795325
+c = cos(pi/8) gaebe delta = 0.2222538852; Abstand zu delta* = +3.184e-05 (Unsicherheit von delta*: 4e-10; aus m_tau allein 7.8e-7)
+
+H167d1: bestaetigt (kein Treffer)
