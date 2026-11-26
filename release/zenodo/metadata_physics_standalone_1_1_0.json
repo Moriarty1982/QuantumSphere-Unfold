@@ -30,6 +30,12 @@
       "scheme": "doi"
     },
     {
+      "identifier": "10.5281/zenodo.24539643",
+      "relation": "isVersionOf",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
       "identifier": "10.5281/zenodo.19210728",
       "relation": "references",
       "resource_type": "publication-preprint",
