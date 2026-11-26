@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**26.11.2026, Runde r69 (Namenskonvention):** Neue Namen der Frames und Lepton-Sektoren in Forschungsstand, Gesamtbild (Frame-Spickzettel, Zeitleiste), Inhalt, Content-overview, Begriffe, Hinweise für LLMs und Vorhersagen-und-Tests eingetragen. Ältere Einträge behalten die alten Namen.
+
 **22.11.2026, QAM-Streaming-Guard:** Zweischritt-Filter, Rückstauprüfung und am MMA-Vergleich gemessene Ausgabemenge eingetragen.
 
 **22.11.2026, QAM-Kontextfilter:** Suche nach Beleg-IDs über MMA-Kontext, Frame und Status samt anschließendem Belegabruf beschrieben.

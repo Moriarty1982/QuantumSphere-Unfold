@@ -1,5 +1,7 @@
 # Vorhersagen und Tests
 
+**Nachtrag 26.11.2026 (r69, Namenskonvention):** Ab r69 heißen die Frames Ruheframe (R), Materie-Frame (M), Dual-Frame (T, bisher Tachyon-Frame) und Lichtpunkt (P, bisher Photon-Eigenframe), die Lepton-Sektoren Re-Sektor (neutral) und Im-Sektor (geladen). Die Einträge dieser Liste behalten ihre alten Bezeichnungen. Kein Status ändert sich.
+
 **Nachtrag 26.11.2026 (r68, Nachrechnung k358):** Alle Zahlen dieser Liste, die an β_sym, γ_L oder γ_M hängen, sind beim Bezugswert nachgerechnet (Erkundung, kein Test). Kein Status ändert sich. m_W: −0,44σ → −0,13σ gegen PDG 2026; H102: +2,3σ wie registriert (gerundet wären es +1,4σ); H96 und H9: Änderung 0,01σ; H46: Trefferzahl 120 → 168 durch das Raster, Fenster [0,49; 0,50] unverändert.
 
 **Nachtrag 26.11.2026 (r67, Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an (Gewicht 2 je Spin, Fläche √(j(j+1)), ein Bit bei j = ½). Bezugswert ab r67: β_sym = 0,5494056410, γ_L = 1,8646997646. Kein Urteil dieser Liste kippt (k357); die Tests mit Datenvergleich rechnen schon mit dem ungerundeten Wert. OP1 bleibt offen.
