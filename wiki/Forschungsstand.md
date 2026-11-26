@@ -20,6 +20,17 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Skala als Setzung: Der Spin-1-Term gibt mit c = 1 den Oktanten; die Skala wählt den Zweig und hebt das Elektron (26.11.2026, Test H167, k362)
+
+**Test H167. Ergebnis: a, b, c, d2 bestätigt (nicht blind), d1 bestätigt (blind, kein Treffer).** Der Autor hat für diesen Schritt die Skala als Setzung gewählt. Gesetzt sind außerdem das Postulat J und c = 1.
+
+- **Zwei Terme sehen die Phase** (k282): die Konjugation, r² cos 2δ, und der Spin-1-Term, r² sin²(δ − χ) mit χ = arctan c. Die Ladungsmischung c verdreht den zweiten gegen den ersten. Das ist der unter der Konjugation ungerade Beitrag, den H166 verlangt.
+- **Oktant.** Mit c = 1 liegt das Minimum des Spin-1-Terms allein bei δ = π/12 oder π/4. δ = π/12 ist der Oktant: det W = 0, das Elektron ist masselos. Der Oktant folgt hier aus c = 1; c = 1 selbst ist gesetzt (Projektor-Lesart aus r42, offen seit k278).
+- **Skala.** Unter J ist bei Ordnung 2 nur die Norm erlaubt; die δ-Terme haben Ordnung 4 und sind dimensionslos. Bis Ordnung 4 sind δ und δ + π exakt entartet, mit verschiedenen Spektren. Erst Ordnung 6 (1/Λ²) wählt, und derselbe Term hebt das Elektron (nachträglich): δ* verlangt β₃v₀²/(α′Λ²) = −0,0852. Skalenfrei ohne Konjugationsterm wäre das Elektron masselos.
+- **Zweiter Weg.** Der Konjugationsterm hebt das Elektron ebenfalls: δ = π/12 − ½ arctan(α/α′), m_e/m_τ ∝ (α/α′)², nötig α/α′ = 0,0793204. Unter 42 nativen Kandidaten trifft keiner (nächster 1/(4π), 0,32 % daneben).
+
+Einordnung: Der Fit aus H155 ist durch ein kleines Verhältnis ersetzt, das nicht hergeleitet ist. Offen sind der Grund für c = 1 und die Wahl zwischen Konjugationsterm und Skala als Quelle der Elektronmasse. OP3 und OP4 bleiben offen. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/delta_h167/`.
+
 ### Phase der Brannen-Form: ⅔ und 2/9 gelten nicht beide exakt; exakt 2/9 gibt kein polynomiales Potential; die Maske erzeugt die Phase nicht (26.11.2026, Test H166, k359)
 
 **Test H166. Ergebnis: a, b, c bestätigt (nicht blind), d bestätigt (blind, kein Treffer).** Frage des Autors: Was legt die Phase der Nebendiagonale in der Albert-Algebra fest (offen seit H158)? Rückwärtssuche in vier Teilen.

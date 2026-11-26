@@ -1,0 +1,16 @@
+k362b_gegenprobe.wl, ausgefuehrt am 26.11.2026 mit dem Wolfram Language Evaluator (Rueckgabewert des Skripts).
+Warnungen des Evaluators: Symbol::undefined2 zu den im Skript definierten Symbolen (S, W, Wc, V4, A, B); sechsmal N::meprec beim Vergleich
+exakt gleicher Cotangens-Werte im SameTest von Union (Vergleich zweier gleicher Ausdruecke, kein Einfluss auf die Zahlen). Kein Rechenfehler.
+
+a: Tr(W o sigma W) - (3a^2 + 6[(1-c^2)(s^2-v^2) - 4csv]) = 0
+a: Re z^2 - r^2 Cos[2d] = 0
+a: (1+c^2)v^2 - r^2 Sin[d-chi]^2 = 0
+a: alpha=0, alphap=1, c=1: gefaltet {Pi/4, Pi/12}; alphap=-1: {Pi/12, Pi/4}
+a: alphap=0, alpha=1, c=7/10: gefaltet {Pi/6, Pi/6}; alpha=-1: {Pi/3, 0}
+a: det W (K=2/3) = -(1/2) + Cos[3 x]/Sqrt[2]; bei Pi/12: 0; bei Pi/4: -1
+b: V4(A<->B) - V4 = 0; V4(-A) - V4 = 0; V4(d+Pi) - V4 = 0
+b: quadratisch (B^2/2 Cos[2d]) unter Tausch: (A^2 - B^2) Cos[2 d]/2
+c: delta - Pi/12 bei rho=1/100 (c=1, Oktant-Zweig): -0.004999833343 ; -ArcTan[1/100]/2 = -0.004999833343
+d: Tan[Pi/6 - 2 delta*] = 0.0793204104037; rho-Ziele: {-2.0998653833, 2.0998653833, 1.4530941754, 0.079320410404, -0.079320410404, -1.4530941754}
+d: 1/(4 Pi) = 0.07957747155; relativ zu rho*: 0.003241
+Kontrolle c: Tan[delta* + Pi/6] = 0.923820520626; Cos[Pi/8] = 0.923879532511; ArcTan[Cos[Pi/8]] - Pi/6 - delta* = 0.000031838

@@ -994,3 +994,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Tests H157 und H158:** Postulat J und δ (k340) sowie Albert-Algebra und δ (k341) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert; die Träger-Tabelle im Physik-Paper ist noch nicht nachgezogen (später, mit Runde im Companion).
 
 **26.11.2026, Test H166:** Phase der Nebendiagonale (k359) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**26.11.2026, Test H167:** Skala als Setzung, Konjugationsterm gegen Spin-1-Term (k362) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.

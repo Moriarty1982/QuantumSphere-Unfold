@@ -1,0 +1,11 @@
+q/alphap  globales Minimum (gefaltet)  m_klein/m_gross
+-0.2000   0.183143   1.167e-03
+-0.1000   0.216397   3.800e-04
+-0.0852   0.222240   2.873e-04
+-0.0500   0.237292   1.091e-04
+-0.0100   0.256581   4.882e-06
++0.0100   0.790616   3.402e-02
++0.0500   0.809906   3.597e-02
++0.1000   0.830800   3.808e-02
+delta* verlangt q/alphap = beta3 v0^2/alphap = -0.08524791 (Zweig delta = 5 pi/4 + x, zweite Ableitung +4.590 > 0)
+Vergleich: Konjugationsterm allein verlangt alpha/alphap = +0.07932041
