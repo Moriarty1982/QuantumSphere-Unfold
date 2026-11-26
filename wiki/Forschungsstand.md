@@ -38,6 +38,18 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Quarks einzeln justiert: K ≠ ⅔ ist ein Bruch des Frame-Tauschs, nicht der Dreiersymmetrie (26.11.2026, Erkundung k376)
+Nicht blind. Frage: Welche Eingabe schiebt K bei den Quarks von ⅔ weg?
+- **Als Winkel:** K = (1 + tan²θ)/3. Leptonen θ = 45° (Fixpunkt des Frame-Tauschs J), Down 48,1°, Up 52,2° (bei M_Z).
+- **Exakt:** Wollte man K ≠ ⅔ durch einen Bruch der Dreiersymmetrie auf einem J-symmetrischen Baumwert erzeugen, wäre dessen Stärke festgelegt:
+  ‖B‖² = 9K − 6, also 0,85 (Down) und 1,41 (Up). Für die ganze CKM-Matrix reichen 0,16. Dazu kämen Drehungen von 10° bis 27° je Sektor, die sich zwischen
+  Up und Down aufheben müssten.
+- **Lesart:** Die Quarks brauchen zwei getrennte Eingaben: einen J-Bruch, der die Dreiersymmetrie erhält (3,1° und 7,2°), und einen kleinen Bruch der
+  Dreiersymmetrie für die Mischung. Bei den Leptonen fehlt die erste. Offen: warum J nur bei Quarks gebrochen ist (Kandidat Farbe, nicht geprüft).
+- Nachträgliche Zahlenvergleiche (K_d nahe ¾, K_u nahe 8/9; J-Bruch gegen δ) tragen nicht.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/quarks_k376/`.
+
 ### Die Phasenhalbierung zwischen den Sektoren ist keine Regel (26.11.2026, Test H177, k375)
 Aus k374 war aufgefallen, dass sich die Phase δ von Sektor zu Sektor grob halbiert (ν 0,480, e 0,222, d 0,100, u 0,052). H177 prüft, ob das bei einer
 gemeinsamen Skala exakt wird. Vorab-Notiz 0887d27; die Beobachtung selbst war nachträglich, blind war nur das Laufen oberhalb von M_Z.
