@@ -996,3 +996,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Test H166:** Phase der Nebendiagonale (k359) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **26.11.2026, Test H167:** Skala als Setzung, Konjugationsterm gegen Spin-1-Term (k362) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**26.11.2026, Test H168:** Skala und Sektoren (k363) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.

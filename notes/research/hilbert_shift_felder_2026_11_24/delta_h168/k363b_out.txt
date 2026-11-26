@@ -1,0 +1,12 @@
+k363b_gegenprobe.wl, ausgefuehrt am 26.11.2026 mit dem Wolfram Language Evaluator (Rueckgabewerte; in zwei Aufrufen: a, b, d und c, d-Wurzel).
+Warnung des Evaluators: Symbol::undefined2 zum im Skript definierten Symbol R. Kein Rechenfehler in der abgelegten Fassung.
+Offengelegt: Eine erste Fassung sortierte die Wurzeln als exakte Ausdruecke (Sort ordnet dann kanonisch, nicht nach Groesse) und gab fuer Teil c
+falsche Werte (R(Pi/6) = -0,0424, R(Pi/6 - x) = 32,4) sowie eine falsche Wurzel in d. Mit numerischer Auswertung vor dem Sortieren (rts mit N) stimmen
+alle Werte mit Python ueberein. Die fehlerhafte Fassung ist nicht abgelegt.
+
+a: c=0: {0, Pi/6, Pi/3, Pi/6}; c=1: {Pi/4, Pi/12, Pi/12, Pi/4}
+b: x = 0.0395773407260; Tan[Pi/4 - x] = 0.923820520626; Tan[-x] = -0.0395980178803
+c: R_obs = 0.03001593 +- 0.0004575; R(Pi/6) = 0.040720673 (23.40 sigma); R(Pi/6 - x) = 0.030838801 (1.799 sigma); R(Pi/12) = 0.0051547761 (-54.34 sigma)
+d: {{{0, -1, 0.000296813, -64.96}, {0, 1, 0.000296813, -64.96}}, {{Pi/12, -1, 0.00353540, -57.88}, {Pi/12, 1, 0.00735382, -49.54}},
+    {{Pi/6, -1, 0.0308388, 1.799}, {Pi/6, 1, 0.0533182, 50.94}}, {{Pi/4, -1, 0.170608, 307.3}, {Pi/4, 1, 0.274518, 534.5}}}
+d: delta_nu(Daten) = 0.48023974; x_nu = 0.0433590

@@ -20,6 +20,17 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Skala und Sektoren: c = 0 neutral, c = 1 geladen gibt die Verschiebung π/12; der gemeinsame Versatz kommt nicht aus einer festen Skala (26.11.2026, Test H168, k363)
+
+**Test H168. Ergebnis: a, b, c bestätigt (nicht blind), d, e bestätigt (blind).** Frage des Autors: Hängt die Skala mit den Sektoren zusammen, es könnte beides sein. Gelesen als Fermionsektoren. Alles steht unter H99 (Brannen-Form mit K = ⅔ für Neutrinos).
+
+- **Unterschied der Sektoren.** Mit dem Spin-1-Term allein hängt das Minimum nur an der Ladungsmischung: c = 0 gibt π/6, c = 1 gibt π/12. Der Abstand π/12 ist die Verschiebung zwischen Neutrino- und Lepton-Phase aus H99, die bisher nicht hergeleitet war. Lesart: neutral c = 0, geladen c = 1.
+- **Gemeinsamer Versatz.** δ_e = π/12 − x, δ_ν = π/6 − x mit x = 0,0395773. Die Neutrino-Daten verlangen x_ν = 0,0434 ± 0,0021 (1,8σ, das ist H99 in anderer Form). Unter acht Kandidaten {0, π/12, π/6, π/4} ± x liegt nur π/6 − x innerhalb 3σ.
+- **Skala.** Mit gemeinsamem Λ wäre der Versatz im Neutrinosektor um (Σ√m_ν/Σ√m_ℓ)² = 3·10⁻¹¹ kleiner, also null; dann wäre R = 0,0407, 23σ neben den Daten. Der Versatz ist dimensionslos, oder die Skala wächst mit dem Sektor (Λ_s ∝ v_s), was auf dasselbe hinausläuft. Dass Phase und Versatz über elf Größenordnungen in der Masse gleich bleiben, ist ein Hinweis auf eine skalenfreie Bestimmung.
+- **Offen.** Der Versatz x selbst: keine von 360 nativen Kombinationen trifft (nächste γ_M/6, relativ 2,3·10⁻⁴, das ist H102).
+
+Einordnung: Die offene Wahl ist eine Zahl für beide Sektoren. Gesetzt sind c = 0 und 1 und die Brannen-Form für Neutrinos. OP3 und OP4 bleiben offen. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/delta_h168/`.
+
 ### Skala als Setzung: Der Spin-1-Term gibt mit c = 1 den Oktanten; die Skala wählt den Zweig und hebt das Elektron (26.11.2026, Test H167, k362)
 
 **Test H167. Ergebnis: a, b, c, d2 bestätigt (nicht blind), d1 bestätigt (blind, kein Treffer).** Der Autor hat für diesen Schritt die Skala als Setzung gewählt. Gesetzt sind außerdem das Postulat J und c = 1.
