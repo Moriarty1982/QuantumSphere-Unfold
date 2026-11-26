@@ -20,6 +20,15 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Quarks als Prüfstein: die Zuordnung Ladung ↔ Phasenlage gilt für Quarks nicht (26.11.2026, Test H172, k367)
+
+**Test H172. Ergebnis: a widerlegt (nicht blind bezüglich der Daten, Erwartung vorab notiert).** Regel aus H168 bis H171, auf Quarks ausgedehnt: Phasenlage χ(Q) = |Q|·π/4 mit dem Versatz x. Vorhersage: Down-Quarks δ nahe π/12 (0,222 bis 0,301), Up-Quarks δ nahe 0 oder π/6.
+
+- **Daten (wie H1, k14):** δ_d = 0,100129 ± 0,000953 bei M_Z (0,110 bei Standardskalen), δ_u = 0,051806 ± 0,000483 (0,075). Der nächste Kandidat liegt 128σ (Down) und 25σ (Up) entfernt; mit negativer leichtester Wurzel 71σ und 35σ.
+- **Einschränkungen:** K = ⅔ gilt für Quarks nicht (0,73 bis 0,89), und δ hängt von der Skala ab (Up: 0,052 → 0,075). Das ändert das Urteil nicht.
+- **Lesart:** Die Größe, die zwischen neutralem und geladenem Lepton-Sektor umschaltet, ist nicht |Q| mit linearem Gesetz. Die Lepton-Lesart selbst (unter H99) ist nicht berührt. Eine Herleitung der Lepton-Phase muss erklären, warum sie für Quarks nicht gilt; Kandidat ist die Farbe (H127, H125). Offen.
+- **Status.** OP3 und OP4 offen; kein Guard berührt. Notizen: `notes/research/hilbert_shift_felder_2026_11_24/delta_h172/`.
+
 ### Zwei Achteldrehungen: r13 legt K = ⅔ fest, H170 den Sektorschritt; zusammen der Oktant (26.11.2026, Test H171, k366)
 
 **Test H171. Ergebnis: a, b, d bestätigt (nicht blind, exakte Nachprüfung), c bestätigt (Sedenionen).** Frage nach H170: Ist die Achteldrehung zwischen neutralem und geladenem Feld dieselbe wie Ψ = exp(uπ/4) aus r13 neu?
