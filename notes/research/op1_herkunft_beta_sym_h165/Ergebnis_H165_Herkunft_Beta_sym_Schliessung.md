@@ -62,3 +62,8 @@ Woher kann 0,5493 kommen, und wieso müsste genau das folgen?
 ## Grenzen
 Geprüft sind nur Schließungen mit kohärenten Zuständen in der gesetzten Lesart C. Die Sichtung der 37 Versuche stammt aus einer Durchsicht durch einen Subagenten;
 gegengelesen sind nur Stichproben. Kein Datenvergleich. β_sym bleibt Eingabe; OP1 bis OP5 bleiben offen.
+
+## Nachtrag 26.11.2026: Entscheidung des Autors
+Der Autor hat die Weggabelung am 26.11.2026 (11:18 UTC) entschieden: Die Zählregel wird als Postulat angenommen. Runde v4.10.0-r67 hält das Postulat (C1 bis C3
+und die Zuordnung zu den Frames), den Bezugswert β_sym = 0,5494056410 und diesen Test fest. `k357_werte_exakt_gegen_gerundet.py` zeigt, dass mit dem exakten Wert
+kein Urteil kippt. OP1 bleibt offen in der Form „leite das Zählpostulat her“.

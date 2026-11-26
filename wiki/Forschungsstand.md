@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Die Zählregel ist jetzt Postulat; β_sym = 0,5494056410 ist die daraus berechnete Zahl (26.11.2026, Runde r67)
+
+Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selben Sinn wie die Frame-Gleichberechtigung: benannt, nicht hergeleitet. Runde **v4.10.0-r67** hält fest:
+
+- **Zählpostulat r67.P:** (C1) Im Materie-Frame zählt jeder Spin j ≥ ½ mit Gewicht 2 (m = ±j). (C2) Die Fläche ist proportional zu √(j(j+1)). (C3) Der Frame T zählt nur j = ½, und ein solcher Punkt trägt ein Bit. Die Zuordnung der zwei Regeln zu M und T gehört zum Postulat.
+- **Was daraus folgt (r67.1):** γ_L ist die eine Wurzel von Σ_{k≥1} 2^(1 − γ_L·√(k(k+2)/3)) = 1, also γ_L = 1,8646997646, **β_sym = 0,5494056410**, ε = 0,6175295849. Mit der Fläche j + ½ statt √(j(j+1)) gäbe dieselbe Regel exakt 1/√3.
+- **Bezugswert (r67.2):** Ab r67 gilt dieser Wert. Die 0,5493482 in älteren Runden kommt aus gerundeten Eingaben und bleibt dort stehen. Unterschied 1,05·10⁻⁴ in β, 7·10⁻⁴ in γ_L⁵. Kein Urteil kippt: H96, die m_W-Beziehung, H98 und H102 rechnen schon mit dem ungerundeten Wert, und das Leptonfenster enthält beide.
+- **Was das Postulat leistet und was nicht:** Es gibt jetzt eine Rechnung, die zeigt, woher die Zahl kommt. Es fehlt der Grund, warum die Zählung diese Form hat. Statt „zwei Literaturwerte“ steht „eine Regel mit drei benannten Teilen“. **OP1 bleibt offen**, jetzt in der Form „leite das Zählpostulat her“.
+- H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
+
 ### Woher β_sym kommt: eine Gleichung, drei Zutaten; die Überlapp-Schließung erzwingt den Hopf-Wert, nicht den gemessenen (26.11.2026, Test H165, k356; Runde r66)
 
 **Runde v4.10.0-r66** hält H164 und den Teil K-e von H161 im Companion fest: β_sym = |⟨K₁|S⟩|, der Boost mit β_sym trägt den R-Zustand auf die Besetzungen des Materie-Zustands (θ_H → 2α, cos 2α = 1/γ_L). Gesetzt und benannt: Lesart C (Hopf-Sphäre als Himmelskugel), der Gegenpol als zweite Auslese, das Dephasieren. Kein Guard berührt.

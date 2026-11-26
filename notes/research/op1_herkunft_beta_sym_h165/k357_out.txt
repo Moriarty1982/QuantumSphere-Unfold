@@ -1,0 +1,24 @@
+exakt (Zaehlregel): 0.549405640975 ; aus gerundeten Eingaben 0.2375/0.1274: 0.549296368467 ; im Bestand gefuehrt: 0.5493482
+Groesse                                       exakt  Bestand 0.5493482   rel. Unterschied
+beta                                    0.549405641          0.5493482           0.000105
+beta^2 (Omega_M in H96)                0.3018465583       0.3017834448           0.000209
+gamma_L                                 1.864699765        1.864440817           0.000139
+gamma_L^5                                22.5447062        22.52905685           0.000695
+1/gamma_L                               0.536279362       0.5363538444          -0.000139
+epsilon = artanh beta                  0.6175295849       0.6174473131           0.000133
+theta_H [Grad]                          66.65249402         66.6446165           0.000118
+pi - theta_H [Grad]                      113.347506        113.3553835           -6.95e-5
+alpha = arctan beta [Grad]              28.78464187        28.78211377            8.78e-5
+2 alpha [Grad]                          57.56928375        57.56422754            8.78e-5
+Besetzung 1/(1+beta^2)                  0.768139681       0.7681769222           -4.85e-5
+Besetzung beta^2/(1+beta^2)             0.231860319       0.2318230778           0.000161
+Mischung (1+beta)/2                    0.7747028205          0.7746741            3.71e-5
+K = (1+beta^4)/3                       0.3637037816       0.3636910825            3.49e-5
+kappa = (gamma_L+1/gamma_L)/2           1.200489563        1.200397331            7.68e-5
+Hopf-Luecke in beta [%]                 5.086338059        5.097326102           -0.00216
+Hopf-Luecke in gamma_L [%]              7.255872391        7.270768871           -0.00205
+
+Schwellen:
+Leptonfenster [0.545; 0.570] (r61.1e): exakt drin = True ; Bestand drin = True
+Fenster der Dimensionsleiter fuer gamma_T [0.127384; 0.137033): unberuehrt (haengt nicht an beta)
+H96: Omega_M = beta^2 exakt = 0.3018466 (im Bestand schon 0.30185, r61.2); mit 0.5493482 waere es 0.3017834

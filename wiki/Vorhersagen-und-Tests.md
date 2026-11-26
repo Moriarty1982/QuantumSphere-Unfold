@@ -1,5 +1,6 @@
 # Vorhersagen und Tests
 
+**Nachtrag 26.11.2026 (r67, Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an (Gewicht 2 je Spin, Fläche √(j(j+1)), ein Bit bei j = ½). Bezugswert ab r67: β_sym = 0,5494056410, γ_L = 1,8646997646. Kein Urteil dieser Liste kippt (k357); die Tests mit Datenvergleich rechnen schon mit dem ungerundeten Wert. OP1 bleibt offen.
 **Nachtrag 26.11.2026 (H165, r66):** H165 abgeschlossen (widerlegt: keine Schließungsbedingung und kein Zahlenkandidat trifft β = 0,5494056 als Identität; überwiegend nicht blind). H164 steht als Runde r66 im Companion. Kein Datenvergleich; H96 ist nicht berührt.
 **Nachtrag 26.11.2026 (H164):** H164 abgeschlossen (trägt teilweise: K-a, K-b bestätigt, K-c widerlegt, K-d nach Wortlaut widerlegt bei bestätigtem Kern; überwiegend nicht blind). Kein Datenvergleich; H96 ist nicht berührt.
 **Nachtrag 26.11.2026 (v4.10.0-r65):** H162 und k361 stehen als Runde r65 im Companion. H125 Stufe A gilt für jede Ladungsachse und beide Ladungstypen, bedingt unter der Setzung „dieselbe Seite der Multiplikation in beiden Sektoren“. H125 Stufe B bleibt offen (Frist 31.12.2035) und hängt an S1 und dieser Setzung; Entscheidungsregel und Vorwahrscheinlichkeit ½ sind unverändert.

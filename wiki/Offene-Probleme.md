@@ -54,6 +54,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Test H165, 26.11.2026 (k356), und Runde r66:** H164 steht als Runde v4.10.0-r66 im Companion. H165 fragt, woher β_sym kommen kann: γ_L ist die Wurzel von Σ_k 2^(1 − γ_L·√(k(k+2)/3)) = 1 (β = 0,5494056410). Eine Sichtung zählt 37 frühere Versuche; keiner leitet den Wert her. Die Schließung über die Überlappe kohärenter Zustände, Σ_j 2β^{4j} = 1, erzwingt den Hopf-Wert 1/√3 und nicht den gemessenen; H165 ist widerlegt. Gesetzt bleiben die U(1)-Zählung mit Gewicht 2, das Casimir-Spektrum, die Ein-Bit-Einheit und die Zuordnung der zwei Regeln zu den Frames. OP1 bleibt offen.
 
+**Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
+
 ## OP2: Dirac-Operator auf dem antisymmetrischen Sektor
 
 Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert_{H^+_-}`$ als geschlossen. Beide Beweise stützen sich aber auf die Riemann-Arbeit, die seit v4.8.0-r04 keine Beweisquelle mehr ist. Der letzte Schritt, den Versatz aus dem Spektrum abzulesen, ist dasselbe Problem wie OP1.
