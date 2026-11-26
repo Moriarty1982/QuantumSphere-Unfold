@@ -1,4 +1,4 @@
-Ausgabe von k381b_gegenprobe.wl (Wolfram Language, ausgefuehrt am 26.11.2026 ueber den Wolfram-Kernel der Sitzung; keine Warnungen)
+Ausgabe von k382b_gegenprobe.wl (Wolfram Language, ausgefuehrt am 26.11.2026 ueber den Wolfram-Kernel der Sitzung; keine Warnungen)
 W1 bC^2+bS^2+|ExB|^2/u^2-1 = 0
 W2 Schub von R (E=B): bC-Sech[2h] = 0 ; bS = 0 ; b3^2-Tanh[2h]^2 = 0
 W3 p+ bei h=ArcTanh[be] minus 1/(1+be^2) = 0

@@ -1,4 +1,4 @@
-k381: Nachrechnung mit b/a = beta_sym = 0.5494056410 statt b/a = beta_sym^2 (Zeilen '-' alt, '+' neu)
+k382: Nachrechnung mit b/a = beta_sym = 0.5494056410 statt b/a = beta_sym^2 (Zeilen '-' alt, '+' neu)
 
 === feldgleichung/k292_hc_feste_norm.py  (Ersetzung: 'g = 1.8644; m = (g - 1) / (g + 1)' -> 'g = 1.8644; m = 0.5494056410', 1 Stelle) ===
   Zeilen der Ausgabe: 26; geaendert: 2

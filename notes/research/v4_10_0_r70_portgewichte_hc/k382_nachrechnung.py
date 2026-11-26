@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""k381 (Erkundung, nicht blind): Nachrechnung der Skripte, die mu = beta_sym^2 als Amplitudenverhaeltnis b/a einsetzen.
+"""k382 (Erkundung, nicht blind): Nachrechnung der Skripte, die mu = beta_sym^2 als Amplitudenverhaeltnis b/a einsetzen.
 
 Konvention F fuehrt x = beta_sym^2 als Verhaeltnis der Portgewichte (Energien), p_-/p_+ = x.  Liest man die Ports als die
 zwei gegenlaeufigen Anteile (k253, k292), dann ist b^2/a^2 = x und das Amplitudenverhaeltnis b/a = beta_sym.
 Dieses Skript laesst jedes betroffene Skript unveraendert und noch einmal mit b/a = beta_sym laufen (die Zeile, die mu
 setzt, wird im Speicher ersetzt; die Dateien bleiben wie sie sind) und gibt die Zeilen aus, die sich aendern.
 
-Aufruf:  python k381_nachrechnung.py [--beta 0.5494056410] > k381_out.txt
+Aufruf:  python k382_nachrechnung.py [--beta 0.5494056410] > k382_out.txt
 """
 import argparse
 import difflib
@@ -41,7 +41,7 @@ def run(code, cwd):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--beta", default="0.5494056410"); a = ap.parse_args()
-    print(f"k381: Nachrechnung mit b/a = beta_sym = {a.beta} statt b/a = beta_sym^2 (Zeilen '-' alt, '+' neu)")
+    print(f"k382: Nachrechnung mit b/a = beta_sym = {a.beta} statt b/a = beta_sym^2 (Zeilen '-' alt, '+' neu)")
     for rel, old, new in PATCH:
         src = (BASE / rel).read_text(encoding="utf-8")
         n = src.count(old)

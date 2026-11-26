@@ -1,4 +1,4 @@
-(* k381b: Gegenprobe zu r70 (Wolfram Language, exakt).  Kugel der Feldzustaende, HC, Gewichte gegen Amplituden. *)
+(* k382b: Gegenprobe zu r70 (Wolfram Language, exakt).  Kugel der Feldzustaende, HC, Gewichte gegen Amplituden. *)
 out = {};
 p[s__] := AppendTo[out, StringJoin[ToString /@ {s}]];
 ev = {e1, e2, e3}; bv = {b1, b2, b3};

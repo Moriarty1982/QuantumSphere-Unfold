@@ -1,6 +1,6 @@
 # Forschungsstand
 
-### Portgewichte gegen Amplituden, der HC auf der Zustandskugel (26.11.2026, Runde r70, Erkundung k381, nicht blind)
+### Portgewichte gegen Amplituden, der HC auf der Zustandskugel (26.11.2026, Runde r70, Erkundung k382, nicht blind)
 
 Anlass war eine Zeichnung der Frames, die der Autor am 26.11.2026 angefragt hat. Dabei fiel auf, dass r69.4 für den Materie-Frame zwei Angaben nebeneinanderstellt, die nicht denselben Zustand beschreiben. Runde **v4.10.0-r70** stellt das richtig. Kein Test mit Kriterium, keine H-Nummer, kein Status eines offenen Problems geändert.
 
@@ -32,7 +32,7 @@ Die Dualität D und die Zeitumkehr ϑ vertauschen M und T. Der Tausch J_B lässt
 
 Die zweite Zeile ist der Zustand nach einem Schub mit der Geschwindigkeit β_sym², nicht M. In r69.4 bleibt die Angabe der Portgewichte stehen; die Ellipse mit Achsenverhältnis γ_L gehört zur zweiten Zeile. γ_L = cosh 2ε ist beim Materie-Frame der Kehrwert der Höhe, nicht das Achsenverhältnis. Die Vermischung steht schon im Beweis von `thm:hc-quasiconformal`: Er nennt μ ein Verhältnis von Eigenwerten und setzt es dort ein, wo ein Amplitudenverhältnis hingehört. Der Satz hat einen Statusvermerk bekommen.
 
-**Nachrechnung (r70.5, k381).** Neun Skripte setzen x für b/a ein: k292, k297, k298 (H132), k299, k301, k302 (H133), k303, k305 (H136), k350 (H159). Jedes lief unverändert und mit b/a = β_sym.
+**Nachrechnung (r70.5, k382).** Neun Skripte setzen x für b/a ein: k292, k297, k298 (H132), k299, k301, k302 (H133), k303, k305 (H136), k350 (H159). Jedes lief unverändert und mit b/a = β_sym.
 
 | Größe | b/a = x (wie notiert) | b/a = β_sym |
 |---|---|---|
@@ -54,7 +54,7 @@ Die zweite Zeile ist der Zustand nach einem Schub mit der Geschwindigkeit β_sym
 
 Werkzeuge: Python mit sympy (exakt) und Wolfram Language unabhängig für die Identitäten und die geschlossenen Formen. Qiskit nicht eingesetzt (keine Schaltung), kein HDL/MMA-Vergleich. Die Wolfram-Gegenproben der neun Skripte selbst wurden nicht neu gerechnet. β_sym ist eingesetzt, OP1 bis OP5 bleiben offen.
 
-Quelle: `notes/research/v4_10_0_r70_portgewichte_hc/` (README, Rundentext, k381, k381b mit Ausgaben) und `notes/research/frames_kugelbild_2026_11_26/` (Zeichnung in vier Teilbildern).
+Quelle: `notes/research/v4_10_0_r70_portgewichte_hc/` (README, Rundentext, k382, k382b mit Ausgaben) und `notes/research/frames_kugelbild_2026_11_26/` (Zeichnung in vier Teilbildern).
 
 ### Neue Namen für die Frames und die Lepton-Sektoren (26.11.2026, Runde r69, Konvention)
 
