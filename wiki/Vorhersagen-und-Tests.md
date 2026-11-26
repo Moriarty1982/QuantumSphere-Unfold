@@ -1,6 +1,7 @@
 # Vorhersagen und Tests
 
 **Nachtrag 26.11.2026 (H162, k360):** H162 abgeschlossen (a, b, c, d bestätigt; weitgehend nicht blind). Weg A (zwei Generationen), die Familien-su(2) und H125 Stufe A gelten für jede Ladungsachse u in Im H_n, auch für e₇; e₈ ist nur durch [Q, ψ] = 0 ausgezeichnet, e₇ dadurch, dass die Ladung die oktonionische Ladung einer Kopie fortsetzt. H125 Stufe B bleibt offen. Kein neuer offener Test. [Ergebnis](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/predictions/Ergebnis_H162_Ladungsachse_e7_WegA_CP.md)
+
 **Nachtrag 26.11.2026 (später):** H160 abgeschlossen (widerlegt: K-a, K-b, K-c; Vorhersage zu K-a war „trägt teilweise“ und damit falsch; teilweise nicht blind). H161 abgeschlossen (trägt teilweise: a, b, e bestätigt, c, d widerlegt; überwiegend nicht blind). H163 abgeschlossen (trägt teilweise: K-a widerlegt, K-b, K-c, K-d bestätigt; überwiegend nicht blind; ersetzt die Auslegung von H160). Kein Datenvergleich; H96 ist nicht berührt.
 
 **Nachtrag 26.11.2026:** H159 abgeschlossen (trägt teilweise: K-a teilweise, K-b widerlegt, K-c teilweise; teilweise nicht blind). Kein Datenvergleich; H96 ist nicht berührt.
