@@ -61,8 +61,11 @@ of the assertion database was not changed; no migration was needed for the check
 Entered: `qam/editions/v5_release.json` (version 5.5.0, date, version DOI), the metadata description, `.zenodo.json` (copy of
 the metadata file), `CITATION.cff`, `DOI_ROLES` in `tools/qs.py`, the DOI section of `AGENTS.md` (as reserved and
 unpublished), `sources/research/parts/working-preamble.tex` (version, date, DOI, PDF title). The publication date
-2026-11-26 in these files is provisional and is set to the actual date before publication. Results of the rebuild and of
-`tools/qs.py doi` are recorded in the pull request of this step.
+2026-11-26 in these files is provisional and is set to the actual date before publication. Rebuild after stamping (local container, `python -m qam.tools.build_v5_documents`): status `candidate-built`,
+`build_complete` true; full Companion 1572 pages, physics edition 38 pages; `pytest qam/store/test_editions.py`: 3 passed.
+`python tools/qs.py doi` on both PDFs: the version DOI 10.5281/zenodo.24563811 occurs exactly once, on the title page; no
+previous DOI on a title page; the expired DOI does not occur. The release files themselves come from the paired build on
+GitHub, not from this local build.
 
 ## Scope
 
