@@ -476,6 +476,8 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 3. eine gekoppelte Coframe-Dynamik,
 4. erst dann eine lokale Lösung.
 
+**Test H159, 26.11.2026 (k350):** Für OP5: Die Lesart „Λ im Photon-Frame ist eine Superposition“ trägt teilweise. Am Fixpunkt des Tauschs J ist die Ladung netto null bei Anteilen ungleich null, und mit tauschsymmetrischem HC-Potential (μ₀ = 1, aus dem Postulat der Frame-Gleichberechtigung) ist V(P) = 0 und V(M) = V(T) = ηf⁴·(2γ_L/(γ_L² + 1))². Das Verhältnis γ_L⁵ folgt daraus nicht; es bleibt die Gewichtsregel. η und f sind frei, eine Zahl für Λ folgt nicht. Λ bleibt Eingabe, OP5 bleibt offen. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/lambda_photon_h159/Ergebnis_H159_Lambda_Photon_Superposition.md`.
+
 ## C4, C5, C6/T2: die Schließungsfragen
 
 - **C4:** Der Restwert $\beta_4 = 1/256$ ist eine Endschranke; ihn auszugeben wäre der verbotene Schritt. Als „nicht ausgebbar“ geschlossen (r91).
