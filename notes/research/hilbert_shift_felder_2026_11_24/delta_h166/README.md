@@ -9,4 +9,4 @@ Offen bleibt eine reelle Zahl: Dipol gegen Quadrupol.
 
 Dateien: `Vorab_Notiz_H166_Phase_der_Nebendiagonale.md` (Commit c0e9142), `Ergebnis_H166_Phase_der_Nebendiagonale.md`, `k359_test_h166.py` mit
 `k359_out.txt`, `k359b_gegenprobe.wl` mit `k359b_out.txt`. Aufruf aus diesem Ordner: `python3 k359_test_h166.py > k359_out.txt`.
-Bezug: H158 (PR #327) im Nachbarordner `../generationszahl_h138/`.
+Bezug: H158 im Nachbarordner `../generationszahl_h138/`.

@@ -1,0 +1,22 @@
+k341b_gegenprobe.wl, ausgefuehrt am 26.11.2026 ueber den Wolfram-Kernel (MCP-Evaluator; lokal kein wolframscript).
+Warnungen: "Symbol::undefined2: Global symbols S, W, U, A, B, X are undefined" (Hinweis des Kernels auf globale Namen,
+keine Rechenwarnung); "General::messages" als Sammelhinweis darauf. Rueckgabewert: Null.
+Symbolische Nullreste: P W P^T - W, det-Formel, K - 2/3, H158e Rest. Numerisch (Chop): Eigenwerte - Brannen.
+
+P W P^T - W = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+Eigenwerte - Brannen: {0, 0, 0}
+det W - (a^3 - 3 a r^2 + 2 r^3 Cos[3 d]) = 0
+K - 2/3 bei r^2 = a^2/2: 0
+H158e Rest: 0
+Ordnung 0: J-erlaubt Dimension 1, Harmonische: {1}
+Ordnung 1: J-erlaubt Dimension 0, Harmonische: {}
+Ordnung 2: J-erlaubt Dimension 1, Harmonische: {1}
+Ordnung 3: J-erlaubt Dimension 0, Harmonische: {}
+Ordnung 4: J-erlaubt Dimension 4, Harmonische: {1, cos2, sin2}
+Ordnung 5: J-erlaubt Dimension 0, Harmonische: {}
+Ordnung 6: J-erlaubt Dimension 8, Harmonische: {1, cos1, sin1, cos2, sin2, cos3, sin3}
+Ordnung 7: J-erlaubt Dimension 0, Harmonische: {}
+Ordnung 8: J-erlaubt Dimension 13, Harmonische: {1, cos1, sin1, cos2, sin2, cos3, sin3, cos4, sin4}
+noetiges beta/alpha, Zweig 2Pi/3 - delta (I6): -5.18614; 3 Sqrt[3] = 5.19615
+
+Abgleich mit k341 (Python): Klassen je Ordnung mal (cos, sin) geben 1, 1, 4, 8, 13 fuer Ordnung 0, 2, 4, 6, 8. Stimmt ueberein.

@@ -1,0 +1,26 @@
+k340b_gegenprobe.wl, ausgefuehrt am 26.11.2026 ueber den Wolfram-Kernel (MCP-Evaluator; lokal kein wolframscript).
+Warnungen: "Symbol::undefined2: Global symbols P, P1, ... Q, V155 are undefined" (Hinweis des Kernels auf
+globale Namen, keine Rechenwarnung); "General::messages" als Sammelhinweis darauf. Rueckgabewert: Null.
+Symbolische Nullreste: H155-Form Rest = 0.
+
+Ordnung, invariant, J-erlaubt, hoechstes k (cos 3k delta):
+{0, 1, 1, 0}
+{1, 1, 0, -1}
+{2, 2, 1, 0}
+{3, 3, 0, -1}
+{4, 4, 2, 0}
+{5, 5, 0, -1}
+{6, 7, 3, 1}
+{7, 8, 0, -1}
+{8, 10, 4, 1}
+{9, 12, 0, -1}
+{10, 14, 5, 1}
+{11, 16, 0, -1}
+{12, 19, 7, 2}
+(i) ungerade Ordnung erlaubt? {}
+(ii) erste Ordnung mit k>=1: 6
+(iii) erste Ordnung mit k>=2: 12
+N(W): Rest = -(1/6) (phi - r) (-2 phi^2 - 5 phi r - 2 r^2 + Sqrt[2] phi^2 Cos[3 t] + Sqrt[2] phi r Cos[3 t] + Sqrt[2] r^2 Cos[3 t]) / Sqrt[3]
+N(W): Ebenen mit Rest identisch 0: False
+H155-Form: Rest = 0
+Lambda/v fuer delta = 2/9 (Einheitskoeffizienten): 0.7624593765

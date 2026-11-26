@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H156; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H158; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -60,7 +60,12 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   machen (ζN(W)) verschiebt K. Laufen mit zwei Ebenenrichtungen stört erst in zweiter Ordnung. Term sechster Ordnung erlaubt innere δ, 2/9 verlangt einen Parameter (Fit).
 - **H156** (Vorab fdac350): Die Algebra verlangt μ_A² = μ_B² nicht. Gleiche Massen (und gleiche λ, κ frei) erzwingt genau der Tausch J bzw. D₄ = ⟨L_U, Konjugation⟩;
   J ist eine Isometrie, aber kein Automorphismus, muss also als Frame-Gleichberechtigung postuliert werden.
+- **H157** (Vorab c5929e4): Postulat J in der Ebenen-Lesart. Erlaubt sind nur gerade Ordnungen; N(W) ist in jeder Ebene verboten; cos 3δ erst ab Ordnung 6
+  (φ³C₃), cos² 3δ erst ab Ordnung 12 (φ⁶C₃²). Im Drei-Felder-Modell bleibt δ bis Ordnung 10 bei 0 oder π/3 (außer bei φ = 0, wo δ flach ist).
+- **H158** (Vorab f2e5862): Offene Zellen der Träger-Tabelle für die Albert-Algebra. Zyklus = Platztausch P, Vakuum = Zirkulante mit Brannen-Eigenwerten,
+  δ = Phase der Nebendiagonale (tan δ = v/s), K = ⅔ = gleiche Norm von Spur und Nebendiagonale (Postulat). cos 2δ ab Ordnung 4, cos δ und cos 3δ ab Ordnung 6;
+  2/9 braucht ein Koeffizientenverhältnis, unter 720 vorab festgelegten Kandidaten kein Treffer.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H156; Skripte k321–k339 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H158; Skripte k321–k341 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

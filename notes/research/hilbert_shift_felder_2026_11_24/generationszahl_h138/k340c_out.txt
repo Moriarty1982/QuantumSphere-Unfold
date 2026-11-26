@@ -1,0 +1,4 @@
+Dmax=10: {'phi=0': 59, 'theta=pi/4 Endpunkt': 210, 'theta=pi/4 innen': 0, 'sonst Endpunkt': 6, 'sonst innen (phi!=0)': 0, 'r=0': 25}
+   phi=0: max Spannweite von V ueber delta bei festem r: 6.661e-16 (flach)
+Dmax=12: {'phi=0': 61, 'theta=pi/4 Endpunkt': 193, 'theta=pi/4 innen': 3, 'sonst Endpunkt': 7, 'sonst innen (phi!=0)': 0, 'r=0': 36}
+   phi=0: max Spannweite von V ueber delta bei festem r: 1.776e-15 (flach)
