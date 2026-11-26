@@ -1,15 +1,15 @@
 \section{An independent executor: the tape machine and the spinor tape}\label{sec:tape}
 
 The interval recipe of Section~\ref{sec:requests} has exactly one implementation, so it can only be checked against a hand calculation.
-For one instruction, QAM goes further: the same plan is executed by several independent implementations, including two hardware
-descriptions, and for the hardware descriptions the traces are compared step by step. The instruction is a tape machine, the simplest model of a computer with a
+For one instruction, QAM goes further: the same plan is executed by several implementations, including a hardware core with two controllers, and for the hardware the traces are compared step by step. The instruction is a tape machine, the simplest model of a computer with a
 separately stated plan. This section first describes the machine and the comparison, and then a hypothesis about where such a tape
 might live, which shows how QAM records a claim whose conditions are far from discharged.
 
 \subsection{Plan and execution}
 
 The instruction \texttt{RUN\_TAPE} takes two objects from the request context. The \emph{program} is an operator object with a set of
-control states, a halting state and a deterministic transition table: for each control state and each bit read from the tape, the bit to
+control states, a halting state and a deterministic, possibly partial transition table (at most 64 states and 128 rules): for a control
+state and a bit read from the tape, the bit to
 write, the head movement ($-1$, $0$ or $+1$) and the next control state. The \emph{initial state} is a state object with the tape, the
 head position and the control state. The request sets the tape mode, either fixed or growing (a blank cell is appended at the right edge
 when needed), bounds of at most 1024 steps and 1024 cells, and optionally a full trace.
@@ -18,7 +18,7 @@ The result separates two questions that are easily confused:
 \begin{itemize}[leftmargin=1.5em]
 \item \emph{Was the request allowed to run?} This is the executor's outcome, \cont, \guard\ or \reject, as in Section~\ref{sec:requests}.
 \item \emph{How did the computation end?} This is the machine's stop reason: \textsf{halted} (the halting state was reached),
-\textsf{stuck} (no rule for the current state and bit), \textsf{boundary} (a step would leave a fixed tape; the whole step is discarded),
+\textsf{stuck} (no rule for the current state and bit), \textsf{boundary} (a step would leave the tape at its left end or, in fixed mode, at its right end; the whole step is discarded),
 \textsf{step\_limit} or \textsf{cell\_limit} (the budget is exhausted).
 \end{itemize}
 An exhausted budget is explicitly not a verdict of non-termination. The machine does not claim that the computation would never end; it
@@ -26,14 +26,15 @@ reports that it did not end within the budget and returns the tape, head and sta
 continue. This is Turing's boundary in practical form: whether a program halts cannot be decided in general, so the executor never
 pretends to decide it.
 
-\subsection{Five executors for one plan}
+\subsection{Several executors for one plan}
 
-The same plan is executed by the Python adapter (the reference), by a Wolfram Language script, by a Qiskit version that builds every step
-as a reversible circuit over all decision cases, and by two controllers written in SystemVerilog. The first controller addresses the
+The plan is executed in full by the Python adapter (the reference) and by a core written in SystemVerilog with two selectable
+controllers. A Wolfram Language script and a Qiskit version, which builds every step as a reversible circuit over all decision cases,
+implement the transition rule without the step and cell budgets; the Qiskit version has only the fixed tape and at most 18 qubits. The first controller addresses the
 matching table entry directly. The second reads the whole table cyclically on every machine step, remembers the matching entry and applies
 it after the last slot. Both share the logic for writing, head movement, tape growth and stop signals; the example instance has eight physical cells and six
-table entries (three control states, two bits read). The Wolfram and Qiskit versions were compared with the reference on a few example
-traces and on all 24 start configurations of a two-cell program; the systematic comparison concerns the hardware.
+table entries (three control states, two bits read). The Wolfram and Qiskit versions agree with the reference on the example traces that were run (two for Wolfram, one for Qiskit) and
+with each other on all 24 start configurations of a two-cell program; the systematic comparison concerns the hardware.
 
 A comparison suite runs both controllers in a hardware simulator and compares them with the reference traces obtained through the
 ordinary executor. The suite covers 209 cases, among them 204 start configurations formed by all binary tapes of length one to three,
@@ -55,13 +56,14 @@ a good example of a claim that QAM must keep conditional for a long time, and be
 
 In that structure there is a distinguished line along which spinors (two-component objects on which rotations act through $SU(2)$)
 can be transported while satisfying the structure's admissibility conditions. The \emph{spinor tape hypothesis} states that this
-line can serve as an extendable read/write support: finite stretches of a tape can be written on it, read from it and prolonged along
-it without violating admissibility, and a transport step acts as a head movement. The motivation is structural. Transport along a line is
+line can serve as an extendable read/write support: finite stretches of a tape can be prolonged along
+it without violating admissibility. Assuming this, the project derives that such stretches can be written and read and that a transport
+step acts as a head movement. The motivation is structural. Transport along a line is
 sequential and one-dimensional, and in Turing's model the tape is the simplest store with local access.
 
 The accompanying \emph{conditional Z3 hypothesis} is named after Zuse's Z3. The Z3 had no conditional branch instruction; Rojas showed
 that it is nevertheless universal in principle, by emulating branching and indirect addressing arithmetically, as universal as a computer
-with bounded address space and at the price of very long programs~\cite{rojas98}. The hypothesis transfers this: once branching,
+with bounded address space and at the price of very long programs~\cite{rojas98}. The hypothesis is named in this spirit (the link to Rojas's analysis is our gloss, not part of its statement): once branching,
 persistent storage and return are available on the spinor carrier, the request-and-executor stack described here can emulate an
 ordinary sequential control core.
 
@@ -78,7 +80,7 @@ conditional route with five obligations, listed here in the recommended order in
 \item a standard sequential reference machine is explicitly simulated.
 \end{enumerate}
 Each has been reduced to a stated certificate (on finite windows for the first three, along chains of windows for the last two), but
-only under the assumption that such a certificate exists. None of the five is discharged.
+only under the assumption that such a certificate exists and remains stable when windows are joined or chains are extended. None of the five is discharged.
 
 \subsection{How QAM records it}
 
@@ -91,4 +93,5 @@ executed correctly. A deterministic binary machine with a one-sided unbounded ta
 steps and cells per request the executor is, like the Z3 in Rojas's analysis, universal only in the bounded sense. That the tape can be
 identified with the spinor carrier remains a premise that no run fulfils. If the carrier were universal, the halting problem for its
 programs would be undecidable. That step and cell limits are recorded as stop reasons of their own and never read as ``does not halt'' is
-therefore not a convenience. It follows from the very boundary the hypothesis aims to reach.
+therefore not a convenience. A single bounded request is a finite computation, but a run can be continued from its returned state
+again and again, and for such continued runs no executor could decide halting. This is the very boundary the hypothesis aims to reach.

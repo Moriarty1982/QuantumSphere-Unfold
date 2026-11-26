@@ -6,7 +6,7 @@ ever been computed from this premise?} QAM answers them with a local SQLite data
 
 \subsection{Indexing}
 
-Indexing reads all exported records of a project into the database. It recomputes and verifies every entry hash and record hash on the
+Indexing reads the exported records under a project's record directories into the database; the deliberately broken examples are excluded by name, and the record of this article lies outside the default directories. It recomputes and verifies every entry hash and record hash on the
 way, and checks the hash of the source file where it is available. A record that fails this verification is skipped as a whole, with a message. For every entry
 the database stores the edges to its premises, indexed in both directions. In the repository from which the examples are taken, indexing reports 81
 hash-verified entries, among them the two entries of the example rule.
@@ -23,7 +23,7 @@ with its statement, status and frame. For the example rule the answer is the rul
 \st{conditional}. These are exactly its open conditions in the sense of Definition~\ref{def:open}.
 \item \emph{Impact.} Starting from the hash of an entry, follow the edges in the other direction and return every entry that depends
 on it, together with every stored receipt whose premise trace contains it, either as a resolved or as a missing premise. For the
-preparation of the example, the answer is the rule and the receipt of the successful run.
+preparation of the example, the answer is the rule and the stored receipts of the runs of Section~\ref{sec:requests} that reached it: the successful run and the two rejected ones.
 \item \emph{Chains.} A catalogue of rules records, for each recipe, the declarations it requires and the quantity it produces. The
 query matches outputs of one rule to requirements of another and suggests paths of two to five rules. These are suggestions: execution
 still checks values, frames and premises. The interval rule currently has no registered downstream rule.
@@ -32,7 +32,7 @@ still checks values, frames and premises. The interval rule currently has no reg
 \subsection{Corrections without overwriting}
 
 The record is append-only, so an error is corrected by a new entry, and the database links the two by recording a \emph{replacement}
-from the old hash to the new one, with a stated reason. A trigger rejects replacements that would form a cycle. Old entries and old
+from the old hash to the new one, with a stated reason (the two hashes are stored as given; that they belong to indexed entries is not checked). A trigger rejects replacements that would form a cycle. Old entries and old
 receipts are not changed. The impact query then shows what was built on the superseded entry, so the correction can be propagated
 deliberately rather than by search and replace.
 
