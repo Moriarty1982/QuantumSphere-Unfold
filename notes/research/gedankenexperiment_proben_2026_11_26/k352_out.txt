@@ -1,0 +1,45 @@
+== K-a  Etiketten: Pauli ohne Phase = GF(2)^2 ==
+  alle 16 Produkte P·Q sind bis auf eine Phase das Etikett (x|z)(P) XOR (x|z)(Q): True
+  X xor Z = Y ;  X xor Y = Z ;  Y xor Z = X  => je zwei der drei geben das dritte (wie RAID5 mit drei Platten)
+  Phasen: X·Z = -i·Y ;  Z·X = +i·Y  => das Etikett ist eindeutig, das Vorzeichen haengt an der Reihenfolge
+
+== K-b  zwei Koepfe: XX, ZZ, YY nacheinander (Qiskit, 4096 Laeufe je Zustand) ==
+  Bell Phi+             : (xx, zz, yy) -> Anzahl {(0, 0, 1): 4096};  yy = xx xor zz xor c fuer alle Laeufe mit c = [1]
+  Bell Phi-             : (xx, zz, yy) -> Anzahl {(1, 0, 0): 4096};  yy = xx xor zz xor c fuer alle Laeufe mit c = [1]
+  Bell Psi+             : (xx, zz, yy) -> Anzahl {(0, 1, 0): 4096};  yy = xx xor zz xor c fuer alle Laeufe mit c = [1]
+  Bell Psi-             : (xx, zz, yy) -> Anzahl {(1, 1, 1): 4096};  yy = xx xor zz xor c fuer alle Laeufe mit c = [1]
+  Zufallszustand 1      : (xx, zz, yy) -> Anzahl {(0, 0, 1): 191, (0, 1, 0): 1664, (1, 0, 0): 1265, (1, 1, 1): 976};  yy = xx xor zz xor c fuer alle Laeufe mit c = [1]
+  Zufallszustand 2      : (xx, zz, yy) -> Anzahl {(0, 0, 1): 70, (0, 1, 0): 2153, (1, 0, 0): 45, (1, 1, 1): 1828};  yy = xx xor zz xor c fuer alle Laeufe mit c = [1]
+  Zufallszustand 3      : (xx, zz, yy) -> Anzahl {(0, 0, 1): 298, (0, 1, 0): 76, (1, 0, 0): 1746, (1, 1, 1): 1976};  yy = xx xor zz xor c fuer alle Laeufe mit c = [1]
+  K-b: festes c in allen Faellen: True  (c = 1: (XX)(ZZ) = -YY; die Paritaet der drei Platten ist immer ungerade)
+  Matrixprobe: (XX)(ZZ) + YY = 0.0
+
+== K-c  ein Kopf: X, dann Z, dann Y auf einem Qubit (Qiskit, 20 Zufallszustaende, 4096 Laeufe) ==
+  Trefferquote von y = x xor z: min 0.4941, Mittel 0.5116, max 0.5261;  mit c = 1: Mittel 0.4884
+  erwartete Streuung bei reinem Zufall: +-0.0078;  groesste Abweichung von 0.5: 0.0261
+  Vergleich ohne Messung: Bloch-Komponenten erfuellen x^2 + y^2 + z^2 = 1; |y| folgt aus x und z, das Vorzeichen von y nicht (ein Bit fehlt)
+
+== K-d  Datenstrom: Peres-Mermin-Quadrat ==
+  Zeile 1: ['XI', 'IX', 'XX'], Produkt = +1·1, vertauschen paarweise: True
+  Zeile 2: ['IZ', 'ZI', 'ZZ'], Produkt = +1·1, vertauschen paarweise: True
+  Zeile 3: ['XZ', 'ZX', 'YY'], Produkt = +1·1, vertauschen paarweise: True
+  Spalte 1: ['XI', 'IZ', 'XZ'], Produkt = +1·1, vertauschen paarweise: True
+  Spalte 2: ['IX', 'ZI', 'ZX'], Produkt = +1·1, vertauschen paarweise: True
+  Spalte 3: ['XX', 'ZZ', 'YY'], Produkt = -1·1, vertauschen paarweise: True
+  512 klassische Belegungen: hoechstens 5 von 6 Pruefungen erfuellt (96 Belegungen erreichen das); alle 6: keine
+  Qiskit, Zeile 1 auf Zufallszustand: Paritaet der drei Bits gerade 4096, ungerade 0  (erwartet: gerade)
+  Qiskit, Zeile 2 auf Zufallszustand: Paritaet der drei Bits gerade 4096, ungerade 0  (erwartet: gerade)
+  Qiskit, Zeile 3 auf Zufallszustand: Paritaet der drei Bits gerade 4096, ungerade 0  (erwartet: gerade)
+  Qiskit, Spalte 1 auf Zufallszustand: Paritaet der drei Bits gerade 4096, ungerade 0  (erwartet: gerade)
+  Qiskit, Spalte 2 auf Zufallszustand: Paritaet der drei Bits gerade 4096, ungerade 0  (erwartet: gerade)
+  Qiskit, Spalte 3 auf Zufallszustand: Paritaet der drei Bits gerade 0, ungerade 4096  (erwartet: ungerade)
+
+== K-e  Verbiegung: Moebius/Lorentz macht zwei Punkte zu Gegenpunkten ==
+  symmetrischer Fall, Boost laengs der Winkelhalbierenden: n_z' = (beta - cos(theta/2))/(beta*cos(theta/2) - 1) ;  null fuer beta = [cos(theta/2)]
+  dann n_x' = sin(theta/2)/Abs(sin(theta/2)) (Gegenpunkte +-x);  gamma = 1/Abs(sin(theta/2)) = 1/sin(theta/2)
+  Spinor-Ueberlapp |<psi1|psi2>|^2 = (1 + n1·n2)/2 = cos^2(theta/2) = beta^2
+  invariante Masse: M^2 = 2 E1 E2 (1 - cos theta); im Gegenpunkt-System E1' = E2' = M/2
+  1000 Zufallspaare, Boost beta = cos(theta/2) laengs der Winkelhalbierenden: groesste Abweichung von Gegenpunkten 2.67e-13;
+    invariante Masse und E' = M/2: 2.81e-15;  Kreis -> Kreis (Abstand der Bildpunkte von einer Ebene): 5.57e-14;
+    Spinoren nach der SL(2,C)-Abbildung orthogonal (Rest-Ueberlapp): 5.54e-14;  |<psi1|psi2>| - beta: 9.16e-15
+  Zahlen ohne Zuordnung: beta = beta_sym = 0.5494 entspricht theta = 113.35 Grad, Lorentz-gamma 1.1968 (gamma_L = 1.86444 ist cosh der doppelten Rapiditaet: 1.8647)

@@ -1,0 +1,48 @@
+== 0  Kontrolle des Bahnstuecks gegen direkte Integration ==
+  P = [1.5 0.8], v = 1.4: Formel [ 0.78418893 -0.65208229], e = 1.799109; Integration [ 0.78418893 -0.65208229]; Differenz 4.82e-13
+  P = [-0.7  2. ], v = 0.6: Formel [ 0.3057173  -0.26545918], e = 0.763605; Integration [ 0.3057173  -0.26545918]; Differenz 4.35e-13
+  P = [2.  0.3], v = 0.5: Formel [-0.58102253 -0.22844266], e = 0.538669; Integration [-0.58102253 -0.22844266]; Differenz 3.74e-13
+
+== 1  Regel E (Energie der urspruenglichen Probe) ==
+  Regel E: 48 Laeufe; konvergent 7 (14.6 %), Kollaps 18 (37.5 %), anderes 23
+    Endabstand |P1 - P2|: max 7.271e-10;  |r1 - r2| max 9.463e-11;  Schritte bis Stillstand: Median 219, max 369
+    r_inf: min 0.00000, Median 0.00000, max 0.00000
+    e_inf: min 1.00000, Median 1.00000, max 1.00000;  Anteil e_inf < 1e-3: 0.0 %
+
+== 2  Regel V (feste Startgeschwindigkeit v0) ==
+  Regel V: 144 Laeufe; konvergent 1 (0.7 %), Kollaps 140 (97.2 %), anderes 3
+    Endabstand |P1 - P2|: max 2.116e-10;  |r1 - r2| max 0.000e+00;  Schritte bis Stillstand: Median 19, max 19
+    r_inf: min 1.06508, Median 1.06508, max 1.06508
+    e_inf: min 3.26034, Median 3.26034, max 3.26034;  Anteil e_inf < 1e-3: 0.0 %
+    v0 = 0.5: Kreisradius 1/v0^2 = 4.0000; konvergent 0/48
+    v0 = 1: Kreisradius 1/v0^2 = 1.0000; konvergent 0/48
+    v0 = 2: Kreisradius 1/v0^2 = 0.2500; konvergent 1/48, r_inf von 1.0651 bis 1.0651, kleinster Wert von r_inf v0^2: 4.2603
+
+== 3  Regel B (gebunden, E = -1/(2a)), 200 Zufallsstarts ==
+  Regel B: 200 Laeufe; konvergent 0 (0.0 %), Kollaps 200 (100.0 %), anderes 0
+
+== 4  K-c: Anziehung oder Kontinuum? ==
+  Regel E: 7 Endzustaende um 1e-3 versetzt: zurueck zum alten r_inf 3, neuer Endwert 0, nicht konvergent 4; Abweichung Median 2.87e-10, max 2.88e-10
+  Regel V: 1 Endzustaende um 1e-3 versetzt: zurueck zum alten r_inf 0, neuer Endwert 0, nicht konvergent 1; keine Abweichung messbar
+  Regel B: kein konvergenter Lauf
+
+== 5  Beispiel-Lauf und addierte Auslesen (Regel B, a = 1) ==
+  Ausgang: Kollaps nach 8 Schritten
+    n = 0: P1 = (+1.600000, +0.500000), r1 = 1.676305;  P2 = (-1.200000, +0.900000), r2 = 1.500000;  Winkel zwischen ihnen 125.7761 Grad
+    n = 1: P1 = (-0.050812, -0.008719), r1 = 0.051554;  P2 = (+0.083315, -0.036163), r2 = 0.090825;  Winkel zwischen ihnen 146.7999 Grad
+    n = 2: P1 = (+0.005648, -0.003510), r1 = 0.006650;  P2 = (-0.003693, +0.000046), r2 = 0.003693;  Winkel zwischen ihnen 148.8603 Grad
+    n = 3: P1 = (-0.000238, +0.000042), r1 = 0.000242;  P2 = (+0.000330, -0.000286), r2 = 0.000436;  Winkel zwischen ihnen 149.0002 Grad
+    n = 4: P1 = (+0.000018, -0.000022), r1 = 0.000028;  P2 = (-0.000015, +0.000005), r2 = 0.000016;  Winkel zwischen ihnen 149.0093 Grad
+    n = 5: P1 = (-0.000001, +0.000000), r1 = 0.000001;  P2 = (+0.000001, -0.000002), r2 = 0.000002;  Winkel zwischen ihnen 149.0099 Grad
+    n = 6: P1 = (+0.000000, -0.000000), r1 = 0.000000;  P2 = (-0.000000, +0.000000), r2 = 0.000000;  Winkel zwischen ihnen 149.0099 Grad
+    n = 7: P1 = (-0.000000, +0.000000), r1 = 0.000000;  P2 = (+0.000000, -0.000000), r2 = 0.000000;  Winkel zwischen ihnen 149.0099 Grad
+  alle 16 Auslesepunkte: Radius von 0.000000 bis 1.676305; ueberstrichener Winkelbereich 319.18 Grad (ein Vollkreis waere 360)
+  Endbahn: e = 1.000000, Periapsis r_inf = 0.000000, Apoapsis 2.000000; beide Proben starten am selben Punkt in Gegenrichtung
+
+== 6  Erkundung ohne Kriterium: Schwarzschild-Variante u'' + u = 1/L^2 + 3 m u^2 ==
+  40 Starts (die ersten 40 aus Abschnitt 3), Newton: konvergent 0, Kollaps 40, anderes 0
+  m = 0.01: konvergent 0, Einfang 40, anderes 0
+  m = 0.05: konvergent 0, Einfang 40, anderes 0
+
+== 7  Erkundung ohne Kriterium: harter Kern, Radius R = 0.5 ==
+  40 Starts: konvergent 40, anderes 0; beide Endpunkte auf der Oberflaeche: 40; Winkel zwischen den Endpunkten: min 0.282, Median 81.185, max 177.103 Grad

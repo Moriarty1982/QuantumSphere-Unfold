@@ -1,0 +1,5 @@
+(1) 200 Zustaende, Startwerte 1000 + k (benachbart): Trefferquote Mittel 0.48932, Streuung 0.00850 (erwartet 0.00781), min 0.4771, max 0.5095; Mittel - 0.5 = -17.77 Standardfehler
+(2) 200 Zustaende, Zufalls-Startwerte (weit getrennt): Trefferquote Mittel 0.50029, Streuung 0.00677 (erwartet 0.00781), min 0.4824, max 0.5156; Mittel - 0.5 = +0.61 Standardfehler
+(3) eine Schaltung, 2 000 000 Laeufe: Trefferquote 0.50024 (Zaehlstatistik +-0.00035)
+  exakt: nach Z-Ergebnis |0> ist P(Y-Bit = 0) = 0.500000000000
+  exakt: nach Z-Ergebnis |1> ist P(Y-Bit = 0) = 0.500000000000
