@@ -1,0 +1,55 @@
+beta_sym = 0.549405641, gamma_L = 1.86469976472
+  W (b/a = beta_sym): eta = 0.617529585, cosh 2eta = 1.86469976, e^(2eta) = 3.43858198, tanh^2 = 0.301846558
+  A (b/a = beta_sym^2): eta = 0.311550028, cosh 2eta = 1.20048956, e^(2eta) = 1.86469976, tanh^2 = 0.0911113448
+  Identitaeten: cosh 2eta_A - (gamma_L + 1/gamma_L)/2 = 0.0;  e^(2eta_A) - gamma_L = -1.97e-31;  cosh 2eta_W - gamma_L = -1.97e-31
+
+=== Teil 1: Woerterbuch D (cot theta_W = cosh 2eta, Omega_M = tanh^2 eta, eps = eta, kappa = cosh 2eta) ===
+
+--- Lesart W (b/a = beta_sym), Woerterbuch D ---
+  Q1 m_W = 80.36113 GeV (cot theta_W = 1.8647, sin^2 theta_W = 0.22336); z = -0.1729 -> traegt
+  Q2 Omega_M = 0.301847; z(DESI) = 0.5054, z(Planck) = -1.879 -> traegt
+  Q3 sin^2 theta_12 = 0.308684; z(JUNO) = 0.7944 -> traegt
+  Q4 Maske eps = 0.6175296; Fenster 0,611 bis 0,647 -> im Fenster
+  Q5 kappa = 1.8647 -> m_h = 201.444 GeV (60.9 %) -> widerlegt
+  verfehlt von Q1 bis Q4: 0
+
+--- Lesart A (b/a = beta_sym^2), Woerterbuch D ---
+  Q1 m_W = 70.06396 GeV (cot theta_W = 1.20049, sin^2 theta_W = 0.40964); z = -1302.0 -> widerlegt
+  Q2 Omega_M = 0.0911113; z(DESI) = -24.0, z(Planck) = -31.98 -> widerlegt
+  Q3 sin^2 theta_12 = 0.0931752; z(JUNO) = -32.88 -> widerlegt
+  Q4 Maske eps = 0.31155; Fenster 0,611 bis 0,647 -> ausserhalb
+  Q5 kappa = 1.20049 -> m_h = 124.797 GeV (-0.322 %) -> traegt (kein Beleg)
+  verfehlt von Q1 bis Q4: 4
+
+Urteil H181 (Teil 1): Lesart A verfehlt 4 von Q1 bis Q4 -> widerlegt
+
+=== Teil 1b (Erkundung): Woerterbuch D' fuer A (cot theta_W = e^(2eta), Omega_M = tanh eta, eps = 2eta, kappa = cosh 2eta) ===
+
+--- Lesart A, Woerterbuch D' ---
+  Q1 m_W = 80.36113 GeV (cot theta_W = 1.8647, sin^2 theta_W = 0.22336); z = -0.1729 -> traegt
+  Q2 Omega_M = 0.301847; z(DESI) = 0.5054, z(Planck) = -1.879 -> traegt
+  Q3 sin^2 theta_12 = 0.308684; z(JUNO) = 0.7944 -> traegt
+  Q4 Maske eps = 0.6231001; Fenster 0,611 bis 0,647 -> im Fenster
+  Q5 kappa = 1.20049 -> m_h = 124.797 GeV (-0.322 %) -> traegt (kein Beleg)
+  verfehlt von Q1 bis Q4: 0
+  Portgewichte unter D' (Gewicht = Amplitude^2): 0.9165 : 0.083503; Konvention F verlangt 0.76814 : 0.23186
+  eps: 2 eta_A = ln gamma_L = 0.623100056 gegen eta_W = 0.617529585; Unterschied 0.902 %
+
+=== Teil 1b: feste Liste einfacher Funktionen als kappa (Fenster 5 % um kappa* = 1,2039) ===
+  Lesart W (b/a = beta_sym): 20 Kandidaten, 2 im Fenster
+    kappa = cosh(eta) = 1.196808 (-0.589 %), m_h = 124.362 GeV
+    kappa = 1/tanh(2eta) = 1.184777 (-1.59 %), m_h = 122.939 GeV
+  Lesart A (b/a = beta_sym^2): 20 Kandidaten, 1 im Fenster
+    kappa = cosh(2eta) = 1.20049 (-0.283 %), m_h = 124.797 GeV
+
+=== Teil 2 (blind): Maskenscan, unveraenderter Code k105 mit drei Werten von eps ===
+Variante A, eps = eta_A = artanh(beta_sym^2) (0.3116): 0 Treffer
+Variante A, eps = eta_W = artanh(beta_sym) (0.6175): 168 Treffer; sin^2 23 in [0.4908, 0.4975] (Breite 0.0067), |sin delta| in [0.169, 0.998] (Breite 0.829)
+Variante A, eps = 2 eta_A = ln gamma_L (0.6231): 232 Treffer; sin^2 23 in [0.4911, 0.4977] (Breite 0.0066), |sin delta| in [0.179, 0.999] (Breite 0.820)
+Variante B, eps = eta_A = artanh(beta_sym^2) (0.3116): 0 Treffer
+Variante B, eps = eta_W = artanh(beta_sym) (0.6175): 1552 Treffer; sin^2 23 in [0.4908, 0.4975] (Breite 0.0067), |sin delta| in [0.168, 0.999] (Breite 0.831)
+Variante B, eps = 2 eta_A = ln gamma_L (0.6231): 1936 Treffer; sin^2 23 in [0.4911, 0.4977] (Breite 0.0066), |sin delta| in [0.177, 0.999] (Breite 0.822)
+
+H45a (Treffer bei eps = artanh(beta_sym)): widerlegt
+H45b (scharf): widerlegt
+H45c (Treffer beim Hopf-Wert): nein

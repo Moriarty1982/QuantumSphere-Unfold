@@ -1,0 +1,9 @@
+Ausgabe von k383b_gegenprobe.wl (Wolfram Language, 26.11.2026). Symbolische Reste W1 bis W3 sind exakt 0; Rueckgabewert Null; keine Warnungen.
+W1 cosh 2etaW - gammaL = 0
+W2 exp(2etaA) - gammaL = 0
+W3 cosh 2etaA - (gammaL+1/gammaL)/2 = 0
+W4 tanh^2 etaA = b^4 ; num 0.09111134480
+W5 mW(W,D) = 80.3611330; mW(A,D) = 70.0639633
+W6 mh(kappa=gammaL) = 201.444; mh((gL+1/gL)/2) = 124.797; mh(cosh etaW) = 124.362; mh(coth 2etaW) = 122.939
+W7 2etaA = 0.623100056074; etaW = 0.617529584950; ln gammaL = 0.623100056074
+W8 z mW(A,D) = -1302.36; z OmegaM(A,D) DESI/Planck = -23.9987 / -31.9841

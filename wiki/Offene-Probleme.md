@@ -154,6 +154,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H180, 26.11.2026:** Für OP3 und OP4. Mit freiem K_ν legen R und die Mischungswinkel K_ν = 0,660 (0,634 bis 0,701) fest; die Setzung K_ν = ⅔ ist innerhalb des Modells von den Daten gestützt. Alternative ohne kleine Drehung (K_ν = 0,629, χ² = 8,2) nicht ausgeschlossen; JUNO trennt über sin²θ₁₂. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/neutrino_k_h180/`.
 
+**Test H181, 26.11.2026:** Für OP1 (Rolle von β_sym im HC). Der Zustand mit b/a = β_sym² (alte Lesart aus k292/k297) trägt als gemeinsamer Zustand die Ablesungen m_W, Ω_M, sin²θ₁₂ und die Maske nicht; widerlegt. Der Zahlentreffer κ → m_h = 124,8 GeV bleibt ohne Herleitung und trennt die Lesarten nicht. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/zwei_lesarten_h181/`.
+
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
 **Runde r65, 26.11.2026:** H162 und k361 stehen als Runde v4.10.0-r65 im Companion. Für OP3/OP4: Weg A und das relative CP-Vorzeichen gelten für jede Ladungsachse und beide Ladungstypen; die Frage aus r64.2 ist damit beantwortet. Offen bleiben die Wahl der Achse (ψ-fest oder kopientreu), die Setzung der Seite und die dritte Generation. OP3 und OP4 bleiben offen.
