@@ -38,6 +38,30 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Was die übliche Physik für Up gegen Down erwartet (26.11.2026, Test H179, k379)
+Vorab-Notiz a986b29. Auftrag des Autors: zuerst die Standarderwartung prüfen.
+- **Eichladungen** wirken generationsblind und ändern K, ρ, δ nicht. Im Standardmodell sind die Yukawa-Kopplungen freie Zahlen; für Up gegen Down gibt es
+  keine Standardvorhersage. Ein-Parameter-Gesetze in der Ladung (Verhältnis 2 oder 4) und ein gemeinsames Potenzgesetz tragen nicht.
+- **Georgi-Jarlskog** (m_b = m_τ, m_s = m_μ/3, m_d = 3m_e) ist die einzige parameterfreie Standardrelation. Sie sagt für die Down-Quarks K = 0,7454,
+  δ = 0,1051, θ = 48,03° voraus. Gemessen: 0,7478 / 0,1001 / 48,11° bei M_Z und 0,7362 / 0,1071 / 47,71° bei 2·10¹⁶ GeV.
+- **Urteil nach den vorab gesetzten Kriterien: widerlegt** (K 6,7σ daneben im Bereich hoher Skalen; einzelne Massenverhältnisse 5 bis 24 % daneben).
+  Zugleich liegt die Relation in K und δ auf 0,3 bis 5 %, näher als alles andere Geprüfte.
+- Nachträgliche Lesart, kein Ergebnis: Die Faktoren 3 und ⅓ sind die Farbzahl; der J-Abstand der Down-Quarks (3,1°) entsteht fast ganz aus ihnen.
+  Der Up-Sektor bleibt ohne Beziehung.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/standardphysik_h179/`.
+
+### Der Farbanteil ist nicht frei, und die Farbrichtung verschiebt δ nicht (26.11.2026, Erkundung k378)
+Nicht blind. Nachprüfung der Setzung aus H178c.
+- **Farbanteil:** Die Farbsymmetrie (Derivationen von 𝕆, die e₇ festhalten) lässt genau 1 und e₇ fest. Ein Farbtriplett liegt deshalb ganz in den sechs
+  Farbrichtungen. Der in H178c gesetzte gebrochene Farbanteil je Sektor hat keine Grundlage; diese Lesart ist zurückgenommen. H178a und H178b bleiben.
+- **Folge:** Die Farbe trennt Up und Down nicht. Jeder Quarktyp braucht ein eigenes Koeffizientenverhältnis im Potential. Die Quarkwinkel sind zwei freie Zahlen.
+- **Phase:** Der kubische Term der Albert-Algebra ist für gleich ausgerichtete Nebendiagonalen cos 3φ, für jede Richtung. Die Farbrichtung allein verschiebt δ nicht.
+- **Stellgrößen:** Besser als (K, δ) ist (ρ, x) mit x als Abstand vom masselosen Punkt: e (1; 0,040), d (1,115; 0,063), u (1,290; 0,005). Der kleine Wert
+  von δ bei den Quarks ist überwiegend eine Folge des größeren ρ.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/farbanteil_k378/`.
+
 ### Der Frame-Tausch legt den Winkel nur für farblose Felder fest (26.11.2026, Test H178, k377)
 Frage aus k376: Was bricht J nur bei den Quarks? Antwort: nichts muss J brechen. Vorab-Notiz 93e6e75 (Teil a nicht blind).
 - **Exakt:** Mit U als der Einheit, die die Farbe festhält, ist J in der farblosen Ebene {1, U} eine Spiegelung (J² = +1) mit Fixpunkt 45°, auf den

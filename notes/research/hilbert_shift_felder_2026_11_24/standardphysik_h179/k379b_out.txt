@@ -1,0 +1,6 @@
+k379b (Wolfram Language, MCP-Kernel, 26.11.2026), Ausgabe ({K, delta, rho, theta in Grad, x}):
+Georgi-Jarlskog-Vektor (3 m_e, m_mu/3, m_tau): {0.74542270, 0.10507021, 1.11187594, 48.03239071, 0.06058072}
+Down gemessen, M_Z:                            {0.74778848, 0.10012947, 1.11506298, 48.11391717, 0.06316839}
+Down gemessen, I = 0,12302 (2e16 GeV):         {0.73620138, 0.10705244, 1.09936533, 47.70985151, 0.06801300}
+Doppelverhaeltnisse M_Z: {0.94715590, 1.09512117};  bei 2e16 GeV: {1.07114527, 1.23848024}
+Stimmt mit k379 (Python) auf alle gezeigten Stellen. Keine Warnungen. Nur numerische Zentralwerte, kein symbolischer Nullrest.
