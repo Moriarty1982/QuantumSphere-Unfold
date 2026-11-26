@@ -52,6 +52,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Test H164, 26.11.2026 (k355):** Für OP1: In der Lesart „Hopf-Sphäre = Himmelskugel von Lichtrichtungen“ ist β_sym = sin(θ_H/2) der Überlapp des Hopf-Zustands mit dem Gegenpol und zugleich die Geschwindigkeit des Systems, in dem beide gegenüberliegen (Rapidität = ε der Maske, γ_L als relativer Lorentz-Faktor der Frames ±β). Derselbe Boost führt den R-Zustand auf die Besetzungen des Materie-Zustands (cos 2α = 1/γ_L). Das verbindet die Winkel- und die Geschwindigkeits-Lesart, die im Companion nebeneinander standen; es sind Identitäten in β, die für jeden Wert gelten. **Der Wert von β_sym folgt daraus nicht, OP1 bleibt offen.** Am Hopf-Wert 1/√3 ist der Winkel der Tetraederwinkel (Erkundung).
 
+**Test H165, 26.11.2026 (k356), und Runde r66:** H164 steht als Runde v4.10.0-r66 im Companion. H165 fragt, woher β_sym kommen kann: γ_L ist die Wurzel von Σ_k 2^(1 − γ_L·√(k(k+2)/3)) = 1 (β = 0,5494056410). Eine Sichtung zählt 37 frühere Versuche; keiner leitet den Wert her. Die Schließung über die Überlappe kohärenter Zustände, Σ_j 2β^{4j} = 1, erzwingt den Hopf-Wert 1/√3 und nicht den gemessenen; H165 ist widerlegt. Gesetzt bleiben die U(1)-Zählung mit Gewicht 2, das Casimir-Spektrum, die Ein-Bit-Einheit und die Zuordnung der zwei Regeln zu den Frames. OP1 bleibt offen.
+
 ## OP2: Dirac-Operator auf dem antisymmetrischen Sektor
 
 Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert_{H^+_-}`$ als geschlossen. Beide Beweise stützen sich aber auf die Riemann-Arbeit, die seit v4.8.0-r04 keine Beweisquelle mehr ist. Der letzte Schritt, den Versatz aus dem Spektrum abzulesen, ist dasselbe Problem wie OP1.
