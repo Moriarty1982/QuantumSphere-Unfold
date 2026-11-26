@@ -33,7 +33,7 @@ sector, so it does not select $q$ either (\rnd{r11}, Theoremlet~11.2(b),(c)).  T
 \subsection{H96 and H97}
 \label{sec:lop5-h96}
 
-The $\Lambda$ readout gives a prediction without a free parameter (pre-registered; \rnd{r05}, Theoremlet~5.4):
+Once the pair of counting rules is chosen, the $\Lambda$ readout gives a prediction without a free parameter (pre-registered; \rnd{r05}, Theoremlet~5.4):
 \begin{equation}
  \Omega_M=\bsym^2=\frac{\gamma_L-1}{\gamma_L+1}=0.30185 .
  \label{eq:lop5-h96}
@@ -53,7 +53,7 @@ $\chi^2=10.9$, $p=0.54$ (\rnd{r05}, Theoremlet~5.5).
 \label{sec:lop5-worked}
 
 The OP5 comparison model is a local auxiliary construction: a reduced field theory in which a matter modulation drives a comparison field whose
-response can be read along a ray.  The worked case of \rnd{r32} collects its derivations; every step was checked exactly in Wolfram Language.
+response can be read along a ray.  The worked case of \rnd{r32} collects its derivations; the algebraic steps (Theoremlets~32.2 and 32.4--32.6) were checked exactly in Wolfram Language.
 
 \paragraph{What is chosen.}
 Two inputs are set.  (i) The drive operator
@@ -127,16 +127,18 @@ fork: these data belong either to a field or medium (field side) or to the reado
 
 \paragraph{The readout side carries the frame but not the slowing.}
 Read as a readout, the directed coupling is a transverse tidal readout of a detector moving with $u$, and orientation and slowing drop out of the
-leading static contrast (\rnd{r46}).  The branch predicts a dependence on the detector motion of relative size $\beta^2$, very small at
+leading static contrast (\rnd{r46}).  The branch predicts a dependence on the detector motion of relative size $v^2/c^2$ in the detector velocity $v$, very small at
 laboratory velocities.  But the reduced model must also satisfy the metric cone limit, i.e.\ no characteristic propagates faster than the
-metric light cone.  With $Z=1$, $g_0^2=g_m^2=3/100$ the largest squared characteristic speed is $0.675$ for the chosen slow values, but $1.064$
+metric light cone.  In the principal part of the model, $r_0$ and $r_m$ are the squared speeds of the massless and the massive mediator,
+$\alpha=a_\perp/q\in[0,1]$, and the mediators couple to the Higgs radius with $j_0^2=\tfrac12g_0^2\alpha^2$ and
+$j_m^2=\tfrac23g_m^2(r_m^2-r_m\alpha+\alpha^2)$.  With $Z=1$, $g_0^2=g_m^2=3/100$ the largest squared characteristic speed is $0.675$ for the chosen slow values, but $1.064$
 for luminal mediators and $1.199$ with $c_h^2=1$ as W2 forces (\rnd{r47}, Theoremlet~47.1).  A Lorentz-covariant field propagates luminally in
 every frame, so the slowing needs a distinguished frame on the field side.  The rest frame R of the field of Convention~F can slow propagation only
 across its axis (\rnd{r49}, Theoremlets~49.1, 49.2).
 
 \begin{proposition}[no-go for the luminal Higgs radius; \rnd{r49}, Theoremlet~49.3, found afterwards]
 \label{prop:lop5-nogo}
-For $c_h^2=1$ the upper condition of the cone limit of the reduced model is identically
+For $c_h^2=1$ the left side of the upper condition of the cone limit of the reduced model, which has to be non-negative, is identically
 \[
  -\tfrac23g_m^2(1+r_m-\alpha)-\frac{j_0^2}{1-r_0}-\frac{j_m^2}{1-r_m}<0
 \]
@@ -152,8 +154,8 @@ The identification of the comparison field with the radial mode of W2 and the di
 mediator, on either side of the fork \Refuted.  Three propagations would have to be slowed, and each needs a medium with its own rest vector.
 
 \paragraph{A medium, and a vacuum bound.}
-A medium of two light-like counter-streams (an object of the photon frame seen from other frames) can keep the cone limit; one stream cannot
-(H120, \rnd{r50}).  For any medium with a universal slowing $r=1-\epsilon$ in vacuum the upper cone condition gives exactly
+A medium of two light-like counter-streams (an object of the photon frame seen from other frames) can keep the cone limit for observers near the balance of the streams; one stream cannot
+(H120, \rnd{r50}).  For any medium with a universal slowing $r=1-\epsilon$ in vacuum the upper cone condition gives (for $Z=1$, $g_0=g_m$) exactly
 $\epsilon^2\ge g_m^2\bigl(\tfrac23-\tfrac23\alpha+\tfrac76\alpha^2\bigr)$, sharpest at $\alpha=1$, hence $\epsilon\ge\sqrt{7g_m^2/6}$.  Adopting the
 laboratory bound $\epsilon\le10^{-13}$ on Lorentz violation (a bound for electrons \cite{Altschul2010}, used here for the Higgs sector without separate evidence) gives
 \begin{equation}

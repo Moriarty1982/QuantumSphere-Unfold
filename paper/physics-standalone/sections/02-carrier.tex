@@ -23,8 +23,8 @@ construction. The complex unit $i$ commutes with the quaternion units.
 The original definition equipped $q$ with the Hermitian norm $-t^2+\sum_k|z_k|^2$ and read it as a
 Minkowski metric. Round v4.8.0-r06 corrected this: as a real quadratic form in the seven real
 variables $(t,\operatorname{Re}z_k,\operatorname{Im}z_k)$ it has signature $(1,6)$, and conjugation by
-real unit quaternions only rotates $\operatorname{Re}z$ and $\operatorname{Im}z$ separately; it contains no
-boost. The invariant that the algebra provides is a different one.
+real unit quaternions only rotates $\operatorname{Re}z$ and $\operatorname{Im}z$, each by the same spatial rotation; it
+contains no boost. The invariant that the algebra provides is a different one.
 
 \begin{proposition}[Natural norm; v4.8.0-r06.1]
 \label{prop:A-norm}
@@ -94,7 +94,7 @@ C=\tfrac12(1+J),\qquad A=\tfrac12(1-J).
 \end{equation}
 \end{definition}
 
-\begin{proposition}[Compensator as orthogonal projection; v4.8.0-r04.2, \texttt{prop:compensator}]
+\begin{proposition}[Compensator as orthogonal projection; v4.8.0-r04.2]
 \label{prop:A-compensator}
 $C$ and $A$ are complementary orthogonal projections: $C^2=C=C^*$, $A^2=A=A^*$, $CA=AC=0$, $C+A=1$.
 Their ranges are $\operatorname{ran}C=\ker(J-1)$ and $\operatorname{ran}A=\ker(J+1)$, and
@@ -109,7 +109,7 @@ $JA=-A$ gives $\operatorname{ran}A=\ker(J+1)$. Finally $CJ=C$ and $AJ=-A$.
 \end{proof}
 
 So $C$ keeps the part of a state that $J$ leaves fixed and removes the part that $J$ reverses, and the
-two parts are orthogonal. Nothing beyond $J^2=1$ and $J^*=J$ is used. The earlier main-text statement
+two parts are orthogonal. Nothing beyond $J^2=1$ and $J^*=J$ is used. The main-text statement
 of \texttt{prop:compensator}, that $C$ ``takes matter and its tachyon image and produces the photon'',
 does not follow from this; Section~\ref{sec:A-field-example} shows why.
 
@@ -215,7 +215,8 @@ input is recovered only from both. A projection loses information, while symmetr
 (\rnd{r16}, r16.6). The older reading of \texttt{prop:compensator}, in which $C$ produces the photon
 from matter and its tachyon image, is therefore not supported: the quaternion identity $e_3=e_1e_2$
 makes the \emph{product} $z\times J_Bz=2\,\mathbf E\times\mathbf B$ orthogonal to both inputs, not the
-average (\rndold{r03}). The Companion corrected the statement accordingly.
+average (\rndold{r03}, r03.4). The Companion corrected the orthogonality clause of the proposition accordingly; its sentence
+that $C$ produces the photon still stands in the main text and is superseded by \rnd{r23}.
 
 \subsection{What the carrier does not give}
 \label{sec:A-limits}
@@ -227,8 +228,9 @@ belong to one theory and are connected by an active operation; different readout
 different information. Proposition~\ref{prop:A-orbits} establishes the third for matter and tachyon
 configurations; it says nothing about the second. The compensator is of the fourth kind.
 
-In particular the carrier by itself identifies no particle. Which state is an electron, which a
-photon, and how many generations there are, requires the larger algebra
-$\mathbb C\otimes\mathbb H\otimes\mathbb O$ and further named choices (Section~\ref{sec:B-particles}). It also contains
+In particular the carrier by itself identifies no particle. Which state is an electron and which a
+photon requires the larger algebra
+$\mathbb C\otimes\mathbb H\otimes\mathbb O$ and further named choices (Section~\ref{sec:B-particles}). The number of generations
+is not derived there either; it is an input. It also contains
 no dynamics: neither the evolution of $z$ nor an action that would fix a scale follows from the
 algebra (Section~\ref{sec:act}). What it does fix is the frame structure of the next section.
