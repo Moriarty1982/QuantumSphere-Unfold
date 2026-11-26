@@ -519,5 +519,16 @@
     ],
     "guard": "Deflection-angle criterion and the 10¹²² reading",
     "obligation": "The model has no coupling to a metric of its own (H147: the HS(0) line is a scalar) and no length independent of Λ; both ideas stay untested readings. Λ remains an input; OP5 remains open."
+  },
+  {
+    "id": "probes-periapsis-restart-circular-orbit-force-h163",
+    "path": "notes/research/gedankenexperiment_proben_2026_11_26/Ergebnis_H163_Minimalpunkte_Kreisbahn_Kraft.md",
+    "title": "Turning the closest-approach point into a circular orbit takes twice the Newtonian attraction; a smallest distance exists only relativistically, at 4m",
+    "excerpt": "**Für Einfall aus der Ruhe (Parabel) ist es genau das Doppelte der Schwerkraft**",
+    "assumptions": [
+      "Planar point mass, two set readings of the restart, kick or extra central force; the Schwarzschild part is textbook general relativity, not a statement of the model; predominantly not blind."
+    ],
+    "guard": "Closest-approach restart, circularising force and the bound/unbound threshold",
+    "obligation": "No Companion quantity enters; the model has no metric coupling of its own (H147). Reading the sum of two counter-rotating probes as the shadow ellipse of H159 is a reading, not a derivation. OP1–OP5 remain open."
   }
 ]
