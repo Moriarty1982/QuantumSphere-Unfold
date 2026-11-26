@@ -142,6 +142,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Erkundung k376, 26.11.2026:** Für OP3 und OP4. K ≠ ⅔ bei den Quarks ist ein Bruch des Frame-Tauschs J bei erhaltener Dreiersymmetrie (θ − 45° = 3,1° Down, 7,2° Up); ein Bruch der Dreiersymmetrie müsste dafür exakt die Stärke √(9K − 6) = 0,85 bzw. 1,41 haben, weit mehr als die Mischung braucht. Warum J nur bei Quarks gebrochen ist, ist offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/quarks_k376/`.
 
+**Test H178, 26.11.2026:** Für OP3 und OP4. J legt θ = 45° nur in der farblosen Ebene fest (J² = +1 dort, J² = −1 auf den Farbrichtungen); für Felder mit Farbanteil ist der Winkel frei. Damit ist erklärt, warum K = ⅔ nur bei den Leptonen gilt. Die Größe der Quarkabweichung bleibt angepasst (zwei Koeffizienten, gesetzter Farbanteil). OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/farbe_h178/`.
+
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
 **Runde r65, 26.11.2026:** H162 und k361 stehen als Runde v4.10.0-r65 im Companion. Für OP3/OP4: Weg A und das relative CP-Vorzeichen gelten für jede Ladungsachse und beide Ladungstypen; die Frage aus r64.2 ist damit beantwortet. Offen bleiben die Wahl der Achse (ψ-fest oder kopientreu), die Setzung der Seite und die dritte Generation. OP3 und OP4 bleiben offen.

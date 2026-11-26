@@ -38,6 +38,18 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Der Frame-Tausch legt den Winkel nur für farblose Felder fest (26.11.2026, Test H178, k377)
+Frage aus k376: Was bricht J nur bei den Quarks? Antwort: nichts muss J brechen. Vorab-Notiz 93e6e75 (Teil a nicht blind).
+- **Exakt:** Mit U als der Einheit, die die Farbe festhält, ist J in der farblosen Ebene {1, U} eine Spiegelung (J² = +1) mit Fixpunkt 45°, auf den
+  sechs Farbrichtungen aber eine Vierteldrehung (J² = −1) ohne Fixrichtung.
+- **Potential:** Das allgemeinste J-invariante Potential bis Grad 4 legt θ = 45° (K = ⅔) nur für Felder ohne Farbanteil fest. Mit Farbanteil hängt der
+  Winkel von zwei Koeffizienten ab.
+- **Angepasst, nicht hergeleitet:** Die Größe der Abweichung (3,1° und 7,2°). Zwei Messgrößen, zwei Koeffizienten, dazu eine gesetzte Regel für den
+  Farbanteil je Sektor. Farbe allein reicht nicht, weil Up und Down dieselbe Farbe und verschiedene Winkel haben (92σ).
+- Offen: der Farbanteil je Sektor und die beiden Koeffizienten; die Phase δ ist nicht behandelt.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/farbe_h178/`.
+
 ### Quarks einzeln justiert: K ≠ ⅔ ist ein Bruch des Frame-Tauschs, nicht der Dreiersymmetrie (26.11.2026, Erkundung k376)
 Nicht blind. Frage: Welche Eingabe schiebt K bei den Quarks von ⅔ weg?
 - **Als Winkel:** K = (1 + tan²θ)/3. Leptonen θ = 45° (Fixpunkt des Frame-Tauschs J), Down 48,1°, Up 52,2° (bei M_Z).

@@ -1022,3 +1022,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Test H177 (k375):** Phasenhalbierung widerlegt; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
 
 **26.11.2026, Erkundung k376:** Quarks einzeln justiert; Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert.
+
+**26.11.2026, Test H178 (k377):** Farbe und Frame-Tausch; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
