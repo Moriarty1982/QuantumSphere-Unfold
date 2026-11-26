@@ -1,0 +1,12 @@
+k374b, Wolfram-Nachrechnung (26.11.2026), tatsaechliche Ausgaben des Kerns.
+
+Warnung des Kerns (beide Laeufe): Symbol::undefined2: Warning: Global symbols "T, T2, ..." are undefined. (Vorpruefung des Werkzeugs; im Code definiert.)
+
+Lauf 1 (Sort auf exakten Ausdruecken, Down-Eigenwerte dadurch falsch geordnet):
+{0.7017867722105606, 0.16556712769361526, {0.351996, 2.56904, 0.0789655}, {0.00761217, 0.171178, 2.82121}}
+   Der Down-Wert 0,7018 ist wegen der falschen Reihenfolge nicht zu verwenden; der Up-Wert 0,16557 ist gueltig.
+Lauf 2 (numerisch vor dem Sortieren, nur Down; so steht es jetzt in k374b_kontrolle.wl):
+{0.15704105754347492, {0.0789655, 0.351996, 2.56904}}
+
+Vergleich mit Python (k374_out.txt): CKM-Brechung nur im Down-Sektor 0,1570, nur im Up-Sektor 0,1656. Stimmen ueberein.
+Nicht in Wolfram nachgerechnet: die PMNS-Zeilen, die Zerlegung in Anteile und Teil 1 (dessen Zahlen stammen aus H172 und sind dort gegengerechnet).

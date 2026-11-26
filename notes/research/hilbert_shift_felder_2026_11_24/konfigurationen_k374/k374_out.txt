@@ -1,0 +1,35 @@
+== 1. Massen je Sektor: Brannen-Form lambda_k = 1 + sqrt2 rho cos(delta + 2 pi k/3), K = (1 + rho^2)/3 ==
+   Sektor | K | rho | delta (gefaltet) | Polwinkel theta mit K = 1/(3 cos^2 theta) | naechster Baumwert n*pi/12 und Abstand
+   e (geladene Leptonen) | 0.66666 | 1.00000 | 0.222225 | 45.00 Grad | 1*pi/12, Abstand -0.03957; Kontrolle 2.0e-15
+   d (Down-Quarks, M_Z) | 0.74779 | 1.11506 | 0.100129 | 48.11 Grad | 0*pi/12, Abstand +0.10013; Kontrolle 2.0e-15
+   u (Up-Quarks, M_Z) | 0.88762 | 1.28952 | 0.051806 | 52.21 Grad | 0*pi/12, Abstand +0.05181; Kontrolle 3.5e-15
+   nu (Neutrinos; nur R bekannt) | K = 2/3 gesetzt | 1 | 0.480240 (aus R) bzw. 0.478819 (H176) | 45.00 Grad | 2*pi/12, Abstand -0.04336 bzw. -0.04478
+   Hinweis: K und delta der Quarks haengen von der Skala ab (H172: K_u 0,888 bei M_Z, 0,849 bei PDG-Skalen; K_d 0,748 / 0,731).
+
+== 2. Mischungen: Baumwert und kleinster Z3-brechender Term (direkte Konstruktion, Massen exakt) ==
+Verfahren: Zielmatrix V vorgeben; U = U_Baum-Partner * V (bis auf freie Phasen); M = U diag(lambda) U^+; nicht zirkulanter Anteil = M minus Z3-Mittel.
+Norm = Frobenius-Norm des nicht zirkulanten Anteils in Einheiten der mittleren Diagonale (a = 1); minimiert ueber die freien Phasen.
+CKM-Ziel (aus Vorwissen): s12 = 0.225, s23 = 0.0418, s13 = 0.00373, delta = 1.14. Baumwert: beide Sektoren zirkulant in derselben Basis, V = 1.
+   CKM, Brechung nur im Down-Sektor: Norm 0.1570; Anteile S A-gerade 0.540, S A-ungerade 0.295, K A-gerade 0.055, K A-ungerade 0.110 (reell 0.835, imaginaer 0.165); zirkulanter Teil: rho = 1.11137, delta = 0.09168; Phasen [3.212, 5.967]
+   CKM, Brechung nur im Up-Sektor: Norm 0.1656; Anteile S A-gerade 0.756, S A-ungerade 0.220, K A-gerade 0.003, K A-ungerade 0.020 (reell 0.977, imaginaer 0.023); zirkulanter Teil: rho = 1.28597, delta = 0.04804; Phasen [4.694, 4.417]
+   nur Cabibbo-Winkel, Down-Sektor: Norm 0.0847; Anteile S A-gerade 0.434, S A-ungerade 0.066, K A-gerade 0.160, K A-ungerade 0.340 (reell 0.500, imaginaer 0.500); zirkulanter Teil: rho = 1.11399, delta = 0.09005; Phasen [3.337, 6.196]
+   zum Vergleich: theta*(lambda_j - lambda_i) Down: 12: 0.0614, 23: 0.0927, 13: 0.0093; Up: 12: 0.0368, 23: 0.1108, 13: 0.0105
+   lambda Down [0.079, 0.352, 2.569], Up [0.0076, 0.1712, 2.8212]
+   PMNS, Brechung nur bei den geladenen Leptonen, Neutrinos bei x_R (freie Phasen: delta_CP, zwei Majorana-Phasen): Norm 0.0752; Anteile S A-gerade 0.525, S A-ungerade 0.366, K A-gerade 0.004, K A-ungerade 0.104 (reell 0.891, imaginaer 0.109); zirkulanter Teil: rho = 0.99905, delta = 0.22201; Phasen [4.611, 0.058, 1.613]
+         dasselbe mit delta_CP = +90 Grad fest: Norm 0.0831; Anteile S A-gerade 0.512, S A-ungerade 0.359, K A-gerade 0.021, K A-ungerade 0.108 (reell 0.870, imaginaer 0.130); zirkulanter Teil: rho = 0.99884, delta = 0.22206; Phasen [6.219, 4.661]
+         dasselbe mit delta_CP = -90 Grad fest: Norm 0.0831; Anteile S A-gerade 0.512, S A-ungerade 0.359, K A-gerade 0.021, K A-ungerade 0.108 (reell 0.870, imaginaer 0.130); zirkulanter Teil: rho = 0.99884, delta = 0.22206; Phasen [0.064, 1.622]
+   PMNS, Brechung nur bei den geladenen Leptonen, Neutrinos bei x = 0,04478 (H176) (freie Phasen: delta_CP, zwei Majorana-Phasen): Norm 0.0750; Anteile S A-gerade 0.540, S A-ungerade 0.359, K A-gerade 0.004, K A-ungerade 0.097 (reell 0.898, imaginaer 0.102); zirkulanter Teil: rho = 0.99906, delta = 0.22211; Phasen [4.612, 0.055, 1.611]
+         dasselbe mit delta_CP = +90 Grad fest: Norm 0.0827; Anteile S A-gerade 0.522, S A-ungerade 0.354, K A-gerade 0.021, K A-ungerade 0.103 (reell 0.876, imaginaer 0.124); zirkulanter Teil: rho = 0.99886, delta = 0.22216; Phasen [6.223, 4.663]
+         dasselbe mit delta_CP = -90 Grad fest: Norm 0.0827; Anteile S A-gerade 0.522, S A-ungerade 0.354, K A-gerade 0.021, K A-ungerade 0.103 (reell 0.876, imaginaer 0.124); zirkulanter Teil: rho = 0.99886, delta = 0.22216; Phasen [0.06, 1.62]
+   PMNS, Brechung nur bei den geladenen Leptonen, Neutrinos bei Baumwert der Neutrinos (x = 0, tribimaximal) (freie Phasen: delta_CP, zwei Majorana-Phasen): Norm 0.1636; Anteile S A-gerade 0.266, S A-ungerade 0.433, K A-gerade 0.016, K A-ungerade 0.285 (reell 0.698, imaginaer 0.302); zirkulanter Teil: rho = 0.99553, delta = 0.20433; Phasen [4.542, 0.298, 1.774]
+         dasselbe mit delta_CP = +90 Grad fest: Norm 0.1725; Anteile S A-gerade 0.312, S A-ungerade 0.438, K A-gerade 0.002, K A-ungerade 0.247 (reell 0.751, imaginaer 0.249); zirkulanter Teil: rho = 0.99502, delta = 0.20374; Phasen [5.975, 4.496]
+         dasselbe mit delta_CP = -90 Grad fest: Norm 0.1725; Anteile S A-gerade 0.312, S A-ungerade 0.438, K A-gerade 0.002, K A-ungerade 0.247 (reell 0.751, imaginaer 0.249); zirkulanter Teil: rho = 0.99502, delta = 0.20374; Phasen [0.308, 1.787]
+   Hinweis: Diese Norm ist die Frobenius-Norm (Nebendiagonalen zaehlen doppelt) und deshalb nicht direkt die Koeffizienten-Norm aus k372.
+
+== 3. Zahlkoerper je HS-Stufe: wie viele Eingaben gibt es ueberhaupt? ==
+   Stufe | Algebra | Dimension | hermitesche 3x3-Formen | davon zirkulant (a + z S + z* S^2) | Z3-brechend | imaginaere antisymmetrische Richtungen
+   HS(0) | R | 1 | 6 | 2 | 4 | 0
+   HS(1) | C | 2 | 9 | 3 | 6 | 3
+   HS(2) | H | 4 | 15 | 5 | 10 | 9
+   HS(3) | O | 8 | 27 | 9 | 18 | 21
+   Reelle zirkulante Form (HS(0)): z reell, also delta = 0 oder pi (gefaltet 0 bzw. pi/3); jede andere Phase braucht mindestens C.
