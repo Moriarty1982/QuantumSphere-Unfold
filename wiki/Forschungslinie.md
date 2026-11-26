@@ -63,6 +63,7 @@ In r25 wurden 15 Sackgassen archiviert.
 - **Gravitationssätze (r64–r66).** In dieser Lesart sitzt der Frame-Unterschied in $\gamma$, nicht in $\hbar$ oder $G$; mehrere alte Folgerungen werden nicht gestützt.
 - **Einsteins „größter Fehler“ (r67).** Der Companion setzt denselben Wert $\beta^2$ einmal auf $\Lambda$ und einmal auf die Materie. In Zählform ist $\Omega_M = 0{,}302$, $\Omega_\Lambda = 0{,}698$, gültig nur für die heutige Epoche.
 - **Nachrechnung (r68).** Die Zahlen bestätigen sich. Die Zähl-Lesart braucht aber die U(1)-Zählung; die besser begründete SU(2)-Zählung gibt $\beta = 0{,}604$, außerhalb des Fensters.
+- **Portgewichte und HC auf der Kugel (r70).** Die Frames sind Punkte einer Halbkugel von Feldzuständen, der HC ist die Messung entlang ihrer Achse b_C = E·B/u. r69.4 hatte für M die Portgewichte 76,8 : 23,2 und die Ellipse mit b/a = β_sym² nebeneinandergestellt; das sind zwei Zustände (der zweite hat 91,65 : 8,35). Nachrechnung von neun Skripten (k381): kein Urteil kippt, aber der Zahlentreffer κ = (γ_L + 1/γ_L)/2 aus k303 hängt an der Lesart b/a = β_sym².
 
 ## OP5, die 4.10-Konsolidierung und eine gemeinsame Dynamik (r69–r74)
 

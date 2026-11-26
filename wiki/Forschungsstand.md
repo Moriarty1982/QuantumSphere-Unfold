@@ -1,5 +1,61 @@
 # Forschungsstand
 
+### Portgewichte gegen Amplituden, der HC auf der Zustandskugel (26.11.2026, Runde r70, Erkundung k381, nicht blind)
+
+Anlass war eine Zeichnung der Frames, die der Autor am 26.11.2026 angefragt hat. Dabei fiel auf, dass r69.4 für den Materie-Frame zwei Angaben nebeneinanderstellt, die nicht denselben Zustand beschreiben. Runde **v4.10.0-r70** stellt das richtig. Kein Test mit Kriterium, keine H-Nummer, kein Status eines offenen Problems geändert.
+
+**Die Kugel der Feldzustände (r70.1).** Mit `b_S = (|E|² − |B|²)/(2u)`, `b_C = E·B/u` und `b_3 = |E×B|/u` gilt `b_S² + b_C² + b_3² = 1`. Jeder Feldzustand ist ein Punkt einer Halbkugel (b₃ ≥ 0), und die Zustandsscheibe der Konvention F ist ihr Schatten. b₃ ist der Anteil der Energie, der strömt. Ein Schub der Rapidität η quer zum Feld führt den Zustand E = B auf `b_C = sech 2η`, `b_3 = tanh 2η`. Die Frames liegen auf diesem Meridian:
+
+| Frame | Höhe b_C | b₃ | Portgewichte | Winkel zwischen E und B |
+|---|---|---|---|---|
+| R Ruheframe | 1 | 0 | 1 : 0 | 0° |
+| M Materie-Frame | 0,5363 = 1/γ_L | 0,8440 | 76,8 : 23,2 | 57,57° |
+| P Lichtpunkt | 0 | 1 | 50 : 50 | 90° |
+| T Dual-Frame | −0,5363 | 0,8440 | 23,2 : 76,8 | 122,43° |
+
+Die Dualität D und die Zeitumkehr ϑ vertauschen M und T. Der Tausch J_B lässt alle vier Frames fest.
+
+**Was der HC macht (r70.2).** Im Feld-Dublett ist der Kompensator C = ½(1 + σ_x), seine Achse ist b_C. Er ist die Messung entlang dieser Achse:
+- Der Anteil im Kompensator-Port ist `p₊ = (1 + b_C)/2 = |E + B|²/(4u)`. Der HC sieht von einem Zustand nur die Höhe.
+- Was er durchlässt, hat E′ = B′ = (E + B)/2 und liegt am Pol R. Der Rest liegt am Gegenpol.
+- Behält man beide Ports und verwirft die Kohärenz, bleibt der Schatten auf der Achse (r27).
+- Von R führen zwei Wege auf die Höhe von M: der Schub mit ε = artanh β_sym und die Dualitätsdrehung um α mit tan α = β_sym, gefolgt vom HC (r27.1(b), p₊ = cos²α = 0,7681). Der HC unterscheidet sie nicht.
+
+„Ein Frame ist die Verteilung eines Zustands auf die zwei Ports“ heißt damit: Ein Frame ist eine Höhe auf der Achse des HC.
+
+**Die zwei Rollen von x = β_sym² (r70.3, r70.4).** Für die Schwingung a·e^{iωt} + b·e^{−iωt} mit den Gewichten a² : b²:
+
+| Lesart | b/a | Gewichte | Achsen der Ellipse | Winkel vom Pol |
+|---|---|---|---|---|
+| Konvention F: x ist das Verhältnis der Gewichte | β_sym = 0,5494 | 76,8 : 23,2 | e^{2ε} : 1 = 3,439 : 1 | 57,57° |
+| k292, k297: x ist das Verhältnis der Amplituden | x = 0,3018 | 91,65 : 8,35 | γ_L : 1 = 1,865 : 1 | 33,59° |
+
+Die zweite Zeile ist der Zustand nach einem Schub mit der Geschwindigkeit β_sym², nicht M. In r69.4 bleibt die Angabe der Portgewichte stehen; die Ellipse mit Achsenverhältnis γ_L gehört zur zweiten Zeile. γ_L = cosh 2ε ist beim Materie-Frame der Kehrwert der Höhe, nicht das Achsenverhältnis. Die Vermischung steht schon im Beweis von `thm:hc-quasiconformal`: Er nennt μ ein Verhältnis von Eigenwerten und setzt es dort ein, wo ein Amplitudenverhältnis hingehört. Der Satz hat einen Statusvermerk bekommen.
+
+**Nachrechnung (r70.5, k381).** Neun Skripte setzen x für b/a ein: k292, k297, k298 (H132), k299, k301, k302 (H133), k303, k305 (H136), k350 (H159). Jedes lief unverändert und mit b/a = β_sym.
+
+| Größe | b/a = x (wie notiert) | b/a = β_sym |
+|---|---|---|
+| Anteil des kleineren Teils an der Norm (k297) | 8,35 % | 23,19 % |
+| Winkel auf der Sphäre aus k292 | 33,6° | 57,57° |
+| λ_B/λ_A (k297) | 120,5 | 10,98 |
+| m_H²/(η f²) (k297) | 0,729 | 2,415 |
+| m_s²/m_H² (k297) | 0,00923·η | 0,03058·η |
+| m₋/m₊ bei g_L = g_R (H132) | 0,3018 | 0,5494 |
+| ρ in Fassung S mit 1 + ξ = 1 + μ² (k299) | 0,9165 | 0,7681 |
+| T = 1/cos² 2θ gegen das Fenster 5/3 bis 3 (k301) | 1,441, darunter | 3,477, darüber |
+| κ = 1/cos 2θ gegen das Ziel 1,2039 (k303) | 1,2004 (−0,29 %) | γ_L = 1,8647 (+55 %) |
+
+- **Kein Urteil kippt.** H132, H133, H136 und H159 ruhen auf Struktur, die nicht am Wert von μ hängt.
+- Mit b/a = β_sym ist der Winkel aus k292 derselbe wie der von M auf der Kugel und wie 2α aus r66. Die Zahl, die k292 als „nur ausgerechnet, keine Zuordnung“ führte, ist in dieser Lesart die Lage des Materie-Frames.
+- **Der Zahlentreffer κ = (γ_L + 1/γ_L)/2 aus k303 gibt es nur für b/a = x.** Mit b/a = β_sym wird derselbe Ausdruck zu γ_L, und kein Kandidat der Liste liegt innerhalb von 1 % am Ziel. Ob der Treffer Zufall ist, wie k303 schon zuließ, oder ein Hinweis darauf, dass der Zustand der zweiten Zeile eine eigene Bedeutung hat, ist nicht entschieden.
+
+**Offen.** (1) Die Sektorregel (Materie heißt Re s > 0, also b_S > 0) benutzt die andere Achse der Scheibe als der HC; beide gehen durch eine Dualitätsdrehung um 45° ineinander über. Welche gemeint ist, sagt Konvention F nur über die Worte „compensator port“. (2) k297 und k350 nennen den Tausch a ↔ b „Tausch J“. Liest man die zwei Kreisanteile als Ports, dann ist ein Tausch der Ports in Konvention F die Abbildung D oder ϑ, und die Involution des HC lässt beide Anteile fest. Ergebnis 1 von H159 („das Bild von C ist die Menge |a| = |b|“) gilt deshalb für den Projektor aus dem Tausch a ↔ b, nicht für den HC des Dubletts, dessen Bild R ist.
+
+Werkzeuge: Python mit sympy (exakt) und Wolfram Language unabhängig für die Identitäten und die geschlossenen Formen. Qiskit nicht eingesetzt (keine Schaltung), kein HDL/MMA-Vergleich. Die Wolfram-Gegenproben der neun Skripte selbst wurden nicht neu gerechnet. β_sym ist eingesetzt, OP1 bis OP5 bleiben offen.
+
+Quelle: `notes/research/v4_10_0_r70_portgewichte_hc/` (README, Rundentext, k381, k381b mit Ausgaben) und `notes/research/frames_kugelbild_2026_11_26/` (Zeichnung in vier Teilbildern).
+
 ### Neue Namen für die Frames und die Lepton-Sektoren (26.11.2026, Runde r69, Konvention)
 
 Entscheidung des Autors vom 26.11.2026. Runde **v4.10.0-r69** ist eine Konvention und kein Ergebnis: keine Rechnung, kein Test, kein Status geändert. Die Buchstaben M, T, P, R und die alten Namen bleiben gültig; ältere Runden und veröffentlichte Fassungen werden nicht umbenannt.
@@ -13,7 +69,7 @@ Entscheidung des Autors vom 26.11.2026. Runde **v4.10.0-r69** ist eine Konventio
 
 - **Lepton-Sektoren (r69.2):** **Re-Sektor** (neutrale Leptonen, c = 0) und **Im-Sektor** (geladene Leptonen, c = 1). Nach H170 sind die beiden Terme Real- und Imaginärteil derselben Form G = −(s + iv)². Die Namen gelten nur für Leptonen und stehen als Lesart unter H99. Die Quarks behalten Up- und Down-Sektor, weil sie dieser Struktur nach H172 nicht folgen. Die zwei Ausgänge des Kompensators heißen Ports.
 - **Warum nicht „bosonisch/fermionisch“ (r69.3):** Alle vier Frames sind Zustände desselben Felddubletts (E, B), eines Spin-1-Felds; ein Frame ist keine Teilchensorte. Die Lesart „M liest bosonisch, T fermionisch“ aus r17 ist nach r24 eine nicht begründbare Setzung. T11 benutzt die Wörter für die Ports. Beide Lepton-Sektoren bestehen aus Fermionen.
-- **Was die Frames über den HC sind (r69.4, Lesart):** Ein Frame ist die Verteilung desselben Zustands auf die zwei Ports des Kompensators: R 1 : 0, M 1 : x, T x : 1, P 1 : 1 mit x = β_sym² = 0,301847. Im Materie-Frame liegen 76,8 % im Kompensatorport. Im Bild von k292 und k297 sind M und T Ellipsen mit Achsenverhältnis γ_L und entgegengesetztem Drehsinn. Dass R der Kreis und P der Grenzfall ist, folgt aus derselben Parametrisierung und ist nicht eigens gerechnet. Das ist die Stokes-Beschreibung der Polarisation, angewandt auf (E, B). Die Gleichsetzung mit Beobachtern von Materie, Licht und Tachyon bleibt Lesart; warum die Daten in M und nicht in T verglichen werden, ist nicht hergeleitet.
+- **Was die Frames über den HC sind (r69.4, Lesart):** Ein Frame ist die Verteilung desselben Zustands auf die zwei Ports des Kompensators: R 1 : 0, M 1 : x, T x : 1, P 1 : 1 mit x = β_sym² = 0,301847. Im Materie-Frame liegen 76,8 % im Kompensatorport. Im Bild von k292 und k297 sind M und T Ellipsen mit Achsenverhältnis γ_L und entgegengesetztem Drehsinn. Dass R der Kreis und P der Grenzfall ist, folgt aus derselben Parametrisierung und ist nicht eigens gerechnet. Das ist die Stokes-Beschreibung der Polarisation, angewandt auf (E, B). Die Gleichsetzung mit Beobachtern von Materie, Licht und Tachyon bleibt Lesart; warum die Daten in M und nicht in T verglichen werden, ist nicht hergeleitet. **Berichtigt in r70:** Die Portgewichte stehen; die Ellipse mit Achsenverhältnis γ_L gehört zu einem anderen Zustand (Amplituden 1 : x, Gewichte 91,65 : 8,35). Mit den Gewichten der Konvention F hat die Ellipse die Achsen e^{2ε} : 1 = 3,439 : 1.
 - **Grenzen:** Kein Guard berührt, OP1 bis OP5 offen. Die Lesarten zu H168 bis H170 stehen bisher nur in den Notizen, nicht in einer eigenen Runde.
 
 Quelle: `notes/research/v4_10_0_r69_namenskonvention/` (README, Rundentext).
@@ -491,6 +547,8 @@ Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H
 
 ### Rückwärtssuche nach einer Regel für κ ≈ 1,2: keine Regel, ein Zahlentreffer (25.11.2026, Erkundung, nicht blind, k303)
 
+> **Nachtrag r70 (26.11.2026):** Der Zahlentreffer κ = (γ_L + 1/γ_L)/2 entsteht als 1/cos 2θ mit tan θ = b/a = β_sym². Mit b/a = β_sym (Portgewichte der Konvention F) ist derselbe Ausdruck γ_L = 1,8647, und der Treffer entfällt. Zufall oder Hinweis ist nicht entschieden.
+
 Nach H133 ist der Wert der Kopplung κ zwischen Vorstufe und HS(3)-Anhang frei, nötig wäre κ* = 1,204. Die Rückwärtssuche hält zuerst die notwendige Bedingung fest: 16κ² = 8π²·m_h²/v² − (3/8)g⁴ − (3/16)(g² + g′²)² + 3y_t⁴. Eine Regel für κ ist im skalenfreien Bild also eine Vorhersage der Higgs-Masse.
 
 **Regeln mit einem Prinzip dahinter treffen nicht.** Die volle Norm gibt κ = 0 (kein Minimum), Sp M⁴ = 0 gibt m_h = 0, die Veltman-Bedingung gibt κ ≈ 0,6 und m_h zwischen 32 und 49 GeV, die gesättigte Unitaritätsgrenze gibt κ = π und 345 GeV, und einen festen Punkt von κ mit Eichfeldern und Top gibt es nicht. Auch die Eichfelder der eigenen su(2) des Anhangs tragen nicht (24 GeV statt 312 GeV).
@@ -554,6 +612,8 @@ Ablage: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung/Ergebnis_H
 
 ### Der HC gibt die Form vor, die Schleife die Größe (25.11.2026, Erkundung, nicht blind, k297)
 
+> **Nachtrag r70 (26.11.2026):** Die Zahlen dieses Abschnitts gelten für b/a = β_sym² als Amplitudenverhältnis. Das ist nicht der Materie-Frame der Konvention F (dort b/a = β_sym). Werte dafür: Anteil 23,19 %, λ_B/λ_A = 10,98, m_H² = 2,415·η·f², m_s²/m_H² = 0,03058·η, Winkel 57,57°. Die Struktur des Ergebnisses ändert sich nicht.
+
 Anschluss an H129: Bricht der HC die Tauschsymmetrie zwischen Vorstufe und Anhang? Ja. Der Tausch (Rechtsmultiplikation mit j) vertauscht die beiden Kreisanteile a und b und wirkt auf den Beltrami-Koeffizienten des HC als μ → 1/μ. Das ist die Orientierungsumkehr, die r23 als Tachyon-Frame führt. Der HC mit μ = β_sym² < 1 zeichnet die Vorstufe als den größeren Teil aus (91,65 % der Norm, Anhang 8,35 %). Die Tauschsymmetrie ist also die bekannte Wahl zwischen Materie-Frame und Tachyon-Frame; hergeleitet wird diese Wahl nicht.
 
 Schreibt man die HC-Bedingung B = μ²A als Potential, V = η(B − μ²A)² = ημ⁴A² − 2ημ²AB + ηB², dann sind das genau die nach k295 zulässigen skalenfreien Terme, mit κ < 0 und genau auf der Stabilitätsgrenze κ = −2√(λ_Aλ_B). Auf der Richtung B = μ²A ist V = 0 für jede Größe f: Die Form ist fest, die Größe frei (k292, k272). Massen: zwei Phasen und die Größenmode null, die Formmode m_H² = 8ημ²f². Die Schleife legt dann die Größe fest (f² = e·M²/(8ημ²)) und gibt der Größenmode m_s² = (ημ²/π²)·m_H², mit μ = β_sym² also 0,00923·η·m_H². Das ist die Klasse (iv) aus H129, die einzige, in der immer eine Skala entsteht.
@@ -612,6 +672,8 @@ Anschluss an H128. Offen war, was den Winkel zwischen Ladungsrichtung u und Verd
 Lesart: Zusammen mit H128 ist die Brechung SU(3) → SO(3) erzwungen, sobald eine Generation verlangt wird, und das Verhältnis von Spin 1 zu Spin 2 in der Form K ist 9/10 ohne Wahl von u. Die Ladung, die die Farbe auswählt, und die Brechung der Familiensymmetrie hängen an derselben Bedingung u ≠ ±e₈. Gesetzt bleiben die Forderung selbst, die Form K und ihr Vorzeichen im Potential (offen bis zur Feldgleichung). Die Vollständigkeit der Suche beruht auf Zufallsstarts, nicht auf einem Beweis. OP3 und OP4 bleiben offen, kein Guard ist berührt. Notizen: `notes/research/predictions/Ergebnis_H130_Ladungsrichtung_Verdopplungseinheit.md`, Skripte in `notes/research/hilbert_shift_felder_2026_11_24/ladungsrichtung_h130/`.
 
 ### Der HC legt die Form der HS(1)-Ellipse fest, nicht die Amplitude (25.11.2026, Erkundung, nicht blind, k292)
+
+> **Nachtrag r70 (26.11.2026):** „b/a = β_sym², Halbachsen γ_L, 33,6° vom Pol“ gilt für x als Amplitudenverhältnis. Mit den Portgewichten der Konvention F ist b/a = β_sym, das Achsenverhältnis e^{2ε} = 3,439 und der Winkel 57,57°, die Lage des Materie-Frames auf der Kugel.
 
 Frage des Autors: Gilt eher Lesart A (Amplitude f entsteht bei HS(2)) oder B (f liegt schon bei HS(1) fest, etwa durch den HC)? Der HC ist im Bestand eine quasikonforme Projektion mit Beltrami-Koeffizient μ = β_sym² und Dilatation γ_L. Die HS(1)-Ellipse a·e^{iωt} + b·e^{−iωt} ist die Abbildung z → a·z + b·z̄ mit μ = b/a und K = (a + b)/(a − b). Der HC legt also b/a = 0,3018 und das Achsenverhältnis 1,8644 fest und lässt die Größe frei; als lineare Abbildung kann er keine Amplitude auszeichnen. Die Norm ist bei HS(1) nicht fest, N = a² + b² + 2ab·cos 2ωt, und ein auf der Ellipse festgehaltenes Feld verträgt sich mit der Regel ψ̈ = −ω²ψ nur für ab = 0. Das spricht für A: Das Licht von HS(1) bleibt masselos.
 

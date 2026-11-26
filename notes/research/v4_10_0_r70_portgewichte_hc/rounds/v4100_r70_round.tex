@@ -1,0 +1,232 @@
+\clearpage
+% ============================================================================
+\section*{v4.10.0-r70 Source-Only: Port Weights against Amplitudes; the Compensator on the State Sphere; Correction to r69.4 (Exploration k381)}
+\addcontentsline{toc}{section}{v4.10.0-r70 Source-Only: Port Weights against Amplitudes; the Compensator on the State Sphere; Correction to r69.4 (Exploration k381)}
+\label{sec:v4100-r70-port-weights}
+% ============================================================================
+
+\paragraph{Purpose.}
+Remark v4.10.0-r69.4 gave the matter frame the port weights \(1:x\) (\(76.8\,\%\) in the compensator port) and, in the same sentence, the
+ellipse of the explorations k292 and k297 with \(b/a=x\).  A drawing of the frames requested by the author on 26 November 2026 showed that
+these are two different states: \(b/a=x\) has the weights \(1:x^2\) (\(91.65\,\%\)).  This layer states where the frames lie on the sphere of
+field states, what the compensator does there, which of the two statements of r69.4 stands, and how the numbers of the notes change that
+inserted \(x\) as a ratio of amplitudes.  \textbf{Exploration, not blind}: every statement is an identity or a recalculation; there is no test
+with a decision criterion and no H~number.  No status of an open problem changes and no guard changes.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r70 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.5.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24563811}{10.5281/zenodo.24563811} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r70 the state sphere of the doublet}
+\label{subsec:v4100-r70-sphere}
+
+Notation of v4.9.0-r04: \(F=[\mathbf E\mid\mathbf B]\), \(G=F^{\mathsf T}F\), \(u=\tfrac12\operatorname{tr}G\),
+\(\rho=G/\operatorname{tr}G=\tfrac12(1+b_S\sigma_z+b_C\sigma_x)\) with
+\[
+b_S=\frac{|\mathbf E|^2-|\mathbf B|^2}{2u},\qquad b_C=\frac{\mathbf E\cdot\mathbf B}{u},\qquad b_3:=\frac{|\mathbf E\times\mathbf B|}{u}\ \ge0 .
+\]
+\(b_S\) and \(b_C\) are \(b_1\) and \(b_2\) of r04.2.  The compensator of the doublet is \(C_{\HC}=\tfrac12(1+\sigma_x)\) (r04.1), so its axis is
+\(b_C\) (``compensator axis along \(x\)'', v4.9.0-r27).
+
+\paragraph{Theoremlet v4.10.0-r70.1 (hemisphere of states and position of the frames).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(b_S^2+b_C^2+b_3^2=1\).  Every field state is a point of the hemisphere \(b_3\ge0\) of the unit sphere, and the state disk of
+r04.2 is its projection along \(b_3\).  The third coordinate is the share of the energy that flows.
+\item[(b)] A boost of rapidity \(\eta\) transverse to the field takes the state \(\mathbf E=\mathbf B\) (\(b_C=1\)) to
+\(b_C=\operatorname{sech}2\eta\), \(b_S=0\), \(b_3=\tanh2\eta\): it moves along the meridian from the pole \(b_C=1\) towards the point
+\(b_3=1\), which it reaches only for \(\eta\to\infty\).
+\item[(c)] With the port weights of Convention~F (``compensator port holding \(p_+\)'') the frames are R at the pole \(b_C=1\)
+(\(\mathbf E=\mathbf B\)), M at \(b_C=1/\gL\), that is \(\eta=\varepsilon=\operatorname{artanh}\bsym\) and the angle
+\(\arccos(1/\gL)=57.57^\circ\) from the pole, P at \(b_3=1\) (\(\mathbf E\perp\mathbf B\), \(|\mathbf E|=|\mathbf B|\)), and T at \(b_C=-1/\gL\).
+In the representative with \(|\mathbf E|=|\mathbf B|\) the angle between \(\mathbf E\) and \(\mathbf B\) equals the angle from the pole:
+\(0^\circ\), \(57.57^\circ\), \(90^\circ\), \(122.43^\circ\).
+\item[(d)] On this meridian \(D\) (\(b\mapsto-b\)) and \(\vartheta\) (\(b_C\mapsto-b_C\)) both exchange M and T, and \(J_B\)
+(\(b_S\mapsto-b_S\)) fixes all four frames.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(|b|^2=1-\det G/u^2\) and \(\det G=|\mathbf E\times\mathbf B|^2\) (r04.2).  (b) \(\mathbf E'=\gamma(\mathbf E+\mathbf v\times\mathbf B)\),
+\(\mathbf B'=\gamma(\mathbf B-\mathbf v\times\mathbf E)\) with \(\mathbf v\perp\mathbf E=\mathbf B\); \(\mathbf E\cdot\mathbf B\) is invariant and
+\(u\mapsto u\cosh2\eta\).  (c) \(p_\pm=(1\pm b_C)/2\) and \(p_+=1/(1+x)\) give \(b_C=(1-x)/(1+x)=1/\gL=\operatorname{sech}2\varepsilon\)
+(v4.9.0-r24.3, v4.10.0-r66).  (d) v4.9.0-r04.2(b), r28.  Checked exactly with sympy and independently in Wolfram Language (k381b, W1--W3).
+\(\square\)
+
+\subsection*{v4.10.0-r70 the compensator on the sphere}
+\label{subsec:v4100-r70-compensator}
+
+\paragraph{Theoremlet v4.10.0-r70.2 (the compensator is the measurement along the axis \(b_C\)).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] The share of the energy in the compensator port is \(p_+=(1+b_C)/2=|\mathbf E+\mathbf B|^2/(4u)\), that of the partner port
+\(p_-=(1-b_C)/2\).  The compensator sees of a state only its height \(b_C\).
+\item[(b)] The kept part \(FC_{\HC}\) has \(\mathbf E'=\mathbf B'=(\mathbf E+\mathbf B)/2\) and lies at the pole \(b_C=1\), the frame R; the
+removed part lies at the opposite pole \(b_C=-1\) (v4.10.0-r23.2 for the kept part).
+\item[(c)] The non-selective step \(\rho\mapsto C_{\HC}\rho C_{\HC}+A\rho A\) of v4.9.0-r27 is the projection \((b_S,b_C)\mapsto(0,b_C)\)
+onto the axis.
+\item[(d)] Two routes lead from R to the height of M.  The boost of rapidity \(\varepsilon\) (r70.1(b)) reaches the point M on the sphere.
+The duality rotation by \(\alpha\) with \(\tan\alpha=\bsym\), which moves R along the rim \(b_3=0\) by \(2\alpha\), followed by the
+non-selective step, reaches \(b_C=\cos2\alpha=1/\gL\) (r27.1(b)); here \(p_+=\cos^2\alpha=0.7681\).  The compensator does not tell the two
+apart.  They differ in \(b_3\): \(\tanh2\varepsilon=0.8440\) on the first route, and no single field state on the second.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+(a) \(\operatorname{tr}(GC_{\HC})=u+\mathbf E\cdot\mathbf B\) (r04.3).  (b), (c) direct.  (d) \(\cos(2\arctan\beta)=(1-\beta^2)/(1+\beta^2)\).
+Sympy and Wolfram (k381b, W4--W6).  \(\square\)
+
+\paragraph{Reading.}
+``A frame is the distribution of one state over the two ports'' (r69.4) means: a frame is a height on the axis of the compensator.  The
+sector rule of v4.8.0-r07 (matter \(\operatorname{Re}s>0\), that is \(b_S>0\)) uses the other axis of the disk.  The two axes are related by a
+duality rotation by \(45^\circ\) (v4.8.0-r07.2); which axis Convention~F means is fixed only by the words ``compensator port''.  This layer
+follows these words and r27.  \textbf{Open; not decided here.}
+
+\subsection*{v4.10.0-r70 weights against amplitudes}
+\label{subsec:v4100-r70-weights}
+
+\paragraph{Theoremlet v4.10.0-r70.3 (the two roles of \(x\)).}
+Let \(a\,e^{i\omega t}+b\,e^{-i\omega t}\) be the oscillation of k253 and k292 with real \(a>b\ge0\), weights \(a^2:b^2\), Beltrami coefficient
+\(\mu=b/a\), axis ratio \(K=(1+\mu)/(1-\mu)\) and height \(h=(a^2-b^2)/(a^2+b^2)\) on the sphere of k292.
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Weights \(1:x\) (Convention~F): \(\mu=\bsym\), \(K=e^{2\varepsilon}=3.4386\), \(h=1/\gL\), angle \(57.57^\circ\).  The height is that of
+M in r70.1(c).
+\item[(b)] Amplitudes \(1:x\) (k292, k297): weights \(1:x^2\), that is \(91.65\,\%:8.35\,\%\), \(K=\gL\), \(h=(1-x^2)/(1+x^2)=0.8330\), angle
+\(33.59^\circ\).  This is the height after a boost with velocity \(x=\bsym^2\), not with \(\bsym\).
+\item[(c)] The two agree only for \(x\in\{0,1\}\), that is at R and at P.
+\end{enumerate}
+
+\paragraph{Proof sketch.}
+\(h=(1-\mu^2)/(1+\mu^2)\); \((1+\beta)/(1-\beta)=e^{2\operatorname{artanh}\beta}\); \(\operatorname{sech}(2\operatorname{artanh}x)=(1-x^2)/(1+x^2)\).
+Sympy and Wolfram (k381b, W7, W8).  \(\square\)
+
+\paragraph{Correction v4.10.0-r70.4 (to Remark v4.10.0-r69.4 and to the status of Theorem~\ref{thm:hc-quasiconformal}).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] In r69.4 the sentence on the port weights stands.  The sentence that the matter frame is the ellipse with \(b/a=\mu=x\) and axis
+ratio \(\gL\) does not describe the same state.  If the two counter-rotating parts are read as the ports (k253), the matter frame of
+Convention~F has \(b/a=\bsym\) and the axis ratio \(e^{2\varepsilon}=3.4386\); \(\gL=\cosh2\varepsilon\) is then the inverse of its height
+\(b_C\) and not its axis ratio.  The readings ``circle at R'', ``degenerate ellipse at P'' and ``reversed sense of rotation at T'' are not
+affected.
+\item[(b)] The proof of Theorem~\ref{thm:hc-quasiconformal} calls \(\mu=\bsym^2\) ``the ratio of the eigenvalues'', a ratio of weights, and
+inserts it into \(K=(1+|\mu|)/(1-|\mu|)\), which holds for a ratio of amplitudes.  The identity \((1+x)/(1-x)=\gL\) is correct.  The statement
+``dilatation \(\gL\)'' holds for the state of r70.3(b) and not for the matter frame of Convention~F.  A status note is added to the theorem.
+Theorem~\ref{thm:tribonacci-beltrami}, which rests on the same \(\mu\), inherits the remark.
+\item[(c)] The explorations k297 and k350 call the exchange \(a\leftrightarrow b\) (\(\mu\mapsto1/\mu\)) the exchange \(J\).  With the two parts
+read as the ports, an exchange of the ports is \(D\) or \(\vartheta\) in Convention~F as corrected in v4.9.0-r28, and the involution of the
+compensator fixes both parts (r70.1(d)).  Result~1 of H159 (``the image of \(C\) is the set \(|a|=|b|\)'') therefore holds for the projector
+built from the exchange \(a\leftrightarrow b\), and not for the compensator of the doublet, whose image is R (r70.2(b)).  The typing of the
+exchange in the picture of k253 is \textbf{open}.
+\end{enumerate}
+
+\subsection*{v4.10.0-r70 recalculation}
+\label{subsec:v4100-r70-recalculation}
+
+\paragraph{Theoremlet v4.10.0-r70.5 (exploration k381, not blind).}
+Nine scripts of the notes of 24 to 26 November 2026 insert \(x\) for \(b/a\): k292, k297, k298 (H132), k299, k301, k302 (H133), k303, k305
+(H136), k350 (H159).  Each was run unchanged and with \(b/a=\bsym=0.5494056\); the files were not altered.
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.44\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}@{}}
+\toprule
+quantity & \(b/a=x\) (as recorded) & \(b/a=\bsym\) (weights of Convention~F)\\
+\midrule
+share of the smaller part in the norm (k297) & \(8.35\,\%\) & \(23.19\,\%\)\\
+angle on the sphere of k292 & \(33.6^\circ\) & \(57.57^\circ\)\\
+axis ratio \(K\) of the ellipse & \(\gL=1.8647\) & \(e^{2\varepsilon}=3.4386\)\\
+\(\lambda_B/\lambda_A=\mu^{-4}\) (k297) & \(120.5\) & \(10.98\)\\
+\(m_H^2/(\eta f^2)=8\mu^2\) (k297) & \(0.729\) & \(2.415\)\\
+\(m_s^2/m_H^2=\eta\mu^2/\pi^2\) (k297) & \(0.00923\,\eta\) & \(0.03058\,\eta\)\\
+\(m_-/m_+=\mu\) for \(g_L=g_R\) (H132) & \(0.3018\) & \(0.5494\)\\
+\(\rho\) in version~S with \(1+\xi=1+\mu^2\) (k299) & \(0.9165\) & \(0.7681\)\\
+\(T=1/\cos^22\theta\) against the window \([5/3,3]\) (k301) & \(1.441\), below & \(3.477\), above\\
+\(\kappa=1/\cos2\theta\) against the target \(1.2039\) (k303) & \(1.2004\) (\(-0.29\,\%\)) & \(\gL=1.8647\) (\(+55\,\%\))\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] No verdict changes.  H132 (no massless gauge field on the compensator direction), H133, H136 and H159 rest on structure that does
+not depend on the value of \(\mu\); in H159 none of the ratios becomes \(\gL^5\) (exponents between \(-1.98\) and \(+2.98\)).
+\item[(b)] With \(b/a=\bsym\) the angle of k292 equals the angle of M in r70.1(c) and the angle \(2\alpha\) of v4.10.0-r66.  The number that k292
+recorded as ``computed only, no assignment'' is, in this reading, the position of the matter frame.
+\item[(c)] The only numerical hit of the series, \(\kappa=(\gL+1/\gL)/2\) (k303; with the reference value of \(\bsym\) it is \(1.20049\),
+\(-0.28\,\%\) from the target), exists only for \(b/a=x\).  It is \(1/\cos2\theta\) with \(\tan\theta=\mu\); for \(b/a=\bsym\) the same expression is
+\(\gL\), and no candidate of the list of k303 lies within \(1\,\%\) of the target (nearest: \(1/\sin2\theta=1.1848\), \(-1.6\,\%\)).  Whether the hit
+is chance, as k303 already allowed, or an indication that the state of r70.3(b) has a meaning of its own, is not decided.
+\item[(d)] In k350 three ratios become exact powers: norm R\,:\,M at equal area \(=\gL^{-1}\), charge R\,:\,M at equal \(f\) \(=\gL\), and
+\(K_1\) R\,:\,M at equal \(f\) \(=\gL^{2}\).  They restate \(h=1/\gL\).  The near agreement \(\cos^22\theta\approx1-\bsym^2\) (\(0.6940\) against \(0.6982\))
+recorded there disappears (\(0.2877\) against \(0.4507\)).
+\end{enumerate}
+
+\paragraph{Check.}
+\texttt{k381\_nachrechnung.py} runs the nine scripts twice and prints the changed lines (\texttt{k381\_out.txt}); the closed forms were
+recomputed independently in Wolfram Language (k381b, W9--W12).  The recorded output of k297 has \(m_H^2=0.7285\) and \(\lambda_B/\lambda_A=120.6\)
+because it used \(\gL=1.8644\); with the reference value these are \(0.7289\) and \(120.5\).
+
+\subsection*{v4.10.0-r70 frames}
+\label{subsec:v4100-r70-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}@{}}
+\toprule
+frame & \(b_C\) & \(b_3\) & \(p_+:p_-\) & angle between \(\mathbf E\) and \(\mathbf B\) (\(|\mathbf E|=|\mathbf B|\))\\
+\midrule
+R & \(1\) & \(0\) & \(1:0\) & \(0^\circ\)\\
+M & \(0.5363\) & \(0.8440\) & \(0.7681:0.2319\) & \(57.57^\circ\)\\
+P & \(0\) & \(1\) & \(\tfrac12:\tfrac12\) & \(90^\circ\)\\
+T & \(-0.5363\) & \(0.8440\) & \(0.2319:0.7681\) & \(122.43^\circ\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+No new frame map is used.  r70.1 and r70.2 are frame statements of Convention~F in the names of v4.10.0-r69; r70.3 to r70.5 concern the matter
+frame and, through \(\mu\mapsto1/\mu\), the dual frame.  The values depend on \(\bsym\), which is inserted (reference value of v4.10.0-r67).
+
+\subsection*{v4.10.0-r70 register entries}
+\label{subsec:v4100-r70-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r70\\
+\midrule
+frames as points of the hemisphere \(b_S^2+b_C^2+b_3^2=1\) (r70.1) & exact; positions depend on the inserted \(\bsym\)\\
+compensator as measurement along \(b_C\) (r70.2) & exact; restates v4.9.0-r04.3, r27 and v4.10.0-r23.2 on the sphere\\
+r69.4, ellipse of the matter frame with \(b/a=x\), axis ratio \(\gL\) & corrected: that state has the weights \(1:x^2\); with the weights of Convention~F \(b/a=\bsym\), axes \(e^{2\varepsilon}:1\) (r70.4(a))\\
+Theorem~\ref{thm:hc-quasiconformal}, dilatation \(\gL\) & status note: holds for a ratio of amplitudes \(x\), not for the matter frame of Convention~F (r70.4(b))\\
+numbers of k292, k297, k298, k299, k301, k302, k303, k305, k350 & typed as values at \(b/a=x\); values at \(b/a=\bsym\) in r70.5; no verdict changes\\
+number hit \(\kappa=(\gL+1/\gL)/2\) (k303) & belongs to \(b/a=x\) only; chance or indication not decided (r70.5(c))\\
+which axis of the disk carries the frames; typing of the exchange \(a\leftrightarrow b\) & open (reading after r70.2; r70.4(c))\\
+OP1--OP5 & open, as before\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r70 notes}
+\label{subsec:v4100-r70-notes}
+
+{\raggedright
+Notes: \texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak r70\_\allowbreak portgewichte\_\allowbreak hc/}
+(k381, k381b with outputs) and \texttt{notes/\allowbreak research/\allowbreak frames\_\allowbreak kugelbild\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 26/}
+(drawing in four panels with its check).
+Tools: Python with sympy (exact) for the identities and for running the nine scripts; Wolfram Language independently for the identities and
+the closed forms.  Qiskit not used (no circuit).  No HDL/MMA comparison (no \texttt{RUN\_TAPE} sequence).  The Wolfram counter-checks of the nine
+scripts themselves (k292b and the others) were not rerun.
+\par}
+
+\subsection*{v4.10.0-r70 ledger and guard update}
+\label{subsec:v4100-r70-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r70}=(1,1,0)
+\]
+for (status recorded; computation checked in two tools; no comparison with data).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r70,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r70}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

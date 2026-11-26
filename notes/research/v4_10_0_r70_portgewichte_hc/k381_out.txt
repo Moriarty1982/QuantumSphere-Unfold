@@ -1,0 +1,156 @@
+k381: Nachrechnung mit b/a = beta_sym = 0.5494056410 statt b/a = beta_sym^2 (Zeilen '-' alt, '+' neu)
+
+=== feldgleichung/k292_hc_feste_norm.py  (Ersetzung: 'g = 1.8644; m = (g - 1) / (g + 1)' -> 'g = 1.8644; m = 0.5494056410', 1 Stelle) ===
+  Zeilen der Ausgabe: 26; geaendert: 2
+  -  Zahlen: gamma_L = 1.8644, mu = b/a = 0.30177, beta_sym = 0.5493
+  +  Zahlen: gamma_L = 1.8644, mu = b/a = 0.54941, beta_sym = 0.7412
+  -  mit mu = b/a = 0.30177: cos = 0.8331, Winkel vom Pol = 33.58 Grad (nur ausgerechnet, keine Zuordnung)
+  +  mit mu = b/a = 0.54941: cos = 0.5363, Winkel vom Pol = 57.57 Grad (nur ausgerechnet, keine Zuordnung)
+
+=== feldgleichung/k297_hc_tauschsymmetrie.py  (Ersetzung: 'gL = sp.Float("1.8644"); muv = (gL - 1) / (gL + 1)' -> 'gL = sp.Float("1.8644"); muv = sp.Float("0.5494056410")', 1 Stelle) ===
+  Zeilen der Ausgabe: 30; geaendert: 3
+  -  mu = (gamma_L - 1)/(gamma_L + 1) = 0.3018;  B/A = mu^2 = 0.0911;  Anteil des Anhangs an der Norm = 0.0835
+  -  lamB/lamA = mu^-4 = 120.6;  m_H^2 = 0.7285 eta f^2;  m_s^2/m_H^2 = 0.009227 eta
+  -  Winkel auf der Hopf-Sphaere: cos = (1 - mu^2)/(1 + mu^2) = 0.8331, also 33.58 Grad vom Pol (k292: 33,6)
+  +  mu = (gamma_L - 1)/(gamma_L + 1) = 0.5494;  B/A = mu^2 = 0.3018;  Anteil des Anhangs an der Norm = 0.2319
+  +  lamB/lamA = mu^-4 = 11.0;  m_H^2 = 2.415 eta f^2;  m_s^2/m_H^2 = 0.03058 eta
+  +  Winkel auf der Hopf-Sphaere: cos = (1 - mu^2)/(1 + mu^2) = 0.5363, also 57.57 Grad vom Pol (k292: 33,6)
+
+=== feldgleichung/k298_test_h132.py  (Ersetzung: 'gLv = sp.Float("1.8644"); muv = (gLv - 1) / (gLv + 1)' -> 'gLv = sp.Float("1.8644"); muv = sp.Float("0.5494056410")', 1 Stelle) ===
+  Zeilen der Ausgabe: 24; geaendert: 2
+  -  Zahlen mit mu = 0.3018: m-/m+ = 0.3018;  m+^2 = 1.8331 g^2 f^2;  m-^2 = 0.1669 g^2 f^2;  m_H^2 = 0.7285 eta f^2
+  -  m_s^2/f^2 = 0.006722 eta^2 + 0.1287 g^4
+  +  Zahlen mit mu = 0.5494: m-/m+ = 0.5494;  m+^2 = 1.5363 g^2 f^2;  m-^2 = 0.4637 g^2 f^2;  m_H^2 = 2.4148 eta f^2
+  +  m_s^2/f^2 = 0.07385 eta^2 + 0.09785 g^4
+
+=== feldgleichung/k299_hc_su2_vertraeglich.py  (Ersetzung: 'gLv = 1.8644; muv = (gLv - 1) / (gLv + 1)' -> 'gLv = 1.8644; muv = 0.5494056410', 1 Stelle) ===
+  Zeilen der Ausgabe: 33; geaendert: 3
+  -  mu = 0.3018; |J_s|/J_i = 0.6640; J_i/|J| = cos 2 theta = 0.8331
+  +  mu = 0.5494; |J_s|/J_i = 1.5739; J_i/|J| = cos 2 theta = 0.5363
+  -  Fassung S, 1 + xi = 1 + mu^2           : rho = 0.9165
+  -  Fassung S, 1 + xi = 1/cos^2(2 theta)   : rho = 0.6940
+  +  Fassung S, 1 + xi = 1 + mu^2           : rho = 0.7681
+  +  Fassung S, 1 + xi = 1/cos^2(2 theta)   : rho = 0.2876
+
+=== feldgleichung/k301_fassung_F_am_igel.py  (Ersetzung: 'gL = 1.8644; mu = (gL - 1) / (gL + 1)' -> 'gL = 1.8644; mu = 0.5494056410', 1 Stelle) ===
+  Zeilen der Ausgabe: 19; geaendert: 3
+  -    T* = 2.9080 (tau*^2 = 1.9080);  I_P(T*) = 4.976;  I_P(3) = 5.133;  HC-Wert T = 1.4409: I_P = 45.020 = 9.05 x Minimum
+  +    T* = 2.9080 (tau*^2 = 1.9080);  I_P(T*) = 4.976;  I_P(3) = 5.133;  HC-Wert T = 3.4771: I_P = 11.001 = 2.21 x Minimum
+  -    T* = 2.9097 (tau*^2 = 1.9097);  I_P(T*) = 4.861;  I_P(3) = 5.012;  HC-Wert T = 1.4409: I_P = 44.768 = 9.21 x Minimum
+  -  HC: mu = 0.3018, tau^2 = 0.4409, T = 1/cos^2(2 theta) = 1.4409; liegt unter der Schranke 5/3 = 1.6667
+  +    T* = 2.9097 (tau*^2 = 1.9097);  I_P(T*) = 4.861;  I_P(3) = 5.012;  HC-Wert T = 3.4771: I_P = 10.817 = 2.23 x Minimum
+  +  HC: mu = 0.5494, tau^2 = 2.4771, T = 1/cos^2(2 theta) = 3.4771; liegt unter der Schranke 5/3 = 1.6667
+
+=== feldgleichung/k302_test_h133.py  (Ersetzung: 'mu = 0.3018' -> 'mu = 0.5494056410', 1 Stelle) ===
+  Zeilen der Ausgabe: 75; geaendert: 1
+  -Regel R2 (HC-Strafe eta(C - mu²A)², mu = 0.3018): kappa = -2·eta·mu² = -0.1822·eta, negativ, eta frei.
+  +Regel R2 (HC-Strafe eta(C - mu²A)², mu = 0.549405641): kappa = -2·eta·mu² = -0.6037·eta, negativ, eta frei.
+
+=== feldgleichung/k303_rueckwaerts_kappa.py  (Ersetzung: 'mu = 0.3018' -> 'mu = 0.5494056410', 1 Stelle) ===
+  Zeilen der Ausgabe: 41; geaendert: 8
+  -drei Vektorfelder (9 Freiheitsgrade): noetig m = 311.9 GeV; mit gleicher Kopplung g und Anhang-Wert mu·v: m = 24.3 GeV; noetig waere ein Anhang-Wert von 3.88·v
+  +drei Vektorfelder (9 Freiheitsgrade): noetig m = 311.9 GeV; mit gleicher Kopplung g und Anhang-Wert mu·v: m = 44.2 GeV; noetig waere ein Anhang-Wert von 3.88·v
+  -mu = 0.3018, gamma_L = 1.8645; 14 Zahlen × 3 Normierungen = 42 Kandidaten
+  -  kappa            = 1/cos2θ   : kappa = 1.2004, Abweichung -0.29 %, m_h = 124.8 GeV
+  -Kandidaten reichen von 0.023 bis 10.979 (ln-Spanne 6.18).
+  -  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, Fenster ±20 % der Summe: 1.24
+  -  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, ±5 % (grobe Genauigkeit der Ein-Schleifen-Formel): 0.68
+  -  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, ±0,3 %: 0.04
+  -bester Treffer: kappa = 1/cos2θ = (1+mu²)/(1−mu²) = (gamma_L + 1/gamma_L)/2 = 1.20042; Ziel 1.20385; m_h = 124.79 GeV
+  +mu = 0.549405641, gamma_L = 3.4386; 14 Zahlen × 3 Normierungen = 42 Kandidaten
+  +  kappa            = 1/sin2θ   : kappa = 1.1848, Abweichung -1.58 %, m_h = 122.9 GeV
+  +Kandidaten reichen von 0.073 bis 3.439 (ln-Spanne 3.86).
+  +  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, Fenster ±20 % der Summe: 1.99
+  +  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, ±5 % (grobe Genauigkeit der Ein-Schleifen-Formel): 1.09
+  +  erwartete Zufallstreffer bei log-gleichverteilten Kandidaten, ±0,3 %: 0.07
+  +bester Treffer: kappa = 1/cos2θ = (1+mu²)/(1−mu²) = (gamma_L + 1/gamma_L)/2 = 1.86470; Ziel 1.20385; m_h = 201.46 GeV
+
+=== feldgleichung/k305_test_h136.py  (Ersetzung: 'mu = 0.3018' -> 'mu = 0.5494056410', 1 Stelle) ===
+  Zeilen der Ausgabe: 26; geaendert: 16
+  -theta0 = 16.794 Grad, 1/cos(2 theta0) = 1.2004, kappa* = 1.2039
+  +theta0 = 28.785 Grad, 1/cos(2 theta0) = 1.8647, kappa* = 1.2039
+  -ln(v²/Lambda²) = -0.0900; dV1/dtheta = -0.00713·(k2 − k1)·v⁴; d²V0/dtheta² = 0.7287·eta·v⁴
+  -  eta = 0.1, k2 − k1 = -0.5: Verschiebung -2.803 Grad; Regel 1/cos2theta aendert sich um -0.06804
+  -  eta = 0.1, k2 − k1 = +0.5: Verschiebung +2.803 Grad; Regel 1/cos2theta aendert sich um +0.08987
+  -  eta = 1.0, k2 − k1 = -0.5: Verschiebung -0.280 Grad; Regel 1/cos2theta aendert sich um -0.00769
+  -  eta = 1.0, k2 − k1 = +0.5: Verschiebung +0.280 Grad; Regel 1/cos2theta aendert sich um +0.00791
+  -  eta = 6.6, k2 − k1 = -0.5: Verschiebung -0.042 Grad; Regel 1/cos2theta aendert sich um -0.00118
+  -  eta = 6.6, k2 − k1 = +0.5: Verschiebung +0.042 Grad; Regel 1/cos2theta aendert sich um +0.00118
+  +ln(v²/Lambda²) = -0.0900; dV1/dtheta = -0.01088·(k2 − k1)·v⁴; d²V0/dtheta² = 2.4148·eta·v⁴
+  +  eta = 0.1, k2 − k1 = -0.5: Verschiebung -1.290 Grad; Regel 1/cos2theta aendert sich um -0.12175
+  +  eta = 0.1, k2 − k1 = +0.5: Verschiebung +1.290 Grad; Regel 1/cos2theta aendert sich um +0.14442
+  +  eta = 1.0, k2 − k1 = -0.5: Verschiebung -0.129 Grad; Regel 1/cos2theta aendert sich um -0.01311
+  +  eta = 1.0, k2 − k1 = +0.5: Verschiebung +0.129 Grad; Regel 1/cos2theta aendert sich um +0.01333
+  +  eta = 6.6, k2 − k1 = -0.5: Verschiebung -0.020 Grad; Regel 1/cos2theta aendert sich um -0.00200
+  +  eta = 6.6, k2 − k1 = +0.5: Verschiebung +0.020 Grad; Regel 1/cos2theta aendert sich um +0.00201
+  -Loesungen k2 − k1 mit dF/dtheta(theta0) = 0: [-1.39864]
+  -  k1 = 1.3207, k2 = -0.0780 (beide in (0, π): False); kappa_eff(theta0) = 1.2039
+  -  d²F/dtheta² bei theta0 = +0.00109  ->  Minimum (instabil)
+  -  kappa_eff > 0 nur fuer theta < 76.0°; F(0) = 0.07340, F(theta0) = 0.07339, F(45°) = 0.07436, F(70°) = 0.08760
+  -  groesstes F im zulaessigen Bereich bei 67.5°, kleinstes bei 76.0°
+  -  Steigung d kappa_eff/d theta = -0.7737; Regel: +1.5944; Verhaeltnis -0.485
+  -Kontrolle ohne theta-Abhaengigkeit des Top: dF/dtheta(theta0) fuer k2 − k1 = −0,5 / 0 / +0,5: [np.float64(-0.016187), np.float64(0.0), np.float64(0.016187)] (nur k1 = k2 ist stationaer, und dann ist F flach)
+  -Welche Steigung haette die Regel noetig? k2 − k1 = 2.882 ; dort dF/dtheta(theta0) = 0.138578
+  +Loesungen k2 − k1 mit dF/dtheta(theta0) = 0: [-1.66881]
+  +  k1 = 1.5908, k2 = -0.0780 (beide in (0, π): False); kappa_eff(theta0) = 1.2039
+  +  d²F/dtheta² bei theta0 = +0.00363  ->  Minimum (instabil)
+  +  kappa_eff > 0 nur fuer theta < 77.5°; F(0) = 0.07347, F(theta0) = 0.07339, F(45°) = 0.07380, F(70°) = 0.09282
+  +  groesstes F im zulaessigen Bereich bei 69.5°, kleinstes bei 77.0°
+  +  Steigung d kappa_eff/d theta = -1.4085; Regel: +5.8696; Verhaeltnis -0.240
+  +Kontrolle ohne theta-Abhaengigkeit des Top: dF/dtheta(theta0) fuer k2 − k1 = −0,5 / 0 / +0,5: [np.float64(-0.024696), np.float64(0.0), np.float64(0.024696)] (nur k1 = k2 ist stationaer, und dann ist F flach)
+  +Welche Steigung haette die Regel noetig? k2 − k1 = 6.9542 ; dort dF/dtheta(theta0) = 0.425908
+
+=== lambda_photon_h159/k350_test_h159.py  (Ersetzung: 'muM = (GL - 1) / (GL + 1)' -> 'muM = sp.sqrt((GL - 1) / (GL + 1))', 1 Stelle) ===
+  Zeilen der Ausgabe: 100; geaendert: 26
+  -  Norm (Zeitmittel) a^2 + b^2                    P:M, gleiches a     :     1.8331   = gamma_L^+0.9728
+  +  Norm (Zeitmittel) a^2 + b^2                    P:M, gleiches a     :     1.5364   = gamma_L^+0.6893
+  -  Norm (Zeitmittel) a^2 + b^2                    R:M, gleiches a     :    0.91653   = gamma_L^-0.1399
+  -  Norm (Zeitmittel) a^2 + b^2                    R:M, gleiche Flaeche:    0.83306   = gamma_L^-0.2932
+  +  Norm (Zeitmittel) a^2 + b^2                    R:M, gleiches a     :    0.76818   = gamma_L^-0.4234
+  +  Norm (Zeitmittel) a^2 + b^2                    R:M, gleiche Flaeche:    0.53635   = gamma_L^-1.0000
+  -  Ladung Q/omega = a^2 - b^2 = J_i/omega         R:M, gleiches f     :     1.2004   = gamma_L^+0.2932
+  -  Ladung Q/omega = a^2 - b^2 = J_i/omega         R:M, gleiches a     :     1.1002   = gamma_L^+0.1533
+  +  Ladung Q/omega = a^2 - b^2 = J_i/omega         R:M, gleiches f     :     1.8644   = gamma_L^+1.0000
+  +  Ladung Q/omega = a^2 - b^2 = J_i/omega         R:M, gleiches a     :     1.4322   = gamma_L^+0.5766
+  -  |J_senkrecht|/omega = 2ab                      P:M, gleiches f     :     1.8077   = gamma_L^+0.9504
+  -  |J_senkrecht|/omega = 2ab                      P:M, gleiches a     :     3.3136   = gamma_L^+1.9231
+  +  |J_senkrecht|/omega = 2ab                      P:M, gleiches f     :     1.1848   = gamma_L^+0.2723
+  +  |J_senkrecht|/omega = 2ab                      P:M, gleiches a     :     1.8203   = gamma_L^+0.9616
+  -  K1 = Q^2                                       R:M, gleiches f     :      1.441   = gamma_L^+0.5864
+  -  K1 = Q^2                                       R:M, gleiches a     :     1.2104   = gamma_L^+0.3066
+  +  K1 = Q^2                                       R:M, gleiches f     :     3.4761   = gamma_L^+2.0000
+  +  K1 = Q^2                                       R:M, gleiches a     :     2.0513   = gamma_L^+1.1533
+  -  grosse Halbachse^2 (a + b)^2                   P:M, gleiches f     :     1.2877   = gamma_L^+0.4059
+  -  grosse Halbachse^2 (a + b)^2                   P:M, gleiches a     :     2.3604   = gamma_L^+1.3786
+  -  grosse Halbachse^2 (a + b)^2                   R:M, gleiches f     :    0.64384   = gamma_L^-0.7068
+  -  grosse Halbachse^2 (a + b)^2                   R:M, gleiches a     :     0.5901   = gamma_L^-0.8467
+  -  grosse Halbachse^2 (a + b)^2                   R:M, gleiche Flaeche:    0.53635   = gamma_L^-1.0000
+  +  grosse Halbachse^2 (a + b)^2                   P:M, gleiches f     :     1.0846   = gamma_L^+0.1304
+  +  grosse Halbachse^2 (a + b)^2                   P:M, gleiches a     :     1.6663   = gamma_L^+0.8197
+  +  grosse Halbachse^2 (a + b)^2                   R:M, gleiches f     :     0.5423   = gamma_L^-0.9823
+  +  grosse Halbachse^2 (a + b)^2                   R:M, gleiches a     :    0.41658   = gamma_L^-1.4057
+  +  grosse Halbachse^2 (a + b)^2                   R:M, gleiche Flaeche:    0.29087   = gamma_L^-1.9823
+  -  kleine Halbachse^2 (a - b)^2                   R:M, gleiches f     :     2.2381   = gamma_L^+1.2932
+  -  kleine Halbachse^2 (a - b)^2                   R:M, gleiches a     :     2.0513   = gamma_L^+1.1533
+  -  kleine Halbachse^2 (a - b)^2                   R:M, gleiche Flaeche:     1.8644   = gamma_L^+1.0000
+  +  kleine Halbachse^2 (a - b)^2                   R:M, gleiches f     :       6.41   = gamma_L^+2.9823
+  +  kleine Halbachse^2 (a - b)^2                   R:M, gleiches a     :      4.924   = gamma_L^+2.5589
+  +  kleine Halbachse^2 (a - b)^2                   R:M, gleiche Flaeche:      3.438   = gamma_L^+1.9823
+  -  V_sym = (B - A)^2 (mu0 = 1)                    R:M, gleiches f     :      1.441   = gamma_L^+0.5864
+  -  V_sym = (B - A)^2 (mu0 = 1)                    R:M, gleiches a     :     1.2104   = gamma_L^+0.3066
+  +  V_sym = (B - A)^2 (mu0 = 1)                    R:M, gleiches f     :     3.4761   = gamma_L^+2.0000
+  +  V_sym = (B - A)^2 (mu0 = 1)                    R:M, gleiches a     :     2.0513   = gamma_L^+1.1533
+  -  Fassung S: Ji^2/N (k299)                       R:M, gleiches f     :      1.441   = gamma_L^+0.5864
+  -  Fassung S: Ji^2/N (k299)                       R:M, gleiches a     :     1.3207   = gamma_L^+0.4465
+  -  Fassung S: Ji^2/N (k299)                       R:M, gleiche Flaeche:     1.2004   = gamma_L^+0.2932
+  -  Anteile im M-Zustand: a/b = 1/mu, a^2/b^2 = 1/mu^2, (a+b)/(a-b) = K. Als Potenz von K: 1/mu = K^1.9231, 1/mu^2 = K^3.8463
+  +  Fassung S: Ji^2/N (k299)                       R:M, gleiches f     :     3.4761   = gamma_L^+2.0000
+  +  Fassung S: Ji^2/N (k299)                       R:M, gleiches a     :     2.6703   = gamma_L^+1.5766
+  +  Fassung S: Ji^2/N (k299)                       R:M, gleiche Flaeche:     1.8644   = gamma_L^+1.0000
+  +  Anteile im M-Zustand: a/b = 1/mu, a^2/b^2 = 1/mu^2, (a+b)/(a-b) = K. Als Potenz von K: 1/mu = K^0.9616, 1/mu^2 = K^1.9231
+  -  umskalierte Fassung F bei allgemeinem mu, Koeffizient von d^2: 4*a**4*omega**4*(m - 1)**2*(m + 1)**2/m**2 ;  bei mu -> 1: 0 ;  bei mu_M: 36.28504 a^4 omega^4
+  +  umskalierte Fassung F bei allgemeinem mu, Koeffizient von d^2: 4*a**4*omega**4*(m - 1)**2*(m + 1)**2/m**2 ;  bei mu -> 1: 0 ;  bei mu_M: 6.46168 a^4 omega^4
+  -  V(M)/V(R) = cos^2(2 theta) bei mu_M: 0.693985;  1 - beta_sym^2 = 1 - mu_M: 0.698217;  Differenz -0.004232
+  +  V(M)/V(R) = cos^2(2 theta) bei mu_M: 0.287676;  1 - beta_sym^2 = 1 - mu_M: 0.450652;  Differenz -0.162976
+  -  mit dem Materie-Wert mu0 = mu_M statt 1: V(M) = 0, V(P)/V(R) = (mu0 - 1)**2*(mu0 + 1)**2/(4*mu0**4) = 24.9010 bei mu_M (gamma_L^5 = 22.5290)
+  +  mit dem Materie-Wert mu0 = mu_M statt 1: V(M) = 0, V(P)/V(R) = (mu0 - 1)**2*(mu0 + 1)**2/(4*mu0**4) = 1.3382 bei mu_M (gamma_L^5 = 22.5290)

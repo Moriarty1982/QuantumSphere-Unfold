@@ -1,0 +1,13 @@
+Ausgabe von k381b_gegenprobe.wl (Wolfram Language, ausgefuehrt am 26.11.2026 ueber den Wolfram-Kernel der Sitzung; keine Warnungen)
+W1 bC^2+bS^2+|ExB|^2/u^2-1 = 0
+W2 Schub von R (E=B): bC-Sech[2h] = 0 ; bS = 0 ; b3^2-Tanh[2h]^2 = 0
+W3 p+ bei h=ArcTanh[be] minus 1/(1+be^2) = 0
+W4 HC-Bild: bC = 1, bS = 0, b3^2 = 0 ; Anteil-(1+bC)/2 = 0
+W5 Partner: bC = -1 ; Anteil-(1-bC)/2 = 0
+W6 Cos[2 ArcTan[be]]-(1-be^2)/(1+be^2) = 0
+W7 Gewichte 1:x, b/a=be: Hoehe-(1-x)/(1+x) = 0 ; K-Exp[2 ArcTanh[be]] = 0
+W8 b/a=x=be^2: K-gammaL = 0 ; Hoehe-Sech[2 ArcTanh[be^2]] = 0
+W9 1/cos(2 theta), tan(theta)=m: bei m=x: (gL+1/gL)/2-(1+x^2)/(1-x^2) = 0 ; bei m=be: 1/ht[be]-gammaL = 0
+W10 b/a=beta_sym: B/A=0.301847 Anteil=0.231860 lamB/lamA=10.9756 mH2/(eta f^2)=8 mu^2=2.41477 ms2/mH2/eta=0.0305835 Winkel=57.5693 K=3.43858 1/cos2theta=1.86470 m+^2,m-^2/(g^2 f^2)=1.53628,0.463721
+W11 b/a=x:        B/A=0.0911113 Anteil=0.0835033 lamB/lamA=120.463 mH2/(eta f^2)=8 mu^2=0.728891 ms2/mH2/eta=0.00923151 Winkel=33.5925 K=1.86470 1/cos2theta=1.20049 m+^2,m-^2/(g^2 f^2)=1.83299,0.167007
+W12 gamma_L=1.864700 x=0.3018466 eps=0.6175296 Quadratur-Ellipse der Dublette bei M: Achsen 1/beta=1.82015

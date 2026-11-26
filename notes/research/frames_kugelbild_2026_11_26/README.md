@@ -44,9 +44,7 @@ Dieselbe Zahl x = β_sym² steht an zwei Stellen in verschiedener Rolle (Kontrol
 Hält man die Gewichte der Konvention F fest und liest die Ports als die zwei Kreisanteile (k253), dann ist b/a = β_sym,
 die Ellipse hat die Achsen e^{2ε} : 1 = 3,439 : 1, und γ_L = cosh 2ε ist nicht ihr Achsenverhältnis, sondern 1/b_C.
 So ist Teilbild C gezeichnet; die Ellipse aus k297 (γ_L : 1) steht gestrichelt daneben.
-**Vorschlag, nicht ausgeführt:** Berichtigungsrunde (r70) zu r69.4 und zum Statusvermerk von `thm:hc-quasiconformal`; die
-Zahlen aus k292/k297, die an b/a = x hängen (33,6°, 91,65 %, m_s²/m_H² = 0,00923·η, λ_B/λ_A = 120,6), neu typisieren oder
-mit b/a = β_sym nachrechnen. Entscheidung beim Autor.
+**Ausgeführt in Runde v4.10.0-r70** (`notes/research/v4_10_0_r70_portgewichte_hc/`, Nachrechnung k381).
 
 ## Offene Stelle
 Die Sektorregel (Materie Re s > 0, also b_S > 0; r04.2(a)) und die Lage der Frames auf der HC-Achse (b_S = 0, s rein
