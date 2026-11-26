@@ -20,6 +20,16 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Projektor und Ladungsmischung: der Projektor gibt c = i, nicht c = 1; c = 0 und c = 1 sind die Fälle fester σ-Parität (26.11.2026, Test H169, k364)
+
+**Test H169. Ergebnis: a bis d bestätigt (nicht blind, exakte Nachprüfung); e: Vorzeichen nicht festgelegt.** Frage nach H168: Erzwingt der Chiralitätsprojektor ½(1 + iL_e₇) aus r42 die Ladungsmischung c = 1 im geladenen Sektor? Python (sympy) und Wolfram unabhängig, alle Nullreste symbolisch.
+
+- **Antwort: nein.** In der Familie 1 + c·e₇ gilt 1 + ce₇ = (1 − ic)P + (1 + ic)P̄. Der Projektor ist der komplexe Punkt c = i. Dort sind Tr Z² = 0, Tr Z⁴ = 0 und der Spin-1-Term (1 + c²)v² ≡ 0; nur die kubische Norm bleibt (N = 8i·xyz). ½(1 + e₇) ist kein Projektor. Die Vermutung aus k278 („Projektor gäbe a = 1“), in H167 als Lesart benutzt, ist widerlegt.
+- **Was c ist.** Ein reelles Feld hat beide Chiralitätsanteile; δ ist die halbe relative Phase. Bei c = 0 stehen sie in Phase, bei c = 1 um eine Vierteldrehung versetzt.
+- **Was c = 0 und c = 1 auszeichnet.** −cos 2(δ − χ) = [(c² − 1) cos 2δ − 2c sin 2δ]/(1 + c²). Rein σ-gerade genau für c = 0, rein σ-ungerade genau für c = ±1. Für c = 1 ist der Term (s² + v²)/2 − sv, invariant unter Cσ, dem Tausch von Spin-2- und Spin-1-Anteil. σ und C sind die Strukturabbildungen des Verdopplungsschritts (k282). Das passt zu H166 (δ als σ-ungerader Dipol).
+- **Sektoren (unter H99).** Neutral = σ-gerade ist natürlich, wenn σ die Ladungskonjugation ist. Geladen = rein σ-ungerade ist nicht hergeleitet. Nachträglich: Die Verschiebung π/12 aus H99 ist modulo Faltung genau der Tausch „gerade gegen ungerade“; beide Sektoren haben dieselbe Beimischung tan 2x = 0,0793204.
+- **Status.** Die Setzung c = 1 ist umformuliert (Cσ-Symmetrie des geladenen Terms), nicht entfernt. OP3 und OP4 offen; kein Guard berührt; keine neue Datenvorhersage. Notizen: `notes/research/hilbert_shift_felder_2026_11_24/delta_h169/`.
+
 ### Skala und Sektoren: c = 0 neutral, c = 1 geladen gibt die Verschiebung π/12; der gemeinsame Versatz kommt nicht aus einer festen Skala (26.11.2026, Test H168, k363)
 
 **Test H168. Ergebnis: a, b, c bestätigt (nicht blind), d, e bestätigt (blind).** Frage des Autors: Hängt die Skala mit den Sektoren zusammen, es könnte beides sein. Gelesen als Fermionsektoren. Alles steht unter H99 (Brannen-Form mit K = ⅔ für Neutrinos).

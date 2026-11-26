@@ -1,0 +1,49 @@
+== H169a: Projektor als Mitglied der Familie 1 + c j ==
+P^2 - P = 0: True ; Pb^2 - Pb = 0: True ; P Pb = 0: True ; P + Pb = 1: True
+1 + c j - [(1 - i c) P + (1 + i c) Pb] = 0: True
+(1 + c j)/2 idempotent genau fuer c = [(-I,), (I,)]
+2P - (1 + c j) bei c = i: Nullrest True ; 2Pb bei c = -i: True
+((1 + j)/2)^2 - j/2 = 0: True  (kein Projektor; (1+j)/sqrt2 = Drehung um pi/4: True )
+
+== H169b: Invarianten von Z_a bei a = +-i (H_3 ueber C(x)C) ==
+Tr Z^2 - 2(1+a^2)|x|^2 = 0: True
+Tr Z^4 - 2(1+a^2)^2 |x|^4 = 0: True
+N(Z) = Tr Z^3/3; N - 2(3a - a^3) x1x2x3 = 0: True
+  a = I: Tr Z^2 = 0, Tr Z^4 = 0, N(Z) = 8*I*x1*x2*x3
+  a = -I: Tr Z^2 = 0, Tr Z^4 = 0, N(Z) = -8*I*x1*x2*x3
+  a = 1 (zum Vergleich): Tr Z^2 = 4*(x1**2 + x2**2 + x3**2) , N(Z) = 4*x1*x2*x3
+Eintrag bei a = i: (-i + j) = 2 j P ? Nullrest True
+Spin-1-Term (1 + c^2) v'^2 bei c = +-i: 0 0
+
+== H169c: reelles c als relative Phase der Chiralitaetsanteile ==
+P z - r e^{-i delta} P = 0: True ; Pb z - r e^{+i delta} Pb = 0: True
+(1 + c j) - sqrt(1+c^2) e^{j chi} = 0: True
+sigma(P) = Pb: True ; sigma(z) = r e^{-j delta}: True
+C sigma: j * sigma(s + j v) - (v + j s) = 0: True
+relative Phase P gegen Pb bei c = 1: Faktor (1 + i c)/(1 - i c) = I ; bei c = 0: 1
+
+== H169d: sigma-Paritaet des Spin-1-Terms ==
+gerader Teil: (c**2 - 1)*cos(2*d)/(c**2 + 1) ; ungerader Teil: -2*c*sin(2*d)/(c**2 + 1)
+cos 2chi = cos(2*atan(c)) ; sin 2chi = sin(2*atan(c))
+rein sigma-ungerade (cos 2chi = 0) genau fuer c = [-1, 1] ; rein sigma-gerade (sin 2chi = 0) genau fuer c = [0] (und c -> unendlich)
+(1 + c^2) v'^2 in (s, v): (c*s - v)**2/(c**2 + 1)
+  c = 1: minus [(s^2 + v^2)/2 - s v] = 0 ; invariant unter s <-> v: True ; unter v -> -v: False
+  c = 0: v**2 ; invariant unter v -> -v: True ; unter s <-> v: False
+  allgemeines c, invariant unter s <-> v genau fuer c = [(-1,), (1,)]
+
+== H169e: Beimischung der anderen Paritaet in beiden Sektoren (Bericht) ==
+x = pi/12 - delta* = 0.039577340726 ; tan 2x = 0.0793204104037
+geladen (rein ungerade + gerade Beimischung X/Y) ; Ziel gefaltet 0.222222047073
+   delta = +t + 2pi*0/3 =  0.222222047: Verhaeltnis =    2.099865383, Vorzeichen des reinen Terms im Minimum: -
+   delta = +t + 2pi*1/3 =   2.31661715: Verhaeltnis =   0.0793204104, Vorzeichen des reinen Terms im Minimum: +
+   delta = +t + 2pi*2/3 =   4.41101225: Verhaeltnis =   -1.453094175, Vorzeichen des reinen Terms im Minimum: -
+   delta = -t + 2pi*0/3 = -0.222222047: Verhaeltnis =   -2.099865383, Vorzeichen des reinen Terms im Minimum: +
+   delta = -t + 2pi*1/3 =   1.87217306: Verhaeltnis =    1.453094175, Vorzeichen des reinen Terms im Minimum: +
+   delta = -t + 2pi*2/3 =   3.96656816: Verhaeltnis =  -0.0793204104, Vorzeichen des reinen Terms im Minimum: -
+neutral (rein gerade + ungerade Beimischung Y/X) ; Ziel gefaltet 0.484021434872
+   delta = +t + 2pi*0/3 =  0.484021435: Verhaeltnis =    1.453094175, Vorzeichen des reinen Terms im Minimum: -
+   delta = +t + 2pi*1/3 =   2.57841654: Verhaeltnis =   -2.099865383, Vorzeichen des reinen Terms im Minimum: -
+   delta = +t + 2pi*2/3 =   4.67281164: Verhaeltnis =  -0.0793204104, Vorzeichen des reinen Terms im Minimum: +
+   delta = -t + 2pi*0/3 = -0.484021435: Verhaeltnis =   -1.453094175, Vorzeichen des reinen Terms im Minimum: -
+   delta = -t + 2pi*1/3 =   1.61037367: Verhaeltnis =   0.0793204104, Vorzeichen des reinen Terms im Minimum: +
+   delta = -t + 2pi*2/3 =   3.70476877: Verhaeltnis =    2.099865383, Vorzeichen des reinen Terms im Minimum: -
