@@ -1,0 +1,52 @@
+{
+  "title": "One Object, Three Frames: The Quantum Sphaera Construction",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc"
+    }
+  ],
+  "description": "<p>The Quantum Sphaera construction starts from a conjecture: matter, light and a tachyon sector are one object seen from three frames. Its carrier is a biquaternion kernel built from three complex kernels, split by a compensator C = (1+J)/2 into symmetric and antisymmetric parts; the sign of the field invariant s = z₁² + z₂² + z₃² separates the sectors. This article reports what the construction establishes, what it assumes, and where it stops. The carrier, the compensator, the sector rule and the frame maps are established mathematics; the tachyon map z ↦ iz is electromagnetic duality, distinct from time reversal, and frame maps yield equalities, not values. On ℂ⊗ℍ⊗𝕆 one generation and the Standard Model gauge group follow under named choices; the Albert algebra carries a family SO(3) that the charge operator breaks exactly to A₄, and, under a placeholder charge axis, a relative CP sign of leptons and quarks is fixed; one further setting turns it into the open prediction sin δ_PMNS &lt; 0. Read as the spectrum of a Gram matrix, Koide's relation is equivalent to a mean squared overlap 1/2 of three states, whose extremal configuration is the octant; the overlap itself is an input, so K = 2/3 is not derived. Later tests trace this input to a postulated exchange symmetry of the matter and the tachyon frame and leave the Koide phase a fit. The numerical values offered for the open problems go back to one frame offset, β_sym ≈ 0.549, each through a separately set identification; it follows from a horizon counting rule that is adopted as a postulate and not derived. A common action of Einstein–Cartan type with Dixon-stored fermions and a Higgs field, set up by author decisions, gives consistent field equations but no scale; within the present stock no equation selects Λ.</p><p><strong>New in 1.1.0.</strong> The text of version 1.0.0 was audited against the Companion and corrected: over-strong statements were narrowed, several numbers and citations were fixed (for example m_W = 82.69 GeV in the SU(2) counting and γ_L = 1.8647), and the tests H105, H128–H156 and H162 recorded after 1.0.0 were worked in (Companion round v4.10.0-r64 lists the corrections; r62, r63 and r65 hold the tests). Section 6 has a new subsection, “The counting rule as a postulate, and the two-readout reading”: on 26 November 2026 the author adopted the horizon counting rule as a postulate (round v4.10.0-r67), from which β_sym = 0.5494056410 and γ_L = 1.8646997646 are computed; the rule is a working assumption, it is not derived, and the postulate is not a blind prediction. The reading of β_sym as the overlap of two readouts (r66) holds identically in β and derives no value, and the pre-registered test H165 of an overlap closure is refuted: that closure gives the Hopf value 1/√3 and not β_sym. The origin of β_sym (OP1) is still an open problem, now in the form “derive the counting postulate”. The relative CP sign of leptons and quarks is stated for every charge axis and rests on one setting, the same side of the multiplication for the family in both sectors (r65).</p><p><strong>Scope.</strong> No lepton masses, no number of generations, no absolute scale and no value of Λ are derived, and no blind prediction has so far been confirmed against measurement data. The open problems OP1–OP5 and the testable statements are listed in the article with their status; none of them is presented as settled. The authoritative source of every statement is the Quantum Sphaera Companion (concept doi:10.5281/zenodo.19210728; baseline v5.4.0, doi:10.5281/zenodo.24500009, and the research rounds up to v4.10.0-r67 in the public repository). This standalone article does not replace the physics paper bundled with Companion v5.4.0. Version 1.0.0 (doi:10.5281/zenodo.24539644) stays available unchanged.</p>",
+  "version": "1.1.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "biquaternions",
+    "Dixon algebra",
+    "Albert algebra",
+    "Koide relation",
+    "CP violation",
+    "Einstein-Cartan",
+    "cosmological constant",
+    "mathematical physics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24539644",
+      "relation": "isNewVersionOf",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24500009",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Version 1.1.0, new version of record 24539644 (version 1.0.0, doi:10.5281/zenodo.24539644). Version DOI is entered after the reservation by tools/paper_release.py stamp.",
+  "publication_date": "2026-11-26"
+}
