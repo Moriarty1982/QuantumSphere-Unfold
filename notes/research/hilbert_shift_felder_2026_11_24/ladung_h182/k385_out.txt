@@ -1,0 +1,40 @@
+dim su(3)_c = 8; Ladungen auf {1, U}: [0. 1.]; auf dem Farbblock: [0.3333 0.3333 0.3333 0.6667 0.6667 0.6667]
+
+== H182a (nicht blind): ladungsungerade hermitesche Form unter J ==
+   unter komplexer Konjugation ungerade: |sig Hc sig + Hc| = 0.0e+00, |sig Hs sig + Hs| = 0.0e+00
+   Farbblock: |J^T Hc J - Hc| = 0.0e+00 (invariant);  farblos: |J^T Hs J + Hs| = 0.0e+00 (ungerade)
+   Oktonion-Konjugation: |K^T Hc K - Hc| = 0.0e+00; |K^T Hs K + Hs| = 0.0e+00
+   Farbe: max |g^T Hc + Hc g| = 6.9e-17
+   Urteil H182a: BESTAETIGT
+   Bericht, antilineare Fortsetzung: Farbblock |Ja^T Hc Ja + Hc| = 0.0e+00 (ungerade); farblos |Ja^T Hs Ja - Hs| = 0.0e+00 (invariant)
+
+== H182b: Invarianten vom Grad 2 (SU(3)_c, Oktonion-Konjugation, J; komplex-linear) ==
+   nur Farbe                           : 14 Formen; ladungsgerade 8 (farblos 6, Farbe 2); ladungsungerade 6 (farblos 4, Farbe 2, gemischt 0)
+   Farbe + Konjugation                 : 10 Formen; ladungsgerade 6 (farblos 4, Farbe 2); ladungsungerade 4 (farblos 2, Farbe 2, gemischt 0)
+   Farbe + J                           : 10 Formen; ladungsgerade 6 (farblos 4, Farbe 2); ladungsungerade 4 (farblos 2, Farbe 2, gemischt 0)
+   Farbe + Konjugation + J             :  7 Formen; ladungsgerade 4 (farblos 2, Farbe 2); ladungsungerade 3 (farblos 1, Farbe 2, gemischt 0)
+   Farbe + Konjugation + J antilinear  :  5 Formen; ladungsgerade 4 (farblos 2, Farbe 2); ladungsungerade 1 (farblos 1, Farbe 0, gemischt 0)
+   Urteil H182b: WIDERLEGT (ladungsungerade im Farbblock: 2, im Farblosen: 1)
+   davon hermitesch (invariant unter der Phase von C): 3
+
+== H182c: allgemeinstes invariantes Potential bis Grad 4 auf den Feldfamilien ==
+   Invarianten vom Grad 4: 33 (von 3876 Monomen; Singulaerwerte um die Luecke: 7.78e+00 / 4.46e-12)
+   Probe an 50 neuen Punkten: max |P(gx) - P(x)| = 1.7e-13
+   (i) Leptonfeld: groesste Ableitung einer Invariante bei 45 Grad: 5.6e-12; V(theta) = V(pi/2 - theta) fuer jede Invariante: Abweichung 3.3e-16; Funktionenraum Dimension 2
+   Quarkfelder: V ist Polynom vom Grad <= 2 in t = sin^2 theta (Restfehler d: 5.6e-16, u: 5.6e-16)
+   Funktionenraum V_d: 3, V_u: 3, V_d - V_u: 2; Rang von (a_d, b_d, a_u, b_u) ueber alle Invarianten: 4
+   Urteil H182c: BESTAETIGT ((i) erfuellt, (ii) erfuellt)
+
+== H182d: Zaehlung und Daten ==
+   V_q(t) = a_q t + b_q t^2 + konst., stationaer bei t* = -a_q / (2 b_q), Minimum fuer b_q > 0.
+   unabhaengige Kombinationen (a_d, b_d, a_u, b_u): 4; unabhaengige Verhaeltnisse fuer die zwei Winkel: 2
+   Daten verlangen a_d/b_d = -1.1085 (theta_d = 48.114), a_u/b_u = -1.2489 (theta_u = 52.207); Unterschied -0.1404
+   Lesart mit D = 0 (gleicher Grad-4-Koeffizient B): A/B = -1.1787, C/B = -0.0702; |C/A| = 0.0596
+   Urteil H182d: VERTRAEGLICH, KEINE BESTAETIGUNG (zwei freie Verhaeltnisse fuer zwei Messgroessen; stabile Minima mit b_d, b_u > 0 waehlbar)
+
+== Zusatz (nachtraeglich, nach dem Urteil zu H182b): Welche ladungsungeraden Formen sind das? ==
+   ladungsungerade und hermitesch: farblos 0, Farbe 1;  ladungsungerade und bilinear: farblos 1, Farbe 1
+   Im(x0^2 + xU^2) liegt im Raum der Invarianten: Rest 2.5e-15
+   Ladungs-Eigenzustaende im Farblosen (Q = 1, 0): Wert der Form +0.0e+00, +0.0e+00; auf reellen Feldern: 0
+   hermitesche Invarianten insgesamt: 3 (|s|^2, |c|^2 und die ladungsungerade Form im Farbblock); im Farblosen gibt es keine ladungsungerade hermitesche Invariante.
+   J tauscht die Ladungs-Eigenzustaende im Farblosen: |J P(Q=1) + i P(Q=0)| = 0.0e+00, |J P(Q=0) - i P(Q=1)| = 0.0e+00; jede J-Invariante gewichtet beide also gleich.

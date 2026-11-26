@@ -1034,3 +1034,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Test H180 (k381):** K der Neutrinos; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
 
 **26.11.2026, Test H181 (k383):** Zwei Lesarten des M-Zustands; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein neuer Befund für Physik-Artikel oder Preprint; r70 bleibt).
+
+**26.11.2026, Erkundung k384:** Endliche Symmetrien der Sedenionen und Farbblöcke; Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert (kein neuer Befund für Physik-Artikel oder Preprint; Einordnung und Einschränkung von k380).
+
+**26.11.2026, Test H182 (k385):** Ladung als Unterscheidung von Up und Down; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein Befund, der in Physik-Artikel oder Preprint steht).

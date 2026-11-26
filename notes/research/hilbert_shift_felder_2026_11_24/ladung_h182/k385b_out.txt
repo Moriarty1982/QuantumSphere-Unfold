@@ -1,0 +1,15 @@
+k385b, Wolfram Language (MCP-Auswerter), 26.11.2026. Tatsaechliche Print-Ausgaben (zweidimensionale Brueche in eine Zeile gesetzt). Rueckgabewert: Null.
+Warnungen: Symbol::undefined2 (Global symbols "A, B" are undefined) und General::messages; A, B sind hier absichtlich freie Symbole des Potentials.
+
+hodd hermitesch: True; Conjugate[Q0] == 1 - Q0: True
+Farbblock: J^T hc J == hc: True; farblos: J^T hs J == -hs: True
+Konjugation: K hc K == hc: True; K hs K == -hs: True
+Eigenwerte von hc auf dem Farbblock: {-1/6, -1/6, -1/6, 1/6, 1/6, 1/6}; von hs auf {1, U}: {-1/2, 1/2}
+Vorzeichen 1: Ladung von n = 2/3; Psi^dagger hc Psi = Sin[th]^2/6; |c|^2 = Sin[th]^2
+Vorzeichen -1: Ladung von n = 1/3; Psi^dagger hc Psi = -Sin[th]^2/6; |c|^2 = Sin[th]^2
+b invariant unter J: True; unter K: True; ungerade unter komplexer Konjugation: True
+b auf den Ladungs-Eigenzustaenden (1 -+ i U)/Sqrt[2]: 0, 0
+J (1 - i U)/Sqrt[2] == -i (1 + i U)/Sqrt[2]: True
+Leptonfeld: Ableitungen von s, p, |x0^2 + xU^2|^2 bei 45 Grad: {0, 0, 0}
+t* = {{t -> (-A - C s)/(2 (B + D s))}}
+Daten: a_d/b_d = -1.10849, a_u/b_u = -1.24893; mit D = 0: A/B = -1.17871, C/B = -0.0702207

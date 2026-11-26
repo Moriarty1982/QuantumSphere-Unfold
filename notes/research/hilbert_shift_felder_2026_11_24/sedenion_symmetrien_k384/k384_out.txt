@@ -1,0 +1,55 @@
+== A. Endliche Symmetrien: alle Abbildungen, die mit G2 (blockweise) vertauschen ==
+   Familie: 1 (x) A auf Im O (x) R^2 (Paare e_i, e_{i+8}), e0 fest, e8 -> +-e8; A = Drehung oder Spiegelung um Winkel t
+   Drehung, e8 -> +e8: Automorphismus bei t = [0, 120, 240] Grad (Raster 1 Grad); kleinster Defekt sonst 0.045
+   Drehung, e8 -> -e8: Automorphismus bei t = [] Grad (Raster 1 Grad); kleinster Defekt sonst 2.000
+   Spiegelung, e8 -> +e8: Automorphismus bei t = [] Grad (Raster 1 Grad); kleinster Defekt sonst 2.000
+   Spiegelung, e8 -> -e8: Automorphismus bei t = [0, 120, 240] Grad (Raster 1 Grad); kleinster Defekt sonst 0.045
+   psi (Drehung 120 Grad), eps (Vorzeichen von O*l): Defekte 5.6e-16, 0.0e+00
+   psi^3 = 1: True; eps^2 = 1: True; eps psi eps = psi^-1: True
+   erzeugte Gruppe: 6 Elemente (S3), alle Automorphismen: True
+   dim Der(S) = 14 (zusammenhaengender Teil G2); Farbe = Stabilisator von e7: 8
+   S3 vertauscht mit ganz G2: max |[D, psi]| = 5.5e-16, max |[D, eps]| = 8.0e-16
+
+== B. Wirkung auf U = e7, auf den Tausch J und auf die Sektoren ==
+   eps U = U: True; psi U = U: False; psi U = -1/2 e7 + (sqrt3/2) e15: True
+   eps J eps = J: True; |psi J psi^-1 - J| = 1.5000
+   eps: Block 1 (e1..e6) -> +Block 1, Block 2 (e9..e14) -> -Block 2: True
+   psi mischt die Farbbloecke: |psi(Block 2 <- Block 1)| = 0.8660 (sqrt3/2 = 0.8660); mischt e7 mit e15: 0.8660; laesst e0, e8 fest: True
+   Die zwei Farbbloecke sind also die zwei Komponenten eines S3-Dubletts: (3 + 3bar) (x) 2; ebenso (e7, e15); e0 trivial, e8 Vorzeichendarstellung.
+
+== C. Invariante quadratische Formen (Massenterme) je nach geforderter Symmetrie ==
+   Spalten: gesamt | Block 1 | Block 2 | zwischen den Farbbloecken | farblos (e0,e7,e8,e15)
+   nur Farbe                       : 14 | 1 | 1 | 2 | 10
+   Farbe + eps                     :  8 | 1 | 1 | 0 | 6
+   Farbe + psi (Z3)                :  6 | 1 | 1 | 1 | 4
+   Farbe + S3                      :  4 | 1 | 1 | 0 | 3
+   Farbe + Konjugation + J         :  4 | 1 | 1 | 0 | 2
+   Farbe + Konjugation + J + eps   :  4 | 1 | 1 | 0 | 2
+   Farbe + Konjugation + S3        :  4 | 1 | 1 | 0 | 3
+   Farbe + S3: Koeffizient je Form auf Block 1 / Block 2 (Spur/6): -0.2557 / -0.2557; -0.1336 / -0.1336; -0.0023 / -0.0023; -0.0081 / -0.0081
+   Farbe + S3: groesste Abweichung Block 1 gegen Block 2: 1.4e-17; Form auf (e7, e15) proportional zur Eins: 2.3e-16
+   Bricht U = e7 die S3 auf Z2 = {1, eps}, kommen 4 freie Brechungskoeffizienten dazu (Farbe + eps: 8, Farbe + S3: 4).
+
+== D. Folge fuer Up und Down ==
+   Ungebrochene S3 gaebe gleiche Massenterme fuer beide Farbbloecke, also K_u = K_d und rho_u = rho_d.
+   Daten (M_Z): K_d = 0.7478, K_u = 0.8876; rho_d = 1.115, rho_u = 1.29
+   Brechung in rho: Mittel a = 1.2025, Dublettanteil b = 0.0875, b/a = 0.0728
+   Brechung in K:   Mittel a = 0.8177, Dublettanteil b = 0.0699, b/a = 0.0855
+   Zwei Farbbloecke, zwei Koeffizienten (a, b): keine Beziehung fuer Up aus S3 allein.
+
+== E. Zusatz: S3 zusammen mit dem Tausch, und die Ladung auf den Bloecken ==
+   Farbe + Konjugation + S3 + alle drei Tausche J_k: 2 Formen | Farbe 1 | farblos 1
+      Diagonale (e0, e7, e8, e15 | Block 1 | Block 2): -0.4096, -0.4096, -0.4096, -0.4096 | +0.1655 | +0.1655
+      Diagonale (e0, e7, e8, e15 | Block 1 | Block 2): +0.2867, +0.2867, +0.2867, +0.2867 | +0.2365 | +0.2365
+   Q_0 auf farblose Ebene {e0, e7}   : Leck 0.0e+00; Eigenwerte 0.0000, 1.0000
+   Q_0 auf Farbblock 1 (in O)        : Leck 0.0e+00; Eigenwerte 0.3333, 0.3333, 0.3333, 0.6667, 0.6667, 0.6667
+   Q_0 auf farblose Ebene {e8, e15}  : Leck 0.0e+00; Eigenwerte 0.3333, 0.6667
+   Q_0 auf Farbblock 2 (in O*l)      : Leck 0.0e+00; Eigenwerte 0.3333, 0.3333, 0.3333, 0.6667, 0.6667, 0.6667
+   [Q_0, eps] = 0: True; Q_0 vertauscht mit der Farbe: 6.4e-16
+
+== F. Zusatz: hermitesche Formen auf C (x) A, die mit Farbe und Ladung vertauschen ==
+   O: Ladungen [0.0, 0.3333, 0.3333, 0.3333, 0.6667, 0.6667, 0.6667, 1.0]
+   O: hermitesche Formen (Farbe + Q_0): 4  (erwartet 4: je eine fuer Ladung 0, 1/3, 2/3, 1)
+   S: Ladungen [0.0, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.6667, 0.6667, 0.6667, 0.6667, 0.6667, 0.6667, 0.6667, 1.0]
+   S: hermitesche Formen (Farbe + Q_0): 8; zusaetzlich eps: 8
+   Tausch J (komplex-linear fortgesetzt) und Ladung: auf {e0, e7} J Q_0 J^-1 = 1 - Q_0: True; auf den Farbbloecken J Q_0 J^-1 = Q_0: True

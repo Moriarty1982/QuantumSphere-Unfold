@@ -106,6 +106,40 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Der Tausch J erlaubt nur im Farbblock einen ladungsabhängigen Massenterm (26.11.2026, Test H182, k385)
+Vorab-Notiz 70fdce1 (Teil a nicht blind). Anlass: Entscheidung des Autors nach k384, Up gegen Down als Ladungsanteil im Block zu lesen.
+- **Aufbau:** Feld in ℂ ⊗ 𝕆; Symmetrien Farbe, Oktonion-Konjugation und J, komplex-linear fortgesetzt; alle Invarianten bis Grad 4 gezählt (7 vom Grad 2,
+  33 vom Grad 4).
+- **Befund:** Die komplexe Konjugation tauscht die Ladungen 0 mit 1 und ⅓ mit ⅔. J tauscht im Farblosen ebenfalls 0 mit 1, erhält im Farbblock aber die
+  Ladung. Deshalb gibt es genau eine hermitesche Form, die Ladungen verschieden gewichtet, und sie sitzt im Farbblock.
+- **Leptonen:** Neutrale und geladene Leptonen haben denselben Massenterm; 45° (K = ⅔) ist für jede Invariante stationär. Passt zu H180.
+- **Quarks:** V = (A ± C)t + (B ± D)t², t = sin²θ. Up und Down dürfen verschiedene Winkel haben. Die Daten verlangen a/b = −1,1085 (d) und −1,2489 (u);
+  mit D = 0 ist der ladungsungerade Anteil 6 % des geraden. **Zwei freie Verhältnisse für zwei Winkel: angepasst, keine Vorhersage.**
+- **Urteile:** a bestätigt, c bestätigt, d verträglich ohne Bestätigung. b nach dem vorab festgelegten Kriterium **widerlegt**: Im Farblosen gibt es eine
+  unter komplexer Konjugation ungerade Form, Im(x₀² + x_U²). Sie ist bilinear, verschwindet auf den Ladungs-Eigenzuständen und gewichtet die Ladungen
+  nicht (nachträglich festgestellt); in der engeren Fassung „hermitesch“ trägt die Aussage.
+- **Bericht:** Mit antilinear fortgesetztem J wäre θ_u = θ_d erzwungen; die Daten wählen die komplex-lineare Fortsetzung.
+- Grenzen: ein Feld je Sektor, Grad ≤ 4, Winkel bei M_Z, δ nicht behandelt. Offen: was die Stärke der ladungsungeraden Form festlegt.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/ladung_h182/`.
+
+### Die endliche Symmetrie S₃ der Sedenionen verknüpft die Farbblöcke, gibt aber keine Zahl für Up (26.11.2026, Erkundung k384)
+Nicht blind. Anlass: in k380 offen gelassene Frage nach den endlichen Automorphismen von 𝕊.
+- **Die Gruppe:** Neben G₂ hat 𝕊 genau sechs endliche Symmetrien (S₃): die Drehung ψ um 120° zwischen 𝕆 und 𝕆·ℓ und das Vorzeichen ε von 𝕆·ℓ
+  (Python und Wolfram exakt).
+- **Verknüpfung:** Die zwei Farbblöcke aus k380 sind die zwei Komponenten eines S₃-Dubletts, ebenso das Paar (e₇, e₁₅). Ungebrochene S₃ gäbe beiden
+  Blöcken denselben Massenterm, in der Lesart „Block = Quarktyp“ also K_u = K_d (gemessen 0,8876 gegen 0,7478).
+- **Brechung:** Die Ladungsrichtung U = e₇ bricht S₃ auf ℤ₂ = {1, ε}. Dabei werden vier Koeffizienten frei; einer ist der Unterschied der zwei
+  Farbblöcke. **Eine Zahl für Up folgt nicht.**
+- **Zusammen mit dem Tausch:** Unter S₃ und allen drei Tauschen J_k bleiben nur zwei Massenterme, einer für alles Farblose, einer für alle Farbe.
+- **Einwand gegen „Block = Quarktyp“:** Die Ladung Q₀ trennt die Farbblöcke nicht. Jeder Block trägt ⅓ und ⅔; die Ladungen 0 und 1 liegen beide in
+  {1, U}; die zweite farblose Ebene trägt ⅓ und ⅔. Das stützt H180 (Neutrinos in derselben Ebene wie die geladenen Leptonen) und schränkt k380 ein:
+  Mit der Ladung als Unterscheidung gibt es vier Sektoren schon auf ℂ ⊗ 𝕆. Offen (Weggabelung für den Autor): Up gegen Down als Block (S₃-Brechung)
+  oder als Ladungs-Eigenraum innerhalb eines Blocks.
+- Grenzen: nur Formen vom Grad 2; Aut(𝕊) = G₂ × S₃ aus der Literatur; Ladung in der k85-Form.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/sedenion_symmetrien_k384/`.
+
 ### Die Mischungsdaten legen K der Neutrinos selbst auf ⅔ fest (26.11.2026, Test H180, k381)
 Vorab-Notiz 3495a67. Anlass: Weggabelung aus k380 (K_ν durch J gedeckt oder frei).
 - **Blind gerechnet:** Mit freiem K_ν wählen R und die drei Winkel ρ_ν = 0,99, also K_ν = 0,660; erlaubt (Δχ² < 4) ist K_ν von 0,634 bis 0,701.

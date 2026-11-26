@@ -1,0 +1,14 @@
+k384b, Wolfram Language (MCP-Auswerter), 26.11.2026. Tatsaechliche Print-Ausgaben (zweidimensionale Brueche in eine Zeile gesetzt). Rueckgabewert: Null. Keine Warnungen.
+
+Drehung, e8 -> +e8: Loesungen (c, s) = {{c -> -1/2, s -> -Sqrt[3]/2}, {c -> -1/2, s -> Sqrt[3]/2}, {c -> 1, s -> 0}}
+Drehung, e8 -> -e8: Loesungen = {}
+Spiegelung, e8 -> -e8: Loesungen (c, s) = {{c -> -1/2, s -> -Sqrt[3]/2}, {c -> -1/2, s -> Sqrt[3]/2}, {c -> 1, s -> 0}}
+Spiegelung, e8 -> +e8: Loesungen = {}
+psi^3 == 1: True; eps psi eps == psi^-1: True
+psi U = {0, 0, 0, 0, 0, 0, 0, -1/2, 0, 0, 0, 0, 0, 0, 0, Sqrt[3]/2}; eps U == U: True
+eps J eps == J: True; psi J psi^-1 == J: False
+Invarianz unter psi verlangt: a15 == a7 && c2 == c1
+Invarianz unter J verlangt: a7 == a0 && a15 == a8
+Invarianz unter psi, J und psi J psi^-1 verlangt: a7 == a0 && a8 == a0 && a15 == a0 && c2 == c1
+Q0 auf {e0, e7}: {0, 1}; Block 1: {1/3, 1/3, 1/3, 2/3, 2/3, 2/3}; {e8, e15}: {1/3, 2/3}; Block 2: {1/3, 1/3, 1/3, 2/3, 2/3, 2/3}
+[Q0, eps] == 0: True
