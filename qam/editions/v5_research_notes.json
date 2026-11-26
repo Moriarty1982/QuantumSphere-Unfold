@@ -552,5 +552,126 @@
     ],
     "guard": "Origin of β_sym (OP1)",
     "obligation": "H165 is refuted: no closure condition and no number candidate reproduces β = 0.5494056 as an identity. The counting rule itself (weight 2, Casimir area, one-bit unit, assignment to frames) is set, not derived. The survey of 37 earlier attempts was compiled by a subagent and only spot-checked. OP1 remains open."
+  },
+  {
+    "id": "op3-theta-fixed-point-of-frame-exchange-h149",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H149_Was_legt_Theta_und_Delta_fest.md",
+    "title": "θ = π/4 is the fixed point of the frame exchange J; no term fixes δ = 2/9 without fitting",
+    "excerpt": "Ergebnis H149: θ = π/4 ist der Fixpunkt des Frame-Tauschs, δ = 2/9 legt kein Term ohne Anpassung fest",
+    "assumptions": [
+      "Amplitude readout; exchange J: ψ ↦ U ψ̄ in the plane {1, U}; quartic potentials; part a not blind. H149a–e confirmed."
+    ],
+    "guard": "What fixes θ = π/4 and δ = 2/9",
+    "obligation": "The fixed point is realised only if the exchange is required as a symmetry; whether it is a minimum depends on the sign of 2a − b, which is not set. δ = 2/9 remains a fit. OP3 remains open."
+  },
+  {
+    "id": "op3-sign-of-2a-minus-b-not-from-field-equation-h150",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H150_Vorzeichen_2a_minus_b.md",
+    "title": "The sign of 2a − b does not follow from the field equation alone; it depends on the sign of κ and on the choice scale free",
+    "excerpt": "Ergebnis H150: Das Vorzeichen von 2a − b folgt nicht allein aus der Feldgleichung; es hängt am Vorzeichen der Kopplung κ und an der Wahl „skalenfrei“",
+    "assumptions": [
+      "One-loop flow of a quartic ansatz with one coupling κ; both cases (scale set, scale free) computed; parts a and f not blind. a, d, e, f confirmed; the cutoff part of b (1 against 2 components) refuted; c refuted by its wording."
+    ],
+    "guard": "Sign of 2λ − κ at the Koide point",
+    "obligation": "The sign follows only if two things are required: scale free, and the scale shall arise. With the actual component numbers the flow shifts K off ⅔. Deferred idea I4 is met but not implemented. OP3 remains open."
+  },
+  {
+    "id": "op3-koide-shift-unrelated-to-settings-h151",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H151_Verschiebung_und_Zwei_Neuntel.md",
+    "title": "The scale-free shift of K is related neither to δ = 2/9 nor to any other setting, and the frame difference cannot cancel it",
+    "excerpt": "Ergebnis H151: Die Koide-Verschiebung aus H150 hängt weder mit δ = 2/9 noch mit einer anderen Setzung zusammen, und die Frame-Differenz kann sie nicht aufheben",
+    "assumptions": [
+      "Scale-free flow of H150; comparison catalogue of settings fixed before the computation (second addendum on the frame difference after the run of a–d, before e). a, c, d, e confirmed; b partly."
+    ],
+    "guard": "Origin of the scale-free shift of K",
+    "obligation": "The shift is start dependent, not a fixed number; no hit above chance expectation. No derivation of δ or of K follows. OP3 remains open."
+  },
+  {
+    "id": "op3-complete-scale-free-ansatz-fixes-neither-k-nor-delta-h152",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H152_Erweiterter_Ansatz.md",
+    "title": "The complete scale-free ansatz fixes neither K nor δ; the cubic norm selects δ = 0 or π/3, two equal masses",
+    "excerpt": "Ergebnis H152: Der vollständige skalenfreie Ansatz legt weder K noch δ fest; die kubische Norm wählt δ = 0 oder π/3, also zwei gleiche Massen",
+    "assumptions": [
+      "All Z₃ ⋊ Z₂-invariant quartic terms and the back-reaction of HS(3); 144 starting points. H152a–e confirmed, all as predicted."
+    ],
+    "guard": "Scale-free route to K and δ",
+    "obligation": "Three different masses occur in none of the cases computed; the measured K value used here rested on an older tau mass and is corrected in H154 without change of a decision. OP3 remains open."
+  },
+  {
+    "id": "op3-normalisation-selects-only-starting-ray-h153",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H153_Normierung_1_zu_2.md",
+    "title": "A normalisation selects only the starting ray; only the restriction of the loop to the subalgebra {1, U} gives K = ⅔ exactly",
+    "excerpt": "Ergebnis H153: Eine Normierung wählt nur die Startlinie; nur die Einschränkung auf die Unteralgebra {1, U} gibt K = ⅔ exakt",
+    "assumptions": [
+      "Scale-free flow with three normalisations of the two norms. H153a, c, d confirmed; H153b confirmed except one sub-prediction."
+    ],
+    "guard": "Normalisation 1:2 and the degrees of freedom in the loop",
+    "obligation": "Restricting the loop to {1, U} is a setting about the degrees of freedom, not a consequence of the algebra (H154). OP3 remains open."
+  },
+  {
+    "id": "op3-loop-not-forced-koide-deviation-noise-h154",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H154_Unteralgebra_und_Abweichung.md",
+    "title": "The algebra does not force the loop over {1, U}; the deviation of the measured Koide value from ⅔ is measurement noise (0.43σ, entirely from the tau mass)",
+    "excerpt": "Ergebnis H154: Die Algebra erzwingt die Schleife über {1, U} nicht; die Abweichung von ⅔ ist Messrauschen (0,43σ, ganz aus m_τ)",
+    "assumptions": [
+      "K = 0.6666645 ± 0.0000051 with m_τ = 1776.93 ± 0.09 MeV; one-loop QED running; parts a, g, h not blind. H154a–h confirmed."
+    ],
+    "guard": "Subalgebra restriction and the measured deviation from ⅔",
+    "obligation": "The value m_τ = 1776.969 MeV is a conditional prediction (if K = ⅔ holds exactly for pole masses), open. Koide holds for pole masses, not for running masses at a common scale. OP3 remains open."
+  },
+  {
+    "id": "op3-set-scale-exchange-symmetry-holds-koide-h155",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H155_Skala_als_Setzung.md",
+    "title": "With a set scale the exchange symmetry holds K = ⅔ without a heavy U′; running disturbs only at second order; δ = 2/9 remains a parameter",
+    "excerpt": "Ergebnis H155: Mit gesetzter Skala hält die Tauschsymmetrie K = ⅔ ohne schweres U′; das Laufen stört erst in zweiter Ordnung; δ = 2/9 bleibt ein Parameter",
+    "assumptions": [
+      "Scale set; equal mass terms and equal quartic couplings in the plane {1, U}; part a not blind. H155a, b confirmed; H155c refuted (in favour of Koide); H155d refuted by its wording; one addition is marked as a post-hoc exploration."
+    ],
+    "guard": "Koide value under a set scale and the Brannen phase",
+    "obligation": "δ = 2/9 requires one fitted parameter R*; the one comparison counted as a hit lies 63σ off in δ and is no derivation. Scale and exchange symmetry are set. OP3 remains open."
+  },
+  {
+    "id": "op3-equal-mass-terms-need-exchange-postulate-h156",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/generationszahl_h138/Ergebnis_H156_Gleiche_Massenterme.md",
+    "title": "The algebra does not require equal mass terms; they follow only if the exchange J is required as a symmetry",
+    "excerpt": "Ergebnis H156: Die Algebra verlangt μ_A² = μ_B² nicht; gleiche Massen folgen erst, wenn der Tausch J als Symmetrie gefordert wird",
+    "assumptions": [
+      "Invariants computed in the plane {1, U}; candidate symmetries SO(2), Z₄, Z₂ = ⟨J⟩, D₄; parts a, d not blind. H156a, b, d confirmed; H156c partly."
+    ],
+    "guard": "Postulate of equal standing of the matter and the tachyon frame",
+    "obligation": "J is an isometry but neither an automorphism nor an antiautomorphism; the algebra does not supply it. The postulate was adopted by the author on 26 November 2026 as a working assumption and is not derived. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op4-charge-axis-e7-route-a-cp-sign-h162",
+    "path": "notes/research/predictions/Ergebnis_H162_Ladungsachse_e7_WegA_CP.md",
+    "title": "Route A and the relative CP sign do not depend on the charge axis e₈; with e₇ the charge extends the octonionic charge of one copy",
+    "excerpt": "Ergebnis H162: Weg A und das relative CP-Vorzeichen hängen nicht an der Achse e₈; mit e₇ setzt die Ladung die oktonionische Ladung einer Kopie fort",
+    "assumptions": [
+      "Sedenion carrier with charge of the form ½ − (i/2)L_u on the colour-neutral block; largely not blind (a, b, d argued by hand beforehand); part c numerical only; e is an exploration. H162a–d confirmed."
+    ],
+    "guard": "Charge axis (CT-003) and the statements conditional on it",
+    "obligation": "CT-003 stays a placeholder: the choice between the ψ-fixed axis e₈ and an axis faithful to a copy (e₇) is not decided. By r65 the relative sign depends on the setting that the same side of the multiplication carries the family in both sectors. Stage B of H125 stays open. OP1–OP5 remain open."
+  },
+  {
+    "id": "op1-counting-rule-adopted-as-postulate-r67",
+    "path": "notes/research/v4_10_0_r67_zaehlpostulat/README.md",
+    "title": "The counting rule is adopted as a postulate; β_sym = 0.5494056410 is computed from it",
+    "excerpt": "Die Zählregel wird als Postulat angenommen, im selben Sinn wie die Frame-Gleichberechtigung (r63.7):",
+    "assumptions": [
+      "Postulate r67.P: weight 2 per spin in the matter frame, Casimir area √(j(j+1)), the frame T counts only j = ½ with one bit; the assignment of the rules to the frames is part of the postulate."
+    ],
+    "guard": "Counting postulate (OP1)",
+    "obligation": "The postulate is named, not derived, and closes no open problem. OP1 remains open in the form: derive the counting postulate. Earlier layers keep their printed rounded-input values."
+  },
+  {
+    "id": "op1-recalculation-at-exact-beta-sym-k358",
+    "path": "notes/research/op1_herkunft_beta_sym_h165/Nachrechnung_k358_Empfindlichkeit.md",
+    "title": "Recalculation of all numbers depending on β_sym, γ_L or γ_M at the exact value: no verdict changes",
+    "excerpt": "**Erkundung, kein Test** (keine Vorab-Notiz, kein Entscheidungskriterium).",
+    "assumptions": [
+      "Exploration without advance note or decision criterion; measured values are those already held in the record, none counts as a test of a prediction; scripts that use 0.5493 only for illustrative numbers were not rerun individually."
+    ],
+    "guard": "Sensitivity of the dependent numbers to the reference value of β_sym",
+    "obligation": "The σ distances are descriptions of position, not tests. Hit counts of the mask scans change through a raster effect and are not a measure. No statement on the origin of β_sym follows. OP1 remains open."
   }
 ]

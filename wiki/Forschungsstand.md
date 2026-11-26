@@ -1,5 +1,13 @@
 # Forschungsstand
 
+### Nachrechnung als Runde r68; drei Releases vorbereitet, nichts veröffentlicht (26.11.2026)
+
+- **Runde v4.10.0-r68** hält die Nachrechnung k358 im Companion fest (Erkundung, kein Test): Empfindlichkeiten, Abstände zu den Messwerten des Bestands, H102 über γ_M, Maskenscans. Kein Urteil kippt; m_W ist die schärfste Stelle (2σ-Fenster 0,54907 ≤ β ≤ 0,54978). Kein Guard berührt, OP1 bis OP5 offen.
+- **Layout:** Drei Tabellen und eine Formelzeile in r60, r62 und r67 passen jetzt auf die Seite; der Inhalt ist unverändert.
+- **Physik-Ausgabe des Companion** (`qam/editions/`): neuer Abschnitt „Family symmetry, octonion copies and the Koide point on the tower“ (r60 bis r65) und Ergänzungen zu „One number and several translations“ (r64, r66, r67, r68). Katalog der Forschungsnotizen: elf neue Einträge (H149 bis H156, H162, Entscheidung r67, k358), zusammen 61.
+- **Deutscher Preprint:** neuer Abschnitt 5.8 „Familiensymmetrie, Kopien und der Koide-Punkt“ (r60 bis r65, Tests getrennt von Erkundungen), Titelseite „Fassung 0.4.0“ ohne DOI.
+- **Vorbereitet, nicht reserviert, nicht veröffentlicht:** Companion v5.5.0, Physik-Artikel 1.1.0, Preprint 0.4.0 (siehe „Versionen und Quellen“). Zenodo-Schritte nur mit ausdrücklicher Freigabe des Autors.
+
 ### Die Zählregel ist jetzt Postulat; β_sym = 0,5494056410 ist die daraus berechnete Zahl (26.11.2026, Runde r67)
 
 Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selben Sinn wie die Frame-Gleichberechtigung: benannt, nicht hergeleitet. Runde **v4.10.0-r67** hält fest:

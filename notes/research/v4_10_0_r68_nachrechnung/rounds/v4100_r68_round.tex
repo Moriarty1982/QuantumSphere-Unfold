@@ -1,0 +1,126 @@
+
+\clearpage
+% ============================================================================
+\section*{v4.10.0-r68 Source-Only: Recalculation of the Numbers that Depend on \texorpdfstring{\(\beta_{\rm sym}\)}{beta sym} at the Reference Value (Exploration k358)}
+\addcontentsline{toc}{section}{v4.10.0-r68 Source-Only: Recalculation of the Numbers that Depend on \texorpdfstring{\(\beta_{\rm sym}\)}{beta sym} at the Reference Value (Exploration k358)}
+\label{sec:v4100-r68-recalculation}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer v4.10.0-r67 fixed \(\beta_{\rm sym}=0.5494056410\) as the reference value and stated, from the exploration k357, that no recorded verdict
+depends on the difference to the value \(0.5493482\) of earlier layers.  The author asked how the individual places react.  This layer records
+the answer of the exploration k358.  It is an exploration and not a test: there is no advance note and no decision criterion.  All data values
+are those already in the record; none is new and none counts as a check of a prediction.  The distances in \(\sigma\) describe positions.
+Earlier layers are not rewritten.  No guard changes.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r68 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r68 results}
+\label{subsec:v4100-r68-results}
+
+Three values are compared: \(0.5493\) (four digits, used by several older scripts), \(0.5493482\) (carried in earlier layers) and the reference
+value.  One \emph{step} is the change \(5.74\times10^{-5}\) in \(\beta\) from the second to the third (relative \(1.05\times10^{-4}\)).
+The sensitivity of a quantity \(X\) is \(s_X=d\ln X/d\ln\beta\) at the reference value.
+
+\paragraph{Remark v4.10.0-r68.1 (sensitivities).}
+In closed form \(s_{\gamma_L}=4\beta^2/(1-\beta^4)=1.328\) and \(s_{m_W}=2\beta^2(1-\beta^2)/(1+\beta^2+\beta^4+\beta^6)=0.297\) for
+\(m_W=m_Z\gamma_L/\sqrt{1+\gamma_L^2}\).  Further values: \(\beta^2\) (\(\Omega_M\) of H96, \(|U_{e2}|^2\) of H9) \(2.00\);
+\(\varepsilon=\operatorname{artanh}\beta\) \(1.274\); \(\gamma_L^5\) \(6.64\); \(K=(1+\beta^4)/3\) \(0.334\); the Hopf gap
+\(1/(\sqrt3\,\beta)-1\) \(-20.7\).  Only the Hopf gap and high powers of \(\gamma_L\) react strongly; neither is compared with data in the
+record.  \(\gamma_L^5\) changes from \(22.5291\) to \(22.5447\) (\(+0.07\%\)).  \textbf{Computed} (mpmath; sensitivities symbolically in
+Wolfram Language).
+
+\paragraph{Remark v4.10.0-r68.2 (distances to the data values of the record).}
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}@{}}
+\toprule
+quantity & data value & at \(0.5493482\) & at the reference value\\
+\midrule
+\(\Omega_M=\beta^2\) (H96) & DESI DR2 BAO \(0.2975\pm0.0086\) & \(0.30178\), \(+0.50\sigma\) & \(0.30185\), \(+0.51\sigma\)\\
+\(m_W\) (H15) & PDG 2026 \(80.3625\pm0.0077\) GeV & \(80.3590\), \(-0.44\sigma\) & \(80.3615\), \(-0.13\sigma\)\\
+\(m_W\) (H15) & PDG 2024 \(80.3692\pm0.0133\) GeV & \(-0.76\sigma\) & \(-0.58\sigma\)\\
+\(\sin^2\theta_{12}\) (H9), \(s_{13}^2=0.02215\) & JUNO 2026 \(0.3036\pm0.0064\) & \(0.30862\), \(+0.78\sigma\) & \(0.30868\), \(+0.79\sigma\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The uncertainty \(1.8\) MeV of the \(m_W\) relation from \(m_Z\) is included.  H96 and the \(m_W\) relation were registered with the unrounded
+value; the registered value \(0.30862\pm0.00018\) of H9 stays as printed and contains \(0.30868\).  No verdict changes.  The sharpest place is
+\(m_W\): its \(2\sigma\) window (PDG 2026) corresponds to \(0.54907\le\beta\le0.54978\), about six steps to either side of the reference value.
+The lepton window \([0.545,0.570]\), the \(2\sigma\) window of \(\Omega_M\) and the hit window \(0.611\le\varepsilon\le0.647\) of v4.9.0-r61
+are at least \(76\) steps away.  \textbf{Computed.}
+
+\paragraph{Remark v4.10.0-r68.3 (H102 depends on \(\gamma_M\) alone and reacts strongly).}
+The relation \(\Phi_e=\pi/4-\gamma_M/2\) of H102 uses \(\gamma_M\), not \(\beta_{\rm sym}\), and \(dm_\tau/d\gamma_M=2396\) MeV.  With the
+rounded \(\gamma_M=0.2375\) it gives \(m_\tau=1777.055\) MeV (\(+1.39\sigma\) against \(1776.93\pm0.09\) MeV), with the value of the counting
+rule \(1777.134\) MeV (\(+2.27\sigma\)).  H102 was registered with the latter on 13 November 2026; its status is unchanged and open.  The
+rounded value follows from no rule and is not an alternative.  \textbf{Computed} (functions of the registered script k224).
+
+\paragraph{Remark v4.10.0-r68.4 (mask scans).}
+The scan of H45/H46 (code of k105 unchanged, grid \(2^\circ\)) gives \(120\) hits in variant A at \(0.5493\) and at \(0.5493482\) and \(168\)
+at the reference value (variant B: \(1104\), \(1104\), \(1552\)); the interval of \(\sin^2\theta_{23}\) among the hits changes from
+\([0.4913,0.4975]\) to \([0.4908,0.4975]\).  The jump of the hit count is an effect of the fixed grid; hit counts of this scan are not a
+measure.  The registered window \([0.49,0.50]\) of H46 contains both intervals.  The scan of H134 (code of k263 unchanged) changes in the
+fourth digit; its three verdicts (a confirmed, b refuted, c confirmed) are unchanged.  \textbf{Computed.}
+
+\subsection*{v4.10.0-r68 frames}
+\label{subsec:v4100-r68-frames}
+
+No new frame map is used.  Each quantity is evaluated in the frame and through the identification of the layer that introduced it; the
+recalculation changes the input number only.  The data values are those the earlier layers compared with, under the same conditions.
+
+\subsection*{v4.10.0-r68 register entries}
+\label{subsec:v4100-r68-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r68\\
+\midrule
+verdicts of the record at the reference value & unchanged (exploration k358; not a test)\\
+H9, H15, H46, H96, H102, H112 & open, as before\\
+\(m_W\) relation & sharpest place; \(2\sigma\) window \(0.54907\le\beta\le0.54978\)\\
+H102 & registered with the value of the counting rule; \(+2.27\sigma\) against the data value of the record\\
+hit counts of the mask scan (H45/H46) & grid dependent; not a measure\\
+OP1--OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r68 notes}
+\label{subsec:v4100-r68-notes}
+
+{\raggedright
+Note with the full table, scripts and actual outputs:
+\texttt{notes/\allowbreak research/\allowbreak op1\_\allowbreak herkunft\_\allowbreak beta\_\allowbreak sym\_\allowbreak h165/}
+(\texttt{Nachrechnung\_\allowbreak k358\_\allowbreak Empfindlichkeit.md}, \texttt{k358\_\allowbreak empfindlichkeit.py},
+\texttt{k358b\_\allowbreak maske\_\allowbreak h46.py}, \texttt{k358c\_\allowbreak maske\_\allowbreak h134.py},
+\texttt{k358d\_\allowbreak gegenprobe.wl} with their output files).
+Tools: mpmath; Wolfram Language for the independent cross-check; Qiskit not used (no circuit, state or measurement simulation is involved);
+no HDL comparison (no finite search or guard procedure involved).  Scripts that use \(0.5493\) for illustrative numbers only were not rerun
+one by one.
+\par}
+
+\subsection*{v4.10.0-r68 ledger and guard update}
+\label{subsec:v4100-r68-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r68}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no new comparison with data).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r68,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r68}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

@@ -1,5 +1,7 @@
 # Versionen und Quellen
 
+**In Vorbereitung (26.11.2026), nichts davon reserviert oder veröffentlicht:** Companion **v5.5.0** (Runden v4.10.0-r60 bis r68; Vollausgabe 1572 Seiten, Physik-Ausgabe 38 Seiten im lokalen Bau; Metadaten `release/zenodo/metadata_v5_5_0.json`, Notiz `release/v5.5.0/README.md`), eigenständiger Physik-Artikel **1.1.0** (51 Seiten; `release/papers/physics-standalone-1.1.0-prep.md`) und deutscher Preprint **0.4.0** (61 Seiten, neuer Abschnitt 5.8; `release/preprint-de-v0.4.0/README.md`). Die Versionsnummern sind Vorschläge. Jeder Zenodo-Schritt (Reservierung, Upload, Veröffentlichung) braucht die ausdrückliche Freigabe des Autors. Öffentlich gültig bleiben v5.4.0, 1.0.0 und 0.3.0.
+
 Veröffentlichungsnachtrag vom **25.11.2026**: Der eigenständige englische Physik-Artikel „One Object, Three Frames: The Quantum Sphaera
 Construction“ ist als eigener Record in Fassung 1.0.0 erschienen ([Zenodo](https://zenodo.org/records/24539644), DOI 10.5281/zenodo.24539644).
 49 Seiten; er berichtet, was die Konstruktion festlegt, was sie annimmt und wo sie endet, nach dem Companion bis Runde v4.10.0-r61. Er ersetzt

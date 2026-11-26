@@ -195,6 +195,8 @@ zugleich und lässt das relative Vorzeichen stehen. Die zweite Stufe ist blind g
 CP-Phase in beiden Sektoren auf dieselbe Weise aus der Familienstruktur entsteht, folgt \(\operatorname{sign}J_{\rm PMNS}=-\operatorname{sign}J_{\rm CKM}\),
 also \(\sin\delta_{\rm PMNS}<0\). Entschieden wird mit der ersten Auswertung, die das Vorzeichen auf mindestens \(3\sigma\) festlegt,
 spätestens Ende 2035. Ein einzelnes Vorzeichen hat die Grundwahrscheinlichkeit \(\tfrac12\); eine Bestätigung stützte vor allem die Setzung.
+Runde v4.10.0-r65 schränkt diesen Befund ein: Das relative Vorzeichen hängt an einer weiteren benannten Setzung
+(Abschnitt~\ref{sec:family-copies-koide}).
 
 \paragraph{Der Turm der Hilbert-Shifts.}
 Die zweite Frage war, ob der Feldwert eine Erzeugungsregel von einem Hilbert-Shift zum nächsten hat. Liest man den Feldwert auf der
@@ -214,6 +216,79 @@ Zusatz in der Grundgleichung bringt eine Skala, ändert die Struktur aber nicht.
 Keine dieser Rechnungen leitet \(\beta\), eine Masse, einen Mischungswinkel oder \(\Lambda\) her. Gesetzt bleiben der Rahmen der
 Chiralität, die Unterscheidung von M und T, die Zahl der Generationen und jede Skala. OP1, OP3, OP4 und OP5 bleiben offen.
 
+\subsection{Familiensymmetrie, Kopien und der Koide-Punkt}
+\label{sec:family-copies-koide}
+
+Nach Fassung 0.3.0 hat der Companion die Runden v4.10.0-r60 bis v4.10.0-r67 erhalten \cite{layers}. Die Runden r66 und r67 betreffen die
+Zahl \(\beta\) und stehen in Abschnitt~\ref{sec:one-number}. Die Runden r60 bis r65 sind Sammelrunden und eine Korrekturrunde: Sie rechnen
+nichts neu und halten Tests und Erkundungen mit dem Status fest, den die Ergebnis-Notizen nennen \cite{roundsr60r65}. Dieser Abschnitt gibt
+sie verkürzt wieder; maßgeblich sind die Runden. Die erste Tabelle nennt die Tests mit vorab festgelegtem Kriterium. Wo ein Teil nicht blind
+war, steht das in der dritten Spalte; die Runden führen es je Teilaussage.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.21\linewidth}p{.09\linewidth}p{.15\linewidth}p{.45\linewidth}@{}}
+\hline
+\textbf{Test} & \textbf{Runde} & \textbf{blind?} & \textbf{Ergebnis}\\
+\hline
+\raggedright H127: Brechung der Familiensymmetrie durch die Ladung & r60.2 & \raggedright vorab festgelegt & \raggedright Stufe A bestätigt: Die Brechung \(SO(3)\to A_4\) ist ein reiner Spin-3-Tensor. Stufe B nach dem Wortlaut widerlegt; sie war für jede zulässige Kopplung leer (r60.3).\tabularnewline
+\raggedright H138--H147: Oktonion-Kopien in den Sedenionen, Rest-Generation & r62 & \raggedright teils nicht blind & \raggedright Widerlegt: H138a, H138b, H142b, H144c, nach dem Wortlaut H139a und H145c; die übrigen Teile bestätigt. Es gibt genau drei \(G_2\)-stabile Oktonion-Kopien, bedingt an die Definition der Kopie. Sie sind drei Lesarten einer Generation, nicht drei Generationen. Die Kopienstruktur liefert keine Massen.\tabularnewline
+\raggedright H148--H156: der Koide-Punkt & r63 & \raggedright teils nicht blind & \raggedright Widerlegt: H150b in einem Teil, H155c, nach dem Wortlaut H150c und H155d; teilweise H151b und H156c; die übrigen Teile bestätigt, H153b bis auf eine Teilvorhersage. \(K=\tfrac23\) folgt aus einem Postulat mit gesetzter Skala, nicht aus der Algebra.\tabularnewline
+\raggedright H128, H130: Familiensymmetrie und Träger in den Sedenionen & r64.1, r64.2 & \raggedright teils nicht blind & \raggedright H128a widerlegt (Dimension 22 statt der vorab genannten 17, numerischer Rang); H128b für die Richtung \(e_7\) bestätigt, für \(e_8\) widerlegt; H130a und H130b bestätigt.\tabularnewline
+\raggedright H131, H134: Mischung aus den Kopien & r64.3 & \raggedright teils nicht blind & \raggedright H131a bestätigt, H131b widerlegt; H134a und H134c bestätigt, H134b widerlegt. Verträglichkeit mit den Daten, keine Vorhersage.\tabularnewline
+\raggedright H129, H132, H133, H135, H136: rekursive Feldgleichung auf dem Turm & r64.4 & \raggedright teils nicht blind & \raggedright H129 und H133 nicht bestätigt; H132, H135 und H136 widerlegt. Der Ansatz legt keine Skala und keinen Wert fest.\tabularnewline
+\raggedright H105: Flächenschritte und Echos & r64.5 & \raggedright vorab festgelegt, gegen künftige Daten & \raggedright offen; Frist 31.~Dezember 2028.\tabularnewline
+\raggedright H162: Ladungsachse auf dem Sedenionen-Träger & r65.1 bis r65.3 & \raggedright a, b, d nicht blind & \raggedright a bis d bestätigt, c nur numerisch; Teil e ist eine Erkundung.\tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Familiensymmetrie und Kopien.}
+Die hermiteschen \(3\times3\)-Matrizen über den Oktonionen bilden die Albert-Algebra. Dort ist der Kommutant von \(G_2\) in
+\(F_4\) eine Familien-\(SO(3)\); die Ladung bricht sie zu genau \(A_4\) (Runde v4.10.0-r60, Erkundungen k275 und k277, nicht blind). Die Gruppe \(A_4\),
+die frühere Runden als Symmetrie der drei Plätze gesetzt hatten, ist dort also ein Rest. Bei exakter \(A_4\) sind die Quarkmassen entartet,
+und die Quarkmischung ist die Einheitsmatrix; eine Mischung verlangt, dass \(A_4\) selbst bricht. Die Ausrichtung des Vakuums hängt an freien
+Koeffizienten eines Potentials, sodass ein blinder Test derzeit nicht möglich ist. Die drei Plätze als Generationen zu lesen ist eine Lesart.
+Runde v4.10.0-r62 fragt, ob die Sedenionen die Zahl der Generationen erklären. Die Abschlussbedingung einer Kopie ist kubisch und hat genau
+drei Lösungen. Die drei Kopien haben dieselbe Farbe und tragen je eine Generation, aber keine gemeinsame Ladung, und zusammen nur 15 von 24
+Zuständen. Auf der nächsten Stufe des Turms tritt bei vier Kopien in 9 von 126 Auswahlen eine vollständige Rest-Generation auf; ob ihre
+Zustände physikalische Zustände sind, ist nicht gezeigt. Die Zahl der Generationen bleibt eine Eingabe.
+
+\paragraph{Der Koide-Punkt.}
+Liest man die Massen an den Amplituden ab (eine Setzung aus Runde v4.10.0-r59), dann gilt \(K=1/(3\cos^2\theta)\) mit einem Mischwinkel
+\(\theta\), also \(K=\tfrac23\) genau bei \(\theta=\pi/4\) (Runde v4.10.0-r63). Dieser Winkel ist der Fixpunkt eines Tauschs \(J\), den der
+Companion als Tausch von Materie- und Tachyon-Frame liest; jedes tauschsymmetrische Potential ist dort stationär. Hergeleitet sind diese
+beiden Aussagen. Dass der Fixpunkt angenommen wird, folgt nur aus dem Postulat, dass die beiden Frames gleichberechtigt sind, und mit
+gesetzter Skala; der Autor hat das Postulat am 26.~November 2026 als Arbeitsannahme angenommen, hergeleitet ist es nicht. Der Tausch \(J\)
+ist antilinear und weder die Tachyon-Abbildung \(z\mapsto iz\) noch die Zeitumkehr \(z\mapsto\bar z\) (Bemerkung v4.10.0-r64.7). Die Phase
+\(\delta=2/9\) bleibt angepasst. Ohne gesetzte Skala verschiebt der Fluss den Wert abhängig vom Start. Der gemessene Wert
+\(K=0{,}6666645\pm0{,}0000051\) liegt \(0{,}43\sigma\) unter \(\tfrac23\). Runde r63 führt daraus eine bedingte, offene Vorhersage
+\(m_\tau=1776{,}969\)\,MeV, falls \(K=\tfrac23\) für die Polmassen exakt gilt; sie ist nicht die Vorhersage H102 aus
+Abschnitt~\ref{sec:data}.
+
+\paragraph{Ladungsachse und das relative Vorzeichen.}
+Abschnitt~\ref{sec:handedness-tower} nennt das relative CP-Vorzeichen zwischen Leptonen und Quarks (H125). Es war an eine Ladungsachse
+gebunden, die ein Platzhalter des Companion ist (CT-003); Test H130 stützt diese Achse nicht (Runde v4.10.0-r64). Test H162 zeigt, dass das
+Spektrum der Ladung, die Konstruktion mit zwei Generationen, die Familien-\(su(2)\) und die erste Stufe von H125 für jede Achse gelten
+(Runde v4.10.0-r65). Eine Erkundung derselben Runde (k361, nicht blind, nur numerisch) findet zwei Typen der Ladung, mit Links- oder mit
+Rechtsmultiplikation, und schränkt den Befund aus Abschnitt~\ref{sec:handedness-tower} ein: Das relative Vorzeichen hängt nicht an der Wahl
+\(i\mapsto-i\), nicht an der Achse und nicht am Ladungstyp, wohl aber an der Setzung, dass dieselbe Seite der Multiplikation die Familie in
+beiden Sektoren trägt. Sie liegt nahe, folgt aber nicht aus Ladung und Farbe allein. Die Vorhersage \(\sin\delta_{\rm PMNS}<0\) bleibt offen
+und hängt jetzt an zwei benannten Setzungen. Der Träger enthält zwei Generationen, nicht drei.
+
+\paragraph{Korrekturen und Nachrechnung.}
+Runde v4.10.0-r61 berichtigt zwei Formeln früherer Runden (Erkundung k320, nicht blind): die Normierung der Vakuumdichte,
+\(\rho_\Lambda=\Lambda/\kappa\), und die Wurzel in \(\beta=\sqrt{(\gamma_L-1)/(\gamma_L+1)}\). Keine Zahl, kein Testergebnis und kein Status
+ändert sich; dieser Artikel hat keine der beiden Formeln zitiert. Runde r64 präzisiert außerdem den Geltungsbereich einiger älterer Aussagen,
+ebenfalls ohne Statusänderung. Nach der Annahme des Zählpostulats hat eine Erkundung (k358, kein Test; Runde v4.10.0-r68) die Zahlen, die von \(\beta\)
+abhängen, mit dem exakten Wert nachgerechnet \cite{recalc}: Kein Urteil ändert sich; am schärfsten reagiert \(m_W\), dessen Abstand zu
+PDG~2026 von \(-0{,}44\sigma\) beim zuvor geführten, aus gerundeten Eingaben gewonnenen Wert auf \(-0{,}13\sigma\) geht, und \(m_\tau\) aus
+H102 bleibt bei \(+2{,}3\sigma\).
+
+Keine dieser Runden leitet \(\beta\), eine Masse, einen Mischungswinkel oder \(\Lambda\) her. Gesetzt bleiben die Zahl der Generationen,
+die Definition der Kopie, die Ladungsachse, die Seite der Multiplikation, die Auslese an den Amplituden und jede Skala; angepasst bleibt
+\(\delta\). OP1 bis OP5, C5 und C6/T2 bleiben offen, und kein Guard ist aufgehoben.
+
 \subsection{Was nach dieser Fassung offen bleibt}
 \label{sec:open-points}
 
@@ -229,8 +304,8 @@ geschlossen, und kein Guard ist aufgehoben \cite{companion,layers}.
 \hline
 OP1 & Woher kommt die Zahl \(\beta=0{,}5494\), also warum zählen die Frames M und T die Horizontzustände nach verschiedenen Regeln? & Abschnitt~\ref{sec:one-number}\\
 OP2 & Existiert der Dirac-artige Operator auf dem antisymmetrischen Sektor als selbstadjungierter Operator, ohne die zurückgezogene Riemann-Arbeit, und liegt sein Spektralversatz bei \(\beta\)? & nur als Gleichsetzung in Abschnitt~\ref{sec:one-number}\\
-OP3 & Welche Übergänge der Hülle sind zulässig, woher kommen drei Generationen, und was legt Phase und Vorzeichen der Leptonphase fest? & Abschnitte~\ref{sec:charged-multiplicity}, \ref{sec:octant-sign} und \ref{sec:handedness-tower}\\
-OP4 & Woher kommen die Mischungswinkel der Neutrinos und der Quarks? & Gleichsetzung in Abschnitt~\ref{sec:one-number}; relatives CP-Vorzeichen in Abschnitt~\ref{sec:handedness-tower}\\
+OP3 & Welche Übergänge der Hülle sind zulässig, woher kommen drei Generationen, und was legt Phase und Vorzeichen der Leptonphase fest? & Abschnitte~\ref{sec:charged-multiplicity}, \ref{sec:octant-sign}, \ref{sec:handedness-tower} und \ref{sec:family-copies-koide}\\
+OP4 & Woher kommen die Mischungswinkel der Neutrinos und der Quarks? & Gleichsetzung in Abschnitt~\ref{sec:one-number}; relatives CP-Vorzeichen in den Abschnitten~\ref{sec:handedness-tower} und \ref{sec:family-copies-koide}\\
 OP5 & Wie fügen sich Vakuumbilanz und kosmologische Konstante in den Rahmen, und welche Materiequelle treibt welches geometrische Feld? & Fallstudie in Abschnitt~\ref{sec:op5-coupling}, Anhang~\ref{sec:anhang-b-annahmen}\\
 C5 & Kann die verbleibende Obstruktion in endlich vielen Schritten exakt null werden, statt nur unter eine Detektorschwelle zu fallen? & nicht behandelt\\
 C6/T2 & Schließen alle Auslesungen zugleich, global und nicht nur lokal? & nicht behandelt; durch Guards gesperrt\\

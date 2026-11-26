@@ -16,3 +16,5 @@ Vorab-Notiz: `notes/research/predictions/Vorab_Notiz_H165_Herkunft_Beta_sym_Schl
 Vergeben: H165, k356, k356b, k357, k358, k358b, k358c, k358d. Nächste freie Nummern: H166, k359.
 
 Nachtrag 26.11.2026, 11:18 UTC: Der Autor nimmt die Zählregel als Postulat an. Die Runde dazu ist v4.10.0-r67 (`notes/research/v4_10_0_r67_zaehlpostulat/`).
+
+Nachtrag 26.11.2026: Die Nachrechnung k358 steht als Runde v4.10.0-r68 im Companion (`notes/research/v4_10_0_r68_nachrechnung/`).
