@@ -1,0 +1,14 @@
+k371b, Wolfram-Nachrechnung (26.11.2026), tatsaechliche Ausgabe des Kerns (Stellen gekuerzt).
+
+Warnung des Kerns: Symbol::undefined2: Warning: Global symbols "T, T2, T, T, T, T2" are undefined. (Vorpruefung des Werkzeugs; im Code definiert.)
+
+Rueckgabe:
+{{0.9891458, {0.0224978, 0.303649, 0.493995}},
+ {0.9994739, {0.0216420, 0.319826, 0.494453}},
+ {0.9898969, {0.0194731, 0.305596, 0.496154}},
+ {0.9888873, {0.0215193, 0.302876, 0.495590}},
+ {0.9993690, {0.0239986, 0.318434, 0.493644}}}
+
+Vergleich mit Python (k371_out.txt): 1: rho 0,98915; 0,02250 / 0,30365 / 0,49399. 2: 0,99947; 0,02164 / 0,31983 / 0,49445.
+3: 0,98990; 0,01947 / 0,30560 / 0,49615. 4: 0,98889; 0,02152 / 0,30288 / 0,49559. 5: 0,99937; 0,02400 / 0,31843 / 0,49364.
+Alle Stellen stimmen ueberein. Nicht in Wolfram nachgerechnet: die Anpassungen selbst, die uebrigen Faelle, k372 und k373.

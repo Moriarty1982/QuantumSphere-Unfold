@@ -1,0 +1,80 @@
+===== Versatz x = 0.0395773407 =====
+Kontrolle ohne Term: th13 = 0.01426 (-14.7), th12 = 0.32369 (+3.1), th23 = 0.50000 (+1.8), sin delta = +1.000
+== H175a: Anpassung je Symmetrieklasse ==
+   antisymmetrisch A-ungerade (Ladungsrichtung, Hypothese): {'K-1': np.float64(0.02914), 'K-2': np.float64(0.04236)}, chi2 = 1.99 (2 Parameter); rho = 0.98915 (K = 0.65947); th13 = 0.02250 (+0.0), th12 = 0.30365 (+0.0), th23 = 0.49399 (+1.4), sin delta = +0.980; 2s/2s/3s: True
+   antisymmetrisch A-gerade: {'K+': np.float64(-0.15408)}, chi2 = 40.06 (1 Parameter); rho = 1.07547 (K = 0.71888); th13 = 0.02153 (-1.7), th12 = 0.26587 (-5.9), th23 = 0.49654 (+1.6), sin delta = +0.724; 2s/2s/3s: False
+   symmetrisch A-gerade: {'S+b': np.float64(-0.06169), 'S+c': np.float64(-0.08241), 'S+d': np.float64(-0.04753)}, chi2 = 0.00 (3 Parameter); rho = 1.00815 (K = 0.67212); th13 = 0.02248 (-0.0), th12 = 0.30360 (+0.0), th23 = 0.47000 (-0.0), sin delta = +1.000; 2s/2s/3s: True
+   symmetrisch A-ungerade: {'S-p': np.float64(-0.04369), 'S-q': np.float64(0.05149)}, chi2 = 0.57 (2 Parameter); rho = 1.01932 (K = 0.67967); th13 = 0.02248 (+0.0), th12 = 0.30239 (-0.2), th23 = 0.48240 (+0.7), sin delta = +0.996; 2s/2s/3s: True
+== H175b: je eine Richtung allein, Staerke frei ==
+   S+b: kappa = -0.04735, chi2 = 10.33; rho = 0.99925; th13 = 0.02251 (+0.0), th12 = 0.31958 (+2.5), th23 = 0.50438 (+2.0), sin delta = +0.999; 2s/2s/3s: False
+   S+c: kappa = +0.07063, chi2 = 205.25; rho = 1.02177; th13 = 0.01629 (-11.0), th12 = 0.35830 (+8.5), th23 = 0.52415 (+3.2), sin delta = +0.986; 2s/2s/3s: False
+   S+c: kappa = -0.05927, chi2 = 264.89; rho = 1.03450; th13 = 0.01339 (-16.2), th12 = 0.29777 (-0.9), th23 = 0.48022 (+0.6), sin delta = +0.992; 2s/2s/3s: False
+   S+d: kappa = -0.07130, chi2 = 197.83; rho = 0.97565; th13 = 0.01646 (-10.7), th12 = 0.36136 (+9.0), th23 = 0.48659 (+1.0), sin delta = +0.980; 2s/2s/3s: False
+   S+d: kappa = -0.11141, chi2 = 207.82; rho = 1.01404; th13 = 0.01748 (-8.9), th12 = 0.37598 (+11.3), th23 = 0.47952 (+0.6), sin delta = +0.968; 2s/2s/3s: False
+   S-p: kappa = +0.10558, chi2 = 208.37; rho = 1.00550; th13 = 0.01603 (-11.5), th12 = 0.35529 (+8.1), th23 = 0.52498 (+3.2), sin delta = +0.990; 2s/2s/3s: False
+   S-p: kappa = +0.10558, chi2 = 208.37; rho = 1.00550; th13 = 0.01603 (-11.5), th12 = 0.35529 (+8.1), th23 = 0.52498 (+3.2), sin delta = +0.990; 2s/2s/3s: False
+   S-q: kappa = +0.04800, chi2 = 7.23; rho = 0.99961; th13 = 0.02257 (+0.2), th12 = 0.31834 (+2.3), th23 = 0.49344 (+1.4), sin delta = +1.000; 2s/2s/3s: False
+   K+: kappa = -0.15408, chi2 = 40.06; rho = 1.07547; th13 = 0.02153 (-1.7), th12 = 0.26587 (-5.9), th23 = 0.49654 (+1.6), sin delta = +0.724; 2s/2s/3s: False
+   K+: kappa = +0.10605, chi2 = 105.80; rho = 0.94788; th13 = 0.02066 (-3.2), th12 = 0.36530 (+9.6), th23 = 0.49594 (+1.5), sin delta = +0.875; 2s/2s/3s: False
+   K-1: kappa = +0.10895, chi2 = 40.06; rho = 0.96004; th13 = 0.02153 (-1.7), th12 = 0.26587 (-5.9), th23 = 0.49654 (+1.6), sin delta = +0.724; 2s/2s/3s: False
+   K-1: kappa = -0.07499, chi2 = 105.80; rho = 1.02506; th13 = 0.02066 (-3.2), th12 = 0.36530 (+9.6), th23 = 0.49594 (+1.5), sin delta = +0.875; 2s/2s/3s: False
+   K-2: kappa = +0.04391, chi2 = 8.14; rho = 0.99935; th13 = 0.02254 (+0.1), th12 = 0.31949 (+2.5), th23 = 0.49382 (+1.4), sin delta = +1.000; 2s/2s/3s: False
+   K-2: kappa = -0.19402, chi2 = 1404.52; rho = 0.98737; th13 = 0.00222 (-36.2), th12 = 0.36312 (+9.3), th23 = 0.52179 (+3.0), sin delta = -0.452; 2s/2s/3s: False
+== H175c: feste Staerke in der Ladungsrichtung (16 Faelle; die Vorab-Notiz nennt irrtuemlich 24, festgelegt waren 4 Staerken mal 4 Richtungen) ==
+   kappa = +tan x = +0.03960, K-1: rho = 0.98601; th13 = 0.01462 (-14.0), th12 = 0.30249 (-0.2), th23 = 0.50003 (+1.8), sin delta = +0.953
+   kappa = +tan x = +0.03960, K-2: rho = 0.99947; th13 = 0.02164 (-1.5), th12 = 0.31983 (+2.5), th23 = 0.49445 (+1.4), sin delta = +1.000
+   kappa = +tan x = +0.03960, (K-1 + K-2)/sqrt2: rho = 0.98990; th13 = 0.01947 (-5.4), th12 = 0.30560 (+0.3), th23 = 0.49615 (+1.5), sin delta = +0.980
+   kappa = +tan x = +0.03960, (K-1 - K-2)/sqrt2: rho = 0.98990; th13 = 0.00981 (-22.6), th12 = 0.31237 (+1.4), th23 = 0.50400 (+2.0), sin delta = +0.973
+   kappa = -tan x = -0.03960, K-1: rho = 1.01345; th13 = 0.01648 (-10.7), th12 = 0.34535 (+6.5), th23 = 0.49852 (+1.7), sin delta = +0.958
+   kappa = -tan x = -0.03960, K-2: rho = 0.99947; th13 = 0.00845 (-25.1), th12 = 0.32888 (+3.9), th23 = 0.50517 (+2.1), sin delta = +0.999
+   kappa = -tan x = -0.03960, (K-1 + K-2)/sqrt2: rho = 1.00931; th13 = 0.01146 (-19.7), th12 = 0.34231 (+6.0), th23 = 0.50267 (+1.9), sin delta = +0.963
+   kappa = -tan x = -0.03960, (K-1 - K-2)/sqrt2: rho = 1.00931; th13 = 0.02045 (-3.6), th12 = 0.33627 (+5.1), th23 = 0.49535 (+1.5), sin delta = +0.986
+   kappa = +tan 2x = +0.07932, K-1: rho = 0.97138; th13 = 0.01759 (-8.7), th12 = 0.28149 (-3.5), th23 = 0.49859 (+1.7), sin delta = +0.832
+   kappa = +tan 2x = +0.07932, K-2: rho = 0.99790; th13 = 0.03068 (+14.6), th12 = 0.31730 (+2.1), th23 = 0.48844 (+1.1), sin delta = +1.000
+   kappa = +tan 2x = +0.07932, (K-1 + K-2)/sqrt2: rho = 0.97891; th13 = 0.02716 (+8.4), th12 = 0.28780 (-2.5), th23 = 0.49104 (+1.2), sin delta = +0.942
+   kappa = +tan 2x = +0.07932, (K-1 - K-2)/sqrt2: rho = 0.97891; th13 = 0.00710 (-27.5), th12 = 0.30219 (-0.2), th23 = 0.50739 (+2.2), sin delta = +0.849
+   kappa = -tan 2x = -0.07932, K-1: rho = 1.02646; th13 = 0.02132 (-2.1), th12 = 0.36779 (+10.0), th23 = 0.49554 (+1.5), sin delta = +0.864
+   kappa = -tan 2x = -0.07932, K-2: rho = 0.99790; th13 = 0.00420 (-32.6), th12 = 0.33545 (+5.0), th23 = 0.51002 (+2.4), sin delta = +0.985
+   kappa = -tan 2x = -0.07932, (K-1 + K-2)/sqrt2: rho = 1.01790; th13 = 0.01108 (-20.4), th12 = 0.36172 (+9.1), th23 = 0.50419 (+2.0), sin delta = +0.830
+   kappa = -tan 2x = -0.07932, (K-1 - K-2)/sqrt2: rho = 1.01790; th13 = 0.02845 (+10.7), th12 = 0.35031 (+7.3), th23 = 0.48997 (+1.2), sin delta = +0.957
+   Faelle: 16; vertraeglich 2s/2s/3s: 0; th13 innerhalb 3 sigma: 2
+===== Versatz x_R (Kontrolle) = 0.043359 =====
+Kontrolle ohne Term: th13 = 0.01553 (-12.4), th12 = 0.32282 (+3.0), th23 = 0.50000 (+1.8), sin delta = +1.000
+== H175a: Anpassung je Symmetrieklasse ==
+   antisymmetrisch A-ungerade (Ladungsrichtung, Hypothese): {'K-1': np.float64(0.02832), 'K-2': np.float64(0.03561)}, chi2 = 2.14 (2 Parameter); rho = 0.98962 (K = 0.65978); th13 = 0.02250 (+0.0), th12 = 0.30366 (+0.0), th23 = 0.49486 (+1.5), sin delta = +0.981; 2s/2s/3s: True
+   antisymmetrisch A-gerade: {'K+': np.float64(-0.14454)}, chi2 = 35.32 (1 Parameter); rho = 1.07079 (K = 0.71553); th13 = 0.02152 (-1.7), th12 = 0.26867 (-5.5), th23 = 0.49728 (+1.6), sin delta = +0.763; 2s/2s/3s: False
+   symmetrisch A-gerade: {'S+b': np.float64(-0.05216), 'S+c': np.float64(-0.08115), 'S+d': np.float64(-0.04749)}, chi2 = 0.00 (3 Parameter); rho = 1.00896 (K = 0.67267); th13 = 0.02248 (-0.0), th12 = 0.30360 (+0.0), th23 = 0.47000 (+0.0), sin delta = +1.000; 2s/2s/3s: True
+   symmetrisch A-ungerade: {'S-p': np.float64(-0.04359), 'S-q': np.float64(0.04364)}, chi2 = 0.67 (2 Parameter); rho = 1.01940 (K = 0.67973); th13 = 0.02249 (+0.0), th12 = 0.30230 (-0.2), th23 = 0.48343 (+0.8), sin delta = +0.996; 2s/2s/3s: True
+== H175b: je eine Richtung allein, Staerke frei ==
+   S+b: kappa = -0.03942, chi2 = 9.84; rho = 0.99948; th13 = 0.02251 (+0.1), th12 = 0.31909 (+2.4), th23 = 0.50390 (+2.0), sin delta = +1.000; 2s/2s/3s: False
+   S+c: kappa = +0.05244, chi2 = 151.65; rho = 1.01632; th13 = 0.01704 (-9.7), th12 = 0.34861 (+7.0), th23 = 0.51780 (+2.8), sin delta = +0.993; 2s/2s/3s: False
+   S+c: kappa = -0.05927, chi2 = 201.79; rho = 1.03450; th13 = 0.01455 (-14.2), th12 = 0.29694 (-1.0), th23 = 0.48037 (+0.6), sin delta = +0.993; 2s/2s/3s: False
+   S+d: kappa = -0.05675, chi2 = 145.52; rho = 0.98072; th13 = 0.01729 (-9.3), th12 = 0.35241 (+7.6), th23 = 0.48942 (+1.1), sin delta = +0.988; 2s/2s/3s: False
+   S+d: kappa = -0.11141, chi2 = 164.70; rho = 1.01404; th13 = 0.01895 (-6.3), th12 = 0.37504 (+11.2), th23 = 0.47956 (+0.6), sin delta = +0.970; 2s/2s/3s: False
+   S-p: kappa = +0.07888, chi2 = 153.35; rho = 1.01788; th13 = 0.01687 (-10.0), th12 = 0.34651 (+6.7), th23 = 0.51853 (+2.9), sin delta = +0.995; 2s/2s/3s: False
+   S-p: kappa = +0.04258, chi2 = 154.50; rho = 0.98076; th13 = 0.01633 (-11.0), th12 = 0.33771 (+5.3), th23 = 0.51022 (+2.4), sin delta = +0.997; 2s/2s/3s: False
+   S-q: kappa = +0.03997, chi2 = 7.30; rho = 0.99973; th13 = 0.02257 (+0.2), th12 = 0.31822 (+2.3), th23 = 0.49440 (+1.4), sin delta = +1.000; 2s/2s/3s: False
+   K+: kappa = -0.14454, chi2 = 35.32; rho = 1.07079; th13 = 0.02152 (-1.7), th12 = 0.26867 (-5.5), th23 = 0.49728 (+1.6), sin delta = +0.763; 2s/2s/3s: False
+   K+: kappa = +0.09228, chi2 = 87.14; rho = 0.95468; th13 = 0.02069 (-3.2), th12 = 0.35884 (+8.6), th23 = 0.49666 (+1.6), sin delta = +0.908; 2s/2s/3s: False
+   K-1: kappa = +0.10221, chi2 = 35.32; rho = 0.96265; th13 = 0.02152 (-1.7), th12 = 0.26867 (-5.5), th23 = 0.49728 (+1.6), sin delta = +0.763; 2s/2s/3s: False
+   K-1: kappa = -0.06525, chi2 = 87.14; rho = 1.02190; th13 = 0.02069 (-3.2), th12 = 0.35884 (+8.6), th23 = 0.49666 (+1.6), sin delta = +0.908; 2s/2s/3s: False
+   K-2: kappa = +0.03660, chi2 = 7.92; rho = 0.99955; th13 = 0.02255 (+0.1), th12 = 0.31901 (+2.4), th23 = 0.49467 (+1.5), sin delta = +1.000; 2s/2s/3s: False
+   K-2: kappa = -0.19402, chi2 = 1422.66; rho = 0.98737; th13 = 0.00209 (-36.4), th12 = 0.36321 (+9.3), th23 = 0.52287 (+3.1), sin delta = -0.346; 2s/2s/3s: False
+== H175c: feste Staerke in der Ladungsrichtung (16 Faelle; die Vorab-Notiz nennt irrtuemlich 24, festgelegt waren 4 Staerken mal 4 Richtungen) ==
+   kappa = +tan x = +0.04339, K-1: rho = 0.98464; th13 = 0.01596 (-11.6), th12 = 0.29965 (-0.6), th23 = 0.50003 (+1.8), sin delta = +0.948
+   kappa = +tan x = +0.04339, K-2: rho = 0.99937; th13 = 0.02400 (+2.7), th12 = 0.31843 (+2.3), th23 = 0.49364 (+1.4), sin delta = +1.000
+   kappa = +tan x = +0.04339, (K-1 + K-2)/sqrt2: rho = 0.98889; th13 = 0.02152 (-1.7), th12 = 0.30288 (-0.1), th23 = 0.49559 (+1.5), sin delta = +0.978
+   kappa = +tan x = +0.04339, (K-1 - K-2)/sqrt2: rho = 0.98889; th13 = 0.01046 (-21.5), th12 = 0.31067 (+1.1), th23 = 0.50458 (+2.0), sin delta = +0.970
+   kappa = -tan x = -0.04339, K-1: rho = 1.01471; th13 = 0.01818 (-7.7), th12 = 0.34656 (+6.7), th23 = 0.49823 (+1.7), sin delta = +0.955
+   kappa = -tan x = -0.04339, K-2: rho = 0.99937; th13 = 0.00894 (-24.2), th12 = 0.32879 (+3.9), th23 = 0.50589 (+2.1), sin delta = +0.998
+   kappa = -tan x = -0.04339, (K-1 + K-2)/sqrt2: rho = 1.01016; th13 = 0.01244 (-17.9), th12 = 0.34338 (+6.2), th23 = 0.50298 (+1.9), sin delta = +0.959
+   kappa = -tan x = -0.04339, (K-1 - K-2)/sqrt2: rho = 1.01016; th13 = 0.02267 (+0.3), th12 = 0.33651 (+5.1), th23 = 0.49464 (+1.4), sin delta = +0.985
+   kappa = +tan 2x = +0.08694, K-1: rho = 0.96850; th13 = 0.01952 (-5.3), th12 = 0.27669 (-4.2), th23 = 0.49831 (+1.7), sin delta = +0.817
+   kappa = +tan 2x = +0.08694, K-2: rho = 0.99747; th13 = 0.03447 (+21.4), th12 = 0.31565 (+1.9), th23 = 0.48669 (+1.0), sin delta = +1.000
+   kappa = +tan 2x = +0.08694, (K-1 + K-2)/sqrt2: rho = 0.97671; th13 = 0.03050 (+14.3), th12 = 0.28325 (-3.2), th23 = 0.48963 (+1.2), sin delta = +0.938
+   kappa = +tan 2x = +0.08694, (K-1 - K-2)/sqrt2: rho = 0.97671; th13 = 0.00745 (-26.8), th12 = 0.29990 (-0.6), th23 = 0.50845 (+2.3), sin delta = +0.829
+   kappa = -tan 2x = -0.08694, K-1: rho = 1.02890; th13 = 0.02397 (+2.7), th12 = 0.37129 (+10.6), th23 = 0.49465 (+1.5), sin delta = +0.854
+   kappa = -tan 2x = -0.08694, K-2: rho = 0.99747; th13 = 0.00424 (-32.6), th12 = 0.33643 (+5.1), th23 = 0.51139 (+2.4), sin delta = +0.980
+   kappa = -tan 2x = -0.08694, (K-1 + K-2)/sqrt2: rho = 1.01947; th13 = 0.01228 (-18.2), th12 = 0.36491 (+9.6), th23 = 0.50458 (+2.0), sin delta = +0.812
+   kappa = -tan 2x = -0.08694, (K-1 - K-2)/sqrt2: rho = 1.01947; th13 = 0.03197 (+16.9), th12 = 0.35199 (+7.6), th23 = 0.48840 (+1.1), sin delta = +0.954
+   Faelle: 16; vertraeglich 2s/2s/3s: 1; th13 innerhalb 3 sigma: 4

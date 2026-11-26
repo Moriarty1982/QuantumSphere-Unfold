@@ -20,6 +20,19 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Mischung: ein Term aus der Ladungsrichtung ist möglich, aber nicht nötig; die Eingaben zerfallen in zwei Gruppen (26.11.2026, Test H175, Erkundung k372, Nachtrag k373)
+
+**Test H175. Ergebnis: a verträglich, aber nicht ausgezeichnet (blind); b trägt nicht (blind); c mit x nicht entschieden, mit x_R ein verträglicher Fall unter 16 (blind).** Geprüft wurde die Kopplung zwischen s und v bei den geladenen Leptonen: imaginär antisymmetrisch, ungerade unter A, zwei Richtungen K₁, K₂.
+
+- **a:** Mit zwei freien Zahlen (κ₁ = 0,029, κ₂ = 0,042) χ² = 2,0; sin²θ₁₃ und sin²θ₁₂ getroffen, sin²θ₂₃ +1,4σ. Zwei andere Symmetrieklassen passen ebenso gut (χ² = 0,6 und 0,0).
+- **b:** Eine Richtung allein reicht nicht (K₂: θ₁₃ getroffen, θ₁₂ +2,5σ).
+- **c:** Feste Stärken ±tan x, ±tan 2x in vier Richtungen. Mit x aus den Leptonen kein verträglicher Fall; mit x_R einer: κ = tan x_R in Richtung (K₁ + K₂)/√2.
+- **Erkundung k372 (nicht blind), welche Eingabe was bewirkt:** Von den acht Termen, die ℤ₃ brechen können, bewegen drei (S⁺b, S⁻q, K₂) θ₁₃ und lassen die Massenstruktur unberührt; fünf (S⁺c, S⁺d, S⁻p, K⁺, K₁) bewegen θ₁₂ und verschieben Koide-Wert und Phase des zirkulanten Teils. Man braucht je eine aus beiden Gruppen. Die stochastische Suche bevorzugt keine Symmetrieklasse; der kleinste Term, der alle Winkel trifft, hat die Norm 0,06 und nur 16 bis 18 % Anteil in der Ladungsrichtung.
+- **Nachtrag k373 (nachträglich):** Eine einzige Zahl x für R, die Stärke κ = tan x in Richtung (K₁ + K₂)/√2 und alle drei Winkel gibt χ² = 2,9 bei vier Messgrößen (ohne Term 67), mit x = 0,0448 ± 0,0009. Der Versatz der geladenen Leptonen (0,0396) liegt 5,7σ daneben. Die Richtung wurde nach Ansicht der 16 Fälle gewählt; das ist kein Test. Daraus prüfbar: sin²θ₁₂ = 0,302, sin²θ₂₃ = 0,495, |sin δ_CP| = 0,977.
+- **Grenzen:** Alle Stärken und die Richtung sind angepasst, nicht hergeleitet. Keine Maske gerechnet. OP3 und OP4 bleiben offen.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/mischung_h175/` (Vorab-Notiz 9135e83, Ergebnis-Notiz, k371, k371b Wolfram, k372, k373, Ausgaben).
+
 ### Mischung: eine Beimischung der neutralen Form liefert die nötige kleine Drehung nicht (26.11.2026, Test H174, k370)
 
 **Test H174. Ergebnis: a bestätigt (nicht blind), b nicht verträglich (blind; nach dem Wortlaut des Kriteriums „nicht entschieden“), c widerlegt (blind).** Nach k369 bräuchten θ₁₃ und θ₁₂ eine e–μ-Drehung der geladenen Leptonen um 0,045 bis 0,052. Geprüft wurde der einzige nicht zirkulante Baustein, den der Aufbau ohne neue Zahl schon enthält: eine Beimischung der neutralen Form, M_e ∝ Ĉ + η·N̂.

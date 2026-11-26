@@ -1,0 +1,10 @@
++tan x, (K-1 + K-2)/sqrt2: bestes x = 0.04478, chi2 = 2.86 (4 Messgroessen, 1 Parameter); z(R) = -0.66; th13 = 0.02229 (-0.3), th12 = 0.30185 (-0.3), th23 = 0.49537 (+1.5), sin delta = +0.977; rho = 0.98851
+      x = 0.04478 (+0.00091/-0.00091); zum Vergleich x der geladenen Leptonen 0.039577 (-5.7 sigma), chi2 dort 34.5
+-tan x, (K-1 + K-2)/sqrt2: bestes x = 0.06050, chi2 = 212.82 (4 Messgroessen, 1 Parameter); z(R) = -7.64; th13 = 0.01685 (-10.0), th12 = 0.34857 (+7.0), th23 = 0.50438 (+2.0), sin delta = +0.938; rho = 1.01393
++tan x, K-2 allein: bestes x = 0.04141, chi2 = 9.05 (4 Messgroessen, 1 Parameter); z(R) = +0.92; th13 = 0.02278 (+0.5), th12 = 0.31915 (+2.4), th23 = 0.49407 (+1.4), sin delta = +1.000; rho = 0.99942
+-tan x, K-2 allein: bestes x = 0.06050, chi2 = 516.61 (4 Messgroessen, 1 Parameter); z(R) = -7.64; th13 = 0.01077 (-20.9), th12 = 0.32895 (+4.0), th23 = 0.50946 (+2.3), sin delta = +0.996; rho = 0.99877
++tan x, K-1 allein: bestes x = 0.05529, chi2 = 53.83 (4 Messgroessen, 1 Parameter); z(R) = -5.41; th13 = 0.02014 (-4.2), th12 = 0.29080 (-2.0), th23 = 0.50005 (+1.8), sin delta = +0.933; rho = 0.98028
+-tan x, K-1 allein: bestes x = 0.05014, chi2 = 66.74 (4 Messgroessen, 1 Parameter); z(R) = -3.13; th13 = 0.02129 (-2.1), th12 = 0.34875 (+7.1), th23 = 0.49764 (+1.6), sin delta = +0.948; rho = 1.01696
++tan x, (K-1 - K-2)/sqrt2: bestes x = 0.06050, chi2 = 353.94 (4 Messgroessen, 1 Parameter); z(R) = -7.64; th13 = 0.01293 (-17.0), th12 = 0.30350 (-0.0), th23 = 0.50754 (+2.2), sin delta = +0.956; rho = 0.98421
+-tan x, (K-1 - K-2)/sqrt2: bestes x = 0.04307, chi2 = 28.54 (4 Messgroessen, 1 Parameter); z(R) = +0.14; th13 = 0.02250 (+0.0), th12 = 0.33649 (+5.1), th23 = 0.49470 (+1.5), sin delta = +0.985; rho = 1.01009
++tan x, ohne Term (H173): bestes x = 0.05695, chi2 = 67.10 (4 Messgroessen, 1 Parameter); z(R) = -6.13; th13 = 0.01997 (-4.5), th12 = 0.31975 (+2.5), th23 = 0.50000 (+1.8), sin delta = +1.000; rho = 1.00000
