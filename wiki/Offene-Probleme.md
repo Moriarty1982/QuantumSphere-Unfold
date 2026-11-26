@@ -160,6 +160,12 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H183, 26.11.2026:** Für OP3 und OP4 (Feldgleichung). Mit einem Feld und invariantem Potential bis Grad 4 sind Leptonzustand und Quarkzustand nie zugleich stabil (widerlegt; konvexes Programm, Grund exakt: Vorzeichen von b₂). Offen: ein Vakuum mit Schwingungen, getrennte Felder oder höherer Grad. Nichts geschlossen.
 
+**Test H184, 26.11.2026:** Für OP3 und OP4 (Feldgleichung, Lesart „ein Vakuum, Sektoren schwingen“). Um das zirkulante Leptonvakuum in H₃(𝕆) haben die
+Farbschwingungen drei Frequenzen je sechsfach (hermitesche Zirkulante, feste Fourier-Richtungen); mit der Spiegelung τ sind zwei gleich. Drei freie
+Größen für drei Massen, keine Zahl vorhergesagt. In F₄-invarianten Potentialen sind die Farbschwingungen masselos; ihre Frequenzen kommen nur aus
+Termen, die U auszeichnen (nachträglich). Offen: Up und Down im komplexen Feld, Stabilität des Vakuums, was α und β festlegt. OP3 und OP4 bleiben
+offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/schwingungen_h184/`.
+
 **Test H181, 26.11.2026:** Für OP1 (Rolle von β_sym im HC). Der Zustand mit b/a = β_sym² (alte Lesart aus k292/k297) trägt als gemeinsamer Zustand die Ablesungen m_W, Ω_M, sin²θ₁₂ und die Maske nicht; widerlegt. Der Zahlentreffer κ → m_h = 124,8 GeV bleibt ohne Herleitung und trennt die Lesarten nicht. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/zwei_lesarten_h181/`.
 
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.

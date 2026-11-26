@@ -106,6 +106,26 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Drei Generationen eines Farbtripletts als Schwingungen um das Leptonvakuum (26.11.2026, Test H184, k387)
+Nach H183 hat der Autor die Lesart „ein Vakuum, Sektoren schwingen“ gewählt. Geprüft im Träger der drei Generationen, der Albert-Algebra H₃(𝕆): Das
+Vakuum W₀ ist die Zirkulante der geladenen Leptonen (K = ⅔, δ = 2/9 als Eingabe), das Potential bis Grad 4 ist invariant unter Farbe und dem
+Platztausch P. Vorab-Notiz vor der Rechnung (Commit 3048625); Python und Wolfram.
+- **H184a bestätigt (nicht blind):** Die 18 Farbrichtungen haben genau drei Frequenzquadrate mit Vielfachheit je sechs. Die zweite Variation ist eine
+  hermitesche Zirkulante α + βS + β̄S², ihr Spektrum α + 2|β|cos(arg β + 2πk/3) hat dieselbe Form wie bei den Leptonen. Die Eigenrichtungen sind die
+  Fourier-Vektoren, unabhängig von den Koeffizienten.
+- **H184b bestätigt:** Mit der Spiegelung τ (Tausch zweier Plätze mit Konjugation der Einträge) sind immer zwei Frequenzen gleich. Drei verschiedene
+  Quarkmassen verlangen, dass τ gebrochen ist. τ ist kein Automorphismus der Albert-Algebra.
+- **H184c bestätigt:** Die farblosen Schwingungen haben keine erzwungenen Nullrichtungen.
+- **Keine Vorhersage:** drei freie Größen (α, Re β, Im β) für drei Massen. K und δ eines Quarktyps sind in dieser Lesart Größen der Schwingung und
+  bleiben angepasst. Stabilität von W₀ ist nicht gezeigt.
+- **Zusatz (nachträglich, Erkundung):** In einem F₄-invarianten Potential Σ v(l_k) ist das Frequenzquadrat der Farbmode zum Paar (i, j) gleich
+  2(v′(l_i) − v′(l_j))/(l_i − l_j), also null, sobald W₀ stationär ist: Die Farbschwingungen liegen in der Bahn von W₀ unter F₄. Ihre Frequenzen
+  kommen allein aus Termen, die U auszeichnen. Die Quarkmassen messen dann die Brechung F₄ → SU(3)_c × SU(3), nicht das Leptonvakuum.
+- **Grenzen:** reelles Feld, also ein Quarktyp; die Trennung von Up und Down (H182) braucht das komplexe Feld und ist nicht gerechnet. Ohne
+  Ableitungsterme. Mischung: Baumwert der CKM-Matrix bleibt die Einheit (wie k374).
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/schwingungen_h184/`.
+
 ### Leptonen und Quarks sind nicht zugleich stabile Lösungen einer Feldgleichung bis Grad 4 (26.11.2026, Test H183, k386)
 Vorab-Notiz a009664. Anlass: Autor, 26.11.2026 („schau dir die Feldgleichung an“).
 - **Aufbau:** ein Feld in ℂ ⊗ 𝕆, kinetischer Term und allgemeines invariantes Potential bis Grad 4 (40 Koeffizienten, wie H182); statische homogene
