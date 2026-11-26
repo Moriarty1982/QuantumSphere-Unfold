@@ -1,0 +1,15 @@
+k366b (H171), Wolfram Language (MCP-Evaluator, 26.11.2026). Print-Ausgaben in Reihenfolge, in Zeilenform übertragen. Warnung des Evaluators:
+"Symbol::undefined2" (globale Symbole beim Einlesen noch undefiniert; ohne Folgen). Keine weiteren Meldungen.
+
+a1 K: (1 + B^2/A^2)/3; dK/dd: 0; K(theta): Sec[th]^2/3; K(Pi/4): 2/3
+a2 Raz.Rpol.e: {Cos[th], Cos[d] Sin[th], Sin[d] Sin[th]}
+b (1/2 + I/2) a: |z|/a = 1/Sqrt[2], Arg = Pi/4, K = 2/3, EW/a = {(1 - Sqrt[3])/2, (1 + Sqrt[3])/2, 2}, det/a^3 = -1
+b (-1/2 + I/2) a: |z|/a = 1/Sqrt[2], Arg = 3 Pi/4, K = 2/3, EW/a = {0, (3 - Sqrt[3])/2, (3 + Sqrt[3])/2}, det/a^3 = 0
+b3 z - a/Sqrt2 Exp[I Pi/4]: 0; zweiter Zweig: 0
+b4 n*: {1/Sqrt[2], 1/2, 1/2}; Quadrate: {1/2, 1/4, 1/4}
+d1 cos Theta: -1/4 + 1/Sqrt[2]; minus (2 Sqrt2 - 1)/4: 0; Theta Grad: 62.7994296198
+d2 Kommutatornorm: 0.819495500448
+
+Uebereinstimmung mit k366_out.txt (Python) in a, b, d. Teil c (Sedenionen) hat keine Wolfram-Gegenprobe; er benutzt das Produkt aus k253.
+Hinweis: Die erste Fassung von k366 hatte die Eigenwerte als A + B cos(...) statt A + sqrt2 B cos(...) angesetzt (K(pi/4) = 1/2); vor der Auswertung
+berichtigt, die abgelegte Ausgabe stammt aus der berichtigten Fassung.
