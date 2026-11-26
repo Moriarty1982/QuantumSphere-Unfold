@@ -1,0 +1,59 @@
+== H172b: Kontrolle Leptonen (Polmassen) ==
+K = 0.66666446 (K - 2/3 = -2.20e-06, sigma 5.1e-06); delta = 0.222224762 (delta - delta* = +2.71e-06, sigma 6.3e-06)
+   Hinweis: delta* gilt bei K = 2/3 aus m_mu/m_e allein; hier geht m_tau mit Fehler ein.
+
+== H172a: Vorhersage gegen Daten ==
+down, leichteste Wurzel positiv, M_Z: K = 0.747788 +- 0.001123, delta = 0.100129 +- 0.000953
+        gegen     pi/12 = 0.261799: z =    -169.7
+        gegen pi/12 - x = 0.222222: z =    -128.2
+        gegen pi/12 + x = 0.301377: z =    -211.2
+down, leichteste Wurzel positiv, PDG: K = 0.731288 +- 0.000452, delta = 0.110119 +- 0.000424
+        gegen     pi/12 = 0.261799: z =    -357.9
+        gegen pi/12 - x = 0.222222: z =    -264.5
+        gegen pi/12 + x = 0.301377: z =    -451.3
+down, leichteste Wurzel negativ, M_Z: K = 0.833205 +- 0.001241, delta = 0.152243 +- 0.000988
+        gegen     pi/12 = 0.261799: z =    -110.9
+        gegen pi/12 - x = 0.222222: z =     -70.8
+        gegen pi/12 + x = 0.301377: z =    -151.0
+down, leichteste Wurzel negativ, PDG: K = 0.821787 +- 0.000542, delta = 0.166703 +- 0.000417
+        gegen     pi/12 = 0.261799: z =    -228.2
+        gegen pi/12 - x = 0.222222: z =    -133.2
+        gegen pi/12 + x = 0.301377: z =    -323.1
+  up, leichteste Wurzel positiv, M_Z: K = 0.887621 +- 0.000825, delta = 0.051806 +- 0.000483
+        gegen         0 = 0.000000: z =    +107.4
+        gegen         x = 0.039577: z =     +25.3
+        gegen      pi/6 = 0.523599: z =    -977.6
+        gegen  pi/6 - x = 0.484021: z =    -895.6
+        gegen  pi/6 + x = 0.563176: z =   -1059.6
+  up, leichteste Wurzel positiv, PDG: K = 0.848731 +- 0.000294, delta = 0.074555 +- 0.000183
+        gegen         0 = 0.000000: z =    +406.9
+        gegen         x = 0.039577: z =    +190.9
+        gegen      pi/6 = 0.523599: z =   -2450.5
+        gegen  pi/6 - x = 0.484021: z =   -2234.5
+        gegen  pi/6 + x = 0.563176: z =   -2666.5
+  up, leichteste Wurzel negativ, M_Z: K = 0.896699 +- 0.000835, delta = 0.056461 +- 0.000486
+        gegen         0 = 0.000000: z =    +116.3
+        gegen         x = 0.039577: z =     +34.8
+        gegen      pi/6 = 0.523599: z =    -962.0
+        gegen  pi/6 - x = 0.484021: z =    -880.5
+        gegen  pi/6 + x = 0.563176: z =   -1043.5
+  up, leichteste Wurzel negativ, PDG: K = 0.859869 +- 0.000281, delta = 0.080637 +- 0.000194
+        gegen         0 = 0.000000: z =    +415.5
+        gegen         x = 0.039577: z =    +211.5
+        gegen      pi/6 = 0.523599: z =   -2282.2
+        gegen  pi/6 - x = 0.484021: z =   -2078.3
+        gegen  pi/6 + x = 0.563176: z =   -2486.1
+
+Urteil nach Vorab-Kriterium (Primaer |z| < 3 und Sekundaer |z| < 5: bestaetigt; Primaer kein Kandidat < 5: widerlegt):
+   down, Wurzel positiv: kleinstes |z| primaer = 128.2 -> WIDERLEGT
+   down, Wurzel negativ: kleinstes |z| primaer = 70.8 -> WIDERLEGT
+     up, Wurzel positiv: kleinstes |z| primaer = 25.3 -> WIDERLEGT
+     up, Wurzel negativ: kleinstes |z| primaer = 34.8 -> WIDERLEGT
+
+== H172c: Bericht rueckwaerts ==
+down (|Q| = 0.3333), Wurzel positiv: delta(M_Z) = 0.100129, delta(PDG) = 0.110119, Skalenabhaengigkeit +0.009989; delta + x = 0.139707 / 0.149696; Regelwert chi = |Q| pi/4 = 0.261799
+down (|Q| = 0.3333), Wurzel negativ: delta(M_Z) = 0.152243, delta(PDG) = 0.166703, Skalenabhaengigkeit +0.014460; delta + x = 0.191821 / 0.206280; Regelwert chi = |Q| pi/4 = 0.261799
+  up (|Q| = 0.6667), Wurzel positiv: delta(M_Z) = 0.051806, delta(PDG) = 0.074555, Skalenabhaengigkeit +0.022749; delta + x = 0.091384 / 0.114133; Regelwert chi = |Q| pi/4 = 0.523599
+  up (|Q| = 0.6667), Wurzel negativ: delta(M_Z) = 0.056461, delta(PDG) = 0.080637, Skalenabhaengigkeit +0.024176; delta + x = 0.096039 / 0.120214; Regelwert chi = |Q| pi/4 = 0.523599
+Leptonen zum Vergleich: delta = 0.222222, delta + x = pi/12 = 0.261799
+K: up 0.8876 / 0.8487 ; down 0.7478 / 0.7313 ; Leptonen 0.6667

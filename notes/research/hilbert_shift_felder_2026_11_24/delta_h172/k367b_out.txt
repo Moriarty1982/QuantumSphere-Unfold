@@ -1,0 +1,10 @@
+k367b (H172), Wolfram Language (MCP-Evaluator, 26.11.2026). Print-Ausgaben in Reihenfolge ({K, delta}). Keine Meldungen.
+
+up MZ: pos {0.8876207, 0.051806271}; neg {0.89669871, 0.056461437}
+up PDG: pos {0.848731, 0.074555249}; neg {0.85986939, 0.080636953}
+down MZ: pos {0.74778848, 0.10012947}; neg {0.8332053, 0.15224332}
+down PDG: pos {0.73128758, 0.11011875}; neg {0.82178715, 0.16670287}
+lept: pos {0.66666446, 0.22222476}; neg {0.70403236, 0.24945843}
+Vorhersagen down: {0.26179939, 0.222222, 0.301377}; up: {0, 0.0395773, 0.52359878, 0.484021, 0.563176}
+
+Uebereinstimmung der Zentralwerte mit k367_out.txt (Python). Die Fehler (Monte Carlo) sind nur in Python gerechnet.
