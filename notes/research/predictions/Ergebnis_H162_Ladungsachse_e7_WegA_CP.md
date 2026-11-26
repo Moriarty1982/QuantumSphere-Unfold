@@ -55,6 +55,6 @@ Algebra auf dem Träger, frame-unabhängig; kein Vergleich mit Daten. Die Tachyo
 Q̄ = 1 − Q vor (komplexe Konjugation der Ladung).
 
 ## Nicht gerechnet
-- Die Ladungen der Form ½ − (i/2)R_u auf H_n (Rechts- statt Linksmultiplikation); dann wäre die Familienalgebra eine Linkswirkung.
+- Nachgetragen in der Erkundung k361 (`ladungsachse_h162/README.md`): die Ladungen der Form ½ − (i/2)R_u. Das relative Vorzeichen hängt an der Setzung „dieselbe Seite der Multiplikation für beide Sektoren“.
 - Ob r14.4 (Abbildung nach ℂ⊗ℍ⊗𝕆) über Teil c hinaus alle Aussagen behält.
 - Eine Runde im Companion: Der Befund steht als Notiz; r64.2 („nicht gerechnet“) ist damit beantwortet und wird in der nächsten Sammelrunde nachgetragen.

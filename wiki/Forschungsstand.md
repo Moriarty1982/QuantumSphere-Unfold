@@ -9,6 +9,8 @@ Offener Punkt aus r64.2: H130 stützt die Ladungsachse e₈ (CT-003) nicht. Best
 - **H162d bestätigt:** Q_{e7} setzt die oktonionische Ladung Q₈ der Kopie 𝕆₀ exakt fort; Q_* (e₈) tut das nicht (Leck² = ½).
 - **Was e₈ auszeichnet,** ist allein [Q, ψ] = 0. Unter e₇ ist ψ keine Symmetrie der Ladung; die Aussagen von r13.1 bis r13.3 über ψ auf dem neutralen Kern gelten dort nicht in dieser Form.
 
+**Nachtrag, Erkundung k361 (26.11., nicht blind):** Neben dem Linkstyp gibt es genau einen zweiten Ladungstyp, Q^R_u mit Rechtsmultiplikation; er erfüllt dieselben Bedingungen. Auf den Quarks vertauschen L_x und R_x beide mit Ladung und Farbe, mit entgegengesetzter Orientierung. Trägt eine native Multiplikation die Familie auf dem ganzen Träger, sind Leptonen und Quarks entgegengesetzt orientiert (für beide Typen und jede Achse). Nimmt man für die Sektoren verschiedene Seiten, sind sie gleich orientiert. Das relative Vorzeichen von H125 Stufe A hängt also an der bisher nicht benannten Setzung „dieselbe Seite für beide Sektoren“. [Notiz](../notes/research/hilbert_shift_felder_2026_11_24/ladungsachse_h162/README.md)
+
 Damit lässt sich „bedingt unter CT-003“ für Weg A und H125 Stufe A abschwächen zu „bedingt unter der Form Q_u“. Es bleiben zwei Generationen, die Wahl der Achse bleibt eine Setzung (ψ-fest oder kopientreu), H125 Stufe B bleibt offen. Wolfram exakt für a, b, d. Noch keine Runde im Companion. [Ergebnis](../notes/research/predictions/Ergebnis_H162_Ladungsachse_e7_WegA_CP.md)
 =======
 ### Gedankenexperiment mit zwei Proben am Kern: keine Kreisbahn; RAID-Bild trägt für zwei Köpfe, nicht für einen (26.11.2026, Tests H160, H161 und H163, k351–k354)
