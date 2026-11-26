@@ -1,0 +1,9 @@
+k386b, Wolfram Language (MCP-Auswerter), 26.11.2026. Tatsaechliche Print-Ausgaben (zweidimensionale Darstellung in eine Zeile gesetzt). Rueckgabewert: Null. Keine Warnungen.
+
+L: Gradient = {0, 0, 0}; Kruemmung in der Leptonebene (Richtung (1,-1,0)/Sqrt2) = -2 b2; Richtung Farbe = -2 a1 + 2 a2 - 4 b1 - b2 + 2 b3
+D: Stationaritaet entlang theta = -((a1 - a2 + b1 - b4 + (b1 - b3 + b4) Cos[2 th]) Sin[2 th])
+nach Stationaritaet bei D: Kruemmung D Richtung U = 2 b2 Cos[th]^2; D Richtung theta = 2 (b1 - b3 + b4) Sin[2 th]^2; L Leptonebene = -2 b2; L Richtung Farbe = -2 b1 - b2 + 2 b3 - 2 b4 + 2 (b1 - b3 + b4) Cos[2 th]
+Alle vier > 0 mit 0 < th < Pi/2 loesbar? False
+Nur D (Richtung U) > 0: b2 > 0 && 0 < th < Pi/2; nur L Leptonebene > 0: b2 < 0
+D': Kruemmung Richtung theta = (4 b1 + b2 - 4 b3 + 4 b4) Sin[2 th]^2 / 2; L Richtung Farbe = -((4 b1 + b2 - 4 b3 + 4 b4) Sin[th]^2)
+D' und L zugleich: False

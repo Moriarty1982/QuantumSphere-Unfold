@@ -1,0 +1,16 @@
+(* Ausgabe von k387b_gegenprobe.wl, Wolfram Language, 26.11.2026. Nur Print-Ausgaben; Rueckgabewert Null; keine Warnungen.
+   Hinweis: Der symbolische Vergleich der charakteristischen Polynome wurde von Simplify nicht auf 0 gebracht (Ausdruck unten);
+   die Brannen-Form der Eigenwerte ist dort nur numerisch gezeigt (Abweichung 1.1e-16). Exakt gezeigt sind die Fourier-Eigenwerte in der letzten Zeile. *)
+During evaluation of In[1]:=                                     2    2
+Tr W^2: Koeffizient von eps^2 = 2 (x  + y ); zweite Ableitung nach x: 4; Regel 2 (v'(l1) - v'(l2))/(l1 - l2) = 4
+During evaluation of In[1]:=                                               2    2
+Tr W^3: Koeffizient von eps^2 = 3 (l1 + l2) (x  + y ); zweite Ableitung nach x: 6 (l1 + l2); Regel 2 (v'(l1) - v'(l2))/(l1 - l2) = 6 (l1 + l2)
+During evaluation of In[1]:=                                      2             2    2    2                                 2             2                                              2             2
+Tr W^4: Koeffizient von eps^2 = 4 (l1  + l1 l2 + l2 ) (x  + y ); zweite Ableitung nach x: 8 (l1  + l1 l2 + l2 ); Regel 2 (v'(l1) - v'(l2))/(l1 - l2) = 8 (l1  + l1 l2 + l2 )
+During evaluation of In[1]:= v' = (l - l1)(l - l2)(l - l3): Frequenzquadrat der Mode (1,2) = 0
+During evaluation of In[1]:=                                                    -16                                                                   2       2                            2          2     2                                    2     2
+Zirkulante: Eigenwerte = Brannen-Form? {-1.11022 10   , 0., 0.}; charakteristisches Polynom gleich: 2 (al + 2 br - z) (al  - 2 bi  - al br - 2 al z + br z + z  - Sqrt[bi  + br ] (al - z) Cos[Arg[I bi + br]] + (bi  + br ) Cos[2 Arg[I bi + br]])
+During evaluation of In[1]:= mit tau (bi = 0): Eigenwerte {al - br, al - br, al + 2 br}
+During evaluation of In[1]:= Eigenvektoren unabhaengig von al, br, bi: h . f_k / f_k = {{al + 2 br, al + 2 br, al + 2 br}, {al - Sqrt[3] bi - br, al - Sqrt[3] bi - br, al - Sqrt[3] bi - br}, {al + Sqrt[3] bi - br, al + Sqrt[3] bi - br, al + Sqrt[3] bi - br}}
+
+Out[1]= Null

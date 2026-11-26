@@ -106,6 +106,56 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Das komplexe Feld erlaubt Up und Down, trennt sie aber nicht von selbst (26.11.2026, Test H185, k388)
+Fortsetzung von H184 im komplexen Feld ℂ ⊗ H₃(𝕆), um dasselbe Leptonvakuum. Vorab-Notiz vor der Rechnung (Commit df685ba); Python und Wolfram.
+- **H185a, b bestätigt (nicht blind):** Die 36 Farbrichtungen zerfallen nach der Ladung in ⅓ und ⅔, je drei Generationen. Farbe und Platztausch
+  erlauben 12 Massenterme: sechs erhalten die Ladung (je Ladung eine hermitesche Zirkulante, sechs freie Größen für sechs Massen), sechs mischen
+  ⅓ mit ⅔. Die mischenden gibt es, weil das reelle Leptonvakuum kein Ladungseigenzustand ist. Sie verschwinden genau dann, wenn die Phase auf den
+  Farbrichtungen allein eine Symmetrie ist (Erhaltung der Farbzahl, in üblicher Sprache Baryonenzahl).
+- **H185c bestätigt:** Mit der ℂ-Konjugation C haben Up und Down dasselbe Spektrum. Verschiedene Massen verlangen die Brechung von C (wie H182).
+- **H185d widerlegt:** Die Vermutung, die Leptonphase δ ≠ 0 trenne Up und Down in Potentialen aus Jordan-Spuren, trägt nicht. In 43 Spurinvarianten
+  ist der Unterschied der Spektren null (≤ 1,2·10⁻¹⁵), auch für zwei nicht reelle Vakua (nachträglich). Der Unterschied braucht einen Term mit dem
+  Ladungsoperator selbst (i·L_U, die ladungsungerade Invariante aus H182).
+- **Keine Vorhersage.** Offen: was den Koeffizienten dieses Terms festlegt, Grund für die Farbphase, Stabilität des Vakuums.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/updown_h185/`.
+
+### Drei Generationen eines Farbtripletts als Schwingungen um das Leptonvakuum (26.11.2026, Test H184, k387)
+Nach H183 hat der Autor die Lesart „ein Vakuum, Sektoren schwingen“ gewählt. Geprüft im Träger der drei Generationen, der Albert-Algebra H₃(𝕆): Das
+Vakuum W₀ ist die Zirkulante der geladenen Leptonen (K = ⅔, δ = 2/9 als Eingabe), das Potential bis Grad 4 ist invariant unter Farbe und dem
+Platztausch P. Vorab-Notiz vor der Rechnung (Commit 3048625); Python und Wolfram.
+- **H184a bestätigt (nicht blind):** Die 18 Farbrichtungen haben genau drei Frequenzquadrate mit Vielfachheit je sechs. Die zweite Variation ist eine
+  hermitesche Zirkulante α + βS + β̄S², ihr Spektrum α + 2|β|cos(arg β + 2πk/3) hat dieselbe Form wie bei den Leptonen. Die Eigenrichtungen sind die
+  Fourier-Vektoren, unabhängig von den Koeffizienten.
+- **H184b bestätigt:** Mit der Spiegelung τ (Tausch zweier Plätze mit Konjugation der Einträge) sind immer zwei Frequenzen gleich. Drei verschiedene
+  Quarkmassen verlangen, dass τ gebrochen ist. τ ist kein Automorphismus der Albert-Algebra.
+- **H184c bestätigt:** Die farblosen Schwingungen haben keine erzwungenen Nullrichtungen.
+- **Keine Vorhersage:** drei freie Größen (α, Re β, Im β) für drei Massen. K und δ eines Quarktyps sind in dieser Lesart Größen der Schwingung und
+  bleiben angepasst. Stabilität von W₀ ist nicht gezeigt.
+- **Zusatz (nachträglich, Erkundung):** In einem F₄-invarianten Potential Σ v(l_k) ist das Frequenzquadrat der Farbmode zum Paar (i, j) gleich
+  2(v′(l_i) − v′(l_j))/(l_i − l_j), also null, sobald W₀ stationär ist: Die Farbschwingungen liegen in der Bahn von W₀ unter F₄. Ihre Frequenzen
+  kommen allein aus Termen, die U auszeichnen. Die Quarkmassen messen dann die Brechung F₄ → SU(3)_c × SU(3), nicht das Leptonvakuum.
+- **Grenzen:** reelles Feld, also ein Quarktyp; die Trennung von Up und Down (H182) braucht das komplexe Feld und ist nicht gerechnet. Ohne
+  Ableitungsterme. Mischung: Baumwert der CKM-Matrix bleibt die Einheit (wie k374).
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/schwingungen_h184/`.
+
+### Leptonen und Quarks sind nicht zugleich stabile Lösungen einer Feldgleichung bis Grad 4 (26.11.2026, Test H183, k386)
+Vorab-Notiz a009664. Anlass: Autor, 26.11.2026 („schau dir die Feldgleichung an“).
+- **Aufbau:** ein Feld in ℂ ⊗ 𝕆, kinetischer Term und allgemeines invariantes Potential bis Grad 4 (40 Koeffizienten, wie H182); statische homogene
+  Lösungen und ihre zweite Variation; Lösbarkeit über ein konvexes Programm, also für alle Koeffizienten zugleich entschieden.
+- **Befund:** Der Leptonzustand (45°), Down und Up sind einzeln stabil möglich, Down und Up auch gemeinsam. **Leptonzustand und Quarkzustand zusammen
+  nie**, für keinen Winkel, mit fester und mit freier Norm. Urteil: **widerlegt**.
+- **Grund (Wolfram exakt):** Der Term b₂x₀²x_U² macht 45° bei den Leptonen nur für b₂ < 0 zum Minimum; ein Quarkzustand ist gegen einen U-Anteil nur
+  für b₂ > 0 stabil. Das offene Vorzeichen (κ aus H178, 2a − b aus H149) hängt also daran, welcher Zustand das Vakuum ist.
+- **Was geht (nachträglich):** Ein Vakuum mit den anderen Sektoren als Schwingungen. Um den Leptonzustand haben die Schwingungen die Vielfachheiten
+  6, 6, 1, 1, 1: zwei Farbgruppen (Ladung ⅓ und ⅔) mit eigener Frequenz und drei farblose.
+- **Folge:** Die Lesart „ein Potential, je Sektor ein eigener stationärer Zustand“ aus H178, k378, H182 ist zurückgenommen; die Symmetrieaussagen dort
+  bleiben. Offen (Weggabelung für den Autor): ein Vakuum mit Schwingungen, getrennte Felder je Sektor oder höherer Grad.
+- Grenzen: Grad ≤ 4, statisch und homogen (Ableitungsterme und rotierende Lösungen nicht einbezogen), lokale Stabilität, kein Generationenindex.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung_h183/`.
+
 ### Der Tausch J erlaubt nur im Farbblock einen ladungsabhängigen Massenterm (26.11.2026, Test H182, k385)
 Vorab-Notiz 70fdce1 (Teil a nicht blind). Anlass: Entscheidung des Autors nach k384, Up gegen Down als Ladungsanteil im Block zu lesen.
 - **Aufbau:** Feld in ℂ ⊗ 𝕆; Symmetrien Farbe, Oktonion-Konjugation und J, komplex-linear fortgesetzt; alle Invarianten bis Grad 4 gezählt (7 vom Grad 2,

@@ -1,0 +1,12 @@
+w = DiagonalMatrix[{l1, l2, l3}] + eps {{0, x + I y, 0}, {x - I y, 0, 0}, {0, 0, 0}};
+Do[c2 = SeriesCoefficient[Tr[MatrixPower[w, n]], {eps, 0, 2}];
+  Print["Tr W^", n, ": Koeffizient von eps^2 = ", Factor[c2], "; zweite Ableitung nach x: ", Factor[2 c2/(x^2 + y^2)], "; Regel 2 (v'(l1) - v'(l2))/(l1 - l2) = ", Factor[2 (n l1^(n - 1) - n l2^(n - 1))/(l1 - l2)]], {n, 2, 4}];
+vp[l_] := (l - l1) (l - l2) (l - l3);
+Print["v' = (l - l1)(l - l2)(l - l3): Frequenzquadrat der Mode (1,2) = ", Simplify[2 (vp[l1] - vp[l2])/(l1 - l2)]];
+s = {{0, 1, 0}, {0, 0, 1}, {1, 0, 0}};
+h = al IdentityMatrix[3] + (br + I bi) s + (br - I bi) Transpose[s];
+ev = Eigenvalues[h];
+pred = Table[al + 2 Sqrt[br^2 + bi^2] Cos[ArcTan[br, bi] + 2 Pi k/3], {k, 0, 2}];
+Print["Zirkulante: Eigenwerte = Brannen-Form? ", Simplify[Sort[N[ev /. {al -> 1.3, br -> 0.4, bi -> 0.7}]] - Sort[N[pred /. {al -> 1.3, br -> 0.4, bi -> 0.7}]]], "; charakteristisches Polynom gleich: ", Simplify[ComplexExpand[CharacteristicPolynomial[h, z] - Product[z - pred[[k]], {k, 3}]], Assumptions -> Element[{al, br, bi}, Reals]]];
+Print["mit tau (bi = 0): Eigenwerte ", Eigenvalues[h /. bi -> 0]];
+Print["Eigenvektoren unabhaengig von al, br, bi: h . f_k / f_k = ", Table[Simplify[(h . {1, Exp[2 Pi I k/3], Exp[4 Pi I k/3]})/{1, Exp[2 Pi I k/3], Exp[4 Pi I k/3]}], {k, 0, 2}]];
