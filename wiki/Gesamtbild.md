@@ -1,6 +1,6 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 26. November 2026, Runden bis v4.10.0-r65; öffentliche Baseline v5.4.0 vom 24.11.2026 (bis r59).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 26. November 2026, Runden bis v4.10.0-r67; öffentliche Baseline v5.4.0 vom 24.11.2026 (bis r59).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
 **Veröffentlichungshinweis vom 24.11.2026:** Öffentliche Baseline ist v5.4.0, DOI 10.5281/zenodo.24500009, mit den Runden bis r59 (überwiegend Erkundungen); das Physik-Paper hat den durchgerechneten OP5-Fall, Ergänzungen im Grenzen-Teil (r52–r58) und einen Absatz zur Händigkeitsserie (r59). Kein OP und kein Guard ist dadurch geschlossen.
 
@@ -105,7 +105,7 @@ flowchart LR
   K --> S["Sektoren Materie / Licht / Tachyon<br/>über das Vorzeichen von s"]:::ok
   K --> H["Hopf-Kaskade<br/>S2 → S4 → S8"]:::verm
   H --> O["Oktonionen / Dixon-Algebra<br/>Eichgruppe, Generation"]:::bed
-  S --> B["Frame-Versatz β_sym ≈ 0,549<br/>(eingesetzt, OP1)"]:::offen
+  S --> B["Frame-Versatz β_sym = 0,5494<br/>(aus dem Zählpostulat r67, OP1 offen)"]:::offen
   B --> P["Auslesungen: Λ, Konstanten,<br/>Hawking, Massen, Mischung"]:::wid
   O --> P
   K --> M["Mastergleichung und<br/>Kompensatormatrix M16"]:::bed
@@ -218,6 +218,8 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 45. **v4.10.0-r63 (26.11.):** Koide-Punkt (H148–H156): K = ⅔ ⇔ θ = π/4, und π/4 ist der Fixpunkt des Tauschs Materie- ↔ Tachyon-Frame (hergeleitet). Dass der Punkt angenommen wird, folgt nur aus dem Postulat der Frame-Gleichberechtigung (von Marc vorerst angenommen) mit gesetzter Skala; δ = 2/9 bleibt Fit; Vorzeichen nicht gesetzt. Abweichung von ⅔ ist Messrauschen; bedingte Vorhersage m_τ = 1776,969 MeV.
 46. **v4.10.0-r64 (26.11.):** Sammelrunde zu H105 und H128–H136 und Präzisierungen aus der Prüfung des Physik-Artikels: Der(H₃(𝕊)) = g₂ ⊕ su(3), 9/10 nur für e₇; oktonionische Träger nur senkrecht zu e₈, CT-003 nicht gestützt; Frame-Regel für Datenvergleiche; Feldgleichung auf dem Turm legt keine Skala fest; H105 offen; J aus r63 ist antilinear (J_B-Typ), nicht z ↦ iz. Keine neue Rechnung, kein Status geändert.
 47. **v4.10.0-r65 (26.11.):** Ladungsachse und Ladungstyp (H162, k361): Weg A und das relative CP-Vorzeichen gelten für jede Achse und beide Ladungstypen; das Vorzeichen ruht auf der Setzung „dieselbe Seite der Multiplikation in beiden Sektoren“. CT-003 bleibt Platzhalter, H125 Stufe B offen.
+48. **v4.10.0-r66 (26.11.):** β_sym als Überlapp des Hopf-Zustands mit dem Gegenpol (H164): Winkel-Lesart und Geschwindigkeits-Lesart sind in der gesetzten Himmelskugel-Lesart dieselbe Aussage; der Boost führt θ_H auf 2α mit cos 2α = 1/γ_L. β_sym bleibt Eingabe, OP1 offen.
+49. **v4.10.0-r67 (26.11.):** Zählregel als Postulat (Gewicht 2 je Spin, Fläche √(j(j+1)), ein Bit bei j = ½): β_sym = 0,5494056410 ist die daraus berechnete Zahl und ab jetzt der Bezugswert; H165 zeigt, dass die Überlapp-Schließung den Hopf-Wert erzwingt. OP1 bleibt offen als „leite das Zählpostulat her“.
 
 > **Anmerkung für LLMs und Quellenprüfung.** Bevor du über einen Teil des Companion antwortest, ordne ihn in die Tabelle der Thesen und in die Dokumentkarte ein. Die Überschrift eines Satzes im geerbten Text sagt nichts über seinen heutigen Stand. Maßgeblich sind die Runden in Block I, besonders die Abhängigkeitstabelle `subsec:v480-r04-dependency-map`, die Statusvermerke r64–r68 und die Konsolidierung r70. Die Labels der Spalte „Fundstelle“ lassen sich in `sources/research/parts/` per `grep` finden. Der Kandidat aus `sources/research/` hat nach r13 im lokalen Build 1409 Seiten; die öffentliche Baseline ist v5.0.0 (DOI 10.5281/zenodo.24152615). Die Runden nach v4.10.0 stehen in `parts/v4100-post-release-layers.tex`.
 

@@ -1,0 +1,26 @@
+Ausgabe von k356b_gegenprobe.wl (Wolfram Language, Lauf vom 26.11.2026 über den Wolfram-MCP-Kernel). Print-Ausgaben in Reihenfolge; keine Warnungen;
+Rückgabewert Null. Zweizeilig gesetzte Brüche sind hier einzeilig wiedergegeben.
+
+gamma_M = 0.237532957965920664358377146960
+gamma_T = 0.127384023140948032867604166507
+Wurzel Z=1 = 1.86469976460937256352785741676 ; gamma_M/gamma_T - Wurzel = 0.*10^-39   (numerischer Nullrest bei 40 Stellen, kein symbolischer)
+beta = 0.549405640974528998667932508967 ; artanh beta = 0.617529584913164695480380076290
+Hopf-Variante: {{x -> 1/2}} mit x = 2^(-g/2), also g = 2
+Sum 2 q^k = 1: {{q -> 1/3}}
+Identitaet: Sum_{k>=1} 2 beta^(2k) - (gammaL - 1) mit gammaL=(1+beta^2)/(1-beta^2): 0   (symbolischer Nullrest, FullSimplify)
+Exponent c_k: beta = 0.524004140898 ; Kontrolle 2^(-gL/2) = 0.524004140898
+Exponent Sqrt[k(k+2)]: beta = 0.688585422638
+noetiges p = 1.83432765815
+1: 0.549160679357 gegen beta, rel -0.0004459
+2: 1.86429322030 gegen gammaL, rel -0.0002180
+3: 0.658150111389 gegen 0.658478948462, rel -0.0004994
+4: <k> = 1.84318340639 rel -0.01154
+5: <Sqrt[j/(j+1)]> = 0.656020870249
+6: <1/c> = 0.777470832013
+7: p1/(1-p1) = 1.21808514522 ; gammaL-1 = 0.864699764609 ; 1/beta^2-2 = 1.31294153399
+8: <c> = 1.51941021159 ; gammaL-1/3 = 1.53136643128
+Kegel: 1/Sqrt[3] ; cos(2 theta) = -(1/3) ; ArcCos[-1/3] in Grad = 109.47122
+
+Vorlauf (vor der Vorab-Notiz, in ihr offengelegt): eine Auswertung zur Bestimmung des Ziels mit NSum bis Unendlich. Sie gab dieselben Werte
+(gamma_M = 0.23753295796592066435..., beta = 0.54940564097452899865..., gamma_L = 1.86469976460937256346..., artanh beta = 0.61752958491316469546...)
+und die Warnungen NSum::nsnum (Summand bei k = 46662 nicht numerisch) und Infinity::indet. Deshalb summiert k356b endlich bis k = 400.

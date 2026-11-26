@@ -1,5 +1,28 @@
 # Forschungsstand
 
+### Die Zählregel ist jetzt Postulat; β_sym = 0,5494056410 ist die daraus berechnete Zahl (26.11.2026, Runde r67)
+
+Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selben Sinn wie die Frame-Gleichberechtigung: benannt, nicht hergeleitet. Runde **v4.10.0-r67** hält fest:
+
+- **Zählpostulat r67.P:** (C1) Im Materie-Frame zählt jeder Spin j ≥ ½ mit Gewicht 2 (m = ±j). (C2) Die Fläche ist proportional zu √(j(j+1)). (C3) Der Frame T zählt nur j = ½, und ein solcher Punkt trägt ein Bit. Die Zuordnung der zwei Regeln zu M und T gehört zum Postulat.
+- **Was daraus folgt (r67.1):** γ_L ist die eine Wurzel von Σ_{k≥1} 2^(1 − γ_L·√(k(k+2)/3)) = 1, also γ_L = 1,8646997646, **β_sym = 0,5494056410**, ε = 0,6175295849. Mit der Fläche j + ½ statt √(j(j+1)) gäbe dieselbe Regel exakt 1/√3.
+- **Bezugswert (r67.2):** Ab r67 gilt dieser Wert. Die 0,5493482 in älteren Runden kommt aus gerundeten Eingaben und bleibt dort stehen. Unterschied 1,05·10⁻⁴ in β, 7·10⁻⁴ in γ_L⁵. Kein Urteil kippt: H96, die m_W-Beziehung, H98 und H102 rechnen schon mit dem ungerundeten Wert, und das Leptonfenster enthält beide.
+- **Was das Postulat leistet und was nicht:** Es gibt jetzt eine Rechnung, die zeigt, woher die Zahl kommt. Es fehlt der Grund, warum die Zählung diese Form hat. Statt „zwei Literaturwerte“ steht „eine Regel mit drei benannten Teilen“. **OP1 bleibt offen**, jetzt in der Form „leite das Zählpostulat her“.
+- H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
+
+### Woher β_sym kommt: eine Gleichung, drei Zutaten; die Überlapp-Schließung erzwingt den Hopf-Wert, nicht den gemessenen (26.11.2026, Test H165, k356; Runde r66)
+
+**Runde v4.10.0-r66** hält H164 und den Teil K-e von H161 im Companion fest: β_sym = |⟨K₁|S⟩|, der Boost mit β_sym trägt den R-Zustand auf die Besetzungen des Materie-Zustands (θ_H → 2α, cos 2α = 1/γ_L). Gesetzt und benannt: Lesart C (Hopf-Sphäre als Himmelskugel), der Gegenpol als zweite Auslese, das Dephasieren. Kein Guard berührt.
+
+**Test H165. Ergebnis: widerlegt** (überwiegend nicht blind). Frage des Autors: Woher kann 0,5493 kommen, und wieso müsste das folgen?
+
+- **Woher:** γ_L ist die Wurzel von Σ_{k≥1} 2^(1 − γ_L·√(k(k+2)/3)) = 1, also γ_L = 1,8646997646 und β = 0,5494056410 (0,5493482 im Bestand kommt aus gerundeten Eingaben). Drei Zutaten: Gewicht 2 je Spin, Fläche √(j(j+1)), ein Bit bei j = ½. Mit j + ½ statt √(j(j+1)) wird γ_L = 2 exakt (k245).
+- **Sichtung:** 37 frühere Versuche, keiner leitet β_sym her (`notes/research/op1_herkunft_beta_sym_h165/Sichtung_Herleitungsversuche.md`).
+- **Überlapp-Schließung:** Für kohärente Zustände des Spins j ist |⟨j; K₁|j; S⟩| = β^{2j}. Σ_j 2β^{4j} = 1 gilt genau bei β² = ⅓. Die Zwei-Auslesen-Lesart erzwingt also den Hopf-Wert. Nachträglich gefunden: γ_L = 1 + Σ_{j≥½} 2β^{4j} als Identität für jedes β.
+- **Zahlenkandidaten:** keine Identität. Unerklärte Treffer auf 5·10⁻⁴: 2^(1−γ_L) = 0,549161 gegen β, und 1/⟨c⟩ = 0,658150 gegen artanh(1/√3). Beide sind als Identität ausgeschlossen.
+- **Kegel:** 1/√3 ist der Kosinus des Kegelwinkels eines Spins ½ im Vektormodell; der doppelte Winkel ist der Tetraederwinkel.
+- **Bilanz der Setzungen:** Das Ziel ist selbst eine gesetzte Eingabe (Verhältnis zweier Literaturwerte). Gesetzt sind die U(1)-Zählung, das Casimir-Spektrum, die Ein-Bit-Einheit und die Zuordnung zu den Frames. Die offene Wahl heißt seit r63 unverändert „Zählregel“. Weggabelung für den Autor: die Zählregel als Postulat annehmen oder weiter nach ihrer Herleitung suchen. **OP1 bleibt offen.**
+
 ### β_sym als Überlapp zweier Auslesen: Winkel-Lesart und Geschwindigkeits-Lesart sind dieselbe Aussage (26.11.2026, Test H164, k355)
 
 Folgetest zu H161. **Ergebnis: trägt teilweise** (überwiegend nicht blind). (a) Der Winkel θ = 113,355°, bei dem zwei Auslesen den Überlapp β_sym haben, ist das Supplement des Hopf-Winkels θ_H = 66,645° aus `thm:bsym-hopf`: Die zwei Auslesen sind der reine Hopf-Zustand K₁ und der Gegenpol S. Unter 78 Paaren benannter Zustände ist der Überlapp nur für dieses Paar (und seine Bilder unter Tausch und Tachyon-Abbildung) identisch β: bestätigt. (b) Der Boost, der K₁ und S auf Gegenpunkte legt, hat die Geschwindigkeit β_sym und die Rapidität ε = artanh β_sym der Maske (H45); zwei Frames mit ±β haben den relativen Lorentz-Faktor γ_L = (1 + β²)/(1 − β²), und sech 2ε = 1/γ_L (r24.3): bestätigt. Die Gleichsetzung „Versatz = sin(θ_H/2)“ im Beweis von `thm:bsym-hopf` ist damit in der Himmelskugel-Lesart ein Satz der Aberration. (c) Die gleichgewichtete Mischung der zwei Auslesen hat Bloch-Länge β, nicht 1/γ_L: widerlegt. (d) Unter dem Boost wird der Winkel zwischen Pol und Hopf-Zustand von θ_H zu 2α mit cos 2α = 1/γ_L (66,64° → 57,56°; tan α = β, Kickwinkel aus r27), und die Besetzungen des Bilds entlang der Achse des Polbilds sind exakt die des Materie-Zustands, (1, β²)/(1 + β²); am Hopf-Wert (⅔, ⅓) → (¾, ¼), das Zahlenpaar aus dem Statusvermerk zu `thm:bsym-hopf` (r17, r61). Die Bilder der Äquatorpunkte liegen auf keinem benannten Winkel: nach Wortlaut des Kriteriums widerlegt.

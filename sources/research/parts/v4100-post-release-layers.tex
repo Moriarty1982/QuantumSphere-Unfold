@@ -8834,3 +8834,379 @@ R_{\rm glob}^{(v4100\text{-}r65,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+\clearpage
+% ============================================================================
+\section*{v4.10.0-r66 Source-Only: \texorpdfstring{\(\beta_{\rm sym}\)}{beta sym} as the Overlap of the Hopf State with the Antipode; the Boost That Carries the R-Frame State to the Populations of the Matter State (H164, k355)}
+\addcontentsline{toc}{section}{v4.10.0-r66 Source-Only: \texorpdfstring{\(\beta_{\rm sym}\)}{beta sym} as the Overlap of the Hopf State with the Antipode; the Boost That Carries the R-Frame State to the Populations of the Matter State (H164, k355)}
+\label{sec:v4100-r66-bsym-overlap-boost}
+% ============================================================================
+
+\paragraph{Purpose.}
+The status note of \texttt{thm:bsym-hopf} (v4.9.0-r61) records that the theorem reads a pure state of the reference frame R as the offset of the
+matter frame, and that the two have different populations at the same \(\beta_{\rm sym}\).  This layer records the test H164 (k355, 26 November
+2026), which gives a map between the two under one named reading, and the part K-e of the test H161 (k352) on which it rests.  The layer computes
+nothing new.  Every statement is an identity in \(\beta\) and holds for every value \(0<\beta<1\); \(\beta_{\rm sym}\) is not derived and OP1
+stays open.  Earlier layers are not rewritten.  No guard changes.  No comparison with data is made.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r66 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r66 results}
+\label{subsec:v4100-r66-results}
+
+Notation and reading.  \(\beta\) stands for \(\beta_{\rm sym}=0.5493482\), \(\varepsilon=\operatorname{artanh}\beta=0.617447\) is the parameter of the
+mask of H45, \(\gamma_L=(1+\beta^2)/(1-\beta^2)=1.86444\), and \(\alpha\) with \(\tan\alpha=\beta\) is the kick angle of r27.  On the Hopf sphere
+\(S^2\) of \texttt{thm:bsym-hopf}, \(N\) is the photon pole, \(S\) its antipode and \(K_1\) the pure Hopf state at the polar angle
+\(\theta_H=2\arcsin\beta=66.645^\circ\).  \textbf{Setting of this layer (reading C):} the Hopf sphere is read as the celestial sphere of light
+directions, so that a point is a null direction, its spinor is the state, and a Lorentz boost acts on the sphere by aberration (as an element of
+\(SL(2,\mathbb C)\) on the spinors).  The reading is set and not derived.
+
+\paragraph{Theoremlet v4.10.0-r66.1 (two light directions, their overlap and the frame in which they are opposite; H161 K-e, not blind).}
+Let two null directions enclose the angle \(\theta\), with spinors \(\psi_1,\psi_2\).  Then \(|\langle\psi_1|\psi_2\rangle|=\cos(\theta/2)\), and the
+boost with velocity \(\beta=\cos(\theta/2)\) along their bisector makes them antipodal.  For equal energies \(E\) the invariant mass of the pair is
+\(M=2E\sqrt{1-\beta^2}\).  Two frames moving with \(\pm\beta\) against the frame of the antipodes have the relative Lorentz factor
+\((1+\beta^2)/(1-\beta^2)=\cosh2\varepsilon\).  \textbf{Confirmed.}
+\emph{Proof sketch.}  Each direction encloses \(\theta/2\) with the bisector.  Aberration gives \(\cos\vartheta'=(\cos\vartheta-\beta)/(1-\beta\cos\vartheta)\),
+which vanishes for \(\cos\vartheta=\beta\); both images are perpendicular to the boost axis on opposite sides.  The relative velocity of the two
+frames is \(2\beta/(1+\beta^2)\).
+\emph{Check.} k352 (Qiskit \texttt{quantum\_info}), k355 (sympy), k355b (Wolfram Language, exact, with the aberration formula instead of the
+\(SL(2,\mathbb C)\) matrix).
+
+\paragraph{Theoremlet v4.10.0-r66.2 (\(\beta_{\rm sym}\) is the overlap of the Hopf state with the antipode; H164 K-a, K-b, not blind).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(|\langle K_1|S\rangle|=\sin(\theta_H/2)=\beta\).  The angle between \(K_1\) and \(S\) is \(\pi-\theta_H=113.355^\circ\).  Among the 78
+pairs of 13 named states of the record (listed in k355) the overlap equals \(\beta\) identically only for \((K_1,S)\) and its images under the exchange
+and the tachyon map.  One further pair agrees only numerically: \((h,\text{exchanged }h)\) in HS(2) with \(2\beta^2/(1+\beta^4)=0.5532\) (\(+0.7\%\)), not an
+identity.
+\item[(b)] By r66.1 the boost that makes \(K_1\) and \(S\) antipodal has the velocity \(\beta_{\rm sym}\) and the rapidity \(\varepsilon\) of the mask
+(H45).  The relative Lorentz factor of the frames \(\pm\beta\) is \(\gamma_L\), and \(\operatorname{sech}2\varepsilon=1/\gamma_L\) (v4.9.0-r24.3).
+\end{enumerate}
+H164 K-a and K-b \textbf{confirmed}.  In reading C the step in the proof of \texttt{thm:bsym-hopf} that equates the frame offset with
+\(\sin(\theta_H/2)\) ``by the standard half-angle relation'' is the statement r66.1: the overlap of two light directions is the velocity of the frame
+in which they are opposite.  The angle reading and the velocity reading of \(\beta_{\rm sym}\) are then one statement.
+
+\paragraph{Theoremlet v4.10.0-r66.3 (the mixture of the two readouts is not the matter state; H164 K-c).}
+The equal mixture of \(K_1\) and \(S\) has the Bloch length \(\beta=0.5493\) and the populations \((0.7747,\,0.2253)\).  The matter state of
+Convention~F has the Bloch length \(1/\gamma_L=0.5364\) and the populations \((0.7682,\,0.2318)\).  The two agree only for
+\(\beta^3+\beta^2+\beta-1=0\), \(\beta=0.5437\), a number without a meaning in the record.  H164 K-c \textbf{refuted}, as predicted.
+
+\paragraph{Theoremlet v4.10.0-r66.4 (the boost carries the R-frame state to the populations of the matter state; H164 K-d).}
+Under the boost of r66.2(b):
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] the angle between the images of \(N\) and \(K_1\) is \(2\alpha\) with
+\[
+\cos2\alpha=\frac{1-\beta^2}{1+\beta^2}=\frac1{\gamma_L},
+\]
+so \(\theta_H=66.64^\circ\) becomes \(57.56^\circ\);
+\item[(b)] the populations of \(K_1'\) along the axis of \(N'\) are exactly \(1/(1+\beta^2)\) and \(\beta^2/(1+\beta^2)\), those of the matter state,
+and \(K_1'\) dephased about this axis has the Bloch length \(1/\gamma_L\);
+\item[(c)] at the Hopf value \(\beta^2=\tfrac13\): \(70.53^\circ\to60^\circ\) and \((\tfrac23,\tfrac13)\to(\tfrac34,\tfrac14)\), the pair of numbers in
+the status note of \texttt{thm:bsym-hopf};
+\item[(d)] the angle between \(N'\) and \(S'\) is \(\pi-2\alpha\), not \(\pi\); the images of the equator points lie at no named angle (for example
+\(89.51^\circ\), \(50.77^\circ\)).
+\end{enumerate}
+\emph{Proof sketch.}  \((1-\cos\vartheta_{12})E_1E_2\) is invariant.  The Doppler factors of \(N\) and of \(K_1\) (and \(S\)) under the boost are
+\(\gamma(1+\beta^2)\) and \(\gamma(1-\beta^2)\) with \(\gamma^2=1/(1-\beta^2)\).  With \(1-\cos\theta_H=2\beta^2\) this gives
+\(1-\cos\vartheta'=2\beta^2/(1+\beta^2)\) for \((N,K_1)\) and \(2/(1+\beta^2)\) for \((N,S)\).
+\emph{Verdict.}  The advance note asked whether the images lie ``on named angles''; its prediction was ``open (conjecture: refuted)''.  By the wording
+K-d is \textbf{refuted} (item d).  The core, items (a)--(c), is \textbf{confirmed}.  Disclosed: the relation \(N'\)--\(K_1'=2\alpha\) was derived by hand
+after the advance note was committed and before the first run.
+\emph{Check.} sympy and Wolfram Language, all differences exactly zero.
+
+\paragraph{Exploration v4.10.0-r66.5 (the Hopf value and four equivalent readouts; no criterion).}
+At \(\beta=1/\sqrt3\) the angle between the two readouts is \(\arccos(-\tfrac13)=109.47^\circ\), the tetrahedral angle.  Four states with pairwise
+overlap \(1/\sqrt3\) form a tetrahedron, and their projectors sum to twice the identity (the symmetric informationally complete measurement of a
+qubit).  Four pairwise equiangular directions exist only at this angle; at \(\beta_{\rm sym}\) (\(113.36^\circ\)) at most three.  In reading C the Hopf
+gap of \texttt{rem:bsym-hopf-gap} is the distance from an arrangement that closes to four equivalent readouts.  Whether this is connected with the
+\(\mathbb Z/3\mathbb Z\) orbit of that remark (three kernels at equal distance from the pole) is not investigated.
+
+\subsection*{v4.10.0-r66 precisions to earlier layers}
+\label{subsec:v4100-r66-precisions}
+
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Status note of \texttt{thm:bsym-hopf} (v4.9.0-r61, ``reads an R-frame state as the matter offset''): under reading C the map between the
+two is the boost of r66.2(b).  It carries the pure R-frame state (population \(\beta^2\) at the antipode) to a state with the populations of the
+matter state (\(\beta^2/(1+\beta^2)\)).  The statement concerns populations and, after dephasing, the Bloch length.  The boost is not unitary, and the
+dephasing is a separate set step.
+\item[(b)] r27 (kick angle \(\tan\alpha=\beta_{\rm sym}\)): \(2\alpha\) is the image of the Hopf angle under this boost (r66.4a).
+\item[(c)] v4.9.0-r24.3 (\(|b|=\operatorname{sech}2\eta\)): with \(\eta=\varepsilon\) this is the Bloch length of r66.4(b).
+\end{enumerate}
+Set in this layer: reading C; the antipode \(S\) as the second readout; the dephasing in r66.4(b).  Not computed: whether a rule of the record selects
+reading C or the antipode; any statement about the value of \(\beta_{\rm sym}\).
+
+\subsection*{v4.10.0-r66 frames}
+\label{subsec:v4100-r66-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+\(N\), \(S\), \(K_1\), overlap \(\beta\) (r66.2) & R (pure states measured from the photon pole, r24) & none with data\\
+boost of r66.2(b), rapidity \(\varepsilon\) & declared map from R, under reading C & equals the mask of H45 as a number; identification set\\
+populations and Bloch length in r66.4(b) & compared with M (matter state of Convention~F) & only populations and Bloch length; after the declared map\\
+\(\gamma_L\) as relative factor of the frames \(\pm\beta\) & M against T through the symmetric frame & as \texttt{thm:symmetric-frame}\\
+tachyon map \(z\mapsto iz\), exchange & used only to list images of the pair in r66.2(a) & not identified with time reversal \(z\mapsto\bar z\)\\
+P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r66 register entries}
+\label{subsec:v4100-r66-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r66\\
+\midrule
+H161 K-e (overlap equals velocity) & confirmed, not blind\\
+H164 K-a, K-b & confirmed, not blind\\
+H164 K-c & refuted, as predicted\\
+H164 K-d & refuted by its wording; core (r66.4a--c) confirmed; relation derived after the advance note, disclosed\\
+H164 overall & carries partly\\
+r66.5 & exploration\\
+reading C (Hopf sphere as celestial sphere), antipode as second readout, dephasing & settings, named here; not derived\\
+\texttt{thm:bsym-hopf} & unchanged; status note supplemented by r66 precision (a)\\
+value of \(\beta_{\rm sym}\) & input (\(\gamma_{\rm BI}\), \(\gamma_{\rm string}\)); not derived\\
+OP1--OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r66 notes}
+\label{subsec:v4100-r66-notes}
+
+{\raggedright
+Advance and result note of H164: \texttt{notes/\allowbreak research/\allowbreak predictions/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H164\_\allowbreak Beta\_\allowbreak sym\_\allowbreak Ueberlapp\_\allowbreak zweier\_\allowbreak Auslesen.md}
+(commit \texttt{45be2d4}, before the first run) and
+\texttt{notes/\allowbreak research/\allowbreak beta\_\allowbreak sym\_\allowbreak ueberlapp\_\allowbreak h164/\allowbreak Ergebnis\_\allowbreak H164\_\allowbreak Beta\_\allowbreak sym\_\allowbreak Ueberlapp\_\allowbreak zweier\_\allowbreak Auslesen.md},
+with \texttt{k355\_\allowbreak test\_\allowbreak h164.py}, \texttt{k355b\_\allowbreak gegenprobe.wl} and their output files.
+H161: \texttt{notes/\allowbreak research/\allowbreak gedankenexperiment\_\allowbreak proben\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 26/} (k352, k352b, k352c).
+Tools: Python (sympy), Qiskit \texttt{quantum\_info} for states, overlaps and density matrices, Wolfram Language for the exact cross-check; no HDL
+comparison (no finite search or guard procedure involved).
+\par}
+
+\subsection*{v4.10.0-r66 ledger and guard update}
+\label{subsec:v4100-r66-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r66}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no comparison with data).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r66,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r66}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+\clearpage
+% ============================================================================
+\section*{v4.10.0-r67 Source-Only: The Counting Rule as a Postulate; \texorpdfstring{\(\beta_{\rm sym}\)}{beta sym} as a Computed Number; the Overlap Closure Forces the Hopf Value (H165, k356, k357)}
+\addcontentsline{toc}{section}{v4.10.0-r67 Source-Only: The Counting Rule as a Postulate; \texorpdfstring{\(\beta_{\rm sym}\)}{beta sym} as a Computed Number; the Overlap Closure Forces the Hopf Value (H165, k356, k357)}
+\label{sec:v4100-r67-counting-postulate}
+% ============================================================================
+
+\paragraph{Purpose.}
+OP1 asks for a derivation of \(\beta_{\rm sym}\).  The record holds 37 attempts and none succeeds (survey of 26 November 2026).  Since v4.9.0-r63
+the open choice has had one name, the counting rule, and it has not moved.  On 26 November 2026 the author adopted the counting rule as a
+\emph{postulate}, in the same sense as the postulate of equal standing of the frames in r63.7: a working assumption that is named, not derived.
+This layer states the postulate, records the number that follows from it, fixes which of the two values of \(\beta_{\rm sym}\) in the record is
+the reference value from now on, and records the test H165.  With the postulate there is a computation that shows where the number comes from.
+What is missing is the reason why the counting has this form.  OP1 is not closed; it now reads ``derive the counting postulate''.  Earlier
+layers are not rewritten.  No guard changes.  No comparison with data is made.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r67 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r67 results}
+\label{subsec:v4100-r67-results}
+
+\paragraph{Postulate v4.10.0-r67.P (counting postulate; adopted by the author on 26 November 2026, not derived).}
+\begin{enumerate}[leftmargin=2em]
+\item[(C1)] \emph{Weight.}  In the matter frame M every spin \(j\in\{\tfrac12,1,\tfrac32,\dots\}\) of a puncture counts with the weight \(2\) (the two
+extremal states \(m=\pm j\); the U(1) counting of Domagala--Lewandowski and Meissner).
+\item[(C2)] \emph{Area.}  The area of a puncture of spin \(j\) is proportional to \(\sqrt{j(j+1)}\) (Casimir spectrum).
+\item[(C3)] \emph{Unit.}  The frame T counts only \(j=\tfrac12\), and one such puncture carries one bit.
+\end{enumerate}
+The assignment of the two rules to the frames M and T (v4.9.0-r63) is part of the postulate.
+
+\paragraph{Theoremlet v4.10.0-r67.1 (the number that follows; H165 K-a, not blind).}
+Under r67.P, with \(k=2j\) and \(c_k=\sqrt{k(k+2)/3}\) (area in units of the area of \(j=\tfrac12\)), \(\gamma_L\) is the unique positive root of
+\[
+Z(\gamma_L)=\sum_{k\ge1}2^{\,1-\gamma_L c_k}=1 ,
+\]
+and equals \(\gamma_M/\gamma_T\) with \(\gamma_T=\ln2/(\pi\sqrt3)\).  Numerically
+\[
+\gamma_L=1.8646997646,\qquad
+\beta_{\rm sym}=\sqrt{\frac{\gamma_L-1}{\gamma_L+1}}=0.5494056410,\qquad
+\varepsilon=\operatorname{artanh}\beta_{\rm sym}=0.6175295849 .
+\]
+If (C2) is replaced by the semiclassical area \(j+\tfrac12\) in both frames, the sum is geometric, \(2x^2/(1-x)=1\) with \(x=2^{-\gamma_L/2}\), and
+\(\gamma_L=2\), \(\beta=1/\sqrt3\) exactly (k245).  \textbf{Confirmed.}
+\emph{Check.} mpmath and Wolfram Language at 40 digits: the root and \(\gamma_M/\gamma_T\) agree to 39 digits (numerical residue, not a symbolic
+one); \(Z\) is strictly decreasing; the geometric case is symbolic.
+
+\paragraph{Remark v4.10.0-r67.2 (reference value of \(\beta_{\rm sym}\) from this layer on).}
+The record carries two values (r64.6b): \(0.5493482\), \(\gamma_L=1.86444\) from rounded inputs, and \(0.549406\), \(\gamma_L=1.864700\) from the
+unrounded \(\gamma_M\).  From this layer on the reference value is that of r67.1.  The value \(0.5493482\) is reproduced neither by the rule nor by
+the rounded inputs \(0.2375\) and \(0.1274\) themselves (these give \(0.549296\)); its exact origin in the main body is not reconstructed here.  The
+relative difference is \(1.05\cdot10^{-4}\) in \(\beta_{\rm sym}\), \(1.4\cdot10^{-4}\) in \(\gamma_L\) and \(7\cdot10^{-4}\) in \(\gamma_L^5\).
+No recorded verdict changes: the tests that compare with data (H96 with \(\Omega_M=\beta_{\rm sym}^2=0.30185\), the \(m_W\) relation of r08 and
+k218, H98, H102) already use the unrounded \(\gamma_M\), and the lepton window \([0.545,0.570]\) of v4.9.0-r61.1(e) contains both values.
+The numbers of r66 were computed with \(0.5493482\); with the reference value they read:
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+quantity & r66 (rounded input) & reference value\\
+\midrule
+\(\theta_H\) & \(66.645^\circ\) & \(66.652^\circ\)\\
+\(\pi-\theta_H\) & \(113.355^\circ\) & \(113.348^\circ\)\\
+\(\alpha\), \(2\alpha\) & \(28.78^\circ\), \(57.56^\circ\) & \(28.78^\circ\), \(57.57^\circ\)\\
+\(1/\gamma_L\) & \(0.5364\) & \(0.5363\)\\
+populations of the matter state & \((0.7682,\,0.2318)\) & \((0.7681,\,0.2319)\)\\
+mixture of the two readouts & \((0.7747,\,0.2253)\) & \((0.7747,\,0.2253)\)\\
+\(\varepsilon\) & \(0.617447\) & \(0.617530\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+All statements of r66 are identities in \(\beta\) and are unaffected.  Earlier layers keep their printed numbers.
+
+\paragraph{Theoremlet v4.10.0-r67.3 (the overlap closure forces the Hopf value; H165 K-b, not blind).}
+In reading C of r66, let spin \(j\) be carried by \(2j\) symmetrised qubits with the coherent states \(|j;n\rangle=|n\rangle^{\otimes2j}\).  For the
+pair \((K_1,S)\) of r66.2, \(|\langle j;K_1|j;S\rangle|=\beta^{2j}\), and
+\[
+\sum_{j\ge1/2}2\,|\langle j;K_1|j;S\rangle|^2=\frac{2\beta^2}{1-\beta^2}=\gamma_L-1
+\]
+for every \(\beta\) (the second equality was found after the advance note and is marked as such).  The closure condition ``sum \(=1\)'' holds exactly
+at \(\beta^2=\tfrac13\), that is \(\gamma_L=2\).  At the reference value the sum is \(0.8647\).  The four other closures fixed in the advance note
+give \(\beta=\tfrac13\) (amplitudes), \(0.7598\) (fourth powers), \(0.5240\) (exponent \(c_k\)) and \(0.6886\) (exponent \(\sqrt{k(k+2)}\)).  None
+reproduces the reference value; the nearest misses by \(4.6\,\%\).  H165 K-b \textbf{refuted}, as predicted.
+\emph{Reading.}  The two-readout picture, taken by itself, yields the Hopf value.  The reference value needs the Casimir area (C2) and the
+one-bit unit (C3).  At spin \(\tfrac12\) the two weights are \(2^{1-\gamma_L}=0.549161\) (counting) and \(2\beta^2=0.603693\) (overlap).
+\emph{Check.} Qiskit \texttt{quantum\_info} for \(2j=1,\dots,6\); sympy; Wolfram Language (symbolic zero residue for the identity).
+
+\paragraph{Remark v4.10.0-r67.4 (number candidates and the cone; H165 K-c, K-d).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Of 13 comparisons fixed in advance none is an identity (criterion: relative \(10^{-8}\) at 30 digits).  Two unexplained near
+coincidences remain: \(2^{1-\gamma_L}=0.549161\) against \(\beta_{\rm sym}=0.549406\) (\(-4.5\cdot10^{-4}\); the self-consistent root of
+\(2^{1-g}=\sqrt{(g-1)/(g+1)}\) is \(g=1.864293\)), and \(1/\langle c\rangle=0.658150\) against \(\operatorname{artanh}(1/\sqrt3)=0.658479\)
+(\(-5.0\cdot10^{-4}\)), with \(\langle c\rangle=\sum_kp_kc_k\), \(p_k=2^{1-\gamma_Lc_k}\).  Both were known or estimated before the run (not blind) and
+both are excluded as identities.  They are not used as support.  The four blind comparisons all miss.
+\item[(b)] \(1/\sqrt3=j/\sqrt{j(j+1)}\) at \(j=\tfrac12\): the Hopf value is the cosine of the cone angle of a spin \(\tfrac12\) in the vector model, and
+twice this angle is the tetrahedral angle \(\arccos(-\tfrac13)\) of r66.5.  The factor \(\sqrt3\) in \(c_k\) and in \(\gamma_T\) is the same number.
+\end{enumerate}
+H165 overall: \textbf{refuted}.  No closure condition and no number candidate fixes \(\beta_{\rm sym}\) without the counting rule.
+
+\subsection*{v4.10.0-r67 balance of settings}
+\label{subsec:v4100-r67-balance}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+item & status\\
+\midrule
+(C1) weight \(2\) per spin & postulated; U(1) counting; the SU(2) counting would give \(\beta=0.604468\) (v4.9.0-r68)\\
+(C2) Casimir area & postulated; \(j+\tfrac12\) would give \(1/\sqrt3\) (k245, r67.1)\\
+(C3) one bit at \(j=\tfrac12\) for T & postulated\\
+assignment of the rules to M and T & postulated (v4.9.0-r63); not derived (r09, r10, r17, r24, H121)\\
+\(\gamma_L=\gamma_M/\gamma_T\), \(\beta_{\rm sym}\) & computed from r67.P (r67.1)\\
+relation \(\gamma_L\leftrightarrow\beta_{\rm sym}\) & derived (\texttt{thm:symmetric-frame})\\
+readings of \(\beta_{\rm sym}\) as angle, overlap and velocity & identities under reading C (r66)\\
+why the counting has this form & open (OP1)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The target of OP1 was itself a set input: \(\beta_{\rm sym}\) was defined as a ratio of two literature values (F11 of v4.8.0-r03).  The postulate
+replaces ``two literature values'' by ``one counting rule with three named parts''.  It does not reduce the number of settings to zero.
+
+\subsection*{v4.10.0-r67 frames}
+\label{subsec:v4100-r67-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+(C1), (C2), \(\gamma_M\) & M & none with data in this layer\\
+(C3), \(\gamma_T\) & T & ---\\
+\(\gamma_L=\gamma_M/\gamma_T\), \(\beta_{\rm sym}\) & ratio of an M and a T quantity; read as frame offset through \texttt{thm:symmetric-frame} & as in v4.9.0-r63; which pair of frames \(\gamma_L\) relates is not re-examined here\\
+overlap closure (r67.3) & R, under reading C of r66 & compared with the counting only as numbers\\
+P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r67 register entries}
+\label{subsec:v4100-r67-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r67\\
+\midrule
+counting postulate r67.P (C1--C3 and the assignment) & adopted by the author on 26 November 2026 as working assumption; not derived\\
+\(\beta_{\rm sym}=0.5494056410\), \(\gamma_L=1.8646997646\) & computed from r67.P; reference value from this layer on\\
+\(0.5493482\), \(1.86444\) in earlier layers & rounded-input values; left as printed; no verdict depends on the difference\\
+H165 K-a, K-d & confirmed, not blind\\
+H165 K-b & refuted, as predicted\\
+H165 K-c & no identity; two unexplained near coincidences, not used\\
+H165 overall & refuted\\
+\(\gamma_L=1+\sum_{j\ge1/2}2\beta^{4j}\) & identity, found after the advance note\\
+OP1 & open, now in the form ``derive the counting postulate''\\
+OP2--OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r67 notes}
+\label{subsec:v4100-r67-notes}
+
+{\raggedright
+Advance note of H165: \texttt{notes/\allowbreak research/\allowbreak predictions/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H165\_\allowbreak Herkunft\_\allowbreak Beta\_\allowbreak sym\_\allowbreak Schliessung.md}
+(commit \texttt{e81f649}, before the first script run; one Wolfram evaluation that fixed the target ran before it and is disclosed there).
+Result note, survey of the 37 earlier attempts, scripts and actual outputs:
+\texttt{notes/\allowbreak research/\allowbreak op1\_\allowbreak herkunft\_\allowbreak beta\_\allowbreak sym\_\allowbreak h165/}
+(\texttt{k356\_\allowbreak test\_\allowbreak h165.py}, \texttt{k356b\_\allowbreak gegenprobe.wl}, \texttt{k357\_\allowbreak werte\_\allowbreak exakt\_\allowbreak gegen\_\allowbreak gerundet.py} with their output files).
+The survey was compiled by a subagent and spot-checked only.
+Tools: mpmath and sympy, Qiskit \texttt{quantum\_info} for the spin-\(j\) overlaps, Wolfram Language for the independent cross-check; no HDL
+comparison (no finite search or guard procedure involved).
+\par}
+
+\subsection*{v4.10.0-r67 ledger and guard update}
+\label{subsec:v4100-r67-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r67}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no comparison with data).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r67,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r67}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  A postulate closes no open problem: OP1--OP5, C5 and C6/T2 remain open.
