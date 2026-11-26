@@ -1,0 +1,43 @@
+== H158a: Zirkulante, Zyklus, magischer Winkel ==
+P W P^-1 - W = True
+charakteristisches Polynom an a + 2r cos(delta + 2 pi k/3): [0, 0, 0]
+Tr W = 3*a ; Tr W^2 = 3*a**2 + 6*s**2 + 6*v**2 ; det W = a**3 - 3*a*s**2 - 3*a*v**2 + 2*s**3 - 6*s*v**2
+det W in (a, r, delta) - (a^3 - 3 a r^2 + 2 r^3 cos 3delta) = 0
+magischer Winkel: (1,1,1)/sqrt3 gegen Platzachse: cos = sqrt(3)/3 -> Winkel 54.735610317245346 Grad
+  Fourier-Vektor k=0: P f = omega^0 f: True ; W f = lambda f mit lambda = a + 2*s
+  Fourier-Vektor k=1: P f = omega^1 f: True ; W f = lambda f mit lambda = a - s - sqrt(3)*v
+  Fourier-Vektor k=2: P f = omega^2 f: True ; W f = lambda f mit lambda = a - s + sqrt(3)*v
+H3(O) mit x1=x2=x3=x, 20 Zufallsproben: max Abweichung (Tr, Tr W^2, det) gegen H3(C_x) = 5.68e-14
+
+== H158b: K = 2/3 ==
+K = Tr W^2/(Tr W)^2 = (a**2 + 2*r**2)/(3*a**2) ; K - 2/3 = 0 <=> [-sqrt(2)*a/2, sqrt(2)*a/2] (r^2 = a^2/2)
+Norm Spuranteil 3a^2, Norm Nebendiagonale 6 r^2: gleich <=> r^2 = a^2/2: Rest 0
+
+== H158c: A4-invariante, J-erlaubte Terme auf dem Zirkulantensektor bis Ordnung 8 ==
+erlaubte (m, n) ohne J: [(0, 0), (2, 0), (2, 2), (3, 1), (3, 3), (4, 0), (4, 2), (4, 4), (5, 1), (5, 3), (5, 5), (6, 0), (6, 2), (6, 4), (6, 6), (7, 1), (7, 3), (7, 5), (7, 7), (8, 0), (8, 2), (8, 4), (8, 6), (8, 8)]
+Ordnung 0: J-erlaubte Klassen (a, m, n) mit a<=m: [(0, 0, 0)]; Harmonische n: [0]
+Ordnung 1: J-erlaubte Klassen (a, m, n) mit a<=m: []; Harmonische n: []
+Ordnung 2: J-erlaubte Klassen (a, m, n) mit a<=m: [(0, 2, 0)]; Harmonische n: [0]
+Ordnung 3: J-erlaubte Klassen (a, m, n) mit a<=m: []; Harmonische n: []
+Ordnung 4: J-erlaubte Klassen (a, m, n) mit a<=m: [(0, 4, 0), (2, 2, 0), (2, 2, 2)]; Harmonische n: [0, 2]
+Ordnung 5: J-erlaubte Klassen (a, m, n) mit a<=m: []; Harmonische n: []
+Ordnung 6: J-erlaubte Klassen (a, m, n) mit a<=m: [(0, 6, 0), (2, 4, 0), (2, 4, 2), (3, 3, 1), (3, 3, 3)]; Harmonische n: [0, 1, 2, 3]
+Ordnung 7: J-erlaubte Klassen (a, m, n) mit a<=m: []; Harmonische n: []
+Ordnung 8: J-erlaubte Klassen (a, m, n) mit a<=m: [(0, 8, 0), (2, 6, 0), (2, 6, 2), (3, 5, 1), (3, 5, 3), (4, 4, 0), (4, 4, 2), (4, 4, 4)]; Harmonische n: [0, 1, 2, 3, 4]
+(je Klasse n > 0: cos n delta, und sin n delta nur ohne sigma-Symmetrie)
+
+== H158e: Ladungsmischung c ==
+Re(w^2) - [(1-c^2)(s^2-v^2) - 4 c s v] = 0
+arg w = arctan c + atan2(v, s); |w|^2 = c**2*s**2 + c**2*v**2 + s**2 + v**2
+
+== H158d: Kandidatensuche (sigma als Symmetrie, Lambda = v, K = 2/3) ==
+delta_exp (aus m_e/Summe der Wurzeln, K = 2/3 angenommen) = 0.2222217 +- 7.8e-07; 2/9 = 0.2222222; Abstand -0.66 sigma
+I4 = 0.750000 cos 2d; I6 = 0.088388 cos 3d; I6' = 0.132583 cos d
+I6 (cos 3d): Kandidaten 2*2*36*5 = 720, verschiedene Minima 176 (davon innen 174), Treffer (3 sigma) 0, Zufallserwartung 0.0008
+   naechster Kandidat: Vorzeichen alpha +1, beta/alpha = -5.196152 (3/1 * sqrt3), delta = 0.221935, Abstand 368 sigma
+   noetig: Zweig delta = +1.872173, Vorzeichen alpha +1, beta/alpha = -5.186141
+I6' (cos d): Kandidaten 2*2*36*5 = 720, verschiedene Minima 176 (davon innen 174), Treffer (3 sigma) 0, Zufallserwartung 0.0008
+   naechster Kandidat: Vorzeichen alpha +1, beta/alpha = +6.928203 (4/1 * sqrt3), delta = 0.212415, Abstand 12570 sigma
+   noetig: Zweig delta = -0.222222, Vorzeichen alpha +1, beta/alpha = -22.071013
+   noetig: Zweig delta = +2.316617, Vorzeichen alpha +1, beta/alpha = +15.354393
+   noetig: Zweig delta = +1.872173, Vorzeichen alpha +1, beta/alpha = +6.716620

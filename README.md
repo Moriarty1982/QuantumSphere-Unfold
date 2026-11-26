@@ -1,17 +1,18 @@
 # Quantum Sphaera Companion
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24500009.svg)](https://doi.org/10.5281/zenodo.24500009)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24563811.svg)](https://doi.org/10.5281/zenodo.24563811)
 
 Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
 
 ## Current public release
 
-- Public version: `v5.4.0` (2026-11-24)
-- Version DOI: [`10.5281/zenodo.24500009`](https://doi.org/10.5281/zenodo.24500009) ([Zenodo record](https://zenodo.org/records/24500009))
+- Public version: `v5.5.0` (2026-11-26)
+- Version DOI: [`10.5281/zenodo.24563811`](https://doi.org/10.5281/zenodo.24563811) ([Zenodo record](https://zenodo.org/records/24563811))
 - Concept DOI: [`10.5281/zenodo.19210728`](https://doi.org/10.5281/zenodo.19210728)
-- Previous version: `v5.3.0`, DOI `10.5281/zenodo.24434403`.
-- Release package: two English PDFs (full Companion, 1537 pages; selected physics paper, 36 pages), source archive, database snapshot and manifests, available in the Zenodo record.
-- Frozen package source: `122eb34315a7870106a3e7a8d8fcbf74c438449d` (tag `v5.4.0`). Later repository metadata updates do not change the deposited package.
+- Previous version: `v5.4.0`, DOI `10.5281/zenodo.24500009`.
+- Release package: two English PDFs (full Companion, 1572 pages; selected physics paper, 38 pages), source archive, database snapshot and manifests, available in the Zenodo record.
+- Frozen package source: `e69452a4073426f71c4337617a5ed902347eec4b` (tag `v5.5.0`, set by the author). Later repository metadata updates do not change the deposited package.
+- Version 5.5.0 adds the research layers v4.10.0-r60 to r68; see [the release record](release/v5.5.0/README.md). Publication does not close any open problem or guard.
 
 Version 5 introduces the database-backed document architecture: registered
 statements, immutable content versions, dependencies, open guards and ordered

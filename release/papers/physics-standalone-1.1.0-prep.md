@@ -1,6 +1,6 @@
 # Physik-Artikel „One Object, Three Frames“, Fassung 1.1.0: Vorbereitung
 
-**Status (26.11.2026): reserviert und gestempelt, nicht hochgeladen, nicht veröffentlicht.** Zenodo-Entwurf 24563808, Version-DOI
+**Status (26.11.2026): veröffentlicht** ([Record 24563808](https://zenodo.org/records/24563808)). Zenodo-Entwurf 24563808, Version-DOI
 10.5281/zenodo.24563808; Stand und Läufe in `release/physics-standalone-v1.1.0/README.md`. Der Text unten beschreibt die Vorbereitung
 vor der Reservierung. Der offene Punkt zur Concept-DOI ist erledigt: Der Autor hat sie am 26.11.2026 genannt (10.5281/zenodo.24539643),
 `isVersionOf` steht in den Metadaten. Kein Tag.

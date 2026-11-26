@@ -990,3 +990,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Test H156:** Gleiche Massenterme (k339) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **26.11.2026, Runden v4.10.0-r62 und r63:** Sedenion-Kopien und Rest-Generation (H138–H147) sowie Koide-Punkt als Fixpunkt des Frame-Tauschs (H148–H156) in Forschungsstand, Forschungslinie, Gesamtbild, Inhalt, Content-overview, Vorhersagen-und-Tests und Offene-Probleme eingetragen. Physik-Paper und Preprint noch nicht nachgezogen.
+
+**26.11.2026, Tests H157 und H158:** Postulat J und δ (k340) sowie Albert-Algebra und δ (k341) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert; die Träger-Tabelle im Physik-Paper ist noch nicht nachgezogen (später, mit Runde im Companion).
+
+**26.11.2026, Test H166:** Phase der Nebendiagonale (k359) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.

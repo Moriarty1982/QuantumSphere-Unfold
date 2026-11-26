@@ -5,13 +5,12 @@ unabhängig vom Werkzeug. `CLAUDE.md` verweist nur hierauf. Regeln werden **hier
 
 ## Was dieses Repository ist
 Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematischen Unfold der Paper-Reihe „Quantum
-Sphaera“. Die öffentliche Baseline ist **v5.4.0** vom 2026-11-24
-(Version-DOI 10.5281/zenodo.24500009, Concept-DOI 10.5281/zenodo.19210728;
-Vorgänger v5.3.0, 10.5281/zenodo.24434403; davor v5.2.0, 10.5281/zenodo.24294648).
-**Reserviert, unveröffentlicht (26.11.2026):** v5.5.0 mit den Runden v4.10.0-r60 bis r68, Zenodo-Entwurf 24563811, Version-DOI
-10.5281/zenodo.24563811 (löst erst nach der Veröffentlichung auf); Upload und Veröffentlichung nur mit Freigabe des Autors. Ebenso
-reserviert: Physik-Artikel 1.1.0 (Entwurf 24563808, 10.5281/zenodo.24563808; Concept-DOI des Records 10.5281/zenodo.24539643) und
-deutscher Preprint 0.4.0 (Entwurf 24563916, 10.5281/zenodo.24563916). Bis zur Veröffentlichung bleibt v5.4.0 die öffentliche Baseline.
+Sphaera“. Die öffentliche Baseline ist **v5.5.0** vom 2026-11-26
+(Version-DOI 10.5281/zenodo.24563811, Concept-DOI 10.5281/zenodo.19210728;
+Vorgänger v5.4.0, 10.5281/zenodo.24500009; davor v5.3.0, 10.5281/zenodo.24434403, und v5.2.0, 10.5281/zenodo.24294648).
+v5.5.0 bringt die Runden v4.10.0-r60 bis r68 (1572/38 Seiten); Paketquellstand e69452a4073426f71c4337617a5ed902347eec4b,
+Tag v5.5.0 (legt der Autor an). Am selben Tag veröffentlicht: Physik-Artikel 1.1.0 (10.5281/zenodo.24563808; Concept-DOI des Records
+10.5281/zenodo.24539643) und deutscher Preprint 0.4.0 (10.5281/zenodo.24563916).
 v5.4.0 bringt die Runden v4.10.0-r31 bis r59 (überwiegend Erkundungen) und im Physik-Paper den durchgerechneten OP5-Fall,
 Ergänzungen im Grenzen-Teil (r52–r58) und die Händigkeitsserie (r59) (1537/36 Seiten); Paketquellstand
 122eb34315a7870106a3e7a8d8fcbf74c438449d, Tag v5.4.0.
@@ -22,7 +21,8 @@ v5.2.0 bringt die Runden v4.10.0-r15 bis r28 und im Physik-Paper den Abschnitt 5
 v5.1.0 brachte die Runden v4.10.0-r12 bis r14, das Gegenterm-Register und einen Abschnitt zum gebogenen Oktanten im
 Physik-Paper (1412/29 Seiten); Paketquellstand dfdb41387264e728a13a9a51a8636fd532011ff2, Tag v5.1.0.
 
-Eigenständiger Physik-Artikel „One Object, Three Frames“ 1.0.0 vom 2026-11-25 als eigener Record: Version-DOI 10.5281/zenodo.24539644
+Eigenständiger Physik-Artikel „One Object, Three Frames“ 1.1.0 vom 2026-11-26 als eigener Record: Version-DOI 10.5281/zenodo.24563808
+(Vorgänger 1.0.0 vom 2026-11-25, 10.5281/zenodo.24539644)
 (Quelle `paper/physics-standalone/`, Ablauf `notes/anleitungen/paper-release.md`).
 
 Version 5 enthält die datenbankgestützte Dokumentarchitektur und zwei englische

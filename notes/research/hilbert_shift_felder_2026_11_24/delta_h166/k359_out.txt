@@ -1,0 +1,79 @@
+== H166a: Zielwert allein aus m_mu/m_e ==
+(i)  K = 2/3 exakt: delta* = 0.2222220470731 +- 4.0e-10; delta* - 2/9 = -1.751e-7 (relativ -7.88e-7; -442.0 sigma); m_tau = 1776.96903 MeV
+(ii) delta = 2/9 exakt: K = 0.6666665245203; K - 2/3 = -1.421e-7; m_tau = 1776.96651 MeV
+(iii) beide exakt: m_mu/m_e = 206.770315973; gemessen 206.7682827 +- 4.6e-6; Abstand 442.02 sigma (relativ 9.83e-6)
+(iv) 3 delta = K: delta = 0.2222221849289, K = 0.6666665547866; m_tau = 1776.96705 MeV
+(v)  H102, 3 delta = pi/4 - gamma_M/2: delta = 0.2222105545; m_tau = 1777.1343 MeV
+   K = 2/3     : (m_tau - 1776.93)/0.09 = 0.434 sigma
+   delta = 2/9 : (m_tau - 1776.93)/0.09 = 0.406 sigma
+   3 delta = K : (m_tau - 1776.93)/0.09 = 0.412 sigma
+   H102        : (m_tau - 1776.93)/0.09 = 2.27 sigma
+   drei Massen, m_tau = 1776.84: K = 0.666659382, delta = 0.222231023
+   drei Massen, m_tau = 1776.93: K = 0.666664463, delta = 0.222224762
+   drei Massen, m_tau = 1777.02: K = 0.666669544, delta = 0.222218501
+Groessenvergleich: |delta*/(2/9) - 1| = 7.88e-7; alpha/pi = 0.00232; (alpha/pi)^2 = 5.4e-6; (alpha/pi)^3 = 1.25e-8
+
+== H166b: Stationaritaet ist algebraisch ==
+V = cos 2d + q cos 3d: dV/d(delta) = sin(delta) * (-12*q*x**2 + 3*q - 4*x); Polynom in x = cos delta vom Grad 2, Koeffizienten in Q(q)
+   noetiges q bei delta: q = -4*x/(12*x**2 - 3); bei cos(2/9): -0.463537473; bei cos(2 pi/3 - 2/9): -0.611190440
+V = cos 2d + q cos d: dV/d(delta) = sin(delta) * (-q - 4*x); Polynom in x = cos delta vom Grad 1, Koeffizienten in Q(q)
+   noetiges q bei delta: q = -4*x; bei cos(2/9): -3.901640342; bei cos(2 pi/3 - 2/9): +1.187339992
+Satz: q algebraisch => x = cos delta algebraisch (Nullstelle eines Polynoms ueber den algebraischen Zahlen).
+Lindemann-Weierstrass: fuer algebraisches t != 0 ist cos t transzendent; also ist delta = 2/9 fuer algebraisches q ausgeschlossen.
+sympy: cos(2/9) algebraisch? False ; tan(2/9) algebraisch? False
+
+== H166c: Bedeutung der Phase ==
+L_n^3 - L_n = 0: True ; L_n^2 = 1 - n n^T: True
+(i) S = exp(+i (2 pi/3) L_n): True
+(ii) W - (c0 + D L_n^2 + B L_n) = 0 mit c0 = a + 2s, D = -3s, B = -sqrt(3)*v : True ; tan delta = v/s = -sqrt3 B/D * ( 1 )
+     Konjugation sigma (W -> W*): L_n -> -L_n, L_n^2 fest; der v-Anteil ist der sigma-ungerade Dipol: True
+(iii) Torus: w12 w23 w31 nach Umeichung - b^3 = 0 ; einzelne Phase w12 -> exp(I*(alpha1 - alpha2))
+(iv) sqrt3 (sqrt m_mu - sqrt m_e)/(2 sqrt m_tau - sqrt m_mu - sqrt m_e) - tan delta = 0
+
+== H166d: Maske mit festem eps0 = artanh(beta_sym) (blind) ==
+eps0 = 0.6175295849; phi_1 = 0.6790422, phi_1/3 = 0.2263474
+Kontrollen:
+  eps = 0: max |(K', delta') - (2/3, delta0)| = 3.3e-16
+  Maskenplatz, delta0 -> -delta0, delta0 -> delta0 + 2 pi/3: max Aenderung des Spektrums = 2.7e-15
+  Form S (Aehnlichkeit): max Aenderung des Spektrums = 1.2e-16
+
+Vorwaerts (rho^2 = 1/2): Kandidat -> (K', delta'), Anzahl negativer Eigenwerte
+  Form K   eps +eps0, delta0 = 0      : K' = 0.744036, delta' = 0.154733, neg = 0
+  Form K   eps +eps0, delta0 = pi/12  : K' = 0.744036, delta' = 0.167041, neg = 1
+  Form K   eps +eps0, delta0 = pi/6   : K' = 0.744036, delta' = 0.193815, neg = 1
+  Form K   eps +eps0, delta0 = pi/4   : K' = 0.744036, delta' = 0.217649, neg = 1
+  Form K   eps +eps0, delta0 = pi/3   : K' = 0.744036, delta' = 0.226886, neg = 1
+  Form K   eps +eps0, delta0 = phi1/3 : K' = 0.744036, delta' = 0.164133, neg = 0
+  Form K   eps -eps0, delta0 = 0      : K' = 0.954763, delta' = 0.008347, neg = 0
+  Form K   eps -eps0, delta0 = pi/12  : K' = 0.954763, delta' = 0.020771, neg = 1
+  Form K   eps -eps0, delta0 = pi/6   : K' = 0.954763, delta' = 0.036133, neg = 1
+  Form K   eps -eps0, delta0 = pi/4   : K' = 0.954763, delta' = 0.046700, neg = 1
+  Form K   eps -eps0, delta0 = pi/3   : K' = 0.954763, delta' = 0.050436, neg = 1
+  Form K   eps -eps0, delta0 = phi1/3 : K' = 0.954763, delta' = 0.018537, neg = 0
+  Form lin eps +eps0, delta0 = 0      : K' = 23.672602, delta' = 0.714558, neg = 1
+  Form lin eps +eps0, delta0 = pi/12  : K' = 23.672602, delta' = 0.725781, neg = 1
+  Form lin eps +eps0, delta0 = pi/6   : K' = 23.672602, delta' = 0.754051, neg = 1
+  Form lin eps +eps0, delta0 = pi/4   : K' = 23.672602, delta' = 0.784468, neg = 1
+  Form lin eps +eps0, delta0 = pi/3   : K' = 23.672602, delta' = 0.797894, neg = 1
+  Form lin eps +eps0, delta0 = phi1/3 : K' = 23.672602, delta' = 0.723034, neg = 1
+  Form lin eps -eps0, delta0 = 0      : K' = 0.921125, delta' = 0.042548, neg = 1
+  Form lin eps -eps0, delta0 = pi/12  : K' = 0.921125, delta' = 0.149802, neg = 1
+  Form lin eps -eps0, delta0 = pi/6   : K' = 0.921125, delta' = 0.274060, neg = 1
+  Form lin eps -eps0, delta0 = pi/4   : K' = 0.921125, delta' = 0.364062, neg = 1
+  Form lin eps -eps0, delta0 = pi/3   : K' = 0.921125, delta' = 0.397483, neg = 1
+  Form lin eps -eps0, delta0 = phi1/3 : K' = 0.921125, delta' = 0.131816, neg = 1
+Treffer vorwaerts: 0 von 24; naechster Kandidat ('K', 1, 'pi/6') mit Abstand 0.0774
+
+Rueckwaerts: unmaskiertes (K0, delta0), dessen maskiertes Spektrum die Lepton-Wurzeln gibt
+  m_tau 1776.93: Form K   eps +eps0: rho0 = 0.6495044, K0 = 0.614571, delta0 = 0.8923522 (naechstes N: pi/4, Abstand 0.1070), neg. Eigenwerte 1
+  m_tau 1776.93: Form K   eps +eps0: rho0 = 1.5843172, K0 = 2.006707, delta0 = 0.3712063 (naechstes N: pi/12, Abstand 0.1094), neg. Eigenwerte 1
+  m_tau 1776.93: Form K   eps -eps0: rho0 = 3.0894030, K0 = 6.696274, delta0 = 0.4636525 (naechstes N: pi/6, Abstand 0.0599), neg. Eigenwerte 1
+  m_tau 1776.93: Form K   eps -eps0: rho0 = 3.3740207, K0 = 7.922677, delta0 = 0.2716092 (naechstes N: pi/12, Abstand 0.0098), neg. Eigenwerte 2
+  m_tau 1776.93: Form lin eps +eps0: keine Loesung
+  m_tau 1776.93: Form lin eps -eps0: rho0 = 0.4109325, K0 = 0.445910, delta0 = 0.6899351 (naechstes N: pi/4, Abstand 0.0955), neg. Eigenwerte 0
+  m_tau 1776.93: Form lin eps -eps0: rho0 = 0.4663616, K0 = 0.478329, delta0 = 0.6962404 (naechstes N: pi/4, Abstand 0.0892), neg. Eigenwerte 1
+  m_tau 1776.93: Form lin eps -eps0: rho0 = 1.2683126, K0 = 1.405745, delta0 = 0.2181151 (naechstes N: phi1/3, Abstand 0.0082), neg. Eigenwerte 1
+  m_tau 1776.93: Form lin eps -eps0: rho0 = 1.3510005, K0 = 1.550135, delta0 = 0.1393747 (naechstes N: phi1/3, Abstand 0.0870), neg. Eigenwerte 2
+Treffer rueckwaerts (alle drei m_tau): 0
+
+H166d: bestaetigt (kein Treffer)

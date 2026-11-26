@@ -1,0 +1,53 @@
+== H157a: H155-Form und N(W) unter der Ebenen-Lesart ==
+H155-Form: Rest P - J P = 0
+N(W): Rest P - J P = (-phi + r)*(sqrt(6)*c*phi**2 + sqrt(6)*c*phi*r + sqrt(6)*c*r**2 - 2*sqrt(3)*phi**2 - 5*sqrt(3)*phi*r - 2*sqrt(3)*r**2)/18
+N(W): Koeffizienten des Rests nach (phi, r)-Monomen: {(0, 3): sqrt(6)*c/18 - sqrt(3)/9, (1, 2): -sqrt(3)/6, (2, 1): sqrt(3)/6, (3, 0): -sqrt(6)*c/18 + sqrt(3)/9}
+N(W): Ebenen mit Rest 0 (Loesungen in c): []  -> keine reelle Ebene mit |c|<=1
+
+== H157b: J-erlaubter Unterraum bis Ordnung 12 (Erzeuger phi, R, C3) ==
+Ordnung  0: invariant  1, J-erlaubt  1, k-Inhalt {0: 1}
+     1*phi^0 R^0 C3^0
+Ordnung  1: invariant  1, J-erlaubt  0, k-Inhalt {}
+Ordnung  2: invariant  2, J-erlaubt  1, k-Inhalt {0: 1}
+     1*phi^2 R^0 C3^0 + 1*phi^0 R^1 C3^0
+Ordnung  3: invariant  3, J-erlaubt  0, k-Inhalt {}
+Ordnung  4: invariant  4, J-erlaubt  2, k-Inhalt {0: 2}
+     1*phi^2 R^1 C3^0
+     1*phi^4 R^0 C3^0 + 1*phi^0 R^2 C3^0
+Ordnung  5: invariant  5, J-erlaubt  0, k-Inhalt {}
+Ordnung  6: invariant  7, J-erlaubt  3, k-Inhalt {0: 2, 1: 1}
+     1*phi^4 R^1 C3^0 + 1*phi^2 R^2 C3^0
+     1*phi^6 R^0 C3^0 + 1*phi^0 R^3 C3^0
+     1*phi^3 R^0 C3^1
+Ordnung  7: invariant  8, J-erlaubt  0, k-Inhalt {}
+Ordnung  8: invariant 10, J-erlaubt  4, k-Inhalt {0: 3, 1: 1}
+Ordnung  9: invariant 12, J-erlaubt  0, k-Inhalt {}
+Ordnung 10: invariant 14, J-erlaubt  5, k-Inhalt {0: 3, 1: 2}
+Ordnung 11: invariant 16, J-erlaubt  0, k-Inhalt {}
+Ordnung 12: invariant 19, J-erlaubt  7, k-Inhalt {0: 4, 1: 2, 2: 1}
+     1*phi^6 R^3 C3^0
+     1*phi^8 R^2 C3^0 + 1*phi^4 R^4 C3^0
+     1*phi^10 R^1 C3^0 + 1*phi^2 R^5 C3^0
+     1*phi^12 R^0 C3^0 + 1*phi^0 R^6 C3^0
+     1*phi^7 R^1 C3^1 + 1*phi^5 R^2 C3^1
+     1*phi^9 R^0 C3^1 + 1*phi^3 R^3 C3^1
+     1*phi^6 R^0 C3^2
+(i) keine ungerade Ordnung erlaubt: True
+(ii) erste Ordnung mit cos3delta (k=1): 6
+(iii) erste Ordnung mit cos^2 3delta (k=2): 12
+
+== H157c: Zufallsstichprobe, volle Minimierung in (phi, y1, y2) ==
+Dmax=10: Proben 300, mit r>0 275, innere delta (|sin3d|>1e-4) 59, max|sin3d| 9.998e-01, Median|sin3d| 1.989e-07, theta=pi/4 bei 210
+   Groessen der Basis (Terme Ordnung 6..10): 12
+Dmax=12: Proben 300, mit r>0 264, innere delta (|sin3d|>1e-4) 64, max|sin3d| 1.000e+00, Median|sin3d| 2.263e-07, theta=pi/4 bei 196
+   Groessen der Basis (Terme Ordnung 6..12): 19
+
+Skalenschaetzung fuer delta = 2/9 (nur Ordnung 6 und 12, Einheitskoeffizienten):
+  c* = cos(2/3) = 0.785887; Lambda/u = (2 c*)^(1/6) = 1.078280; u = v/sqrt2 -> Lambda/v = 0.762459
+  Vorzeichenbedingung: c* = -zeta6 Lambda^6/(2 zeta12 u^6) > 0 verlangt zeta6*zeta12 < 0 und zeta12 > 0 (nicht gesetzt, nur benannt)
+
+== H157d: Massenspektren an den Endpunkten bei K = 2/3 ==
+  delta=0: m/m_max = [1.       0.014719 0.014719], K = 0.666666666667
+  delta=pi/3: m/m_max = [1.       1.       0.058875], K = 0.666666666667
+  delta=2/9: m/m_max = [1.000e+00 5.946e-02 2.880e-04], K = 0.666666666667
+  Leptonen: m/m_tau = [1, 0.059461, 2.876e-04]
