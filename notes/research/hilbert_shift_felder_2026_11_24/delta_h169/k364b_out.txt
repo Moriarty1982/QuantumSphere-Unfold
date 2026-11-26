@@ -1,0 +1,24 @@
+k364b (H169), Wolfram Language (MCP-Evaluator, 26.11.2026). Print-Ausgaben in Reihenfolge. Warnung des Evaluators: "Symbol::undefined2" (globale Symbole
+P, Pb, Z, T1 ... beim Einlesen noch undefiniert; ohne Folgen). Keine weiteren Meldungen. Nullreste sind symbolisch (0 oder leere Koeffizientenliste {}).
+
+a1 P^2-P, Pb^2-Pb, P Pb: {0, 0, 0}
+a2 1 + c j - [(1 - I c) P + (1 + I c) Pb]: 0
+a3 (1 + c j)/2 idempotent fuer c: {{c -> -I}, {c -> I}}
+a4 ((1+j)/2)^2 - j/2: 0
+b1 Tr Z^2 - 2(1+a^2)|x|^2: 0
+b2 Tr Z^4 - 2(1+a^2)^2|x|^4: 0
+b3 Tr Z^3/3 - 2(3a - a^3) x1 x2 x3: 0
+b4 bei a = I: {0, 0, (8 I) x[1] x[2] x[3]}; bei a = -I: {0, 0, (-8 I) x[1] x[2] x[3]}
+b5 (-I + j) - 2 j P: 0
+c1 P z - r Exp[-I d] P, Pb z - r Exp[I d] Pb: {}{}     (leere Koeffizientenliste = Nullrest)
+c2 sig[P] - Pb: 0; j sig[s + j v] - (v + j s): 0
+c3 (1 + I c)/(1 - I c) bei c = 1, 0: {I, 1}
+d1 gerader, ungerader Teil: (-1 + c^2) Cos[2 d]/(1 + c^2); -4 c Cos[d] Sin[d]/(1 + c^2)
+d2 rein ungerade fuer c: {{c -> -1}, {c -> 1}}; rein gerade fuer c: {{c -> 0}}
+d3 (1+c^2) v'^2 = (c s - v)^2/(1 + c^2); c = 1 minus [(s^2+v^2)/2 - s v]: 0
+d4 invariant unter s <-> v fuer c: {{c -> -1}, {c -> 1}}
+e1 x, tan 2x: 0.0395773407260 0.0793204104037
+e2 geladen, X/Y = Cot[2 d]: {{2.099865383, 0.07932041040, -1.453094175}, {-2.099865383, 1.453094175, -0.07932041040}}
+e3 neutral, Y/X = Tan[2 d]: {{1.453094175, -2.099865383, -0.07932041040}, {-1.453094175, 0.07932041040, 2.099865383}}
+
+Uebereinstimmung mit k364_out.txt (Python/sympy) in allen Punkten.

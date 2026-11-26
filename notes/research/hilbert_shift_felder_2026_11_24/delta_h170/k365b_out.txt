@@ -1,0 +1,22 @@
+k365b (H170), Wolfram Language (MCP-Evaluator, 26.11.2026). Print-Ausgaben in Reihenfolge. Warnung des Evaluators: "Symbol::undefined2" (globale Symbole
+P, Pb, G, F beim Einlesen noch undefiniert; ohne Folgen). Keine weiteren Meldungen. Nullreste symbolisch (0, {0, 0} oder leere Koeffizientenliste {}).
+
+a1 Bahn: {I, 1, -I, -1, I}; Fixpunkte: {{c -> 0}}
+b1 k^2 - 1: 0; (a + b j)(a - b j): a^2 + b^2; (a + b k)(a - b k): a^2 - b^2
+b2 1 + Tanh[e] k - (Cosh[e] + k Sinh[e])/Cosh[e]: {}
+b3 (Cosh+k Sinh) P - Exp[e] P: {0, 0}; Pb: {0, 0}
+b4 Addition: {0, 0}
+b5 2(1+a^2), 2(3a-a^3), bei a = I cp: {-2 (-1 + cp) (1 + cp), (2 I) cp (3 + cp^2)}; 1 + k - 2P: 0
+c1 G[I] + (s + I v)^2: 0
+c2 Re, Im: 0 0; Im = -2 s v
+c3 2 F[c] - n + r^2 Cos[2(d - ArcTan[c])]: 0
+c4 Re[Exp[-2 I chi] G_i] + r^2 Cos[2(d - chi)]: 0
+d1 Re[-I G[I]] - (2 F[1] - n): 0
+d2 -I G_i(d) - G_i(d - Pi/4): 0; Exp[-I Pi/4]^2 + I: 0
+d3 Minima gefaltet (q, Vorzeichen +/-): {{0, {0, Pi/3}, {Pi/6}}, {1, {Pi/12, Pi/4}, {Pi/12, Pi/4}}, {2, {Pi/6}, {0, Pi/3}}, {3, {Pi/12, Pi/4}, {Pi/12, Pi/4}}}
+e1 eps0, gd, arctan, x: {0.617529584950, 0.581652737648, 0.502386774716, 0.0395773407260}
+e2 Vergleiche: 84; Treffer < 10^-3: 2; < 10^-4: 0
+e3 beste vier: {{0.00068642448, 0.079320410, 0.079265963}, {0.00088296303, 0.039598018, 0.039632981}, {0.0014058736, 0.039577341, 0.039632981}, {0.0014058736, 0.079154681, 0.079265963}}
+f1 m_mu/m_e bei delta*, bei 2x = gd - at, bei tan 2x = gd - at: {206.7682827, 206.1237767, 207.0826758}
+
+Uebereinstimmung mit k365_out.txt und k365c_out.txt (Python) in allen Punkten.

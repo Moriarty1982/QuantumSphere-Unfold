@@ -1,0 +1,45 @@
+== H170a: die Abbildung c -> -i c ==
+Bahn von c = i: [I, 1, -I, -1, I] ; Ordnung 4: True ; Fixpunkte endlich: [0] (dazu unendlich)
+c = i: 1 + c j = 2P: True ; c = -i: 2Pb: True
+
+== H170b: Schub und Minkowski-Signatur ==
+k^2 = +1: True ; 1 + c j - (1 + c' k) bei c = i c': True
+Norm auf span(1, j): (a + b j)(a - b j) = a**2 + b**2 ; auf span(1, k): (a + b k)(a - b k) = a**2 - b**2
+1 + tanh(eps) k - (cosh eps + k sinh eps)/cosh eps = 0: True
+exp(eps k) = cosh + k sinh; e^{eps k} P = e^{eps} P: True ; e^{eps k} Pb = e^{-eps} Pb: True
+(1 + c1 k)(1 + c2 k) = (1 + c1 c2)(1 + c12 k) mit c12 = (c1 + c2)/(1 + c1 c2): True
+zum Vergleich reell: (1 + c1 j)(1 + c2 j) = (1 - c1 c2)(1 + c12 j), c12 = (c1 + c2)/(1 - c1 c2): True
+Tr Z^2 = 2(1 + a^2)|x|^2 bei a = i c': -2*(cp - 1)*(cp + 1) |x|^2 ; N = 2(3a - a^3) xyz: 2*I*cp*(cp**2 + 3) xyz ; Spin-1-Term (1 + c^2) v'^2: -(cp - 1)*(cp + 1) v'^2
+lichtartig (Norm 0) genau fuer c' = [-1, 1] ; 1 + k = 2P: True
+
+== H170c: holomorphe Form am Projektorpunkt ==
+G_i + (s + i v)^2 = 0
+Re G_i - (2 F_0 - n) = 0 ; Im G_i - (2 F_1 - n) = 0 ; Im G_i = -2*s*v
+G_i + r^2 e^{2 i delta} = 0
+Re[e^{-2 i chi} G_i] + r^2 cos 2(delta - chi) = 0
+2 F_c - n + r^2 cos 2(delta - arctan c) = 0
+
+== H170d: Multiplikation mit -i ==
+Re[-i G_i] - (2 F_1 - n) = 0 ; Re[G_i] - (2 F_0 - n) = 0
+-i G_i(delta) - G_i(delta - pi/4) = 0
+Feld mal e^{-i pi/4}: (e^{-i pi/4})^2 + i = 0 ; volle Tachyon-Abbildung z -> i z: i^2 = -1 (G -> -G)
+Minima von sgn * Re[(-i)^q G_i] = -sgn r^2 cos(2 delta - q pi/2), gefaltet:
+   q = 0, Vorzeichen +: ['0.0', '1.0471975512']
+   q = 0, Vorzeichen -: ['0.523598775598']
+   q = 1, Vorzeichen +: ['0.261799387799', '0.785398163397']
+   q = 1, Vorzeichen -: ['0.261799387799', '0.785398163397']
+   q = 2, Vorzeichen +: ['0.523598775598']
+   q = 2, Vorzeichen -: ['0.0', '1.0471975512']
+   q = 3, Vorzeichen +: ['0.261799387799', '0.785398163397']
+   q = 3, Vorzeichen -: ['0.261799387799', '0.785398163397']
+   pi/12 = 0.261799387799 ; pi/6 = 0.523598775598 ; pi/4 = 0.785398163397 ; pi/3 = 1.0471975512
+
+== H170e: Wick-Woerterbuch gegen den Versatz ==
+eps0 = 0.61752958495 ; gd(eps0) = arcsin beta = 0.581652737648 ; arctan beta = 0.502386774716 ; x = 0.039577340726
+Vergleiche: 84 ; Treffer (< 1e-3): 2
+    tan 2x gegen gd - arctan beta           =  0.07926596293: relativ 0.0006864
+     tan x gegen (gd - arctan beta)/2       =  0.03963298147: relativ 0.000883
+        2x gegen gd - arctan beta           =  0.07926596293: relativ 0.001406
+         x gegen (gd - arctan beta)/2       =  0.03963298147: relativ 0.001406
+    tan 2x gegen (pi/4 - eps0)/2            =  0.08393428922: relativ 0.05817
+        2x gegen (pi/4 - eps0)/2            =  0.08393428922: relativ 0.06038
