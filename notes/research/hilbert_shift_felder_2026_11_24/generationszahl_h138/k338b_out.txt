@@ -1,0 +1,13 @@
+(Ausgabe von k338b_gegenprobe.wl, Wolfram-Kernel ueber MCP, 25.11.2026. Meldungen: nur "Symbol::undefined2" fuer die Hilfssymbole R und L (Hinweis des
+ Kernels, kein Rechenfehler). Ein frueherer Lauf hatte im ersten Fenster ln(24622/91187,6) statt ln(246,22/91,1876) (Tippfehler, negatives Fenster); korrigiert.)
+N(W) Rest gegen Formel: 0
+theta=pi/4 Rest: 0
+16pi^2 beta (mA,mB,lA,ka,lB), n_B=2: {8 (3 lA mA + ka mB), 4 (ka mA + 8 lB mB), 4 (ka^2 + 18 lA^2), 8 ka (2 ka + 3 lA + 4 lB), 2 (ka^2 + 40 lB^2)}
+erste Ordnung im Fenster: 0
+Eigenwerte H155a: {0, -4 m, 4 (k - 2 l) m/(k + 2 l)}
+R* = -0.007580655183
+Sum m_l/v: R = -0.00764804; delta = 0.221844
+Fenster ln(246.22/91.1876), lam=0.1, k=-0.05: -0.0000141875 (Python -1.42e-05)
+Fenster ln(91.1876/9.78), lam=0.2, k=0.2: -0.000568473 (Python -5.68e-04)
+H155b k=-0.2, zeta=-0.01: K - 2/3 = 0.0015813; m^2_U' = 0.027472 (Python 1.581e-03, 0.02747)
+Nachtraeglich lam=0.1, k=0.1, zeta=R*, Lam=v: K - 2/3 = -7.290*10^-16; delta = 0.22222222

@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H154; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H155; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -56,7 +56,9 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   den Startstrahl, K bleibt startabhängig, δ bleibt 0 oder π/3. Nur die Einschränkung der Schleife auf die Unteralgebra {1, U} gibt K = ⅔ und θ = π/4 exakt; das ist eine Setzung.
 - **H154** (Vorab 5ef018d): Die Algebra erzwingt die Schleife über {1, U} nicht: Keine Symmetrie nimmt U′ aus der Schleife, Goldstone und Eichung ändern daran nichts.
   Die Abweichung von ⅔ ist Messrauschen: mit m_τ = 1776,93 ± 0,09 MeV 0,43σ (Fehler ganz aus m_τ); laufende Massen verschlechtern K, Frame und δ tragen nichts bei.
+- **H155** (Vorab 9d6b6ca): Skala als Setzung. Mit tauschsymmetrischen Massen- und Quartiktermen liegt K = ⅔ am Baumgraph, ohne dass U′ schwer sein muss; U′ schwer
+  machen (ζN(W)) verschiebt K. Laufen mit zwei Ebenenrichtungen stört erst in zweiter Ordnung. Term sechster Ordnung erlaubt innere δ, 2/9 verlangt einen Parameter (Fit).
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H154; Skripte k321–k337 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H155; Skripte k321–k338 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

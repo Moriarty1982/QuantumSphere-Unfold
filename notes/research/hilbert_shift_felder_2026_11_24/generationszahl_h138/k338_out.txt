@@ -1,0 +1,69 @@
+=== Vorbereitung: N(W) in (phi, y) ===
+   N(W) = sqrt(3)*phi**3/9 - sqrt(3)*phi*y1**2/6 - sqrt(3)*phi*y2**2/6 + sqrt(6)*y1**3/18 - sqrt(6)*y1*y2**2/6  = phi^3/(3 sqrt3) - phi B/(2 sqrt3) + C3/(3 sqrt6)? True
+   auf theta = pi/4: 0 (Nullrest gegen H149d)
+   Tausch phi <-> y1 bei y2 = 0: N - J(N) = -(-phi + y1)*(-sqrt(6)*phi**2 + 2*sqrt(3)*phi**2 - sqrt(6)*phi*y1 + 5*sqrt(3)*phi*y1 - sqrt(6)*y1**2 + 2*sqrt(3)*y1**2)/18 (ungleich 0: N(W) bricht den Tausch)
+
+=== H155a: Baumgraph mit Skala, tauschsymmetrisch ===
+   Stationaer (A, B) = [{a: -mu2/(k + 2*lam), b: -mu2/(k + 2*lam)}] -> A = B, tan^2 theta = 1, K = 2/3; positiv nur fuer mu2 < 0 und 2 lam + k > 0
+   Hessesche am Minimum: [[-8*lam*mu2/(k + 2*lam), -4*k*mu2/(k + 2*lam), 0], [-4*k*mu2/(k + 2*lam), -8*lam*mu2/(k + 2*lam), 0], [0, 0, 0]]
+   Eigenwerte: [-4*mu2, 4*mu2*(k - 2*lam)/(k + 2*lam), 0] -> U' (y2) Goldstone, Krummung theta-Mode ~ (2 lam - k): Minimum nur fuer -2 lam < k < 2 lam
+
+=== H155b: U' schwer machen mit zeta N(W) ===
+   k = -0.2, zeta = -0.300: (phi, y1, y2) = [-2.301301, 2.453961, 0.0], K - 2/3 = +4.569e-02, m^2_U'/|mu^2| = +0.90164, Eigenwerte [0.90164, 4.27238, 14.16095]
+   k = -0.2, zeta = -0.100: (phi, y1, y2) = [-2.254679, 2.306997, 0.0], K - 2/3 = +1.565e-02, m^2_U'/|mu^2| = +0.28255, Eigenwerte [0.28255, 4.08206, 12.67137]
+   k = -0.2, zeta = -0.010: (phi, y1, y2) = [-2.237785, 2.243087, 0.0], K - 2/3 = +1.581e-03, m^2_U'/|mu^2| = +0.02747, Eigenwerte [0.02747, 4.00783, 12.06501]
+   k = -0.2, zeta = -0.001: (phi, y1, y2) = [-2.236238, 2.236769, 0.0], K - 2/3 = +1.583e-04, m^2_U'/|mu^2| = +0.00274, Eigenwerte [0.00274, 4.00078, 12.00648]
+   k = -0.2, zeta = +0.001: (phi, y1, y2) = [2.236238, -2.236769, 0.0], K - 2/3 = +1.583e-04, m^2_U'/|mu^2| = +0.00274, Eigenwerte [0.00274, 4.00078, 12.00648]
+   k = -0.2, zeta = +0.010: (phi, y1, y2) = [2.237785, -2.243087, 0.0], K - 2/3 = +1.581e-03, m^2_U'/|mu^2| = +0.02747, Eigenwerte [0.02747, 4.00783, 12.06501]
+   k = -0.2, zeta = +0.100: (phi, y1, y2) = [2.254679, -2.306997, 0.0], K - 2/3 = +1.565e-02, m^2_U'/|mu^2| = +0.28255, Eigenwerte [0.28255, 4.08206, 12.67137]
+   k = -0.2, zeta = +0.300: (phi, y1, y2) = [2.301301, 1.22698, 2.125193], K - 2/3 = +4.569e-02, m^2_U'/|mu^2| = +0.90164, Eigenwerte [0.90164, 4.27238, 14.16095]
+   k = +0.2, zeta = -0.300: (phi, y1, y2) = [-1.144148, -0.762676, -1.320994], K - 2/3 = +2.591e-01, m^2_U'/|mu^2| = +0.56045, Eigenwerte [0.56045, 1.75093, 4.25378]
+   k = +0.2, zeta = -0.100: (phi, y1, y2) = [-1.231383, -0.689398, -1.194072], K - 2/3 = +8.459e-02, m^2_U'/|mu^2| = +0.16887, Eigenwerte [0.16887, 1.46583, 4.06135]
+   k = +0.2, zeta = -0.010: (phi, y1, y2) = [-1.284537, 1.300342, -0.0], K - 2/3 = +8.253e-03, m^2_U'/|mu^2| = +0.01593, Eigenwerte [0.01593, 1.34671, 4.00468]
+   k = +0.2, zeta = -0.001: (phi, y1, y2) = [-1.290344, 1.291935, -0.0], K - 2/3 = +8.228e-04, m^2_U'/|mu^2| = +0.00158, Eigenwerte [0.00158, 1.33467, 4.00045]
+   k = +0.2, zeta = +0.001: (phi, y1, y2) = [1.290344, -1.291935, 0.0], K - 2/3 = +8.228e-04, m^2_U'/|mu^2| = +0.00158, Eigenwerte [0.00158, 1.33467, 4.00045]
+   k = +0.2, zeta = +0.010: (phi, y1, y2) = [1.284537, -1.300342, 0.0], K - 2/3 = +8.253e-03, m^2_U'/|mu^2| = +0.01593, Eigenwerte [0.01593, 1.34671, 4.00468]
+   k = +0.2, zeta = +0.100: (phi, y1, y2) = [1.231383, 0.689398, 1.194072], K - 2/3 = +8.459e-02, m^2_U'/|mu^2| = +0.16887, Eigenwerte [0.16887, 1.46583, 4.06135]
+   k = +0.2, zeta = +0.300: (phi, y1, y2) = [1.144148, 0.762676, -1.320994], K - 2/3 = +2.591e-01, m^2_U'/|mu^2| = +0.56045, Eigenwerte [0.56045, 1.75093, 4.25378]
+   Punkte mit m^2_U' >= |mu^2| und |K - 2/3| < 1,5e-5: 0
+   k = -0.2, |zeta| <= 0,01: Verhaeltnis (K - 2/3)/m^2_U' = [0.05756, 0.05778, 0.05778, 0.05756]
+   k = +0.2, |zeta| <= 0,01: Verhaeltnis (K - 2/3)/m^2_U' = [0.51821, 0.52001, 0.52002, 0.51821]
+
+=== H155c: Entkopplung im Fluss (Fenster mit n_B = 2) ===
+   16 pi^2 beta (muA, muB, lA, ka, lB), n_B = 2: [8*(ka*mB + 3*lA*mA), 4*(ka*mA + 8*lB*mB), 4*(ka**2 + 18*lA**2), 8*ka*(2*ka + 3*lA + 4*lB), 2*(ka**2 + 40*lB**2)]
+   16 pi^2 beta, n_B = 1: [4*(ka*mB + 6*lA*mA), 4*(ka*mA + 6*lB*mB), 2*(ka**2 + 36*lA**2), 8*ka*(2*ka + 3*lA + 3*lB), 2*(ka**2 + 36*lB**2)]
+   lam = 0.05, k/lam = -1.0: K - 2/3 = ln(382/246,22): -9.64e-08, ln(246,22/91,19): -4.51e-07, ln(91,19/9,78): -1.83e-06, ln(246,22/9,78): -3.13e-06; Fenster 0: +1.1e-16; L_max = 1.15e+01 (Faktor 102333.204170)
+   lam = 0.05, k/lam = -0.5: K - 2/3 = ln(382/246,22): -7.35e-07, ln(246,22/91,19): -3.68e-06, ln(91,19/9,78): -1.78e-05, ln(246,22/9,78): -3.57e-05; Fenster 0: +0.0e+00; L_max = 2.04e+00 (Faktor 7.728600)
+   lam = 0.05, k/lam = +0.5: K - 2/3 = ln(382/246,22): -1.55e-06, ln(246,22/91,19): -7.81e-06, ln(91,19/9,78): -3.80e-05, ln(246,22/9,78): -7.72e-05; Fenster 0: +0.0e+00; L_max = 1.38e+00 (Faktor 3.993286)
+   lam = 0.05, k/lam = +1.0: K - 2/3 = ln(382/246,22): -1.73e-06, ln(246,22/91,19): -8.71e-06, ln(91,19/9,78): -4.25e-05, ln(246,22/9,78): -8.62e-05; Fenster 0: +0.0e+00; L_max = 1.31e+00 (Faktor 3.704551)
+   lam = 0.1, k/lam = -1.0: K - 2/3 = ln(382/246,22): -3.59e-07, ln(246,22/91,19): -1.52e-06, ln(91,19/9,78): -4.46e-06, ln(246,22/9,78): -4.70e-06; Fenster 0: +1.1e-16; L_max = 5.77e+00 (Faktor 319.895614)
+   lam = 0.1, k/lam = -0.5: K - 2/3 = ln(382/246,22): -2.89e-06, ln(246,22/91,19): -1.42e-05, ln(91,19/9,78): -6.55e-05, ln(246,22/9,78): -1.28e-04; Fenster 0: +0.0e+00; L_max = 1.02e+00 (Faktor 2.780036)
+   lam = 0.1, k/lam = +0.5: K - 2/3 = ln(382/246,22): -6.13e-06, ln(246,22/91,19): -3.03e-05, ln(91,19/9,78): -1.43e-04, ln(246,22/9,78): -2.83e-04; Fenster 0: +0.0e+00; L_max = 6.92e-01 (Faktor 1.998321)
+   lam = 0.1, k/lam = +1.0: K - 2/3 = ln(382/246,22): -6.83e-06, ln(246,22/91,19): -3.39e-05, ln(91,19/9,78): -1.60e-04, ln(246,22/9,78): -3.16e-04; Fenster 0: +0.0e+00; L_max = 6.55e-01 (Faktor 1.924721)
+   lam = 0.2, k/lam = -1.0: K - 2/3 = ln(382/246,22): -1.24e-06, ln(246,22/91,19): -4.00e-06, ln(91,19/9,78): +4.97e-07, ln(246,22/9,78): +2.70e-05; Fenster 0: +1.1e-16; L_max = 2.88e+00 (Faktor 17.885626)
+   lam = 0.2, k/lam = -0.5: K - 2/3 = ln(382/246,22): -1.12e-05, ln(246,22/91,19): -5.28e-05, ln(91,19/9,78): -2.25e-04, ln(246,22/9,78): -4.13e-04; Fenster 0: +0.0e+00; L_max = 5.11e-01 (Faktor 1.667344)
+   lam = 0.2, k/lam = +0.5: K - 2/3 = ln(382/246,22): -2.39e-05, ln(246,22/91,19): -1.15e-04, ln(91,19/9,78): -5.08e-04, ln(246,22/9,78): -9.62e-04; Fenster 0: +0.0e+00; L_max = 3.46e-01 (Faktor 1.413620)
+   lam = 0.2, k/lam = +1.0: K - 2/3 = ln(382/246,22): -2.66e-05, ln(246,22/91,19): -1.28e-04, ln(91,19/9,78): -5.68e-04, ln(246,22/9,78): -1.08e-03; Fenster 0: +0.0e+00; L_max = 3.27e-01 (Faktor 1.387343)
+   verfehlt (|K - 2/3| >= 1,5e-5): 26/48
+   (nachtraeglich) erste Ordnung in L: d(muA - muB) + 2 A0 d(lA - lB) = 0 -> dK/dL bei L = 0 verschwindet exakt
+   Nachlauf mit n_B = 1 (L2 = 2) nach Fenster ln(246,22/91,19): K - 2/3 = -6.349e-05 (ohne Nachlauf -1.419e-05)
+   nur n_B = 1 ab symmetrischem Start (L2 = 5): K - 2/3 = +1.1e-16
+
+=== H155d: delta mit Term sechster Ordnung ===
+   Minimum von zeta N + N^2/Lam^2 auf theta = pi/4: cos 3 delta = -6*sqrt(3)*R + sqrt(2)/2 ; delta = 2/9 bei R* = -sqrt(3)*cos(2/3)/18 + sqrt(6)/36 = -0.007580655183067589
+   innere Minima (drei verschiedene Massen) fuer R in [-0.028183663120960458, 0.1642664266089148] ; mit negativem N^2-Koeffizienten: Maximum, delta bleibt 0 oder pi/3
+   196 Kombinationen; Treffer innerhalb 1 %: 1 [('Sum m_l', 'v', 'v', -1, -0.007648038339696207)]
+   Zufallserwartung (log-gleichverteilt ueber 30.7 e-Folgen, 98 mit passendem Vorzeichen): 0.06
+   naechste: [('Sum m_l', 'v', 'v', 0.0089), ('m_tau', 'v', 'v', -0.048), ('9,78', 'm_h', 'v', 0.3548)]
+   Sum m_l, v, v: delta = 0.221844, Abstand zu 0,222225: -63 sigma
+   m_tau, v, v: delta = 0.224252, Abstand zu 0,222225: +338 sigma
+   9,78, m_h, v: delta = 0.206690, Abstand zu 0,222225: -2589 sigma
+
+=== Nachtraeglich (Erkundung, nicht in der Vorab-Notiz): K und delta gemeinsam, wenn zeta N + N^2/Lam^2 delta = 2/9 einstellt ===
+   lam = 0.1, k/lam = -1: entartete Minima (delta, Vorzeichen Summe c): delta = 0.22222, +: K - 2/3 = -3.3e-09; delta = 0.29713, -: K - 2/3 = +3.1e-09
+   lam = 0.1, k/lam = +1: entartete Minima (delta, Vorzeichen Summe c): delta = 0.22222, +: K - 2/3 = -1.1e-08; delta = 0.29713, -: K - 2/3 = -5.6e-09
+   lam = 0.5, k/lam = -1: entartete Minima (delta, Vorzeichen Summe c): delta = 0.22222, +: K - 2/3 = +7.0e-09; delta = 0.29713, -: K - 2/3 = +2.0e-09
+   lam = 0.5, k/lam = +1: entartete Minima (delta, Vorzeichen Summe c): delta = 0.22222, +: K - 2/3 = +9.8e-10; delta = 0.29713, -: K - 2/3 = -3.0e-10
+   lam = 2.0, k/lam = -1: entartete Minima (delta, Vorzeichen Summe c): delta = 0.22222, +: K - 2/3 = -7.7e-10; delta = 0.29713, -: K - 2/3 = +9.9e-10
+   lam = 2.0, k/lam = +1: entartete Minima (delta, Vorzeichen Summe c): delta = 0.22222, +: K - 2/3 = +6.8e-09; delta = 0.29713, -: K - 2/3 = -3.2e-09
+   delta zum zweiten Zweig (Summe c < 0, N -> -N): arccos(sqrt2 - cos(2/3))/3 = 0.29713213705526165
