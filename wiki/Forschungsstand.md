@@ -20,6 +20,18 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Konfigurationen je Sektor: zwei Stellgrößen für die Massen, ein Bruch gleicher Größe für beide Mischungen (26.11.2026, Erkundung k374; H176 festgeschrieben)
+
+**Erkundung, nicht blind; alles angepasst, nichts hergeleitet.** Auftrag des Autors: erst je Teil das System justieren, dann die Konfigurationen nebeneinanderlegen und die HS-Stufe beachten.
+
+- **Massen:** Je Sektor zwei Stellgrößen, Koide-Wert K und Phase δ. Neutrinos (K = ⅔ gesetzt; 0,480), geladene Leptonen (⅔; 0,222), Down (0,748; 0,100), Up (0,888; 0,052), Quarks bei M_Z und skalenabhängig.
+- **Mischungen:** CKM hat den Baumwert Einheitsmatrix (beide Quarksektoren zirkulant in derselben Basis), PMNS tribimaximal. Der kleinste Term, der die Dreiersymmetrie bricht und die Messwerte trifft, hat die Norm 0,157 (CKM, Down), 0,166 (CKM, Up) und 0,075 (PMNS, geladene Leptonen); ohne den Versatz der Neutrinos wären es bei PMNS 0,164. Er ist überall überwiegend reell symmetrisch (83 bis 98 %). Die CKM-Winkel sind klein, weil die Quarkmassen weit auseinanderliegen, nicht weil der Bruch klein wäre.
+- **HS-Stufen (Abzählung):** hermitesche 3×3-Formen über ℝ, ℂ, ℍ, 𝕆: 6, 9, 15, 27; davon brechen 4, 6, 10, 18 die Dreiersymmetrie. Eine reelle zirkulante Form kennt nur δ = 0 oder π/3; jede gemessene Phase braucht mindestens ℂ. Nur die Neutrinos (reell, nicht zirkulant) haben eine Massenform, die schon auf HS(0) Platz hat. Der imaginäre antisymmetrische Anteil der Mischungen existiert erst ab HS(1).
+- **Nachträgliche Beobachtung, kein Befund:** δ halbiert sich grob von Neutrinos über geladene Leptonen und Down zu Up (0,480 / 0,222 / 0,100 / 0,052 gegen π/6, π/12, π/24, π/48 = 0,524 / 0,262 / 0,131 / 0,065). Skalenabhängig, an vier Punkten abgelesen, nicht getestet.
+- **H176 (festgeschrieben, Vorab 06f0743):** Der Ein-Zahl-Kandidat aus k373 mit x = 0,04478 sagt sin²θ₁₂ = 0,3019, sin²θ₁₃ = 0,0223, sin²θ₂₃ = 0,4954, δ_CP = ±77,7°, Summe der Neutrinomassen 59,4 meV. Prüfung an künftigen Daten; nicht blind gegenüber den heutigen.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/konfigurationen_k374/` und `notes/research/hilbert_shift_felder_2026_11_24/mischung_h176/`.
+
 ### Mischung: ein Term aus der Ladungsrichtung ist möglich, aber nicht nötig; die Eingaben zerfallen in zwei Gruppen (26.11.2026, Test H175, Erkundung k372, Nachtrag k373)
 
 **Test H175. Ergebnis: a verträglich, aber nicht ausgezeichnet (blind); b trägt nicht (blind); c mit x nicht entschieden, mit x_R ein verträglicher Fall unter 16 (blind).** Geprüft wurde die Kopplung zwischen s und v bei den geladenen Leptonen: imaginär antisymmetrisch, ungerade unter A, zwei Richtungen K₁, K₂.

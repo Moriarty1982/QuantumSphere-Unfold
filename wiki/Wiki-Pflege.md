@@ -1014,3 +1014,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Test H174:** Beimischung der neutralen Form (k370) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **26.11.2026, Test H175 mit k372, k373:** Term aus der Ladungsrichtung, Eingaben einzeln, stochastische Suche in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**26.11.2026, Vorab-Notiz H176 und Erkundung k374:** Ein-Zahl-Kandidat festgeschrieben; Konfigurationen je Sektor und HS-Stufen in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
