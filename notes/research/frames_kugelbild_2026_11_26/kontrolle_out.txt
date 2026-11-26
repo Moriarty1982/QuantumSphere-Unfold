@@ -1,0 +1,15 @@
+== Kontrollrechnung (sympy, exakt) ==
+1. b1^2 + b2^2 + |ExB|^2/u^2 - 1 = 0   (jeder Feldzustand liegt auf der Einheitskugel, b3 >= 0)
+2. R (reines E-Feld) unter Schub eta quer zum Feld:
+   b1 - sech(2 eta) = 0
+   b3 - tanh(2 eta) = 0
+   |B'|/|E'| - tanh(eta) = 0
+3. bei eta = artanh(beta):  p_+ - 1/(1+beta^2) = 0 ;  b1 - (1-beta^2)/(1+beta^2) = 0
+4. Ellipse k297 (b/a = mu = beta^2): kleine/grosse Achse - b1(M) = 0
+   Stokes-Anteil derselben Ellipse (1-mu^2)/(1+mu^2) = 0.832993  gegen b1(M) = 1/gamma_L = 0.536279  -> verschieden, siehe README
+== Zahlen ==
+beta_sym = 0.5494056410, x = 0.301847, gamma_L = 1.864700, eps = 0.617530
+M: b1 = 0.536279, b3 = 0.844041, Winkel vom Pol R = 57.569 Grad, p+ = 0.768140, p- = 0.231860
+T: b1 = -0.536279, b3 = 0.844041, p+ = 0.231860, p- = 0.768140
+P: b1 = 0, b3 = 1, p+ = p- = 1/2;   R: b1 = 1, b3 = 0, p+ = 1
+geschrieben nach /home/user/QuantumSphere-Unfold/notes/research/frames_kugelbild_2026_11_26
