@@ -1,0 +1,52 @@
+Invarianten: Grad 2: 7, Grad 4: 33
+Probe Tensoren: |T[x,x,x,x] - P(x)| = 3.2e-14
+
+== H183a: gemeinsame Stabilitaet (feste Norm, volle Fassung, 40 Koeffizienten) ==
+   t* = groesster erreichbarer kleinster Eigenwert der zweiten Variation ausserhalb der Symmetrierichtungen, bei normierten Koeffizienten.
+   t* > 0: gemeinsam stabil moeglich; t* = 0: nur die triviale Loesung V = 0, also nicht moeglich.
+   Stationaritaet an L, D, Up laesst frei: 31 von 40 Koeffizienten (H183c)
+   Symmetrierichtungen: L: 0, D: 5, U: 5; gepruefte Richtungen: L: 15, D: 10, U: 10
+   L         : t* = +1.689181  (freie Koeffizienten 39)
+   D         : t* = +0.482750  (freie Koeffizienten 36)
+   U         : t* = +0.440126  (freie Koeffizienten 36)
+   D + U     : t* = +0.135006  (freie Koeffizienten 32)
+   L + D     : t* = -0.000000  (freie Koeffizienten 35)
+   L + U     : t* = +0.000000  (freie Koeffizienten 35)
+   L + D + U : t* = -0.000000  (freie Koeffizienten 31)
+   Urteil H183a: WIDERLEGT (L, D und Up sind in keinem Potential bis Grad 4 zugleich stabil; schon L mit einem Quarkzustand geht nicht)
+   Bericht Phasenfassung: L: t* = +0.414672, D + U: t* = +0.116834, L + D + U: t* = -0.000000
+   H183b entfaellt in der vorab geschriebenen Form (kein gemeinsamer loesbarer Bereich).
+
+== Zusatz (nachtraeglich, Erkundung): Woran es liegt ==
+   Zertifikat fuer L + D (positive Gewichte auf Richtungen, deren Kruemmungen sich fuer jedes Potential zu null summieren): Status optimal
+      L: 0.049 auf (1: 0.00, U: 0.00, Farbe: 1.00); 0.049 auf (1: 0.00, U: 0.00, Farbe: 1.00); 0.049 auf (1: 0.00, U: 0.00, Farbe: 1.00); 0.049 auf (1: 0.00, U: 0.00, Farbe: 1.00); 0.049 auf (1: 0.00, U: 0.00, Farbe: 1.00); 0.049 auf (1: 0.00, U: 0.00, Farbe: 1.00); 0.014 auf (1: 0.50, U: 0.50, Farbe: 0.00)
+      D: 0.361 auf (1: 0.00, U: 1.00, Farbe: 0.00); 0.330 auf (1: 0.55, U: 0.00, Farbe: 0.45)
+   Reelle Unterfamilie zum Nachrechnen (X = x0^2, Y = xU^2, q = |c|^2, X + Y + q = 1): V = f(q) + delta X Y, f quadratisch.
+      L (q = 0, X = Y = 1/2) stabil in der Leptonebene verlangt delta < 0; D (Y = 0, q = t_d) stabil gegen einen U-Anteil verlangt delta (1 - t_d) > 0. Widerspruch.
+   Abhaengigkeit vom Winkel (L + Quarkzustand mit Ladung 1/3 bzw. 2/3; Quarkzustand allein):
+      theta =  10.000: L + Q(1/3): +0.00000; L + Q(2/3): +0.00000; Q(1/3) allein: +0.08191
+      theta =  30.000: L + Q(1/3): +0.00000; L + Q(2/3): -0.00000; Q(1/3) allein: +0.45082
+      theta =  45.000: L + Q(1/3): +0.00000; L + Q(2/3): -0.00000; Q(1/3) allein: +0.50467
+      theta =  48.114: L + Q(1/3): -0.00000; L + Q(2/3): -0.00000; Q(1/3) allein: +0.48275
+      theta =  52.207: L + Q(1/3): +0.00000; L + Q(2/3): +0.00000; Q(1/3) allein: +0.44013
+      theta =  60.000: L + Q(1/3): -0.00000; L + Q(2/3): -0.00000; Q(1/3) allein: +0.32785
+      theta =  80.000: L + Q(1/3): +0.00000; L + Q(2/3): +0.00000; Q(1/3) allein: +0.04437
+   Quarkzustand mit farblosem Anteil bei 45 Grad, cos(theta) (1 + U)/sqrt2 + sin(theta) n:
+      L + D': -0.00000; D' allein: +0.69927  (Grund: entlang q ist V dort quadratisch, g(q); L verlangt g'(0) > 0, D' verlangt g'(q_d) = 0 mit g'' > 0)
+   Freie Norm (Skala nicht gesetzt; Zustaende r * x, voller Gradient null):
+      r_D = 1, r_U = 1: L + D: +0.00000; L + D + Up: -0.00000; D + Up: +0.09808
+      r_D = 0.5, r_U = 0.5: L + D: +0.00000; L + D + Up: +0.00000; D + Up: +0.02469
+      r_D = 0.8, r_U = 1.25: L + D: +0.00000; L + D + Up: +0.00000; D + Up: +0.06134
+      r_D = 1.25, r_U = 0.8: L + D: -0.00000; L + D + Up: +0.00000; D + Up: +0.06974
+      r_D = 2, r_U = 2: L + D: +0.00000; L + D + Up: +0.00000; D + Up: +0.36345
+
+== Zusatz (nachtraeglich, Erkundung): Was geht ==
+   D + Up gemeinsam stabil: t* = +0.13501 (freie Koeffizienten 32). Vorzeichen im loesbaren Bereich (|y| <= 1, Rand t >= 0):
+      A = (a_u + a_d)/2                     : [-0.4860, -0.0000] -> erzwungen < 0
+      B = (b_u + b_d)/2                     : [-0.0000, +0.4149] -> erzwungen > 0
+      C = (a_u - a_d)/2                     : [-0.0578, +0.0768] -> frei
+      D = (b_u - b_d)/2                     : [-0.0750, +0.0462] -> frei
+      V_L(45) - V_L(0) in der Leptonebene   : [-0.0000, +0.2685] -> erzwungen > 0
+   Ein Vakuum L allein: t* = +1.68918. Schwingungen um L am Punkt mit groesstem t* (Frequenzquadrat, Farbanteil):
+      1.6892 x 15 (Farbanteil 0.80)
+      allgemeines Potential: 8 unabhaengige Matrizen der zweiten Variation bei L; Vielfachheiten der Frequenzquadrate bei zufaelligen Koeffizienten: [6, 6, 1, 1, 1]
