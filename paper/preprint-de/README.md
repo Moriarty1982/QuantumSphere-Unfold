@@ -43,7 +43,7 @@ bis r65 des Companion (Tests H105, H127 bis H136, H138 bis H156 und H162 mit ihr
 dazu ein Satz zur Nachrechnung k358 (Erkundung, Runde r68). Der Abschnitt zu den offenen Punkten ist jetzt 5.9. Abschnitt 5.7 verweist auf die
 Einschränkung des relativen CP-Vorzeichens durch r65. Titelseite auf „Fassung 0.4.0“, Version-DOI 10.5281/zenodo.24563916 seit der Reservierung am 26.11.2026; Zusammenfassung
 nennt das Zählpostulat und den Vorgänger 0.3.0. Neue Literatureinträge `roundsr60r65` (gepinnt auf 3fc66afd) und `recalc` (gepinnt auf c0657a6a,
-Merge von PR #338); `layers` reicht bis r67 und nennt v5.4.0 für die Runden bis r59. Lokaler Build: 61 Seiten, 0 Overfull, keine undefinierten
+Merge von PR #338); `layers` nennt v5.4.0 für die Runden bis r59 und v5.5.0 (DOI 10.5281/zenodo.24563811) für r60 bis r68. Lokaler Build: 61 Seiten, 0 Overfull, keine undefinierten
 Verweise. Die veröffentlichte Fassung 0.3.0 bleibt unverändert; jeder Zenodo-Schritt nur mit Freigabe des Autors. Änderungsliste, Metadaten
 und Schritte im [Release-Paket](../../release/preprint-de-v0.4.0/README.md).
 

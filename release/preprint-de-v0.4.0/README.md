@@ -9,9 +9,9 @@ gilt für die Entscheidung, dass diese Fassung erscheint. Concept-DOI 10.5281/ze
 - Quelle: `paper/preprint-de/` (Fassung 0.4.0; lokaler Build am 26.11.2026 mit leerer Version-DOI: 61 Seiten, 0 Overfull, keine
   undefinierten Verweise oder Zitate).
 - Metadaten: `release/zenodo/metadata_preprint_de_0_4_0.json` (isVersionOf Concept 24405552, isNewVersionOf 0.3.0 24497991, Bezug
-  Companion v5.4.0, DOI 10.5281/zenodo.24500009, und Repository). **Erscheint vorher der Companion v5.5.0, den Bezug in den
-  Metadaten (`related_identifiers` und Absatz „Geltungsbereich“) auf dessen Version-DOI umstellen.** `publication_date` 2026-11-26 ist
-  vorläufig und wird vor dem Veröffentlichen auf das tatsächliche Datum gesetzt, ebenso das Datum auf der Titelseite.
+  Companion v5.5.0, DOI 10.5281/zenodo.24563811, und Repository; Entscheidung des Autors vom 26.11.2026, der Companion v5.5.0 muss
+  deshalb vor oder zusammen mit dem Preprint erscheinen). `publication_date` 2026-11-26 und das Datum auf der Titelseite hat der Autor
+  am 26.11.2026 bestätigt.
 - Payload: `Quantum_Sphaera_Preprint_0.4.0.pdf` in diesem Ordner. Gebaut am 26.11.2026 nach der Reservierung, mit der
   Version-DOI auf der Titelseite (61 Seiten); Prüfsumme in `SHA256SUMS.txt`.
 - Lokaler Trockenlauf von `tools/zenodo_publish.py` (`--new-version-of 24497991 --reserve-only --dry-run`) am 26.11.2026: bestanden
@@ -62,7 +62,7 @@ der Gleichberechtigung von Materie- und Tachyon-Frame (r63, Arbeitsannahme des A
 - Neuer Abschnitt 5.8 „Familiensymmetrie, Kopien und der Koide-Punkt“ (r60–r65, k358); der Abschnitt zu den offenen Punkten ist jetzt 5.9,
   seine Tabelle verweist bei OP3 und OP4 auf 5.8.
 - Literatur: neue Einträge `countingpostulate` (r66, r67), `roundsr60r65` und `recalc` (k358); `layers` bis r67, mit dem Hinweis, dass die
-  Runden bis r59 in v5.4.0 veröffentlicht sind.
+  Runden bis r59 in v5.4.0 und die Runden r60 bis r68 in v5.5.0 stehen.
 
 ## Schritte
 
