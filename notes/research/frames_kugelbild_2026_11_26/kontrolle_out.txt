@@ -1,15 +1,19 @@
 == Kontrollrechnung (sympy, exakt) ==
-1. b1^2 + b2^2 + |ExB|^2/u^2 - 1 = 0   (jeder Feldzustand liegt auf der Einheitskugel, b3 >= 0)
-2. R (reines E-Feld) unter Schub eta quer zum Feld:
-   b1 - sech(2 eta) = 0
-   b3 - tanh(2 eta) = 0
-   |B'|/|E'| - tanh(eta) = 0
-3. bei eta = artanh(beta):  p_+ - 1/(1+beta^2) = 0 ;  b1 - (1-beta^2)/(1+beta^2) = 0
-4. Ellipse k297 (b/a = mu = beta^2): kleine/grosse Achse - b1(M) = 0
-   Stokes-Anteil derselben Ellipse (1-mu^2)/(1+mu^2) = 0.832993  gegen b1(M) = 1/gamma_L = 0.536279  -> verschieden, siehe README
+1. b_C^2 + b_S^2 + |ExB|^2/u^2 - 1 = 0   (jeder Feldzustand liegt auf der Einheitskugel, b_3 >= 0)
+2. R (E = B) unter Schub eta quer zum Feld:
+   b_C - sech(2 eta) = 0 ;  b_S = 0 ;  b_3^2 - tanh(2 eta)^2 = 0
+3. bei eta = artanh(beta):  p_+ - 1/(1+beta^2) = 0
+4. HC im Feld-Dublett, C = (1+J_B)/2:  E' = B' = (E+B)/2
+   Bild: b_C = 1 , b_S = 0 , b_3^2 = 0  (Pol R);  behaltener Anteil - (1+b_C)/2 = 0
+   Partner A: b_C = -1  (Gegenpol D(R));  Anteil - (1-b_C)/2 = 0
+5. Weg aus r27: R, Dualitaetsdrehung um alpha, dann HC (nicht selektiv): b_C = cos(2 alpha);
+   mit tan(alpha) = beta:  cos(2 alpha) - (1-beta^2)/(1+beta^2) = 0 ;  p_+ = cos(alpha)^2 = 0.768140
+6. Portgewichte gegen Ellipse (a, b = Amplituden der zwei Kreisanteile, Gewichte a^2 : b^2):
+   Konvention F, Gewichte 1 : x  ->  b/a = beta, Achsen (1+beta)/(1-beta) - exp(2 artanh beta) = 0
+   k292/k297, b/a = x  ->  Gewichte 1 : x^2, Achsen (1+x)/(1-x) = gamma_L, Hoehe (1-x^2)/(1+x^2);
+   das ist die Hoehe nach einem Schub mit Geschwindigkeit x = beta^2:  sech(2 artanh x) - (1-x^2)/(1+x^2) = 0
 == Zahlen ==
 beta_sym = 0.5494056410, x = 0.301847, gamma_L = 1.864700, eps = 0.617530
-M: b1 = 0.536279, b3 = 0.844041, Winkel vom Pol R = 57.569 Grad, p+ = 0.768140, p- = 0.231860
-T: b1 = -0.536279, b3 = 0.844041, p+ = 0.231860, p- = 0.768140
-P: b1 = 0, b3 = 1, p+ = p- = 1/2;   R: b1 = 1, b3 = 0, p+ = 1
-geschrieben nach /home/user/QuantumSphere-Unfold/notes/research/frames_kugelbild_2026_11_26
+M (Konvention F): Gewichte 0.768140 : 0.231860, Hoehe b_C = 0.536279, Winkel vom Pol 57.569 Grad, b_3 = 0.844041, Ellipse 3.4386 : 1
+k292/k297 (b/a = x): Gewichte 0.916497 : 0.083503, Hoehe 0.832993, Winkel vom Pol 33.593 Grad, Ellipse 1.8647 : 1
+geschrieben nach frames_kugelbild_2026_11_26
