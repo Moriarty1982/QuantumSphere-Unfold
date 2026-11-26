@@ -158,6 +158,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H182, 26.11.2026:** Für OP3 und OP4. In ℂ ⊗ 𝕆 lässt J genau im Farbblock eine hermitesche Form zu, die die Ladungen ⅓ und ⅔ verschieden gewichtet, und keine im Farblosen: K_ν = K_e bleibt geschützt, θ_u ≠ θ_d ist erlaubt. Die Größe des Unterschieds (zwei Verhältnisse) ist angepasst. Teil b in der vorab geschriebenen Form widerlegt (bilineare Form im Farblosen). Nichts geschlossen.
 
+**Test H183, 26.11.2026:** Für OP3 und OP4 (Feldgleichung). Mit einem Feld und invariantem Potential bis Grad 4 sind Leptonzustand und Quarkzustand nie zugleich stabil (widerlegt; konvexes Programm, Grund exakt: Vorzeichen von b₂). Offen: ein Vakuum mit Schwingungen, getrennte Felder oder höherer Grad. Nichts geschlossen.
+
 **Test H181, 26.11.2026:** Für OP1 (Rolle von β_sym im HC). Der Zustand mit b/a = β_sym² (alte Lesart aus k292/k297) trägt als gemeinsamer Zustand die Ablesungen m_W, Ω_M, sin²θ₁₂ und die Maske nicht; widerlegt. Der Zahlentreffer κ → m_h = 124,8 GeV bleibt ohne Herleitung und trennt die Lesarten nicht. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/zwei_lesarten_h181/`.
 
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.

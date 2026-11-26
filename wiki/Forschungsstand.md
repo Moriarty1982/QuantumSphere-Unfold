@@ -106,6 +106,22 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Leptonen und Quarks sind nicht zugleich stabile Lösungen einer Feldgleichung bis Grad 4 (26.11.2026, Test H183, k386)
+Vorab-Notiz a009664. Anlass: Autor, 26.11.2026 („schau dir die Feldgleichung an“).
+- **Aufbau:** ein Feld in ℂ ⊗ 𝕆, kinetischer Term und allgemeines invariantes Potential bis Grad 4 (40 Koeffizienten, wie H182); statische homogene
+  Lösungen und ihre zweite Variation; Lösbarkeit über ein konvexes Programm, also für alle Koeffizienten zugleich entschieden.
+- **Befund:** Der Leptonzustand (45°), Down und Up sind einzeln stabil möglich, Down und Up auch gemeinsam. **Leptonzustand und Quarkzustand zusammen
+  nie**, für keinen Winkel, mit fester und mit freier Norm. Urteil: **widerlegt**.
+- **Grund (Wolfram exakt):** Der Term b₂x₀²x_U² macht 45° bei den Leptonen nur für b₂ < 0 zum Minimum; ein Quarkzustand ist gegen einen U-Anteil nur
+  für b₂ > 0 stabil. Das offene Vorzeichen (κ aus H178, 2a − b aus H149) hängt also daran, welcher Zustand das Vakuum ist.
+- **Was geht (nachträglich):** Ein Vakuum mit den anderen Sektoren als Schwingungen. Um den Leptonzustand haben die Schwingungen die Vielfachheiten
+  6, 6, 1, 1, 1: zwei Farbgruppen (Ladung ⅓ und ⅔) mit eigener Frequenz und drei farblose.
+- **Folge:** Die Lesart „ein Potential, je Sektor ein eigener stationärer Zustand“ aus H178, k378, H182 ist zurückgenommen; die Symmetrieaussagen dort
+  bleiben. Offen (Weggabelung für den Autor): ein Vakuum mit Schwingungen, getrennte Felder je Sektor oder höherer Grad.
+- Grenzen: Grad ≤ 4, statisch und homogen (Ableitungsterme und rotierende Lösungen nicht einbezogen), lokale Stabilität, kein Generationenindex.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/feldgleichung_h183/`.
+
 ### Der Tausch J erlaubt nur im Farbblock einen ladungsabhängigen Massenterm (26.11.2026, Test H182, k385)
 Vorab-Notiz 70fdce1 (Teil a nicht blind). Anlass: Entscheidung des Autors nach k384, Up gegen Down als Ladungsanteil im Block zu lesen.
 - **Aufbau:** Feld in ℂ ⊗ 𝕆; Symmetrien Farbe, Oktonion-Konjugation und J, komplex-linear fortgesetzt; alle Invarianten bis Grad 4 gezählt (7 vom Grad 2,
