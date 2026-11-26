@@ -1,0 +1,25 @@
+== 1. Farbanteil aus der Farbsymmetrie (Derivationen von O, die e7 festhalten) ==
+   dim Der(O) = 14 (g2);  davon mit D(e7) = 0: 8 (su(3)_c)
+   gemeinsamer Kern aller Farbgeneratoren: Dimension 2, getragen von den Einheiten [0, 7] (also genau 1 und e7)
+   Casimir-Eigenwerte (bis auf Normierung): [np.float64(-0.0), np.float64(1.33333333)] mit Vielfachheiten [2, 6]: 1 + 1 + 6 (= 3 + 3-quer)
+   Folge (Schur): Ein Feld, das als Farbtriplett transformiert, liegt ganz in e1..e6. Fuer beide Quarktypen ist sin^2 alpha = 1; einen
+   gebrochenen Farbanteil (R1, R2 aus H178) gibt es fuer ein Farbmultiplett nicht.
+   Im Potential aus H178 (V = A q + B q^2 + kappa p) ist dann xU = 0 und sin^2 theta = -A/(2B) fuer beide Quarktypen gleich.
+   Gemessen: sin^2 theta_d = 0.5542, sin^2 theta_u = 0.6245. Mit reiner Farbe braucht es also je Quarktyp ein eigenes Verhaeltnis A/B: -1.1085 (d), -1.2489 (u).
+
+== 2. Wirkt die Farbrichtung auf delta? Kubischer Term t = Re((x1 x2) x3) der Albert-Algebra ==
+   Gleiche Eintraege x_i = cos(phi) + sin(phi) n, n beliebige imaginaere Richtung (2000 Zufallsfaelle): |t - cos(3 phi)| <= 2.1e-15
+   Folge: Zeigen alle drei Nebendiagonalen in dieselbe Richtung, haengt der kubische Term nur von phi ab, nicht von der Richtung. Farbe verschiebt delta dann nicht.
+   Verschiedene Richtungen n_i: t = cos^3 phi - cos phi sin^2 phi (n1.n2 + n2.n3 + n1.n3) - sin^3 phi Phi(n1, n2, n3); Abweichung <= 3.3e-16
+   Beispiele (n_i = cos(alpha) e7 + sin(alpha) c_i, Farbrichtungen c_i paarweise senkrecht):
+   c = (e1, e2, e3) (assoziatives Tripel): sin^2 a = 0.00: G = +3.000, Phi = +0.000, erste Nullstelle phi = 0.5236; sin^2 a = 0.33: G = +2.000, Phi = +0.192, erste Nullstelle phi = 0.6005; sin^2 a = 0.67: G = +1.000, Phi = +0.544, erste Nullstelle phi = 0.6927; sin^2 a = 1.00: G = +0.000, Phi = +1.000, erste Nullstelle phi = 0.7854
+   c = (e1, e2, e4): sin^2 a = 0.00: G = +3.000, Phi = +0.000, erste Nullstelle phi = 0.5236; sin^2 a = 0.33: G = +2.000, Phi = +0.000, erste Nullstelle phi = 0.6155; sin^2 a = 0.67: G = +1.000, Phi = +0.000, erste Nullstelle phi = 0.7854; sin^2 a = 1.00: G = +0.000, Phi = +0.000, erste Nullstelle phi = 1.5708
+   c = (e1, e2, e5): sin^2 a = 0.00: G = +3.000, Phi = +0.000, erste Nullstelle phi = 0.5236; sin^2 a = 0.33: G = +2.000, Phi = +0.272, erste Nullstelle phi = 0.5949; sin^2 a = 0.67: G = +1.000, Phi = +0.385, erste Nullstelle phi = 0.7137; sin^2 a = 1.00: G = +0.000, Phi = +0.000, erste Nullstelle phi = 1.5708
+   c = (e1, e2, e6): sin^2 a = 0.00: G = +3.000, Phi = +0.000, erste Nullstelle phi = 0.5236; sin^2 a = 0.33: G = +2.000, Phi = +0.272, erste Nullstelle phi = 0.5949; sin^2 a = 0.67: G = +1.000, Phi = +0.385, erste Nullstelle phi = 0.7137; sin^2 a = 1.00: G = +0.000, Phi = +0.000, erste Nullstelle phi = 1.5708
+   Bei alpha = 0 ist die Nullstelle pi/6 = 0,5236 (cos 3 phi = 0). Mit Farbanteil und verschiedenen Farbrichtungen wandert sie.
+
+== 3. Je Sektor: Abstand vom masselosen Punkt (kleinste Wurzel null) ==
+   e: rho = 1.00000, masseloser Punkt delta0 = 0.261799, gemessen delta = 0.222222, Abstand x = 0.039577, x/delta0 = 0.1512
+   d: rho = 1.11506, masseloser Punkt delta0 = 0.163300, gemessen delta = 0.100129, Abstand x = 0.063171, x/delta0 = 0.3868
+   u: rho = 1.28952, masseloser Punkt delta0 = 0.056790, gemessen delta = 0.051806, Abstand x = 0.004984, x/delta0 = 0.0878
+   Lesart: x misst nur, wie klein die leichteste Masse ist (sqrt(m1)/Summe); es ist keine neue Groesse.

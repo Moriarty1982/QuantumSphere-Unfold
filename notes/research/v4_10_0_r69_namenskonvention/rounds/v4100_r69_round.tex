@@ -1,0 +1,121 @@
+
+\clearpage
+% ============================================================================
+\section*{v4.10.0-r69 Source-Only: Naming Convention for the Frames and the Lepton Sectors (Author Decision of 26 November 2026)}
+\addcontentsline{toc}{section}{v4.10.0-r69 Source-Only: Naming Convention for the Frames and the Lepton Sectors (Author Decision of 26 November 2026)}
+\label{sec:v4100-r69-naming}
+% ============================================================================
+
+\paragraph{Purpose.}
+The author asked whether the frames and the sectors can carry names that say what they are, and whether ``bosonic'' and ``fermionic'' would
+fit.  This layer records the answer and the names the author chose on 26 November 2026.  It is a convention and not a result: it contains no
+new computation, no test and no decision criterion, and it changes no status.  The letters M, T, P, R of Convention~F and all earlier names
+remain valid; earlier layers are not rewritten.  No guard changes.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r69 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.5.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24563811}{10.5281/zenodo.24563811} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r69 convention}
+\label{subsec:v4100-r69-convention}
+
+\paragraph{Convention v4.10.0-r69.1 (names of the frames).}
+With \(x=\beta_{\rm sym}^2\) and the port weights \(p_+\) (compensator port) and \(p_-\) (partner port) of Convention~F (v4.9.0-r22, r24, r28):
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.41\textwidth}@{}}
+\toprule
+letter & name so far & name from r69 on & what the name says\\
+\midrule
+R & reference frame & \textbf{rest frame} (German: Ruheframe) & pure doublet state \(|b|=1\), \(p_+=1\), offset \(0\); for a non-null field the frame with \(\mathbf E\parallel\mathbf B\) (``rest frame of the field'', v4.10.0-r29)\\
+M & matter frame & \textbf{matter frame} (unchanged) & \(p_+=1/(1+x)\), \(p_-=x/(1+x)\); the state R carried by the boost of rapidity \(\varepsilon=\operatorname{artanh}\beta_{\rm sym}\) to these populations (v4.10.0-r66)\\
+T & tachyon frame & \textbf{dual frame} (German: Dual-Frame) & image of M under \(D\colon z\mapsto iz\), which is the electromagnetic duality (v4.10.0-r07); ports exchanged\\
+P & photon eigenframe & \textbf{light point} (German: Lichtpunkt) & fixed point \(b=0\), \(p_+=p_-=\tfrac12\), light-like; a point of the state disk, not a frame of an observer\\
+\bottomrule
+\end{tabular}
+\end{center}
+The word ``photon frame'' stays reserved as the historical name that older chapters use mostly for R (v4.9.0-r22).  ``Light frame'' is not
+used for R: the light-like state is P.
+
+\paragraph{Convention v4.10.0-r69.2 (names of the two lepton sectors).}
+In the reading of H168 to H170 (notes of 26 November 2026, not yet a layer of the Companion; under the sector assignment of H99) the
+quadratic form at the projector point is \(G=-(s+iv)^2\), its real part is the term of the neutral leptons (\(c=0\)) and its imaginary part
+the term of the charged leptons (\(c=1\)).  From r69 on the two are called
+\begin{center}
+\textbf{Re sector} (neutral leptons, \(c=0\)) \qquad and \qquad \textbf{Im sector} (charged leptons, \(c=1\)).
+\end{center}
+The names apply to leptons only.  The quarks keep the names up sector and down sector: by H172 they follow this structure neither in \(K\)
+nor in \(\delta\).  ``Even'' and ``odd'' (parity under \(\sigma\), H169) may be added as a qualifier.  ``Sector'' without qualifier in older
+text can also mean the symmetric and antisymmetric part of the compensator or a Dixon sector; these keep their names, and the two outputs of
+the compensator are called \emph{ports}.
+
+\paragraph{Remark v4.10.0-r69.3 (why not ``bosonic'' and ``fermionic'').}
+(a) All four frames are states of one field doublet \((\mathbf E,\mathbf B)\), a spin-one field; a frame is not a species of particle and
+carries no statistics of its own.  (b) The reading ``M reads strands bosonically, T fermionically'' of v4.10.0-r17 is a setting that the
+frame and port structure cannot justify (v4.10.0-r24).  (c) The main text uses the two words for the ports of the compensator
+(T11), a third meaning.  (d) Both lepton sectors consist of fermions.  The words are therefore not used as names.
+
+\paragraph{Remark v4.10.0-r69.4 (what the frames are in terms of the compensator; reading).}
+The compensator \(C=\tfrac12(1+J)\) has two ports.  In Convention~F a frame is the distribution of the same doublet state over them:
+\(1:0\) (R), \(1:x\) (M), \(x:1\) (T), \(1:1\) (P); with \(x=0.301847\) the matter frame has \(76.8\,\%\) in the compensator port.  In the
+picture of the explorations k292 and k297 (notes, not blind) the compensator is a quasiconformal projection with Beltrami coefficient
+\(\mu=x\): the oscillation \(a\,e^{i\omega t}+b\,e^{-i\omega t}\) with \(b/a=\mu\) is an ellipse of axis ratio
+\((1+\mu)/(1-\mu)=\gamma_L\), and the exchange \(\mu\mapsto1/\mu\) reverses its sense of rotation (M and T).  Read with the same parameter,
+\(\mu=0\) is the circle (R) and \(\mu=1\) the degenerate ellipse (P).  The last sentence is a reading of the parametrisation; it was not
+computed separately.  This is the Stokes description of polarisation applied to \((\mathbf E,\mathbf B)\) (v4.9.0-r04): the frames are
+polarisation-like states of the field.  The identification with observers of matter, light and tachyons stays a reading, and why the
+recorded data are compared in M and not in T is not derived.  \textbf{Reading; no new computation.}
+
+\subsection*{v4.10.0-r69 frames}
+\label{subsec:v4100-r69-frames}
+
+No new frame map is used.  The convention renames the frames of Convention~F and does not move them.  The names Re sector and Im sector are
+formulated in the picture of M; by v4.9.0-r51 the map \(D\) leaves sectors and chirality fixed.
+
+\subsection*{v4.10.0-r69 register entries}
+\label{subsec:v4100-r69-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r69\\
+\midrule
+names rest frame (R), matter frame (M), dual frame (T), light point (P) & convention (author decision of 26 November 2026); older names remain valid\\
+names Re sector, Im sector & convention, leptons only; the underlying reading is under H99 and open\\
+``bosonic''/``fermionic'' as names of frames or sectors & not used (v4.10.0-r17, r24)\\
+statistics per frame, sector assignment H99, OP1--OP5 & open, as before\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r69 notes}
+\label{subsec:v4100-r69-notes}
+
+{\raggedright
+Note: \texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak r69\_\allowbreak namenskonvention/}.
+Sources of the readings: \texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/}
+(H168 to H170, H172, k292, k297).
+Tools: none; the layer contains no computation, so Wolfram Language, Qiskit and the HDL comparison do not apply.
+\par}
+
+\subsection*{v4.10.0-r69 ledger and guard update}
+\label{subsec:v4100-r69-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r69}=(1,0,0)
+\]
+for (status recorded; no computation; no comparison with data).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r69,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r69}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

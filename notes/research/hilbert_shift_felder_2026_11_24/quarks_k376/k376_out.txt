@@ -1,0 +1,29 @@
+== 1. Konfiguration je geladenem Sektor bei M_Z und an der Planck-Skala (I = 0 bzw. 0,1337) ==
+   Sektor | I | K | rho = tan(theta) | theta [Grad] | theta - 45 | delta
+   e | 0.0000 | 0.66666 +- 0.00001 | 1.00000 +- 0.00001 | 45.000 +- 0.000 | -0.000 | 0.222225 +- 0.000006
+   d | 0.0000 | 0.74779 +- 0.00112 | 1.11506 +- 0.00151 | 48.114 +- 0.039 | +3.114 | 0.100129 +- 0.000953
+   d | 0.1336 | 0.73519 +- 0.00115 | 1.09798 +- 0.00157 | 47.674 +- 0.041 | +2.674 | 0.107674 +- 0.001026
+   u | 0.0000 | 0.88762 +- 0.00083 | 1.28952 +- 0.00096 | 52.207 +- 0.021 | +7.207 | 0.051806 +- 0.000484
+   u | 0.1336 | 0.89409 +- 0.00079 | 1.29702 +- 0.00091 | 52.368 +- 0.019 | +7.368 | 0.048361 +- 0.000451
+   Lesart: K = (1 + rho^2)/3. K = 2/3 heisst rho = 1, theta = 45 Grad (Fixpunkt des Frame-Tauschs J, H149).
+
+== 2. Zwei Wege zu K != 2/3 ==
+Weg A (zirkulant, Z3 bleibt, J gebrochen): rho != 1. Nur K bewegt sich, delta und Mischung bleiben. Noetig: rho - 1 = d: +0.1151, u: +0.2895
+Weg B (J bleibt im Baumwert, Z3 gebrochen): M = C(rho = 1, delta0) + B, B ohne zirkulanten Anteil (Diagonale in der Fourier-Basis null).
+   Exakt: ||B||_F^2 = Sum mu_i^2 - Sum lambda0_i^2 = 3 (rho_q^2 - 1) = 9 K - 6, unabhaengig von delta0 und von der Drehung.
+   d: ||B|| = sqrt(9K - 6) = 0.8545 (zum Vergleich: fuer die ganze CKM-Matrix reichen 0,157 bis 0,166; k374)
+   u: ||B|| = sqrt(9K - 6) = 1.4102 (zum Vergleich: fuer die ganze CKM-Matrix reichen 0,157 bis 0,166; k374)
+   Numerische Probe und noetige Drehung (kleinste groesste Drehung aus 200 Starts; Winkel zwischen Masse- und Fourier-Basis):
+   d, delta0 = eigenes delta: loesbar (Schur-Horn ja); ||B|| numerisch 0.8545; Drehwinkel 12/23/13 = 9.9 / 10.6 / 10.8 Grad
+   d, delta0 = pi/12: keine Loesung gefunden (Schur-Horn nein)
+   d, delta0 = 0: loesbar (Schur-Horn ja); ||B|| numerisch 0.8545; Drehwinkel 12/23/13 = 26.9 / 0.8 / 14.6 Grad
+   u, delta0 = eigenes delta: loesbar (Schur-Horn ja); ||B|| numerisch 1.4102; Drehwinkel 12/23/13 = 14.8 / 15.9 / 15.9 Grad
+   u, delta0 = pi/12: keine Loesung gefunden (Schur-Horn nein)
+   u, delta0 = 0: loesbar (Schur-Horn ja); ||B|| numerisch 1.4102; Drehwinkel 12/23/13 = 17.8 / 12.9 / 18.0 Grad
+   CKM zum Vergleich: 13,0 / 2,4 / 0,2 Grad. Weg B braeuchte also in beiden Sektoren fast dieselbe grosse Drehung, die sich in V = U_u^+ U_d aufhebt.
+
+== 3. Haengen J-Bruch (theta - 45) und delta zusammen? (nachtraeglich, Zahlenvergleich, kein Test) ==
+   I = 0.0000: (theta-45)_u/(theta-45)_d = 2.314; (rho-1)_u/(rho-1)_d = 2.516; (K-2/3)_u/(K-2/3)_d = 2.724; delta_d/delta_u = 1.933; Produkt (theta-45)*delta: d 0.00544, u 0.00652
+   I = 0.1336: (theta-45)_u/(theta-45)_d = 2.756; (rho-1)_u/(rho-1)_d = 3.031; (K-2/3)_u/(K-2/3)_d = 3.319; delta_d/delta_u = 2.226; Produkt (theta-45)*delta: d 0.00502, u 0.00622
+   Einfache Brueche fuer K (nachtraeglich): K_d gegen 3/4: z = -2.0 (M_Z), -12.9 (Planck); K_u gegen 8/9: z = -1.5 (M_Z), +6.6 (Planck); 
+   Einordnung: Brueche mit Nenner bis 12 liegen im Bereich 0,70 bis 0,92 im Mittel 0,008 auseinander; bei Fehler 0,001 trifft ein beliebiger Wert mit etwa 50 % einen davon auf 2 sigma.

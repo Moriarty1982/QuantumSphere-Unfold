@@ -76,6 +76,7 @@ Für die neue OP5-Arbeitsfrage liegt ein [erstes Route-Datenblatt](https://githu
 2. Commit/Tag, Dateipfad und möglichst Satzlabel oder Abschnitt nennen.
 3. Definitionen, Voraussetzungen, Guards und Frame-Konventionen derselben Fassung lesen.
 4. Spätere Korrekturen, Statusnotizen und archivierte Argumente berücksichtigen. Für Frame-/Gravitationsaussagen insbesondere r64–r68 prüfen (r66 korrigiert die Zitierung in r64); für OP5, Vakuumterm und Frame-Neutralität r69 bis r80; für die gemeinsame Wirkung, das Tachyonbild einer Wirkung und den Urknall r81 bis r85 (r83 zieht r82.1 b, c zurück; die Autorentscheidungen stehen in `notes/research/v4_10_0_w1/Bestandsaufnahme_Wirkungsansaetze.md`). Der Inhalt des Companion ist auf der Seite [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) zusammengefasst; sie ersetzt nicht die Quellstelle, gibt aber den Stand jeder Aussage an. Die Arbeitsnotizen unter `analysis/` sind Forschungsstände mit bedingten Ergebnissen, keine Manuskriptaussagen.
+   Namen seit v4.10.0-r69: Ruheframe R (alt: Referenzframe), Materie-Frame M, Dual-Frame T (alt: Tachyon-Frame), Lichtpunkt P (alt: Photon-Eigenframe); Re-Sektor und Im-Sektor für neutrale und geladene Leptonen. Alte und neue Namen bezeichnen dasselbe; ältere Runden benutzen die alten.
 5. Nach Evidenz formulieren: bewiesen unter genannten Voraussetzungen; numerisch geprüft im angegebenen Bereich; zusätzlich angenommen; zurückgezogen; oder offen.
 6. Fehlende Belege als fehlend kennzeichnen. Aus einer Analogie keine native Ableitung machen.
 

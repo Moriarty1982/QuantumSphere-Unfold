@@ -1,0 +1,47 @@
+== 1. Laufen (eine Schleife, Standardmodell, Start M_Z: g1 0.4613, g2 0.6517, g3 1.2198, y_t 0.967) ==
+   mu =      91.2 GeV: y_t = 0.9670, g3 = 1.2198, I = 0.00000
+   mu =     1e+03 GeV: y_t = 0.8600, g3 = 1.0633, I = 0.01887
+   mu =     1e+06 GeV: y_t = 0.6813, g3 = 0.8174, I = 0.05697
+   mu =     1e+10 GeV: y_t = 0.5535, g3 = 0.6575, I = 0.08980
+   mu =     1e+13 GeV: y_t = 0.4900, g3 = 0.5846, I = 0.10758
+   mu =     2e+16 GeV: y_t = 0.4365, g3 = 0.5271, I = 0.12302
+   mu =  1.22e+19 GeV: y_t = 0.3996, g3 = 0.4898, I = 0.13365
+   Bereich: I von 0 bis I(M_Planck) = 0.13365
+
+== 2. K und delta ueber den Bereich (Zentralwert +- Massenfehler) ==
+   I | mu [GeV] | delta_d | delta_u | delta_d/delta_u | delta_e/delta_d | K_d | K_u
+   0.0000 |      91.2 | 0.100129 +- 0.000953 | 0.051806 +- 0.000485 | 1.9328 +- 0.0258 | 2.2193 | 0.74779 +- 0.00112 | 0.88762 +- 0.00083
+   0.0167 |       738 | 0.101041 +- 0.000962 | 0.051362 +- 0.000481 | 1.9672 +- 0.0263 | 2.1993 | 0.74623 +- 0.00113 | 0.88845 +- 0.00082
+   0.0334 |  9.64e+03 | 0.101961 +- 0.000971 | 0.050922 +- 0.000477 | 2.0023 +- 0.0267 | 2.1795 | 0.74467 +- 0.00113 | 0.88927 +- 0.00082
+   0.0501 |  2.25e+05 | 0.102890 +- 0.000981 | 0.050486 +- 0.000473 | 2.0380 +- 0.0272 | 2.1598 | 0.74310 +- 0.00113 | 0.89008 +- 0.00081
+   0.0668 |  1.08e+07 | 0.103828 +- 0.000990 | 0.050053 +- 0.000468 | 2.0744 +- 0.0277 | 2.1403 | 0.74153 +- 0.00114 | 0.89090 +- 0.00081
+   0.0835 |  1.26e+09 | 0.104776 +- 0.000999 | 0.049624 +- 0.000464 | 2.1114 +- 0.0282 | 2.1209 | 0.73995 +- 0.00114 | 0.89170 +- 0.00080
+   0.1002 |  4.69e+11 | 0.105732 +- 0.001009 | 0.049199 +- 0.000460 | 2.1491 +- 0.0287 | 2.1017 | 0.73837 +- 0.00114 | 0.89250 +- 0.00080
+   0.1169 |  8.11e+14 | 0.106699 +- 0.001019 | 0.048778 +- 0.000456 | 2.1874 +- 0.0292 | 2.0827 | 0.73678 +- 0.00115 | 0.89330 +- 0.00079
+   0.1336 |  1.22e+19 | 0.107674 +- 0.001028 | 0.048361 +- 0.000452 | 2.2265 +- 0.0298 | 2.0638 | 0.73519 +- 0.00115 | 0.89409 +- 0.00079
+
+== 3. H177a: Zielwerte gegen den Bereich ==
+-- V1 (delta_e/2, delta_e/4): Ziel delta_d = 0.111111, delta_u = 0.055556
+   kleinstes max(|z_d|, |z_u|) im Bereich: 9.6 bei I = 0.0311 (z_d = -9.6, z_u = -9.6)
+   z-Bereich einzeln: Down -11.5 bis -3.3, Up -15.9 bis -7.7
+   Down: erreicht den Zielwert im Bereich nicht (Zentralwert)
+   Up: erreicht den Zielwert im Bereich nicht (Zentralwert)
+   Urteil: WIDERLEGT (Down, Up erreicht das Ziel nicht innerhalb 3 sigma)
+-- V2 (pi/24, pi/48): Ziel delta_d = 0.130900, delta_u = 0.065450
+   kleinstes max(|z_d|, |z_u|) im Bereich: 30.1 bei I = 0.0287 (z_d = -30.1, z_u = -30.1)
+   z-Bereich einzeln: Down -32.3 bis -22.6, Up -37.8 bis -28.1
+   Down: erreicht den Zielwert im Bereich nicht (Zentralwert)
+   Up: erreicht den Zielwert im Bereich nicht (Zentralwert)
+   Urteil: WIDERLEGT (Down, Up erreicht das Ziel nicht innerhalb 3 sigma)
+
+== 4. H177b: Bericht ==
+   delta_d/delta_u = 2 bei I = 0.0323 (mu = 8.03e+03 GeV): delta_d = 0.101901 +- 0.000971, delta_u = 0.050950 +- 0.000477; delta_e/delta_d = 2.1808; K_d = 0.74477, K_u = 0.88922
+   down: K von 0.74779 (M_Z) bis 0.73519 (M_Planck); erreicht 2/3: nein
+   down, leichteste Wurzel negativ: delta von 0.152243 bis 0.163208, K von 0.83321 bis 0.82452
+   up: K von 0.88762 (M_Z) bis 0.89409 (M_Planck); erreicht 2/3: nein
+   up, leichteste Wurzel negativ: delta von 0.056461 bis 0.052717, K von 0.89670 bis 0.90267
+   Rueckwaerts: noetiges I je Ziel ohne Bereichsgrenze (negativ = unterhalb M_Z, dort laeuft das Verhaeltnis in dieser Naeherung nicht):
+      down, Ziel 0.111111: I = +0.1912
+      down, Ziel 0.130900: I = +0.4893
+      up, Ziel 0.055556: I = -0.1354
+      up, Ziel 0.065450: I = -0.4520

@@ -1,0 +1,8 @@
+k378b (Wolfram Language, MCP-Kernel, 26.11.2026), Ausgabe:
+{0, 0.6154797086703873, 0.6005183185649632, 0.6927415414891387, 0.7853981633974483,
+ {0.2617993877991494, 0.16330005560836014, 0.05678968520872418}, {-1.1084851766028083, -1.248926549251858}}
+
+Bedeutung: (1) t(phi; G = 3, Phi = 0) - cos(3 phi) = 0, symbolischer Nullrest. (2) bis (5) Nullstellen des kubischen Terms fuer (G, Phi) = (2, 0),
+(2, 0,192), (1, 0,544), (1, 0): stimmen mit k378 (0,6155; 0,6005; 0,6927; 0,7854). (6) masselose Punkte delta0 fuer e, d, u. (7) noetige A/B je Quarktyp.
+Die Oktonionen-Aussagen (Derivationen, Tripelprodukt) sind in k378 explizit gerechnet und hier nicht wiederholt (kein Oktonionen-Paket im Kernel).
+Keine Warnungen.

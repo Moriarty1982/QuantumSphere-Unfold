@@ -1,0 +1,28 @@
+== H179a: Georgi-Jarlskog, Down-Konfiguration aus den Leptonen ==
+   Leptonen: K = 0.666664, delta = 0.222225, rho = 1.00000, x = 0.039578
+   Vorhersage (3 m_e, m_mu/3, m_tau): K = 0.745423, delta = 0.105070, rho = 1.11188, theta = 48.032 Grad, x = 0.060581
+   I | mu [GeV] | K_d gemessen | z(K) | delta_d gemessen | z(delta) | Abweichung K, delta in %
+   0.0000 |   M_Z | 0.74779 +- 0.00113 |    +2.1 | 0.100129 +- 0.000957 |    -5.2 | +0.32, -4.70
+   0.1076 |  1e13 | 0.73767 +- 0.00115 |    -6.7 | 0.106156 +- 0.001017 |    +1.1 | -1.04, +1.03
+   0.1230 |  2e16 | 0.73620 +- 0.00115 |    -8.0 | 0.107052 +- 0.001026 |    +1.9 | -1.24, +1.89
+   0.1336 |  M_Pl | 0.73519 +- 0.00116 |    -8.8 | 0.107674 +- 0.001032 |    +2.5 | -1.37, +2.48
+   Bereich I in [0,108; 0,134]: kleinstes max(|z_K|, |z_delta|) = 6.7 bei I = 0.1076; min |z_K| = 6.7, min |z_delta| = 1.1 -> Urteil H179a: WIDERLEGT
+
+== H179b: die drei Verhaeltnisse einzeln ==
+   I | m_b/m_tau | 3 m_s/m_mu | m_d/(3 m_e) | (3 m_s/m_mu)/(m_b/m_tau) | (m_d/3m_e)/(m_b/m_tau)   [Normierung faellt in den letzten beiden heraus]
+   0.0000 (M_Z) | 0.00917 | 0.00869 | 0.01005 | 0.9472 +- 0.0135 (z = -3.9) | 1.0951 +- 0.0154 (z = +6.2)
+   0.1076 (1e13) | 0.00917 | 0.00968 | 0.01119 | 1.0547 +- 0.0150 (z = +3.6) | 1.2195 +- 0.0172 (z = +12.8)
+   0.1230 (2e16) | 0.00917 | 0.00983 | 0.01136 | 1.0711 +- 0.0153 (z = +4.7) | 1.2385 +- 0.0175 (z = +13.6)
+   0.1336 (M_Pl) | 0.00917 | 0.00993 | 0.01148 | 1.0826 +- 0.0154 (z = +5.4) | 1.2517 +- 0.0177 (z = +14.3)
+   (Die Yukawa-Tabelle ist in Einheiten der Kopplung, die Leptonmassen in GeV; nur die beiden Doppelverhaeltnisse sind aussagekraeftig.)
+   Urteil H179b: WIDERLEGT
+
+== Nicht blind (Bericht) ==
+   (i) einfache SU(5)-Gleichheit Down = Leptonen: K_d = 2/3 verlangt; gemessen 0,748 (M_Z) bis 0,735 (M_Pl). Ausgeschlossen.
+   (ii) Ein-Parameter-Gesetze in der Ladung (|Q| oder |Y_R|: Verhaeltnis 2; Q^2: 4):
+       M_Z: (theta-45)_u/(theta-45)_d = 2.314; ln rho_u/ln rho_d = 2.335; (K-2/3)_u/(K-2/3)_d = 2.724  -> keines ist 2 oder 4
+       2e16: (theta-45)_u/(theta-45)_d = 2.714; ln rho_u/ln rho_d = 2.741; (K-2/3)_u/(K-2/3)_d = 3.263  -> keines ist 2 oder 4
+   (iii) Potenzgesetz Up-Hierarchie = (Down-Hierarchie)^p:
+       M_Z: p aus der leichtesten = 1.6987 +- 0.0047, p aus der mittleren = 1.4098 +- 0.0067; Unterschied 35 sigma (ein gemeinsames p, etwa 2, traegt nicht)
+       2e16: p aus der leichtesten = 1.7472 +- 0.0048, p aus der mittleren = 1.4868 +- 0.0071; Unterschied 30 sigma (ein gemeinsames p, etwa 2, traegt nicht)
+       Leptonen gegen Down (M_Z): p = 1.1708 und 0.7100

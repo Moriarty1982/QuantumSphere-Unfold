@@ -1,5 +1,23 @@
 # Forschungsstand
 
+### Neue Namen für die Frames und die Lepton-Sektoren (26.11.2026, Runde r69, Konvention)
+
+Entscheidung des Autors vom 26.11.2026. Runde **v4.10.0-r69** ist eine Konvention und kein Ergebnis: keine Rechnung, kein Test, kein Status geändert. Die Buchstaben M, T, P, R und die alten Namen bleiben gültig; ältere Runden und veröffentlichte Fassungen werden nicht umbenannt.
+
+| Buchstabe | bisher | ab r69 | was der Name sagt |
+|---|---|---|---|
+| R | Referenz- bzw. Bezugsframe | **Ruheframe** (rest frame) | reiner Dublettzustand, Versatz 0; für ein nicht lichtartiges Feld der Bezug mit E ∥ B |
+| M | Materie-Frame | **Materie-Frame** | der Zustand von R, um ε = artanh β_sym geschoben (H164, r66) |
+| T | Tachyon-Frame | **Dual-Frame** (dual frame) | Bild von M unter z ↦ iz, der elektromagnetischen Dualität (r07); Ports getauscht |
+| P | Photon-Eigenframe | **Lichtpunkt** (light point) | Fixpunkt b = 0, lichtartig; ein Punkt der Zustandsscheibe, kein Beobachter-Frame |
+
+- **Lepton-Sektoren (r69.2):** **Re-Sektor** (neutrale Leptonen, c = 0) und **Im-Sektor** (geladene Leptonen, c = 1). Nach H170 sind die beiden Terme Real- und Imaginärteil derselben Form G = −(s + iv)². Die Namen gelten nur für Leptonen und stehen als Lesart unter H99. Die Quarks behalten Up- und Down-Sektor, weil sie dieser Struktur nach H172 nicht folgen. Die zwei Ausgänge des Kompensators heißen Ports.
+- **Warum nicht „bosonisch/fermionisch“ (r69.3):** Alle vier Frames sind Zustände desselben Felddubletts (E, B), eines Spin-1-Felds; ein Frame ist keine Teilchensorte. Die Lesart „M liest bosonisch, T fermionisch“ aus r17 ist nach r24 eine nicht begründbare Setzung. T11 benutzt die Wörter für die Ports. Beide Lepton-Sektoren bestehen aus Fermionen.
+- **Was die Frames über den HC sind (r69.4, Lesart):** Ein Frame ist die Verteilung desselben Zustands auf die zwei Ports des Kompensators: R 1 : 0, M 1 : x, T x : 1, P 1 : 1 mit x = β_sym² = 0,301847. Im Materie-Frame liegen 76,8 % im Kompensatorport. Im Bild von k292 und k297 sind M und T Ellipsen mit Achsenverhältnis γ_L und entgegengesetztem Drehsinn. Dass R der Kreis und P der Grenzfall ist, folgt aus derselben Parametrisierung und ist nicht eigens gerechnet. Das ist die Stokes-Beschreibung der Polarisation, angewandt auf (E, B). Die Gleichsetzung mit Beobachtern von Materie, Licht und Tachyon bleibt Lesart; warum die Daten in M und nicht in T verglichen werden, ist nicht hergeleitet.
+- **Grenzen:** Kein Guard berührt, OP1 bis OP5 offen. Die Lesarten zu H168 bis H170 stehen bisher nur in den Notizen, nicht in einer eigenen Runde.
+
+Quelle: `notes/research/v4_10_0_r69_namenskonvention/` (README, Rundentext).
+
 ### Nachrechnung als Runde r68; drei Releases vorbereitet, nichts veröffentlicht (26.11.2026)
 
 - **Runde v4.10.0-r68** hält die Nachrechnung k358 im Companion fest (Erkundung, kein Test): Empfindlichkeiten, Abstände zu den Messwerten des Bestands, H102 über γ_M, Maskenscans. Kein Urteil kippt; m_W ist die schärfste Stelle (2σ-Fenster 0,54907 ≤ β ≤ 0,54978). Kein Guard berührt, OP1 bis OP5 offen.
@@ -19,6 +37,67 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - **Nachrechnung aller abhängigen Stellen (k358, Erkundung, 26.11.):** Auf Frage des Autors sind alle Zahlen, die an β_sym, γ_L oder γ_M hängen, bei 0,5493, 0,5493482 und dem exakten Wert gerechnet (mpmath, Gegenprobe Wolfram). Kein Urteil kippt. Die schärfste Stelle ist m_W: 80,3590 → 80,3615 GeV, gegen PDG 2026 von −0,44σ auf −0,13σ; das 2σ-Fenster lässt nur β zwischen 0,54907 und 0,54978 zu, etwa sechs Schritte der Änderung nach jeder Seite. m_τ aus H102 hängt an γ_M und reagiert stark (d m_τ/d γ_M = 2396 MeV): gerundet 1777,055 MeV (+1,4σ), exakt 1777,134 MeV (+2,3σ); registriert ist der exakte Wert. Ω_M und sin²θ₁₂ bewegen sich um 0,01σ. Stark reagieren nur Kennzahlen ohne Datenvergleich: die Hopf-Lücke (Faktor 20) und γ_L⁵ (Faktor 6,6; +0,07 %). In der Maskenrechnung zu H46 springt die Trefferzahl von 120 auf 168 (Rasterwirkung), das Intervall für sin²θ₂₃ bleibt in [0,49; 0,50]; H134 ändert sich in der vierten Stelle. Tabelle: `notes/research/op1_herkunft_beta_sym_h165/Nachrechnung_k358_Empfindlichkeit.md`.
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
+
+### Was die übliche Physik für Up gegen Down erwartet (26.11.2026, Test H179, k379)
+Vorab-Notiz a986b29. Auftrag des Autors: zuerst die Standarderwartung prüfen.
+- **Eichladungen** wirken generationsblind und ändern K, ρ, δ nicht. Im Standardmodell sind die Yukawa-Kopplungen freie Zahlen; für Up gegen Down gibt es
+  keine Standardvorhersage. Ein-Parameter-Gesetze in der Ladung (Verhältnis 2 oder 4) und ein gemeinsames Potenzgesetz tragen nicht.
+- **Georgi-Jarlskog** (m_b = m_τ, m_s = m_μ/3, m_d = 3m_e) ist die einzige parameterfreie Standardrelation. Sie sagt für die Down-Quarks K = 0,7454,
+  δ = 0,1051, θ = 48,03° voraus. Gemessen: 0,7478 / 0,1001 / 48,11° bei M_Z und 0,7362 / 0,1071 / 47,71° bei 2·10¹⁶ GeV.
+- **Urteil nach den vorab gesetzten Kriterien: widerlegt** (K 6,7σ daneben im Bereich hoher Skalen; einzelne Massenverhältnisse 5 bis 24 % daneben).
+  Zugleich liegt die Relation in K und δ auf 0,3 bis 5 %, näher als alles andere Geprüfte.
+- Nachträgliche Lesart, kein Ergebnis: Die Faktoren 3 und ⅓ sind die Farbzahl; der J-Abstand der Down-Quarks (3,1°) entsteht fast ganz aus ihnen.
+  Der Up-Sektor bleibt ohne Beziehung.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/standardphysik_h179/`.
+
+### Der Farbanteil ist nicht frei, und die Farbrichtung verschiebt δ nicht (26.11.2026, Erkundung k378)
+Nicht blind. Nachprüfung der Setzung aus H178c.
+- **Farbanteil:** Die Farbsymmetrie (Derivationen von 𝕆, die e₇ festhalten) lässt genau 1 und e₇ fest. Ein Farbtriplett liegt deshalb ganz in den sechs
+  Farbrichtungen. Der in H178c gesetzte gebrochene Farbanteil je Sektor hat keine Grundlage; diese Lesart ist zurückgenommen. H178a und H178b bleiben.
+- **Folge:** Die Farbe trennt Up und Down nicht. Jeder Quarktyp braucht ein eigenes Koeffizientenverhältnis im Potential. Die Quarkwinkel sind zwei freie Zahlen.
+- **Phase:** Der kubische Term der Albert-Algebra ist für gleich ausgerichtete Nebendiagonalen cos 3φ, für jede Richtung. Die Farbrichtung allein verschiebt δ nicht.
+- **Stellgrößen:** Besser als (K, δ) ist (ρ, x) mit x als Abstand vom masselosen Punkt: e (1; 0,040), d (1,115; 0,063), u (1,290; 0,005). Der kleine Wert
+  von δ bei den Quarks ist überwiegend eine Folge des größeren ρ.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/farbanteil_k378/`.
+
+### Der Frame-Tausch legt den Winkel nur für farblose Felder fest (26.11.2026, Test H178, k377)
+Frage aus k376: Was bricht J nur bei den Quarks? Antwort: nichts muss J brechen. Vorab-Notiz 93e6e75 (Teil a nicht blind).
+- **Exakt:** Mit U als der Einheit, die die Farbe festhält, ist J in der farblosen Ebene {1, U} eine Spiegelung (J² = +1) mit Fixpunkt 45°, auf den
+  sechs Farbrichtungen aber eine Vierteldrehung (J² = −1) ohne Fixrichtung.
+- **Potential:** Das allgemeinste J-invariante Potential bis Grad 4 legt θ = 45° (K = ⅔) nur für Felder ohne Farbanteil fest. Mit Farbanteil hängt der
+  Winkel von zwei Koeffizienten ab.
+- **Angepasst, nicht hergeleitet:** Die Größe der Abweichung (3,1° und 7,2°). Zwei Messgrößen, zwei Koeffizienten, dazu eine gesetzte Regel für den
+  Farbanteil je Sektor. Farbe allein reicht nicht, weil Up und Down dieselbe Farbe und verschiedene Winkel haben (92σ).
+- Offen: der Farbanteil je Sektor und die beiden Koeffizienten; die Phase δ ist nicht behandelt.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/farbe_h178/`.
+
+### Quarks einzeln justiert: K ≠ ⅔ ist ein Bruch des Frame-Tauschs, nicht der Dreiersymmetrie (26.11.2026, Erkundung k376)
+Nicht blind. Frage: Welche Eingabe schiebt K bei den Quarks von ⅔ weg?
+- **Als Winkel:** K = (1 + tan²θ)/3. Leptonen θ = 45° (Fixpunkt des Frame-Tauschs J), Down 48,1°, Up 52,2° (bei M_Z).
+- **Exakt:** Wollte man K ≠ ⅔ durch einen Bruch der Dreiersymmetrie auf einem J-symmetrischen Baumwert erzeugen, wäre dessen Stärke festgelegt:
+  ‖B‖² = 9K − 6, also 0,85 (Down) und 1,41 (Up). Für die ganze CKM-Matrix reichen 0,16. Dazu kämen Drehungen von 10° bis 27° je Sektor, die sich zwischen
+  Up und Down aufheben müssten.
+- **Lesart:** Die Quarks brauchen zwei getrennte Eingaben: einen J-Bruch, der die Dreiersymmetrie erhält (3,1° und 7,2°), und einen kleinen Bruch der
+  Dreiersymmetrie für die Mischung. Bei den Leptonen fehlt die erste. Offen: warum J nur bei Quarks gebrochen ist (Kandidat Farbe, nicht geprüft).
+- Nachträgliche Zahlenvergleiche (K_d nahe ¾, K_u nahe 8/9; J-Bruch gegen δ) tragen nicht.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/quarks_k376/`.
+
+### Die Phasenhalbierung zwischen den Sektoren ist keine Regel (26.11.2026, Test H177, k375)
+Aus k374 war aufgefallen, dass sich die Phase δ von Sektor zu Sektor grob halbiert (ν 0,480, e 0,222, d 0,100, u 0,052). H177 prüft, ob das bei einer
+gemeinsamen Skala exakt wird. Vorab-Notiz 0887d27; die Beobachtung selbst war nachträglich, blind war nur das Laufen oberhalb von M_Z.
+- **Widerlegt in beiden Fassungen.** Weder δ_d = δ_e/2, δ_u = δ_e/4 noch δ_d = π/24, δ_u = π/48 wird zwischen M_Z und der Planck-Skala erreicht
+  (bestes gemeinsames I: beide 9,6σ daneben; Baumwerte über 22σ).
+- **Grund:** Unter der QCD ändern sich K und δ bei gemeinsamer Skala gar nicht. Oberhalb von M_Z verschiebt nur die Top-Kopplung die Verhältnisse, über
+  eine einzige Zahl I ≤ 0,134. Dabei steigt δ_d (0,1001 auf 0,1077) und fällt δ_u (0,0518 auf 0,0484): gegenläufig, also grundsätzlich kein gemeinsamer Punkt.
+- **Was bleibt:** Die vier Quarkzahlen sind fast starr gegen die Skala (δ um 7 %, K um 1 bis 2 % über 17 Größenordnungen). K_d ≈ 0,74, K_u ≈ 0,89,
+  δ_d ≈ 0,10, δ_u ≈ 0,05 müssen als solche erklärt werden. Kein K erreicht ⅔. Die Zählung der Stellgrößen je HS-Stufe aus k374 ist nicht berührt.
+- Grenzen: eine Schleife, Top-Dominanz, nur Standardmodell-Inhalt.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/konfigurationen_h177/`.
 
 ### Konfigurationen je Sektor: zwei Stellgrößen für die Massen, ein Bruch gleicher Größe für beide Mischungen (26.11.2026, Erkundung k374; H176 festgeschrieben)
 

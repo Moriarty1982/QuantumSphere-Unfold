@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**26.11.2026, Runde r69 (Namenskonvention):** Neue Namen der Frames und Lepton-Sektoren in Forschungsstand, Gesamtbild (Frame-Spickzettel, Zeitleiste), Inhalt, Content-overview, Begriffe, Hinweise für LLMs und Vorhersagen-und-Tests eingetragen. Ältere Einträge behalten die alten Namen.
+
 **22.11.2026, QAM-Streaming-Guard:** Zweischritt-Filter, Rückstauprüfung und am MMA-Vergleich gemessene Ausgabemenge eingetragen.
 
 **22.11.2026, QAM-Kontextfilter:** Suche nach Beleg-IDs über MMA-Kontext, Frame und Status samt anschließendem Belegabruf beschrieben.
@@ -1016,3 +1018,13 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Test H175 mit k372, k373:** Term aus der Ladungsrichtung, Eingaben einzeln, stochastische Suche in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **26.11.2026, Vorab-Notiz H176 und Erkundung k374:** Ein-Zahl-Kandidat festgeschrieben; Konfigurationen je Sektor und HS-Stufen in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**26.11.2026, Test H177 (k375):** Phasenhalbierung widerlegt; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
+
+**26.11.2026, Erkundung k376:** Quarks einzeln justiert; Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert.
+
+**26.11.2026, Test H178 (k377):** Farbe und Frame-Tausch; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
+
+**26.11.2026, Erkundung k378:** Farbanteil und Phase; Forschungsstand, Offene-Probleme ergänzt, Nachtrag in der Zeile H178 von Vorhersagen-und-Tests. Artikel unverändert.
+
+**26.11.2026, Test H179 (k379):** Standarderwartung Up gegen Down; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
