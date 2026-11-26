@@ -53,6 +53,6 @@
       "scheme": "url"
     }
   ],
-  "notes": "Version 1.1.0, new version of record 24539644 (version 1.0.0, doi:10.5281/zenodo.24539644). Version DOI is entered after the reservation by tools/paper_release.py stamp.",
+  "notes": "Version DOI 10.5281/zenodo.24563808 (reserved on Zenodo, deposition 24563808; shown on the title page). Version 1.1.0, new version of record 24539644 (version 1.0.0, doi:10.5281/zenodo.24539644). Version DOI is entered after the reservation by tools/paper_release.py stamp.",
   "publication_date": "2026-11-26"
 }
