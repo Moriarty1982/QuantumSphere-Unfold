@@ -1,0 +1,21 @@
+k359b_gegenprobe.wl, ausgefuehrt am 26.11.2026 mit dem Wolfram Language Evaluator (Rueckgabewert des Skripts; keine Fehlermeldungen der Rechnung).
+Warnung des Evaluators (kein Rechenfehler): Symbol::undefined2 zu den im Skript selbst definierten globalen Symbolen (S, Ln, W, G, Wg, Dm, Wm, M, Cm).
+
+a(i) delta* = 0.2222220470730878; delta* - 2/9 = -1.7515 x 10^-7
+a(i) m_tau = 1776.96902730
+a(ii) K = 0.6666665245202741; m_tau = 1776.96650938
+a(iii) m_mu/m_e = 206.770315972729; Abstand = 442.0158 sigma
+b: dV/Sin[d], cos 3d: -(x*(4 + 9*q*x)) + 3*q*Sin[d]^2; cos d: -q - 4*x
+   (mit Sin[d]^2 = 1 - x^2: -12 q x^2 - 4 x + 3 q, wie in k359)
+b: Cos[2/9] in Algebraics: False; Tan[2/9] in Algebraics: False
+b: noetiges q (cos 3d) bei 2/9 und 2Pi/3 - 2/9: -0.4635374727, -0.6111904396
+c(i) MatrixExp[I 2Pi/3 Ln] - S = {0}
+c(ii) W - (a+2s - 3s Ln^2 - Sqrt3 v Ln) = {0}
+c(iii) w12 w23 w31 - b^3 = 0
+c(iv) Rest = 0
+d: eps0 = 0.61752958495
+d vorwaerts K 1: {{0.7440364, 0.1547329}, {0.7440364, 0.1670413}, {0.7440364, 0.1938151}, {0.7440364, 0.2176493}, {0.7440364, 0.2268860}, {0.7440364, 0.1641329}}
+d vorwaerts K -1: {{0.9547633, 0.008347192}, {0.9547633, 0.02077087}, {0.9547633, 0.03613294}, {0.9547633, 0.04670009}, {0.9547633, 0.05043610}, {0.9547633, 0.01853739}}
+d vorwaerts lin 1: {{23.67260, 0.7145582}, {23.67260, 0.7257807}, {23.67260, 0.7540505}, {23.67260, 0.7844681}, {23.67260, 0.7978937}, {23.67260, 0.7230342}}
+d vorwaerts lin -1: {{0.9211247, 0.04254765}, {0.9211247, 0.1498024}, {0.9211247, 0.2740602}, {0.9211247, 0.3640621}, {0.9211247, 0.3974827}, {0.9211247, 0.1318162}}
+d: K' in Form K geschlossen (rho^2 = 1/2): 2 (1 + 2 Cosh[6 e] + Sinh[6 e]) / (3 Cosh[3 e] + Sinh[3 e])^2

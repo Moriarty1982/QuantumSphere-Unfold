@@ -20,6 +20,17 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Phase der Brannen-Form: ⅔ und 2/9 gelten nicht beide exakt; exakt 2/9 gibt kein polynomiales Potential; die Maske erzeugt die Phase nicht (26.11.2026, Test H166, k359)
+
+**Test H166. Ergebnis: a, b, c bestätigt (nicht blind), d bestätigt (blind, kein Treffer).** Frage des Autors: Was legt die Phase der Nebendiagonale in der Albert-Algebra fest (offen seit H158)? Rückwärtssuche in vier Teilen.
+
+- **Zielwert.** m_μ/m_e ist auf 2·10⁻⁸ gemessen und braucht m_τ nicht. Mit K = ⅔ exakt folgt δ* = 0,2222220471 (2/9 − 1,75·10⁻⁷). Mit δ = 2/9 exakt folgt K = ⅔ − 1,42·10⁻⁷. Beide zugleich exakt geben m_μ/m_e = 206,770316 statt 206,7682827(46), das sind 442σ. Unter dem Postulat J ist also δ* das Ziel. Die τ-Masse trennt die Lesarten nicht (1776,9690 gegen 1776,9665 MeV). Der relative Abstand 7,9·10⁻⁷ ist kleiner als (α/π)²; ob 2/9 exakt gilt, ist ohne Theorie der Korrekturen nicht entscheidbar.
+- **Notwendige Bedingung.** Ein isolierter stationärer Punkt eines polynomialen Potentials mit algebraischen Koeffizienten hat algebraisches tan δ. tan(2/9) ist transzendent (Lindemann–Weierstraß). Alle bisherigen Wege konnten 2/9 daher nur annähern. Exakt 2/9 verlangt eine transzendente Zahl im Koeffizientenverhältnis oder einen Mechanismus, in dem der Winkel linear entsteht (Fluss, Holonomie).
+- **Bedeutung.** W = a + 2r cos(Θ + δ) mit Θ = (2π/3)L_n, dem Erzeuger des Zyklus. In Spin-1-Sprache W = c₀ + D·L_n² + B·L_n mit tan δ = −√3 B/D: δ ist der unter der Konjugation ungerade Dipol entlang der Zyklusachse. Das τ ist der Zustand m = 0, Elektron und Myon sind m = ∓1. Eichinvariant ist nur der Fluss Φ = 3δ.
+- **Maske.** Mit festem ε₀ = artanh β_sym = 0,6175296 erzeugt die Maske in Form K und in der linearen Form aus keinem von sechs nativen Winkeln das Lepton-Spektrum (0 von 24), und rückwärts gehört zum Lepton-Spektrum kein Paar mit K₀ = ⅔. Nur Form S erhält K, und dort ist δ in jedem Frame gleich.
+
+Einordnung: Die offene Wahl ist eine reelle Zahl, der Dipol gegen den Quadrupol. Eine Herleitung braucht einen Term, der unter der Konjugation ungerade ist und entlang der Zyklusachse zeigt. OP3 und OP4 bleiben offen. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/delta_h166/`.
+
 ### Woher β_sym kommt: eine Gleichung, drei Zutaten; die Überlapp-Schließung erzwingt den Hopf-Wert, nicht den gemessenen (26.11.2026, Test H165, k356; Runde r66)
 
 **Runde v4.10.0-r66** hält H164 und den Teil K-e von H161 im Companion fest: β_sym = |⟨K₁|S⟩|, der Boost mit β_sym trägt den R-Zustand auf die Besetzungen des Materie-Zustands (θ_H → 2α, cos 2α = 1/γ_L). Gesetzt und benannt: Lesart C (Hopf-Sphäre als Himmelskugel), der Gegenpol als zweite Auslese, das Dephasieren. Kein Guard berührt.
