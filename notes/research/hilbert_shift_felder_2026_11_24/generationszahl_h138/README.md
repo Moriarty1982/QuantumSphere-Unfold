@@ -1,4 +1,4 @@
-# Generationszahl aus den Sedenionen (H138–H155; 25.11.2026)
+# Generationszahl aus den Sedenionen (H138–H156; 25.11.2026)
 
 Frage des Autors (25.11.2026): Lässt sich aus den Sedenionen erklären, warum für die Generationen nur 3–4 Kopien entstehen? Ergänzende
 Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteilern oder Familien von Nullteilern.
@@ -58,7 +58,9 @@ Vermutung des Autors: Darüber hinaus gäbe es nur noch Anordnungen aus Nullteil
   Die Abweichung von ⅔ ist Messrauschen: mit m_τ = 1776,93 ± 0,09 MeV 0,43σ (Fehler ganz aus m_τ); laufende Massen verschlechtern K, Frame und δ tragen nichts bei.
 - **H155** (Vorab 9d6b6ca): Skala als Setzung. Mit tauschsymmetrischen Massen- und Quartiktermen liegt K = ⅔ am Baumgraph, ohne dass U′ schwer sein muss; U′ schwer
   machen (ζN(W)) verschiebt K. Laufen mit zwei Ebenenrichtungen stört erst in zweiter Ordnung. Term sechster Ordnung erlaubt innere δ, 2/9 verlangt einen Parameter (Fit).
+- **H156** (Vorab fdac350): Die Algebra verlangt μ_A² = μ_B² nicht. Gleiche Massen (und gleiche λ, κ frei) erzwingt genau der Tausch J bzw. D₄ = ⟨L_U, Konjugation⟩;
+  J ist eine Isometrie, aber kein Automorphismus, muss also als Frame-Gleichberechtigung postuliert werden.
 - Status: „3 je Verdopplung“ gezeigt (bedingt auf G₂-Stabilität); „Kopien = Generationen“ offen; Generationszahl bleibt Eingabe.
 
-Dateien: Vorab- und Ergebnis-Notizen H138–H155; Skripte k321–k338 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
+Dateien: Vorab- und Ergebnis-Notizen H138–H156; Skripte k321–k339 (je mit b-Gegenprobe in Wolfram, teils c, d) mit Ausgaben. Aufruf aus diesem Ordner.
 Werkzeuge: Python, Wolfram (exakt bis HS(5)); Qiskit nicht eingesetzt.

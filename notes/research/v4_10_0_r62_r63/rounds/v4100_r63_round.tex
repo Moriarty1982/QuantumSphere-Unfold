@@ -1,0 +1,230 @@
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r63 Source-Only: The Koide Point as Fixed Point of the Frame Exchange, and What Remains Set or Fitted (k331--k339, H148--H156)}
+\addcontentsline{toc}{section}{v4.10.0-r63 Source-Only: The Koide Point as Fixed Point of the Frame Exchange, and What Remains Set or Fitted (k331--k339, H148--H156)}
+\label{sec:v4100-r63-koide-frame-exchange}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r62.8 found that the copy structure alone gives no masses, and r62.9 left a free mixing angle \(\theta\) between the \(HS(0)\) unit and
+the copy direction.  On 25 and 26 November 2026 nine tests followed (H148--H156, scripts k331--k339), each fixed in an advance note before the
+computation.  They ask what fixes \(\theta=\pi/4\) (Koide) and the Brannen phase \(\delta=2/9\), and trace the open choice step by step.  This
+layer collects them with their status as recorded, on the author's decision of 26 November 2026.  It adds no new computation.  The outcome in one
+sentence: \(K=\tfrac23\) follows from one postulate, the equal standing of the matter and the tachyon frame (exchange \(J\)), together with a set
+scale; the postulate is not derived from the algebra, and \(\delta=2/9\) remains a fit.  The layer keeps apart throughout what is derived, what
+is set and what is fitted (table in the balance below).  Signs are not set: where a sign matters, both cases are computed.  Earlier layers are
+not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r63 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r63 setting}
+\label{subsec:v4100-r63-setting}
+
+The state is \(\Psi=\cos\theta\,1+\sin\theta\,U\) with \(U\) a unit in the copy plane at azimuth \(\delta\); \(\theta\) is the polar angle between
+the \(HS(0)\) unit and the copy plane, \(\delta\) the angle within the plane, and \(U'\) denotes the second direction of the plane.  The
+\emph{amplitude readout} is that of r59.9: \(\sqrt{m_k}\propto c_k=\bigl(\cos\theta+\sqrt2\,\sin\theta\cos(\delta-2\pi k/3)\bigr)/\sqrt3\) with signed amplitudes, and
+\(K=\sum m_k/(\sum\sqrt{m_k})^2\).  This readout is a setting.  In the potential, \(A=\varphi^2\) is the norm of the \(HS(0)\) component
+(\(\varphi=\operatorname{Re}\Psi\)), \(B=|y|^2\) that of the copy direction with \(n_B\) components, and
+\[
+V=\mu_A^2A+\mu_B^2B+\lambda_AA^2+\kappa AB+\lambda_BB^2 .
+\]
+``Scale free'' means \(\mu_A^2=\mu_B^2=0\) with the scale arising by condensation at a Gildener--Weinberg point of the one-loop flow; ``scale
+set'' means \(\mu^2\ne0\) as an input.  \(W\) is the diagonal element with entries \(c_k\) and \(N(W)=c_0c_1c_2\) its cubic norm.  Measured values
+used: \(m_\tau=1776.93\pm0.09\) MeV and the pole masses of \(e\), \(\mu\).  Tools: Python (sympy, scipy, explicit octonions), Wolfram Language
+independently for every part; all common quantities agree.  Qiskit was not used (no circuit).
+
+\subsection*{v4.10.0-r63 results}
+\label{subsec:v4100-r63-results}
+
+\paragraph{Theoremlet v4.10.0-r63.1 (why the Gram values miss, and \(K=\tfrac23\) exactly at \(\theta=\pi/4\); H148, k331; partly not blind).}
+The Gram readout of r62.8 compares fixed states of the three copies; their overlap is fixed by the \(120^\circ\) position that
+\(\operatorname{Im}z^3=0\) forces (\(|a|^2=\tfrac1{16}\) for leptons, \(\tfrac14\) for colour), whereas \(K=\tfrac23\) needs
+\(|a|^2=\tfrac12=\cos^2(\pi/4)\).  No choice of copies and no frame mask changes this (H148a confirmed).  In the amplitude readout
+\[
+K=\frac{1}{3\cos^2\theta}
+\]
+(Wolfram exact), independent of \(\delta\), so \(K=\tfrac23\) exactly at \(\theta=\pi/4\) (H148c confirmed).  With \(\delta=2/9\) inserted the
+ratios are \(m_\mu/m_e=206.770\) (measured \(206.768\)) and \(m_\tau/m_\mu=16.8180\) (\(16.8177\)).  The complex charge state
+\((e_0+ie_7)/\sqrt2\) gives \(K\approx0.34\) for every \(\delta\) (H148d); the Koide state must be real and hence fixed under time reversal.  A
+Gram variant with \(\theta^*=26.2242^\circ\) meets \(K=\tfrac23\) with two equal masses; \(\theta^*\) is not a project quantity (H148b).
+\emph{Derived:} \(K=\tfrac23\Leftrightarrow\theta=\pi/4\).  \emph{Set or fitted at this stage:} \(\theta=\pi/4\) itself, \(\delta=2/9\) (fitted to
+\(m_\mu/m_e\)), the scale, the readout.
+
+\paragraph{Theoremlet v4.10.0-r63.2 (\(\theta=\pi/4\) is the fixed point of the frame exchange; \(\delta\) is fixed by no term without fitting; H149, k332; part a not blind).}
+\(\operatorname{Re}\Psi^2=\cos2\theta=x_0^2-|\vec x|^2\).  The exchange \(J:\psi\mapsto U\bar\psi\) maps \(\theta\) to \(\pi/2-\theta\), \(J^2=1\),
+and its only fixed point in \([0,\pi)\) is \(\theta=\pi/4\), where \(\Psi\) is lightlike (\(\operatorname{Re}\Psi^2=0\)); verified in the octonions
+explicitly.  By k297 \(J\) is the exchange of matter frame and tachyon frame (\(\mu\mapsto1/\mu\)).  For a quartic potential
+\(\partial_\theta V|_{\pi/4}=-(2a-2c+\mu_0^2-\mu_1^2)/2\): exactly one linear condition, the exchange-odd part.  With the exchange it vanishes, and
+the curvature is \(2(2a-b)\) at \(\pi/4\) and \(-2(2a-b)\) at \(\theta=0\) (\(K=\tfrac13\), three equal masses).  Minimum or maximum is decided by
+the sign of \(2a-b\) alone; this sign is not set.  The HC breaks the exchange and gives \(K=(1+\beta_{\rm sym}^4)/3=0.364\) in the matter frame
+(H149c).  For any \(V(N,\operatorname{Re})\) up to degree 4, \(\partial_\delta V\equiv0\); \(\delta\) enters only through
+\(N(W)=(2\cos3\delta-\sqrt2)/(24\sqrt3)\) at \(\theta=\pi/4\).  Among 966 minima of \(V=\sum\alpha_kN^k\) with small integer coefficients, the 126
+with three different masses all lie at \(\delta=\pi/12\) (\(N(W)=0\), massless electron, the octant of H101); none at \(2/9\) (H149d).  No project
+quantity lies within \(1\%\) of \(\delta_{\rm fit}=0.222222\) (H149e).  Not evaluated: CT-002 (\(\delta=\pi/12-\gamma_M/6\)) lies \(5\cdot10^{-5}\)
+off; a numerical coincidence \(\delta=\arccos(\pi/4)/3\) noticed before the note lies \(42\sigma\) off and does not hold.  H149a--e confirmed.
+
+\paragraph{Theoremlet v4.10.0-r63.3 (the sign of \(2a-b=2\lambda-\kappa\) does not follow from the field equation alone; H150, k333; parts a, f not blind).}
+With the potential of the full norm (or a gauged \(U(1)\)) \(2\lambda-\kappa=0\) to every order and \(\theta\) is flat.  \emph{Scale set:} the
+Koide point is the minimum for the whole window \(-2\lambda<\kappa<2\lambda\); with a hard cutoff and unequal component numbers (1 against 2) the
+mass term becomes exchange odd and \(\theta\) moves to \(\cos2\theta=c_L/f^2\) (this part of H150b \emph{refuted}).  \emph{Scale free:} a
+condensate at the Koide point arises only for \(\kappa<0\) (class (iv); 190 of 190 for \(n=1\) and \(n=2\)), and then \(2a-b>0\) without a
+further choice; for \(0<\kappa<2\lambda\) no scale arises.  H150c is \emph{refuted by its wording} in the part \(r>2\).  With the actual component
+numbers (1 against 2) the flow shifts the condensation point to \(K\) between \(0.6667\) and \(0.6778\), median \(0.6719\) (H150d); with all of
+\(\operatorname{Im}\mathbb O\) (1 against 7) the median is \(0.697\).  In the HC form \(\eta(B-\mu^2A)^2\) boundedness gives \(\kappa\le0\) and
+\(2a-b>0\), but the minimum lies at \(\tan\theta=\mu\) (H150f).  So the sign follows from the field equation only if two things are required:
+scale free, and the scale shall arise.  Deferred idea I4 (condensation as the source of mass) is met and was named to the author; it is not
+implemented.
+
+\paragraph{Theoremlet v4.10.0-r63.4 (the scale-free shift is start dependent and unrelated to any setting; H151--H153, k334--k336).}
+(a)~The flow is invariant under rotations in the copy plane and does not generate \(\delta\) (H151a).  The shift of \(K\) is not a fixed number:
+between \(0\) and \(0.011\) over the physical range, with a fixed value only in the limit \(\kappa_0\to0^-\),
+\(K^*=\tfrac13+\sqrt{10}/9=0.684698\) for \(n_B=2\); no fixed ray with \(\kappa<0\) exists (H151b partly).  48 comparisons with functions of
+\(2/9\) give no hit, 540 with all 15 settings give 2 against a chance expectation \(0.58\) (H151c, d).  Form S leaves \(K\) invariant and a boost
+keeps the light cone fixed, so the frame difference cannot restore \(\tfrac23\) (H151e).
+(b)~The complete scale-free ansatz with all \(\mathbb Z_3\rtimes\mathbb Z_2\)-invariant quartics (new only \(\xi\varphi C_3\),
+\(C_3=y_1^3-3y_1y_2^2\)) and the back-reaction of \(HS(3)\): over 144 starting points \(K\) ranges from \(0.6615\) to \(0.8182\), and \(\delta\)
+always lands on \(0\) or \(\pi/3\) (two equal masses); three different masses in 0 of 144 cases (H152a--e confirmed).
+(c)~A normalisation of \(A\) and \(B\) (per component, by the trace \(\tfrac13:\tfrac23\), over three copies) is a reparametrisation (zero
+residue): it selects only the starting ray (H153a, b).  Only restricting the loop to the subalgebra \(\{1,U\}\) (\(n_A=n_B=1\)) gives
+\(K=\tfrac23\) and \(\theta=\pi/4\) exactly for all starts (H153c); that is a setting about the degrees of freedom.
+
+\paragraph{Theoremlet v4.10.0-r63.5 (the loop over \(\{1,U\}\) is not forced; the deviation from \(\tfrac23\) is measurement noise; H154, k337; parts a, g, h not blind).}
+The second plane direction contributes \(\beta(1,2)-\beta(1,1)=[2\kappa^2,\,8\kappa\lambda_B,\,8\lambda_B^2]\), nonzero in the Koide range.  The
+only generator that leaves \(\operatorname{span}\{1,U\}\) invariant is the \(U(1)\) of \(\exp(\alpha U)\), under which \(U'\) is neutral; it
+preserves \(V\) only for the full norm.  At the Gildener--Weinberg point \(U'\) is a Goldstone direction and \(K\) is unchanged; gauging the plane
+rotation leaves \(K\) start dependent (\(0.634\) to \(1.922\) over 40 starts).  No symmetry removes a field from the loop: the algebra does not
+force \(n_B=1\).  \emph{Measured value:}
+\[
+K=0.6666645\pm0.0000051,
+\]
+\(0.43\sigma\) below \(\tfrac23\), the error coming entirely from \(m_\tau\).  The value \(0.666661\pm0.000007\) used in H152 and H153 rested on
+the older \(m_\tau=1776.86\pm0.12\) MeV; this is corrected here, and no decision changes.  One-loop QED running to a common scale shifts \(K\) by
+\(+1.1\cdot10^{-3}\) (about \(225\sigma\)): Koide holds for pole masses, not for running masses at a common scale.  Form S leaves \(K\) exactly
+unchanged and \(\partial_\delta K\equiv0\).  \emph{Conditional prediction:} if \(K=\tfrac23\) holds exactly for pole masses, then
+\(m_\tau=1776.969\) MeV, \(0.039\) MeV above the present mean.  H154a--h confirmed.
+
+\paragraph{Theoremlet v4.10.0-r63.6 (with a set scale the exchange symmetry holds \(K=\tfrac23\); H155, k338; part a not blind).}
+For \(\mu_A^2=\mu_B^2=\mu^2<0\) and \(\lambda_A=\lambda_B=\lambda\) the minimum is \(A=B=-\mu^2/(2\lambda+\kappa)\), hence \(\theta=\pi/4\) and
+\(K=\tfrac23\) at tree level for \(-2\lambda<\kappa<2\lambda\), with mass squares \(0\) (\(U'\), Goldstone), \(-4\mu^2\) and
+\(4\mu^2(\kappa-2\lambda)/(\kappa+2\lambda)\); \(U'\) need not be heavy (H155a).  Making \(U'\) heavy by the cubic norm \(\zeta N(W)\) shifts \(K\)
+together with its mass (H155b).  Running with two plane directions: the first order in the logarithm cancels exactly between mass and quartic
+running (symbolic zero residue), leaving an effect of order \((\lambda L/16\pi^2)^2\); H155c, which predicted that every window misses, is
+\emph{refuted} in favour of Koide.  A hard cutoff or thresholds shift \(\theta\) at first order (r63.3 stands).  A sixth-order term
+\(\zeta N+N^2/\Lambda^2\) allows interior \(\delta\) for \(R=\zeta\Lambda^2/v^3\in[-0.0282,\,0.164]\); \(\delta=2/9\) requires
+\(R^*=-0.0075807\), one parameter, which is a fit.  One comparison with known scales (\(R=-\sum m_\ell/v\), \(0.89\%\) off) counts as a hit by the
+wording of H155d but lies \(63\sigma\) off in \(\delta\) and is not independent of the target; it is no derivation.  \emph{Exploration, after the
+fact:} with \(R^*\) the full potential keeps \(K=\tfrac23\) and gives \(\delta=2/9\), doubly degenerate with \(\delta=0.29713\).  The three lepton
+masses are then reproduced from the set exchange symmetry, the scale and one fitted parameter: as many inputs as Koide plus Brannen phase.
+
+\paragraph{Theoremlet v4.10.0-r63.7 (equal mass terms follow only from the exchange \(J\) as a postulate; H156, k339; parts a, d not blind).}
+\(\mu_AA+\mu_BB=\tfrac12(\mu_A+\mu_B)N+\tfrac12(\mu_A-\mu_B)\operatorname{Re}\Psi^2\), and both \(N\) and \(\operatorname{Re}\Psi^2\) are invariant
+under conjugation and under \(G_2\): the algebra allows unequal mass terms (H156a).  Among the candidate symmetries, \(SO(2)=\exp(\alpha U)\) is
+too strong (\(\kappa=2\lambda\), no Koide condensate), \(\mathbb Z_4=\langle L_U\rangle\) too weak (it allows the exchange-odd quartic
+\(\varphi y(y^2-\varphi^2)\)); exactly \(\mathbb Z_2=\langle J\rangle\) and \(D_4=\langle L_U,\text{conjugation}\rangle\) enforce the form of
+r63.6: equal masses, equal \(\lambda\), \(\kappa\) free (H156b).  \(J\) is an isometry but neither an automorphism nor an antiautomorphism:
+\(J(1)J(1)=-1\ne J(1)\), \(J(zw)=J(z)\bar w\) (H156d).  The algebra therefore does not supply \(J\); it has to be required as a symmetry of the
+field theory.  The flow helps only weakly: for \(n_B=1\) the quartic direction is attracted to the exchange line for \(|\kappa|<6\lambda\), the
+mass direction only for \(\kappa<0\); for \(n_B=2\) the flow sources the deviation itself (H156c partly).  Equal mass terms are thus equivalent to
+the \emph{postulate of equal standing of the matter and the tachyon frame}.  The author adopted this postulate as a working assumption on
+26 November 2026; it is a statement about the physics, not a result of the computation.  Limit: the invariants are computed in the plane
+\(\{1,U\}\); in all of \(\mathbb O\) or \(\mathbb S\), \(L_U\) leads out of the three-field space (named only).
+
+\subsection*{v4.10.0-r63 balance of settings}
+\label{subsec:v4100-r63-balance}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+item & status\\
+\midrule
+\(K=\tfrac23\Leftrightarrow\theta=\pi/4\) & derived (in the amplitude readout)\\
+\(\theta=\pi/4\) is the fixed point of \(J\); stationary for every exchange-symmetric potential & derived\\
+\(\theta=\pi/4\) realised & only with the postulate of equal standing of the frames (\(J\)); postulate adopted by the author, not derived\\
+scale \(\mu^2\) & set (scale free: \(K\) start dependent, shifted)\\
+sign of \(2\lambda-\kappa\), of \(\mu^2\), \(\zeta\), global orientation & not set; both cases computed; left to the field equation\\
+\(\delta=2/9\) & fitted (one parameter \(R^*\), or CT-002 as placeholder)\\
+amplitude readout, number of generations & set (inputs)\\
+\(m_\tau=1776.969\) MeV & conditional prediction (if \(K=\tfrac23\) exactly for pole masses)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The open choice moved from ``\(\theta\)'' (r63.1) to ``sign of \(2a-b\)'' (r63.2), to ``starting value of the flow'' (r63.3--r63.5), to ``equality
+of the mass terms'' (r63.6) and ends at one postulate (r63.7).  The target \(\delta=2/9\) is itself a fitted input; the question of \(\theta\)
+arises in the chosen decomposition (amplitude readout) and would not arise in this form in the Gram readout.
+
+\subsection*{v4.10.0-r63 frames}
+\label{subsec:v4100-r63-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r63.1 (readouts, measured ratios) & M & form S for charged leptons: \(K\) unchanged, so the comparison with data is frame independent\\
+r63.2, r63.7 (exchange \(J\)) & M \(\leftrightarrow\) T, declared map \(\theta\mapsto\pi/2-\theta\) (\(\mu\mapsto1/\mu\), k297) & fixed point \(\theta=\pi/4\); HC value \(0.364\) in M\\
+r63.3--r63.6 (potential, flow) & M & boost keeps the light cone; no rapidity restores \(\tfrac23\) (H151e)\\
+P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+\(J\) is the exchange of matter and tachyon frame and is not time reversal \(z\mapsto\bar z\); the two are kept apart (r51, r81).
+
+\subsection*{v4.10.0-r63 register entries}
+\label{subsec:v4100-r63-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r63\\
+\midrule
+H148a--d; H149a--e; H150a, d, e, f; H151a, c, d, e; H152a--e; H153a, c, d; H154a--h; H155a, b; H156a, b, d & confirmed, with the blindness recorded per part\\
+H150b (cutoff part, 1 against 2), H150c (part \(r>2\)), H155c, H155d & refuted (H150c, H155d by wording; H155c in favour of Koide)\\
+H151b, H156c & partly\\
+H153b & confirmed except one sub-prediction (two normalisations give the same \(K\))\\
+Koide \(K=\tfrac23\) & follows from the postulate \(J\) with a set scale; not derived from the algebra\\
+postulate of equal standing of M and T frame & adopted by the author on 26 November 2026 as working assumption\\
+\(\delta=2/9\) & fit; CT-002 remains a placeholder\\
+\(m_\tau=1776.969\) MeV & conditional prediction, open\\
+consequences of \(J\) for \(\delta\) (H157) & in progress elsewhere; not part of this layer\\
+OP3, OP4 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r63 notes}
+\label{subsec:v4100-r63-notes}
+
+{\raggedright
+\texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/\allowbreak generationszahl\_\allowbreak h138/}:
+advance notes \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H148\_\allowbreak *.md} to \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H156\_\allowbreak *.md}, result notes
+\texttt{Ergebnis\_\allowbreak H148\_\allowbreak *.md} to \texttt{Ergebnis\_\allowbreak H156\_\allowbreak *.md}, scripts \texttt{k331} to \texttt{k339} (each with a
+Wolfram cross-check \texttt{b}) and their actual outputs \texttt{k3NN\_\allowbreak out.txt}.  The exchange as frame change (k297) is in
+\texttt{feldgleichung/\allowbreak HC\_\allowbreak Tauschsymmetrie\_\allowbreak k297.md} of the same folder tree.
+\par}
+
+\subsection*{v4.10.0-r63 ledger and guard update}
+\label{subsec:v4100-r63-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r63}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no new computation in this layer; \(\delta\), the scale and the postulate \(J\) not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r63,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r63}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

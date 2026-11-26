@@ -1,0 +1,49 @@
+=== H156a: Automorphismen lassen N und Re Psi^2 invariant ===
+   Konjugation in C = {1, U}: (phi, y) -> (phi, -y): dN = 0 , dRe Psi^2 = 0
+   Oktonionen: zyklischer Shift der Einheiten ist Automorphismus (max. Fehler 1.8e-15); haelt den Realteil fest
+   N vorher/nachher: 3.413360256719 / 3.413360256719; Re Psi^2 = x0^2 - |Im|^2 vorher/nachher: -3.400239244444 / -3.400239244444
+   -> beide quadratischen Formen sind automorphismeninvariant; mu_A^2 != mu_B^2 ist erlaubt.
+   Zerlegung: muA A + muB B = (muA + muB)/2 N + (muA - muB)/2 Re Psi^2: True
+
+=== H156b: Invarianten in der Ebene {1, U} ===
+   J = L_U * Konjugation: True
+   Z4 = <L_U> (Ordnung 4): quadratisch [phi**2 + y**2]; quartisch [phi**4 + y**4, -phi**3*y + phi*y**3, phi**2*y**2]; quartische Terme mit d/dtheta != 0 bei pi/4: [-phi**3*y + phi*y**3]
+   Z2 = <J> (Ordnung 2): quadratisch [phi**2 + y**2, phi*y]; quartisch [phi**4 + y**4, phi**3*y + phi*y**3, phi**2*y**2]; quartische Terme mit d/dtheta != 0 bei pi/4: []
+   D4 = <L_U, Konjugation> (Ordnung 8): quadratisch [phi**2 + y**2]; quartisch [phi**4 + y**4, phi**2*y**2]; quartische Terme mit d/dtheta != 0 bei pi/4: []
+   SO(2) aus exp(aU): einzige Invarianten N, N^2 -> mu_A^2 = mu_B^2 und kappa = 2 lambda (volle Norm, kein Koide-Kondensat, H150)
+
+=== H156c: Ist die Tauschlinie im Fluss anziehend? ===
+   n_B = 1: Quelle (Abweichung, die der Fluss auf der Tauschlinie selbst erzeugt) d(s, r)/dt = [0, 0]
+      lineare Matrix fuer (s, r): [[8*k, -24*l], [0, 2*k**2/l - 72*l]]
+      lam = 0.05, k/lam = -1.0: Eigenwerte [-0.4, -3.5] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.05, k/lam = -0.5: Eigenwerte [-0.2, -3.575] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.05, k/lam = +0.5: Eigenwerte [0.2, -3.575] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.05, k/lam = +1.0: Eigenwerte [0.4, -3.5] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.1, k/lam = -1.0: Eigenwerte [-0.8, -7.0] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.1, k/lam = -0.5: Eigenwerte [-0.4, -7.15] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.1, k/lam = +0.5: Eigenwerte [0.4, -7.15] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.1, k/lam = +1.0: Eigenwerte [0.8, -7.0] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.2, k/lam = -1.0: Eigenwerte [-1.6, -14.0] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.2, k/lam = -0.5: Eigenwerte [-0.8, -14.3] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.2, k/lam = +0.5: Eigenwerte [0.8, -14.3] (negativ = anziehend), Quelle [0.0, 0.0]
+      lam = 0.2, k/lam = +1.0: Eigenwerte [1.6, -14.0] (negativ = anziehend), Quelle [0.0, 0.0]
+   n_B = 2: Quelle (Abweichung, die der Fluss auf der Tauschlinie selbst erzeugt) d(s, r)/dt = [-4*k + 8*l, -2*k**2/l + 8*l]
+      lineare Matrix fuer (s, r): [[12*k, -28*l], [0, 3*k**2/l - 76*l]]
+      lam = 0.05, k/lam = -1.0: Eigenwerte [-0.6, -3.65] (negativ = anziehend), Quelle [0.6, 0.3]
+      lam = 0.05, k/lam = -0.5: Eigenwerte [-0.3, -3.7625] (negativ = anziehend), Quelle [0.5, 0.375]
+      lam = 0.05, k/lam = +0.5: Eigenwerte [0.3, -3.7625] (negativ = anziehend), Quelle [0.3, 0.375]
+      lam = 0.05, k/lam = +1.0: Eigenwerte [0.6, -3.65] (negativ = anziehend), Quelle [0.2, 0.3]
+      lam = 0.1, k/lam = -1.0: Eigenwerte [-1.2, -7.3] (negativ = anziehend), Quelle [1.2, 0.6]
+      lam = 0.1, k/lam = -0.5: Eigenwerte [-0.6, -7.525] (negativ = anziehend), Quelle [1.0, 0.75]
+      lam = 0.1, k/lam = +0.5: Eigenwerte [0.6, -7.525] (negativ = anziehend), Quelle [0.6, 0.75]
+      lam = 0.1, k/lam = +1.0: Eigenwerte [1.2, -7.3] (negativ = anziehend), Quelle [0.4, 0.6]
+      lam = 0.2, k/lam = -1.0: Eigenwerte [-2.4, -14.6] (negativ = anziehend), Quelle [2.4, 1.2]
+      lam = 0.2, k/lam = -0.5: Eigenwerte [-1.2, -15.05] (negativ = anziehend), Quelle [2.0, 1.5]
+      lam = 0.2, k/lam = +0.5: Eigenwerte [1.2, -15.05] (negativ = anziehend), Quelle [1.2, 1.5]
+      lam = 0.2, k/lam = +1.0: Eigenwerte [2.4, -14.6] (negativ = anziehend), Quelle [0.8, 1.2]
+
+=== H156d: Ist J eine Symmetrie der Multiplikation? ===
+   J(1) J(1) = -1 ; J(1 * 1) = I -> kein Automorphismus
+   J(1) J(1) gegen J(conj(1 * 1)) (Antiautomorphismus): -1 vs I -> auch kein Antiautomorphismus
+   |J(z)|^2 - |z|^2 = 0 -> Isometrie der Norm
+   J(z w) - J(z) conj(w) = 0 -> J ist mit der Multiplikation nur bis auf Konjugation vertraeglich
