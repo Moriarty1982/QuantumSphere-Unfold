@@ -1,6 +1,7 @@
 # Vorhersagen und Tests
 
 **Nachtrag 26.11.2026 (H164):** H164 abgeschlossen (trägt teilweise: K-a, K-b bestätigt, K-c widerlegt, K-d nach Wortlaut widerlegt bei bestätigtem Kern; überwiegend nicht blind). Kein Datenvergleich; H96 ist nicht berührt.
+**Nachtrag 26.11.2026 (v4.10.0-r65):** H162 und k361 stehen als Runde r65 im Companion. H125 Stufe A gilt für jede Ladungsachse und beide Ladungstypen, bedingt unter der Setzung „dieselbe Seite der Multiplikation in beiden Sektoren“. H125 Stufe B bleibt offen (Frist 31.12.2035) und hängt an S1 und dieser Setzung; Entscheidungsregel und Vorwahrscheinlichkeit ½ sind unverändert.
 
 **Nachtrag 26.11.2026 (Erkundung k361 zu H125):** Das relative Vorzeichen von H125 Stufe A hängt nicht an der Ladungsachse und nicht am Ladungstyp (L_u oder R_u), aber an der Setzung, dass dieselbe Seite der Multiplikation die Familie auf Leptonen und Quarks trägt. Mit verschiedenen Seiten sind beide Sektoren gleich orientiert. Stufe B bleibt offen; sie hängt an S1 und an dieser Setzung.
 
