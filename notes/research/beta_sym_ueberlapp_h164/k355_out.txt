@@ -1,0 +1,46 @@
+== K-a  Paare benannter Zustaende mit Ueberlapp beta ==
+  13 Zustaende, 78 Paare;  beta_sym = 0.5493482, theta_H = 66.6446 Grad, pi - theta_H = 113.3554 Grad
+  Identitaet |<psi1|psi2>| = beta (symbolisch):
+    (N, K1~Tausch): 0.5493482
+    (S, K1): 0.5493482
+    (S, K1~Tach): 0.5493482
+  nur Zahlentreffer innerhalb 1 % (keine Identitaet):
+    (h, h~Tausch): 0.5531864  Abweichung +0.70 %;  Ueberlapp^2 = 4*beta**4/(beta**8 + 2*beta**4 + 1)
+
+== K-b  Boost-Identitaeten (sympy) ==
+  (i)   cos(theta/2) - beta mit theta = pi - theta_H: 0 ;  Rapiditaet = artanh(beta) = eps der Maske (H45), Zahl: 0.617447
+  (ii)  Frames mit +beta und -beta: relative Geschwindigkeit 2 beta/(1 + beta^2); 1/(1 - v^2) - gamma_L^2 = 0 ;  gamma_L = 1.86444
+  (iii) sech(2 eps) - 1/gamma_L = 0
+  invariante Masse des Paars: M/(2E) = sin(theta/2) = cos(theta_H/2) = sqrt(1 - beta^2) = 0.835594 = 1/gamma(beta)
+
+== K-c  gleichgewichtete Mischung der zwei Auslesen (Qiskit DensityMatrix) ==
+  Bloch-Vektor [ 0.459032  0.       -0.301783], Laenge 0.549348  (beta = 0.5493482; Materie-Zustand: 1/gamma_L = 0.536354)
+  Besetzungen im Eigensystem [0.774674 0.225326]; Materie-Zustand (1, beta^2)/(1 + beta^2) = [0.768177 0.231823]
+  zum Vergleich der dephasierte Kickzustand (1, beta): Besetzungen [0.768177 0.231823], Bloch-Laenge 0.536354
+  Laenge beta = 1/gamma_L nur fuer beta^3 + beta^2 + beta - 1 = 0: beta = 0.543689 (gemessen 0.5493482, Hopf 0.577350)
+
+== K-d  Bilder unter dem Boost, der K1 und S auf Gegenpunkte legt ==
+  det A = 1.000000000000;  Winkel K1'-S' = 180.000000 Grad (Gegenpunkte);  Ueberlapp danach 1.5e-16
+  Bezugswinkel: theta_H = 66.6446, 2 alpha = 57.5642, 4 alpha = 115.1285, pi - theta_H = 113.3554, pi - 2 alpha = 122.4358  (tan alpha = beta, cos 2 alpha = 1/gamma_L)
+      N'-S  ': vorher  180.0000, nachher  122.4358 Grad;  Identitaet (5 Werte von beta): pi - 2 alpha
+      N'-K1 ': vorher   66.6446, nachher   57.5642 Grad;  Identitaet (5 Werte von beta): 2 alpha
+      N'-E+x': vorher   90.0000, nachher   89.5113 Grad;  Identitaet (5 Werte von beta): keine der benannten
+      N'-E-x': vorher   90.0000, nachher   50.7733 Grad;  Identitaet (5 Werte von beta): keine der benannten
+      N'-E+y': vorher   90.0000, nachher   62.3774 Grad;  Identitaet (5 Werte von beta): keine der benannten
+      S'-K1 ': vorher  113.3554, nachher  180.0000 Grad;  Identitaet (5 Werte von beta): keine der benannten
+      S'-E+x': vorher   90.0000, nachher  148.0530 Grad;  Identitaet (5 Werte von beta): keine der benannten
+      S'-E-x': vorher   90.0000, nachher   71.6625 Grad;  Identitaet (5 Werte von beta): keine der benannten
+      S'-E+y': vorher   90.0000, nachher   90.0000 Grad;  Identitaet (5 Werte von beta): pi/2
+     K1'-E+x': vorher   23.3554, nachher   31.9470 Grad;  Identitaet (5 Werte von beta): keine der benannten
+     K1'-E-x': vorher  156.6446, nachher  108.3375 Grad;  Identitaet (5 Werte von beta): keine der benannten
+     K1'-E+y': vorher   90.0000, nachher   90.0000 Grad;  Identitaet (5 Werte von beta): pi/2
+    E+x'-E-x': vorher  180.0000, nachher  140.2846 Grad;  Identitaet (5 Werte von beta): keine der benannten
+    E+x'-E+y': vorher   90.0000, nachher  106.8986 Grad;  Identitaet (5 Werte von beta): keine der benannten
+    E-x'-E+y': vorher   90.0000, nachher   58.5703 Grad;  Identitaet (5 Werte von beta): keine der benannten
+  Projektion von K1' auf die Achse N': 0.536354;  1/gamma_L = 0.536354  => K1', um die Achse N' dephasiert, hat die Bloch-Laenge des Materie-Zustands
+  Besetzungen von K1' in der Basis (N', Gegenpunkt von N'): 0.768177, 0.231823;  Materie-Zustand: 0.768177, 0.231823
+
+== Erkundung ohne Kriterium ==
+  Hopf-Wert beta = 1/sqrt(3): theta = pi - theta_H = 109.4712 Grad = arccos(-1/3) = 109.4712 (Tetraederwinkel); 2 alpha = 60, gamma_L = 2
+    vier Tetraeder-Zustaende: paarweiser Ueberlapp min 0.577350, max 0.577350 (1/sqrt(3) = 0.577350); Summe der Projektoren = [[2.0, -0.0], [-0.0, 2.0]] (= 2 mal Eins: vollstaendige Messung)
+    vier paarweise gleichwinklige Richtungen gibt es nur bei cos = -1/3; beim gemessenen beta (cos = -0.3964, 113.36 Grad) hoechstens drei

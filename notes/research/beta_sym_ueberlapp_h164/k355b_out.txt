@@ -1,0 +1,20 @@
+k355b_gegenprobe.wl, ausgefuehrt am 26.11.2026 (Wolfram-Kernel, zustandslos, zwei Aufrufe: Punkte 1-5 und 7, danach Punkt 6 einzeln).
+Print-Ausgaben, zweidimensionale Darstellung in eine Zeile uebertragen; Rueckgabewert Null.
+
+1) Paar (K1, S): |<S|K1>| = b ; theta = Pi - theta_H: Cos[(Pi - 2 ArcSin[b])/2] - b = 0
+2) gamma der Relativgeschwindigkeit 2b/(1+b^2) minus gamma_L = 0 ; Sech[2 eps] - 1/gamma_L = 0
+3) Bilder: K1'.S' = -1 (Gegenpunkte) ; |N'|^2 = 1
+   N'.K1' = -1 + 2/(1 + b^2) ; minus 1/gamma_L = 0 ; minus Cos[2 ArcTan[b]] = 0
+   N'.S' = 1 - 2/(1 + b^2) ; plus 1/gamma_L = 0
+   vorher: N.K1 = Cos[2 ArcSin[b]] = 1 - 2 b^2
+4) Besetzungen von K1' bezueglich der Achse N': (1 + N'.K1')/2 = 1/(1 + b^2) ; Materie-Zustand 1/(1 + b^2): Differenz 0
+5) Mischung der zwei Auslesen: Laenge^2 von (nK + nS)/2 = b^2 ; gleich 1/gamma_L^2 fuer b = {{b -> 0.5436890127}}
+6) Hopf-Wert b = 1/Sqrt[3]: Cos[Pi - 2 ArcSin[1/Sqrt[3]]] = -1/3 ; Differenz zum Tetraederwinkel numerisch 0.*10^-79 ; gamma_L = 2 ; N'.K1' = 1/2
+7) Zahlen: b = 0.5493482: N'.K1' = 0.536354 , Winkel 57.5642 Grad
+
+Einordnung: Punkte 1 bis 5 sind symbolische Nullreste bzw. exakte Ausdruecke (FullSimplify unter 0 < b < 1); Punkt 7 Gleitkomma.
+Punkt 6: der Kosinus ist exakt -1/3; die Winkeldifferenz selbst vereinfacht FullSimplify nicht zu 0 (Ausgabe Pi - 2 ArcCsc[Sqrt[3]] - ArcSec[-3]),
+numerisch ist sie null auf 79 Stellen.
+Warnungen des Kernels (nur zu Punkt 6): N::meprec ($MaxExtraPrecision = 50 erreicht, zweimal) und PossibleZeroQ::ztest1 (Nullpruefung nicht entscheidbar,
+als null angenommen); General::messages. Im ersten Aufruf stand Punkt 6 als unvereinfachter Winkelausdruck in der Ausgabe und war dort nicht lesbar; deshalb
+der zweite Aufruf mit dem Kosinus.
