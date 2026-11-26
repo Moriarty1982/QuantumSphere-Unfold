@@ -148,6 +148,10 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H179, 26.11.2026:** Für OP3 und OP4. Standarderwartung geprüft: Eichladungen ändern K nicht; kein Ladungsgesetz trennt Up und Down. Die Georgi-Jarlskog-Relation trifft die Down-Konfiguration auf 0,3 bis 5 %, ist nach den vorab gesetzten Kriterien aber widerlegt. Up bleibt frei. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/standardphysik_h179/`.
 
+**Erkundung k380, 26.11.2026:** Für OP3 und OP4. Vier Sektoren (zwei farblose Ebenen, zwei Farbblöcke) gibt es erst auf HS(4); J legt nur den Sektor mit Kopienrichtung U auf K = ⅔ fest. Offen: Zuordnung der Sektoren, die Koeffizienten der Farbblöcke und ob K_ν = ⅔ gedeckt ist (Weggabelung für den Autor). Quelle: `notes/research/hilbert_shift_felder_2026_11_24/hs_stufe_k380/`.
+
+**Test H180, 26.11.2026:** Für OP3 und OP4. Mit freiem K_ν legen R und die Mischungswinkel K_ν = 0,660 (0,634 bis 0,701) fest; die Setzung K_ν = ⅔ ist innerhalb des Modells von den Daten gestützt. Alternative ohne kleine Drehung (K_ν = 0,629, χ² = 8,2) nicht ausgeschlossen; JUNO trennt über sin²θ₁₂. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/neutrino_k_h180/`.
+
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
 **Runde r65, 26.11.2026:** H162 und k361 stehen als Runde v4.10.0-r65 im Companion. Für OP3/OP4: Weg A und das relative CP-Vorzeichen gelten für jede Ladungsachse und beide Ladungstypen; die Frage aus r64.2 ist damit beantwortet. Offen bleiben die Wahl der Achse (ψ-fest oder kopientreu), die Setzung der Seite und die dritte Generation. OP3 und OP4 bleiben offen.
