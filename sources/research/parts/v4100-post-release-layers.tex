@@ -8648,3 +8648,189 @@ R_{\rm glob}^{(v4100\text{-}r64,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r65 Source-Only: Charge Axis and Charge Type on the Sedenion Carrier; Route A and the Relative CP Sign Depend on One Named Setting}
+\addcontentsline{toc}{section}{v4.10.0-r65 Source-Only: Charge Axis and Charge Type on the Sedenion Carrier; Route A and the Relative CP Sign Depend on One Named Setting}
+\label{sec:v4100-r65-charge-axis-type}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r64.2 recorded that H130 does not support the charge axis \(e_8\) (placeholder CT-003) and left open whether route A of r13 (two generations)
+and the relative CP sign of r59.6 survive on the axis \(e_7\).  This layer records the test H162 (k360, 26 November 2026), which answers that
+question, and the exploration k361, which adds the second type of charge and finds that the relative sign of r59.6 rests on a setting that was
+not named there.  It restricts one sentence of r59.6 and weakens the condition under which r13.3, r13.4 and r59.6 stand.  Earlier layers are not
+rewritten.  No guard changes.  No comparison with data is made.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r65 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r65 results}
+\label{subsec:v4100-r65-results}
+
+Notation.  \(H_n=\operatorname{span}(1,e_7,e_8,e_{15})\) is the colour-neutral block of \(\mathbb S\); it is associative (a quaternion algebra).
+\(P_0\), \(P_3\), \(P_{\bar3}\) are the projectors onto \(H_n\) and the two coloured blocks (ranks \(4,6,6\)).  For a unit
+\(u\in\operatorname{Im}H_n=\operatorname{span}(e_7,e_8,e_{15})\),
+\[
+Q^{L}_u=P_0\bigl(\tfrac12-\tfrac i2L_u\bigr)P_0+\tfrac23P_3+\tfrac13P_{\bar3},
+\qquad
+Q^{R}_u=P_0\bigl(\tfrac12-\tfrac i2R_u\bigr)P_0+\tfrac23P_3+\tfrac13P_{\bar3},
+\]
+with left and right multiplication \(L_u\), \(R_u\).  The charge of r13.1 is \(Q_*=Q^L_{e_8}\).
+
+\paragraph{Theoremlet v4.10.0-r65.1 (the charge has the same spectrum and the same symmetries for every axis; H162a, not blind).}
+For every unit \(u\in\operatorname{Im}H_n\), \(Q^L_u\) has the spectrum \(0\,(2)\), \(\tfrac13\,(6)\), \(\tfrac23\,(6)\), \(1\,(2)\), commutes with
+\(su(3)_c\) and satisfies \(\overline{Q}=1-Q\).  \textbf{Confirmed.}
+\emph{Proof sketch.}  \(H_n\) is associative, so \(L_u^2=-1\) on \(H_n\) for every unit \(u\), and \(\tfrac12-\tfrac i2L_u\) has the eigenvalues
+\(0\) and \(1\) twice each.  The coloured part of \(Q^L_u\) does not depend on \(u\).
+\emph{Check.} Wolfram Language exact for \(u=e_7\): characteristic polynomial \(x^2(x-1)^2(3x-1)^6(3x-2)^6/3^{12}\), both commutation residues
+exactly zero; \(L_u^2=-1\) on \(H_n\) symbolically in \(u\).  numpy: 200 of 200 random axes.
+
+\paragraph{Theoremlet v4.10.0-r65.2 (route A, the family \(su(2)\) and stage A of H125 hold for every axis; H162b, c; b not blind).}
+For every unit \(u\in\operatorname{Im}H_n\): the right multiplications \(R_x\), \(x\in\{e_7,e_8,e_{15}\}\), commute with \(Q^L_u\) and with
+\(su(3)_c\); \([R_{e_7},R_{e_8}]=-2R_{e_{15}}\) on the lepton block and \(+2R_{e_{15}}\) on the coloured block; the Bargmann invariant of the octant
+projectors is \(\tfrac14-\tfrac i4\) on the leptons against \(\tfrac14+\tfrac i4\) on the quarks; every particle species is a doublet (Casimir
+\(\tfrac34\)), so the carrier holds two complete generations.  With \(Q^L_{e_7}\) the space of intertwiners to
+\(\mathbb C\otimes\mathbb H\otimes\mathbb O\) has dimension 20, and all 24 assignments of full rank per sector have determinant \(-1\) (leptons) and
+\(+1\) (quarks), as for \(e_8\) (k252); the same for the two rotated copy axes.  H162b and H162c \textbf{confirmed}.
+\emph{Reason.}  Right multiplications commute with \(L_u\) on \(H_n\) by associativity, and with \(P_3\) because they commute with \(su(3)_c\).  The
+family algebra and its opposite orientation on the two sectors are properties of the sedenion right multiplication and of colour.  The charge
+axis does not enter.
+\emph{Check.} Commutators and Bargmann invariants Wolfram Language exact, built independently from the Cayley--Dickson recursion; part c numerically
+only (numpy, residues below \(10^{-10}\)).
+
+\paragraph{Theoremlet v4.10.0-r65.3 (what distinguishes \(e_8\) and what distinguishes \(e_7\); H162d, not blind, and exploration H162e).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \(Q^L_{e_7}\) leaves \(\mathbb C\otimes\mathbb O_0\) invariant (leak \(0\)) and equals there the octonionic charge \(Q_8\) of one complete
+generation (deviation \(0\), exact).  \(Q_*\) does not: squared leak \(\tfrac12\).  On the other two copies \(\mathbb O_{120}\), \(\mathbb O_{240}\) the
+squared leak of \(Q^L_{e_7}\) is \(\tfrac38\).  Each of the three copy axes does the same for its own copy.  H162d \textbf{confirmed}.
+\item[(b)] The \(S_3\) cycle \(\psi\) commutes with \(Q^L_u\) only for \(u=\pm e_8\); \(\lVert[Q^L_{e_7},\psi]\rVert=\sqrt3\), and \(\psi\) does not
+map the neutral kernel of \(Q^L_{e_7}\) into itself.
+\item[(c)] No axis satisfies both.  The statements that use \(\psi\) on the neutral kernel (r13.1, r13.2, the phase per generation in r13.3) do not
+hold in that form for \(e_7\).  A substitute cycle \(\exp(-(\pi/3)R_u)\) reproduces \(\rho^2=\tfrac12\) and the phase \(\pi/4\) for \(u=e_7\) and
+\(u=e_8\) (for the rotated copy axes \(\rho^2=0.283\) or \(0.717\)); it is a set right rotation and not an automorphism.  As in r13.2 this is a
+construction and not a derivation of Koide.
+\end{enumerate}
+The choice of the axis stays a setting, now between two named criteria: \(\psi\)-fixed (\(e_8\)) or faithful to a copy (\(e_7\) and its two
+rotations).
+
+\paragraph{Theoremlet v4.10.0-r65.4 (two types of charge, and the side that carries the family; exploration k361, not blind, numerical).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] \emph{Completeness.}  A Hermitian charge on \(\mathbb C\otimes H_n\) with spectrum \(\{0,0,1,1\}\) and \(\overline Q=1-Q\) has the form
+\(\tfrac12-\tfrac i2A\) with a real antisymmetric \(A\), \(A^2=-1\).  On \(H_n\), \(so(4)=\{L_a+R_b\}\), and \(A^2=-1\) holds exactly for
+\(A=L_u\) or \(A=R_u\) with a unit \(u\).  There are two types, each with a free axis (r13.1 lists the second as ``up to two signs'').
+\item[(b)] \(Q^R_u\) satisfies the same conditions as \(Q^L_u\): the spectrum of r65.1, \([Q,su(3)_c]=0\), \(\overline Q=1-Q\); \(Q^R_{e_8}\)
+commutes with \(\psi\), and \(Q^R_{e_7}\) extends \(Q_8\) on \(\mathbb O_0\) (leak \(0\)).  No criterion of H162 separates the types.
+\item[(c)] With \(Q^R_u\) the \emph{left} multiplications \(L_x\) commute with the charge on the leptons and the right multiplications do not
+(commutator norm \(2\)).  On the coloured blocks both \(L_x\) and \(R_x\) commute with charge and colour.
+\item[(d)] Orientation, as the sign \(s\) in \([X_{e_7},X_{e_8}]=2sX_{e_{15}}\) with the Bargmann invariant \(\tfrac14+\tfrac{is}4\):
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+block & \(X=L\) & \(X=R\)\\
+\midrule
+leptons (\(H_n\)) & \(s=+1\) & \(s=-1\)\\
+quarks (coloured) & \(s=-1\) & \(s=+1\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+On the quarks there are two native family \(su(2)\) of opposite orientation.  Which one is admissible on the leptons is fixed by the type of charge.
+\item[(e)] If \emph{one} native multiplication carries the family on the whole carrier (\(R_x\) for the left type as in r13.4, \(L_x\) for the right
+type), leptons and quarks are oppositely oriented, for both types and every axis.  If the two sectors use different sides, which charge and colour
+permit because both sides commute on the quarks, they are equally oriented: computed for \(Q^R\) with \(L\) on the leptons and \(R\) on the
+quarks, \(24+24\) assignments, determinants \(+1\) and \(+1\).
+\end{enumerate}
+\emph{Check.} numpy on the infrastructure of r13, r14 and k252 (residues below \(10^{-10}\)); part (a) is the standard description of the orthogonal
+complex structures of \(\mathbb R^4\).  No Wolfram cross-check was made for k361.
+
+\subsection*{v4.10.0-r65 precisions to earlier layers}
+\label{subsec:v4100-r65-precisions}
+
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] r64.2: the question ``whether they survive on \(u=e_7\) is not computed'' is answered by r65.2: they do.  H130 does not endanger route A,
+the family \(su(2)\) or stage A of H125.
+\item[(b)] r13.3, r13.4, r14.4, r59.6: the condition ``under CT-003'' can be weakened to ``under a charge of the form \(Q^L_u\) or \(Q^R_u\) and the
+setting S-side below''.  The statements of r13.1--r13.3 that use \(\psi\) stay conditional on the axis \(e_8\) (r65.3).
+\item[(c)] r59.6: the sentence that the relative sign ``is the first item of the series that does not set a sign'' is restricted.  The relative sign
+does not depend on the convention \(i\mapsto-i\), on the charge axis or on the charge type.  It does depend on the setting
+\textbf{S-side: the same side of the multiplication carries the family in both sectors.}  S-side is the natural choice (r13.4: one native operation), but
+it does not follow from charge and colour alone (r65.4e).
+\item[(d)] Stage B of H125 (\(\sin\delta_{\rm PMNS}<0\), deadline 31 December 2035) now depends on S1 and S-side.  Its status ``open, prior probability
+\(\tfrac12\)'' and its decision rule are unchanged.
+\end{enumerate}
+Not computed: whether an action (W1/W2, Yukawa connectors) fixes the side; whether r14.4 keeps all its statements beyond r65.2 on the axis \(e_7\).
+
+\subsection*{v4.10.0-r65 frames}
+\label{subsec:v4100-r65-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r65.1--r65.4 (charge, family algebra, orientation) & frame independent algebra on the carrier & none with data\\
+complex conjugation \(\overline Q=1-Q\) & charge conjugation of the carrier & not identified with \(z\mapsto\bar z\) or \(z\mapsto iz\) of the frames\\
+stage B of H125 & M (measured mixing phases) & open; only after the declared map of r64.3\\
+T, P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r65 register entries}
+\label{subsec:v4100-r65-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r65\\
+\midrule
+H162a, b, d & confirmed, not blind\\
+H162c & confirmed (numerical)\\
+H162e, k361 & explorations\\
+route A (r13.3), family \(su(2)\) (r13.4), H125 stage A (r59.6) & hold for every axis and both charge types; conditional on S-side\\
+H125 stage B & open, deadline 31 December 2035; depends on S1 and S-side\\
+CT-003 (charge axis) & placeholder; choice between \(\psi\)-fixed (\(e_8\)) and faithful to a copy (\(e_7\)) not decided\\
+S-side (same side in both sectors) & setting, named here; not derived\\
+number of generations & two on this carrier, not three\\
+OP1--OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r65 notes}
+\label{subsec:v4100-r65-notes}
+
+{\raggedright
+Advance and result note of H162: \texttt{notes/\allowbreak research/\allowbreak predictions/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H162\_\allowbreak Ladungsachse\_\allowbreak e7\_\allowbreak WegA\_\allowbreak CP.md}
+(commit \texttt{080d9a9}, before the computation) and \texttt{Ergebnis\_\allowbreak H162\_\allowbreak Ladungsachse\_\allowbreak e7\_\allowbreak WegA\_\allowbreak CP.md}.
+Scripts and actual outputs: \texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/\allowbreak ladungsachse\_\allowbreak h162/}
+(\texttt{k360\_\allowbreak test\_\allowbreak h162.py}, \texttt{k360b\_\allowbreak exakt.wl}, \texttt{k361\_\allowbreak rechtsladung.py} with their output files and \texttt{README.md}).
+Disclosed there: the first Wolfram run of k360 was invalid (inverse of a singular matrix, a clash of symbol names) and was repeated.
+Tools: Python (numpy) and Wolfram Language; Qiskit not used (no circuit); no HDL comparison (no finite search or guard procedure involved).
+\par}
+
+\subsection*{v4.10.0-r65 ledger and guard update}
+\label{subsec:v4100-r65-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r65}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no comparison with data).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r65,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r65}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

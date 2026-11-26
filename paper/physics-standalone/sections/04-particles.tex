@@ -1,6 +1,6 @@
 % Section 4 (group B): particles from C (x) H (x) O. Sources: Companion thm:SM, thm:octonion-SU3, thm:three-generations,
 % rounds v4.9.0-r34, r35, r37, r40--r43, r48, r49; v4.10.0-r13, r14.4, r18.4, r19, r25--r27, r59, r60;
-% after publication: tests H130, H138, H140 (recorded in v4.10.0-r62 and r64).
+% after publication: tests H130, H138, H140, H162 (recorded in v4.10.0-r62, r64 and r65).
 \section{Particles from \texorpdfstring{$\mathbb C\otimes\mathbb H\otimes\mathbb O$}{C x H x O}: a conditional construction}
 \label{sec:B-particles}
 
@@ -174,7 +174,8 @@ $[Q,\psi]=0$, $[Q,\mathfrak{su}(3)_c]=0$, $\bar Q=1-Q$ and spectrum $\{0,\tfrac1
 \end{equation}
 with charge axis $e_8$, the only $\psi$-fixed imaginary direction (\rnd{r13}.1). The axis is an assumption, registered
 as placeholder CT-003; everything below inherits it. A later test finds octonionic colour-stable carriers in $\mathbb S$ only for charge
-directions perpendicular to $e_8$ (H130, \rnd{r64}), so the placeholder is not supported by it. The kernel $N=\operatorname{span}(1+ie_8,\,e_7-ie_{15})$ is a colour-
+directions perpendicular to $e_8$ (H130, \rnd{r64}), so the placeholder is not supported by it. The two generations, the family $\mathfrak{su}(2)$ and the relative sign of
+Section~\ref{sec:B-cp} hold for every axis in $\operatorname{Im}\mathbb H_n$; only the statements that use $\psi$ need $e_8$ (H162, \rnd{r65}). The kernel $N=\operatorname{span}(1+ie_8,\,e_7-ie_{15})$ is a colour-
 and charge-neutral qubit, on which $\psi$ acts as $\operatorname{diag}(1,\omega)$. The quaternion algebra
 $\mathbb H_n=\operatorname{span}(1,e_7,e_8,e_{15})$ acts on $N$ from the right; its 24 Hurwitz units act as the binary
 tetrahedral group $2T$, whose four threefold axes lie at $|\cos|=1/\sqrt3$ to the $\psi$ axis. An eigenstate of an
@@ -259,7 +260,7 @@ the known $A_4$ phase diagram, and the coefficients are free. No blind test of t
 
 On route A the right multiplications obey the quaternion relations with opposite orientation on the neutral and on the
 coloured part (\rnd{r13}.4), a consequence of the non-associativity of the sedenion product. In terms of the neutral family
-$\mathfrak{su}(2)$ (\rnd{r14}.4, under CT-003):
+$\mathfrak{su}(2)$ (\rnd{r14}.4; for every charge axis, \rnd{r65}.2):
 \begin{equation}
  [R_{e_7},R_{e_8}]=-2R_{e_{15}}\ \text{on the lepton block},\qquad [R_{e_7},R_{e_8}]=+2R_{e_{15}}\ \text{on the coloured block}.
  \label{eq:B-cp}
@@ -268,8 +269,10 @@ For three projectors onto the $+1$ eigenstates of generators with $[J_x,J_y]=isJ
 $\operatorname{tr}(P_xP_yP_z)=\tfrac14+\tfrac{is}{4}$. Relative to the Lorentz spin (left action of $\mathbb H$, invariant
 $\tfrac14+\tfrac i4$) the lepton doublet is the complex-conjugate one: $\tfrac14-\tfrac i4$ on leptons against
 $\tfrac14+\tfrac i4$ on quarks, in all $24+24$ assignments of full rank. This is H125 stage~A, \textbf{confirmed} but
-\emph{not blind} (\rnd{r59}.6). The relative sign survives $i\mapsto-i$, which conjugates both sectors at once; it is the
-first sign in this series that is not a convention.
+\emph{not blind} (\rnd{r59}.6). The relative sign survives $i\mapsto-i$, which conjugates both sectors at once, and it does not depend on the charge axis
+or on whether the charge is built with left or right multiplication. It does rest on one setting: the same side of the
+multiplication carries the family in both sectors. On the coloured block left and right multiplications both commute with
+charge and colour, with opposite orientation; with different sides the two sectors come out equal (\rnd{r65}.4).
 
 Stage~B is a prediction against future data. Under the setting S1 (CP arises in both sectors in the same way from the
 family structure) one has $\operatorname{sign}J_{\rm PMNS}=-\operatorname{sign}J_{\rm CKM}$, that is
