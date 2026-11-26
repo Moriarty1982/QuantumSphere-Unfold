@@ -1,12 +1,13 @@
-# Quantum Sphaera Companion v5.5.0 — DOI RESERVED, NOT UPLOADED, NOT PUBLISHED
+# Quantum Sphaera Companion v5.5.0 — PUBLISHED
 
-Status on 26 November 2026: the version DOI is reserved (approved by the author on 26 November 2026). Zenodo draft 24563811
-is a new version of record 24500009; it is unpublished and holds no files. Nothing is uploaded or published, and no tag
-exists. The DOI resolves only after publication. For every later run use `deposition_id=24563811`, never `new_version_of`
-again. Runs of the workflow "Zenodo Release": dry run 45842058182, reservation 45842937765.
+Status: published on Zenodo on 26 November 2026 with the author's approval, record https://zenodo.org/records/24563811
+(new version of record 24500009). Runs: dry run 45842058182 and reservation 45842937765 (workflow "Zenodo Release"); paired build
+45848371899 on commit e69452a4073426f71c4337617a5ed902347eec4b; upload into the draft 45849813753 and publication 45858677122
+(workflow "Zenodo v5 verified candidate", 8 files, preview `Quantum_Sphaera_Companion_v5_5_0_full.pdf`). The tag `v5.5.0` is
+set by the author. The sections below record the preparation as it stood before upload and publication.
 
 - Target version: v5.5.0 (full Companion and physics paper, one package).
-- Version DOI: https://doi.org/10.5281/zenodo.24563811 (reserved, unpublished).
+- Version DOI: https://doi.org/10.5281/zenodo.24563811 (published).
 - Concept DOI: https://doi.org/10.5281/zenodo.19210728
 - Predecessor: v5.4.0, DOI 10.5281/zenodo.24500009, record https://zenodo.org/records/24500009.
 - Metadata draft: `release/zenodo/metadata_v5_5_0.json` (publication date provisional).
