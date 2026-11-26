@@ -20,6 +20,14 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Zwei Achteldrehungen: r13 legt K = ⅔ fest, H170 den Sektorschritt; zusammen der Oktant (26.11.2026, Test H171, k366)
+
+**Test H171. Ergebnis: a, b, d bestätigt (nicht blind, exakte Nachprüfung), c bestätigt (Sedenionen).** Frage nach H170: Ist die Achteldrehung zwischen neutralem und geladenem Feld dieselbe wie Ψ = exp(uπ/4) aus r13 neu?
+
+- **Nein, zwei verschiedene Drehungen.** Als Dreiervektor (A, B cos δ, B sin δ) gelesen ist r13 die Drehung um π/4 von der Singulett-Achse weg (K = 1/(3 cos² θ), also ⅔, δ frei) und H170 die Drehung um π/4 in der Dublettebene (δ verschoben, K fest). In den Sedenionen erzeugt die Verdopplungseinheit e₈ den Azimut (e_i·e₈ = e_{i+8}), die polare Einheit u liegt in einer Kopie. Die Drehungen vertauschen nicht; zusammen sind sie eine Drehung um 62,80°.
+- **Gemeinsam.** Beide haben die Form exp(Einheit·π/4) und sind Fixachsen eines Tauschs: J (Singulett gegen Dublett) und Cσ (Spin 2 gegen Spin 1). Am Baumpunkt des geladenen Sektors ist z = (a/√2)·exp(jπ/4): Betrag aus r13, Phase aus H170, Gewichte (½, ¼, ¼). Auf einem der zwei Zweige ist das der Oktant mit Eigenwert 0 (masseloses Elektron, H101).
+- **Status.** K = ⅔ und c = 1 kommen nicht aus einer Operation. J ist Postulat, für Cσ im geladenen Sektor fehlt der Grund. Bilanz nach H167 bis H171: Die Setzung wurde viermal umformuliert, nicht entfernt; offen sind die Tauschsymmetrie Cσ und der Versatz x. OP3 und OP4 offen; kein Guard berührt. Notizen: `notes/research/hilbert_shift_felder_2026_11_24/delta_h171/`.
+
 ### c mal −i: aus der Drehung wird ein Schub mit Minkowski-Signatur, aus dem neutralen der geladene Term (26.11.2026, Test H170, k365)
 
 **Test H170. Ergebnis: a bis d bestätigt (nicht blind, exakte Nachprüfung); e: Vorhersage „kein Treffer“ nach dem eigenen Kriterium verfehlt, der Beinahe-Treffer ist als Gleichung ausgeschlossen.** Fragen des Autors: Was wäre, wenn wir c mit −i multiplizieren? Und: Hinge das mit der Zeit zusammen, hätten wir den ersten Teil eines Minkowski-Raums. Python und Wolfram unabhängig.

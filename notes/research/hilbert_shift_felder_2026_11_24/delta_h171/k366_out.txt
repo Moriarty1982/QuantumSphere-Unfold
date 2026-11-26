@@ -1,0 +1,31 @@
+== H171a: zwei verschiedene Drehungen ==
+K(A, B, delta) = (A**2 + B**2)/(3*A**2) ; dK/d delta = 0
+K(theta) = 1/(3*cos(theta)**2) ; K = 2/3 fuer tan^2 theta = [1] ; K(pi/4) = 2/3
+Spin-1-Term -cos 2(delta - chi): Ableitung nach theta = 0 ; Minima delta = chi + n pi, unabhaengig von theta
+Raz(delta) Rpol(theta) e_A = [cos(theta), sin(theta)*cos(delta), sin(delta)*sin(theta)]  (= (cos th, sin th cos d, sin th sin d))
+
+== H171b: Fixachsen zweier Tausche; Baumpunkt ==
+Tausch (x, y) -> (y, x): Fixachse (1, 1)/sqrt2 = Winkel pi/4 ; gilt fuer J auf (A, B) und fuer C sigma auf (s, v)
+  z = a(1 + j)/2 : |z|/a = sqrt(2)/2, arg z = pi/4, K = 2/3, Eigenwerte/a = [1/2 - sqrt(3)/2, 1/2 + sqrt(3)/2, 2], det/a^3 = -1
+  z = a(-1 + j)/2: |z|/a = sqrt(2)/2, arg z = 3*pi/4, K = 2/3, Eigenwerte/a = [0, 3/2 - sqrt(3)/2, sqrt(3)/2 + 3/2], det/a^3 = 0
+  z - (a/sqrt2) exp(j pi/4) = 0 ; a(-1 + j)/2 - j (a/sqrt2) exp(j pi/4) = 0
+  Gewichte (A^2, 2 s^2, 2 v^2)/Summe = [1/2, 1/4, 1/4]
+  Raz(pi/4) Rpol(pi/4) e_A = [sqrt(2)/2, 1/2, 1/2] ; Quadrate: [1/2, 1/4, 1/4]
+
+== H171c: Sedenionen, wer erzeugt den Azimut? ==
+e_i e_8 = s_R e_{i+8}, s_R = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] ; e_8 e_i = s_L e_{i+8}, s_L = [-1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]
+einheitlich: True True ; e_8^2 = -1.0
+cos th e_3 + sin th s_R (e_3 e_8) - (cos th e_3 + sin th e_11): max 0.0
+u^2 = -1: True ; u e_8 + e_8 u (Antikommutator), max: 0.0 ; u senkrecht e_8: True
+Abgeschlossenheit von O_theta (max |(1-P) xy|), wie k255 (3):
+   delta =         0 (  0.0000 Grad): 0.000000
+   delta =     pi/12 ( 15.0000 Grad): 0.683013
+   delta =      pi/6 ( 30.0000 Grad): 0.866025
+   delta =      pi/4 ( 45.0000 Grad): 0.500000
+   delta =      pi/3 ( 60.0000 Grad): 0.000000
+   delta = pi/12 - x ( 12.7324 Grad): 0.603164
+   delta =  pi/6 - x ( 27.7324 Grad): 0.878899
+
+== H171d: Zusammensetzung ==
+cos Theta = -1/4 + sqrt(2)/2 ; minus (2 sqrt2 - 1)/4 = 0 ; Theta = 62.79942961983809 Grad
+Kommutator ungleich null: True ; Norm: 0.819495500447568
