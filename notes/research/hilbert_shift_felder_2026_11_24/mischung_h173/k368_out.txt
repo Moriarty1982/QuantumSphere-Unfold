@@ -1,0 +1,45 @@
+== H173a: Winkel aus dem Spektrum (Zahlenprobe; exakt in k368b) ==
+delta_nu = pi/6 (Baumwert): lambda = [-0.224745  1.        2.224745], N-Eigenwerte = [-0.224745  1.        2.224745], A-invariant: True, Diagonale gleich: True
+     sin2 th13 = 0.00000000, sin2 th12 = 0.33333333, sin2 th23 = 0.50000000, sin delta = +nan; geschlossene Form: phi = 0.00000002, 0.00000000, 0.33333333; Rest 8.6e-17, 1.1e-16
+delta_nu = pi/6 - x: lambda = [-0.195808  0.944044  2.251764], N-Eigenwerte = [-0.195808  0.944044  2.251764], A-invariant: True, Diagonale gleich: True
+     sin2 th13 = 0.01426304, sin2 th12 = 0.32368705, sin2 th23 = 0.50000000, sin delta = +1.000000; geschlossene Form: phi = 0.20835967, 0.01426304, 0.32368705; Rest 1.7e-16, 6.7e-16
+delta_nu = pi/6 - 0.02: lambda = [-0.210359  0.971718  2.238641], N-Eigenwerte = [-0.210359  0.971718  2.238641], A-invariant: True, Diagonale gleich: True
+     sin2 th13 = 0.00744122, sin2 th12 = 0.32833533, sin2 th23 = 0.50000000, sin delta = +1.000000; geschlossene Form: phi = 0.14997265, 0.00744122, 0.32833533; Rest 4.2e-17, 3.9e-16
+delta_nu = pi/6 + x: keine reelle Loesung (b^2 < 0); geschlossene Form: None
+
+== H173b: Test ohne Maske ==
+x = 0.0395773407 (Leptonen): sin2 th13 = 0.014263 gegen 0.02248 +- 0.00056: z = -14.7; sin2 th12 = 0.323687: NuFIT z = +2.22, JUNO z = +3.14; R = 0.030839
+x_nu = 0.04336 +- 0.00213 (Neutrino-Daten, aus R): sin2 th13 = 0.015532 +- 0.000711; z = -7.68
+Rueckwaerts: sin2 th13 = 0.02248 verlangt x = 0.064887; dort R = 0.025688 (z = -9.47), sin2 th12 = 0.318002
+
+== H173d: gemeinsame Anpassung (x frei; R und sin2 th13) ==
+chi2_min = 57.60 bei x = 0.056776 (ein Freiheitsgrad; Schwelle 3.84): R = 0.027250 (-6.05 sigma), sin2 th13 = 0.019916 (-4.58 sigma) -> nicht vertraeglich
+
+== H173e: Varianten (Bericht) ==
+Feldebene, feste Spalte = nu_1: sin2 th13 = 0.014263, th12 = 0.323687, th23 = 0.500000
+Feldebene, feste Spalte = nu_2: sin2 th13 = 0.162856, th12 = 0.796359, th23 = 0.500000
+Feldebene, feste Spalte = nu_3: keine reelle Loesung
+Massenebene, feste Spalte = nu_1: sin2 th13 = 0.088436, th12 = 0.268656, th23 = 0.500000
+Massenebene, feste Spalte = nu_2: sin2 th13 = 0.129943, th12 = 0.766233, th23 = 0.500000
+Massenebene (gleiche Diagonale auf N^2-Spektrum), feste Spalte = nu_3: keine reelle Loesung
+
+== H173c: Frame-Uebertragung mit der Maske ==
+eps = artanh(beta_sym) = 0.6175296; Massen der geladenen Leptonen: groesster Rest 3.5e-13; Zweige bei eps = 0: 24, bei eta: 24
+eps = 0 (Kontrolle): Faelle 288 (24 Zweige x 12 Neutrino-Faelle); sin2 th13 Spanne [0.014263, 0.843211]; innerhalb 3 sigma: 0, innerhalb 2 sigma: 0, alle drei Bedingungen: 0
+     verschiedene (th13, th12, th23): 9; naechste an th13 = 0.02248:
+        sin2 th13 = 0.014263 (-14.7 sigma), sin2 th12 = 0.323687, sin2 th23 = 0.500000
+        sin2 th13 = 0.078395 (+99.8 sigma), sin2 th12 = 0.457468, sin2 th23 = 0.085063
+        sin2 th13 = 0.078395 (+99.8 sigma), sin2 th12 = 0.457468, sin2 th23 = 0.914937
+        sin2 th13 = 0.269202 (+440.6 sigma), sin2 th12 = 0.315817, sin2 th23 = 0.368367
+        sin2 th13 = 0.269202 (+440.6 sigma), sin2 th12 = 0.315817, sin2 th23 = 0.631633
+        sin2 th13 = 0.461597 (+784.1 sigma), sin2 th12 = 1.000000, sin2 th23 = 0.500000
+     Kontrolle: kleinster Abstand zu b (sin2 th13 = 0.01426304): 1.7e-18
+eps = artanh(beta_sym), Variante A: Faelle 288 (24 Zweige x 12 Neutrino-Faelle); sin2 th13 Spanne [0.000050, 0.663042]; innerhalb 3 sigma: 0, innerhalb 2 sigma: 0, alle drei Bedingungen: 0
+     verschiedene (th13, th12, th23): 84; naechste an th13 = 0.02248:
+        sin2 th13 = 0.009712 (-22.8 sigma), sin2 th12 = 0.965164, sin2 th23 = 0.885757
+        sin2 th13 = 0.009630 (-22.9 sigma), sin2 th12 = 0.964731, sin2 th23 = 0.628672
+        sin2 th13 = 0.009305 (-23.5 sigma), sin2 th12 = 0.963758, sin2 th23 = 0.034795
+        sin2 th13 = 0.009305 (-23.5 sigma), sin2 th12 = 0.965638, sin2 th23 = 0.014696
+        sin2 th13 = 0.009141 (-23.8 sigma), sin2 th12 = 0.965308, sin2 th23 = 0.035353
+        sin2 th13 = 0.009135 (-23.8 sigma), sin2 th12 = 0.963414, sin2 th23 = 0.013999
+Variante B (Bericht, ohne Nachanpassung): R nach Maske zwischen 3.983e-05 und 9.625e-02 (R_obs = 0.030016); sin2 th13 Spanne [0.000707, 0.113585]; innerhalb 3 sigma: 0

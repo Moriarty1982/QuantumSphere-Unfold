@@ -20,6 +20,15 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Mischung: mit der Ein-Feld-Form folgt der Drehwinkel aus der Neutrino-Phase; Baumwert tribimaximal, die Zahl für θ₁₃ stimmt nicht (26.11.2026, Test H173, k368)
+
+**Test H173. Ergebnis: a bestätigt (nicht blind), b widerlegt (erwartet), c widerlegt (blind), d nicht verträglich (blind).** Strang 3: Legt die Algebra den freien Drehwinkel der Mischung fest? In k262 (Majorana-Neutrinos auf dem Realteil, ℤ₃ und ungerade ℤ₂) blieb ein Winkel frei, θ₁₃.
+
+- **Zusatzforderung:** Ein-Feld-Form für das neutrale Feld, N = a·𝟙 + Nebendiagonale, also gleiche Diagonale (k278, H158). Dann hat N drei Parameter, und mit dem Brannen-Spektrum (H99) folgt der Winkel: tan² 2φ = 3 tan²(δ_ν + 2π/3) − 1, sin²θ₁₃ = sin²φ/3, sin²θ₁₂ = 1 − 4/(5 + cos 2φ), θ₂₃ = 45°, |sin δ_CP| = 1 (Wolfram exakt).
+- **Struktur:** Am Baumwert δ_ν = π/6 ist die Mischung exakt tribimaximal (θ₁₃ = 0). θ₁₃ entsteht erst durch den Versatz x, und nur für δ_ν < π/6. Ein Parameter steuert Massenverhältnis und θ₁₃.
+- **Zahl:** Mit x = 0,0395773 aus den Leptonen ist sin²θ₁₃ = 0,01426 gegen 0,02248 ± 0,00056 (−14,7σ); sin²θ₁₂ = 0,3237 (JUNO +3,1σ). Mit der Maske ε = artanh β_sym (Variante A, 288 Fälle) liegt kein Fall innerhalb 3σ. Ein freies x passt nicht zu R und θ₁₃ zugleich (χ² = 57,6).
+- **Status.** Die Verbindung „ein Versatz für Massen und Mischung“ ist in dieser Form quantitativ widerlegt; als Struktur (Baumwert tribimaximal) bleibt sie eine Lesart. Die Ein-Feld-Form ist eine Setzung. OP3 und OP4 offen; kein Guard berührt. Notizen: `notes/research/hilbert_shift_felder_2026_11_24/mischung_h173/`.
+
 ### Quarks als Prüfstein: die Zuordnung Ladung ↔ Phasenlage gilt für Quarks nicht (26.11.2026, Test H172, k367)
 
 **Test H172. Ergebnis: a widerlegt (nicht blind bezüglich der Daten, Erwartung vorab notiert).** Regel aus H168 bis H171, auf Quarks ausgedehnt: Phasenlage χ(Q) = |Q|·π/4 mit dem Versatz x. Vorhersage: Down-Quarks δ nahe π/12 (0,222 bis 0,301), Up-Quarks δ nahe 0 oder π/6.

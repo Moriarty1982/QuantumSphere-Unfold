@@ -128,6 +128,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H172, 26.11.2026 (k367):** Für OP3 und OP4. Die Regel „Phasenlage linear in der Ladung“ (χ = |Q|·π/4, Versatz x), auf Quarks ausgedehnt, ist widerlegt: δ_d = 0,100 und δ_u = 0,052 bei M_Z liegen 128σ und 25σ neben dem nächsten vorhergesagten Wert. K = ⅔ gilt für Quarks ohnehin nicht, und δ hängt dort von der Skala ab. Die Lepton-Lesart unter H99 ist nicht berührt. Offen: warum die Lepton-Struktur für Quarks nicht gilt (Kandidat Farbe). Nicht blind bezüglich der Daten. OP3 und OP4 bleiben offen.
 
+**Test H173, 26.11.2026 (k368):** Für OP3 und OP4, Strang Mischung. Mit der Ein-Feld-Form (gleiche Diagonale) für das neutrale Feld ist der in k262 freie Drehwinkel festgelegt: Er folgt aus der Neutrino-Phase δ_ν. Am Baumwert π/6 ist die Mischung exakt tribimaximal; der Versatz x erzeugt θ₁₃. Quantitativ widerlegt: sin²θ₁₃ = 0,0143 gegen 0,0225 (−14,7σ), mit der Maske (Variante A) kein Fall innerhalb 3σ, gemeinsame Anpassung von R und θ₁₃ χ² = 58. Die Ein-Feld-Form ist eine Setzung. OP3 und OP4 bleiben offen.
+
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
 **Runde r65, 26.11.2026:** H162 und k361 stehen als Runde v4.10.0-r65 im Companion. Für OP3/OP4: Weg A und das relative CP-Vorzeichen gelten für jede Ladungsachse und beide Ladungstypen; die Frage aus r64.2 ist damit beantwortet. Offen bleiben die Wahl der Achse (ψ-fest oder kopientreu), die Setzung der Seite und die dritte Generation. OP3 und OP4 bleiben offen.

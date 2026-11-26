@@ -1,0 +1,20 @@
+(* k368b (H173): exakte Herleitung des Winkels aus dem Spektrum (Teil a). *)
+T = {{0, 0, 1}, {-1, 0, 0}, {0, -1, 0}}; A = {{0, 0, -1}, {0, 1, 0}, {-1, 0, 0}};
+n = {{a, b, c}, {b, a, -b}, {c, -b, a}};
+Print["1 A-invariant: ", Simplify[Transpose[A] . n . A - n] == ConstantArray[0, {3, 3}]];
+w = {1, 0, 1}/Sqrt[2]; u1 = {1, 0, -1}/Sqrt[2]; u2 = {0, 1, 0};
+Print["2 n.w - (a + c) w: ", Simplify[n . w - (a + c) w], "; Block in (u1, u2): ", Simplify[{{u1 . n . u1, u1 . n . u2}, {u2 . n . u1, u2 . n . u2}}]];
+ev = Eigenvalues[{{a - c, Sqrt[2] b}, {Sqrt[2] b, a}}];
+Print["3 Block-Eigenwerte: ", FullSimplify[ev], "; (Differenz)^2 - (c^2 + 8 b^2): ", FullSimplify[(ev[[1]] - ev[[2]])^2 - (c^2 + 8 b^2)]];
+lam[k_] := 1 + Sqrt[2] Cos[d + 2 Pi k/3];
+Print["4 Spur: ", FullSimplify[Sum[lam[k], {k, 0, 2}]], " (also a = 1); c = lam[1] - 1 = ", FullSimplify[lam[1] - 1]];
+Print["5 (lam[0] - lam[2])^2 - 6 Sin[d + 2 Pi/3]^2: ", FullSimplify[(lam[0] - lam[2])^2 - 6 Sin[d + 2 Pi/3]^2]];
+b2 = FullSimplify[((lam[0] - lam[2])^2 - (lam[1] - 1)^2)/8];
+Print["6 b^2 = ", b2, "; b^2 bei d = Pi/6: ", FullSimplify[b2 /. d -> Pi/6], "; Vorzeichen bei Pi/6 -+ 1/100: ", N[{b2 /. d -> Pi/6 - 1/100, b2 /. d -> Pi/6 + 1/100}]];
+Print["7 tan^2(2 phi) = 8 b^2/c^2 - (3 Tan[psi]^2 - 1): ", FullSimplify[8 b2/(lam[1] - 1)^2 - (3 Tan[d + 2 Pi/3]^2 - 1)]];
+es = Eigensystem[T]; e1 = Normalize[First[Select[Transpose[es], #[[1]] == 1 &]][[2]]];
+Print["8 Elektron-Richtung (T-Eigenwert 1): ", e1, "; |e.w|^2, |e.u1|^2, |e.u2|^2: ", FullSimplify[{Abs[e1 . w]^2, Abs[e1 . u1]^2, Abs[e1 . u2]^2}]];
+Print["9 daraus |U_e3|^2 = Sin[phi]^2/3, |U_e2|^2 = Cos[phi]^2/3; sin^2 th12 = ", FullSimplify[(Cos[phi]^2/3)/(1 - Sin[phi]^2/3)]];
+x = 0.0395773407`20; ph = ArcTan[Sqrt[3 Tan[Pi/6 - x + 2 Pi/3]^2 - 1]]/2;
+Print["10 Zahlen bei d = Pi/6 - x: phi = ", N[ph, 10], ", sin^2 th13 = ", N[Sin[ph]^2/3, 10], ", sin^2 th12 = ", N[Cos[ph]^2/(3 - Sin[ph]^2), 10]];
+Print["11 klein-x-Entwicklung: tan^2(2phi) = ", Series[3 Tan[5 Pi/6 - y]^2 - 1, {y, 0, 2}]];
