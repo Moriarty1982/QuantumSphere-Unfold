@@ -530,5 +530,16 @@
     ],
     "guard": "Closest-approach restart, circularising force and the bound/unbound threshold",
     "obligation": "No Companion quantity enters; the model has no metric coupling of its own (H147). Reading the sum of two counter-rotating probes as the shadow ellipse of H159 is a reading, not a derivation. OP1–OP5 remain open."
+  },
+  {
+    "id": "op1-beta-sym-overlap-of-two-readouts-h164",
+    "path": "notes/research/beta_sym_ueberlapp_h164/Ergebnis_H164_Beta_sym_Ueberlapp_zweier_Auslesen.md",
+    "title": "β_sym is the overlap of the Hopf state with the antipodal pole; the boost that makes them opposite carries the R state to the matter populations",
+    "excerpt": "**Der Boost trägt den R-Zustand auf die Besetzungen des Materie-Zustands (K-d).**",
+    "assumptions": [
+      "Hopf sphere read as the celestial sphere of null directions (as in H161); the antipodal pole chosen as second readout; dephasing step set; predominantly not blind."
+    ],
+    "guard": "Angle reading and velocity reading of β_sym",
+    "obligation": "Every statement is an identity in β and holds for any value; β_sym is not derived and OP1 remains open. The pair (K₁, S) consists of R-frame states (r24, r61); only populations and Bloch length of the matter state are matched."
   }
 ]
