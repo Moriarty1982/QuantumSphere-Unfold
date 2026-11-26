@@ -1,5 +1,6 @@
 % Section 5 (group B): Koide as geometry. Sources: Companion thm:koide-triolic (status), rounds v4.10.0-r12, r13.2, r14,
-% r15, r16, r17, r19, r25, r28, r30, r31 (H118), r59; tests from wiki/Vorhersagen-und-Tests.md.
+% r15, r16, r17, r19, r25, r28, r30, r31 (H118), r59; tests from wiki/Vorhersagen-und-Tests.md;
+% after publication: tests H148--H156 (recorded in v4.10.0-r63).
 \section{Koide as geometry, not as derivation}
 \label{sec:B-koide}
 
@@ -8,7 +9,9 @@ For three non-negative mass roots $x_k=\sqrt{m_k}$ the Koide ratio is
  K=\frac{\sum_k x_k^2}{\bigl(\sum_k x_k\bigr)^2}\in\bigl[\tfrac13,1\bigr].
  \label{eq:B-koide}
 \end{equation}
-For the charged-lepton pole masses $K=\tfrac23$ holds to better than $0.005\,\%$ \cite{Koide1983}. In the Companion this is an
+For the charged-lepton pole masses $K=\tfrac23$ holds within the measurement error \cite{Koide1983}: $K=0.6666645\pm0.0000051$,
+$0.43\sigma$ below $\tfrac23$ (test H154, research note of 25 November 2026; recorded in Companion round \rnd{r63}). In the
+Companion this is an
 empirical fact whose derivation is \Open{} (\cite{QSC}, \texttt{thm:koide-triolic}; \rnd{r12}.1). This section collects
 what the construction says about it. The result is geometric and largely \Established: $K=\tfrac23$ is equivalent to a
 statement about three states with overlap $\tfrac12$, the boundary of the admissible family is the octant of a qubit, and the
@@ -18,6 +21,15 @@ We state the point plainly, because it is easy to miss in a calculation. \emph{T
 construction below that produces $K=\tfrac23$ does so because the overlap $\tfrac12$, or a parameter condition equivalent to
 it, was put in. Inserting such a condition (the radius $r=\sqrt2$ of the Brannen form, equal weights of two couplings, or any
 fixed ratio of parameters chosen to give $\rho^2=\tfrac12$) presupposes the Koide relation; it does not explain it.
+
+Tests made after publication give this input one more form and do not remove it. In an amplitude readout of a state that
+mixes the real unit with a copy direction $U$ at angle $\theta$, $K=1/(3\cos^2\theta)$ (\rnd{r59}.9 in other variables), so
+$K=\tfrac23$ exactly at $\theta=\pi/4$, the fixed point of the swap $J\colon\psi\mapsto U\bar\psi$, which has the form of $J_B$
+in \eqref{eq:A-maps} and exchanges matter-type and tachyon-type states; a $J$-symmetric potential with a set scale has its
+minimum there in a window of the quartic couplings. This is a symmetry argument under a postulate, not a derivation of the
+masses: the algebra does not supply $J$ (an isometry, not an automorphism), the scale-free flow gives $K=\tfrac23$
+independently of the starting couplings only if the loop is restricted to $\{1,U\}$, a setting, and $\delta=\tfrac29$ stays a
+fit (tests H148--H156, research notes of 25 and 26 November 2026; recorded in Companion round \rnd{r63}).
 
 \subsection{The Gram reading}
 \label{sec:B-gram}
@@ -137,7 +149,8 @@ $\Omega$ on the generation sphere (the guarded core of the orbit scan) as remove
 there are $n-1$ free Aharonov--Bohm holonomies; exactly one core is the only number that bends without a free parameter. If
 the displaced flux sits at the antipode, which the antilinear reflector with $\Theta^2=-1$ suggests, the phase is
 $\varphi=\pi/4-\Omega/2$. With $\Omega=\gamma_M=0.237533$, the matter-frame value of Section~\ref{sec:beta}, this is the relation of test
-H102, $m_\tau=1777.134$\,MeV (exact Koide gives $1776.969$\,MeV). H102 rests on the placeholders CT-001 and CT-002; it is
+H102; with $\rho^2=0.500014$ taken from $m_e/m_\mu$, not set to $\tfrac12$, it gives $m_\tau=1777.134$\,MeV (exact Koide gives
+$1776.969$\,MeV). H102 rests on the placeholders CT-001 and CT-002; it is
 \Open{} until the first PDG edition after 13~November 2026 (at the latest end of 2028), and against PDG 2024
 ($1776.93\pm0.09$\,MeV, unchanged in PDG 2026) it stands at $+2.3\sigma$ (\rnd{r28}.3). The core size is thereby OP1 again
 (\rnd{r14}.7, \rnd{r28}.2).
@@ -290,7 +303,7 @@ H99 & equal overlap $\rho^2=\tfrac12$ for charged leptons and neutrinos, $\theta
 $\Delta m^2_{21}/\Delta m^2_{31}=0.030839$ & compatible, $+1.80\sigma$ (NuFIT 6.1); \emph{not blind} (\rnd{r12}.5)\\
 H100 & three values of that ratio fixed for the next NuFIT release & open (\rnd{r12}.5)\\
 H101 & lepton mask lifts the electron off the qubit octant & refuted: the form preserves the rank, the electron stays massless\\
-H102 & $\varphi_e=\pi/4-\gamma_M/2$ gives $m_\tau=1777.134$\,MeV & open; $+2.3\sigma$ against PDG 2024 (\rnd{r28}.3)\\
+H102 & $\varphi_e=\pi/4-\gamma_M/2$, with $\rho^2$ from $m_e/m_\mu$, gives $m_\tau=1777.134$\,MeV & open; $+2.3\sigma$ against PDG 2024 (\rnd{r28}.3)\\
 H103a & inherited charge fixes the magic-angle reference on $N$ & refuted; gives $K=\tfrac12$ (\rnd{r13}.1)\\
 H106--H111 & carrier variants (singlet admixture, nested normalisation, entangled copies, frame-dependent readouts, time octant)
 close the residual bend & refuted; no hit (\rnd{r28})\\
@@ -307,6 +320,7 @@ H118 & a native structure fixes the orientation & formula confirmed, selection r
 $\det G=\tfrac12(\sqrt2\cos\varphi-1)$; the boundary is the rigid qubit octant with one massless state; $K=2/(d+1)$ for
 complete sets of unbiased states; on the invariant doublet $\chi$ the non-orthogonal frame eigenstates are at most three
 and form exactly the octants; the sign of the step is a time orientation. \Reading: the complementarity reading, the
-readouts of one object, the time cycle and the guarded core. \Open: the overlap $\tfrac12$ itself, the bend to
+readouts of one object, the time cycle and the guarded core. \Open: the overlap $\tfrac12$ itself (now traced to the postulated
+swap symmetry $J$; H149, H155, H156), the bend to
 $\varphi=\tfrac23$ (equivalently the core size, OP1), the orientation, and a charged carrier with three generations. The
 Koide relation is described, not derived; OP3 remains open.
