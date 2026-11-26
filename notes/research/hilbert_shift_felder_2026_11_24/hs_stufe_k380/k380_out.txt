@@ -1,0 +1,26 @@
+== HS(3) = O (Dimension 8), U = e7 ==
+   dim Der = 14; Stabilisator von e7: 8; farblose Richtungen: Dimension 2, Einheiten [0, 7]
+   Casimir: -0.0000 x 2, 1.3333 x 6
+   J^2 = +1 auf den Einheiten [0, 7]; J^2 = -1 auf [1, 2, 3, 4, 5, 6]; J orthogonal: True
+   J-Bilder: e0->+e7; e1->+e6; e2->-e5; e3->-e4; e4->+e3; e5->+e2; e6->-e1; e7->+e0
+   invariante quadratische Formen (nur Farbe): 4
+   invariante quadratische Formen (Farbe + Konjugation): 3
+   invariante quadratische Formen (Farbe + J): 3
+   invariante quadratische Formen (Farbe + Konjugation + J): 2
+   davon (Farbe + Konjugation + J): auf den farblosen Richtungen 1, auf den Farbrichtungen 1, gemischt 0
+
+== HS(4) = S (Dimension 16), U = e7 ==
+   dim Der = 14; Stabilisator von e7: 8; farblose Richtungen: Dimension 4, Einheiten [0, 7, 8, 15]
+   Casimir: -0.0000 x 4, 0.6667 x 12
+   J^2 = +1 auf den Einheiten [0, 7]; J^2 = -1 auf [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]; J orthogonal: True
+   J-Bilder: e0->+e7; e1->+e6; e2->-e5; e3->-e4; e4->+e3; e5->+e2; e6->-e1; e7->+e0; e8->-e15; e9->-e14; e10->+e13; e11->+e12; e12->-e11; e13->-e10; e14->+e9; e15->+e8
+   invariante quadratische Formen (nur Farbe): 14
+   invariante quadratische Formen (Farbe + Konjugation): 11
+   invariante quadratische Formen (Farbe + J): 5
+   invariante quadratische Formen (Farbe + Konjugation + J): 4
+   davon (Farbe + Konjugation + J): auf den farblosen Richtungen 2, auf den Farbrichtungen 2, gemischt 0
+   Farbrichtungen zerfallen in zwei Sechserbloecke (in O: [1, 2, 3, 4, 5, 6]; in O*l: [9, 10, 11, 12, 13, 14]); invariante Formen: Block 1: 1, Block 2: 1, zwischen den Bloecken: 0
+   J bildet Block 1 auf Block 1 ab: True; Block 2 auf Block 2: True
+   farblose Ebenen: [0, 7] (J^2 = +1) und [8, 15] (J^2 = -1)
+   invariante Formen auf Ebene [0, 7]: 1 (1 heisst: nur die Summe der Quadrate, also Tauschsymmetrie); auf Ebene [8, 15]: 1
+

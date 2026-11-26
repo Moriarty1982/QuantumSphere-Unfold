@@ -1028,3 +1028,7 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Erkundung k378:** Farbanteil und Phase; Forschungsstand, Offene-Probleme ergänzt, Nachtrag in der Zeile H178 von Vorhersagen-und-Tests. Artikel unverändert.
 
 **26.11.2026, Test H179 (k379):** Standarderwartung Up gegen Down; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
+
+**26.11.2026, Erkundung k380:** HS-Stufe der Sektoren; Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert.
+
+**26.11.2026, Test H180 (k381):** K der Neutrinos; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.

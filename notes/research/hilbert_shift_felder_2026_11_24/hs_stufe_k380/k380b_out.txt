@@ -1,0 +1,6 @@
+k380b (Wolfram Language, MCP-Kernel, 26.11.2026), Ausgabe:
+{{{1, -1, -1, -1, -1, -1, -1, 1}, True, True}, {{1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1}, True, True}}
+
+Bedeutung: Diagonale von J^2 (exakt, ganzzahlig), J^2 ist diagonal, J ist orthogonal; fuer O (8) und S (16).
+J^2 = +1 genau auf e0 und e7, sonst -1. Stimmt mit k380. Die Zaehlung der Derivationen und der invarianten Formen ist nur in k380 (Python) gerechnet.
+Warnung (kein Fehler): Symbol::undefined2 fuer J, J2 (lokale Symbole im Module; Vorab-Scan des Kernels).
