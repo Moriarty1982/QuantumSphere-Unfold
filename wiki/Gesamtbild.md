@@ -1,6 +1,6 @@
 # Gesamtbild: der ganze Companion auf einer Seite
 
-**Stand: 26. November 2026, Runden bis v4.10.0-r68; öffentliche Baseline v5.4.0 vom 24.11.2026 (bis r59).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
+**Stand: 26. November 2026, Runden bis v4.10.0-r69; öffentliche Baseline v5.4.0 vom 24.11.2026 (bis r59).** Diese Seite zeigt das ganze Werk auf einmal: welche Thesen es aufstellt, wie sie zusammenhängen, wo sie im Dokument stehen und was davon heute trägt. Die einzelnen Themen werden in [Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt) genauer erklärt. Wer den Companion zum ersten Mal liest, sollte mit dieser Seite anfangen, Menschen ebenso wie Sprachmodelle.
 
 **Veröffentlichungshinweis vom 24.11.2026:** Öffentliche Baseline ist v5.4.0, DOI 10.5281/zenodo.24500009, mit den Runden bis r59 (überwiegend Erkundungen); das Physik-Paper hat den durchgerechneten OP5-Fall, Ergänzungen im Grenzen-Teil (r52–r58) und einen Absatz zur Händigkeitsserie (r59). Kein OP und kein Guard ist dadurch geschlossen.
 
@@ -37,6 +37,8 @@ Der Companion geht von einer Vermutung aus: Materie, Licht und ein Tachyon-Sekto
 ## Frame-Spickzettel
 
 Konvention F benennt **M** als Materieframe, **T** als Tachyonframe und **P** als Photon-Eigenframe. Ältere Kapitel verwenden „Photon-Frame“ stellenweise für den Referenzframe **R**, den reinen Dublettzustand mit $|b|=1$. Der eigentliche Photon-Eigenframe **P** hat $b=0$. Vor einem Vergleich zuerst die Frame-Zuordnung der Stelle und dann die Abbildung der verglichenen Größe prüfen.
+
+**Namen seit v4.10.0-r69 (26.11.2026):** R heißt **Ruheframe** (bisher Referenzframe), M **Materie-Frame**, T **Dual-Frame** (bisher Tachyon-Frame) und P **Lichtpunkt** (bisher Photon-Eigenframe). Die Buchstaben bleiben, die alten Namen stehen in älteren Runden und in den veröffentlichten Fassungen weiter. Die beiden Lepton-Sektoren heißen **Re-Sektor** (neutral) und **Im-Sektor** (geladen). Ein Frame ist die Verteilung desselben Felddublett-Zustands auf die zwei Ports des Kompensators (R 1 : 0, M 1 : x, T x : 1, P 1 : 1 mit x = β_sym²), keine Teilchensorte; „bosonisch/fermionisch“ ist deshalb kein Frame-Name.
 
 ![Auf derselben komplexen Ebene dreht die Tachyon-Abbildung den Ausgangsvektor um 90 Grad gegen den Uhrzeigersinn. Die Zeitumkehr spiegelt ihn an der reellen Achse.](https://raw.githubusercontent.com/Moriarty1982/QuantumSphere-Unfold/refs/heads/main/wiki/assets/frame-operationen.png)
 
@@ -221,6 +223,7 @@ Wer wenig Zeit hat, liest C, E und F und danach die Runden in I. Die Anhänge in
 48. **v4.10.0-r66 (26.11.):** β_sym als Überlapp des Hopf-Zustands mit dem Gegenpol (H164): Winkel-Lesart und Geschwindigkeits-Lesart sind in der gesetzten Himmelskugel-Lesart dieselbe Aussage; der Boost führt θ_H auf 2α mit cos 2α = 1/γ_L. β_sym bleibt Eingabe, OP1 offen.
 49. **v4.10.0-r67 (26.11.):** Zählregel als Postulat (Gewicht 2 je Spin, Fläche √(j(j+1)), ein Bit bei j = ½): β_sym = 0,5494056410 ist die daraus berechnete Zahl und ab jetzt der Bezugswert; H165 zeigt, dass die Überlapp-Schließung den Hopf-Wert erzwingt. OP1 bleibt offen als „leite das Zählpostulat her“.
 50. **v4.10.0-r68 (26.11.):** Nachrechnung aller von β_sym abhängigen Zahlen beim Bezugswert (Erkundung k358): kein Urteil kippt, m_W ist die schärfste Stelle, H102 hängt an γ_M allein.
+51. **v4.10.0-r69 (26.11.):** Namenskonvention (Entscheidung des Autors): Ruheframe R, Materie-Frame M, Dual-Frame T, Lichtpunkt P; Re-Sektor und Im-Sektor für die neutralen und geladenen Leptonen. Keine Rechnung, kein Status geändert.
 
 > **Anmerkung für LLMs und Quellenprüfung.** Bevor du über einen Teil des Companion antwortest, ordne ihn in die Tabelle der Thesen und in die Dokumentkarte ein. Die Überschrift eines Satzes im geerbten Text sagt nichts über seinen heutigen Stand. Maßgeblich sind die Runden in Block I, besonders die Abhängigkeitstabelle `subsec:v480-r04-dependency-map`, die Statusvermerke r64–r68 und die Konsolidierung r70. Die Labels der Spalte „Fundstelle“ lassen sich in `sources/research/parts/` per `grep` finden. Der Kandidat aus `sources/research/` hat nach r13 im lokalen Build 1409 Seiten; die öffentliche Baseline ist v5.0.0 (DOI 10.5281/zenodo.24152615). Die Runden nach v4.10.0 stehen in `parts/v4100-post-release-layers.tex`.
 

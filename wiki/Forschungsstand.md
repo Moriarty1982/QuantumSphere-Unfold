@@ -1,5 +1,23 @@
 # Forschungsstand
 
+### Neue Namen für die Frames und die Lepton-Sektoren (26.11.2026, Runde r69, Konvention)
+
+Entscheidung des Autors vom 26.11.2026. Runde **v4.10.0-r69** ist eine Konvention und kein Ergebnis: keine Rechnung, kein Test, kein Status geändert. Die Buchstaben M, T, P, R und die alten Namen bleiben gültig; ältere Runden und veröffentlichte Fassungen werden nicht umbenannt.
+
+| Buchstabe | bisher | ab r69 | was der Name sagt |
+|---|---|---|---|
+| R | Referenz- bzw. Bezugsframe | **Ruheframe** (rest frame) | reiner Dublettzustand, Versatz 0; für ein nicht lichtartiges Feld der Bezug mit E ∥ B |
+| M | Materie-Frame | **Materie-Frame** | der Zustand von R, um ε = artanh β_sym geschoben (H164, r66) |
+| T | Tachyon-Frame | **Dual-Frame** (dual frame) | Bild von M unter z ↦ iz, der elektromagnetischen Dualität (r07); Ports getauscht |
+| P | Photon-Eigenframe | **Lichtpunkt** (light point) | Fixpunkt b = 0, lichtartig; ein Punkt der Zustandsscheibe, kein Beobachter-Frame |
+
+- **Lepton-Sektoren (r69.2):** **Re-Sektor** (neutrale Leptonen, c = 0) und **Im-Sektor** (geladene Leptonen, c = 1). Nach H170 sind die beiden Terme Real- und Imaginärteil derselben Form G = −(s + iv)². Die Namen gelten nur für Leptonen und stehen als Lesart unter H99. Die Quarks behalten Up- und Down-Sektor, weil sie dieser Struktur nach H172 nicht folgen. Die zwei Ausgänge des Kompensators heißen Ports.
+- **Warum nicht „bosonisch/fermionisch“ (r69.3):** Alle vier Frames sind Zustände desselben Felddubletts (E, B), eines Spin-1-Felds; ein Frame ist keine Teilchensorte. Die Lesart „M liest bosonisch, T fermionisch“ aus r17 ist nach r24 eine nicht begründbare Setzung. T11 benutzt die Wörter für die Ports. Beide Lepton-Sektoren bestehen aus Fermionen.
+- **Was die Frames über den HC sind (r69.4, Lesart):** Ein Frame ist die Verteilung desselben Zustands auf die zwei Ports des Kompensators: R 1 : 0, M 1 : x, T x : 1, P 1 : 1 mit x = β_sym² = 0,301847. Im Materie-Frame liegen 76,8 % im Kompensatorport. Im Bild von k292 und k297 sind M und T Ellipsen mit Achsenverhältnis γ_L und entgegengesetztem Drehsinn. Dass R der Kreis und P der Grenzfall ist, folgt aus derselben Parametrisierung und ist nicht eigens gerechnet. Das ist die Stokes-Beschreibung der Polarisation, angewandt auf (E, B). Die Gleichsetzung mit Beobachtern von Materie, Licht und Tachyon bleibt Lesart; warum die Daten in M und nicht in T verglichen werden, ist nicht hergeleitet.
+- **Grenzen:** Kein Guard berührt, OP1 bis OP5 offen. Die Lesarten zu H168 bis H170 stehen bisher nur in den Notizen, nicht in einer eigenen Runde.
+
+Quelle: `notes/research/v4_10_0_r69_namenskonvention/` (README, Rundentext).
+
 ### Nachrechnung als Runde r68; drei Releases vorbereitet, nichts veröffentlicht (26.11.2026)
 
 - **Runde v4.10.0-r68** hält die Nachrechnung k358 im Companion fest (Erkundung, kein Test): Empfindlichkeiten, Abstände zu den Messwerten des Bestands, H102 über γ_M, Maskenscans. Kein Urteil kippt; m_W ist die schärfste Stelle (2σ-Fenster 0,54907 ≤ β ≤ 0,54978). Kein Guard berührt, OP1 bis OP5 offen.

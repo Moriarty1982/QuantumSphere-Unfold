@@ -138,6 +138,12 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
 - **Stand der letzten Sitzung:** Im lokalen Ordner des Autors ist `llm/Uebergabe.md` der Einstiegspunkt (Stand, offene PRs, zuletzt vergebene H-Nummer, nächster Schritt). Auf GitHub: jüngste Runde unter `notes/research/`, offene PRs, Actions-Läufe.
 - **Parallel rechnen:** große Rangrechnungen über `.github/workflows/op5-parallel.yml`, ein Job je Parameter (Einzelheiten in der OP5-Anleitung).
 - **Frames:** Konvention F (M, T, P) einhalten; Größen verschiedener Frames erst nach einer erklärten Abbildung vergleichen. Tachyon-Abbildung (z ↦ iz) und Zeitumkehr (z ↦ z̄) nicht verwechseln (r51, r81).
+- **Namen der Frames und Sektoren** (Entscheidung des Autors vom 26.11.2026, Runde v4.10.0-r69): In neuen Texten heißen die Frames
+  R **Ruheframe** (rest frame; bisher Referenz-/Bezugsframe), M **Materie-Frame**, T **Dual-Frame** (dual frame; bisher Tachyon-Frame) und
+  P **Lichtpunkt** (light point; bisher Photon-Eigenframe). Die zwei Lepton-Sektoren heißen **Re-Sektor** (neutrale Leptonen, c = 0) und
+  **Im-Sektor** (geladene Leptonen, c = 1), nur für Leptonen und als Lesart unter H99; Quarks behalten Up- und Down-Sektor. Beim ersten
+  Auftreten den alten Namen in Klammern dazuschreiben. Bestehende Runden und veröffentlichte Fassungen nicht umbenennen. „Bosonisch/fermionisch“
+  und „Licht-Frame“ nicht als Namen für Frames oder Sektoren verwenden.
 
 ## Lokale Arbeitskopie des Autors
 Die Monolith-Fassung und die vollständige Rundentabelle liegen im lokalen Ordner des Autors. Dessen `AGENTS.md` ist die
