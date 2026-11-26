@@ -108,6 +108,12 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H155, 25.11.2026 (k338):** Für OP3, mit Skala als Setzung: Tauschsymmetrische Massen- und Quartikterme geben K = ⅔ am Baumgraph, und das Laufen stört erst in zweiter Ordnung. δ zwischen 0 und π/3 ist mit dem Term sechster Ordnung möglich, 2/9 bleibt aber ein angepasster Parameter. Offen: Verlangt die Algebra μ_A² = μ_B²? OP3 offen.
 
+**Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
+
+**Runde r64, 26.11.2026:** H128–H136 und H105 stehen als Runde v4.10.0-r64 im Companion. Für OP3/OP4 wichtig: Oktonionische, farbstabile Träger gibt es in 𝕊 nur senkrecht zur Verdopplungseinheit (H130), der Platzhalter CT-003 (Ladungsachse e₈) wird davon nicht gestützt; ob Weg A und das CP-Vorzeichen auf u = e₇ bestehen, ist nicht gerechnet. Der Tausch J aus r63 ist antilinear (J_B-Typ), nicht die Tachyon-Abbildung z ↦ iz. Für OP1: Der Feldgleichungs-Ansatz auf dem Turm legt weder β_sym noch eine Skala fest (H129, H132, H133, H135, H136). OP1–OP5 bleiben offen.
+
+**Runden r62 und r63, 26.11.2026:** Die Befunde H138–H156 stehen jetzt als Runden v4.10.0-r62 (Kopien und Rest-Generation) und v4.10.0-r63 (Koide-Punkt) im Companion. OP3 und OP4 bleiben offen. Nicht gezeigt sind: dass Kopien Generationen sind (die Generationszahl bleibt Eingabe), dass die Rest-Generation ein physikalischer Zustand ist, woher δ = 2/9 kommt (Fit), woher die Skala kommt (Setzung) und das Postulat der Frame-Gleichberechtigung selbst (von Marc vorerst angenommen, nicht hergeleitet). Die Vorzeichen bleiben offen bis zur Feldgleichung.
+
 **Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
 
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.

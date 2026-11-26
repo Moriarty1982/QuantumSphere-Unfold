@@ -7993,3 +7993,658 @@ R_{\rm glob}^{(v4100\text{-}r61,+)}=(0,1,1,1,1),
 \]
 The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
 or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r62 Source-Only: Octonion Copies in the Sedenions and the Remainder Generation (k321--k330, H138--H147)}
+\addcontentsline{toc}{section}{v4.10.0-r62 Source-Only: Octonion Copies in the Sedenions and the Remainder Generation (k321--k330, H138--H147)}
+\label{sec:v4100-r62-sedenion-copies}
+% ============================================================================
+
+\paragraph{Purpose.}
+On 25 November 2026 the author asked whether the sedenions explain why only three or four copies arise for the generations, and conjectured that
+beyond them only arrangements of zero divisors remain.  Ten tests followed (H138--H147, scripts k321--k330), each fixed in an advance note before
+the computation and recorded as a research note with scripts and outputs.  This layer collects them, each with its status as recorded at the time,
+on the author's decision of 26 November 2026 to bring the Companion up to date.  It adds no new computation; every statement below is checked in
+the cited scripts.  Where a part of a test was not blind, or was found after the fact, this is said.  The tests H128--H137 (k278--k320) of the same
+days belong to other lines and are not collected here.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r62 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r62 setting}
+\label{subsec:v4100-r62-setting}
+
+The tower is the Cayley--Dickson tower of r59 with \(HS(3)=\mathbb O\), \(HS(4)=\mathbb S\) (sedenions, \(A_4\)), \(HS(5)=A_5\), \(HS(6)=A_6\).
+\(G_2=\operatorname{Aut}(\mathbb O)\) acts blockwise on \(A_n=\mathbb O\otimes\mathbb R^{2^{n-3}}\).  A \emph{copy} is a unital, \(G_2\)-stable,
+eight-dimensional subalgebra \(O_v=\mathbb R\,1\oplus\operatorname{Im}\mathbb O\otimes v\) with a unit direction \(v\); it is \emph{octonionic} if
+it is alternative.  This definition is a setting; colour-stable subalgebras (only \(su(3)\), H130) are more numerous and are not counted.
+Colour is the stabiliser \(su(3)\subset g_2\) of \(e_7\); the charge of a copy is the k85 charge \(Q_v\) built from \(L_u,R_u\) with
+\(u=e_7\otimes v\), with spectrum \(0,\tfrac13^3,\tfrac23^3,1\) on \(C_v=\mathbb C\otimes O_v\).  Because \(u\) depends on the sign of \(v\), the
+\emph{orientation} of every copy enters; in r62.5--r62.8 it is transported by the automorphisms that permute the copies.  The global sign of the
+orientation is not set here: by the author's rule it is to follow from the field equation.  Reading copies as generations is a reading that is
+tested below, not assumed.  Tools: Python (numpy, scipy) for searches and all selections, Wolfram Language exactly for \(n=4,5\) and for one
+representative of each class; Qiskit was not used (no circuit and no measurement sequence occurs).
+
+\subsection*{v4.10.0-r62 results}
+\label{subsec:v4100-r62-results}
+
+\paragraph{Theoremlet v4.10.0-r62.1 (three copies per doubling; H138, k321; \(HS(4)\) not blind, \(HS(5)\), \(HS(6)\) blind).}
+For \(v=(t_1,t_2)\) the closure condition of \(O_v\) in \(\mathbb S\) is \(t_2(3t_1^2-t_2^2)=0\), that is
+\[
+\operatorname{Im}\bigl((t_1+i t_2)^3\bigr)=0 .
+\]
+It has exactly three solution lines (\(0^\circ,60^\circ,120^\circ\)); a fourth \(G_2\)-stable octonion copy does not exist in \(\mathbb S\)
+(Wolfram exact).  The threefold count comes from the conjugation in the doubling product.  The three copies span only two directions and no two
+are orthogonal: three labels, two independent carriers, the same linear dependence as recorded for K28 (rank 6 instead of 9).  Higher levels:
+\begin{center}
+\small
+\begin{tabular}{@{}lllll@{}}
+\toprule
+level & closed \(O_v\) & octonionic & rank of directions & largest orthogonal set (all / octonionic)\\
+\midrule
+\(HS(4)\) & 3 (exact) & 3 & 2 & 1 / 1\\
+\(HS(5)\) & 15 (exact) & \(9=3\times3\) & 4 & 2 / 1\\
+\(HS(6)\) & \(\ge 207\) (search not saturated) & \(\ge 79\) & 8 & \(\ge5\) / 1\\
+\bottomrule
+\end{tabular}
+\end{center}
+On \(HS(5)\) the nine octonionic copies are exactly the products \(v=a\otimes b\) of the three sedenion directions.  H138a (\(N_5=9\),
+\(N_6=27\)) and H138b (at most three orthogonal copies) are \emph{refuted} in the counting fixed in advance.  Orthogonal, hence independent,
+copies are never octonionic on any level computed.  \emph{Status:} ``three, not four'' is shown within one doubling over \(\mathbb O\), conditional
+on the definition of a copy; that the three copies are three generations is not shown, and the number of generations remains an input.
+
+\paragraph{Theoremlet v4.10.0-r62.2 (zero divisors between and beyond the copies; H139, k322; partly not blind).}
+For \(x=c\,e_1+s\,e_{10}\),
+\[
+\det L_x=(c-s)^4(c+s)^4(c^2+s^2)^4 ,
+\]
+zero exactly for \(c^2=s^2\); for the parallel pair \(x=c\,e_1+s\,e_9\) it is \((c^2+s^2)^8\) and never zero (Wolfram exact).  In the copy
+language an element of \(\mathbb S\) is a \(7\times2\) block \([a\ b]\), and the zero divisors are exactly the elements with \(a\perp b\) and
+\(|a|=|b|\): equal weight \(\tfrac12\) in every copy direction (84 basis diagonals and 500 samples, deviation \(\le6\cdot10^{-15}\); H139b, H139c
+confirmed, the latter not blind).  An element of a single direction is never a zero divisor.  On \(HS(5)\) the six closed, non-alternative
+algebras beyond the nine octonionic copies contain no zero divisor among themselves, so H139a is \emph{refuted by its wording}; found after the
+fact (k322c, k321c): every purely imaginary element of them is a zero divisor of all of \(A_5\) (kernel of dimension 12), and the same holds on
+\(HS(6)\) within rounding.  The nine octonionic copies contain no zero divisor.  The author's conjecture holds in this form: what goes beyond the
+\(3\times3\) octonionic copies are families of zero divisors, leaking outward, not inward.  It does not follow that zero divisors represent or
+forbid a fourth generation.
+
+\paragraph{Theoremlet v4.10.0-r62.3 (same colour, own charge, no common charge; H140, k323; partly not blind).}
+The three copies in \(\mathbb S\) have the same \(su(3)\) (principal-angle cosine \(1\) to twelve digits), which commutes with the \(S_3\) of the
+copies, and each carries one generation: \(Q_k\) maps \(C_k\) into itself with spectrum \(0,\tfrac13^3,\tfrac23^3,1\), and the cyclic automorphism
+\(\psi\) sends \(Q_k\) to \(Q_{k+1}\) (H140a, H140b confirmed).  A charge that preserves all three copies does not exist in the family
+\(\alpha+\beta L_x+\gamma R_x\): the leak is exactly
+\[
+\bigl(12|\beta|^2+12|\gamma|^2-18\operatorname{Re}\bar\beta\gamma\bigr)\bigl(|x|^2+x_8^2\bigr)\ \ge\ 3|x|^2
+\]
+(Wolfram exact; H140c confirmed).  The three copies together cover 15 complex dimensions instead of 24 (H140d, not blind).  By the consequence
+fixed in advance the copies in \(\mathbb C\otimes\mathbb S\) are therefore \emph{not} three generations; they are three equivalent readings of one.
+
+\paragraph{Theoremlet v4.10.0-r62.4 (the nine missing states; H141, k324; partly not blind).}
+Take the copies as separate carriers \(V=C_0\oplus C_{120}\oplus C_{240}\) (24 states) with \(\Phi(x_0,x_1,x_2)=x_0+x_1+x_2\) into
+\(\mathbb C\otimes\mathbb S\).  The image has dimension 15, the cokernel is \(e_8\), and the kernel \(K\) (states that cancel in \(\mathbb S\)) has
+dimension 9 with \(su(3)\) content \(1\oplus1\oplus1\oplus3\oplus\bar3\).  The compressed charge on \(K\) has spectrum
+\(\tfrac13^3,\tfrac12^3,\tfrac23^3\) (Wolfram exact).  The colour part \(3\oplus\bar3\) is charge stable and carries the quark charges; the three
+singlets carry \(\tfrac12\) and leak (leak \(\tfrac12\)).  \(K\) is not closed under the product, its components are not zero divisors, and
+\([Q_\oplus,P_K]\ne0\): no common charge (H141a--d confirmed).  A fourth member built from the remainder has a stable quark part but no leptons.
+
+\paragraph{Theoremlet v4.10.0-r62.5 (four and five copies on \(HS(5)\): the remainder generation; H142, H143, k325, k326; partly not blind).}
+Among the 126 selections of four of the nine octonionic copies on \(HS(5)\), with transported orientation, exactly 9 have a kernel that
+contains a part with spectrum \(0,\tfrac13^3,\tfrac23^3,1\), exactly charge stable (leak \(\le4\cdot10^{-15}\)) and decomposing as
+\(1\oplus1\oplus3\oplus\bar3\): a complete \emph{remainder generation}, leptons included, plus two leaking singlets with \(\tfrac12\).  H142b, which
+predicted no such selection, is \emph{refuted}.  The nine selections are those whose directions satisfy an alternating relation
+\(v_1-v_2+v_3-v_4=0\); none contains all three sedenion copies.  A first run failed its control because the directions carried arbitrary signs;
+the orientation rule was added to the advance note before the evaluated run, and this is recorded.  With five copies (H143) the rule
+\[
+n_{\rm gen}=\dim R^0,\qquad R^0=\Bigl\{c:\ \textstyle\sum_k c_kv_k=0,\ \sum_k c_k=0\Bigr\},
+\]
+holds in 2016 of 2016 cases (126 selections \(\times\) 16 orientations).  At most one remainder generation occurs (45 selections with transported
+orientation), and each stems from exactly one of the nine relations of H142.  The fifth copy adds only a further quark set or leaking states with
+compressed charges \(\tfrac12\), \(\tfrac1{10}\), \(\tfrac9{10}\), \((5\mp\sqrt{10})/10\), \((10\mp\sqrt{10})/20\).  No common charge exists
+(minimal squared leak \(3.5\) to \(6.0\)); no kernel component is a zero divisor.  Because the orientation enters the relations, the count depends
+on the open sign; the maximum 1 does not.  Whether remainder states are physical states (they cancel in \(A_5\)) is not shown.
+
+\paragraph{Theoremlet v4.10.0-r62.6 (the remainder carries no sector of its own; H144, k327; parts a, b not blind).}
+Setting: the factor \(\mathbb C\) of \(\mathbb C\otimes A_5\) is the C-factor of the frames as in r51, with sector quantity
+\(N=\sum_a x_a^2\) or \(s=\sum_{a\ge1}x_a^2\).  Under either quantity the remainder generation has the signature of a copy generation: quarks
+\(s=0\), leptons \(|s|=\tfrac12\) (Wolfram exact).  H144c, which predicted \(|s|<10^{-6}\) for the remainder leptons, is \emph{refuted}.  The
+criterion of H144d could not fail (recognised after the fact).  The frame maps act within each carrier, while every remainder state lies on at
+least three carriers, so they do not connect copies and remainder.  Side result: time reversal \(z\mapsto\bar z\) maps the remainder generation
+to itself with \(q\mapsto1-q\), which is the global sign change of the orientation (\(1-Q_v=Q_{-v}\)).  The open global sign is therefore the
+choice of the time direction (particle against antiparticle); it is left to the field equation.
+
+\paragraph{Theoremlet v4.10.0-r62.7 (the remainder is built on \(HS(0)\) but is no algebra; H145, k328; largely not blind).}
+With \(D^0=\{c:\sum_kc_k=0\}\) and \(R=\{c:\sum_kc_kv_k=0\}\), in all 3360 selection--orientation cases with 3, 4, 5 copies
+\[
+K=(D^0\otimes e_0)\oplus(R\otimes\operatorname{Im}\mathbb O),\qquad \dim K=(m-1)+7\dim R
+\]
+(projector distance \(\le2\cdot10^{-14}\); Wolfram exact for one selection).  With transported orientation the remainder generation is
+\(R^0\otimes\mathbb C\mathbb O\): a whole octonion copy over a real coefficient line \(c=(-1,-1,1,1)\), on which charge and colour do not act.
+The line has the marks of \(HS(0)\): real, only \(\pm c\) as a choice, fixed under time reversal.  The remainder is not an \(HS(0)\) as an algebra:
+it is not closed (for the H142 selections the product of two remainder states lies entirely outside), and \(\sum_kc_k^3=0\).  H145c is
+\emph{refuted by its wording} (it holds for transported orientation only); with mixed signs a copy carries the mirrored octonion, and H145a for the
+stable part needed a corrected form found after the fact.  The formula explains the rule of r62.5 analytically.  No new tower starts from the line.
+
+\paragraph{Theoremlet v4.10.0-r62.8 (no masses from the copy structure; H146, k329; parts a, b not blind).}
+Setting: the Gram readout of r14--r16, \(\sqrt{m_k}\) the eigenvalues of the Gram matrix of the generation states,
+\(K=\sum m/(\sum\sqrt m)^2\).  Three copies give at most \(K=19/32\) (leptons) and \(\tfrac12\) (colour) over all 84 selections; the sedenion
+triple gives \(\sqrt m=(\tfrac34,\tfrac34,\tfrac32)\), \(K=\tfrac38\).  With four copies in an H142 relation every charge sector has exactly one
+eigenvalue \(0\), with eigenvector exactly the line \(c\) of r62.7; the other three give \(K=59/128\) (leptons) and \(11/32\) (colour), with
+\(|K-\tfrac23|\ge0.206\) and mass ratios at most \(11.1\) against the measured \(3477\) (H146a--c confirmed).  For charged leptons the frame mask
+is a similarity transformation (form S, r57), so the verdict does not depend on the frame.  The copy structure alone gives no masses.  In this
+readout the remainder generation has eigenvalue zero; this agrees with the author's statement that on \(HS(0)\) and \(HS(1)\) there is no mass in
+the strict sense, and is not an independent derivation of it.
+
+\paragraph{Theoremlet v4.10.0-r62.9 (the \(HS(0)\) line is a scalar, not a spin-2 graviton; H147, k330; largely not blind).}
+The line \(c\) is the exact null vector of the Gram matrix in all 54 generation selections and is neutral.  Under \(SO(3)\subset SU(3)_c\) (all
+eight totally real coordinate triples) \(\mathbb C\mathbb O=2\times\text{spin }0\oplus2\times\text{spin }1\), and the line itself has spin \(0\);
+under the principal subgroup of \(G_2\) (representation theory only) \(1\oplus7\) is spin \(0\oplus\) spin \(3\).  Spin 2 occurs in the outer
+product \(\operatorname{Sym}^2(\mathbb O)\), where the symmetric algebra product vanishes on it (norm \(\le7\cdot10^{-15}\)), and in the derivation
+channel \(D_{x,y}\), which reaches the spin-2 part of \(su(3)\) fully (rank 5) but is antisymmetric in the two states (H147a--d confirmed; one
+evaluation of part c was corrected and the correction is recorded).  The line is thus a neutral scalar, dilaton-like, not the graviton.  A
+symmetric spin-2 coupling would need the metric as an additional rule; coupling strength, Newton's constant and fifth-force bounds are not
+computed.  \emph{Exploration, after the fact:} the remainder has two scalar directions \(c\otimes e_0\) and \(c\otimes e_7\); the charge rotation
+\(\exp(i\varphi Q)\) turns \(e_0\) into \(e_7\) by \(\varphi/2\), so the family \(\cos\theta\,e_0+\sin\theta\,e_7\) has a \emph{free} mixing angle
+\(\theta\) under the charge symmetry, and no automorphism mixes the two.  Whether the \(e_7\) end is a Higgs is not shown.  This angle is the
+starting point of r63.
+
+\subsection*{v4.10.0-r62 frames}
+\label{subsec:v4100-r62-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r62.1--r62.5, r62.7 (algebra, charge) & M (field value) & none across frames\\
+r62.6 (sector quantity) & M of the copies; T by \(z\mapsto iz\); time reversal \(z\mapsto\bar z\) & \(s\mapsto-s\) resp.\ \(s\mapsto\bar s\); \(|s|\) unchanged, verdict frame independent\\
+r62.8 (Gram readout) & M & form S leaves eigenvalues and \(K\) unchanged\\
+r62.9 (spin content) & M; choice of the spatial \(SO(3)\) is a setting & none\\
+P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+The tachyon map \(z\mapsto iz\) and time reversal \(z\mapsto\bar z\) are kept apart throughout (r51, r81).
+
+\subsection*{v4.10.0-r62 register entries}
+\label{subsec:v4100-r62-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r62\\
+\midrule
+three octonion copies per doubling (\(\operatorname{Im}z^3=0\)) & shown, conditional on the definition of a copy\\
+H138a, H138b; H139a; H142b; H144c; H145c & refuted (H139a, H145c by wording)\\
+H139b, c; H140a--d; H141a--d; H142a, c, d; H143a--d; H144a, b; H145a (for \(K\)), b, d; H146a--c; H147a--d & confirmed, with the blindness recorded per part\\
+copies \(=\) three generations in \(\mathbb C\otimes\mathbb S\) & not the case (no common charge, 15 of 24 states)\\
+number of generations & remains an input\\
+remainder generation as physical state & not shown\\
+orientation and global sign & open; to follow from the field equation, not set\\
+\(HS(0)\) line as graviton & no (scalar); scalar gravity not computed\\
+T1 & remains a conjecture\\
+OP1, OP3, OP4, OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r62 notes}
+\label{subsec:v4100-r62-notes}
+
+{\raggedright
+\texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/\allowbreak generationszahl\_\allowbreak h138/}:
+advance notes \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H138\_\allowbreak *.md} to \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H147\_\allowbreak *.md}, result notes
+\texttt{Ergebnis\_\allowbreak H138\_\allowbreak *.md} to \texttt{Ergebnis\_\allowbreak H147\_\allowbreak *.md}, scripts \texttt{k321} to \texttt{k330} (each with a
+Wolfram cross-check \texttt{b}, some with \texttt{c}, \texttt{d}) and their actual outputs \texttt{k3NN\_\allowbreak out.txt}.
+\par}
+
+\subsection*{v4.10.0-r62 ledger and guard update}
+\label{subsec:v4100-r62-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r62}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no new computation in this layer; generation number, orientation and masses not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r62,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r62}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r63 Source-Only: The Koide Point as Fixed Point of the Frame Exchange, and What Remains Set or Fitted (k331--k339, H148--H156)}
+\addcontentsline{toc}{section}{v4.10.0-r63 Source-Only: The Koide Point as Fixed Point of the Frame Exchange, and What Remains Set or Fitted (k331--k339, H148--H156)}
+\label{sec:v4100-r63-koide-frame-exchange}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r62.8 found that the copy structure alone gives no masses, and r62.9 left a free mixing angle \(\theta\) between the \(HS(0)\) unit and
+the copy direction.  On 25 and 26 November 2026 nine tests followed (H148--H156, scripts k331--k339), each fixed in an advance note before the
+computation.  They ask what fixes \(\theta=\pi/4\) (Koide) and the Brannen phase \(\delta=2/9\), and trace the open choice step by step.  This
+layer collects them with their status as recorded, on the author's decision of 26 November 2026.  It adds no new computation.  The outcome in one
+sentence: \(K=\tfrac23\) follows from one postulate, the equal standing of the matter and the tachyon frame (exchange \(J\)), together with a set
+scale; the postulate is not derived from the algebra, and \(\delta=2/9\) remains a fit.  The layer keeps apart throughout what is derived, what
+is set and what is fitted (table in the balance below).  Signs are not set: where a sign matters, both cases are computed.  Earlier layers are
+not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r63 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r63 setting}
+\label{subsec:v4100-r63-setting}
+
+The state is \(\Psi=\cos\theta\,1+\sin\theta\,U\) with \(U\) a unit in the copy plane at azimuth \(\delta\); \(\theta\) is the polar angle between
+the \(HS(0)\) unit and the copy plane, \(\delta\) the angle within the plane, and \(U'\) denotes the second direction of the plane.  The
+\emph{amplitude readout} is that of r59.9: \(\sqrt{m_k}\propto c_k=\bigl(\cos\theta+\sqrt2\,\sin\theta\cos(\delta-2\pi k/3)\bigr)/\sqrt3\) with signed amplitudes, and
+\(K=\sum m_k/(\sum\sqrt{m_k})^2\).  This readout is a setting.  In the potential, \(A=\varphi^2\) is the norm of the \(HS(0)\) component
+(\(\varphi=\operatorname{Re}\Psi\)), \(B=|y|^2\) that of the copy direction with \(n_B\) components, and
+\[
+V=\mu_A^2A+\mu_B^2B+\lambda_AA^2+\kappa AB+\lambda_BB^2 .
+\]
+``Scale free'' means \(\mu_A^2=\mu_B^2=0\) with the scale arising by condensation at a Gildener--Weinberg point of the one-loop flow; ``scale
+set'' means \(\mu^2\ne0\) as an input.  \(W\) is the diagonal element with entries \(c_k\) and \(N(W)=c_0c_1c_2\) its cubic norm.  Measured values
+used: \(m_\tau=1776.93\pm0.09\) MeV and the pole masses of \(e\), \(\mu\).  Tools: Python (sympy, scipy, explicit octonions), Wolfram Language
+independently for every part; all common quantities agree.  Qiskit was not used (no circuit).
+
+\subsection*{v4.10.0-r63 results}
+\label{subsec:v4100-r63-results}
+
+\paragraph{Theoremlet v4.10.0-r63.1 (why the Gram values miss, and \(K=\tfrac23\) exactly at \(\theta=\pi/4\); H148, k331; partly not blind).}
+The Gram readout of r62.8 compares fixed states of the three copies; their overlap is fixed by the \(120^\circ\) position that
+\(\operatorname{Im}z^3=0\) forces (\(|a|^2=\tfrac1{16}\) for leptons, \(\tfrac14\) for colour), whereas \(K=\tfrac23\) needs
+\(|a|^2=\tfrac12=\cos^2(\pi/4)\).  No choice of copies and no frame mask changes this (H148a confirmed).  In the amplitude readout
+\[
+K=\frac{1}{3\cos^2\theta}
+\]
+(Wolfram exact), independent of \(\delta\), so \(K=\tfrac23\) exactly at \(\theta=\pi/4\) (H148c confirmed).  With \(\delta=2/9\) inserted the
+ratios are \(m_\mu/m_e=206.770\) (measured \(206.768\)) and \(m_\tau/m_\mu=16.8180\) (\(16.8177\)).  The complex charge state
+\((e_0+ie_7)/\sqrt2\) gives \(K\approx0.34\) for every \(\delta\) (H148d); the Koide state must be real and hence fixed under time reversal.  A
+Gram variant with \(\theta^*=26.2242^\circ\) meets \(K=\tfrac23\) with two equal masses; \(\theta^*\) is not a project quantity (H148b).
+\emph{Derived:} \(K=\tfrac23\Leftrightarrow\theta=\pi/4\).  \emph{Set or fitted at this stage:} \(\theta=\pi/4\) itself, \(\delta=2/9\) (fitted to
+\(m_\mu/m_e\)), the scale, the readout.
+
+\paragraph{Theoremlet v4.10.0-r63.2 (\(\theta=\pi/4\) is the fixed point of the frame exchange; \(\delta\) is fixed by no term without fitting; H149, k332; part a not blind).}
+\(\operatorname{Re}\Psi^2=\cos2\theta=x_0^2-|\vec x|^2\).  The exchange \(J:\psi\mapsto U\bar\psi\) maps \(\theta\) to \(\pi/2-\theta\), \(J^2=1\),
+and its only fixed point in \([0,\pi)\) is \(\theta=\pi/4\), where \(\Psi\) is lightlike (\(\operatorname{Re}\Psi^2=0\)); verified in the octonions
+explicitly.  By k297 \(J\) is the exchange of matter frame and tachyon frame (\(\mu\mapsto1/\mu\)).  For a quartic potential
+\(\partial_\theta V|_{\pi/4}=-(2a-2c+\mu_0^2-\mu_1^2)/2\): exactly one linear condition, the exchange-odd part.  With the exchange it vanishes, and
+the curvature is \(2(2a-b)\) at \(\pi/4\) and \(-2(2a-b)\) at \(\theta=0\) (\(K=\tfrac13\), three equal masses).  Minimum or maximum is decided by
+the sign of \(2a-b\) alone; this sign is not set.  The HC breaks the exchange and gives \(K=(1+\beta_{\rm sym}^4)/3=0.364\) in the matter frame
+(H149c).  For any \(V(N,\operatorname{Re})\) up to degree 4, \(\partial_\delta V\equiv0\); \(\delta\) enters only through
+\(N(W)=(2\cos3\delta-\sqrt2)/(24\sqrt3)\) at \(\theta=\pi/4\).  Among 966 minima of \(V=\sum\alpha_kN^k\) with small integer coefficients, the 126
+with three different masses all lie at \(\delta=\pi/12\) (\(N(W)=0\), massless electron, the octant of H101); none at \(2/9\) (H149d).  No project
+quantity lies within \(1\%\) of \(\delta_{\rm fit}=0.222222\) (H149e).  Not evaluated: CT-002 (\(\delta=\pi/12-\gamma_M/6\)) lies \(5\cdot10^{-5}\)
+off; a numerical coincidence \(\delta=\arccos(\pi/4)/3\) noticed before the note lies \(42\sigma\) off and does not hold.  H149a--e confirmed.
+
+\paragraph{Theoremlet v4.10.0-r63.3 (the sign of \(2a-b=2\lambda-\kappa\) does not follow from the field equation alone; H150, k333; parts a, f not blind).}
+With the potential of the full norm (or a gauged \(U(1)\)) \(2\lambda-\kappa=0\) to every order and \(\theta\) is flat.  \emph{Scale set:} the
+Koide point is the minimum for the whole window \(-2\lambda<\kappa<2\lambda\); with a hard cutoff and unequal component numbers (1 against 2) the
+mass term becomes exchange odd and \(\theta\) moves to \(\cos2\theta=c_L/f^2\) (this part of H150b \emph{refuted}).  \emph{Scale free:} a
+condensate at the Koide point arises only for \(\kappa<0\) (class (iv); 190 of 190 for \(n=1\) and \(n=2\)), and then \(2a-b>0\) without a
+further choice; for \(0<\kappa<2\lambda\) no scale arises.  H150c is \emph{refuted by its wording} in the part \(r>2\).  With the actual component
+numbers (1 against 2) the flow shifts the condensation point to \(K\) between \(0.6667\) and \(0.6778\), median \(0.6719\) (H150d); with all of
+\(\operatorname{Im}\mathbb O\) (1 against 7) the median is \(0.697\).  In the HC form \(\eta(B-\mu^2A)^2\) boundedness gives \(\kappa\le0\) and
+\(2a-b>0\), but the minimum lies at \(\tan\theta=\mu\) (H150f).  So the sign follows from the field equation only if two things are required:
+scale free, and the scale shall arise.  Deferred idea I4 (condensation as the source of mass) is met and was named to the author; it is not
+implemented.
+
+\paragraph{Theoremlet v4.10.0-r63.4 (the scale-free shift is start dependent and unrelated to any setting; H151--H153, k334--k336).}
+(a)~The flow is invariant under rotations in the copy plane and does not generate \(\delta\) (H151a).  The shift of \(K\) is not a fixed number:
+between \(0\) and \(0.011\) over the physical range, with a fixed value only in the limit \(\kappa_0\to0^-\),
+\(K^*=\tfrac13+\sqrt{10}/9=0.684698\) for \(n_B=2\); no fixed ray with \(\kappa<0\) exists (H151b partly).  48 comparisons with functions of
+\(2/9\) give no hit, 540 with all 15 settings give 2 against a chance expectation \(0.58\) (H151c, d).  Form S leaves \(K\) invariant and a boost
+keeps the light cone fixed, so the frame difference cannot restore \(\tfrac23\) (H151e).
+(b)~The complete scale-free ansatz with all \(\mathbb Z_3\rtimes\mathbb Z_2\)-invariant quartics (new only \(\xi\varphi C_3\),
+\(C_3=y_1^3-3y_1y_2^2\)) and the back-reaction of \(HS(3)\): over 144 starting points \(K\) ranges from \(0.6615\) to \(0.8182\), and \(\delta\)
+always lands on \(0\) or \(\pi/3\) (two equal masses); three different masses in 0 of 144 cases (H152a--e confirmed).
+(c)~A normalisation of \(A\) and \(B\) (per component, by the trace \(\tfrac13:\tfrac23\), over three copies) is a reparametrisation (zero
+residue): it selects only the starting ray (H153a, b).  Only restricting the loop to the subalgebra \(\{1,U\}\) (\(n_A=n_B=1\)) gives
+\(K=\tfrac23\) and \(\theta=\pi/4\) exactly for all starts (H153c); that is a setting about the degrees of freedom.
+
+\paragraph{Theoremlet v4.10.0-r63.5 (the loop over \(\{1,U\}\) is not forced; the deviation from \(\tfrac23\) is measurement noise; H154, k337; parts a, g, h not blind).}
+The second plane direction contributes \(\beta(1,2)-\beta(1,1)=[2\kappa^2,\,8\kappa\lambda_B,\,8\lambda_B^2]\), nonzero in the Koide range.  The
+only generator that leaves \(\operatorname{span}\{1,U\}\) invariant is the \(U(1)\) of \(\exp(\alpha U)\), under which \(U'\) is neutral; it
+preserves \(V\) only for the full norm.  At the Gildener--Weinberg point \(U'\) is a Goldstone direction and \(K\) is unchanged; gauging the plane
+rotation leaves \(K\) start dependent (\(0.634\) to \(1.922\) over 40 starts).  No symmetry removes a field from the loop: the algebra does not
+force \(n_B=1\).  \emph{Measured value:}
+\[
+K=0.6666645\pm0.0000051,
+\]
+\(0.43\sigma\) below \(\tfrac23\), the error coming entirely from \(m_\tau\).  The value \(0.666661\pm0.000007\) used in H152 and H153 rested on
+the older \(m_\tau=1776.86\pm0.12\) MeV; this is corrected here, and no decision changes.  One-loop QED running to a common scale shifts \(K\) by
+\(+1.1\cdot10^{-3}\) (about \(225\sigma\)): Koide holds for pole masses, not for running masses at a common scale.  Form S leaves \(K\) exactly
+unchanged and \(\partial_\delta K\equiv0\).  \emph{Conditional prediction:} if \(K=\tfrac23\) holds exactly for pole masses, then
+\(m_\tau=1776.969\) MeV, \(0.039\) MeV above the present mean.  H154a--h confirmed.
+
+\paragraph{Theoremlet v4.10.0-r63.6 (with a set scale the exchange symmetry holds \(K=\tfrac23\); H155, k338; part a not blind).}
+For \(\mu_A^2=\mu_B^2=\mu^2<0\) and \(\lambda_A=\lambda_B=\lambda\) the minimum is \(A=B=-\mu^2/(2\lambda+\kappa)\), hence \(\theta=\pi/4\) and
+\(K=\tfrac23\) at tree level for \(-2\lambda<\kappa<2\lambda\), with mass squares \(0\) (\(U'\), Goldstone), \(-4\mu^2\) and
+\(4\mu^2(\kappa-2\lambda)/(\kappa+2\lambda)\); \(U'\) need not be heavy (H155a).  Making \(U'\) heavy by the cubic norm \(\zeta N(W)\) shifts \(K\)
+together with its mass (H155b).  Running with two plane directions: the first order in the logarithm cancels exactly between mass and quartic
+running (symbolic zero residue), leaving an effect of order \((\lambda L/16\pi^2)^2\); H155c, which predicted that every window misses, is
+\emph{refuted} in favour of Koide.  A hard cutoff or thresholds shift \(\theta\) at first order (r63.3 stands).  A sixth-order term
+\(\zeta N+N^2/\Lambda^2\) allows interior \(\delta\) for \(R=\zeta\Lambda^2/v^3\in[-0.0282,\,0.164]\); \(\delta=2/9\) requires
+\(R^*=-0.0075807\), one parameter, which is a fit.  One comparison with known scales (\(R=-\sum m_\ell/v\), \(0.89\%\) off) counts as a hit by the
+wording of H155d but lies \(63\sigma\) off in \(\delta\) and is not independent of the target; it is no derivation.  \emph{Exploration, after the
+fact:} with \(R^*\) the full potential keeps \(K=\tfrac23\) and gives \(\delta=2/9\), doubly degenerate with \(\delta=0.29713\).  The three lepton
+masses are then reproduced from the set exchange symmetry, the scale and one fitted parameter: as many inputs as Koide plus Brannen phase.
+
+\paragraph{Theoremlet v4.10.0-r63.7 (equal mass terms follow only from the exchange \(J\) as a postulate; H156, k339; parts a, d not blind).}
+\(\mu_AA+\mu_BB=\tfrac12(\mu_A+\mu_B)N+\tfrac12(\mu_A-\mu_B)\operatorname{Re}\Psi^2\), and both \(N\) and \(\operatorname{Re}\Psi^2\) are invariant
+under conjugation and under \(G_2\): the algebra allows unequal mass terms (H156a).  Among the candidate symmetries, \(SO(2)=\exp(\alpha U)\) is
+too strong (\(\kappa=2\lambda\), no Koide condensate), \(\mathbb Z_4=\langle L_U\rangle\) too weak (it allows the exchange-odd quartic
+\(\varphi y(y^2-\varphi^2)\)); exactly \(\mathbb Z_2=\langle J\rangle\) and \(D_4=\langle L_U,\text{conjugation}\rangle\) enforce the form of
+r63.6: equal masses, equal \(\lambda\), \(\kappa\) free (H156b).  \(J\) is an isometry but neither an automorphism nor an antiautomorphism:
+\(J(1)J(1)=-1\ne J(1)\), \(J(zw)=J(z)\bar w\) (H156d).  The algebra therefore does not supply \(J\); it has to be required as a symmetry of the
+field theory.  The flow helps only weakly: for \(n_B=1\) the quartic direction is attracted to the exchange line for \(|\kappa|<6\lambda\), the
+mass direction only for \(\kappa<0\); for \(n_B=2\) the flow sources the deviation itself (H156c partly).  Equal mass terms are thus equivalent to
+the \emph{postulate of equal standing of the matter and the tachyon frame}.  The author adopted this postulate as a working assumption on
+26 November 2026; it is a statement about the physics, not a result of the computation.  Limit: the invariants are computed in the plane
+\(\{1,U\}\); in all of \(\mathbb O\) or \(\mathbb S\), \(L_U\) leads out of the three-field space (named only).
+
+\subsection*{v4.10.0-r63 balance of settings}
+\label{subsec:v4100-r63-balance}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}@{}}
+\toprule
+item & status\\
+\midrule
+\(K=\tfrac23\Leftrightarrow\theta=\pi/4\) & derived (in the amplitude readout)\\
+\(\theta=\pi/4\) is the fixed point of \(J\); stationary for every exchange-symmetric potential & derived\\
+\(\theta=\pi/4\) realised & only with the postulate of equal standing of the frames (\(J\)); postulate adopted by the author, not derived\\
+scale \(\mu^2\) & set (scale free: \(K\) start dependent, shifted)\\
+sign of \(2\lambda-\kappa\), of \(\mu^2\), \(\zeta\), global orientation & not set; both cases computed; left to the field equation\\
+\(\delta=2/9\) & fitted (one parameter \(R^*\), or CT-002 as placeholder)\\
+amplitude readout, number of generations & set (inputs)\\
+\(m_\tau=1776.969\) MeV & conditional prediction (if \(K=\tfrac23\) exactly for pole masses)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The open choice moved from ``\(\theta\)'' (r63.1) to ``sign of \(2a-b\)'' (r63.2), to ``starting value of the flow'' (r63.3--r63.5), to ``equality
+of the mass terms'' (r63.6) and ends at one postulate (r63.7).  The target \(\delta=2/9\) is itself a fitted input; the question of \(\theta\)
+arises in the chosen decomposition (amplitude readout) and would not arise in this form in the Gram readout.
+
+\subsection*{v4.10.0-r63 frames}
+\label{subsec:v4100-r63-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r63.1 (readouts, measured ratios) & M & form S for charged leptons: \(K\) unchanged, so the comparison with data is frame independent\\
+r63.2, r63.7 (exchange \(J\)) & M \(\leftrightarrow\) T, declared map \(\theta\mapsto\pi/2-\theta\) (\(\mu\mapsto1/\mu\), k297) & fixed point \(\theta=\pi/4\); HC value \(0.364\) in M\\
+r63.3--r63.6 (potential, flow) & M & boost keeps the light cone; no rapidity restores \(\tfrac23\) (H151e)\\
+P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+\(J\) is the exchange of matter and tachyon frame and is not time reversal \(z\mapsto\bar z\); the two are kept apart (r51, r81).
+
+\subsection*{v4.10.0-r63 register entries}
+\label{subsec:v4100-r63-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r63\\
+\midrule
+H148a--d; H149a--e; H150a, d, e, f; H151a, c, d, e; H152a--e; H153a, c, d; H154a--h; H155a, b; H156a, b, d & confirmed, with the blindness recorded per part\\
+H150b (cutoff part, 1 against 2), H150c (part \(r>2\)), H155c, H155d & refuted (H150c, H155d by wording; H155c in favour of Koide)\\
+H151b, H156c & partly\\
+H153b & confirmed except one sub-prediction (two normalisations give the same \(K\))\\
+Koide \(K=\tfrac23\) & follows from the postulate \(J\) with a set scale; not derived from the algebra\\
+postulate of equal standing of M and T frame & adopted by the author on 26 November 2026 as working assumption\\
+\(\delta=2/9\) & fit; CT-002 remains a placeholder\\
+\(m_\tau=1776.969\) MeV & conditional prediction, open\\
+consequences of \(J\) for \(\delta\) (H157) & in progress elsewhere; not part of this layer\\
+OP3, OP4 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r63 notes}
+\label{subsec:v4100-r63-notes}
+
+{\raggedright
+\texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/\allowbreak generationszahl\_\allowbreak h138/}:
+advance notes \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H148\_\allowbreak *.md} to \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H156\_\allowbreak *.md}, result notes
+\texttt{Ergebnis\_\allowbreak H148\_\allowbreak *.md} to \texttt{Ergebnis\_\allowbreak H156\_\allowbreak *.md}, scripts \texttt{k331} to \texttt{k339} (each with a
+Wolfram cross-check \texttt{b}) and their actual outputs \texttt{k3NN\_\allowbreak out.txt}.  The exchange as frame change (k297) is in
+\texttt{feldgleichung/\allowbreak HC\_\allowbreak Tauschsymmetrie\_\allowbreak k297.md} of the same folder tree.
+\par}
+
+\subsection*{v4.10.0-r63 ledger and guard update}
+\label{subsec:v4100-r63-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r63}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no new computation in this layer; \(\delta\), the scale and the postulate \(J\) not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r63,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r63}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
+
+% ============================================================================
+\clearpage
+\section*{v4.10.0-r64 Source-Only: Record of the Tests H105 and H128--H136, and Precisions from the Audit of the Physics Article}
+\addcontentsline{toc}{section}{v4.10.0-r64 Source-Only: Record of the Tests H105 and H128--H136, and Precisions from the Audit of the Physics Article}
+\label{sec:v4100-r64-record-audit}
+% ============================================================================
+
+\paragraph{Purpose.}
+On 26 November 2026 the stand-alone physics article ``One Object, Three Frames'' (version 1.0.0, doi:10.5281/zenodo.24539644) was audited
+sentence by sentence against this Companion, the test register and the research notes written after r60.  Where the corrected article now
+refers to a result, that result has to stand in the Companion.  The layers r62 and r63 collect H138--H156.  This layer collects the remaining
+tests that the article cites, H128--H136 of 25 November 2026 and the open prediction H105 of 16 November 2026, each with the status recorded in
+its result note.  It also records the precisions to earlier layers that the audit found.  It adds no new computation.  No test status and no
+guard changes.  Earlier layers are not rewritten.  The test H137 (tape circuit on superpositions) belongs to the QAM line and is not collected here.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r64 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.4.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r64 results recorded}
+\label{subsec:v4100-r64-results}
+
+\paragraph{Theoremlet v4.10.0-r64.1 (what the step to the sedenions leaves of the family symmetry; H128, k283; partly not blind).}
+For the Hermitian \(3\times3\) matrices over the Cayley--Dickson algebras, \(\dim\operatorname{Der}H_3(A_n)=3,\,8,\,21,\,52\) for
+\(n=0,\dots,3\) (control) and \(\dim\operatorname{Der}H_3(\mathbb S)=22\), with the structure \(g_2\oplus su(3)\) (numerical rank with a gap of
+\(1.5\cdot10^{13}\); the exact rank was not obtained).  The pre-registered value \(17=14+3\) is \textbf{refuted} (H128a).  The \(su(3)\) is the
+commutant of \(g_2\); it contains the family \(so(3)\).  For a charge direction \(u\) the ratio of the quadratic mass forms of the spin-1 and the
+spin-2 part is \(r(u)=1-(1-u_8^2)/10\) exactly (Wolfram Language): \(r=9/10\) for \(u=e_7\), H128b \textbf{confirmed}; \(r=1\) for the doubling
+unit \(u=e_8\), H128b \textbf{refuted} for that direction.  The sign with which this form enters a potential is open and is not set.  The step
+\(SO(3)\to A_4\) does not come from the tower (as disclosed in advance; it is the charge per slot of r60).
+
+\paragraph{Theoremlet v4.10.0-r64.2 (octonionic colour-stable carriers exist only perpendicular to the doubling unit; H130, k258; partly not blind).}
+Demand a charge direction \(u\in\operatorname{span}(e_7,e_8,e_{15})\) and a closed colour-stable subalgebra of \(\mathbb S\) on which
+\(su(3)_c\) acts as \(1\oplus1\oplus3\oplus\bar3\).  All 600 random starts end in one of three classes: \(u=e_7\) and
+\(u=-\tfrac12e_7\pm\tfrac{\sqrt3}{2}e_{15}\) (alternative and norm multiplicative, the three octonion copies of r62.1; \(u_8=0\) in 383 of 383
+solutions), and \(u=e_8\), where the closed algebra is \emph{not} alternative and \emph{not} norm multiplicative (twelve non-zero alternator
+components, Wolfram Language exact).  H130a and H130b \textbf{confirmed}.  Under this demand the ratio \(9/10\) of r64.1 is the one that applies.
+\emph{Consequence for the register:} the placeholder CT-003 (charge axis \(e_8\), r13.1) is not supported by this finding: at \(u=e_8\)
+the closed colour-stable algebras found are not alternative.  Route A of r13 (two generations) and the relative CP sign of r59.6 keep their status ``conditional on
+CT-003''; whether they survive on \(u=e_7\) is not computed.  CT-003 stays a placeholder.
+
+\paragraph{Theoremlet v4.10.0-r64.3 (mixing from the copies: one class, and the frame rule for comparisons with data; H131, H134, k260--k263; partly not blind).}
+With \(\mathbb Z_3\) for charged leptons, \(\mathbb Z_2\) with a generalised CP from the charge for Majorana neutrinos and ``copy \(k\) on slot
+\(k\)'' (all settings), the 48 admissible combinations give one class: a trimaximal column with \(J=0\), \(\delta\in\{0,\pi\}\) and
+\(\sin^2\theta_{23}=0.395\) or \(0.605\) at \(\sin^2\theta_{13}=0.022\) (found after the fact).  H131a \textbf{confirmed}, H131b (CP violation with
+\(\mu\tau\) reflection) \textbf{refuted}.  The result note sets this column beside measured values without a declared map to the matter frame.
+The author's objection of 25 November 2026 is recorded as a rule: \emph{before a statement ``disfavoured by data'', the prediction is to be
+transferred to the matter frame.}  Frame maps that commute with the group (\(z\mapsto iz\), \(z\mapsto\bar z\)) cannot move a column fixed by a
+residual symmetry; the only map in the Companion that distinguishes the slots is the mask \(D=\exp(\varepsilon W_l)\) with
+\(\varepsilon=\operatorname{artanh}\beta_{\rm sym}=0.6174\) (H45).  With it the TM1 class has 56 hits compatible with the JUNO value of
+\(\theta_{12}\), only if the mask also acts on the neutrinos (H134a, H134c \textbf{confirmed}); \(\theta_{23}\) and \(\delta\) are not sharp
+(widths \(0.635\) and \(0.932\); H134b \textbf{refuted}).  This is compatibility, not a prediction.  The verdict ``stands badly against the data''
+for the H131 column therefore holds only for the untransferred column and is not a verdict on the construction.
+
+\paragraph{Theoremlet v4.10.0-r64.4 (a recursive field equation on the tower fixes no scale; H129, H132, H133, H135, H136, k290--k305; partly not blind).}
+An ansatz \(L_{n+1}[\psi+\chi\ell]=L_n[\psi]+\Delta_n[\psi,\chi]\) with one new term per step (area, commutator, associator, norm defect) has the
+symmetry of each step; its signs are free parameters (exploration k290).  It lies outside the setting W1/W2 of v4.9.0-r81--r86 and outside the
+list \(\mathcal K\) of r56.  Tested: (i) H129: one-loop flow generates a scale on \(67.8\,\%\) of the grid (carries partly), but not in the
+appended half field (\(29.5\,\%\), equal by exchange symmetry to the share in the pre-stage); \textbf{not confirmed}.  (ii) H132: on the HC
+direction no gauge field stays massless (\(\det M^2=4g_L^2g_R^2AB\)); \textbf{refuted}; for \(g_L=g_R\) the ratio is
+\(m_-/m_+=\beta_{\rm sym}^2\) with \(\beta_{\rm sym}\) inserted.  (iii) H133: the tower fixes the form of the coupling of the \(HS(3)\) appendix
+(one mixed term \(\kappa AC\), four degenerate fields) but not its value; \textbf{not confirmed}.  (iv) H135, H136: \(\kappa\approx1.2\) is neither
+a fixed point of the flow, nor an extremum of the vacuum depth, nor held by the back-reaction through the HC angle; both \textbf{refuted}.  The
+numerical hit \(\kappa=(\gamma_L+1/\gamma_L)/2=1.2004\) (k303) uses \(\gamma_L\) as input, lies at chance level among the candidates searched and
+is recorded as no evidence.  Consequence: as in v4.9.0-r84 and r56, no scale and no value
+follows; OP1 and the scale stay open.
+
+\paragraph{Remark v4.10.0-r64.5 (H105 is an assigned, open prediction).}
+The statements ``H105 stays unassigned'' (r18) and ``no test'' (r24.4) are superseded.  On 16 November 2026 the author chose the setting V1
+(every crossing of the horizon is one T quantum) so that the crossing reading of r24.4 has a measurable consequence.  H105, pre-registered
+(note \texttt{Vorab\_\allowbreak Notiz\_\allowbreak H105\_\allowbreak Flaechenschritte\_\allowbreak Echos.md}, script k227): area steps
+\(\Delta A=4\ln2\,\ell_P^2\), absorption lines at \(\omega_n=n\,\tfrac{\ln2}{2\pi}\kappa+m\Omega_H\), hence echoes after the ringdown; to be
+decided by gravitational-wave analyses appearing after 16 November 2026, deadline 31 December 2028 (confirmed at Bayes factor \(\ge10\) or
+\(\ge3\sigma\), refuted at exclusion for one event).  Status: open.  The value \(\alpha=4\ln2\) is not specific to the construction (any counting
+with \(j=\tfrac12\) only gives it), and whether such a quantisation produces observable echoes is disputed in the literature.
+
+\subsection*{v4.10.0-r64 precisions to earlier layers}
+\label{subsec:v4100-r64-precisions}
+
+\paragraph{Remark v4.10.0-r64.6 (numbers).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] r08.3(a): with the SU(2) counting (\(\gamma_L=2.151501\)) the \(m_W\) relation gives \(82.69\) GeV (stored output of k218:
+\(82.69234\)), not \(82.68\) GeV; the latter came from the rounded \(\gamma_L\approx2.15\).  \(\Omega_M=0.365\) is unchanged.
+\item[(b)] Two values of \(\gamma_L\) appear in the Companion: \(1.864700\) from \(\gamma_M=0.23753296\) and \(1.86444\) from the rounded input
+\(0.2375\) of the main body (v4.9.0-r68).  The entries \(1.86444\) (v4.9.0-r24.3) and \(1.8645\) (v4.9.0-r84.2(b)) are the rounded-input value;
+with the unrounded input both read \(1.8647\).  No statement depends on the difference.
+\item[(c)] Koide: with \(m_\tau=1776.93\pm0.09\) MeV, \(K=0.6666645\pm0.0000051\), that is \(0.43\sigma\) below \(\tfrac23\) (r63.5).  The
+``within \(0.005\,\%\)'' of the main text is correct but loose by a factor of about fifteen.  H102 (\(m_\tau=1777.134\) MeV) uses
+\(\rho^2=0.500014\) taken from \(m_e/m_\mu\), not the overlap \(\tfrac12\); with exactly \(\tfrac12\) the value is \(1776.969\) MeV.  The two
+statements do not contradict each other: the deviation that H102 explains is not significant at present.
+\end{enumerate}
+
+\paragraph{Remark v4.10.0-r64.7 (which map exchanges the frames).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] Remark r29.4 writes ``the frame T is the \(J_B\) image with \(s\mapsto-\bar s\)''.  By the correction v4.9.0-r28 the frame T of
+Convention F is the image under the duality rotation \(D\colon z\mapsto iz\), \(s\mapsto-s\).  Both maps reverse \(\operatorname{Re}s\), and the
+argument of r29.4 (a boost preserves \(s\), so \(\gamma_L\) is the factor of \((M,\bar M)\), not of \((M,T)\)) holds for either.  r29.4 is to be
+read with \(D\).
+\item[(b)] The exchange of r63.2 and r63.7, \(J\colon\psi\mapsto U\bar\psi\), is antilinear.  On \(\operatorname{span}(1,U)\cong\mathbb C\) it is
+\(z\mapsto i\bar z\), the map \(J_B=D\circ\vartheta\), not \(D\).  \(D\) itself acts as \(\theta\mapsto\theta+\pi/2\) (H149b) and has no fixed
+angle; \(J\) acts as \(\theta\mapsto\pi/2-\theta\) and fixes \(\theta=\pi/4\).  \(J\) exchanges matter-type and tachyon-type states
+(\(\operatorname{Re}\Psi^2\mapsto-\operatorname{Re}\Psi^2\)); calling it ``the exchange of matter frame and tachyon frame'' is the declared
+reading of k297 (\(\mu\mapsto1/\mu\)), not the tachyon map of Convention F.  \(J\) is not time reversal \(\vartheta\colon z\mapsto\bar z\) either.
+\item[(c)] At the fixed point \(\operatorname{Re}\Psi^2=0\) but \(\Psi^2=U\ne0\).  ``Lightlike'' in r63.2 means \(\operatorname{Re}s=0\), the
+boundary between the two classes; it is not the null class \(s=0\) and not the photon eigenframe \(P\) (\(b=0\)).
+\end{enumerate}
+
+\paragraph{Remark v4.10.0-r64.8 (scope of earlier statements).}
+\begin{enumerate}[leftmargin=2em]
+\item[(a)] r06.1, r07.2: Dorau and Much give arguments for the chain, for a real scalar field in coherent states at leading order.  That the
+chain holds for the Maxwell field in frame M is an assumption of r07.2; r07.2 shows that frame T then gives the same equation.
+\item[(b)] Main text, \texttt{prop:compensator}: the status note of v4.9.0-r03.4 corrects only the orthogonality clause.  The clause ``produces
+the photon \(C(f)\in K_3\)'' is superseded by r23.2 and r11.2(f): the compensator image lies on the compensator axis R (\(\phi=1\)) and never
+reaches \(P\).
+\item[(c)] r30.6, r55.1: ``the numerical values in OP2--OP5 all go back to \(\beta_{\rm sym}\)'' holds for the inserted values.  The open
+predictions H42, H100, H112 and H125 do not depend on \(\beta_{\rm sym}\) (r08.3, r12.5, r59), and the Koide overlap \(\tfrac12\) and the number
+of generations are separate inputs.
+\item[(d)] r19.4: the caveat ``to be confirmed in the PDFs before citation'' is lifted for the formulas quoted there; they were confirmed in the
+full texts (Brannen, arXiv:1006.3114, eqs.~17, 56, 67, 69, 72; Foot, arXiv:hep-ph/9402242; \.Zenczykowski, arXiv:1210.4125).  Brannen attributes
+the charged-lepton formula with \(2/9\) to G.~Rosen (Mod.\ Phys.\ Lett.\ A 22 (2007) 283).
+\item[(e)] Numbering: in r25, r26 the names \(HS(6)\), \(HS(7)\), \(HS(8)\) denote Dixon copies built on \(\mathbb C\otimes\mathbb H\otimes\mathbb O\);
+in r62, r63 and in this layer \(HS(n)\) denotes the Cayley--Dickson level \(A_n\) (\(HS(4)=\mathbb S\)).  The two are different towers.
+\end{enumerate}
+
+\subsection*{v4.10.0-r64 frames}
+\label{subsec:v4100-r64-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r64.1, r64.2 (derivations, carriers) & frame independent algebra & none with data\\
+r64.3 (mixing) & algebraic column; M after the mask \(\varepsilon=\operatorname{artanh}\beta_{\rm sym}\) & with data only after the declared map (H45, H134)\\
+r64.4 (field equation on the tower) & M; exchange \(\mu\mapsto1/\mu\) as declared reading & none with data\\
+r64.5 (H105) & T counts crossings (setting V1) & gravitational-wave analyses, open\\
+r64.7 & M, T & \(D\), \(J_B\) and \(\vartheta\) kept apart (v4.9.0-r28, r51, r81)\\
+P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r64 register entries}
+\label{subsec:v4100-r64-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r64\\
+\midrule
+H128a; H128b for \(e_8\); H131b; H132; H134b; H135; H136 & refuted\\
+H128b for \(e_7\); H130a, b; H131a; H134a, c & confirmed, partly not blind\\
+H129, H133 & not confirmed (carry partly)\\
+H105 & open, deadline 31 December 2028\\
+CT-003 (charge axis \(e_8\)) & placeholder; not supported by H130; dependent statements stay conditional\\
+frame rule for comparisons with data & recorded (author, 25 November 2026)\\
+scale and \(\beta_{\rm sym}\) from a field equation on the tower & not obtained\\
+OP1--OP5 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r64 notes}
+\label{subsec:v4100-r64-notes}
+
+{\raggedright
+Result and advance notes of H128--H136: \texttt{notes/\allowbreak research/\allowbreak predictions/} (H128, H130, H131, H134 and all advance
+notes) and \texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/\allowbreak feldgleichung/}
+(H129, H132, H133, H135, H136, explorations k290--k305), with the scripts, Wolfram cross-checks and actual outputs in the subfolders
+\texttt{kollaps\_\allowbreak h128}, \texttt{ladungsrichtung\_\allowbreak h130}, \texttt{mischung\_\allowbreak h131}, \texttt{frame\_\allowbreak h134} and
+\texttt{feldgleichung}.  H105: \texttt{notes/\allowbreak research/\allowbreak predictions/\allowbreak Vorab\_\allowbreak Notiz\_\allowbreak H105\_\allowbreak Flaechenschritte\_\allowbreak Echos.md}.
+Audit of the article and list of its changes: \texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak r64\_\allowbreak nachtrag\_\allowbreak audit/\allowbreak README.md}.
+\par}
+
+\subsection*{v4.10.0-r64 ledger and guard update}
+\label{subsec:v4100-r64-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r64}=(1,1,0)
+\]
+for (status recorded; computations checked in the cited scripts; no new computation in this layer).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r64,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r64}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock/RH theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

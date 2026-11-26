@@ -1,5 +1,6 @@
 % Section 4 (group B): particles from C (x) H (x) O. Sources: Companion thm:SM, thm:octonion-SU3, thm:three-generations,
-% rounds v4.9.0-r34, r35, r37, r40--r43, r48, r49; v4.10.0-r13, r14.4, r18.4, r19, r25--r27, r59, r60.
+% rounds v4.9.0-r34, r35, r37, r40--r43, r48, r49; v4.10.0-r13, r14.4, r18.4, r19, r25--r27, r59, r60;
+% after publication: tests H130, H138, H140 (recorded in v4.10.0-r62 and r64).
 \section{Particles from \texorpdfstring{$\mathbb C\otimes\mathbb H\otimes\mathbb O$}{C x H x O}: a conditional construction}
 \label{sec:B-particles}
 
@@ -83,7 +84,8 @@ leave four. The traces are exact fractions over the sixteen states (script \text
 \end{proof}
 
 Gravitational anomaly cancellation fixes the hypercharge offset, and the remaining anomalies select left against right
-multiplication. What is left is the Standard Model and its frame mirror. The hypercharge offset also has a clean reading
+multiplication. What is left, under the setting, is the charge assignment of one Standard Model generation and its frame
+mirror. The hypercharge offset also has a clean reading
 (\rndold{r49}): on one generation $2(Q-\tfrac12)=B-L$, hence
 \begin{equation}
  \tfrac Y2=\tfrac{B-L}{2}+T_3^R,\qquad Q_{\rm em}=T_3^L+T_3^R+\tfrac{B-L}{2},\qquad T_3^L=C\,T_3,\ T_3^R=(1-C)\,T_3 ,
@@ -148,7 +150,7 @@ The explicit computation (\rnd{r19}.1, \rnd{r25}.1) confirms this on the concret
 antilinear part.
 \end{proof}
 
-The consequence is \Established: on one generation there is no pair of anticommuting symmetric operators, hence no qubit
+The consequence is \Established: on one generation there is no pair of anticommuting operators compatible with the symmetries, hence no qubit
 with three mutually unbiased bases, whether built from the frame maps or from anything else. Of the frame maps,
 $R\colon z\mapsto iz$ is central and $T$, $J_B$ map a generation to its conjugate. A generation index exists only when the
 carrier contains the generation several times, and the number of copies is then an input (\rnd{r19}.2). The reading ``three
@@ -171,7 +173,8 @@ $[Q,\psi]=0$, $[Q,\mathfrak{su}(3)_c]=0$, $\bar Q=1-Q$ and spectrum $\{0,\tfrac1
  \label{eq:B-Qstar}
 \end{equation}
 with charge axis $e_8$, the only $\psi$-fixed imaginary direction (\rnd{r13}.1). The axis is an assumption, registered
-as placeholder CT-003; everything below inherits it. The kernel $N=\operatorname{span}(1+ie_8,\,e_7-ie_{15})$ is a colour-
+as placeholder CT-003; everything below inherits it. A later test finds octonionic colour-stable carriers in $\mathbb S$ only for charge
+directions perpendicular to $e_8$ (H130, \rnd{r64}), so the placeholder is not supported by it. The kernel $N=\operatorname{span}(1+ie_8,\,e_7-ie_{15})$ is a colour-
 and charge-neutral qubit, on which $\psi$ acts as $\operatorname{diag}(1,\omega)$. The quaternion algebra
 $\mathbb H_n=\operatorname{span}(1,e_7,e_8,e_{15})$ acts on $N$ from the right; its 24 Hurwitz units act as the binary
 tetrahedral group $2T$, whose four threefold axes lie at $|\cos|=1/\sqrt3$ to the $\psi$ axis. An eigenstate of an
@@ -179,7 +182,13 @@ order-three Hurwitz unit has orbit overlap $\rho^2=\tfrac12$, hence $K=\tfrac23$
 The target was known in advance: this is a construction, not a derivation. The decisive negative is the content: under
 $(Q_*,\text{colour},\psi)$ the space carries exactly two complete generations, and $\psi$ acts inside each as a phase, not as a
 generation step (\rnd{r13}.3). The Majorana vector on $N$ is not fixed, and two flavours do not give three masses
-(\rnd{r13}.5). A test of the inherited charge (H103a) was \Refuted.
+(\rnd{r13}.5). A test of the inherited charge (H103a) was \Refuted. In the basis of the three octonion copies inside
+$\mathbb S$ the same cycle is a permutation and supplies a generation label, but three generations do not fit
+(\rnd{r59}.9). Tests made after publication sharpen this: these are the only $G_2$-stable octonion copies in $\mathbb S$ and
+span two independent directions; they share colour, each carries one generation with its own charge direction, perpendicular
+to the axis $e_8$ of $Q_*$, no common charge $\alpha+\beta L_x+\gamma R_x$ exists, and together they cover 15 of 24 states. They are three
+equivalent readings of one generation (tests H130, H138, H140, research notes of 25 November 2026; recorded in Companion
+rounds \rnd{r62} and \rnd{r64}).
 
 \paragraph{Route B: triality slots.}
 On $(\mathbb O^3,\tau)$ with $\tau(x,y,z)=(y,z,x)$ there are three slots and a cycle. With the slot charge every species
@@ -274,7 +283,8 @@ Koide octant in Section~\ref{sec:B-koide-orientation} is of the same kind.
 \paragraph{Summary of the section.}
 Under named choices one generation with its charges, chirality and anomaly freedom follows from $\mathbb C\otimes\mathbb H
 \otimes\mathbb O$; this is a consistency result in a known line of work. The number of generations is not derived: one
-generation admits no generation qubit, route~A gives two generations, route~B gives three slots without the Koide
+generation admits no generation qubit, route~A gives two generations (the three octonion copies inside $\mathbb S$ are three
+readings of one, H140), route~B gives three slots without the Koide
 reference, copies give whatever number is set, and the Albert algebra gives a derived family $SO(3)$ broken to $A_4$ with
 the slots read as generations. Masses, mixing angles and scales are not derived anywhere in this section. OP3 and OP4 remain
 \Open.

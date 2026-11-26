@@ -122,10 +122,10 @@ connection solved from $de+\omega\wedge e=0$ rather than inserted, equals minus 
 two plane waves, exactly symmetric, to $7\times10^{-15}$ (\rndold{r86}, r86.3(c)).
 \end{proof}
 
-These are numerical-exact checks at generic points, not a general symbolic proof of~(f); the round records them as such,
-together with two errors found in the checking code (a conjugate transpose that also conjugated real symbols, and extra
-$\eta$ factors in $\omega_{\mu ab}\Sigma^{ab}$). After their correction everything agreed; the disagreement lay in the
-checking code, not in W1 (\rndold{r86}, disclosure to r86.3). The modulus $3/16$ of~\eqref{eq:act-4f} is the
+For (b), (f) and (g) these are numerical checks to machine precision at generic points, not a general symbolic proof;
+\rnd{r01} records them as such. For the first-order check \rndold{r86} discloses two errors found in the checking code (a
+conjugate transpose that also conjugated real symbols, and extra $\eta$ factors in $\omega_{\mu ab}\Sigma^{ab}$). After their
+correction everything agreed; the disagreement lay in the checking code, not in W1 (\rndold{r86}, disclosure to r86.3). The modulus $3/16$ of~\eqref{eq:act-4f} is the
 Hehl--Datta value \cite{D:HehlDatta}, which the control of \rndold{r81} reproduced for a Dirac field.
 
 \subsection{The sign of the gravitational action}
@@ -219,7 +219,7 @@ holomorphically, $\psi^\dagger\mapsto\psi^\dagger S$, the image term is $-L_M$ i
 is $(a-b)S_M$: isotropic, stable for $a>b$, with opposite energy in the image (criterion K3). The hermitian alternative
 $\psi^\dagger\mapsto\psi^\dagger S^\dagger$ gives $(a+b)S_M$ and violates K3 (H79, not blind). The author fixed the holomorphic
 form; in the matter reading the Dirac adjoint stays. A first form that rotated only the spinor index gave an anisotropic
-Weyl operator with factor $(a+b)/(a-b)=\gamma_L=1.8645$ at matter weights, a Lorentz violation of order one for fermions
+Weyl operator with factor $(a+b)/(a-b)=\gamma_L=1.8647$ at matter weights, a Lorentz violation of order one for fermions
 that laboratory bounds exclude (H78; \cite{Altschul2010}).
 
 For a scalar the weighted Lagrangian is
@@ -243,7 +243,9 @@ second reading only renormalises the kinetic term against the potential; the vac
 sign are set by a free weight ratio (\rndold{r81}, H72); with the second reading no tachyonic branch remains, and every
 route examined in \rnd{r03} and \rnd{r04} ends with a vacuum term that is a free multiple of $V_{\min}$. The aim of the
 programme, a vacuum term that is not free, is not met (\rnd{r05}, r05.2(c)); Section~\ref{sec:lop5} states the corresponding negative
-result for $\Lambda$ in the full class of constructions of the Companion. Table~\ref{tab:act-status} collects the status.
+result for $\Lambda$ in the full class of constructions of the Companion. A later loop ansatz outside W1/W2, on the
+Companion's Hilbert-shift tower, fixed no scale either (H129, H133 not confirmed; H132, H135, H136 refuted; research notes
+of 25~November 2026, recorded in Companion round \rnd{r64}). Table~\ref{tab:act-status} collects the status.
 
 \begin{table}[ht]
 \centering
@@ -253,8 +255,8 @@ result for $\Lambda$ in the full class of constructions of the Companion. Table~
 statement & status & source\\
 \midrule
 action W1, $U(1)_J$ anomaly-free on the full carrier & \Conditional\ set up under author decisions & \rndold{r81}\\
-field equations (generator, torsion, Weyl, Ward) & \Established\ for W1, derived in Wolfram (H88) & \rndold{r86}\\
-non-linear Einstein--Cartan equation, Bianchi & \Established\ for W1, derived and compatible (H90) & \rnd{r01}\\
+field equations (generator, torsion, Weyl, Ward) & \Established\ for W1, derived in Wolfram (H88, not blind) & \rndold{r86}\\
+non-linear Einstein--Cartan equation, Bianchi & \Established\ for W1, numerically at generic points (H90, not blind) & \rnd{r01}\\
 sign of the gravitational action & \Refuted\ as first written (repulsion); corrected by author decision & \rnd{r01}\\
 torsion pairing channel & repulsive after the correction; Planck-scale condensate withdrawn & \rnd{r01}\\
 homogeneous fermion state & stiff matter, $\rho=p<0$; not a vacuum term & \rndold{r86}, \rnd{r01}\\
@@ -286,7 +288,8 @@ afterwards.
   $|\beta/\alpha|=1/\gamma_L=0.536$ and the occupation $n=(1-\bsym^2)^2/(4\bsym^2)=0.404$ per mode, for every $k$; at photon
   weights $n=0$. With a smooth transition of duration $\Delta$, taken around zero in the complex plane, every mode of the
   tachyon reading is mapped to a mode of negative frequency after the bang (a CPT assignment), and the admixture is cut
-  off exponentially for $k\Delta\gg1$ (H86; checked by a second system in \rndold{r86}). $\Delta$ is a free scale.
+  off exponentially for $k\Delta\gg1$ (H86, not blind, set up after H85 had missed its criteria; values confirmed by a
+  second system in \rndold{r86}; asymptotically $e^{-\pi k\Delta}$ with a growing prefactor, \rnd{r02}). $\Delta$ is a free scale.
 \item \emph{Fermions pass without admixture} (\rnd{r03}). The weighted Dirac or Weyl equation is solved exactly by
   $\psi=c^{-1/2}\chi$ with $\chi$ free, for every profile $c(\tau)$; positive and negative frequencies do not mix, and the
   transfer factor is $\pm i\bsym$, unitary in the weighted norm. A first-order equation lets the weight be scaled away; the
@@ -304,6 +307,8 @@ afterwards.
 \paragraph{What could still be.} \Open\ Whether the transition has a physical duration $\Delta$ and what fixes it; what
 the two senses of the complex rotation mean (they are exactly conjugate and give an asymmetry with fixed product); how
 tensor modes see the transition, which an observable trace such as a gravitational-wave background would need; and the
-energy in bosons created near $k\sim1/\Delta$, which sets a Planck-hot, non-thermal start without fermions and an open
-problem for $\Delta N_{\mathrm{eff}}$ (\rnd{r04}, \rnd{r05}). None of this is derived. The picture is a consistent reading
+energy in bosons created near $k\sim1/\Delta$, which sets a Planck-hot, non-thermal start without fermions (\rnd{r04}). For
+gravitons the estimate is $\Delta N_{\mathrm{eff}}\approx3.6$, and still $\approx2.6$ with the photon weights the author then
+assigned to gravity, against a bound near $0.3$; this is recorded as an open problem, not closed by a cut-off (\rnd{r05},
+r05.1). None of this is derived. The picture is a consistent reading
 of the second reading under G2, not a result about the early universe.

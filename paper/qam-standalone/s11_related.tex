@@ -65,35 +65,51 @@ is no controlled study of whether it reduces errors, only the experience that it
 
 \subsection{Outlook: a quantum computer in the physics itself?}
 
-\emph{This subsection is speculation. Nothing in it is established, and QAM would record every claim in it as \st{open}.}
+\emph{This subsection is speculation about the carrier. What is established concerns the present circuit only and is mostly negative;
+QAM would record every positive claim made here as \st{open}.}
 
 If a mathematical structure can carry a classical tape (Section~\ref{sec:tape}), one may ask whether it could carry a quantum computer:
 a machine whose tape holds superpositions of configurations and whose steps act on them coherently. The question is natural for a
-carrier built from spinors, because a two-component spinor is exactly the state space of a qubit. It also has a long history: Feynman
-proposed simulating physics with quantum systems~\cite{feynman82}, and Deutsch defined a universal quantum computer as a physical
-system obeying quantum mechanics~\cite{deutsch85}.
+carrier built from spinors, because the states of a qubit are the two-component spinors, up to normalisation and phase. It also has a long history: Feynman
+proposed simulating physics with quantum systems~\cite{feynman82}, and Deutsch defined a universal quantum computer as a quantum generalisation of Turing's machine~\cite{deutsch85}.
 
-What exists today is modest. The tape machine is classical and deterministic. Its Qiskit version builds each step as a \emph{reversible}
-circuit, and reversibility is a precondition for coherent execution, since unitary evolution is reversible and an irreversible step
-would have to dissipate information~\cite{bennett73}. A check confirms that the circuit followed by its inverse restores a superposition of two inputs.
-But in the machine runs the circuit is applied to basis states only: every step is read out and the result
-fed into the next one, so no superposition survives from step to step. The spinor tape hypothesis, as stated, concerns classical reading
-and writing along the carrier.
+What exists today is modest, and one test has made it more precise. The tape machine is classical and deterministic. Its Qiskit version
+builds each step as a circuit that keeps the input configuration $x$ and writes the successor $f(x)$ into a separate register,
+$|x,0\rangle\mapsto|x,f(x)\rangle$. A logically irreversible step must dissipate information~\cite{landauer61}, and any computation can be
+made reversible by keeping such a record of its input~\cite{bennett73}; this is the form the circuit has. A test in the
+repository~\cite{repo} (H137, with its expected outcome written down before the calculation; Qiskit with an exact Wolfram Language
+cross-check, for tapes of two and three cells) examined how this circuit acts on superpositions. The findings are:
+\begin{itemize}[nosep,leftmargin=1.5em]
+\item The circuit is unitary and maps $\sum_c a_c|c\rangle$ to $\sum_c a_c|c,f(c)\rangle$, linearly and with the phases intact.
+\item The successor register alone is not coherent. Because the input stays behind as a copy, a superposition of inputs appears there as a
+mixture.
+\item For the example program, a unitary step on the tape alone does not exist: the step map is not injective (16 configurations are
+mapped to 12 for two cells, 48 to 36 for three).
+\item For a program with a reversible rule table, a step that computes, swaps and uncomputes does act coherently on the tape.
+\item The circuit only permutes basis states. It never turns a definite configuration into a superposition, and it can entangle the tape
+with the head but not one cell with another.
+\end{itemize}
+In the machine runs, finally, every step is read out and the result fed into the next one, so no superposition survives from step to
+step. The spinor tape hypothesis, as stated, concerns classical reading and writing along the carrier.
 
-At least four further conditions would be needed, each of which would be an open obligation in a QAM record:
+At least five further conditions would be needed, each of which would be an open obligation in a QAM record:
 \begin{enumerate}[label=\arabic*.,nosep,leftmargin=2em]
 \item the carrier admits superpositions of distinct tape configurations as states, not only definite ones;
-\item each machine step acts on those states as a unitary map, including head movement and control;
+\item each machine step acts on those states as a unitary map, including head movement and control, which requires a reversible rule
+table or a log that is uncomputed afterwards;
+\item at least one step mixes amplitudes instead of permuting basis states; the present circuit has none, and the test names this as
+the ingredient that is actually missing;
 \item no step implicitly reads out the state: branch predicates must be applied coherently, as controlled operations, not as
 measurements;
 \item the coherence survives long enough, or can be protected well enough, for a computation of useful length.
 \end{enumerate}
-The third condition conflicts directly with the present design, in which branch predicates are \emph{read} (Section~\ref{sec:tape}). A
-quantum version would need a different branching primitive. The fourth is the hardest problem of experimental quantum computing and has
-no reason to be easier in a mathematical carrier that is meant to describe physics.
+Which part of the structure could supply the third has not been examined. The fourth conflicts directly with the present design, in
+which branch predicates are \emph{read} (Section~\ref{sec:tape}); a quantum version would need a different branching primitive. The
+fifth is a central difficulty of experimental quantum computing, and we see no reason why it should be easier in a mathematical carrier
+that is meant to describe physics.
 
 What QAM can contribute here is bookkeeping, not an answer. It would hold ``the carrier supports a quantum computer'' as an \st{open}
-entry with these four conditions, separate from the conditional classical claim and from the executable checks of the classical plan, and
+entry with these five conditions, separate from the conditional classical claim and from the executable checks of the classical plan, and
 it would prevent any successful classical run from being cited as evidence for the quantum claim.
 
 \subsection{Conclusion}

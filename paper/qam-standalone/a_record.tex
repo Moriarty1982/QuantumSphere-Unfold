@@ -1,13 +1,13 @@
 \section{The record of this article}\label{app:record}
 
 Typesetting this article with the option \texttt{export} writes its QAM record to \texttt{main.qam}. The listing below is that record from
-the previous typesetting run, without its two comment lines (which carry the MD5 of the source and the record hash). Long lines are
-wrapped. The script \texttt{qamhash.py} recomputes every hash in it, and the Lean checker accepts it.
+the previous typesetting run, without its three comment lines (a header, the MD5 of the source and the record hash). Long lines are
+wrapped. The script \texttt{qamhash.py} recomputes every hash in \texttt{main.qam}, and the Lean checker accepts that file.
 
 {\footnotesize
 \IfFileExists{record_snapshot.qam}
   {\lstinputlisting[basicstyle=\ttfamily\scriptsize]{record_snapshot.qam}}
-  {\noindent[Record snapshot not yet generated; run \texttt{make} in \texttt{paper/qam-standalone}.]}
+  {\noindent[Record snapshot not yet generated; run \texttt{sh build.sh} in \texttt{paper/qam-standalone}.]}
 }
 
 For comparison, the hand-authored record used by the executor in Section~\ref{sec:requests} contains one map and two entries:

@@ -128,4 +128,4 @@ for ax in (ax1, ax2):
 fig.tight_layout(w_pad=1.2)
 OUT.parent.mkdir(parents=True, exist_ok=True)
 fig.savefig(OUT)
-print("wrote", OUT)
+print("wrote", OUT.relative_to(HERE.parent).as_posix())

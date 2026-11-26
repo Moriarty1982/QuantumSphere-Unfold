@@ -14,4 +14,4 @@ beta windows: lepton (0.545, 0.57), m_W (0.54897, 0.55020), Omega_M (0.52943, 0.
   A,2        / S1/2,2     gamma_L = 1.864700 beta = 0.54941  L1 W1 O1
   A,2        / S1,2j+1    gamma_L = 1.921208 beta = 0.56156  L1 W0 O0
 all three: [('A,2', 'S1/2,2')]
-wrote /home/user/QuantumSphere-Unfold/paper/physics-standalone/figures/F7-counting-pairs.pdf
+wrote figures/F7-counting-pairs.pdf

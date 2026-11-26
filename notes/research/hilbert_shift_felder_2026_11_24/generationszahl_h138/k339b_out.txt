@@ -1,0 +1,8 @@
+(Ausgabe von k339b_gegenprobe.wl, Wolfram-Kernel ueber MCP, 26.11.2026; keine Meldungen oder Warnungen. f = phi, w = y.)
+J = L_U . Konjugation: True
+Z4 (Ordnung 4): quadratisch {f^2 + w^2}; quartisch {f^4 + w^4, -(f^3 w) + f w^3, f^2 w^2}; schiebt theta bei pi/4: {-(f^3 w) + f w^3}
+Z2 J (Ordnung 2): quadratisch {f^2 + w^2, f w}; quartisch {f^4 + w^4, f^3 w + f w^3, f^2 w^2}; schiebt theta bei pi/4: {}
+D4 (Ordnung 8): quadratisch {f^2 + w^2}; quartisch {f^4 + w^4, f^2 w^2}; schiebt theta bei pi/4: {}
+n_B=1: Quelle {0, 0}; Matrix (s, r): {{8 k, -24 l}, {0, 2 k^2/l - 72 l}}
+n_B=2: Quelle {-4 k + 8 l, -2 k^2/l + 8 l}; Matrix (s, r): {{12 k, -28 l}, {0, 3 k^2/l - 76 l}}
+J(1)J(1) = -1, J(1) = I; |J(z)|^2-|z|^2 = 0; J(zw)-J(z)conj(w) = 0
