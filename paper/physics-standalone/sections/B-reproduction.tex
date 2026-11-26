@@ -5,26 +5,28 @@
 \paragraph{Source version.} The article reports the Quantum Sphaera Companion \cite{QSC}. The public baseline is v5.4.0
 (24~November 2026, Version DOI \href{https://doi.org/10.5281/zenodo.24500009}{10.5281/zenodo.24500009}, Concept DOI
 \href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728}, tag \texttt{v5.4.0}); it contains the research rounds
-up to v4.10.0-r59. Rounds v4.10.0-r60 and r61 (formula corrections) are in the source-only research layer of the public repository
-\url{https://github.com/Moriarty1982/QuantumSphere-Unfold}. Nothing after r61 is used. In that repository:
+up to v4.10.0-r59. Rounds v4.10.0-r60, r61 (formula corrections) and r62--r64 (the tests after r60 that are cited here: H105 and
+H128--H156) are in the source-only research layer of the public repository
+\url{https://github.com/Moriarty1982/QuantumSphere-Unfold}. Nothing after r64 is used. In that repository:
 \begin{itemize}
 \item \nolinkurl{sources/research/v480-companion.tex} is the entry point of the Companion (historical file name);
 \item \nolinkurl{sources/research/parts/v490-post-release-layers.tex} holds the rounds v4.9.0-r01 to r86, cited here as
   \textsc{c}\,4.9-rNN;
-\item \nolinkurl{sources/research/parts/v4100-post-release-layers.tex} holds the rounds v4.10.0-r01 to r61, cited as
+\item \nolinkurl{sources/research/parts/v4100-post-release-layers.tex} holds the rounds v4.10.0-r01 to r64, cited as
   \textsc{c}\,rNN, with labels \texttt{sec:v4100-rNN-\dots}.
 \end{itemize}
-Each round ends with a ``Proof and measurement sources'' paragraph that names its scripts, and with a ledger and guard
-update.
+Each round ends with a ledger and guard update and names its notes and scripts, in a ``Proof and measurement
+sources'' paragraph or, in most later rounds, in the results or in a closing notes paragraph.
 
 \paragraph{Where the scripts live.} The notes of a round are in \nolinkurl{notes/research/v4_10_0_rNN/}. The folder name
 follows the working sequence, not the round label: \nolinkurl{v4_10_0_w1/} holds the notes of v4.9.0-r81,
 \nolinkurl{v4_10_0_r82/} to \nolinkurl{v4_10_0_r86/} those of v4.9.0-r82 to r86, and \nolinkurl{v4_10_0_r01/} onwards those
 of v4.10.0-r01 onwards. Scripts and their recorded outputs are in the subfolder \nolinkurl{llm/} or, for later rounds, in a
 topic folder that the round's \texttt{README.md} names (for example \nolinkurl{notes/research/op5_attractor_2026_11_23/} for
-H124 and \nolinkurl{notes/research/h125_relatives_cp_2026_11_24/} for H125). Pre-registration notes and result notes of all
-tests are in \nolinkurl{notes/research/predictions/} as \nolinkurl{Vorab_Notiz_H*.md} and \nolinkurl{Ergebnis_H*.md}; the commit
-of a pre-registration note can be compared with the date of the computation. Table~\ref{tab:repro-act} lists the scripts
+H124 and \nolinkurl{notes/research/h125_relatives_cp_2026_11_24/} for H125). Pre-registration and result notes
+(\nolinkurl{Vorab_Notiz_H*.md}, \nolinkurl{Ergebnis_H*.md}) are in \nolinkurl{notes/research/predictions/} for H42, H46,
+H48--H112 and H124--H137, in the \nolinkurl{llm/} folder of their round for earlier tests, in \nolinkurl{llm/} at the top
+level for H113--H123 and in \nolinkurl{notes/research/hilbert_shift_felder_2026_11_24/} for H138--H156. The commit of a pre-registration note can be compared with the date of the computation. Table~\ref{tab:repro-act} lists the scripts
 behind the numbers of Section~\ref{sec:act}.
 
 \begin{table}[ht]

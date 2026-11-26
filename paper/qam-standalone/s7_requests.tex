@@ -10,8 +10,8 @@ executed by an executor, MMA; and every execution leaves a \emph{receipt}.
 The central design decision is that an execution has three possible outcomes, not two:
 \begin{itemize}[leftmargin=1.5em]
 \item \cont: the request was admissible and was carried out; the receipt contains the result.
-\item \guard: the request was well formed, but a condition it depends on is not available, for example a premise that is not in the
-record. Nothing is computed. The receipt names the missing condition as an obligation.
+\item \guard: the request was well formed, but a condition it depends on is not available or not fulfilled, for example a premise that is not in the
+record. No result is returned or stored. The receipt names the missing condition as an obligation.
 \item \reject: the request itself is not admissible, for example because an argument lies outside the declared range.
 \end{itemize}
 A \guard\ is not a failure. It is the third outcome required by the decidability boundary of Section~\ref{sec:intro}: the honest answer
@@ -29,7 +29,7 @@ preparation, the boost and the measured interval:
                  "a": "-1/4", "b": "1/4" } }
 \end{lstlisting}
 Before computing, the executor looks up the analytic rule the recipe depends on, by the hash of its record entry, and follows the
-premises of that entry recursively. We ran the request three times, changing one thing each time:
+premises of that entry recursively. We ran the request four times, the first as shown and then with one thing changed each time:
 \begin{center}
 \small
 \begin{tabular}{@{}p{0.34\textwidth}p{0.12\textwidth}p{0.45\textwidth}@{}}
@@ -44,13 +44,13 @@ boost $z{:}1/3$ instead of $z{:}1/4$ & \reject & error: the recipe requires the 
 \end{tabular}
 \end{center}
 The first row reproduces the hand calculation~\eqref{eq:interval} with exact rational arithmetic. The second shows the guard: the same
-request against a database in which the rule is not recorded is not executed, because the result would rest on something the record does
+request against a database in which the rule is not recorded returns no result, because the result would rest on something the record does
 not contain. The third and fourth show that the recipe accepts only the situation for which the rule was derived; it does not
 extrapolate to another boost speed.
 
 \subsection{What a receipt contains}
 
-A receipt is a structured document identified by its SHA-512 hash. It contains the full request; the outcome; the result or the reasons
+A receipt is a structured document identified by its SHA-512 hash. It contains the hash of the request (the request itself is stored beside it); the outcome; the result or the reasons
 for blocking it; a hash of the context in which the request was evaluated; hashes of the implementation that executed it; and, when the
 request depends on record entries, a \emph{premise trace}: a snapshot of every entry reached from the named premises, in dependency
 order, with its statement, status and frame. For the example, the trace contains two entries, the preparation in Lab and the rule obtained
@@ -72,7 +72,10 @@ report keeps the two apart.
 
 \subsection{The abstract machine}
 
-The executor follows an abstract semantics that is small enough to state completely. A \emph{store} consists of its content (objects at
+The three-way execution has an abstract model that is small enough to state completely. It is the store machine defined in the main
+text of the research project~\cite{repo}, with a small instruction set of its own (store, link, snapshot, rollback, scrub, export). The
+running executor follows the same three-way pattern with a different instruction set; the \texttt{READOUT} instruction of the example
+is not part of the model. A \emph{store} consists of its content (objects at
 addresses and relations between addresses), a register of guards (predicates that the content must satisfy), a list of snapshots and a
 log. A store is \emph{admissible} if every relation uses stored addresses and every guard holds. Each instruction $i$ has a raw effect,
 which may be undefined, and is executed as
@@ -83,7 +86,9 @@ which may be undefined, and is executed as
 (s \text{ with log entry } (i,\guard),\ \guard) & \text{otherwise.}
 \end{cases}
 \]
-A result that would violate a guard is never adopted; the old content stays, and the log records what happened.
+A result that would violate a guard is never adopted; the old content stays, and the log records what happened. In the model, \guard\
+thus means that a computed result was discarded. The running executor answers \guard\ also when a premise or a declared guard is
+missing.
 
 \begin{proposition}[Machine properties]\label{prop:machine}
 For every store $s$ and instruction $i$:
@@ -102,14 +107,15 @@ induction. Every case prepends exactly one log entry and returns one of the thre
 \end{proof}
 
 A further rule concerns certificates. The executor can label a result as a \emph{candidate} for a theorem, but a certificate for a
-statement $P$ is defined to contain a proof of $P$. Since no instruction produces proofs, no sequence of instructions yields a
-certificate for a false statement; a candidate becomes a certificate only through a proof supplied from outside the machine. In Lean
-this is a one-line consequence of the type of certificates (Appendix~\ref{app:lean}).
+statement $P$ is defined to contain a proof of $P$. No instruction of the model produces a proof, so a candidate becomes a certificate only through a proof supplied from outside the
+machine. The Lean file records the immediate consequence of this definition, that there is no certificate for a contradiction; the
+statement does not refer to the instructions (Appendix~\ref{app:lean}).
 
 \paragraph{Implementation.} The running executor is a Python adapter over an SQLite database. It follows the same three-way
 semantics and checks the declared guards of the context, the request and the objects involved, as well as the linked premises, before
-any computation. That the adapter implements the abstract semantics correctly is not proved; it is supported by tests. For one
-instruction, the hardware comparison of Section~\ref{sec:tape} checks the adapter's results against independent implementations,
+any result is stored. That the adapter behaves like the abstract model is not proved, and its instruction set differs from the
+model's. Its behaviour is supported by tests of the tape instruction, of batches and of receipts, and by the runs reported here. For one
+instruction, the hardware comparison of Section~\ref{sec:tape} checks the adapter's results against other implementations,
 which supports the results of that instruction but not the guard semantics as such.
 
 \subsection{Batches}

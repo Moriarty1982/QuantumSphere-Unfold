@@ -1,0 +1,90 @@
+== K-a  kleinster Abstand (Newton) ==
+  Auslegung T (Fortsetzung): Start am Auslesepunkt mit der dortigen Geschwindigkeit
+    18 Gitterpunkte: neuer Auslesepunkt = alter Auslesepunkt, groesste relative Abweichung 1.3e-16  (die Bahn ist dieselbe; nichts wird kuerzer)
+    erster Auslesepunkt r_p(b, v) = (-1 + sqrt(1 + b^2 v^4))/v^2: fuer b -> 0 geht r_p -> 0, z. B. v = 1: b = 1: 4.142e-01, b = 0.1: 4.988e-03, b = 0.01: 5.000e-05, b = 0.001: 5.000e-07
+  Auslegung P (parallel): Start am Auslesepunkt, Betrag bleibt, Richtung = urspruengliche Einflugrichtung
+    Befund beim Umsetzen (nach der Vorab-Notiz): mit dieser Richtung laeuft die Probe vom Auslesepunkt weg nach aussen
+    b = 1, v = 1: r_p = 0.414214; radiale Geschwindigkeit am Neustart +1.7071 (> 0: nach aussen); die ganze Spur (auch rueckwaerts) hat b' = 0.292893 (Formel r_p sqrt(1 - 1/e^2) = 0.292893) und Kleinstabstand 0.224745
+    b = 4, v = 0.5: r_p = 1.656854; radiale Geschwindigkeit am Neustart +0.8536 (> 0: nach aussen); die ganze Spur (auch rueckwaerts) hat b' = 1.171573 (Formel r_p sqrt(1 - 1/e^2) = 1.171573) und Kleinstabstand 0.898979
+    b = 0.5, v = 2: r_p = 0.309017; radiale Geschwindigkeit am Neustart +1.4472 (> 0: nach aussen); die ganze Spur (auch rueckwaerts) hat b' = 0.276393 (Formel r_p sqrt(1 - 1/e^2) = 0.276393) und Kleinstabstand 0.262348
+    vorwaerts gerechnet bleibt der Auslesepunkt also stehen; nimmt man die ganze Spur (beide Richtungen), entsteht die Folge b -> b':
+      b = 1, v = 1: Kleinstabstaende 4.142e-01, 4.201e-02, 6.972e-05, 3.388e-13 ... unter 1e-12 nach 4 Schritten
+      b = 4, v = 0.5: Kleinstabstaende 1.657e+00, 1.680e-01, 2.789e-04, 1.355e-12, 0.000e+00 ... unter 1e-12 nach 5 Schritten
+      b = 8, v = 1: Kleinstabstaende 7.062e+00, 6.079e+00, 5.100e+00, 4.130e+00, 3.172e+00, 2.238e+00 ... unter 1e-12 nach 12 Schritten
+      b = 8, v = 2: Kleinstabstaende 7.754e+00, 7.504e+00, 7.254e+00, 7.005e+00, 6.755e+00, 6.505e+00 ... unter 1e-12 nach 36 Schritten
+  K-a: in T steht der erste Punkt, in P (ganze Spur) faellt die Folge gegen null; kein r_min > 0
+
+== K-b  Kraft fuer die Kreisbahn (Newton) ==
+  21 Faelle; Radiusschwankung ueber 5 Umlaeufe: nach dem Stoss hoechstens 9.0e-13, mit Zusatzkraft hoechstens 9.1e-13
+     b     v_inf   r_p        v_p/v_c    sqrt(2+v^2 r_p)   Zusatzkraft f (in Einheiten der Schwerkraft)   abzugebende Energie
+    0.5     1      0.118034   1.455347   1.455347          1.118034                                       4.736068
+    2       0.5    0.472136   1.455347   1.455347          1.118034                                       1.184017
+    2       1      1.236068   1.798907   1.798907          2.236068                                       0.904508
+    2       2      1.765564   3.010358   3.010358          8.062258                                       2.283196
+    8       1      7.062258   3.010358   3.010358          8.062258                                       0.570799
+    Parabel 0      0.500000   1.414214   1.414214          1.000000                                       1.000000
+    Parabel 0      1.000000   1.414214   1.414214          1.000000                                       0.500000
+    Parabel 0      2.000000   1.414214   1.414214          1.000000                                       0.250000
+  Einfall aus der Ruhe (v_inf = 0): v_p/v_c = sqrt(2), Zusatzkraft = 1 mal Schwerkraft (zusammen das Doppelte), abzugebende Energie = 1/(2 r_p) = Bindungsenergie der Kreisbahn
+
+== K-c  Schwung holen von der Kreisbahn (r = 1, v_c = 1) ==
+  k = 1.1000: Energie -0.39500, geschlossen: Abstand zum Startpunkt nach einem Umlauf 1.8e-12; fernster Punkt 1.531646 (Formel k^2/(2 - k^2) = 1.531646); Umlaufzeit 1.424 Kreisumlaeufe
+  k = 1.2000: Energie -0.28000, geschlossen: Abstand zum Startpunkt nach einem Umlauf 3.3e-12; fernster Punkt 2.571429 (Formel k^2/(2 - k^2) = 2.571429); Umlaufzeit 2.386 Kreisumlaeufe
+  k = 1.3000: Energie -0.15500, geschlossen: Abstand zum Startpunkt nach einem Umlauf 1.7e-11; fernster Punkt 5.451613 (Formel k^2/(2 - k^2) = 5.451613); Umlaufzeit 5.794 Kreisumlaeufe
+  k = 1.4000: Energie -0.02000, geschlossen: Abstand zum Startpunkt nach einem Umlauf 2.2e-09; fernster Punkt 49.000000 (Formel k^2/(2 - k^2) = 49.000000); Umlaufzeit 125.000 Kreisumlaeufe
+  k = 1.4142: Energie +0.00000, Parabel: erreicht r = 1e4, radiale Geschwindigkeit dort 0.01414 (Formel 0.01414), kein Umkehrpunkt: True
+  k = 1.5000: Energie +0.12500, Hyperbel: erreicht r = 1e4, radiale Geschwindigkeit dort 0.50020 (Formel 0.50020), kein Umkehrpunkt: True
+  Schwelle k = sqrt(2): genau der Stoss aus K-b rueckwaerts (Kreis -> Parabel braucht dieselbe Energie 1/(2r), die der Einfang abgegeben hat)
+
+== K-d  Schwarzschild, m = 0.05: Radius, an dem keine Zusatzkraft noetig ist ==
+  Kreisbahn bei r hat E^2 = (1 - 2m/r)^2/(1 - 3m/r), L^2 = m r^2/(r - 3m); gesucht r(E) mit der Energie der einfallenden Probe
+  E = 1.0: r(E) = 4.00000 m, kritischer Drehimpuls 4.00000 m
+      Abstand 1e-02: darueber entkommt, 1.795 Umlaeufe, innerster Radius 4.653169 m;  darunter Einfang, 1.413 Umlaeufe bis zum Horizont
+      Abstand 1e-04: darueber entkommt, 2.825 Umlaeufe, innerster Radius 4.057376 m;  darunter Einfang, 2.456 Umlaeufe bis zum Horizont
+      Abstand 1e-06: darueber entkommt, 3.861 Umlaeufe, innerster Radius 4.005665 m;  darunter Einfang, 3.493 Umlaeufe bis zum Horizont
+      Abstand 1e-08: darueber entkommt, 4.898 Umlaeufe, innerster Radius 4.000566 m;  darunter Einfang, 4.529 Umlaeufe bis zum Horizont
+  E = 1.1: r(E) = 3.57143 m, kritischer Drehimpuls 4.72456 m (Stossparameter 10.30983 m)
+      Abstand 1e-02: darueber entkommt, 1.373 Umlaeufe, innerster Radius 4.029120 m;  darunter Einfang, 1.137 Umlaeufe bis zum Horizont
+      Abstand 1e-04: darueber entkommt, 2.258 Umlaeufe, innerster Radius 3.612547 m;  darunter Einfang, 2.030 Umlaeufe bis zum Horizont
+      Abstand 1e-06: darueber entkommt, 3.147 Umlaeufe, innerster Radius 3.575496 m;  darunter Einfang, 2.919 Umlaeufe bis zum Horizont
+      Abstand 1e-08: darueber entkommt, 4.036 Umlaeufe, innerster Radius 3.571835 m;  darunter Einfang, 3.808 Umlaeufe bis zum Horizont
+  E = 1.5: r(E) = 3.20000 m, kritischer Drehimpuls 7.15542 m (Stossparameter 6.40000 m)
+      Abstand 1e-02: darueber entkommt, 1.229 Umlaeufe, innerster Radius 3.530589 m;  darunter Einfang, 1.013 Umlaeufe bis zum Horizont
+      Abstand 1e-04: darueber entkommt, 2.009 Umlaeufe, innerster Radius 3.229961 m;  darunter Einfang, 1.801 Umlaeufe bis zum Horizont
+      Abstand 1e-06: darueber entkommt, 2.792 Umlaeufe, innerster Radius 3.202966 m;  darunter Einfang, 2.584 Umlaeufe bis zum Horizont
+      Abstand 1e-08: darueber entkommt, 3.576 Umlaeufe, innerster Radius 3.200296 m;  darunter Einfang, 3.368 Umlaeufe bis zum Horizont
+  E = 3.0: r(E) = 3.03950 m, kritischer Drehimpuls 15.29325 m (Stossparameter 5.40698 m)
+      Abstand 1e-02: darueber entkommt, 1.183 Umlaeufe, innerster Radius 3.323423 m;  darunter Einfang, 0.967 Umlaeufe bis zum Horizont
+      Abstand 1e-04: darueber entkommt, 1.921 Umlaeufe, innerster Radius 3.065251 m;  darunter Einfang, 1.713 Umlaeufe bis zum Horizont
+      Abstand 1e-06: darueber entkommt, 2.664 Umlaeufe, innerster Radius 3.042051 m;  darunter Einfang, 2.456 Umlaeufe bis zum Horizont
+      Abstand 1e-08: darueber entkommt, 3.407 Umlaeufe, innerster Radius 3.039755 m;  darunter Einfang, 3.199 Umlaeufe bis zum Horizont
+  Licht: r(E) = 3.00000 m, kritischer Stossparameter 5.19615 m
+      Abstand 1e-02: darueber entkommt, 1.172 Umlaeufe, innerster Radius 3.272948 m;  darunter Einfang, 0.956 Umlaeufe bis zum Horizont
+      Abstand 1e-04: darueber entkommt, 1.901 Umlaeufe, innerster Radius 3.024766 m;  darunter Einfang, 1.693 Umlaeufe bis zum Horizont
+      Abstand 1e-06: darueber entkommt, 2.634 Umlaeufe, innerster Radius 3.002453 m;  darunter Einfang, 2.426 Umlaeufe bis zum Horizont
+      Abstand 1e-08: darueber entkommt, 3.367 Umlaeufe, innerster Radius 3.000245 m;  darunter Einfang, 3.158 Umlaeufe bis zum Horizont
+  Newton-Grenzfall zum Vergleich: dieselbe Rechnung ohne den Term 3 m u^2 hat keinen kritischen Wert (jede Probe mit L > 0 entkommt)
+
+== Erkundung ohne Kriterium ==
+  (1) Stoss an der Grenzbahn r = 4m (E = 1, L = 4m), Drehimpuls mal (1 + eps):
+      eps = +1e-02: E = 1.00501244, entkommt nach aussen nach 1.41 Umlaeufen
+      eps = +1e-04: E = 1.00005000, entkommt nach aussen nach 2.48 Umlaeufen
+      eps = +1e-06: E = 1.00000050, entkommt nach aussen nach 3.51 Umlaeufen
+      eps = -1e-06: E = 0.99999950, faellt in den Horizont nach 3.18 Umlaeufen
+      eps = -1e-04: E = 0.99995000, faellt in den Horizont nach 2.14 Umlaeufen
+      eps = -1e-02: E = 0.99501256, faellt in den Horizont nach 1.12 Umlaeufen
+      nach aussen gestossen ist E knapp ueber 1: die Flucht ist im Grenzfall die Parabel; nach innen gestossen faellt die Probe hinein
+  (2) stabile Kreisbahnen gibt es erst ab r = 6m. Schwung holen von der Kreisbahn bei r = 20m, 100m, 400m (L mal k), gebundene Bahn schliesst nicht, sie dreht sich:
+      r = 20 m, k = 1.02: nah 20.00 m, fern 22.05 m, Drehung des nahen Punkts je Umlauf 66.06 Grad (Naeherung 6 pi m/(a(1 - e^2)) = 51.49 Grad)
+      r = 20 m, k = 1.05: nah 20.00 m, fern 25.61 m, Drehung des nahen Punkts je Umlauf 60.55 Grad (Naeherung 6 pi m/(a(1 - e^2)) = 48.09 Grad)
+      r = 20 m, k = 1.1: nah 20.00 m, fern 33.27 m, Drehung des nahen Punkts je Umlauf 53.05 Grad (Naeherung 6 pi m/(a(1 - e^2)) = 43.23 Grad)
+      r = 100 m, k = 1.05: nah 100.00 m, fern 123.62 m, Drehung des nahen Punkts je Umlauf 10.18 Grad (Naeherung 6 pi m/(a(1 - e^2)) = 9.77 Grad)
+      r = 400 m, k = 1.05: nah 400.00 m, fern 492.11 m, Drehung des nahen Punkts je Umlauf 2.47 Grad (Naeherung 6 pi m/(a(1 - e^2)) = 2.45 Grad)
+  (3) addierte Auslesen: Summe der Orte zweier gegenlaeufiger Kreisbahnen, z(t) = r1 e^{i w1 t} + r2 e^{-i w2 t}, w = r^(-3/2)
+      r2/r1 = 1.0000: |z| zwischen 0.0000 und 2.0000 (|r1 - r2| = 0.0000, r1 + r2 = 2.0000); groesster Abstand von der x-Achse 0.0000; Achse der momentanen Ellipse dreht mit (w1 - w2)/2 = +0.0000
+      r2/r1 = 1.5000: |z| zwischen 0.5000 und 2.5000 (|r1 - r2| = 0.5000, r1 + r2 = 2.5000); groesster Abstand von der x-Achse 2.4993; Achse der momentanen Ellipse dreht mit (w1 - w2)/2 = +0.2278
+      r2/r1 = 3.3137: |z| zwischen 2.3137 und 4.3137 (|r1 - r2| = 2.3137, r1 + r2 = 4.3137); groesster Abstand von der x-Achse 4.3133; Achse der momentanen Ellipse dreht mit (w1 - w2)/2 = +0.4171
+      gleiche Radien: eine Strecke durch den Kern (mu = 1, der Photonpunkt P aus H159). Ungleiche Radien: Ellipse mit mu = kleinerer/groesserer Radius, die sich dreht,
+      weil die zwei Kreise nach Kepler verschieden schnell laufen; ueber lange Zeit fuellt die Spur den Ring zwischen |r1 - r2| und r1 + r2.
+  (4) Faktor 2: Einfall aus der Ruhe braucht fuer die Kreisbahn die doppelte Schwerkraft (K-b); der Ablenkwinkel der ART ist das Doppelte des Newton-Werts (k353).
+      Beides sind Lehrbuchzahlen mit verschiedener Herkunft (Energiesatz bzw. Raumkruemmung); eine Verbindung wird hier nicht behauptet.

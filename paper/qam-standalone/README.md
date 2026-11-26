@@ -2,7 +2,7 @@
 
 *What a Conclusion Rests On: Checked Bookkeeping of Status, Inputs and Frames in Long Research Records*
 
-Entwurf vom 25.11.2026, 26 Seiten mit Anhang. Der Artikel stellt die QAM vollständig in sich dar: Modell, Regeln, Beweise ihrer
+Entwurf vom 25.11.2026, am 26.11.2026 nach einer Richtigkeitsprüfung gegen das Repo berichtigt, 28 Seiten mit Anhang. Der Artikel stellt die QAM vollständig in sich dar: Modell, Regeln, Beweise ihrer
 Eigenschaften, LaTeX-Paket, Lean-Prüfer, MML/MMA mit Belegen, Prämissengraph, Bandmaschine mit HDL-Vergleich und MCP. Man muss
 weder den Companion noch das Physik-Paper kennen. Als durchgehendes Beispiel dient ein Gram-Register unter einem Lorentz-Boost
 (E = 2e_x, v = 1/4, Intervall [121/162, 961/1202]), das im Text vollständig hergeleitet wird. Das Spinorband steht in Abschnitt 9 als

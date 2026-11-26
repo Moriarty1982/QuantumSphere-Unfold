@@ -1,0 +1,24 @@
+k351b_gegenprobe.wl, ausgefuehrt am 26.11.2026 (Wolfram-Kernel, zustandslos). Print-Ausgaben woertlich, Rueckgabewert Null.
+
+1) Bahnstueck: Formel (Exzentrizitaetsvektor) gegen NDSolve mit WhenEvent am Punkt groesster Annaeherung
+   Regel B, a=2: |Formel - NDSolve| = 4.31 × 10^-19 , 5.37 × 10^-19 ; neue Radien 0.070472358 , 0.10887416
+   Regel V, v0=1/2: |Formel - NDSolve| = 2.70 × 10^-19 , 3.28 × 10^-19 ; neue Radien 0.039826757 , 0.039792628
+   Regel E, vinf=1: |Formel - NDSolve| = 1.16 × 10^-19 , 8.53 × 10^-19 ; neue Radien 0.48525792 , 0.34878158
+   parabolisch: |Formel - NDSolve| = 4.94 × 10^-20 , 2.09 × 10^-19 ; neue Radien 0.29192658 , 0.29192658
+2) Parabolischer Grenzfall exakt (symmetrisch, r1 = r2 = 1, Winkel d zwischen den Punkten):
+   neuer Radius q = L^2/2 = Cos[d/2]^2 ;  q - Cos[d/2]^2 = 0
+   Exzentrizitaet^2 - 1 = 0
+   Richtung des neuen Punktes minus Richtung von P2: {0, 0}
+   => P1' = Cos[d/2]^2 P2 und spiegelbildlich P2' = Cos[d/2]^2 P1: Winkel bleibt d, Radius mal Cos[d/2]^2
+3) Kreisbedingung: tangentialer Start an beiden Punkten verlangt (P2-P1).P1 = 0 und (P1-P2).P2 = 0; Summe + |P1-P2|^2 = 0 , also nur fuer P1 = P2
+4) K-c exakt (H161): P(Y=+1) nach Z-Ergebnis |0>: 1/2 ; nach |1>: 1/2
+
+Einordnung der Ausgaben:
+- Zeile 1: numerische Reste (NDSolve mit 30 Stellen), keine symbolischen Nullen.
+- Zeilen 2 bis 4: symbolische Nullreste bzw. exakte Werte (FullSimplify/Simplify).
+Warnungen des Kernels:
+- NDSolve::precw (mehrfach): die Praezision der Gleichung sei kleiner als WorkingPrecision 30. Ursache: Startwerte mit SetPrecision[..., 30]
+  aus exakten Zahlen und Wurzeln; die Reste von 1e-19 zeigen, dass die Rechnung davon nicht beeintraechtigt ist.
+- General::stop (Unterdrueckung weiterer precw-Meldungen), General::messages.
+Erster Versuch (verworfen, hier offengelegt): Minimumsuche mit FindMinimum auf der Interpolation statt WhenEvent gab nur 1e-5 Uebereinstimmung,
+und der erste Testfall (Regel B, a=1, Start bei r=2) hatte Startgeschwindigkeit null, also radialen Fall (NDSolve::ndsz bei t=pi). Beides ersetzt.

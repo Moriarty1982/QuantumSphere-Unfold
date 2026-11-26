@@ -1,0 +1,26 @@
+k352b_gegenprobe.wl, ausgefuehrt am 26.11.2026 (Wolfram-Kernel, zustandslos). Print-Ausgaben woertlich, Rueckgabewert Null.
+
+K-a: X.Z + I Y = {{0, 0}, {0, 0}} ;  Z.X - I Y = {{0, 0}, {0, 0}}
+K-b: (XX).(ZZ) + YY = {0}
+   Phi+: <XX>, <ZZ>, <YY> = {1, 1, -1}
+   Phi-: <XX>, <ZZ>, <YY> = {-1, 1, 1}
+   Psi+: <XX>, <ZZ>, <YY> = {1, -1, 1}
+   Psi-: <XX>, <ZZ>, <YY> = {-1, -1, -1}
+K-d: Vorzeichen Zeilen {1, 1, 1} Spalten {1, 1, -1} ; Produkte sind Vielfache der Eins: True
+   512 Belegungen: Maximum erfuellter Pruefungen 5 , Anzahl mit Maximum 96 , Verteilung {{1, 96}, {3, 320}, {5, 96}}
+K-e: symmetrischer Fall exakt
+   n_z' = (b - Cos[t/2])/(-1 + b Cos[t/2]) ; Null bei beta = {{b -> Cos[t/2]}}
+   bei beta = Cos[t/2]: l1' = {Sin[t/2], Sin[t/2], 0, 0} , l2' = {Sin[t/2], -Sin[t/2], 0, 0}
+   M^2 = (l1+l2)^2 = 2 - 2 Cos[t] = 2(1 - Cos[t]) : 0 ; E1' - M/2 = 0
+   |<psi1|psi2>|^2 - Cos[t/2]^2 = 0
+   Det A = 1 ; Ueberlapp der abgebildeten Spinoren = 0
+   Kreistreue: stereographisch w = Tan[th/2] E^(I ph) -> w E^eta (Streckung, Moebius), bildet Kreise auf Kreise ab
+   Zahl: beta = beta_sym => theta = 113.348 Grad
+
+Einordnung der Ausgaben: alle Nullen sind exakte Matrix- oder symbolische Nullreste (FullSimplify); die letzte Zeile ist eine Gleitkommazahl.
+Die Zeile zur Kreistreue ist ein Satz, kein Rechenergebnis; numerisch geprueft in k352 (1000 Zufallskreise, Rest 5.6e-14).
+Warnungen des Kernels:
+- Symbol::undefined2: globale Symbole P und A seien undefiniert (Hinweis der Umgebung vor der Auswertung; beide werden im Skript definiert).
+- General::messages.
+Im ersten Lauf enthielt das Skript eine K-c-Zeile mit einem Schreibfehler (Skalarprodukt mit einer Zahl), die keinen Wert lieferte.
+Sie ist hier entfernt; die korrekte Zeile steht in k351b (Punkt 4): P(Y=+1) = 1/2 nach beiden Z-Ergebnissen. Die uebrigen Zeilen sind unveraendert.

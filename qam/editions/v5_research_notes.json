@@ -475,5 +475,60 @@
     ],
     "guard": "Origin of θ = π/4 and δ = 2/9",
     "obligation": "θ = π/4 is set by the Koide requirement, not derived; δ, scale and quarks remain open; a potential or the field equation must fix θ. OP3 remains open; sign open."
+  },
+  {
+    "id": "op5-lambda-photon-superposition-h159",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/lambda_photon_h159/Ergebnis_H159_Lambda_Photon_Superposition.md",
+    "title": "At the photon point the net charge vanishes with nonzero parts; the ratio γ_L⁵ does not come from the superposition",
+    "excerpt": "**Ungerade ist allein die Ladung** Q = J_i = ω(a² − b²)",
+    "assumptions": [
+      "Photon frame read as the fixed point of the antilinear swap J (z ↦ i·z̄) acting on the shadow ellipse; HC potential η(B − μ₀²A)² (k297) and current versions F, S (k299) are set; β_sym inserted (OP1); partly not blind."
+    ],
+    "guard": "Net/gross vacuum density and the weight-rule exponent 5",
+    "obligation": "Identifying the vacuum density with the charge or the HC potential is set; the exponent 5 comes only from the weight rule (v4.8.0-r03.1); with a swap-symmetric potential the M state is not a vacuum and what holds μ = β_sym² is open. Λ remains an input; OP5 remains open."
+  },
+  {
+    "id": "probes-iterated-readout-orbit-h160",
+    "path": "notes/research/gedankenexperiment_proben_2026_11_26/Ergebnis_H160_Iterierte_Proben_Kreisbahn.md",
+    "title": "Iterated closest-approach readouts of two probes do not settle on a circular orbit; they collapse into the core",
+    "excerpt": "**Winkel bleibt, Radius schrumpft geometrisch.**",
+    "assumptions": [
+      "Planar Newtonian point mass, straight aiming at the other readout point, three set speed rules (E, V, B); classical orbits only; partly not blind; the angle-conservation law is a post-hoc finding for equal radii in the scale-free limit."
+    ],
+    "guard": "Iterated two-probe readout and the circular-orbit conjecture",
+    "obligation": "The translation of the thought experiment is set; no Companion quantity enters and no assignment to core, frames or HC is claimed. A rule that conserves or supplies angular momentum would be a new setting and a new test. OP1–OP5 remain open."
+  },
+  {
+    "id": "spinor-read-head-xor-raid-h161",
+    "path": "notes/research/gedankenexperiment_proben_2026_11_26/Ergebnis_H161_Spinor_Lesekopf_XOR.md",
+    "title": "The RAID picture holds for Pauli labels and for two heads, not for a single head and not as a classical data stream",
+    "excerpt": "**Das ist ein drittes Objekt im wörtlichen Sinn:**",
+    "assumptions": [
+      "Spinor read as a qubit, disk as a Pauli readout, bending as a Möbius map (Lorentz boost of the celestial sphere); ideal simulator; predominantly not blind (textbook results disclosed beforehand)."
+    ],
+    "guard": "Parity reconstruction of spinor readouts and the third object",
+    "obligation": "No Companion quantity enters; an assignment to core, tape or frames is not claimed, and β = β_sym ↔ θ = 113.35° is a number without assignment. H137 is not touched. OP1–OP5 remain open."
+  },
+  {
+    "id": "gravity-two-paths-and-10-122-exploration",
+    "path": "notes/research/gedankenexperiment_proben_2026_11_26/Einordnung_Ideen_1_2_Gravitation_10_122.md",
+    "title": "Two ideas sharpened: the light-deflection angle as a criterion for the two-path picture of gravity, and 10¹²² as a squared length ratio",
+    "excerpt": "**Ein Entscheidungskriterium ist derzeit nicht möglich.**",
+    "assumptions": [
+      "Exploration without decision criterion; textbook physics recomputed (deflection 0, 2m/b, 4m/b; ρ_Planck/ρ_Λ = 8π/(Λ l_P²))."
+    ],
+    "guard": "Deflection-angle criterion and the 10¹²² reading",
+    "obligation": "The model has no coupling to a metric of its own (H147: the HS(0) line is a scalar) and no length independent of Λ; both ideas stay untested readings. Λ remains an input; OP5 remains open."
+  },
+  {
+    "id": "probes-periapsis-restart-circular-orbit-force-h163",
+    "path": "notes/research/gedankenexperiment_proben_2026_11_26/Ergebnis_H163_Minimalpunkte_Kreisbahn_Kraft.md",
+    "title": "Turning the closest-approach point into a circular orbit takes twice the Newtonian attraction; a smallest distance exists only relativistically, at 4m",
+    "excerpt": "**Für Einfall aus der Ruhe (Parabel) ist es genau das Doppelte der Schwerkraft**",
+    "assumptions": [
+      "Planar point mass, two set readings of the restart, kick or extra central force; the Schwarzschild part is textbook general relativity, not a statement of the model; predominantly not blind."
+    ],
+    "guard": "Closest-approach restart, circularising force and the bound/unbound threshold",
+    "obligation": "No Companion quantity enters; the model has no metric coupling of its own (H147). Reading the sum of two counter-rotating probes as the shadow ellipse of H159 is a reading, not a derivation. OP1–OP5 remain open."
   }
 ]

@@ -1,4 +1,4 @@
 LCDM: Om = 0.2970, h r_d = 101.56 Mpc, chi2 = 10.55
 cascade eps=3: Om0 = 0.5006, h r_d = 95.49 Mpc, chi2 = 18.42, Delta chi2 = 7.87
 Omega_M(cascade) at N=+2.5: 0.3033 (attractor 0.3018 )
-wrote /home/user/QuantumSphere-Unfold/paper/physics-standalone/figures/F10-attractor.pdf
+wrote figures/F10-attractor.pdf

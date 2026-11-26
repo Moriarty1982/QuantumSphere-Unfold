@@ -110,6 +110,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
+**Runde r64, 26.11.2026:** H128–H136 und H105 stehen als Runde v4.10.0-r64 im Companion. Für OP3/OP4 wichtig: Oktonionische, farbstabile Träger gibt es in 𝕊 nur senkrecht zur Verdopplungseinheit (H130), der Platzhalter CT-003 (Ladungsachse e₈) wird davon nicht gestützt; ob Weg A und das CP-Vorzeichen auf u = e₇ bestehen, ist nicht gerechnet. Der Tausch J aus r63 ist antilinear (J_B-Typ), nicht die Tachyon-Abbildung z ↦ iz. Für OP1: Der Feldgleichungs-Ansatz auf dem Turm legt weder β_sym noch eine Skala fest (H129, H132, H133, H135, H136). OP1–OP5 bleiben offen.
+
 **Runden r62 und r63, 26.11.2026:** Die Befunde H138–H156 stehen jetzt als Runden v4.10.0-r62 (Kopien und Rest-Generation) und v4.10.0-r63 (Koide-Punkt) im Companion. OP3 und OP4 bleiben offen. Nicht gezeigt sind: dass Kopien Generationen sind (die Generationszahl bleibt Eingabe), dass die Rest-Generation ein physikalischer Zustand ist, woher δ = 2/9 kommt (Fit), woher die Skala kommt (Setzung) und das Postulat der Frame-Gleichberechtigung selbst (von Marc vorerst angenommen, nicht hergeleitet). Die Vorzeichen bleiben offen bis zur Feldgleichung.
 
 **Test H157, 26.11.2026 (k340):** Für OP3, unter dem Postulat J: Nur gerade Ordnungen sind erlaubt, N(W) ist verboten. Im Drei-Felder-Modell bleibt δ bis Ordnung 10 bei 0 oder π/3; drei verschiedene Massen brauchen dort Ordnung 12. OP3 bleibt offen.
@@ -477,6 +479,10 @@ Lokal ist OP5 über eine Detektorschwelle geschlossen ($\mathrm{OP5}_{\mathrm{ef
 2. Nebenbedingungsalgorithmus und formale Integrabilität,
 3. eine gekoppelte Coframe-Dynamik,
 4. erst dann eine lokale Lösung.
+
+**Test H159, 26.11.2026 (k350):** Für OP5: Die Lesart „Λ im Photon-Frame ist eine Superposition“ trägt teilweise. Am Fixpunkt des Tauschs J ist die Ladung netto null bei Anteilen ungleich null, und mit tauschsymmetrischem HC-Potential (μ₀ = 1, aus dem Postulat der Frame-Gleichberechtigung) ist V(P) = 0 und V(M) = V(T) = ηf⁴·(2γ_L/(γ_L² + 1))². Das Verhältnis γ_L⁵ folgt daraus nicht; es bleibt die Gewichtsregel. η und f sind frei, eine Zahl für Λ folgt nicht. Λ bleibt Eingabe, OP5 bleibt offen. Notiz: `notes/research/hilbert_shift_felder_2026_11_24/lambda_photon_h159/Ergebnis_H159_Lambda_Photon_Superposition.md`.
+
+**Erkundung 26.11.2026 (k353), Idee des Autors zu 10¹²²:** Die Zahl ist ρ_Planck/ρ_Λ = 8π/(Λ·l_P²) = 8,8·10¹²², bis auf den Faktor 8π/3 das Quadrat des Längenverhältnisses L/l_P = 1,03·10⁶¹ (L = √(3/Λ)); die Horizontfläche in Planck-Einheiten ist 3,3·10¹²². Sie ist ein Dichteverhältnis, keine Energiemenge; die Lesart „Energie zum Erzeugen des Trägers“ entspricht der Zählung auf der Fläche statt im Volumen. Ein Entscheidungskriterium ist nicht möglich, solange das Modell keine von Λ unabhängige Länge liefert. Λ bleibt Eingabe, OP5 offen. Im selben Faden: Für die Lesart „zwei Bahnen am Mittelpunkt vorbei als Bild der Schwerkraft“ ist das Kriterium der Ablenkwinkel des Lichts (skalar 0, Newton 2m/b, ART 4m/b); rechenbar erst mit einer eigenen Kopplung an eine Metrik (H147: Skalar, kein Graviton). Die Tests H160 und H161 (iterierte Proben, Spinor als Lesekopf) berühren kein OP.
 
 ## C4, C5, C6/T2: die Schließungsfragen
 
