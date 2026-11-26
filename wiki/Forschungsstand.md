@@ -20,6 +20,18 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Mischung: die Abweichung bei θ₁₃ ist eine Lücke im Phasenversatz, Faktor 1,5 bis 1,64 (26.11.2026, Erkundung k369)
+
+**Erkundung, nicht blind (keine Vorab-Notiz).** Fortsetzung von H173: Wie groß ist die Abweichung, und woher kann sie kommen?
+
+- **Größe:** sin²θ₁₃ = 0,014263 gegen 0,02248 ± 0,00056 (−14,7σ), Messung/Vorhersage 1,576 ± 0,039; im Drehwinkel 11,94° gegen 15,05°. In der Ein-Feld-Form hängt θ₁₃ nur am Versatz x = π/6 − δ_ν. Die Mischung verlangt x_th = 0,0649 ± 0,0018, die Massen geben x = 0,0396 (geladene Leptonen) bzw. x_R = 0,0434 ± 0,0021 (aus R) her. Faktor 1,64 bzw. 1,50; x_th − x_R liegt 7,7σ auseinander. Eine einzige Phase trägt nicht beides.
+- **Exakt (Wolfram):** tan² 2φ = 3 tan²(δ_ν + 2π/3) − 1 hängt nicht vom Koide-Wert der Neutrinos ab.
+- **Vier mögliche Quellen, jeweils nur als Größenangabe:** (a) Koide-Wert der Neutrinos frei: K_ν = 0,629 statt ⅔ (ρ = 0,942 ± 0,007), Massen 0,12 / 8,68 / 50,09 meV, Summe 58,9 meV. (b) Ungleiche Diagonale: d − f = 4 bis 5 %. (c) Maske mit kleinem ε ≈ 0,02 bis 0,03 statt 0,6175 (χ² 6 bis 7,5); das postulierte ε bleibt weit weg (χ² ≈ 11 000). (d) Drehung der geladenen Leptonen (e–μ) um 0,045 bis 0,052 mit freier Phase: χ² = 2,3 bei drei Messgrößen und zwei Parametern, sin²θ₁₂ = 0,3036; mit genau √(m_e/m_μ) = 0,0695 käme sin²θ₁₂ = 0,284 (JUNO −3,0σ).
+- **Unterscheidung:** (a) und (b) behalten TM1 und damit sin²θ₁₂ = 0,318 beim gemessenen θ₁₃ (JUNO +2,25σ); bestätigt JUNO 0,3036 genauer, fallen beide. (d) löst diese Spannung mit, kostet aber zwei freie Zahlen.
+- **Grenzen:** Alle vier Kandidaten sind nachträglich angepasst und haben mindestens so viele freie Zahlen wie erklärte Messgrößen; keiner ist hergeleitet. Die geladenen Leptonen sind im Aufbau zirkulant, ihr eigener Versatz erzeugt keine Drehung; (d) bräuchte einen Term, der ℤ₃ bricht. OP3 und OP4 bleiben offen.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/mischung_h173/k369/` (Ergebnis-Notiz, `k369_abweichung.py`, `k369b_exakt.wl`, Ausgaben).
+
 ### Mischung: mit der Ein-Feld-Form folgt der Drehwinkel aus der Neutrino-Phase; Baumwert tribimaximal, die Zahl für θ₁₃ stimmt nicht (26.11.2026, Test H173, k368)
 
 **Test H173. Ergebnis: a bestätigt (nicht blind), b widerlegt (erwartet), c widerlegt (blind), d nicht verträglich (blind).** Strang 3: Legt die Algebra den freien Drehwinkel der Mischung fest? In k262 (Majorana-Neutrinos auf dem Realteil, ℤ₃ und ungerade ℤ₂) blieb ein Winkel frei, θ₁₃.
