@@ -112,6 +112,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
+**Erkundung k361, 26.11.2026:** Für OP4: Das relative CP-Vorzeichen von Leptonen und Quarks (H125 Stufe A) setzt voraus, dass dieselbe Seite der Sedenionen-Multiplikation die Familie in beiden Sektoren trägt; auf den Quarks sind beide Seiten zulässig und entgegengesetzt orientiert. Offen ist, ob eine Wirkung die Seite festlegt.
+
 **Test H162, 26.11.2026 (k360):** Für OP3/OP4: Weg A und das relative CP-Vorzeichen (H125 Stufe A) hängen nicht an der Achse e₈, sondern nur an der Form der Ladung Q_u; sie gelten auch für e₇. Die Achse bleibt eine Setzung zwischen zwei Kriterien (ψ-fest: e₈; kopientreu: e₇). Zwei Generationen, nicht drei. OP3 und OP4 offen.
 
 **Runde r64, 26.11.2026:** H128–H136 und H105 stehen als Runde v4.10.0-r64 im Companion. Für OP3/OP4 wichtig: Oktonionische, farbstabile Träger gibt es in 𝕊 nur senkrecht zur Verdopplungseinheit (H130), der Platzhalter CT-003 (Ladungsachse e₈) wird davon nicht gestützt; ob Weg A und das CP-Vorzeichen auf u = e₇ bestehen, ist nicht gerechnet. Der Tausch J aus r63 ist antilinear (J_B-Typ), nicht die Tachyon-Abbildung z ↦ iz. Für OP1: Der Feldgleichungs-Ansatz auf dem Turm legt weder β_sym noch eine Skala fest (H129, H132, H133, H135, H136). OP1–OP5 bleiben offen.
