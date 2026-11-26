@@ -1,0 +1,11 @@
+k376b (Wolfram Language, MCP-Kernel, 26.11.2026), Ausgabe:
+{3, 0, 0, 0, {0.8544568450191035, 1.4101724362644452}}
+
+Bedeutung der fuenf Eintraege:
+1. Summe der lambda_k = 3 (exakt).
+2. Summe lambda_k^2 - 3 (1 + rho^2) = 0 (symbolischer Nullrest).
+3. K - (1 + rho^2)/3 = 0 (symbolischer Nullrest).
+4. Quadratsumme der Fourier-Diagonale einer allgemeinen hermiteschen 3x3-Matrix minus Frobenius-Norm^2 ihres Z3-Mittels = 0 (symbolischer Nullrest):
+   der zirkulante Anteil ist genau die Fourier-Diagonale, der Z3-brechende Rest hat dort Null.
+5. sqrt(9 K - 6) fuer K_d, K_u bei M_Z: 0,8545 und 1,4102 (numerisch, stimmt mit k376).
+Warnung (kein Fehler): Symbol::undefined2 fuer F, M, T, G; die Symbole sind im selben Aufruf definiert, die Meldung kommt vom Vorab-Scan des Kernels.

@@ -1020,3 +1020,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Vorab-Notiz H176 und Erkundung k374:** Ein-Zahl-Kandidat festgeschrieben; Konfigurationen je Sektor und HS-Stufen in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **26.11.2026, Test H177 (k375):** Phasenhalbierung widerlegt; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert.
+
+**26.11.2026, Erkundung k376:** Quarks einzeln justiert; Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert.
