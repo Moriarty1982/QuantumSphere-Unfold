@@ -38,6 +38,18 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Die Mischungsdaten legen K der Neutrinos selbst auf ⅔ fest (26.11.2026, Test H180, k381)
+Vorab-Notiz 3495a67. Anlass: Weggabelung aus k380 (K_ν durch J gedeckt oder frei).
+- **Blind gerechnet:** Mit freiem K_ν wählen R und die drei Winkel ρ_ν = 0,99, also K_ν = 0,660; erlaubt (Δχ² < 4) ist K_ν von 0,634 bis 0,701.
+  **Die Daten stützen K_ν ≈ ⅔.** Die Setzung aus H99/H100 und H176 ist damit innerhalb des Modells geprüft.
+- **Lesart:** Die Neutrinos sitzen wie die geladenen Leptonen am J-Fixpunkt, also in derselben farblosen Ebene. Die zweite farblose Ebene von HS(4) wird
+  für sie nicht gebraucht.
+- **Zweite Möglichkeit für θ₁₃:** K_ν = 0,629 ohne jede Drehung bei den geladenen Leptonen gibt χ² = 8,2 (trägt knapp), mit sin²θ₂₃ = ½ und
+  sin²θ₁₂ = 0,318. Der Kandidat H176 sagt 0,4954 und 0,3019. JUNO trennt die beiden.
+- Grenzen: Ein-Feld-Form und Richtung der Drehung aus H173 bis H176; keine Übertragung in den Materie-Frame.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/neutrino_k_h180/`.
+
 ### HS-Stufe der Sektoren: erst HS(4) bietet vier Sektoren, J legt genau einen fest (26.11.2026, Erkundung k380)
 Nicht blind. Strukturrechnung auf 𝕆 und 𝕊 unter Farbe, Konjugation und Tausch J.
 - **HS(3) = 𝕆:** eine farblose Ebene {1, e₇} und ein Farbblock. Platz für ein Lepton und einen Quarktyp.
