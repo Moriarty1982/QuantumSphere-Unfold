@@ -110,6 +110,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
+**Runden r62 und r63, 26.11.2026:** Die Befunde H138–H156 stehen jetzt als Runden v4.10.0-r62 (Kopien und Rest-Generation) und v4.10.0-r63 (Koide-Punkt) im Companion. OP3 und OP4 bleiben offen. Nicht gezeigt sind: dass Kopien Generationen sind (die Generationszahl bleibt Eingabe), dass die Rest-Generation ein physikalischer Zustand ist, woher δ = 2/9 kommt (Fit), woher die Skala kommt (Setzung) und das Postulat der Frame-Gleichberechtigung selbst (von Marc vorerst angenommen, nicht hergeleitet). Die Vorzeichen bleiben offen bis zur Feldgleichung.
+
 **Test H157, 26.11.2026 (k340):** Für OP3, unter dem Postulat J: Nur gerade Ordnungen sind erlaubt, N(W) ist verboten. Im Drei-Felder-Modell bleibt δ bis Ordnung 10 bei 0 oder π/3; drei verschiedene Massen brauchen dort Ordnung 12. OP3 bleibt offen.
 
 **Test H158, 26.11.2026 (k341):** Für OP3 und OP4: In der Albert-Algebra ist das P-invariante Vakuum eine Zirkulante mit Brannen-Eigenwerten. δ ist die Phase der Nebendiagonale (tan δ = v/s), K = ⅔ die gleiche Norm von Spur und Nebendiagonale (unter Postulat). 2/9 folgt nicht; offen ist, was v/s festlegt. OP3 und OP4 bleiben offen.
