@@ -1,0 +1,9 @@
+k375b (Wolfram Language, MCP-Kernel, 26.11.2026), Ausgabe:
+I(M_Planck) = 0.133647, y_t(M_Planck) = 0.39961
+I = 0: {K_d, delta_d} = {0.7477885, 0.1001295}, {K_u, delta_u} = {0.8876207, 0.05180627}
+I = 0.13365: {K_d, delta_d} = {0.7351866, 0.1076741}, {K_u, delta_u} = {0.8940879, 0.04836082}
+delta_d/delta_u = 2 bei I = 0.032326
+noetiges I: Down auf delta_e/2: 0.191229; Up auf delta_e/4: -0.135422
+
+Warnung (kein Fehler): FindRoot::lstol bei einer der Nullstellensuchen (Schrittweite an der Maschinengenauigkeit); die Werte stimmen mit k375
+(Python) auf alle gezeigten Stellen ueberein (0.0323, +0.1912, -0.1354). Kein symbolischer Nullrest in dieser Kontrolle, nur numerische Zentralwerte.

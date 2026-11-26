@@ -20,6 +20,19 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Die Phasenhalbierung zwischen den Sektoren ist keine Regel (26.11.2026, Test H177, k375)
+Aus k374 war aufgefallen, dass sich die Phase δ von Sektor zu Sektor grob halbiert (ν 0,480, e 0,222, d 0,100, u 0,052). H177 prüft, ob das bei einer
+gemeinsamen Skala exakt wird. Vorab-Notiz 0887d27; die Beobachtung selbst war nachträglich, blind war nur das Laufen oberhalb von M_Z.
+- **Widerlegt in beiden Fassungen.** Weder δ_d = δ_e/2, δ_u = δ_e/4 noch δ_d = π/24, δ_u = π/48 wird zwischen M_Z und der Planck-Skala erreicht
+  (bestes gemeinsames I: beide 9,6σ daneben; Baumwerte über 22σ).
+- **Grund:** Unter der QCD ändern sich K und δ bei gemeinsamer Skala gar nicht. Oberhalb von M_Z verschiebt nur die Top-Kopplung die Verhältnisse, über
+  eine einzige Zahl I ≤ 0,134. Dabei steigt δ_d (0,1001 auf 0,1077) und fällt δ_u (0,0518 auf 0,0484): gegenläufig, also grundsätzlich kein gemeinsamer Punkt.
+- **Was bleibt:** Die vier Quarkzahlen sind fast starr gegen die Skala (δ um 7 %, K um 1 bis 2 % über 17 Größenordnungen). K_d ≈ 0,74, K_u ≈ 0,89,
+  δ_d ≈ 0,10, δ_u ≈ 0,05 müssen als solche erklärt werden. Kein K erreicht ⅔. Die Zählung der Stellgrößen je HS-Stufe aus k374 ist nicht berührt.
+- Grenzen: eine Schleife, Top-Dominanz, nur Standardmodell-Inhalt.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/konfigurationen_h177/`.
+
 ### Konfigurationen je Sektor: zwei Stellgrößen für die Massen, ein Bruch gleicher Größe für beide Mischungen (26.11.2026, Erkundung k374; H176 festgeschrieben)
 
 **Erkundung, nicht blind; alles angepasst, nichts hergeleitet.** Auftrag des Autors: erst je Teil das System justieren, dann die Konfigurationen nebeneinanderlegen und die HS-Stufe beachten.

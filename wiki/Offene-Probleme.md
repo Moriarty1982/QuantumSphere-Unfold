@@ -138,6 +138,8 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Erkundung k374 und Vorab-Notiz H176, 26.11.2026:** Für OP3 und OP4. Je Sektor sind zwei Stellgrößen für die Massen nötig (K, δ) und für jede Mischung ein Bruch der Dreiersymmetrie von 0,08 bis 0,17 der Diagonale, überwiegend reell symmetrisch; CKM hat den Baumwert Einheitsmatrix. Reelle zirkulante Formen (HS(0)) kennen nur δ = 0 oder π/3. Nachträgliche Beobachtung: δ halbiert sich grob von Neutrinos über Leptonen und Down zu Up (nicht getestet, skalenabhängig). H176 schreibt den Ein-Zahl-Kandidaten für die Leptonmischung für künftige Daten fest. Kein OP geschlossen.
 
+**Test H177, 26.11.2026:** Für OP3 und OP4. Die grobe Halbierung der Phase von Sektor zu Sektor (k374) wird bei keiner gemeinsamen Skala zwischen M_Z und der Planck-Skala exakt; δ_d und δ_u laufen gegenläufig und nur um wenige Prozent. H177 ist widerlegt. Die Quarkzahlen (K, δ) bleiben unerklärt; OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/konfigurationen_h177/`.
+
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
 **Runde r65, 26.11.2026:** H162 und k361 stehen als Runde v4.10.0-r65 im Companion. Für OP3/OP4: Weg A und das relative CP-Vorzeichen gelten für jede Ladungsachse und beide Ladungstypen; die Frage aus r64.2 ist damit beantwortet. Offen bleiben die Wahl der Achse (ψ-fest oder kopientreu), die Setzung der Seite und die dritte Generation. OP3 und OP4 bleiben offen.
