@@ -106,6 +106,20 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Das komplexe Feld erlaubt Up und Down, trennt sie aber nicht von selbst (26.11.2026, Test H185, k388)
+Fortsetzung von H184 im komplexen Feld ℂ ⊗ H₃(𝕆), um dasselbe Leptonvakuum. Vorab-Notiz vor der Rechnung (Commit df685ba); Python und Wolfram.
+- **H185a, b bestätigt (nicht blind):** Die 36 Farbrichtungen zerfallen nach der Ladung in ⅓ und ⅔, je drei Generationen. Farbe und Platztausch
+  erlauben 12 Massenterme: sechs erhalten die Ladung (je Ladung eine hermitesche Zirkulante, sechs freie Größen für sechs Massen), sechs mischen
+  ⅓ mit ⅔. Die mischenden gibt es, weil das reelle Leptonvakuum kein Ladungseigenzustand ist. Sie verschwinden genau dann, wenn die Phase auf den
+  Farbrichtungen allein eine Symmetrie ist (Erhaltung der Farbzahl, in üblicher Sprache Baryonenzahl).
+- **H185c bestätigt:** Mit der ℂ-Konjugation C haben Up und Down dasselbe Spektrum. Verschiedene Massen verlangen die Brechung von C (wie H182).
+- **H185d widerlegt:** Die Vermutung, die Leptonphase δ ≠ 0 trenne Up und Down in Potentialen aus Jordan-Spuren, trägt nicht. In 43 Spurinvarianten
+  ist der Unterschied der Spektren null (≤ 1,2·10⁻¹⁵), auch für zwei nicht reelle Vakua (nachträglich). Der Unterschied braucht einen Term mit dem
+  Ladungsoperator selbst (i·L_U, die ladungsungerade Invariante aus H182).
+- **Keine Vorhersage.** Offen: was den Koeffizienten dieses Terms festlegt, Grund für die Farbphase, Stabilität des Vakuums.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/updown_h185/`.
+
 ### Drei Generationen eines Farbtripletts als Schwingungen um das Leptonvakuum (26.11.2026, Test H184, k387)
 Nach H183 hat der Autor die Lesart „ein Vakuum, Sektoren schwingen“ gewählt. Geprüft im Träger der drei Generationen, der Albert-Algebra H₃(𝕆): Das
 Vakuum W₀ ist die Zirkulante der geladenen Leptonen (K = ⅔, δ = 2/9 als Eingabe), das Potential bis Grad 4 ist invariant unter Farbe und dem

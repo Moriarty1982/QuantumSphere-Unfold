@@ -1,0 +1,14 @@
+(* Ausgabe von k388b_gegenprobe.wl, Wolfram Language, 26.11.2026. Print-Ausgaben; Rueckgabewert Null.
+   Warnungen: Symbol::undefined2 (Hinweis der Auswerteumgebung auf global definierte Symbole) und General::messages; keine Rechenwarnung.
+   Die char. Polynome sind die der projizierten 12x12-Matrix: z^6 gehoert zum jeweils anderen Ladungsraum; je Ladung ein einfacher
+   Faktor und ein quadratischer, jeweils doppelt (zwei reelle Dimensionen je komplexer Richtung). *)
+Formen mit Farbe (Schur: vertauschen mit L_U) und P: 12
+davon vertauschend mit i: 6; antivertauschend: 6
+mit C: 6; vertauschend mit i und C: 3
+freie Groessen der ladungserhaltenden Form: 6
+Ladungen: {{2/3, 6}, {1/3, 6}}
+Projektoren: True True
+char. Polynom auf Ladung 1/3: z^6 (z + 2 x[3,12] - 2 x[4,6] + x[5,12] - x[6,6])^2 (z^2 - 3 x[3,6]^2 - 2 z x[3,12] + x[3,12]^2 + 2 z x[4,6] - 2 x[3,12] x[4,6] + x[4,6]^2 - 6 x[3,6] x[4,12] - 3 x[4,12]^2 + 2 z x[5,12] - 2 x[3,12] x[5,12] + 2 x[4,6] x[5,12] + x[5,12]^2 - 2 z x[6,6] + 2 x[3,12] x[6,6] - 2 x[4,6] x[6,6] - 2 x[5,12] x[6,6] + x[6,6]^2)^2
+char. Polynom auf Ladung 2/3: z^6 (z - 2 x[3,12] - 2 x[4,6] - x[5,12] - x[6,6])^2 (z^2 - 3 x[3,6]^2 + 2 z x[3,12] + x[3,12]^2 + 2 z x[4,6] + 2 x[3,12] x[4,6] + x[4,6]^2 + 6 x[3,6] x[4,12] - 3 x[4,12]^2 - 2 z x[5,12] - 2 x[3,12] x[5,12] - 2 x[4,6] x[5,12] + x[5,12]^2 - 2 z x[6,6] - 2 x[3,12] x[6,6] - 2 x[4,6] x[6,6] + 2 x[5,12] x[6,6] + x[6,6]^2)^2
+mit C: Differenz der char. Polynome fuer 1/3 und 2/3 = 0
+ladungsmischende Form: p13.Xm.p13 = 0? True; p13.Xm.p23 = 0? False

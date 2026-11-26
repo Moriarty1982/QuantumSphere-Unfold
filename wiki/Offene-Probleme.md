@@ -161,6 +161,11 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 **Test H183, 26.11.2026:** Für OP3 und OP4 (Feldgleichung). Mit einem Feld und invariantem Potential bis Grad 4 sind Leptonzustand und Quarkzustand nie zugleich stabil (widerlegt; konvexes Programm, Grund exakt: Vorzeichen von b₂). Offen: ein Vakuum mit Schwingungen, getrennte Felder oder höherer Grad. Nichts geschlossen.
 
 **Test H184, 26.11.2026:** Für OP3 und OP4 (Feldgleichung, Lesart „ein Vakuum, Sektoren schwingen“). Um das zirkulante Leptonvakuum in H₃(𝕆) haben die
+
+**Test H185, 26.11.2026:** Für OP3 und OP4. Im komplexen Feld ℂ ⊗ H₃(𝕆) gibt es um das Leptonvakuum zwei Sätze von Farbschwingungen (Ladung ⅓, ⅔).
+Erlaubt sind sechs ladungserhaltende und sechs ladungsmischende Massenterme; die mischenden entfallen nur mit einer Phasensymmetrie auf den
+Farbrichtungen. Up ≠ Down verlangt die Brechung der ℂ-Konjugation; Potentiale aus Jordan-Spuren liefern sie nicht (H185d widerlegt), nötig ist ein
+Term mit dem Ladungsoperator. Keine Zahl vorhergesagt. OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/updown_h185/`.
 Farbschwingungen drei Frequenzen je sechsfach (hermitesche Zirkulante, feste Fourier-Richtungen); mit der Spiegelung τ sind zwei gleich. Drei freie
 Größen für drei Massen, keine Zahl vorhergesagt. In F₄-invarianten Potentialen sind die Farbschwingungen masselos; ihre Frequenzen kommen nur aus
 Termen, die U auszeichnen (nachträglich). Offen: Up und Down im komplexen Feld, Stabilität des Vakuums, was α und β festlegt. OP3 und OP4 bleiben
