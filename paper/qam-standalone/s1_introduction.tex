@@ -35,16 +35,17 @@ The contributions are:
 \item A \emph{model} of research records (Section~\ref{sec:model}): an append-only sequence of typed entries, each with a frame, a
 status, a set of inputs and a list of premises, and four rules that every entry must satisfy.
 \item \emph{Proofs} of what the rules guarantee for whole records (Section~\ref{sec:properties}): no conclusion is ever stronger than
-anything it rests on, however long the chain; inputs are never lost and never invented; frames change only through declared maps;
-and a hash chain binds every conclusion to the exact versions of its premises. The core statements are also machine-checked in Lean~4
+anything it rests on, however long the chain; inputs are never lost and never invented;
+and a hash chain binds every conclusion to the exact versions of its premises. That frames change only through declared maps is proved for a tree model of derivations and enforced line by line on
+records. The core statements are also machine-checked in Lean~4
 (Appendix~\ref{app:lean}).
 \item \emph{Frames as an interface} (Section~\ref{sec:frames}): ordinary formulas are written in ordinary notation, but each one is
 registered under a declared frame and interpretation, and moving it to another frame requires an explicit, declared step.
-\item \emph{Tools} that check a record independently of one another: a \LaTeX{} package that refuses to typeset a record that breaks
-the rules, a Lean program that checks the exported record against the same rules, and a script that recomputes all hashes (Section~\ref{sec:latex}).
+\item \emph{Tools} that check a record: a \LaTeX{} package that reports every breach of the rules as an error while typesetting,
+a Lean program that checks the status, input and frame rules on the exported record, and a script that recomputes all hashes (Section~\ref{sec:latex}).
 \item An \emph{execution layer} (Sections~\ref{sec:requests}--\ref{sec:tape}): calculations are submitted as requests to an executor
 that answers with one of three outcomes and stores a hashed receipt; a premise graph answers what a result rests on and what
-depends on a premise; and a small tape machine is executed both in software and in two hardware descriptions as a cross-check.
+depends on a premise; and a small tape machine is executed both in software and by a hardware core with two controllers as a cross-check.
 \end{enumerate}
 
 \subsection{Two design principles}

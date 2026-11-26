@@ -22,7 +22,9 @@ $k$ is in frame $B$, $k$ is not stronger than $p$, and the inputs of $k$ are tho
 \end{itemize}
 A record is \emph{accepted} if every line is accepted in turn, starting from the empty state. This is exactly the procedure of the
 Lean checker of Section~\ref{sec:latex}, and it is the reason for rule (R1): because nothing may be used before it is declared, a single
-pass suffices.
+pass suffices. Two parts of Definition~\ref{def:rules} lie outside this procedure. It does not test that frame names are declared, and
+it assigns the inputs of a premise-free entry from its kind, without reading an input list written in the file. Both are settled by the
+\TeX{} package when the record is produced.
 
 \subsection{An invariant of accepted records}
 
@@ -118,8 +120,9 @@ through $g\colon a\to b$, every leaf of the child reaches $a$ by induction, and 
 only chains are empty, so every leaf lies in the frame of the root.
 \end{proof}
 
-Theorem~\ref{thm:frames} is the formal content of rule (R4): there is no way to arrive in the Boosted frame from a Lab statement except
-through $\mathit{lorentz}_z$ or another declared map.
+Theorem~\ref{thm:frames} is the formal content of rule (R4) for trees: in a well-formed tree there is no way to arrive in the Boosted
+frame from a Lab statement except through $\mathit{lorentz}_z$ or another declared map. That every accepted record unfolds into such
+trees is not proved, here or in Lean.
 
 \subsection{The hash chain binds conclusions to premises}
 
@@ -129,7 +132,7 @@ earlier for its premises, in order; leaves must have no sources.
 
 \begin{proposition}[Hash links]\label{prop:links}
 In a record accepted by the hash check, the sources of every derivation and conversion are the hashes of its premises as they were
-recorded, and no hash occurs twice. If, in addition, the hashes are computed as in Definition~\ref{def:hash} and no MD5 collision
+recorded, and no hash occurs twice. If, in addition, the hashes are computed as in Definition~\ref{def:hash}, no field contains a separator character and no MD5 collision
 occurs among the entries involved, then changing any field of an entry changes its hash and the hash of every entry of which it is an
 ancestor, and leaves the hash of every other entry unchanged.
 \end{proposition}

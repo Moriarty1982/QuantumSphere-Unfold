@@ -1,13 +1,13 @@
 \section{The model}\label{sec:model}
 
 This section defines QAM without reference to any tool. The \LaTeX{} package, the Lean checker and the database of later sections
-are implementations of this model and apply the same rules.
+are implementations of this model. Section~\ref{sec:latex} states which of the rules each of them checks.
 
 \subsection{Records, frames and maps}
 
 \begin{definition}[Record]
 A \emph{record} is a finite sequence of entries $e_1,\dots,e_n$. It is extended only at the end (\emph{append-only}); an existing
-entry is never changed. A correction is a new entry that names the entry it replaces.
+entry is never changed. A correction is a new entry; which entry it replaces is recorded outside the record, in the database of Section~\ref{sec:graph}.
 \end{definition}
 
 A \emph{frame} is the name of a frame of description: an observer, a convention, a choice of units, a model assumption, a sector of a
@@ -107,7 +107,9 @@ The hash of an entry is
 \[
 h(e)=\mathrm{MD5}\bigl(\mathit{kind};\mathit{key};\mathit{frame};\mathit{status};\mathit{inputs};\mathit{sources};\mathit{statement}\bigr),
 \]
-where $\mathit{sources}$ is the list of the hashes of the premises of $e$. The hash of the record is the MD5 of the sequence of all
+where $\mathit{sources}$ is the list of the hashes of the premises of $e$. For a conversion, $\mathit{kind}$ includes the name of
+the map, so the map is covered by the hash. The fields are joined by separator characters without escaping; keys and frame names are
+assumed not to contain them. The hash of the record is the MD5 of the sequence of all
 entry hashes.
 \end{definition}
 

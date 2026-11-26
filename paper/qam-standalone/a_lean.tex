@@ -1,10 +1,10 @@
 \section{The Lean formalisation}\label{app:lean}
 
-Two Lean~4 packages accompany QAM. The record checker \texttt{qam/lean} uses only the Lean core library, without Mathlib, and builds in seconds. The modules of the abstract machine import nothing from Mathlib either, although the package \texttt{formal} that contains them depends on it for other modules.
+Two Lean~4 packages accompany QAM. The record checker \texttt{qam/lean} uses only the Lean core library, without Mathlib. The modules of the abstract machine import nothing from Mathlib either, although the package \texttt{formal} that contains them depends on it for other modules.
 
 \paragraph{The record checker} (\texttt{qam/lean}). The module \texttt{QAM.Provenance} formalises derivation trees with status, frame
-and inputs (Section~\ref{sec:properties}, frames). The module \texttt{QAM.QamFile} contains the one-pass checker \texttt{qamcheck} for
-exported records and the proofs of what an accepted record satisfies. The table maps the results of Section~\ref{sec:properties} to the
+and inputs (Section~\ref{sec:properties}, frames). The module \texttt{QAM.QamFile} contains the one-pass checking function for
+exported records and the proofs of what an accepted record satisfies; the executable \texttt{qamcheck} is a short driver around it. The table maps the results of Section~\ref{sec:properties} to the
 Lean names.
 \begin{center}
 \small
@@ -23,8 +23,13 @@ Proposition~\ref{prop:links} (links) & \texttt{link\_derive\_sound}, \texttt{lin
 \bottomrule
 \end{tabular}
 \end{center}
-The second half of Proposition~\ref{prop:links}, that a changed entry changes its hash, is a property of MD5 and is not formalised. Lean does
-not compute MD5; the script \texttt{qamhash.py} does. The parser that turns text lines into the checker's input is not verified.
+Four limits of this correspondence should be stated. The tree theorems compare the root of a tree with its leaves. The record theorems
+are proved for the checking function applied to a list of lines; the parser that turns text lines into that list, and the driver that
+applies the same step function while reading a file, are not verified. The \texttt{link} theorems hold line by line; that no hash
+occurs twice in a whole record is tested by the checker but not stated as a theorem. And the clause of
+Theorem~\ref{thm:inputs}\,(iii) that no ancestor is an input entry is proved in this article by hand only. The second half of
+Proposition~\ref{prop:links}, that a changed entry changes its hash, is a property of MD5 and is not formalised. Lean does
+not compute MD5; the script \texttt{qamhash.py} does.
 
 \paragraph{The abstract machine} (\texttt{formal/QSFormal}). The module \texttt{Store} formalises the store, its admissibility, the
 instruction set (store, link, snapshot, rollback, scrub, export) and the three-way execution of Section~\ref{sec:requests}; the module
@@ -38,10 +43,11 @@ Proposition~\ref{prop:machine} & Lean theorem(s)\\
 (i) admissibility preserved & \texttt{exec\_preserves}, \texttt{run\_preserves}, \texttt{exec\_cont\_admissible}\\
 (ii) no halt & \texttt{exec\_ne\_halt}; outcomes characterised by \texttt{exec\_cont\_iff}, \texttt{exec\_reject\_iff}\\
 (iii) atomicity & \texttt{exec\_atomic}\\
-(iv) one log entry per step & \texttt{exec\_logs}, \texttt{run\_ledger\_length}\\
-no certificate for a false statement & \texttt{no\_false\_certificate}\\
+(iv) one log entry per step & \texttt{exec\_logs}, \texttt{exec\_ledger\_length}, \texttt{run\_ledger\_length}\\
+no certificate for a contradiction (\texttt{False}) & \texttt{no\_false\_certificate}\\
 \bottomrule
 \end{tabular}
 \end{center}
-The formalisation simplifies the running system: addresses are natural numbers, and cloning and merging of stores are not included.
-That the Python executor implements this semantics is not proved.
+The formalisation follows the definitions in the main text of the research project, with simplifications: addresses are natural
+numbers, the log carries no pointers, and cloning and merging of stores are not included. The Python executor has a different
+instruction set (it includes \texttt{READOUT} and \texttt{RUN\_TAPE}), and that it behaves like this model is not proved.

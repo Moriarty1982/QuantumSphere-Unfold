@@ -7,14 +7,14 @@ What counts as a result is decided by the record and the executor. Two mechanism
 
 Language models reach the record through the Model Context Protocol~\cite{mcp}, a standard interface through which a model calls
 tools. QAM provides servers with graded rights. The read-only server lets a model search entries, list and retrieve receipts (with
-their premise trace or as a summary), select a context, and list, read, compare and audit batch reports. It is meant to be run, as documented, in a
+their premise trace or as a summary), select receipts by context, and list, read, compare and audit batch reports. It is meant to be run, as documented, in a
 container without network access, with a read-only file system and the database mounted read-only. Further servers can rebuild the index and execute
-single requests or stored batches; they write receipts but cannot change existing ones. All servers run only fixed modules with
-validated arguments and a time limit. None of them can raise a status, rewrite a record or delete a receipt.
+single requests or batches; they add receipts and offer no operation that changes an existing one. All servers run only fixed modules
+under a time limit. None of them offers a tool that raises a status, rewrites a record or deletes a receipt.
 
 A model asked about a stored result is expected to retrieve the receipt, verify it by its hash and state its open guards, rather than
 rely on an earlier conversation. The receipt summary is designed for this: it gives the verified hash, the instruction, the outcome,
-errors, obligations and open guards in a few lines.
+errors, obligations and the declared guards with their status in a few lines.
 
 \subsection{Hallucination as a status error}
 
@@ -24,7 +24,7 @@ because it shows in the structure of the record rather than in the meaning of th
 prose. It cannot remove it from the record without changing hashes, and it cannot set the status of a conclusion above that of its
 premises without the compiler (in its default mode) or the Lean checker rejecting the record. A calculated value, finally, is backed
 by evidence only if the calculation was submitted as a request and left a receipt; a value merely declared \st{computed} in the record
-is visibly not backed by one.
+has no receipt that could be retrieved for it.
 
 This does not make a model reliable. It changes where its unreliability can do damage: from the silent transitions of
 Section~\ref{sec:intro}, which are hard to see, to explicit entries and receipts, which can be checked.

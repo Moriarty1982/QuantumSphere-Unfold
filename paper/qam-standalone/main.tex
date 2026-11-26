@@ -50,9 +50,10 @@ can check the dependencies inside it. The costly mistakes are then rarely wrong 
 that holds only under a condition is later cited as proved, a value that was put in by hand is later presented as derived, or two
 quantities from different frames of reference are compared as if they were the same kind of thing. This article presents QAM, a small
 typed bookkeeping language for such records, together with the tools that check it. Every statement in a QAM record carries a frame,
-a status on a five-step scale from \st{open} to \st{proved}, the inputs it rests on and the exact versions of its premises. Four rules,
-stated in the article and proved there, guarantee that no conclusion is stronger than what it rests on, that no input disappears along
-a chain of reasoning, and that frames change only through declared maps. Calculations are submitted as requests to an executor that
+a status on a five-step scale from \st{open} to \st{proved}, the inputs it rests on and the exact versions of its premises. Four rules
+guarantee, as the article proves, that no conclusion is stronger than what it rests on and that no input disappears along
+a chain of reasoning; that frames change only through declared maps is enforced on every line and proved for a tree model of
+derivations. Calculations are submitted as requests to an executor that
 answers with one of three outcomes (\cont, \guard\ or \reject) and stores a hashed receipt; a premise graph in SQLite answers what
 a result rests on and what depends on a given premise. A single worked example from elementary electrodynamics, a field
 configuration observed before and after a Lorentz boost, runs through the whole article. QAM secures the form of a record. It does

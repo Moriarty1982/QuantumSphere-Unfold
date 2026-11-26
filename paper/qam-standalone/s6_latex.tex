@@ -67,7 +67,7 @@ from'', $R(w)$ is the readout of a witness $w$ (a value put in by hand), and $W$
 \verb|\qamshow{narrowed-range}| gives the short form \qamshow{narrowed-range}. One reads off that $p_I$ was carried from Lab to Boosted,
 rests on the measured input $t_I$ and holds at most conditionally, while the general rule $p$ rests on no input.
 
-The package also prints a ledger of all entries. For the five entries above it reads:
+The package can also print a ledger of all entries (\verb|\qamledger|). For the five entries above, the notation and the hashes it produces are:
 \begin{center}
 \small
 \begin{tabular}{@{}lll@{}}
@@ -86,7 +86,9 @@ The full record of the article, including the entries of Section~\ref{sec:frames
 
 \subsection{What happens when a rule is broken}
 
-By default a violation stops the compiler. This is deliberate: a document containing a promotion should not come out as a PDF. Had the
+By default a violation is a \LaTeX{} error. In an interactive run, or with \texttt{-halt-on-error}, typesetting stops there, so that a
+document containing a promotion does not come out as a PDF. A build that is told to continue past errors still produces a PDF and an
+exported record; that record is then caught by the Lean checker. Had the
 last line above declared the prediction \st{proved}, typesetting would have stopped with
 \begin{lstlisting}
 ! Package qam Error: Promotion: `narrowed-range' is declared `proved', but its
@@ -109,8 +111,10 @@ stops with
 These messages were produced by compiling the three variants; they are quoted, not paraphrased. Further messages cover keys, frames and
 maps that are used before they are declared or declared twice, unknown status names, a conversion whose map starts in the wrong frame,
 and a derivation without premises. A warning mode (\texttt{mode=warning}) turns errors into warnings so that the package can be
-introduced into an existing text; the record exported in that mode is then rejected by the Lean checker, so the violation cannot pass
-unnoticed.
+introduced into an existing text. A promotion, a frame mixing, a false declaration of independence or a conversion from the wrong
+frame is then still written to the exported record, which the Lean checker rejects. Other violations, such as a duplicate key or an
+undeclared map, export no line in that mode and are visible only as warnings. The formula commands of Section~\ref{sec:frames} stay
+errors in either mode.
 
 \subsection{The exported record}
 
@@ -135,19 +139,24 @@ checker. Checking does not depend on trusting the \TeX{} package.
 
 \subsection{Three checkers}
 
-Three programs, written independently of one another, check an exported record. Two of them apply the rules of
+Three programs check a record. Two of them apply rules of
 Definition~\ref{def:rules}; the third checks the hashes:
 \begin{enumerate}[leftmargin=1.5em]
-\item the \TeX{} package, while the document is typeset;
+\item the \TeX{} package, on the source, while the document is typeset. It applies all four rules and is the only one that checks that
+frames are declared;
 \item \texttt{qamcheck}, a program written in Lean~4, on the exported file. It performs the one-pass check of
-Section~\ref{sec:properties}, including the hash links, and its correctness properties are proved in Lean (Appendix~\ref{app:lean});
-\item \texttt{qamhash.py}, a short Python script that recomputes every entry hash, the record hash and the MD5 of the source file.
+Section~\ref{sec:properties}, including the hash links. The properties of Section~\ref{sec:properties} are proved in Lean for its
+checking function; the parser and the short loop that feeds it the lines of a file are not verified (Appendix~\ref{app:lean});
+\item \texttt{qamhash.py}, a short Python script that recomputes every entry hash, the record hash and the MD5 of the top-level source
+file (files it includes are not covered).
 \end{enumerate}
 Lean does not compute MD5; the script does. Lean checks that the links between the recorded hashes are consistent. For a release, a
 manifest of SHA-256 sums over the source, the PDF and the record is written in addition.
 
-A checker that only ever sees good records is not tested. The repository therefore contains deliberately broken records that must be
-rejected: a promotion, a frame mixing, a false declaration of independence, a conversion whose map starts in the wrong frame, a broken hash
-link, an entry whose statement was edited after export, and an input that was deleted by hand. The last cannot be produced by the \TeX{}
+A checker that only ever sees good records is not tested. The repository therefore contains deliberately broken records, each of
+which must be rejected by the checker responsible for it. The Lean checker must reject a promotion, a frame mixing, a false declaration
+of independence, a conversion whose map starts in the wrong frame, a broken hash link and an input that was deleted by hand; the hash
+script must reject an entry whose statement was edited after export, which the Lean checker, not computing MD5, cannot see. The record
+with the deleted input cannot be produced by the \TeX{}
 package at all. It ensures that the Lean checker does more than repeat what the package already prevents. The \TeX{} package has its
-own test suite of 34 small documents, each of which must either compile or stop with a specific error.
+own test suite of 34 small documents: 12 must compile, and 22 must fail with a package error, 12 of them with a specific message.

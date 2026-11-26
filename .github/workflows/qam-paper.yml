@@ -33,6 +33,9 @@ jobs:
         run: |
           lake build
           lake exe qamcheck ../../paper/qam-standalone/main.qam
+      - name: qamcheck on the hand-authored example record (Appendix B, C)
+        working-directory: qam/lean
+        run: lake exe qamcheck ../examples/gram-range-rule.qam
       - uses: actions/upload-artifact@v4
         with:
           name: qam-standalone-pdf
