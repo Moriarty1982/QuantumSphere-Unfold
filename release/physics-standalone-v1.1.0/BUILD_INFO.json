@@ -1,0 +1,15 @@
+{
+  "paper": "physics-standalone",
+  "version": "1.1.0",
+  "source_commit": "b7890e72734c3b8c59f2be286de4e27d6b883783",
+  "pages": 51,
+  "overfull_hbox": 0,
+  "underfull_hbox": 3,
+  "tex": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+  "version_doi": "10.5281/zenodo.24563808",
+  "final": true,
+  "files": {
+    "Quantum_Sphaera_One_Object_Three_Frames_v1.1.0.pdf": "2e11fa9159640a7c3930a2780b92f490d2227fce7872f04fadb9f71a3542d6b3",
+    "Quantum_Sphaera_One_Object_Three_Frames_v1.1.0_source.tar.gz": "c989069364dae169e3ea74ae2c45338bb45fd6e8702733d18334ca2e2dbbcc6a"
+  }
+}
