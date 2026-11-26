@@ -1,0 +1,16 @@
+== Teil A  Ablenkwinkel, in Einheiten von m/b ==
+  m/b = 1e-02: Newton (v = c) 1.99993,  Schwarzschild 4.12225,  Verhaeltnis 2.06120
+  m/b = 1e-03: Newton (v = c) 2.00000,  Schwarzschild 4.01182,  Verhaeltnis 2.00591
+  m/b = 1e-04: Newton (v = c) 2.00000,  Schwarzschild 4.00118,  Verhaeltnis 2.00059
+  Grenzwerte: Newton 2 m/b, Schwarzschild 4 m/b, Verhaeltnis 2 (gemessen: 1.0 in Einheiten von 4 m/b, VLBI auf etwa 1e-4)
+  skalare Gravitation (Nordstroem, Kopplung an die Spur): 0, weil die Spur fuer Licht verschwindet (Lehrbuchwert)
+
+== Teil B  die Zahl 10^122 ==
+  Lambda = 1.091e-52 1/m^2,  l_P^2 = 2.612e-70 m^2,  Lambda*l_P^2 = 2.850e-122
+  rho_Planck / rho_Lambda = 8 pi/(Lambda l_P^2) = 8.819e+122  (log10 = 122.95)
+  de-Sitter-Radius L = sqrt(3/Lambda) = 1.658e+26 m;  L/l_P = 1.026e+61  (log10 = 61.01)
+  Horizontflaeche/(4 l_P^2) = 3 pi/(Lambda l_P^2) = 3.307e+122  (log10 = 122.52)
+  also rho_Planck/rho_Lambda = (8/3)*(Horizontflaeche in Planck-Einheiten/4) = 8 pi/3 * (L/l_P)^2: Probe 1.000000
+  Vakuumenergie im Horizontvolumen / Planck-Energie = 5.130e+60 = (1/2) L/l_P: Probe 1.000000
+  ein Schwarzes Loch der Planck-Masse: Masse 2.176e-08 kg, Energie 1.956e+09 J, Verdampfungszeit von der Ordnung der Planck-Zeit 5.39e-44 s
+  Lesart: die 'falsche' Zahl 10^122 ist das Quadrat von L/l_P. Sie misst kein Energiebudget, sondern das Verhaeltnis zweier Laengen.

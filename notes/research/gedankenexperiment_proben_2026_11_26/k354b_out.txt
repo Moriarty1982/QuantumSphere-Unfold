@@ -1,0 +1,28 @@
+k354b_gegenprobe.wl, ausgefuehrt am 26.11.2026 (Wolfram-Kernel, zustandslos). Print-Ausgaben, zweidimensionale Darstellung in eine Zeile uebertragen; Rueckgabewert Null.
+
+1) Newton: Stoss und Zusatzkraft
+   (v_p/v_c)^2 - (2 + vinf^2 rp) = 0
+   Zentralkraft fuer Kreis mit v_p: v_p^2/rp geteilt durch Schwerkraft 1/rp^2, minus (2 + vinf^2 rp) = 0
+   abzugebende Energie v_p^2/2 - v_c^2/2 = (1 + rp vinf^2)/(2 rp) ; fuer vinf = 0 gleich -E_Kreis = 1/(2 rp)
+2) Auslegung P: b' aus Auslesepunkt und Einflugrichtung
+   b'^2 - rp^2 (1 - 1/e^2) mit Winkel Pi - ArcCos[-1/e] zwischen Ort und Richtung: 0
+   b' < rp < b: b'/rp = b v^2/Sqrt[1 + b^2 v^4] ; rp/b = (-1 + Sqrt[1 + b^2 v^4])/(b v^2) ; Reihe b' fuer kleines b: b^2 v^2 Sqrt[b^2 v^4]/2   (= b^3 v^4/2)
+3) Schwung holen: fernster Punkt
+   aus Energie und Drehimpuls: {{ra -> -(k^2/(-2 + k^2)), vq -> 2/k - k}}
+4) Schwarzschild: Kreisbahn mit E = 1
+   E^2 = 1 bei r = {{r -> ConditionalExpression[4 m, m > 0]}} ; dort L^2 = 16 m^2
+   V_eff(4m, L = 4m) = 1 , V_eff' = 0 , V_eff'' = -1/(16 m^2) (negativ: Maximum, instabil)
+   innerste stabile Kreisbahn (L^2 minimal): {{r -> ConditionalExpression[6 m, m > 0]}}
+   E^2 -> unendlich bei r -> 3m; Licht: kritischer Stossparameter^2 = r^2/(1 - 2m/r) bei r = 3m: 27 m^2
+   noetige Zusatzkraft: Verhaeltnis L^2(Einfall aus der Ruhe, naechster Punkt r)/L^2(Kreis bei r) = 2 (-3 m + r)/(-2 m + r) ; gleich 1 bei r = {{r -> 4 m}} ; Grenzwert r -> unendlich: 2
+5) addierte Auslesen, gleiche Radien: Im[r E^(I w t) + r E^(-I w t)] = 0 ; Re = 2 r Cos[t w]
+6) numerisch (NDSolve, 30 Stellen): E = 1, L = 4m(1 + 10^-6), m = 1/20
+   innerster Radius 4.005664861 m nach 1.94482 Umlaeufen (halbe Bahn)
+
+Einordnung: Punkte 1 bis 5 sind symbolische Nullreste bzw. exakte Loesungen; Punkt 6 ist numerisch und stimmt mit k354 ueberein (innerster Radius 4.005665 m;
+k354 zaehlt die ganze Bahn ab r = 1000 m: 3.861 Umlaeufe).
+Warnungen des Kernels:
+- Symbol::undefined2: globale Symbole L, L0 seien undefiniert (Hinweis der Umgebung vor der Auswertung; beide sind Muster- bzw. Modulvariablen).
+- MinValue::lpsub, MaxValue::lpsub (je zweimal, Meldungstext nicht verfuegbar): aus FullSimplify mit Annahmen in Punkt 2; das Ergebnis dort ist die exakte Null
+  und ist numerisch in k354 bestaetigt (b' = 0.292893 gegen Formel 0.292893).
+- General::messages.
