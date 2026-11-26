@@ -1,7 +1,7 @@
 # Zenodo-Angaben zur Fassung 0.4.0
 
-**Status:** reserviert am 26.11.2026 (Freigabe des Autors), nicht hochgeladen, nicht veröffentlicht. Zenodo-Entwurf 24563916,
-reservierte Version-DOI 10.5281/zenodo.24563916; sie steht auf der Titelseite und löst erst nach der Veröffentlichung auf. Eine neue Zenodo-Version entsteht nur
+**Status:** veröffentlicht am 26.11.2026 (Freigabe des Autors), [Record 24563916](https://zenodo.org/records/24563916),
+Version-DOI 10.5281/zenodo.24563916; sie steht auf der Titelseite. Eine neue Zenodo-Version entsteht nur
 mit ausdrücklicher Freigabe des Autors (`AGENTS.md`), und jeder einzelne Zenodo-Schritt braucht sie ebenfalls. Concept-DOI
 10.5281/zenodo.24405552; vorige Fassung 0.3.0 (24.11.2026, 58 Seiten), [Record 24497991](https://zenodo.org/records/24497991),
 DOI 10.5281/zenodo.24497991; davor 0.2.0, DOI 10.5281/zenodo.24481107, und 0.1.0, DOI 10.5281/zenodo.24405553.

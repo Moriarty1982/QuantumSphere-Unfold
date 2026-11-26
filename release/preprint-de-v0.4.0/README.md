@@ -1,6 +1,6 @@
 # Deutscher Preprint, Fassung 0.4.0: Release-Paket
 
-**Status (26.11.2026): reserviert, nicht hochgeladen, nicht veröffentlicht.** Zenodo-Entwurf 24563916 als neue Fassung des Records
+**Status (26.11.2026): veröffentlicht**, [Record 24563916](https://zenodo.org/records/24563916) (Upload-Lauf 45850312846, Veröffentlichung Lauf 45859610189, Workflow „Zenodo Release“; Freigabe des Autors). Der folgende Text hält den Stand der Vorbereitung fest. Zenodo-Entwurf 24563916 als neue Fassung des Records
 24497991, reservierte Version-DOI 10.5281/zenodo.24563916 (Trockenlauf 45842918715, Reservierung 45843670966, Workflow „Zenodo Release“;
 vom Autor am 26.11.2026 freigegeben). Für Upload und Veröffentlichung weiter `deposition_id=24563916` verwenden, nicht `new_version_of`. Jeder Zenodo-Schritt (Reservierung, Upload, Veröffentlichung) braucht die ausdrückliche Freigabe des Autors (`AGENTS.md`); dasselbe
 gilt für die Entscheidung, dass diese Fassung erscheint. Concept-DOI 10.5281/zenodo.24405552; Vorgänger 0.3.0 vom 24.11.2026,
