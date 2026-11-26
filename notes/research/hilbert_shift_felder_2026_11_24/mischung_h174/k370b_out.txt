@@ -1,0 +1,21 @@
+k370b, Wolfram-Nachrechnung (26.11.2026), tatsaechliche Ausgabe des Kerns (Stellen gekuerzt wie zurueckgegeben).
+
+Warnung des Kerns: Symbol::undefined2: Warning: Global symbols "T, T2, T, T, T, T2" are undefined.
+(Vorpruefung des Werkzeugs; T und T2 sind im Code definiert.)
+
+Rueckgabe:
+{{0.01426304231, 0.3236870532, 0.5},
+ {{0.0395980, 1.0240658, {0.0120712, 0.301779, 0.483282}},
+  {-0.0395980, 0.97512515, {0.0174250, 0.346848, 0.517897}},
+  {0.0793204, 1.0475129, {0.0106422, 0.281010, 0.467584}},
+  {-0.0793204, 0.94924134, {0.0218399, 0.371385, 0.537163}}},
+ {-0.13197631, 2534.3064, {0.00391745, 0.420155, 0.561050}}}
+
+Vergleich mit Python (k370_out.txt): Kontrolle 0,01426 / 0,32369 / 0,50000; Teil b rho 1,024066 / 0,975125 / 1,047513 / 0,949241 und
+sin^2 theta_13 0,01207 / 0,01742 / 0,01064 / 0,02184, theta_12 0,30178 / 0,34685 / 0,28101 / 0,37138, theta_23 0,48328 / 0,51790 / 0,46758 / 0,53716;
+Teil c eta -0,131976, m_tau 2534,31 MeV, 0,00392 / 0,42015 / 0,56105. Alle Stellen stimmen ueberein.
+
+Erster Lauf (nicht verwendet): SortBy mit exakten Ausdruecken sortierte nach kanonischer Ordnung statt nach Betrag; die Neutrino-Zuordnung war dadurch
+falsch (Kontrolle gab 2/3, 1, 1/2). Berichtigt durch numerische Auswertung vor dem Sortieren; der obige Lauf ist der berichtigte.
+
+Nicht in Wolfram nachgerechnet: Teil a, die uebrigen Zweige von b und c, die Kontrolle mit x_R und der Zusatz mit freiem eta.

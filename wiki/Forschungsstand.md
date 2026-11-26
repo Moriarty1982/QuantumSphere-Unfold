@@ -20,6 +20,18 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Mischung: eine Beimischung der neutralen Form liefert die nötige kleine Drehung nicht (26.11.2026, Test H174, k370)
+
+**Test H174. Ergebnis: a bestätigt (nicht blind), b nicht verträglich (blind; nach dem Wortlaut des Kriteriums „nicht entschieden“), c widerlegt (blind).** Nach k369 bräuchten θ₁₃ und θ₁₂ eine e–μ-Drehung der geladenen Leptonen um 0,045 bis 0,052. Geprüft wurde der einzige nicht zirkulante Baustein, den der Aufbau ohne neue Zahl schon enthält: eine Beimischung der neutralen Form, M_e ∝ Ĉ + η·N̂.
+
+- **b:** η = ±tan x, ±tan 2x, Massen exakt angepasst, alle Zweige. Kein Zweig verträglich. Der beste (η = −tan 2x) hat sin²θ₁₃ = 0,0218 (−1,1σ), aber sin²θ₁₂ = 0,371 (+10,6σ) und sin²θ₂₃ = 0,537 (+4,0σ). Auch ein frei gewähltes η erreicht nur χ² = 115.
+- **c:** Zirkulant und neutrale Form am Baumpunkt, η allein aus m_e/m_μ: kein Fall mit θ₁₃ innerhalb 3σ, m_τ mindestens 6 % daneben. Widerlegt.
+- **a, der eigentliche Befund:** Der nötige Term hat das e–μ-Element 0,0516 (in Einheiten von λ_μ − λ_e), ist zu 99,7 % nicht zirkulant und steht rund 78° gegen die neutrale Form (Überlapp 0,08). Er hat einen reellen symmetrischen und einen gleich großen imaginären antisymmetrischen Anteil. Eine reelle Form kann den zweiten nicht liefern.
+- **Exakt:** Jede Drehung der geladenen Seite, die eine Funktion von N̂ ist, ändert nur Phasen, keinen Winkel.
+- **Grenzen:** Widerlegt ist diese Konstruktion, nicht jede Drehung. Die Stärken von η und die gleiche Normierung waren Setzungen. Keine Maske gerechnet. OP3 und OP4 bleiben offen.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/mischung_h174/` (Vorab-Notiz d1aebfe, Ergebnis-Notiz, `k370_test_h174.py`, `k370b_kontrolle.wl`, Ausgaben).
+
 ### Mischung: die Abweichung bei θ₁₃ ist eine Lücke im Phasenversatz, Faktor 1,5 bis 1,64 (26.11.2026, Erkundung k369)
 
 **Erkundung, nicht blind (keine Vorab-Notiz).** Fortsetzung von H173: Wie groß ist die Abweichung, und woher kann sie kommen?

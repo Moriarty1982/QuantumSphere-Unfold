@@ -1010,3 +1010,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Test H173:** Drehwinkel der Mischung aus dem Spektrum (k368) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **26.11.2026, Erkundung k369:** Abweichung bei θ₁₃ beziffert und vier mögliche Quellen eingegrenzt; in Forschungsstand und Offene-Probleme eingetragen. Vorhersagen-und-Tests unverändert (kein Test). Artikel unverändert.
+
+**26.11.2026, Test H174:** Beimischung der neutralen Form (k370) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
