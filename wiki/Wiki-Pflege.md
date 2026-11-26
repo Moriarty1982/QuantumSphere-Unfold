@@ -988,3 +988,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **25.11.2026, Test H155:** Skala als Setzung (k338) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
 
 **26.11.2026, Test H156:** Gleiche Massenterme (k339) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert.
+
+**26.11.2026, Tests H157 und H158:** Postulat J und δ (k340) sowie Albert-Algebra und δ (k341) in Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests eingetragen. Artikel unverändert; die Träger-Tabelle im Physik-Paper ist noch nicht nachgezogen (später, mit Runde im Companion).

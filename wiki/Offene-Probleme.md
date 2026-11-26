@@ -110,6 +110,10 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.
 
+**Test H157, 26.11.2026 (k340):** Für OP3, unter dem Postulat J: Nur gerade Ordnungen sind erlaubt, N(W) ist verboten. Im Drei-Felder-Modell bleibt δ bis Ordnung 10 bei 0 oder π/3; drei verschiedene Massen brauchen dort Ordnung 12. OP3 bleibt offen.
+
+**Test H158, 26.11.2026 (k341):** Für OP3 und OP4: In der Albert-Algebra ist das P-invariante Vakuum eine Zirkulante mit Brannen-Eigenwerten. δ ist die Phase der Nebendiagonale (tan δ = v/s), K = ⅔ die gleiche Norm von Spur und Nebendiagonale (unter Postulat). 2/9 folgt nicht; offen ist, was v/s festlegt. OP3 und OP4 bleiben offen.
+
 **Konjugation und Einheit, 25.11.2026 (Erkundung, nicht blind, k282):** Die Terme Tr(W∘σW) und Tr((CW)²) aus dem Verdopplungsschritt ℝ → ℂ brechen SU(3) → SO(3) → A₄ auch für das Potential. Je nach Vorzeichen ist das Vakuum ℤ₃, V₄ oder eine flache ℤ₂-Richtung; ein isoliertes ℤ₂ gibt es nicht. Offen: ob der Turm die Vorzeichen festlegt. OP3 bleibt offen.
 
 **Runde r60, 24.11.2026:** Die Befunde k275, H127 und k277 stehen jetzt als Runde v4.10.0-r60 im Companion. OP3 und OP4 bleiben offen: Nicht gezeigt sind, dass die Plätze Generationen sind, die Einbettung von H₃(𝕆) in den Turm, die Massen und das Prinzip für die Vakuumausrichtung.
