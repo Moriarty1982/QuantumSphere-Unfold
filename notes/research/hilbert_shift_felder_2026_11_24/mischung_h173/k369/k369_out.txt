@@ -1,0 +1,71 @@
+== 1. Abweichung beziffern ==
+sin2 th13: Vorhersage 0.014263, Messung 0.02248 +- 0.00056; Differenz -0.008217 (-14.7 sigma); Messung/Vorhersage = 1.5761 +- 0.0393
+Amplitude |U_e3|: Vorhersage 0.11943, Messung 0.14993 +- 0.00187; Differenz +0.03051
+Drehwinkel phi: Vorhersage 0.208360 (11.938 Grad), Messung 0.262703 +- 0.003350 (15.052 Grad); Verhaeltnis 1.2608 +- 0.0161
+Versatz: Leptonen x = 0.039577; aus R: x_R = 0.043359 +- 0.002140; aus th13: x_th = 0.064887 +- 0.001798
+   x_th/x = 1.6395 +- 0.0454; x_th/x_R = 1.4965 +- 0.0847; x_th - x_R = 0.021528 (7.7 sigma)
+   Naeherung kleiner Versatz: sin2 th13 ~ 2x/(3 sqrt3) = 0.015233 (exakt 0.014263)
+TM1-Beziehung bei gemessenem th13: sin2 th12 = 0.318002 (JUNO +2.25 sigma, NuFIT +1.37 sigma)
+
+== 2. Kandidat: Koide-Wert der Neutrinos (rho frei) ==
+tan^2(2 phi) = 3 tan^2(delta + 2pi/3) - 1 haengt nicht von rho ab (exakt in k369b). th13 legt also delta_nu fest, R dann rho.
+delta_nu aus th13: 0.458712 = pi/6 - 0.064887; R bei rho = 1: 0.025688 (-9.5 sigma)
+   rho = 0.94226 +- 0.00722: K_nu = (1 + rho^2)/3 = 0.62928 (K - 2/3 = -0.03738 +- 0.00453); lambda = [-0.1084  0.9136  2.1948]; Massen = [ 0.122  8.678 50.087] meV, Summe 58.89 meV
+      Ein-Feld-Form: a = 1.00000, c = -1.10840, b^2 = 0.051618; sin2 th13 = 0.022480
+   rho = 2.22049 +- 0.00987: K_nu = (1 + rho^2)/3 = 1.97686 (K - 2/3 = +1.31019 +- 0.01461); lambda = [ 0.79638 -1.612    3.81562]; Massen = [ 2.184  8.948 50.134] meV, Summe 61.27 meV
+      Ein-Feld-Form: a = 1.00000, c = -0.20362, b^2 = 3.677198; sin2 th13 = 0.160414
+
+== 3. Kandidat: ungleiche Diagonale (K = 2/3, delta_nu aus R oder aus den Leptonen) ==
+   x (Leptonen), Ein-Feld (Kontrolle): f = 1.000000, d = 1.000000, d - f = +0.000000 (relativ zur mittleren Diagonale +0.00000), b = 0.187142, c = -1.195808; Spektrum ok: True
+   x (Leptonen), gemessenes th13: f = 0.983882, d = 1.032236, d - f = +0.048355 (relativ zur mittleren Diagonale +0.04835), b = 0.231898, c = -1.179689; Spektrum ok: True
+   x_R (aus R), Ein-Feld (Kontrolle): f = 1.000000, d = 1.000000, d - f = -0.000000 (relativ zur mittleren Diagonale -0.00000), b = 0.196067, c = -1.192944; Spektrum ok: True
+   x_R (aus R), gemessenes th13: f = 0.986290, d = 1.027421, d - f = +0.041131 (relativ zur mittleren Diagonale +0.04113), b = 0.233285, c = -1.179234; Spektrum ok: True
+
+== 4. Kandidat: Maske mit freiem eps (Variante A) ==
+   x (Leptonen): Rest der Massenanpassung 3.5e-13; eps-Raster 0 .. 1 (Schritt 0,01), 102 Werte
+      eps = 0.0300: chi2(th13, th12 JUNO, th23) = 6.1; sin2 th13 = 0.02309, th12 = 0.29804, th23 = 0.50446
+      eps = 0.0200: chi2(th13, th12 JUNO, th23) = 24.3; sin2 th13 = 0.01996, th12 = 0.30645, th23 = 0.50303
+      eps = 0.0400: chi2(th13, th12 JUNO, th23) = 62.0; sin2 th13 = 0.02654, th12 = 0.28943, th23 = 0.50576
+      eps = artanh(beta_sym) = 0.6175: chi2 = 11284.9; kleinster Abstand in th13 ueber alle Faelle 22.8 sigma
+      eps = 0: chi2 = 228.3
+   x_R (aus R): Rest der Massenanpassung 3.5e-13; eps-Raster 0 .. 1 (Schritt 0,01), 102 Werte
+      eps = 0.0200: chi2(th13, th12 JUNO, th23) = 7.5; sin2 th13 = 0.02141, th12 = 0.30542, th23 = 0.50277
+      eps = 0.0300: chi2(th13, th12 JUNO, th23) = 19.8; sin2 th13 = 0.02463, th12 = 0.29693, th23 = 0.50406
+      eps = 0.0100: chi2(th13, th12 JUNO, th23) = 60.7; sin2 th13 = 0.01834, th12 = 0.31414, th23 = 0.50143
+      eps = artanh(beta_sym) = 0.6175: chi2 = 11144.1; kleinster Abstand in th13 ueber alle Faelle 19.5 sigma
+      eps = 0: chi2 = 166.1
+
+== 5. Kandidat: kleine Drehung der geladenen Leptonen (e-mu), Z3 gebrochen ==
+natuerliche Groesse (Gatto-Sartori-Tonin-artig): sqrt(m_e/m_mu) = 0.06954; sqrt(m_mu/m_tau) = 0.24385
+   x (Leptonen), b +, mu = omega: kleinster Winkel fuer th13: 0.0440 (alpha = 1.396): th12 = 0.32414, th23 = 0.49576, sin delta = +1.000
+        th_e = sqrt(m_e/m_mu), alpha = 0.3620: th13 = 0.02248, th12 = 0.36468 (JUNO +9.54), th23 = 0.49580 (+1.52), sin delta = +0.955
+        th_e = sqrt(m_e/m_mu), alpha = 2.4377: th13 = 0.02248, th12 = 0.28443 (JUNO -2.99), th23 = 0.49580 (+1.52), sin delta = +0.966
+        beste Anpassung: th_e = 0.05164, alpha = 2.0355, chi2 = 2.30 (3 Messgroessen, 2 Parameter): th13 = 0.02249, th12 = 0.30360, th23 = 0.49579, sin delta = +0.993
+   x (Leptonen), b +, mu = omega*: kleinster Winkel fuer th13: 0.0440 (alpha = 4.887): th12 = 0.32414, th23 = 0.49576, sin delta = -1.000
+        th_e = sqrt(m_e/m_mu), alpha = 3.8455: th13 = 0.02248, th12 = 0.28443 (JUNO -2.99), th23 = 0.49580 (+1.52), sin delta = -0.966
+        th_e = sqrt(m_e/m_mu), alpha = 5.9212: th13 = 0.02248, th12 = 0.36468 (JUNO +9.54), th23 = 0.49580 (+1.52), sin delta = -0.955
+        beste Anpassung: th_e = 0.05164, alpha = 4.2477, chi2 = 2.30 (3 Messgroessen, 2 Parameter): th13 = 0.02249, th12 = 0.30360, th23 = 0.49579, sin delta = -0.993
+   x (Leptonen), b -, mu = omega: kleinster Winkel fuer th13: 0.0440 (alpha = 4.887): th12 = 0.32414, th23 = 0.49576, sin delta = -1.000
+        th_e = sqrt(m_e/m_mu), alpha = 3.8455: th13 = 0.02248, th12 = 0.28443 (JUNO -2.99), th23 = 0.49580 (+1.52), sin delta = -0.966
+        th_e = sqrt(m_e/m_mu), alpha = 5.9212: th13 = 0.02248, th12 = 0.36468 (JUNO +9.54), th23 = 0.49580 (+1.52), sin delta = -0.955
+        beste Anpassung: th_e = 0.05164, alpha = 4.2477, chi2 = 2.30 (3 Messgroessen, 2 Parameter): th13 = 0.02249, th12 = 0.30360, th23 = 0.49579, sin delta = -0.993
+   x (Leptonen), b -, mu = omega*: kleinster Winkel fuer th13: 0.0440 (alpha = 1.396): th12 = 0.32414, th23 = 0.49576, sin delta = +1.000
+        th_e = sqrt(m_e/m_mu), alpha = 0.3620: th13 = 0.02248, th12 = 0.36468 (JUNO +9.54), th23 = 0.49580 (+1.52), sin delta = +0.955
+        th_e = sqrt(m_e/m_mu), alpha = 2.4377: th13 = 0.02248, th12 = 0.28443 (JUNO -2.99), th23 = 0.49580 (+1.52), sin delta = +0.966
+        beste Anpassung: th_e = 0.05164, alpha = 2.0355, chi2 = 2.30 (3 Messgroessen, 2 Parameter): th13 = 0.02249, th12 = 0.30360, th23 = 0.49579, sin delta = +0.993
+   x_R (aus R), b +, mu = omega: kleinster Winkel fuer th13: 0.0365 (alpha = 1.396): th12 = 0.32296, th23 = 0.49641, sin delta = +1.000
+        th_e = sqrt(m_e/m_mu), alpha = 0.2148: th13 = 0.02248, th12 = 0.36666 (JUNO +9.85), th23 = 0.49645 (+1.56), sin delta = +0.950
+        th_e = sqrt(m_e/m_mu), alpha = 2.5697: th13 = 0.02248, th12 = 0.28072 (JUNO -3.58), th23 = 0.49645 (+1.56), sin delta = +0.959
+        beste Anpassung: th_e = 0.04508, alpha = 2.0974, chi2 = 2.42 (3 Messgroessen, 2 Parameter): th13 = 0.02249, th12 = 0.30360, th23 = 0.49644, sin delta = +0.993
+   x_R (aus R), b +, mu = omega*: kleinster Winkel fuer th13: 0.0365 (alpha = 4.887): th12 = 0.32296, th23 = 0.49641, sin delta = -1.000
+        th_e = sqrt(m_e/m_mu), alpha = 3.7135: th13 = 0.02248, th12 = 0.28072 (JUNO -3.58), th23 = 0.49645 (+1.56), sin delta = -0.959
+        th_e = sqrt(m_e/m_mu), alpha = 6.0684: th13 = 0.02248, th12 = 0.36666 (JUNO +9.85), th23 = 0.49645 (+1.56), sin delta = -0.950
+        beste Anpassung: th_e = 0.04508, alpha = 4.1858, chi2 = 2.42 (3 Messgroessen, 2 Parameter): th13 = 0.02249, th12 = 0.30360, th23 = 0.49644, sin delta = -0.993
+   x_R (aus R), b -, mu = omega: kleinster Winkel fuer th13: 0.0365 (alpha = 4.887): th12 = 0.32296, th23 = 0.49641, sin delta = -1.000
+        th_e = sqrt(m_e/m_mu), alpha = 3.7135: th13 = 0.02248, th12 = 0.28072 (JUNO -3.58), th23 = 0.49645 (+1.56), sin delta = -0.959
+        th_e = sqrt(m_e/m_mu), alpha = 6.0684: th13 = 0.02248, th12 = 0.36666 (JUNO +9.85), th23 = 0.49645 (+1.56), sin delta = -0.950
+        beste Anpassung: th_e = 0.04508, alpha = 4.1858, chi2 = 2.42 (3 Messgroessen, 2 Parameter): th13 = 0.02249, th12 = 0.30360, th23 = 0.49644, sin delta = -0.993
+   x_R (aus R), b -, mu = omega*: kleinster Winkel fuer th13: 0.0365 (alpha = 1.396): th12 = 0.32296, th23 = 0.49641, sin delta = +1.000
+        th_e = sqrt(m_e/m_mu), alpha = 0.2148: th13 = 0.02248, th12 = 0.36666 (JUNO +9.85), th23 = 0.49645 (+1.56), sin delta = +0.950
+        th_e = sqrt(m_e/m_mu), alpha = 2.5697: th13 = 0.02248, th12 = 0.28072 (JUNO -3.58), th23 = 0.49645 (+1.56), sin delta = +0.959
+        beste Anpassung: th_e = 0.04508, alpha = 2.0974, chi2 = 2.42 (3 Messgroessen, 2 Parameter): th13 = 0.02249, th12 = 0.30360, th23 = 0.49644, sin delta = +0.993

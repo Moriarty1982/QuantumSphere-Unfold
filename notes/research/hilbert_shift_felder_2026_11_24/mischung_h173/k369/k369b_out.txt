@@ -1,0 +1,37 @@
+k369b, Wolfram-Gegenrechnung (26.11.2026), tatsaechliche Ausgaben des Wolfram-Kerns.
+
+== Auswertung 1 ==
+Warnungen des Kerns:
+  Symbol::undefined2: Warning: Global symbols "Robs, RR, RR, Robs, RR, Robs" are undefined.
+  FindRoot::precw: The precision of the argument function (...) is less than WorkingPrecision (25.).
+  (Die erste Warnung stammt von der Vorpruefung des Werkzeugs; die Symbole sind im Code definiert. Die zweite betrifft nur die Stellenzahl.)
+Rueckgabe:
+Eigenwerte: {a + c, a - c/2 - Sqrt[8*b^2 + c^2]/2, (2*a - c + Sqrt[8*b^2 + c^2])/2}
+Spur-Kontrolle (soll 0): 0
+Summe-Quadrate-Kontrolle (soll 0): 0
+Block: {{a - c, Sqrt[2]*b}, {Sqrt[2]*b, a}}
+tan^2(2 phi) = 8 b^2/c^2 = 2*Cos[d]*Csc[d + Pi/6]^2*(Cos[d] - Sqrt[3]*Sin[d])
+Differenz zu 3 Tan[d+2Pi/3]^2 - 1 (soll 0): 0
+Ableitung nach rho (soll 0): 0
+x_th = 0.0648867021348
+x_R = 4.23214891349
+rho = 0.942258409370, K_nu = 0.629283636676
+x_th/x = 1.6394912, x_th/x_R = 0.015331857
+Block ungleiche Diagonale: {{-c + f, Sqrt[2]*b}, {Sqrt[2]*b, dd}}
+x = 0.039577341: {0.98388178, 1.0322364, 0.048354663, -0.23189798, -1.1796895}
+x = 4.2321489: {0.98628953, 1.0274209, 0.041131405, -0.23328517, -1.1792337}
+
+Hinweis: FindRoot lief fuer x_R in die um 4 Pi/3 verschobene Nullstelle (4,2321489 - 4 Pi/3 = 0,0433587; gleiches Spektrum).
+Die Zeile "x_th/x_R" dieser Auswertung ist deshalb nicht zu verwenden; Auswertung 2 rechnet mit Klammer nach.
+Das Vorzeichen von b ist Konvention (b und -b geben dieselben Winkel).
+
+== Auswertung 2 ==
+Warnung des Kerns: Symbol::undefined2: Warning: Global symbols "Robs, RR, RR, Robs" are undefined. (Vorpruefung, wie oben)
+Rueckgabe {x_R, x_th/x_R, x_th - x_R, x_th/x, {f, d, d - f, b, c} bei x_R, sin^2 theta_13 der Ein-Feld-Form bei x}:
+{0.0433587087044, 1.496509100, 0.02152799343, 1.639491207, {0.98628953, 1.0274209, 0.041131405, -0.23328517, -1.1792337}, 0.01426304232}
+
+== Vergleich mit Python (k369_out.txt) ==
+x_th 0,064887; x_R 0,043359; x_th/x 1,6395; x_th/x_R 1,4965; rho 0,94226; K_nu 0,62928; d - f 0,048355 und 0,041131;
+sin^2 theta_13 0,014263: alle Stellen stimmen ueberein.
+Symbolisch exakt (Nullreste): tan^2(2 phi) haengt nicht von rho ab und ist gleich 3 tan^2(delta + 2 Pi/3) - 1.
+Nicht in Wolfram nachgerechnet: Teil 4 (Maske) und Teil 5 (Drehung der geladenen Leptonen); beide nur numerisch in Python.

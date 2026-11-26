@@ -1,0 +1,84 @@
+== Kontrolle: eta = 0 gibt H173 (Elektron auf dem T-Eigenwert 1: delta = +-delta* + 2pi/3 bzw. 4pi/3) ==
+   delta = +delta* + 0*2pi/3: th13 = 0.49287 (+840.0), th12 = 0.67135 (+57.5), th23 = 0.97188 (+29.5), sin delta = +0.996
+   delta = -delta* + 0*2pi/3: th13 = 0.49287 (+840.0), th12 = 0.67135 (+57.5), th23 = 0.97188 (+29.5), sin delta = -0.996
+   delta = +delta* + 1*2pi/3: th13 = 0.01426 (-14.7), th12 = 0.32369 (+3.1), th23 = 0.50000 (+1.8), sin delta = +1.000
+   delta = -delta* + 1*2pi/3: th13 = 0.49287 (+840.0), th12 = 0.67135 (+57.5), th23 = 0.02812 (-31.6), sin delta = -0.996
+   delta = +delta* + 2*2pi/3: th13 = 0.49287 (+840.0), th12 = 0.67135 (+57.5), th23 = 0.02812 (-31.6), sin delta = +0.996
+   delta = -delta* + 2*2pi/3: th13 = 0.01426 (-14.7), th12 = 0.32369 (+3.1), th23 = 0.50000 (+1.8), sin delta = -1.000
+   Zirkulant bei delta*: Verhaeltnisse 0.016958, 0.243844; gemessen 0.016958, 0.243847
+   Hinweis: Die erste Fassung dieses Skripts benutzte in der Kontrolle und in Teil a den Zweig delta = delta* (Elektron nicht auf dem T-Eigenwert 1);
+   das wurde vor der Auswertung berichtigt. Teile b und c durchlaufen ohnehin alle sechs Zweige und sind unveraendert.
+
+== H174a: noetiger Term (aus k369, nicht blind) ==
+   x, b +: th_e = 0.05164, chi2 = 2.30; |dM| = 0.03941, zirkulant 0.00203, nicht zirkulant 0.03936 (reell 0.02783, imaginaer 0.02783); Rekonstruktion 6.1e-16
+        e-mu-Element der Stoerung in der Z3-Basis: Betrag/(lambda_mu - lambda_e) = 0.05155; Phasendifferenz zum e-mu-Element von N: +1.3708 rad; |N_emu| = 0.4130, |N_ee| = 0.2028
+        Projektion auf den nicht zirkulanten Teil von N: Koeffizient eta_eff = +0.00223, Kosinus des Winkels zwischen beiden = +0.0811
+   x, b -: th_e = 0.05164, chi2 = 2.30; |dM| = 0.03941, zirkulant 0.00203, nicht zirkulant 0.03936 (reell 0.02783, imaginaer 0.02783); Rekonstruktion 3.3e-16
+        e-mu-Element der Stoerung in der Z3-Basis: Betrag/(lambda_mu - lambda_e) = 0.05155; Phasendifferenz zum e-mu-Element von N: -1.3708 rad; |N_emu| = 0.4130, |N_ee| = 0.2028
+        Projektion auf den nicht zirkulanten Teil von N: Koeffizient eta_eff = +0.00223, Kosinus des Winkels zwischen beiden = +0.0811
+   x_R, b +: th_e = 0.04508, chi2 = 2.42; |dM| = 0.03440, zirkulant 0.00155, nicht zirkulant 0.03437 (reell 0.02430, imaginaer 0.02430); Rekonstruktion 1.1e-16
+        e-mu-Element der Stoerung in der Z3-Basis: Betrag/(lambda_mu - lambda_e) = 0.04502; Phasendifferenz zum e-mu-Element von N: +1.3215 rad; |N_emu| = 0.4134, |N_ee| = 0.2047
+        Projektion auf den nicht zirkulanten Teil von N: Koeffizient eta_eff = +0.00242, Kosinus des Winkels zwischen beiden = +0.1007
+   x_R, b -: th_e = 0.04508, chi2 = 2.42; |dM| = 0.03440, zirkulant 0.00155, nicht zirkulant 0.03437 (reell 0.02430, imaginaer 0.02430); Rekonstruktion 7.2e-16
+        e-mu-Element der Stoerung in der Z3-Basis: Betrag/(lambda_mu - lambda_e) = 0.04502; Phasendifferenz zum e-mu-Element von N: -1.3215 rad; |N_emu| = 0.4134, |N_ee| = 0.2047
+        Projektion auf den nicht zirkulanten Teil von N: Koeffizient eta_eff = +0.00242, Kosinus des Winkels zwischen beiden = +0.1007
+
+== H174b: Beimischung mit festem eta, Massen angepasst (blind) ==
+ Versatz x = 0.0395773407
+   eta = +tan x = +0.03960, b +: rho = 1.060871 (K = 0.70848), delta gefaltet = 0.216193 (pi/12 = 0.261799); th13 = 0.43502 (+736.7), th12 = 0.66322 (+56.2), th23 = 0.97275 (+29.6), sin delta = +0.997
+   eta = +tan x = +0.03960, b +: rho = 1.024066 (K = 0.68290), delta gefaltet = 0.206117 (pi/12 = 0.261799); th13 = 0.01207 (-18.6), th12 = 0.30178 (-0.3), th23 = 0.48328 (+0.8), sin delta = +0.991
+   eta = +tan x = +0.03960, b +: rho = 1.032666 (K = 0.68880), delta gefaltet = 0.242465 (pi/12 = 0.261799); th13 = 0.47710 (+811.8), th12 = 0.63533 (+51.8), th23 = 0.03107 (-31.4), sin delta = -0.962
+   eta = -tan x = -0.03960, b +: rho = 0.990651 (K = 0.66046), delta gefaltet = 0.253692 (pi/12 = 0.261799); th13 = 0.54574 (+934.4), th12 = 0.67954 (+58.7), th23 = 0.97102 (+29.5), sin delta = +0.994
+   eta = -tan x = -0.03960, b +: rho = 0.975125 (K = 0.65029), delta gefaltet = 0.238951 (pi/12 = 0.261799); th13 = 0.01742 (-9.0), th12 = 0.34685 (+6.8), th23 = 0.51790 (+2.8), sin delta = +0.993
+   eta = -tan x = -0.03960, b +: rho = 1.018550 (K = 0.67915), delta gefaltet = 0.228016 (pi/12 = 0.261799); th13 = 0.50780 (+866.6), th12 = 0.70357 (+62.5), th23 = 0.02744 (-31.6), sin delta = -0.994
+   eta = +tan 2x = +0.07932, b +: rho = 1.121034 (K = 0.75224), delta gefaltet = 0.208255 (pi/12 = 0.261799); th13 = 0.38110 (+640.4), th12 = 0.65556 (+55.0), th23 = 0.97333 (+29.6), sin delta = +0.998
+   eta = +tan 2x = +0.07932, b +: rho = 1.047513 (K = 0.69909), delta gefaltet = 0.190470 (pi/12 = 0.261799); th13 = 0.01064 (-21.1), th12 = 0.28101 (-3.5), th23 = 0.46758 (-0.2), sin delta = +0.962
+   eta = +tan 2x = +0.07932, b +: rho = 1.064845 (K = 0.71130), delta gefaltet = 0.260790 (pi/12 = 0.261799); th13 = 0.46158 (+784.1), th12 = 0.60120 (+46.5), th23 = 0.03539 (-31.0), sin delta = -0.911
+   eta = -tan 2x = -0.07932, b +: rho = 0.925370 (K = 0.61877), delta gefaltet = 0.255415 (pi/12 = 0.261799); th13 = 0.60309 (+1036.8), th12 = 0.68830 (+60.1), th23 = 0.96964 (+29.4), sin delta = +0.992
+   eta = -tan 2x = -0.07932, b +: rho = 0.949241 (K = 0.63369), delta gefaltet = 0.256493 (pi/12 = 0.261799); th13 = 0.02184 (-1.1), th12 = 0.37138 (+10.6), th23 = 0.53716 (+4.0), sin delta = +0.975
+   eta = -tan 2x = -0.07932, b +: rho = 0.981811 (K = 0.65465), delta gefaltet = 0.204142 (pi/12 = 0.261799); th13 = 0.52314 (+894.0), th12 = 0.73761 (+67.8), th23 = 0.02892 (-31.5), sin delta = -0.946
+   (gleiche Zweige mit anderem Vorzeichen von b oder sin delta sind zusammengefasst)
+   Zweige insgesamt: 48; vertraeglich (2s/2s/3s): 0; th13 innerhalb 3 sigma: 4; kleinster |z(th13)|: 1.1
+ Versatz x_R (Kontrolle) = 0.043359
+   eta = +tan x = +0.04339, b +: rho = 1.066587 (K = 0.71254), delta gefaltet = 0.215519 (pi/12 = 0.261799); th13 = 0.42907 (+726.0), th12 = 0.66297 (+56.2), th23 = 0.97044 (+29.4), sin delta = +0.997
+   eta = +tan x = +0.04339, b +: rho = 1.026368 (K = 0.68448), delta gefaltet = 0.204647 (pi/12 = 0.261799); th13 = 0.01294 (-17.0), th12 = 0.29908 (-0.7), th23 = 0.48180 (+0.7), sin delta = +0.990
+   eta = +tan x = +0.04339, b +: rho = 1.035774 (K = 0.69094), delta gefaltet = 0.244239 (pi/12 = 0.261799); th13 = 0.47479 (+807.7), th12 = 0.63269 (+51.4), th23 = 0.03404 (-31.1), sin delta = -0.959
+   eta = -tan x = -0.04339, b +: rho = 0.984534 (K = 0.65644), delta gefaltet = 0.253961 (pi/12 = 0.261799); th13 = 0.55042 (+942.7), th12 = 0.68066 (+58.9), th23 = 0.96837 (+29.3), sin delta = +0.994
+   eta = -tan x = -0.04339, b +: rho = 0.972657 (K = 0.64869), delta gefaltet = 0.240544 (pi/12 = 0.261799); th13 = 0.01934 (-5.6), th12 = 0.34804 (+6.9), th23 = 0.51960 (+2.9), sin delta = +0.992
+   eta = -tan x = -0.04339, b +: rho = 1.015055 (K = 0.67678), delta gefaltet = 0.225900 (pi/12 = 0.261799); th13 = 0.50881 (+868.4), th12 = 0.70690 (+63.0), th23 = 0.02976 (-31.4), sin delta = -0.994
+   eta = +tan 2x = +0.08694, b +: rho = 1.132356 (K = 0.76074), delta gefaltet = 0.206561 (pi/12 = 0.261799); th13 = 0.37057 (+621.6), th12 = 0.65472 (+54.9), th23 = 0.97107 (+29.5), sin delta = +0.998
+   eta = +tan 2x = +0.08694, b +: rho = 1.052008 (K = 0.70224), delta gefaltet = 0.187608 (pi/12 = 0.261799); th13 = 0.01127 (-20.0), th12 = 0.27670 (-4.2), th23 = 0.46479 (-0.4), sin delta = +0.958
+   eta = +tan 2x = +0.08694, b +: rho = 1.070973 (K = 0.71566), delta gefaltet = 0.263991 (pi/12 = 0.261799); th13 = 0.45768 (+777.1), th12 = 0.59587 (+45.7), th23 = 0.03899 (-30.8), sin delta = -0.906
+   eta = -tan 2x = -0.08694, b +: rho = 0.912810 (K = 0.61107), delta gefaltet = 0.255315 (pi/12 = 0.261799); th13 = 0.61410 (+1056.5), th12 = 0.69025 (+60.4), th23 = 0.96661 (+29.2), sin delta = +0.991
+   eta = -tan 2x = -0.08694, b +: rho = 0.944070 (K = 0.63042), delta gefaltet = 0.259864 (pi/12 = 0.261799); th13 = 0.02476 (+4.1), th12 = 0.37494 (+11.1), th23 = 0.54085 (+4.2), sin delta = +0.974
+   eta = -tan 2x = -0.08694, b +: rho = 0.974650 (K = 0.64998), delta gefaltet = 0.199369 (pi/12 = 0.261799); th13 = 0.52591 (+899.0), th12 = 0.74423 (+68.8), th23 = 0.03150 (-31.3), sin delta = -0.940
+   (gleiche Zweige mit anderem Vorzeichen von b oder sin delta sind zusammengefasst)
+   Zweige insgesamt: 48; vertraeglich (2s/2s/3s): 0; th13 innerhalb 3 sigma: 0; kleinster |z(th13)|: 4.1
+
+== H174b, Zusatz (nicht vorab festgelegt, nur zur Einordnung): welches eta wuerde passen? ==
+   x, b +: bestes eta = -0.0630 (Raster 0,001), chi2 = 114.9, rho = 0.96000; th13 = 0.01985 (-4.7), th12 = 0.36114 (+9.0), th23 = 0.52908 (+3.5), sin delta = +0.983
+   x, b -: bestes eta = -0.0630 (Raster 0,001), chi2 = 114.9, rho = 0.96000; th13 = 0.01985 (-4.7), th12 = 0.36114 (+9.0), th23 = 0.52908 (+3.5), sin delta = -0.983
+   x_R, b +: bestes eta = -0.0510 (Raster 0,001), chi2 = 85.6, rho = 0.96775; th13 = 0.02016 (-4.1), th12 = 0.35263 (+7.7), th23 = 0.52320 (+3.1), sin delta = +0.990
+   x_R, b -: bestes eta = -0.0510 (Raster 0,001), chi2 = 85.6, rho = 0.96775; th13 = 0.02016 (-4.1), th12 = 0.35263 (+7.7), th23 = 0.52320 (+3.1), sin delta = -0.990
+
+== H174c: Baumpunkt plus Beimischung (blind) ==
+   N am Baumpunkt: [[1.0, 0.0, -1.224745], [0.0, 1.0, -0.0], [-1.224745, -0.0, 1.0]]; Eigenwerte [-0.224745, 1.0, 2.224745]
+   delta = +pi/12 + 0*2pi/3: Eigenwerte am Baumpunkt [0.0, 0.633975, 2.366025]; Loesungen eta: [-0.028699, 0.034748]
+        eta = -0.028699: m_tau vorhergesagt 1667.19 MeV (gemessen 1776.93; relativ -0.0618); th13 = 0.53676 (+918.4), th12 = 0.67315 (+57.7), th23 = 1.00000 (+31.2), sin delta = +0.000
+        eta = +0.034748: m_tau vorhergesagt 1271.03 MeV (gemessen 1776.93; relativ -0.2847); th13 = 0.45527 (+772.8), th12 = 0.65851 (+55.5), th23 = 1.00000 (+31.2), sin delta = +0.000
+   delta = -pi/12 + 0*2pi/3: Eigenwerte am Baumpunkt [0.0, 0.633975, 2.366025]; Loesungen eta: [-0.028699, 0.034748]
+        eta = -0.028699: m_tau vorhergesagt 1667.19 MeV (gemessen 1776.93; relativ -0.0618); th13 = 0.53676 (+918.4), th12 = 0.67315 (+57.7), th23 = 1.00000 (+31.2), sin delta = -0.000
+        eta = +0.034748: m_tau vorhergesagt 1271.03 MeV (gemessen 1776.93; relativ -0.2847); th13 = 0.45527 (+772.8), th12 = 0.65851 (+55.5), th23 = 1.00000 (+31.2), sin delta = -0.000
+   delta = +pi/12 + 1*2pi/3: Eigenwerte am Baumpunkt [0.0, 0.633975, 2.366025]; Loesungen eta: [-0.489795, -0.131976]
+        eta = -0.489795: m_tau vorhergesagt 4231.27 MeV (gemessen 1776.93; relativ +1.3812); th13 = 0.39097 (+658.0), th12 = 0.05918 (-38.2), th23 = 0.54541 (+4.4), sin delta = -0.000
+        eta = -0.131976: m_tau vorhergesagt 2534.31 MeV (gemessen 1776.93; relativ +0.4262); th13 = 0.00392 (-33.1), th12 = 0.42015 (+18.2), th23 = 0.56105 (+5.4), sin delta = +0.000
+   delta = -pi/12 + 1*2pi/3: Eigenwerte am Baumpunkt [0.0, 0.633975, 2.366025]; Loesungen eta: [-0.030686, 0.032021]
+        eta = -0.030686: m_tau vorhergesagt 1443.73 MeV (gemessen 1776.93; relativ -0.1875); th13 = 0.51031 (+871.1), th12 = 0.69127 (+60.6), th23 = 0.00069 (-33.5), sin delta = -0.000
+        eta = +0.032021: m_tau vorhergesagt 1499.86 MeV (gemessen 1776.93; relativ -0.1559); th13 = 0.48859 (+832.3), th12 = 0.63710 (+52.1), th23 = 0.00084 (-33.5), sin delta = -0.000
+   delta = +pi/12 + 2*2pi/3: Eigenwerte am Baumpunkt [0.0, 0.633975, 2.366025]; Loesungen eta: [-0.030686, 0.032021]
+        eta = -0.030686: m_tau vorhergesagt 1443.73 MeV (gemessen 1776.93; relativ -0.1875); th13 = 0.51031 (+871.1), th12 = 0.69127 (+60.6), th23 = 0.00069 (-33.5), sin delta = +0.000
+        eta = +0.032021: m_tau vorhergesagt 1499.86 MeV (gemessen 1776.93; relativ -0.1559); th13 = 0.48859 (+832.3), th12 = 0.63710 (+52.1), th23 = 0.00084 (-33.5), sin delta = +0.000
+   delta = -pi/12 + 2*2pi/3: Eigenwerte am Baumpunkt [0.0, 0.633975, 2.366025]; Loesungen eta: [-0.489795, -0.131976]
+        eta = -0.489795: m_tau vorhergesagt 4231.27 MeV (gemessen 1776.93; relativ +1.3812); th13 = 0.39097 (+658.0), th12 = 0.05918 (-38.2), th23 = 0.54541 (+4.4), sin delta = +0.000
+        eta = -0.131976: m_tau vorhergesagt 2534.31 MeV (gemessen 1776.93; relativ +0.4262); th13 = 0.00392 (-33.1), th12 = 0.42015 (+18.2), th23 = 0.56105 (+5.4), sin delta = -0.000
+   Faelle: 12; th13 innerhalb 3 sigma: 0; Winkel 2s/2s/3s: 0; m_tau auf 1e-3: 0
