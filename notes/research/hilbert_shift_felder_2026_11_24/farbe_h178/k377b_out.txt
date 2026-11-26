@@ -1,0 +1,9 @@
+k377b (Wolfram Language, MCP-Kernel, 26.11.2026), Ausgabe:
+{1/2, 2*(kap*(-1 + sa) + B*sa^2), sa/(2*kap - 2*kap*sa - 2*B*sa^2), {{A -> -1.070179414168347, B -> 1.3747637505363401}},
+ {{A -> -0.2907756597194726, B -> 0.19974639644721628}}, 0.3892230260475064, 38.59983988167848,
+ {1.8886788893656354, 1.6388363890080755}, {1.3777214214327147, 0.8442190190641922}}
+
+Bedeutung: t* bei alpha = 0 exakt 1/2 (theta = pi/4); V''; d t*/dA (ungleich null fuer sa != 0); Koeffizienten fuer R1 und R2 (kappa = -1);
+t* und theta fuer reinen Farbanteil unter R1; V'' fuer (d, u) unter R1 und R2 (alle positiv). Stimmt mit k377 auf alle gezeigten Stellen.
+Warnung (kein Fehler): Symbol::undefined2 fuer V, A, B (Vorab-Scan des Kernels; A, B sind absichtlich freie Symbole).
+Die Oktonionen-Aussagen (H178a) sind in k377 explizit gerechnet (Cayley-Dickson) und hier nicht wiederholt.

@@ -1,0 +1,32 @@
+== H178a: J auf ganz O (U = e7) ==
+   J^2 = +1 auf {1, U}: Fehler 0.0e+00;  J^2 = -1 auf e1..e6: Fehler 0.0e+00
+   Bilder der Einheiten: J(e0) = +e7; J(e1) = +e6; J(e2) = -e5; J(e3) = -e4; J(e4) = +e3; J(e5) = +e2; J(e6) = -e1; J(e7) = +e0
+   J tauscht x0 und xU, erhaelt |c|^2 und N (1000 Zufallselemente): groesste Abweichung 7.1e-15
+   Ebene {1, c}, c = e1: J(cos t + sin t c) hat Komponenten nur auf [6, 7] (also auf U und U c): die Ebene wird nicht auf sich abgebildet.
+   Folge: Die Abbildung theta -> pi/2 - theta gibt es nur in der Ebene {1, U}.
+
+== H178b: allgemeinstes Potential bis Grad 4, invariant unter SU(3)_c, Konjugation und J ==
+   Invarianten eines Elements unter SU(3)_c: x0, xU, q = |c|^2. Konjugation: xU -> -xU. J: x0 <-> xU.
+   Grad 2: s = x0^2 + xU^2, q.  Grad 4: s^2, s q, q^2, p = x0^2 xU^2.  Auf N = s + q = 1: V = A q + B q^2 + kappa p + konst. (drei Koeffizienten).
+   V(t), t = sin^2 theta: A*t*sin(alpha)**2 + B*t**2*sin(alpha)**4 + kappa*t*(1 - t)*cos(alpha)**2
+   stationaer bei t* = (-A*sin(alpha)**2 - kappa*cos(alpha)**2)/(2*(B*sin(alpha)**4 - kappa*cos(alpha)**2)) ;  V'' = 2*B*sin(alpha)**4 - 2*kappa*cos(alpha)**2
+   alpha = 0: t* = 1/2 (theta = pi/4, unabhaengig von A, B);  V'' = -2*kappa (Minimum genau fuer kappa < 0)
+   d t*/dA = -sin(alpha)**2/(2*B*sin(alpha)**4 - 2*kappa*cos(alpha)**2)  -> fuer alpha != 0 haengt der Winkel von den Koeffizienten ab.
+   Urteil H178b: BESTAETIGT (pi/4 ist nur fuer alpha = 0 festgelegt).
+
+== H178c: ein Potential, Sektoren nur durch den Farbanteil unterschieden ==
+-- R1 (sin^2 alpha = 1 - |Q|): A/|kappa| = -1.0702, B/|kappa| = +1.3748; V''(d) = +1.8887, V''(u) = +1.6388; Leptonen V'' = +2 (kappa < 0)
+   Urteil: VERTRAEGLICH (stabile Loesung im ganzen 3-sigma-Band). Zaehlung: zwei Messgroessen (theta_d, theta_u), zwei freie Verhaeltnisse (A/kappa, B/kappa): keine Bestaetigung.
+   Bericht Q = 0: reiner Farbanteil, t* = 0.3892, theta = 38.60 Grad, K = 0.5458, V'' = +2.7495
+   Verlauf theta(sin^2 alpha): 0.00: 45.00, 0.10: 47.93, 0.33: 52.21, 0.50: 51.56, 0.67: 48.11, 0.90: 41.44
+-- R2 (sin^2 alpha = |Q|): A/|kappa| = -0.2908, B/|kappa| = +0.1997; V''(d) = +1.3777, V''(u) = +0.8442; Leptonen V'' = +2 (kappa < 0)
+   Urteil: VERTRAEGLICH (stabile Loesung im ganzen 3-sigma-Band). Zaehlung: zwei Messgroessen (theta_d, theta_u), zwei freie Verhaeltnisse (A/kappa, B/kappa): keine Bestaetigung.
+   Bericht Q = 0: alpha = 0, also theta = 45 Grad, K = 2/3 (wie die geladenen Leptonen).
+   Verlauf theta(sin^2 alpha): 0.00: 45.00, 0.10: 45.86, 0.33: 48.11, 0.50: 50.00, 0.67: 52.21, 0.90: 56.22
+
+== Vorab bekannt (nicht blind): Farbe allein ==
+   gleiches alpha fuer beide Quarktypen gibt theta_u = theta_d; gemessen 4.093 Grad Unterschied (92 sigma). Ausgeschlossen.
+
+== Bericht: Variante <J> ohne Konjugation ==
+   Zusaetzlich erlaubt: m = x0 xU (Grad 2) sowie m s, m q (Grad 4); m^2 = p. Auf N = 1 drei weitere Koeffizienten.
+   alpha = 0: m = sin(2 theta)/2, d m/d theta bei pi/4 = 0 -> pi/4 bleibt stationaer; fuer alpha != 0 kommen weitere freie Zahlen dazu (keine schaerfere Aussage).
