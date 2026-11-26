@@ -4,7 +4,7 @@ Veröffentlichungsnachtrag vom **25.11.2026**: Der eigenständige englische Phys
 Construction“ ist als eigener Record in Fassung 1.0.0 erschienen ([Zenodo](https://zenodo.org/records/24539644), DOI 10.5281/zenodo.24539644).
 49 Seiten; er berichtet, was die Konstruktion festlegt, was sie annimmt und wo sie endet, nach dem Companion bis Runde v4.10.0-r61. Er ersetzt
 nicht das Physik-Paper im Companion-Record v5.4.0. Kein offenes Problem ist geschlossen. Quelle `paper/physics-standalone/`, Tag `physics-paper-v1.0.0`.
-Nachtrag **26.11.2026**: Die Quelle im Repo ist nach einer Richtigkeitsprüfung berichtigt und um die Befunde H128–H156 ergänzt (50 Seiten, Runden bis v4.10.0-r64; [Liste der Änderungen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r64_nachtrag_audit/README.md)). Die Zenodo-Fassung 1.0.0 ist unverändert; eine neue Fassung ist nicht veröffentlicht.
+Nachtrag **26.11.2026**: Die Quelle im Repo ist nach einer Richtigkeitsprüfung berichtigt und um die Befunde H128–H156 ergänzt (50 Seiten, Runden bis v4.10.0-r65; [Liste der Änderungen](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r64_nachtrag_audit/README.md)). Die Zenodo-Fassung 1.0.0 ist unverändert; eine neue Fassung ist nicht veröffentlicht.
 
 Veröffentlichungsnachtrag vom **24.11.2026**: Der deutsche Preprint ist in Fassung 0.3.0 erschienen ([Zenodo](https://zenodo.org/records/24497991),
 DOI 10.5281/zenodo.24497991, Concept-DOI 10.5281/zenodo.24405552, Vorgänger 0.2.0 10.5281/zenodo.24481107). 58 Seiten; neu ist Abschnitt 5.7

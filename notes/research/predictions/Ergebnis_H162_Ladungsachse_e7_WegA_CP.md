@@ -57,4 +57,4 @@ Q̄ = 1 − Q vor (komplexe Konjugation der Ladung).
 ## Nicht gerechnet
 - Nachgetragen in der Erkundung k361 (`ladungsachse_h162/README.md`): die Ladungen der Form ½ − (i/2)R_u. Das relative Vorzeichen hängt an der Setzung „dieselbe Seite der Multiplikation für beide Sektoren“.
 - Ob r14.4 (Abbildung nach ℂ⊗ℍ⊗𝕆) über Teil c hinaus alle Aussagen behält.
-- Eine Runde im Companion: Der Befund steht als Notiz; r64.2 („nicht gerechnet“) ist damit beantwortet und wird in der nächsten Sammelrunde nachgetragen.
+- Eine Runde im Companion: nachgetragen als v4.10.0-r65 (`notes/research/v4_10_0_r65_ladungsachse/`).
