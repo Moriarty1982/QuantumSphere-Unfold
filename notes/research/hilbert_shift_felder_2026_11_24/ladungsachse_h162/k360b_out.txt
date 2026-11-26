@@ -1,0 +1,23 @@
+Ausgabe von k360b_exakt.wl (Wolfram Language, exakt), Lauf vom 26.11.2026.
+Erster Lauf ungueltig (Inverse einer singulaeren 9x9-Matrix fuer P3, Namenskonflikt bei der symbolischen Achse);
+danach P3 ueber PseudoInverse und eigene Symbolnamen. Unten der gueltige Lauf.
+
+dim g2 = 14; dim su(3)_c = 8
+Rang P3 = 6; P3^2 = P3: True; P3 vertauscht mit su(3)_c: True
+R_x vertauschen mit su(3)_c: True
+[R7,R8] + 2 R15 = 0 auf H_n: True; [R7,R8] - 2 R15 = 0 farbig: True
+Bargmann Leptonen = 1/4 - I/4; Quarks = 1/4 + I/4
+u = e7: char. Polynom = ((-1 + x)^2*x^2*(-2 + 3*x)^6*(-1 + 3*x)^6)/531441
+   [Q,su3] = 0: True; conj(Q) = 1 - Q: True; [R_x,Q] = 0: True; [Q,psi] = 0: False
+   O_0: Leck^2 = 0; |Q_u - Q_S|^2 auf O_0 = 0
+u = -e7/2 + (Sqrt3/2) e15: char. Polynom = ((-1 + x)^2*x^2*(-2 + 3*x)^6*(-1 + 3*x)^6)/531441
+   [Q,su3] = 0: True; conj(Q) = 1 - Q: True; [R_x,Q] = 0: True; [Q,psi] = 0: False
+   O_0: Leck^2 = 3/8; |Q_u - Q_S|^2 auf O_0 = 9/8
+u = e8 (Q_*): char. Polynom = ((-1 + x)^2*x^2*(-2 + 3*x)^6*(-1 + 3*x)^6)/531441
+   [Q,su3] = 0: True; conj(Q) = 1 - Q: True; [R_x,Q] = 0: True; [Q,psi] = 0: True
+   O_0: Leck^2 = 1/2; |Q_u - Q_S|^2 auf O_0 = 1/2
+u = (2 e7 + e8 + 2 e15)/3: char. Polynom = ((-1 + x)^2*x^2*(-2 + 3*x)^6*(-1 + 3*x)^6)/531441
+   [Q,su3] = 0: True; conj(Q) = 1 - Q: True; [R_x,Q] = 0: True; [Q,psi] = 0: False
+   O_0: Leck^2 = 5/18; |Q_u - Q_S|^2 auf O_0 = 1/18
+symbolisch: L_u^2 auf H_n (Diagonale, mit uc^2 = 1 - ua^2 - ub^2) = {-1, -1, -1, -1}; Nebendiagonale null: True; [L_u, R_x] = 0 auf H_n: True
+Warnung des Kernels: "Symbol::undefined2" (Hinweis auf Definitionen in derselben Eingabe, kein Fehler). Keine weiteren Meldungen.

@@ -1,0 +1,44 @@
+Kontrolle: |Q_e8 - Q_*| = 0.0e+00; e7 e8 = +e15: True; Raenge P0, P3, P3bar = 4, 6, 6
+
+H162a, H162b
+  u = e7: Spektrum {0: 2, 0.3333: 6, 0.6667: 6, 1: 2} (Summe 16); |[Q,su3]| 6.9e-16; |Qquer-(1-Q)| 8.7e-16; |[R_x,Q]| 7.5e-16; |[L_x,Q]| 2.00
+      [R7,R8]/R15: Leptonen -2.000000, Quarks +2.000000; Bargmann Leptonen 0.250000-0.250000j, Quarks 0.250000+0.250000j
+      Teilchenarten (nu, e+, u, dbar): Dimension und |Casimir - 3/4|: [(2, 1.6043243562278149e-49), (2, 3.3306690738754696e-16), (6, 7.774348620928471e-16), (6, 4.577566798522237e-16)]
+  u = -e7/2 + s3 e15: Spektrum {0: 2, 0.3333: 6, 0.6667: 6, 1: 2} (Summe 16); |[Q,su3]| 7.1e-16; |Qquer-(1-Q)| 8.7e-16; |[R_x,Q]| 7.5e-16; |[L_x,Q]| 2.00
+      [R7,R8]/R15: Leptonen -2.000000, Quarks +2.000000; Bargmann Leptonen 0.250000-0.250000j, Quarks 0.250000+0.250000j
+      Teilchenarten (nu, e+, u, dbar): Dimension und |Casimir - 3/4|: [(2, 1.1102230246251565e-16), (2, 1.1102230246251565e-16), (6, 1.1150912609939193e-15), (6, 1.2215606906376903e-15)]
+  u = -e7/2 - s3 e15: Spektrum {0: 2, 0.3333: 6, 0.6667: 6, 1: 2} (Summe 16); |[Q,su3]| 7.1e-16; |Qquer-(1-Q)| 8.7e-16; |[R_x,Q]| 7.5e-16; |[L_x,Q]| 2.00
+      [R7,R8]/R15: Leptonen -2.000000, Quarks +2.000000; Bargmann Leptonen 0.250000-0.250000j, Quarks 0.250000+0.250000j
+      Teilchenarten (nu, e+, u, dbar): Dimension und |Casimir - 3/4|: [(2, 1.1102230246251565e-16), (2, 1.1102230246251565e-16), (6, 1.1150912609939193e-15), (6, 1.2215606906376903e-15)]
+  u = e8 (Q_*, Kontrolle): Spektrum {0: 2, 0.3333: 6, 0.6667: 6, 1: 2} (Summe 16); |[Q,su3]| 6.6e-16; |Qquer-(1-Q)| 8.7e-16; |[R_x,Q]| 7.5e-16; |[L_x,Q]| 2.00
+      [R7,R8]/R15: Leptonen -2.000000, Quarks +2.000000; Bargmann Leptonen 0.250000-0.250000j, Quarks 0.250000+0.250000j
+      Teilchenarten (nu, e+, u, dbar): Dimension und |Casimir - 3/4|: [(2, 2.237726045655905e-16), (2, 4.47545209131181e-16), (6, 8.891536662303994e-16), (6, 6.667118051786499e-16)]
+  200 Zufallsachsen: a erfuellt 200/200, b erfuellt 200/200
+
+H162c (Zuordnungen zur Dixon-Seite, wie k252 A3)
+  u = e7: Verflechter (Farbe, Ladung) Dimension 20; Zuordnungen vollen Rangs: Leptonen 24 mit det [-1], Quarks 24 mit det [1]
+  u = -e7/2 + s3 e15: Verflechter (Farbe, Ladung) Dimension 20; Zuordnungen vollen Rangs: Leptonen 24 mit det [-1], Quarks 24 mit det [1]
+  u = -e7/2 - s3 e15: Verflechter (Farbe, Ladung) Dimension 20; Zuordnungen vollen Rangs: Leptonen 24 mit det [-1], Quarks 24 mit det [1]
+  u = e8 (Q_*, Kontrolle): Verflechter (Farbe, Ladung) Dimension 20; Zuordnungen vollen Rangs: Leptonen 24 mit det [-1], Quarks 24 mit det [1]
+
+H162d (Einschraenkung auf die Oktonion-Kopien)
+  u = e7: O_0: Leck 2.160e-16, |Q_u - Q_8(Kopie)| 2.925e-16; O_120: Leck 6.124e-01, |Q_u - Q_8(Kopie)| 1.061e+00; O_240: Leck 6.124e-01, |Q_u - Q_8(Kopie)| 1.061e+00
+  u = -e7/2 + s3 e15: O_0: Leck 6.124e-01, |Q_u - Q_8(Kopie)| 1.061e+00; O_120: Leck 3.500e-16, |Q_u - Q_8(Kopie)| 3.261e-16; O_240: Leck 6.124e-01, |Q_u - Q_8(Kopie)| 1.061e+00
+  u = -e7/2 - s3 e15: O_0: Leck 6.124e-01, |Q_u - Q_8(Kopie)| 1.061e+00; O_120: Leck 6.124e-01, |Q_u - Q_8(Kopie)| 1.061e+00; O_240: Leck 3.684e-16, |Q_u - Q_8(Kopie)| 3.357e-16
+  u = e8 (Q_*, Kontrolle): O_0: Leck 7.071e-01, |Q_u - Q_8(Kopie)| 7.071e-01; O_120: Leck 7.071e-01, |Q_u - Q_8(Kopie)| 7.071e-01; O_240: Leck 7.071e-01, |Q_u - Q_8(Kopie)| 7.071e-01
+
+H162e (Erkundung)
+  u = e7: |[Q_u, psi]| = 1.7321; dim ker Q_u = 2; |(1 - P_N) psi P_N| = 1.2247
+      Hurwitz-Einheiten T_g vertauschen mit Q_u: 6.3e-16; Ersatzzyklus exp(-(pi/3)R_u) auf N: Ordnung 3 projektiv True; (rho^2, Bargmann-Phase) der Bahnen: [(0.5, 0.785398)] (pi/4 = 0.785398)
+  u = -e7/2 + s3 e15: |[Q_u, psi]| = 1.7321; dim ker Q_u = 2; |(1 - P_N) psi P_N| = 1.2247
+      Hurwitz-Einheiten T_g vertauschen mit Q_u: 6.3e-16; Ersatzzyklus exp(-(pi/3)R_u) auf N: Ordnung 3 projektiv True; (rho^2, Bargmann-Phase) der Bahnen: [(0.283494, 2.088954), (0.716506, 0.324947)] (pi/4 = 0.785398)
+  u = -e7/2 - s3 e15: |[Q_u, psi]| = 1.7321; dim ker Q_u = 2; |(1 - P_N) psi P_N| = 1.2247
+      Hurwitz-Einheiten T_g vertauschen mit Q_u: 6.3e-16; Ersatzzyklus exp(-(pi/3)R_u) auf N: Ordnung 3 projektiv True; (rho^2, Bargmann-Phase) der Bahnen: [(0.283494, 2.088954), (0.716506, 0.324947)] (pi/4 = 0.785398)
+  u = e8 (Q_*, Kontrolle): |[Q_u, psi]| = 0.0000; dim ker Q_u = 2; |(1 - P_N) psi P_N| = 0.0000
+      Hurwitz-Einheiten T_g vertauschen mit Q_u: 6.3e-16; Ersatzzyklus exp(-(pi/3)R_u) auf N: Ordnung 3 projektiv True; (rho^2, Bargmann-Phase) der Bahnen: [(0.5, 0.785398)] (pi/4 = 0.785398)
+
+Entscheidungen
+  H162a: bestaetigt
+  H162b: bestaetigt
+  H162c: bestaetigt
+  H162d: bestaetigt
