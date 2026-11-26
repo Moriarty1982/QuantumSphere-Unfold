@@ -475,5 +475,16 @@
     ],
     "guard": "Origin of θ = π/4 and δ = 2/9",
     "obligation": "θ = π/4 is set by the Koide requirement, not derived; δ, scale and quarks remain open; a potential or the field equation must fix θ. OP3 remains open; sign open."
+  },
+  {
+    "id": "op5-lambda-photon-superposition-h159",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/lambda_photon_h159/Ergebnis_H159_Lambda_Photon_Superposition.md",
+    "title": "At the photon point the net charge vanishes with nonzero parts; the ratio γ_L⁵ does not come from the superposition",
+    "excerpt": "**Ungerade ist allein die Ladung** Q = J_i = ω(a² − b²)",
+    "assumptions": [
+      "Photon frame read as the fixed point of the antilinear swap J (z ↦ i·z̄) acting on the shadow ellipse; HC potential η(B − μ₀²A)² (k297) and current versions F, S (k299) are set; β_sym inserted (OP1); partly not blind."
+    ],
+    "guard": "Net/gross vacuum density and the weight-rule exponent 5",
+    "obligation": "Identifying the vacuum density with the charge or the HC potential is set; the exponent 5 comes only from the weight rule (v4.8.0-r03.1); with a swap-symmetric potential the M state is not a vacuum and what holds μ = β_sym² is open. Λ remains an input; OP5 remains open."
   }
 ]

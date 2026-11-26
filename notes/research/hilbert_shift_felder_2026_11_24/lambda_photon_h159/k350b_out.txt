@@ -1,0 +1,24 @@
+Ausgabe von k350b_gegenprobe.wl (Wolfram-Cloud-Kernel, 26.11.2026), Print-Zeilen in InputForm.
+Warnungen des Kernels: Symbol::undefined2 (betrifft nur die Auswertungsumgebung), Power::infy (0^(-2): Verhaeltnisse mit Nenner null in P4,
+erwartet, dort wo die Groesse im M-Zustand verschwindet; sie werden als nicht endlich aussortiert), Simplify::gtime (Zeitgrenze eines
+Teilschritts von Simplify, das Ergebnis ist trotzdem der Nullrest), General::messages. Keine weiteren Meldungen.
+Symbolische Nullreste: P1, P2, P6, P7, V(T) - V(M) in P12. Rueckgabewerte: alle anderen.
+
+P1 J z - z(I conj b, I conj a): 0
+P2 |C a|^2 - |C b|^2: 0 ; Rang von C: 2 ; Im(E^(-I Pi/4) C z): 0
+P3 J_t: {0, (a^2 - b^2)*w, 0, 2*a*b*w} ; unter a <-> b: J_i -> (-a^2 + b^2)*w ; bei a = b: {0, 0, 0, 2*a^2*w}
+P4 Anzahl Verhaeltnisse: 40 ; gleich K^5 oder K^-5 als Identitaet: 0 ; gamma_L^5 = 22.5290
+P5 Exponenten log(r)/log(gamma_L) der endlichen positiven Verhaeltnisse: {-1., -0.8467, -0.7068, -0.2932, -0.1399, 0., 0.1533, 0.2932, 0.3066, 0.4059, 0.4465, 0.5864, 0.9504, 0.9728, 1., 1.1533, 1.2932, 1.3786, 1.9231}
+P6 Limit von P/tau^4 bei mu -> 1 minus J_i^4/N^2: 0
+P7 Aenderung von J_i^4/N^2 links um i, j, k: {0, 0, 0} ; rechts um i: 0
+P8 Kosten b = (1 + d) a: J_i^4/N^2 = 4*a^4*d^4*w^4 ; J_i^2/N = 2*a^2*d^2*w^2
+P9 umskalierte Fassung F, Koeffizient von d^2: (4*a^4*(-1 + m)^2*(1 + m)^2*w^4)/m^2 ; bei mu = 1: 0 ; bei mu_M (a = w = 1): 36.28504
+P10 Massenmatrix: {{f^2*gL^2, -(f^2*gL*gR*Cos[2*th])}, {-(f^2*gL*gR*Cos[2*th]), f^2*gR^2}} ; det: f^4*gL^2*gR^2*Sin[2*th]^2 ; Eigenwerte bei 45 Grad: {f^2*gL^2, f^2*gR^2} ; det bei th = 0: 0
+P11 V(A,B) - V(B,A): -((-A + B)*(A + B)*eta*(-1 + m0)*(1 + m0)*(1 + m0^2))
+P12 mu0 = 1: V(P) = 0 ; V(M) = (eta*f^4*(-1 + mu)^2*(1 + mu)^2)/(1 + mu^2)^2 ; V(T) - V(M) = 0 ; V(R) = eta f^4
+P13 cos^2(2 th) bei mu_M: 0.6939851 ; 1 - mu_M: 0.6982168 ; reelle Loesungen von cos^2(2 th) = 1 - mu: {0, 1.00000, 0.295598} ; cos(2 th) in K: (2*k)/(1 + k^2)
+P14 mu0 = mu_M: V(P)/V(R) = ((-1 + m0)^2*(1 + m0)^2)/(4*m0^4) = 24.9010
+P15 Massenquadrate am Vakuum A = B: {8*eta*f^2, 0, 0, 0}
+
+Hinweis: Die Gegenprobe fuehrt 8 Groessen (40 Verhaeltnisse); k350 fuehrt 10 (50), dort zusaetzlich V_HC und Fassung F mit mu0 = mu_M,
+deren Verhaeltnisse alle nicht endlich sind (Nenner null im M-Zustand). Die 19 verschiedenen endlichen Exponenten stimmen mit k350 ueberein.
