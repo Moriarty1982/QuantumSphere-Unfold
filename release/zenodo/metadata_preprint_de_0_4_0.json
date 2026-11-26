@@ -46,6 +46,6 @@
       "scheme": "url"
     }
   ],
-  "notes": "Deutschsprachiger Preprint, Fassung 0.4.0. Version-DOI wird bei der Reservierung vergeben und dann hier und auf der Titelseite eingetragen. Quellstand der Literaturlinks: Commits 3fc66afd (Runden r60 bis r67, Merge von PR #337) und c0657a6a (Nachrechnung k358, Merge von PR #338) auf main.",
+  "notes": "Deutschsprachiger Preprint, Fassung 0.4.0. Version-DOI 10.5281/zenodo.24563916 (reserviert am 26.11.2026). Quellstand der Literaturlinks: Commits 3fc66afd (Runden r60 bis r67, Merge von PR #337) und c0657a6a (Nachrechnung k358, Merge von PR #338) auf main.",
   "publication_date": "2026-11-26"
 }
