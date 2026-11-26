@@ -1,0 +1,133 @@
+== Kontrollen ==
+   dim su(3)_c = 8; R_U = -L_U auf dem Farbblock: 0.0e+00; Ladungen auf den 36 Farbrichtungen: {0.333333: 18, 0.666667: 18}
+   C tauscht die Ladungen (C Q C = 1 - Q): 0.0e+00; P und tau vertauschen mit Q: 0.0e+00, 0.0e+00
+
+== H185a, b, c: invariante quadratische Formen auf den 36 Farbrichtungen ==
+   nur Farbe: 36; mit P: 12; davon ladungserhaltend (vertauschen mit i): 6, ladungsmischend (antivertauschen): 6
+   mit P und C: 6; ladungserhaltend mit P und C: 3; ladungserhaltend mit P und tau: 4; mit P, C und tau: 2
+   mit P: Vielfachheiten in 25 Proben: {(6, 6, 6, 6, 6, 6): 25}
+   alle 12 Formen vertauschen mit dem Platztausch (Fourier-Eigenrichtungen): 1.0e-14
+   Urteil H185a: BESTAETIGT (12 Formen, sechs Frequenzquadrate je sechsfach)
+   Urteil H185b: BESTAETIGT (6 ladungserhaltende, 6 ladungsmischende Formen)
+   ladungserhaltend mit P: Vielfachheiten (Ladung 1/3, Ladung 2/3): {'((6, 6, 6), (6, 6, 6))': 25}; Unterschied der beiden Spektren (relativ) zwischen 0.71 und 4.64
+   mit C dazu: Unterschied der Spektren fuer 1/3 und 2/3 in 25 Proben hoechstens 3.3e-15
+   Urteil H185c: BESTAETIGT (mit C gleiche Spektren fuer beide Ladungen)
+   ladungserhaltend mit P und tau: Vielfachheiten {(6, 6, 12, 12): 25}
+   Beispiel mit ladungsmischendem Anteil (Gewicht 0,3): Ladungserwartungswerte der Eigenrichtungen [0.3344 0.3383 0.4878 0.5122 0.6617 0.6656] (nicht mehr 1/3 und 2/3)
+   Bericht: freie Groessen: Farbe + P 12; ladungserhaltend 6 (fuer sechs Massen); mit C 3; mit tau 4.
+
+== H185d: Spurpotentiale ohne expliziten Ladungsoperator ==
+   -- delta = 2/9 --
+      Re Tr W^2                 : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2                 : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Tr W Wq                   : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [4.], 2/3: [4.]
+      Re Tr W^3                 : Invarianzdefekt 2e-14; ladungsungerade 8.41e-30; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^3                 : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 Wq              : Invarianzdefekt 2e-14; ladungsungerade 8.88e-16; ladungsmischend 3.33e-01; Frequenzquadrate 1/3: [ 2.48225  9.67915 11.8386 ], 2/3: [ 2.48225  9.67915 11.8386 ]
+      Im Tr W^2 Wq              : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 Wu              : Invarianzdefekt 3e-14; ladungsungerade 5.05e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 Wu              : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 Wuq             : Invarianzdefekt 3e-14; ladungsungerade 5.05e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 Wuq             : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr (W Wq) Wu           : Invarianzdefekt 3e-14; ladungsungerade 6.66e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [1.24112 4.83958 5.9193 ], 2/3: [1.24112 4.83958 5.9193 ]
+      Im Tr (W Wq) Wu           : traegt nichts bei
+      Re Tr W^2 o W^2           : Invarianzdefekt 1e-14; ladungsungerade 1.40e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 o W^2           : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 o (W Wq)        : Invarianzdefekt 1e-14; ladungsungerade 3.95e-16; ladungsmischend 5.00e-01; Frequenzquadrate 1/3: [ 1.44674 23.03746 29.5158 ], 2/3: [ 1.44674 23.03746 29.5158 ]
+      Im Tr W^2 o (W Wq)        : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Tr W^2 o Wq^2             : Invarianzdefekt 3e-14; ladungsungerade 4.93e-16; ladungsmischend 4.44e-01; Frequenzquadrate 1/3: [ 1.54039 23.4215  35.03811], 2/3: [ 1.54039 23.4215  35.03811]
+      Tr (W Wq)^2               : Invarianzdefekt 1e-14; ladungsungerade 7.89e-16; ladungsmischend 2.78e-01; Frequenzquadrate 1/3: [ 2.12329 34.36417 41.51254], 2/3: [ 2.12329 34.36417 41.51254]
+      Re Tr W^2 o Wu^2          : Invarianzdefekt 6e-14; ladungsungerade 8.84e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 o Wu^2          : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 o Wuq^2         : Invarianzdefekt 6e-14; ladungsungerade 8.84e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 o Wuq^2         : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 o (Wu Wuq)      : Invarianzdefekt 6e-14; ladungsungerade 8.84e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 o (Wu Wuq)      : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr (W Wq) o Wu^2       : Invarianzdefekt 6e-14; ladungsungerade 7.49e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [ 0.67655 11.32671 11.99674], 2/3: [ 0.67655 11.32671 11.99674]
+      Im Tr (W Wq) o Wu^2       : traegt nichts bei
+      Tr (W Wq) o (Wu Wuq)      : Invarianzdefekt 6e-14; ladungsungerade 7.49e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [ 0.67655 11.32671 11.99674], 2/3: [ 0.67655 11.32671 11.99674]
+      Re Tr (W Wu)^2            : Invarianzdefekt 1e-13; ladungsungerade 5.55e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr (W Wu)^2            : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr (W Wu) o (W Wuq)    : Invarianzdefekt 1e-13; ladungsungerade 5.55e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr (W Wu) o (W Wuq)    : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr (W Wu) o (Wq Wu)    : Invarianzdefekt 8e-14; ladungsungerade 1.24e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [0.3851  5.85537 8.75953], 2/3: [0.3851  5.85537 8.75953]
+      Im Tr (W Wu) o (Wq Wu)    : traegt nichts bei
+      Re Tr (W Wu) o (Wq Wuq)   : Invarianzdefekt 8e-14; ladungsungerade 1.24e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [0.3851  5.85537 8.75953], 2/3: [0.3851  5.85537 8.75953]
+      Im Tr (W Wu) o (Wq Wuq)   : traegt nichts bei
+      Re Tr W^2 Tr Wu Wuq       : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 Tr Wu Wuq       : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W Wq Tr Wu^2        : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [24.], 2/3: [24.]
+      Im Tr W Wq Tr Wu^2        : traegt nichts bei
+      Re Tr W Tr W^2 Wq         : Invarianzdefekt 3e-14; ladungsungerade 5.92e-16; ladungsmischend 3.33e-01; Frequenzquadrate 1/3: [ 7.44674 29.03746 35.5158 ], 2/3: [ 7.44674 29.03746 35.5158 ]
+      Im Tr W Tr W^2 Wq         : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+   -- delta = 0 --
+      Re Tr W^2                 : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2                 : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Tr W Wq                   : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [4.], 2/3: [4.]
+      Re Tr W^3                 : Invarianzdefekt 1e-14; ladungsungerade 1.05e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^3                 : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 Wq              : Invarianzdefekt 1e-14; ladungsungerade 1.04e-15; ladungsmischend 3.33e-01; Frequenzquadrate 1/3: [ 2.34315 10.82843], 2/3: [ 2.34315 10.82843]
+      Im Tr W^2 Wq              : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 Wu              : Invarianzdefekt 3e-14; ladungsungerade 2.52e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 Wu              : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 Wuq             : Invarianzdefekt 3e-14; ladungsungerade 2.52e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 Wuq             : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr (W Wq) Wu           : Invarianzdefekt 3e-14; ladungsungerade 8.88e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [1.17157 5.41421], 2/3: [1.17157 5.41421]
+      Im Tr (W Wq) Wu           : traegt nichts bei
+      Re Tr W^2 o W^2           : Invarianzdefekt 1e-14; ladungsungerade 1.12e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [-0.], 2/3: [-0.]
+      Im Tr W^2 o W^2           : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 o (W Wq)        : Invarianzdefekt 1e-14; ladungsungerade 4.93e-16; ladungsmischend 5.00e-01; Frequenzquadrate 1/3: [ 1.02944 26.48528], 2/3: [ 1.02944 26.48528]
+      Im Tr W^2 o (W Wq)        : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Tr W^2 o Wq^2             : Invarianzdefekt 1e-14; ladungsungerade 5.92e-16; ladungsmischend 4.44e-01; Frequenzquadrate 1/3: [ 1.37258 29.31371], 2/3: [ 1.37258 29.31371]
+      Tr (W Wq)^2               : Invarianzdefekt 1e-14; ladungsungerade 1.18e-15; ladungsmischend 2.78e-01; Frequenzquadrate 1/3: [ 1.37258 38.31371], 2/3: [ 1.37258 38.31371]
+      Re Tr W^2 o Wu^2          : Invarianzdefekt 6e-14; ladungsungerade 2.52e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 o Wu^2          : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 o Wuq^2         : Invarianzdefekt 6e-14; ladungsungerade 2.52e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 o Wuq^2         : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W^2 o (Wu Wuq)      : Invarianzdefekt 6e-14; ladungsungerade 2.52e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 o (Wu Wuq)      : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr (W Wq) o Wu^2       : Invarianzdefekt 7e-16; ladungsungerade 1.33e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [ 0.34315 11.82843], 2/3: [ 0.34315 11.82843]
+      Im Tr (W Wq) o Wu^2       : traegt nichts bei
+      Tr (W Wq) o (Wu Wuq)      : Invarianzdefekt 7e-16; ladungsungerade 1.33e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [ 0.34315 11.82843], 2/3: [ 0.34315 11.82843]
+      Re Tr (W Wu)^2            : Invarianzdefekt 2e-13; ladungsungerade 7.07e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr (W Wu)^2            : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr (W Wu) o (W Wuq)    : Invarianzdefekt 2e-13; ladungsungerade 7.07e-29; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr (W Wu) o (W Wuq)    : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr (W Wu) o (Wq Wu)    : Invarianzdefekt 9e-14; ladungsungerade 7.11e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [0.34315 7.32843], 2/3: [0.34315 7.32843]
+      Im Tr (W Wu) o (Wq Wu)    : traegt nichts bei
+      Re Tr (W Wu) o (Wq Wuq)   : Invarianzdefekt 9e-14; ladungsungerade 7.11e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [0.34315 7.32843], 2/3: [0.34315 7.32843]
+      Im Tr (W Wu) o (Wq Wuq)   : traegt nichts bei
+      Re Tr W^2 Tr Wu Wuq       : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Im Tr W^2 Tr Wu Wuq       : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+      Re Tr W Wq Tr Wu^2        : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [24.], 2/3: [24.]
+      Im Tr W Wq Tr Wu^2        : traegt nichts bei
+      Re Tr W Tr W^2 Wq         : Invarianzdefekt 1e-14; ladungsungerade 3.95e-16; ladungsmischend 3.33e-01; Frequenzquadrate 1/3: [ 7.02944 32.48528], 2/3: [ 7.02944 32.48528]
+      Im Tr W Tr W^2 Wq         : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [0.], 2/3: [0.]
+   groesster ladungsungerader Anteil: delta = 2/9: 1.24e-15; delta = 0: 1.33e-15. Groesster ladungsmischender Anteil: 1.00e+00; 1.00e+00
+   Urteil H185d: WIDERLEGT (kein ladungsungerader Anteil ohne expliziten Ladungsoperator)
+
+== Zusatz (nachtraeglich, Erkundung): nicht reelles Vakuum ==
+   -- Eintraege mal exp(0,3 i) --
+      Tr W Wq                   : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [4.], 2/3: [4.]
+      Re Tr W^2 Wq              : Invarianzdefekt 2e-14; ladungsungerade 8.88e-16; ladungsmischend 3.33e-01; Frequenzquadrate 1/3: [ 2.72869  9.60416 11.66715], 2/3: [ 2.72869  9.60416 11.66715]
+      Im Tr W^2 Wq              : Invarianzdefekt 7e-15; ladungsungerade 1.67e-16; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [-1.63061  0.49622  1.13438], 2/3: [-1.63061  0.49622  1.13438]
+      Re Tr (W Wq) Wu           : Invarianzdefekt 6e-14; ladungsungerade 4.44e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [1.36434 4.80208 5.83358], 2/3: [1.36434 4.80208 5.83358]
+      Im Tr (W Wq) Wu           : Invarianzdefekt 7e-14; ladungsungerade 1.91e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [-0.8153   0.24811  0.56719], 2/3: [-0.8153   0.24811  0.56719]
+      Tr (W Wq)^2               : Invarianzdefekt 1e-14; ladungsungerade 8.57e-15; ladungsmischend 2.71e-01; Frequenzquadrate 1/3: [ 3.10906 34.06418 40.82676], 2/3: [ 3.10906 34.06418 40.82676]
+      Re Tr (W Wq) o Wu^2       : Invarianzdefekt 1e-13; ladungsungerade 7.30e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [ 0.53972 10.26528 11.09902], 2/3: [ 0.53972 10.26528 11.09902]
+      Im Tr (W Wq) o Wu^2       : Invarianzdefekt 5e-14; ladungsungerade 1.38e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [-0.39161  3.48225  3.68507], 2/3: [-0.39161  3.48225  3.68507]
+      Re Tr (W Wu) o (Wq Wu)    : Invarianzdefekt 1e-13; ladungsungerade 7.36e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [0.29918 5.7496  8.42723], 2/3: [0.29918 5.7496  8.42723]
+      Im Tr (W Wu) o (Wq Wu)    : Invarianzdefekt 2e-13; ladungsungerade 1.18e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [-0.55618  0.59573  1.65438], 2/3: [-0.55618  0.59573  1.65438]
+      groesster ladungsungerader Anteil: 8.57e-15
+   -- Eintraege plus 0,3 i U --
+      Tr W Wq                   : Invarianzdefekt 7e-16; ladungsungerade 0.00e+00; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [4.], 2/3: [4.]
+      Re Tr W^2 Wq              : Invarianzdefekt 2e-14; ladungsungerade 5.92e-16; ladungsmischend 3.33e-01; Frequenzquadrate 1/3: [ 2.48225  9.67915 11.8386 ], 2/3: [ 2.48225  9.67915 11.8386 ]
+      Im Tr W^2 Wq              : Invarianzdefekt 1e-15; ladungsungerade 5.55e-16; ladungsmischend 1.00e+00; Frequenzquadrate 1/3: [-2.07846  0.       2.07846], 2/3: [-2.07846  0.       2.07846]
+      Re Tr (W Wq) Wu           : Invarianzdefekt 3e-14; ladungsungerade 8.88e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [1.24112 4.83958 5.9193 ], 2/3: [1.24112 4.83958 5.9193 ]
+      Im Tr (W Wq) Wu           : Invarianzdefekt 3e-15; ladungsungerade 1.11e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [-1.03923  0.       1.03923], 2/3: [-1.03923  0.       1.03923]
+      Tr (W Wq)^2               : Invarianzdefekt 1e-14; ladungsungerade 8.68e-15; ladungsmischend 2.57e-01; Frequenzquadrate 1/3: [ 4.28329 35.98417 43.13254], 2/3: [ 4.28329 35.98417 43.13254]
+      Re Tr (W Wq) o Wu^2       : Invarianzdefekt 7e-14; ladungsungerade 7.32e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [-0.40345 10.78671 11.45674], 2/3: [-0.40345 10.78671 11.45674]
+      Im Tr (W Wq) o Wu^2       : Invarianzdefekt 1e-14; ladungsungerade 8.90e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [-0.08387  1.12208  1.20595], 2/3: [-0.08387  1.12208  1.20595]
+      Re Tr (W Wu) o (Wq Wu)    : Invarianzdefekt 1e-13; ladungsungerade 7.72e-16; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [0.3851  5.58537 8.48953], 2/3: [0.3851  5.58537 8.48953]
+      Im Tr (W Wu) o (Wq Wu)    : Invarianzdefekt 5e-15; ladungsungerade 1.65e-15; ladungsmischend 0.00e+00; Frequenzquadrate 1/3: [-2.51472 -0.       3.07576], 2/3: [-2.51472 -0.       3.07576]
+      groesster ladungsungerader Anteil: 8.68e-15
