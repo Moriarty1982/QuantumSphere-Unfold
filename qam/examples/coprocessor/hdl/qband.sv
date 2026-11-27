@@ -24,7 +24,7 @@
 // Laufend gueltig: layout_ok (alle gueltigen Abschnitte ausgerichtet, im Register, ohne Ueberlappung) und
 // full (zusaetzlich jede Zelle belegt). WR_CELL/RD_CELL melden guard (rsp_ok = 0), solange layout_ok = 0.
 // Die Pruefung der Aufteilung (paarweiser Vergleich aller Abschnitte) ist registriert, damit sie nicht im Pfad der
-// Befehle liegt: Nach SET_PART steht busy einen Takt lang auf 1; erst danach gelten layout_ok und full fuer die
+// Befehle liegt: Nach SET_PART steht busy zwei Takte lang auf 1; erst danach gelten layout_ok und full fuer die
 // neue Tabelle. Der Aufrufer wartet, solange busy = 1 ist (in diesem Takt keinen Befehl senden).
 module qband #(
     parameter integer CELLS = 128,
@@ -45,7 +45,7 @@ module qband #(
     output reg [BUSW-1:0] rsp_data,
     output reg layout_ok,
     output reg full,
-    output reg busy,
+    output wire busy,
     // Abschnittstabelle fuer spaetere Rechenwerke je Band
     output wire [PARTS-1:0] part_valid,
     output wire [PARTS*L-1:0] part_base,
@@ -74,34 +74,43 @@ module qband #(
     endgenerate
 
     // ---------------------------------------------------------------- Pruefung der Aufteilung
-    reg ok_r, full_r;
-    reg [L+4:0] total;
-    reg [L:0] len_i, len_j;
-    integer i, j;
+    // Zwei registrierte Stufen. A: je Abschnitt Laenge, Ende und Einzelfehler (zu lang, nicht ausgerichtet, ueber
+    // das Register hinaus), dazu alle Paarueberlappungen parallel. B: Summe der Laengen als Baum, Ergebnis.
+    // Ohne Ueberlappung und alle im Register: voll genau dann, wenn die Laengen sich zu CELLS summieren.
+    localparam integer P2 = 1 << PB;
+    reg [L:0] len_c [0:PARTS-1];
+    reg [L+1:0] end_c [0:PARTS-1];
+    reg bad_c, ovl_c;
+    reg [L:0] len_q [0:PARTS-1];
+    reg bad_q, ovl_q;
+    reg [L+4:0] tree [1:2*P2-1];
+    reg set_d1, set_d2;
+    integer i, j, t;
     always @(*) begin
-        ok_r = 1'b1;
-        total = 0;
-        len_i = 0;
-        len_j = 0;
-        for (i = 0; i < PARTS; i = i + 1) if (pv[i]) begin
-            len_i = {{L{1'b0}}, 1'b1} << po[i];
-            if (po[i] > L) ok_r = 1'b0;
-            if ((pb[i] & (len_i - 1'b1)) != 0) ok_r = 1'b0;          // ausgerichtet (Buddy-Regel)
-            if ({1'b0, pb[i]} + len_i > CELLS) ok_r = 1'b0;           // im Register
-            for (j = i + 1; j < PARTS; j = j + 1) if (pv[j]) begin   // keine Ueberlappung
-                len_j = {{L{1'b0}}, 1'b1} << po[j];
-                if ({1'b0, pb[i]} < {1'b0, pb[j]} + len_j && {1'b0, pb[j]} < {1'b0, pb[i]} + len_i) ok_r = 1'b0;
-            end
-            total = total + len_i;
+        bad_c = 1'b0;
+        ovl_c = 1'b0;
+        for (i = 0; i < PARTS; i = i + 1) begin
+            len_c[i] = pv[i] ? ({{L{1'b0}}, 1'b1} << po[i]) : {(L+1){1'b0}};
+            end_c[i] = {2'b00, pb[i]} + {1'b0, len_c[i]};
+            if (pv[i] && (po[i] > L || (pb[i] & (len_c[i][L-1:0] - 1'b1)) != 0 || end_c[i] > CELLS)) bad_c = 1'b1;
         end
-        // Ohne Ueberlappung und alle im Register: voll genau dann, wenn die Laengen sich zu CELLS summieren.
-        full_r = ok_r && total == CELLS;
+        for (i = 0; i < PARTS; i = i + 1)
+            for (j = i + 1; j < PARTS; j = j + 1)
+                if (pv[i] && pv[j] && {2'b00, pb[i]} < end_c[j] && {2'b00, pb[j]} < end_c[i]) ovl_c = 1'b1;
+        for (t = 0; t < P2; t = t + 1) tree[P2 + t] = t < PARTS ? len_q[t] : 0;
+        for (t = P2 - 1; t >= 1; t = t - 1) tree[t] = tree[2*t] + tree[2*t+1];
     end
     always @(posedge clk) begin
-        layout_ok <= !rst && ok_r;
-        full <= !rst && full_r;
-        busy <= !rst && cmd_valid && cmd == C_SET_PART;
+        for (i = 0; i < PARTS; i = i + 1) len_q[i] <= len_c[i];
+        bad_q <= bad_c;
+        ovl_q <= ovl_c;
+        layout_ok <= !rst && !bad_q && !ovl_q;
+        full <= !rst && !bad_q && !ovl_q && tree[1] == CELLS;
+        set_d1 <= !rst && cmd_valid && cmd == C_SET_PART;
+        set_d2 <= !rst && set_d1;
     end
+    // Nach SET_PART zwei Takte, bis layout_ok und full zur neuen Tabelle gehoeren.
+    assign busy = set_d1 || set_d2;
 
     // ---------------------------------------------------------------- Profile
     function automatic [31:0] burned(input [3:0] n, input [2:0] field);

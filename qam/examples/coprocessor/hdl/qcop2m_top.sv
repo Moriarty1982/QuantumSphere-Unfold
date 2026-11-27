@@ -64,10 +64,13 @@ module qcop2m_top #(
         .part_valid(part_valid), .part_base(), .part_order()
     );
 
-    // layout_ok kommt registriert aus qband; die Gueltigkeitsbits werden ebenso um einen Takt verzoegert, damit
-    // beide zur selben Tabelle gehoeren. Ein neues SET_PART wirkt einen Takt spaeter (band_busy) auf die Rechenwerke.
-    reg [PARTS-1:0] valid_q;
-    always @(posedge clk) valid_q <= rst ? {PARTS{1'b0}} : part_valid;
+    // layout_ok kommt aus qband zwei Takte nach der Tabelle; die Gueltigkeitsbits werden ebenso verzoegert, damit
+    // beide zur selben Tabelle gehoeren. Ein neues SET_PART wirkt nach band_busy auf die Rechenwerke.
+    reg [PARTS-1:0] valid_d, valid_q;
+    always @(posedge clk) begin
+        valid_d <= rst ? {PARTS{1'b0}} : part_valid;
+        valid_q <= rst ? {PARTS{1'b0}} : valid_d;
+    end
 
     wire [LANES*16*W-1:0] l_coeffs;
     wire [LANES*8-1:0] l_k;
