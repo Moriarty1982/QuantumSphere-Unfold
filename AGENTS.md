@@ -90,7 +90,8 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
 - **Vorab-Notizen:** Jeder Test mit Entscheidungskriterium wird vor der Rechnung festgeschrieben und committet.
   Erkundungen ohne Vorab-Notiz heißen „Erkundung“.
 - **Append-only:** Bestehende Runden werden nie umgeschrieben. Korrekturen kommen in eine neue Runde.
-- **Merges** auf `main` nur nach ausdrücklicher Freigabe des Autors.
+- **Merges** auf `main`: PRs ohne Rückfrage mergen, sobald die CI grün ist, und danach kurz melden (Dauerauftrag des Autors vom
+  26./27.11.2026). Ist keine CI gelaufen oder ist sie rot, nur mit ausdrücklicher Freigabe.
 - **Gemergte Zweige löschen:** Zweige, die vollständig in `main` enthalten sind und keinen offenen PR haben, nach
   jedem Merge ohne Rückfrage löschen, lokal und auf GitHub (Dauerauftrag des Autors vom 14.11.2026). Prüfen mit
   `git merge-base --is-ancestor <zweig> <remote>/main`. Nicht gemergte Zweige bleiben stehen, auch fremde. Den Zweig
@@ -144,6 +145,31 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
   **Im-Sektor** (geladene Leptonen, c = 1), nur für Leptonen und als Lesart unter H99; Quarks behalten Up- und Down-Sektor. Beim ersten
   Auftreten den alten Namen in Klammern dazuschreiben. Bestehende Runden und veröffentlichte Fassungen nicht umbenennen. „Bosonisch/fermionisch“
   und „Licht-Frame“ nicht als Namen für Frames oder Sektoren verwenden.
+
+## Arbeitsweise des Autors (gilt für jedes Modell, auch lokal mit ChatGPT/Codex)
+- **Sprache:** Mit dem Autor auf Deutsch kommunizieren.
+- **Nummern:** Nächste freie H- und k-Nummer vor der Vergabe gegen `origin/main` prüfen (`git grep -n "H2[0-9][0-9]"`, Ordnernamen unter
+  `notes/research/`); parallele Sitzungen vergeben ebenfalls Nummern. Stand 27.11.2026: nächste freie H212, k425.
+- **Rechnung und Gegenprobe:** Hauptrechnung in Python (Skript `kNNN_*.py`, Ausgabe `kNNN_out.txt`), unabhängige Gegenprobe in
+  Wolfram Language (`kNNNb_gegenprobe.wl`, Ausgabe `kNNNb_out.txt`); Nachträge als `kNNNc_*`. Wolfram-Fallstrick: `N` vor `Sort`.
+- **Hergeleitet vs. angepasst:** In jeder Ergebnis-Notiz offen trennen, was hergeleitet, was gesetzt/angepasst und was nachträglich
+  gefunden ist. Urteile: trägt / trägt teilweise / widerlegt.
+- **Wenn eine Vermutung nicht trägt:** zuerst die Eingaben einzeln mit Stichproben durchgehen, dann variieren (stochastische Suche);
+  für jeden Sektor einzeln die nötige Konfiguration suchen und vergleichen, was gesetzt sein muss (HS-Stufe beachten).
+- **Vor „von Daten disfavorisiert“:** prüfen, ob die Vorhersage in den Materie-Frame übertragen ist (für Mischung Maske mit
+  ε = artanh β_sym, H45).
+- **Offene Vorzeichen** sollen aus der finalen Feldgleichung folgen, nicht gesetzt werden.
+- **Laufend pushen:** Änderungen während der Arbeit regelmäßig committen und pushen, nicht erst am Ende; Zwischenergebnisse laufender
+  Rechnungen sofort melden.
+- **Zenodo:** Nur `deposition_id` verwenden, nie `new_version_of`; jeder Zenodo-Schritt und jede neue öffentliche Version nur mit
+  Freigabe des Autors; nach jedem Upload/Publish die Vorschau prüfen.
+- **Wiki:** Absätze in `wiki/Offene-Probleme.md` sind mehrzeilig; nie „nach der ersten Zeile“ einfügen, sondern nach dem ganzen Absatz.
+- **Ordner für neue Runden:** `notes/research/v4_10_0_rNN/` gehört zur alten v4.9.0-Serie. Neue v4.10.0-Runden bekommen einen eigenen
+  Ordner `notes/research/v4_10_0_rNN_<thema>/`; der Text kommt nach `sources/research/parts/v4100-post-release-layers.tex`.
+- **Modellwahl:** Offene, schwere Herleitungen und lange Argumentketten mit dem stärksten verfügbaren Modell; klar umrissene Tests,
+  Rechnungen und PRs mit einem starken Standardmodell; Routine (Branches, Wiki, Formatierung) mit einem kleineren Modell. Bei einer
+  neuen Aufgabe von sich aus ein passendes Modell vorschlagen.
+- **Keine privaten Daten** (E-Mail-Adressen, Zugangsdaten) in Dateien, Commits oder Anfragen an externe Dienste.
 
 ## Lokale Arbeitskopie des Autors
 Die Monolith-Fassung und die vollständige Rundentabelle liegen im lokalen Ordner des Autors. Dessen `AGENTS.md` ist die
