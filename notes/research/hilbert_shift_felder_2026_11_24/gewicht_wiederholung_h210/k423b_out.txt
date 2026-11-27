@@ -1,0 +1,12 @@
+k423b: (1) Paritaet: Cos[m (s + Pi) - al] - (-1)^m Cos[m s - al] = 0
+(2) Kreuzterm (Trapez 81 quer ueber +-5 sigma, 1440 laengs), sigma = 5 Grad, theta = 50 Grad, Phasen (0.3, 1.1)
+   m = {4, 2}: 0.04927534204
+   m = {16, 8}: 0.01940271035
+   m = {2, 1}: 8.900714854 × 10^-18
+   m = {16, 1}: -7.887703361 × 10^-18
+
+Symbolischer Nullrest: (1) exakt 0. Rueckgabewert Null. Keine Warnungen.
+Vergleich Python k423 (Gauss-Legendre 15 quer ueber +-4 sigma, 5760 laengs), dieselbe Lage:
+   m = (4, 2): 0.0492731648; m = (16, 8): 0.0194025596; m = (2, 1): 5.3e-18; m = (16, 1): -7.2e-19.
+   Uebereinstimmung der geraden Paare auf 4e-5 relativ (Unterschied: Abschneiden des Gauss-Profils bei 4 bzw. 5 sigma).
+Zwei fruehere Wolfram-Aufrufe liefen in die Zeitgrenze (adaptive 2D-Integration; Paketaufruf fuer Gauss-Gewichte) und gaben kein Ergebnis.

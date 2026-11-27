@@ -1,0 +1,43 @@
+== H210a (nicht blind): Belegung ohne Phase, Gesetz 1/sin ==
+   Inhalt je Wiederholung, w_i = m_i: Energie 322.1532; RC 89.54  RH 89.00  RO 76.18  RS 68.24  CH 70.01  CO 63.40  CS 65.03  HO 49.40  HS 50.08  OS 35.59
+   Inhalt je Band, w_i = 1: Energie 11.0254; RC 59.14  RH 74.03  RO 74.03  RS 59.14  CH 59.14  CO 74.03  CS 74.03  HO 59.14  HS 74.03  OS 59.14
+   Vergleich: k422 Teil 3 (322.1532; RC 89.54 ... OS 35.59) und k399 (fuenf gleiche Baender 59.14/74.03).
+
+== H210b (nicht blind): Welle, Kreuzterme fuer Zufallslagen (volle Integration, sigma = 5 Grad) ==
+   groesster |Kreuzterm| mit S (m_i + m_j ungerade): 6.950e-17; Median |Kreuzterm| der geraden Paare: 1.542e-02; Verhaeltnis 4.51e-15
+   Kontrolle der Fensterintegration (gerade Paare) gegen die volle: groesste Abweichung 1.35e-11
+
+== Welle, A_i = 1 (H210c, Test), sigma = 2.0 Grad ==
+   Energie -1.184646e-01; 1 von 240 Starts im besten Minimum; Energien der fuenf besten: -1.1846e-01, -1.1492e-01, -1.1344e-01, -1.1344e-01, -1.1047e-01
+   RC 18.88  RH 33.10  RO 34.25  CH 32.51  CO 26.26  HO 12.39
+      naechstes: RC 28.78  RH 37.55  RO 39.65  CH 24.80  CO 17.84  HO 11.34  (E = -1.1492e-01)
+      naechstes: RC 53.62  RH 30.70  RO 31.06  CH 29.77  CO 22.98  HO 11.60  (E = -1.1344e-01)
+      naechstes: RC 53.62  RH 30.70  RO 31.06  CH 29.77  CO 22.98  HO 11.60  (E = -1.1344e-01)
+
+== Welle, A_i = 1 (H210c, Test), sigma = 5.0 Grad ==
+   Energie -3.336454e-01; 5 von 240 Starts im besten Minimum; Energien der fuenf besten: -3.3365e-01, -3.3365e-01, -3.3365e-01, -3.3365e-01, -3.3365e-01
+   RC 47.21  RH 88.34  RO 89.00  CH 65.38  CO 51.80  HO 22.71
+      naechstes: RC 47.21  RH 88.34  RO 89.00  CH 65.38  CO 51.80  HO 22.71  (E = -3.3365e-01)
+      naechstes: RC 47.21  RH 88.34  RO 89.00  CH 65.38  CO 51.80  HO 22.71  (E = -3.3365e-01)
+      naechstes: RC 47.21  RH 88.34  RO 89.00  CH 65.38  CO 51.80  HO 22.71  (E = -3.3365e-01)
+
+== Welle, A_i = m_i (H210d, Bericht), sigma = 2.0 Grad ==
+   Energie -4.037278e+00; 1 von 240 Starts im besten Minimum; Energien der fuenf besten: -4.0373e+00, -4.0175e+00, -4.0018e+00, -3.9843e+00, -3.9719e+00
+   RC 38.05  RH 55.16  RO 46.92  CH 29.37  CO 31.06  HO 59.34
+      naechstes: RC 49.71  RH 32.70  RO 45.36  CH 39.15  CO 25.53  HO 18.39  (E = -4.0175e+00)
+      naechstes: RC 71.90  RH 55.02  RO 73.13  CH 25.92  CO 21.79  HO 43.86  (E = -4.0018e+00)
+      naechstes: RC 39.55  RH 55.26  RO 54.76  CH 28.77  CO 18.45  HO 15.49  (E = -3.9843e+00)
+
+== Welle, A_i = m_i (H210d, Bericht), sigma = 5.0 Grad ==
+   Energie -1.079719e+01; 6 von 240 Starts im besten Minimum; Energien der fuenf besten: -1.0797e+01, -1.0797e+01, -1.0797e+01, -1.0797e+01, -1.0797e+01
+   RC 50.32  RH 89.05  RO 89.09  CH 64.74  CO 50.41  HO 22.65
+      naechstes: RC 50.32  RH 89.05  RO 89.09  CH 64.74  CO 50.41  HO 22.65  (E = -1.0797e+01)
+      naechstes: RC 50.32  RH 89.05  RO 89.09  CH 64.74  CO 50.41  HO 22.65  (E = -1.0797e+01)
+      naechstes: RC 50.32  RH 89.05  RO 89.09  CH 64.74  CO 50.41  HO 22.65  (E = -1.0797e+01)
+
+   H210c: groesste Aenderung eines Winkels zwischen sigma = 2 und 5 Grad: 55.24; alle bei 70.53 +- 1: nein; zusammenfallende Baender: nein
+   H210c: widerlegt
+   H210d Treffer auf der Zielliste (nachtraeglich) ('A_i = 1 (H210c, Test)', 2.0): []
+   H210d Treffer auf der Zielliste (nachtraeglich) ('A_i = 1 (H210c, Test)', 5.0): []
+   H210d Treffer auf der Zielliste (nachtraeglich) ('A_i = m_i (H210d, Bericht)', 2.0): [('R-H', 55.16), ('H-O', 59.34)]
+   H210d Treffer auf der Zielliste (nachtraeglich) ('A_i = m_i (H210d, Bericht)', 5.0): [('R-H', 89.05), ('R-O', 89.09)]
