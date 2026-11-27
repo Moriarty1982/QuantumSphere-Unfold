@@ -1,0 +1,15 @@
+(* Ausgabe des Wolfram-Evaluators fuer k426b_gegenprobe.wl, 27.11.2026 *)
+Warnungen (harmlos, Daten in Maschinenpraezision, WorkingPrecision 30 nicht ausgeschoepft):
+FindRoot::precw: The precision of the argument function (rNO[d] == 0.030015929908403027) is less than WorkingPrecision (30.).
+FindRoot::precw: The precision of the argument function (rNO[d] == 0.030473399668643607) is less than WorkingPrecision (30.).
+FindRoot::precw: The precision of the argument function (rNO[d] == 0.029558460148162446) is less than WorkingPrecision (30.).
+General::stop: Further output of FindRoot::precw will be suppressed during this calculation.
+Print-Ausgaben:
+a) R_obs = 0.03001593 +- 0.00045747
+a) x_nu = 0.043359035 +- 0.00212773
+c) Pol:  a = 1.41420889  delta = 0.222224761904  x_lepton = 0.0395746259
+c) M_Z:  a = 1.41688827  delta = 0.221037659948  x_lepton(M_Z) = 0.04076172785
+a) T_a (Pol) = 1.779 sigma;  mit Nenner 0.00091: 4.159
+c) T (M_Z) = 1.221 sigma;  Verschiebung = 0.5579 sigma_nu
+Pruefung K: Pol 0.6666644634  M_Z 0.6679287284
+Rueckgabewert: Null (keine symbolischen Reste)

@@ -1,0 +1,44 @@
+==============================================================================
+H213 a (nicht blind)  richtige Fehler fuer x_nu und x_lepton
+==============================================================================
+  R_obs = 0.030016 +- 0.000457
+  x_nu      = 0.043359 +- 0.002128   (Repo X_R = 0.043359)
+  Polmassen: K = 0.66666446, a = 1.4142089 (sqrt2 = 1.4142136), delta = 0.2222247619
+  x_lepton  = 0.03957463 +- 0.00000626   (Repo X_LEP = 0.0395773407)
+  Differenz x_nu - x_lepton = 0.003784
+  mit H207-Nenner 0,00091:      4.16 sigma  (so in H207 berichtet)
+  mit richtigem Nenner:         T_a = 1.78 sigma   (sigma_nu dominiert: 0.00213 vs 6.26e-06)
+  Kriterium a: T_a < 2 -> JA, 4,2 sigma war ein Nenner-Fehler
+
+==============================================================================
+H213 b (blind)  Monte Carlo der Fehlerfortpflanzung (10^6 Ziehungen)
+==============================================================================
+  x_nu: Median 0.043358, 16 % 0.041248, 84 % 0.045478  (-0.002110 / +0.002119)
+  Anteil x_nu <= x_lepton: 0.03680  -> einseitig 1.79 sigma
+  Differenz MC - linear: +0.01 sigma -> linear ausreichend
+
+==============================================================================
+H213 c (blind)  Massenschema: laufende Massen bei M_Z statt Polmassen
+==============================================================================
+  M_Z-Massen: K = 0.66792873 (Pol 0.66666446), a = 1.4168883, delta = 0.2210376599
+  x_lepton(M_Z) = 0.040762 +- 0.000014   Verschiebung Delta x_Schema = +0.001187 = +0.56 sigma(x_nu)
+  Abstand x_nu - x_lepton(M_Z): +0.002597 = 1.22 sigma
+  Kriterium c: teilweise
+    nur m_e auf M_Z: x_lepton = 0.039237
+    nur m_mu auf M_Z: x_lepton = 0.043230
+    nur m_tau auf M_Z: x_lepton = 0.037410
+
+==============================================================================
+H213 d (blind)  weitere Zweige der Brannen-Form (K=2/3), normale und invertierte Ordnung
+==============================================================================
+  NO: R_Ziel = 0.030016; Loesungen delta_nu (in [0, 2pi/3)): [0.48024  1.614155]
+     delta_nu = 0.480240: naechstes c=0-Minimum pi/6, Versatz x = +0.043359; |x| - x_lepton = +0.003784  (+1.78 sigma_nu)
+     delta_nu = 1.614155: naechstes c=0-Minimum pi/2, Versatz x = -0.043359; |x| - x_lepton = +0.003784  (+1.78 sigma_nu)
+  IO: R_Ziel = 0.030172; Loesungen delta_nu (in [0, 2pi/3)): [1.041878 1.052517]
+     delta_nu = 1.041878: naechstes c=0-Minimum pi/3, Versatz x = +0.005319; |x| - x_lepton = -0.034255  (-16.10 sigma_nu)
+     delta_nu = 1.052517: naechstes c=0-Minimum pi/3, Versatz x = -0.005319; |x| - x_lepton = -0.034255  (-16.10 sigma_nu)
+
+==============================================================================
+H213 Gesamturteil
+==============================================================================
+  T (massgeblich) = 1.78 sigma -> TRAEGT: der Abstand ist nicht signifikant (4,2 sigma war der falsche Nenner)
