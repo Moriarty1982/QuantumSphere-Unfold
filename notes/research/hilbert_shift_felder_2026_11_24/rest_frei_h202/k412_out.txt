@@ -1,0 +1,29 @@
+==========================================================================
+H202 A  Rang der Abbildung (Kopplungen) -> (A,B,C,D)
+==========================================================================
+  Strukturmatrix 4x8 (A,B,C,D) x Kopplungen; Rang = 4
+  gerade Kopplungen betreffen nur (A,B), ungerade nur (C,D) -> Bloecke 2+2.
+  Rang (A,B)-Block (gerade) = 2;  Rang (C,D)-Block (ungerade) = 2
+  -> volle Abbildung Rang 4 = 4 Koeffizienten unabhaengig -> D/B ist FREI (nicht blind).
+
+==========================================================================
+H202 B  Minimale Invariant-Basis: fittet <=3 Kopplungen alle sechs Massen?
+==========================================================================
+  bester 2-Kopplungs-Fit: chi2=  39895.00 (dof 4, p=0.00e+00)  Basis ('g6', 'h_c45')
+  bester 3-Kopplungs-Fit: chi2=   8312.43 (dof 3, p=0.00e+00)  Basis ('g3', 'g6', 'h_c45')
+  bester 4-Kopplungs-Fit: chi2=      7.91 (dof 2, p=1.92e-02)  Basis ('g3', 'g6', 'h_c2', 'h_c79')
+
+  bester 4-Kopplungs-Fit -> A=1.082e-03 B=3.291e-02 C=-2.224e-03 D=3.320e-02  D/B=+1.0085
+
+==========================================================================
+H202 Entscheidung (Vorab-Kriterien)
+==========================================================================
+  bester <=3-Kopplungs-Fit: chi2=8312.4 (p=0.0e+00) -> ausgeschlossen
+  -> K2: D/B FREI. Jede <=3-Basis verworfen (bestes chi2=8312 >> 7.9 bei 4).
+     Minimal noetig: 2 gerade (A,B) + 2 ungerade (C,D) = 4 Kopplungen = 4 Koeffizienten.
+     Der ~0,9-%-Rest D/B-1 ist ein EINGABEWERT (Quark-Yukawas frei in diesem Rahmen).
+
+  FAZIT H202: Weder Grad (H201), Symmetrie (H197), Holomorphie (H200) noch minimale
+  Invariant-Zahl (H202) legen D/B fest. Alle Bausteine identifiziert, Kopplungen frei.
+  Naechster Schritt braucht eine NEUE Eingabe (Prinzip, das die Kopplungen bindet) —
+  dem Autor als Weggabelung vorlegen.

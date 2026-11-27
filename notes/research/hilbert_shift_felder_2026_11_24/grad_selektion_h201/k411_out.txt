@@ -1,0 +1,54 @@
+==============================================================================
+H201 A  Grad-Zerlegung: Beitraege zu A,B (gerade) und C,D (ungerade)
+==============================================================================
+
+ ladungsGERADE F4-Kruemmung v=x^n auf dem Vakuum  (-> A: l_k, B: l_k^2):
+    Grad n=2: A-Beitrag(l_k)=0,  B-Beitrag(l_k^2)=0
+    Grad n=3: A-Beitrag(l_k)=-6,  B-Beitrag(l_k^2)=0
+    Grad n=4: A-Beitrag(l_k)=-24,  B-Beitrag(l_k^2)=0
+    Grad n=5: A-Beitrag(l_k)=-60,  B-Beitrag(l_k^2)=-30
+    Grad n=6: A-Beitrag(l_k)=-108,  B-Beitrag(l_k^2)=-234
+    -> gerades l_k (A) zuerst bei Grad 3;  gerades l_k^2 (B) zuerst bei Grad 5.
+
+ ladungsUNGERADE Kruemmung (H186, Grad 4) auf dem Vakuum  (-> C: l_k, D: l_k^2):
+    c1     : C-Beitrag(l_k)=0,  D-Beitrag(l_k^2)=0
+    c2     : C-Beitrag(l_k)=-1/3,  D-Beitrag(l_k^2)=0
+    c4/c5  : C-Beitrag(l_k)=0,  D-Beitrag(l_k^2)=-1/3
+    c7/c9  : C-Beitrag(l_k)=-1,  D-Beitrag(l_k^2)=1/6
+    c11    : C-Beitrag(l_k)=-1,  D-Beitrag(l_k^2)=-1/6
+    -> ungerades l_k (C) ab c2 (Grad<=4);  ungerades l_k^2 (D) ab c4/c5 (Grad 4).
+
+ Grad-Karte (erstes Auftreten):
+    A (gerade l_k ) : Grad 3
+    C (ungerade l_k): Grad <= 4 (H186-Form c2)
+    D (ungerade l_k^2): Grad 4 (H186-Form c4/c5)
+    B (gerade  l_k^2): Grad 5
+    Teilen sich B und D EINEN Grad (noetig fuer automatisches D=B)? NEIN (B Grad 5, D Grad 4)
+    -> 'Top-Grad = chiral' braeuchte B und D im selben Grad. Sie liegen in Grad 5 bzw 4.
+
+==============================================================================
+H201 B  Geschachtelte Fits: saubere Grad-Selektion vs frei
+==============================================================================
+
+(3) frei (A,B,C,D): chi2=7.909 dof=2
+    A=1.082e-03+-2.4e-05  B=3.291e-02  C=-2.224e-03+-2.4e-05  D=3.320e-02  D/B=+1.0085
+    C/A = -2.0556   |C|/sigma_C = 91.1  (ist der lineare Term blind? C=0?)
+
+(2) D=B, C frei (A,C,B): chi2=320.674 dof=3  p=0.00e+00
+
+(1) C=0 & D=B (A,B): chi2=11206.499 dof=4  p=0.00e+00
+    A=2.271e-03 B=2.821e-02
+
+==============================================================================
+H201 Entscheidung (Vorab-Kriterien)
+==============================================================================
+  K1 saubere Grad-Selektion (C=0 & D=B): chi2=11206.5 (dof 4, p=0.0e+00); |C|/sigma_C=91.1
+     -> K2: KEINE Grad-Selektion. C ist scharf != 0 (91 sigma), 2-Param
+        verworfen (Delta-chi2 ggue frei = 11199); und B (Grad 5), D (Grad 4)
+        liegen in verschiedenen Graden. 'Top-Grad = chiral' ist KEINE Grad-Ordnung.
+
+  FAZIT H201 (voraussichtlich nein zur Grad-Selektion):
+  - Die Quintik-Chiralitaet (D~B) ist eine GRADUEBERGREIFENDE Near-Equality zwischen einer
+    Grad-4-ungeraden (D) und einer Grad-5-geraden (B) Kopplung, kein Top-Grad-Prinzip.
+  - Der lineare Term ist unabhaengig ladungsgespalten: C/A = -2.056 (nicht blind, nicht chiral).
+  - Der ~0,9-%-Rest D/B-1 = +0.0085 ist der Grad-4/Grad-5-Versatz (Uebergang zu Schritt 2).
