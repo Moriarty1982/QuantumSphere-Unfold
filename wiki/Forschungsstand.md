@@ -110,6 +110,31 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 
 Offener Punkt aus H195: woher der Up/Down-Unterschied im Zähler? H182 gibt den Ort — Up (Ladung ⅔) und Down (Ladung ⅓) unterscheiden sich durch das Vorzeichen s = ±1 eines ladungsungeraden Terms. Getestet: m_s = [A·l_k + B·l_k² + s·(C·l_k + D·l_k²)]/(l_i+l_j)², mit dem H195-Nenner, der die schwerste Mode verstärkt (das fehlte H186). Verdikt teilweise. Ein **fester** ladungsungerader Kandidat aus H186 mit drei Parametern (A,B,γ) trägt nicht (Up 237σ) — der H195-Nenner behebt H186 hier nicht. Die **volle** Ladungsstruktur (vier Parameter) trifft (χ² 7,9, max 2,1σ): das ladungsungerade l_k² (D = 3,32·10⁻²) ist nötig, Vorzeichen +, und D ≈ B (= 3,29·10⁻²), also b_up = B+D stark und b_down = B−D ≈ 0 — die Ladung schaltet das Quadratische für Down ab und verdoppelt es für Up, genau das gesuchte „Up quadratisch, Down linear". Damit ist die Frage strukturell mit Ja beantwortet: der Up/Down-Unterschied sitzt im Vorzeichen eines ladungsungeraden l_k²-Terms. Quantitativ bleibt es ein Fit: die vier Parameter sind H194 umparametrisiert (b/a −57,9 und −0,085 kommen wieder), kein fester Kandidat trägt (D/C = −14,9 trifft keinen), und D ≈ B ist mit 2 Freiheitsgraden nicht erzwungen. Python/sympy, Wolfram-Gegenprobe exakt.
 
+### Ein HS(−1) unter dem Turm gibt es nicht als Zahlbereich; drei Lesarten (27.11.2026, Erkundung k405, nicht blind)
+
+Frage des Autors: Wie sähe eine Stufe unter HS(0) = ℝ aus (formale Dimension 2⁻¹ = ½)? Erkundung ohne Vorab-Notiz, kein Test; Ordner
+`notes/research/hilbert_shift_felder_2026_11_24/hs_minus_1_k405`. Werkzeuge: Python, Wolfram (exakte Gegenprobe).
+
+- **Die Regel des Turms endet bei ℝ (exakt).** Der Schritt nach unten ist der festgehaltene Teil der Spiegelung (a, b) ↦ (a, −b); auf ℝ gibt es
+  nur die Identität. Das Vorzeichen ℤ₂ = S⁰ liegt nicht unter HS(0), es ist dessen Einheitssphäre; der Raum der Wahlen ist schon bei HS(0) leer.
+- **Lesart 1, Vorzeichen:** Als Algebra ist ℤ₂ die Spiegelstufe ℝ ⊕ ℝ·j mit j² = +1. Sie ist das Clifford-Gegenstück zu ℂ (zusammen M₂(ℝ),
+  Index −1, in der Bott-Uhr Stufe 7), hat aber Dimension 2 und liegt neben ℂ, nicht unter ℝ. Ihre Bahn ist eine Hyperbel (Schub statt Drehung),
+  ihr Idempotent ½(1 + j) ist der HC-Projektor aus r70, und M und T gehen durch j ↦ −j ineinander über. Die Rapidität der Port-Gewichte,
+  ln(1/β_sym) = 0,5989, ist nicht der Schub des Modells (artanh β_sym = 0,6175).
+- **Größe ½** hat in der Zählung „Menge geteilt durch Symmetrie“ genau ein Objekt: der Nullpunkt, auf dem das Vorzeichen wirkt, ohne etwas zu
+  ändern. Damit fallen Lesart 1 (Vorzeichen) und Lesart 3 (Randpunkt) zusammen. Unter ℝ bleibt der Betrag ohne Vorzeichen (Halbgerade).
+- **Lesart 2, Körper mit einem Element:** Der Turm hat die Basis 2 (Einheiten beschriftet mit 𝔽₂ⁿ; 2ⁿ − 1 imaginäre Einheiten = Punkte des
+  projektiven Raums über 𝔽₂). Bei Basis q = 1 hat jede Stufe Dimension 1, der Turm fällt auf HS(0) zusammen. F₁ liegt quer zum Turm, nicht
+  darunter, und liefert keine Größe für das Modell.
+- **Lesart 3, Ur-Seed:** Die Schleife L3 aus k395 ist in c = 2b − 1 exakt die Quadrierabbildung c ↦ c². Sie löscht im ersten Schritt das
+  Vorzeichen, dann den Betrag. Rückwärts verdoppeln sich die Vorgänger (1, 2, 4, 8, …, wie die Dimensionen der Stufen). Der Rand unten ist das
+  Ende der Schleife, nicht ihr Anfang; ein Ur-Seed lässt sich dort nicht ablesen. Nachträglich; gilt für jede Abbildung vom Grad 2.
+- **Zählregel (nachträglich):** Im glatten Vergleichsfall (Fläche j + ½) ist das Gewicht eines Durchstoßpunkts mit Spin k/2 genau 2^(−k), die
+  formale Dimension von HS(−k), und ½ + ¼ + … = 1 = dim HS(0). Mit der Casimir-Fläche des Postulats liegen die „Stufen“ bei −0,865; −2,045;
+  −3,170. Die Zuordnung ist gesetzt und passt gerade nicht für β_sym.
+
+Keine neue Zahl, keine Herleitung; OP1 bleibt offen.
+
 ### Die Feldgleichung gibt den Nenner der H188-Form her, nicht ihre Koeffizienten (27.11.2026, Test H195, k403)
 
 Herleitung der H188-Form m ∝ (a·l_k + b·l_k²)/(l_i+l_j)² aus der zweiten Variation um das Leptonvakuum. Verdikt teilweise. **Nenner hergeleitet:** Jede Quark-Farbmode ist ein Off-Diagonal-Oktonion X in Position (i,j) der Albert-Algebra; die Peirce-Zerlegung gibt exakt W₀∘X = ½(l_i+l_j)X (verifiziert über die H₃(𝕆)-Algebra, konstant über alle acht Komponenten). Eine W²-gewichtete kinetische Norm liefert damit N₂ = ¼(l_i+l_j)²·N₀, also den Nenner (l_i+l_j)², ohne Einsetzen von Hand. **Zähler nicht hergeleitet:** Die F₄-Krümmung eines Potentials vom Grad n wird auf dem festen Vakuum (Tr = 3, K = ⅔ ⇒ e₂ = 3/2) eine Funktion von l_k, deren l_k² erst ab Potentialgrad 5 erscheint (Grad-Leiter sympy/Wolfram exakt). Die einfache hergeleitete Form A + B·l_k (Grad ≤ 4) verwerfen die Daten (Up 93σ, Kontrolle beide < 3σ nur 0,0 %); die H188-Form mit l_k² trifft (χ² 4,8/3,1), braucht aber Grad 5 und hat freie Koeffizienten. Der H188-Zähler ist also feldgleichungs-fähig, aber nicht vorhergesagt: a, b und das Fehlen der Konstante bleiben Setzungen, und warum Up quadratisch und Down linear ist (verschiedene b/a, H194), bleibt frei. Antwort auf „warum gerade diese Form": der Nenner aus der kinetischen Struktur, der Zähler aus einem Potential vom Grad ≥ 5 mit freien Koeffizienten. Python/sympy, Wolfram-Gegenprobe (stimmt exakt).
