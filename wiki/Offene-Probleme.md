@@ -194,6 +194,8 @@ gyroskopisch und kann eine Frequenz beliebig klein machen (hergeleitet, für bei
 Up nie (7,1σ), keine gemeinsame Form trifft beide (widerlegt). Bilanz H184 bis H190: Die Lesart „Quarks als Farbschwingungen um das
 Leptonvakuum“ ist in allen benannten Wegen geprüft, ohne Quelle für die Massen. Beide Probleme bleiben offen.
 
+**Test H191 und Erkundungen k398, k399, 27.11.2026:** Für OP1. Auf der nachgezogenen Maschine (Coprozessor Stufe 2) wurde eine Schleife über Bänder verschiedener Spins gerechnet: Erzeugt sie als Gewichtsprofil die Casimir-Fläche √(j(j+1))? Nein (widerlegt, 0 von 12 Gitterpunkten; ohne Drehung kommt exakt die glatte Fläche j+½ heraus). Das Profil folgt den Clebsch-Gordan-Faktoren (Abfall 1/k), nicht der Casimir-Fläche (1/k²). Primzahl-Rauschen (k398) wirkt wie Zufallsrauschen gleicher Streuung; die Riemann-Vermutung gibt nur Fehlerschranken für π(x), keine Formel für Primzahlen und keine Folge für RSA/ElGamal. Geometrie-Erkundung k399: Möbiusband = Spinor-Vorzeichen, Band am Äquator = Clifford-Torus, mehrere Bänder = platonische Winkel, Turmstufen = Hopf-Faserungen; eine Zahl entsteht erst mit einem hergeleiteten Gewicht je Band und Spannungsgesetz. OP1 bleibt offen.
+
 **Erkundungen k394 bis k396, 27.11.2026:** Für OP1, OP3 und OP4. Übersicht der Stellgrößen (k394): Jede Einzelzahl der Quarkmassen ist mit
 einer Stellgröße erreichbar, zwei im selben Sektor nur für Up gut, alle vier nie. Selbstjustierende Schleife durch den HC (k395): Fixpunkt
 b = ½ (Hopf-Punkt), nicht β_sym; Schranken durch Wiederholen löschen Übergänge, liefern aber keine Zahl. β_sym als Erwartungswert (k396): 1/γ_L
