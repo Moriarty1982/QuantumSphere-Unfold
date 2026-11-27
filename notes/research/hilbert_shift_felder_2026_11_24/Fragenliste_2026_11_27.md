@@ -19,6 +19,6 @@ Status wird hier nachgezogen. Erledigte Punkte verweisen auf die Notiz.
 | F12 | Spinor als Gummischlauch (Linie mit winzigem Loch); Band um den Äquator der Sphäre: Band maximal gedehnt, Sphäre maximal entspannt; liegt das Band anders, verformt sich die Sphäre so, dass Weglänge und Spannung wieder maximal sind | erledigt: k399 (`baender_auf_der_sphaere_k399/`) |
 | F13 | Was passiert, wenn alle Spinorbänder gleichzeitig auf die Oberfläche sollen? | erledigt: k399 (`baender_auf_der_sphaere_k399/`) |
 | F14 | Was, wenn jedes dieser Bänder eine Stufe des HS-Turms ist (HS(0) bis HS(4): ℝ, ℂ, ℍ, 𝕆, 𝕊)? | erledigt: k399 (`baender_auf_der_sphaere_k399/`) |
-| F15 | Wie weiter mit den Quarkmassen nach H190 (Lesart wechseln, ruhen lassen, gemeinsame Form, Drehung in zwei Ebenen) | Entscheidung des Autors offen |
+| F15 | Wie weiter mit den Quarkmassen nach H190 (Lesart wechseln, ruhen lassen, gemeinsame Form, Drehung in zwei Ebenen) | Autor wählte „Lesart wechseln“; erster Schritt H192 (HS-Stufen auf der Sphäre, teilweise); Weggabelung getrennte Felder offen |
 
-Vergebene Nummern: H191, k397 (Test H191), k398 (Primzahl-Rauschen), k399 (Bänder auf der Sphäre). Nächste frei: H192, k400. Stand: F1 bis F14 erledigt; F15 (Quarkmassen nach H190) bei Marc offen.
+Vergebene Nummern: H191, k397 (Test H191), k398 (Primzahl-Rauschen), k399 (Bänder auf der Sphäre). Nächste frei: H193, k401. Stand: F1 bis F14 erledigt; F15 (Quarkmassen nach H190) bei Marc offen.

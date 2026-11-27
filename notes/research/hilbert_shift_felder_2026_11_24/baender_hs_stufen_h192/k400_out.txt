@@ -1,0 +1,44 @@
+== H192a (nicht blind): gleiche Gewichte -> platonische Winkel ==
+
+   [Kontrolle, alle gleich] Gewicht [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)], Gesetz 1/sin^1; Energie 11.0254
+      R-C:  59.14 Grad  (naechster: Hopf 60, Abstand 0.86)
+      R-H:  74.03 Grad  (naechster: Wuerfel arccos(1/3) 70.53, Abstand 3.50)
+      R-O:  59.14 Grad  (naechster: Hopf 60, Abstand 0.86)
+      R-S:  74.03 Grad  (naechster: Wuerfel arccos(1/3) 70.53, Abstand 3.50)
+      C-H:  74.03 Grad  (naechster: Wuerfel arccos(1/3) 70.53, Abstand 3.50)
+      C-O:  74.03 Grad  (naechster: Wuerfel arccos(1/3) 70.53, Abstand 3.50)
+      C-S:  59.14 Grad  (naechster: Hopf 60, Abstand 0.86)
+      H-O:  59.14 Grad  (naechster: Hopf 60, Abstand 0.86)
+      H-S:  59.14 Grad  (naechster: Hopf 60, Abstand 0.86)
+      O-S:  74.03 Grad  (naechster: Wuerfel arccos(1/3) 70.53, Abstand 3.50)
+   Kontrolle Teilmengen (k399 reproduziert):
+      n = 2: [90.] (erwartet 90)
+      n = 3: [90. 90. 90.] (erwartet 90)
+      n = 4: [70.53 70.53 70.53 70.53 70.53 70.53] (erwartet 70.53)
+      n = 6: [63.43 63.43 63.43 63.43 63.43 63.43 63.43 63.43 63.43 63.43 63.43 63.43
+ 63.43 63.43 63.44] (erwartet 63.43)
+
+== H192b (Test): Gewicht = Dimension, Gesetz 1/sin ==
+
+   [Test] Gewicht [np.int64(1), np.int64(2), np.int64(4), np.int64(8), np.int64(16)], Gesetz 1/sin^1; Energie 322.1532
+      R-C:  35.59 Grad  (naechster: Koide/theta 45, Abstand 9.41)
+      R-H:  50.08 Grad  (naechster: magisch arccos(1/sqrt3) 54.74, Abstand 4.66)
+      R-O:  65.03 Grad  (naechster: Ikosaeder arccos(1/sqrt5) 63.43, Abstand 1.60)
+      R-S:  68.24 Grad  (naechster: Wuerfel arccos(1/3) 70.53, Abstand 2.29)
+      C-H:  49.40 Grad  (naechster: Koide/theta 45, Abstand 4.40) <= vorab benannt
+      C-O:  63.40 Grad  (naechster: Ikosaeder arccos(1/sqrt5) 63.43, Abstand 0.03)
+      C-S:  76.18 Grad  (naechster: Wuerfel arccos(1/3) 70.53, Abstand 5.65)
+      H-O:  70.01 Grad  (naechster: Wuerfel arccos(1/3) 70.53, Abstand 0.51)
+      H-S:  89.00 Grad  (naechster: Oktant 90, Abstand 1.00)
+      O-S:  89.54 Grad  (naechster: Oktant 90, Abstand 0.46) <= vorab benannt
+
+   vorab benannte Paare: O-S = 89.54 (90 gefordert: ja); C-H = 49.40 (57.569 oder 54.74 gefordert: nein)
+   H192b: teilweise
+
+== H192c (Robustheit): Gewicht und Gesetz variiert ==
+   Gewicht dim, 1/sin^1: O-S = 89.54, C-H = 49.40
+   Gewicht dim, 1/sin^2: O-S = 89.26, C-H = 51.59
+   Gewicht sqrt(dim), 1/sin^1: O-S = 88.17, C-H = 58.36
+   Gewicht sqrt(dim), 1/sin^2: O-S = 87.90, C-H = 59.43
+   Spannweite O-S 87.90..89.54; C-H 49.40..59.43
+   H192c: O-S stabil ueber die vier Wahlen; C-H haengt von Gewicht/Gesetz ab
