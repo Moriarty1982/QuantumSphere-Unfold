@@ -1,0 +1,16 @@
+Wolfram Language Kernel ueber den Evaluator, 27.11.2026. Skript: bridge_exakt.wl (erzeugt von bridge_check.py --write-wolfram).
+Acht Faelle: Qiskit-Schaltung -> OpenQASM 3 -> Bruecke -> Band -> HDL-Simulation; Wolfram rechnet den Zustand exakt
+mit Kronecker-Matrizen nach und vergleicht mit dem exakten HDL-Zustand. Print-Ausgaben vollstaendig, Rueckgabewert Null,
+keine Warnungen:
+
+Fall 0: Gatter 11, exakte Differenz {0, 0, 0, 0}
+Fall 1: Gatter 19, exakte Differenz {0, 0, 0, 0}
+Fall 2: Gatter 4, exakte Differenz {0, 0, 0, 0}
+Fall 3: Gatter 22, exakte Differenz {0, 0, 0, 0}
+Fall 4: Gatter 5, exakte Differenz {0, 0, 0, 0}
+Fall 5: Gatter 1, exakte Differenz {0, 0, 0, 0}
+Fall 6: Gatter 18, exakte Differenz {0, 0, 0, 0}
+Fall 7: Gatter 4, exakte Differenz {0, 0, 0, 0}
+
+Gegenkontrolle (eigener Lauf): H, T auf Qubit 0 gegen einen absichtlich falschen Zustand ohne T ergibt die Differenz
+{0, (1/2 + I/2) - 1/Sqrt[2], 0, 0}, also ungleich null. Der Vergleich erkennt Abweichungen.

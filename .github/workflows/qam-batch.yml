@@ -53,8 +53,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y iverilog yosys
-          python -m pip install "qiskit>=2,<3"
+          python -m pip install "qiskit>=2,<3" qiskit-qasm3-import
       - name: All HDL blocks synthesize with Yosys
         run: python -m qam.examples.coprocessor.synth_check
       - name: Coprocessor core against exact reference and Qiskit
         run: python -m qam.examples.coprocessor.check --cases 500 --seed 1
+      - name: Bridge to OpenQASM, Qiskit and Wolfram
+        run: python -m qam.examples.coprocessor.bridge_check --cases 300 --seed 7
