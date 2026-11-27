@@ -252,3 +252,28 @@ durch. Grenzen: Wertebereich Q2.30 ([−2, 2)); die HC-Schleife b′ = 1 − 2b 
 Welche Größe (β_sym, χ, Gewicht) mit welcher Zielfunktion gesucht wird, legt der Host fest; das Werk erklärt nichts, es
 findet nur Werte und misst ihre Stabilität. Das ist die Grundlage für den geplanten Stabilitätstest mit Vorab-Notiz.
 
+## Zustandsspeicher nach ZFS-Vorbild (27.11.2026)
+
+[`hdl/qstore.sv`](hdl/qstore.sv) legt exakte Zustände (16 Koeffizienten zu 16 Bit und k, 264 Bit) inhaltsadressiert ab, wie
+ZFS Blöcke: Jeder Datensatz trägt seine Prüfsumme (CRC-32 wie `zlib.crc32`). Namen zeigen auf Plätze, ein Platz zählt seine
+Nutzer.
+
+| Befehl | Wirkung |
+|---|---|
+| PUT a | Datensatz unter Name a ablegen; gleicher Inhalt schon vorhanden → derselbe Platz (Dedup); Copy-on-write bei geteilten Plätzen |
+| GET a | lesen; stimmt ein Spiegel nicht mit der Prüfsumme, wird aus dem anderen gelesen und repariert (Selbstheilung) |
+| SNAP a → b | Schnappschuss: b zeigt auf denselben Platz und ist nur lesbar |
+| CLONE a → b | Klon: b zeigt auf denselben Platz und ist schreibbar; eine eigene Kopie entsteht erst beim PUT |
+| DEL a | Name löschen, Platz frei, wenn niemand mehr darauf zeigt |
+| FLIP | (nur für Prüfungen) ein Bit in einem Spiegel kippen |
+
+Dazu ein laufender Prüfhash über alle PUT (`audit`), sodass zwei Läufe mit gleichem Hash dieselben Zustände in derselben
+Reihenfolge abgelegt haben. [`store_check.py`](store_check.py) ([Ausgabe](store_check_out.txt)): 3000 Befehle bitgenau gleich
+dem Python-Modell (407 Dedup-Treffer, 51 Reparaturen, 22 Fälle mit beiden Spiegeln falsch korrekt als Fehler gemeldet).
+Gegenkontrollen: Ohne Reparatur oder ohne Freigabe des alten Platzes fällt der Vergleich durch.
+
+Warum die kanonische √2-Form dafür nötig ist: Aus 600 Schaltungen entstehen 403 verschiedene Zustandsvektoren. Kanonisch sind
+das genau 403 Datensätze, mit Kürzen durch 2 aber 407 und ohne Kürzen 453: Derselbe Zustand hätte sonst mehrere Darstellungen,
+und die Dedup würde ihn nicht wiedererkennen. Die Paritätsspur aus dem Plan bleibt Erkundung und ist nicht gebaut. Grenzen:
+8 Plätze und 8 Namen (Parameter), Speicher in Registern (46 000 generische Zellen), noch nicht an den Kern angeschlossen.
+

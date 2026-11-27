@@ -1132,3 +1132,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Quanten-Coprozessor, Takt der Rechenwerke:** Inhaltsübersichten nennen den gemessenen Durchsatz zweier Pipelines am Bandregister (124 Mio. Gatter/s). Kein Forschungsbefund, Artikel unverändert.
 
 **27.11.2026, Quanten-Coprozessor, Selbstjustierung:** Inhaltsübersichten nennen das Rückkopplungswerk (Fixpunkt, Halbierung, Markierung „angepasst“). Kein Forschungsbefund, Artikel unverändert.
+
+**27.11.2026, Quanten-Coprozessor, Zustandsspeicher:** Inhaltsübersichten nennen den Zustandsspeicher nach ZFS-Vorbild. Kein Forschungsbefund, Artikel unverändert.

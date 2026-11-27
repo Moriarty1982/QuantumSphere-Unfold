@@ -72,3 +72,5 @@ jobs:
         run: python -m qam.examples.coprocessor.monitor_check --cases 800 --seed 13
       - name: Self-adjustment (feedback unit, results marked as adjusted)
         run: python -m qam.examples.coprocessor.tune_check --runs 400 --seed 17
+      - name: State store (ZFS-like dedup, snapshots, mirror)
+        run: python -m qam.examples.coprocessor.store_check --steps 3000 --seed 19
