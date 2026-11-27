@@ -64,3 +64,5 @@ jobs:
         run: python -m qam.examples.coprocessor.qimage --cases 600 --seed 3
       - name: Pipelined core with several contexts
         run: python -m qam.examples.coprocessor.pipe_check --cases 600 --seed 5
+      - name: Partitionable band register
+        run: python -m qam.examples.coprocessor.band_check --steps 6000 --seed 11

@@ -1,0 +1,3 @@
+Bandregister 128 Zellen, 16 Abschnitte, Bus 128 Bit: 6000 Befehle = Modell (ok 3746, guard 2254; Befehle bei ungueltiger Aufteilung 1611, bei voller Belegung 1771)
+Baender je Stufe in 128 Zellen: HS(7) 128er x1, HS(6) 64er x2, HS(5) 32er x4, HS(4) 16er x8, HS(3) 8er x16, HS(2) 4er x32, HS(1) 2er x64, HS(0) 1er x128
+Groessenmischungen: 27338; Buddy-Belegungen mit Lage: 44127887745906175987802 (~4.41e+22)

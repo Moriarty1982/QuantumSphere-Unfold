@@ -35,6 +35,7 @@ TARGETS = [
      # Aeltere Yosys-Fassungen (z. B. 0.33) schalten ABC9 standardmaessig ein und brauchen -noabc9 zusaetzlich.
      {"W": 16, "AW": 10, "flow": ["synth_ice40 -noabc", "synth_ice40 -noabc9 -noabc"]}),
     ("qboot", "qboot", [COP / "qboot.sv"], {"AW": 10}),
+    ("qband 128 Zellen, 16 Abschnitte", "qband", [COP / "qband.sv"], {}),
     ("tape_core direkt", "tape_core", [ZUSE / "tape_core.sv"], {"SCAN": 0}),
     ("tape_core zyklisch", "tape_core", [ZUSE / "tape_core.sv"], {"SCAN": 1}),
     ("guard_stream", "guard_stream", [ZUSE / "guard_stream.sv"], {}),
