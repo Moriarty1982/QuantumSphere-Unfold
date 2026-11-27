@@ -1,0 +1,16 @@
+=== k404b Gegenprobe (Wolfram Language), H196 ===
+Ladungsungerade Kruemmungen (H186), auf dem Vakuum (Tr=3, e2=3/2) reduziert = Zaehler-Anteile:
+  c1    : 2/3
+  c2    : 1 - lk/3
+  c4/c5 : 2 - lk^2/3
+  c7/c9 : 3/2 - lk + lk^2/6
+  c11   : 7/2 - lk - lk^2/6
+Bestaetigt sympy (Vorab-Tabelle) exakt.
+
+Voller 4-Parameter-Fit (Python k404): A=1.082e-3, B=3.291e-2 (ladungsgerade),
+C=-2.224e-3, D=3.320e-2 (ladungsungerade). b_s = B + s*D:
+  b_up   = B+D = 0.06611  (s=+1, Up: starkes l_k^2)
+  b_down = B-D = -2.8e-4  (s=-1, Down: l_k^2 nahe null)
+Das ladungsungerade l_k^2 (D) ist noetig, Vorzeichen +, und D ~ B: die Ladung schaltet
+das Quadratische fuer Down praktisch ab und verdoppelt es fuer Up. D/C = -14.9 trifft
+aber keinen einzelnen H186-Kandidaten (Kandidaten-Verhaeltnisse 0, +-0.167).
