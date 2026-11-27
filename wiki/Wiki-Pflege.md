@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**27.11.2026, Test H204 (Elter-F4-Darstellung, nach H203):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: die Ladungs-kovariante l_k²-Operatoralgebra auf dem Farbblock ist exakt 2-dim ({1, iL_U}, (iL_U)²=1), zwei minimale Idempotente P_up/P_dn; einzelne Darstellung erzwingt D/B nur diskret {0,+1,−1,∞}, Datenwert 1,0085 liegt 8,5σ vom nächsten; B (Grad 5) und D (Grad 4) in verschiedenen F₄-Graden → keine einzelne Irrep trägt beide → nein (bestätigt H202, teilweise nicht blind).
+
 **27.11.2026, Test H203 (Lepton-Kopplung, nach H202):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: stationäres (lepton-bindendes) F₄-Potential macht Quarks masselos (H184-Regel, Wolfram exakt); 7 Kopplungsrichtungen ändern die Quark-Frequenzen, lassen den farblosen Lepton-Sektor unberührt → Lepton-Sektor blind gegen die Quark-Kopplungen; nein.
 
 **27.11.2026, Test H202 (ist der 0,9-%-Rest frei, nach H201):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Abbildung Kopplungen→(A,B,C,D) Rang 4, jede ≤3-Basis verworfen (χ² 8312 vs 7,91) → D/B frei, ~0,9-%-Rest ist Eingabewert. Schließt den chiralen Strang ab; Weggabelung an den Autor.
