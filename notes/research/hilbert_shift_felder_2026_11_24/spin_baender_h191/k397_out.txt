@@ -1,0 +1,57 @@
+Zielprofile r_k (k = 1..8): Casimir [1.0964 1.0446 1.026  1.0171 1.0121 1.0091 1.007  1.0056] ; glatt: alle 1
+
+== H191a (nicht blind): alpha = 0 ==
+   mu = 0.25, lam = 0.5: Runden 800, p_0 = 0.666667, p_1 = 0.222222, p_(k+1)/p_k = 0.33333333, groesste Abweichung |r_k - 1| = 5.2e-15
+   mu = 0.5, lam = 1.0: Runden 800, kein Schwanz: nur die Baender 0..0 sind besetzt (p_0 = 1.000000, p_1 = 0.000000); Gitterpunkt entartet, zaehlt nicht
+   mu = 0.2, lam = 0.6: Runden 800, p_0 = 0.833333, p_1 = 0.138889, p_(k+1)/p_k = 0.16666667, groesste Abweichung |r_k - 1| = 2.3e-15
+   mu = 0.4, lam = 0.6: Runden 1600, p_0 = 0.555556, p_1 = 0.246914, p_(k+1)/p_k = 0.44444444, groesste Abweichung |r_k - 1| = 9.5e-15
+   H191a: bestaetigt (nicht blind)
+
+== H191b, H191c: Gitter ==
+   alpha = pi/6, mu = 0.25, lam = 0.5: Runden 800, p_0 = 0.72388, p_1 = 0.21328, d_inf = 1.837189 (Baender 12..16), Streuung dort 2.1e-02
+      r_1..r_8 = [0.7897 0.8547 0.8949 0.9213 0.9399 0.9536 0.9642 0.9726];  Abstand zu Casimir 0.3067, zu glatt 0.2103; mittlere Polarisation b = 0.17183
+   alpha = pi/6, mu = 0.5, lam = 1.0: Runden 800, kein Schwanz: nur die Baender 0..0 besetzt (p_0 = 1.00000, p_1 = 0.00000); entartet, kann kein Fenster erfuellen
+   alpha = pi/6, mu = 0.2, lam = 0.6: Runden 800, p_0 = 0.84926, p_1 = 0.13187, d_inf = 2.395144 (Baender 8..12), Streuung dort 3.7e-02
+      r_1..r_8 = [0.8616 0.9069 0.9356 0.9547 0.9681 0.978  0.9857 0.9917];  Abstand zu Casimir 0.2347, zu glatt 0.1384; mittlere Polarisation b = 0.10790
+   alpha = pi/6, mu = 0.4, lam = 0.6: Runden 800, p_0 = 0.66586, p_1 = 0.24215, d_inf = 1.666431 (Baender 12..16), Streuung dort 2.3e-02
+      r_1..r_8 = [0.7508 0.8267 0.8739 0.9054 0.9276 0.9441 0.9568 0.9669];  Abstand zu Casimir 0.3455, zu glatt 0.2492; mittlere Polarisation b = 0.22813
+   alpha = pi/4, mu = 0.25, lam = 0.5: Runden 800, p_0 = 0.74161, p_1 = 0.20791, d_inf = 2.002099 (Baender 10..14), Streuung dort 2.8e-02
+      r_1..r_8 = [0.8015 0.8712 0.9099 0.9345 0.9516 0.9642 0.9738 0.9814];  Abstand zu Casimir 0.2949, zu glatt 0.1985; mittlere Polarisation b = 0.12237
+   alpha = pi/4, mu = 0.5, lam = 1.0: Runden 800, kein Schwanz: nur die Baender 0..0 besetzt (p_0 = 1.00000, p_1 = 0.00000); entartet, kann kein Fenster erfuellen
+   alpha = pi/4, mu = 0.2, lam = 0.6: Runden 800, p_0 = 0.85637, p_1 = 0.12821, d_inf = 2.568253 (Baender 7..11), Streuung dort 4.4e-02
+      r_1..r_8 = [0.8634 0.915  0.9436 0.9618 0.9744 0.9836 0.9907 0.9963];  Abstand zu Casimir 0.2330, zu glatt 0.1366; mittlere Polarisation b = 0.08229
+   alpha = pi/4, mu = 0.4, lam = 0.6: Runden 800, p_0 = 0.69832, p_1 = 0.23337, d_inf = 1.882576 (Baender 11..15), Streuung dort 2.6e-02
+      r_1..r_8 = [0.7702 0.8494 0.8935 0.9216 0.941  0.9554 0.9663 0.975 ];  Abstand zu Casimir 0.3262, zu glatt 0.2298; mittlere Polarisation b = 0.16651
+   alpha = pi/3, mu = 0.25, lam = 0.5: Runden 800, p_0 = 0.75109, p_1 = 0.20449, d_inf = 2.088237 (Baender 10..14), Streuung dort 2.7e-02
+      r_1..r_8 = [0.8137 0.8765 0.9143 0.9377 0.954  0.9659 0.9751 0.9823];  Abstand zu Casimir 0.2827, zu glatt 0.1863; mittlere Polarisation b = 0.09625
+   alpha = pi/3, mu = 0.5, lam = 1.0: Runden 800, kein Schwanz: nur die Baender 0..0 besetzt (p_0 = 1.00000, p_1 = 0.00000); entartet, kann kein Fenster erfuellen
+   alpha = pi/3, mu = 0.2, lam = 0.6: Runden 800, p_0 = 0.86064, p_1 = 0.12586, d_inf = 2.649375 (Baender 6..10), Streuung dort 5.3e-02
+      r_1..r_8 = [0.8766 0.9216 0.9504 0.9677 0.9799 0.9888 0.9957 1.0011];  Abstand zu Casimir 0.2198, zu glatt 0.1234; mittlere Polarisation b = 0.06717
+   alpha = pi/3, mu = 0.4, lam = 0.6: Runden 800, p_0 = 0.71610, p_1 = 0.22702, d_inf = 1.991107 (Baender 10..14), Streuung dort 2.9e-02
+      r_1..r_8 = [0.7929 0.8617 0.9044 0.9304 0.9486 0.9619 0.9722 0.9802];  Abstand zu Casimir 0.3035, zu glatt 0.2071; mittlere Polarisation b = 0.13358
+   Laufzeit 691 s
+
+   entartete Gitterpunkte (lam = 1, kein Schwanz): 3 von 12; sie koennen kein Fenster erfuellen (Fehler im vorab gesetzten Gitter, offen benannt)
+   H191b (Casimir-Profil): 0 von 12 Gitterpunkten im Fenster -> widerlegt
+   H191c (glattes Profil): 0 von 12 Gitterpunkten im Fenster -> widerlegt
+   H191d: Spannweite von r_1 ueber das Gitter: 0.7508 bis 0.8766; von d_inf: 1.6664 bis 2.6494
+   Abfall der Abweichung: (r_k - 1) * k und (r_k - 1) * k^2 fuer den ersten Gitterpunkt: [-0.2103 -0.2905 -0.3154 -0.3148 -0.3005 -0.2782 -0.2505 -0.2193] [-0.2103 -0.581  -0.9463 -1.2592 -1.5027 -1.669  -1.7537 -1.7543]
+
+== Protokoll eines kurzen Laufs (alpha = pi/6, mu = 0.25, lam = 0.5, 3 Runden) ==
+     5 | LOOP 3                       | Schleife mit 3 Runden beginnt | weil: Rolle Loop aus 19Q | Baender {'1': 1.0}
+     6 | ROT 0.5235987755982988       | Drehung um alpha = 0.5235987756 (Blochwinkel 1.047197551) | weil: Drehbefehl: mischt Amplituden (fehlte der Bandmaschine laut H137) | Baender {'1': 1.0}
+     7 | HC                           | S_x gemessen, Ergebnis verworfen | weil: HC nicht selektiv: loescht alles quer zur HC-Achse (r70.2) | Baender {'1': 1.0}
+     8 | ADD 0.25                     | Qubit |+> angekoppelt mit Gewicht 0.25, Gesamtspin gemessen | weil: Bandwechsel: Clebsch-Gordan verbindet Band k mit k+1 und k-1 | Baender {'0': 0.03125, '1': 0.75, '2': 0.21875}
+     9 | DROP 0.5                     | ein Qubit abgegeben mit Gewicht 0.5 | weil: Bandwechsel nach unten (Teilspur): k -> k-1 | Baender {'0': 0.40625, '1': 0.484375, '2': 0.109375}
+    10 | END                          | zurueck zum Schleifenanfang (Runde 2 von 3) | weil: Runde beendet, Zaehler noch nicht erreicht | Baender {'0': 0.40625, '1': 0.484375, '2': 0.109375}
+    11 | ROT 0.5235987755982988       | Drehung um alpha = 0.5235987756 (Blochwinkel 1.047197551) | weil: Drehbefehl: mischt Amplituden (fehlte der Bandmaschine laut H137) | Baender {'0': 0.40625, '1': 0.484375, '2': 0.109375}
+    12 | HC                           | S_x gemessen, Ergebnis verworfen | weil: HC nicht selektiv: loescht alles quer zur HC-Achse (r70.2) | Baender {'0': 0.40625, '1': 0.484375, '2': 0.109375}
+    13 | ADD 0.25                     | Qubit |+> angekoppelt mit Gewicht 0.25, Gesamtspin gemessen | weil: Bandwechsel: Clebsch-Gordan verbindet Band k mit k+1 und k-1 | Baender {'0': 0.326171875, '1': 0.4700520833, '2': 0.181640625, '3': 0.0221354167}
+    14 | DROP 0.5                     | ein Qubit abgegeben mit Gewicht 0.5 | weil: Bandwechsel nach unten (Teilspur): k -> k-1 | Baender {'0': 0.5611979167, '1': 0.3258463542, '2': 0.1018880208, '3': 0.0110677083}
+    15 | END                          | zurueck zum Schleifenanfang (Runde 3 von 3) | weil: Runde beendet, Zaehler noch nicht erreicht | Baender {'0': 0.5611979167, '1': 0.3258463542, '2': 0.1018880208, '3': 0.0110677083}
+    16 | ROT 0.5235987755982988       | Drehung um alpha = 0.5235987756 (Blochwinkel 1.047197551) | weil: Drehbefehl: mischt Amplituden (fehlte der Bandmaschine laut H137) | Baender {'0': 0.5611979167, '1': 0.3258463542, '2': 0.1018880208, '3': 0.0110677083}
+    17 | HC                           | S_x gemessen, Ergebnis verworfen | weil: HC nicht selektiv: loescht alles quer zur HC-Achse (r70.2) | Baender {'0': 0.5611979167, '1': 0.3258463542, '2': 0.1018880208, '3': 0.0110677083}
+    18 | ADD 0.25                     | Qubit |+> angekoppelt mit Gewicht 0.25, Gesamtspin gemessen | weil: Bandwechsel: Clebsch-Gordan verbindet Band k mit k+1 und k-1 | Baender {'0': 0.4362386068, '1': 0.3904712818, '2': 0.1431884766, '3': 0.0279857494, '4': 0.0021158854}
+    19 | DROP 0.5                     | ein Qubit abgegeben mit Gewicht 0.5 | weil: Bandwechsel nach unten (Teilspur): k -> k-1 | Baender {'0': 0.6314742477, '1': 0.2668298792, '2': 0.085587113, '3': 0.0150508174, '4': 0.0010579427}
+    20 | END                          | Schleife nach 3 Runden verlassen | weil: Zaehler erreicht (Rolle Return aus 19Q) | Baender {'0': 0.6314742477, '1': 0.2668298792, '2': 0.085587113, '3': 0.0150508174, '4': 0.0010579427}
+    21 | HALT                         | angehalten | weil: HALT gelesen | Baender {'0': 0.6314742477, '1': 0.2668298792, '2': 0.085587113, '3': 0.0150508174, '4': 0.0010579427}

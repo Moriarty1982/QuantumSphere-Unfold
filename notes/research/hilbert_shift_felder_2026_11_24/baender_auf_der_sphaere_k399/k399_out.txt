@@ -1,0 +1,68 @@
+== 1 Moebiusband und Torus (Zahlenprobe zu bekannter Geometrie) ==
+   Rand des Moebiusbands (Halbbreite 0.3): schliesst sich nach t = 4 pi (Abstand Anfang-Ende 6.4e-16), nach 2 pi noch nicht (2.319)
+   der Rand liegt auf dem Torus mit Schlauchradius 0.3: Abstand von der Mittellinie 0.300000 bis 0.300000
+   Windungszahlen des Rands auf diesem Torus: 2.000 mal lang herum, 1.000 mal um den Schlauch: eine (2,1)-Kurve
+   Also: Moebiusband mit Dicke = Volltorus; seine Oberflaeche ist ein Torus. Zwei Moebiusbaender am Rand verklebt = Kleinsche Flasche (bekannt, nicht gerechnet).
+
+== 2 Band auf der Sphaere der Feldzustaende und sein Urbild in S^3 (Hopf) ==
+   Polwinkel   Laenge des Bands / 2 pi   Torusflaeche numerisch   2 pi^2 sin(th)
+     10.000                 0.173648                  3.42761          3.42768
+     30.000                 0.500000                  9.86940          9.86960
+     54.736                 0.816496                 16.11666         16.11699
+     57.569                 0.844038                 16.66030         16.66064
+     60.000                 0.866025                 17.09430         17.09466
+     90.000                 1.000000                 19.73880         19.73921
+   Befund: Laenge des Bands und Flaeche seines Torus gehen beide wie sin(th); beide sind am Aequator maximal (Clifford-Torus, Flaeche 2 pi^2).
+   Einordnung der Frames (r70: R am Pol, M bei b_C = 1/gamma_L): Polwinkel von M = 57.569 Grad, sin = 0.844041;
+   am Hopf-Punkt (b = 1/2, k395): 60 Grad, sin = 0.866025 = sqrt(3)/2 (dieselbe Zahl wie sqrt(j(j+1)) fuer j = 1/2; nachtraeglich bemerkt, kein Befund).
+   Vektormodell des Spins 1/2: cos(th) = m/sqrt(j(j+1)) = 1/sqrt(3), th = 54.7356 Grad; 1/sqrt(3) ist beta am Hopf-Punkt.
+
+== 3 Ein Band abseits des Aequators: wie muss sich die Flaeche verformen? ==
+   Setzung: Das Band hat die feste Laenge L = 2 pi (maximal gedehnt). Es liegt beim Polwinkel th einer Drehflaeche (Sphaeroid mit Halbachsen a, a, c).
+   Bedingung 'Weg wieder maximal': der Breitenkreis des Bands ist der laengste, also der Aequator des Sphaeroids, mit Umfang 2 pi a = L, d. h. a = 1.
+   Die Sphaere dreht also nur ihre Achse zum Band (kostet nichts) oder, wenn die Achse festgehalten wird, verformt sie sich:
+      th =  90.00: Band-Laenge auf der ruhenden Kugel 1.0000 * 2 pi; noetige Verschiebung des Kugelmittelpunkts 0.0000 (oder Dehnung des Breitenkreises um den Faktor 1.0000)
+      th =  75.00: Band-Laenge auf der ruhenden Kugel 0.9659 * 2 pi; noetige Verschiebung des Kugelmittelpunkts 0.2588 (oder Dehnung des Breitenkreises um den Faktor 1.0353)
+      th =  60.00: Band-Laenge auf der ruhenden Kugel 0.8660 * 2 pi; noetige Verschiebung des Kugelmittelpunkts 0.5000 (oder Dehnung des Breitenkreises um den Faktor 1.1547)
+      th =  57.57: Band-Laenge auf der ruhenden Kugel 0.8440 * 2 pi; noetige Verschiebung des Kugelmittelpunkts 0.5363 (oder Dehnung des Breitenkreises um den Faktor 1.1848)
+      th =  45.00: Band-Laenge auf der ruhenden Kugel 0.7071 * 2 pi; noetige Verschiebung des Kugelmittelpunkts 0.7071 (oder Dehnung des Breitenkreises um den Faktor 1.4142)
+      th =  30.00: Band-Laenge auf der ruhenden Kugel 0.5000 * 2 pi; noetige Verschiebung des Kugelmittelpunkts 0.8660 (oder Dehnung des Breitenkreises um den Faktor 2.0000)
+   Befund: Ein einzelnes Band erzwingt keine neue Form. Die Kugel kann sich immer so legen, dass das Band ihr Aequator ist. Zahlen entstehen erst, wenn mehrere Baender
+   gleichzeitig maximal sein wollen und sich dabei stoeren.
+
+== 4 Mehrere Baender gleichzeitig: Grosskreise, die sich moeglichst wenig stoeren ==
+   Je zwei Grosskreise schneiden sich in zwei Gegenpunkten. Alle n Baender koennen also gleichzeitig maximal lang sein, aber nicht kreuzungsfrei.
+   Setzung: Die Baender stossen sich ab; Energie = Summe ueber Paare von 1/sin^s(Winkel zwischen den Ebenen), s = 1 und s = 2 (zwei Gesetze, um die Abhaengigkeit zu sehen).
+   n = 2, s = 1: Winkel zwischen den Baendern (Grad): 90.00
+   n = 2, s = 2: Winkel zwischen den Baendern (Grad): 90.00
+   n = 3, s = 1: Winkel zwischen den Baendern (Grad): 90.00, 90.00, 90.00
+   n = 3, s = 2: Winkel zwischen den Baendern (Grad): 90.00, 90.00, 90.00
+   n = 4, s = 1: Winkel zwischen den Baendern (Grad): 70.53, 70.53, 70.53, 70.53, 70.53, 70.53
+   n = 4, s = 2: Winkel zwischen den Baendern (Grad): 70.53, 70.53, 70.53, 70.53, 70.53, 70.53
+   n = 5, s = 1: Winkel zwischen den Baendern (Grad): 59.14, 59.14, 59.14, 59.14, 59.14, 74.03, 74.03, 74.03, 74.03, 74.03
+   n = 5, s = 2: Winkel zwischen den Baendern (Grad): 59.58, 59.58, 59.58, 59.58, 59.58, 72.99, 72.99, 72.99, 72.99, 72.99
+   n = 6, s = 1: Winkel zwischen den Baendern (Grad): 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.44, 63.44
+   n = 6, s = 2: Winkel zwischen den Baendern (Grad): 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43, 63.43
+   Vergleichswerte: 3 Baender senkrecht = Koordinatenebenen (acht Oktanten); 4 Baender: arccos(1/3) = 70.53; 6 Baender: arccos(1/sqrt(5)) = 63.43
+   Befund: Fuer 2, 3, 4 und 6 gleiche Baender ist die Lage eindeutig und haengt nicht vom Abstossungsgesetz ab (Symmetrie: Kreuz, Oktaeder, Wuerfel-Diagonalen, Ikosaeder).
+   Fuer 5 gleiche Baender gibt es keine solche Lage; die Winkel haengen vom Gesetz ab.
+
+== 5 Jedes Band eine Stufe des HS-Turms: Gewichte nach Dimension (1, 2, 4, 8, 16) ==
+   Gewicht = Dimension, s = 1: RC 35.6, RH 50.1, RO 65.0, RS 68.2, CH 49.4, CO 63.4, CS 76.2, HO 70.0, HS 89.0, OS 89.5
+   Gewicht = Dimension, s = 2: RC 39.9, RH 52.2, RO 63.9, RS 66.6, CH 51.6, CO 63.4, CS 73.5, HO 69.2, HS 88.2, OS 89.3
+   Gewicht = Wurzel der Dimension, s = 1: RC 50.1, RH 57.4, RO 63.5, RS 63.5, CH 58.4, CO 66.5, CS 66.4, HO 63.9, HS 86.4, OS 88.2
+   Gewicht = Wurzel der Dimension, s = 2: RC 51.8, RH 58.0, RO 62.9, RS 62.9, CH 59.4, CO 66.5, CS 65.4, HO 63.9, HS 85.7, OS 87.9
+   alle gleich, s = 1: RC 59.1, RH 74.0, RO 74.0, RS 59.1, CH 59.1, CO 74.0, CS 74.0, HO 59.1, HS 74.0, OS 59.1
+   alle gleich, s = 2: RC 59.6, RH 73.0, RO 59.6, RS 73.0, CH 73.0, CO 73.0, CS 59.6, HO 59.6, HS 59.6, OS 73.0
+   Befund: Die schweren Baender (O, S) stellen sich nahezu senkrecht; die leichten ordnen sich danach ein. Die Winkel haengen vom Gewicht und vom Gesetz ab:
+   ohne hergeleitetes Abstossungsgesetz liefert das Bild keine Zahl.
+
+== 6 Hopf-Faserungen des Turms (bekannte Mathematik, hier nur die Zahlen) ==
+   Stufe   Faserung            Urbild des Aequators        Volumen des Urbilds beim Polwinkel th (relativ zum Aequator)
+   R       S^1 -> S^1, Faser S^0    S^0 x S^0               sin^0(th): bei 60 Grad 1.00000, bei 57.569 Grad 1.00000
+   C       S^3 -> S^2, Faser S^1    S^1 x S^1               sin^1(th): bei 60 Grad 0.86603, bei 57.569 Grad 0.84404
+   H       S^7 -> S^4, Faser S^3    S^3 x S^3               sin^3(th): bei 60 Grad 0.64952, bei 57.569 Grad 0.60129
+   O       S^15 -> S^8, Faser S^7    S^7 x S^7               sin^7(th): bei 60 Grad 0.36535, bei 57.569 Grad 0.30516
+   S (Sedenionen): keine Hopf-Faserung (Adams 1960: nur Dimension 1, 2, 4, 8); die Sedenionen haben Nullteiler.
+   Stufe R ist das Moebiusband selbst: S^1 -> S^1 mit Faser aus zwei Punkten ist der Rand, der zweimal umlaeuft (Teil 1).
+   Stufe C ist der Torus ueber dem Band (Teil 2). Die Folge 'Moebiusband, Torus, ...' ist also die Folge der Hopf-Faserungen, und sie endet bei O.

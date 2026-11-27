@@ -1,0 +1,36 @@
+== 1 Schleife L3 mit Rauschen auf dem Drehwinkel (3000 Runden, Mittel ueber die letzten 2500) ==
+   Streuung der ersten 3000 Primzahl-Werte (normierte Luecke - 1): 0.7229, Mittel +0.0088
+      eps       Quelle     Mittel b   Streuung  Mittel - 1/2
+     0.00    prime_gap    0.5000000   0.00e+00     +0.00e+00
+     0.01    prime_gap    0.4999801   4.26e-03     -1.99e-05
+     0.01       random    0.5000243   4.20e-03     +2.43e-05  (drei Startwerte: 0.500001, 0.500112, 0.499960)
+     0.05    prime_gap    0.5002689   2.21e-02     +2.69e-04
+     0.05       random    0.5004804   2.10e-02     +4.80e-04  (drei Startwerte: 0.500374, 0.500893, 0.500174)
+     0.10    prime_gap    0.5019888   4.69e-02     +1.99e-03
+     0.10       random    0.5018617   4.21e-02     +1.86e-03  (drei Startwerte: 0.501685, 0.502605, 0.501296)
+   Erwartung aus der Formel: eine Runde vom Fixpunkt aus mit gestoertem Winkel, b' = (1 - x) cos(2 alpha + 2 d) b + x:
+      eps = 0.01: eine Runde vom Fixpunkt aus mit den Primzahl-Werten: Mittel 0.4999489 (Verschiebung -5.11e-05; zweite Ordnung -(1-x) cos(2 alpha) b * 2 <d^2> = -1.79e-05, erste Ordnung -3.35e-05)
+      eps = 0.05: eine Runde vom Fixpunkt aus mit den Primzahl-Werten: Mittel 0.4994148 (Verschiebung -5.85e-04; zweite Ordnung -(1-x) cos(2 alpha) b * 2 <d^2> = -4.47e-04, erste Ordnung -1.67e-04)
+      eps = 0.1: eine Runde vom Fixpunkt aus mit den Primzahl-Werten: Mittel 0.4981187 (Verschiebung -1.88e-03; zweite Ordnung -(1-x) cos(2 alpha) b * 2 <d^2> = -1.79e-03, erste Ordnung -3.35e-04)
+   Die ganze Schleife verschiebt das Mittel nach oben, weil b' = 1 - 2b(1 - b) gekruemmt ist: + 2 Var(b). Mit den Zahlen oben (eps = 0.05):
+      2 * (2.2e-2)^2 = +9.77e-04, dazu die eine Runde -5.85e-04, zusammen +3.92e-04; gemessen +2.7e-04 (Primzahlen), +4.8e-04 (Zufall, Spanne der Startwerte 1.7e-04 bis 8.9e-04)
+   Lesart: Rauschen verschiebt das Mittel nur ueber Streuung und Mittel der Werte. Die Reihenfolge (das Muster der Primzahlen) geht in dieser Ordnung nicht ein;
+   Primzahl- und Zufallsrauschen gleicher Streuung sind innerhalb der Spanne der Startwerte nicht zu unterscheiden.
+
+== 2 Was ist an Position X exakt berechenbar? ==
+   Primzahl Nr. 10: 29
+   Primzahl Nr. 1000: 7919
+   Primzahl Nr. 100000: 1299709
+   Primzahl Nr. 1000000: 15485863
+   (Sieb bis 2*10^7 in 0.12 s; das ist exakt und braucht keine Vermutung.)
+   Riemann-Vermutung als Fehlerschranke (Schoenfeld 1976): |pi(x) - li(x)| < sqrt(x) ln(x) / (8 pi) fuer x >= 2657
+      x =    10000: pi(x) = 1229, li(x) = 1246.1, Abweichung -17.1, Schranke 36.6
+      x =   100000: pi(x) = 9592, li(x) = 9629.8, Abweichung -37.8, Schranke 144.9
+      x =  1000000: pi(x) = 78498, li(x) = 78627.5, Abweichung -129.5, Schranke 549.7
+      x = 10000000: pi(x) = 664579, li(x) = 664918.4, Abweichung -339.4, Schranke 2028.0
+   Die Schranke sagt, wie weit pi(x) hoechstens von li(x) abweicht. Sie gibt weder die n-te Primzahl noch die Teiler einer Zahl.
+
+== 3 Laesst sich bekanntes Rauschen aus der Ausgabe herausrechnen? ==
+   200 Runden mit eps = 0.05: Maschine gegen Vorhersage aus der bekannten Primzahlfolge: groesste Abweichung 5.0e-13
+   zwei Laeufe, gleicher Hash: True; letzter Wert b = 0.5046076153
+   Lesart: Mit bekanntem Bauprinzip und bekannter Folge ist jede Runde exakt vorhersagbar. Das ist die Lage eines Angreifers, der den Schluessel schon hat.

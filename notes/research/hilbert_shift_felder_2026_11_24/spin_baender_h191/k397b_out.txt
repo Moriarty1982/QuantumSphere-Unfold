@@ -1,0 +1,7 @@
+Wolfram-Gegenprobe zu H191 (27.11.2026; nur Print-Ausgaben, Rueckgabewert Null)
+Casimir-Profil r_k, k=1..8: {1.09638, 1.04456, 1.02600, 1.01710, 1.01212, 1.00905, 1.00702, 1.00560}
+Grenzwert k^2 (r_k - 1) = 1/2, also r_k - 1 faellt wie 1/(2 k^2)
+eine Runde (alpha=Pi/6, mu=1/4, lam=1/2) von Band 1, |+>: nach ROT,HC b = 1/2
+P(Gesamtspin 1) = 7/8
+nach ADD(1/4),DROP(1/2): Baender {0,1,2} = {0.4062500000, 0.4843750000, 0.1093750000}   [= Maschine]
+alpha=0: P(Gesamtspin 1) = 1 -> ADD fuehrt immer nach oben; Verteilung exakt geometrisch, r_k = 1 (glatte Flaeche j+1/2)

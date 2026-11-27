@@ -1058,3 +1058,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Erkundungen k394 bis k396:** Übersicht der Stellgrößen, Renderschleife durch den HC, Bandwechsel, Lorenz-Vergleich, β_sym als Erwartungswert; Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert (Erkundungen, kein Befund für Physik-Artikel oder Preprint).
 
 **27.11.2026, Coprozessor Stufe 2 (Software), Fragenliste, Vorab H191:** Forschungsstand ergänzt; Bauplan um Zeile 2s ergänzt. Artikel unverändert (kein Befund).
+
+**27.11.2026, Test H191, Erkundungen k398/k399:** Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein Befund für Physik-Artikel oder Preprint).
