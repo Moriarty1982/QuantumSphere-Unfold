@@ -1,0 +1,14 @@
+Ausgabe von k393b_gegenprobe.wl (Wolfram Language, 27.11.2026)
+
+Print-Ausgaben:
+Charakteristische Gleichung in x = Omega^2: ha hb - ha om^2 - hb om^2 + om^4 + (-ha - hb - 2 om^2) x + x^2 = 0
+Rest gegen die Formel der Vorab-Notiz (eingesetzt): {0, 0}
+Produkt minus (ha - om^2)(hb - om^2): 0; Summe: ha + hb + 2 om^2
+Grenzfall ha = hb = h: {(Sqrt[h] - om)^2, (Sqrt[h] + om)^2}
+Stichprobe Down, Omega^2 = m, +f9, Ebene (1,2): f9 = {1.4765885, 1.4039899, 0.11942161}; bester Abstand 2.466 sigma bei w = 1.635850; Spektrum {0.00600793, 0.119422, 6.14627}
+
+Symbolische Nullreste: {0, 0} (Formel erfuellt die charakteristische Gleichung) und 0 (Produkt), exakt.
+Rueckgabewert: Null.
+Warnungen: Symbol::undefined2 (freies Symbol M) und General::messages; Hinweise der Auswerteumgebung, keine Rechenfehler.
+Hinweise: Der erste Versuch scheiterte zweimal mit "Service Unavailable" (Dienst nicht erreichbar), der dritte lief durch. Die Stichprobe stimmt
+mit k393_out.txt ueberein (2,47 sigma bei w = 1,63587). Die Wirkung von D_T im vollen Modell ist nur in Python geprueft.
