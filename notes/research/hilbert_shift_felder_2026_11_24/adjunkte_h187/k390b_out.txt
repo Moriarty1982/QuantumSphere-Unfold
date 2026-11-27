@@ -1,0 +1,11 @@
+(* Ausgabe von k390b_gegenprobe.wl, Wolfram Language, 27.11.2026. Print-Ausgaben; Rueckgabewert Null.
+   Warnungen: Symbol::undefined2 und General::messages (Hinweise der Auswerteumgebung), keine Rechenwarnung.
+   Die Adjunkte der Diagonale wurde unvereinfacht ausgegeben; ausmultipliziert ist sie (l2 l3, l1 l3, l1 l2). *)
+Adjunkte der Diagonale: {l1^2 - l1 (l1 + l2 + l3) + (-l1^2 - l2^2 - l3^2 + (l1 + l2 + l3)^2)/2, l2^2 - l2 (l1 + l2 + l3) + (-l1^2 - l2^2 - l3^2 + (l1 + l2 + l3)^2)/2, l3^2 - l3 (l1 + l2 + l3) + (-l1^2 - l2^2 - l3^2 + (l1 + l2 + l3)^2)/2}
+a3 Tr (W x Wq) Wu: {-2 l3, -2 l3, -2 l3, -2 l3}
+a4 Tr (W x Wq) (Wu Wuq): {-2 l3^2, -2 l3^2, -2 l3^2, -2 l3^2}
+a5 Tr (W x Wq) Wu#: {-2 l1 l2, -2 l1 l2, -2 l1 l2, -2 l1 l2}
+a7 Tr (W x Wu) (Wq x Wuq): {l3^2, l3^2, l3^2, l3^2}
+d1 Tr (Wq x DW) Wu: {-l3/3, -l3/3, l3/3, l3/3}
+d3 Tr (Wq x DW) Wu#: {-(l1 l2)/3, -(l1 l2)/3, (l1 l2)/3, (l1 l2)/3}
+d4 Tr (DW x Wu) (Wq x Wuq): {-l3^2/6, -l3^2/6, l3^2/6, l3^2/6}

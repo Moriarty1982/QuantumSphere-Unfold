@@ -106,6 +106,21 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Die Adjunkte liefert Produkt und dritten Eigenwert, aber nicht die Quarkmassen (27.11.2026, Test H187, k390)
+Fortsetzung von H186: zwölf Invarianten mit der Adjunkten W^# und dem Kreuzprodukt der Albert-Algebra, gegen alle sechs Quarkmassen bei M_Z.
+Vorab-Notiz vor der Rechnung (Commit beaa6ae); Python und Wolfram.
+- **H187a bestätigt:** Das Kreuzprodukt liefert genau die Funktionen, die den Spurpotenzen fehlten: den dritten Eigenwert l_k (und l_k²) und, mit
+  der Adjunkten des farblosen Anteils, das reine Produkt l_i l_j. Beide gibt es als gemeinsamen Term und, mit dem Ladungsoperator, als reinen
+  Unterschied zwischen Up und Down.
+- **H187b widerlegt:** Eine Funktion je Sektor trifft nicht (bester Abstand Up 82σ, Down 69σ).
+- **H187c widerlegt:** Zwei Funktionen je Sektor treffen Up zweimal (0,74σ und 1,05σ), Down nie (bester Abstand 11,8σ). Verlangt waren beide
+  Sektoren zugleich; die Zufallsquote dafür liegt bei 2,45 % (2000 erfundene Datensätze).
+- **Bilanz H184 bis H187:** Die Lesart „ein Vakuum, Sektoren schwingen“ gibt die richtige Zahl und Form der Zustände, aber die Massen bleiben in
+  allen geprüften Potentialtermen frei oder falsch. Die offene Wahl ist von „welches Potential“ zu „welche Koeffizienten“ gewandert, ohne kleiner zu
+  werden. Nicht geprüft: Ableitungsterme der Feldgleichung und Quarks auf einer anderen HS-Stufe. Die Wahl liegt beim Autor.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/adjunkte_h187/`.
+
 ### Kein einzelner Ladungsterm gibt den Unterschied zwischen Up und Down (27.11.2026, Test H186, k389)
 Fortsetzung von H185: elf Invarianten bis Grad 4 mit dem Ladungsoperator D = Q₀ − ½ auf ℂ ⊗ H₃(𝕆), ihre Wirkung je Generation, gegen die Massen bei
 M_Z. Vorab-Notiz vor der Rechnung (Commit c8ab85d); Python und Wolfram.
