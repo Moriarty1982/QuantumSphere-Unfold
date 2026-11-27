@@ -169,11 +169,6 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 **Test H187, 27.11.2026:** Für OP3 und OP4. Terme mit Adjunkter und Kreuzprodukt liefern l_k, l_k² und das reine Produkt l_i l_j (bestätigt), aber
 
 **Test H188, 27.11.2026:** Für OP3 und OP4. Die Ableitungsterme K₁ bis K₄ tragen zu kleinen Schwingungen um ein ruhendes Vakuum nicht bei (exakt,
-
-**Test H189, 27.11.2026:** Für OP3 und OP4. Bei drehendem Vakuum ändern K₁ bis K₄ nur die Ausbreitung der Farbschwingungen (K₂: 2(l_i − l_j)²,
-K₄: −2(l_i² + l_j²) − 4l_k²), für beide Ladungen gleich; die Ruhefrequenzen bleiben. Die daraus folgende träge Masse trifft die Quarkmassen nicht
-(bester Abstand 14σ, widerlegt). Die Lesart „Quarks als Farbschwingungen um das Leptonvakuum“ hat damit in sechs Tests keine Quelle für die
-Massen geliefert. Beide Probleme bleiben offen.
 nicht blind). Eine kinetische Normierung aus dem Vakuum trifft mit einer Potentialfunktion nicht (widerlegt), mit zweien so oft wie der Zufall
 (63 %, ohne Urteil). Nachträglich: eine gemeinsame Form m ∝ (a·l_k + b·l_k²)/(l_i + l_j)² trifft beide Sektoren, je Sektor zwei angepasste Zahlen,
 kein Test. Offen: bewegtes Vakuum (dort wirken K₁, K₂, K₄ in zweiter Ordnung) oder Wechsel der Lesart. Beide Probleme bleiben offen.
@@ -188,6 +183,11 @@ Farbschwingungen drei Frequenzen je sechsfach (hermitesche Zirkulante, feste Fou
 Größen für drei Massen, keine Zahl vorhergesagt. In F₄-invarianten Potentialen sind die Farbschwingungen masselos; ihre Frequenzen kommen nur aus
 Termen, die U auszeichnen (nachträglich). Offen: Up und Down im komplexen Feld, Stabilität des Vakuums, was α und β festlegt. OP3 und OP4 bleiben
 offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/schwingungen_h184/`.
+
+**Test H189, 27.11.2026:** Für OP3 und OP4. Bei drehendem Vakuum ändern K₁ bis K₄ nur die Ausbreitung der Farbschwingungen (K₂: 2(l_i − l_j)²,
+K₄: −2(l_i² + l_j²) − 4l_k²), für beide Ladungen gleich; die Ruhefrequenzen bleiben. Die daraus folgende träge Masse trifft die Quarkmassen nicht
+(bester Abstand 14σ, widerlegt). Die Lesart „Quarks als Farbschwingungen um das Leptonvakuum“ hat damit in sechs Tests keine Quelle für die
+Massen geliefert. Beide Probleme bleiben offen.
 
 **Test H181, 26.11.2026:** Für OP1 (Rolle von β_sym im HC). Der Zustand mit b/a = β_sym² (alte Lesart aus k292/k297) trägt als gemeinsamer Zustand die Ablesungen m_W, Ω_M, sin²θ₁₂ und die Maske nicht; widerlegt. Der Zahlentreffer κ → m_h = 124,8 GeV bleibt ohne Herleitung und trennt die Lesarten nicht. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/zwei_lesarten_h181/`.
 
