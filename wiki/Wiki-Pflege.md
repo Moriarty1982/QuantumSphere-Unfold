@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**27.11.2026, Test H202 (ist der 0,9-%-Rest frei, nach H201):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Abbildung Kopplungen→(A,B,C,D) Rang 4, jede ≤3-Basis verworfen (χ² 8312 vs 7,91) → D/B frei, ~0,9-%-Rest ist Eingabewert. Schließt den chiralen Strang ab; Weggabelung an den Autor.
+
 **27.11.2026, Test H201 (Grad-Selektion der chiralen Quintik, nach H200):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: keine Grad-Ordnung — B (gerades l_k²) Grad 5, D (ungerades l_k²) Grad 4; saubere Grad-Selektion (C=0, D=B) χ² 11206 verworfen (C 91σ ≠ 0). D≈B gradübergreifend; nein.
 
 **27.11.2026, Test H200 (chirale/holomorphe Feldgleichung, nach H198/H199):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: global holomorph verworfen (Down masselos), strikt D=B (gradselektiv) bei ~9σ verworfen (χ² 320,7 vs 7,91; D/B=1,0085) — Chiralität dominant, approximativ, gradselektiv; teilweise.
