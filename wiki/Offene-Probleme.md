@@ -194,6 +194,12 @@ gyroskopisch und kann eine Frequenz beliebig klein machen (hergeleitet, für bei
 Up nie (7,1σ), keine gemeinsame Form trifft beide (widerlegt). Bilanz H184 bis H190: Die Lesart „Quarks als Farbschwingungen um das
 Leptonvakuum“ ist in allen benannten Wegen geprüft, ohne Quelle für die Massen. Beide Probleme bleiben offen.
 
+**Erkundungen k394 bis k396, 27.11.2026:** Für OP1, OP3 und OP4. Übersicht der Stellgrößen (k394): Jede Einzelzahl der Quarkmassen ist mit
+einer Stellgröße erreichbar, zwei im selben Sektor nur für Up gut, alle vier nie. Selbstjustierende Schleife durch den HC (k395): Fixpunkt
+b = ½ (Hopf-Punkt), nicht β_sym; Schranken durch Wiederholen löschen Übergänge, liefern aber keine Zahl. β_sym als Erwartungswert (k396): 1/γ_L
+ist ½ plus der mittlere Flächenüberschuss der höheren Spins; das verlagert die Frage auf die Casimir-Fläche, die Postulat bleibt. Keine
+Herleitung, alle drei Probleme bleiben offen.
+
 **Test H181, 26.11.2026:** Für OP1 (Rolle von β_sym im HC). Der Zustand mit b/a = β_sym² (alte Lesart aus k292/k297) trägt als gemeinsamer Zustand die Ablesungen m_W, Ω_M, sin²θ₁₂ und die Maske nicht; widerlegt. Der Zahlentreffer κ → m_h = 124,8 GeV bleibt ohne Herleitung und trennt die Lesarten nicht. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/zwei_lesarten_h181/`.
 
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.

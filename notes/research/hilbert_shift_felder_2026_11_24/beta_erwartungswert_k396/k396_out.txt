@@ -1,0 +1,85 @@
+== Teil 1: Welche Groesse liegt nahe 1/2? ==
+   Zaehlregel (r67): Summe_k 2^(1 - gamma a_k) = 1.  Casimir: gamma_L = 1.8646997646, beta_sym = 0.5494056410.  Flaeche j+1/2: gamma = 2.0000000000, beta = 0.5773502692
+   Groesse                                                     glatt (j+1/2)      Casimir    Abstand
+   b_C = 1/gamma (Erwartungswert der HC-Messung, <sigma_x>)        0.5000000    0.5362794 +0.0362794
+   p_1 = 2^(1-gamma) (Anteil der Spin-1/2-Durchstosspunkte)        0.5000000    0.5491607 +0.0491607
+   beta = sqrt((gamma-1)/(gamma+1))                                0.5773503    0.5494056 -0.0279446
+   x = beta^2 (Gewichtsverhaeltnis)                                0.3333333    0.3018466 -0.0314868
+   p_+ = (1 + 1/gamma)/2 (Wahrscheinlichkeit HC-Ausgang +)         0.7500000    0.7681397 +0.0181397
+   beta_sym - 1/2 = +0.0494056; beta_sym - 1/sqrt(3) = -0.0279446
+   Befund: Glatt 1/2 sind im Vergleichsfall (Flaeche j+1/2, zugleich Fixpunkt der Schleife L3 aus k395) der Erwartungswert 1/gamma und der Anteil p_1,
+   nicht beta. Der glatte Wert von beta ist 1/sqrt(3).
+
+== Teil 2: Die Abweichung von 1/2 als Erwartungswert (innerhalb der Zaehlregel hergeleitet) ==
+   Verteilung der Spins k = 2j: glatt p_k = 2^-k: [0.5     0.25    0.125   0.0625  0.03125]; Casimir: [0.54916 0.24232 0.11114 0.05168 0.02419]; Summen 1.000000000000, 1.000000000000
+   Flaechenueberschuss a_C - a_H fuer k = 1..6: [0.      0.13299 0.23607 0.32843 0.41565 0.5    ] (null bei j = 1/2, waechst mit dem Spin)
+   erste Ordnung: delta gamma = -gamma <delta a>/<a> = -0.152599  (<delta a> = 0.114450, <a> = 1.500000); voll: -0.135300
+   also 1/gamma - 1/2: erste Ordnung +0.038150, voll +0.036279
+   Interpolation a(t) = (1-t) a_H + t a_C:  t, gamma, 1/gamma, beta:
+      0.0  2.0000000  0.5000000  0.5773503
+      0.2  1.9702447  0.5075512  0.5715372
+      0.4  1.9419402  0.5149489  0.5658414
+      0.6  1.9149780  0.5221992  0.5602575
+      0.8  1.8892605  0.5293076  0.5547805
+      1.0  1.8646998  0.5362794  0.5494056
+   Befund: Die Abweichung von 1/2 ist ein Mittelwert: der mittlere Flaechenueberschuss der hoeheren Spins (j >= 1), gewichtet mit ihrer Haeufigkeit.
+   Spin 1/2 allein gaebe exakt 1/2; die selteneren hoeheren Spins (zusammen 45 % der Durchstosspunkte) verschieben den Wert. Das ist die Zaehlregel, anders gelesen.
+      Casimir nur bis k =   1, darueber glatt: 1/gamma = 0.5000000, beta = 0.5773503
+      Casimir nur bis k =   2, darueber glatt: 1/gamma = 0.5103040, beta = 0.5694179
+      Casimir nur bis k =   3, darueber glatt: 1/gamma = 0.5193742, beta = 0.5624335
+      Casimir nur bis k =   4, darueber glatt: 1/gamma = 0.5258277, beta = 0.5574621
+      Casimir nur bis k =   6, darueber glatt: 1/gamma = 0.5326551, beta = 0.5522002
+      Casimir nur bis k =  10, darueber glatt: 1/gamma = 0.5359275, beta = 0.5496770
+      Casimir nur bis k = 400, darueber glatt: 1/gamma = 0.5362794, beta = 0.5494056
+
+== Teil 3: Schleife L3 (k395) mit kleinen Stoerungen: welche Eingabe verschiebt den Fixpunkt 1/2 wohin? ==
+   ungestoert: Fixpunkt 0.5000000; Ziel 1/gamma_L = 0.5362794
+   res (Reservoir unrein, 1 - eps)
+      Fixpunkt bei +0.99: 0.49666  +0.95: 0.48314  +0.90: 0.46589
+      erreicht 1/gamma_L im Bereich nicht
+   mem (Reservoir enthaelt Anteil m der letzten Ausgabe)
+      Fixpunkt bei +0.05: 0.49148  +0.10: 0.48255  +0.20: 0.46332  -0.10: 0.51596  -0.20: 0.53066
+      trifft 1/gamma_L bei mem = -0.24038
+   kap (Drehwinkel-Regel tan^2 alpha = x (1 + kap))
+      Fixpunkt bei -0.10: 0.51351  -0.05: 0.50649  +0.05: 0.49398  +0.10: 0.48837
+      trifft 1/gamma_L bei kap = -0.23835
+   lam (Staerke-Regel x = (1-b)/(1+b) (1 + lam))
+      Fixpunkt bei -0.10: 0.48718  -0.05: 0.49367  +0.05: 0.50617  +0.10: 0.51220
+      trifft 1/gamma_L bei lam = +0.31294
+   eta (HC-Messung nur mit Staerke eta)
+      Fixpunkt bei +0.99: 0.49834  +0.90: 0.48390  +0.70: 0.45389  +0.50: 0.42486
+      erreicht 1/gamma_L im Bereich nicht
+   Lesart: Jede Stellgroesse ist eine Zahl fuer eine Zahl (angepasst, nichts hergeleitet). Die Tabelle sagt nur, in welche Richtung welche Stoerung zieht.
+
+== Teil 4: Restkorrelation gekoppelter Baender (Lorenz-artig), Qiskit ==
+   unabhaengige Baender b = (0.5000, 0.5000): <X X> = 0.250000 = Produkt 0.250000; P(gleich) = 0.625000
+   unabhaengige Baender b = (0.5363, 0.5363): <X X> = 0.287596 = Produkt 0.287596; P(gleich) = 0.643798
+   unabhaengige Baender b = (0.2000, 0.3000): <X X> = 0.060000 = Produkt 0.060000; P(gleich) = 0.530000
+   (Das ist die Regel hinter Tuttes 1+2-Angriff: Korrelationen multiplizieren sich, kleine Abweichungen von 50 % ueberleben die Summe zweier Baender.)
+   Zwei Schleifen L3, deren Baender je Runde teilweise getauscht werden (Kopplung y) und deren Reservoir |+> ist:
+      y = 0.0: Endwerte b = (0.5000000, 0.5000000), <X X> = 0.2500000 (Produkt 0.2500000)
+      y = 0.1: Endwerte b = (0.5000000, 0.5000000), <X X> = 0.2500000 (Produkt 0.2500000)
+      y = 0.3: Endwerte b = (0.5000000, 0.5000000), <X X> = 0.2500000 (Produkt 0.2500000)
+   Befund: Zwei gleiche gekoppelte Schleifen bleiben bei 1/2; der Tausch gleicher Zustaende erzeugt keine Restkorrelation. Eine Abweichung braucht ein Band,
+   das anders ist (andere Flaeche, anderer Spin). Genau das leistet in der Zaehlregel der Flaechenueberschuss der hoeheren Spins (Teil 2).
+
+== Teil 5: Nachtraegliche Beobachtung (kein Test) ==
+   p_1 = 2^(1 - gamma_L) = 0.5491607; beta_sym = 0.5494056; Unterschied -0.0002450 (-0.045 %). Im glatten Fall: p_1 = 0.5, beta = 0.57735 (dort NICHT gleich).
+   2-sigma-Fenster aus m_W (k358): beta in [0.54907, 0.54978]: p_1 liegt darin.
+   Beide gleich waeren sie bei gamma = 1.8642932 (beta = 0.5493155); die Zaehlregel gibt 1.8646998.
+   Durchgesehene einfache Kenngroessen der Spinverteilung (alle, nicht nur die naechste):
+      p_1                                0.5491607  Abstand zu beta_sym -0.0002450
+      1/<k>                              0.5425396  Abstand zu beta_sym -0.0068660
+      1/gamma                            0.5362794  Abstand zu beta_sym -0.0131263
+      1 - p_1                            0.4508393  Abstand zu beta_sym -0.0985663
+      p_2/p_1                            0.4412468  Abstand zu beta_sym -0.1081588
+      1/<a>                              0.6581501  Abstand zu beta_sym +0.1087445
+      sqrt(2 p_2)                        0.6961543  Abstand zu beta_sym +0.1467487
+      <a>/2                              0.7597051  Abstand zu beta_sym +0.2102995
+      p_+                                0.7681397  Abstand zu beta_sym +0.2187340
+      1/(gamma ln 2)                     0.7736876  Abstand zu beta_sym +0.2242819
+      x                                  0.3018466  Abstand zu beta_sym -0.2475591
+      Entropie/2 (bit)                   0.9166219  Abstand zu beta_sym +0.3672163
+      <k>/2 = <j>                        0.9215917  Abstand zu beta_sym +0.3721861
+   Entlang der Interpolation aus Teil 2 schneiden sich p_1(t) und beta(t) bei t = 1.00339 (t = 1 ist die Casimir-Flaeche). Bei t gleichverteilt in [0, 2] laege ein Schnitt so nah an 1 mit 0.34 %.
+   Grobe Zufallsabschaetzung: 13 Kenngroessen, Fenster +-0.00024 in einem Bereich der Breite ~1: Erwartung 0.0064 Treffer. Selten, aber nachtraeglich gefunden.

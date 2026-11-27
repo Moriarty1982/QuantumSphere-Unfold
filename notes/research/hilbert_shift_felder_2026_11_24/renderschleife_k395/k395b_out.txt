@@ -1,0 +1,17 @@
+Ausgabe der Wolfram-Gegenprobe (27.11.2026, Wolfram Language Evaluator; nur Print-Ausgaben, Rueckgabewert Null, keine Warnungen)
+k395b: Schleife L3
+f3 = 1 - 2 b + 2 b^2; Rest gegen (2b^3-b+1)/(1+b): 0        [symbolischer Nullrest]
+Fixpunkte: {{b -> 1/2}, {b -> 1}}
+Steigungen bei 1/2 und 1: {0, 2}
+zweite Ableitung bei 1/2: 4
+L2 Fixpunkte allgemein: {{b -> (1 - Sqrt[2 - 2 c])/(-1 + 2 c)}, {b -> (1 + Sqrt[2 - 2 c])/(-1 + 2 c)}}
+L2, c = 1/2: {{b -> 1/2}}
+gamma_L = 1.86469976460937; beta_sym = 0.549405640974529
+L2 trifft 1/gamma_L bei cos 2alpha = 0.6261471585, alpha = 25.616782 Grad
+k396b
+glatt: gamma = 2
+<delta a> = 0.1144495930; <a> = 3/2
+erste Ordnung 1/gamma - 1/2 = 0.03814986434; voll = 0.03627936195
+p_1 = 0.549160679357; beta_sym - p_1 = 0.00024496162
+gamma mit p_1 = beta: 1.8642932202986566463
+gestoerte Schleife, Gedaechtnis m: Fixpunktbedingung (2b-1)(b+1) = m (b-1); m fuer 1/gamma_L: -0.2403828101

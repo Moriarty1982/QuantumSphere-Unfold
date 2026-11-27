@@ -106,6 +106,31 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Übersicht der Stellgrößen, Renderschleife durch den HC, β_sym als Erwartungswert (27.11.2026, Erkundungen k394, k395, k396)
+
+Drei Erkundungen ohne Vorab-Notiz, kein Test; Ordner `notes/research/hilbert_shift_felder_2026_11_24/uebersicht_k394`, `renderschleife_k395`,
+`beta_erwartungswert_k396`. Werkzeuge: Python, Qiskit, Wolfram.
+
+- **k394, Übersicht Eingaben und Ausgaben:** In der Brannen-Form bewegt die Skala M alle drei Massen gleich; ρ und δ bewegen fast nur die
+  leichteste Masse (Up: d ln m_u/dρ = −202, d ln m_u/dδ = 402). Gegen die vier Quark-Verhältnisse trifft jeder Mechanismus aus H184 bis H190 eine
+  Ausgabe allein mit einer Stellgröße. Zwei Ausgaben im selben Sektor gelingen für Up (0,4σ bis 0,7σ), für Down nur mit kinetischem Nenner
+  (1,15σ) oder Generationsdrehung (2,5σ); mit einer gemeinsamen Kopplung gelingen Paare über die Sektoren (0,2σ bis 0,4σ), nie alle vier (30σ,
+  43σ). Alles angepasst.
+- **k395, Renderschleife:** Eine Runde (Drehung, HC nicht selektiv, Austausch mit einem frischen Band) ist als Qiskit-Schaltung die Abbildung
+  b′ = (1 − x) cos 2α · b + x. Justieren sich Stärke und Drehwinkel selbst (x = (1 − b)/(1 + b), tan²α = x), wird daraus b′ = 1 − 2b(1 − b) mit
+  dem Fixpunkt b = ½ (Steigung 0, aus jedem Start erreicht). Das ist der Hopf-Punkt (γ = 2, β = 1/√3), nicht β_sym. Die Schleife löscht
+  Unterschiede im Startwert; sie vergisst den Ur-Seed.
+- **k395, Bandwechsel mit Schranken:** Vier Bänder (ν, e, d, u), zuerst jedes mit jedem verbunden. Eine N-mal wiederholte Schranke löscht die
+  Übergänge, die sie unterscheidet (Abfluss in die Quark-Bänder 0,41 → 0,002 bei N = 1024, wie 1/N). Der HC lässt ν ↔ e offen und besetzt beide
+  gleich. Eine Auswahlregel, keine Zahl; die Schranken sind gesetzt.
+- **k395, Lorenz-Maschine:** Als Bild tragen die Überlagerung mehrerer Bänder und das Rechnen mit Differenzen. Der Kern trägt nicht: Die Chiffre
+  ist umkehrbar und verbreitet Unterschiede, die Schleife mit HC löscht sie; und es gibt zu wenige Messwerte für einen statistischen Angriff.
+  Nachträglich: Die Differenzen ln(m_u/m_d) je Generation haben das Verhältnis 1,987 ± 0,043 (Zufallsquote 7 %).
+- **k396, β_sym als Erwartungswert:** Glatt ½ ist nicht β, sondern der Erwartungswert der HC-Messung 1/γ (und der Anteil p₁ der
+  Spin-½-Durchstoßpunkte) im Vergleichsfall mit Fläche j + ½. In der Zählregel ist 1/γ_L − ½ = 0,0363 der mittlere Flächenüberschuss der höheren
+  Spins (erste Ordnung 0,0381). Das ist die Zählregel anders gelesen, keine Herleitung. Zwei gleiche gekoppelte Schleifen bleiben bei ½; eine
+  Abweichung braucht ein andersartiges Band. Nachträglich: p₁ = 2^(1−γ_L) = 0,54916 liegt 0,045 % neben β_sym = 0,54941 (ungeklärt).
+
 ### Eine Drehung in den Generationen erzeugt eine Hierarchie, aber nicht die der Quarks (27.11.2026, Test H190, k393)
 Fortsetzung von H189 nach Entscheidung des Autors („Drehung in den Generationen“). Vorab-Notiz vor der Rechnung (Commit d918623); Python und Wolfram.
 - **H190a bestätigt (nicht blind):** Dreht sich das Vakuum in der Ebene zweier Eigenrichtungen (Derivation D_T aus der SU(3) der Plätze, die mit

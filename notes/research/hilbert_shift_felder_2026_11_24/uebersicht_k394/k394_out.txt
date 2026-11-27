@@ -1,0 +1,82 @@
+Erkundung k394: alles in dieser Ausgabe ist ANGEPASST oder eine Empfindlichkeit, keine Vorhersage.
+Vakuum (Eingabe): a = 1, r = 1/sqrt(2) (K = 2/3), delta = 2/9; Eigenwerte l = [0.04035  0.580212 2.379438]
+Funktionen je Paar (R aus H187): f1 = l_k; f2 = l_k^2; f3 = l_i l_j; f4 = l_i l_j - l_k^2/2; f5 = 1; f6 = l_i + l_j; f7 = l_i^2 + l_j^2; f8 = (l_i^2 + l_j^2)/2 + l_i l_j; f9 = l_k (l_i + l_j)
+
+== Teil A: drei Eingaben je Sektor treffen drei Massen exakt (Brannen-Form sqrt(m_g) = M (1 + sqrt(2) rho cos(delta + 2 pi g/3))) ==
+   Eingaben: M (Skala), rho (K = (1 + rho^2)/3), delta (Phase). Empfindlichkeit = d ln m_g / d Eingabe am angepassten Punkt.
+   Sektor e: M = 17.7156, rho = 0.99999 (K = 0.66666), delta = 0.22223 (Rest 1.1e-16)
+      d ln(m1, m2, m3) / d ln M = [2. 2. 2.];  / d rho = [-47.57  -1.45   1.16];  / d delta = [51.49 -4.65  0.26]
+   Sektor d: M = 0.0496962, rho = 1.11506 (K = 0.74779), delta = 0.10013 (Rest 2.2e-16)
+      d ln(m1, m2, m3) / d ln M = [2. 2. 2.];  / d rho = [-20.92  -3.3    1.1 ];  / d delta = [-32.42   8.17  -0.12]
+   Sektor u: M = 0.34856, rho = 1.28952 (K = 0.88762), delta = 0.05181 (Rest 2.2e-16)
+      d ln(m1, m2, m3) / d ln M = [2. 2. 2.];  / d rho = [-202.2    -7.51    1.  ];  / d delta = [ 4.0199e+02 -1.8980e+01  7.0000e-02]
+   Lesehilfe: M bewegt alle drei gleich; rho und delta bewegen fast nur die leichteste Masse (grosse Zahlen in der ersten Spalte).
+
+== Teil B: Mechanismen aus H184 bis H190 gegen die vier Quark-Verhaeltnisse ==
+   Ausgaben: m_u/m_t = 7.28e-06 +- 1.6e-07, m_c/m_t = 0.003681 +- 6.4e-05, m_d/m_b = 0.0009448 +- 1.3e-05, m_s/m_b = 0.01877 +- 0.00027; dazu je Sektor die Skala (m_t, m_b), die immer eine eigene freie Zahl A ist.
+
+   -- M1: eine Potentialfunktion (H184 bis H187), keine Stellgroesse --
+      m_u/m_t: naechste Funktion f2, Zuordnung B, X = sqrt(m): Modell 8.269e-08, Abstand 45.5 sigma
+      m_c/m_t: naechste Funktion f2, Zuordnung B, X = sqrt(m): Modell 0.003535, Abstand 2.3 sigma
+      m_d/m_b: naechste Funktion f1, Zuordnung B, X = sqrt(m): Modell 0.0002876, Abstand 49.3 sigma
+      m_s/m_b: naechste Funktion f3, Zuordnung A, X = sqrt(m): Modell 0.004836, Abstand 52.3 sigma
+      beide Verhaeltnisse u: f2, Zuordnung B, X = sqrt(m), Abstand 46 sigma
+      beide Verhaeltnisse d: f3, Zuordnung A, X = sqrt(m), Abstand 52 sigma
+
+   -- M2: zwei Potentialfunktionen (H187c) --
+      Stellgroesse: Mischung b/a = tan(phi), je Sektor; Optionen (diskrete Wahlen): 216. Eine Zahl je Sektor fuer zwei Verhaeltnisse.
+      m_u/m_t allein exakt erreichbar in 79 von 216 Optionen
+      m_c/m_t allein exakt erreichbar in 28 von 216 Optionen
+      m_d/m_b allein exakt erreichbar in 139 von 216 Optionen
+      m_s/m_b allein exakt erreichbar in 38 von 216 Optionen
+      Up (m_u/m_t und m_c/m_t zusammen): bester Abstand 0.72 sigma mit (f2, f8), Zuordnung B, X = sqrt(m); Stellgroesse phi mit X = cos(phi) f2 + sin(phi) f8, Stellgroesse = 0.00308937
+      Down (m_d/m_b und m_s/m_b zusammen): bester Abstand 7.68 sigma mit (f3, f6), Zuordnung A, X = sqrt(m); Stellgroesse phi mit X = cos(phi) f3 + sin(phi) f6, Stellgroesse = 0.0404989
+      Paare ueber die Sektoren (je ein Verhaeltnis aus Up und Down): je Sektor eigene Stellgroesse, also so gut wie die Einzelwerte.
+
+   -- M3: zwei Potentialfunktionen ueber einer kinetischen (H188c) --
+      Stellgroesse: Mischung b/a = tan(phi), je Sektor; Optionen (diskrete Wahlen): 1728. Wie M2, mit Nenner aus R.
+      m_u/m_t allein exakt erreichbar in 505 von 1728 Optionen
+      m_c/m_t allein exakt erreichbar in 367 von 1728 Optionen
+      m_d/m_b allein exakt erreichbar in 846 von 1728 Optionen
+      m_s/m_b allein exakt erreichbar in 562 von 1728 Optionen
+      Up (m_u/m_t und m_c/m_t zusammen): bester Abstand 0.36 sigma mit (f4, f9)/f8, Zuordnung B, X = sqrt(m); phi, Stellgroesse = 1.58911
+      Down (m_d/m_b und m_s/m_b zusammen): bester Abstand 1.15 sigma mit (f1, f9)/f8, Zuordnung B, X = m; phi, Stellgroesse = 0.112367
+      Paare ueber die Sektoren (je ein Verhaeltnis aus Up und Down): je Sektor eigene Stellgroesse, also so gut wie die Einzelwerte.
+
+   -- M5: Drehung in den Generationen (H190) --
+      Stellgroesse: w = omega^2/A, je Sektor; Optionen (diskrete Wahlen): 162. Die Drehung macht eine Frequenz klein; Zuordnung nach Groesse.
+      m_u/m_t allein exakt erreichbar in 74 von 162 Optionen
+      m_c/m_t allein exakt erreichbar in 11 von 162 Optionen
+      m_d/m_b allein exakt erreichbar in 68 von 162 Optionen
+      m_s/m_b allein exakt erreichbar in 25 von 162 Optionen
+      Up (m_u/m_t und m_c/m_t zusammen): bester Abstand 7.31 sigma mit +f6, Ebene (0, 1), X = sqrt(m); w = omega^2/A, Stellgroesse = 2.13962
+      Down (m_d/m_b und m_s/m_b zusammen): bester Abstand 2.47 sigma mit +f9, Ebene (1, 2), X = m; w = omega^2/A, Stellgroesse = 1.63587
+      Paare ueber die Sektoren (je ein Verhaeltnis aus Up und Down): je Sektor eigene Stellgroesse, also so gut wie die Einzelwerte.
+
+   -- M4: Ausbreitung aus K2 oder K4 bei drehendem Vakuum (H189) --
+      Stellgroesse: a mit c^2_g = 1 + a (g_g - g_3), entspricht kappa (fuer beide Sektoren dieselbe); Optionen: 512. Je Sektor eine Potentialfunktion, eine gemeinsame Kopplung.
+      m_u/m_t: bester Abstand 0.00 sigma mit Up f5, Down f1, Zuordnung A, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A sqrt(f)/c^2, Stellgroesse = -12133.9
+      m_c/m_t: bester Abstand 0.00 sigma mit Up f9, Down f1, Zuordnung A, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A f/c^2, Stellgroesse = -4764.31
+      m_d/m_b: bester Abstand 0.00 sigma mit Up f1, Down f5, Zuordnung B, K2: 2(l_i - l_j)^2, m = A sqrt(f)/c^2, Stellgroesse = 179.473
+      m_s/m_b: bester Abstand 0.00 sigma mit Up f1, Down f3, Zuordnung B, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A f/c^2, Stellgroesse = 20.4174
+      m_u/m_t und m_c/m_t: bester Abstand 15.11 sigma mit Up f7, Down f1, Zuordnung A, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A f/c^2, Stellgroesse = -515.229
+      m_u/m_t und m_d/m_b: bester Abstand 0.29 sigma mit Up f6, Down f2, Zuordnung A, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A sqrt(f)/c^2, Stellgroesse = -5520.77
+      m_u/m_t und m_s/m_b: bester Abstand 7.25 sigma mit Up f2, Down f5, Zuordnung B, K2: 2(l_i - l_j)^2, m = A f/c^2, Stellgroesse = 5.62341
+      m_c/m_t und m_d/m_b: bester Abstand 0.20 sigma mit Up f8, Down f9, Zuordnung A, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A sqrt(f)/c^2, Stellgroesse = -329.61
+      m_c/m_t und m_s/m_b: bester Abstand 3.04 sigma mit Up f8, Down f1, Zuordnung A, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A sqrt(f)/c^2, Stellgroesse = -313.329
+      m_d/m_b und m_s/m_b: bester Abstand 6.37 sigma mit Up f1, Down f5, Zuordnung A, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A sqrt(f)/c^2, Stellgroesse = -85.9014
+      alle vier: bester Abstand 30.05 sigma mit Up f2, Down f1, Zuordnung B, K4: -2(l_i^2 + l_j^2) - 4 l_k^2, m = A f/c^2, Stellgroesse = 2.03236
+
+   -- M6: gemeinsamer Term plus Ladungsterm (H182, H186) --
+      Stellgroesse: c (Staerke des ladungsungeraden Terms) (fuer beide Sektoren dieselbe); Optionen: 432. Dieselben zwei Funktionen fuer Up und Down, nur das Vorzeichen von c wechselt.
+      m_u/m_t: bester Abstand 0.02 sigma mit X = f6 +- c f2 (Up +, Down -), Zuordnung B, X = sqrt(m), Stellgroesse = 216.77
+      m_c/m_t: bester Abstand 0.00 sigma mit X = f7 +- c f2 (Up +, Down -), Zuordnung B, X = sqrt(m), Stellgroesse = 820.352
+      m_d/m_b: bester Abstand 0.00 sigma mit X = f4 +- c f2 (Up +, Down -), Zuordnung B, X = m, Stellgroesse = -371.535
+      m_s/m_b: bester Abstand 0.01 sigma mit X = f2 +- c f8 (Up +, Down -), Zuordnung B, X = sqrt(m), Stellgroesse = -0.151356
+      m_u/m_t und m_c/m_t: bester Abstand 0.72 sigma mit X = f2 +- c f8 (Up +, Down -), Zuordnung B, X = sqrt(m), Stellgroesse = 0.0030903
+      m_u/m_t und m_d/m_b: bester Abstand 0.40 sigma mit X = f1 +- c f5 (Up +, Down -), Zuordnung B, X = sqrt(m), Stellgroesse = -0.0340408
+      m_u/m_t und m_s/m_b: bester Abstand 17.01 sigma mit X = f6 +- c f3 (Up +, Down -), Zuordnung A, X = sqrt(m), Stellgroesse = -30.0608
+      m_c/m_t und m_d/m_b: bester Abstand 5.62 sigma mit X = f9 +- c f3 (Up +, Down -), Zuordnung A, X = sqrt(m), Stellgroesse = -85.1138
+      m_c/m_t und m_s/m_b: bester Abstand 34.17 sigma mit X = f7 +- c f3 (Up +, Down -), Zuordnung A, X = sqrt(m), Stellgroesse = -127.644
+      m_d/m_b und m_s/m_b: bester Abstand 7.73 sigma mit X = f3 +- c f6 (Up +, Down -), Zuordnung A, X = sqrt(m), Stellgroesse = -0.0405509
+      alle vier: bester Abstand 43.42 sigma mit X = f9 +- c f3 (Up +, Down -), Zuordnung A, X = sqrt(m), Stellgroesse = -65.7658
