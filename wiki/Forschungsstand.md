@@ -106,6 +106,31 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Ein HS(−1) unter dem Turm gibt es nicht als Zahlbereich; drei Lesarten (27.11.2026, Erkundung k404, nicht blind)
+
+Frage des Autors: Wie sähe eine Stufe unter HS(0) = ℝ aus (formale Dimension 2⁻¹ = ½)? Erkundung ohne Vorab-Notiz, kein Test; Ordner
+`notes/research/hilbert_shift_felder_2026_11_24/hs_minus_1_k404`. Werkzeuge: Python, Wolfram (exakte Gegenprobe).
+
+- **Die Regel des Turms endet bei ℝ (exakt).** Der Schritt nach unten ist der festgehaltene Teil der Spiegelung (a, b) ↦ (a, −b); auf ℝ gibt es
+  nur die Identität. Das Vorzeichen ℤ₂ = S⁰ liegt nicht unter HS(0), es ist dessen Einheitssphäre; der Raum der Wahlen ist schon bei HS(0) leer.
+- **Lesart 1, Vorzeichen:** Als Algebra ist ℤ₂ die Spiegelstufe ℝ ⊕ ℝ·j mit j² = +1. Sie ist das Clifford-Gegenstück zu ℂ (zusammen M₂(ℝ),
+  Index −1, in der Bott-Uhr Stufe 7), hat aber Dimension 2 und liegt neben ℂ, nicht unter ℝ. Ihre Bahn ist eine Hyperbel (Schub statt Drehung),
+  ihr Idempotent ½(1 + j) ist der HC-Projektor aus r70, und M und T gehen durch j ↦ −j ineinander über. Die Rapidität der Port-Gewichte,
+  ln(1/β_sym) = 0,5989, ist nicht der Schub des Modells (artanh β_sym = 0,6175).
+- **Größe ½** hat in der Zählung „Menge geteilt durch Symmetrie“ genau ein Objekt: der Nullpunkt, auf dem das Vorzeichen wirkt, ohne etwas zu
+  ändern. Damit fallen Lesart 1 (Vorzeichen) und Lesart 3 (Randpunkt) zusammen. Unter ℝ bleibt der Betrag ohne Vorzeichen (Halbgerade).
+- **Lesart 2, Körper mit einem Element:** Der Turm hat die Basis 2 (Einheiten beschriftet mit 𝔽₂ⁿ; 2ⁿ − 1 imaginäre Einheiten = Punkte des
+  projektiven Raums über 𝔽₂). Bei Basis q = 1 hat jede Stufe Dimension 1, der Turm fällt auf HS(0) zusammen. F₁ liegt quer zum Turm, nicht
+  darunter, und liefert keine Größe für das Modell.
+- **Lesart 3, Ur-Seed:** Die Schleife L3 aus k395 ist in c = 2b − 1 exakt die Quadrierabbildung c ↦ c². Sie löscht im ersten Schritt das
+  Vorzeichen, dann den Betrag. Rückwärts verdoppeln sich die Vorgänger (1, 2, 4, 8, …, wie die Dimensionen der Stufen). Der Rand unten ist das
+  Ende der Schleife, nicht ihr Anfang; ein Ur-Seed lässt sich dort nicht ablesen. Nachträglich; gilt für jede Abbildung vom Grad 2.
+- **Zählregel (nachträglich):** Im glatten Vergleichsfall (Fläche j + ½) ist das Gewicht eines Durchstoßpunkts mit Spin k/2 genau 2^(−k), die
+  formale Dimension von HS(−k), und ½ + ¼ + … = 1 = dim HS(0). Mit der Casimir-Fläche des Postulats liegen die „Stufen“ bei −0,865; −2,045;
+  −3,170. Die Zuordnung ist gesetzt und passt gerade nicht für β_sym.
+
+Keine neue Zahl, keine Herleitung; OP1 bleibt offen.
+
 ### Die Feldgleichung gibt den Nenner der H188-Form her, nicht ihre Koeffizienten (27.11.2026, Test H195, k403)
 
 Herleitung der H188-Form m ∝ (a·l_k + b·l_k²)/(l_i+l_j)² aus der zweiten Variation um das Leptonvakuum. Verdikt teilweise. **Nenner hergeleitet:** Jede Quark-Farbmode ist ein Off-Diagonal-Oktonion X in Position (i,j) der Albert-Algebra; die Peirce-Zerlegung gibt exakt W₀∘X = ½(l_i+l_j)X (verifiziert über die H₃(𝕆)-Algebra, konstant über alle acht Komponenten). Eine W²-gewichtete kinetische Norm liefert damit N₂ = ¼(l_i+l_j)²·N₀, also den Nenner (l_i+l_j)², ohne Einsetzen von Hand. **Zähler nicht hergeleitet:** Die F₄-Krümmung eines Potentials vom Grad n wird auf dem festen Vakuum (Tr = 3, K = ⅔ ⇒ e₂ = 3/2) eine Funktion von l_k, deren l_k² erst ab Potentialgrad 5 erscheint (Grad-Leiter sympy/Wolfram exakt). Die einfache hergeleitete Form A + B·l_k (Grad ≤ 4) verwerfen die Daten (Up 93σ, Kontrolle beide < 3σ nur 0,0 %); die H188-Form mit l_k² trifft (χ² 4,8/3,1), braucht aber Grad 5 und hat freie Koeffizienten. Der H188-Zähler ist also feldgleichungs-fähig, aber nicht vorhergesagt: a, b und das Fehlen der Konstante bleiben Setzungen, und warum Up quadratisch und Down linear ist (verschiedene b/a, H194), bleibt frei. Antwort auf „warum gerade diese Form": der Nenner aus der kinetischen Struktur, der Zähler aus einem Potential vom Grad ≥ 5 mit freien Koeffizienten. Python/sympy, Wolfram-Gegenprobe (stimmt exakt).
