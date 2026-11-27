@@ -1,0 +1,78 @@
+== H209a (nicht blind): Ueberlappflaeche zweier Streifen auf der Sphaere gegen 2 a_i a_j / sin(theta) ==
+   halbe Breite  2.0 Grad, theta  90 Grad: Flaeche 0.009747, 2 a^2/sin = 0.009748, Verhaeltnis 1.0000
+   halbe Breite  2.0 Grad, theta  60 Grad: Flaeche 0.011257, 2 a^2/sin = 0.011256, Verhaeltnis 1.0001
+   halbe Breite  2.0 Grad, theta  45 Grad: Flaeche 0.013791, 2 a^2/sin = 0.013785, Verhaeltnis 1.0004
+   halbe Breite  2.0 Grad, theta  30 Grad: Flaeche 0.019519, 2 a^2/sin = 0.019496, Verhaeltnis 1.0012
+   halbe Breite  2.0 Grad, theta  15 Grad: Flaeche 0.037880, 2 a^2/sin = 0.037662, Verhaeltnis 1.0058
+   halbe Breite  5.0 Grad, theta  90 Grad: Flaeche 0.060924, 2 a^2/sin = 0.060923, Verhaeltnis 1.0000
+   halbe Breite  5.0 Grad, theta  60 Grad: Flaeche 0.070409, 2 a^2/sin = 0.070348, Verhaeltnis 1.0009
+   halbe Breite  5.0 Grad, theta  45 Grad: Flaeche 0.086382, 2 a^2/sin = 0.086159, Verhaeltnis 1.0026
+   halbe Breite  5.0 Grad, theta  30 Grad: Flaeche 0.122811, 2 a^2/sin = 0.121847, Verhaeltnis 1.0079
+   halbe Breite  5.0 Grad, theta  15 Grad: Flaeche 0.245154, 2 a^2/sin = 0.235390, Verhaeltnis 1.0415
+   halbe Breite 10.0 Grad, theta  90 Grad: Flaeche 0.243707, 2 a^2/sin = 0.243694, Verhaeltnis 1.0001
+   halbe Breite 10.0 Grad, theta  60 Grad: Flaeche 0.282411, 2 a^2/sin = 0.281394, Verhaeltnis 1.0036
+   halbe Breite 10.0 Grad, theta  45 Grad: Flaeche 0.348440, 2 a^2/sin = 0.344635, Verhaeltnis 1.0110
+   halbe Breite 10.0 Grad, theta  30 Grad: Flaeche 0.505040, 2 a^2/sin = 0.487388, Verhaeltnis 1.0362
+   halbe Breite 10.0 Grad, theta  15 Grad: Flaeche 1.150891, 2 a^2/sin = 0.941561, Verhaeltnis 1.2223
+
+== N0: H192: w_ij = d_i d_j (Vergleich), Gesetz 1/sin ==
+   Energie 322.153189; 359 von 600 Starts im besten Minimum; naechstes anderes Minimum: 322.848764
+      R-C:  35.59 Grad  (w =   2.000; naechster: Koide 45, Abstand 9.41)
+      R-H:  50.08 Grad  (w =   4.000; naechster: magisch 54.74, Abstand 4.66)
+      R-O:  65.03 Grad  (w =   8.000; naechster: Ikosaeder 63.43, Abstand 1.60)
+      R-S:  68.24 Grad  (w =  16.000; naechster: Wuerfel 70.53, Abstand 2.29)
+      C-H:  49.40 Grad  (w =   8.000; naechster: Koide 45, Abstand 4.40)  <= vorab benannt
+      C-O:  63.40 Grad  (w =  16.000; naechster: Ikosaeder 63.43, Abstand 0.03)
+      C-S:  76.18 Grad  (w =  32.000; naechster: Wuerfel 70.53, Abstand 5.65)
+      H-O:  70.01 Grad  (w =  32.000; naechster: Wuerfel 70.53, Abstand 0.51)
+      H-S:  89.00 Grad  (w =  64.000; naechster: Oktant 90, Abstand 1.00)
+      O-S:  89.54 Grad  (w = 128.000; naechster: Oktant 90, Abstand 0.46)  <= vorab benannt
+   vorab benannte Paare: O-S = 89.54 (90 +- 1: ja); C-H = 49.40 (57.569 oder 54.74 +- 1: nein)
+   (N0 ist der Vergleich mit H192: teilweise)
+   H209c: Kreuzenergie je Band E_i (Zug nach aussen, Anteil): R 34.705 (0.054), C 64.820 (0.101), H 113.813 (0.177), O 188.773 (0.293), S 242.195 (0.376)
+      m2 =  2.0: groesste Beule liegt auf den Baendern O und S (|x.n| = 0.000, 0.000); Delle/Beule = -0.355
+      m2 =  6.0: groesste Beule liegt auf den Baendern O und S (|x.n| = 0.000, 0.000); Delle/Beule = -0.347
+      m2 = 20.0: groesste Beule liegt auf den Baendern O und S (|x.n| = 0.000, 0.000); Delle/Beule = -0.310
+
+== N1: w_ij = min(d_i, d_j), Gesetz 1/sin ==
+   Energie 27.730780; 469 von 600 Starts im besten Minimum; naechstes anderes Minimum: 27.845786
+      R-C:  67.34 Grad  (w =   1.000; naechster: Wuerfel 70.53, Abstand 3.19)
+      R-H:  60.43 Grad  (w =   1.000; naechster: Hopf 60, Abstand 0.43)
+      R-O:  57.65 Grad  (w =   1.000; naechster: M 57.569, Abstand 0.08)
+      R-S:  53.88 Grad  (w =   1.000; naechster: magisch 54.74, Abstand 0.85)
+      C-H:  62.06 Grad  (w =   2.000; naechster: Ikosaeder 63.43, Abstand 1.38)  <= vorab benannt
+      C-O:  64.34 Grad  (w =   2.000; naechster: Ikosaeder 63.43, Abstand 0.90)
+      C-S:  59.12 Grad  (w =   2.000; naechster: Hopf 60, Abstand 0.88)
+      H-O:  71.28 Grad  (w =   4.000; naechster: Wuerfel 70.53, Abstand 0.75)
+      H-S:  82.78 Grad  (w =   4.000; naechster: Oktant 90, Abstand 7.22)
+      O-S:  87.60 Grad  (w =   8.000; naechster: Oktant 90, Abstand 2.40)  <= vorab benannt
+   vorab benannte Paare: O-S = 87.60 (90 +- 1: nein); C-H = 62.06 (57.569 oder 54.74 +- 1: nein)
+   H209b [N1]: widerlegt
+   H209c: Kreuzenergie je Band E_i (Zug nach aussen, Anteil): R 4.655 (0.084), C 7.897 (0.142), H 11.669 (0.210), O 15.633 (0.282), S 15.607 (0.281)
+      m2 =  2.0: groesste Beule liegt auf den Baendern S und O (|x.n| = 0.001, 0.004); Delle/Beule = -0.522
+      m2 =  6.0: groesste Beule liegt auf den Baendern S und O (|x.n| = 0.001, 0.004); Delle/Beule = -0.489
+      m2 = 20.0: groesste Beule liegt auf den Baendern S und O (|x.n| = 0.001, 0.004); Delle/Beule = -0.406
+
+== N2: w_ij = sqrt(d_min/d_max), Gesetz 1/sin ==
+   Energie 5.739197; 489 von 600 Starts im besten Minimum; naechstes anderes Minimum: 5.744984
+      R-C:  84.40 Grad  (w =   0.707; naechster: Oktant 90, Abstand 5.60)
+      R-H:  72.73 Grad  (w =   0.500; naechster: Wuerfel 70.53, Abstand 2.20)
+      R-O:  54.09 Grad  (w =   0.354; naechster: magisch 54.74, Abstand 0.65)
+      R-S:  49.23 Grad  (w =   0.250; naechster: Koide 45, Abstand 4.23)
+      C-H:  67.19 Grad  (w =   0.707; naechster: Wuerfel 70.53, Abstand 3.34)  <= vorab benannt
+      C-O:  69.57 Grad  (w =   0.500; naechster: Wuerfel 70.53, Abstand 0.96)
+      C-S:  54.09 Grad  (w =   0.354; naechster: magisch 54.74, Abstand 0.65)
+      H-O:  67.19 Grad  (w =   0.707; naechster: Wuerfel 70.53, Abstand 3.34)
+      H-S:  72.73 Grad  (w =   0.500; naechster: Wuerfel 70.53, Abstand 2.20)
+      O-S:  84.40 Grad  (w =   0.707; naechster: Oktant 90, Abstand 5.60)  <= vorab benannt
+   vorab benannte Paare: O-S = 84.40 (90 +- 1: nein); C-H = 67.19 (57.569 oder 54.74 +- 1: nein)
+   H209b [N2]: widerlegt
+   H209c: Kreuzenergie je Band E_i (Zug nach aussen, Anteil): R 2.001 (0.174), C 2.448 (0.213), H 2.581 (0.225), O 2.448 (0.213), S 2.001 (0.174)
+      m2 =  2.0: groesste Beule liegt auf den Baendern C und H (|x.n| = 0.002, 0.002); Delle/Beule = -0.825
+      m2 =  6.0: groesste Beule liegt auf den Baendern C und H (|x.n| = 0.002, 0.002); Delle/Beule = -0.780
+      m2 = 20.0: groesste Beule liegt auf den Baendern C und H (|x.n| = 0.002, 0.002); Delle/Beule = -0.629
+
+== H209d (Bericht): Treffer auf der Zielliste (+-1 Grad), nachtraeglich ausser den benannten Paaren ==
+   N1: [('R-H', np.float64(60.43), 'Hopf 60'), ('R-O', np.float64(57.65), 'M 57.569'), ('R-S', np.float64(53.88), 'magisch 54.74'), ('C-O', np.float64(64.34), 'Ikosaeder 63.43'), ('C-S', np.float64(59.12), 'Hopf 60'), ('H-O', np.float64(71.28), 'Wuerfel 70.53')]
+   N2: [('R-O', np.float64(54.09), 'magisch 54.74'), ('C-O', np.float64(69.57), 'Wuerfel 70.53'), ('C-S', np.float64(54.09), 'magisch 54.74')]
+   Skala: keine. Die Energie ist homogen in der Streifenbreite und im Feldbetrag; das Verhaeltnis Zug zu Elastizitaet der Flaeche bleibt frei.
