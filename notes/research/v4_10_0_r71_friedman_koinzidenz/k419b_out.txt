@@ -1,0 +1,11 @@
+Ausgabe von k419b_kontrolle.wl (Wolfram Language). 2026-11-27.
+Unabhaengige Kontrolle derselben Groessen wie k419 (Python), auf demselben Strom (seed 71).
+
+len = 420  counts = {{0, 110}, {1, 119}, {2, 170}, {3, 21}}
+global IC = 0.313570  (Python 0.31357)
+mittlerer Spalten-IC(7) = 0.733737  (Python 0.73374)
+Spalten-IC bei L=6,7,8 = {0.30801, 0.73374, 0.30495}
+Zufalls-IC 1/c = 0.250000
+
+Beide Werkzeuge stimmen exakt ueberein: global IC 0.31357, Spalten-IC(7) 0.73374, scharfer
+Peak bei der Periode 7 (L=6 und L=8 liegen bei 0.305-0.308). Wolfram und Python einig.

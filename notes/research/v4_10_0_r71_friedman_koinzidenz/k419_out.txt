@@ -1,0 +1,35 @@
+Strom: N=420, Alphabet c=4, versteckte Periode=7, 80% strukturiert / 20% Rauschen (seed 71)
+globaler IC = 0.31357   (Zufall 1/c = 0.25000)
+
+KASISKI  — haeufigste Abstaende: [(7, 121), (154, 108), (28, 104), (147, 81), (168, 73)]
+KASISKI  — Perioden-Kandidaten (Teiler, Haeufung): [(7, 1941), (2, 1217), (14, 1067), (3, 796), (21, 699), (4, 603)]
+KASISKI  — dominanter Teiler = 7
+
+FRIEDMAN — Zufalls-IC kappa_r=1/c=0.25000; Ausreisser-Kamm bei L=[7, 14, 21]
+FRIEDMAN — fundamentale Periode = kleinste im Kamm = 7
+FRIEDMAN — Spalten-IC je L (Ausreisser markiert):
+   L= 1: Spalten-IC=0.31357  Ueberschuss=+0.06357
+   L= 2: Spalten-IC=0.31244  Ueberschuss=+0.06244
+   L= 3: Spalten-IC=0.31117  Ueberschuss=+0.06117
+   L= 4: Spalten-IC=0.30929  Ueberschuss=+0.05929
+   L= 5: Spalten-IC=0.30838  Ueberschuss=+0.05838
+   L= 6: Spalten-IC=0.30801  Ueberschuss=+0.05801
+   L= 7: Spalten-IC=0.73374  Ueberschuss=+0.48374 <== fundamental
+   L= 8: Spalten-IC=0.30495  Ueberschuss=+0.05495
+   L= 9: Spalten-IC=0.30553  Ueberschuss=+0.05553
+   L=10: Spalten-IC=0.30105  Ueberschuss=+0.05105
+   L=11: Spalten-IC=0.30376  Ueberschuss=+0.05376
+   L=12: Spalten-IC=0.29916  Ueberschuss=+0.04916
+   L=13: Spalten-IC=0.30083  Ueberschuss=+0.05083
+   L=14: Spalten-IC=0.73251  Ueberschuss=+0.48251 (Vielfaches)
+   L=15: Spalten-IC=0.29541  Ueberschuss=+0.04541
+   L=16: Spalten-IC=0.29578  Ueberschuss=+0.04578
+   L=17: Spalten-IC=0.29904  Ueberschuss=+0.04904
+   L=18: Spalten-IC=0.29558  Ueberschuss=+0.04558
+   L=19: Spalten-IC=0.29991  Ueberschuss=+0.04991
+   L=20: Spalten-IC=0.28833  Ueberschuss=+0.03833
+   L=21: Spalten-IC=0.73885  Ueberschuss=+0.48885 (Vielfaches)
+
+FRIEDMAN — Ein-Zahl-Schaetzung mit kappa_p=Spalten-IC(7)=0.7337: L ~ 7.61
+
+Ergebnis: Kasiski (dominanter Teiler) und Friedman (fundamentale Kamm-Periode) zeigen beide 7. Friedman ist komplementaer (Statistik statt Abstaende), robuster gegen Rauschen und liefert eine Zahl.
