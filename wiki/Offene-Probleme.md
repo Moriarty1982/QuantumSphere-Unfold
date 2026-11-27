@@ -167,6 +167,11 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 **Test H186, 27.11.2026:** Für OP3 und OP4. Elf Terme mit dem Ladungsoperator bis Grad 4: Sie spannen alle drei Richtungen des Unterschieds zwischen
 
 **Test H187, 27.11.2026:** Für OP3 und OP4. Terme mit Adjunkter und Kreuzprodukt liefern l_k, l_k² und das reine Produkt l_i l_j (bestätigt), aber
+
+**Test H188, 27.11.2026:** Für OP3 und OP4. Die Ableitungsterme K₁ bis K₄ tragen zu kleinen Schwingungen um ein ruhendes Vakuum nicht bei (exakt,
+nicht blind). Eine kinetische Normierung aus dem Vakuum trifft mit einer Potentialfunktion nicht (widerlegt), mit zweien so oft wie der Zufall
+(63 %, ohne Urteil). Nachträglich: eine gemeinsame Form m ∝ (a·l_k + b·l_k²)/(l_i + l_j)² trifft beide Sektoren, je Sektor zwei angepasste Zahlen,
+kein Test. Offen: bewegtes Vakuum (dort wirken K₁, K₂, K₄ in zweiter Ordnung) oder Wechsel der Lesart. Beide Probleme bleiben offen.
 weder eine noch zwei Funktionen je Sektor geben die sechs Quarkmassen; Down wird nie getroffen (bester Abstand 11,8σ). Bilanz H184 bis H187: Zahl und
 Form der Zustände folgen, die Massen nicht. Offen: Ableitungsterme oder andere HS-Stufe. OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/adjunkte_h187/`.
 Up und Down auf (keine Vorhersage), und kein einzelner trifft die Daten (nächster 1018σ). Nachträglich: Der gemessene Unterschied liegt fast ganz auf

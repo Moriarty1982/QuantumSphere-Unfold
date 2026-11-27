@@ -1,0 +1,17 @@
+Ausgabe von k391b_gegenprobe.wl (Wolfram Language, 27.11.2026)
+
+Print-Ausgaben:
+H188a, symbolische 3x3-Matrizen (27 freie Symbole), Koeffizienten eps^0..eps^3 von K(eps A, eps B):
+K1: {0, 0, 0, 0}; Grad in eps: {4}
+K2: {0, 0, 0, 0}; Grad in eps: {4}
+K4: {0, 0, 0, 0}; Grad in eps: {4}
+Gegenstueck mit Hintergrund X_t = B0: eps^2-Koeffizient von K1(B0 + eps A, eps B) minus [N(B0) N(B) - <B0,B>^2] = 0
+l = {0.0403499082192, 0.580211920148, 2.37943817163}
+Up   {a,b}, b/a, Modell, Abstaende, chi2: {{-0.0005710477, 0.03305504}, -57.8849, {7.0268*10^-6, 0.0036877, 0.96490}, {-0.0881, 2.13, -0.525}, 4.815}
+Down {a,b}, b/a, Modell, Abstaende, chi2: {{0.001652972, -0.0001406915}, -0.0851143, {0.000015176, 0.00031141, 0.016290}, {-1.12, 1.35, -0.113}, 3.094}
+Determinantenabstand (f1, f2)/f8, Zuordnung B, X = m: Up 2.194 sigma, Down 1.759 sigma
+
+Symbolische Nullreste: die Koeffizientenlisten {0, 0, 0, 0} (exakt) und der Rest 0 beim Gegenstueck (exakt).
+Rueckgabewert: Null.
+Warnungen: Symbol::undefined2 (freie Symbole A, B, B0, X, Y, M gelten als undefiniert) und General::messages; beides Hinweise der
+Auswerteumgebung, keine Rechenfehler. K3 (Assoziator) verschwindet fuer Matrizen identisch und ist hier nicht geprueft; siehe k391_out.txt (Oktonionen).
