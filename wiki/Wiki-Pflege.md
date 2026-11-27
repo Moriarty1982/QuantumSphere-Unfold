@@ -1110,3 +1110,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Test H210 (k423):** Paargewicht aus der Zahl der Wiederholungen (widerlegt), Bilanz der Setzungen nach H192/H209/H210; Forschungsstand und Vorhersagen-und-Tests ergänzt. Artikel unverändert (Geometrie-Test ohne Bezug zu Messdaten).
 
 **27.11.2026, Test H211 (k424):** Bänder um einen festen Schritt gedreht (widerlegt; freie Größe ist die Neigung der Achse); Forschungsstand und Vorhersagen-und-Tests ergänzt. Artikel unverändert (Geometrie-Test ohne Bezug zu Messdaten).
+
+**27.11.2026, Quanten-Coprozessor synthesefest:** Deutsche und englische Inhaltsübersicht nennen die Yosys-Prüfung in der CI und die Konfigurationsregister (Laufzeitgrenzen, Bank für unsichere Größen). Kein Forschungsbefund, Artikel unverändert.
