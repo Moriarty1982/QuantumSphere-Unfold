@@ -1,0 +1,5 @@
+n = 4: groesste antikommutierende Menge a = 8; n + 4 = 8; Radon-Hurwitz - 1 = 8; Einheiten [8, 9, 10, 11, 12, 13, 14, 15]
+n = 5: groesste antikommutierende Menge a = 9; n + 4 = 9; Radon-Hurwitz - 1 = 9; Einheiten [16, 24, 25, 26, 27, 28, 29, 30, 31]
+n = 6: groesste antikommutierende Menge a = 10; n + 4 = 10; Radon-Hurwitz - 1 = 11; Einheiten [32, 48, 56, 57, 58, 59, 60, 61, 62, 63]
+n = 7: groesste antikommutierende Menge a = 11; n + 4 = 11; Radon-Hurwitz - 1 = 15; Einheiten [64, 96, 112, 120, 121, 122, 123, 124, 125, 126, 127]
+n = 8: groesste antikommutierende Menge a = 12; n + 4 = 12; Radon-Hurwitz - 1 = 16; Einheiten [128, 192, 224, 240, 248, 249, 250, 251, 252, 253, 254, 255]
