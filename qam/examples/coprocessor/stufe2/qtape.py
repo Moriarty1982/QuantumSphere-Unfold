@@ -186,7 +186,9 @@ class QTape:
                     mu = evaluate(" ".join(t[1:]), self.reg); new = {}; q = (1 / math.sqrt(2), 1 / math.sqrt(2))
                     for k, r in self.bands.items():
                         self._put(new, k, (1 - mu) * r)
-                        if k + 1 > self.kmax: self._log(cell, "nichts", f"Band {k + 1} ueber KMAX: guard"); self._stop("guard", "guard"); break
+                        if k + 1 > self.kmax:
+                            if abs(np.trace(r)) < 1e-10: self._put(new, k, mu * r); continue     # verschwindendes Gewicht am Rand bleibt liegen
+                            self._log(cell, "nichts", f"Band {k + 1} ueber KMAX: guard"); self._stop("guard", "guard"); break
                         U, D = self._cache.setdefault(("cg", k), cg_maps(k, q)); self._put(new, k + 1, mu * U @ r @ U.conj().T)
                         if k >= 1: self._put(new, k - 1, mu * D @ r @ D.conj().T)
                     if self.stop: break
