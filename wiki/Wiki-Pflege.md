@@ -1130,3 +1130,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Quanten-Coprozessor, Rechenwerke je Band, √2-Form, Normwächter:** Deutsche und englische Inhaltsübersicht nennen die parallelen Rechenwerke je Band, die kanonische √2-Form und den Normwächter. Kein Forschungsbefund, Artikel unverändert.
 
 **27.11.2026, Quanten-Coprozessor, Takt der Rechenwerke:** Inhaltsübersichten nennen den gemessenen Durchsatz zweier Pipelines am Bandregister (124 Mio. Gatter/s). Kein Forschungsbefund, Artikel unverändert.
+
+**27.11.2026, Quanten-Coprozessor, Selbstjustierung:** Inhaltsübersichten nennen das Rückkopplungswerk (Fixpunkt, Halbierung, Markierung „angepasst“). Kein Forschungsbefund, Artikel unverändert.
