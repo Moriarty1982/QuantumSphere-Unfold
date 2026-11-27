@@ -1,0 +1,41 @@
+========================================================================
+H200 A  Operator-Kontrolle: ein holomorpher (P_up) Term koppelt nicht an Down
+========================================================================
+  || P_up on Down-Raum ||_max (soll 0) = 0.00e+00
+  <P_up>_up (soll 1) = 1.000000
+  -> JEDER aus P_up gebaute Term (linear ODER quadratisch) gibt fuer Down (s=-1) null.
+     Voll holomorpher Zaehler => a_down=0 UND b_down=0 => Down-Masse (Zaehler) = 0.
+
+========================================================================
+H200 B  Drei Modelle am Quarkdatensatz (6 Massen, Nenner (l_i+l_j)^2)
+========================================================================
+
+(3) voll (A,B,C,D):   chi2 = 7.909  dof = 2
+    A=1.082e-03 B=3.291e-02 C=-2.224e-03 D=3.320e-02  ->  D/B = +1.0085
+
+(2) gradselektiv D=B (A,C,B): chi2 = 320.674  dof = 3
+    A=8.035e-04 C=-1.946e-03 B=D=3.306e-02   (b_down = 0 erzwungen)
+    p-Wert (dof=3) = 0.000e+00
+
+(1) voll holomorph (down=0): chi2 = 4.459e+04  dof = 4
+    davon Up-Fit chi2 = 4.815,  Down (Vorhersage 0) chi2 = 4.458e+04
+    Down-Massen vorhergesagt = 0 gegen beob. [1.54e-05 3.06e-04 1.63e-02] (Abweichung in sigma: [ 77.          76.5        181.11111111])
+
+========================================================================
+H200 C  Entscheidung gegen die Vorab-Kriterien
+========================================================================
+  K1 voll holomorph: chi2 4.5e+04 >> 7.91, Down 76-181sigma daneben
+     -> voll holomorphe Feldgleichung VERWORFEN.
+  K2/K3 gradselektiv D=B: chi2_3=320.67 (dof 3, p=0.00e+00) vs chi2_4=7.91 (dof 2)
+     Delta-chi2 (D=B vs frei) = 312.76;  |D/B-1| = 0.0085  (RG-Budget 0.004)
+     -> K3: strikte Chiralitaet NUR APPROXIMATIV. D=B bei Delta-chi2=312.8
+        ausgeschlossen; Rest |D/B-1|=0.0085 ueber RG-Budget 0.004. Quintik ist
+        chiral-DOMINANT (~99%) mit ladungsblindem Beimischungsanteil, nicht exakt chiral.
+
+  FAZIT H200 (teilweise):
+  - Globale Holomorphie VERWORFEN (sauber, nicht blind): sie macht Down masselos.
+  - Gradselektive Chiralitaet erklaert das MUSTER (b_down~0, Up quadratisch-dominant),
+    aber strikte Chiralitaet (exakt D=B) ist ausgeschlossen; der ~0.9%-Rest liegt
+    ueber dem RG-Budget (H199) -> Chiralitaet ist dominant, approximativ, gradselektiv.
+  - Offen geschaerft: was zeichnet die Quintik fuer die Chiralitaet aus, und woher
+    kommt der ladungsblinde Beimischungsanteil (D/B-1 ~ 0.9%)?

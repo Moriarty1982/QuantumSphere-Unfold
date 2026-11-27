@@ -1,0 +1,18 @@
+Unabhaengige Wolfram-Kontrolle (k410b_kontrolle.wl), tatsaechliche Ausgabe:
+
+(3) voll A,B,C,D: chi2 = 7.90948   D/B = 1.00855
+(2) D=B strikt:   chi2 = 320.674   p(dof3) = 0.
+(1) voll holo:    chi2 = 44587.3
+
+Stimmt mit numpy (k410_out.txt) ueberein:
+  (3) chi2 = 7.909, D/B = +1.0085
+  (2) chi2 = 320.674, p = 0
+  (1) chi2 = 4.459e4 (= 44587: up-Fit 4.815 + down0 44582.5)
+
+Warnung "Symbol::undefined2 ... PRS, W, X ... undefined": kosmetisch (Module/Global-
+Scoping-Hinweis von LeastSquares), KEIN Rechenfehler; die Rueckgabewerte sind korrekt
+und decken sich mit numpy. Kein symbolischer Nullrest zu melden (rein numerischer Fit).
+
+Fallstrick festgehalten: "N VOR Sort". Sort[Table[1+Sqrt[2]Cos[...]]] ordnet die EXAKTEN
+Ausdruecke kanonisch, nicht nach Wert -> Vakuum l verdreht (ergab falsch chi2=91143,
+D/B=0.841). Mit Sort[N[Table[...]]] stimmt die Ordnung {0.0403, 0.580, 2.379} wie numpy.
