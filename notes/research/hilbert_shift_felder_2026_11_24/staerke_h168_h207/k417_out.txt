@@ -1,0 +1,51 @@
+Versaetze:  x_lepton = 0.0395773407   x_nu (X_R, aus R) = 0.043359   beta_sym = 0.5494056   eps=artanh(beta)= 0.61753
+
+==============================================================================
+H207 1  kappa*(theta13) und datengetriebene Unsicherheit (Neutrino-Spektrum bei x_nu)
+==============================================================================
+  kappa* = 0.03628  (sin^2 th13 = 0.02248 +- 0.00056)   sigma_kappa = 0.00267
+  bei kappa*: sin^2 th12=0.31904 (+2.4s)  sin^2 th23=0.49472 (+1.5s)  sin delta=+0.9999
+
+==============================================================================
+H207 2  Kandidaten-Versaetze als Staerke kappa: trifft einer theta13?
+==============================================================================
+  Kandidat             kappa |k-k*|/sig  sin^2 th13   z(th13)   sin^2 th12  z(th12)  sin delta
+  tan(x_nu)          0.04339        2.7   0.023999    +2.7    0.31843   +2.3   +0.9998
+  x_nu               0.04336        2.7   0.023993    +2.7    0.31844   +2.3   +0.9998
+  tan(x_lepton)      0.03960        1.2   0.023183    +1.3    0.31875   +2.4   +0.9998
+  x_lepton           0.03958        1.2   0.023179    +1.2    0.31875   +2.4   +0.9998
+  eps=artanh(b)      0.61753      217.9   (Massen/PMNS nicht erreichbar)
+  eps/14             0.04411        2.9   0.024156    +3.0    0.31837   +2.3   +0.9998
+
+==============================================================================
+H207 3  Gemeinsamer Versatz (H168): ein x fuer Neutrino-Spektrum UND kappa=tan(x)
+==============================================================================
+  gemeinsames x (Spektrum + kappa=tan x) fuer theta13: x = 0.04093
+    sin^2 th12=0.31933 (+2.5s)  sin^2 th23=0.49417  sin delta=+0.9998
+    Abstand zu x_lepton=0.0395773407: 0.00135  (H176 nannte 5,7 sigma mit der Halbierenden)
+    Abstand zu x_nu=0.043359: 0.00243
+
+==============================================================================
+H207 4  Reiner H168-Versatz: EIN x = x_lepton fuer Spektrum UND kappa=tan(x) (0 Parameter)
+==============================================================================
+  x=x_lepton=0.03958: sin^2 th13=0.02164 (-1.5s)  sin^2 th12=0.31983 (+2.5s)  sin^2 th23=0.49445 (+1.4s)  sin delta=+0.9998
+  x=x_nu=0.04336: sin^2 th13=0.02400 (+2.7s)  sin^2 th12=0.31843 (+2.3s)  sin^2 th23=0.49364 (+1.4s)  sin delta=+0.9998
+
+  H168-Spannung (gemeinsames x fuer theta13 = 0.04093) gegen x_lepton=0.0395773407:
+    |x* - x_lepton| = 0.00135 = 1.5 sigma  (mit sigma_x=0.00091)
+    H176 (Halbierende) nannte hier 5,7 sigma. Mit der STRUKTUR-Richtung K2:
+    x* = 0.04093, nur 1.5 sigma von x_lepton -> Spannung weitgehend aufgeloest.
+
+==============================================================================
+H207 Entscheidung
+==============================================================================
+  Bester Neutrino-Kandidat: x_nu (kappa=0.04336), theta13 2.7 sigma
+  K1 (Staerke = Neutrino-Versatz, theta13 aus R vorhergesagt) -> NEIN
+
+  FAZIT H207 (Interpretation):
+  - Richtung fest K2 (H206); Neutrino-Spektrum bei x_nu (R). Die Staerke kappa*, die theta13
+    trifft, wird mit strukturellen Versaetzen verglichen.
+  - Trifft tan(x_nu)/x_nu theta13 innerhalb 2 sigma, ist theta13 aus dem Neutrino-Versatz (R)
+    vorhergesagt (ein Versatz fuer R UND theta13); die Naehe war aus H206 schon erkennbar
+    (teilweise nicht blind) -> moeglicher struktureller Link ODER Zahlenkoinzidenz (vgl. H181).
+  - sin^2 th12 bleibt bei K2 zu hoch (TM1-Problem, H206); x_lepton ist ein anderer Versatz.
