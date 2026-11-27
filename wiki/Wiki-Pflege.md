@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**27.11.2026, Test H206 (Mischung, Winkel in der Ebene ⊥ v₀):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: in der Ebene ⊥ v₀ ist K₂ die eindeutige massenerhaltende Richtung (zirkulante Eigenbasis: diag(K₂)={0,0,0}, diag(K₁)={0,−1/√3,+1/√3}≠0, Wolfram exakt); θ₁₃-Richtung vollständig strukturell, Vorhersage nahezu maximales θ₂₃/CP, aber sin²θ₁₂ zu hoch (TM1); Bilanz gezogen (offen: Stärke/H168 + θ₁₂).
+
 **27.11.2026, Test H205 (Mischung, Drehwinkel-Richtung):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: die θ₁₃-Korrekturrichtung im Ladungssektor ist exakt und strukturell erzwungen — v₀=(1,0,1)/√2 ist Eigenvektor der neutralen Form für jedes b,c; Ladungs-Generatoren K₁,K₂ exakt ⊥ v₀ (span = Ebene ⊥ v₀), (K₁+K₂)/√2 45°-halbierend; Richtungsklasse hergeleitet, Stärke/Vorzeichen frei, Daten verlangen die Richtung nach H175 nicht (numpy+Wolfram, teilweise nicht blind).
 
 **27.11.2026, Test H204 (Elter-F4-Darstellung, nach H203):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: die Ladungs-kovariante l_k²-Operatoralgebra auf dem Farbblock ist exakt 2-dim ({1, iL_U}, (iL_U)²=1), zwei minimale Idempotente P_up/P_dn; einzelne Darstellung erzwingt D/B nur diskret {0,+1,−1,∞}, Datenwert 1,0085 liegt 8,5σ vom nächsten; B (Grad 5) und D (Grad 4) in verschiedenen F₄-Graden → keine einzelne Irrep trägt beide → nein (bestätigt H202, teilweise nicht blind).
