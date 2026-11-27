@@ -26,6 +26,12 @@ ZUSE = Path("qam/examples/zuse_machine/hdl")
 # (Name, Top-Modul, Quellen, Parameter)
 TARGETS = [
     ("qcop2_top W=16", "qcop2_top", [COP / "qcfg.sv", COP / "qstep2.sv", COP / "qcop2_top.sv"], {"W": 16}),
+    # Mit Programmspeicher: generisch wuerde der Speicher in Register zerlegt; synth_ice40 bildet ihn auf Block-RAM ab.
+    ("qcop2_sys W=16 (mit Boot-Monitor, 1024 Worte; iCE40-Zellen, 8 Block-RAM)", "qcop2_sys",
+     [COP / f for f in ("qcfg.sv", "qstep2.sv", "qcop2_top.sv", "qboot.sv", "qcop2_sys.sv")],
+     # Aeltere Yosys-Fassungen (z. B. 0.33) schalten ABC9 standardmaessig ein und brauchen -noabc9 zusaetzlich.
+     {"W": 16, "AW": 10, "flow": ["synth_ice40 -noabc", "synth_ice40 -noabc9 -noabc"]}),
+    ("qboot", "qboot", [COP / "qboot.sv"], {"AW": 10}),
     ("tape_core direkt", "tape_core", [ZUSE / "tape_core.sv"], {"SCAN": 0}),
     ("tape_core zyklisch", "tape_core", [ZUSE / "tape_core.sv"], {"SCAN": 1}),
     ("guard_stream", "guard_stream", [ZUSE / "guard_stream.sv"], {}),
@@ -46,9 +52,18 @@ def find_yosys(explicit):
 
 
 def synth(yosys, top, sources, params):
+    params = dict(params)
+    flows = params.pop("flow", "synth -noabc")
+    if isinstance(flows, list):
+        for flow in flows[:-1]:
+            result = synth(yosys, top, sources, {**params, "flow": flow})
+            if result[0] is None or "incompatible" not in result[0]:
+                return result
+        flows = flows[-1]
+    flow = flows
     chparam = "".join(f"chparam -set {k} {v} {top}; " for k, v in params.items())
     script = (f"read_verilog -sv {' '.join(str(s) for s in sources)}; {chparam}"
-              f"synth -noabc -top {top}; check -assert; stat")
+              f"{flow} -top {top}; check -assert; stat")
     proc = subprocess.run([yosys, "-p", script], capture_output=True, text=True, cwd=REPO)
     text = proc.stdout + proc.stderr
     warnings = sorted({line.strip() for line in text.splitlines()
@@ -85,7 +100,7 @@ def main():
     if args.report:
         out = Path(args.report)
         out.parent.mkdir(parents=True, exist_ok=True)
-        lines = ["| Baustein | synthesefest | generische Zellen (synth -noabc) |", "|---|---|---:|"]
+        lines = ["| Baustein | synthesefest | Zellen (synth -noabc, sofern nicht anders genannt) |", "|---|---|---:|"]
         lines += [f"| {n} | {'ja' if ok else 'nein: ' + msg} | {c if c is not None else '-'} |"
                   for n, ok, c, msg in rows]
         out.write_text("\n".join(lines) + "\n", encoding="utf-8")

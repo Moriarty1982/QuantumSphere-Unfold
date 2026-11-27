@@ -1,0 +1,1 @@
+Boot-Monitor: 20 gueltige Abbilder mit 600 Laeufen (davon 315 mit eigener Konfiguration) = exakte Referenz; 7 fehlerhafte bzw. Grenz-Abbilder richtig behandelt (reject ohne Ausgabe, done ohne HALT); 78464 Takte fuer die gueltigen Abbilder
