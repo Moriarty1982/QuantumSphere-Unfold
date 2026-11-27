@@ -1,0 +1,19 @@
+F4-invariantes Potential v=x^n -> Kruemmung der Mode (i,j) auf dem Vakuum (Tr=3, e2=3/2):
+  n=2: 4   (Grad in l_k: 0)
+  n=3: 18 - 6*l_k   (Grad in l_k: 1)
+  n=4: 60 - 24*l_k   (Grad in l_k: 1)
+  n=5: 10*l_k**3 - 30*l_k**2 - 60*l_k + 180   (Grad in l_k: 3)
+  n=6: -12*l_k**4 + 108*l_k**3 - 234*l_k**2 - 108*l_k + 513   (Grad in l_k: 4)
+  -> l_k^2 erscheint zuerst bei Potentialgrad n = 5 (ein Quintik-Term).
+
+Fit ueber dem hergeleiteten Nenner (l_i+l_j)^2:
+  Zaehler {1, l_k}      (Potentialgrad <= 4)  : Up chi2=16989.88  Down chi2=   93.15  (2 Param, 1 dof)
+  Zaehler {l_k, l_k^2}  (H188, braucht Grad 5): Up chi2=    4.82  Down chi2=    3.09  (2 Param, 1 dof)
+  Zaehler {1, l_k, l_k^2} (Grad 5, 3 Param)   : Up chi2=    0.00  Down chi2=    0.00  (3 Param, 0 dof)
+
+Lesart:
+  - Nenner (l_i+l_j)^2: hergeleitet (Peirce + W^2-Norm).
+  - Zaehler {1,l_k} (Potentialgrad <=4): von den Daten verworfen (Up ~ 10^4 chi2).
+  - l_k^2 erscheint erst bei Potentialgrad 5; damit ist der H188-Zaehler feldgleichungs-
+    FAEHIG, aber nicht eindeutig vorhergesagt: die Koeffizienten (inkl. fehlender Konstante)
+    bleiben frei. {1,l_k,l_k^2} trifft exakt (0 dof), ist aber reiner Fit.

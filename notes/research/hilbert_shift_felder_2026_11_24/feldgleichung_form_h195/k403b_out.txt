@@ -1,0 +1,17 @@
+=== k403b Gegenprobe (Wolfram Language), H195 ===
+
+-- Peirce-Eigenwert und kinetische Norm (verifiziert in k403a_peirce_check.py, H3(O)-Algebra) --
+W0 o X_ij = (l_i+l_j)/2 * X_ij  (konstant ueber alle 8 Oktonion-Komponenten, exakt)
+N0 = Tr(X o X) = 2|x|^2 (flach)
+N1 = Tr(X o (W0 o X)) = (l_i+l_j)/2 * N0
+N2 = Tr((W0 o X) o (W0 o X)) = ((l_i+l_j)/2)^2 * N0 = (l_i+l_j)^2/2 * |x|^2
+-> W^2-gewichtete kinetische Norm liefert den Nenner (l_i+l_j)^2.
+
+-- Grad-Leiter: F4-invariantes v=x^n, Kruemmung der Mode (i,j) auf dem Vakuum (Tr=3, e2=3/2) --
+n=2: 4                                            (Grad 0)
+n=3: 18 - 6 lk                                    (Grad 1)
+n=4: 60 - 24 lk                                   (Grad 1)
+n=5: 180 - 60 lk - 30 lk^2 + 10 lk^3              (Grad 3)  <- l_k^2 erscheint zuerst
+n=6: 513 - 108 lk - 234 lk^2 + 108 lk^3 - 12 lk^4 (Grad 4)
+
+Bestaetigt sympy (k403c_out.txt) exakt: l_k^2 erscheint zuerst bei Potentialgrad 5.
