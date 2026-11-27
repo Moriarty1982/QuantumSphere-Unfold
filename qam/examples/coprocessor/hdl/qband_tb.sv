@@ -11,7 +11,7 @@ module qband_tb;
     reg [7:0] a = 0;
     reg [15:0] b = 0;
     reg [BUSW-1:0] d = 0;
-    wire rsp_ok, layout_ok, full;
+    wire rsp_ok, layout_ok, full, busy;
     wire [BUSW-1:0] rsp_data;
     wire [PARTS-1:0] part_valid;
     wire [PARTS*$clog2(CELLS)-1:0] part_base;
@@ -23,7 +23,7 @@ module qband_tb;
 
     qband #(.CELLS(CELLS), .PARTS(PARTS), .CW(CW), .BUSW(BUSW)) dut (
         .clk(clk), .rst(rst), .cmd_valid(cmd_valid), .cmd(cmd), .a(a), .b(b), .d(d), .rsp_ok(rsp_ok),
-        .rsp_data(rsp_data), .layout_ok(layout_ok), .full(full), .part_valid(part_valid),
+        .rsp_data(rsp_data), .layout_ok(layout_ok), .full(full), .busy(busy), .part_valid(part_valid),
         .part_base(part_base), .part_order(part_order)
     );
 
@@ -41,7 +41,9 @@ module qband_tb;
             if (rc == 5) begin
                 cmd = ci; a = ai; b = bi; d = di; cmd_valid = 1;
                 @(negedge clk) cmd_valid = 0;
-                $display("R %0d %h %0d %0d", rsp_ok, rsp_data, layout_ok, full);
+                $write("R %0d %h", rsp_ok, rsp_data);
+                while (busy) @(negedge clk);
+                $display(" %0d %0d", layout_ok, full);
             end
         end
         $fclose(fd);

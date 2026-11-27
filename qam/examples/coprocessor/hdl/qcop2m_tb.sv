@@ -14,6 +14,7 @@ module qcop2m_tb;
     localparam integer PB = PARTS > 1 ? $clog2(PARTS) : 1;
     localparam integer MAXG = 256;
     reg clk = 0, rst = 1, load = 0, cfg_we = 0, band_valid = 0;
+    wire band_busy;
     reg [4:0] cfg_addr = 0;
     reg [31:0] cfg_wdata = 0;
     reg [3:0] band_cmd = 0;
@@ -51,7 +52,7 @@ module qcop2m_tb;
         .clk(clk), .rst(rst), .cfg_we(cfg_we), .cfg_addr(cfg_addr), .cfg_wdata(cfg_wdata),
         .cfg_rdata(cfg_rdata), .band_valid(band_valid), .band_cmd(band_cmd), .band_a(band_a),
         .band_b(band_b), .band_d(band_d), .band_ok(band_ok), .band_data(band_data),
-        .layout_ok(layout_ok), .full(full), .load(load), .load_part(load_part), .op_valid(op_valid),
+        .layout_ok(layout_ok), .full(full), .band_busy(band_busy), .load(load), .load_part(load_part), .op_valid(op_valid),
         .op_ctx(op_ctx), .opcode(opcode), .target(target), .ready(ready), .blocked(blocked),
         .rd_part(rd_part), .coeffs(coeffs), .k(k), .status(status), .gates_done(gates_done), .phys(phys)
     );
@@ -73,6 +74,7 @@ module qcop2m_tb;
                     rc = $fscanf(fd, "%d %d %d %h", x, y, adr, dv);
                     band_cmd = x; band_a = y; band_b = adr; band_d = dv; band_valid = 1;
                     @(negedge clk) band_valid = 0;
+                    while (band_busy) @(negedge clk);
                 end else if (cmd == "C") begin
                     rc = $fscanf(fd, "%d %d", adr, val);
                     cfg_addr = adr; cfg_wdata = val; cfg_we = 1;

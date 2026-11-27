@@ -29,6 +29,7 @@ module qcop2m_top #(
     output wire [127:0] band_data,
     output wire layout_ok,
     output wire full,
+    output wire band_busy,
     // Laeufe
     input wire load,
     input wire [PB-1:0] load_part,
@@ -59,18 +60,14 @@ module qcop2m_top #(
 
     qband #(.CELLS(128), .PARTS(PARTS), .BUSW(128)) band (
         .clk(clk), .rst(rst), .cmd_valid(band_valid), .cmd(band_cmd), .a(band_a), .b(band_b), .d(band_d),
-        .rsp_ok(band_ok), .rsp_data(band_data), .layout_ok(layout_ok), .full(full),
+        .rsp_ok(band_ok), .rsp_data(band_data), .layout_ok(layout_ok), .full(full), .busy(band_busy),
         .part_valid(part_valid), .part_base(), .part_order()
     );
 
-    // Gueltigkeit der Baender registriert: Die Pruefung der Aufteilung (paarweiser Vergleich aller Abschnitte) liegt
-    // so nicht im Pfad der Gatterannahme. Ein neues SET_PART wirkt einen Takt spaeter auf die Rechenwerke.
-    reg layout_q;
+    // layout_ok kommt registriert aus qband; die Gueltigkeitsbits werden ebenso um einen Takt verzoegert, damit
+    // beide zur selben Tabelle gehoeren. Ein neues SET_PART wirkt einen Takt spaeter (band_busy) auf die Rechenwerke.
     reg [PARTS-1:0] valid_q;
-    always @(posedge clk) begin
-        layout_q <= !rst && layout_ok;
-        valid_q <= rst ? {PARTS{1'b0}} : part_valid;
-    end
+    always @(posedge clk) valid_q <= rst ? {PARTS{1'b0}} : part_valid;
 
     wire [LANES*16*W-1:0] l_coeffs;
     wire [LANES*8-1:0] l_k;
@@ -85,7 +82,7 @@ module qcop2m_top #(
     generate
         for (g = 0; g < LANES; g = g + 1) begin : lane
             wire [CB-1:0] ctx = op_ctx[g*CB +: CB];
-            assign enabled[g] = layout_q && valid_q[g * CTX + ctx];
+            assign enabled[g] = layout_ok && valid_q[g * CTX + ctx];
             qstep2p #(.W(W), .CTX(CTX)) core (
                 .clk(clk), .rst(rst), .load(load && load_part / CTX == g), .load_ctx(load_ctx),
                 .op_valid(op_valid[g] && enabled[g]), .op_ctx(ctx), .opcode(opcode[g*4 +: 4]),

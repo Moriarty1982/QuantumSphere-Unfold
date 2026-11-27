@@ -23,6 +23,9 @@
 //   8 RD_PROF    Band a, Feld b (0 WEIGHT, 1 PHASE, 2 CLOCK, 3 HS, 4 LENGTH, 5 REPEAT, 6 BASE)  wirksamer Wert
 // Laufend gueltig: layout_ok (alle gueltigen Abschnitte ausgerichtet, im Register, ohne Ueberlappung) und
 // full (zusaetzlich jede Zelle belegt). WR_CELL/RD_CELL melden guard (rsp_ok = 0), solange layout_ok = 0.
+// Die Pruefung der Aufteilung (paarweiser Vergleich aller Abschnitte) ist registriert, damit sie nicht im Pfad der
+// Befehle liegt: Nach SET_PART steht busy einen Takt lang auf 1; erst danach gelten layout_ok und full fuer die
+// neue Tabelle. Der Aufrufer wartet, solange busy = 1 ist (in diesem Takt keinen Befehl senden).
 module qband #(
     parameter integer CELLS = 128,
     parameter integer PARTS = 16,
@@ -40,8 +43,9 @@ module qband #(
     input wire [BUSW-1:0] d,
     output reg rsp_ok,
     output reg [BUSW-1:0] rsp_data,
-    output wire layout_ok,
-    output wire full,
+    output reg layout_ok,
+    output reg full,
+    output reg busy,
     // Abschnittstabelle fuer spaetere Rechenwerke je Band
     output wire [PARTS-1:0] part_valid,
     output wire [PARTS*L-1:0] part_base,
@@ -93,8 +97,11 @@ module qband #(
         // Ohne Ueberlappung und alle im Register: voll genau dann, wenn die Laengen sich zu CELLS summieren.
         full_r = ok_r && total == CELLS;
     end
-    assign layout_ok = ok_r;
-    assign full = full_r;
+    always @(posedge clk) begin
+        layout_ok <= !rst && ok_r;
+        full <= !rst && full_r;
+        busy <= !rst && cmd_valid && cmd == C_SET_PART;
+    end
 
     // ---------------------------------------------------------------- Profile
     function automatic [31:0] burned(input [3:0] n, input [2:0] field);
