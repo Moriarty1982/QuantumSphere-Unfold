@@ -1,0 +1,98 @@
+== H188a: Ordnung von K1 bis K4 in der Stoerung (ruhendes, homogenes Vakuum) ==
+   X_mu = d_mu W = d_mu (W0 + eps dW) = eps d_mu dW, weil d_mu W0 = 0. Ganzzahlige Zufallsrichtungen A = d_t dW, B = d_x dW (exakt in float64).
+   K1(eps A, eps B) = 58835*eps**4;  Koeffizienten eps^0..eps^3: [0, 0, 0, 0]
+   K2(eps A, eps B) = 47018*eps**4;  Koeffizienten eps^0..eps^3: [0, 0, 0, 0]
+   K3(eps A, eps B) = 1767020*eps**6;  Koeffizienten eps^0..eps^3: [0, 0, 0, 0]
+   K4(eps A, eps B) = -43064*eps**4;  Koeffizienten eps^0..eps^3: [0, 0, 0, 0]
+   Urteil H188a: BESTAETIGT (nicht blind): niedrigste Ordnung ist eps^4, kein Beitrag zu kleinen Schwingungen
+
+   Gegenstueck (nachtraeglich, nur Ordnungsabzaehlung, keine Loesung der Feldgleichung): Hintergrund mit X_t = B0 != 0 (rotierendes Vakuum)
+   K1(B0 + eps A, eps B): Koeffizient eps^2 = 30888
+   K2(B0 + eps A, eps B): Koeffizient eps^2 = 25248
+   K3(B0 + eps A, eps B): Koeffizient eps^2 = 0
+   K4(B0 + eps A, eps B): Koeffizient eps^2 = -19320
+
+== H188b, c: kinetische Form aus dem Vakuum, X = h/z je Paar ==
+   Eigenwerte des Vakuums l = [0.04035  0.580212 2.379438]
+   Funktionsmenge R (wie H187), Werte je Paar (e mu), (e tau), (mu tau):
+      f1 = l_k                          [2.379438 0.580212 0.04035 ]
+      f2 = l_k^2                        [5.661726e+00 3.366459e-01 1.628115e-03]
+      f3 = l_i l_j                      [0.023411 0.09601  1.380578]
+      f4 = l_i l_j - l_k^2/2            [-2.807452 -0.072313  1.379764]   (wechselt das Vorzeichen: als kinetische Form nicht positiv)
+      f5 = 1                            [1. 1. 1.]
+      f6 = l_i + l_j                    [0.620562 2.419788 2.95965 ]
+      f7 = l_i^2 + l_j^2                [0.338274 5.663354 5.998372]
+      f8 = (l_i^2 + l_j^2)/2 + l_i l_j  [0.192548 2.927687 4.379764]
+      f9 = l_k (l_i + l_j)              [1.476589 1.40399  0.119422]
+   X = sqrt(m), Zuordnung A:
+      Up  : bester Quotient f8/f9 29.28 sigma (0 unter 3 sigma); bestes Tripel (f6, f7)/f1 1.69 sigma (1 unter 3 sigma)
+            Tripel (f6, f7)/f1: 1.69 sigma
+      Down: bester Quotient f1/f2 69.41 sigma (0 unter 3 sigma); bestes Tripel (f3, f9)/f4 3.56 sigma (0 unter 3 sigma)
+   X = sqrt(m), Zuordnung B:
+      Up  : bester Quotient f9/f8 29.28 sigma (0 unter 3 sigma); bestes Tripel (f4, f9)/f8 0.41 sigma (23 unter 3 sigma)
+            Tripel (f1, f3)/f3: 2.00 sigma
+            Tripel (f2, f3)/f5: 2.00 sigma
+            Tripel (f2, f4)/f5: 2.00 sigma
+            Tripel (f2, f5)/f5: 2.00 sigma
+            Tripel (f2, f6)/f5: 1.38 sigma
+            Tripel (f2, f7)/f5: 2.00 sigma
+            Tripel (f2, f8)/f5: 0.74 sigma
+            Tripel (f3, f4)/f5: 2.00 sigma
+            Tripel (f5, f7)/f5: 2.00 sigma
+            Tripel (f1, f4)/f6: 2.68 sigma
+            Tripel (f1, f5)/f6: 2.00 sigma
+            Tripel (f1, f6)/f6: 2.00 sigma
+            Tripel (f1, f7)/f6: 1.68 sigma
+            Tripel (f1, f8)/f6: 2.22 sigma
+            Tripel (f5, f6)/f6: 2.00 sigma
+            Tripel (f4, f9)/f8: 0.41 sigma
+            Tripel (f6, f8)/f8: 2.00 sigma
+            Tripel (f6, f9)/f8: 2.00 sigma
+            Tripel (f7, f9)/f8: 1.35 sigma
+            Tripel (f8, f9)/f8: 2.00 sigma
+            Tripel (f1, f2)/f9: 2.00 sigma
+            Tripel (f1, f9)/f9: 2.00 sigma
+            Tripel (f2, f9)/f9: 2.00 sigma
+      Down: bester Quotient f5/f8 73.29 sigma (0 unter 3 sigma); bestes Tripel (f4, f9)/f8 8.52 sigma (0 unter 3 sigma)
+   X = m, Zuordnung A:
+      Up  : bester Quotient f8/f2 33.93 sigma (0 unter 3 sigma); bestes Tripel (f3, f9)/f1 1.05 sigma (8 unter 3 sigma)
+            Tripel (f3, f5)/f1: 1.05 sigma
+            Tripel (f3, f9)/f1: 1.05 sigma
+            Tripel (f5, f9)/f1: 1.05 sigma
+            Tripel (f1, f5)/f2: 1.05 sigma
+            Tripel (f1, f6)/f2: 1.05 sigma
+            Tripel (f4, f6)/f2: 1.14 sigma
+            Tripel (f5, f6)/f2: 1.05 sigma
+            Tripel (f3, f6)/f5: 1.05 sigma
+      Down: bester Quotient f3/f9 48.27 sigma (0 unter 3 sigma); bestes Tripel (f7, f9)/f2 1.59 sigma (1 unter 3 sigma)
+            Tripel (f7, f9)/f2: 1.59 sigma
+   X = m, Zuordnung B:
+      Up  : bester Quotient f2/f8 33.93 sigma (0 unter 3 sigma); bestes Tripel (f2, f3)/f7 2.05 sigma (11 unter 3 sigma)
+            Tripel (f2, f3)/f7: 2.05 sigma
+            Tripel (f2, f4)/f7: 2.05 sigma
+            Tripel (f2, f5)/f7: 2.18 sigma
+            Tripel (f2, f6)/f7: 2.16 sigma
+            Tripel (f2, f7)/f7: 2.18 sigma
+            Tripel (f2, f8)/f7: 2.14 sigma
+            Tripel (f3, f4)/f7: 2.05 sigma
+            Tripel (f5, f7)/f7: 2.18 sigma
+            Tripel (f1, f2)/f8: 2.19 sigma
+            Tripel (f1, f9)/f8: 2.19 sigma
+            Tripel (f2, f9)/f8: 2.19 sigma
+      Down: bester Quotient f1/f8 14.95 sigma (0 unter 3 sigma); bestes Tripel (f1, f9)/f8 1.76 sigma (3 unter 3 sigma)
+            Tripel (f1, f2)/f8: 1.76 sigma
+            Tripel (f1, f9)/f8: 1.76 sigma
+            Tripel (f2, f9)/f8: 1.76 sigma
+   X = m^2, Zuordnung A:
+      Up  : bester Quotient f3/f2 2119457.98 sigma (0 unter 3 sigma); bestes Tripel (f3, f6)/f2 9.24 sigma (0 unter 3 sigma)
+      Down: bester Quotient f3/f2 158.13 sigma (0 unter 3 sigma); bestes Tripel (f2, f3)/f2 2.03 sigma (3 unter 3 sigma)
+            Tripel (f2, f3)/f2: 2.03 sigma
+            Tripel (f2, f4)/f2: 2.03 sigma
+            Tripel (f3, f4)/f2: 2.03 sigma
+   X = m^2, Zuordnung B:
+      Up  : bester Quotient f2/f3 2119457.98 sigma (0 unter 3 sigma); bestes Tripel (f2, f9)/f7 120.37 sigma (0 unter 3 sigma)
+      Down: bester Quotient f2/f8 466.38 sigma (0 unter 3 sigma); bestes Tripel (f1, f2)/f7 78.95 sigma (0 unter 3 sigma)
+   verglichen: 72 Quotienten und 324 Tripel je Sektor, je 3 Lesarten und 2 Zuordnungen
+   Zufallskontrolle (2000 erfundene Datensaetze): Treffer mit einem Quotienten 0.00%, mit einem Tripel 63.40%
+   Urteil H188b: WIDERLEGT (kein Quotient trifft beide Verhaeltnisse in beiden Sektoren)
+   Urteil H188c: OHNE URTEIL (Treffer, aber mit Zufall vertraeglich)
