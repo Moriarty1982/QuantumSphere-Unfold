@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**27.11.2026, Test H197 (erzwingt eine Symmetrie D = B?):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme um den Befund „nein" ergänzt: B (gerade) braucht Grad 5, D (ungerade) existiert bei Grad 4 ⇒ D/B frei; nur Q₀−½ ist J-ausgezeichnet, D=B = P_up ist nicht J-kovariant; Daten verlangen D/B = 1,009 ± 0,001, symmetrienahe Werte bei Δχ² ≈ 6·10⁴. „Down linear" ist eine empirische Auswahlregel, die der Rahmen nicht erzeugt.
+
 **26.11.2026, Runde r69 (Namenskonvention):** Neue Namen der Frames und Lepton-Sektoren in Forschungsstand, Gesamtbild (Frame-Spickzettel, Zeitleiste), Inhalt, Content-overview, Begriffe, Hinweise für LLMs und Vorhersagen-und-Tests eingetragen. Ältere Einträge behalten die alten Namen.
 
 **22.11.2026, QAM-Streaming-Guard:** Zweischritt-Filter, Rückstauprüfung und am MMA-Vergleich gemessene Ausgabemenge eingetragen.

@@ -1,0 +1,64 @@
+==============================================================================
+H197a  Quelle von B (ladungsgerade) und D (ladungsungerade) getrennt
+==============================================================================
+
+(A) ladungsgerade F4-Kruemmung v=x^n  ->  l_k^2-Koeffizient auf dem Vakuum:
+    Grad n=2: l_k^2-Koeff = 0
+    Grad n=3: l_k^2-Koeff = 0
+    Grad n=4: l_k^2-Koeff = 0
+    Grad n=5: l_k^2-Koeff = -30
+    Grad n=6: l_k^2-Koeff = -234
+    -> ladungsgerades l_k^2 erscheint zuerst bei Grad 5 (F4-invariant, GERADE).
+
+(B) ladungsungerade Kruemmung (H186, Grad 4) auf dem Vakuum  ->  l_k^2-Koeffizient:
+    c1     : 2/3   (l_k^2-Koeff = 0)
+    c2     : 1 - l_k/3   (l_k^2-Koeff = 0)
+    c4/c5  : 2 - l_k**2/3   (l_k^2-Koeff = -1/3)
+    c7/c9  : l_k**2/6 - l_k + 3/2   (l_k^2-Koeff = 1/6)
+    c11    : -l_k**2/6 - l_k + 7/2   (l_k^2-Koeff = -1/6)
+    -> ladungsungerades l_k^2 existiert schon bei Grad 4 (erster: c4/c5).
+
+(Befund A/B) B braucht Grad 5 (gerade), D existiert bei Grad 4 (ungerade):
+    verschiedener Grad UND verschiedene Invarianz -> getrennte Kopplungen.
+
+==============================================================================
+H197c (Rang)  Sind B und D unabhaengig?  Abbildung (g_gerade, g_ungerade) -> (B, D)
+==============================================================================
+    gerade Grad-5-Quelle -> (B,D) = [-30.   0.]
+    ungerade Grad-4-Quelle (c7/c9) -> (B,D) = [0.         0.16666667]
+    Rang der Abbildung auf (B,D) = 2  -> D/B ist FREI (keine Bindung).
+
+==============================================================================
+H197d  J-Kovarianz der Ladungsformen (J: Q0 -> 1 - Q0, tauscht 1/3 <-> 2/3)
+==============================================================================
+    Eigenwerte von Q0 auf dem Farbblock: [np.float64(0.333333), np.float64(0.666667)]  (erwartet 1/3, 2/3)
+    Q0 - 1/2 (H182-Form h)  : Down=-1/6, Up=1/6 -> Eigenform, J-Eigenwert -1
+    Q0 - 1/3                : Down=0, Up=1/3 -> KEINE Eigenform (J mischt)
+    P_up = 3(Q0 - 1/3)      : Down=0, Up=1 -> KEINE Eigenform (J mischt); J bildet (Up,Down)=(1,0) auf (0,1) ab = P_down
+    -> nur Q0-1/2 ist J-ausgezeichnet (ladungsungerade). D=B entspricht P_up, NICHT J-kovariant.
+
+==============================================================================
+H197b/c  Daten (6 Massen) gegen feste D/B vs. freier Fit
+==============================================================================
+    freier 4-Param-Fit: chi2=7.91 (2 dof); A=1.082e-03 B=3.291e-02 C=-2.224e-03 D=3.320e-02; D/B=+1.009
+
+    feste D/B (symmetrieausgezeichnet), je 3 Param (A,B,C):
+      ladungsblind  D/B=0     : chi2=  60613.65  (3 dof)  ausgeschlossen
+      lineare Ladung D/B=1/3  : chi2=  60496.83  (3 dof)  ausgeschlossen
+      reine J-Form  D/B=-1    : chi2=  60310.92  (3 dof)  ausgeschlossen
+      P_up/Fit     D/B=+1     : chi2=    320.67  (3 dof)  ausgeschlossen
+
+    chi2(D/B)-Minimum bei D/B = +1.0086 (chi2=7.91); 2-sigma-Fenster D/B in [+1.0076, +1.0095]  (Breite 0.0019)
+      D/B=+0.000: chi2=60613.7  (Delta chi2 ggue Minimum = 60605.7)
+      D/B=+0.333: chi2=60496.8  (Delta chi2 ggue Minimum = 60488.9)
+      D/B=-1.000: chi2=60310.9  (Delta chi2 ggue Minimum = 60303.0)
+
+    Kontrolle: 2000 erfundene Massenpaare, wie oft trifft ein festes D/B (0, 1/3, -1) mit chi2<12?
+      freier 4-Param: 0.0%   feste D/B: D/B=+0.00: 0.0%  D/B=+0.33: 0.0%  D/B=-1.00: 0.0%
+
+==============================================================================
+Urteil H197:
+    symmetrieausgezeichnete D/B (0, 1/3, -1) alle ausgeschlossen: True
+    Daten verlangen D/B ~ +1.01 (= P_up, nicht J-kovariant): True
+    -> NEIN, keine Symmetrie erzwingt D=B. 'Down linear' ist eine empirische
+       Auswahlregel (Up-Typ-Projektor P_up), die der H182/F4-Rahmen nicht erzeugt.
