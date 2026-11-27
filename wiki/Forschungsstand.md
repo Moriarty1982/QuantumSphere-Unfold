@@ -106,6 +106,19 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Auch über ein drehendes Vakuum erreichen die Ableitungsterme die Quarkmassen nicht (27.11.2026, Test H189, k392)
+Fortsetzung von H188 nach Entscheidung des Autors („Bewegtes Vakuum rechnen“). Vorab-Notiz vor der Rechnung (Commit 017a2be); Python und Wolfram.
+- **H189a bestätigt (nicht blind):** Auch bei zeitlich bewegtem Vakuum ändern K₁ bis K₄ die Ruhefrequenzen nicht; sie brauchen einen Gradienten.
+- **H189b bestätigt (nicht blind):** Die Drehung W = e^{iωt}W₀ verschiebt alle Frequenzen um dasselbe ±ω, unabhängig von Generation und Ladung.
+- **H189c bestätigt (ohne Daten):** Die Ableitungsterme ändern die Ausbreitung der Farbschwingung zum Paar (i, j): K₂ liefert 2(l_i − l_j)²,
+  K₄ liefert −2(l_i² + l_j²) − 4l_k², K₁ nur eine Konstante. Für Ladung ⅓ und ⅔ ist das gleich; Up und Down werden nicht getrennt.
+- **H189d widerlegt:** Die träge Masse m = A·√f/(1 + κ₂g₂ + κ₄g₄) mit gemeinsamen κ trifft in keinem von 24 Fällen; bester Abstand 14σ, und
+  der nur mit Nennern im Verhältnis 2885 : 88 : 1.
+- **Bilanz H184 bis H189:** Die Lesart „Quarks als Farbschwingungen um das Leptonvakuum“ gibt Zahl und Form der Zustände, aber jede geprüfte
+  Quelle für die Massen ist ausgeschlossen oder frei. Nicht gerechnet: räumlich verdrehte Vakua, Drehungen in den Generationen.
+
+Ordner: `notes/research/hilbert_shift_felder_2026_11_24/bewegtes_vakuum_h189/`. OP3 und OP4 bleiben offen.
+
 ### Ableitungsterme wirken bei kleinen Schwingungen nicht; kinetische Normierung trennt nicht vom Zufall (27.11.2026, Test H188, k391)
 Fortsetzung von H187 nach Entscheidung des Autors („Ableitungsterme einbeziehen“). Vorab-Notiz vor der Rechnung (Commit bb9da71); Python und Wolfram.
 - **H188a bestätigt (nicht blind):** Die Ableitungsterme K₁ bis K₄ der Feldgleichung (k290) sind mindestens vierter Ordnung in ∂W. Um ein ruhendes,
