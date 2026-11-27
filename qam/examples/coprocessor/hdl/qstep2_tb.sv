@@ -50,6 +50,7 @@ module qstep2_tb;
                     rc = $fscanf(fd, "%d", adr);
                     cfg_addr = adr; #1;
                     $display("cfg %0d %0d", adr, cfg_rdata);
+                    @(negedge clk);  // zurueck auf die fallende Flanke
                 end else if (cmd == "B") begin
                     load = 1; @(negedge clk) load = 0;
                     cycles = 0;

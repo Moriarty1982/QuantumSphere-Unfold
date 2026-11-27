@@ -22,7 +22,7 @@ HDL = Path(__file__).resolve().parent / "hdl"
 OPS = {"nop": 0, "x": 1, "z": 2, "s": 3, "sdg": 4, "t": 5, "tdg": 6, "h": 7, "cx": 8}
 NAMES = {v: k for k, v in OPS.items()}
 ROT = {"z": 4, "s": 2, "sdg": 6, "t": 1, "tdg": 7}
-SOURCES = ("qcfg.sv", "qstep2.sv", "qcop2_top.sv", "qstep2_tb.sv")
+SOURCES = ("qcfg.sv", "qgate2.sv", "qnorm2.sv", "qstep2.sv", "qcop2_top.sv", "qstep2_tb.sv")
 STATUS = ("continue", "guard", "reject", "step_limit")
 W8 = cmath.exp(1j * cmath.pi / 4)
 

@@ -20,6 +20,8 @@
 //
 // Synthesefest (27.11.2026): alle Schleifen haben feste Grenzen; die Phase w^r ist ein
 // Umsortieren der vier Koeffizienten mit Vorzeichenwechsel, also reine Verdrahtung.
+// Aufbau: qgate2 (Gatter) und qnorm2 (Kuerzen, Guard) sind kombinatorisch und werden auch von der
+// Pipeline-Fassung qstep2p benutzt; hier liegen beide in einem Takt.
 module qstep2 #(
     parameter integer W = 16
 ) (
@@ -41,19 +43,26 @@ module qstep2 #(
     output reg [1:0] status,
     output reg [15:0] gates_done
 );
-    localparam [3:0] OP_NOP = 0, OP_X = 1, OP_Z = 2, OP_S = 3, OP_SDG = 4,
-                     OP_T = 5, OP_TDG = 6, OP_H = 7, OP_CX = 8;
     localparam [1:0] CONTINUE = 0, GUARD = 1, REJECT = 2, STEP_LIMIT = 3;
     localparam integer TW = W + 2;  // Arbeitsbreite mit Reserve fuer Summen
 
-    reg signed [TW-1:0] t [0:15];
-    reg signed [TW-1:0] o [0:15];
-    reg signed [TW-1:0] maxv, minv;
-    reg [8:0] kn;
-    reg bad, ovf, all_even;
-    reg [2:0] rot;
-    reg [1:0] b;
-    integer m, i, j, d;
+    wire [16*TW-1:0] o_flat;
+    wire [8:0] kn;
+    wire bad, ovf;
+    wire [16*W-1:0] coeffs_n;
+    wire [7:0] k_n;
+
+    wire signed [TW-1:0] maxv, minv;
+    qguard_limits #(.TW(TW)) limits (.w_eff(w_eff), .maxv(maxv), .minv(minv));
+
+    qgate2 #(.W(W), .TW(TW)) gate (
+        .coeffs(coeffs), .k(k), .opcode(opcode), .target(target), .allow(allow),
+        .o_flat(o_flat), .kn(kn), .bad(bad)
+    );
+    qnorm2 #(.W(W), .TW(TW)) norm (
+        .o_flat(o_flat), .kn_in(kn), .reduce_en(reduce_en), .maxv(maxv), .minv(minv), .k_max(k_max),
+        .coeffs(coeffs_n), .k(k_n), .ovf(ovf)
+    );
 
     always @(posedge clk) begin
         if (rst || load) begin
@@ -62,75 +71,12 @@ module qstep2 #(
             status <= CONTINUE;
             gates_done <= 16'd0;
         end else if (op_valid && status == CONTINUE) begin
-            for (m = 0; m < 16; m = m + 1) begin
-                t[m] = $signed(coeffs[m*W +: W]);
-                o[m] = t[m];
-            end
-            kn = {1'b0, k};
-            bad = (opcode > OP_CX) || !allow[opcode];
-            ovf = 1'b0;
-            b = target ? 2'd2 : 2'd1;
-            case (opcode)
-                OP_Z: rot = 3'd4;
-                OP_S: rot = 3'd2;
-                OP_SDG: rot = 3'd6;
-                OP_T: rot = 3'd1;
-                default: rot = 3'd7;  // OP_TDG
-            endcase
-            case (opcode)
-                OP_X: for (i = 0; i < 4; i = i + 1)
-                    if ((i & b) == 0)
-                        for (j = 0; j < 4; j = j + 1) begin
-                            o[4*i+j] = t[4*(i|b)+j];
-                            o[4*(i|b)+j] = t[4*i+j];
-                        end
-                OP_CX: for (i = 0; i < 4; i = i + 1)
-                    // Steuerqubit ist das jeweils andere Qubit.
-                    if ((i & b) == 0 && (i & (3 ^ b)) != 0)
-                        for (j = 0; j < 4; j = j + 1) begin
-                            o[4*i+j] = t[4*(i|b)+j];
-                            o[4*(i|b)+j] = t[4*i+j];
-                        end
-                OP_Z, OP_S, OP_SDG, OP_T, OP_TDG:
-                    // w^r * a: Koeffizient j kommt von (j - r) mod 4, negiert bei genau einem
-                    // Umlauf (w^4 = -1).
-                    for (i = 0; i < 4; i = i + 1)
-                        if ((i & b) != 0)
-                            for (j = 0; j < 4; j = j + 1) begin
-                                d = j - rot + 8;
-                                o[4*i+j] = (d >= 4 && d < 8) ? -t[4*i+(d & 3)] : t[4*i+(d & 3)];
-                            end
-                OP_H: begin
-                    for (i = 0; i < 4; i = i + 1)
-                        if ((i & b) == 0)
-                            for (j = 0; j < 4; j = j + 1) begin
-                                o[4*i+j] = t[4*i+j] + t[4*(i|b)+j];
-                                o[4*(i|b)+j] = t[4*i+j] - t[4*(i|b)+j];
-                            end
-                    kn = kn + 9'd1;
-                end
-                default: ;
-            endcase
-
-            // Kuerzen: sind alle Koeffizienten gerade und k >= 2, durch 2 teilen.
-            all_even = 1'b1;
-            for (m = 0; m < 16; m = m + 1) if (o[m][0]) all_even = 1'b0;
-            if (reduce_en && all_even && kn >= 2) begin
-                for (m = 0; m < 16; m = m + 1) o[m] = o[m] >>> 1;
-                kn = kn - 9'd2;
-            end
-
-            maxv = ({{(TW-1){1'b0}}, 1'b1} <<< (w_eff - 1)) - 1;
-            minv = -maxv - 1;
-            for (m = 0; m < 16; m = m + 1) if (o[m] > maxv || o[m] < minv) ovf = 1'b1;
-            if (kn > {1'b0, k_max}) ovf = 1'b1;
-
             if (budget != 16'd0 && gates_done >= budget) status <= STEP_LIMIT;
             else if (bad) status <= REJECT;
             else if (ovf) status <= GUARD;
             else begin
-                for (m = 0; m < 16; m = m + 1) coeffs[m*W +: W] <= o[m][W-1:0];
-                k <= kn[7:0];
+                coeffs <= coeffs_n;
+                k <= k_n;
                 gates_done <= gates_done + 16'd1;
             end
         end

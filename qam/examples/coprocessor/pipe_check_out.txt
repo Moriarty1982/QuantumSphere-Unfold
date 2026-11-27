@@ -1,0 +1,3 @@
+CTX=1: 1200 Faelle = exakte Referenz; 24348 Gatter in 79146 Takten = 0.308 Gatter/Takt
+CTX=4: 1200 Faelle = exakte Referenz; 24348 Gatter in 35326 Takten = 0.689 Gatter/Takt
+CTX=8: 1200 Faelle = exakte Referenz; 24348 Gatter in 27694 Takten = 0.879 Gatter/Takt

@@ -62,3 +62,5 @@ jobs:
         run: python -m qam.examples.coprocessor.bridge_check --cases 300 --seed 7
       - name: Boot monitor runs portable program images
         run: python -m qam.examples.coprocessor.qimage --cases 600 --seed 3
+      - name: Pipelined core with several contexts
+        run: python -m qam.examples.coprocessor.pipe_check --cases 600 --seed 5
