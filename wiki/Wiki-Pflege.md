@@ -1124,3 +1124,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Quanten-Coprozessor, Pipeline:** Deutsche und englische Inhaltsübersicht nennen die Pipeline mit Kontexten und die Taktmessung. Kein Forschungsbefund, Artikel unverändert.
 
 **27.11.2026, Quanten-Coprozessor, Bandregister:** Deutsche und englische Inhaltsübersicht nennen das partitionierbare Bandregister mit eingebrannten Profilen. Kein Forschungsbefund, Artikel unverändert.
+
+**27.11.2026, Quanten-Coprozessor, Rechenwerke je Band, √2-Form, Normwächter:** Deutsche und englische Inhaltsübersicht nennen die parallelen Rechenwerke je Band, die kanonische √2-Form und den Normwächter. Kein Forschungsbefund, Artikel unverändert.
