@@ -74,7 +74,7 @@ def render(ax, V, w, m2, scale, B, hw, nth=320, nph=640):
     sh = 0.50 + 0.50 * np.clip(nrm @ light, 0, 1); col = np.clip(col * sh[:, None], 0, 1)
     depth = q.mean(1) @ d; vis = (nrm @ d) > 0; idx = np.argsort(depth[vis])
     xy = np.stack([q[vis] @ r, q[vis] @ up], -1)[idx]
-    ax.add_collection(PolyCollection(xy, facecolors=col[vis][idx], edgecolors=col[vis][idx], linewidths=0.25, antialiaseds=False))
+    ax.add_collection(PolyCollection(xy, facecolors=col[vis][idx], edgecolors=col[vis][idx], linewidths=0.25, antialiaseds=False, rasterized=True))
     t = np.linspace(0, 2 * np.pi, 400); ax.plot(np.cos(t), np.sin(t), color="#555555", lw=0.9, ls=(0, (4, 3)), zorder=5)
     ax.set_aspect("equal"); ax.axis("off"); lim = 1 + um + 0.06; ax.set_xlim(-lim, lim); ax.set_ylim(-lim, lim)
     return um

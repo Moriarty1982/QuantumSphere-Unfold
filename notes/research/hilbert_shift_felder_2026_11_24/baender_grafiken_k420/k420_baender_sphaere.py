@@ -81,7 +81,7 @@ def draw_band(ax, n, hw, col, B, z0):
     for k in range(len(p1) - 1):
         quad = np.array([p1[k], p1[k + 1], p2[k + 1], p2[k]]); front = (quad @ d).mean() > 0
         xy = np.c_[quad @ r, quad @ up]
-        ax.add_patch(Polygon(xy, closed=True, fc=col, ec="none", antialiased=False, alpha=0.95 if front else 0.18, zorder=z0 + (3 if front else 0)))
+        ax.add_patch(Polygon(xy, closed=True, fc=col, ec="none", antialiased=False, alpha=0.95 if front else 0.18, zorder=z0 + (3 if front else 0), rasterized=True))
 def draw_line(ax, n, col, B, lw=0.8, alpha=0.7):
     r, up, d = B; p = circle_pts(n)
     f = (p @ d) > 0; x, y = p @ r, p @ up
