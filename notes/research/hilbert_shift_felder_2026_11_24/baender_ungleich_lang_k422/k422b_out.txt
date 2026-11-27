@@ -1,0 +1,10 @@
+k422b: (1) Perlenkette, Radien d/16 fuer d = 1,2,4,8,16
+   Flaeche/4Pi = 341/256 = 1.3320313; Grenzwert 4/3
+   Volumen/(4Pi/3) = 4681/4096 = 1.1428223; Grenzwert 8/7
+   Hoehe/2 = 31/16; Grenzwert 2
+(2) Stufe: rho(t) = Sin[t] - Cos[t0] (t - t0) Exp[-(t - t0)^2/(2 s^2)]
+   rho(t0) - Sin[t0] = 0; rho'(t0) = 0; rho''(t0) = -Sin[t0]
+(3) Polwinkel der Kleinkreise in Grad: {3.58332, 7.18076, 14.4775, 30.0000, 90.0000}
+(4) Kreuzungsbedingung koaxial: Abstand der Achsen 0, |th_i - th_j| > 0 fuer alle Paare: True
+
+Symbolische Nullreste: rho(t0) - Sin[t0] = 0 und rho'(t0) = 0 exakt. Rueckgabewert Null. Keine Warnungen.

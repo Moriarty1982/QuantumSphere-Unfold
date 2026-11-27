@@ -1,0 +1,20 @@
+dim   1/sin^1: RC 35.59  RH 50.08  RO 65.03  RS 68.24  CH 49.40  CO 63.40  CS 76.18  HO 70.01  HS 89.00  OS 89.54
+dim   1/sin^2: RC 39.90  RH 52.23  RO 63.87  RS 66.59  CH 51.59  CO 63.38  CS 73.52  HO 69.23  HS 88.24  OS 89.26
+sqrt  1/sin^1: RC 50.07  RH 57.45  RO 63.50  RS 63.53  CH 58.36  CO 66.46  CS 66.44  HO 63.88  HS 86.38  OS 88.17
+sqrt  1/sin^2: RC 51.76  RH 57.98  RO 62.85  RS 62.88  CH 59.43  CO 66.48  CS 65.42  HO 63.89  HS 85.74  OS 87.90
+geschrieben: baender_sphaere_de.png
+m2 =   2.0: max bei [ 0. -1.  0.] (u = +3.172), min bei [-0.58 -0.2  -0.79] (u = -1.205), min/max = -0.380; Anteil l=2: 0.521, l=4: 0.379, l=6: 0.052; Mittel +0.0011
+m2 =   6.0: max bei [ 0. -1.  0.] (u = +2.631), min bei [0.63 0.21 0.75] (u = -0.889), min/max = -0.338; Anteil l=2: 0.391, l=4: 0.458, l=6: 0.073; Mittel +0.0010
+m2 =  20.0: max bei [ 0. -1.  0.] (u = +1.857), min bei [-0.63 -0.22 -0.74] (u = -0.487), min/max = -0.262; Anteil l=2: 0.217, l=4: 0.505, l=6: 0.114; Mittel +0.0008
+Auslenkung auf den Achsen (x = Pol von O, y = Kreuzung O/S, z = Pol von S): {'x': 0.166, 'y': 0.28, 'z': 0.06}
+geschrieben
+dim   1/sin^1: RC 35.59  RH 50.08  RO 65.03  RS 68.24  CH 49.40  CO 63.40  CS 76.18  HO 70.01  HS 89.00  OS 89.54
+dim   1/sin^2: RC 39.90  RH 52.23  RO 63.87  RS 66.59  CH 51.59  CO 63.38  CS 73.52  HO 69.23  HS 88.24  OS 89.26
+sqrt  1/sin^1: RC 50.07  RH 57.45  RO 63.50  RS 63.53  CH 58.36  CO 66.46  CS 66.44  HO 63.88  HS 86.38  OS 88.17
+sqrt  1/sin^2: RC 51.76  RH 57.98  RO 62.85  RS 62.88  CH 59.43  CO 66.48  CS 65.42  HO 63.89  HS 85.74  OS 87.90
+geschrieben: baender_sphaere_en.png
+m2 =   2.0: max bei [ 0. -1.  0.] (u = +3.172), min bei [-0.58 -0.2  -0.79] (u = -1.205), min/max = -0.380; Anteil l=2: 0.521, l=4: 0.379, l=6: 0.052; Mittel +0.0011
+m2 =   6.0: max bei [ 0. -1.  0.] (u = +2.631), min bei [0.63 0.21 0.75] (u = -0.889), min/max = -0.338; Anteil l=2: 0.391, l=4: 0.458, l=6: 0.073; Mittel +0.0010
+m2 =  20.0: max bei [ 0. -1.  0.] (u = +1.857), min bei [-0.63 -0.22 -0.74] (u = -0.487), min/max = -0.262; Anteil l=2: 0.217, l=4: 0.505, l=6: 0.114; Mittel +0.0008
+Auslenkung auf den Achsen (x = Pol von O, y = Kreuzung O/S, z = Pol von S): {'x': 0.166, 'y': 0.28, 'z': 0.06}
+geschrieben

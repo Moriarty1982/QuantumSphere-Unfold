@@ -1,0 +1,10 @@
+k421b: (1) Ueberlappflaeche zweier ebener Streifen der Breiten a, b unter Winkel th (eine Raute)
+   Flaeche = a b Csc[th]; mal Sin[th]/(a b) = 1
+(2) unabhaengige Minimierung, Gesetz 1/sin
+   N1 min(d_i,d_j): Energie 27.7307797; Winkel RC RH RO RS CH CO CS HO HS OS = {67.34, 60.43, 57.65, 53.88, 62.06, 64.34, 59.12, 71.28, 82.78, 87.60}
+   N2 sqrt(dmin/dmax): Energie 5.7391966; Winkel RC RH RO RS CH CO CS HO HS OS = {84.40, 72.73, 54.09, 49.23, 67.19, 69.57, 54.09, 67.19, 72.73, 84.40}
+   N0 d_i d_j: Energie 322.153189; Winkel RC RH RO RS CH CO CS HO HS OS = {35.59, 50.08, 65.03, 68.24, 49.40, 63.40, 76.18, 70.01, 89.00, 89.54}
+
+Symbolischer Rest: Flaeche * Sin[th]/(a b) = 1 exakt. Rueckgabewert Null.
+Warnungen: "Symbol::undefined2: Global symbols W undefined" (Voranalyse der Umgebung; W ist Funktionsargument) und "General::messages" (FindMinimum-Meldungen einzelner Starts, per Quiet unterdrueckt).
+Vergleich Python k421: Energien 27.730780, 5.739197, 322.153189; alle 30 Winkel gleich auf 0,01 Grad.
