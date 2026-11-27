@@ -163,6 +163,10 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 **Test H184, 26.11.2026:** Für OP3 und OP4 (Feldgleichung, Lesart „ein Vakuum, Sektoren schwingen“). Um das zirkulante Leptonvakuum in H₃(𝕆) haben die
 
 **Test H185, 26.11.2026:** Für OP3 und OP4. Im komplexen Feld ℂ ⊗ H₃(𝕆) gibt es um das Leptonvakuum zwei Sätze von Farbschwingungen (Ladung ⅓, ⅔).
+
+**Test H186, 27.11.2026:** Für OP3 und OP4. Elf Terme mit dem Ladungsoperator bis Grad 4: Sie spannen alle drei Richtungen des Unterschieds zwischen
+Up und Down auf (keine Vorhersage), und kein einzelner trifft die Daten (nächster 1018σ). Nachträglich: Der gemessene Unterschied liegt fast ganz auf
+dem Produkt der zwei Vakuum-Eigenwerte des Paars. OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/ladungsterm_h186/`.
 Erlaubt sind sechs ladungserhaltende und sechs ladungsmischende Massenterme; die mischenden entfallen nur mit einer Phasensymmetrie auf den
 Farbrichtungen. Up ≠ Down verlangt die Brechung der ℂ-Konjugation; Potentiale aus Jordan-Spuren liefern sie nicht (H185d widerlegt), nötig ist ein
 Term mit dem Ladungsoperator. Keine Zahl vorhergesagt. OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/updown_h185/`.

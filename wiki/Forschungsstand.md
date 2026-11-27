@@ -106,6 +106,19 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Kein einzelner Ladungsterm gibt den Unterschied zwischen Up und Down (27.11.2026, Test H186, k389)
+Fortsetzung von H185: elf Invarianten bis Grad 4 mit dem Ladungsoperator D = Q₀ − ½ auf ℂ ⊗ H₃(𝕆), ihre Wirkung je Generation, gegen die Massen bei
+M_Z. Vorab-Notiz vor der Rechnung (Commit c8ab85d); Python und Wolfram.
+- **H186a bestätigt:** Die Terme spannen alle drei Richtungen auf. Symmetrie und Grad legen den Unterschied zwischen Up und Down nicht fest.
+- **H186b widerlegt:** Kein einzelner Term trifft die Daten (33 Paare aus Kandidat und Lesart X = √m, m, m²; der nächste liegt 1018σ daneben).
+- **Grund:** Jede Verschiebung ist eine symmetrische Funktion der zwei Vakuum-Eigenwerte des Paars, zu dem die Farbmode gehört: ⅔, ⅓(l_i + l_j),
+  ⅓(l_i² + l_j²), ⅙(l_i + l_j)². Die zwei Moden mit der schwersten Richtung sind dann fast gleich schwer; die Daten verlangen ein Verhältnis 0,05.
+- **Nachträglich (Erkundung):** In der Basis 1, (l_i + l_j), l_i l_j liegt der gemessene Unterschied fast ganz auf dem Produkt l_i l_j (Anteil 0,74
+  bis 0,79, die anderen unter 0,04). Das reine Produkt trifft nicht (r₂ 1,41-fach, r₁ falsches Vorzeichen), deutet aber auf Terme mit der Adjunkten
+  oder der Determinante der Albert-Algebra. Nur mit eigener Vorab-Notiz prüfbar.
+
+Quelle: `notes/research/hilbert_shift_felder_2026_11_24/ladungsterm_h186/`.
+
 ### Das komplexe Feld erlaubt Up und Down, trennt sie aber nicht von selbst (26.11.2026, Test H185, k388)
 Fortsetzung von H184 im komplexen Feld ℂ ⊗ H₃(𝕆), um dasselbe Leptonvakuum. Vorab-Notiz vor der Rechnung (Commit df685ba); Python und Wolfram.
 - **H185a, b bestätigt (nicht blind):** Die 36 Farbrichtungen zerfallen nach der Ladung in ⅓ und ⅔, je drei Generationen. Farbe und Platztausch

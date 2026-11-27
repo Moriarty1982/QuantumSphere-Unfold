@@ -1,0 +1,88 @@
+== Kontrollen ==
+   Eigenwerte des Vakuums l = [0.04035  0.580212 2.379438]; Referenzform: Frequenzquadrate [1.24112 4.83958 5.9193 ] (Ladung 1/3), [1.24112 4.83958 5.9193 ] (2/3); erwartet 2 (l_i + l_j) = [1.24112 4.83958 5.9193 ]
+   Zuordnung (Setzung): Paar (e, mu) = 1. Generation, (e, tau) = 2., (mu, tau) = 3.
+
+== Kandidaten am Vakuum K = 2/3, delta = 2/9: Frequenzquadrate je Ladung und Generation ==
+   c1  Re Tr Wq DW               : ungerade (Up - Down)/2 = [0.66667 0.66667 0.66667]; gerade = [-0.  0.  0.]; Rest 2e-16; ladungsmischend 0e+00
+   c2  Re Tr (Wq DW) Wu          : ungerade (Up - Down)/2 = [0.20685 0.8066  0.98655]; gerade = [-0.  0.  0.]; Rest 1e-14; ladungsmischend 0e+00
+   c3  Im Tr (Wq DW) Wu          : ungerade (Up - Down)/2 = [0. 0. 0.]; gerade = [0. 0. 0.]; Rest 0e+00; ladungsmischend 0e+00
+   c4  Re Tr (Wq DW) o (Wu Wuq)  : ungerade (Up - Down)/2 = [0.11276 1.88778 1.99946]; gerade = [-0.  0.  0.]; Rest 3e-14; ladungsmischend 0e+00
+   c5  Re Tr (Wq DW) o Wu^2      : ungerade (Up - Down)/2 = [0.11276 1.88778 1.99946]; gerade = [-0.  0.  0.]; Rest 3e-14; ladungsmischend 0e+00
+   c6  Im Tr (Wq DW) o Wu^2      : ungerade (Up - Down)/2 = [0. 0. 0.]; gerade = [0. 0. 0.]; Rest 0e+00; ladungsmischend 0e+00
+   c7  Re Tr (Wq Wu) o (DW Wuq)  : ungerade (Up - Down)/2 = [0.06418 0.9759  1.45992]; gerade = [-0. -0.  0.]; Rest 2e-14; ladungsmischend 0e+00
+   c8  Im Tr (Wq Wu) o (DW Wuq)  : ungerade (Up - Down)/2 = [0. 0. 0.]; gerade = [0. 0. 0.]; Rest 0e+00; ladungsmischend 0e+00
+   c9  Re Tr (Wq Wuq) o (DW Wu)  : ungerade (Up - Down)/2 = [0.06418 0.9759  1.45992]; gerade = [-0. -0.  0.]; Rest 2e-14; ladungsmischend 0e+00
+   c10  Im Tr (Wq Wuq) o (DW Wu) : ungerade (Up - Down)/2 = [0. 0. 0.]; gerade = [0. 0. 0.]; Rest 0e+00; ladungsmischend 0e+00
+   c11 Re Tr (Wq DW) o (W Wq)    : ungerade (Up - Down)/2 = [0.17694 2.86368 3.45938]; gerade = [-0.  0.  0.]; Rest 5e-14; ladungsmischend 9e-01
+
+== Form der ungeraden Verschiebung als Funktion der l (vier Vakua gemeinsam) ==
+   c1  Re Tr Wq DW               : +0.6667 1   (Rest 4.4e-16)
+   c2  Re Tr (Wq DW) Wu          : +0.3333 (l_i + l_j)   (Rest 3.3e-16)
+   c3  Im Tr (Wq DW) Wu          : null
+   c4  Re Tr (Wq DW) o (Wu Wuq)  : +0.3333 (l_i^2 + l_j^2)   (Rest 8.9e-16)
+   c5  Re Tr (Wq DW) o Wu^2      : +0.3333 (l_i^2 + l_j^2)   (Rest 8.9e-16)
+   c6  Im Tr (Wq DW) o Wu^2      : null
+   c7  Re Tr (Wq Wu) o (DW Wuq)  : +0.1667 (l_i^2 + l_j^2) +0.3333 l_i l_j   (Rest 8.9e-16)
+   c8  Im Tr (Wq Wu) o (DW Wuq)  : null
+   c9  Re Tr (Wq Wuq) o (DW Wu)  : +0.1667 (l_i^2 + l_j^2) +0.3333 l_i l_j   (Rest 8.9e-16)
+   c10  Im Tr (Wq Wuq) o (DW Wu) : null
+   c11 Re Tr (Wq DW) o (W Wq)    : +0.5000 (l_i^2 + l_j^2) +0.3333 l_i l_j   (Rest 1.3e-15)
+
+== H186a: Rang der ungeraden Richtungen ==
+   Singulaerwerte: [6.63222 0.64335 0.35113]; relativ kleinster: 5.29e-02
+   Urteil H186a: BESTAETIGT (Rang 3: Symmetrie und Grad legen die Richtung nicht fest)
+
+== H186b: einzelne Kandidaten gegen die Daten (M_Z, k376) ==
+   X = sqrt(m): Daten r1 = -0.001485 +- 0.000045, r2 = +0.049285 +- 0.000616
+      c1  Re Tr Wq DW               : r1 = +1.00000, r2 = +1.00000; Abstand +22438.1 sigma, +1542.2 sigma
+      c2  Re Tr (Wq DW) Wu          : r1 = +0.20967, r2 = +0.81759; Abstand +4731.0 sigma, +1246.3 sigma
+      c3  Im Tr (Wq DW) Wu          : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c4  Re Tr (Wq DW) o (Wu Wuq)  : r1 = +0.05639, r2 = +0.94415; Abstand +1296.8 sigma, +1451.6 sigma
+      c5  Re Tr (Wq DW) o Wu^2      : r1 = +0.05639, r2 = +0.94415; Abstand +1296.8 sigma, +1451.6 sigma
+      c6  Im Tr (Wq DW) o Wu^2      : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c7  Re Tr (Wq Wu) o (DW Wuq)  : r1 = +0.04396, r2 = +0.66846; Abstand +1018.3 sigma, +1004.4 sigma
+      c8  Im Tr (Wq Wu) o (DW Wuq)  : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c9  Re Tr (Wq Wuq) o (DW Wu)  : r1 = +0.04396, r2 = +0.66846; Abstand +1018.3 sigma, +1004.4 sigma
+      c10  Im Tr (Wq Wuq) o (DW Wu) : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c11 Re Tr (Wq DW) o (W Wq)    : r1 = +0.05115, r2 = +0.82780; Abstand +1179.2 sigma, +1262.9 sigma
+   X = m: Daten r1 = -0.000009 +- 0.000000, r2 = +0.003423 +- 0.000065
+      c1  Re Tr Wq DW               : r1 = +1.00000, r2 = +1.00000; Abstand +3766070.8 sigma, +15311.1 sigma
+      c2  Re Tr (Wq DW) Wu          : r1 = +0.20967, r2 = +0.81759; Abstand +789673.5 sigma, +12508.7 sigma
+      c3  Im Tr (Wq DW) Wu          : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c4  Re Tr (Wq DW) o (Wu Wuq)  : r1 = +0.05639, r2 = +0.94415; Abstand +212416.2 sigma, +14453.1 sigma
+      c5  Re Tr (Wq DW) o Wu^2      : r1 = +0.05639, r2 = +0.94415; Abstand +212416.2 sigma, +14453.1 sigma
+      c6  Im Tr (Wq DW) o Wu^2      : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c7  Re Tr (Wq Wu) o (DW Wuq)  : r1 = +0.04396, r2 = +0.66846; Abstand +165600.2 sigma, +10217.4 sigma
+      c8  Im Tr (Wq Wu) o (DW Wuq)  : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c9  Re Tr (Wq Wuq) o (DW Wu)  : r1 = +0.04396, r2 = +0.66846; Abstand +165600.2 sigma, +10217.4 sigma
+      c10  Im Tr (Wq Wuq) o (DW Wu) : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c11 Re Tr (Wq DW) o (W Wq)    : r1 = +0.05115, r2 = +0.82780; Abstand +192659.0 sigma, +12665.5 sigma
+   X = m^2: Daten r1 = -0.000000 +- 0.000000, r2 = +0.000013 +- 0.000000
+      c1  Re Tr Wq DW               : r1 = +1.00000, r2 = +1.00000; Abstand +139715993830.0 sigma, +2118881.4 sigma
+      c2  Re Tr (Wq DW) Wu          : r1 = +0.20967, r2 = +0.81759; Abstand +29294818630.6 sigma, +1732376.6 sigma
+      c3  Im Tr (Wq DW) Wu          : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c4  Re Tr (Wq DW) o (Wu Wuq)  : r1 = +0.05639, r2 = +0.94415; Abstand +7879185785.5 sigma, +2000537.2 sigma
+      c5  Re Tr (Wq DW) o Wu^2      : r1 = +0.05639, r2 = +0.94415; Abstand +7879185785.5 sigma, +2000537.2 sigma
+      c6  Im Tr (Wq DW) o Wu^2      : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c7  Re Tr (Wq Wu) o (DW Wuq)  : r1 = +0.04396, r2 = +0.66846; Abstand +6142363358.1 sigma, +1416373.1 sigma
+      c8  Im Tr (Wq Wu) o (DW Wuq)  : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c9  Re Tr (Wq Wuq) o (DW Wu)  : r1 = +0.04396, r2 = +0.66846; Abstand +6142363358.1 sigma, +1416373.1 sigma
+      c10  Im Tr (Wq Wuq) o (DW Wu) : Verschiebung der 3. Generation null, kein Verhaeltnis
+      c11 Re Tr (Wq DW) o (W Wq)    : r1 = +0.05115, r2 = +0.82780; Abstand +7146214781.8 sigma, +1754009.2 sigma
+   kleinster groesster Abstand: 1018.3 sigma (c7  Re Tr (Wq Wu) o (DW Wuq) mit X = sqrt(m))
+   Urteil H186b: WIDERLEGT (kein Kandidat trifft beide Verhaeltnisse innerhalb von 3 sigma)
+
+== Bericht (nachtraeglich): andere Zuordnungen der Generationen, nur Lesart X = sqrt(m) ==
+   Paare in der Reihenfolge (0, 2, 1): kleinster Abstand 1638.1 sigma (c4  Re Tr (Wq DW) o (Wu Wuq))
+   Paare in der Reihenfolge (1, 0, 2): kleinster Abstand 15010.0 sigma (c7  Re Tr (Wq Wu) o (DW Wuq))
+   Paare in der Reihenfolge (1, 2, 0): kleinster Abstand 22438.1 sigma (c1  Re Tr Wq DW)
+   Paare in der Reihenfolge (2, 0, 1): kleinster Abstand 22438.1 sigma (c1  Re Tr Wq DW)
+   Paare in der Reihenfolge (2, 1, 0): kleinster Abstand 22438.1 sigma (c1  Re Tr Wq DW)
+
+== Zusatz (nachtraeglich, Erkundung): Daten im Raum der erlaubten Verschiebungen ==
+   Alle Kandidaten haengen nur an (l_i, l_j) des Paars, nicht an l_k. Basis: 1, (l_i + l_j), l_i l_j, (l_i^2 + l_j^2).
+   X = sqrt(m): Daten (auf die 3. Generation normiert) = -0.0178 * 1 -0.0017 * (l_i + l_j) +0.7408 * l_i l_j
+   X = m: Daten (auf die 3. Generation normiert) = +0.0001 * 1 -0.0299 * (l_i + l_j) +0.7884 * l_i l_j
+   X = m^2: Daten (auf die 3. Generation normiert) = +0.0013 * 1 -0.0319 * (l_i + l_j) +0.7919 * l_i l_j
+   reines l_i l_j (= 3 c7 - 1,5 c4): r1 = +0.01696, r2 = +0.06954; reines (l_i^2 + l_j^2): r1 = +0.05639, r2 = +0.94415
+   reines l_i l_j gegen X = sqrt(m): Abstand +413 sigma, +33 sigma; relativ zu r2 der Daten: 1.41-fach

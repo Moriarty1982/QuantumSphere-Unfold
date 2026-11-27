@@ -1,0 +1,8 @@
+(* Ausgabe von k389b_gegenprobe.wl, Wolfram Language, 26.11.2026. Print-Ausgaben; Rueckgabewert Null.
+   Warnungen: Symbol::undefined2 und General::messages (Hinweise der Auswerteumgebung), keine Rechenwarnung. *)
+c1 Tr Wq DW: Hesse-Eigenwerte {-2/3, -2/3, 2/3, 2/3}
+c2 Tr (Wq DW) Wu: {-(l1 + l2)/3, -(l1 + l2)/3, (l1 + l2)/3, (l1 + l2)/3}
+c4 Tr (Wq DW) o (Wu Wuq): {-(l1^2 + l2^2)/3, -(l1^2 + l2^2)/3, (l1^2 + l2^2)/3, (l1^2 + l2^2)/3}
+c7 Tr (Wq Wu) o (DW Wuq): {-(l1 + l2)^2/6, -(l1 + l2)^2/6, (l1 + l2)^2/6, (l1 + l2)^2/6}
+c11 Tr (Wq DW) o (W Wq): {-(3 l1^2 + 2 l1 l2 + 3 l2^2)/6, -(3 l1^2 + 2 l1 l2 + 3 l2^2)/6, (3 l1^2 + 2 l1 l2 + 3 l2^2)/6, (3 l1^2 + 2 l1 l2 + 3 l2^2)/6}
+Referenz Tr (W Wq) Wu: {2 (l1 + l2), 2 (l1 + l2), 2 (l1 + l2), 2 (l1 + l2)}
