@@ -1,0 +1,13 @@
+k407b: groesste Menge antikommutierender L_(e_i), n = 1..5 (FindClique), dazu Radon-Hurwitz - 1
+n = 1: a = 1, rho - 1 = 1, omega.omega = -1, omega Skalar: nein, Spur omega = 0
+n = 2: a = 3, rho - 1 = 3, omega.omega = +1, omega Skalar: -1, Spur omega = -4
+n = 3: a = 7, rho - 1 = 7, omega.omega = +1, omega Skalar: -1, Spur omega = -8
+n = 4: a = 8, rho - 1 = 8, omega.omega = +1, omega Skalar: nein, Spur omega = 0
+n = 5: a = 9, rho - 1 = 9, omega.omega = -1, omega Skalar: nein, Spur omega = 0
+HS(3): L1...L7 = -1: True; R1...R7 = +1: True
+HS(2): L1 L2 L3 = -1: True; R1 R2 R3 = +1: True
+omega^2 in Cl(0,a) = (-1)^(a(a+1)/2), a = 0..16: {1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1}
+a mod 8 fuer a = n + 4, n = 3..20: {7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0}
+(Ausgabe des Wolfram-Kerns. Warnungen: "Symbol::undefined2 ... Global symbols Lm, N0, Rm, Ls ... are undefined" und "General::messages";
+ das ist die statische Vorpruefung der Sitzung, die Definitionen im selben Aufruf nicht sieht. Rueckgabewert Null. Ein erster Lauf mit n = 6
+ lief in das Zeitlimit von 60 s und lieferte nichts.)
