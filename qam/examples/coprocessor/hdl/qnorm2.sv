@@ -38,13 +38,15 @@ module qnorm2 #(
     reg all_even, red, ovf_plain, ovf_half;
     reg [8:0] kn;
     integer m;
-    // kanonische Form: zwei sqrt(2)-Schritte
-    reg signed [TW-1:0] r1 [0:15];
-    reg signed [TW-1:0] r2 [0:15];
-    reg signed [TW:0] t0, t1, t2, t3;
-    reg div1, div2, ovf_root;
-    reg [8:0] kr;
-    integer q;
+    // kanonische Form: zwei sqrt(2)-Schritte (qroot2), dann Guard (qguard2)
+    wire [16*TW-1:0] r_flat;
+    wire [8:0] kr;
+    wire [16*W-1:0] coeffs_r;
+    wire [7:0] k_r;
+    wire ovf_r;
+    qroot2 #(.TW(TW)) root (.o_flat(o_flat), .kn_in(kn_in), .r_flat(r_flat), .kr(kr));
+    qguard2 #(.W(W), .TW(TW)) guard (.r_flat(r_flat), .kr(kr), .maxv(maxv), .minv(minv), .k_max(k_max),
+                                     .coeffs(coeffs_r), .k(k_r), .ovf(ovf_r));
 
     always @(*) begin
         for (m = 0; m < 16; m = m + 1) o[m] = $signed(o_flat[m*TW +: TW]);
@@ -63,7 +65,43 @@ module qnorm2 #(
         ovf = (red ? ovf_half : ovf_plain) || kn > {1'b0, k_max};
         for (m = 0; m < 16; m = m + 1) coeffs[m*W +: W] = red ? o[m][W:1] : o[m][W-1:0];
         k = kn[7:0];
-        // ---- kanonische Form (reduce_en[1])
+        if (CANON != 0 && reduce_en[1]) begin
+            ovf = ovf_r;
+            k = k_r;
+            coeffs = coeffs_r;
+        end
+    end
+endmodule
+
+// Grenzen der Guard-Breite: maxv = 2^(w_eff-1) - 1, minv = -2^(w_eff-1).
+module qguard_limits #(
+    parameter integer TW = 18
+) (
+    input wire [5:0] w_eff,
+    output wire signed [TW-1:0] maxv,
+    output wire signed [TW-1:0] minv
+);
+    assign maxv = ({{(TW-1){1'b0}}, 1'b1} <<< (w_eff - 1)) - 1;
+    assign minv = -maxv - 1;
+endmodule
+
+// Zwei sqrt(2)-Schritte der kanonischen Form (Regel im Kopf von qnorm2): r = o / sqrt(2)^(k_in - kr).
+module qroot2 #(
+    parameter integer TW = 18
+) (
+    input wire [16*TW-1:0] o_flat,
+    input wire [8:0] kn_in,
+    output reg [16*TW-1:0] r_flat,
+    output reg [8:0] kr
+);
+    reg signed [TW-1:0] o [0:15];
+    reg signed [TW-1:0] r1 [0:15];
+    reg signed [TW-1:0] r2 [0:15];
+    reg signed [TW:0] t0, t1, t2, t3;
+    reg div1, div2;
+    integer m, q;
+    always @(*) begin
+        for (m = 0; m < 16; m = m + 1) o[m] = $signed(o_flat[m*TW +: TW]);
         div1 = kn_in >= 1;
         for (q = 0; q < 4; q = q + 1)
             if (o[4*q][0] != o[4*q+2][0] || o[4*q+1][0] != o[4*q+3][0]) div1 = 1'b0;
@@ -82,25 +120,34 @@ module qnorm2 #(
             r2[4*q] = div2 ? t0[TW:1] : r1[4*q];     r2[4*q+1] = div2 ? t1[TW:1] : r1[4*q+1];
             r2[4*q+2] = div2 ? t2[TW:1] : r1[4*q+2]; r2[4*q+3] = div2 ? t3[TW:1] : r1[4*q+3];
         end
-        kr = kn_in - {7'd0, div1} - {7'd0, div2};
-        ovf_root = kr > {1'b0, k_max};
-        for (m = 0; m < 16; m = m + 1) if (r2[m] > maxv || r2[m] < minv) ovf_root = 1'b1;
-        if (CANON != 0 && reduce_en[1]) begin
-            ovf = ovf_root;
-            k = kr[7:0];
-            for (m = 0; m < 16; m = m + 1) coeffs[m*W +: W] = r2[m][W-1:0];
-        end
+        kr = kn_in - {8'd0, div1} - {8'd0, div2};
+        for (m = 0; m < 16; m = m + 1) r_flat[m*TW +: TW] = r2[m];
     end
 endmodule
 
-// Grenzen der Guard-Breite: maxv = 2^(w_eff-1) - 1, minv = -2^(w_eff-1).
-module qguard_limits #(
-    parameter integer TW = 18
+// Guard nach der kanonischen Form: ovf, wenn ein Koeffizient ausserhalb [minv, maxv] liegt oder kr > k_max.
+module qguard2 #(
+    parameter integer W = 16,
+    parameter integer TW = W + 2
 ) (
-    input wire [5:0] w_eff,
-    output wire signed [TW-1:0] maxv,
-    output wire signed [TW-1:0] minv
+    input wire [16*TW-1:0] r_flat,
+    input wire [8:0] kr,
+    input wire signed [TW-1:0] maxv,
+    input wire signed [TW-1:0] minv,
+    input wire [7:0] k_max,
+    output reg [16*W-1:0] coeffs,
+    output reg [7:0] k,
+    output reg ovf
 );
-    assign maxv = ({{(TW-1){1'b0}}, 1'b1} <<< (w_eff - 1)) - 1;
-    assign minv = -maxv - 1;
+    reg signed [TW-1:0] r;
+    integer m;
+    always @(*) begin
+        ovf = kr > {1'b0, k_max};
+        for (m = 0; m < 16; m = m + 1) begin
+            r = $signed(r_flat[m*TW +: TW]);
+            if (r > maxv || r < minv) ovf = 1'b1;
+            coeffs[m*W +: W] = r[W-1:0];
+        end
+        k = kr[7:0];
+    end
 endmodule
