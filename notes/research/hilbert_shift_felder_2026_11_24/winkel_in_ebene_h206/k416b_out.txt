@@ -1,0 +1,14 @@
+Wolfram Language (exakt), k416b_kontrolle.wl — H206.
+Die "Symbol undefined"-Warnungen sind kosmetisch; die Rueckgabewerte sind exakt und in
+Uebereinstimmung mit numpy (k416).
+
+T-Eigenwerte = {1, (-1 + I Sqrt[3])/2, (-1 - I Sqrt[3])/2}   (1, omega, omega^2 = zirkulant)
+Diag(K1) in T-Basis = {0, -1/Sqrt[3], 1/Sqrt[3]}   (nicht alle 0 => aendert Massen)
+Diag(K2) in T-Basis = {0, 0, 0}   (0,0,0 => massenerhaltend)
+Eindeutigkeit: cos psi*diag(K1) + sin psi*diag(K2) = 0  =>  cos psi = 0  =>  psi = 90 (K2).
+
+Fazit der Kontrolle: In der Ebene span{K1,K2} (= Ebene senkrecht v0, H205) ist K2 die EINDEUTIGE
+Richtung, deren Diagonale in der zirkulanten Eigenbasis verschwindet, die also die
+Massen-Eigenwerte (erste Ordnung) nicht verschiebt. K1 verschiebt sie ({0,-1/sqrt3,+1/sqrt3}).
+Die Massen-Erhaltung legt die Richtung in der Ebene somit exakt auf K2 fest (psi=90 Grad).
+Deckt sich mit k416 (numpy).
