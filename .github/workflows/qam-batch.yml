@@ -60,3 +60,5 @@ jobs:
         run: python -m qam.examples.coprocessor.check --cases 500 --seed 1
       - name: Bridge to OpenQASM, Qiskit and Wolfram
         run: python -m qam.examples.coprocessor.bridge_check --cases 300 --seed 7
+      - name: Boot monitor runs portable program images
+        run: python -m qam.examples.coprocessor.qimage --cases 600 --seed 3

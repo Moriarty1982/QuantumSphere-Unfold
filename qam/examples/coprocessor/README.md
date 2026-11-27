@@ -92,3 +92,35 @@ Kronecker-Matrizen exakt nach (alle Differenzen 0, [Ausgabe](wolfram/bridge_exak
 absichtlich falschem Zustand). In der CI verlangt der Lauf, dass die aktuelle HDL-Ausgabe genau den gespeicherten Fällen
 entspricht; ist `wolframscript` vorhanden, läuft das Skript zusätzlich. Grenzen: zwei Qubits, nur Clifford+T, keine
 Messung (kommt mit Stufe 2).
+
+## Boot-Monitor und portables Programmabbild (27.11.2026)
+
+Programme lassen sich jetzt tauschen, ohne die Hardware neu zu bauen. [`hdl/qboot.sv`](hdl/qboot.sv) liest ein Programmabbild
+(QIMG) aus dem Programmspeicher, prüft Kopf und Prüfsumme und führt es auf dem Kern aus; [`hdl/qcop2_sys.sv`](hdl/qcop2_sys.sv)
+verbindet Programmspeicher (synchron gelesen, also Block-RAM; vom Host beschreibbar), Monitor und `qcop2_top`. Die Idee ist die
+einer kleinen virtuellen Maschine mit portablem Programmformat: dasselbe Abbild läuft in der Simulation, später auf dem FPGA und
+auf der Python-Referenz. Ein Soft-Core (z. B. RISC-V) kann später denselben Speicher und dieselben Register bedienen.
+
+| Wort | Inhalt |
+|---|---|
+| 0 | `0x51494D47` („QIMG“) |
+| 1 | Version 1 in Bit 31–16, Zahl N der Programmworte in Bit 15–0 |
+| 2 | Summe der N Programmworte mod 2³² |
+| 3 … | Programm: `HALT` (0), `CFG adr` (1, Wert im nächsten Wort), `LOAD` (2), `GATE op ziel` (3), `EMIT` (4) |
+
+Der Monitor meldet `idle`, `running`, `done` oder `reject` (falsches Magic, falsche Version, zu lang für den Speicher, falsche
+Prüfsumme, unbekannter Befehl, `CFG` ohne Wert). Bei `reject` führt er nichts aus. Ein Programmwort braucht zwei Takte (synchrones
+Lesen mit Wartetakt).
+
+```sh
+python -m qam.examples.coprocessor.bridge band schaltung.qasm > band.txt   # OpenQASM -> Band
+python -m qam.examples.coprocessor.qimage asm band.txt > prog.hex          # Band -> Abbild
+python -m qam.examples.coprocessor.qimage dis prog.hex                     # Abbild lesbar
+python -m qam.examples.coprocessor.qimage --cases 600 --seed 3             # Prüfung
+```
+
+[`qimage.py`](qimage.py) ([Ausgabe](qimage_out.txt)): 600 Läufe in 20 Abbildern, davon 315 mit eigener Konfiguration, bitgenau
+gleich der Referenz; sieben fehlerhafte bzw. Grenz-Abbilder richtig behandelt. Gegenkontrollen: Ein Monitor ohne
+Prüfsummenvergleich und einer mit festem Zielqubit fallen beide durch. Synthese mit Programmspeicher (1024 Worte) auf iCE40:
+8 Block-RAM, Zellen in [`synth_out.md`](synth_out.md). Grenzen: keine Sprünge oder Schleifen im Abbild (kommen mit Stufe 2),
+keine Taktmessung auf Hardware.
