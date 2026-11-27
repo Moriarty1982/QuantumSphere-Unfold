@@ -4,13 +4,14 @@
 // Vier Stufen statt eines langen Takts:
 //   S0  Annahme: Kontext op_ctx lesen, Gatter und Zustand registrieren (Budget pruefen)
 //   S1  Gatterwerk qgate2
-//   S2  Kuerzen und Guard qnorm2
-//   S3  Status bestimmen und in den Kontext zurueckschreiben
+//   S2  Kuerzen und Guard qnorm2; fuer die kanonische Form nur die zwei sqrt(2)-Schritte (qroot2)
+//   S3  (kanonische Form: Guard qguard2) Status bestimmen und in den Kontext zurueckschreiben
 // Ein Kontext ist waehrend seines Gatters belegt (ready[c] = 0, vier Takte). Wechseln sich mindestens vier
 // Kontexte ab, nimmt die Einheit jeden Takt ein Gatter an; ein einzelner Lauf braucht vier Takte je Gatter.
 // Rechenregeln, Status und Konfiguration wie qstep2 (bitgenau gleich, geprueft mit pipe_check.py).
 // Die Konfiguration ist fuer alle Kontexte gemeinsam.
 module qstep2p #(
+    parameter integer CANON = `QCOP_CANON,
     parameter integer W = 16,
     parameter integer CTX = 4,
     parameter integer CB = CTX > 1 ? $clog2(CTX) : 1
@@ -73,6 +74,14 @@ module qstep2p #(
     reg [CB-1:0] ctx3;
     reg [16*W-1:0] s3_coeffs;
     reg [7:0] s3_k;
+    reg [16*TW-1:0] s3_r;
+    reg [8:0] s3_kr;
+    reg s3_canon;
+    wire [16*TW-1:0] r_flat;
+    wire [8:0] kr;
+    wire [16*W-1:0] coeffs_r;
+    wire [7:0] k_r;
+    wire ovf_r;
 
     wire [16*TW-1:0] o_flat;
     wire [8:0] kn;
@@ -95,7 +104,11 @@ module qstep2p #(
         .coeffs(s1_coeffs), .k(s1_k), .opcode(op1), .target(tg1), .allow(allow),
         .o_flat(o_flat), .kn(kn), .bad(bad)
     );
-    qnorm2 #(.W(W), .TW(TW)) norm (
+    qroot2 #(.TW(TW)) root (.o_flat(s2_o), .kn_in(s2_kn), .r_flat(r_flat), .kr(kr));
+    qguard2 #(.W(W), .TW(TW)) guard (.r_flat(s3_r), .kr(s3_kr), .maxv(maxv_q), .minv(minv_q), .k_max(k_max),
+                                     .coeffs(coeffs_r), .k(k_r), .ovf(ovf_r));
+    wire ovf3_eff = s3_canon ? ovf_r : ovf3;
+    qnorm2 #(.CANON(0), .W(W), .TW(TW)) norm (
         .o_flat(s2_o), .kn_in(s2_kn), .reduce_en(reduce_en), .maxv(maxv_q), .minv(minv_q), .k_max(k_max),
         .coeffs(coeffs_n), .k(k_n), .ovf(ovf)
     );
@@ -144,15 +157,18 @@ module qstep2p #(
                 ovf3 <= ovf;
                 s3_coeffs <= coeffs_n;
                 s3_k <= k_n;
+                s3_r <= r_flat;
+                s3_kr <= kr;
+                s3_canon <= CANON != 0 && reduce_en[1];
             end
             // S3: zurueckschreiben
             if (v3) begin
                 if (lim3) c_status[ctx3] <= STEP_LIMIT;
                 else if (bad3) c_status[ctx3] <= REJECT;
-                else if (ovf3) c_status[ctx3] <= GUARD;
+                else if (ovf3_eff) c_status[ctx3] <= GUARD;
                 else begin
-                    c_coeffs[ctx3] <= s3_coeffs;
-                    c_k[ctx3] <= s3_k;
+                    c_coeffs[ctx3] <= s3_canon ? coeffs_r : s3_coeffs;
+                    c_k[ctx3] <= s3_canon ? k_r : s3_k;
                     c_done[ctx3] <= c_done[ctx3] + 16'd1;
                 end
             end
