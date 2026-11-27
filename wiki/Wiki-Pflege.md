@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**27.11.2026, Test H203 (Lepton-Kopplung, nach H202):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: stationäres (lepton-bindendes) F₄-Potential macht Quarks masselos (H184-Regel, Wolfram exakt); 7 Kopplungsrichtungen ändern die Quark-Frequenzen, lassen den farblosen Lepton-Sektor unberührt → Lepton-Sektor blind gegen die Quark-Kopplungen; nein.
+
 **27.11.2026, Test H202 (ist der 0,9-%-Rest frei, nach H201):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Abbildung Kopplungen→(A,B,C,D) Rang 4, jede ≤3-Basis verworfen (χ² 8312 vs 7,91) → D/B frei, ~0,9-%-Rest ist Eingabewert. Schließt den chiralen Strang ab; Weggabelung an den Autor.
 
 **27.11.2026, Test H201 (Grad-Selektion der chiralen Quintik, nach H200):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: keine Grad-Ordnung — B (gerades l_k²) Grad 5, D (ungerades l_k²) Grad 4; saubere Grad-Selektion (C=0, D=B) χ² 11206 verworfen (C 91σ ≠ 0). D≈B gradübergreifend; nein.

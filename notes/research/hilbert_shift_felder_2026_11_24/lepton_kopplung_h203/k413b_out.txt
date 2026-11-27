@@ -1,0 +1,15 @@
+Unabhaengige Wolfram-Kontrolle (k413b_kontrolle.wl), tatsaechliche Ausgabe:
+
+Tr W^2 (v=l^2): 4                          (H184: 4)
+Tr W^3 (v=l^3): 6 (li + lj)                (H184: 6(li+lj))
+Tr W^4 (v=l^4): 8 (li^2 + li lj + lj^2)    (H184: 8(li^2+li lj+lj^2))
+stationaer, Paar (l1,l2): 0
+stationaer, Paar (l2,l3): 0
+stationaer, Paar (l1,l3): 0
+
+Bestaetigt die H184-Regel exakt und: ein F4-invariantes Potential, das W0 stationaer
+macht (v'(l)=(l-l1)(l-l2)(l-l3)), gibt fuer JEDES Paar Farbfrequenz 0. Deckt sich mit
+der numpy-Rechnung (k413_out.txt): Farbfrequenzen max|EV| = 1,6e-12 bei stationaerem
+F4-Potential; farbloser Block 3 massive Moden (Leptonen).
+
+Keine symbolischen Nullreste offen. Keine Warnungen.

@@ -1,0 +1,42 @@
+==========================================================================
+H203 A  Kontrolle: F4-invariantes stationaeres Potential -> Farbe masselos (H184)
+==========================================================================
+   Farbfrequenzen (soll 0): max |EV| = 1.6e-12
+   farbloser Block EV: [-1.5136 -0.     -0.     -0.      0.      0.      0.      1.9244  7.0891]  (3 massive = Lepton-Moden, 6 Null aus Familien-SU(3))
+   -> Stationaritaet (bindet Leptonen) macht die Quarks masselos: Quarkmassen brauchen U-Terme.
+
+==========================================================================
+H203 B  Blindheit: aendern Kopplungen die Quarks (Farbe), aber nicht die Leptonen (farblos)?
+==========================================================================
+   Rang Kopplung->farblose Hesse (Leptonen): 6 von 13
+   Rang Kopplung->Farb-Hesse   (Quarks):    3 von 13
+   Kopplungsrichtungen, die den FARBLOSEN Sektor (Hesse+Gradient) voellig unberuehrt lassen: 7
+   davon, die die FARB-(Quark)-Frequenzen aendern: 7
+
+   Beispiel-Blindrichtung g (Koeffizienten je Invariante):
+      Tr W^2            : +0.085
+      Tr Wu^2           : -0.085
+      Tr W^3            : +0.119
+      Tr Wu^3           : -0.119
+      Tr W^4            : +0.136
+      Tr Wu^4           : -0.069
+      Tr W^2 o Wu^2     : -0.067
+      (Tr W^2)^2        : +0.220
+      Tr W^2 Tr Wu^2    : -0.110
+      (Tr Wu^2)^2       : -0.110
+      (Tr W)^2 Tr W^2   : +0.655
+      (Tr W)^2 Tr Wu^2  : -0.655
+   -> farblose Hesse max|.| = 7.1e-15, farbloser Gradient max|.| = 1.3e-15 (beide ~0)
+   -> Farb-(Quark)-Hesse Eigenwerte (distinct): [32.62041 39.05833 41.15921] (NICHT null)
+
+==========================================================================
+H203 Entscheidung (Vorab-Kriterien)
+==========================================================================
+   K2: Es gibt 7 Kopplungsrichtung(en), die die Quark-Frequenzen aendern, aber
+   den Lepton-Sektor (farblose Hesse UND Stationaritaet) voellig unberuehrt lassen.
+   -> Der Lepton-Sektor ist BLIND gegen diese Quark-Kopplungen. Lepton-Massen + delta
+      binden die Quark-Kopplungen NICHT; D/B bleibt frei. (delta/Vakuum ist geteilt, steckt
+      schon in l_k, legt aber die Kopplungsstaerken nicht fest.)
+
+  Grenze: reelle Feld-Ebene (ein Quarktyp, H184); Up/Down-Spaltung (C,D) braucht H3(C x O).
+  H203 beantwortet: bindet der Lepton-Sektor die quarkbestimmenden Kopplungen ueberhaupt.
