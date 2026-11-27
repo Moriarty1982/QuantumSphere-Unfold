@@ -29,7 +29,8 @@ TARGETS = [
     # Mit Programmspeicher: generisch wuerde der Speicher in Register zerlegt; synth_ice40 bildet ihn auf Block-RAM ab.
     ("qcop2_sys W=16 (mit Boot-Monitor, 1024 Worte; iCE40-Zellen, 8 Block-RAM)", "qcop2_sys",
      [COP / f for f in ("qcfg.sv", "qstep2.sv", "qcop2_top.sv", "qboot.sv", "qcop2_sys.sv")],
-     {"W": 16, "AW": 10, "flow": "synth_ice40 -noabc"}),
+     # Aeltere Yosys-Fassungen (z. B. 0.33) schalten ABC9 standardmaessig ein und brauchen -noabc9 zusaetzlich.
+     {"W": 16, "AW": 10, "flow": ["synth_ice40 -noabc", "synth_ice40 -noabc9 -noabc"]}),
     ("qboot", "qboot", [COP / "qboot.sv"], {"AW": 10}),
     ("tape_core direkt", "tape_core", [ZUSE / "tape_core.sv"], {"SCAN": 0}),
     ("tape_core zyklisch", "tape_core", [ZUSE / "tape_core.sv"], {"SCAN": 1}),
@@ -52,7 +53,14 @@ def find_yosys(explicit):
 
 def synth(yosys, top, sources, params):
     params = dict(params)
-    flow = params.pop("flow", "synth -noabc")
+    flows = params.pop("flow", "synth -noabc")
+    if isinstance(flows, list):
+        for flow in flows[:-1]:
+            result = synth(yosys, top, sources, {**params, "flow": flow})
+            if result[0] is None or "incompatible" not in result[0]:
+                return result
+        flows = flows[-1]
+    flow = flows
     chparam = "".join(f"chparam -set {k} {v} {top}; " for k, v in params.items())
     script = (f"read_verilog -sv {' '.join(str(s) for s in sources)}; {chparam}"
               f"{flow} -top {top}; check -assert; stat")
