@@ -189,6 +189,11 @@ K₄: −2(l_i² + l_j²) − 4l_k²), für beide Ladungen gleich; die Ruhefrequ
 (bester Abstand 14σ, widerlegt). Die Lesart „Quarks als Farbschwingungen um das Leptonvakuum“ hat damit in sechs Tests keine Quelle für die
 Massen geliefert. Beide Probleme bleiben offen.
 
+**Test H190, 27.11.2026:** Für OP3 und OP4. Eine Drehung des Vakuums in der Ebene zweier Generationen koppelt zwei der drei Farbschwingungen
+gyroskopisch und kann eine Frequenz beliebig klein machen (hergeleitet, für beide Ladungen gleich). Gegen die Daten trifft Down allein (2,5σ),
+Up nie (7,1σ), keine gemeinsame Form trifft beide (widerlegt). Bilanz H184 bis H190: Die Lesart „Quarks als Farbschwingungen um das
+Leptonvakuum“ ist in allen benannten Wegen geprüft, ohne Quelle für die Massen. Beide Probleme bleiben offen.
+
 **Test H181, 26.11.2026:** Für OP1 (Rolle von β_sym im HC). Der Zustand mit b/a = β_sym² (alte Lesart aus k292/k297) trägt als gemeinsamer Zustand die Ablesungen m_W, Ω_M, sin²θ₁₂ und die Maske nicht; widerlegt. Der Zahlentreffer κ → m_h = 124,8 GeV bleibt ohne Herleitung und trennt die Lesarten nicht. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/zwei_lesarten_h181/`.
 
 **Test H156, 26.11.2026 (k339):** Für OP3: Die Algebra verlangt μ_A² = μ_B² nicht. Die passende Symmetrie ist genau der Tausch J (Materie- ↔ Tachyon-Frame), der eine Isometrie, aber kein Automorphismus ist. K = ⅔ mit Skala ruht damit auf dem Postulat der Frame-Gleichberechtigung. OP3 offen.

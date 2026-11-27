@@ -106,6 +106,20 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Eine Drehung in den Generationen erzeugt eine Hierarchie, aber nicht die der Quarks (27.11.2026, Test H190, k393)
+Fortsetzung von H189 nach Entscheidung des Autors („Drehung in den Generationen“). Vorab-Notiz vor der Rechnung (Commit d918623); Python und Wolfram.
+- **H190a bestätigt (nicht blind):** Dreht sich das Vakuum in der Ebene zweier Eigenrichtungen (Derivation D_T aus der SU(3) der Plätze, die mit
+  Farbe und Ladung vertauscht), bleibt eine der drei Farbschwingungen frei, die zwei anderen werden gyroskopisch gekoppelt:
+  Ω²_± = ½(h_a + h_b) + ω² ± √(¼(h_a − h_b)² + 2ω²(h_a + h_b)), Produkt (h_a − ω²)(h_b − ω²). Nahe ω² = h wird eine Frequenz beliebig klein.
+- **H190b widerlegt:** Mit einer Krümmungsfunktion und einer Drehrate je Sektor trifft Down einmal (2,5σ), Up nie (bester Abstand 7,1σ).
+- **H190c widerlegt:** Keine gemeinsame Form trifft beide Sektoren.
+- **Einordnung:** Erfundene Hierarchien werden in 26 % der Fälle getroffen; die echten Quarkmassen nicht, weil Up zwei sehr kleine Verhältnisse
+  zugleich braucht und die Drehung nur einen Hebel hat. Auch diese Kopplung ist für beide Ladungen gleich.
+- **Bilanz H184 bis H190:** Die Lesart „Quarks als Farbschwingungen um das Leptonvakuum“ ist in allen benannten Wegen geprüft, ohne Quelle für
+  die Massen. Nicht gerechnet: Drehungen in zwei Ebenen zugleich.
+
+Ordner: `notes/research/hilbert_shift_felder_2026_11_24/generationsdrehung_h190/`. OP3 und OP4 bleiben offen.
+
 ### Auch über ein drehendes Vakuum erreichen die Ableitungsterme die Quarkmassen nicht (27.11.2026, Test H189, k392)
 Fortsetzung von H188 nach Entscheidung des Autors („Bewegtes Vakuum rechnen“). Vorab-Notiz vor der Rechnung (Commit 017a2be); Python und Wolfram.
 - **H189a bestätigt (nicht blind):** Auch bei zeitlich bewegtem Vakuum ändern K₁ bis K₄ die Ruhefrequenzen nicht; sie brauchen einen Gradienten.
