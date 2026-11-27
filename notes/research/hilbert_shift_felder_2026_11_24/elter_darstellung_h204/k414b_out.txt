@@ -1,0 +1,22 @@
+Wolfram Language (exakt), k414b_kontrolle.wl — H204.
+Die "Symbol undefined"-Warnungen sind kosmetisch (Module/Global-Scoping, wie in k410b/k413b);
+die Rueckgabewerte sind exakt rational, in voller Uebereinstimmung mit numpy (k414).
+
+L_U^2 = -1 (6x6) ? True
+(i L_U)^2 = 1 (36) ? True
+P_up^2=P_up ? True  P_dn^2=P_dn ? True
+P_up+P_dn=1 ? True  P_up.P_dn=0 ? True
+Spur P_up=18  Spur P_dn=18
+O=1    (B,D)={1, 0}    D/B=0
+O=iLU  (B,D)={0, 1}    B=0  (D/B=oo)
+O=Pup  (B,D)={1/2, 1/2}    D/B=1
+O=Pdn  (B,D)={1/2, -1/2}   D/B=-1
+  36dim O=1  : (B,D)={1, 0}    D/B=0
+  36dim O=iLU: (B,D)={0, 1}    B=0
+  36dim O=Pup: (B,D)={1/2, 1/2}    D/B=1
+  36dim O=Pdn: (B,D)={1/2, -1/2}   D/B=-1
+
+Fazit der Kontrolle: Die Ladungs-kovariante Operatoralgebra auf dem Farbblock ist exakt
+2-dimensional mit genau zwei minimalen Idempotenten P_up, P_dn (Spur je 18). Jede einzelne
+irreduzible Komponente erzwingt D/B in der diskreten Menge {0, +1, -1, oo}; der scharfe
+Datenwert D/B = 1.0085 liegt dazwischen. Deckt sich mit k414 (numpy).

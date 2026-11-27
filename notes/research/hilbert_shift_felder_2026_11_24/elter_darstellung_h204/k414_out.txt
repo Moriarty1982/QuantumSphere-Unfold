@@ -1,0 +1,59 @@
+==============================================================================
+H204 A  Ladungs-kovariante l_k^2-Operatoralgebra auf dem Farbblock
+==============================================================================
+  (i L_U)^2 = 1 ?   || (iL_U)^2 - 1 ||_max = 0.00e+00
+  dim span{1, iL_U, (iL_U)^2, ...} = 2  (kommutativ, da (iL_U)^2=1)
+  P_up = 1/2(1+iL_U): P^2=P ? 0.0e+00  Spur=18.000
+  P_dn = 1/2(1-iL_U): P^2=P ? 0.0e+00  Spur=18.000
+  Vollstaendig  P_up+P_dn=1 ? 0.0e+00
+  Orthogonal    P_up P_dn=0 ? 0.0e+00
+
+  Erzwungenes (B,D) je 'einzelner Darstellung' (irred. Komponente):
+  (ein l_k^2-Operator O gibt b_up=<O>_up, b_down=<O>_down)
+    O = 1 (ladungsblind)      : b_up=+1.000 b_down=+1.000  B=+1.000 D=+0.000  D/B=+0.0000
+    O = iL_U (J-Form Q0-1/2)  : b_up=+1.000 b_down=-1.000  B=+0.000 D=+1.000  D/B=+inf
+    O = P_up (irred. +)       : b_up=+1.000 b_down=+0.000  B=+0.500 D=+0.500  D/B=+1.0000
+    O = P_dn (irred. -)       : b_up=+0.000 b_down=+1.000  B=+0.500 D=-0.500  D/B=-1.0000
+
+  -> Minimale Idempotente: genau ZWEI (P_up, P_dn). Jede 'einzelne Darstellung'
+     erzwingt D/B in der DISKRETEN Menge {0 (1), +1 (P_up), -1 (P_dn), oo (iL_U)}.
+     Ein allgemeiner Operator a*P_up + b*P_dn braucht ZWEI Koeffizienten (b_up,b_down)
+     = zwei Komponenten. D/B=1 nur bei REIN P_up (b_down=0 exakt).
+
+==============================================================================
+H204 B  F4-Feldgrad: koennen B und D in EINER F4-Irrep (einem Grad) liegen?
+==============================================================================
+  B (ladungsGERADE l_k^2) zuerst bei Feldgrad : 5
+  D (ladungsUNGERADE l_k^2) zuerst bei Feldgrad: 4  (H186-Formen, Grad 4)
+  Gleicher Grad (noetig, damit EINE F4-Irrep beide traegt)? NEIN  (B Grad 5, D Grad 4)
+  -> Eine irreduzible F4-Darstellung lebt in EINEM homogenen Tensorgrad (Sym^n des 26).
+     B in Sym^5, D in Sym^4 => keine einzelne F4-Irrep kann beide Beine tragen.
+
+==============================================================================
+H204 C  Abgleich: diskrete Verzweigungswerte vs Datenwert D/B
+==============================================================================
+  Datenwert D/B = 1.0085 +- 0.0010 (scharf, 4-Param-Fit H197/H202)
+    einzelne Darstellung D/B=0 (ladungsblind, O=1) : |Delta|/sigma =  1008.5
+    einzelne Darstellung D/B=+1 (chiral P_up)      : |Delta|/sigma =     8.5
+    einzelne Darstellung D/B=-1 (P_dn)             : |Delta|/sigma =  2008.5
+    einzelne Darstellung D/B=oo (J-Form, B=0)      : unendlich weit (B=0 ausgeschlossen, B!=0)
+  Naechster diskreter Wert: +1 (chiral P_up), 8.5 sigma entfernt.
+
+==============================================================================
+H204 Entscheidung
+==============================================================================
+  K1 (eine Elter-Darstellung bindet D/B): naechster diskreter Wert 8.5 sigma, gleicher Grad=False -> NEIN
+  K2 (keine einzelne Elter-Darstellung, frei): diskreter Wert 8 sigma entfernt
+     (zweite Komponente noetig) UND B/D in verschiedenen Graden (5 vs 4).
+
+  FAZIT H204 (voraussichtlich nein):
+  - Die Ladungs-kovariante l_k^2-Operatoralgebra ist 2-dimensional (kommutativ), mit genau
+    zwei minimalen Idempotenten P_up, P_dn. Eine 'einzelne Darstellung' erzwingt D/B nur
+    diskret {0,+1,-1,oo}; der Datenwert 1.0085 liegt 8.5 sigma vom naechsten (+1) entfernt
+    => eine zweite, unabhaengige Komponente ist noetig (b_down != 0).
+  - B (Feldgrad 5) und D (Feldgrad 4) leben in VERSCHIEDENEN F4-Tensorgraden; keine einzelne
+    F4-irreduzible Darstellung kann beide tragen. D/B ist eine FREIE relative Normierung
+    zwischen zwei unabhaengigen Invarianten verschiedenen Grades, kein Clebsch-Gordan-Verhaeltnis.
+  - Bestaetigt H202 (Rang 4, Kopplungen frei). Schliesst die Elter-Route.
+  - (Teilweise nicht blind: Grad-Trennung aus H201; neu ist die Branching-Lesart und der
+    quantitative Abgleich mit den diskreten Verzweigungswerten.)
