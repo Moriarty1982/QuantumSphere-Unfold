@@ -1,0 +1,3 @@
+QASM: 300 Schaltungen, Qiskit -> OpenQASM 3 -> Bruecke -> Band -> OpenQASM 3 -> Bruecke verlustfrei
+HDL ueber Bruecke = Qiskit-Statevector in 300 von 300 Faellen, max Abstand 7.07e-16; JSON-Zustand verlustfrei
+Wolfram: 8 gespeicherte exakte Faelle gleich der aktuellen HDL-Ausgabe (Ausgabe des Wolfram-Laufs: wolfram/bridge_exakt_out.txt)

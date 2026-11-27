@@ -64,3 +64,31 @@ Vorgaben sind die derzeitigen Setzungen bzw. Postulate des Projekts, keine herge
 
 `check.py` prüft zusätzlich: alle 32 Register nach dem Reset (ID und Vorgaben), Schreiben und Zurücklesen, Schreibschutz der
 ID, und 2005 Fälle mit zufälligen Laufzeitwerten (ALLOW, W_EFF, K_MAX, BUDGET, FLAGS) bitgenau gegen die Referenz.
+
+## Brücke zu Qiskit, Wolfram und OpenQASM (27.11.2026)
+
+[`bridge.py`](bridge.py) verbindet den HDL-Kern mit anderen Werkzeugen, ohne den Kern zu ändern.
+
+- **Gatterfolgen:** OpenQASM 2 oder 3 (Gatter `id x z s sdg t tdg h cx` auf zwei Qubits) ↔ Befehlsband der Testbench.
+  Qiskit-Schaltungen gehen direkt (`circuit_to_gates`), jede Gatterfolge lässt sich als OpenQASM 3 ausgeben. Nicht vorhandene
+  Gatter werden mit Namen abgelehnt, nicht stillschweigend übersetzt.
+- **Zustände:** JSON `qcop-state-1` mit den exakten Koeffizienten in ℤ[ω], k, Status und Gleitkomma-Amplituden;
+  `to_statevector` gibt einen Qiskit-`Statevector`, `to_wolfram` einen exakten Wolfram-Ausdruck.
+- **Ausführen:** `run(...)` auf dem simulierten HDL-Kern (Icarus Verilog) oder mit `simulate=False` auf der exakten Referenz;
+  Konfigurationsregister lassen sich je Lauf mitgeben.
+
+```sh
+python -m qam.examples.coprocessor.bridge run schaltung.qasm --json zustand.json --wolfram zustand.wl
+python -m qam.examples.coprocessor.bridge band schaltung.qasm     # OpenQASM -> Band
+python -m qam.examples.coprocessor.bridge qasm band.txt           # Band -> OpenQASM 3
+python -m qam.examples.coprocessor.bridge_check --cases 300 --seed 7
+```
+
+[`bridge_check.py`](bridge_check.py) ([Ausgabe](bridge_check_out.txt)) prüft in drei Richtungen: 300 zufällige Qiskit-Schaltungen
+laufen über OpenQASM 3 → Brücke → Band → OpenQASM 3 → Brücke verlustfrei; die HDL-Simulation gleicht dem Qiskit-Statevector
+(Abstand ≤ 7·10⁻¹⁶, ohne Phasenausgleich); der JSON-Zustand ist verlustfrei. Für Wolfram schreibt `--write-wolfram` acht
+feste Fälle mit den exakten HDL-Zuständen nach [`wolfram/bridge_exakt.wl`](wolfram/bridge_exakt.wl); Wolfram rechnet sie mit
+Kronecker-Matrizen exakt nach (alle Differenzen 0, [Ausgabe](wolfram/bridge_exakt_out.txt), dazu eine Gegenkontrolle mit
+absichtlich falschem Zustand). In der CI verlangt der Lauf, dass die aktuelle HDL-Ausgabe genau den gespeicherten Fällen
+entspricht; ist `wolframscript` vorhanden, läuft das Skript zusätzlich. Grenzen: zwei Qubits, nur Clifford+T, keine
+Messung (kommt mit Stufe 2).
