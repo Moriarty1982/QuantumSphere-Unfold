@@ -1,0 +1,10 @@
+=== k402b Gegenprobe (Wolfram Language), H194 ===
+l_k (aufsteigend, numerisch): {0.0403499082, 0.5802119201, 2.3794381716}
+K = sum l^2 / (sum l)^2 = 2/3 (exakt 0.6666666667)
+Zuordnung B (perm [2,1,0]):
+  Up   {b/a, chi2, Abstaende} = {-57.8849, 4.81549, {-0.0881, 2.1288, -0.5253}}
+  Down {b/a, chi2, Abstaende} = {-0.0851, 3.09399, {-1.1190, 1.3525, -0.1126}}
+
+Bestaetigt Python (k402_out.txt) exakt: b/a Up -57.9, Down -0.085; chi2 4.82 / 3.09.
+Hinweis: Sort auf die exakten Trig-Ausdruecke ordnet symbolisch (absteigend); daher
+numerisch sortieren (N dann Sort), um Pythons aufsteigende l-Reihenfolge zu treffen.
