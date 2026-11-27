@@ -77,6 +77,8 @@ module qband #(
     always @(*) begin
         ok_r = 1'b1;
         total = 0;
+        len_i = 0;
+        len_j = 0;
         for (i = 0; i < PARTS; i = i + 1) if (pv[i]) begin
             len_i = {{L{1'b0}}, 1'b1} << po[i];
             if (po[i] > L) ok_r = 1'b0;
