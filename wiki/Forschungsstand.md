@@ -106,10 +106,10 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
-### Ein HS(−1) unter dem Turm gibt es nicht als Zahlbereich; drei Lesarten (27.11.2026, Erkundung k404, nicht blind)
+### Ein HS(−1) unter dem Turm gibt es nicht als Zahlbereich; drei Lesarten (27.11.2026, Erkundung k405, nicht blind)
 
 Frage des Autors: Wie sähe eine Stufe unter HS(0) = ℝ aus (formale Dimension 2⁻¹ = ½)? Erkundung ohne Vorab-Notiz, kein Test; Ordner
-`notes/research/hilbert_shift_felder_2026_11_24/hs_minus_1_k404`. Werkzeuge: Python, Wolfram (exakte Gegenprobe).
+`notes/research/hilbert_shift_felder_2026_11_24/hs_minus_1_k405`. Werkzeuge: Python, Wolfram (exakte Gegenprobe).
 
 - **Die Regel des Turms endet bei ℝ (exakt).** Der Schritt nach unten ist der festgehaltene Teil der Spiegelung (a, b) ↦ (a, −b); auf ℝ gibt es
   nur die Identität. Das Vorzeichen ℤ₂ = S⁰ liegt nicht unter HS(0), es ist dessen Einheitssphäre; der Raum der Wahlen ist schon bei HS(0) leer.

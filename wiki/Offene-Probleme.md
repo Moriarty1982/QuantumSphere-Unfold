@@ -198,7 +198,7 @@ Leptonvakuum“ ist in allen benannten Wegen geprüft, ohne Quelle für die Mass
 
 **Test H192, 27.11.2026:** Für OP3 und OP4 (Richtung „Lesart wechseln“: Quarks auf eigener HS-Stufe). Fünf Bänder als HS-Stufen auf einer Sphäre, Gewicht nach Dimension, Abstoßung 1/sin: Das vorab benannte Paar 𝕆–𝕊 trifft den Oktant (89,5°, stabil über vier Gewicht/Gesetz-Wahlen), aber das Paar ℂ–ℍ (49°) trifft keinen Companion-Winkel und läuft mit der Wahl von Gewicht und Gesetz (49–59°). Teilweise: Die Geometrie gibt die Oktant-Struktur, nicht die kleinen Winkel. Die Lesart „Winkel aus der Lage der HS-Stufen auf einer Sphäre“ ist erledigt; die Weggabelung getrennte Felder je Stufe liegt beim Autor. OP3/OP4 bleiben offen.
 
-**Erkundung k404, 27.11.2026:** Für OP1 (Einordnung, kein Fortschritt). Eine Stufe HS(−1) unter ℝ gibt es in der Regel des Turms nicht. Das
+**Erkundung k405, 27.11.2026:** Für OP1 (Einordnung, kein Fortschritt). Eine Stufe HS(−1) unter ℝ gibt es in der Regel des Turms nicht. Das
 Vorzeichen ℤ₂ ist die Einheitssphäre von HS(0); als Algebra ist es eine Spiegelstufe neben ℂ (j² = +1), deren Idempotent der HC-Projektor ist.
 Größe ½ hat nur der Nullpunkt mit unsichtbarem Vorzeichen. Die Schleife L3 aus k395 ist exakt c ↦ c². Im glatten Vergleichsfall der Zählregel
 sind die Gewichte 2^(−k) die formalen Dimensionen negativer Stufen; für die Casimir-Fläche des Postulats gilt das nicht. Keine Zahl, keine

@@ -1,7 +1,7 @@
-"""k404 (Erkundung, nicht blind): Wie saehe ein HS(-1) aus, eine Stufe unter HS(0) = R?
+"""k405 (Erkundung, nicht blind): Wie saehe ein HS(-1) aus, eine Stufe unter HS(0) = R?
 Drei Lesarten: (1) Vorzeichen Z2, (2) Koerper mit einem Element F1, (3) Rand des Turms als Ur-Seed.
 Konvention Cayley-Dickson wie k253: (a,b)(c,d) = (ac - d* b, d a + b c*).
-Aufruf: python k404_hs_minus_1.py > k404_out.txt
+Aufruf: python k405_hs_minus_1.py > k405_out.txt
 """
 import itertools, math
 from fractions import Fraction as Fr

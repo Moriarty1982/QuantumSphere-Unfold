@@ -1,9 +1,9 @@
-# k404: Wie sähe ein HS(−1) aus? (Erkundung, nicht blind, 27.11.2026)
+# k405: Wie sähe ein HS(−1) aus? (Erkundung, nicht blind, 27.11.2026)
 
 **Status:** Erkundung ohne Vorab-Notiz, kein Test, keine Runde. Die Mathematik ist Standard; neu ist nur die Zuordnung zum Turm, und die ist
 eine Lesart. Abschnitt 4 ist nachträglich. **Anlass:** Frage des Autors vom 27.11.2026 („wie würde ein HS(−1) aussehen?“) und Auftrag, die drei
 genannten Lesarten zu erkunden: (1) nur das Vorzeichen ℤ₂, (2) Körper mit einem Element, (3) leerer oder punktförmiger Rand des Turms als
-Ur-Seed. Vergeben: **k404** (k404, k404b).
+Ur-Seed. Vergeben: **k405** (k405, k405b).
 
 **Ergebnis in einem Satz:** Die Regel des Turms selbst hat keine Stufe unter ℝ; die drei Lesarten sind aber keine drei Alternativen. Das
 Vorzeichen und der Randpunkt fallen zusammen (der Nullpunkt, auf dem das Vorzeichen unsichtbar wirkt, hat als einziges Objekt die „Größe“ ½),
@@ -11,8 +11,8 @@ die linearisierte Fassung ist eine Spiegelstufe gleicher Größe wie ℂ mit ein
 unter dem Turm, sondern quer dazu. Eine neue Zahl entsteht nicht; β_sym wird nicht hergeleitet.
 
 **Werkzeuge:** Python (numpy) für die Strukturrechnung an den Cayley–Dickson-Algebren bis Dimension 32, die Clifford-Proben und die Zählregel
-(`k404_hs_minus_1.py`, Ausgabe `k404_out.txt`); Wolfram Language als unabhängige exakte Kontrolle der Schleife, von Cl(1,1), der Zählregel und
-der q-Zahlen (`k404b_gegenprobe.wl`, Ausgabe `k404b_out.txt`; alle symbolischen Reste 0, keine Warnungen). Qiskit nicht eingesetzt: Es gibt keine
+(`k405_hs_minus_1.py`, Ausgabe `k405_out.txt`); Wolfram Language als unabhängige exakte Kontrolle der Schleife, von Cl(1,1), der Zählregel und
+der q-Zahlen (`k405b_gegenprobe.wl`, Ausgabe `k405b_out.txt`; alle symbolischen Reste 0, keine Warnungen). Qiskit nicht eingesetzt: Es gibt keine
 neue Schaltung; die Schleife L3 liegt als Schaltung aus k395 vor und wird hier nur umgeschrieben. Kein HDL/MMA-Vergleich (kein RUN_TAPE, kein
 endlicher Auswahlablauf).
 
@@ -75,7 +75,7 @@ Aussage wie r70.2, nur anders geschrieben.
 
 Die einzige saubere Zählung, die ½ = 2^(−1) liefert, ist die Zählung „Menge geteilt durch Symmetrie“ (ein Punkt zählt 1/Größe seines
 Stabilisators). Die zwei Vorzeichen {+1, −1} geteilt durch den Vorzeichentausch geben 1; der Nullpunkt {0}, den der Tausch festhält, gibt ½;
-die Zahlen −2 … 2 geben 5/2 (`k404_out.txt`). **Größe ½ hat also nicht das Vorzeichen, sondern der Punkt, auf dem das Vorzeichen wirkt, ohne
+die Zahlen −2 … 2 geben 5/2 (`k405_out.txt`). **Größe ½ hat also nicht das Vorzeichen, sondern der Punkt, auf dem das Vorzeichen wirkt, ohne
 etwas zu ändern.** Damit fallen Lesart 1 und Lesart 3 zusammen: HS(−1) wäre der Randpunkt (Lesart 3) mit einem unsichtbaren Vorzeichen
 (Lesart 1). ℝ zerfällt in Vorzeichen mal Betrag; unter ℝ bleibt der Betrag ohne Vorzeichen, die Halbgerade r ≥ 0. Das passt zur Atlas-Lesart
 von HS(0) als „radialer Kern“, ist aber nur eine Zählung, keine Algebra: Auf der Halbgeraden kann man nicht subtrahieren.
