@@ -216,4 +216,4 @@ Layer v4.10.0-r51 tests the bending by the frame map J_B between M and T. J_B fi
 
 ## Never claimed
 
-Exact finite C5 zero closure, exact all-readout terminality, T2 closure, a global photon-clock/RH theorem and global all-readout closure. All five guards have stood unchanged since layer r60: *guarded effective/local and frame-typed closures, not exact global closure.*
+Exact finite C5 zero closure, exact all-readout terminality, T2 closure, a global photon-clock theorem and global all-readout closure. All five guards have stood unchanged since layer r60: *guarded effective/local and frame-typed closures, not exact global closure.* Since layer v4.10.0-r72 the Riemann hypothesis is no longer part of the guard list: the Companion makes no claim about it, has drawn nothing from the Riemann source since v4.8.0-r04, and records this once as a dormant note.
