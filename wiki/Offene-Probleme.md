@@ -165,6 +165,10 @@ Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert
 **Test H185, 26.11.2026:** Für OP3 und OP4. Im komplexen Feld ℂ ⊗ H₃(𝕆) gibt es um das Leptonvakuum zwei Sätze von Farbschwingungen (Ladung ⅓, ⅔).
 
 **Test H186, 27.11.2026:** Für OP3 und OP4. Elf Terme mit dem Ladungsoperator bis Grad 4: Sie spannen alle drei Richtungen des Unterschieds zwischen
+
+**Test H187, 27.11.2026:** Für OP3 und OP4. Terme mit Adjunkter und Kreuzprodukt liefern l_k, l_k² und das reine Produkt l_i l_j (bestätigt), aber
+weder eine noch zwei Funktionen je Sektor geben die sechs Quarkmassen; Down wird nie getroffen (bester Abstand 11,8σ). Bilanz H184 bis H187: Zahl und
+Form der Zustände folgen, die Massen nicht. Offen: Ableitungsterme oder andere HS-Stufe. OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/adjunkte_h187/`.
 Up und Down auf (keine Vorhersage), und kein einzelner trifft die Daten (nächster 1018σ). Nachträglich: Der gemessene Unterschied liegt fast ganz auf
 dem Produkt der zwei Vakuum-Eigenwerte des Paars. OP3 und OP4 bleiben offen. Quelle: `notes/research/hilbert_shift_felder_2026_11_24/ladungsterm_h186/`.
 Erlaubt sind sechs ladungserhaltende und sechs ladungsmischende Massenterme; die mischenden entfallen nur mit einer Phasensymmetrie auf den
