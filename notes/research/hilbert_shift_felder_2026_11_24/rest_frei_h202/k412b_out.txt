@@ -1,0 +1,14 @@
+Unabhaengige Wolfram-Kontrolle (k412b_kontrolle.wl), tatsaechliche Ausgabe:
+
+Rang volle Abbildung 4x8 = 4
+Rang (A,B)-Block (gerade) = 2
+Rang (C,D)-Block (ungerade) = 2
+
+Stimmt mit numpy (k412_out.txt): Rang 4, Bloecke 2+2 -> D/B frei.
+
+Warnung "Symbol::undefined2 ... M undefined": kosmetisch (Scoping-Hinweis), kein
+Rechenfehler. Keine symbolischen Nullreste (exakte rationale Matrix).
+
+numpy-Fit-Enumeration (nur numpy, Suchlauf): bester 2-Kopplungs-Fit chi2=39895,
+bester 3-Kopplungs chi2=8312 (ausgeschlossen), bester 4-Kopplungs chi2=7,91
+(reproduziert A,B,C,D, D/B=1,0085). Minimal 4 Kopplungen noetig = 4 Koeffizienten.
