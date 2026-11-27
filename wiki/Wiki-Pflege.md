@@ -1106,3 +1106,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Test H209 (k421):** Spannungsgesetz der Bänder aus dem Überlapp; Forschungsstand ergänzt. Artikel unverändert (Geometrie-Test ohne Bezug zu Messdaten, kein Befund für Physik-Artikel oder Preprint).
 
 **27.11.2026, Erkundung k422:** Ungleich lange Bänder auf der Sphäre; Forschungsstand ergänzt. Artikel unverändert (Erkundung, kein Befund für Physik-Artikel oder Preprint).
+
+**27.11.2026, Test H210 (k423):** Paargewicht aus der Zahl der Wiederholungen (widerlegt), Bilanz der Setzungen nach H192/H209/H210; Forschungsstand und Vorhersagen-und-Tests ergänzt. Artikel unverändert (Geometrie-Test ohne Bezug zu Messdaten).
