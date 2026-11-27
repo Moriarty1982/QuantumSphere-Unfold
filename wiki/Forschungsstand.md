@@ -106,6 +106,16 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Die Maschine rechnet Schleifen mit Messung und Bandwechsel; Fragenliste vom 27.11. (27.11.2026, kein Befund)
+
+Der Coprozessor hat eine Software-Referenz der Baustufe 2 (`qam/examples/coprocessor/stufe2/`): ein Band mit Drehung, HC als Messung im Lauf
+(verworfen oder mit Zufall und Verzweigung), Schleife, Rückführung über Register, Wechsel des Trägerbands (Spin j = k/2, Auf- und Abbau um ein
+Qubit nach Clebsch-Gordan) und einem Rauschbefehl, der die Primzahlen der Reihe nach verwendet. Je ausgeführter Zelle steht im Protokoll, was
+getan wurde und warum, mit fortlaufendem Hash. Abnahme: Bausteine gegen Qiskit (Abweichung ≤ 5·10⁻¹⁶), die Schleife L3 aus k395 läuft auf dem
+Band und landet bei b = ½, Guards und Stopgründe einzeln geprüft. Das ist Software in Gleitkomma, kein HDL und kein MMA-Beleg.
+Die Fragen des Autors vom 27.11. stehen als Liste in `notes/research/hilbert_shift_felder_2026_11_24/Fragenliste_2026_11_27.md` (F1 bis F15).
+Der Test H191 (entsteht die Casimir-Fläche in einer Schleife über Bänder verschiedener Spins?) ist vorab festgeschrieben; die Rechnung läuft.
+
 ### Übersicht der Stellgrößen, Renderschleife durch den HC, β_sym als Erwartungswert (27.11.2026, Erkundungen k394, k395, k396)
 
 Drei Erkundungen ohne Vorab-Notiz, kein Test; Ordner `notes/research/hilbert_shift_felder_2026_11_24/uebersicht_k394`, `renderschleife_k395`,

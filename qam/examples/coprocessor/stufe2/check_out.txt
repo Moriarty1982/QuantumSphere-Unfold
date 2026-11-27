@@ -1,0 +1,37 @@
+== 1 Spin-Bausteine gegen Qiskit (symmetrische Zustaende aus Qubits) ==
+   OK   DROP = Teilspur ueber ein Qubit (k = 1..4) groesste Abweichung 4.4e-16
+   OK   ADD = Projektion auf Gesamtspin j+1/2, Spur von j-1/2 ergaenzt zu 1 (k = 1..4) groesste Abweichung 2.2e-16
+   OK   ROT = kollektives RY(2 alpha) (k = 1..4) groesste Abweichung 3.3e-16
+   OK   Spin-Algebra Band 1: [S_x, S_y] = i S_z und S^2 = j(j+1) 
+   OK   Spin-Algebra Band 2: [S_x, S_y] = i S_z und S^2 = j(j+1) 
+   OK   Spin-Algebra Band 5: [S_x, S_y] = i S_z und S^2 = j(j+1) 
+== 2 Band der Schleife L3 aus k395 auf der Maschine ==
+   Stopgrund halted, Status continue, Schritte 286, b = 0.500000000000, Hash 0fc74ce88a4f8255
+   OK   L3 haelt an und landet bei b = 1/2 
+   OK   Verlauf gleich der geschlossenen Form b' = 1 - 2b(1-b) erste Werte 0.82000000 0.70480000 0.58388608 0.51407375 0.50039614
+   Auszug aus dem Protokoll (erste Runde):
+      Schritt   6 | SET x = (1 - b) / (1 + b)          | x = 0.0526315789474 | weil: Rueckfuehrung: x wird aus den Registern berechnet ((1 - b) / (1 + b))
+      Schritt   7 | SET alpha = atan(sqrt(x))          | alpha = 0.225513405898 | weil: Rueckfuehrung: alpha wird aus den Registern berechnet (atan(sqrt(x)))
+      Schritt   8 | ROT alpha                          | Drehung um alpha = 0.2255134059 (Blochwinkel 0.4510268118) | weil: Drehbefehl: mischt Amplituden (fehlte der Bandmaschine laut H137)
+      Schritt   9 | HC                                 | S_x gemessen, Ergebnis verworfen | weil: HC nicht selektiv: loescht alles quer zur HC-Achse (r70.2)
+      Schritt  10 | SWAP x                             | Austausch mit frischem Band |+>, Staerke x = 0.05263157895 | weil: Teil-SWAP: ein Anteil x des Zustands wird durch das Bezugsband ersetzt
+      Schritt  11 | READ b b                           | b = 0.82 | weil: Auslese (b) in ein Register; steht der naechsten Runde zur Verfuegung
+      Schritt  12 | END                                | zurueck zum Schleifenanfang (Runde 2 von 40) | weil: Runde beendet, Zaehler noch nicht erreicht
+      Schritt  13 | SET x = (1 - b) / (1 + b)          | x = 0.0989010989011 | weil: Rueckfuehrung: x wird aus den Registern berechnet ((1 - b) / (1 + b))
+== 3 Guards und Stopgruende ==
+   OK   verbotener Befehl -> reject 
+   OK   falsche Kennung -> reject, nichts gerechnet 
+   OK   Budget erschoepft -> step_limit 
+   OK   SWAP mit x > 1 -> guard 
+   OK   Band ohne HALT -> boundary 
+   OK   KMAX ueberschritten -> guard 
+   OK   gleicher Lauf, gleicher Hash 
+== 4 Messung im Lauf und Verzweigung ==
+   OK   MEASURE: Anteil '+' bei b = 0,5 nahe 0,75 gemessen 0.7530 aus 4000 Laeufen (Stichprobe, SEED 0..3999)
+   OK   nach selektiver Messung ist der Zustand rein (|b| = 1) 
+== 5 Primzahl-Rauschgenerator ==
+   erste Ausgaben (Primzahl, normierte Luecke - 1): 2: -0.090, 3: +0.243, 5: +0.028, 7: +0.668, 11: -0.220, 13: +0.412, 17: -0.321, 19: +0.276
+   100000 Werte: Mittel +0.0011, Streuung 0.8048, Korrelation aufeinanderfolgender Werte -0.0571
+   OK   Primzahlen stimmen (die 100000. Primzahl ist 1299709) 
+
+GESAMT: alle Pruefungen bestanden

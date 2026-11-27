@@ -1,0 +1,15 @@
+QTAPE 2
+# Schleife L3 aus k395: Staerke und Drehwinkel justieren sich aus der letzten Runde
+BUDGET 2000
+ALLOW INIT SET READ ROT HC SWAP LOOP END HALT
+INIT 1 0.9
+READ b b
+LOOP 40
+  SET x = (1 - b) / (1 + b)
+  SET alpha = atan(sqrt(x))
+  ROT alpha
+  HC
+  SWAP x
+  READ b b
+END
+HALT
