@@ -106,6 +106,22 @@ Der Autor hat am 26.11.2026 die Zählregel als **Postulat** angenommen, im selbe
 - H165 (siehe unten) steht mit in der Runde: Die Überlapp-Schließung erzwingt den Hopf-Wert.
 - **Artikel nachgezogen (26.11., Repo-Quelle):** Der Physik-Artikel „One Object, Three Frames“ hat in Abschnitt 6 den neuen Unterabschnitt „The counting rule as a postulate, and the two-readout reading“ (Postulat, Gleichung für γ_L, Lesart aus r66, H165), dazu angepasste Sätze in Abstract, Einleitung, Abschnitt 9, Schluss und Anhang A (51 Seiten, lokal gebaut). Der deutsche Preprint nennt das Postulat in Abschnitt 5.4 (58 Seiten, Kopf „Entwurf nach Fassung 0.3.0“). Die Zenodo-Fassungen 1.0.0 und 0.3.0 sind unverändert.
 
+### Ableitungsterme wirken bei kleinen Schwingungen nicht; kinetische Normierung trennt nicht vom Zufall (27.11.2026, Test H188, k391)
+Fortsetzung von H187 nach Entscheidung des Autors („Ableitungsterme einbeziehen“). Vorab-Notiz vor der Rechnung (Commit bb9da71); Python und Wolfram.
+- **H188a bestätigt (nicht blind):** Die Ableitungsterme K₁ bis K₄ der Feldgleichung (k290) sind mindestens vierter Ordnung in ∂W. Um ein ruhendes,
+  homogenes Vakuum ist ∂W₀ = 0, also beginnen sie bei ε⁴ (K₃ bei ε⁶) und fehlen in der Gleichung der kleinen Schwingungen. Exakt geprüft.
+- **H188b widerlegt:** Eine vom Vakuum abhängige kinetische Normierung mit einer Potentialfunktion (Masse ∝ f/z, f und z aus der Funktionsmenge
+  von H187) trifft nicht: bester Abstand Up 29σ, Down 15σ.
+- **H188c ohne Urteil:** Mit zwei Potentialfunktionen über einer kinetischen werden beide Sektoren getroffen (Lesart X = m, beide Zuordnungen),
+  aber das geschieht auch bei 63 % erfundener Datensätze. Der Nenner macht die Lesart flexibler, nicht schärfer.
+- **Nachträglich (kein Test):** Genau eine Form trifft beide Sektoren mit denselben Funktionen: m ∝ (a·l_k + b·l_k²)/(l_i + l_j)², leichteste
+  Generation beim Paar (μ, τ); Up χ² = 4,8, Down χ² = 3,1 bei je einem Freiheitsgrad, je Sektor zwei angepasste Zahlen. Eine solche gemeinsame
+  Form kommt bei 4,2 % erfundener Datensätze vor. Kandidat, nur mit neuer Vorab-Notiz prüfbar.
+- **Hinweis für den nächsten Schritt:** Hat das Vakuum selbst eine Ableitung (rotierende Lösung, k253), tragen K₁, K₂, K₄ in zweiter Ordnung bei
+  (nur Ordnungsabzählung, nicht gerechnet). Die Ableitungsterme erreichen die Massen also nur über ein bewegtes Vakuum.
+
+Ordner: `notes/research/hilbert_shift_felder_2026_11_24/ableitungsterme_h188/`. OP3 und OP4 bleiben offen.
+
 ### Die Adjunkte liefert Produkt und dritten Eigenwert, aber nicht die Quarkmassen (27.11.2026, Test H187, k390)
 Fortsetzung von H186: zwölf Invarianten mit der Adjunkten W^# und dem Kreuzprodukt der Albert-Algebra, gegen alle sechs Quarkmassen bei M_Z.
 Vorab-Notiz vor der Rechnung (Commit beaa6ae); Python und Wolfram.

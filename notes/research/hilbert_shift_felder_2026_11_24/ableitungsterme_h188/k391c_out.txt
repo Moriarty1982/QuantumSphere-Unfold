@@ -1,0 +1,8 @@
+== Form m = (a l_k + b l_k^2) / z, z = (l_i + l_j)^2 / 2, Zuordnung B (Generation 1 = Paar (mu tau)) ==
+   Up  : a = -5.710477e-04, b = 3.305504e-02, b/a = -57.8849; Massen Modell [7.0268e-06 3.6877e-03 9.6490e-01] gegen Daten [7.04e-06 3.56e-03 9.67e-01]; Abstaende [-0.09  2.13 -0.53] sigma; chi^2 = 4.82 (1 Freiheitsgrad)
+   Down: a = 1.652972e-03, b = -1.406915e-04, b/a = -0.0851; Massen Modell [1.5176e-05 3.1141e-04 1.6290e-02] gegen Daten [1.54e-05 3.06e-04 1.63e-02]; Abstaende [-1.12  1.35 -0.11] sigma; chi^2 = 3.09 (1 Freiheitsgrad)
+   Je Sektor zwei angepasste Zahlen (a, b) fuer drei Massen: eine Vorhersage je Sektor. Down liegt nahe an l_k / z (b/a klein), Up nahe an l_k^2 / z.
+
+== Wie oft trifft dieselbe Form (gleiche zwei Potentialfunktionen bis auf lineare Abhaengigkeit, gleiches z, gleiche Lesart und Zuordnung) beide Sektoren zufaellig? ==
+   echte Daten: 3 Tripel treffen beide Sektoren zugleich (linear abhaengige Schreibweisen zaehlen einzeln)
+   Zufallskontrolle (2000 erfundene Datensaetze): mindestens ein gemeinsames Tripel in 4.20% der Faelle
