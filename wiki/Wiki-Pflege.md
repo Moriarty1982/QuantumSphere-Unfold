@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**27.11.2026, Test H214 (Massenschema):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Polmassen sind das Schema des Rahmens (nur dort K = ⅔); M_Z-Lesart aus H213c unzulässig; kein zulässiges Schema schließt den 1,78σ-Abstand; R schemafest; trägt.
+
 **27.11.2026, Test H213 (Versatz-Abstand Neutrino/Lepton):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: der in H207 genannte 4,2σ-Abstand zwischen x_ν (aus R) und x_lepton war ein Nenner-Fehler (0,00091 statt σ(x_ν) = 0,00213); richtig 1,78σ, mit M_Z-Massen 1,22σ; trägt. Die H207-Einträge bleiben stehen, die Korrektur steht im H213-Eintrag.
 
 **27.11.2026, Runde v4.10.0-r71 (Friedman-Koinzidenzindex):** Companion-Schicht `v4100-post-release-layers.tex` ergänzt: der „Friedman coincidence scan" als statistische Ergänzung zum Kasiski-Abstandsscan auf dem Persistenz-Strom Σ_pers (Koinzidenzindex IC, Spalten-IC-Kamm → fundamentale Periode; rein diagnostisch, dem Admissibility-Kriterium untergeordnet wie Kasiski). Rechen-Kontrolle in zwei Werkzeugen (Python k419 + Wolfram k419b): an einem Strom mit versteckter Periode 7 finden Kasiski (dominanter Teiler 7) und Friedman (IC-Kamm bei 7/14/21) beide die Periode; global IC 0,31357, Spalten-IC(7) 0,73374, Python und Wolfram einig. Keine Guard-Freigabe; kein OP berührt. Reader-Wiki unverändert (interne Methodenschicht).

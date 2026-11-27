@@ -1,0 +1,6 @@
+(* Ausgabe des Wolfram-Evaluators fuer k427b_gegenprobe.wl, 27.11.2026; keine Warnungen; Rueckgabewert Null *)
+Pol: K = 0.6666644634  z = -0.4336  a = 1.4142089  x = 0.0395746259
+M_Z (XZZ): K = 0.6679287284  z = 109.9  a = 1.4168883  x = 0.0407617279
+gemeinsam m_tau: K = 0.6678322056  z = 229.  a = 1.4166839  x = 0.0406803046
+eigene Skala: K = 0.6666600839  z = -1.293  a = 1.4141996  x = 0.039569573
+Rueckwaerts: Verhaeltnisse bei x_Pol {0.00483559, 0.0594607} bei x_nu {0.00592954, 0.058361} relative Aenderung {0.22623, -0.018494}
