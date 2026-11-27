@@ -70,3 +70,5 @@ jobs:
         run: python -m qam.examples.coprocessor.lanes_check --cases 1200 --seed 9
       - name: Self-monitoring (norm watchdog halts on violation)
         run: python -m qam.examples.coprocessor.monitor_check --cases 800 --seed 13
+      - name: Self-adjustment (feedback unit, results marked as adjusted)
+        run: python -m qam.examples.coprocessor.tune_check --runs 400 --seed 17

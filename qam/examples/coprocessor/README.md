@@ -231,3 +231,24 @@ Einspeisung kein Fehlalarm, mit gekipptem Bit am Eingang des Wächters sofort an
 davor), bei ausgeschaltetem Wächter weitergerechnet. Gegenkontrollen: Anhalten erst einen Takt später oder ein Wächter, der
 immer „ok“ meldet, fallen durch. Grenzen: Die Fehler werden am Eingang des Wächters nachgebildet, nicht im Kern; der Wächter
 ist kombinatorisch und groß (32 Multiplikationen; generische Synthese 93 000 Zellen), eine sequenzielle Fassung wäre kleiner.
+
+## Selbstjustierung: Rückkopplungswerk (27.11.2026)
+
+[`hdl/qtune.sv`](hdl/qtune.sv) sucht eine von außen gesetzte Größe in Q2.30 selbst: Es wertet f(x) = c₀ + c₁x + c₂x² in
+Festkomma aus (ein Schritt je Takt) und läuft entweder als Fixpunktsuche x ← f(x) (Modus FIX, bis |f(x) − x| ≤ tol oder
+`max_iter`) oder als Halbierung für f(x) = target in [lo, hi] (Modus BISECT, mit Prüfung der Klammer). In FIX meldet es die
+letzten zwei Schrittweiten; ihr Verhältnis schätzt |f′(x*)|, also wie stabil der Fixpunkt ist. [`hdl/qcop2t_top.sv`](hdl/qcop2t_top.sv)
+hängt das Werk an den Kern: Mit Rückschreiben landet ein konvergiertes Ergebnis im live-Register 0x10 + n der Bank (wirksam ab
+dem nächsten `load`) und das Bit n im Register ADJUSTED wird gesetzt. **Jedes so geschriebene Ergebnis ist als „angepasst“
+markiert** (gesucht, nicht hergeleitet). Schreibt der Host das Register selbst, verschwindet die Markierung: Der Wert ist dann
+gesetzt. Hostzugriffe haben Vorrang.
+
+[`tune_check.py`](tune_check.py) ([Ausgabe](tune_check_out.txt)): 403 Läufe (zufällige Polynome, Grenzen, Toleranzen,
+Schrittzahlen; konvergiert, `max_iter`, ungültige Klammer) bitgenau gleich dem Python-Modell, Rückschreiben und Markierung wie
+erwartet. Beispiele: Die logistische Abbildung x′ = 1,5x(1 − x) läuft ab 0,9 in 24 Schritten auf 1/3, das Verhältnis der
+letzten Schritte ist 0,502 (|f′(1/3)| = 0,5); die Halbierung für x² = ½ liefert 0,707106781 in 30 Schritten.
+Gegenkontrollen: Ohne Löschen der Markierung beim Hostschreiben oder mit vertauschter Halbierungsrichtung fällt der Vergleich
+durch. Grenzen: Wertebereich Q2.30 ([−2, 2)); die HC-Schleife b′ = 1 − 2b + 2b² braucht c₂ = 2 und passt so nicht hinein.
+Welche Größe (β_sym, χ, Gewicht) mit welcher Zielfunktion gesucht wird, legt der Host fest; das Werk erklärt nichts, es
+findet nur Werte und misst ihre Stabilität. Das ist die Grundlage für den geplanten Stabilitätstest mit Vorab-Notiz.
+
