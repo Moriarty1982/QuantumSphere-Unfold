@@ -1,0 +1,46 @@
+================================================================================
+H214 a (nicht blind)  Kriterium des Rahmens: K = 2/3 (a = sqrt2) innerhalb 2 sigma_K
+================================================================================
+  Schema                                                K       K-2/3   sigma_K         z          a   x_lepton  zulaessig
+  Pol                                          0.66666446   -2.20e-06  5.08e-06      -0.4   1.414209   0.039575  JA
+  laufend, gemeinsam M_Z (XZZ)                 0.66792873   +1.26e-03  1.15e-05    +109.9   1.416888   0.040762  nein
+  laufend, gemeinsam m_tau (1-Schl. QED)       0.66783221   +1.17e-03  5.09e-06    +229.0   1.416684   0.040680  nein
+  laufend, gemeinsam 2 GeV (1-Schl. QED)       0.66783215   +1.17e-03  5.09e-06    +228.9   1.416684   0.040680  nein
+
+================================================================================
+H214 b (blind)  laufend, je eigene Skala mbar(M) = M/(1 + alpha(M)/pi)
+================================================================================
+  Hadron-Anteil Delta(1/alpha)=0.0: alpha^-1(M_i) = [137.036, np.float64(135.905), np.float64(134.707)]
+     mbar = [5.09815000e-01 1.05411485e+02 1.77274104e+03]; K = 0.66666221 (z = -0.88); x_lepton = 0.0395722; Delta x vs Pol = -2.43e-06 = -0.0011 sigma(x_nu)  -> zulaessig
+  Hadron-Anteil Delta(1/alpha)=1.2: alpha^-1(M_i) = [137.036, np.float64(135.905), np.float64(133.507)]
+     mbar = [5.09815000e-01 1.05411485e+02 1.77270348e+03]; K = 0.66666008 (z = -1.29); x_lepton = 0.0395696; Delta x vs Pol = -5.05e-06 = -0.0024 sigma(x_nu)  -> zulaessig
+  Hadron-Anteil Delta(1/alpha)=2.0: alpha^-1(M_i) = [137.036, np.float64(135.905), np.float64(132.707)]
+     mbar = [5.09815000e-01 1.05411485e+02 1.77267806e+03]; K = 0.66665865 (z = -1.57); x_lepton = 0.0395678; Delta x vs Pol = -6.83e-06 = -0.0032 sigma(x_nu)  -> zulaessig
+
+================================================================================
+H214 c (blind)  Rueckwaertssuche: welche Massenverhaeltnisse verlangt x = x_nu bei K = 2/3?
+================================================================================
+  bei x_lepton(Pol)=0.039575: m_e/m_mu = 4.835595e-03, m_mu/m_tau = 0.059461   (gemessen 4.836332e-03, 0.059461)
+  bei x_nu=0.043359:          m_e/m_mu = 5.929541e-03, m_mu/m_tau = 0.058361
+  verlangte relative Aenderung: m_e/m_mu +22.623%, m_mu/m_tau -1.849%
+  zulaessiges Schema 'laufend, je eigene Skala': Verschiebung m_e/m_mu +0.0019%, m_mu/m_tau +0.0042%
+  (nicht zulaessig) 'laufend, gemeinsam M_Z (XZZ)': Verschiebung m_e/m_mu -2.055%, m_mu/m_tau -1.074%
+  (nicht zulaessig) 'laufend, gemeinsam m_tau (1-Schl. QED)': Verschiebung m_e/m_mu -1.848%, m_mu/m_tau -0.997%
+  kleinste verlangte Aenderung / groesste zulaessige Verschiebung = 441
+  Kriterium c: kein zulaessiges Schema schliesst den Abstand
+
+================================================================================
+H214 d (blind)  Neutrino-Seite: Schemaabhaengigkeit von R (1-Schl. SM, nicht-universeller tau-Yukawa-Anteil)
+================================================================================
+  Delta t = ln(M_Z/1 GeV)  ( 4.51): eps_i = [-2.14e-06 -2.95e-06 -3.84e-06]; Delta R/R = +1.78e-06; Delta x_nu = -2.49e-07 = -0.00012 sigma(x_nu)
+  Delta t = ln(M_Z/m_e)    (12.09): eps_i = [-5.74e-06 -7.90e-06 -1.03e-05]; Delta R/R = +4.78e-06; Delta x_nu = -6.67e-07 = -0.00031 sigma(x_nu)
+  Delta t = ln(1 TeV/m_e)  (14.49): eps_i = [-6.88e-06 -9.46e-06 -1.23e-05]; Delta R/R = +5.73e-06; Delta x_nu = -7.99e-07 = -0.00038 sigma(x_nu)
+  y_tau = 0.01021; Kriterium d: |Delta x_nu| < 0,1 sigma -> R schemafest
+
+================================================================================
+H214 Gesamturteil
+================================================================================
+  zulaessige Schemata: ['Pol', 'laufend, je eigene Skala']
+  groesste x-Spreizung unter zulaessigen Schemata: 0.0024 sigma(x_nu)
+  Abstand x_nu - x_lepton(Pol) = 1.78 sigma
+  -> TRAEGT: Pol ist das Schema des Rahmens; M_Z-Lesart (H213c) unzulaessig; Abstand bleibt 1,78 sigma
