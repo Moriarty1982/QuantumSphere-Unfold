@@ -1,0 +1,5 @@
+Wolfram-Gegenprobe zu H192 (27.11.2026; nur Print-Ausgaben)
+arccos(1/3) = 70.528779 (Wuerfel/Tetraeder)
+arccos(1/Sqrt5) = 63.434949 (Ikosaeder)
+arccos(1/Sqrt3) = 54.735610 (magischer Winkel)
+Koinzidenz C-O 63.40 gegen arccos(1/Sqrt5) 63.4349: Differenz 0.03 Grad, nachtraeglich (nicht vorab benannt)
