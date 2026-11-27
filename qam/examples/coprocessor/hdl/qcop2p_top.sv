@@ -29,7 +29,7 @@ module qcop2p_top #(
     wire [15:0] allow, budget;
     wire [5:0] w_eff;
     wire [7:0] k_max;
-    wire reduce_en;
+    wire [1:0] reduce_en;
 
     qcfg #(.W(W)) cfg (
         .clk(clk), .rst(rst), .commit(load), .cfg_we(cfg_we), .cfg_addr(cfg_addr),

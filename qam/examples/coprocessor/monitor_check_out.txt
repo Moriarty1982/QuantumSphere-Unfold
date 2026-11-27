@@ -1,0 +1,1 @@
+Selbstueberwachung W=16: 800 Faelle = Referenz; ohne Einspeisung 398 (kein Fehlalarm), mit Einspeisung sofort angehalten 330, bei Waechter aus weitergerechnet 72; Norm sum P = 2^k, sum Q = 0 in allen Faellen

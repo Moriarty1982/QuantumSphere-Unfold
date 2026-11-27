@@ -68,3 +68,5 @@ jobs:
         run: python -m qam.examples.coprocessor.band_check --steps 6000 --seed 11
       - name: Parallel compute units per band
         run: python -m qam.examples.coprocessor.lanes_check --cases 1200 --seed 9
+      - name: Self-monitoring (norm watchdog halts on violation)
+        run: python -m qam.examples.coprocessor.monitor_check --cases 800 --seed 13

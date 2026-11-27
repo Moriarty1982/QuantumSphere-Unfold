@@ -48,7 +48,7 @@ module qcop2m_top #(
     wire [15:0] allow, budget;
     wire [5:0] w_eff;
     wire [7:0] k_max;
-    wire reduce_en;
+    wire [1:0] reduce_en;
     wire [PARTS-1:0] part_valid;
 
     qcfg #(.W(W)) cfg (
