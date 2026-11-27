@@ -1,0 +1,27 @@
+l_k: [0.04035  0.580212 2.379438]
+
+=== H196b (Test): fester Kandidat, 3 Parameter (A, B, gamma) gemeinsam ===
+  c1    : chi2=  59654.11  A=2.617e-03 B=4.140e-05 gamma=-5.787e-05  max Up  237.6 sigma, Down    9.4 sigma
+  c2    : chi2=  59636.80  A=2.621e-03 B=4.528e-05 gamma=-3.940e-05  max Up  237.5 sigma, Down    9.6 sigma
+  c4/c5 : chi2=  59630.31  A=2.619e-03 B=4.710e-05 gamma=-1.947e-05  max Up  237.5 sigma, Down    9.4 sigma
+  c7/c9 : chi2=  59635.38  A=2.623e-03 B=4.538e-05 gamma=-2.667e-05  max Up  237.5 sigma, Down    9.7 sigma
+  c11   : chi2=  59632.41  A=2.621e-03 B=4.637e-05 gamma=-1.126e-05  max Up  237.5 sigma, Down    9.5 sigma
+  bester Kandidat: c4/c5 (chi2=59630.31, Up 237.5 sigma, Down 9.4 sigma)
+
+=== H196c (Bericht): volle Ladungsstruktur m_s = [A l_k + B l_k^2 + s(C l_k + D l_k^2)]/z ===
+  A=1.0819e-03 B=3.2914e-02 C=-2.2240e-03 D=3.3196e-02  chi2=7.91 (2 dof)
+  ladungsgerade a,b: A=1.082e-03, B=3.291e-02; ladungsungerade C(lin)=-2.224e-03, D(quad)=3.320e-02
+  Up  b/a = -57.885;  Down b/a = -0.085
+  -> ladungsungerades l_k^2 (D) NOETIG, Vorzeichen +; verschiebt Up staerker ins Quadratische als Down
+  ungerades Verhaeltnis D/C = -14.926
+    c2    : Kandidaten-Verhaeltnis (l^2-Koeff)/(l-Koeff) = 0.000
+    c7/c9 : Kandidaten-Verhaeltnis (l^2-Koeff)/(l-Koeff) = -0.167
+    c11   : Kandidaten-Verhaeltnis (l^2-Koeff)/(l-Koeff) = 0.167
+
+=== Kontrolle: 2000 erfundene Massenpaare, bester 3-Param-Kandidat ===
+  erfundene Paare mit chi2 < 12 (fester Kandidat c4/c5): 0.0%
+
+=== Gesamturteil ===
+  teilweise: volle Ladungsstruktur (4 Param) traegt, aber kein fester Kandidat mit 3 Param.
+    -> ladungsungerades l_k^2 D=3.320e-02 noetig; Up/Down-Split kommt aus der Ladung, aber mit freier Form.
+  (bester Kandidat c4/c5: chi2 59630.3; volle Struktur: chi2 7.91, max 2.1 sigma)
