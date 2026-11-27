@@ -1,7 +1,7 @@
-"""k406c: zweite, unabhaengige exakte Suche nach der groessten Menge antikommutierender L_(e_i) fuer n = 4..8.
-Anderer Weg als k406: dichte Matrizen aus der rekursiven Multiplikation (k253) bis n = 6, Vorzeichentabelle ab n = 7;
+"""k407c: zweite, unabhaengige exakte Suche nach der groessten Menge antikommutierender L_(e_i) fuer n = 4..8.
+Anderer Weg als k407: dichte Matrizen aus der rekursiven Multiplikation (k253) bis n = 6, Vorzeichentabelle ab n = 7;
 Suche per Verzweigung mit Faerbungsschranke (Tomita-Seki-Art) statt Bron-Kerbosch mit Pivot.
-Aufruf: python k406c_zweite_suche.py > k406c_out.txt
+Aufruf: python k407c_zweite_suche.py > k407c_out.txt
 """
 import numpy as np
 

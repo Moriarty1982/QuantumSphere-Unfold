@@ -1,8 +1,8 @@
-"""k406 (Erkundung, nicht blind): Durchlaeuft der Turm beim Hochgehen zyklisch wieder eine Stufe vom Typ HS(-1)?
+"""k407 (Erkundung, nicht blind): Durchlaeuft der Turm beim Hochgehen zyklisch wieder eine Stufe vom Typ HS(-1)?
 HS(-1)-Typ nach k405: R (+) R = R[Z2], Stunde 7 = -1 der Clifford-Uhr (Zentrum mit einem j, j^2 = +1).
 Zwei Uhren: (A) Clifford-Geschwister Cl(0,n) derselben Dimension 2^n; (B) vertraegliche Kreisachsen im Turm selbst (k254).
 Konvention Cayley-Dickson wie k253: (a,b)(c,d) = (ac - d* b, d a + b c*).
-Aufruf: python k406_rueckkehr.py > k406_out.txt   (optional: hoechste Stufe als Argument, Standard 11)
+Aufruf: python k407_rueckkehr.py > k407_out.txt   (optional: hoechste Stufe als Argument, Standard 11)
 """
 import math, random
 import numpy as np

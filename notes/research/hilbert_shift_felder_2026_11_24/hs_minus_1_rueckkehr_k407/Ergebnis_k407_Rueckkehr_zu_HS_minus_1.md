@@ -1,17 +1,17 @@
-# k406: Kehrt der Turm beim Hochgehen zu einer Stufe vom Typ HS(−1) zurück? (Erkundung, nicht blind, 27.11.2026)
+# k407: Kehrt der Turm beim Hochgehen zu einer Stufe vom Typ HS(−1) zurück? (Erkundung, nicht blind, 27.11.2026)
 
 **Status:** Erkundung ohne Vorab-Notiz, kein Test, keine Runde. **Anlass:** Frage des Autors vom 27.11.2026: Früher wurde geprüft, ob der Turm
 beim Hochgehen zyklisch wieder durchlaufen wird, mit HS(0) als Rückkehr (k254: Periode 4). Dasselbe jetzt mit HS(−1) als Rückkehr.
-Vergeben: **k406** (k406, k406b, k406c).
+Vergeben: **k407** (k407, k407b, k407c).
 
 **Ergebnis in einem Satz:** Ja. Der Typ von HS(−1) (zwei Hälften, die nur ein Vorzeichen unterscheidet; k405) kehrt beim Hochgehen wieder, zum
 ersten Mal schon bei HS(3), den Oktonionen: Dort ist das Vorzeichen der Unterschied zwischen Links- und Rechtsmultiplikation. Die nächste
 Rückkehr liegt gemessen bei HS(11), nicht bei HS(7). Dabei zeigt sich, dass die Periode 4 aus k254 ab HS(6) nur eine Obergrenze beschreibt:
 Für die Einheiten des Turms selbst geht die Uhr ab den Oktonionen jede Stufe genau eine Stunde weiter, die Periode ist 8.
 
-**Werkzeuge:** Python (numpy) mit exakter Suche (Bron–Kerbosch mit Pivot) über alle Einheiten bis HS(11), Dimension 2048 (`k406_rueckkehr.py`,
-`k406_out.txt`); eine zweite, unabhängig geschriebene exakte Suche für n = 4 bis 8 (`k406c_zweite_suche.py`, `k406c_out.txt`); Wolfram Language
-exakt für n = 1 bis 5 und die Vorzeichen bei HS(2), HS(3) (`k406b_gegenprobe.wl`, `k406b_out.txt`). Wolfram reicht wegen des Zeitlimits nur bis
+**Werkzeuge:** Python (numpy) mit exakter Suche (Bron–Kerbosch mit Pivot) über alle Einheiten bis HS(11), Dimension 2048 (`k407_rueckkehr.py`,
+`k407_out.txt`); eine zweite, unabhängig geschriebene exakte Suche für n = 4 bis 8 (`k407c_zweite_suche.py`, `k407c_out.txt`); Wolfram Language
+exakt für n = 1 bis 5 und die Vorzeichen bei HS(2), HS(3) (`k407b_gegenprobe.wl`, `k407b_out.txt`). Wolfram reicht wegen des Zeitlimits nur bis
 n = 5; die neuen Zahlen ab n = 6 stützen sich auf die zwei Python-Suchen. Qiskit nicht eingesetzt (keine Schaltung). Kein HDL/MMA-Vergleich.
 
 ## Vorwissen geprüft

@@ -1073,4 +1073,4 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 **27.11.2026, Erkundung k405:** Wie sähe ein HS(−1) aus (Vorzeichen, Körper mit einem Element, Rand als Ur-Seed); Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert (Erkundung, kein Befund für Physik-Artikel oder Preprint).
 
-**27.11.2026, Erkundung k406:** Rückkehr zum Typ von HS(−1) im Turm (HS(3), HS(11)); Berichtigung zur Periode aus k254; Forschungsstand ergänzt. Artikel unverändert (Erkundung, kein Befund für Physik-Artikel oder Preprint).
+**27.11.2026, Erkundung k407:** Rückkehr zum Typ von HS(−1) im Turm (HS(3), HS(11)); Berichtigung zur Periode aus k254; Forschungsstand ergänzt. Artikel unverändert (Erkundung, kein Befund für Physik-Artikel oder Preprint).
