@@ -137,6 +137,15 @@ exakte Suchen), Wolfram (exakt bis n = 5).
 
 Keine Zahl für das Modell; die Verbindung zur Händigkeit (r59, H8) ist nicht gerechnet. OP1, OP3 bleiben offen.
 
+**Festgehalten, nicht gerechnet (Autor, 27.11.2026; Fragenliste F18 bis F20):**
+
+- **Rotor mit 8 Stellungen.** Lesart des Autors: Der Turm ist wie 8 Bit, von denen jedes doppelt so viel trägt wie das vorige, und die „Rotoren“
+  haben nur 8 Positionen. Gedeckt ist davon: Der Typ einer Stufe auf der Clifford-Uhr hat 8 Stellungen, jede Stufe verdoppelt die Dimension, und
+  ab HS(3) rückt die Uhr je Stufe um eine Stellung weiter (bis HS(11) gemessen). Die Winkel innerhalb einer Stufe (θ, δ, β_sym) bleiben stetig.
+  **Offene Frage:** Legt die Einrastung auf 8 Stellungen auch die feinen Winkel fest? Der Bezug zu den 8 Oktanten aus H192 ist eine Vermutung.
+- **Offen aus k407:** Erreichen allgemeine Richtungen in HS(6) elf verträgliche Achsen (dann gälte die Periode 4 auch für den Turm)?
+- **Offen aus k405:** Hat eine Schleife mit der Hyperbel-Regel der Spiegelstufe (j² = +1) einen Fixpunkt abseits von ½?
+
 ### Ein HS(−1) unter dem Turm gibt es nicht als Zahlbereich; drei Lesarten (27.11.2026, Erkundung k405, nicht blind)
 
 Frage des Autors: Wie sähe eine Stufe unter HS(0) = ℝ aus (formale Dimension 2⁻¹ = ½)? Erkundung ohne Vorab-Notiz, kein Test; Ordner
