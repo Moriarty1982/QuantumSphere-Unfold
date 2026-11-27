@@ -1104,3 +1104,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Erkundung k420:** Zwei Grafiken zu den Bändern auf der Sphäre (Lagen aus H192, Verformung mit gesetztem Spannungsgesetz); Forschungsstand ergänzt. Artikel unverändert (Erkundung, kein Befund für Physik-Artikel oder Preprint).
 
 **27.11.2026, Test H209 (k421):** Spannungsgesetz der Bänder aus dem Überlapp; Forschungsstand ergänzt. Artikel unverändert (Geometrie-Test ohne Bezug zu Messdaten, kein Befund für Physik-Artikel oder Preprint).
+
+**27.11.2026, Erkundung k422:** Ungleich lange Bänder auf der Sphäre; Forschungsstand ergänzt. Artikel unverändert (Erkundung, kein Befund für Physik-Artikel oder Preprint).

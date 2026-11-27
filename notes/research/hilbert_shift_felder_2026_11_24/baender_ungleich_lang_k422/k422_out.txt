@@ -1,0 +1,23 @@
+== Teil 1: Baender als Kleinkreise der Laenge 2 pi d/16 auf der runden Sphaere ==
+   R: Laenge/Grosskreis = 0.0625, Polwinkel   3.58 Grad, Neigung der Flaeche dort cos = 0.9980
+   C: Laenge/Grosskreis = 0.1250, Polwinkel   7.18 Grad, Neigung der Flaeche dort cos = 0.9922
+   H: Laenge/Grosskreis = 0.2500, Polwinkel  14.48 Grad, Neigung der Flaeche dort cos = 0.9682
+   O: Laenge/Grosskreis = 0.5000, Polwinkel  30.00 Grad, Neigung der Flaeche dort cos = 0.8660
+   S: Laenge/Grosskreis = 1.0000, Polwinkel  90.00 Grad, Neigung der Flaeche dort cos = 0.0000
+   Zufallslagen: kleinste Zahl sich kreuzender Paare = 0; Anteil ganz kreuzungsfreier Lagen = 0.2245
+   koaxiale Lage (alle Achsen gleich): kreuzende Paare = 0
+   Folge: Die Ueberlappenergie (H209) hat ihr Minimum 0 auf einer ganzen Schar von Lagen; kein Winkel zwischen den Baendern ist festgelegt.
+   Nur Grosskreise kreuzen einander zwingend. Bei Laengen ~ Dimension ist S der einzige Grosskreis.
+
+== Teil 2: Lesart 'gleich lang, aber wiederholt' (alle Baender Grosskreise, Windungszahl m = 16/d) ==
+   Gewicht = Windungszahl [16, 8, 4, 2, 1], Gesetz 1/sin, Energie 322.1532 (H192 mit Gewicht = Dimension: 322.1532)
+   RC 89.54  RH 89.00  RO 76.18  RS 68.24  CH 70.01  CO 63.40  CS 65.03  HO 49.40  HS 50.08  OS 35.59
+   Die Rollen sind gespiegelt: R-C = 89.54 (in H192 war O-S = 89.54), O-S = 35.59 (in H192 war R-C = 35.59).
+
+== Teil 3: Formen, auf denen jedes Band ein laengster Kreis ist (Rotationsflaeche, Baender koaxial) ==
+   Ein Breitenkreis ist genau dann geschlossene Geodaete, wenn der Abstand rho von der Achse dort stationaer ist (Clairaut); 'laengster' heisst rho maximal.
+   (a) Stufen: kleinster Eingriff, an jedem Band wird die Neigung cos(theta_i) auf 0 gebracht; Hoehe der Stufe frei.
+   (b) Perlenkette: jedes Band ist Aequator einer eigenen Kugel mit Radius d/16.
+       Flaeche / Flaeche der Einheitskugel = 1.332031 (Grenzwert unendlicher Turm 4/3 = 1.333333)
+       Volumen / Volumen der Einheitskugel = 1.142822 (Grenzwert 8/7 = 1.142857)
+       Hoehe / Durchmesser der Einheitskugel = 1.937500 (Grenzwert 2)
