@@ -1069,4 +1069,6 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 
 **27.11.2026, Test H195 (k403):** Herleitung der H188-Form aus der Feldgleichung (teilweise: Nenner (l_i+l_j)² hergeleitet, Zähler l_k² feldgleichungs-fähig ab Grad 5 aber nicht vorhergesagt); Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (noch kein tragender Befund; Nenner-Herleitung vermerkbar, wenn der Strang weitergeht).
 
+**27.11.2026, Test H196 (k404):** Ladungsterm und der Up/Down-Zähler-Split (teilweise: strukturell ja — ladungsungerades l_k² mit D≈B macht Up quadratisch/Down linear —, aber Umparametrisierung von H194, kein fester Kandidat); Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein tragender Befund).
+
 **27.11.2026, Erkundung k405:** Wie sähe ein HS(−1) aus (Vorzeichen, Körper mit einem Element, Rand als Ur-Seed); Forschungsstand und Offene-Probleme ergänzt. Artikel unverändert (Erkundung, kein Befund für Physik-Artikel oder Preprint).
