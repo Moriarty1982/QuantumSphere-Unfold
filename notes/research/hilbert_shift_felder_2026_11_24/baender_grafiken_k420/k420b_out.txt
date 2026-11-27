@@ -1,0 +1,12 @@
+k420b Gegenprobe: u auf den Achsen x (Pol von O), y (Kreuzung O/S), z (Pol von S)
+m2 = 2, lmax = 80: {1.818067947, 3.172510176, 0.3276983622}
+m2 = 2, lmax = 200: {1.852020468, 3.228712604, 0.3266326731}
+m2 = 6, lmax = 80: {1.557413999, 2.631686375, 0.5664342265}
+m2 = 6, lmax = 200: {1.591357075, 2.687871059, 0.5653707768}
+m2 = 20, lmax = 80: {1.131284458, 1.858301788, 0.6365983576}
+m2 = 20, lmax = 200: {1.165194522, 1.914424474, 0.6355427175}
+Mittel von u auf Band S (m2 = 6): 1.73942
+Mittel von u auf Band O (m2 = 6): 0.597919
+
+Hinweis: Die Wolfram-Umgebung meldete beim Lauf "Symbol::undefined2: Global symbols V undefined" (Warnung der Voranalyse; V ist in der ersten Zeile definiert, die Werte wurden berechnet). Rückgabewert Null.
+Vergleich Python k420 (lmax = 80): m2 = 2: 1.8180679472, 3.1725101757, 0.3276983622; m2 = 6: 1.5574139998, 2.6316863749, 0.5664342265; m2 = 20: 1.1312844580, 1.8583017882, 0.6365983576.
