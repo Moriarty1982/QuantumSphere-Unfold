@@ -152,3 +152,33 @@ Fläche und, wegen der breiteren Auswahl der Kontexte, wieder etwas Takt. Gemess
 Referenz, auch mit zufälliger Konfiguration je Gruppe; bei ungleich langen Läufen erreicht der Wechsel 0,69 (4 Kontexte)
 bzw. 0,88 (8 Kontexte) Gatter je Takt, weil am Ende einer Gruppe Kontexte leer laufen. Die Werte schwanken mit dem
 Platzierungs-Seed um einige Prozent; keine Messung auf echter Hardware.
+
+## Partitionierbares Bandregister (27.11.2026)
+
+[`hdl/qband.sv`](hdl/qband.sv) ist ein Register aus 128 Zellen (Parameter `CELLS`, Zweierpotenz), das sich in bis zu 16 Bänder
+(Parameter `PARTS`) der Länge 2ⁿ teilen lässt. Es gilt die Buddy-Regel: Ein Band der Stufe n beginnt auf einem Vielfachen von
+2ⁿ. Damit passen 2^(7−n) Bänder der Stufe HS(n) hinein (1 × 128, 2 × 64, …, 8 × 16, 16 × 8, …, 128 × 1), und jede Mischung
+geht lückenlos auf: 27.338 Größenmischungen, mit Lage rund 4,4·10²² Belegungen. Die Hardware prüft laufend, ob die
+Aufteilung gültig ist (`layout_ok`: ausgerichtet, im Register, ohne Überlappung) und ob jede Zelle belegt ist (`full`);
+Zugriffe auf eine ungültige Aufteilung oder hinter das Bandende melden `guard`. Ein Bus von 128 Bit (Parameter `BUSW`) liest
+und schreibt das ganze Register in einem Wort.
+
+**Eingebrannte Eigenschaften je Stufe n** (Setzungen, keine hergeleiteten Werte), je Stufe über `SET_PROF` überschreibbar und
+mit `CLR_PROF` wieder auf die Vorgabe zurückzusetzen:
+
+| Feld | eingebrannt | überschreibbar |
+|---|---|---|
+| HS | n | nein |
+| CLOCK (Typ-Uhr mod 8, k407) | n mod 8 | ja |
+| LENGTH, REPEAT | 2ⁿ, 128/2ⁿ | nein |
+| WEIGHT (Q2.30) | 2ⁿ/128, Anteil am Register | ja |
+| PHASE (Drehung) | n/8, ein 45°-Schritt je Stufe (vgl. H211) | ja |
+
+Befehle: `SET_PART`, `WR_CELL`/`RD_CELL` (Band, Zelle), `WR_WORD`/`RD_WORD` (Bus), `SET_PROF`/`CLR_PROF`/`RD_PROF`. Die
+Abschnittstabelle liegt als Ausgang für spätere Rechenwerke je Band an.
+
+[`band_check.py`](band_check.py) ([Ausgabe](band_check_out.txt)): 6000 zufällige Befehle mit gültigen, lückenhaften und
+absichtlich falschen Aufteilungen (falsch ausgerichtet, überlappend, zu lang) bitgenau gleich dem Python-Modell.
+Gegenkontrollen: Ohne Ausrichtungsprüfung oder ohne Speichern der überschriebenen Phase fällt der Vergleich durch.
+Grenzen: Die Bänder sind noch nicht an Rechenwerke angeschlossen (kommt mit den parallelen Rechenwerken), die Zellen sind
+1 Bit breit (Parameter `CW` vorbereitet, Busweg nur für 1 Bit geprüft).

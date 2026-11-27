@@ -1122,3 +1122,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Quanten-Coprozessor, Boot-Monitor:** Deutsche und englische Inhaltsübersicht nennen den Boot-Monitor mit portablem Programmabbild. Kein Forschungsbefund, Artikel unverändert.
 
 **27.11.2026, Quanten-Coprozessor, Pipeline:** Deutsche und englische Inhaltsübersicht nennen die Pipeline mit Kontexten und die Taktmessung. Kein Forschungsbefund, Artikel unverändert.
+
+**27.11.2026, Quanten-Coprozessor, Bandregister:** Deutsche und englische Inhaltsübersicht nennen das partitionierbare Bandregister mit eingebrannten Profilen. Kein Forschungsbefund, Artikel unverändert.
