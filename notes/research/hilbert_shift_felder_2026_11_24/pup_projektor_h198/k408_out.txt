@@ -1,0 +1,30 @@
+========================================================================
+H198a  Operatoridentitaet und Projektor-Eigenschaften
+========================================================================
+  || P_up  -  1/2(1 + i L_U) ||_max            = 0.00e+00
+  || (i L_U)^2  -  1 ||_max  (Chiralitaet +-1) = 0.00e+00
+  || P_up^2 - P_up ||_max   (Projektor)        = 0.00e+00
+  || P_up + P_down - 1 ||_max                  = 0.00e+00
+  || P_up P_down ||_max                        = 0.00e+00
+  Q0-Eigenwerte: [np.float64(0.333333), np.float64(0.666667)]  (1/3 = Down, 2/3 = Up)
+  P_up auf Up-Raum   (soll 1): 1.0
+  P_up auf Down-Raum (soll 0): 0.0
+  Spur P_up = 18.0000 (Dim des Up-Raums = 18); +i-Eigenraum von L_U.
+  -> P_up ist der Projektor auf eine CHIRALITAET der Ladungs-U(1): P_up = 1/2(1 + i L_U).
+
+========================================================================
+H198b  Konsequenz: wie koppelt das l_k^2-Glied je nach Ladungsstruktur?
+========================================================================
+  Ein l_k^2-Term mit Operator O gibt b_up = <O>_up, b_down = <O>_down:
+  O = 1        (ladungsblind, F4) : Up=+1.0000  Down=+1.0000  (gerade B=+1.0000, ungerade D=+0.0000, D/B=+0.000)
+  O = i L_U    (J-Form Q0-1/2)    : Up=+1.0000  Down=-1.0000  (gerade B=+0.0000, ungerade D=+1.0000, D/B=+inf)
+  O = P_up     (chiral, 1/2(1+iL_U)): Up=+1.0000  Down=+0.0000  (gerade B=+0.5000, ungerade D=+0.5000, D/B=+1.000)
+
+  Lesart:
+  - ladungsblind (F4-invariant): Up=Down -> D=0 (kein Up/Down-Unterschied).
+  - J-Form (Q0-1/2 ~ i L_U): Up=-Down -> rein ungerade, B=0 (antisymmetrisch).
+  - chiral (P_up): Up!=0, Down=0 -> b_down=0, also D=B. GENAU 'Down linear'.
+  => D=B ist aequivalent dazu, dass das l_k^2-Glied HOLOMORPH (chiral) unter der
+     Ladungs-U(1) ist: es benutzt nur die +Chiralitaet. P_up ist deren Projektor.
+     Das identifiziert P_up mit einem bekannten Objekt (Chiralitaet der Ladung),
+     erzwingt die Chiralitaet aber nicht (die U(1) ist nach H178 nicht gefordert).

@@ -1,0 +1,15 @@
+k408b: Wolfram-Gegenprobe (exakt) zu H198. Unabhaengige Oktonion-Rekonstruktion (Cayley-Dickson).
+
+(i L_U)^2 - 1   (Max-Abs): 0        -> Chiralitaet +-1 exakt
+P_up^2 - P_up   (Max-Abs): 0        -> P_up = 1/2(1 + i L_U) ist ein Projektor
+Spur P_up (Dim des Up-Raums): 18    -> projiziert auf halben Farbblock (+i-Eigenraum von L_U)
+
+L_U (6x6, Linksmultiplikation mit U=e7 auf den Farbrichtungen e1..e6), antisymmetrisch:
+  0  0  0  0  0  1
+  0  0  0  0 -1  0
+  0  0  0 -1  0  0
+  0  0  1  0  0  0
+  0  1  0  0  0  0
+ -1  0  0  0  0  0
+
+Stimmt exakt mit numpy (k408) ueberein. Die Warnungen "undefined" sind harmlose Module-Lokalsymbol-Hinweise.
