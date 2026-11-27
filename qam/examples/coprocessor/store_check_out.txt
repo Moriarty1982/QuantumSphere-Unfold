@@ -1,0 +1,3 @@
+Zustandsspeicher 8 Plaetze, 8 Namen, Spiegel A/B: 3000 Befehle = Modell (Dedup 407, repariert 51, beide Spiegel falsch 22, guard 1221); Pruefhash am Ende 33c6703e
+Vorrat 60 Schaltungen: 18 verschiedene Zustaende in kanonischer Form, 19 verschiedene Datensaetze ohne Kuerzen (gleicher Zustand, andere Darstellung)
+Groesserer Vorrat (600 Schaltungen, nur continue): 403 verschiedene Zustandsvektoren; als Datensaetze kanonisch 403, gekuerzt durch 2 407, ohne Kuerzen 453; nur die kanonische Form macht die Dedup exakt

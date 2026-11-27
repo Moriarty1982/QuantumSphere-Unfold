@@ -40,6 +40,7 @@ TARGETS = [
     ("qcop2t_top W=16 (mit Selbstjustierung qtune)", "qcop2t_top",
      [COP / f for f in ("qcfg.sv", "qgate2.sv", "qnorm2.sv", "qstep2.sv", "qcop2_top.sv", "qtune.sv", "qcop2t_top.sv")],
      {"W": 16}),
+    ("qstore 8 Plaetze, 8 Namen, Spiegel (ZFS-Vorbild)", "qstore", [COP / "qstore.sv"], {}),
     ("qband 128 Zellen, 16 Abschnitte", "qband", [COP / "qband.sv"], {}),
     ("qcop2m_top 2 Spuren x 4 Kontexte (Rechenwerke je Band)", "qcop2m_top",
      [COP / f for f in ("qcfg.sv", "qgate2.sv", "qnorm2.sv", "qstep2p.sv", "qband.sv", "qcop2m_top.sv")],
