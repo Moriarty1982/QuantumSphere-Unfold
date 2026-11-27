@@ -1,0 +1,17 @@
+Ausgabe von k392b_gegenprobe.wl (Wolfram Language, 27.11.2026)
+
+Print-Ausgaben:
+H189a: K1, K2, K4 mit X_x = 0 (allgemeine reelle 3x3-Matrix fuer X_t): {0, 0, 0}
+H189c, Variante 1 im reduzierten Modell (Vakuum diagonal, Eintrag (p,q) = x + i y, Norm der Koordinaten x^2 + y^2 = 1):
+  Paar {1, 2}: g1 = 2 (l1^2 + l2^2 + l3^2), g2 = 2 (l1 - l2)^2, g4 = -2 (l1^2 + l2^2 + 2 l3^2)
+  Paar {1, 3}: g1 = 2 (l1^2 + l2^2 + l3^2), g2 = 2 (l1 - l3)^2, g4 = -2 (l1^2 + 2 l2^2 + l3^2)
+  Paar {2, 3}: g1 = 2 (l1^2 + l2^2 + l3^2), g2 = 2 (l2 - l3)^2, g4 = -2 (2 l1^2 + l2^2 + l3^2)
+  Reste Paar (1,2): {0, 0, 0}
+H189b: Ansatz d = v Exp[I Om t], I v = I s v in d'' + 2 om I d' - om^2 d + h d = 0: Loesungen Om = {-Sqrt[h] - om, Sqrt[h] - om} (s = +1), {-Sqrt[h] + om, Sqrt[h] + om} (s = -1)
+Variante 2 (Zahlen aus k392_out.txt): g2 - 3 g4 = {30.000001, 30.000000, 29.999999}
+
+Symbolische Nullreste: {0, 0, 0} bei H189a und bei den Resten zu H189c (exakt).
+Rueckgabewert: Null.
+Warnungen: Symbol::undefined2 (freie Symbole) und General::messages; Hinweise der Auswerteumgebung, keine Rechenfehler.
+Grenze: Variante 2 und die Oktonion-Eintraege sind nur in Python gerechnet (k392_out.txt); hier das reduzierte Modell mit komplexem Eintrag.
+Lesehilfe: g2 - 3 g4 = 30 = 5 g1 heisst, dass g2 und g4 in Variante 2 bis auf eine Konstante dieselbe Funktion des Paars sind.

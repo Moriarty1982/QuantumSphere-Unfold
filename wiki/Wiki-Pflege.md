@@ -1050,3 +1050,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Test H187 (k390):** Adjunkte und Determinante gegen sechs Quarkmassen; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein Befund, der in Physik-Artikel oder Preprint steht).
 
 **27.11.2026, Test H188 (k391):** Ableitungsterme und Quarkmassen; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein Befund, der in Physik-Artikel oder Preprint steht).
+
+**27.11.2026, Test H189 (k392):** Bewegtes Vakuum und Quarkmassen; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein Befund, der in Physik-Artikel oder Preprint steht).

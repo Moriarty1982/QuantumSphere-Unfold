@@ -1,0 +1,76 @@
+== H189a: Ruhefrequenzen (k = 0) bei rein zeitlich bewegtem Vakuum ==
+   K1, K2, K4 mit X_t = B0 + eps d_t dW, X_x = 0 (beide Varianten): groesster Betrag 0.0e+00
+   K3(B0, eps a, eps b): Verhaeltnis der Werte bei eps = 1 und eps = 1/2: 16.000000, 16.000000 (16 = Ordnung eps^4, kein Beitrag in eps^2)
+   Urteil H189a: BESTAETIGT (nicht blind): die Ableitungsterme aendern die Ruhefrequenzen nicht
+
+== Moden der Generationen je Vakuum (Referenzform wie k390) ==
+   Eigenwerte des Vakuums l = [0.04035  0.580212 2.379438]
+
+== H189b: gewoehnlicher kinetischer Term um W = exp(i omega t) (W0 + dW) ==
+   Bewegungsgleichung: d'' + 2 omega I d' - omega^2 d + H d = 0 (I = Multiplikation mit i; H = zweite Variation eines phaseninvarianten Potentials)
+   Beispiel: omega = 0.37, H diagonal in den Moden mit h = [[0.9, 2.3, 4.1], [1.4, 2.9, 5.2]] (Zeilen: Ladung 1/3, 2/3); [H, I] = 5.2e-15
+   Eigenfrequenzen gegen sqrt(h) +- omega: groesste Abweichung 9.8e-15; Aufspaltung je Mode 2 omega = 0.74, unabhaengig von Generation und Ladung
+   (In der Vorab-Notiz steht sqrt(h + omega^2) +- omega; dort ist h die Kruemmung im mitdrehenden Bild, hier die des Potentials: h_Vorab = h - omega^2.)
+   Urteil H189b: BESTAETIGT (nicht blind): die Drehung allein trennt Up und Down nicht und gibt keine Hierarchie
+
+== H189c (ohne Daten): Gradientenformen aus K1, K2, K4 in zweiter Ordnung, X_t = B0, X_x = d_x dW ==
+   Variante 1, g1 (K1): Eigenrest 3.6e-15, ladungsmischend 3.6e-15
+        gerade: +2.0000 (l_i^2 + l_j^2) +2.0000 l_k^2   (Rest 4.3e-14)
+        Werte am Vakuum (Down; Up): [12. 12. 12.]; [12. 12. 12.]   -> Funktion des Paars
+   Variante 1, g2 (K2): Eigenrest 1.5e-13, ladungsmischend 1.3e-15
+        gerade: +2.0000 (l_i^2 + l_j^2) -4.0000 l_i l_j   (Rest 1.4e-14)
+        Werte am Vakuum (Down; Up): [ 0.582902 10.942668  6.47443 ]; [ 0.582902 10.942668  6.47443 ]   -> Funktion des Paars
+   Variante 1, g4 (K4): Eigenrest 1.8e-13, ladungsmischend 7.1e-15
+        gerade: -2.0000 (l_i^2 + l_j^2) -4.0000 l_k^2   (Rest 6.6e-14)
+        Werte am Vakuum (Down; Up): [-23.323452 -12.673292 -12.003256]; [-23.323452 -12.673292 -12.003256]   -> Funktion des Paars
+   Variante 2, g1 (K1): Eigenrest 1.8e-15, ladungsmischend 8.9e-16
+        gerade: +1.3333 (l_i^2 + l_j^2) -1.3333 l_i l_j -1.3333 l_k (l_i + l_j) +1.3333 l_k^2   (Rest 2.7e-14)
+        Werte am Vakuum (Down; Up): [6. 6. 6.]; [6. 6. 6.]   -> Funktion des Paars
+   Variante 2, g2 (K2): Eigenrest 1.5e-13, ladungsmischend 1.3e-15
+        gerade: +0.6667 (l_i^2 + l_j^2) +1.3333 l_i l_j -2.6667 l_k (l_i + l_j) +2.6667 l_k^2   (Rest 1.2e-14)
+        Werte am Vakuum (Down; Up): [11.417098  1.057332  5.52557 ]; [11.417098  1.057332  5.52557 ]   -> Funktion des Paars
+   Variante 2, g4 (K4): Eigenrest 5.0e-14, ladungsmischend 1.8e-15
+        gerade: -2.0000 (l_i^2 + l_j^2) +2.6667 l_i l_j +1.3333 l_k (l_i + l_j) -1.3333 l_k^2   (Rest 6.2e-15)
+        Werte am Vakuum (Down; Up): [-6.194301 -9.647556 -8.158143]; [-6.194301 -9.647556 -8.158143]   -> Funktion des Paars
+   Urteil H189c: BESTAETIGT (alle Formen diagonal und Funktionen des Paars)
+
+== H189d: traege Masse m_g = A sqrt(f_g) / (1 + kappa2 g2 + kappa4 g4), kappa fuer beide Sektoren gleich ==
+   Funktionen aus R mit positiven Werten (fuer die Wurzel noetig): ['f1', 'f2', 'f3', 'f5', 'f6', 'f7', 'f8', 'f9'] von 9
+   Variante 1, m = A sqrt(f)/c^2, Zuordnung A, nur kappa2: nicht erreichbar (kein Paar unter 3000 sigma)
+   Variante 1, m = A sqrt(f)/c^2, Zuordnung A, nur kappa4: bester Abstand 49.55 sigma mit Up f3, Down f1, kappa2 = +7.9492e-11, kappa4 = +0.08332, Nenner (dritte Generation = 1) [8.61861e+03 5.11071e+02 1.00000e+00]; nachgerechnete Abstaende [ 49.55 -49.55  -4.03 -42.62]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A sqrt(f)/c^2, Zuordnung A, kappa2 und kappa4: bester Abstand 28.83 sigma mit Up f5, Down f2, kappa2 = +0.012224, kappa4 = +0.089905, Nenner (dritte Generation = 1) [1.05227e+05 5.43590e+02 1.00000e+00]; nachgerechnete Abstaende [ 14.07 -28.83 -28.83  28.83]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A sqrt(f)/c^2, Zuordnung B, nur kappa2: bester Abstand 66.67 sigma mit Up f2, Down f7, kappa2 = -1.7231, kappa4 = -0, Nenner (dritte Generation = 1) [2.29650e+03 4.03745e+03 1.00000e+00]; nachgerechnete Abstaende [  0.66 -56.68  66.67 -66.67]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A sqrt(f)/c^2, Zuordnung B, nur kappa4: bester Abstand 63.52 sigma mit Up f2, Down f7, kappa2 = +0, kappa4 = +0.042866, Nenner (dritte Generation = 1) [2.35020e+03 2.21115e+03 1.00000e+00]; nachgerechnete Abstaende [ -0.41 -55.9   63.52 -63.52]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A sqrt(f)/c^2, Zuordnung B, kappa2 und kappa4: bester Abstand 14.09 sigma mit Up f2, Down f6, kappa2 = -0.042336, kappa4 = +0.041814, Nenner (dritte Generation = 1) [2.88498e+03 8.76646e+01 1.00000e+00]; nachgerechnete Abstaende [ -8.87 -14.09 -14.09  14.09]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A f/c^2 (Kontrolle), Zuordnung A, nur kappa2: nicht erreichbar (kein Paar unter 3000 sigma)
+   Variante 1, m = A f/c^2 (Kontrolle), Zuordnung A, nur kappa4: bester Abstand 30.41 sigma mit Up f7, Down f9, kappa2 = +8.2765e-11, kappa4 = +0.083319, Nenner (dritte Generation = 1) [9.15760e+03 5.42974e+02 1.00000e+00]; nachgerechnete Abstaende [ -7.1  -30.41  30.41  10.81]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A f/c^2 (Kontrolle), Zuordnung A, kappa2 und kappa4: bester Abstand 25.49 sigma mit Up f7, Down f9, kappa2 = +0.0069754, kappa4 = +0.087078, Nenner (dritte Generation = 1) [1.73392e+04 4.59899e+02 1.00000e+00]; nachgerechnete Abstaende [-25.49 -25.49 -17.38  25.49]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A f/c^2 (Kontrolle), Zuordnung B, nur kappa2: bester Abstand 44.11 sigma mit Up f2, Down f1, kappa2 = -3.6269, kappa4 = -0, Nenner (dritte Generation = 1) [20.17931 34.72523  1.     ]; nachgerechnete Abstaende [ 44.11 -30.82  -7.83 -44.11]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A f/c^2 (Kontrolle), Zuordnung B, nur kappa4: bester Abstand 29.94 sigma mit Up f2, Down f1, kappa2 = +0, kappa4 = +0.041987, Nenner (dritte Generation = 1) [23.94155 22.58365  1.     ]; nachgerechnete Abstaende [ 29.94 -16.41 -17.74 -29.94]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 1, m = A f/c^2 (Kontrolle), Zuordnung B, kappa2 und kappa4: bester Abstand 22.76 sigma mit Up f5, Down f3, kappa2 = -0.042929, kappa4 = +0.041802, Nenner (dritte Generation = 1) [9.19439e+04 1.94726e+02 1.00000e+00]; nachgerechnete Abstaende [ 22.76  22.76 -22.76   8.59]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 2, m = A sqrt(f)/c^2, Zuordnung A, nur kappa2: nicht erreichbar (kein Paar unter 3000 sigma)
+   Variante 2, m = A sqrt(f)/c^2, Zuordnung A, nur kappa4: nicht erreichbar (kein Paar unter 3000 sigma)
+   Variante 2, m = A sqrt(f)/c^2, Zuordnung A, kappa2 und kappa4: nicht erreichbar (kein Paar unter 3000 sigma)
+   Variante 2, m = A sqrt(f)/c^2, Zuordnung B, nur kappa2: bester Abstand 66.67 sigma mit Up f2, Down f7, kappa2 = -0.087568, kappa4 = +0, Nenner (dritte Generation = 1) [2.29650e+03 4.03745e+03 1.00000e+00]; nachgerechnete Abstaende [  0.66 -56.68  66.67 -66.67]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 2, m = A sqrt(f)/c^2, Zuordnung B, nur kappa4: bester Abstand 66.67 sigma mit Up f2, Down f7, kappa2 = -0, kappa4 = +0.16146, Nenner (dritte Generation = 1) [2.29650e+03 4.03745e+03 1.00000e+00]; nachgerechnete Abstaende [  0.66 -56.68  66.67 -66.67]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 2, m = A sqrt(f)/c^2, Zuordnung B, kappa2 und kappa4: bester Abstand 66.67 sigma mit Up f2, Down f7, kappa2 = -0.033357, kappa4 = +0.099956, Nenner (dritte Generation = 1) [2.29650e+03 4.03745e+03 1.00000e+00]; nachgerechnete Abstaende [  0.66 -56.68  66.67 -66.67]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 2, m = A f/c^2 (Kontrolle), Zuordnung A, nur kappa2: nicht erreichbar (kein Paar unter 3000 sigma)
+   Variante 2, m = A f/c^2 (Kontrolle), Zuordnung A, nur kappa4: nicht erreichbar (kein Paar unter 3000 sigma)
+   Variante 2, m = A f/c^2 (Kontrolle), Zuordnung A, kappa2 und kappa4: nicht erreichbar (kein Paar unter 3000 sigma)
+   Variante 2, m = A f/c^2 (Kontrolle), Zuordnung B, nur kappa2: bester Abstand 44.11 sigma mit Up f2, Down f1, kappa2 = -0.085293, kappa4 = +0, Nenner (dritte Generation = 1) [20.17931 34.72523  1.     ]; nachgerechnete Abstaende [ 44.11 -30.82  -7.83 -44.11]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 2, m = A f/c^2 (Kontrolle), Zuordnung B, nur kappa4: bester Abstand 44.11 sigma mit Up f2, Down f1, kappa2 = -0, kappa4 = +0.16415, Nenner (dritte Generation = 1) [20.17931 34.72523  1.     ]; nachgerechnete Abstaende [ 44.11 -30.82  -7.83 -44.11]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   Variante 2, m = A f/c^2 (Kontrolle), Zuordnung B, kappa2 und kappa4: bester Abstand 44.10 sigma mit Up f2, Down f1, kappa2 = -0.033334, kappa4 = +0.1, Nenner (dritte Generation = 1) [20.18121 34.72857  1.     ]; nachgerechnete Abstaende [ 44.1  -30.82  -7.84 -44.11]; Paare (f_u, f_d) unter 3 sigma: 0 von 64
+   verglichen: 24 Faelle (2 Varianten, 2 Lesarten, 2 Zuordnungen, 3 Wahlen der kappa), je 64 Paare von Potentialfunktionen
+   ... 500 erfundene Datensaetze gerechnet
+   ... 1000 erfundene Datensaetze gerechnet
+   ... 1500 erfundene Datensaetze gerechnet
+   ... 2000 erfundene Datensaetze gerechnet
+   Zufallskontrolle (2000 erfundene Datensaetze), Trefferquote je Lesart und Wahl:
+      m = A sqrt(f)/c^2, nur kappa2: echte Daten kein Treffer; erfunden 0.00%
+      m = A sqrt(f)/c^2, nur kappa4: echte Daten kein Treffer; erfunden 0.00%
+      m = A sqrt(f)/c^2, kappa2 und kappa4: echte Daten kein Treffer; erfunden 3.95%
+      m = A f/c^2 (Kontrolle), nur kappa2: echte Daten kein Treffer; erfunden 0.00%
+      m = A f/c^2 (Kontrolle), nur kappa4: echte Daten kein Treffer; erfunden 0.00%
+      m = A f/c^2 (Kontrolle), kappa2 und kappa4: echte Daten kein Treffer; erfunden 2.85%
+   Urteil H189d (Lesart m = A sqrt(f)/c^2): WIDERLEGT (kein Fall trifft alle vier Verhaeltnisse innerhalb von 3 sigma); Zufallsquote ueber alle Faelle 3.95%
+   Urteil Kontroll-Lesart m = A f/c^2: WIDERLEGT (kein Fall trifft alle vier Verhaeltnisse innerhalb von 3 sigma); Zufallsquote ueber alle Faelle 2.85%
