@@ -1,0 +1,8 @@
+k409b: Wolfram-Gegenprobe zu H199 (dominanter Lauf y_t, 1-Schleife).
+
+NDSolve, 1-Schleife, nur Top-Yukawa + Eichkopplungen (grob):
+  y_t(M_Z) = 0.967  ->  y_t(10^19 GeV) = 0.40061
+
+Stimmt mit der vollen scipy-Integration in k409 ueberein (y_t(Pl) = 0.4006). Der dominante Lauf ist der Top;
+die Massenverhaeltnisse innerhalb eines Sektors und damit D/B bewegen sich dennoch nur um ~0.4% ueber 17 Dekaden
+(D/B: 1.0085 -> 1.0123), weil die universellen Terme (Y2, g2, g3) sich in den Verhaeltnissen kuerzen.
