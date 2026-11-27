@@ -1,0 +1,115 @@
+====================================================================================================
+TEIL A: Rueckwaertsschritt im Turm. A_{n-1} = gerader Teil der Z2-Graduierung s(a,b) = (a,-b)
+====================================================================================================
+n=0 dim=1 | e_a e_b = +-e_(a xor b): True | imaginaere Einheiten 0 | lineare Automorphismen von R: [1.0] -> nur die Identitaet, ungerader Teil = {0}, kein Schritt nach unten
+n=1 dim= 2 | e_a e_b = +-e_(a xor b): True | imaginaere Einheiten 1 = Punkte von P^0(F_2) = 1 | s Automorphismus (max Fehler 0.0e+00) | dim Fix(s) = 1 = 2^0
+n=2 dim= 4 | e_a e_b = +-e_(a xor b): True | imaginaere Einheiten 3 = Punkte von P^1(F_2) = 3 | s Automorphismus (max Fehler 0.0e+00) | dim Fix(s) = 2 = 2^1
+n=3 dim= 8 | e_a e_b = +-e_(a xor b): True | imaginaere Einheiten 7 = Punkte von P^2(F_2) = 7 | s Automorphismus (max Fehler 0.0e+00) | dim Fix(s) = 4 = 2^2
+n=4 dim=16 | e_a e_b = +-e_(a xor b): True | imaginaere Einheiten 15 = Punkte von P^3(F_2) = 15 | s Automorphismus (max Fehler 0.0e+00) | dim Fix(s) = 8 = 2^3
+n=5 dim=32 | e_a e_b = +-e_(a xor b): True | imaginaere Einheiten 31 = Punkte von P^4(F_2) = 31 | s Automorphismus (max Fehler 0.0e+00) | dim Fix(s) = 16 = 2^4
+
+Einheitssphaeren |x| = 1 von A_n: S^(2^n - 1); Sphaere der imaginaeren Einheiten (Wahl von u in k253): S^(2^n - 2)
+  n=-1: dim  1/2 | Einheiten S^(-1/2) | Wahl von u: S^(-3/2)   <- keine Sphaere mit halbzahliger negativer Dimension
+  n= 0: dim    1 | Einheiten S^(0) | Wahl von u: S^(-1)   <- S^(-1) = leere Menge: bei HS(0) gibt es schon keine Wahl mehr
+  n= 1: dim    2 | Einheiten S^(1) | Wahl von u: S^(0)
+  n= 2: dim    4 | Einheiten S^(3) | Wahl von u: S^(2)
+  n= 3: dim    8 | Einheiten S^(7) | Wahl von u: S^(6)
+  n= 4: dim   16 | Einheiten S^(15) | Wahl von u: S^(14)
+  Dimension 0 (Nullalgebra, Einheiten S^(-1) = leer) liegt bei n = -unendlich, nicht bei n = -1.
+
+====================================================================================================
+TEIL B (Lesart 1): Vorzeichen Z2. Gruppenalgebra R[Z2] = Spaltkomplexe Zahlen (j^2 = +1) als Gegenstueck zu C
+====================================================================================================
+e^2 = -1: True | f^2 = +1: True | ef + fe = 0: True
+Rang von {1, e, f, ef} in M2(R): 4 von 4 -> Cl(0,1) (x) Cl(1,0) = Cl(1,1) = M2(R), Morita-aequivalent zu R
+Stufenindex der Clifford-Uhr (Zahl der Einheiten mit Quadrat -1 minus Zahl mit Quadrat +1): C hat +1, R[Z2] hat -1, Summe 0.
+Cl(0,7) aus den 7 Oktonion-Einheiten (Linksmultiplikation): Quadrate -1: True | antikommutieren: True | Rang der 128 Worte: 64 von 64 = dim M8(R)
+   Volumenelement L1...L7 = -1 -> Cl(0,7) = M8(R) (+) M8(R); die zwei Summanden unterscheidet nur das Vorzeichen +-1 dieses Produkts (Links- gegen Rechtsmultiplikation)
+   Rechtsmultiplikation: R1...R7 = +1
+   Stufe 7 ist Morita-aequivalent zu R (+) R = R[Z2]: in der Bott-Uhr (Periode 8) ist Stufe -1 = Stufe 7.
+Bahnregel psi' = u w psi mit u = f (f^2 = +1): exp(f t) = cosh t + f sinh t
+   t=0.0: cosh=  1.0000 sinh=  0.0000 | Reihe - geschlossen = 0.0e+00 | Norm x^2-y^2 = 1.000000
+   t=0.5: cosh=  1.1276 sinh=  0.5211 | Reihe - geschlossen = 0.0e+00 | Norm x^2-y^2 = 1.000000
+   t=1.0: cosh=  1.5431 sinh=  1.1752 | Reihe - geschlossen = 2.2e-16 | Norm x^2-y^2 = 1.000000
+   t=1.5: cosh=  2.3524 sinh=  2.1293 | Reihe - geschlossen = 4.4e-16 | Norm x^2-y^2 = 1.000000
+   t=2.0: cosh=  3.7622 sinh=  3.6269 | Reihe - geschlossen = 4.4e-16 | Norm x^2-y^2 = 1.000000
+Idempotente e+- = (1 +- f)/2: e+^2 = e+: True | e+ e- = 0 (Nullteiler): True | e+ + e- = 1: True
+e+ = (1 + sigma_x)/2 ist der HC-Projektor aus r70 (C_HC = (1 + sigma_x)/2): True
+Konjugation f -> -f vertauscht e+ und e-: zwei Ports. Element p e+ + q e- hat Norm p*q.
+Zaehlregel (Postulat r67): gamma_L = 1.8646997646, beta_sym = 0.5494056410, x = beta_sym^2 = 0.3018466
+Frames als Port-Gewichte (r69.4): R 1:0, M 1:x, T x:1, P 1:1
+   R: (p,q) = (1.000000,0.000000) | Norm p*q = 0.000000 | Rapiditaet phi = (1/2) ln(p/q) = unendlich (Nullteiler, Lichtkegel der Spaltebene)
+   M: (p,q) = (1.000000,0.301847) | Norm p*q = 0.301847 | Rapiditaet phi = (1/2) ln(p/q) = +0.598918
+   T: (p,q) = (0.301847,1.000000) | Norm p*q = 0.301847 | Rapiditaet phi = (1/2) ln(p/q) = -0.598918
+   P: (p,q) = (1.000000,1.000000) | Norm p*q = 1.000000 | Rapiditaet phi = (1/2) ln(p/q) = +0.000000
+   Vergleich: phi_M = ln(1/beta_sym) = 0.598918; eps = artanh(beta_sym) = 0.617530; Verhaeltnis 0.96986 (nicht gleich)
+   M und T gehen durch die Konjugation f -> -f ineinander ueber (phi -> -phi); P ist reell (phi = 0); R ist ein Idempotent.
+
+Gruppoid-Zaehlung (Baez-Dolan): |X//G| = Summe ueber Bahnen 1/|Stabilisator|
+   {+1,-1}//Z2 (Vorzeichen, freie Wirkung): 1
+   {0}//Z2 (Nullpunkt, Vorzeichen wirkt unsichtbar): 1/2  <- einzige Menge mit 'Groesse' 1/2 = 2^(-1)
+   {-2..2}//Z2: 5/2  = 5/2: die halbe Gerade plus halber Nullpunkt
+
+====================================================================================================
+TEIL C: Negative Stufen in der Zaehlregel. Gewicht eines Durchstosspunkts mit Spin j = k/2: p_k = 2^(1 - gamma a_k)
+====================================================================================================
+ k   j    glatt: a=(k+1)/2, gamma=2        Casimir: a=sqrt(k(k+2)/3), gamma=gamma_L
+           p_k        log2 p_k              p_k         log2 p_k   (effektive Stufe)
+ 1  0.5   0.50000000  -1.0000             0.54916068  -0.8647
+ 2  1.0   0.25000000  -2.0000             0.24231541  -2.0450
+ 3  1.5   0.12500000  -3.0000             0.11113650  -3.1696
+ 4  2.0   0.06250000  -4.0000             0.05168296  -4.2742
+ 5  2.5   0.03125000  -5.0000             0.02419475  -5.3692
+ 6  3.0   0.01562500  -6.0000             0.01136862  -6.4588
+ 7  3.5   0.00781250  -7.0000             0.00535415  -7.5451
+ 8  4.0   0.00390625  -8.0000             0.00252541  -8.6293
+ Summe k=1..8: glatt 0.99609375, Casimir 0.99773847; Summe ueber alle k: je 1 (Definition von gamma)
+ glatt: p_k = 2^(-k) exakt = formale Dimension von HS(-k); Summe_(k>=1) dim HS(-k) = 1 = dim HS(0)
+ Casimir: p_1 = 2^(1-gamma_L) = 0.5491607; beta_sym = 0.5494056; Unterschied +0.0002450 (0.045 %), schon in k396 vermerkt, ungeklaert
+
+====================================================================================================
+TEIL D (Lesart 3): Rand des Turms als Ur-Seed. Schleife L3 aus k395: b' = 1 - 2b(1-b)
+====================================================================================================
+Mit c = 2b - 1: c' - c^2 (max ueber 2001 Punkte) = 8.9e-16 -> L3 ist die Quadrierabbildung c -> c^2
+   Start c = +0.9 (b = 0.95): 8.100e-01, 6.561e-01, 4.305e-01, 1.853e-01, 3.434e-02, 1.179e-03, 1.390e-06
+   Start c = -0.9 (b = 0.05): 8.100e-01, 6.561e-01, 4.305e-01, 1.853e-01, 3.434e-02, 1.179e-03, 1.390e-06
+   Start c = +0.3 (b = 0.65): 9.000e-02, 8.100e-03, 6.561e-05, 4.305e-09, 1.853e-17, 3.434e-34, 1.179e-67
+   Start c = -0.3 (b = 0.35): 9.000e-02, 8.100e-03, 6.561e-05, 4.305e-09, 1.853e-17, 3.434e-34, 1.179e-67
+   Nach einem Schritt sind +c und -c gleich: das Vorzeichen (1 Bit) ist weg. Fixpunkte c = 0 (b = 1/2, Steigung 0) und c = 1 (b = 1, Steigung 2).
+   Rueckwaerts (Wurzelziehen) verdoppelt jeder Schritt die Zahl der Vorgaenger:
+      0 Schritte zurueck:  1 Vorgaenger in C = 2^0 = dim HS(0); davon reell: 1
+      1 Schritte zurueck:  2 Vorgaenger in C = 2^1 = dim HS(1); davon reell: 2
+      2 Schritte zurueck:  4 Vorgaenger in C = 2^2 = dim HS(2); davon reell: 2
+      3 Schritte zurueck:  8 Vorgaenger in C = 2^3 = dim HS(3); davon reell: 2
+      4 Schritte zurueck: 16 Vorgaenger in C = 2^4 = dim HS(4); davon reell: 2
+      5 Schritte zurueck: 32 Vorgaenger in C = 2^5 = dim HS(5); davon reell: 2
+   Reell bleiben immer nur 2 Vorgaenger (+-): in R endet die Verzweigung nach einem Bit; die volle Verdopplung braucht C.
+
+====================================================================================================
+TEIL E (Lesart 2): Koerper mit einem Element. Basis 2 des Turms durch q ersetzen, Grenzfall q -> 1
+====================================================================================================
+ n   dim q^n (q=2)  dim (q=1)   imag. Einheiten [n]_q = (q^n-1)/(q-1): q=2    q=3    q=1
+ -2      1/4        1                            -3/4    -4/9    -2
+ -1      1/2        1                            -1/2    -1/3    -1
+  0        1        1                               0       0     0
+  1        2        1                               1       1     1
+  2        4        1                               3       4     2
+  3        8        1                               7      13     3
+  4       16        1                              15      40     4
+ [n]_2 = 2^n - 1 ist fuer n >= 1 die Zahl der imaginaeren Einheiten und die Punktzahl von P^(n-1)(F_2) (n = 3: Fano-Ebene, 7).
+ Bei q = 1 hat jede Stufe Dimension 1 und Stufe n genau n 'Einheiten': der Turm faellt auf HS(0) zusammen.
+ Fuer n = -1 bei q = 2: [-1]_2 = -1/2 imaginaere Einheiten, Dimension 1 + (-1/2) = 1/2.
+ |GL_n(F_q)| / (q-1)^n fuer q -> 1 (Tits: GL_n(F_1) = S_n):
+   n=1: 1.000000, 1.000000, 1.000000  -> n! = 1
+   n=2: 2.030100, 2.000300, 2.000003  -> n! = 2
+   n=3: 6.275049, 6.002701, 6.000027  -> n! = 6
+   n=4: 26.251262, 24.021609, 24.000216  -> n! = 24
+ Vorzeichen-Hyperkoerper S = R/R_+ = {0, +1, -1} (Connes-Consani): Summe zweier Klassen = Menge aller Vorzeichen von x + y
+   (+1) + (+1) = [1]
+   (+1) + (-1) = [-1, 0, 1]
+   (+1) + (+0) = [1]
+   (-1) + (-1) = [-1]
+   (-1) + (+0) = [-1]
+   (+0) + (+0) = [0]
+ S hat als multiplikatives Monoid {0, +1, -1} = F_(1^2) (quadratische Erweiterung von F_1); weiter geteilt durch +-1: Krasner K = {0,1}, Monoid F_1.
+ Kette: R -> S = R/R_+ (nur Vorzeichen, 3 Elemente) -> K = S/{+-1} (nur 'null oder nicht', 2 Elemente).

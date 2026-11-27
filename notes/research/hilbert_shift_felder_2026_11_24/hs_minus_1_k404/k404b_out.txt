@@ -1,0 +1,18 @@
+k404b Teil D: Schleife L3 in c = 2b - 1
+2 f3((1+c)/2) - 1 - c^2 = 0
+n-fache Schleife: c_n - c^(2^n) fuer n = 1..5: {0, 0, 0, 0, 0}
+Zahl der Vorgaenger nach n Schritten (Grad von c_n): {1, 2, 4, 8, 16, 32}
+k404b Teil B: Cl(1,1)
+e.e = {{-1, 0}, {0, -1}}; f.f = {{1, 0}, {0, 1}}; e.f + f.e = {{0, 0}, {0, 0}}; Rang {1,e,f,ef} = 4
+MatrixExp[t f] = {{Cosh[t], Sinh[t]}, {Sinh[t], Cosh[t]}}
+e+.e+ - e+ = {{0, 0}, {0, 0}}; e+.e- = {{0, 0}, {0, 0}}
+(p e+ + q e-) als a + b f: a = (p+q)/2, b = (p-q)/2, Norm a^2 - b^2 = p q
+k404b Teil C: Zaehlregel
+glatt: Sum 2^(1 - 2 (k+1)/2) = 1; p_k = {1/2, 1/4, 1/8, 1/16, 1/32}
+gamma_L = 1.86469976460937; beta_sym = 0.549405640974529
+log2 p_k (Casimir), k = 1..6: {-0.86469976, -2.0450420, -3.1695954, -4.2741674, -5.3691622, -6.4587991}
+phi_M = ln(1/beta_sym) = 0.5989182379; artanh beta_sym = 0.6175295849
+k404b Teil E: q-Zahlen
+[n]_2, n = -2..4: {-3/4, -1/2, 0, 1, 3, 7, 15}; Grenzwert q -> 1: {-2, -1, 0, 1, 2, 3, 4}
+Limit |GL_n(F_q)|/(q-1)^n, n = 1..5: {1, 2, 6, 24, 120}
+(Ausgabe des Wolfram-Kerns; Brueche hier einzeilig umgeschrieben. Keine Warnungen, Rueckgabewert Null.)
