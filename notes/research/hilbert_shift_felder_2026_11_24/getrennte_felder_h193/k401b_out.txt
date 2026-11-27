@@ -1,0 +1,15 @@
+=== k401b Gegenprobe (Wolfram Language), H193 ===
+Casimir a_k exakt: {1, 2 Sqrt[2/3], Sqrt[5], 2 Sqrt[2]}
+Casimir a_k num:   {1.000000, 1.632993, 2.236068, 2.828427}
+Gewicht w_k:       {0.549161, 0.242315, 0.111136, 0.051683}
+Dimension d_k:     {2, 4, 8, 16}
+Up PDG Verhaeltnisse:   {589.352, 135.428}
+Down PDG Verhaeltnisse: {19.8936, 44.738}
+2^d auf {1,2,3}: {4, 16, 256} -> Verhaeltnisse {4, 16}
+2^d ab {4,3,2}: {65536, 256, 16} -> Verhaeltnisse {1/256, 1/16}
+Dimension-Verhaeltnisse (auf): {2, 2}
+Casimir-Verhaeltnisse (auf):   {1.63299, 1.36931}
+Gewicht-Verhaeltnisse (auf):   {0.441247, 0.458644}
+
+Bestaetigt Python (k401_out.txt) exakt: die stufenfesten Verhaeltnisse (Faktor 2 bis 16)
+verfehlen die beobachteten (19,9 bis 589) um Faktoren 5 bis 300; bester Einzelsektor 153,8 sigma.
