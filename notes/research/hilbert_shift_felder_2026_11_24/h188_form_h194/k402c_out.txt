@@ -1,0 +1,7 @@
+echte l_k, beste Permutation: Up chi2=4.82, Down chi2=3.09, worst=4.82
+5000 zufaellige l-Tripel, jeweils beste der 6 Permutationen:
+  Up erreicht/unterbietet 4.82: 0.34%
+  Down erreicht/unterbietet 3.09: 0.58%
+  BEIDE (worst <= 4.82): 0.00%
+  Verteilung worst-chi2 der Zufalls-l: Median 54666.7, 5%-Quantil 3075.9, Minimum 29.1
+  (Der echte worst = 4.82 liegt am Rang 0.00% der Zufalls-l.)

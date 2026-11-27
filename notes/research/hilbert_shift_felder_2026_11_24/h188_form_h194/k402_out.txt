@@ -1,0 +1,34 @@
+l_k (Leptonvakuum, delta=2/9): [0.04035  0.580212 2.379438]
+
+=== H194a (Kontrolle, nicht blind): freier Fit (a,b) je Sektor ===
+  Up  : a=-1.1421e-03 b=6.6110e-02 b/a=-57.885  chi2=4.82  Abst [-0.09  2.13 -0.53] sigma
+  Down: a=3.3059e-03 b=-2.8138e-04 b/a=-0.085  chi2=3.09  Abst [-1.12  1.35 -0.11] sigma
+
+=== H194b (Test): ein gemeinsames rho = b/a fuer beide Sektoren, Skala je Sektor frei ===
+  bestes gemeinsames rho = 24.3600: Up chi2=9145.2 (Abst [ 80.2  -7.2 -51.6]), Down chi2=9145.4 (Abst [-74.9 -59.1   6.3])
+  schlechtester Sektor-max-Abstand bei diesem rho: Up 80.2 sigma, Down 74.9 sigma
+  (zum Vergleich) Up allein optimal bei rho=-57.885, chi2=4.82
+  (zum Vergleich) Down allein optimal bei rho=-0.085, chi2=3.09
+  Kriterium bestaetigt (beide < 3 sigma mit EINEM rho): NEIN
+
+=== H194c (Test): Spezifitaet der leptonischen l_k ===
+  alle 6 Index-Permutationen (echte l_k):
+    perm (0, 1, 2): Up chi2=58417.01  Down chi2=32726.63
+    perm (0, 2, 1): Up chi2=48548.92  Down chi2=10116.69
+    perm (1, 0, 2): Up chi2=58443.11  Down chi2=32797.76
+    perm (1, 2, 0): Up chi2=3959.49  Down chi2=5956.37
+    perm (2, 0, 1): Up chi2=58427.37  Down chi2=31736.29
+    perm (2, 1, 0): Up chi2=   4.82  Down chi2=   3.09  <- Zuordnung B
+
+  2000 zufaellige l-Tripel (gleiche Normierung, Zuordnung B):
+    beobachtet (echte l_k, B): Up chi2=4.82, Down chi2=3.09
+    Zufalls-l erreichen/unterbieten Up: 0.4%, Down: 0.4%, beide: 0.0%
+
+=== Nachtraeglich (kein Test): b/a gegen Modellwerte ===
+  b/a Up=-57.8849, Down=-0.0851; Produkt=4.9268, Verh.=680.08
+  Modellwerte: beta=0.5494, gammaL=1.8647, 1/l1=24.783, -1/l1=-24.783, l3=2.379
+  Vergleich: b/a Up vs -1/l1 (-24.78) Abstand 133.6%; b/a Down vs -l1 (-0.040) Abstand 110.9%
+
+=== Gesamturteil ===
+  Form teilweise gestuetzt: leptonische l_k sind spezifisch (H194c), aber kein gemeinsames rho.
+  (H194b bestes gemeinsames rho: worst 80.2 sigma; H194c Zufalls-l beide 0.0%)
