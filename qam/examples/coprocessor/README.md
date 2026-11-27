@@ -195,7 +195,12 @@ auf 1, danach gelten `layout_ok` und `full` für die neue Tabelle.
 [`lanes_check.py`](lanes_check.py) ([Ausgabe](lanes_check_out.txt)): je 1200 Fälle für 2 Spuren × 4 Kontexte (8 Bänder zu
 16 Zellen) und 4 Spuren × 4 Kontexte (16 Bänder zu 8) bitgenau gleich der Referenz, auch mit fehlenden Bändern und absichtlich
 ungültigen Aufteilungen; in der Simulation 1,30 bzw. 2,27 Gatter je Takt bei voll belegten Gruppen. Gegenkontrolle: Ohne
-Sperre ungültiger Bänder fällt der Vergleich durch. Takt und Fläche stehen in [`timing_out.md`](timing_out.md).
+Sperre ungültiger Bänder fällt der Vergleich durch.
+
+Takt (ECP5-85k, [`timing_out.md`](timing_out.md)): Mit der ersten, einstufigen Prüfung der Aufteilung lag der kritische Pfad
+im Bandregister (2 Spuren 43 MHz, 4 Spuren 23 MHz). Mit der zweistufigen Prüfung erreichen 2 Spuren × 4 Kontexte 62,0 MHz bei
+14 887 LUT4, also bis zu 124 Mio. Gatter/s (eine Pipeline allein: 71 Mio.). Für 4 Spuren wurde die Platzierung mit der neuen
+Prüfung nach zwei Stunden nicht fertig; dieser Wert fehlt noch.
 
 ## Kanonische √2-Form (27.11.2026)
 
@@ -209,8 +214,9 @@ Prüfung in [`check.py`](check.py) (`check_canonical`): 505 Fälle bitgenau glei
 Zustand nicht weiter durch √2 teilbar; die Amplituden sind gleich der Rechnung ohne Kürzen. Summe der Exponenten 721 statt
 795 beim Kürzen durch 2. Gegenkontrolle: Mit nur einem √2-Schritt bleiben in 48 von 3000 Fällen Zustände kürzbar.
 Wolfram-Gegenprobe der Formeln ([`wolfram/norm_wurzel.wl`](wolfram/norm_wurzel.wl), [Ausgabe](wolfram/norm_wurzel_out.txt)).
-Kosten: Der längere Pfad senkt den Takt (ECP5: Pipeline 71 → 41 MHz, ein Takt je Gatter 43 → 30 MHz). Mit dem Makro
-`QCOP_NO_CANON` wird die Form weggelassen; eine eigene Pipelinestufe dafür ist der nächste Schritt.
+Kosten: Der längere Pfad senkt den Takt. In der Pipeline laufen die zwei √2-Schritte deshalb in S2 (`qroot2`) und der Guard
+in S3 (`qguard2`, zusammen mit dem Zurückschreiben): 59,5 MHz statt 41 MHz bei allem in S2 (ohne kanonische Form 71 MHz). Im
+Ein-Takt-Kern kostet sie 43 → 26 MHz. Mit dem Makro `QCOP_NO_CANON` wird die Form weggelassen.
 
 ## Selbstüberwachung: Normwächter (27.11.2026)
 
