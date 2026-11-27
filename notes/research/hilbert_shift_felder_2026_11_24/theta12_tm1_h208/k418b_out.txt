@@ -1,0 +1,12 @@
+Ausgabe von k418b_kontrolle.wl (Wolfram Language, exakt). 2026-11-27.
+
+(i) N.v0 - lambda v0 (soll {0,0,0} fuer alle b,c) = {0, 0, 0}
+    Eigenwert zu v0: lambda = 1 + c  (unabhaengig von b)
+
+(ii) |U_e1|^2 = (1-s12)(1-s13) = 2/3  =>  sin^2 th12 = (1 - 3 s13)/(3 - 3 s13)
+     Differenz zu (1-3 s13)/(3(1-s13)) = 0
+     Wert bei s13 = 0.02248: sin^2 th12 = 0.318002
+
+Hinweis: Die "Symbol undefined"-Warnung von Wolfram ist kosmetisch (globale Namen im Modul);
+die Ergebnisse sind exakt. Bestaetigt: v0 ist fuer JEDES b,c Eigenvektor von N_hat (feste TM1-Spalte,
+Eigenwert 1+c, b-unabhaengig), und |U_e1|^2 = 2/3 gibt exakt sin^2 th12 = (1-3 s13)/(3(1-s13)) ~ 0.318.
