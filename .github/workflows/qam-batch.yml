@@ -40,3 +40,21 @@ jobs:
           python -m qam.examples.zuse_machine.hdl.guard_stream_check --rows 4096
           python -m pip install mcp==2.3.0
           python mcp/check_hdl_stdio.py
+
+  coprocessor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install iverilog, Yosys and Qiskit
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys
+          python -m pip install "qiskit>=2,<3"
+      - name: All HDL blocks synthesize with Yosys
+        run: python -m qam.examples.coprocessor.synth_check
+      - name: Coprocessor core against exact reference and Qiskit
+        run: python -m qam.examples.coprocessor.check --cases 500 --seed 1
