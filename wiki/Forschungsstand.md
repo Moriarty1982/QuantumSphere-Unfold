@@ -1,5 +1,14 @@
 # Forschungsstand
 
+### Riemann-Vermutung als ruhende Notiz, nicht mehr in der Guard-Liste (27.11.2026, Runde r72, redaktionell)
+Anlass: KI-Zusammenfassungen betonten ständig, dass der Companion die Riemann-Vermutung nicht beweist; das war nie sein Ziel.
+- **r72.1:** Der Companion macht keine Aussage zur Riemann-Vermutung. Die Riemann-Arbeit ist seit v4.8.0-r04 keine Beweisquelle; das steht
+  jetzt einmal als ruhende Notiz und wird nicht mehr in jeder Runde wiederholt.
+- **r72.2/r72.3:** Der vierte Guard $W_\gamma^{\rm glob}$ heißt „kein globaler Photon-Uhr-Satz“; Inhalt und Wert bleiben, $\Gamma_{\rm guard}=(1,1,1,1,1)$.
+- **r72.4:** Auf Entscheidung des Autors steht in der Schlussformel auch der früheren Runden nur noch „photon-clock theorem“ (193 Stellen).
+  Ausdrückliche, eng begrenzte Ausnahme von append-only; keine Aussage, Zahl oder Guard-Wert ändert sich. Riemann/RH-Erwähnungen im
+  gebauten Companion: von rund 390 auf rund 220. Veröffentlichte Fassungen bleiben unverändert.
+
 ### Zwei Lesarten des M-Zustands: Die Higgs-Zahl hängt nicht am Zustand der übrigen Ablesungen (26.11.2026, Test H181, k383)
 Vorab-Notiz 84d53c8; Teil 1 nicht blind, Maskenscan blind. Anlass: Weggabelung nach r70 (κ-Treffer Zufall oder doch b/a = β_sym²).
 - **Urteil: H181 widerlegt.** Mit einem gemeinsamen Wörterbuch (cot θ_W = cosh 2η, Ω_M = tanh² η, Maske ε = η, κ = cosh 2η) trägt der Zustand

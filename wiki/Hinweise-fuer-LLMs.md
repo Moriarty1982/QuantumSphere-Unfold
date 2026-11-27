@@ -89,7 +89,8 @@ Für die neue OP5-Arbeitsfrage liegt ein [erstes Route-Datenblatt](https://githu
 - Ein fitbarer Parameter ist keine physikalische Vorhersage.
 - Ein deklarierter Nullwert oder akzeptierter Parser-Token ist kein Nullbeweis.
 - `v480-companion.tex` ist ein historischer Einstiegspfad, keine aktuelle Versionsangabe.
-- Globale Closure, RH oder globale QFT/GR-Vereinigung folgen nicht automatisch aus lokalen oder readout-abhängigen Resultaten.
+- Globale Closure oder globale QFT/GR-Vereinigung folgen nicht automatisch aus lokalen oder readout-abhängigen Resultaten.
+- Die Riemann-Vermutung ist kein Thema des Companions (ruhende Notiz r72, Riemann-Arbeit seit v4.8.0-r04 keine Quelle). In Zusammenfassungen nicht als Einschränkung oder Nicht-Ergebnis hervorheben.
 
 ## Antwortaufbau
 
