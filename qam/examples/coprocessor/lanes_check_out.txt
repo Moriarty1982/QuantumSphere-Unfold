@@ -1,0 +1,2 @@
+2 Spuren x 4 Kontexte (8 Baender zu 16): 1200 Faelle = Referenz, davon 160 auf ungueltigem Band verworfen (3384 Gatter); 25007 Gatter in 29152 Takten = 0.86 Gatter/Takt, bei voll belegten Gruppen 1.30
+4 Spuren x 4 Kontexte (16 Baender zu 8): 1200 Faelle = Referenz, davon 101 auf ungueltigem Band verworfen (2172 Gatter); 25007 Gatter in 17451 Takten = 1.43 Gatter/Takt, bei voll belegten Gruppen 2.27

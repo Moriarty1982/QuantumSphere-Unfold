@@ -66,3 +66,5 @@ jobs:
         run: python -m qam.examples.coprocessor.pipe_check --cases 600 --seed 5
       - name: Partitionable band register
         run: python -m qam.examples.coprocessor.band_check --steps 6000 --seed 11
+      - name: Parallel compute units per band
+        run: python -m qam.examples.coprocessor.lanes_check --cases 1200 --seed 9

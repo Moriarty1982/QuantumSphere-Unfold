@@ -25,6 +25,10 @@ VARIANTS = [
      COMMON + [H / "qstep2p.sv", H / "qcop2p_top.sv", H / "qcop2p_bench.sv"], {"CTX": 4}, 1),
     ("Pipeline, 8 Kontexte (qstep2p)", "qcop2p_bench",
      COMMON + [H / "qstep2p.sv", H / "qcop2p_top.sv", H / "qcop2p_bench.sv"], {"CTX": 8}, 1),
+    ("2 Spuren x 4 Kontexte mit Bandregister (qcop2m_top)", "qcop2m_bench",
+     COMMON + [H / "qstep2p.sv", H / "qband.sv", H / "qcop2m_top.sv", H / "qcop2m_bench.sv"], {"LANES": 2, "CTX": 4}, 2),
+    ("4 Spuren x 4 Kontexte mit Bandregister (qcop2m_top)", "qcop2m_bench",
+     COMMON + [H / "qstep2p.sv", H / "qband.sv", H / "qcop2m_top.sv", H / "qcop2m_bench.sv"], {"LANES": 4, "CTX": 4}, 4),
 ]
 
 
@@ -57,11 +61,14 @@ def measure(yosys, nextpnr, top, sources, params, tag):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--report", default=None)
+    ap.add_argument("--only", default=None, help="nur Varianten, deren Name diesen Text enthaelt")
     args = ap.parse_args()
     yosys = tool(["yosys", "yowasp-yosys"])
     nextpnr = tool(["nextpnr-ecp5", "yowasp-nextpnr-ecp5"])
     rows = []
     for n, (name, top, sources, params, rate) in enumerate(VARIANTS):
+        if args.only and args.only not in name:
+            continue
         lut, ff, fmax = measure(yosys, nextpnr, top, sources, params, f"v{n}")
         rows.append((name, lut, ff, fmax, fmax * rate))
         print(f"{name}: {lut} LUT4, {ff} FF, Fmax {fmax:.1f} MHz, {fmax * rate:.1f} Mio. Gatter/s bei voller Belegung")
