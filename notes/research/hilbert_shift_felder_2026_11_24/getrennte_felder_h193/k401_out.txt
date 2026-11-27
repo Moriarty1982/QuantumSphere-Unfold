@@ -1,0 +1,36 @@
+=== Beobachtete Generationsverhaeltnisse (einheitsfrei) ===
+  up PDG   : r1 (g2/g1) =    589.35   r2 (g3/g2) =   135.43
+  down PDG : r1 (g2/g1) =     19.89   r2 (g3/g2) =    44.74
+  up MZ    : r1 (g2/g1) =    505.68   r2 (g3/g2) =   271.63
+  down MZ  : r1 (g2/g1) =     19.87   r2 (g3/g2) =    53.27
+
+=== Stufeneigene Groessen je Stufe (C,H,O,S = k 1..4) ===
+  k   dim    casimir a_k   gewicht w_k
+  1      2     1.000000     0.549161
+  2      4     1.632993     0.242315
+  3      8     2.236068     0.111136
+  4     16     2.828427     0.051683
+
+=== H193b: stufenfeste Regeln, Verhaeltnis-Abstand (Faktor) je Sektor ===
+  up   PDG: beste Regel '1/2^d' (ab, Stufen (4, 3, 2)): Modell-Verhaeltnisse [256, 16] vs beob. [589, 135] -> max Faktor 8.46x
+  down PDG: beste Regel '2^d' (auf, Stufen (1, 2, 3)): Modell-Verhaeltnisse [4, 16] vs beob. [19.9, 44.7] -> max Faktor 4.97x
+
+=== H193b: eine Regel fuer beide Sektoren, sigma-Abstand (1 Einheit je Sektor) ===
+  beste gemeinsame Regel '1/2^d' (ab, Stufen (4, 3, 2)): up 217.5 sigma, down 190.6 sigma -> schlechtester 217.5 sigma
+  Kriterium bestaetigt (beide < 3 sigma): NEIN
+
+=== H193c: freie Skala je Stufe je Sektor (Lesart ii) ===
+  up  : 3 Massen, 3 freie Skalen -> exakter Fit, Residuum 0, keine Aussage. (Parameter = Daten)
+  down: 3 Massen, 3 freie Skalen -> exakter Fit, Residuum 0, keine Aussage. (Parameter = Daten)
+
+=== Kontrolle: 2000 erfundene Massensaetze ===
+  ein Sektor < 3 sigma (frei gefittete Einheit): 0.7 %
+  beide Sektoren < 3 sigma (gemeinsame Regel):    0.0 %
+
+=== Echte Daten: ein Sektor < 3 sigma? ===
+  up   PDG: bester sigma-Abstand einer stufenfesten Regel = 217.5 sigma
+  down PDG: bester sigma-Abstand einer stufenfesten Regel = 153.8 sigma
+
+=== Urteil ===
+  widerlegt: keine stufenfeste Regel bringt auch nur einen Sektor < 3 sigma.
+  (bester gemeinsamer sigma = 217.5; bester Einzelsektor-sigma = 153.8)
