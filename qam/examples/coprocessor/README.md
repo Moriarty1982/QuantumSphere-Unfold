@@ -182,3 +182,46 @@ absichtlich falschen Aufteilungen (falsch ausgerichtet, überlappend, zu lang) b
 Gegenkontrollen: Ohne Ausrichtungsprüfung oder ohne Speichern der überschriebenen Phase fällt der Vergleich durch.
 Grenzen: Die Bänder sind noch nicht an Rechenwerke angeschlossen (kommt mit den parallelen Rechenwerken), die Zellen sind
 1 Bit breit (Parameter `CW` vorbereitet, Busweg nur für 1 Bit geprüft).
+
+## Parallele Rechenwerke je Band (27.11.2026)
+
+[`hdl/qcop2m_top.sv`](hdl/qcop2m_top.sv) schließt das Bandregister an Rechenwerke an: `LANES` Pipelines (`qstep2p`) mit je
+`CTX` Kontexten, zusammen `LANES·CTX` Läufe. Band p gehört zu Spur p/CTX, Kontext p mod CTX; jede Spur nimmt je Takt ein
+Gatter an, zusammen bis zu `LANES` Gatter je Takt. Gatter für ein Band, das im Bandregister nicht gültig ist (oder solange die
+Aufteilung ungültig ist), werden verworfen und gezählt (`blocked`). Die Prüfung der Aufteilung im Bandregister läuft jetzt in
+zwei registrierten Stufen (Paarüberlappungen parallel, Summe der Längen als Baum); nach `SET_PART` steht `busy` zwei Takte
+auf 1, danach gelten `layout_ok` und `full` für die neue Tabelle.
+
+[`lanes_check.py`](lanes_check.py) ([Ausgabe](lanes_check_out.txt)): je 1200 Fälle für 2 Spuren × 4 Kontexte (8 Bänder zu
+16 Zellen) und 4 Spuren × 4 Kontexte (16 Bänder zu 8) bitgenau gleich der Referenz, auch mit fehlenden Bändern und absichtlich
+ungültigen Aufteilungen; in der Simulation 1,30 bzw. 2,27 Gatter je Takt bei voll belegten Gruppen. Gegenkontrolle: Ohne
+Sperre ungültiger Bänder fällt der Vergleich durch. Takt und Fläche stehen in [`timing_out.md`](timing_out.md).
+
+## Kanonische √2-Form (27.11.2026)
+
+Mit `flags` Bit 1 kürzt der Kern nach jedem Gatter durch √2 statt durch 2. Regel ([`hdl/qnorm2.sv`](hdl/qnorm2.sv)):
+x = a₀ + a₁ω + a₂ω² + a₃ω³ ist genau dann durch √2 = ω − ω³ teilbar, wenn a₀ ≡ a₂ und a₁ ≡ a₃ (mod 2); dann ist
+x/√2 = ((a₁−a₃) + (a₀+a₂)ω + (a₁+a₃)ω² + (a₂−a₀)ω³)/2. Der Schritt läuft zweimal hintereinander. Das genügt: Nur H ändert den
+kleinsten Exponenten, und weil H sich selbst invers ist, um höchstens eins nach unten, also nach kn = k + 1 höchstens zwei
+Schritte. Danach ist k der kleinste mögliche Exponent (kanonische Form, Voraussetzung für einen Hash-Speicher mit Dedup).
+
+Prüfung in [`check.py`](check.py) (`check_canonical`): 505 Fälle bitgenau gleich der Referenz; am Ende jedes Falls ist der
+Zustand nicht weiter durch √2 teilbar; die Amplituden sind gleich der Rechnung ohne Kürzen. Summe der Exponenten 721 statt
+795 beim Kürzen durch 2. Gegenkontrolle: Mit nur einem √2-Schritt bleiben in 48 von 3000 Fällen Zustände kürzbar.
+Wolfram-Gegenprobe der Formeln ([`wolfram/norm_wurzel.wl`](wolfram/norm_wurzel.wl), [Ausgabe](wolfram/norm_wurzel_out.txt)).
+Kosten: Der längere Pfad senkt den Takt (ECP5: Pipeline 71 → 41 MHz, ein Takt je Gatter 43 → 30 MHz). Mit dem Makro
+`QCOP_NO_CANON` wird die Form weggelassen; eine eigene Pipelinestufe dafür ist der nächste Schritt.
+
+## Selbstüberwachung: Normwächter (27.11.2026)
+
+[`hdl/qmon.sv`](hdl/qmon.sv) prüft den exakten Zustand: |x|² = P + √2·Q mit P = Σaⱼ², Q = a₀a₁ + a₁a₂ + a₂a₃ − a₃a₀; der Zustand
+ist genau dann normiert, wenn ΣP = 2ᵏ und ΣQ = 0. [`hdl/qcop2s_top.sv`](hdl/qcop2s_top.sv) schaltet den Wächter mit `flags`
+Bit 2 zu: Bei einer Verletzung nimmt der Kern schon das Gatter im selben Takt nicht mehr an, `fault` bleibt bis zum nächsten
+`load`, `faults` zählt. Ein einzelnes gekipptes Bit unterhalb des Vorzeichenbits ändert P immer (Begründung im Kopf von
+`qmon.sv`); beim Vorzeichenbit gilt das nicht.
+
+[`monitor_check.py`](monitor_check.py) ([Ausgabe](monitor_check_out.txt)): 800 Fälle mit zufälliger Konfiguration; ohne
+Einspeisung kein Fehlalarm, mit gekipptem Bit am Eingang des Wächters sofort angehalten (Ergebnis = Referenz der Gatter
+davor), bei ausgeschaltetem Wächter weitergerechnet. Gegenkontrollen: Anhalten erst einen Takt später oder ein Wächter, der
+immer „ok“ meldet, fallen durch. Grenzen: Die Fehler werden am Eingang des Wächters nachgebildet, nicht im Kern; der Wächter
+ist kombinatorisch und groß (32 Multiplikationen; generische Synthese 93 000 Zellen), eine sequenzielle Fassung wäre kleiner.

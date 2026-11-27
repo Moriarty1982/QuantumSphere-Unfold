@@ -27,7 +27,7 @@ module qstep2p #(
     input wire [5:0] w_eff,
     input wire [7:0] k_max,
     input wire [15:0] budget,
-    input wire reduce_en,
+    input wire [1:0] reduce_en,
     output wire [CTX-1:0] ready,
     // Lesen eines Kontexts
     input wire [CB-1:0] rd_ctx,

@@ -164,7 +164,7 @@ def check(cases, seed, width=16, aw=10):
         if rng.random() < 0.5:
             cfg.update(allow=rng.choice([0x1FF, rng.getrandbits(16)]), w_eff=rng.randint(2, 18),
                        k_max=rng.choice([255, rng.randint(0, 10)]), budget=rng.choice([0, rng.randint(0, 30)]),
-                       flags=rng.choice([0, 1]))
+                       flags=rng.choice([0, 1, 2, 3]))
         runs.append((gates, cfg))
     # In Abbilder zu hoechstens 2^aw Worten aufteilen.
     images, chunk = [], []

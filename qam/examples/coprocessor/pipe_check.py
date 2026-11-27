@@ -65,7 +65,7 @@ def main():
                 if rng.random() < 0.4:
                     cfg.update(allow=rng.choice([0x1FF, rng.getrandbits(16)]), w_eff=rng.randint(2, 18),
                                k_max=rng.choice([255, rng.randint(0, 10)]),
-                               budget=rng.choice([0, rng.randint(0, 30)]), flags=rng.choice([0, 1]))
+                               budget=rng.choice([0, rng.randint(0, 30)]), flags=rng.choice([0, 1, 2, 3]))
                 group = cases[start:start + ctx]
                 groups.append((cfg, group))
                 flat += [(g, cfg) for g in group]

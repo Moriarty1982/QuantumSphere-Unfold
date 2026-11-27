@@ -37,12 +37,28 @@ def default_cfg(width):
     return {"allow": 0x1FF, "w_eff": width, "k_max": 255, "budget": 0, "flags": 1}
 
 
+def root_divisible(t):
+    """Alle Amplituden durch sqrt(2) teilbar: a0 = a2 und a1 = a3 (mod 2)."""
+    return all((a[0] - a[2]) % 2 == 0 and (a[1] - a[3]) % 2 == 0 for a in t)
+
+
+def root_reduce(t, kn, steps=None):
+    """Teilt den Zustand durch sqrt(2), solange moeglich (hoechstens steps-mal): x/sqrt(2) = x*sqrt(2)/2."""
+    n = 0
+    while kn >= 1 and root_divisible(t) and (steps is None or n < steps):
+        t = [[(a[1] - a[3]) // 2, (a[0] + a[2]) // 2, (a[1] + a[3]) // 2, (a[2] - a[0]) // 2] for a in t]
+        kn -= 1
+        n += 1
+    return t, kn
+
+
 def reference(gates, width, cfg=None):
     """Exakte Referenz mit denselben Regeln wie qstep2.sv (cfg = aktive Konfiguration)."""
     cfg = cfg or default_cfg(width)
     w_eff = min(max(cfg["w_eff"], 2), width)
     allow, k_max, budget = cfg["allow"] & 0xFFFF, cfg["k_max"] & 0xFF, cfg["budget"] & 0xFFFF
     reduce_en = cfg["flags"] & 1
+    canon = cfg["flags"] >> 1 & 1
     c = [[0] * 4 for _ in range(4)]
     c[0][0] = 1
     k, status, done = 0, 0, 0
@@ -81,7 +97,9 @@ def reference(gates, width, cfg=None):
                                   [x - y for x, y in zip(t[i], t[p])])
             kn += 1
         flat = [x for row in t for x in row]
-        if reduce_en and all(x % 2 == 0 for x in flat) and kn >= 2:
+        if canon:
+            t, kn = root_reduce(t, kn, 2)
+        elif reduce_en and all(x % 2 == 0 for x in flat) and kn >= 2:
             t = [[x // 2 for x in row] for row in t]
             kn -= 2
         flat = [x for row in t for x in row]
@@ -185,6 +203,7 @@ def main():
                   f"Status {counts}; Gatter-Takte {cycles}; "
                   f"max |HDL - Qiskit| bei continue = {max_dev:.2e}")
         check_config(rng, cases, tmp, args.iverilog, args.vvp)
+        check_canonical(cases, tmp, args.iverilog, args.vvp)
 
 
 def check_config(rng, cases, tmp, iverilog, vvp, width=16):
@@ -196,7 +215,7 @@ def check_config(rng, cases, tmp, iverilog, vvp, width=16):
             "w_eff": rng.choice([width, rng.randint(0, 20)]),
             "k_max": rng.choice([255, rng.randint(0, 12)]),
             "budget": rng.choice([0, rng.randint(0, 40)]),
-            "flags": rng.choice([1, 1, 0]),
+            "flags": rng.choice([1, 1, 0, 2, 3]),
         })
     # Register lesen: ID und Vorgaben, dann schreiben und zuruecklesen; ID ist schreibgeschuetzt.
     writes = {0: 7, 16: 0x12345678, 18: 0xFFFFFFFF, 31: 42}
@@ -216,6 +235,34 @@ def check_config(rng, cases, tmp, iverilog, vvp, width=16):
         counts[STATUS[ref[0]]] += 1
     print(f"Konfiguration W={width}: 32 Register gelesen, 4 geschrieben (ID schreibgeschuetzt) wie erwartet; "
           f"{len(cases)} Faelle mit zufaelligen Laufzeitwerten = exakte Referenz; Status {counts}")
+
+
+def check_canonical(cases, tmp, iverilog, vvp, width=16):
+    """Kanonische Form (flags Bit 1): HDL = Referenz; k minimal; gleiche Amplituden wie ohne Kuerzen."""
+    canon = dict(default_cfg(width), flags=2)
+    rows = run_hdl(cases, width, tmp, iverilog, vvp, cfgs=[canon] * len(cases), tag="_canon")
+    k_canon = k_half = guard_canon = guard_half = 0
+    for n, (gates, row) in enumerate(zip(cases, rows)):
+        ref = reference(gates, width, canon)
+        if row[:4] != ref:
+            raise SystemExit(f"Kanonisch Fall {n}: HDL {row[:4]} != Referenz {ref}; Gatter {gates}")
+        status, k, done, flat = ref
+        t = [flat[4 * i:4 * i + 4] for i in range(4)]
+        if k >= 1 and root_divisible(t):
+            raise SystemExit(f"Kanonisch Fall {n}: Zustand nach zwei Schritten noch durch sqrt(2) teilbar")
+        # Gleiche Amplituden wie die unbegrenzte Rechnung ohne Kuerzen (gleiche Zahl ausgefuehrter Gatter)
+        free = reference(gates[:done], 64, dict(default_cfg(64), flags=0))
+        if decode(k, flat) != decode(free[1], free[3]) and max(abs(a - b) for a, b in zip(
+                decode(k, flat), decode(free[1], free[3]))) > 1e-9:
+            raise SystemExit(f"Kanonisch Fall {n}: Amplituden weichen ab")
+        half = reference(gates, width, default_cfg(width))
+        k_canon += k
+        k_half += half[1]
+        guard_canon += status == 1
+        guard_half += half[0] == 1
+    print(f"Kanonische sqrt(2)-Form W={width}: {len(cases)} Faelle = exakte Referenz, k am Ende jedes Falls minimal, "
+          f"Amplituden gleich der Rechnung ohne Kuerzen; Summe k {k_canon} (Kuerzen durch 2: {k_half}), "
+          f"guard {guard_canon} (Kuerzen durch 2: {guard_half})")
 
 
 if __name__ == "__main__":

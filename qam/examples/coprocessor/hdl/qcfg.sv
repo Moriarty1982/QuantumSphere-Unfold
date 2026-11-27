@@ -43,7 +43,8 @@ module qcfg #(
     output reg [5:0] w_eff,
     output reg [7:0] k_max,
     output reg [15:0] budget,
-    output reg reduce_en,
+    output reg [1:0] reduce_en,     // Bit 0: durch 2 kuerzen, Bit 1: kanonisch durch sqrt(2)
+    output reg mon_en,              // flags Bit 2: Normwaechter (qmon) an
     // aktive Bank 0x10..0x1F, Register n liegt bei phys[32*n +: 32]
     output reg [16*32-1:0] phys
 );
@@ -91,14 +92,16 @@ module qcfg #(
             w_eff <= clamp_w(default_value(2));
             k_max <= default_value(3);
             budget <= default_value(4);
-            reduce_en <= 1'b1;
+            reduce_en <= 2'b01;
+            mon_en <= 1'b0;
             for (n = 0; n < 16; n = n + 1) phys[32*n +: 32] <= default_value(16 + n);
         end else if (commit) begin
             allow <= live[1][15:0];
             w_eff <= clamp_w(live[2]);
             k_max <= live[3][7:0];
             budget <= live[4][15:0];
-            reduce_en <= live[5][0];
+            reduce_en <= live[5][1:0];
+            mon_en <= live[5][2];
             for (n = 0; n < 16; n = n + 1) phys[32*n +: 32] <= live[16 + n];
         end
     end

@@ -25,6 +25,15 @@ VARIANTS = [
      COMMON + [H / "qstep2p.sv", H / "qcop2p_top.sv", H / "qcop2p_bench.sv"], {"CTX": 4}, 1),
     ("Pipeline, 8 Kontexte (qstep2p)", "qcop2p_bench",
      COMMON + [H / "qstep2p.sv", H / "qcop2p_top.sv", H / "qcop2p_bench.sv"], {"CTX": 8}, 1),
+    # Mit kanonischer sqrt(2)-Form (ohne QCOP_NO_CANON); alle anderen Varianten ohne sie.
+    ("ein Takt je Gatter, mit kanonischer Form", "qcop2_bench",
+     COMMON + [H / "qstep2.sv", H / "qcop2_top.sv", H / "qcop2_bench.sv"], {"defines": []}, 1),
+    ("Pipeline, 4 Kontexte, mit kanonischer Form", "qcop2p_bench",
+     COMMON + [H / "qstep2p.sv", H / "qcop2p_top.sv", H / "qcop2p_bench.sv"], {"CTX": 4, "defines": []}, 1),
+    ("2 Spuren x 4 Kontexte mit Bandregister (qcop2m_top)", "qcop2m_bench",
+     COMMON + [H / "qstep2p.sv", H / "qband.sv", H / "qcop2m_top.sv", H / "qcop2m_bench.sv"], {"LANES": 2, "CTX": 4}, 2),
+    ("4 Spuren x 4 Kontexte mit Bandregister (qcop2m_top)", "qcop2m_bench",
+     COMMON + [H / "qstep2p.sv", H / "qband.sv", H / "qcop2m_top.sv", H / "qcop2m_bench.sv"], {"LANES": 4, "CTX": 4}, 4),
 ]
 
 
@@ -39,8 +48,10 @@ def measure(yosys, nextpnr, top, sources, params, tag):
     out = Path("build/timing")
     (REPO / out).mkdir(parents=True, exist_ok=True)
     json = out / f"{tag}.json"
+    params = dict(params)
+    defines = "".join(f"-D{d} " for d in params.pop("defines", ["QCOP_NO_CANON"]))
     chparam = "".join(f"chparam -set {k} {v} {top}; " for k, v in params.items())
-    syn = subprocess.run([yosys, "-p", f"read_verilog -sv {' '.join(map(str, sources))}; {chparam}"
+    syn = subprocess.run([yosys, "-p", f"read_verilog -sv {defines}{' '.join(map(str, sources))}; {chparam}"
                           f"synth_ecp5 -top {top} -json {json}; tee -q -o {out}/{tag}_stat.txt stat"],
                          cwd=REPO, capture_output=True, text=True)
     if syn.returncode:
@@ -50,6 +61,7 @@ def measure(yosys, nextpnr, top, sources, params, tag):
     ff = re.findall(r"^\s+(\d+)\s+TRELLIS_FF\s*$", stat, re.M)
     pnr = subprocess.run([nextpnr, "--85k", "--package", "CABGA381", "--json", str(json), "--freq", "50",
                           "--timing-allow-fail", "--seed", "1"], cwd=REPO, capture_output=True, text=True)
+    (REPO / out / f"{tag}_pnr.log").write_text(pnr.stdout + pnr.stderr)
     fmax = re.findall(r"Max frequency for clock[^:]*: ([0-9.]+) MHz", pnr.stdout + pnr.stderr)
     return int(lut[-1]), int(ff[-1]), float(fmax[-1])
 
@@ -57,11 +69,14 @@ def measure(yosys, nextpnr, top, sources, params, tag):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--report", default=None)
+    ap.add_argument("--only", default=None, help="nur Varianten, deren Name diesen Text enthaelt")
     args = ap.parse_args()
     yosys = tool(["yosys", "yowasp-yosys"])
     nextpnr = tool(["nextpnr-ecp5", "yowasp-nextpnr-ecp5"])
     rows = []
     for n, (name, top, sources, params, rate) in enumerate(VARIANTS):
+        if args.only and args.only not in name:
+            continue
         lut, ff, fmax = measure(yosys, nextpnr, top, sources, params, f"v{n}")
         rows.append((name, lut, ff, fmax, fmax * rate))
         print(f"{name}: {lut} LUT4, {ff} FF, Fmax {fmax:.1f} MHz, {fmax * rate:.1f} Mio. Gatter/s bei voller Belegung")

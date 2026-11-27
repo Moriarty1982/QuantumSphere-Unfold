@@ -1,0 +1,4 @@
+Ausgabe von norm_wurzel.wl (Wolfram Language, 27.11.2026), Print-Zeilen, Rueckgabewert Null, keine Warnungen:
+Norm minus P+sqrt2 Q: 0
+x sqrt2 minus y: 0
+Teilbarkeitsregel fuer alle Restklassen mod 4: True

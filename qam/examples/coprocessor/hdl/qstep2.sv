@@ -37,7 +37,7 @@ module qstep2 #(
     input wire [5:0] w_eff,
     input wire [7:0] k_max,
     input wire [15:0] budget,
-    input wire reduce_en,
+    input wire [1:0] reduce_en,
     output reg [16*W-1:0] coeffs,
     output reg [7:0] k,
     output reg [1:0] status,
