@@ -25,6 +25,11 @@ VARIANTS = [
      COMMON + [H / "qstep2p.sv", H / "qcop2p_top.sv", H / "qcop2p_bench.sv"], {"CTX": 4}, 1),
     ("Pipeline, 8 Kontexte (qstep2p)", "qcop2p_bench",
      COMMON + [H / "qstep2p.sv", H / "qcop2p_top.sv", H / "qcop2p_bench.sv"], {"CTX": 8}, 1),
+    # Mit kanonischer sqrt(2)-Form (ohne QCOP_NO_CANON); alle anderen Varianten ohne sie.
+    ("ein Takt je Gatter, mit kanonischer Form", "qcop2_bench",
+     COMMON + [H / "qstep2.sv", H / "qcop2_top.sv", H / "qcop2_bench.sv"], {"defines": []}, 1),
+    ("Pipeline, 4 Kontexte, mit kanonischer Form", "qcop2p_bench",
+     COMMON + [H / "qstep2p.sv", H / "qcop2p_top.sv", H / "qcop2p_bench.sv"], {"CTX": 4, "defines": []}, 1),
     ("2 Spuren x 4 Kontexte mit Bandregister (qcop2m_top)", "qcop2m_bench",
      COMMON + [H / "qstep2p.sv", H / "qband.sv", H / "qcop2m_top.sv", H / "qcop2m_bench.sv"], {"LANES": 2, "CTX": 4}, 2),
     ("4 Spuren x 4 Kontexte mit Bandregister (qcop2m_top)", "qcop2m_bench",
@@ -43,8 +48,10 @@ def measure(yosys, nextpnr, top, sources, params, tag):
     out = Path("build/timing")
     (REPO / out).mkdir(parents=True, exist_ok=True)
     json = out / f"{tag}.json"
+    params = dict(params)
+    defines = "".join(f"-D{d} " for d in params.pop("defines", ["QCOP_NO_CANON"]))
     chparam = "".join(f"chparam -set {k} {v} {top}; " for k, v in params.items())
-    syn = subprocess.run([yosys, "-p", f"read_verilog -sv {' '.join(map(str, sources))}; {chparam}"
+    syn = subprocess.run([yosys, "-p", f"read_verilog -sv {defines}{' '.join(map(str, sources))}; {chparam}"
                           f"synth_ecp5 -top {top} -json {json}; tee -q -o {out}/{tag}_stat.txt stat"],
                          cwd=REPO, capture_output=True, text=True)
     if syn.returncode:

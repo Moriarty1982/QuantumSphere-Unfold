@@ -11,7 +11,15 @@
 // eins. Der Schritt laeuft zweimal hintereinander: Nach einem Gatter aus kanonischem Zustand genuegt das, denn
 // nur H aendert den kleinsten Exponenten, und weil H sich selbst invers ist, um hoechstens eins nach unten
 // (kn = k + 1, also hoechstens zwei Schritte). Ergebnis: k ist danach der kleinste moegliche Exponent.
+// Die kanonische Form verlaengert den kombinatorischen Pfad deutlich (ECP5: Pipeline 70,5 -> 41 MHz). Mit dem Makro
+// QCOP_NO_CANON (iverilog -D, Yosys read_verilog -D) wird sie weggelassen; reduce_en[1] wirkt dann nicht.
+`ifdef QCOP_NO_CANON
+`define QCOP_CANON 0
+`else
+`define QCOP_CANON 1
+`endif
 module qnorm2 #(
+    parameter integer CANON = `QCOP_CANON,
     parameter integer W = 16,
     parameter integer TW = W + 2
 ) (
@@ -77,7 +85,7 @@ module qnorm2 #(
         kr = kn_in - {7'd0, div1} - {7'd0, div2};
         ovf_root = kr > {1'b0, k_max};
         for (m = 0; m < 16; m = m + 1) if (r2[m] > maxv || r2[m] < minv) ovf_root = 1'b1;
-        if (reduce_en[1]) begin
+        if (CANON != 0 && reduce_en[1]) begin
             ovf = ovf_root;
             k = kr[7:0];
             for (m = 0; m < 16; m = m + 1) coeffs[m*W +: W] = r2[m][W-1:0];
