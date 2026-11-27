@@ -1044,3 +1044,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **26.11.2026, Test H184 (k387):** Farbschwingungen um das Leptonvakuum in H₃(𝕆); Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein Befund, der in Physik-Artikel oder Preprint steht).
 
 **26.11.2026, Test H185 (k388):** Up und Down im komplexen Feld; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein Befund, der in Physik-Artikel oder Preprint steht).
+
+**27.11.2026, Test H186 (k389):** Ladungsterm für drei Generationen; Forschungsstand, Offene-Probleme und Vorhersagen-und-Tests ergänzt. Artikel unverändert (kein Befund, der in Physik-Artikel oder Preprint steht).
