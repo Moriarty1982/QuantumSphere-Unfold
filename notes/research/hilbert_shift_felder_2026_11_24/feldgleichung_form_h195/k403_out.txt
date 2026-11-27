@@ -1,0 +1,27 @@
+l_k: [0.04035  0.580212 2.379438]  S=Tr W0 = 3.0
+
+=== H195b: hergeleitete Form m = (A + B l_k)/(l_i+l_j)^2 ===
+  Up  : A=-3.8978e-03 B=9.8120e-02 B/A=-25.173  chi2=16989.88  Abst [ -0.26  91.62 -92.71] sigma
+  Down: A=2.8015e-05 B=2.6716e-03 B/A=95.364  chi2=93.15  Abst [ 0.52 -9.12  3.11] sigma
+
+=== Vergleich: H188-Form m = (a l_k + b l_k^2)/(l_i+l_j)^2 ===
+  Up  : a=-1.1421e-03 b=6.6110e-02 b/a=-57.885  chi2=4.82  Abst [-0.09  2.13 -0.53] sigma
+  Down: a=3.3059e-03 b=-2.8138e-04 b/a=-0.085  chi2=3.09  Abst [-1.12  1.35 -0.11] sigma
+
+  Urteil H195b je Sektor (hergeleitet < 3 sigma? und >= so gut wie H188?):
+    Up  : hergeleitet chi2=16989.88 (max 92.71 sigma), H188 chi2=4.82 -> NICHT <3; hergeleitet schlechter
+    Down: hergeleitet chi2=93.15 (max 9.12 sigma), H188 chi2=3.09 -> NICHT <3; hergeleitet schlechter
+
+=== H195c: andere Nenner / Zaehler aus Feldgleichungs-Bausteinen ===
+  Beste 2-Parameter-Fits je Nenner (Zaehler A + B l_k):
+    Nenner (l_i+l_j)^2 [W^2-Norm]    : Up chi2=16989.9  Down chi2=93.2
+    Nenner (l_i+l_j) [W-Norm]        : Up chi2=48309.1  Down chi2=10206.5
+    Nenner 1 [flache Norm]           : Up chi2=56358.2  Down chi2=26874.3
+  -> l_k^2 kommt in keiner Invarianten-Kruemmung auf dem Vakuum vor (symbolisch gezeigt, k403b).
+
+=== Kontrolle: 2000 erfundene Massensaetze, hergeleitete Form ===
+  ein Sektor < 3: Up 0.8%, Down 0.7%; beide < 3: 0.0%
+
+=== Gesamturteil ===
+  widerlegt: die hergeleitete Form trifft keinen Sektor; die Feldgleichung gibt diese Form nicht tragend.
+  (hergeleitet: Up 92.7 sigma / chi2 16989.9, Down 9.1 sigma / chi2 93.2; H188: Up chi2 4.8, Down chi2 3.1)
