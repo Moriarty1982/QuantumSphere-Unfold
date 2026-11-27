@@ -1,0 +1,94 @@
+==============================================================================
+H208 Teil 1  Erste PMNS-Spalte und die TM1-Beziehung sin^2 th12 = f(th13)
+==============================================================================
+  kappa* (sin^2 th13 = 0.02248) = 0.043616, rho = 0.999362 (Koide K = 0.666242)
+  Erste PMNS-Spalte |U_e1|^2,|U_mu1|^2,|U_tau1|^2 = [0.665194, 0.167977, 0.166829]  (Summe 1.000000)
+  TM1 verlangt |U_e1|^2 = 2/3 = 0.666667; Schema: |U_e1|^2 = 0.665194  (Abweichung -1.47e-03)
+  sin^2 th12 (Schema) = 0.319508;  TM1-Formel f(th13) = 0.318002  (Differenz +1.51e-03)
+  => sin^2 th12 liegt NICHT auf der TM1-Kurve; z(th12) = +2.49 sigma
+
+==============================================================================
+H208 Teil 2  Pinning: bleibt sin^2 th12 auf der TM1-Kurve, wenn man ALLE Knoepfe variiert?
+==============================================================================
+  (a) v0=(1,0,1)/sqrt2 Eigenvektor von N_hat unter Variation des Neutrino-Versatzes x:
+     x = 0.00000: ||N v0 - lambda v0|| = 3.93e-17  (0 = Eigenvektor)
+     x = 0.02000: ||N v0 - lambda v0|| = 6.21e-17  (0 = Eigenvektor)
+     x = 0.03958: ||N v0 - lambda v0|| = 6.27e-17  (0 = Eigenvektor)
+     x = 0.04336: ||N v0 - lambda v0|| = 6.36e-17  (0 = Eigenvektor)
+     x = 0.06000: ||N v0 - lambda v0|| = 2.96e-17  (0 = Eigenvektor)
+  (b) sin^2 th12 gegen TM1-Kurve f(th13) ueber (Neutrino-Versatz x) x (Staerke kappa, Richtung K2):
+      x        kappa     sin^2 th13   sin^2 th12   TM1 f(th13)   Differenz
+      0.03958  +0.0000   0.014263    0.323687    0.323687    +7.77e-16
+      0.03958  +0.0439   0.022540    0.319486    0.317960    +1.53e-03
+      0.03958  +0.0600   0.026072    0.318356    0.315487    +2.87e-03
+      0.03958  +0.0900   0.033407    0.316850    0.310292    +6.56e-03
+      0.04336  +0.0000   0.015532    0.322815    0.322815    -3.33e-16
+      0.04336  +0.0439   0.024110    0.318391    0.316863    +1.53e-03
+      0.04336  +0.0600   0.027753    0.317178    0.314303    +2.87e-03
+      0.04336  +0.0900   0.035291    0.315515    0.308945    +6.57e-03
+      0.03000  +0.0000   0.010980    0.325932    0.325932    -4.44e-16
+      0.03000  +0.0439   0.018397    0.322358    0.320839    +1.52e-03
+      0.03000  +0.0600   0.021616    0.321460    0.318604    +2.86e-03
+      0.03000  +0.0900   0.028368    0.320392    0.313869    +6.52e-03
+      0.05000  +0.0000   0.017725    0.321304    0.321304    -3.33e-16
+      0.05000  +0.0439   0.026792    0.316513    0.314981    +1.53e-03
+      0.05000  +0.0600   0.030612    0.315164    0.312281    +2.88e-03
+      0.05000  +0.0900   0.038481    0.313244    0.306653    +6.59e-03
+  => groesste Abweichung von der TM1-Kurve ueber alle Knoepfe: 6.59e-03  (gepinnt, wenn ~0)
+
+==============================================================================
+H208 Teil 3  Rueckwaertssuche: welche erste Spalte braeuchten die Daten?
+==============================================================================
+  Daten: |U_e1|^2 = cos^2 th12 cos^2 th13 = 0.680745  (TM1: 2/3 = 0.666667; Differenz +0.0141)
+  Um sin^2 th12 = 0.3036 zu treffen, muesste die feste Spalte |U_e1|^2 = 0.6807 (statt 2/3) haben.
+  Das bricht die TM1-Struktur (feste Spalte v0 <-> |U_e1|^2 = 2/3). Innerhalb der Ein-Feld-Form
+  ist v0 fuer JEDES b,c Eigenvektor (Teil 2a) => |U_e1|^2 = 2/3 ist nicht verstellbar.
+
+==============================================================================
+H208 Teil 4  Voller 8-dim Stoerraum: kann IRGENDEINE Deformation sin^2 th12 senken,
+             ohne th13, Massen (rho=1) und |sin delta|=1 zu brechen?
+==============================================================================
+  Kandidaten mit sin^2 th13 = 0.02248 getroffen: 290 (Einzelrichtungen + 28 Paare)
+  Minimal erreichbares sin^2 th12 unter drei Zwangs-Stufen:
+    (i)  Massen + CP FREI        : min sin^2 th12 = 0.19104 (-17.6s) | rho=0.9444 (Koide K=0.6306) | sin^2 th23=0.42107 | |sin d|=0.6311 | via S+c+K-1@160
+    (ii) + Massen-Erhaltung rho=1: min sin^2 th12 = 0.23362 (-10.9s) | rho=1.0018 (Koide K=0.6678) | sin^2 th23=0.51302 | |sin d|=0.6471 | via S+d+K-1@40
+    (iii)+ Massen UND |sin d|>0,99: min sin^2 th12 = 0.31552 (+1.9s) | rho=1.0019 (Koide K=0.6680) | sin^2 th23=0.49518 | |sin d|=0.9993 | via S+d+K-2@80
+
+  Zielwert der Daten: sin^2 th12 = 0.3036 +- 0.0064
+  => Mit Massen-Erhaltung UND |sin delta|>0,99 bleibt min sin^2 th12 = 0.3155
+     (ERREICHT die Daten). Struktur-erhaltend ist 0,3036 moeglich.
+  Preis des Senkens: das kleinste sin^2 th12 insgesamt (0.1910) hat rho=0.9444 (Koide 0.6306), |sin d|=0.6311 -> Massen und/oder CP gebrochen.
+
+  Pareto-Front (massenerhaltend rho=1): min sin^2 th12 als Funktion der |sin delta|-Untergrenze:
+    |sin d| >=   min sin^2 th12   z(th12)   bei |sin d|=
+     0.000       0.23362     -10.9     0.6471
+     0.500       0.23362     -10.9     0.6471
+     0.800       0.31552      +1.9     0.9993
+     0.900       0.31552      +1.9     0.9993
+     0.950       0.31552      +1.9     0.9993
+     0.990       0.31552      +1.9     0.9993
+     0.999       0.31552      +1.9     0.9993
+    -> Je naeher |sin delta| an 1 (maximale CP), desto hoeher der unvermeidbare sin^2 th12-Boden:
+       die Struktur handelt theta12 GEGEN maximale CP-Verletzung (testbare Korrelation).
+
+==============================================================================
+H208 Teil 5  JUNO-Diskriminierung der Vorhersage sin^2 th12 ~ 0,318
+==============================================================================
+  Vorhersage (TM1, th13 an Daten): sin^2 th12 = 0.31800
+  NuFIT heute:  0.3036 +- 0.0064  => Spannung +2.3 sigma
+  JUNO erwartet ~0.0005 (1 sigma) => Trennung Vorhersage(0,318) vs NuFIT-Zentralwert(0.3036):
+     |0,318 - 0,3036| / 0.0005 = 28.8 sigma  -> JUNO entscheidet scharf.
+
+==============================================================================
+H208 Entscheidung
+==============================================================================
+  v0 fuer jedes b,c Eigenvektor (feste TM1-Spalte, Wolfram exakt): JA
+  Nur hergeleitete Richtung K2: sin^2 th12 = 0,3195 (+2,5s), nahe TM1 0,318.
+  Struktur-erhaltender Boden (Masse + |sin d|>0,99): sin^2 th12 = 0.3155 (+1.9s), via S+d+K-2@80.
+  Zentralwert 0,3036 struktur-erhaltend (±1s) erreichbar: NEIN
+  => TEILWEISE: theta12 ist NICHT starr gepinnt, aber der Zentralwert ist struktur-erhaltend
+     NICHT erreichbar. Mit Massen UND maximaler CP bleibt ein Boden ~0,315 (+1,9s), und das
+     braucht schon einen erlaubten, NICHT hergeleiteten Zusatzterm (S+d). Tiefer geht nur,
+     wenn maximale CP-Verletzung aufgegeben wird (Pareto-Front). Die Struktur handelt theta12
+     GEGEN |sin delta|: entweder hohes theta12 (>=0,315) + maximale CP, oder zentrales theta12
+     + submaximale CP. Scharfe, von JUNO (theta12) + DUNE/T2K (delta) testbare KORRELATION.

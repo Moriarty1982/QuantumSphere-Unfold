@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**27.11.2026, Test H208 (Mischung, θ₁₂/TM1-Problem):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: die feste Spalte v₀=(1,0,1)/√2 ist exakt Eigenvektor von N̂ für jedes b,c (Wolfram, λ=1+c), |U_e1|²=⅔ ⇒ sin²θ₁₂=0,318 (TM1); nicht starr — erlaubter Zusatzterm S+d senkt bei Massen+maximaler CP auf 0,3155 (+1,9σ), nicht auf den Zentralwert; tiefer nur gegen maximale CP (massenerhaltender Boden 0,234 bei |sinδ|≈0,65 → 0,3155 bei |sinδ|≥0,8); neue testbare Korrelation θ₁₂↔|sinδ| (JUNO + DUNE/T2K). Teilweise nicht blind; Korrelation nachträglich.
+
 **27.11.2026, Test H207 (Mischung, Stärke/H168):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: die H168-Mischungs-Spannung (H176: 5,7σ) war ein Artefakt der angepassten Richtung; mit K₂ fällt sie auf 1,5σ, reiner H168-Versatz x=x_lepton gibt θ₁₃/θ₂₃/δ null-parametrig ~1,5σ, nur θ₁₂ +2,5σ (TM1); Rest-Spannung verschoben auf Neutrino-R- vs Lepton-Versatz (4,2σ).
 
 **27.11.2026, Test H206 (Mischung, Winkel in der Ebene ⊥ v₀):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: in der Ebene ⊥ v₀ ist K₂ die eindeutige massenerhaltende Richtung (zirkulante Eigenbasis: diag(K₂)={0,0,0}, diag(K₁)={0,−1/√3,+1/√3}≠0, Wolfram exakt); θ₁₃-Richtung vollständig strukturell, Vorhersage nahezu maximales θ₂₃/CP, aber sin²θ₁₂ zu hoch (TM1); Bilanz gezogen (offen: Stärke/H168 + θ₁₂).
