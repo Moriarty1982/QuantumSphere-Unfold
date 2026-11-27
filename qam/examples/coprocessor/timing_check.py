@@ -54,6 +54,7 @@ def measure(yosys, nextpnr, top, sources, params, tag):
     ff = re.findall(r"^\s+(\d+)\s+TRELLIS_FF\s*$", stat, re.M)
     pnr = subprocess.run([nextpnr, "--85k", "--package", "CABGA381", "--json", str(json), "--freq", "50",
                           "--timing-allow-fail", "--seed", "1"], cwd=REPO, capture_output=True, text=True)
+    (REPO / out / f"{tag}_pnr.log").write_text(pnr.stdout + pnr.stderr)
     fmax = re.findall(r"Max frequency for clock[^:]*: ([0-9.]+) MHz", pnr.stdout + pnr.stderr)
     return int(lut[-1]), int(ff[-1]), float(fmax[-1])
 

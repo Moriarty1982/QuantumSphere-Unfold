@@ -63,6 +63,15 @@ module qcop2m_top #(
         .part_valid(part_valid), .part_base(), .part_order()
     );
 
+    // Gueltigkeit der Baender registriert: Die Pruefung der Aufteilung (paarweiser Vergleich aller Abschnitte) liegt
+    // so nicht im Pfad der Gatterannahme. Ein neues SET_PART wirkt einen Takt spaeter auf die Rechenwerke.
+    reg layout_q;
+    reg [PARTS-1:0] valid_q;
+    always @(posedge clk) begin
+        layout_q <= !rst && layout_ok;
+        valid_q <= rst ? {PARTS{1'b0}} : part_valid;
+    end
+
     wire [LANES*16*W-1:0] l_coeffs;
     wire [LANES*8-1:0] l_k;
     wire [LANES*2-1:0] l_status;
@@ -76,7 +85,7 @@ module qcop2m_top #(
     generate
         for (g = 0; g < LANES; g = g + 1) begin : lane
             wire [CB-1:0] ctx = op_ctx[g*CB +: CB];
-            assign enabled[g] = layout_ok && part_valid[g * CTX + ctx];
+            assign enabled[g] = layout_q && valid_q[g * CTX + ctx];
             qstep2p #(.W(W), .CTX(CTX)) core (
                 .clk(clk), .rst(rst), .load(load && load_part / CTX == g), .load_ctx(load_ctx),
                 .op_valid(op_valid[g] && enabled[g]), .op_ctx(ctx), .opcode(opcode[g*4 +: 4]),
