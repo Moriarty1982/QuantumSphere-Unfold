@@ -1,0 +1,41 @@
+== H211a (nicht blind): Schritt 45 Grad, Winkel nach Stufenabstand s (s=1: RC, CH, HO, OS; s=2: RH, CO, HS; s=3: RO, CS; s=4: RS) ==
+   chi = magischer Winkel 54.7356: s=1:  36.42  s=2:  70.53  s=3:  82.06  s=4:  70.53
+   chi = 45: s=1:  31.40  s=2:  60.00  s=3:  81.58  s=4:  90.00
+   chi = 90: s=1:  45.00  s=2:  90.00  s=3:  45.00  s=4:   0.00
+   chi = 57.569 (Materie-Frame): s=1:  37.69  s=2:  73.29  s=3:  77.52  s=4:  64.86
+   Kontrolle ueber die Normalen (chi magisch): RC 36.42  RH 70.53  RO 82.06  RS 70.53  CH 36.42  CO 70.53  CS 82.06  HO 36.42  HS 70.53  OS 36.42
+
+== H211b (Test, nicht blind): Neigung chi* aus dem Minimum der Abstossung, Schritt 45 Grad, gleiches Gewicht, Gesetz 1/sin ==
+   chi* = 63.6327 Grad, Energie 12.679291; s=1:  40.10  s=2:  78.62  s=3:  68.26  s=4:  52.73
+   zum Vergleich Energie bei chi = 54.7356: 13.000181
+   zum Vergleich Energie bei chi = 45: 14.163363
+   zum Vergleich Energie bei chi = 90 (R und S fallen zusammen): 28659.373980
+   Energie der freien Lage von fuenf gleichen Baendern (k399/H192a): 11.0254; die Schraube liegt um 1.6539 hoeher
+   chi* bei 54.736 +- 1: nein; bei 45 +- 1: nein
+   H211b: widerlegt
+   Treffer der Winkel bei chi* auf der Zielliste (+-1, nachtraeglich): []
+
+== H211c (Bericht): chi* fuer andere Gewichte und Gesetz 1/sin^2, Schritt 45 Grad ==
+   Gewicht gleich           Gesetz 1/sin^1: chi* =  63.633; s=1:  40.10  s=2:  78.62  s=3:  68.26  s=4:  52.73
+   Gewicht gleich           Gesetz 1/sin^2: chi* =  64.849; s=1:  40.53  s=2:  79.59  s=3:  66.50  s=4:  50.30
+   Gewicht d_i d_j          Gesetz 1/sin^1: chi* =  69.320; s=1:  41.96  s=2:  82.84  s=3:  60.38  s=4:  41.36
+   Gewicht d_i d_j          Gesetz 1/sin^2: chi* =  69.625; s=1:  42.05  s=2:  83.04  s=3:  59.99  s=4:  40.75
+   Gewicht min              Gesetz 1/sin^1: chi* =  71.106; s=1:  42.45  s=2:  83.98  s=3:  58.12  s=4:  37.79
+   Gewicht min              Gesetz 1/sin^2: chi* =  71.091; s=1:  42.45  s=2:  83.97  s=3:  58.14  s=4:  37.82
+   Gewicht sqrt(dmin/dmax)  Gesetz 1/sin^1: chi* =  69.453; s=1:  42.00  s=2:  82.92  s=3:  60.21  s=4:  41.09
+   Gewicht sqrt(dmin/dmax)  Gesetz 1/sin^2: chi* =  69.766; s=1:  42.09  s=2:  83.13  s=3:  59.81  s=4:  40.47
+   Spannweite von chi*: 63.63 bis 71.11 Grad -> haengt an der Setzung
+
+== H211d (Stichprobe): andere Schritte und acht Baender, gleiches Gewicht, Gesetz 1/sin ==
+   5 Baender, Schritt  22.5: chi* =  90.000, E =   17.8599; s=1:  22.50  s=2:  45.00  s=3:  67.50  s=4:  90.00; Treffer: [(2, 45.0, '45'), (4, 90.0, '90')]
+   5 Baender, Schritt  45.0: chi* =  63.633, E =   12.6793; s=1:  40.10  s=2:  78.62  s=3:  68.26  s=4:  52.73; Treffer: []
+   5 Baender, Schritt  60.0: chi* =  57.881, E =   11.4457; s=1:  50.11  s=2:  85.64  s=3:  64.24  s=4:  85.64; Treffer: [(3, 64.24, '63.43')]
+   5 Baender, Schritt  72.0: chi* =  57.097, E =   11.0254; s=1:  59.14  s=2:  74.03  s=3:  74.03  s=4:  59.14; Treffer: [(1, 59.14, '60'), (4, 59.14, '60')]
+   5 Baender, Schritt  90.0: Baender fallen fuer jedes chi zusammen (s * Schritt = 360), keine Lage
+   5 Baender, Schritt 120.0: Baender fallen fuer jedes chi zusammen (s * Schritt = 360), keine Lage
+   8 Baender, Schritt  22.5: chi* =  77.230, E =   44.4084; s=1:  21.94  s=2:  43.83  s=3:  65.62  s=4:  87.20  s=5:  71.63  s=6:  51.41  s=7:  33.91; Treffer: []
+   8 Baender, Schritt  45.0: chi* =  59.503, E =   34.0048; s=1:  38.51  s=2:  75.08  s=3:  74.49  s=4:  60.99  s=5:  74.49  s=6:  75.08  s=7:  38.51; Treffer: [(4, 60.99, '60')]
+   8 Baender, Schritt  60.0: Baender fallen fuer jedes chi zusammen (s * Schritt = 360), keine Lage
+   8 Baender, Schritt  72.0: Baender fallen fuer jedes chi zusammen (s * Schritt = 360), keine Lage
+   8 Baender, Schritt  90.0: Baender fallen fuer jedes chi zusammen (s * Schritt = 360), keine Lage
+   8 Baender, Schritt 120.0: Baender fallen fuer jedes chi zusammen (s * Schritt = 360), keine Lage

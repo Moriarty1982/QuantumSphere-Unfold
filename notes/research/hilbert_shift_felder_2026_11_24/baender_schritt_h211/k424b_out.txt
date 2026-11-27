@@ -1,0 +1,14 @@
+k424b: (1) Formelrest: {0}
+(2) chi = ArcCos[1/Sqrt[3]], Schritt Pi/4: {(1 + Sqrt[2])/3, 1/3, (1 - Sqrt[2])/3, -1/3}
+    chi = Pi/4: {(2 + Sqrt[2])/4, 1/2, (2 - Sqrt[2])/4, 0}
+    chi = Pi/2: {1/Sqrt[2], 0, -1/Sqrt[2], -1}
+(3) Schritt Pi/4, 5 Baender: chi* = 63.632659 Grad, E = 12.6792907
+(3) Schritt 2 Pi/5, 5 Baender: chi* = 57.096846 Grad, E = 11.0253501, Winkel {59.14, 74.03, 74.03, 59.14}
+(3) Schritt Pi/4, 8 Baender: chi* = 59.502942 Grad, E = 34.004776
+
+Symbolischer Nullrest: (1) exakt 0 fuer alle Paare. Rueckgabewert Null.
+Warnungen: FindMinimum::lstol (zweimal; Liniensuche erreicht die verlangte Genauigkeit 1e-12 nicht ganz, das Minimum ist
+auf die gezeigten Stellen stabil), danach General::messages. Die Winkel fuer den ersten und dritten Fall wurden im Lauf
+nicht ausgegeben; sie stehen in k424_out.txt.
+Vergleich Python k424: chi* 63,6327 / 57,097 / 59,503 Grad; E 12,679291 / 11,0254 / 34,0048. Uebereinstimmung auf alle
+gezeigten Stellen.

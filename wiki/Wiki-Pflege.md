@@ -1108,3 +1108,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Erkundung k422:** Ungleich lange Bänder auf der Sphäre; Forschungsstand ergänzt. Artikel unverändert (Erkundung, kein Befund für Physik-Artikel oder Preprint).
 
 **27.11.2026, Test H210 (k423):** Paargewicht aus der Zahl der Wiederholungen (widerlegt), Bilanz der Setzungen nach H192/H209/H210; Forschungsstand und Vorhersagen-und-Tests ergänzt. Artikel unverändert (Geometrie-Test ohne Bezug zu Messdaten).
+
+**27.11.2026, Test H211 (k424):** Bänder um einen festen Schritt gedreht (widerlegt; freie Größe ist die Neigung der Achse); Forschungsstand und Vorhersagen-und-Tests ergänzt. Artikel unverändert (Geometrie-Test ohne Bezug zu Messdaten).
