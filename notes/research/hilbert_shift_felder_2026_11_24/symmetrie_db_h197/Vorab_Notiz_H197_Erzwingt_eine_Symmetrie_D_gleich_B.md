@@ -1,7 +1,9 @@
 # Vorab-Notiz H197: Erzwingt eine Symmetrie D = B (ist „Down linear" eine Auswahlregel oder ein Fit)?
 
-**Datum:** 27.11.2026. **Nummern:** H197 (Test), k405 (Rechnung). **Strang:** Quarkmassen; offener Punkt aus H196.
+**Datum:** 27.11.2026. **Nummern:** H197 (Test), k406 (Rechnung). **Strang:** Quarkmassen; offener Punkt aus H196.
 **Anlass:** „mach das" des Autors (27.11., 10:25): suchen, ob eine Symmetrie D = B erzwingt.
+(Diese Notiz wurde vor der Rechnung als k405 committet, Commit 7d39915; die Rechnung ist auf **k406** umnummeriert, weil ein
+paralleler Thread „HS(−1)" k405 belegt hat. Inhalt unverändert.)
 
 ## Worum es geht
 H196 fand mit dem Modell m_s(k) = [A·l_k + B·l_k² + s·(C·l_k + D·l_k²)]/(l_i+l_j)² (s = +1 Up, −1 Down) als besten Fit

@@ -1,0 +1,25 @@
+k406b: Wolfram-Gegenprobe (exakt) zu H197. Aufruf: mcp Wolfram (siehe Ergebnis-Notiz).
+
+(A) ladungsgerade F4-Kruemmung v=x^n, l_k^2-Koeffizient je Grad (exakt):
+    {{2,0},{3,0},{4,0},{5,-30},{6,-234}}
+    -> ladungsgerades l_k^2 erst bei Grad 5.
+
+(B) ladungsungerade Kruemmungen (H186) auf dem Vakuum (s=l_i+l_j, pr=l_i l_j;
+    Vakuum s=3-l_k, pr=3/2-3 l_k+l_k^2), exakt:
+    c1    : 2/3                      l_k^2-Koeff = 0
+    c2    : 1 - l_k/3                l_k^2-Koeff = 0
+    c4/c5 : 2 - l_k^2/3              l_k^2-Koeff = -1/3
+    c7/c9 : 3/2 - l_k + l_k^2/6      l_k^2-Koeff = +1/6
+    c11   : 7/2 - l_k - l_k^2/6      l_k^2-Koeff = -1/6
+    -> ladungsungerades l_k^2 existiert schon bei Grad 4 (c4/c5, c7/c9, c11).
+    (stimmt exakt mit H186/k389 und mit sympy in k406 ueberein.)
+
+(D) J-Kovarianz der Ladungsformen (J: Q0 -> 1 - Q0, tauscht Down 1/3 <-> Up 2/3):
+    h = Q0 - 1/2 : Eigenform, J-Eigenwert -1   (ladungsungerade, von J ausgezeichnet)
+    Q0 - 1/3     : keine Eigenform (J mischt)
+    P_up = 3(Q0-1/3) : keine Eigenform; Werte (Down,Up)=(0,1), nach J (1,0) = P_down
+    -> D = B entspricht P_up, das ist NICHT J-kovariant.
+
+(Hinweis) Die Warnungen "1/0 encountered" und "Symbol undefined" sind harmlos:
+    sie entstehen im Zweig "keine Eigenform", wo der Down-Wert 0 ist (Q0-1/3, P_up),
+    und bei den Module-Hilfssymbolen. Die ausgegebenen Werte sind davon unberuehrt.
