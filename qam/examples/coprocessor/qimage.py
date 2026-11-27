@@ -27,7 +27,7 @@ from tempfile import TemporaryDirectory
 from .check import CFG, NAMES, OPS, default_cfg, make_cases, reference
 
 HDL = Path(__file__).resolve().parent / "hdl"
-SOURCES = ("qcfg.sv", "qstep2.sv", "qcop2_top.sv", "qboot.sv", "qcop2_sys.sv", "qboot_tb.sv")
+SOURCES = ("qcfg.sv", "qgate2.sv", "qnorm2.sv", "qstep2.sv", "qcop2_top.sv", "qboot.sv", "qcop2_sys.sv", "qboot_tb.sv")
 MAGIC, VERSION = 0x51494D47, 1
 HALT, CFG_I, LOAD, GATE, EMIT = 0, 1, 2, 3, 4
 BOOT = ("idle", "running", "done", "reject")

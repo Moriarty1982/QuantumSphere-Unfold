@@ -124,3 +124,31 @@ gleich der Referenz; sieben fehlerhafte bzw. Grenz-Abbilder richtig behandelt. G
 Prüfsummenvergleich und einer mit festem Zielqubit fallen beide durch. Synthese mit Programmspeicher (1024 Worte) auf iCE40:
 8 Block-RAM, Zellen in [`synth_out.md`](synth_out.md). Grenzen: keine Sprünge oder Schleifen im Abbild (kommen mit Stufe 2),
 keine Taktmessung auf Hardware.
+
+## Beschleunigung: Pipeline mit Kontexten (27.11.2026)
+
+Der Kern ist jetzt in zwei kombinatorische Bausteine zerlegt, die beide Fassungen teilen: [`hdl/qgate2.sv`](hdl/qgate2.sv)
+(Gatterwerk) und [`hdl/qnorm2.sv`](hdl/qnorm2.sv) (Kürzen und Guard; beide Vergleichsfälle laufen parallel, die Grenzen der
+Guard-Breite kommen aus `qguard_limits`). `qstep2` setzt sie in einen Takt wie bisher (bitgenau gleich, alle Prüfungen
+unverändert). [`hdl/qstep2p.sv`](hdl/qstep2p.sv) setzt sie in eine Pipeline mit vier Stufen (Annahme, Gatter, Kürzen/Guard,
+Zurückschreiben) und `CTX` Kontexten: unabhängige Läufe, die sich abwechseln. Ab vier Kontexten nimmt die Einheit bei voller
+Belegung jeden Takt ein Gatter an; ein einzelner Lauf braucht vier Takte je Gatter, ist allein also langsamer. Die Pipeline
+lohnt sich deshalb für viele gleichzeitige Läufe, etwa je Band des Bandregisters. Die Konfiguration ist für alle Kontexte
+gemeinsam. Oberste Ebene: [`hdl/qcop2p_top.sv`](hdl/qcop2p_top.sv).
+
+Takt und Fläche auf einem ECP5-85k ([`timing_check.py`](timing_check.py), Yosys `synth_ecp5` + nextpnr, ein Seed; Messrahmen
+`qcop2_bench.sv`/`qcop2p_bench.sv` mit registrierten Pins), Ausgabe [`timing_out.md`](timing_out.md):
+
+| Variante | LUT4 | FF | Fmax | Mio. Gatter/s bei voller Belegung |
+|---|---:|---:|---:|---:|
+| vorher, erste synthesefeste Fassung (#390) | 6132 | 1910 | 42,8 MHz | 42,8 |
+| ein Takt je Gatter (qstep2, jetzt) | 5569 | 1910 | 41,0 MHz | 41,0 |
+| Pipeline, 4 Kontexte | 6413 | 3645 | 70,5 MHz | 70,5 |
+| Pipeline, 8 Kontexte | 8533 | 4782 | 64,3 MHz | 64,3 |
+
+Die Pipeline mit vier Kontexten bringt also rund 1,65-mal so viele Gatter je Sekunde bei 5 % mehr LUTs. Mehr Kontexte kosten
+Fläche und, wegen der breiteren Auswahl der Kontexte, wieder etwas Takt. Gemessen in der Simulation
+([`pipe_check.py`](pipe_check.py), [Ausgabe](pipe_check_out.txt)): 1200 Fälle je Kontextzahl 1, 4, 8 bitgenau gleich der
+Referenz, auch mit zufälliger Konfiguration je Gruppe; bei ungleich langen Läufen erreicht der Wechsel 0,69 (4 Kontexte)
+bzw. 0,88 (8 Kontexte) Gatter je Takt, weil am Ende einer Gruppe Kontexte leer laufen. Die Werte schwanken mit dem
+Platzierungs-Seed um einige Prozent; keine Messung auf echter Hardware.

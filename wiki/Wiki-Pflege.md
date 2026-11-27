@@ -1120,3 +1120,5 @@ Die Pflege erfolgt im Rahmen beauftragter Projektarbeiten. Eine zeitgesteuerte H
 **27.11.2026, Quanten-Coprozessor, Brücke zu Qiskit und Wolfram:** Deutsche und englische Inhaltsübersicht nennen die Brücke (OpenQASM ↔ Band, exakter Zustandsexport) und ihre Prüfung. Kein Forschungsbefund, Artikel unverändert.
 
 **27.11.2026, Quanten-Coprozessor, Boot-Monitor:** Deutsche und englische Inhaltsübersicht nennen den Boot-Monitor mit portablem Programmabbild. Kein Forschungsbefund, Artikel unverändert.
+
+**27.11.2026, Quanten-Coprozessor, Pipeline:** Deutsche und englische Inhaltsübersicht nennen die Pipeline mit Kontexten und die Taktmessung. Kein Forschungsbefund, Artikel unverändert.

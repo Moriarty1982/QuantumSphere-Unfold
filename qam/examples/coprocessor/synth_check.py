@@ -25,10 +25,13 @@ ZUSE = Path("qam/examples/zuse_machine/hdl")
 
 # (Name, Top-Modul, Quellen, Parameter)
 TARGETS = [
-    ("qcop2_top W=16", "qcop2_top", [COP / "qcfg.sv", COP / "qstep2.sv", COP / "qcop2_top.sv"], {"W": 16}),
+    ("qcop2_top W=16", "qcop2_top",
+     [COP / f for f in ("qcfg.sv", "qgate2.sv", "qnorm2.sv", "qstep2.sv", "qcop2_top.sv")], {"W": 16}),
+    ("qcop2p_top W=16, 4 Kontexte (Pipeline)", "qcop2p_top",
+     [COP / f for f in ("qcfg.sv", "qgate2.sv", "qnorm2.sv", "qstep2p.sv", "qcop2p_top.sv")], {"W": 16, "CTX": 4}),
     # Mit Programmspeicher: generisch wuerde der Speicher in Register zerlegt; synth_ice40 bildet ihn auf Block-RAM ab.
     ("qcop2_sys W=16 (mit Boot-Monitor, 1024 Worte; iCE40-Zellen, 8 Block-RAM)", "qcop2_sys",
-     [COP / f for f in ("qcfg.sv", "qstep2.sv", "qcop2_top.sv", "qboot.sv", "qcop2_sys.sv")],
+     [COP / f for f in ("qcfg.sv", "qgate2.sv", "qnorm2.sv", "qstep2.sv", "qcop2_top.sv", "qboot.sv", "qcop2_sys.sv")],
      # Aeltere Yosys-Fassungen (z. B. 0.33) schalten ABC9 standardmaessig ein und brauchen -noabc9 zusaetzlich.
      {"W": 16, "AW": 10, "flow": ["synth_ice40 -noabc", "synth_ice40 -noabc9 -noabc"]}),
     ("qboot", "qboot", [COP / "qboot.sv"], {"AW": 10}),
