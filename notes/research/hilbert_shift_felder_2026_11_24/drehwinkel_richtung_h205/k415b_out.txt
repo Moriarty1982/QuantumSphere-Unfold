@@ -1,0 +1,21 @@
+Wolfram Language (exakt), k415b_kontrolle.wl — H205.
+Die "Symbol undefined"-Warnungen sind kosmetisch (Module/Global-Scoping); die Rueckgabewerte
+sind exakt und in voller Uebereinstimmung mit numpy (k415).
+
+a1 = {0, 1, 0}   a2 = {-(1/Sqrt[2]), 0, 1/Sqrt[2]}
+a1.v0 = 0   a2.v0 = 0
+Nhat.v0 - (1+c) v0 = {0, 0, 0}   (v0 ist Eigenvektor fuer ALLE b,c)
+a1 = u+ ? True   a2 = -u- ? True
+bis.up = 1/Sqrt[2]   bis.um = -(1/Sqrt[2])
+|bis.up| == |bis.um| (exakte 45-Grad-Halbierung) ? True
+Rang[{a1,a2}] = 2   a1.a2 = 0
+Rang[{a1,a2,v0}] = 3   (3 => v0 nicht in span{a1,a2}; span = Ebene senkrecht v0)
+
+Fazit der Kontrolle: Alle drei Aussagen sind exakte Identitaeten.
+(1) v0 = (1,0,1)/sqrt2 ist Eigenvektor von Nhat fuer JEDES b,c (Eigenwert 1+c) -> feste Spalte,
+    unabhaengig vom Baumwert delta_nu.
+(2) Die Achsen a1,a2 der A-ungeraden antisymmetrischen Generatoren sind exakt orthogonal zu v0
+    und spannen (Rang 2, a1.a2=0) genau die Ebene senkrecht zu v0 auf.
+(3) (a1+a2)/sqrt2 halbiert die beiden uebrigen Baum-Richtungen u+=(0,1,0), u-=(1,0,-1)/sqrt2 exakt
+    (gleiche Projektionen 1/sqrt2) -> 45 Grad.
+Die k373-Beobachtung ist also exakt und strukturell, kein Zufall.
