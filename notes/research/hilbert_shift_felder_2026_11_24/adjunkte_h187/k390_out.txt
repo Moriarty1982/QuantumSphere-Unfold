@@ -1,0 +1,40 @@
+== Kontrollen ==
+   W o W# = det(W) 1: Abweichung 7.2e-15; Adjunkte der Diagonale (2, 3, 5): [15. 10.  6.]
+   Eigenwerte des Vakuums l = [0.04035  0.580212 2.379438]
+
+== Schritt 1 (ohne Daten): Funktion des Paars je Kandidat (vier Vakua gemeinsam) ==
+   a1 Re Tr W# Wq                 gerade  : -4.0000 l_k   (Rest 5.8e-13; Eigenrest 1e-13; ladungsmischend 3e+00)
+   a2 Tr W# Wq#                   gerade  : +4.0000 l_k^2   (Rest 1.4e-13; Eigenrest 3e-13; ladungsmischend 6e+00)
+   a3 Tr (W x Wq) Wu              gerade  : -2.0000 l_k   (Rest 6.6e-13; Eigenrest 7e-14; ladungsmischend 0e+00)
+   a4 Tr (W x Wq) (Wu Wuq)        gerade  : -2.0000 l_k^2   (Rest 4.3e-13; Eigenrest 2e-13; ladungsmischend 0e+00)
+   a5 Tr (W x Wq) Wu#             gerade  : -2.0000 l_i l_j   (Rest 1.1e-13; Eigenrest 9e-14; ladungsmischend 0e+00)
+   a6 Tr (W x Wq)^2               gerade  : -4.0000 l_i l_j +2.0000 l_k^2   (Rest 3.4e-13; Eigenrest 2e-13; ladungsmischend 5e+00)
+   a7 Tr (W x Wu) (Wq x Wuq)      gerade  : +1.0000 l_k^2   (Rest 2.4e-13; Eigenrest 9e-14; ladungsmischend 0e+00)
+   d1 Re Tr (Wq x DW) Wu          ungerade: -0.3333 l_k   (Rest 2.0e-15; Eigenrest 1e-14; ladungsmischend 0e+00)
+   d2 Re Tr (Wq x DW) (Wu Wuq)    ungerade: -0.3333 l_k^2   (Rest 4.0e-15; Eigenrest 3e-14; ladungsmischend 0e+00)
+   d3 Re Tr (Wq x DW) Wu#         ungerade: -0.3333 l_i l_j   (Rest 2.8e-15; Eigenrest 1e-14; ladungsmischend 0e+00)
+   d4 Re Tr (DW x Wu) (Wq x Wuq)  ungerade: +0.1667 l_k^2   (Rest 1.1e-15; Eigenrest 1e-14; ladungsmischend 0e+00)
+
+   Funktionsmenge R (9 Funktionen):
+      f1: +1.0000 l_k   [a1, a3, d1]
+      f2: +1.0000 l_k^2   [H184, a2, a4, a7, d2, d4]
+      f3: +1.0000 l_i l_j   [a5, d3]
+      f4: +1.0000 l_i l_j -0.5000 l_k^2   [a6]
+      f5: +1.0000 1   [H184/H186]
+      f6: +1.0000 (l_i + l_j)   [H184/H186]
+      f7: +1.0000 (l_i^2 + l_j^2)   [H186]
+      f8: +0.5000 (l_i^2 + l_j^2) +1.0000 l_i l_j   [H186]
+      f9: +1.0000 l_k (l_i + l_j)   [H184]
+   Urteil H187a: BESTAETIGT (reines l_i l_j: True; Funktion von l_k allein: True)
+
+== Schritt 2: gegen die sechs Massen (M_Z, k376) ==
+   X = sqrt(m), Zuordnung A: Up: eine Funktion f3 487.0 sigma, zwei Funktionen (f5, f9) 8.84 sigma; Down: eine Funktion f3 69.4 sigma, zwei Funktionen (f3, f6) 11.81 sigma
+   X = sqrt(m), Zuordnung B: Up: eine Funktion f2 82.3 sigma, zwei Funktionen (f2, f8) 0.74 sigma; Down: eine Funktion f1 109.9 sigma, zwei Funktionen (f2, f5) 52.62 sigma
+   X = m, Zuordnung A: Up: eine Funktion f3 107271.2 sigma, zwei Funktionen (f3, f6) 1.05 sigma; Down: eine Funktion f3 1201.0 sigma, zwei Funktionen (f3, f6) 45.39 sigma
+   X = m, Zuordnung B: Up: eine Funktion f2 1773.8 sigma, zwei Funktionen (f1, f2) 218.64 sigma; Down: eine Funktion f2 152.7 sigma, zwei Funktionen (f2, f3) 99.40 sigma
+   X = m^2, Zuordnung A: Up: eine Funktion f3 7370437653.5 sigma, zwei Funktionen (f3, f6) 120.42 sigma; Down: eine Funktion f3 673069.3 sigma, zwei Funktionen (f3, f6) 80.07 sigma
+   X = m^2, Zuordnung B: Up: eine Funktion f2 124985987.2 sigma, zwei Funktionen (f1, f2) 120.85 sigma; Down: eine Funktion f2 11378.9 sigma, zwei Funktionen (f1, f2) 89.99 sigma
+   verglichen: 9 Funktionen, 36 Paare, je 3 Lesarten und 2 Zuordnungen, je Sektor
+   Urteil H187b: WIDERLEGT (keine einzelne Funktion je Sektor trifft beide Verhaeltnisse in beiden Sektoren)
+   Zufallskontrolle (2000 erfundene Datensaetze): Treffer mit einer Funktion 0.00%, mit zwei Funktionen 2.45%
+   Urteil H187c: WIDERLEGT (kein Paar von Funktionen trifft beide Sektoren innerhalb von 3 sigma)
