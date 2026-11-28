@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H222 (skalenfreie Zweigwahl):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: das Vorzeichen von cos 3δ (Determinante der Wurzelmatrix) wählt in beiden Lepton-Sektoren den Zweig der Daten, verworfener neutraler Zweig 51σ; trägt, Vorzeichen gesetzt.
+
 **28.11.2026, Test H221 (Skala oder skalenfrei, neutraler Sektor als Trennprobe):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: mit gleichen Koeffizienten in beiden Sektoren scheitern Konjugationsterm (23σ) und Ordnung 6 mit Skala (9σ); eine gemeinsame Drehung von χ gibt gleiche Versätze exakt; spricht für skalenfrei; trägt teilweise.
 
 **28.11.2026, Test H220 (Endzahlen-Suche mit strukturellen Bausteinen):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt. Bei passender Dichte gibt es keinen Treffer; alle Formeln sind angepasst.
