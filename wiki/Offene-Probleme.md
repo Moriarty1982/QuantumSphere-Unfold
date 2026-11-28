@@ -62,6 +62,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Tests H216–H218, 28.11.2026 (k429–k431):** Folgetests zu H215. Umkehrschleifen (H216): kein exakter Treffer. Der formale Überschuss im Fenster (240 Wörter) kommt nachträglich besehen fast ganz aus Abwandlungen von 2^(1−γ) mit dessen bekanntem Fixpunkt 1,6·10⁻⁴ neben β_sym; ohne sie ist β_sym unauffällig. Flächenvarianten (H217): Die Suche wählt die Casimir-Fläche nicht, nur j + ½ (1/√3) hat exakte Treffer, weil γ = 2 eine geschlossene Form ist. χ und Λ (H218): keine Schleife und kein Zielwert ohne neue Setzung. OP1 bleibt offen, die Casimir-Fläche bleibt Postulat. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/stabilitaet_folgetests_h216_h218/README.md).
 
+**Test H219, 28.11.2026 (k432):** Endzahlen-Suche. Wer nur die Zielzahl vorgibt und aus 1, 2, 3, π, ln 2 bis zur Größe 9 sucht, trifft β_sym und 16 Messgrößen nicht früher als gleich genaue Zufallszahlen (kein p < 0,05). β_sym braucht 6 Bausteine (1/π + (ln 2)⁴), die Kontrollen 5. **Widerlegt**; eine Formel für β_sym muss aus einer Herleitung kommen, nicht aus einer Suche. OP1 bleibt offen. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/endzahlen_suche_h219/Ergebnis_H219_Endzahlen_Suche.md).
+
 ## OP2: Dirac-Operator auf dem antisymmetrischen Sektor
 
 Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert_{H^+_-}`$ als geschlossen. Beide Beweise stützen sich aber auf die Riemann-Arbeit, die seit v4.8.0-r04 keine Beweisquelle mehr ist. Der letzte Schritt, den Versatz aus dem Spektrum abzulesen, ist dasselbe Problem wie OP1.
