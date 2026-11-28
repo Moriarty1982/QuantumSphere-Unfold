@@ -58,6 +58,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H232, 28.11.2026 (k446):** Für OP3. Rückwärtssuche nach dem Brecher des Sektortauschs: An jedem Gleichgewicht ist φ der Mittelwert der beiden Sektor-Versätze (exakt). Ein symmetrischer Term q cos 3δ + r cos 6δ macht x höchstens zu einem lokalen Minimum (nie global), mit q = −0,0852 liegt x_ν 22,8σ daneben; ein Ladungsterm der Größe α reicht nicht — widerlegt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/rueckwaerts_brecher_h232/`.
+
 **Test H231, 28.11.2026 (k445):** Für OP3. Expansion als Uhr (Hubble-Reibung, Idee des Autors): φ friert nur beim Startwert ein oder läuft ins Minimum π/8; nur m = 0,97 H₀ gibt heute x, mit einer Drift der Elektronmasse von 2,7·10⁻¹⁰ pro Jahr (10⁶-fach über der Atomuhr-Grenze) — widerlegt. φ bleibt Anfangsbedingung oder braucht einen echten Tauschbrecher; OP3 offen.
 
 **Test H230, 28.11.2026 (k444):** Für OP3. Symmetriepunkt π/8 (und 0) in den Materie-Frame übertragen: keine Frame-Abbildung (Masken auf das Spektrum, Aberration, Kontraktion; ε₀ und 2ε₀) trifft φ, kleinstes Bild 0,116 — widerlegt und abgehakt. φ braucht einen echten Brecher des Sektortauschs; OP3 offen.

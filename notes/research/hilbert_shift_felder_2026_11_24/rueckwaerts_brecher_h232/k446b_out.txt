@@ -1,0 +1,17 @@
+(* Ausgabe k446b, Wolfram-Evaluator, zwei Aufrufe (Teil A/B, dann C). Keine Warnungen; Rueckgabewert Null.
+   Hinweis: NMinimize (DifferentialEvolution) fand im Re-Sektor nur -1,0364 statt des Datenminimums -1,06017 -- Optimierer blieb haengen,
+   kein Widerspruch (das Datenminimum ist tiefer); Globalitaet in delta prueft die Python-Rechnung auf feinem Gitter. *)
+A1 dE/dphi = -4 Cos[oI - oR] Sin[oI + oR - 2 p] ; TrigFactor: -4 Cos[oI - oR] Sin[oI + oR - 2 p]
+A2 c0 = 0.374590240007  1/(4c0) = 0.667395925733
+B r* = 0.0450230875909311  r*/|q| = 0.528439995198722  phi = 0.0657148905605  off_Re = 0.09185244040  z = 22.7664
+Kruemmungen: V_Im'' = 4.21587, V_Re'' = 5.58402
+global Im {-1.055, {d -> 3.96657}} vs Daten -1.055;  global Re {-1.0364, {d -> 4.71355}} vs Daten -1.06017
+E-Gitter beste: {{0.916298, -2.12925}, {1.9635, -2.12925}, {0.913389, -2.12924}}  E(x-Loesung) ~ -2.11517  Partner pi/4-phi = 0.719683
+r = 2/3|q|: off_Im = -0.0207085257369  (x = 0.0395773407260, Abstand -77289.6 sigma), off_Re = 0.052639088
+C:   q            r*/|q|         off_Re        z(x_nu)
+  -1/1000000   0.6673924924   0.039578359   -1.775
+  -1/10000     0.6670530930   0.039679086   -1.728
+  -1/1000      0.6640127386   0.040585924   -1.302
+  -1/100       0.6374063110   0.048887510   +2.595
+  -3/100       0.5947024225   0.063774310   +9.584
+  -213/2500    0.5284399952   0.091852440   +22.77
