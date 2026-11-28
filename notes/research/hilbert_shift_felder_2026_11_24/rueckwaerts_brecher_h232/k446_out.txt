@@ -1,0 +1,58 @@
+================================================================================================
+H232 (k446)  Rueckwaertssuche nach dem Brecher: symmetrisches P(c) = q c + r cos6d bei q = -0,0852
+================================================================================================
+
+Teil A1 (nicht blind)  Stationaritaet: off_Im + off_Re = 2 phi an jedem stationaeren phi
+  q=-0.0852, r=0.0, eps=0.0: phi = 0.3926990817, (off_Im + off_Re)/2 = 0.2825404515  (Diff -1.1e-01)
+  q=-0.0852, r=0.0, eps=0.0: phi = 0.3926990817, (off_Im + off_Re)/2 = 0.2825404515  (Diff -1.1e-01)
+  q=-0.0852, r=0.0, eps=0.0: phi = 1.4398966329, (off_Im + off_Re)/2 = 0.2825404515  (Diff +4.1e-01)
+  q=-0.0852, r=0.05, eps=0.0: phi = 0.9162978573, (off_Im + off_Re)/2 = 0.0043232002  (Diff +6.6e-01)
+  q=-0.0852, r=0.05, eps=0.0: phi = 0.9162978573, (off_Im + off_Re)/2 = 0.0043232002  (Diff +6.6e-01)
+  q=-0.0852, r=0.05, eps=0.0: phi = 1.9634954085, (off_Im + off_Re)/2 = 0.0043232002  (Diff -3.9e-01)
+  q=-0.0852, r=0.057, eps=0.03: phi = 1.9394588370, (off_Im + off_Re)/2 = -0.0081384585  (Diff -3.8e-01)
+  q=-0.0852, r=0.057, eps=0.03: phi = 0.8922612858, (off_Im + off_Re)/2 = -0.0081384585  (Diff +6.7e-01)
+  q=-0.2, r=0.1, eps=-0.05: phi = 0.9384083877, (off_Im + off_Re)/2 = 0.0278960248  (Diff +6.6e-01)
+  q=-0.2, r=0.1, eps=-0.05: phi = 1.9856059389, (off_Im + off_Re)/2 = 0.0278960248  (Diff -3.9e-01)
+  q=-0.2, r=0.1, eps=-0.05: phi = 0.0953102410, (off_Im + off_Re)/2 = 0.0953102410  (Diff +2.2e-16)
+  Daten: phi* = (x + x_nu)/2 = 0.04147 +- 0.00106
+
+Teil A2 (nicht blind)  fuehrende Ordnung: c0 = 0,374590, r/|q| = 0,667396 (siehe Vorab)
+  q = -0.0001: r = 0,667396 |q| -> Im-Versatz am Minimum 0.0394811 (x = 0.0395773), Re-Versatz 0.0395829, global False
+
+Teil B (blind)  q = -0,0852: Abtastung r, Im-Versatz am globalen Minimum
+  r = 0.0200 (r/|q| = 0.2347): phi = 0.392699, off_Im = +0.133989, off_Re = +0.395788, global True
+  r = 0.0300 (r/|q| = 0.3521): phi = 0.518565, off_Im = +0.004606, off_Re = +0.518138, global True
+  r = 0.0400 (r/|q| = 0.4695): phi = 0.100429, off_Im = +0.080354, off_Re = +0.120505, global False
+  r = 0.0500 (r/|q| = 0.5869): phi = 0.040889, off_Im = +0.009831, off_Re = +0.071947, global False
+  r = 0.0600 (r/|q| = 0.7042): phi = 1.053845, off_Im = -0.032352, off_Re = +0.045646, global False
+  r = 0.0700 (r/|q| = 0.8216): phi = 1.963495, off_Im = -0.140847, off_Re = +0.120953, global True
+  r = 0.0800 (r/|q| = 0.9390): phi = 0.916298, off_Im = -0.147017, off_Re = +0.114782, global True
+  r = 0.0900 (r/|q| = 1.0563): phi = 0.916298, off_Im = -0.152637, off_Re = +0.109163, global True
+  r = 0.1000 (r/|q| = 1.1737): phi = 0.392699, off_Im = +0.023453, off_Re = +0.285253, global False
+  r = 0.1100 (r/|q| = 1.2911): phi = 1.439897, off_Im = +0.008890, off_Re = +0.270690, global False
+  r = 0.1200 (r/|q| = 1.4085): phi = 1.439897, off_Im = -0.004849, off_Re = +0.256950, global False
+
+  r* = 0.045023087591  r*/|q| = 0.5284399952 +- 1.34e-06  (phi = 0.0657148906, off_Im = 0.0395773407, global False)
+     x_nu,pred = off_Re = 0.091852  (+22.77 sigma);  Datenzweige: delta_Im = 3.966568 (Klasse 0.222222), delta_Re = 1.662649 (Klasse 0.431746)
+     Abstand zu 2/3: -1.382e-01 = -103453.5 sigma_r (-20.734 %)
+       1/2        = 0.500000: +5.69 %
+       1/sqrt2    = 0.707107: -25.27 %
+       beta_sym   = 0.549406: -3.82 %
+       1/gamma_L  = 0.536279: -1.46 %
+       3/4        = 0.750000: -29.54 %
+       1          = 1.000000: -47.16 %
+     c0 = -q/(4r) = 0.47309061 (3/8: +26.157 %)
+
+  direkt r = 2/3 |q| = 0.056800: phi = 0.0159652811, off_Im = -0.0207085257 (x 0.0395773407, Abstand -77289.6 sigma_x), off_Re = 0.052639, global False
+
+Teil C (nur Bericht)  r*/|q| in Abhaengigkeit von q
+  q =  -0.0010: r*/|q| = 0.66401274, off_Re = 0.040586 (-1.30 sigma), global False
+  q =  -0.0100: r*/|q| = 0.63740631, off_Re = 0.048888 (+2.60 sigma), global False
+  q =  -0.0300: r*/|q| = 0.59470242, off_Re = 0.063774 (+9.58 sigma), global False
+  q =  -0.0852: r*/|q| = 0.52844000, off_Re = 0.091852 (+22.77 sigma), global False
+  q =  -0.1500: r*/|q| = 0.48718167, off_Re = 0.113591 (+32.97 sigma), global False
+  q =  -0.3000: r*/|q| = 0.43878433, off_Re = 0.145332 (+47.87 sigma), global False
+  Expliziter Zusatz eps*c nur im Im-Sektor bei r = 2/3 |q|, q = -0,0852:
+
+================================================================================================
+H232 Gesamturteil: WIDERLEGT   (B1 False, B2 False)
