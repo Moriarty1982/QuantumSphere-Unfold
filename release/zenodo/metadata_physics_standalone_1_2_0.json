@@ -1,0 +1,79 @@
+{
+  "title": "One Object, Three Frames: The Quantum Sphaera Construction",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc"
+    }
+  ],
+  "description": "<p>The Quantum Sphaera construction starts from a conjecture: matter, light and a tachyon sector are one object seen from three frames. Its carrier is a biquaternion kernel built from three complex kernels, split by a compensator C = (1+J)/2 into symmetric and antisymmetric parts; the sign of the field invariant s = z₁² + z₂² + z₃² separates the sectors. This article reports what the construction establishes, what it assumes, and where it stops. The carrier, the compensator, the sector rule and the frame maps are established mathematics; the tachyon map z ↦ iz is electromagnetic duality, distinct from time reversal, and frame maps yield equalities, not values. On ℂ⊗ℍ⊗𝕆 one generation and the Standard Model gauge group follow under named choices; the Albert algebra carries a family SO(3) that the charge operator breaks exactly to A₄, and, under a placeholder charge axis, a relative CP sign of leptons and quarks is fixed; one further setting turns it into the open prediction sin δ_PMNS &lt; 0. Read as the spectrum of a Gram matrix, Koide's relation is equivalent to a mean squared overlap 1/2 of three states, whose extremal configuration is the octant; the overlap itself is an input, so K = 2/3 is not derived. Later tests trace this input to a postulated exchange symmetry of the matter and the tachyon frame (now called the dual frame); the common offset of the lepton phases is a rotation angle whose value stays measured. The numerical values offered for the open problems go back to one frame offset, β_sym ≈ 0.549, each through a separately set identification; it follows from a horizon counting rule that is adopted as a postulate and not derived. A common action of Einstein–Cartan type with Dixon-stored fermions and a Higgs field, set up by author decisions, gives consistent field equations but no scale; within the present stock no equation selects Λ.</p><p><strong>New in 1.2.0.</strong> The article is brought to the research state of Quantum Sphaera Companion v5.6.0 (rounds v4.10.0-r69 to r75). The frames carry the names decided by the author on 26 November 2026: rest frame R (formerly reference frame), matter frame M, dual frame T (formerly tachyon frame) and light point P (formerly photon eigenframe); for leptons only, and as a reading under the sector assignment H99, the Re sector (neutral leptons) and the Im sector (charged leptons) (r69). The frames are placed on the hemisphere of field states, where the compensator sees only the height on its axis; a reading of r69 is corrected without changing any verdict (r70). A new subsection on the lepton phase reports that the common offset of the Brannen phases of both lepton sectors from the octant values is a dimensionless rotation angle φ and not a scale; that the branch of the data is chosen without a scale by the sign of the cubic invariant cos 3δ, a sign set by the author; and that the value φ = 0.0395773 is derived by none of the routes tried (tests H213 to H236) and stays the one measured number of the lepton picture, a measured input; the author let this strand rest. With K = 2/3 and the branch sign set, three inputs (φ and the fitted scales μ_e, μ_ν) carry all six lepton masses (H227, carries partly) (r73, r74). A new dated section, “Predictions of this version (as of 28 November 2026)”, lists the predictions with what each rests on (derived, set, measured, post hoc): normal ordering; Σm_ν = 59.30 ± 0.24 meV; m1, m2, m3 = 0.379, 8.81, 50.11 meV; m_β = 8.87 meV; m_ββ between 1.3 and 4.0 meV; R = 0.030839; three mutually exclusive readings of sin²θ12 and a θ12–CP correlation testable by JUNO with DUNE; θ23, θ13 and δ_CP; Ω_m = β_sym² = 0.30185; m_W = 80.3615 ± 0.0018 GeV; m_τ. φ = 0.0395773 is a measured input, the branch sign a setting, β_sym = 0.5494056410 is computed from the counting rule adopted as a postulate and not derived, K = 2/3 rests on the postulate of equal standing of the frames, the Brannen form is set, and the scales are fitted. Version rule of the author: every public version records its predictions with date; a correction appears only in a later version with a stated reason, never as a readjustment after a measurement; the version fixed before the measurement counts as the test; earlier versions stay visible. The full register is round v4.10.0-r75 of the Companion. The photon-clock guard is restated without change (r72).</p><p><strong>Scope.</strong> No lepton mass scale, no value of the lepton angle φ, no number of generations, no absolute scale and no value of Λ are derived, and no prediction has so far been decided by measurement data. The open problems OP1–OP5, C5 and C6/T2 remain open; none of them is presented as settled, and no guard is closed. The authoritative source of every statement is the Quantum Sphaera Companion (concept doi:10.5281/zenodo.19210728; version v5.6.0, doi:10.5281/zenodo.24632437, which contains the research rounds up to v4.10.0-r75; predecessor v5.5.0, doi:10.5281/zenodo.24563811). The German preprint 0.5.0 (doi:10.5281/zenodo.24632440) is built on the same Companion version. Versions 1.1.0 (doi:10.5281/zenodo.24563808) and 1.0.0 (doi:10.5281/zenodo.24539644) stay available unchanged.</p><p>Version DOI: to be reserved.</p>",
+  "version": "1.2.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "biquaternions",
+    "Dixon algebra",
+    "Albert algebra",
+    "Koide relation",
+    "CP violation",
+    "Einstein-Cartan",
+    "cosmological constant",
+    "mathematical physics",
+    "lepton masses",
+    "neutrino mass",
+    "predictions"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24563808",
+      "relation": "isNewVersionOf",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24539643",
+      "relation": "isVersionOf",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24632437",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24632437",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.19210728",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24563811",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24632440",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Version 1.2.0, new version of record 24563808 (version 1.1.0, doi:10.5281/zenodo.24563808). Version DOI: to be reserved; it is entered after the reservation by tools/paper_release.py stamp and shown on the title page.",
+  "publication_date": "2026-11-28"
+}
