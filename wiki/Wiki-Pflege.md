@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H224 (φ als Wigner-Drehung):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: kein strenger Treffer; Vorzeichen des Zweigwahl-Terms nun Setzung des Autors.
+
 **28.11.2026, Test H223 (Elternterm für das Vorzeichen):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: kein natürlicher Elternterm bindet das Vorzeichen unter J; widerlegt.
 
 **28.11.2026, Erkundung k436 (Vorzeichen des Zweigwahl-Terms):** Forschungsstand und Offene-Probleme ergänzt: weder J noch Stabilität legen das Vorzeichen fest; N² unter J verboten.
