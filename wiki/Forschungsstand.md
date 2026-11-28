@@ -1,5 +1,17 @@
 # Forschungsstand
 
+### Höhere HS-Stufen als Wände, Vergleich der Stufen und warum der Turm bei 𝕆 anhält (28.11.2026, Erkundung k452, nicht blind)
+
+Fortsetzung von k449. **Jede Stufe ist eine weitere Wand um alles Bisherige**, mit Vorzeichen g = ℓ² je Wand (+1 Spiegel, −1 Verdrehung). Divisionsalgebren
+entstehen nur bei Verdrehung an jeder Wand. Zwei Wände: Die Reihenfolge der Durchgänge zählt (ℍ). Drei Wände: Die Klammerung zählt (𝕆). Vier Wände:
+Intensität geht verloren, es gibt Lecks (𝕊). Vergleich: Jede verdrehte Wand bringt eine Symmetrieschicht, der Reihe nach nichts, U(1), SU(2) und
+SU(3) ⊂ G₂ (dim Der 0, 0, 3, 14). Bei HS(4) kommt keine neue stetige Symmetrie dazu, nur drei Kopien (Lesart: Eichstruktur und Generationen).
+**Abbruch, physikalisch:** Eine Feldgleichung erster Ordnung D f = 0 der Stufe (Cauchy–Riemann, Fueter, oktonionischer Dirac) ist nur bis 𝕆 eine Wurzel
+der Wellengleichung (LᵢLⱼ + LⱼLᵢ = −2δᵢⱼ exakt bis HS(3), verletzt bei HS(4)). Gleichwertig: Die Wand S^(N−1) trägt einen vollen Rahmen von
+Verdrehungsfeldern nur für N = 1, 2, 4, 8 (Radon–Hurwitz/Adams; S¹⁵ hat nur 8 von 15). Die Forderung „lokale, kausale Feldgleichung erster
+Ordnung je Stufe“ erzeugt also den Turm und beendet ihn. Gesetzt sind dabei: Verdrehung an jeder Wand, Feldwert in der Stufe selbst (mit allgemeinen
+Clifford-Algebren hielte nichts an) und das Dirac-Prinzip. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/innen_aussen_turm_k452/`.
+
 ### Doppelzählung geklärt: φ trägt den Versatz, q ist nur ein Vorzeichen (28.11.2026, Test H236, k451)
 
 Seit H225 standen im Baum-Modell zwei Größen für denselben Lepton-Versatz: der Fit q = −0,0852 aus H167 und die gemeinsame Drehung φ. **Trägt:**
