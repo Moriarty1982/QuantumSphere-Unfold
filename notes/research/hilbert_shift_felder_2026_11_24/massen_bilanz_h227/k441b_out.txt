@@ -1,0 +1,8 @@
+k441b Ausgabe (Wolfram-Kernel, 2026-11-28). Rueckgabewert: Null.
+Lauf 1 (FindRoot ungeklammert, Startwert 0,22): Warnung Symbol::undefined2 (Mnu, Groß-/Kleinschreibung im Skript; im gewerteten Skript als mnu) und General::messages;
+Teil 1 lief auf den falschen Zweig: "1 delta(e,mu) = 2.2003426790 ; m_tau,pred = 105.658 MeV" (verworfen). Teile 2 und 3 aus Lauf 1 (davon unabhaengig):
+2 Wurzeln Neutrino = {-0.1958077, 0.9440438, 2.251764} ; R = 0.03083880
+3 m (meV) = {0.378922, 8.80794, 50.1113} ; Sigma = 59.2982 ; m_beta = 8.86767 ; m_bb max = 4.00381 ; m_bb min = 1.28528 ; Vorzeichen-Lesart = 3.49018
+Lauf 2 (FindRoot geklammert, Brent), keine Warnungen:
+1 delta(e,mu) = 0.22222204709786796447 ; x = 0.0395773407013 ; m_tau,pred = 1776.969027083013620 MeV ; M_e = 313.8564002555022701 MeV
+4 rho = 3.1489 x 10^-11 ; n(beta_sym) = 40.3751 ; n(gamma_M) = 16.8224 ; n(1/gamma_L) = 38.8082 ; n(exp(-2eps)) = 19.5791 ; v^2/M_nu (GeV) = 6.13418 x 10^15 ; M_e^2/M_nu (GeV) = 9.96717 x 10^9

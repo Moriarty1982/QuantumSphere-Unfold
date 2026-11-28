@@ -1,0 +1,43 @@
+========================================================================================
+H227 1  Bilanz
+========================================================================================
+  (i) aus m_e, m_mu: delta = 0.2222220471, x = pi/12 - delta = 0.0395773407 (unter J aus m_tau: 0.0395773407, Differenz +1.3e-12)
+      m_tau,pred = 1776.969 MeV, gemessen 1776.93 +- 0.09 -> +0.43 sigma (Koide-Relation)
+      mu_e^2 = M_e = 313.856400 MeV  (Kontrolle Sum m / 6 = 313.849896 MeV)
+  (ii) Neutrinos delta = pi/6 - x = 0.4840214: Wurzeln (aufsteigend nach Masse) [-0.195808  0.944044  2.251764]; R_pred = 0.030839, gemessen 0.030016 +- 0.000457 -> +1.80 sigma
+  Zaehlung: 6 Massen, 3 Eingaben (phi, mu_e, mu_nu) -> 3 Vorhersagen: m_tau (Koide), R, absolute Neutrinoskala (Sigma m, m_beta, m_bb)
+
+========================================================================================
+H227 2  festgeschriebene Neutrino-Vorhersagen (normale Ordnung)
+========================================================================================
+  Hauptfall (mu_nu aus Delta m^2_31): m = [ 0.3789  8.8079 50.1113] meV, Sigma m = 59.298 meV, M_nu = mu_nu^2 = 9.8830 meV
+     Delta m^2_21,pred = 7.7436e-05 eV^2 (gemessen 7.5370e-05 +- 9.7e-07)
+     m_beta = 8.868 meV; m_bb in [1.285, 4.004] meV (Majorana-Phasen frei); Brannen-Vorzeichen (Lesart): 3.490 meV
+     Sigma m    = 59.300 +- 0.242 meV
+     m1         = 0.379 +- 0.002 meV
+     m2         = 8.808 +- 0.036 meV
+     m3         = 50.113 +- 0.204 meV
+     m_beta     = 8.868 +- 0.036 meV
+     m_bb,min   = 1.285 +- 0.005 meV
+     m_bb,max   = 4.004 +- 0.016 meV
+     m_bb,Vorz. = 3.490 +- 0.014 meV
+  Kontrolle (mu_nu aus Delta m^2_21): m = [ 0.3738  8.6896 49.4382] meV, Sigma m = 58.502 meV
+  Schranken: m_beta 0.0089 < 0,45 eV: True; Sigma m 0.0593 < 0,0642 eV: True (Abstand zur Schranke 20 Fehlerbreiten); m_bb,max 0.0040 < 0,028 eV: True
+  Kriterium 2 (verträglich): True
+
+========================================================================================
+H227 3  Skalenverhaeltnis rho = M_nu/M_e (Erkundung, nicht blind)
+========================================================================================
+  M_e = 3.138564e+08 eV, M_nu = 9.883029e-03 eV, rho = 3.148902e-11, mu_nu/mu_e = 5.611507e-06
+  rho = beta_sym^n: n = 40.3751 -> naechste ganze Zahl 40, Abstand 0.375: kein Treffer
+  rho = gamma_M^n: n = 16.8224 -> naechste ganze Zahl 17, Abstand 0.178: kein Treffer
+  rho = 1/gamma_L^n: n = 38.8082 -> naechste ganze Zahl 39, Abstand 0.192: kein Treffer
+  rho = exp(-2 eps)^n: n = 19.5791 -> naechste ganze Zahl 20, Abstand 0.421: kein Treffer
+  Zufallserwartung (a): 4 x 0,1 = 0,4; Treffer: 0
+  M_e^2/M_nu = 9.9672e+18 eV = 9.9672e+09 GeV; naechste Liste v (2.462e+02 GeV), Faktor 4.05e+07: kein Treffer
+  v^2/M_nu = 6.1342e+24 eV = 6.1342e+15 GeV; naechste Liste M_Pl,red (2.435e+18 GeV), Faktor 3.97e+02: kein Treffer
+
+========================================================================================
+H227 Gesamturteil
+========================================================================================
+  Kriterium 2: True; Treffer Teil 3: 0 -> TRAEGT TEILWEISE
