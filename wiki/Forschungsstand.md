@@ -1,5 +1,13 @@
 # Forschungsstand
 
+### Ist φ eine kleine ℤ₃-Brechung? Nein (28.11.2026, Erkundung k459, nicht blind)
+
+Nach H242 (Marc „weiter“) wurde geprüft, ob der Lepton-Versatz φ als kleine Brechung der ℤ₃-Regel erscheint. **Nein.** Die ℤ₃-geschlossenen Lagen liegen 12,7°
+(geladen) bzw. 27,7° (neutral) von den gemessenen Phasen entfernt, φ sind nur 2,27°; schon die Basislagen π/12 und π/6 brechen ℤ₃ stark. Als φ-Potential
+(Baum mit q → 0⁻ flach) hat die Leck-Energie exakt dE/dφ = −3(w_I cos 6φ + w_R sin 6φ). Gleiche Gewichte geben das Minimum bei π/8 (wie H225), Zählgewichte
+2:1 bei 0,339, und φ = x bräuchte w_I/w_R = −0,242 ohne Grund. Die φ-Ruheregel bleibt.
+Notiz: `notes/research/hilbert_shift_felder_2026_11_24/z3_bruch_phi_k459/`.
+
 ### Alte Kernel-Definition K₃ = K₁K₂ ist dieselbe Struktur wie die drei Kopien (28.11.2026, Test H242, k458)
 
 Marc: „wir hatten k3 mal ganz am anfang so definiert, dass er senkrecht auf normalen der anderen beiden stehen soll, geometrisch ist das ein xor“.

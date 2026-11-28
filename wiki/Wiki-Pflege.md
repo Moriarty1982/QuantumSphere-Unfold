@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Erkundung k459 (φ als ℤ₃-Brechung):** Forschungsstand und Offene-Probleme ergänzt: nein, φ-Ruheregel bleibt.
+
 **28.11.2026, Test H242 (alte Kernel-Definition und Kopien):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: trägt, nicht blind.
 
 **28.11.2026, Test H241 (Kopien als XOR):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Block nicht in Kopie; XOR trägt (nicht blind); Produktregel nachträglich.
