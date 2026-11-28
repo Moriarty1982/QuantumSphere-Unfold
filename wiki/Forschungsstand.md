@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Zwei RAIDZ2 anders verschaltet? Ein Nullteiler teilt 𝕊 in Klartext-Block und Spiegelpaare (28.11.2026, Test H240, k456)
+
+Marc: „was wäre wenn wir zwei raidz2 haben die noch anders zusammengeschaltet sind?“ Die Zusammenhangskomponenten des Nullteiler-Codes erfassen alle
+Verschaltungen auf einmal: getrennt, verschränkt quer zur Wand und 4 × RAID5. Gespiegelte RAIDZ2 und der volle Produktcode scheiden schon an der
+Kapazität aus. **Trägt teilweise:** In keiner Verschaltung entstehen zwei RAIDZ2. Es gibt aber eine feste, für alle Nullteiler gleiche Verschaltung
+(in G₂-angepassten Koordinaten, Wolfram exakt): Die Multiplikation mit einem Nullteiler x = (a, b) lässt den 8-dim. Quaternion-Block
+ℍ_x ⊕ ℍ_x·e₈ (ℍ_x = span{1, a, b, ab}) ungeschützt durch (wie RAID0) und halbiert das 8-dim. Komplement wie 4 Spiegelpaare (RAID1).
+Korrektur zu H239: Ohne die ungeschützten Platten 1 und e₈ ist der Code in Standardkoordinaten MDS; schwächer als ein Zufallscode ist er nur wegen dieser
+beiden. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/raidz2_verschaltung_h240/`.
+
 ### Zweimal RAIDZ2 in den Sedenionen? Nur die Kapazität passt (28.11.2026, Test H239, k455)
 
 Marc: „prüfe bitte ob das evtl. quasi zwei raidz2 sein könnten“. Übersetzung (gesetzt): Der Code eines Nullteilers x ist das Bild der Linksmultiplikation
