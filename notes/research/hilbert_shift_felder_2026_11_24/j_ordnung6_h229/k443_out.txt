@@ -1,0 +1,35 @@
+============================================================================================
+H229 (k443)  J bei Ordnung 6 gelockert: V_s = -a_s cos2(delta - chi_s - phi) + w g(delta)
+             g = -2 sqrt2 cos 3delta + cos 6delta   (volles N^2 bei K = 2/3)
+============================================================================================
+
+Teil a (nicht blind)  Zweigwahl: Abstand des globalen Minimums vom Datenzweig (Spektralklasse)
+  w =   0.0001: groesster Abstand Im 1.966e-05, Re 2.029e-04  -> Datenzweig in beiden: True
+  w =    0.001: groesster Abstand Im 1.962e-04, Re 2.012e-03  -> Datenzweig in beiden: True
+  w =     0.01: groesster Abstand Im 1.926e-03, Re 1.858e-02  -> Datenzweig in beiden: True
+  w =     0.03: groesster Abstand Im 5.538e-03, Re 4.754e-02  -> Datenzweig in beiden: True
+  w =      0.1: groesster Abstand Im 1.588e-02, Re 1.050e-01  -> Datenzweig in beiden: True
+  w =      0.3: groesster Abstand Im 3.251e-02, Re 1.645e-01  -> Datenzweig in beiden: True
+  w =        1: groesster Abstand Im 4.863e-02, Re 2.127e-01  -> Datenzweig in beiden: True
+  w =        3: groesster Abstand Im 5.580e-02, Re 2.361e-01  -> Datenzweig in beiden: True
+
+Teil b (blind)  Winkel als Modulus: globale Minima von E(phi; w) = e_Im + e_Re ueber phi in [0, pi/3)
+  w =   0.0001: globale Minima ['0.261799', '0.523599']; lokale [np.float64(0.2618), np.float64(0.5236), np.float64(0.9163)]; naechstes zu x (mit Paar pi/4 - phi): 561.5 %
+  w =    0.001: globale Minima ['0.261799', '0.523599']; lokale [np.float64(0.2618), np.float64(0.5236), np.float64(0.9163)]; naechstes zu x (mit Paar pi/4 - phi): 561.5 %
+  w =     0.01: globale Minima ['0.261799', '0.523599']; lokale [np.float64(0.2618), np.float64(0.5236), np.float64(0.9163)]; naechstes zu x (mit Paar pi/4 - phi): 561.5 %
+  w =     0.03: globale Minima ['0.261799', '0.523599']; lokale [np.float64(0.2618), np.float64(0.5236), np.float64(0.9163)]; naechstes zu x (mit Paar pi/4 - phi): 561.5 %
+  w =      0.1: globale Minima ['0.392699']; lokale [np.float64(0.3927), np.float64(0.22158), np.float64(0.56382), np.float64(0.9163)]; naechstes zu x (mit Paar pi/4 - phi): 892.2 %
+  w =      0.3: globale Minima ['0.392699']; lokale [np.float64(0.3927), np.float64(0.14948), np.float64(0.63592), np.float64(0.9163)]; naechstes zu x (mit Paar pi/4 - phi): 892.2 %
+  w =        1: globale Minima ['0.392699']; lokale [np.float64(0.3927), np.float64(0.13355), np.float64(0.65184), np.float64(0.9163)]; naechstes zu x (mit Paar pi/4 - phi): 892.2 %
+  w =        3: globale Minima ['0.392699']; lokale [np.float64(0.3927), np.float64(0.13126), np.float64(0.65414), np.float64(0.9163)]; naechstes zu x (mit Paar pi/4 - phi): 892.2 %
+  feine Abtastung w in [1e-4, 10] (60 Werte, log):
+  vorkommende Lagen der globalen Minima (gerundet): [(np.float64(0.2618), np.float64(0.5236)), (np.float64(0.3927),)]
+  bester Wert: w = 0.001536, Minima [np.float64(0.261799392), np.float64(0.523599022)], Abstand zu x 561.5 %
+  Treffer natuerlich (w->0+ oder w=1): False;  Treffer mit angepasstem w: False
+
+Teil c (blind)  ohne Drehung (phi = 0): w aus dem Im-Sektor, Vorhersage des Re-Versatzes
+  Im-Versatz bei phi=0 laeuft von -2.111e-09 bis 6.793e-11; Re-Versatz von 2.121e-05 bis 2.565e-01
+  kein w gibt den Im-Versatz x
+
+============================================================================================
+H229 Gesamturteil: WIDERLEGT   (b natuerlich False, b angepasst False, c False)

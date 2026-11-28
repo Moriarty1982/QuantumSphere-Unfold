@@ -1,0 +1,25 @@
+k443b Wolfram-Gegenprobe zu H229. Ausgefuehrt ueber den Wolfram-Kernel (MCP) in drei Teilen (1, 2, 3), Rueckgabewert jeweils Null;
+Ausgaben aus Print[...] woertlich. Ein erster Lauf von Teil 2 setzte den Im-Datenzweig faelschlich bei delta = pi/12 - x an (dort hat das
+Sektorpotential kein Minimum; Ergebnis damals w* = -3,089, ein Maximum) -- vor der Auswertung verworfen, Teil 2 unten ist der korrigierte Lauf.
+
+Warnungen (keine Rueckgabewerte): in Teil 3 FindMinimum::lstol und FindMinimum::fmgz (flache Stellen; die Gitterbesten stimmen mit dem
+Ergebnis ueberein, die Lagen sind die exakten Werte pi/12 bzw. pi/8).
+
+--- 1 ---
+1) N^2 = ph^6 - 6 ph^4 r^2 + 9 ph^2 r^4 + 2 r^6 + 4 ph r^3 (ph^2 - 3 r^2) Cos[3 d] + 2 r^6 Cos[6 d]
+1) delta-Teil bei ph = Sqrt2 r, geteilt durch 2 r^6: -2 Sqrt[2] Cos[3 d] + Cos[6 d]
+
+--- 2 ---
+2) g'(5pi/4) = 0,  g''(5pi/4) = 18;  g'(pi/2) = -6 Sqrt[2]
+2) w = 1/1000: Im-Versatz (phi=0) = 9.266*10^-26,  Re-Versatz = 0.0021023636
+2) w = 1/100: Im-Versatz (phi=0) = 1.44591*10^-20,  Re-Versatz = 0.019436704
+2) w = 1/10: Im-Versatz (phi=0) = -1.78965*10^-22,  Re-Versatz = 0.10979060
+2) w = 1: Im-Versatz (phi=0) = 4.99870*10^-23,  Re-Versatz = 0.22139504
+2) w = 3: Im-Versatz (phi=0) = 4.76920*10^-21,  Re-Versatz = 0.73859152
+2) formales w fuer Im-Versatz x (Stationaritaet bei 5pi/4 + x): -0.2705224774 (negativ = unbeschraenkt, ausgeschlossen)
+
+--- 3 ---
+3) w = 0.001: globales Minimum von E bei phi = 0.261799 ; Gitterbester 0.261799 (pi/12 = 0.261799, pi/8 = 0.392699, pi/6 = 0.523599)
+3) w = 0.1: globales Minimum von E bei phi = 0.392699 ; Gitterbester 0.392699 (pi/12 = 0.261799, pi/8 = 0.392699, pi/6 = 0.523599)
+3) w = 1.: globales Minimum von E bei phi = 0.392699 ; Gitterbester 0.392699 (pi/12 = 0.261799, pi/8 = 0.392699, pi/6 = 0.523599)
+3) w = 3.: globales Minimum von E bei phi = 0.392699 ; Gitterbester 0.392699 (pi/12 = 0.261799, pi/8 = 0.392699, pi/6 = 0.523599)

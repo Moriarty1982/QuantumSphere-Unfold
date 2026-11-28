@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### J bei Ordnung 6 gelockert: das volle Quadrat N² wählt den Zweig, legt φ aber nicht fest (28.11.2026, Test H229, k443)
+
+Auf Wahl des Autors wurde das Postulat J bei Ordnung 6 auf Probe gelockert: Zugelassen ist das volle Quadrat der kubischen Norm λN² (λ ≥ 0), dessen
+δ-Teil bei K = ⅔ die feste Kombination −2√2 cos 3δ + cos 6δ ist. **Widerlegt für den Winkel.** Die Zweigwahl folgt damit tatsächlich aus Stabilität
+(beide Sektoren wählen für alle geprüften Stärken den Datenzweig; das war nach H223 erwartet). Die gemeinsame Vakuumenergie hat ihre Minima aber nur
+bei π/12 und π/6 (kleine Stärke) oder bei π/8 (größere Stärke), wegen des exakten Sektortauschs nie bei φ = 0,0396. Ohne Drehung kann N² den Im-Zweig
+gar nicht verschieben (er ist ein stationärer Punkt des Terms), nur den Re-Zweig; die fast gleichen Versätze der Daten kommen so nicht aus einer Stärke.
+Die Lockerung ersetzt also die Setzung „Vorzeichen q < 0“ durch eine Regeländerung, φ bleibt Messzahl; OP3 offen. Ergebnis:
+`notes/research/hilbert_shift_felder_2026_11_24/j_ordnung6_h229/`.
+
 ### φ als Asymptote: weder Grenzwert einer Schleife noch natürlicher Zwischenstand (28.11.2026, Test H228, k442)
 
 Der Autor fragte, was wäre, wenn man den gemeinsamen Drehwinkel φ = 0,0395773 als Asymptote behandelt, und ließ beide Lesarten rechnen.

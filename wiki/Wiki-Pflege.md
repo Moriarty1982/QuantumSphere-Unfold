@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H229 (J bei Ordnung 6 gelockert):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: für φ widerlegt.
+
 **28.11.2026, Test H228 (φ als Asymptote):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.
 
 **28.11.2026, Runde v4.10.0-r73 (Lepton-Versatz, Bilanz):** Forschungsstand, Gesamtbild, Inhalt, Content-overview und Hinweise-fuer-LLMs ergänzt: H213–H227 als Runde festgehalten.
