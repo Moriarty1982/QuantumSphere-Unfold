@@ -1,0 +1,35 @@
+k442b Wolfram-Gegenprobe zu H228. Ausgefuehrt ueber den Wolfram-Kernel (MCP) in zwei Teilen (Teil B, dann Teil A),
+weil ein Gesamtlauf das 60-s-Zeitlimit ueberschritt. Rueckgabewert jeweils Null; Ausgaben aus Print[...] unten woertlich.
+
+Warnungen (keine Rueckgabewerte): Infinity::indet und NSum::nsnum beim Suchen von gamma_L (FindRoot tastet g-Werte ab, bei denen der
+Summand nicht numerisch ist; das Ergebnis stimmt mit Python auf 18 Stellen ueberein); Symbol::undefined2 fuer die Laufvariablen
+S, T, L (Hinweis des Kernels, keine Wirkung).
+
+--- Teil B ---
+gamma_L = 1.86469976460937256  beta_sym = 0.549405640974528999  x = 0.0395773407260
+S vs 2 Cos[pi/8] Cos[3(phi-pi/8)], max Abw.: 4.44089*10^-16
+DSolve: {{u[t] -> ArcCos[Tanh[3 kk t + ArcTanh[Sin[Pi/8]]]]/3}}
+NDSolve vs geschlossene Form, max Abw. [0,2]: 2.67*10^-12
+t_x/tau = 0.132105185233   sigma_t = 2.683*10^-6
+  t*/tau = 1: phi = 0.2320120864  Abstand 246711. sigma
+  t*/tau = 1/2: phi = 0.1360044674  Abstand 123625. sigma
+  t*/tau = 1/3: phi = 0.09501870493  Abstand 71078.7 sigma
+  t*/tau = 1/8: phi = 0.03750841171  Abstand -2652.47 sigma
+  t*/tau = ln 2: phi = 0.1777452236  Abstand 177138. sigma
+  t*/tau = artanh beta: phi = 0.1621327447  Abstand 157122. sigma
+  t*/tau = beta: phi = 0.1472667001  Abstand 138063. sigma
+  t*/tau = beta^2: phi = 0.08676242055  Abstand 60493.7 sigma
+  t*/tau = 1/gamma: phi = 0.1443140906  Abstand 134278. sigma
+  t*/tau = 1/gamma^2: phi = 0.08297305805  Abstand 55635.5 sigma
+  t*/tau = pi/24 (nachtraeglich): phi = 0.03922682318  Abstand -449.381 sigma
+
+--- Teil A ---
+Woerter Laenge <= 3: 1110, identitaetsartig 25, anziehende Fixpunkte 276  (Python: 335)
+naechster Fixpunkt zu x: {GsY, 0.0397459}  Abstand 0.000168594  (Python: GsY 0.0397459, 1.69e-4)
+N_c(x) fuer Laenge <= 3: 0  (Python: 0)
+
+Einordnung der Zaehl-Differenz 276 / 335 (Python-Nachpruefung, nicht Teil des Wolfram-Laufs): Python zaehlt zusaetzlich Fixpunkte, die exakt
+auf Gitterknoten liegen (rationale Vielfache von pi bei stueckweise linearen Woertern, z. B. pi/24 fuer Y). Ohne diese und auf demselben
+Gitter (6001) kommt Python auf 286; der Rest von 10 sind Klassifikationen an Faltungsknicken. Keiner dieser Punkte liegt nahe x.
+DSolve-Form: u = ArcCos[Tanh[3k t + ArcTanh[Sin(pi/8)]]]/3 ist dieselbe Loesung wie tan(3u/2) = tan(3pi/16) e^(-3kt) (Gudermann-Identitaet;
+numerisch bestaetigt durch den NDSolve-Vergleich).
