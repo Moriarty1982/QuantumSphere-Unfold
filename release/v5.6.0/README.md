@@ -31,6 +31,13 @@ publication each need the author's explicit approval (`AGENTS.md`), and so does 
 - Research catalogue: eight entries appended to `qam/editions/v5_research_notes.json` (69 in total).
 - `AGENTS.md`: standing rule of the author of 28 November 2026 "Vorhersagen je Version".
 
+## Layout fixes before packaging
+
+The packager rejects any overfull box. The local build (TeX Live 2023) of the merge commit 8ac762a had two in the full Companion: the
+mass display of r73.10 and one cell of the r75 table. Both were fixed by layout only (the display split in two, the formula in the cell
+split into two math pieces); no number or wording changed. Afterwards: full Companion and physics edition with 0 undefined references,
+0 multiply defined labels, 0 rerun requests, 0 overfull boxes.
+
 ## Predictions of this version (summary of r75)
 
 | Quantity | Prediction | Source | Rests on |
