@@ -1,0 +1,52 @@
+============================================================================================
+H230 (k444)  Symmetriepunkt in den Materie-Frame
+============================================================================================
+beta_sym = 0.549405640974529, eps0 = 0.6175295849, 2 eps0 = 1.2350591698, cosh 2eps0 = 1.8646997646 (gamma_L = 1.864699764609373), tanh 2eps0 = 0.8440405476, cosh eps0 = 1.1968082061
+Ziel x = 0.0395773407 (sigma 7.8e-07), x_nu = 0.04336 +- 0.00213;  Datenphasen delta*_Im = 0.2222220471, delta*_Re = 0.480239
+
+Teil A  Maske auf das R-Spektrum; Auslesen (K', delta') in der Klasse [0, pi/3); Vergleich mit den Datenphasen
+  Kontrolle eps = 0: [(np.float64(0.666666666667), 0.1308996939, 0.1308996939), (np.float64(0.666666666667), 0.1308996939, 0.1308996939), (np.float64(0.666666666667), 0.2617993878, 0.2617993878), (np.float64(0.666666666667), 0.5235987756, 0.5235987756)]  (delta' = |delta0| in der Klasse)
+  phi_R = pi/8                           Form K   +eps0 : Im K' = 0.744036, delta' = 0.158017 (-8.23e+04 sigma), neg 0 | Re K' = 0.744036, delta' = 0.158017 (-151.3 sigma_nu), neg 0
+  phi_R = pi/8                           Form K   -eps0 : Im K' = 0.954763, delta' = 0.012793 (-2.68e+05 sigma), neg 0 | Re K' = 0.954763, delta' = 0.012793 (-219.5 sigma_nu), neg 0
+  phi_R = pi/8                           Form K   +2eps0: Im K' = 0.749849, delta' = 0.161042 (-7.84e+04 sigma), neg 0 | Re K' = 0.749849, delta' = 0.161042 (-149.9 sigma_nu), neg 0
+  phi_R = pi/8                           Form K   -2eps0: Im K' = 0.998793, delta' = 0.000326 (-2.84e+05 sigma), neg 0 | Re K' = 0.998793, delta' = 0.000326 (-225.3 sigma_nu), neg 0
+  phi_R = pi/8                           Form lin +eps0 : Im K' = 23.672602, delta' = 0.717451 (+6.35e+05 sigma), neg 1 | Re K' = 23.672602, delta' = 0.717451 (+111.4 sigma_nu), neg 1
+  phi_R = pi/8                           Form lin -eps0 : Im K' = 0.921125, delta' = 0.084324 (-1.77e+05 sigma), neg 1 | Re K' = 0.921125, delta' = 0.084324 (-185.9 sigma_nu), neg 1
+  phi_R = pi/8                           Form lin +2eps0: Im K' = 3.019275, delta' = 0.831158 (+7.81e+05 sigma), neg 1 | Re K' = 3.019275, delta' = 0.831158 (+164.8 sigma_nu), neg 1
+  phi_R = pi/8                           Form lin -2eps0: Im K' = 1.088913, delta' = 0.094396 (-1.64e+05 sigma), neg 1 | Re K' = 1.088913, delta' = 0.094396 (-181.1 sigma_nu), neg 1
+  phi_R = pi/8                           Form S   +eps0 : Im K' = 0.666667, delta' = 0.130900 (-1.17e+05 sigma), neg 0 | Re K' = 0.666667, delta' = 0.130900 (-164.0 sigma_nu), neg 0
+  phi_R = pi/8                           Form S   -eps0 : Im K' = 0.666667, delta' = 0.130900 (-1.17e+05 sigma), neg 0 | Re K' = 0.666667, delta' = 0.130900 (-164.0 sigma_nu), neg 0
+  phi_R = pi/8                           Form S   +2eps0: Im K' = 0.666667, delta' = 0.130900 (-1.17e+05 sigma), neg 0 | Re K' = 0.666667, delta' = 0.130900 (-164.0 sigma_nu), neg 0
+  phi_R = pi/8                           Form S   -2eps0: Im K' = 0.666667, delta' = 0.130900 (-1.17e+05 sigma), neg 0 | Re K' = 0.666667, delta' = 0.130900 (-164.0 sigma_nu), neg 0
+  phi_R = 0 (schon H166d, nur Kontrolle) Form K   +eps0 : Im K' = 0.744036, delta' = 0.167041 (-7.07e+04 sigma), neg 0 | Re K' = 0.744036, delta' = 0.193815 (-134.5 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form K   -eps0 : Im K' = 0.954763, delta' = 0.020771 (-2.58e+05 sigma), neg 0 | Re K' = 0.954763, delta' = 0.036133 (-208.5 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form K   +2eps0: Im K' = 0.749849, delta' = 0.161269 (-7.81e+04 sigma), neg 0 | Re K' = 0.749849, delta' = 0.162007 (-149.4 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form K   -2eps0: Im K' = 0.998793, delta' = 0.000524 (-2.84e+05 sigma), neg 0 | Re K' = 0.998793, delta' = 0.000907 (-225.0 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form lin +eps0 : Im K' = 23.672602, delta' = 0.725781 (+6.46e+05 sigma), neg 1 | Re K' = 23.672602, delta' = 0.754051 (+128.6 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form lin -eps0 : Im K' = 0.921125, delta' = 0.149802 (-9.28e+04 sigma), neg 1 | Re K' = 0.921125, delta' = 0.274060 (-96.8 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form lin +2eps0: Im K' = 3.019275, delta' = 0.843516 (+7.97e+05 sigma), neg 1 | Re K' = 3.019275, delta' = 0.889564 (+192.2 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form lin -2eps0: Im K' = 1.088913, delta' = 0.128583 (-1.20e+05 sigma), neg 1 | Re K' = 1.088913, delta' = 0.205018 (-129.2 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form S   +eps0 : Im K' = 0.666667, delta' = 0.261799 (+5.07e+04 sigma), neg 0 | Re K' = 0.666667, delta' = 0.523599 (+20.4 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form S   -eps0 : Im K' = 0.666667, delta' = 0.261799 (+5.07e+04 sigma), neg 1 | Re K' = 0.666667, delta' = 0.523599 (+20.4 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form S   +2eps0: Im K' = 0.666667, delta' = 0.261799 (+5.07e+04 sigma), neg 1 | Re K' = 0.666667, delta' = 0.523599 (+20.4 sigma_nu), neg 1
+  phi_R = 0 (schon H166d, nur Kontrolle) Form S   -2eps0: Im K' = 0.666667, delta' = 0.261799 (+5.07e+04 sigma), neg 0 | Re K' = 0.666667, delta' = 0.523599 (+20.4 sigma_nu), neg 1
+Treffer A (phi_R = pi/8): False
+
+Teil B  Winkel-Abbildungen des Symmetriepunkts pi/8 in den Lesarten theta = phi, 2phi, 3phi;  phi' = theta'/n
+  Aberration +tanh2e     Lesart 1phi: phi' = 0.11556563  Abstand +7.599e-02 =    +97420.9 sigma (+192.0 %)
+  Aberration +tanh2e     Lesart 2phi: phi' = 0.11988294  Abstand +8.031e-02 =   +102955.9 sigma (+202.9 %)
+  Aberration +tanh2e     Lesart 3phi: phi' = 0.12795083  Abstand +8.837e-02 =   +113299.4 sigma (+223.3 %)
+  Aberration +beta_sym   Lesart 1phi: phi' = 0.21371972  Abstand +1.741e-01 =   +223259.5 sigma (+440.0 %)
+  tan/gamma_L            Lesart 1phi: phi' = 0.21858505  Abstand +1.790e-01 =   +229497.1 sigma (+452.3 %)
+  Aberration +beta_sym   Lesart 2phi: phi' = 0.21976724  Abstand +1.802e-01 =   +231012.7 sigma (+455.3 %)
+  tan*beta_sym           Lesart 1phi: phi' = 0.22376046  Abstand +1.842e-01 =   +236132.2 sigma (+465.4 %)
+  Aberration +beta_sym   Lesart 3phi: phi' = 0.23056634  Abstand +1.910e-01 =   +244857.7 sigma (+482.6 %)
+  tan/gamma_L            Lesart 2phi: phi' = 0.24612407  Abstand +2.065e-01 =   +264803.5 sigma (+521.9 %)
+  tan*beta_sym           Lesart 2phi: phi' = 0.25119339  Abstand +2.116e-01 =   +271302.6 sigma (+534.7 %)
+  Spannweite der 36 Bilder: 0.1156 bis 1.1998; Bilder unter 0,1: 0
+  lockere Treffer (< 1 %): 0; Zufallserwartung (gleichverteilt ueber die Spannweite) lambda = 0.0263, P(>= 0) = 1
+  Grenzfaelle: Lichtpunkt (beta -> 1): Aberration -> 0 bzw. pi, Kontraktion -> 0; Dual-Frame z -> iz: theta -> theta + pi/2 (pi/8 -> 5pi/8, rationale Vielfache von pi); Punkt 0 ist unter allen Abbildungen fest.
+Treffer B: False
+
+============================================================================================
+H230 Gesamturteil: WIDERLEGT   (A False, B False, lockere B 0)

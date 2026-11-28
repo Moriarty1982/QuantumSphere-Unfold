@@ -1,0 +1,15 @@
+k444b Wolfram-Gegenprobe zu H230, ausgefuehrt ueber den Wolfram-Kernel (MCP); keine Warnungen, Rueckgabewert Null. Ausgaben aus Print[...] woertlich.
+(In der Schleife "eps = s" steht s fuer den Faktor vor eps0: 1, -1, 2, -2.)
+
+cosh 2e0 - gamma_L = -4.3047*10^-16, tanh 2e0 = 0.8440405476
+B: Ab +tanh2e n=1: phi' = 0.115565625473  Abstand 97420.9 sigma
+B: Ab +tanh2e n=2: phi' = 0.119882938258  Abstand 102956. sigma
+B: Ab +tanh2e n=3: phi' = 0.127950833931  Abstand 113299. sigma
+B: Ab +beta n=1: phi' = 0.213719720809  Abstand 223259. sigma
+B: tan/gL n=1: phi' = 0.218585049961  Abstand 229497. sigma
+B: Spannweite 0.115565625473 .. 1.19978156058, Anzahl 36
+A: Form K, eps = 1: Im {0.7440364, 0.1580167}  Re {0.7440364, 0.1580167}
+A: Form K, eps = -1: Im {0.9547633, 0.01279349}  Re {0.9547633, 0.01279349}
+A: Form K, eps = 2: Im {0.7498489, 0.1610415}  Re {0.7498489, 0.1610415}
+A: Form K, eps = -2: Im {0.9987926, 0.0003255908}  Re {0.9987926, 0.0003255908}
+A: Datenphase delta*_Im = 0.2222220471
