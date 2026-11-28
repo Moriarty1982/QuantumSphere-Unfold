@@ -1,0 +1,35 @@
+============================================================================================
+H226 Kontrolle: ohne Term (H225) globales Minimum bei pi/8
+============================================================================================
+  q=-1e-4: phi* = 0.3926990 (mod pi/3: 0.3926990; pi/8 = 0.3926991)
+
+============================================================================================
+H226 A  Grenzfall q = -1e-4: Verhaeltnis (Koeffizient/|q| bei T1, T4; lam, kap direkt), das phi = x stationaer macht; Globalitaet
+============================================================================================
+  T1 c*alpha cos2d (nur Im): Nullstellen der Steigung bei phi = x: [-2.424781]
+     Verhaeltnis -2.424781: Kruemmung +7.373e-04, globales Minimum bei -0.7026711 -> phi = x global: False; naechste Rahmenzahl -2 = -2.00000 (+21.2 %) -> Treffer: False
+  T2 q_Re = lam q: Nullstellen der Steigung bei phi = x: keine
+  T3 |alpha'_Re| = kap: Nullstellen der Steigung bei phi = x: keine
+  T4 alpha cos2d beide (Kontrolle): Nullstellen der Steigung bei phi = x: [-2.634199]
+     Verhaeltnis -2.634199: Kruemmung -3.198e-04, globales Minimum bei -1.4477229 -> phi = x global: False; naechste Rahmenzahl -3 = -3.00000 (-12.2 %) -> Treffer: False
+
+============================================================================================
+H226 B  endliche Kopplung q = -0,0852: Koeffizient so, dass delta_Im = delta* am globalen Modulus-Minimum; Vorhersage x_nu
+============================================================================================
+  T1 c*alpha cos2d (nur Im): delta_Im ueber dem Gitter von 0.0265 bis 0.4375 (Ziel 0.2222)
+     Koeffizient +0.120069: phi* = +0.489501, delta_Im = 0.2222221, delta_Re = 0.028618 -> x_nu,pred = +0.49498 (+212.0 sigma) -> ausserhalb
+  T2 q_Re = lam q: delta_Im ueber dem Gitter von 0.0112 bis 0.1547 (Ziel 0.2222)
+     keine Loesung mit natuerlicher Groesse
+  T3 |alpha'_Re| = kap: delta_Im ueber dem Gitter von 0.0430 bis 0.1163 (Ziel 0.2222)
+     keine Loesung mit natuerlicher Groesse
+  T4 alpha cos2d beide (Kontrolle): delta_Im ueber dem Gitter von 0.0160 bis 0.3057 (Ziel 0.2222)
+     Koeffizient -0.593918: phi* = -1.178097, delta_Im = 0.2222220, delta_Re = 0.222222 -> x_nu,pred = +0.30138 (+121.1 sigma) -> ausserhalb
+     Koeffizient +0.459786: phi* = +0.392699, delta_Im = 0.2222221, delta_Re = 0.222222 -> x_nu,pred = +0.30138 (+121.1 sigma) -> ausserhalb
+
+============================================================================================
+H226 Gesamturteil (T4 ist Kontrolle)
+============================================================================================
+  T1 c*alpha cos2d (nur Im): A global bei x: False, A Rahmenzahl: False, B innerhalb 2 sigma: False
+  T2 q_Re = lam q: A global bei x: False, A Rahmenzahl: False, B innerhalb 2 sigma: False
+  T3 |alpha'_Re| = kap: A global bei x: False, A Rahmenzahl: False, B innerhalb 2 sigma: False
+  -> WIDERLEGT

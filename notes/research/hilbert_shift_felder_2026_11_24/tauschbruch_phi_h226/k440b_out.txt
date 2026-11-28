@@ -1,0 +1,10 @@
+k440b Ausgabe (Wolfram-Kernel, 2026-11-28). Rueckgabewert jeder Auswertung: Null. Keine Warnungen (FindMinimum mit Quiet).
+
+Auswertung 1:
+A1 fuehrende Ordnung T1: alpha/q = 3(Sin[Pi/4-3x]+Cos[3x])/(2Cos[2x]) = 2.4245851
+A2 fuehrende Ordnung T2: lambda = -Sin[Pi/4-3x]/Cos[3x] = -0.62275381
+A3 T1 Verhaeltnis -2.424781: E(x) = -2.00007128303 ; grobes globales Minimum bei phi = -0.706858 mit E = -2.00042199953 ; dE/dphi(x) = 4.44089*10^-11
+
+Auswertung 2:
+B T1 alpha=0.120069, q=-0.0852: phi* = 0.489565 ; delta_Im = 0.222273 ; delta_Re = 0.0285647 ; x_nu,pred = Pi/6 - delta_Re = 0.495034
+(Gitter Pi/3600; Python mit Nachschaerfen: phi* = 0.489501, delta_Im = 0.2222221, delta_Re = 0.028618, x_nu,pred = 0.49498)

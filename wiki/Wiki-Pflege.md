@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H226 (tauschbrechender Term):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.
+
 **28.11.2026, Test H225 (φ als Modulus):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Modulus-Minimum bei π/8, widerlegt.
 
 **28.11.2026, Test H224 (φ als Wigner-Drehung):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: kein strenger Treffer; Vorzeichen des Zweigwahl-Terms nun Setzung des Autors.
