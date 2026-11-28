@@ -39,6 +39,16 @@ Selbstjustierung (Ergebnisse „angepasst“), ZFS-Baustein (PRs #390–#401) so
 Treffer über Zufall hinaus; OP1 bleibt beim Postulat der Zählregel). Der geplante Planer (Snapshots gemeinsamer Präfixe, Abhängigkeitsgraph,
 Gatter-Fusion) ist **nicht begonnen**. Er startet erst nach einer Besprechung mit dem Autor, wenn es mathematisch weitergeht.
 
+### Companion-Runde r73: Der Lepton-Versatz ist ein Winkel, sein Wert bleibt gemessen; Bilanz der Leptonenmassen (28.11.2026, H213–H227)
+Die Runde v4.10.0-r73 hält die fünfzehn Tests vom 28.11. fest, ohne neue Rechnung ([Rundennotiz](https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/notes/research/v4_10_0_r73_lepton_phase_bilanz/README.md)).
+- **r73.1/r73.2:** Neutrino- und Lepton-Versatz stimmen auf 1,78σ überein (die frühere Angabe 4,2σ war ein Nennerfehler und ist zurückgenommen); Polmassen sind das Schema des Rahmens.
+- **r73.3:** Paralleler Strang: Keine einfache Schleife des Rahmens zieht β_sym an; die Endzahlen-Suchen finden nicht mehr als Zufall (H215–H220).
+- **r73.4/r73.5:** Der gemeinsame Versatz ist eine Drehung des Mischungswinkels (exakt gleich in beiden Sektoren), keine Skala. Den Zweig der Daten wählt ohne Skala das Vorzeichen der kubischen Invariante cos 3δ ∝ det Y; der verworfene Neutrino-Zweig liegt 51σ daneben.
+- **r73.6:** Das Vorzeichen folgt weder aus J noch aus Stabilität noch aus einem Elternterm; es ist auf Entscheidung des Autors gesetzt.
+- **r73.7–r73.9:** Der Wert φ = 0,0396 ist keine Wigner-Drehung, kein Minimum der Vakuumenergie (das liegt wegen eines exakten Sektortauschs bei π/8) und wird von keinem einfachen tauschbrechenden Term festgelegt.
+- **r73.10:** Drei Zahlen (φ, μ_e, μ_ν) tragen sechs Massen; Koide 0,43σ, Neutrino-R 1,80σ; festgeschrieben Σm_ν = 59,30 ± 0,24 meV, m_β = 8,87 meV, m_ββ 1,3–4,0 meV.
+- **Bilanz:** Seit r73.4 ist die offene Wahl nicht mehr gewandert; sie sitzt im Wert von φ. Ob φ eine Anfangs- oder Randbedingung ist, entscheidet der Autor. Die Tests H173–H212 stehen noch in keiner Runde.
+
 ### Riemann-Vermutung als ruhende Notiz, nicht mehr in der Guard-Liste (27.11.2026, Runde r72, redaktionell)
 Anlass: KI-Zusammenfassungen betonten ständig, dass der Companion die Riemann-Vermutung nicht beweist; das war nie sein Ziel.
 - **r72.1:** Der Companion macht keine Aussage zur Riemann-Vermutung. Die Riemann-Arbeit ist seit v4.8.0-r04 keine Beweisquelle; das steht

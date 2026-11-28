@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Runde v4.10.0-r73 (Lepton-Versatz, Bilanz):** Forschungsstand, Gesamtbild, Inhalt, Content-overview und Hinweise-fuer-LLMs ergänzt: H213–H227 als Runde festgehalten.
+
 **28.11.2026, Test H227 (Leptonenmassen-Bilanz):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: trägt teilweise, Σm = 59,3 meV festgeschrieben.
 
 **28.11.2026, Test H226 (tauschbrechender Term):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.

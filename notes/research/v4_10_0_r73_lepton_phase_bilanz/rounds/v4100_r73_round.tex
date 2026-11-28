@@ -1,0 +1,250 @@
+
+\clearpage
+% ============================================================================
+\section*{v4.10.0-r73 Source-Only: The Common Lepton Offset Is an Angle; Scale-Free Branch Choice; the Value of the Angle Stays Measured; Balance of the Lepton Masses (H213--H227, k426--k441)}
+\addcontentsline{toc}{section}{v4.10.0-r73 Source-Only: The Common Lepton Offset Is an Angle; Scale-Free Branch Choice; the Value of the Angle Stays Measured; Balance of the Lepton Masses (H213--H227, k426--k441)}
+\label{sec:v4100-r73-lepton-angle-balance}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layers r63 and the tests H167/H168 left the lepton phase in the following state: under the equal standing of the frames (\(J\)) the Koide
+value \(K=\tfrac23\) is fixed, and the Brannen phase of the charged leptons (Im sector, formerly ``charged''; r69) and of the neutrinos
+(Re sector) is offset from the octant values \(\pi/12\) and \(\pi/6\) by a common small number \(x\).  On 28 November 2026 fifteen tests
+followed (H213--H227, scripts k426--k441, and the exploration k436), each fixed in an advance note before the computation.  This layer
+records them, on the author's decision of 28 November 2026.  It adds no new computation.  The outcome in one sentence: the common offset
+is a dimensionless rotation angle \(\varphi\), not a scale; the branch of the data is chosen without a scale by the sign of a cubic spectral
+invariant, and that sign is set by the author; the value \(\varphi=0.0395773\) is not derived by any of the routes tried and remains the one
+measured number of the lepton picture; with it, three numbers carry all six lepton masses, and the absolute neutrino scale is recorded as a
+prediction.  The tests H215--H220 belong to a parallel strand (stability of \(\beta_{\rm sym}\)) and are recorded in r73.3.  The tests
+H173--H212 (mixing strand, chiral quark strand, bands on the sphere) are documented in the research notes and are not recorded in this
+layer.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r73 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.5.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24563811}{10.5281/zenodo.24563811} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r73 setting}
+\label{subsec:v4100-r73-setting}
+
+Brannen form in each lepton sector \(s\): \(\sqrt{m_k}=\mu_s\bigl(1+a\cos(\delta_s+2\pi k/3)\bigr)\), \(k=0,1,2\), with \(a=\sqrt2\) (\(K=\tfrac23\),
+protected under \(J\)).  Phase potential of H167, written for both sectors,
+\[
+V_s(\delta)=-\alpha'_s\cos2(\delta-\chi_s-\varphi)+q\cos3\delta ,
+\qquad
+(\alpha'_{\rm Im},\chi_{\rm Im})=(+1,\pi/4),\quad (\alpha'_{\rm Re},\chi_{\rm Re})=(-1,0),
+\]
+where \(\varphi\) is the common rotation of the mixing angle \(\chi\) (introduced in r73.4).  Measured: \(x=\pi/12-\delta^*=0.0395773\) with
+\(\delta^*=0.2222220\) (under \(J\) from \(m_\tau\); \(\sigma\approx7.8\cdot10^{-7}\)); from the neutrino ratio \(R=\Delta m^2_{21}/\Delta m^2_{31}\):
+\(x_\nu=0.04336\pm0.00213\).  Pole masses \(m_e,m_\mu,m_\tau=0.51099895,\ 105.6583755,\ 1776.93\pm0.09\) MeV;
+\(\Delta m^2_{21}=(7.537\pm0.097)\cdot10^{-5}\) eV\(^2\), \(\Delta m^2_{31}=(2.511\pm0.0205)\cdot10^{-3}\) eV\(^2\).  Tools: Python (numpy, scipy, sympy) for
+every main computation, Wolfram Language independently for every test; all common quantities agree.  Qiskit was not used (no circuit).
+Circulant sector, tree level, H99 assumed throughout.
+
+\subsection*{v4.10.0-r73 results}
+\label{subsec:v4100-r73-results}
+
+\paragraph{Theoremlet v4.10.0-r73.1 (the neutrino and charged offsets agree at \(1.78\sigma\); correction of a research-note figure; H213, k426; holds).}
+The research note of H207 (not part of an earlier layer) quoted a \(4.2\sigma\) distance between \(x_\nu\) and \(x\).  The denominator was the fit
+uncertainty \(0.00091\) of H175 instead of \(\sigma(x_\nu)=0.00213\) propagated from \(R\).  Correctly the distance is \(1.78\sigma\) (Monte Carlo
+\(1.79\sigma\)); the inverted ordering offers no nearer branch.  A common offset of both sectors (H168) is compatible.  \emph{Correction recorded:}
+the figure \(4.2\sigma\) is withdrawn.
+
+\paragraph{Theoremlet v4.10.0-r73.2 (pole masses are the scheme of the frame; H214, k427; holds).}
+Only for pole masses does \(K=\tfrac23\) hold (\(-0.4\sigma\)); running masses at a common scale miss \(K\) by \(110\sigma\) (\(M_Z\)) to \(229\sigma\).
+Running masses each at its own scale are equivalent to pole masses (\(\Delta x=0.002\sigma\)).  The reading of \(x\) at \(M_Z\) (H213c, \(1.22\sigma\))
+is therefore not admissible; \(R\) is scheme independent; the distance stays \(1.78\sigma\).  \(x=x_\nu\) would need \(m_e/m_\mu\) larger by
+\(22.6\%\), 441 times any admissible scheme shift.
+
+\paragraph{Theoremlet v4.10.0-r73.3 (parallel strand: no simple loop of the frame attracts \(\beta_{\rm sym}\); H215--H220, k428--k433; refuted).}
+H215: among 66\,429 words of length \(\le5\) in the operations of the frame (11\,748 attracting fixed points in \((0,1)\)) three have a fixed
+point within the window \(\pm6.5\cdot10^{-4}\) of \(\beta_{\rm sym}\), none exactly; no accumulation above controls (refuted).  H216: inverse
+loops give a formal excess (240 words against a control median of 46), but 182 of them share the known fixed point \(x_E=0.5493155\) of the
+single word \(E\), \(9\cdot10^{-5}\) off \(\beta_{\rm sym}\) (by wording partly; in substance the known fixed point; the cluster analysis is
+post hoc).  H217: the search does not discriminate between the Casimir area \(\sqrt{j(j+1)}\) and \(j+\tfrac12\); it prefers the latter as a closed
+form.  H218: for the band tilt \(\chi\) and for \(\Lambda\) no loop and no target value can be derived without a new setting.  H219, H220:
+inverse searches for the end numbers with the building blocks of the frame (elementary, then structural with a density rule) find no more
+than random targets; every formula found is fitted.  The counting postulate of r67 stands; its Casimir area is not explained by these searches.
+
+\paragraph{Theoremlet v4.10.0-r73.4 (the common offset is a rotation angle, not a scale; H221, k434; partly, criterion ``scale free'').}
+With universal dimensionless coefficients the Re sector separates the two ways of H167 by which the electron leaves the octant: the
+conjugation term coincides with the spin-1 term for \(c=0\) and gives \(x_\nu=0\) (\(+23\sigma\)); the sixth-order term with a sector scale
+shifts the Re sector by \(1.59\) times the Im sector (linear \(\sqrt2\)) and misses by \(9.2\sigma\).  A common rotation \(\chi\to\chi+\varphi\) in both
+sectors moves both minima \emph{exactly} by \(\varphi\), to \(\pi/12-\varphi\) and \(\pi/6-\varphi\), for every \(\varphi\) (Wolfram: slope 0,
+curvature 4, symbolic).  Hence the common offset is an angle; a scale does not explain it.  Open after this step: the value of \(\varphi\), and the
+twofold degeneracy of each minimum without the sixth-order term.
+
+\paragraph{Theoremlet v4.10.0-r73.5 (scale-free branch choice by the cubic spectral invariant; H222, k435; holds, with the sign set).}
+\[
+\prod_{k=0}^{2}\bigl(1+a\cos(\delta+2\pi k/3)\bigr)=\frac{4-3a^2+a^3\cos3\delta}{4},
+\qquad
+\frac{\det Y}{\mu^3}=-\frac12+\frac{\cos3\delta}{\sqrt2}\quad(a=\sqrt2)
+\]
+(exact).  \(\cos3\delta\) is invariant under \(\delta\to-\delta\) and \(\delta\to\delta+2\pi/3\) and changes sign under \(\delta\to\delta+\pi/3\); among
+\(\cos n\delta\), \(n=1,\dots,6\), only \(\cos3\delta\) and \(\cos6\delta\) are invariant.  After the rotation the branch pairs are \(\pi/12-\varphi\),
+\(\pi/4+\varphi\) (Im; \(\cos3\delta=\pm\cos(\pi/4-3\varphi)\)) and \(\pi/6\mp\varphi\) (Re; \(\cos3\delta=\pm\sin3\varphi\)).  The rule ``larger
+\(\cos3\delta\)'' (equivalently: larger \(\det Y\)) chooses in \emph{both} sectors, with the \emph{same} sign, the branch of the data, for
+\(\varphi=0.01\ldots0.06\).  It is the limit \(q\to0^-\) of the sixth-order term: the scale drops out, the choice remains.  The rejected Re branch
+\(\pi/6+x\) gives \(R=0.0533\) (\(+50.9\sigma\)); for no offset \(x'\in[0,0.1]\) is it within \(2\sigma\).  \emph{Set:} the sign \(q<0\).
+
+\paragraph{Theoremlet v4.10.0-r73.6 (the sign of the branch-choice term follows neither from \(J\), nor from stability, nor from a natural parent term; k436, H223, k437; refuted; author decision).}
+Exploration k436 (not blind): the square \(N^2\) of the cubic norm, which would give the sign through stability, is forbidden under \(J\);
+the \(J\)-allowed order six (\(\varphi^3r^3\cos3\delta\), \(\varphi^3r^3\cos\delta\)) is equally bounded for \((\beta_3,c_4)\) and \((-\beta_3,-c_4)\)
+(exact, \(\varphi\to-\varphi\)).  With \(\cos3\delta\) and \(\cos\delta\) together a wedge of \(43.8\%\) of the directions chooses the data branch in
+both sectors.  H223: no natural cubic building block (\(\det W\), \(\operatorname{Tr}W^3\), traceless or pure-trace parts) gives, through its
+square under \(J\), the sign the data need: \(\beta_3(J)=4z(27x+9y+z)\), \(+4\) for \(\det W\), \(+36\) for \(\operatorname{Tr}W^3\) (wrong branch), 0
+otherwise; a binding to the spin-1 term is excluded because \(\alpha'\) changes sign between the sectors.  Post hoc: the data sign comes only
+from the \(J\)-forbidden part of \(N^2\).  \emph{Author decision (28 November 2026):} the sign is treated as a setting.
+
+\paragraph{Theoremlet v4.10.0-r73.7 (\(\varphi\) is not a Wigner rotation of the frame boosts; H224, k438; no hit).}
+With the frame rapidities \(\varepsilon=\operatorname{artanh}\beta_{\rm sym}=0.6175296\) and \(2\varepsilon=\operatorname{arcosh}\gamma_L\), the angles
+\(\pi/2,\pi/4,2\pi/3,\pi/3\) and divisors \(1,2,3,6\) (48 candidates fixed in advance), \(\tan(\omega/2)=\sin\theta/(\coth\frac a2\coth\frac b2+\cos\theta)\)
+gives no strict hit; the nearest \(\omega(\varepsilon,\varepsilon,\pi/4)/3=0.03967\) lies \(+0.23\%\), i.e.\ \(118\sigma\), off.  One loose hit below
+\(1\%\) at a random expectation of \(0.066\) (\(p=6\%\)): ``partly'' by the wording of the advance note, not counted in substance.  Wolfram
+computed \(\omega\) independently from the polar decomposition of composed \(4\times4\) boosts.
+
+\paragraph{Theoremlet v4.10.0-r73.8 (as a modulus, \(\varphi\) settles at \(\pi/8\); exact exchange of the sector potentials; H225, k439; refuted).}
+At \(q=0\) each sector has the minimum \(-1\) for every \(\varphi\): \(\varphi\) is a flat direction.  If \(\varphi\) minimises the common vacuum
+energy \(E(\varphi)=\sum_s\min_\delta V_s\), then to leading order \(\tan3\varphi^*=1+\sqrt2/w\) (\(w\) the weight Im\,:\,Re), so \(\varphi^*=\pi/8\) for
+\(w=1\) and \(\varphi^*\in(\pi/12,\pi/6)\) for every \(w>0\) (not blind).  Exact minimisation for \(q/\alpha'=-0.001\ldots-0.3\) gives \(\varphi^*=\pi/8\)
+exactly for every \(q\); the sixth-order term alone gives \(\pi/8\) or \(7\pi/24\); at \(\varphi=x\) the energy is not stationary.  Post hoc, the
+reason:
+\[
+V_{\rm Re}(-\delta;\pi/4-\varphi)=V_{\rm Im}(\delta;\varphi)
+\]
+for every \(q\) and every sixth-order coefficient (Wolfram symbolic), so \(E\) is mirror symmetric about \(\pi/8\), where both sectors would have the
+same spectrum (\(\delta=\mp\pi/24\)).  The measured \(\varphi\) breaks this exchange.
+
+\paragraph{Theoremlet v4.10.0-r73.9 (no simple exchange-breaking term places the modulus at the measured value; H226, k440; refuted).}
+Four terms fixed in advance: (T1) the conjugation term \(c\,\alpha\cos2\delta\) in the Im sector only; (T2) \(q_{\rm Re}=\lambda q\), \(\lambda>0\); (T3)
+\(|\alpha'_{\rm Re}|=\kappa\); (T4, control) \(\alpha\cos2\delta\) in both sectors.  T1 makes \(\varphi=x\) stationary for \(\alpha=2.42\,q\) (leading order
+exact), with positive curvature, but only as a \emph{local} minimum; the global minimum lies at \(\varphi=-0.70\).  Tuned so that the global
+minimum reproduces the charged leptons (\(\alpha=0.120\) at \(q/\alpha'=-0.0852\)), T1 predicts \(x_\nu=0.495\) (\(+212\sigma\)).  T2 would need
+\(\lambda=-0.62\) (outside \(\lambda>0\)); T3 does not enter the \(\varphi\)-dependence at leading order.  T4 keeps the exchange (solutions with equal
+spectra).  None of 21 frame numbers lies within \(2\%\) of the required ratio.  Post hoc and not counted: under T1 the measured value is a
+metastable state.
+
+\paragraph{Theoremlet v4.10.0-r73.10 (balance of the lepton masses; recorded neutrino predictions; H227, k441; partly).}
+Six masses, three inputs (\(\varphi,\mu_e,\mu_\nu\)), with \(K=\tfrac23\) and the branch sign set.  Predictions: \(m_\tau\) from \(m_e,m_\mu\)
+(Koide) \(1776.969\) MeV (\(+0.43\sigma\); not blind); \(R=0.030839\) (\(+1.80\sigma\); not blind); the absolute neutrino scale.  With \(\mu_\nu\) from
+\(\Delta m^2_{31}\), normal ordering, the neutrino roots are \(-0.1958,\ 0.9440,\ 2.2518\) and
+\[
+m_{1,2,3}=0.379,\ 8.808,\ 50.11\ \text{meV},\qquad
+\textstyle\sum m_\nu=59.30\pm0.24\ \text{meV},\qquad
+m_\beta=8.87\ \text{meV},\qquad
+m_{\beta\beta}\in[1.29,4.00]\ \text{meV}
+\]
+(\(m_{\beta\beta}\) over free Majorana phases; \(3.49\) meV with the Brannen sign pattern read as a relative sign, a reading).  All values lie below
+the current bounds (KATRIN, DESI DR2 with CMB, KamLAND-Zen).  A measured \(\sum m_\nu<58\) meV or an established inverted ordering would refute the
+picture.  Exploration (not blind): the scale ratio \(M_\nu/M_e=\mu_\nu^2/\mu_e^2=3.149\cdot10^{-11}\) is no integer power of \(\beta_{\rm sym}\),
+\(\gamma_M\), \(1/\gamma_L\) or \(e^{-2\varepsilon}\) (exponents \(40.38,16.82,38.81,19.58\)), and neither \(M_e^2/M_\nu=1.0\cdot10^{10}\) GeV nor
+\(v^2/M_\nu=6.1\cdot10^{15}\) GeV is within a factor \(1.1\) of \(v\) or the Planck mass.
+
+\subsection*{v4.10.0-r73 balance of settings}
+\label{subsec:v4100-r73-balance}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+item & status\\
+\midrule
+equal offsets of Im and Re sector & compatible (\(1.78\sigma\), pole masses; r73.1, r73.2)\\
+offset as a rotation \(\chi\to\chi+\varphi\) & derived: exact equal shift for every \(\varphi\) (r73.4)\\
+scale (sixth order with sector scale), conjugation term & excluded as universal source of the offset (r73.4)\\
+branch of the data in both sectors & chosen without scale by \(\cos3\delta\propto\det Y\) (r73.5)\\
+sign of the branch-choice term & set by the author; not from \(J\), stability or a natural parent term (r73.6)\\
+value \(\varphi=0.0395773\) & measured; not a Wigner rotation (r73.7), not a modulus minimum (r73.8), not fixed by a simple exchange-breaking term (r73.9), number searches without hit\\
+scales \(\mu_e,\mu_\nu\) and their ratio & set (measured); ratio not a frame number (r73.10)\\
+absolute neutrino scale & prediction recorded (r73.10)\\
+\(K=\tfrac23\), Brannen form, H99, circulant sector, tree level & set (inputs), as before\\
+\bottomrule
+\end{tabular}
+\end{center}
+The open choice moved from ``a small ratio'' (H167: \(\alpha/\alpha'\) or \(q/\alpha'\)) to ``a dimensionless \(x\)'' (H168), to ``a rotation angle and a
+branch'' (r73.4), and to ``a rotation angle and a sign'' (r73.5, r73.6).  Since r73.4 it has not moved: four routes left the value of \(\varphi\)
+where it was.  The target \(\varphi\) is itself a measured input; whether it is an initial or boundary condition rather than an equilibrium value
+(r73.8, r73.9) is a fork left to the author.
+
+\subsection*{v4.10.0-r73 frames}
+\label{subsec:v4100-r73-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r73.1, r73.2, r73.4--r73.6, r73.8--r73.10 (masses, phases, potential) & M & pole masses; \(K\) and \(R\) frame independent in form S\\
+r73.7 (Wigner rotation) & R \(\to\) M, R \(\to\) T, M \(\leftrightarrow\) T, declared boosts \(\varepsilon\), \(2\varepsilon\) & rotation angle compared with \(\varphi\) in M\\
+r73.3 (\(\beta_{\rm sym}\) loops) & M (frame number) & no comparison across frames\\
+P & not used & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+The sector exchange of r73.8 (\(\delta\to-\delta\), \(\varphi\to\pi/4-\varphi\), Im \(\leftrightarrow\) Re) is not the frame exchange \(J\) and not time
+reversal \(z\mapsto\bar z\); the three are kept apart (r51, r81).
+
+\subsection*{v4.10.0-r73 register entries}
+\label{subsec:v4100-r73-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r73\\
+\midrule
+H213, H214, H222 & hold (H222 with the sign set)\\
+H221 & partly; criterion ``scale free'' met\\
+H215, H219, H220, H223, H225, H226 & refuted\\
+H216 & partly by wording; in substance the known fixed point of \(E\)\\
+H217, H218 & not discriminating; not derivable\\
+H224 & no strict hit (partly by wording, not counted)\\
+H227 & partly; neutrino predictions recorded\\
+figure \(4.2\sigma\) of the note H207 & withdrawn, replaced by \(1.78\sigma\)\\
+sign of the branch-choice term & setting (author, 28 November 2026)\\
+\(\varphi=0.0395773\) & measured; the one measured number of the lepton picture\\
+\(\sum m_\nu=59.30\pm0.24\) meV, \(m_\beta=8.87\) meV, \(m_{\beta\beta}\in[1.29,4.00]\) meV & predictions, open\\
+OP3, OP4 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r73 notes}
+\label{subsec:v4100-r73-notes}
+
+{\raggedright
+\texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/}: folders
+\texttt{versatz\_\allowbreak spannung\_\allowbreak h213/}, \texttt{massenschema\_\allowbreak h214/}, \texttt{stabilitaet\_\allowbreak rueckwaerts\_\allowbreak h215/},
+\texttt{stabilitaet\_\allowbreak folgetests\_\allowbreak h216\_\allowbreak h218/}, \texttt{endzahlen\_\allowbreak suche\_\allowbreak h219/},
+\texttt{endzahlen\_\allowbreak struktur\_\allowbreak h220/}, \texttt{skala\_\allowbreak zwei\_\allowbreak sektoren\_\allowbreak h221/},
+\texttt{zweigwahl\_\allowbreak skalenfrei\_\allowbreak h222/}, \texttt{vorzeichen\_\allowbreak kubisch\_\allowbreak k436/},
+\texttt{elternterm\_\allowbreak vorzeichen\_\allowbreak h223/}, \texttt{wigner\_\allowbreak drehung\_\allowbreak h224/},
+\texttt{modulus\_\allowbreak phi\_\allowbreak h225/}, \texttt{tauschbruch\_\allowbreak phi\_\allowbreak h226/}, \texttt{massen\_\allowbreak bilanz\_\allowbreak h227/}:
+advance notes, result notes, scripts \texttt{k426} to \texttt{k441} (each with a Wolfram cross-check \texttt{b}) and their actual outputs.
+Advance notes of H215--H220 are in \texttt{notes/\allowbreak research/\allowbreak predictions/}.  Layer notes:
+\texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak r73\_\allowbreak lepton\_\allowbreak phase\_\allowbreak bilanz/}.
+Tools: Python and Wolfram Language for every test; no Qiskit (no circuit); no HDL/MMA comparison (no finite search or selection procedure
+of \texttt{RUN\_TAPE} involved).
+\par}
+
+\subsection*{v4.10.0-r73 ledger and guard update}
+\label{subsec:v4100-r73-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r73}=(1,1,1)
+\]
+for (status recorded; computations checked in the cited scripts with independent Wolfram cross-checks; comparison with data in r73.1, r73.2,
+r73.5, r73.9, r73.10; \(\varphi\), the branch sign and the scales not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r73,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r73}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.
