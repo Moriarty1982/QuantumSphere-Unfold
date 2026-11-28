@@ -1,0 +1,46 @@
+Zirkulante: e1 = 3*phi ; e2 = 3*phi**2 - 3*r**2 ; e3 = det = 2*C*r**3 + phi**3 - 3*phi*r**2 ; Tr W^2 = 3*phi**2 + 6*r**2 ; Tr W^3 = 6*C*r**3 + 3*phi**3 + 18*phi*r**2
+
+======================================================================================
+a (nicht blind)  beta3 = kappa * alphap mit sektorunabhaengigem kappa
+======================================================================================
+  kappa = +1: Im (alphap=+1): beta3 = +1, V(Daten)-V(andere) = +1.5718 FALSCH | Re (alphap=-1): beta3 = -1, V(Daten)-V(andere) = -0.2369 Daten
+  kappa = -1: Im (alphap=+1): beta3 = -1, V(Daten)-V(andere) = -1.5718 Daten | Re (alphap=-1): beta3 = +1, V(Daten)-V(andere) = +0.2369 FALSCH
+  -> in jedem Fall genau ein Sektor falsch: Bindung an alphap mit festem kappa ausgeschlossen
+
+======================================================================================
+b/c  Bausteine u = x e1^3 + y e1 Tr W^2 + z det W; J-Projektion von u^2: beta3 = Koeffizient von phi^3 r^3 C
+======================================================================================
+  (i) det W                 : u = 2*C*r**3 + phi**3 - 3*phi*r**2;  X = 1, Z = 2, beta3(J) = 4
+      J-projiziert: nicht beide (Im (alphap=+1): V(Daten)-V(andere) = +6.28710; Re (alphap=-1): V(Daten)-V(andere) = +0.94763)
+      volles u^2:   DATEN-Zweig in beiden (Im (alphap=+1): V(Daten)-V(andere) = -1.11141; Re (alphap=-1): V(Daten)-V(andere) = -0.16752)
+  (ii) Tr W^3               : u = 6*C*r**3 + 3*phi**3 + 18*phi*r**2;  X = 3, Z = 6, beta3(J) = 36
+      J-projiziert: nicht beide (Im (alphap=+1): V(Daten)-V(andere) = +56.58391; Re (alphap=-1): V(Daten)-V(andere) = +8.52863)
+      volles u^2:   nicht beide (Im (alphap=+1): V(Daten)-V(andere) = +80.02173; Re (alphap=-1): V(Daten)-V(andere) = +12.06131)
+  (iii) (Tr W)^3            : u = 27*phi**3;  X = 27, Z = 0, beta3(J) = 0
+      J-projiziert: nicht beide (beta3 = 0: keine Wahl)
+      volles u^2:   nicht beide (Im (alphap=+1): V(Daten)-V(andere) = +0.00000; Re (alphap=-1): V(Daten)-V(andere) = +0.00000)
+  (iv) det(W - TrW/3)       : u = 2*C*r**3;  X = 0, Z = 2, beta3(J) = 0
+      J-projiziert: nicht beide (beta3 = 0: keine Wahl)
+      volles u^2:   nicht beide (Im (alphap=+1): V(Daten)-V(andere) = +0.00000; Re (alphap=-1): V(Daten)-V(andere) = -0.00000)
+  (v) Tr W * Tr W^2         : u = 9*phi**3 + 18*phi*r**2;  X = 9, Z = 0, beta3(J) = 0
+      J-projiziert: nicht beide (beta3 = 0: keine Wahl)
+      volles u^2:   nicht beide (Im (alphap=+1): V(Daten)-V(andere) = +0.00000; Re (alphap=-1): V(Daten)-V(andere) = +0.00000)
+  (vi) Tr W^3 - (Tr W)^3/9  : u = 6*C*r**3 + 18*phi*r**2;  X = 0, Z = 6, beta3(J) = 0
+      J-projiziert: nicht beide (beta3 = 0: keine Wahl)
+      volles u^2:   nicht beide (Im (alphap=+1): V(Daten)-V(andere) = +60.01630; Re (alphap=-1): V(Daten)-V(andere) = +9.04598)
+  (vii) e1 e2 - 9 e3        : u = -18*C*r**3 + 18*phi*r**2;  X = 0, Z = -18, beta3(J) = 0
+      J-projiziert: nicht beide (beta3 = 0: keine Wahl)
+      volles u^2:   DATEN-Zweig in beiden (Im (alphap=+1): V(Daten)-V(andere) = -180.04889; Re (alphap=-1): V(Daten)-V(andere) = -27.13795)
+  Kriterium c: benannter Kandidat mit beta3 < 0 nach J-Projektion: keiner
+  allgemein: X = 27*x + 9*y + z, Z = 2*z, beta3(J) = 4*z*(27*x + 9*y + z)
+  Anteil der Richtungen (x, y, z) mit beta3 < 0: 0.4891  (Bedingung: z (27 x + 9 y + z) < 0)
+
+======================================================================================
+d (blind)  liefern Spur-/Determinanten-Bausteine cos delta oder den Spin-1-Term?
+======================================================================================
+  e1: freie Symbole nach Reduktion ['phi']  (delta nur ueber C = cos 3 delta)
+  e2: freie Symbole nach Reduktion ['phi', 'r']  (delta nur ueber C = cos 3 delta)
+  e3: freie Symbole nach Reduktion ['C', 'phi', 'r']  (delta nur ueber C = cos 3 delta)
+  Tr W^2: freie Symbole nach Reduktion ['phi', 'r']  (delta nur ueber C = cos 3 delta)
+  Tr W^3: freie Symbole nach Reduktion ['C', 'phi', 'r']  (delta nur ueber C = cos 3 delta)
+  -> jede Funktion von Spur und Determinante haengt von delta nur ueber cos 3 delta ab: c4 = 0, kein cos 2(delta - chi), keine Bindung an alphap

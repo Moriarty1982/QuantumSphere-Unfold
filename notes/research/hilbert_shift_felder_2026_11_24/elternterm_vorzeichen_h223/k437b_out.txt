@@ -1,0 +1,13 @@
+(* Ausgabe des Wolfram-Evaluators fuer k437b_gegenprobe.wl, 28.11.2026. Zweiter Lauf; im ersten Lauf vereinfachte TrigReduce allein die
+   Eigenwertsummen nicht vollstaendig (Restterme in Cos[d], Sin[d +- Pi/6], die sich zu null summieren), dazu Symbol::undefined2 fuer das
+   Hilfssymbol; die Werte fuer beta3(J) und die J-projizierten Differenzen waren schon dort gleich. Zweiter Lauf mit TrigExpand + Simplify:
+   keine Warnungen; Rueckgabewert Null. Delta(Im,Re) = V(Daten-Zweig) - V(anderer Zweig) bei phi = x_lepton, K = 2/3; negativ = Daten-Zweig. *)
+e1=3 ph  e2=3 ph^2 - 3 r^2  e3=ph^3 - 3 ph r^2 + 2 cc r^3  TrW2=3 ph^2 + 6 r^2  TrW3=3 ph^3 + 18 ph r^2 + 6 cc r^3
+allgemein beta3(J) = 4 z (27 x + 9 y + z)
+det: u = ph^3 - 3 ph r^2 + 2 cc r^3;  beta3(J) = 4;  J-proj. Delta(Im,Re) = {6.2871, 0.947626};  voll Delta(Im,Re) = {-1.11141, -0.167518}
+TrW3: u = 3 ph^3 + 18 ph r^2 + 6 cc r^3;  beta3(J) = 36;  J-proj. Delta(Im,Re) = {56.5839, 8.52863};  voll Delta(Im,Re) = {80.0217, 12.0613}
+(TrW)^3: u = 27 ph^3;  beta3(J) = 0;  J-proj. Delta(Im,Re) = {0., 0.};  voll Delta(Im,Re) = {0, 0}
+det spurfrei: u = 2 cc r^3;  beta3(J) = 0;  J-proj. Delta(Im,Re) = {0., 0.};  voll Delta(Im,Re) = {6.10623e-16, -5.9848e-17}
+TrW TrW2: u = 3 ph (3 ph^2 + 6 r^2);  beta3(J) = 0;  J-proj. Delta(Im,Re) = {0., 0.};  voll Delta(Im,Re) = {0, 0}
+TrW3-(TrW)^3/9: u = 18 ph r^2 + 6 cc r^3;  beta3(J) = 0;  J-proj. Delta(Im,Re) = {0., 0.};  voll Delta(Im,Re) = {60.0163, 9.04598}
+e1e2-9e3: u = 18 ph r^2 - 18 cc r^3;  beta3(J) = 0;  J-proj. Delta(Im,Re) = {0., 0.};  voll Delta(Im,Re) = {-180.049, -27.1379}

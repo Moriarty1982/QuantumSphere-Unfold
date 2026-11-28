@@ -1,5 +1,9 @@
 # Forschungsstand
 
+### Kein Elternterm bindet das Vorzeichen; das Daten-Vorzeichen steckt im J-verbotenen Teil (28.11.2026, Test H223, k437)
+
+Auf Wahl des Autors („Elternterm suchen“). Ein Quadrat u² eines kubischen Bausteins hätte ein festes Vorzeichen. Unter J bleibt davon nur β₃ = 4z(27x + 9y + z) für u = x(Tr W)³ + y Tr W·Tr W² + z det W (symbolisch). Die natürlichen Bausteine geben das falsche Vorzeichen (det W: +4, Tr W³: +36) oder keines (spurfreie und reine Spurbausteine). Eine Bindung an den Spin-1-Term scheidet aus, weil α′ zwischen den Sektoren das Vorzeichen wechselt und Spur und Determinante den Mischungswinkel nicht sehen. **Widerlegt.** Nachträglich: Das Vorzeichen der Daten kommt im vollen N² nur aus dem J-verbotenen Teil −12φr⁵ cos 3δ, der bei K = ⅔ überwiegt. Das Vorzeichen bleibt also gesetzt, oder J gilt bei Ordnung 6 nicht in der Ebenen-Lesart; das zweite wäre eine Änderung an einem Postulat. Python + Wolfram einig. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/elternterm_vorzeichen_h223/Ergebnis_H223_Elternterm_Vorzeichen.md).
+
 ### Das Vorzeichen des Zweigwahl-Terms ist eine echte Setzung (28.11.2026, Erkundung k436, nicht blind)
 
 Nach H222 bleibt ein Vorzeichen offen. Es folgt weder aus dem Postulat J noch aus der Stabilität. Das Quadrat der kubischen Norm, das über Stabilität das richtige Vorzeichen gäbe, ist unter J verboten (Teile φr⁵ cos 3δ und r⁶ cos 6δ ohne J-Partner). Die J-erlaubte Ordnung 6 ist für (β₃, c₄) und (−β₃, −c₄) gleich beschränkt, exakt über φ → −φ. Nimmt man den zweiten J-erlaubten Term φ³r³ cos δ dazu, wählt ein Keil von 43,8 % der Richtungen in beiden Sektoren den Daten-Zweig. Das Vorzeichen muss also aus der finalen Feldgleichung kommen oder gesetzt werden. Python + Wolfram einig. [Erkundung](../notes/research/hilbert_shift_felder_2026_11_24/vorzeichen_kubisch_k436/Erkundung_k436_Vorzeichen_kubisch.md).
