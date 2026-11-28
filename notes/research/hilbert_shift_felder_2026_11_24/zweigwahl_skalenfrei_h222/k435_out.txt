@@ -1,0 +1,46 @@
+======================================================================================
+H222 a/b  Regel 'max cos 3delta' unter den entarteten Minima nach gemeinsamer Drehung phi (q = 0)
+======================================================================================
+  phi=0.010000 Im (c=1, alphap=+1) : Zweige [0.2517994 0.7953982]  cos3d [ 0.728 -0.728]  detY/mu^3 [ 0.01477 -1.01477]  neg. Wurzeln [0, 1]  -> Wahl 0.2517994 (Ziel 0.2517994) JA
+  phi=0.010000 Re (c=0, alphap=-1) : Zweige [0.5135988 0.5335988]  cos3d [ 0.03 -0.03]  detY/mu^3 [-0.47879 -0.52121]  neg. Wurzeln [1, 1]  -> Wahl 0.5135988 (Ziel 0.5135988) JA
+  phi=0.020000 Im (c=1, alphap=+1) : Zweige [0.2417994 0.8053982]  cos3d [ 0.74824 -0.74824]  detY/mu^3 [ 0.02908 -1.02908]  neg. Wurzeln [0, 1]  -> Wahl 0.2417994 (Ziel 0.2417994) JA
+  phi=0.020000 Re (c=0, alphap=-1) : Zweige [0.5035988 0.5435988]  cos3d [ 0.05996 -0.05996]  detY/mu^3 [-0.4576 -0.5424]  neg. Wurzeln [1, 1]  -> Wahl 0.5035988 (Ziel 0.5035988) JA
+  phi=0.039577 Im (c=1, alphap=+1) : Zweige [0.222222  0.8249755]  cos3d [ 0.78589 -0.78589]  detY/mu^3 [ 0.05571 -1.05571]  neg. Wurzeln [0, 1]  -> Wahl 0.2222220 (Ziel 0.2222220) JA
+  phi=0.039577 Re (c=0, alphap=-1) : Zweige [0.4840214 0.5631761]  cos3d [ 0.11845 -0.11845]  detY/mu^3 [-0.41624 -0.58376]  neg. Wurzeln [1, 1]  -> Wahl 0.4840214 (Ziel 0.4840214) JA
+  phi=0.050000 Im (c=1, alphap=+1) : Zweige [0.2117994 0.8353982]  cos3d [ 0.80484 -0.80484]  detY/mu^3 [ 0.0691 -1.0691]  neg. Wurzeln [0, 1]  -> Wahl 0.2117994 (Ziel 0.2117994) JA
+  phi=0.050000 Re (c=0, alphap=-1) : Zweige [0.4735988 0.5735988]  cos3d [ 0.14944 -0.14944]  detY/mu^3 [-0.39433 -0.60567]  neg. Wurzeln [1, 1]  -> Wahl 0.4735988 (Ziel 0.4735988) JA
+  phi=0.060000 Im (c=1, alphap=+1) : Zweige [0.2017994 0.8453982]  cos3d [ 0.82228 -0.82228]  detY/mu^3 [ 0.08144 -1.08144]  neg. Wurzeln [0, 1]  -> Wahl 0.2017994 (Ziel 0.2017994) JA
+  phi=0.060000 Re (c=0, alphap=-1) : Zweige [0.4635988 0.5835988]  cos3d [ 0.17903 -0.17903]  detY/mu^3 [-0.37341 -0.62659]  neg. Wurzeln [1, 1]  -> Wahl 0.4635988 (Ziel 0.4635988) JA
+  Kriterium a (Im-Sektor waehlt pi/12 - phi): JA
+  Kriterium b (Re-Sektor waehlt pi/6 - phi):  JA
+
+======================================================================================
+H222 c  verworfener Re-Zweig pi/6 + x_lepton gegen die Daten
+======================================================================================
+  gewaehlt  pi/6 - x_lepton: delta = 0.484021, Wurzeln [ 2.25176 -0.19581  0.94404]; R_NO = 0.030839 (+1.8 sigma), R_IO = 0.969161 (+1908.9 sigma)
+  verworfen pi/6 + x_lepton: delta = 0.563176, Wurzeln [ 2.19581 -0.25176  1.05596]; R_NO = 0.053318 (+50.9 sigma), R_IO = 0.946682 (+1863.2 sigma)
+  kleinster Abstand des verworfenen Zweigs: 50.9 sigma -> Kriterium c: ausgeschlossen (> 3 sigma)
+  verworfener Zweig pi/6 + x' innerhalb 2 sigma fuer x' in [0, 0,1]: keines
+
+======================================================================================
+H222 d (numerische Kontrolle, symbolisch in Wolfram)  det Y/mu^3 = 1 - 3a^2/4 + a^3/4 cos 3delta
+======================================================================================
+  groesste Abweichung (1000 Stichproben): 2.0e-14
+
+======================================================================================
+H222 e  Robustheit: q = -eps, phi = x_lepton
+======================================================================================
+  eps=1e-02 Im (c=1, alphap=+1) : globale Minima [0.21766522]  Abstand zum Zweig 4.56e-03  ok
+  eps=1e-02 Re (c=0, alphap=-1) : globale Minima [0.4765956]  Abstand zum Zweig 7.43e-03  ok
+  eps=1e-04 Im (c=1, alphap=+1) : globale Minima [0.22217567]  Abstand zum Zweig 4.64e-05  ok
+  eps=1e-04 Re (c=0, alphap=-1) : globale Minima [0.48394697]  Abstand zum Zweig 7.45e-05  ok
+  eps=1e-06 Im (c=1, alphap=+1) : globale Minima [0.22222158]  Abstand zum Zweig 4.63e-07  ok
+  eps=1e-06 Re (c=0, alphap=-1) : globale Minima [0.48402069]  Abstand zum Zweig 7.45e-07  ok
+  Gegenprobe q = +1e-4 Im (c=1, alphap=+1) : globale Minima [0.8250219]
+  Gegenprobe q = +1e-4 Re (c=0, alphap=-1) : globale Minima [0.5632506]
+  Kriterium e: JA
+
+======================================================================================
+H222 Gesamturteil
+======================================================================================
+  -> TRAEGT (Vorzeichen des kubischen Terms bleibt gesetzt)
