@@ -1,5 +1,14 @@
 # Forschungsstand
 
+### Einrastung auf 8 Stellungen: die feinen Winkel rasten nicht ein (28.11.2026, Test H233, k447, F18)
+
+Marcs Bild „8 Bit, Rotoren mit nur 8 Positionen“ geprüft: Rasten die feinen Winkel auf ein Gitter aus 8 Stellungen (π/4) mit Halbierung bis 8 Bit ein,
+mit oder ohne Dreiteilung? Die Baumwerte des Leptonbilds (π/12, π/6 und die Achteldrehungen) sind genau solche Stellungen. Der Versatz φ = 0,0396 aber
+nicht: Auch nach acht Halbierungen liegt er 392σ neben dem nächsten Gitterpunkt, und er ist auch kein Rest eines natürlichen Winkels (Lesarten von β_sym)
+nach dem Einrasten. Die Mischungswinkel treffen einige Punkte (θ₂₃ ≈ π/4, θ₁₂ ≈ 3π/16, θ₁₃ ≈ 3π/64), aber nur so oft, wie der Zufall bei ihren Fehlern
+erwartet. **Widerlegt:** Die Einrastung legt die Baumwerte fest, nicht die feinen Winkel. F18 beantwortet, OP3 offen.
+Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/einrastung_f18_h233/`.
+
 ### Rückwärtssuche nach dem Brecher: ein symmetrischer Term macht φ = x nur zu einem lokalen Minimum (28.11.2026, Test H232, k446)
 
 Rückwärts gefragt: Was müsste ein Term leisten, damit der Messwert φ = 0,0396 das Minimum der gemeinsamen Vakuumenergie beider Lepton-Sektoren ist? Exakt gilt
