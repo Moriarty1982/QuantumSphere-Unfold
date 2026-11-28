@@ -58,6 +58,10 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H240, 28.11.2026 (k456):** Zwei RAIDZ2, anders verschaltet? In keiner Verschaltung entstehen zwei RAIDZ2. Fest für alle Nullteiler ist die
+Blockzerlegung: der Quaternion-Block ℍ_x ⊕ ℍ_x·e₈ ungeschützt, das Komplement als 4 Spiegelpaare (trägt teilweise). Offen bleibt, ob dieser Block
+physikalisch etwas bedeutet.
+
 **Test H239, 28.11.2026 (k455):** Zweimal RAIDZ2? Nullteiler-Codes haben die Kapazität 12/16, spalten aber weder an der Wand e₈ noch (allgemein) an
 einer anderen 8+8-Aufteilung und verkraften keinen Ausfall je Gruppe. Nach Wortlaut trägt teilweise, inhaltlich keine Paritätsstruktur. 1 und e₈ bleiben
 ungeschützt. Offen bleibt, ob eine andere, G₂-invariante Übersetzung eine Paritätsstruktur zeigt.

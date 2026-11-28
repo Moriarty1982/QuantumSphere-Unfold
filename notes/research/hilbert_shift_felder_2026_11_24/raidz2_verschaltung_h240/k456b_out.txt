@@ -1,0 +1,12 @@
+k456b Gegenprobe (Wolfram Language, exakt, ein Aufruf). Tatsaechliche Ausgaben (Print):
+
+ab = {0, 1/2, 1/2, -1/2, -1/2, 0, 0, 0}; H_x orthonormal: True
+Rang L = 12; C enthaelt H_x + H_x e8: True
+dim(C cap Komplement) = 4
+Kern im Komplement: True
+L bildet H_x + H_x e8 in sich ab, Rang dort: 8; Bild in Block: True
+Rang von L auf dem Komplement: 4; Bild im Komplement: True
+(x2 = (a, b), a = (0,1,1,1,1,0,0,0)/2, b = (0,1,-1,0,0,1,1,0)/2)
+
+Warnungen: "Symbol::undefined2" betrifft nur lokal benutzte Namen der Evaluator-Umgebung; "General::messages" bezieht sich darauf.
+Keine Rechenwarnung. Ergebnis: L_x ist blockdiagonal, invertierbar auf H_x + H_x e8 (8-dim), Rang 4 auf dem 8-dim Komplement.

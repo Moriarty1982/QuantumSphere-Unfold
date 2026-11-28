@@ -1,0 +1,29 @@
+================================================================================================
+H240 (k456)  Zwei RAIDZ2 anders verschaltet?  Komponenten [n,k,d] des Codes C_x = Bild(L_x)
+================================================================================================
+
+Teil A1 (nicht blind): Kapazitaeten  V1 RAID1 ueber 2xRAIDZ2 = 6/16, V3 Produkt 4x4 = 9/16, V3' 4xRAID5 = 12/16, V2 = 12/16; C_x hat 12/16
+  -> V1 und V3 (Zeilen+Spalten) scheiden an der Kapazitaet aus.
+
+Teil A2 Z1 (84 Basis-Diagonalen): 1 verschiedene Zerlegung(en)
+  8x[1,1,1] + 4x[2,1,2]   (84 Nullteiler), Beispiel (1, 10, 1): Komponenten [[4, 15], [5, 14], [6, 13], [7, 12]]
+
+Teil A2 Z2 (200 allgemeine Nullteiler): 1 verschiedene Zerlegung(en)
+  2x[1,1,1] + 1x[14,10,5]   (200 Nullteiler), Einzelkomponenten: [[0], [8]]
+
+  zwei [8,6,3] oder vier [4,3,2] gefunden: False
+  A3: ungeschuetzte Koordinaten [1,1,1] in jedem Nullteiler-Code: True  -> V4 (jede Platte geschuetzt) scheidet aus: True
+
+Teil B: G2-angepasste Koordinaten
+  Konvention: e1 e2 = +1 e3, e1 e4 = +1 e5, e2 e4 = +1 e6, (e1 e2) e4 = +1 e7
+  Rahmen orthonormal (max Abw.) 6.7e-16; Automorphismus von O (max Abw.) 1.4e-15; diagonal auf S (max Abw.) 1.1e-14
+  Zerlegungen in angepassten Koordinaten (200 Nullteiler): 1
+    8x[1,1,1] + 4x[2,1,2]   (200), Paare: [[4, 15], [5, 14], [6, 13], [7, 12]]
+  Basis-Nullteiler (e1 + e10)/sqrt2 in Standardkoordinaten: 8x[1,1,1] + 4x[2,1,2];  gleich: True
+  B2 (C_x enthaelt H_x + H_x e8, dim(C_x cap Komplement), Kern im Komplement): [(True, 4, True)]
+
+Zufallskontrolle: 200 zufaellige [16,12]-Codes
+  1x[16,12,5]   (200)
+
+================================================================================================
+Zwei-RAIDZ2-Verschaltung gefunden: False; feste Verschaltung in angepassten Koordinaten: True; ungeschuetzte Platten: True
