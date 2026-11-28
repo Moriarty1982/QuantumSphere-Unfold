@@ -366,6 +366,7 @@ def main() -> int:
         raise ZenodoError(f"Deposition {deposition_id} is already published; refusing to modify it")
 
     doi_before = reserved_doi(dep)
+    note(f"Concept record of the draft: conceptrecid={dep.get('conceptrecid')}, conceptdoi={dep.get('conceptdoi') or 'none'}")
     note(f"Using draft deposition id: {deposition_id}")
     note(f"Reserved DOI: {doi_before or 'none reported'}")
 
