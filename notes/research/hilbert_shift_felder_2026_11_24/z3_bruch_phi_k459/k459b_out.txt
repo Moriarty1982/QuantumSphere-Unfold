@@ -1,0 +1,11 @@
+k459b Gegenprobe (Wolfram Language, zwei Aufrufe). Tatsaechliche Ausgaben (Print):
+
+dE/dphi = -3 (wI Cos[6 p] + wR Sin[6 p])
+Gleiche Gewichte: stationaer in [-Pi/12, Pi/4): zwei Wurzeln (Root-Objekte von 1 + 4 t - 6 t^2 - 4 t^3 + t^4), numerisch:
+{-0.1308996939, 0.3926990817} ; Pi/8 = 0.3926990817, -Pi/24 = -0.1308996939
+E''(Pi/8) bei (1,1): 18 Sqrt[2]          (> 0: Minimum bei Pi/8)
+Gewichtsverhaeltnis fuer Stationaritaet bei x: -0.24203
+Abstand delta_Im zum Z3-Schluss (Grad): 12.7324; |sin 3 delta_Im| = 0.618369
+
+Warnungen: "Symbol::undefined2" betrifft nur lokal benutzte Namen; "General::messages" bezieht sich darauf. Keine Rechenwarnung.
+Uebereinstimmung mit k459 (Python): Minimum pi/8, Maximum -pi/24, Verhaeltnis -0,242030.

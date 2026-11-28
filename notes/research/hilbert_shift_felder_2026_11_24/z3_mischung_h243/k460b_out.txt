@@ -1,0 +1,14 @@
+k460b Wolfram-Gegenprobe (tatsaechliche Print-Ausgaben, InputForm wiedergegeben; 28.11.2026)
+t_k Eigenvektoren (Restvektoren): {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+N(pi/6) exakt: {{1, 0, -Sqrt[3/2]}, {0, 1, 0}, {-Sqrt[3/2], 0, 1}}
+W Majorana N(pi/6): {2/3, 1/6, 1/6}
+W Majorana b-Richtung: {0, 1/2, 1/2}
+W Majorana c-Richtung: {1/3, 1/3, 1/3}
+v0 Gewichte |<t_k,v0>|^2: {2/3, 1/6, 1/6}
+v0 Eigenvektor von N(pi/6): {0, 0, 0}
+W Dirac je Richtung: {S+b -> {0, 1/2, 1/2}, S+c -> {1/3, 1/3, 1/3}, S+d -> {1/3, 1/3, 1/3}, S-p -> {2/3, 1/6, 1/6}, S-q -> {0, 1/2, 1/2}, K+ -> {2/3, 1/6, 1/6}, K-1 -> {1/3, 1/3, 1/3}, K-2 -> {0, 1/2, 1/2}}
+W Majorana N(pi/6 - x) numerisch: {0.6588840053, 0.1705579974, 0.1705579974}
+
+Warnungen: Symbol::undefined2 (nur lokal verwendete Namen, kein Rechenfehler); General::messages als Folge davon.
+Keine symbolischen Restterme: alle Klassenanteile exakte Brueche, Eigenvektor-Reste exakt 0.
+Befund: N-hat(pi/6) hat b = 0 exakt; die b-Richtung setzt erst mit dem Versatz ein (b ~ sqrt(x)). Stimmt mit k460 ueberein.

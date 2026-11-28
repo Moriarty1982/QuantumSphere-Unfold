@@ -1,0 +1,24 @@
+================================================================================================
+k459  Z3-Brechung und Versatz phi (Erkundung, nicht blind)
+================================================================================================
+
+1) Abstand der gemessenen Phasen zum naechsten Z3-geschlossenen Punkt (3 delta = 0 mod pi)
+  delta_Im = 0.2222220: Abstand 0.22222 rad = 12.732 Grad; Bruch |sin 3 delta| = 0.61837;  phi = 0.03958 rad = 2.268 Grad
+  delta_Re = 0.4839900: Abstand 0.48399 rad = 27.731 Grad; Bruch |sin 3 delta| = 0.99295;  phi = 0.03958 rad = 2.268 Grad
+  Basislagen ohne Versatz: pi/12 -> |sin 3 delta| = 0.70711, pi/6 -> 1.00000 (schon ohne phi weit von Z3-Schluss)
+
+2) Leck-Energie E(phi) = w_I sin^2(3(pi/12-phi)) + w_R sin^2(3(pi/6-phi)); Baum mit q -> 0- ist in phi flach (reine Drehung)
+   dE/dphi = -3 (w_I cos 6phi + w_R sin 6phi)  ->  stationaer bei tan 6phi = -w_I/w_R
+  (1,1) gleich                              : Minimum bei phi = +0.39270 (+0.1250 pi), Maximum bei -0.13090; dE/dphi(x) = -3.6215
+  (2,1) Zaehlgewichte Dirac:Majorana (H235) : Minimum bei phi = +0.33907 (+0.1079 pi), Maximum bei -0.18453; dE/dphi(x) = -6.5373
+  (1,2) umgekehrt                           : Minimum bei phi = +0.44633 (+0.1421 pi), Maximum bei -0.07727; dE/dphi(x) = -4.3272
+  (1,0) nur Im                              : Minimum bei phi = +0.26180 (+0.0833 pi), Maximum bei -0.26180; dE/dphi(x) = -2.9158
+  (0,1) nur Re                              : Minimum bei phi = +0.52360 (+0.1667 pi), Maximum bei +0.00000; dE/dphi(x) = -0.7057
+
+3) Gewichte, fuer die phi = x stationaer waere: w_I/w_R = -tan(6x) = -0.242030 (entgegengesetzte Vorzeichen noetig)
+   naechster einfacher Bruch -1/4 gaebe phi* = 0.0408298 (3.16 % daneben; phi ist auf ~1e-7 bekannt)
+
+4) Zufallskontrolle: zufaellige Gewichte (w_I, w_R) gleichverteilt in [-1,1]^2; Anteil mit Minimum innerhalb 1 % von x
+   12/20000 = 0.0006  (Breite des Fensters / Periode = 0.0015)
+
+================================================================================================

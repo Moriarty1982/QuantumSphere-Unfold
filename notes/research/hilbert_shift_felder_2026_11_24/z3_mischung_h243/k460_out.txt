@@ -1,0 +1,48 @@
+================================================================================================
+H243 (k460)  Z3-Klassen in der T-Eigenbasis (Ladungsbasis)
+================================================================================================
+T^3 = I: True;  Eigenwerte [-0.5+0.866025j -0.5-0.866025j  1. +0.j      ];  t_k Eigenwert w^k: [True, True, True]
+C(rho, delta) diagonal in der Ladungsbasis (Dirac-Klasse 0): True
+
+N-hat(pi/6) =
+ [[ 1.        0.       -1.224745]
+ [ 0.        1.       -0.      ]
+ [-1.224745 -0.        1.      ]]
+Ableitung nach delta_nu (einseitig, links von pi/6; b ~ sqrt(pi/6 - delta_nu) divergiert, daher getrennt b- und c-Anteil):
+  dc/d delta_nu = -0.707107;  b(pi/6 - x) = 0.187142 (b ~ sqrt(x): fuehrende Versatzrichtung ist S+b-artig)
+
+Majorana-Regel (i+j): Gewichte [W0, W1, W2]
+  A1  N-hat(pi/6)  (Baum)                             : [0.66666667 0.16666667 0.16666667]
+      N-hat(pi/6 - x)                                 : [0.65888401 0.170558   0.170558  ]
+  A2  b-Richtung (fuehrende Versatzrichtung, ~sqrt x) : [0.  0.5 0.5]
+  A2' c-Richtung (dc/d delta_nu)                      : [0.33333333 0.33333333 0.33333333]
+      N-hat(pi/6-x) - N-hat(pi/6)                     : [0.00393785 0.49803107 0.49803107]
+      Einheit 1                                       : [1. 0. 0.]
+
+Dirac-Regel (j-i) fuer die geladenen Richtungen DIRS: [W0, W1, W2]
+  S+b  : [0.  0.5 0.5]
+  S+c  : [0.33333333 0.33333333 0.33333333]
+  S+d  : [0.33333333 0.33333333 0.33333333]
+  S-p  : [0.66666667 0.16666667 0.16666667]
+  S-q  : [0.  0.5 0.5]
+  K+   : [0.66666667 0.16666667 0.16666667]
+  K-1  : [0.33333333 0.33333333 0.33333333]
+  K-2  : [0.  0.5 0.5]
+
+Gegenprobe Majorana mit Konjugations-Regel (j-i):
+  N-hat(pi/6) : [0.66666667 0.16666667 0.16666667]
+  b-Richtung  : [0.  0.5 0.5]
+  c-Richtung  : [0.33333333 0.33333333 0.33333333]
+
+Nur Bericht: v0 in der Ladungsbasis: |Komponenten|^2 = [0.666667 0.166667 0.166667]
+Nur Bericht: Klasse-0-Projektion von N-hat(pi/6) zurueck in der Flavourbasis (reell: True):
+ [[ 1.        0.408248 -0.408248]
+ [ 0.408248  1.        0.408248]
+ [-0.408248  0.408248  1.      ]]
+  PMNS mit N-hat(pi/6)         : s12, s23, s13, sin d = [0.333333 0.5      0.            nan]
+  PMNS mit Klasse-0-Projektion : s12, s23, s13, sin d = [0.  0.5 0.  nan]
+
+Zufallskontrolle: symmetrisch (Majorana): W0 >= 1-1e-6 in 0/10000, mittleres W0 = 0.3339;  antisymmetrisch (Dirac): W0 <= 1e-6 in 12/10000, mittleres W0 = 0.3357
+
+================================================================================================
+A1 Baum geschlossen: False;  A2 fuehrende Versatzrichtung rein geladen: True;  A3 W0(K2) = 2.1e-32
