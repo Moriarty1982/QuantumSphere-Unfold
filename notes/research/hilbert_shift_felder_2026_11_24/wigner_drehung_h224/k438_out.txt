@@ -1,0 +1,25 @@
+eps = artanh beta_sym = 0.6175295849;  2 eps = 1.2350591699;  arcosh gamma_L = 1.2350591698  (Kontrolle 2eps - arcosh gamma_L = +7.9e-11)
+Ziel x (unter J) = 0.0395773407 +- 7.8e-07;  x_nu = 0.043359 +- 0.002128
+
+Paar           theta         omega       omega/1       omega/2       omega/3       omega/6
+(eps, eps)     pi/2     0.17869944    0.17869944    0.08934972    0.05956648    0.02978324
+(eps, eps)     pi/4     0.11900836    0.11900836    0.05950418    0.03966945    0.01983473
+(eps, eps)     2pi/3    0.16209229    0.16209229    0.08104615    0.05403076    0.02701538
+(eps, eps)     pi/3     0.14824654    0.14824654    0.07412327    0.04941551    0.02470776
+(2eps, 2eps)   pi/2     0.58630005    0.58630005    0.29315002    0.19543335    0.09771667
+(2eps, 2eps)   pi/4     0.34822806    0.34822806    0.17411403    0.11607602    0.05803801
+(2eps, 2eps)   2pi/3    0.59732580    0.59732580    0.29866290    0.19910860    0.09955430
+(2eps, 2eps)   pi/3     0.44667777    0.44667777    0.22333888    0.14889259    0.07444629
+(eps, 2eps)    pi/2     0.32597106    0.32597106    0.16298553    0.10865702    0.05432851
+(eps, 2eps)    pi/4     0.20758557    0.20758557    0.10379279    0.06919519    0.03459760
+(eps, 2eps)    2pi/3    0.30788736    0.30788736    0.15394368    0.10262912    0.05131456
+(eps, 2eps)    pi/3     0.26168247    0.26168247    0.13084123    0.08722749    0.04361374
+
+Formel gegen Matrix-Komposition: groesste Abweichung 1.8e-15
+naechster Kandidat: (eps, eps), theta = pi/4, n = 3: 0.03966945 (relativ +0.233%, +118 sigma unter J)
+strenge Treffer (3 sigma unter J): 0  []
+lockere Treffer (< 1 %): 1  [('(eps, eps)', 'pi/4', 3, np.float64(0.039669))];  Zufallserwartung 0.066 (Bereich 0.0198 bis 0.5973)
+innerhalb 2 sigma von x_nu (nur Bericht): 2
+Poisson-Wahrscheinlichkeit fuer >= 1 lockere Treffer bei Erwartung 0.066: 0.064
+
+Urteil nach Vorab: TRAEGT TEILWEISE (nur locker, Wortlaut der Vorab: ueber der Zufallserwartung)

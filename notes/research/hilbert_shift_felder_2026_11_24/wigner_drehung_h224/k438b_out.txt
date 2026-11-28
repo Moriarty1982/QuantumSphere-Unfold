@@ -1,0 +1,7 @@
+(* Ausgabe des Wolfram-Evaluators fuer k438b_gegenprobe.wl, 28.11.2026, ein Lauf. Warnungen: Symbol::undefined2 fuer die Modul-Lokalen L, R
+   (harmlos, Hinweis des Evaluators), General::messages (Sammelhinweis). Rueckgabewert Null. *)
+eps = 0.617529584950;  2eps - ArcCosh[gamma_L] = 7.89e-11
+omega (n=1) je Kombination: {{(e,e), pi/2, 0.178699438217}, {(e,e), pi/4, 0.119008355092}, {(e,e), 2pi/3, 0.162092290381}, {(e,e), pi/3, 0.148246541112}, {(2e,2e), pi/2, 0.586300045111}, {(2e,2e), pi/4, 0.348228063502}, {(2e,2e), 2pi/3, 0.597325803739}, {(2e,2e), pi/3, 0.446677765972}, {(e,2e), pi/2, 0.325971064440}, {(e,2e), pi/4, 0.207585572820}, {(e,2e), 2pi/3, 0.307887355719}, {(e,2e), pi/3, 0.261682468851}}
+naechster: {(e,e), pi/4, 3, 0.0396694516975}  relativ 0.002327;  in sigma (7.8e-7): 118.091
+lockere Treffer (<1%): {{(e,e), pi/4, 3, 0.0396694516975}}
+Formel-Kontrolle (e,e,pi/4): 0.119008355092
