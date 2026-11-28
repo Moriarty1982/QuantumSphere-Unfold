@@ -1,0 +1,28 @@
+================================================================================================
+H238 (k454)  Leck-Energie L(theta) auf dem Kreis U_theta = {cos t e_i + sin t e_(8+i)}
+================================================================================================
+
+Teil A: Fit L = A sin^2(3 theta): A = 42.000000000000, max Restabweichung = 9.24e-14 (Kriterium < 1e-10)
+  Fourier-Anteile |c_m| (m = 0..8): 2.10e+01, 1.26e-15, 1.17e-15, 6.52e-16, 4.64e-16, 1.10e-15, 1.05e+01, 1.36e-15, 8.47e-16
+  Minima (Grad): [np.float64(0.0), np.float64(60.0), np.float64(120.0), np.float64(180.0), np.float64(240.0), np.float64(300.0)]  -> Klassen mod 180 Grad: [np.float64(0.0), np.float64(60.0), np.float64(120.0)]
+  L''(0 Grad) = 755.999977  (18 A = 756.000000)
+  L''(120 Grad) = 755.999977  (18 A = 756.000000)
+  L''(240 Grad) = 755.999977  (18 A = 756.000000)
+  weitere lokale Minima: 0
+  Teil A: TRAEGT
+
+Teil B (nicht blind): Ueberlapp und Brannen-Form
+  theta = 0.3: Ueberlapp mit Kopien = [0.955336489126, -0.221740238262, -0.733596250863], cos(theta - theta_k) = [0.955336489126, -0.221740238262, -0.733596250863]
+  theta = 1.1: Ueberlapp mit Kopien = [0.453596121426, 0.54501015314, -0.998606274566], cos(theta - theta_k) = [0.453596121426, 0.54501015314, -0.998606274566]
+  w = 1.000000: K ueber theta = [0.500000000000, 0.500000000000]  (2/3 = 0.666666666667)
+  w = 1.414214: K ueber theta = [0.666666666667, 0.666666666667]  (2/3 = 0.666666666667)
+  w = 2.000000: K ueber theta = [1.000000000000, 1.000000000000]  (2/3 = 0.666666666667)
+  Kopien-Winkel: V1 = 0, V2 = 120, V3 = 240 Grad (mit v -> -v gewaehlt); Ueberlapp der Kopien untereinander cos 120 = -1/2 (H138)
+
+Teil C (blind): Leck-Energie an den gemessenen Brannen-Phasen (theta = +-delta)
+  delta_Im (geladen) = 0.2222220470731: L/max L = sin^2(3 delta) = 0.382381  (12.732 Grad; naechste Kopie bei 0 bzw. 120 Grad)
+  delta_Re (neutral) = 0.48399: L/max L = sin^2(3 delta) = 0.985947  (27.731 Grad; naechste Kopie bei 0 bzw. 120 Grad)
+  Teil C: Phasen abseits der Minima
+
+================================================================================================
+H238 Urteil (Teil A): TRAEGT

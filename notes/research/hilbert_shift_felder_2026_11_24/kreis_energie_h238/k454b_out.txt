@@ -1,0 +1,14 @@
+k454b Gegenprobe (Wolfram Language, ein Aufruf, Code = k454b_gegenprobe.wl). Tatsaechliche Ausgaben (Print):
+
+L(t) symbolisch = 42 Sin[3 t]^2
+L(t) - 42 Sin[3t]^2 = 0                      (symbolischer Nullrest, exakt)
+Nullstellen in [0,Pi): {{t -> 0}, {t -> 0}, {t -> Pi/3}, {t -> Pi/3}, {t -> 2 Pi/3}, {t -> 2 Pi/3}}   (doppelte Nullstellen)
+L''(t) an 0, 2Pi/3, 4Pi/3: {756, 756, 756}   (= 18 * 42, exakt)
+K(w,th) = (2 + w^2)/6                        (unabhaengig von th, exakt)
+K = 2/3 geloest nach w>0: {{w -> Sqrt[2]}}
+delta = 111111/500000: L/max = Sin[3 delta]^2 = 0.382380565390 ; fold-Winkel (Grad) = 12.732383 ; direkt leak/42 = 0.382380565390
+delta = 48399/100000:  L/max = Sin[3 delta]^2 = 0.985946634347 ; fold-Winkel (Grad) = 27.730584 ; direkt leak/42 = 0.985946634347
+
+Warnungen: "Symbol::undefined2: Global symbols B, P, Ls are undefined" ist ein Hinweis der Evaluator-Umgebung auf
+lokal benutzte Namen, kein Rechenfehler; "General::messages" bezieht sich darauf. Keine weiteren Meldungen.
+Uebereinstimmung mit k454 (Python): A = 42, L'' = 756, Koide nur bei w = sqrt 2, L/max 0,382381 und 0,985947.
