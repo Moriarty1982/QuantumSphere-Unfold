@@ -58,6 +58,10 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H242, 28.11.2026 (k458):** Die alte Kernel-Definition e₃ = e₁e₂ mit komplexen z_k schließt in 𝕊 genau bei α₁ + α₂ + α₃ ≡ 0 (mod π). Gemeinsame Phase
+ergibt die drei Kopien, Kopien-Belegungen schließen genau bei g₁ + g₂ + g₃ ≡ 0 (mod 3) (trägt, nicht blind). Offen bleibt, ob diese ℤ₃-Ladung die Generationen
+sind; dazu fehlen Massen und Mischung.
+
 **Test H241, 28.11.2026 (k457):** Die drei Kopien bilden eine exakte Parität (u₁ + u₂ + u₃ = 0), und ihr Produkt folgt dem Gesetz k₁ + k₂ + k₃ ≡ 0 (mod 3),
 symbolisch bewiesen. Daraus folgt L = 42·sin²3θ aus H238 analytisch. Der Klartext-Block eines Nullteilers ist eine eigene Oktonion-Algebra mit e₈ quer zu
 den Kopien. Offen bleibt, ob das ℤ₃-Gesetz eine Generationenregel ist.

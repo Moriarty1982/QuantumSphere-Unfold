@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Alte Kernel-Definition K₃ = K₁K₂ ist dieselbe Struktur wie die drei Kopien (28.11.2026, Test H242, k458)
+
+Marc: „wir hatten k3 mal ganz am anfang so definiert, dass er senkrecht auf normalen der anderen beiden stehen soll, geometrisch ist das ein xor“.
+Gemeint ist die Companion-Definition „Biquaternion kernel“: e₃ := e₁e₂ mit komplexen Koordinaten z_k. **Trägt (nicht blind, folgt aus H241):** In 𝕊 eingebettet
+(i ↦ Wand e₈) folgt die Richtung dem Index-XOR e₁ ⊕ e₂ = e₃, und die Phase von K₃ ist −(α₁ + α₂). Das Tripel span{1, K₁, K₂, K₃} ist genau dann eine
+Quaternion-Unteralgebra, wenn α₁ + α₂ + α₃ ≡ 0 (mod π); der Schlussrest ist exakt |sin Σα| (Wolfram symbolisch, Zufall 0/2000). Bei gemeinsamer Phase
+schließt das Tripel genau an den drei Kopien. Belegt man die Kerne mit Kopien g ∈ ℤ₃, schließen genau die 9 Belegungen mit g₁ + g₂ + g₃ ≡ 0 (mod 3). Das ist eine
+ℤ₃-Erhaltungsregel. Dass sie die physikalischen Generationen beschreibt, ist nicht gezeigt. Die Brannen-Phasen mit Versatz δ brechen den Schluss um |sin 3δ|.
+Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/kernel_xor_h242/`.
+
 ### Die drei Kopien als XOR: Parität und Produktgesetz k₁ + k₂ + k₃ ≡ 0 (mod 3) (28.11.2026, Test H241, k457)
 
 Marc: „es könnte nämlich auch eine art xor der anderen sein“.
