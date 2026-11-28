@@ -1,0 +1,8 @@
+(Ausgabe des Wolfram-Evaluators, 28.11.2026)
+Warnungen (keine Rueckgabewerte): FindRoot::precw, FindMinimum::precw (Eingaben mit 16 Stellen bei WorkingPrecision 20/25;
+die Ergebnisse sind damit auf ~15 Stellen belastbar).
+
+Q: phi = 0.000022291000131251395909  x_nu,pred = 0.062952131858076563861731  z = 9.19818
+M Mittelwert: {p -> 0.033310092631261658393, q -> -0.013513139739212018026}   Anteil q am Im-Versatz: 15.8354 %
+M x_nu+2sigma: {p -> 0.026194788071454932069, q -> -0.028852128654621919371}
+Phi (q -> 0): x_nu,pred = 0.039577340726794123396725  z = -1.7759

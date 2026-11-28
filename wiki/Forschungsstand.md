@@ -1,5 +1,14 @@
 # Forschungsstand
 
+### Doppelzählung geklärt: φ trägt den Versatz, q ist nur ein Vorzeichen (28.11.2026, Test H236, k451)
+
+Seit H225 standen im Baum-Modell zwei Größen für denselben Lepton-Versatz: der Fit q = −0,0852 aus H167 und die gemeinsame Drehung φ. **Trägt:**
+Trägt q allein den Versatz, liegt die Neutrino-Vorhersage bei +9,2σ (wie H221). Trägt φ, liegt sie bei −1,78σ (H213). Mit beiden frei erlauben die
+Daten q ∈ [−0,029; 0] (2σ), also ist q = 0 zulässig und −0,0852 dreimal zu weit draußen. q ist nur das Vorzeichen der Zweigwahl (H222). **Kein
+früheres Urteil kippt:** H226 Teil B in der φ-Lesart nachgerechnet (weiter +207σ), H232 und H235 scheitern weiter an der Globalität. Es ändern sich nur
+Zahlen: Neutrino-Vorhersage in H232/H235 −1,3σ/−1,8σ statt +22,8σ/+9,2σ, Uhr in H228 0,1321 statt 0,1231. Die Leptonenmassen und festgeschriebenen
+Vorhersagen aus H227 (Σm_ν = 59,30 meV, m_β, m_ββ, R) sind nicht betroffen. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/doppelzaehlung_h236/`.
+
 ### Casimir-Verdrehung als Tauschbrecher: bricht den Tausch, wählt aber nicht x (28.11.2026, Test H235, k450)
 
 Nach k449 geprüft: Eine Casimir-Verdrehungsenergie zwischen innerem und äußerem Feld mit Zählgewichten (2 für den geladenen Im-Sektor, 1 für den
