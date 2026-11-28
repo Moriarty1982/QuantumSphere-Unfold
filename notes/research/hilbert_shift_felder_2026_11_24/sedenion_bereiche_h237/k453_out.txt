@@ -1,0 +1,55 @@
+====================================================================================================
+H237 (k453)  Wellenfaehige Richtungen und stabile Bereiche in den Sedenionen
+====================================================================================================
+
+Teil A (blind): die drei G2-stabilen Oktonion-Kopien O_v (H138), v = (1,0), (-1/2, +-sqrt3/2)
+  V1 v=(1,0): Wellendefekt delta = 0.000e+00, dim W = 16, Kopie selbst in W: True
+     W reicht ueber die Kopie hinaus: 8 zusaetzliche Richtungen
+     mit 8. Richtung e8 (G2-Singulett): delta = 0.0e+00, dim W = 16
+  V2 v=(-1/2,+sqrt3/2): Wellendefekt delta = 2.220e-16, dim W = 16, Kopie selbst in W: True
+     W reicht ueber die Kopie hinaus: 8 zusaetzliche Richtungen
+     mit 8. Richtung e8 (G2-Singulett): delta = 2.2e-16, dim W = 16
+  V3 v=(-1/2,-sqrt3/2): Wellendefekt delta = 2.220e-16, dim W = 16, Kopie selbst in W: True
+     W reicht ueber die Kopie hinaus: 8 zusaetzliche Richtungen
+     mit 8. Richtung e8 (G2-Singulett): delta = 2.2e-16, dim W = 16
+  Teil A Urteil: TRAEGT
+
+Teil B1/B2: Basis-Unteralgebren (Basisprodukt e_i e_j = +-e_(i xor j) -> Untergruppen von (Z2)^4)
+  Kontrolle e_i e_j ~ e_(i xor j): True
+  dim 2: 15 Basis-Unteralgebren; alternativ 15, Norm multiplikativ 15, mit Nullteilern (e_i+-e_j) 0
+  dim 4: 35 Basis-Unteralgebren; alternativ 35, Norm multiplikativ 35, mit Nullteilern (e_i+-e_j) 0
+  dim 8: 15 Basis-Unteralgebren; alternativ 8, Norm multiplikativ 8, mit Nullteilern (e_i+-e_j) 7
+   B2: je 8-dim Basis-Unteralgebra: Typ, Wellendefekt ihres Imaginaerteils auf ganz S, dim W
+    [0, 1, 2, 3, 4, 5, 6, 7]: Oktonion                           delta = 0.00, dim W = 16
+    [0, 1, 2, 3, 8, 9, 10, 11]: Oktonion                           delta = 2.00, dim W = 8
+    [0, 1, 2, 3, 12, 13, 14, 15]: Quasi-Oktonion (nicht alternativ)  delta = 2.00, dim W = 2
+    [0, 1, 4, 5, 8, 9, 12, 13]: Oktonion                           delta = 2.00, dim W = 8
+    [0, 1, 4, 5, 10, 11, 14, 15]: Quasi-Oktonion (nicht alternativ)  delta = 2.00, dim W = 2
+    [0, 1, 6, 7, 8, 9, 14, 15]: Oktonion                           delta = 2.00, dim W = 8
+    [0, 1, 6, 7, 10, 11, 12, 13]: Quasi-Oktonion (nicht alternativ)  delta = 2.00, dim W = 2
+    [0, 2, 4, 6, 8, 10, 12, 14]: Oktonion                           delta = 2.00, dim W = 8
+    [0, 2, 4, 6, 9, 11, 13, 15]: Quasi-Oktonion (nicht alternativ)  delta = 2.00, dim W = 2
+    [0, 2, 5, 7, 8, 10, 13, 15]: Oktonion                           delta = 2.00, dim W = 8
+    [0, 2, 5, 7, 9, 11, 12, 14]: Quasi-Oktonion (nicht alternativ)  delta = 2.00, dim W = 2
+    [0, 3, 4, 7, 8, 11, 12, 15]: Oktonion                           delta = 2.00, dim W = 8
+    [0, 3, 4, 7, 9, 10, 13, 14]: Quasi-Oktonion (nicht alternativ)  delta = 2.00, dim W = 2
+    [0, 3, 5, 6, 8, 11, 13, 14]: Oktonion                           delta = 2.00, dim W = 8
+    [0, 3, 5, 6, 9, 10, 12, 15]: Quasi-Oktonion (nicht alternativ)  delta = 2.00, dim W = 2
+
+Teil B3: ganz Im S (15 Richtungen): delta = 2.00, dim W = 2, W = span[[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+
+Teil B4: maximale Clifford-Mengen aus Basiseinheiten (L_i^2 = -1, paarweise L_i L_j + L_j L_i = 0 auf ganz S)
+  L_i^2 = -1 fuer alle 15 Basiseinheiten: True
+  groesste Clifford-Menge: 8 Einheiten; Anzahl solcher Mengen: 2
+    [1, 2, 3, 4, 5, 6, 7, 8]
+    [8, 9, 10, 11, 12, 13, 14, 15]
+  enthaelt eine groesste Menge die 7 Imaginaereinheiten der Kopie V1 = {e1..e7}? True
+  Groessen aller maximalen (nicht erweiterbaren) Mengen: [3, 8]
+    Menge [1, 2, 3, 4, 5, 6, 7, 8]: delta = 0.0e+00, dim W = 16 (ganz S = 16)
+    Menge [8, 9, 10, 11, 12, 13, 14, 15]: delta = 0.0e+00, dim W = 16 (ganz S = 16)
+
+Teil B5 (analytisch, statt Stichprobe): jedes U mit delta(U) = 0 auf ganz S liefert dim U antikommutierende komplexe Strukturen auf R^16;
+  nach Hurwitz-Radon ist dim U <= rho(16) - 1 = 8. Groesser als die Basis-Mengen aus B4 geht es also nicht.
+
+====================================================================================================
+H237 Gesamturteil (Teil A): TRAEGT

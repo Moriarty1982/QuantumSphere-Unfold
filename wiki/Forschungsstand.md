@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Stabile Bereiche in den Sedenionen: die drei Oktonion-Kopien sind auf ganz 𝕊 wellenfähig (28.11.2026, Test H237, k453)
+
+Nach k452 (Marc: „es könnte in den Sedenionen noch Bereiche geben, die stabile Felder zulassen“). **Trägt:** Für jede der drei G₂-stabilen
+Oktonion-Kopien (H138) quadriert sich die Feldgleichung erster Ordnung auf **ganz** 𝕊 zur Wellengleichung. Zusammen mit e₈ (der vierten Wand) bildet
+jede Kopie eine volle Menge aus 8 wellenfähigen Richtungen, das Maximum nach Hurwitz–Radon. Karte: 15 ℂ-, 35 ℍ- und 15 achtdimensionale
+Basis-Unteralgebren. Von den 8 Oktonionen ist nur die innere auf ganz 𝕊 stabil, die anderen 7 nur in sich selbst. Die 7 Quasi-Oktonionen haben
+Nullteiler. Mit allen 15 Richtungen zugleich bleibt nur span{1, e₈}. Nachträglich: Die Wellenbedingung gilt für einen ganzen Kreis von
+Richtungsräumen; die Dreizahl kommt aus der Abgeschlossenheit als Algebra, nicht aus der Feldgleichung. Der Turm hält also bei den Richtungen an
+(höchstens 8), nicht bei den Feldwerten. Generationen bleiben offen. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/sedenion_bereiche_h237/`.
+
 ### Höhere HS-Stufen als Wände, Vergleich der Stufen und warum der Turm bei 𝕆 anhält (28.11.2026, Erkundung k452, nicht blind)
 
 Fortsetzung von k449. **Jede Stufe ist eine weitere Wand um alles Bisherige**, mit Vorzeichen g = ℓ² je Wand (+1 Spiegel, −1 Verdrehung). Divisionsalgebren

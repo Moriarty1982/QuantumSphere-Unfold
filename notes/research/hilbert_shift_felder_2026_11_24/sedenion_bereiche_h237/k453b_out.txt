@@ -1,0 +1,17 @@
+(Ausgabe des Wolfram-Evaluators, 28.11.2026; drei Aufrufe. Ein erster gemeinsamer Aufruf brach an der 60-s-Grenze ab; ein zweiter hatte einen
+Fehler in grp (Union @@ auf Zahlen, Meldungen Union::normal, Table::iterb, Part::pkspec1); dessen Algebra-Liste ist ungueltig und wurde im
+dritten Aufruf berichtigt. Warnungen Symbol::undefined2 sind Hinweise auf globale Namen, keine Rueckgabewerte.)
+
+Aufruf 1:
+V1: {0., 16}  V2: {0., 16}  V3: {0., 16}  theta=Pi/7: {5.55112*10^-17, 0}
+   (bei theta = Pi/7 ist delta numerisch 0; die Nullraumzahl 0 kommt von der relativen Toleranz bei einer Rauschmatrix,
+    wie im ersten Python-Lauf; massgeblich ist delta = 0, also W = ganz S, siehe k453c)
+
+Aufruf 2 (gueltiger Teil):
+ganz Im S: dim W = 2, W = {{0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0}, {-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}}
+
+Aufruf 3:
+8-dim Basis-Unteralgebren: 15
+{{{0,1,2,3,4,5,6,7},16}, {{0,1,2,3,8,9,10,11},8}, {{0,1,2,3,12,13,14,15},2}, {{0,1,4,5,8,9,12,13},8}, {{0,1,4,5,10,11,14,15},2},
+ {{0,1,6,7,8,9,14,15},8}, {{0,1,6,7,10,11,12,13},2}, {{0,2,4,6,8,10,12,14},8}, {{0,2,4,6,9,11,13,15},2}, {{0,2,5,7,8,10,13,15},8},
+ {{0,2,5,7,9,11,12,14},2}, {{0,3,4,7,8,11,12,15},8}, {{0,3,4,7,9,10,13,14},2}, {{0,3,5,6,8,11,13,14},8}, {{0,3,5,6,9,10,12,15},2}}

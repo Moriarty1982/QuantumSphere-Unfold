@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H237 (stabile Bereiche in den Sedenionen):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: trägt.
+
 **28.11.2026, Erkundung k452 (höhere HS-Stufen als Wände, Abbruch über die Feldgleichung):** Forschungsstand ergänzt.
 
 **28.11.2026, Test H236 (Doppelzählung q-Fit/φ):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: trägt, kein Urteil kippt.
