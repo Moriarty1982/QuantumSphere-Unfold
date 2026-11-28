@@ -1,0 +1,6 @@
+(* Ausgabe k447b (Wolfram-Evaluator). Keine Warnungen; Rueckgabewert Null. Gitterbasis b als Pi/4 bzw. Pi/12 ausgegeben. *)
+Treffer: {{t12, Pi/4, 2, 3, -0.788524}, {t12, Pi/4, 3, 6, -0.788524}, {t13, Pi/4, 4, 3, 1.71463}, {t13, Pi/4, 5, 6, 1.71463}, {t23, Pi/4, 0, 1, -1.99760}, {t23, Pi/4, 1, 2, -1.99760}, {t23, Pi/4, 2, 4, -1.99760}, {t23, Pi/12, 0, 3, -1.99760}}
+Anzahl 8, lambda = 5.71181, phi-Treffer 0, lambda_phi = 0.00811981
+phi bester Rest (sigma): {{phi, Pi/4, 8, 13, -392.513, 0.00101696, False}, {phi, Pi/12, 8, 39, -392.513, 0.00305089, False}}
+eindeutige Gitterpunkte je Groesse: {{t12, 0.58904862}, {t13, 0.14726216}, {t23, 0.78539816}}
+C: kleinster Abstand in sigma: {-17654.5}  ; innerhalb 1 %: 0

@@ -1,0 +1,141 @@
+================================================================================================
+H233 (k447)  Einrastung auf 8 Stellungen mit Bit-Verfeinerung, k = 0..8
+================================================================================================
+
+Teil A (nicht blind)  Kontrolle: Baumwerte
+  pi/12 auf Gitter A (pi/4): Vielfaches 0.333333333333 (k = 0)
+  pi/12 auf Gitter B (pi/12): Vielfaches 1.000000000000 (k = 0)
+  pi/6  auf Gitter A (pi/4): Vielfaches 0.666666666667 (k = 0)
+  pi/6  auf Gitter B (pi/12): Vielfaches 2.000000000000 (k = 0)
+  pi/4  auf Gitter A (pi/4): Vielfaches 1.000000000000 (k = 0)
+  pi/4  auf Gitter B (pi/12): Vielfaches 3.000000000000 (k = 0)
+
+Teil B (blind)  je Groesse, Gitter, k: Rest zum naechsten Gitterpunkt; zulaessig nur bei Delta >= 10 sigma
+
+  phi = x: Wert 0.0395773407, sigma 7.800e-07
+    A (pi/4)  k=0: Abstand 0.785398, naechster Punkt    0*Delta, Rest +3.958e-02 =  +50740.18 sigma
+    A (pi/4)  k=1: Abstand 0.392699, naechster Punkt    0*Delta, Rest +3.958e-02 =  +50740.18 sigma
+    A (pi/4)  k=2: Abstand 0.196350, naechster Punkt    0*Delta, Rest +3.958e-02 =  +50740.18 sigma
+    A (pi/4)  k=3: Abstand 0.098175, naechster Punkt    0*Delta, Rest +3.958e-02 =  +50740.18 sigma
+    A (pi/4)  k=4: Abstand 0.049087, naechster Punkt    1*Delta, Rest -9.510e-03 =  -12192.36 sigma
+    A (pi/4)  k=5: Abstand 0.024544, naechster Punkt    2*Delta, Rest -9.510e-03 =  -12192.36 sigma
+    A (pi/4)  k=6: Abstand 0.012272, naechster Punkt    3*Delta, Rest +2.762e-03 =   +3540.77 sigma
+    A (pi/4)  k=7: Abstand 0.006136, naechster Punkt    6*Delta, Rest +2.762e-03 =   +3540.77 sigma
+    A (pi/4)  k=8: Abstand 0.003068, naechster Punkt   13*Delta, Rest -3.062e-04 =    -392.51 sigma
+    B (pi/12) k=0: Abstand 0.261799, naechster Punkt    0*Delta, Rest +3.958e-02 =  +50740.18 sigma
+    B (pi/12) k=1: Abstand 0.130900, naechster Punkt    0*Delta, Rest +3.958e-02 =  +50740.18 sigma
+    B (pi/12) k=2: Abstand 0.065450, naechster Punkt    1*Delta, Rest -2.587e-02 =  -33169.88 sigma
+    B (pi/12) k=3: Abstand 0.032725, naechster Punkt    1*Delta, Rest +6.852e-03 =   +8785.15 sigma
+    B (pi/12) k=4: Abstand 0.016362, naechster Punkt    2*Delta, Rest +6.852e-03 =   +8785.15 sigma
+    B (pi/12) k=5: Abstand 0.008181, naechster Punkt    5*Delta, Rest -1.329e-03 =   -1703.61 sigma
+    B (pi/12) k=6: Abstand 0.004091, naechster Punkt   10*Delta, Rest -1.329e-03 =   -1703.61 sigma
+    B (pi/12) k=7: Abstand 0.002045, naechster Punkt   19*Delta, Rest +7.165e-04 =    +918.58 sigma
+    B (pi/12) k=8: Abstand 0.001023, naechster Punkt   39*Delta, Rest -3.062e-04 =    -392.51 sigma
+
+  x_nu: Wert 0.0433600000, sigma 2.130e-03
+    A (pi/4)  k=0: Abstand 0.785398, naechster Punkt    0*Delta, Rest +4.336e-02 =     +20.36 sigma
+    A (pi/4)  k=1: Abstand 0.392699, naechster Punkt    0*Delta, Rest +4.336e-02 =     +20.36 sigma
+    A (pi/4)  k=2: Abstand 0.196350, naechster Punkt    0*Delta, Rest +4.336e-02 =     +20.36 sigma
+    A (pi/4)  k=3: Abstand 0.098175, naechster Punkt    0*Delta, Rest +4.336e-02 =     +20.36 sigma
+    A (pi/4)  k=4: Abstand 0.049087, naechster Punkt    1*Delta, Rest -5.727e-03 =      -2.69 sigma
+    A (pi/4)  k=5: Abstand 0.024544, naechster Punkt    2*Delta, Rest -5.727e-03 =      -2.69 sigma
+    A (pi/4) : 3 feinste Stufen unzulaessig (Delta < 10 sigma)
+    B (pi/12) k=0: Abstand 0.261799, naechster Punkt    0*Delta, Rest +4.336e-02 =     +20.36 sigma
+    B (pi/12) k=1: Abstand 0.130900, naechster Punkt    0*Delta, Rest +4.336e-02 =     +20.36 sigma
+    B (pi/12) k=2: Abstand 0.065450, naechster Punkt    1*Delta, Rest -2.209e-02 =     -10.37 sigma
+    B (pi/12) k=3: Abstand 0.032725, naechster Punkt    1*Delta, Rest +1.064e-02 =      +4.99 sigma
+    B (pi/12): 5 feinste Stufen unzulaessig (Delta < 10 sigma)
+
+  theta12: Wert 0.5835609919, sigma 6.959e-03
+    A (pi/4)  k=0: Abstand 0.785398, naechster Punkt    1*Delta, Rest -2.018e-01 =     -29.00 sigma
+    A (pi/4)  k=1: Abstand 0.392699, naechster Punkt    1*Delta, Rest +1.909e-01 =     +27.43 sigma
+    A (pi/4)  k=2: Abstand 0.196350, naechster Punkt    3*Delta, Rest -5.488e-03 =      -0.79 sigma  TREFFER
+    A (pi/4)  k=3: Abstand 0.098175, naechster Punkt    6*Delta, Rest -5.488e-03 =      -0.79 sigma  TREFFER
+    A (pi/4) : 5 feinste Stufen unzulaessig (Delta < 10 sigma)
+    B (pi/12) k=0: Abstand 0.261799, naechster Punkt    2*Delta, Rest +5.996e-02 =      +8.62 sigma
+    B (pi/12) k=1: Abstand 0.130900, naechster Punkt    4*Delta, Rest +5.996e-02 =      +8.62 sigma
+    B (pi/12): 7 feinste Stufen unzulaessig (Delta < 10 sigma)
+
+  theta13: Wert 0.1505008286, sigma 1.889e-03
+    A (pi/4)  k=0: Abstand 0.785398, naechster Punkt    0*Delta, Rest +1.505e-01 =     +79.68 sigma
+    A (pi/4)  k=1: Abstand 0.392699, naechster Punkt    0*Delta, Rest +1.505e-01 =     +79.68 sigma
+    A (pi/4)  k=2: Abstand 0.196350, naechster Punkt    1*Delta, Rest -4.585e-02 =     -24.27 sigma
+    A (pi/4)  k=3: Abstand 0.098175, naechster Punkt    2*Delta, Rest -4.585e-02 =     -24.27 sigma
+    A (pi/4)  k=4: Abstand 0.049087, naechster Punkt    3*Delta, Rest +3.239e-03 =      +1.71 sigma  TREFFER
+    A (pi/4)  k=5: Abstand 0.024544, naechster Punkt    6*Delta, Rest +3.239e-03 =      +1.71 sigma  TREFFER
+    A (pi/4) : 3 feinste Stufen unzulaessig (Delta < 10 sigma)
+    B (pi/12) k=0: Abstand 0.261799, naechster Punkt    1*Delta, Rest -1.113e-01 =     -58.92 sigma
+    B (pi/12) k=1: Abstand 0.130900, naechster Punkt    1*Delta, Rest +1.960e-02 =     +10.38 sigma
+    B (pi/12) k=2: Abstand 0.065450, naechster Punkt    2*Delta, Rest +1.960e-02 =     +10.38 sigma
+    B (pi/12) k=3: Abstand 0.032725, naechster Punkt    5*Delta, Rest -1.312e-02 =      -6.95 sigma
+    B (pi/12): 5 feinste Stufen unzulaessig (Delta < 10 sigma)
+
+  theta23: Wert 0.7553801342, sigma 1.503e-02
+    A (pi/4)  k=0: Abstand 0.785398, naechster Punkt    1*Delta, Rest -3.002e-02 =      -2.00 sigma  TREFFER
+    A (pi/4)  k=1: Abstand 0.392699, naechster Punkt    2*Delta, Rest -3.002e-02 =      -2.00 sigma  TREFFER
+    A (pi/4)  k=2: Abstand 0.196350, naechster Punkt    4*Delta, Rest -3.002e-02 =      -2.00 sigma  TREFFER
+    A (pi/4) : 6 feinste Stufen unzulaessig (Delta < 10 sigma)
+    B (pi/12) k=0: Abstand 0.261799, naechster Punkt    3*Delta, Rest -3.002e-02 =      -2.00 sigma  TREFFER
+    B (pi/12): 8 feinste Stufen unzulaessig (Delta < 10 sigma)
+
+  delta_CP: Wert 3.7000980142, sigma 5.934e-01
+    A (pi/4) : 9 feinste Stufen unzulaessig (Delta < 10 sigma)
+    B (pi/12): 9 feinste Stufen unzulaessig (Delta < 10 sigma)
+
+  arctan beta: Wert 0.5023867747, sigma 1.383e-04
+    A (pi/4)  k=0: Abstand 0.785398, naechster Punkt    1*Delta, Rest -2.830e-01 =   -2046.87 sigma
+    A (pi/4)  k=1: Abstand 0.392699, naechster Punkt    1*Delta, Rest +1.097e-01 =    +793.31 sigma
+    A (pi/4)  k=2: Abstand 0.196350, naechster Punkt    3*Delta, Rest -8.666e-02 =    -626.78 sigma
+    A (pi/4)  k=3: Abstand 0.098175, naechster Punkt    5*Delta, Rest +1.151e-02 =     +83.27 sigma
+    A (pi/4)  k=4: Abstand 0.049087, naechster Punkt   10*Delta, Rest +1.151e-02 =     +83.27 sigma
+    A (pi/4)  k=5: Abstand 0.024544, naechster Punkt   20*Delta, Rest +1.151e-02 =     +83.27 sigma
+    A (pi/4)  k=6: Abstand 0.012272, naechster Punkt   41*Delta, Rest -7.589e-04 =      -5.49 sigma
+    A (pi/4)  k=7: Abstand 0.006136, naechster Punkt   82*Delta, Rest -7.589e-04 =      -5.49 sigma
+    A (pi/4)  k=8: Abstand 0.003068, naechster Punkt  164*Delta, Rest -7.589e-04 =      -5.49 sigma
+    B (pi/12) k=0: Abstand 0.261799, naechster Punkt    2*Delta, Rest -2.121e-02 =    -153.42 sigma
+    B (pi/12) k=1: Abstand 0.130900, naechster Punkt    4*Delta, Rest -2.121e-02 =    -153.42 sigma
+    B (pi/12) k=2: Abstand 0.065450, naechster Punkt    8*Delta, Rest -2.121e-02 =    -153.42 sigma
+    B (pi/12) k=3: Abstand 0.032725, naechster Punkt   15*Delta, Rest +1.151e-02 =     +83.27 sigma
+    B (pi/12) k=4: Abstand 0.016362, naechster Punkt   31*Delta, Rest -4.850e-03 =     -35.07 sigma
+    B (pi/12) k=5: Abstand 0.008181, naechster Punkt   61*Delta, Rest +3.332e-03 =     +24.10 sigma
+    B (pi/12) k=6: Abstand 0.004091, naechster Punkt  123*Delta, Rest -7.589e-04 =      -5.49 sigma
+    B (pi/12) k=7: Abstand 0.002045, naechster Punkt  246*Delta, Rest -7.589e-04 =      -5.49 sigma
+    B (pi/12): 1 feinste Stufen unzulaessig (Delta < 10 sigma)
+
+  arcsin beta: Wert 0.5816527376, sigma 2.154e-04
+    A (pi/4)  k=0: Abstand 0.785398, naechster Punkt    1*Delta, Rest -2.037e-01 =    -945.78 sigma
+    A (pi/4)  k=1: Abstand 0.392699, naechster Punkt    1*Delta, Rest +1.890e-01 =    +877.12 sigma
+    A (pi/4)  k=2: Abstand 0.196350, naechster Punkt    3*Delta, Rest -7.396e-03 =     -34.33 sigma
+    A (pi/4)  k=3: Abstand 0.098175, naechster Punkt    6*Delta, Rest -7.396e-03 =     -34.33 sigma
+    A (pi/4)  k=4: Abstand 0.049087, naechster Punkt   12*Delta, Rest -7.396e-03 =     -34.33 sigma
+    A (pi/4)  k=5: Abstand 0.024544, naechster Punkt   24*Delta, Rest -7.396e-03 =     -34.33 sigma
+    A (pi/4)  k=6: Abstand 0.012272, naechster Punkt   47*Delta, Rest +4.876e-03 =     +22.63 sigma
+    A (pi/4)  k=7: Abstand 0.006136, naechster Punkt   95*Delta, Rest -1.260e-03 =      -5.85 sigma
+    A (pi/4)  k=8: Abstand 0.003068, naechster Punkt  190*Delta, Rest -1.260e-03 =      -5.85 sigma
+    B (pi/12) k=0: Abstand 0.261799, naechster Punkt    2*Delta, Rest +5.805e-02 =    +269.49 sigma
+    B (pi/12) k=1: Abstand 0.130900, naechster Punkt    4*Delta, Rest +5.805e-02 =    +269.49 sigma
+    B (pi/12) k=2: Abstand 0.065450, naechster Punkt    9*Delta, Rest -7.396e-03 =     -34.33 sigma
+    B (pi/12) k=3: Abstand 0.032725, naechster Punkt   18*Delta, Rest -7.396e-03 =     -34.33 sigma
+    B (pi/12) k=4: Abstand 0.016362, naechster Punkt   36*Delta, Rest -7.396e-03 =     -34.33 sigma
+    B (pi/12) k=5: Abstand 0.008181, naechster Punkt   71*Delta, Rest +7.853e-04 =      +3.65 sigma
+    B (pi/12) k=6: Abstand 0.004091, naechster Punkt  142*Delta, Rest +7.853e-04 =      +3.65 sigma
+    B (pi/12): 2 feinste Stufen unzulaessig (Delta < 10 sigma)
+
+  Treffer gesamt: 8 [('theta12', 'A (pi/4)', 2, 3, -0.7885244431094338), ('theta12', 'A (pi/4)', 3, 6, -0.7885244431094338), ('theta13', 'A (pi/4)', 4, 3, 1.7146285038638147), ('theta13', 'A (pi/4)', 5, 6, 1.7146285038638147), ('theta23', 'A (pi/4)', 0, 1, -1.9975965368734052), ('theta23', 'A (pi/4)', 1, 2, -1.9975965368734052), ('theta23', 'A (pi/4)', 2, 4, -1.9975965368734052), ('theta23', 'B (pi/12)', 0, 3, -1.9975965368734052)]
+  Zufallserwartung gesamt lambda = 5.7118, P(>= 8) = 0.217
+  phi: Treffer 0, lambda_phi = 8.120e-03, P = 1
+  uebrige Groessen: Treffer 8, lambda = 5.7037, P = 0.216
+
+Teil C (blind)  phi als Rastfehler: Rest eines natuerlichen Winkels nach Einrasten
+  beta (rad)   mod pi/12 (r  ): 0.02580687  Abstand -1.377e-02 =     -17654.5 sigma (-34.79 %)
+  arctan beta  mod pi/12 (s-r): 0.02121200  Abstand -1.837e-02 =     -23545.3 sigma (-46.40 %)
+  arccos beta  mod pi/12 (s-r): 0.05805396  Abstand +1.848e-02 =     +23688.0 sigma (+46.68 %)
+  arcsin beta  mod pi/12 (r  ): 0.05805396  Abstand +1.848e-02 =     +23688.0 sigma (+46.68 %)
+  1/gamma_L    mod pi/12 (r  ): 0.01268059  Abstand -2.690e-02 =     -34483.0 sigma (-67.96 %)
+  2 eps0       mod pi/12 (s-r): 0.07393777  Abstand +3.436e-02 =     +44051.8 sigma (+86.82 %)
+  eps0         mod pi/12 (r  ): 0.09393081  Abstand +5.435e-02 =     +69683.9 sigma (+137.33 %)
+  eps0         mod pi/12 (s-r): 0.16786858  Abstand +1.283e-01 =    +164475.9 sigma (+324.15 %)
+  Treffer 2 sigma: False; locker (1 %): 0; Zufallserwartung lambda = 0.056, P(>= 0) = 1
+
+================================================================================================
+H233 Gesamturteil: WIDERLEGT
