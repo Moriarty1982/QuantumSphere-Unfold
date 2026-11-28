@@ -1,0 +1,14 @@
+(Ausgabe des Wolfram-Kerns, 28.11.2026; zusammengesetzt aus zwei Laeufen derselben Definitionen: Lauf 1 ohne Quiet und mit
+ strikter Vorzeichenpruefung "< 0", Lauf 2 mit "<= 0" fuer die Kontrollen 1/2 und 1/3. Fuer beta_sym aendert "<= 0" nichts,
+ weil beta_sym nicht auf dem Gitter liegt.)
+gamma_L = 1.8646997646093725635   beta_sym = 0.54940564097452899867
+Woerter Laenge <= 3: 819
+N(beta_sym), Laenge <= 3, ohne E: 0  {}
+N(1/2), Laenge <= 3: 19 {H, HH, HC, CH, HHH, HHC, HSR, HRS, HCH, HCC, HAW, HWA}
+N(1/3), Laenge <= 3: 0 {}
+Fixpunkt von E: 0.549315451920024  Abstand zu beta_sym: -0.000090189  E'(x*) = -1.71595
+
+Warnungen in Lauf 1: General::munfl (Unterlauf von 2^(-10^6) bei E nahe 1) und Power::infy / Infinity::indet (E bei x = 1,
+Division durch null) in der Kontrollzaehlung fuer 1/2; sie betreffen Woerter, die x = 1 erreichen, nicht das Fenster um beta_sym.
+In einem frueheren Lauf mit NSum statt Summe: NSum::precw und Infinity::indet (symbolische Auswertung vor dem Zahlwert); dort
+ergab sich derselbe Wert gamma_L = 1,8646997646093725635. Keine symbolischen Nullreste in dieser Gegenprobe (rein numerisch).

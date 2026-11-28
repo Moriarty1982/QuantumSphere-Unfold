@@ -58,6 +58,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H215, 28.11.2026 (k428):** Für OP1, Stabilitätstest des Coprozessor-Plans als Rückwärtssuche. Keine kurze Verkettung von Operationen des Rahmens (HC-Schleife, Quadrat/Wurzel, Komplement, Boost-Addition, halbe Rapidität, 1/γ, Doppelwinkel, 2^(1−γ); 66 429 Schleifen der Länge ≤ 5) hat β_sym als exakt anziehenden Fixpunkt. Im 2σ-Fenster liegen nur drei Schleifen, weniger als bei 89,5 % der Zufallskontrollen. Nachträglich: β_sym ist fast ein abstoßender Fixpunkt von 2^(1−γ) (die Nähe aus k396). **Widerlegt**; Stabilität erklärt β_sym nicht. OP1 bleibt offen. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/stabilitaet_rueckwaerts_h215/Ergebnis_H215_Stabilitaet_Rueckwaertssuche.md).
+
 ## OP2: Dirac-Operator auf dem antisymmetrischen Sektor
 
 Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert_{H^+_-}`$ als geschlossen. Beide Beweise stützen sich aber auf die Riemann-Arbeit, die seit v4.8.0-r04 keine Beweisquelle mehr ist. Der letzte Schritt, den Versatz aus dem Spektrum abzulesen, ist dasselbe Problem wie OP1.
