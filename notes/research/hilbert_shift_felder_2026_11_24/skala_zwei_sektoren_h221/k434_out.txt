@@ -1,0 +1,49 @@
+==================================================================================
+Kontrolle: geladener Sektor (c = 1, chi = pi/4, alphap = +1) reproduziert delta*
+==================================================================================
+  Weg K: alpha=+rho   : Minimum gefaltet 0.8249755046  (delta* = 0.2222220471, Diff +6.0e-01);  entartet: [0.222222 0.824976]
+  Weg K: alpha=-rho   : Minimum gefaltet 0.7458208267  (delta* = 0.2222220471, Diff +5.2e-01);  entartet: [0.301377 0.745821]
+  Weg S: q=Q_S        : Minimum gefaltet 0.2222220488  (delta* = 0.2222220471, Diff +1.8e-09);  entartet: [0.222222]
+
+==================================================================================
+Neutraler Sektor (c = 0, chi = 0): alphap_nu = -1, damit das Minimum ohne Zusatz bei pi/6 liegt (H168)
+==================================================================================
+  ohne Zusatz: Minima gefaltet [0.523599]  (pi/6 = 0.523599)
+
+==================================================================================
+H221 a (nicht blind)  Weg K universell: |alpha/alphap| = 0,0793204
+==================================================================================
+  alpha_nu = +1*rho                 : Minima [0.523599]; Zweig bei pi/6: 0.523599 -> x_nu,pred = +0.000000  (-20.4 sigma);  R_pred = 0.040721 (+23.4 sigma)
+  alpha_nu = -1*rho                 : Minima [0.523599]; Zweig bei pi/6: 0.523599 -> x_nu,pred = +0.000000  (-20.4 sigma);  R_pred = 0.040721 (+23.4 sigma)
+
+==================================================================================
+H221 b (teilweise nicht blind)  Weg S universell: |q/alphap| = 0,0852479 (Lambda_s ~ v_s)
+==================================================================================
+  q_nu = +1*|Q_S|                   : Minima [0.586564]; Zweig bei pi/6: 0.586564 -> x_nu,pred = -0.062965  (-50.0 sigma);  R_pred = 0.062306 (+70.7 sigma)
+  q_nu = -1*|Q_S|                   : Minima [0.460634]; Zweig bei pi/6: 0.460634 -> x_nu,pred = +0.062965  (+9.2 sigma);  R_pred = 0.026051 (-8.7 sigma)
+  lineare Naeherung: |eps_e| = 0.04521, |eps_nu| = 0.06394, Verhaeltnis 1.4142 (sqrt2 = 1.4142)
+  exakt: x_lepton = 0.039577; |x_nu,pred| (Zweig mit passendem Vorzeichen) / x_lepton = 1.5909
+
+==================================================================================
+H221 c (blind)  beide Terme universell: (alpha/alphap, q/alphap) fuer x_lepton UND x_nu (Fit, keine Vorhersage)
+==================================================================================
+  Vorzeichen neutral (s_alpha=+1, s_q=+1): (alpha=+0.02385, q=-0.05962), (alpha=-1.47526, q=-0.28953), (alpha=+1.71143, q=-0.15789)
+  Vorzeichen neutral (s_alpha=+1, s_q=-1): keine Loesung im Startbereich |.|<=0,3
+  Vorzeichen neutral (s_alpha=-1, s_q=+1): (alpha=+0.02658, q=-0.05668), (alpha=-1.75391, q=-0.16036)
+  Vorzeichen neutral (s_alpha=-1, s_q=-1): keine Loesung im Startbereich |.|<=0,3
+
+==================================================================================
+H221 d (blind)  gemeinsame Drehung chi -> chi + phi in beiden Sektoren, ohne weitere Terme
+==================================================================================
+  phi = 0.020000: geladen Minima [0.2417994 0.8053982] (Ziel pi/12-phi = 0.2417994);  neutral Minima [0.5035988 0.5435988] (Ziel pi/6-phi = 0.5035988);  Abweichung 2.7e-09
+  phi = 0.039577: geladen Minima [0.222222  0.8249755] (Ziel pi/12-phi = 0.2222220);  neutral Minima [0.4840214 0.5631761] (Ziel pi/6-phi = 0.4840214);  Abweichung 2.9e-09
+  phi = 0.040000: geladen Minima [0.2217994 0.8253982] (Ziel pi/12-phi = 0.2217994);  neutral Minima [0.4835988 0.5635988] (Ziel pi/6-phi = 0.4835988);  Abweichung 4.2e-09
+  phi = 0.060000: geladen Minima [0.2017994 0.8453982] (Ziel pi/12-phi = 0.2017994);  neutral Minima [0.4635988 0.5835988] (Ziel pi/6-phi = 0.4635988);  Abweichung 3.6e-11
+  groesste Abweichung 4.2e-09  -> Kriterium d (< 1e-9): nein
+  Hinweis: ohne Ordnung 6 ist jedes Minimum zweifach entartet (Partner pi/12+phi bzw. pi/6+phi); die Zweigwahl bleibt offen (H167).
+
+==================================================================================
+H221 Gesamturteil
+==================================================================================
+  Weg K universell: bester Zweig 20.4 sigma;  Weg S universell (richtiges Vorzeichen): 9.2 sigma
+  -> TRAEGT TEILWEISE (beide universell ausgeschlossen)
