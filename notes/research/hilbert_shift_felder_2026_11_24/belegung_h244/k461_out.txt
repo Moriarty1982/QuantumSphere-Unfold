@@ -1,0 +1,63 @@
+================================================================================================
+H244 (k461)  Belegung (2/3, 1/6, 1/6) und Kopien-Regel
+================================================================================================
+D T D zyklisch (Permutationsmatrix): True
+Kontrolle v0 = (1,0,1)/sqrt2: W = [0.666667 0.166667 0.166667]
+
+A (nicht blind): Vollbelegungen z_j = w^{g_j}
+  g = (0, 0, 0) (schliesst): W = [1. 0. 0.]
+  g = (0, 1, 2) (schliesst): W = [0. 0. 1.]
+  g = (0, 2, 1) (schliesst): W = [0. 1. 0.]
+  g = (1, 0, 2) (schliesst): W = [0. 1. 0.]
+  g = (1, 1, 1) (schliesst): W = [1. 0. 0.]
+  g = (1, 2, 0) (schliesst): W = [0. 0. 1.]
+  g = (2, 0, 1) (schliesst): W = [0. 0. 1.]
+  g = (2, 1, 0) (schliesst): W = [0. 1. 0.]
+  g = (2, 2, 2) (schliesst): W = [1. 0. 0.]
+  Mittel ueber die 9 schliessenden: [0.333333 0.333333 0.333333];  eine davon = Ziel: False
+  Mittel ueber alle 27: [0.333333 0.333333 0.333333]
+
+B: alle nicht leeren Muster z_j in {0, w^g}
+  Muster: 63;  |M| (Ziel in Reihenfolge) = 9;  |S| (schliesst, H242) = 21;  |S_inv| (schliesst nach Drehung) = 45
+  M = S: False;  M Teilmenge S: False;  S Teilmenge M: False;  |M ∩ S| = 3
+  M = S_inv: False;  M Teilmenge S_inv: True
+  M = [(0, 0, None), (0, None, 0), (1, 1, None), (1, None, 1), (2, 2, None), (2, None, 2), (None, 0, 0), (None, 1, 1), (None, 2, 2)]
+  Anteilsklassen nach Zahl der besetzten Kopien (Anzahl Muster):
+    1 besetzt, W = (np.float64(0.333333), np.float64(0.333333), np.float64(0.333333)): 9
+    2 besetzt, W = (np.float64(0.166667), np.float64(0.166667), np.float64(0.666667)): 9
+    2 besetzt, W = (np.float64(0.166667), np.float64(0.666667), np.float64(0.166667)): 9
+    2 besetzt, W = (np.float64(0.666667), np.float64(0.166667), np.float64(0.166667)): 9
+    3 besetzt, W = (np.float64(0.0), np.float64(0.0), np.float64(1.0)): 3
+    3 besetzt, W = (np.float64(0.0), np.float64(1.0), np.float64(0.0)): 3
+    3 besetzt, W = (np.float64(0.333333), np.float64(0.333333), np.float64(0.333333)): 18
+    3 besetzt, W = (np.float64(1.0), np.float64(0.0), np.float64(0.0)): 3
+  Nur Bericht, Z6-Phasen (Vorzeichen):
+    (1,0,-1): W = [0.  0.5 0.5]
+    (1,-1,0): W = [0.  0.5 0.5]
+    (1,1,-1): W = [0.111111 0.444444 0.444444]
+    (1,0,1): W = [0.666667 0.166667 0.166667]
+
+C (blind): W0(N-hat(delta_nu)) auf [0, pi/3], Zweig b >= 0
+  delta_nu = 0.000000: b = +0.707107, c = -0.707107, W = [0.55555556 0.22222222 0.22222222]
+  delta_nu = 0.261799: b = +0.500000, c = -1.000000, W = [0.61111111 0.19444444 0.19444444]
+  delta_nu = 0.484021: b = +0.187142, c = -1.195808, W = [0.65888401 0.170558   0.170558  ]
+  delta_nu = 0.523599: b = +0.000000, c = -1.224745, W = [0.66666667 0.16666667 0.16666667]
+  delta_nu = 0.785398: b = +0.000000, c = -1.366025, W = [0.63041962 0.18479019 0.18479019]
+  delta_nu = 1.047198: b = +0.000000, c = -1.414214, W = [0.61904762 0.19047619 0.19047619]
+  Nullstellen von W0 - 2/3: [np.float64(0.5235987756)]  (pi/6 = 0.5235987756)
+  Gitterpunkte mit |W0 - 2/3| < 1e-10: [0.523599];  max |W0 - 2/3| auf dem Gitter: 0.1111
+  b^2 >= 0 (Baum reell) genau fuer delta_nu <= pi/6: True;  jenseits klemmt Nhat b auf 0 (kein gueltiger Baum)
+  W0 auf [0, pi/6] streng steigend: True;  Maximum 2/3 am Rand pi/6 (b = 0)
+  Nur Bericht, W0 fuer b = 0 als Funktion von c (Formel (3 + 2c^2/3)/(3 + 2c^2)):
+    c = -2.00: W0 = 0.515152, Formel 0.515152
+    c = -1.50: W0 = 0.600000, Formel 0.600000
+    c = -1.00: W0 = 0.733333, Formel 0.733333
+    c = -0.50: W0 = 0.904762, Formel 0.904762
+    c = +0.00: W0 = 1.000000, Formel 1.000000
+    c = +0.50: W0 = 0.904762, Formel 0.904762
+    c = +1.00: W0 = 0.733333, Formel 0.733333
+    c = +1.50: W0 = 0.600000, Formel 0.600000
+    c = +2.00: W0 = 0.515152, Formel 0.515152
+
+================================================================================================
+B (M = S): False;  C (W0 = 2/3 nur bei pi/6): True

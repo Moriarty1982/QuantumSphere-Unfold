@@ -1,5 +1,18 @@
 # Forschungsstand
 
+### Folgt die Ladungsbelegung des TM1-Baums aus der Kopien-Regel? Nein, nur eine Lesart von π/6 (28.11.2026, Test H244/k461)
+
+Nach H243 hatten Baum N̂(π/6) und feste Spalte v₀ dieselbe ℤ₃-Belegung (2/3, 1/6, 1/6). **Trägt teilweise.**
+- Die Belegung folgt nicht aus der Schlussregel g₁+g₂+g₃ ≡ 0 aus H242.
+  - Sie gehört genau zu „zwei Kopien besetzt, gleiche Phase“: 9 von 63 Mustern, davon schließen nur 3.
+  - Die Anteile hängen nur von der relativen Phase ab, der Schluss von der absoluten.
+- Der Baum erreicht die Belegung nur bei δ_ν = π/6.
+  - W₀ = (9+2c²)/(9+12b²+6c²) steigt entlang des Baums streng von 5/9 bis 2/3 am Rand π/6 (Wolfram exakt).
+- Die θ₁₃-Richtungen entsprechen „zwei Kopien gegenphasig“; dafür braucht es ℤ₆ statt ℤ₃.
+- Das ist eine Umformulierung von H173, keine neue Herleitung. OP4 bleibt offen.
+
+Notiz: `notes/research/hilbert_shift_felder_2026_11_24/belegung_h244/`.
+
 ### Ordnet die ℤ₃-Regel der Kopien die Lepton-Mischung? Teilweise (28.11.2026, Test H243/k460)
 
 Nach Marcs „ja“ wurde die ℤ₃-Ladung aus H242 an der Mischung geprüft, in der Eigenbasis von T (Ladungsbasis der geladenen Leptonen). **Trägt teilweise.**

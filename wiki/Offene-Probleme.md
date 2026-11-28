@@ -58,6 +58,9 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H244/k461, 28.11.2026 (trägt teilweise):** Die Belegung (2/3, 1/6, 1/6) von Baum und v₀ folgt nicht aus der Kopien-Schlussregel. Sie ist
+„zwei Kopien in Phase“, und der Baum erreicht sie nur bei δ_ν = π/6. Das ist eine Umformulierung von H173. OP4 bleibt offen.
+
 **Test H243/k460, 28.11.2026 (trägt teilweise):** In der Ladungsbasis sind die θ₁₃-Richtungen (b ∝ √x, K₂) rein ℤ₃-geladen, der TM1-Baum aber nicht
 geschlossen (Klasse-0-Anteil 2/3 wie v₀; θ₁₂ sitzt im geladenen Teil). OP4 bleibt offen.
 
