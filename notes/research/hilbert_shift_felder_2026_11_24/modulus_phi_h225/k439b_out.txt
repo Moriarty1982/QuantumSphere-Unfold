@@ -1,0 +1,17 @@
+k439b Ausgabe (Wolfram-Kernel, 2026-11-28). Rueckgabewert jeder Auswertung: Null. Warnungen: nur im ersten, ersetzten Versuch
+(Solve::nsmet, ReplaceAll::reps, FindMinimum/Brent unausgewertet); in den gewerteten Auswertungen keine Warnungen (FindMinimum mit Quiet).
+
+Auswertung 1:
+a1 Tauschsymmetrie vRe[-d, Pi/4 - p] - vIm[d, p] = 0
+a4 Datenpunkt x: S(x) = 0.904341 ; S(Pi/8) = 1.8477591 = 2 Cos[Pi/8] = 1.8477591
+(E(x) aus diesem Versuch, zur Kontrolle: q=-0.001: -2.000905879; q=-0.0852: -2.087549688; q=-0.3: -2.380094219; r=+0.001: -2.000741206; r=-0.001: -1.999267794)
+
+Auswertung 2:
+a2 Tan[u] = {{t -> (Sqrt[2] + w)/w}}
+a3 Tan[3 Pi/8] - (1+Sqrt[2]) = 0
+b q=-0.0852: phi* = 0.392699 (Gitter Pi/2400; Pi/8 = 0.392699) E(phi*) = -2.1594588 E(x) = -2.087549688
+
+Auswertung 3:
+q=-0.3 r=0.: phi* = 0.392699 (Pi/8 = 0.392699, 7Pi/24 = 0.916298) E(phi*) = -2.572465908
+q=0. r=0.001: phi* = 0.916298 (Pi/8 = 0.392699, 7Pi/24 = 0.916298) E(phi*) = -2.001418685
+q=0. r=-0.001: phi* = 0.392699 (Pi/8 = 0.392699, 7Pi/24 = 0.916298) E(phi*) = -2.001418685
