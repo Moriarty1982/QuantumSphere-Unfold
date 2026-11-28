@@ -90,6 +90,7 @@ Für die neue OP5-Arbeitsfrage liegt ein [erstes Route-Datenblatt](https://githu
 - Ein deklarierter Nullwert oder akzeptierter Parser-Token ist kein Nullbeweis.
 - `v480-companion.tex` ist ein historischer Einstiegspfad, keine aktuelle Versionsangabe.
 - Globale Closure oder globale QFT/GR-Vereinigung folgen nicht automatisch aus lokalen oder readout-abhängigen Resultaten.
+- Seit v4.10.0-r73: Der Lepton-Versatz φ = 0,0396 ist gemessen, nicht hergeleitet (Versatz als Winkel und Zweigwahl sind hergeleitet, das Zweigvorzeichen ist gesetzt). Σm_ν = 59,3 meV ist eine Vorhersage, keine Messung.
 - Die Riemann-Vermutung ist kein Thema des Companions (ruhende Notiz r72, Riemann-Arbeit seit v4.8.0-r04 keine Quelle). In Zusammenfassungen nicht als Einschränkung oder Nicht-Ergebnis hervorheben.
 
 ## Antwortaufbau
