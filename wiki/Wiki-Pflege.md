@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, neue Seite Prüfbare-Vorhersagen:** Übersicht der offenen Vorhersagen nach Experimenten (Auftrag des Autors, 15:12); Sidebar und Vorhersagen-und-Tests verlinkt.
+
 **28.11.2026, Test H233 (Einrastung, F18):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.
 
 **28.11.2026, Test H232 (Rückwärtssuche nach dem Brecher):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.

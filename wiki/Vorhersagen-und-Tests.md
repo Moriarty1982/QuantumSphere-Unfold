@@ -51,6 +51,8 @@
 
 ## Offene Vorhersagen (warten auf neue Daten)
 
+**Übersicht nach Experimenten (28.11.2026):** [Prüfbare Vorhersagen](Pruefbare-Vorhersagen) ordnet die offenen Vorhersagen nach JUNO, DUNE/Hyper-K, DESI/Euclid/CMB-S4, KATRIN/Project 8 und LEGEND/nEXO, einschließlich der θ₁₂-CP-Korrelation und der festgeschriebenen Neutrinomassen (H227).
+
 **Gegenterm-Register (15.11.2026):** H15, H46 und H96 sind mit dem Platzhalter CT-004 verknüpft (Zählregel je Frame als
 Stringendpunkte) und erben dessen vier Guards: T = String-Sektor, Chan–Paton, Statistik, Spektrum. Kriterien und Daten
 ändern sich nicht.
