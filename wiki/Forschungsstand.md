@@ -1,5 +1,13 @@
 # Forschungsstand
 
+### Grob und fein: keine gemeinsame Feinstufe (28.11.2026, Test H234, k448)
+
+Marcs Frage: Sind die Eingaben Grob- und Feintuning? Das Muster stimmt: Alles Diskrete (π/12, π/6, K = ⅔, Oktant, Achteldrehungen) ist hergeleitet, alles
+Stetige ist offen. Geprüft wurde, ob die Feinwerte φ, β_sym − ½, D/B − 1 und x_ν − x aus einer gemeinsamen kleinen Zahl ε folgen (F = c·ε^n mit einfachen
+Faktoren). **Widerlegt:** Mit ε = φ liegt β_sym − ½ 36σ daneben; mit freiem ε treffen die Werte nur so oft, wie der Zufall bei dieser Dichte der
+Formeln erwartet (p = 0,74). Das Grob/Fein-Bild beschreibt den Stand, spart aber keine Eingaben; ein Zwei-Feld-Modell bräuchte mehrere unabhängige
+Kopplungen. Nachträglich: (β_sym − ½)/φ ≈ 5/4, nicht gewertet. OP3 offen. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/feinstufe_h234/`.
+
 ### Einrastung auf 8 Stellungen: die feinen Winkel rasten nicht ein (28.11.2026, Test H233, k447, F18)
 
 Marcs Bild „8 Bit, Rotoren mit nur 8 Positionen“ geprüft: Rasten die feinen Winkel auf ein Gitter aus 8 Stellungen (π/4) mit Halbierung bis 8 Bit ein,
