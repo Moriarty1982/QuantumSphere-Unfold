@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H220 (Endzahlen-Suche mit strukturellen Bausteinen):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt. Bei passender Dichte gibt es keinen Treffer; alle Formeln sind angepasst.
+
 **28.11.2026, Test H219 (Endzahlen-Suche):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme (OP1) ergänzt. Die Bausteine des Rahmens treffen die Zielzahlen nicht besser als der Zufall; alle Treffer sind angepasst.
 
 **28.11.2026, Tests H216–H218 (Folgetests zum Stabilitätstest):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme (OP1) ergänzt. Umkehrschleifen sind formal teilweise auffällig, das liegt nur am bekannten E-Fixpunkt. Die Flächenvarianten sind nicht trennscharf (j + ½ als geschlossene Form bevorzugt). Für χ und Λ ist keine Schleife herleitbar.

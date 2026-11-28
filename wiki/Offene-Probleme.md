@@ -64,6 +64,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Test H219, 28.11.2026 (k432):** Endzahlen-Suche. Wer nur die Zielzahl vorgibt und aus 1, 2, 3, π, ln 2 bis zur Größe 9 sucht, trifft β_sym und 16 Messgrößen nicht früher als gleich genaue Zufallszahlen (kein p < 0,05). β_sym braucht 6 Bausteine (1/π + (ln 2)⁴), die Kontrollen 5. **Widerlegt**; eine Formel für β_sym muss aus einer Herleitung kommen, nicht aus einer Suche. OP1 bleibt offen. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/endzahlen_suche_h219/Ergebnis_H219_Endzahlen_Suche.md).
 
+**Test H220, 28.11.2026 (k433):** Zweite Endzahlen-Suche, nur mit strukturellen Bausteinen (Dimensionen, Casimir-Flächen, ⅔, γ_L). Die Tiefe wurde so gewählt, dass ein Treffer aussagekräftig wäre. Für m_e/m_μ, m_μ/m_τ, sin²θ_W und α_em⁻¹ gibt es keinen Treffer: **widerlegt**. β_sym war kein Ziel, weil γ_L als Baustein drin ist. OP1 bleibt offen. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/endzahlen_struktur_h220/Ergebnis_H220_Endzahlen_Struktur.md).
+
 ## OP2: Dirac-Operator auf dem antisymmetrischen Sektor
 
 Die alte Fassung markiert Existenz und Selbstadjungiertheit von $`D_- = L_0\vert_{H^+_-}`$ als geschlossen. Beide Beweise stützen sich aber auf die Riemann-Arbeit, die seit v4.8.0-r04 keine Beweisquelle mehr ist. Der letzte Schritt, den Versatz aus dem Spektrum abzulesen, ist dasselbe Problem wie OP1.

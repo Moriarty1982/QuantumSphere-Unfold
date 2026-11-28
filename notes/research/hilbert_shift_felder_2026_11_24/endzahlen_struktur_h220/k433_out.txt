@@ -1,0 +1,30 @@
+H220 (k433): Endzahlen-Suche, strukturelle Bausteine: 1, 2, 4, 8, 16, 3, 7, 1/2, 2/3, C(1/2), C(1), C(3/2), C(2), gL ; Operationen + - * / sqrt sq inv
+gamma_L = 1.864699764609
+neue Werte je Groesse: {1: 14, 2: 29, 3: 318, 4: 1729, 5: 13924, 6: 105873, 7: 825790, 8: 6926692}
+
+breitestes Fenster: sin2 tW MSbar (rel. +-3.46e-04)
+  S = 1: Anteil getroffener Kontrollen 0.000
+  S = 2: Anteil getroffener Kontrollen 0.001
+  S = 3: Anteil getroffener Kontrollen 0.021
+  S = 4: Anteil getroffener Kontrollen 0.101
+  S = 5: Anteil getroffener Kontrollen 0.549
+  S = 6: Anteil getroffener Kontrollen 0.989
+  S = 7: Anteil getroffener Kontrollen 1.000
+  S = 8: Anteil getroffener Kontrollen 1.000
+S_max nach Regel = 4
+
+--- Ziele (Fenster 2 sigma, Suche bis Groesse 4) ---
+me/mmu                     Wert 0.00483633169242  rel.Fenster 8.71e-08  s_min -  N 0  p 1.000  Kontrollen getroffen 0.000
+                           naechster Wert bis S_max: sq((1/2/7)) = 0.00510204081633 (Groesse 4, 2523637.7 sigma)
+mmu/mtau                   Wert 0.059464  rel.Fenster 2.69e-04  s_min -  N 0  p 1.000  Kontrollen getroffen 0.022
+                           naechster Wert bis S_max: inv((16+C(1/2))) = 0.0592907917579 (Groesse 4, 43.3 sigma)
+sin2 tW MSbar              Wert 0.23129  rel.Fenster 6.92e-04  s_min -  N 0  p 1.000  Kontrollen getroffen 0.101
+                           naechster Wert bis S_max: (C(1/2)/sq(C(3/2))) = 0.230940107676 (Groesse 4, 8.7 sigma)
+1/alpha_em(0)              Wert 137.035999177  rel.Fenster 6.13e-10  s_min -  N 0  p 1.000  Kontrollen getroffen 0.000
+                           naechster Wert bis S_max: (sq(16)/gL) = 137.28751666 (Groesse 4, 11977023.0 sigma)
+mW/mZ (nicht blind, H15)   Wert 0.881357196122  rel.Fenster 6.62e-04  s_min -  N 0  p 1.000  Kontrollen getroffen 0.196
+                           naechster Wert bis S_max: inv((2-C(1/2))) = 0.881853970395 (Groesse 4, 3.4 sigma)
+
+--- Urteil nach Vorab-Notiz (gewertet: 4 Ziele ohne mW/mZ) ---
+p-Werte: {'me/mmu': 1.0, 'mmu/mtau': 1.0, 'sin2 tW MSbar': 1.0, '1/alpha_em(0)': 1.0}   signifikant (p<0,0125): []   p<0,05: 0
+Urteil H220: widerlegt (alle Treffer angepasst)
