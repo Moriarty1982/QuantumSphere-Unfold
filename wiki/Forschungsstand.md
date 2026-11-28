@@ -1,5 +1,13 @@
 # Forschungsstand
 
+### Symmetriepunkt π/8 im Materie-Frame: kein Frame-Bild trifft den Messwert, abgehakt (28.11.2026, Test H230, k444)
+
+Der symmetrische Punkt π/8 der gemeinsamen Vakuumenergie liegt im Ruheframe; der Messwert φ = 0,0396 im Materie-Frame. Der fehlende Übertragungsschritt ist
+nachgeholt. **Widerlegt.** Die Maske auf das Spektrum (Formen K, linear, S mit ±ε₀ und ±2ε₀) trifft nicht: Die formerhaltende Ähnlichkeit lässt die Phase in
+jedem Frame gleich, die anderen Formen zerstören K = ⅔. Die Winkel-Abbildungen (Aberration, Kontraktion, Maske mit β_sym oder tanh 2ε₀, Lesarten φ, 2φ, 3φ)
+bringen π/8 höchstens auf 0,116, dreimal so groß wie der Messwert; 0 bleibt unter allen fest. Der Wert von φ ist also kein Übersetzungsproblem zwischen den
+Frames, er braucht einen echten Brecher des Sektortauschs. OP3 offen. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/symmetriepunkt_frame_h230/`.
+
 ### J bei Ordnung 6 gelockert: das volle Quadrat N² wählt den Zweig, legt φ aber nicht fest (28.11.2026, Test H229, k443)
 
 Auf Wahl des Autors wurde das Postulat J bei Ordnung 6 auf Probe gelockert: Zugelassen ist das volle Quadrat der kubischen Norm λN² (λ ≥ 0), dessen
