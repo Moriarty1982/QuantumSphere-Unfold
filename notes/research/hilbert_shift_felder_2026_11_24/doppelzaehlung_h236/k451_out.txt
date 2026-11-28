@@ -1,0 +1,26 @@
+============================================================================================
+H236 (k451)  Doppelzaehlung: Lesarten Q, Phi, M
+============================================================================================
+
+Lesart Q (nicht blind): q = -0,0852 -> phi = +2.229e-05, x_nu,pred = 0.062952 (+9.20 sigma)
+Lesart Phi (nicht blind): q -> 0-, phi = x -> o_Im = 0.03957734, x_nu,pred = 0.03957734 (-1.78 sigma)
+
+Lesart M (blind): o_Re - x als Funktion von q (phi jeweils aus o_Im = x)
+  q = -6.0e-02: phi = 0.0117363, o_Re = 0.0561576, o_Re - x = +1.658e-02
+  q = -4.0e-02: phi = 0.0210220, o_Re = 0.0506932, o_Re - x = +1.112e-02
+  q = -3.0e-02: phi = 0.0256622, o_Re = 0.0479373, o_Re - x = +8.360e-03
+  q = -2.0e-02: phi = 0.0303013, o_Re = 0.0451660, o_Re - x = +5.589e-03
+  q = -1.5e-02: phi = 0.0326205, o_Re = 0.0437745, o_Re - x = +4.197e-03
+  q = -1.0e-02: phi = 0.0349395, o_Re = 0.0423792, o_Re - x = +2.802e-03
+  q = -5.0e-03: phi = 0.0372584, o_Re = 0.0409802, o_Re - x = +1.403e-03
+  q = -2.0e-03: phi = 0.0386498, o_Re = 0.0401389, o_Re - x = +5.616e-04
+  q = -1.0e-03: phi = 0.0391136, o_Re = 0.0398582, o_Re - x = +2.809e-04
+  q = -1.0e-04: phi = 0.0395310, o_Re = 0.0396054, o_Re - x = +2.809e-05
+  q = -1.0e-06: phi = 0.0395769, o_Re = 0.0395776, o_Re - x = +2.809e-07
+
+  Mittelwert x_nu = 0.04336: q* = -0.013513, phi* = 0.0333101  (Anteil von q am Im-Versatz: 15.8 %)
+  x_nu + 2 sigma = 0.04762: q = -0.028852
+  x_nu - 2 sigma = 0.03910 < x: mit q <= 0 nicht erreichbar (braucht o_Re < o_Im, also q > 0 = anderer Zweig nach H222); Untergrenze q = 0
+  2-sigma-Bereich: q in [-0.02885, +0.00000]
+  q = 0 im Bereich: True;  q = -0,0852 im Bereich: False  ->  Kriterium A (phi traegt): True
+  q = -0,0852 liegt 3.0-mal weiter draussen als die 2-sigma-Grenze

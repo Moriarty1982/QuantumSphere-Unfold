@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H236 (Doppelzählung q-Fit/φ):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: trägt, kein Urteil kippt.
+
 **28.11.2026, Test H235 (Casimir-Verdrehung):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.
 
 **28.11.2026, Erkundung k449 (inneres und äußeres Feld, HS(−1) bis HS(1)):** Forschungsstand ergänzt (Anschauung, nicht blind).
