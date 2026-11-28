@@ -1,5 +1,18 @@
 # Forschungsstand
 
+### φ als Asymptote: weder Grenzwert einer Schleife noch natürlicher Zwischenstand (28.11.2026, Test H228, k442)
+
+Der Autor fragte, was wäre, wenn man den gemeinsamen Drehwinkel φ = 0,0395773 als Asymptote behandelt, und ließ beide Lesarten rechnen.
+**Widerlegt.** Teil A: Unter 111 110 Schleifen der Länge ≤ 5 aus zehn Winkeloperationen des Rahmens (halber, doppelter, dreifacher Winkel,
+Drittel, Sektortausch π/4 − θ, die beiden Brannen-Phasen, die Maske tanh ε = β_sym und die Kontraktion mit γ_L) hat keine einen anziehenden
+Fixpunkt im 2σ-Fenster von φ; der nächste liegt 27σ daneben, und die Umgebung von φ ist dünner besetzt als bei 77 % der Zufallswerte.
+Teil B (nicht blind): Der Gradientenfluss der Vakuumenergie von 0 zum Minimum π/8 hat in führender Ordnung die geschlossene Form
+φ(t) = π/8 − (2/3) arctan(tan(3π/16) e^(−t/τ)), τ = Relaxationszeit am Minimum. Der Messwert wird bei t/τ = 0,1321 erreicht; keine der
+zehn vorab festgelegten Uhren (1, ½, ⅓, ⅛, ln 2, ε, β_sym, β_sym², 1/γ_L, 1/γ_L²) trifft, die nächste (⅛) liegt 2650σ daneben, und bei endlichem
+q hängt die Uhrzeit wieder von der gesetzten Kopplung ab. Die Lesart „Zwischenstand oder Anfangsbedingung“ bleibt möglich, verschiebt aber
+nur die Messzahl φ in eine Messzahl t/τ. φ bleibt die eine Messzahl des Leptonbilds; OP3 offen. Ergebnis:
+`notes/research/hilbert_shift_felder_2026_11_24/asymptote_phi_h228/`.
+
 ### Bilanz der Leptonenmassen: drei Zahlen für sechs Massen, Σm = 59,3 meV vorhergesagt (28.11.2026, Test H227, k441)
 
 Der Autor fragte, was herauskommt, wenn man erstmal nur nach den Leptonenmassen sucht. Im jetzigen Bild tragen drei Zahlen alle sechs Massen: der gemeinsame Winkel φ und je eine Massenskala für geladene Leptonen und Neutrinos (K = ⅔ ist geschützt). Daraus folgen drei Vorhersagen. Die dritte geladene Masse aus den beiden anderen (Koide) stimmt auf 0,43σ, das Verhältnis der Neutrino-Massenquadrat-Differenzen auf 1,80σ. Die absolute Neutrinoskala ist jetzt festgeschrieben: m = 0,379 / 8,81 / 50,11 meV, Summe **Σm = 59,30 ± 0,24 meV**, m_β = 8,87 meV, m_ββ zwischen 1,3 und 4,0 meV (normale Ordnung). Alles liegt unter den heutigen Schranken; Σm prüfen DESI, Euclid und CMB-S4. Das Verhältnis der beiden Skalen (3,15·10⁻¹¹) ist keine einfache Rahmenzahl und keine einfache Seesaw-Größe. Trägt teilweise, Python + Wolfram einig. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/massen_bilanz_h227/Ergebnis_H227_Massen_Bilanz.md).
