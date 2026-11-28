@@ -1,5 +1,16 @@
 # Forschungsstand
 
+### Rückwärtssuche nach dem Brecher: ein symmetrischer Term macht φ = x nur zu einem lokalen Minimum (28.11.2026, Test H232, k446)
+
+Rückwärts gefragt: Was müsste ein Term leisten, damit der Messwert φ = 0,0396 das Minimum der gemeinsamen Vakuumenergie beider Lepton-Sektoren ist? Exakt gilt
+(Wolfram symbolisch): An jedem Gleichgewicht ist φ der Mittelwert der beiden Sektor-Versätze, gleich welcher Zusatz in δ wirkt. Die Daten verlangen damit
+φ = (x + x_ν)/2 = 0,0415 ± 0,0011, und der kleine Abstand zwischen den Versätzen der geladenen und neutralen Leptonen ist genau die Verschiebung gegen φ.
+Ein symmetrischer Spektralterm (cos 3δ und cos 6δ in passendem Verhältnis) kann den Tausch spontan brechen und x zu einem Minimumspaar (x, π/4 − x) machen,
+aber nur lokal; die Vakuumenergie liegt anderswo tiefer. Mit dem festgelegten q = −0,0852 läge die Neutrino-Vorhersage zudem 22,8σ daneben. Das Verhältnis ⅔
+aus der führenden Ordnung hält bei endlichem q nicht (0,528). Ein Ladungsterm nur bei den geladenen Leptonen in der Größe der Feinstrukturkonstante reicht nicht.
+**Widerlegt.** Wie schon in H226 wird x höchstens ein lokales, stabiles Minimum; das stützt φ als metastabiles Vakuum oder Anfangsbedingung. OP3 offen.
+Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/rueckwaerts_brecher_h232/`.
+
 ### Expansion als Uhr: die Hubble-Reibung friert φ nicht beim Messwert ein (28.11.2026, Test H231, k445)
 
 Idee des Autors: φ rollt wie ein Teilchen von einem Energieberg, während sich der Raum ausdehnt; die Hubble-Reibung könnte es beim Messwert anhalten. Gerechnet

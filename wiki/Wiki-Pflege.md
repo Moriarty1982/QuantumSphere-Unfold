@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H232 (Rückwärtssuche nach dem Brecher):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.
+
 **28.11.2026, Test H231 (Expansion als Uhr):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.
 
 **28.11.2026, Test H230 (Symmetriepunkt im Materie-Frame):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt, abgehakt.
