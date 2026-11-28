@@ -125,6 +125,11 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** [Anleitung für LLM-Kontext und Cache](notes/anleitungen/llm-cache-optimieren.md) anwenden.
+- **Vorhersagen je Version** (Dauerauftrag des Autors vom 28.11.2026): Jede öffentliche Version (Companion, Physik-Paper, deutscher Preprint)
+  enthält einen datierten Abschnitt mit dem Modellstand und seinen Vorhersagen (Datum, DOI; ältere Versionen bleiben sichtbar). Für jede Vorhersage
+  offen kennzeichnen, was hergeleitet, was gesetzt (Postulat, Setzung), was gemessene Eingabe und was nachträglich gefunden ist. Korrekturen nur in
+  einer neuen Version mit Begründung (Modellfortschritt oder Fehler), nie Nachjustieren nach einer neuen Messung. Als Test zählt die Version, die vor
+  der Messung festgeschrieben war. Maßgeblich ist das Register im Companion (zuerst Runde v4.10.0-r75 für v5.6.0).
 - **Bilanz der Setzungen:** Nach zwei Runden in Folge mit „trägt teilweise“ zur selben offenen Voraussetzung vor der nächsten Runde
   eine Bilanz ziehen: je Runde, was gesetzt, was hergeleitet und wohin die offene Wahl gewandert ist. Dabei prüfen, ob das Ziel selbst eine
   gesetzte Eingabe ist und ob die Frage nur in einer gewählten Zerlegung entsteht; eine stillschweigend gewählte Weggabelung dem Autor vorlegen
