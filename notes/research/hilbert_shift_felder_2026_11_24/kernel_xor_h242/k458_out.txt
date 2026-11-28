@@ -1,0 +1,30 @@
+================================================================================================
+H242 (k458)  Kernel-Tripel K_k = u_(alpha_k)(e_k), e3 = e1 e2, in S;  Schluss von span{1,K1,K2,K3}
+================================================================================================
+
+N1/C: max |<K1K2, K1>|, |<K1K2, K2>| = 0.0e+00;  max |K1K2 - u_(-(a1+a2))(e3)| = 1.0e-15
+N2/A: auf der Regel a1+a2+a3 = 0 mod pi: max Schlussrest = 1.2e-15 (500 Stichproben)
+      zufaellige Tripel: Schlussrest / |sin(a1+a2+a3)|: min 1.000000, max 1.000000  (Rest = |sin(Summe)|, max Abw. 2.0e-15)
+Zufallskontrolle: Anteil zufaelliger Tripel mit Schlussrest < 1e-6: 0/2000
+
+N3: gemeinsame Phase, Schluss bei (Grad, 3600 Stuetzstellen): [np.float64(0.0), np.float64(60.0), np.float64(120.0)]
+
+N4/B: Kopien-Belegungen (g1,g2,g3), die schliessen: 9 von 27: [(0, 0, 0), (0, 1, 2), (0, 2, 1), (1, 0, 2), (1, 1, 1), (1, 2, 0), (2, 0, 1), (2, 1, 0), (2, 2, 2)]
+      gleich der Menge g1+g2+g3 = 0 mod 3: True
+
+Nur Bericht: K2 = J K1 mit J = i (a2 = a1 + 90 Grad), K3 := K1 K2 -> a3 = -(2 a1 + 90 Grad)
+  a1 =   0 Grad: a3 =   90.00 Grad (mod 180), Re z3 = +0.0000
+  a1 =  30 Grad: a3 =   30.00 Grad (mod 180), Re z3 = -0.8660
+  a1 =  45 Grad: a3 =    0.00 Grad (mod 180), Re z3 = -1.0000
+  a1 =  60 Grad: a3 =  150.00 Grad (mod 180), Re z3 = -0.8660
+  a1 =  90 Grad: a3 =   90.00 Grad (mod 180), Re z3 = -0.0000
+  a1 = 120 Grad: a3 =   30.00 Grad (mod 180), Re z3 = +0.8660
+  a1 = 180 Grad: a3 =   90.00 Grad (mod 180), Re z3 = +0.0000
+  -> Photon-Kriterium Re z3 = 0 genau fuer a1 = 0 mod 90 Grad
+
+Nur Bericht: Brannen-Phasen theta_k = -delta + 2 pi k/3 als Kernel-Phasen
+  delta_Im: Summe mod pi = 141.8028 Grad, Schlussrest = 0.6184 (= |sin 3 delta| = 0.6184)
+  delta_Re: Summe mod pi = 96.8082 Grad, Schlussrest = 0.9929 (= |sin 3 delta| = 0.9929)
+  delta = 0: Summe mod pi = 0.0000 Grad, Schlussrest = 0.0000 (= |sin 3 delta| = 0.0000)
+
+================================================================================================

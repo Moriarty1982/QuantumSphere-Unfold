@@ -1,0 +1,14 @@
+k458b Gegenprobe (Wolfram Language, symbolisch, ein Aufruf). Tatsaechliche Ausgaben (Print):
+
+e1 e2 = e3: True
+K1 K2 - u_-(a1+a2)(e3) = {0}                     (symbolischer Nullrest in a1, a2)
+Quadrat des Schlussrests je Produkt (S_i S_j), S = (1, K1, K2, K3):
+  0  0                  0                  0
+  0  0                  Sin[a1+a2+a3]^2    Sin[a1+a2+a3]^2
+  0  Sin[a1+a2+a3]^2    0                  Sin[a1+a2+a3]^2
+  0  Sin[a1+a2+a3]^2    Sin[a1+a2+a3]^2    0
+unter a3 = -(a1+a2): {0}
+Kopien-Belegungen mit Schluss: {{0,0,0},{0,1,2},{0,2,1},{1,0,2},{1,1,1},{1,2,0},{2,0,1},{2,1,0},{2,2,2}}
+
+Warnungen: "Symbol::undefined2" betrifft nur lokal benutzte Namen der Evaluator-Umgebung; "General::messages" bezieht sich darauf.
+Keine Rechenwarnung.
