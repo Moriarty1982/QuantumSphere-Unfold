@@ -1,7 +1,7 @@
 {
   "id": "physics-standalone",
   "title": "One Object, Three Frames: The Quantum Sphaera Construction",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "source_dir": "paper/physics-standalone",
   "main": "article.tex",
   "build": [
@@ -11,16 +11,16 @@
   ],
   "texinputs": [],
   "build_needs": [],
-  "pdf_name": "Quantum_Sphaera_One_Object_Three_Frames_v1.1.0.pdf",
-  "source_archive": "Quantum_Sphaera_One_Object_Three_Frames_v1.1.0_source.tar.gz",
+  "pdf_name": "Quantum_Sphaera_One_Object_Three_Frames_v1.2.0.pdf",
+  "source_archive": "Quantum_Sphaera_One_Object_Three_Frames_v1.2.0_source.tar.gz",
   "source_extra": [],
   "extra_files": [],
   "lean_check": "",
-  "metadata": "release/zenodo/metadata_physics_standalone_1_1_0.json",
-  "payload_dir": "release/physics-standalone-v1.1.0",
-  "tag": "physics-paper-v1.1.0",
-  "new_version_of": "24539644",
-  "deposition_id": "24563808",
-  "version_doi": "10.5281/zenodo.24563808",
-  "release_date": "2026-11-26"
+  "metadata": "release/zenodo/metadata_physics_standalone_1_2_0.json",
+  "payload_dir": "release/physics-standalone-v1.2.0",
+  "tag": "physics-paper-v1.2.0",
+  "new_version_of": "24563808",
+  "deposition_id": "24632621",
+  "version_doi": "10.5281/zenodo.24632621",
+  "release_date": "2026-11-28"
 }

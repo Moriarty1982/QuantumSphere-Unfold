@@ -1,0 +1,251 @@
+
+\clearpage
+% ============================================================================
+\section*{v4.10.0-r74 Source-Only: The Value of the Lepton Angle Is Not Fixed by Asymptote, Frame Map, Expansion, Locking or a Sector-Exchange Breaker; the Offset Is Carried by \texorpdfstring{\(\varphi\)}{phi}, the Coefficient \texorpdfstring{\(q\)}{q} Only by Its Sign; the Strand Rests (H228--H236, k442--k451)}
+\addcontentsline{toc}{section}{v4.10.0-r74 Source-Only: The Value of the Lepton Angle Is Not Fixed by Asymptote, Frame Map, Expansion, Locking or a Sector-Exchange Breaker; the Offset Is Carried by \texorpdfstring{\(\varphi\)}{phi}, the Coefficient \texorpdfstring{\(q\)}{q} Only by Its Sign; the Strand Rests (H228--H236, k442--k451)}
+\label{sec:v4100-r74-phi-strand-rests}
+% ============================================================================
+
+\paragraph{Purpose.}
+Layer r73 left the common lepton offset as a dimensionless rotation angle \(\varphi\) with the measured value \(\varphi=0.0395773\), the branch
+of the data chosen by the sign of the cubic spectral invariant, and that sign set by the author.  On 28 November 2026 nine further tests
+followed (H228--H236, scripts k442--k448, k450, k451), each fixed in an advance note before the computation, together with one exploration
+without advance note (k449).  This layer records them, on the author's decision of 28 November 2026 to prepare the release.  It adds no new
+computation.  The outcome in one sentence: no route tried fixes the value of \(\varphi\) (asymptote of a loop or of the flow, loosening of \(J\)
+at order six, transfer of the symmetry point to the matter frame, expansion as a clock, backward search for a breaker of the sector exchange,
+locking to eight positions, a common fine step, a Casimir twist between an inner and an outer field); at every equilibrium \(\varphi\) is
+exactly the mean of the two sector offsets; and the coefficient \(q\) of the sixth-order term of H167 carries only the sign of the branch choice
+(\(q\to0^-\)), while \(\varphi\) carries the offset, which leaves every earlier verdict and the recorded neutrino predictions of r73.10
+unchanged.  On 28 November 2026 (15:41) the author decided to leave \(\varphi\) open and to let the \(\varphi\) strand rest; H235 is the one
+additional attempt released with the exploration k449, H236 a clarification of the bookkeeping.  Names follow r69: rest frame R (formerly
+reference frame), matter frame M, dual frame T (formerly tachyon frame), light point P (formerly photon eigenframe); Im sector (charged
+leptons, \(c=1\)) and Re sector (neutral leptons, \(c=0\)), under H99.  The tests H173--H212 remain documented in the research notes and are not
+recorded as a layer.  Earlier layers are not rewritten.
+
+\noindent\textbf{Source-only status.}
+This v4.10.0-r74 layer is source-only.  It does not build a PDF, does not assign a new DOI,
+and does not authorize a public release.  The v5.5.0 Version DOI
+\href{https://doi.org/10.5281/zenodo.24563811}{10.5281/zenodo.24563811} and the Concept DOI
+\href{https://doi.org/10.5281/zenodo.19210728}{10.5281/zenodo.19210728} are unchanged by it.
+
+\subsection*{v4.10.0-r74 setting}
+\label{subsec:v4100-r74-setting}
+
+As in r73: Brannen form \(\sqrt{m_k}=\mu_s\bigl(1+\sqrt2\cos(\delta_s+2\pi k/3)\bigr)\) with \(K=\tfrac23\) under \(J\); tree model of H225,
+\(V_{\rm Im}=-\cos2(\delta-\pi/4-\varphi)+q\cos3\delta\), \(V_{\rm Re}=\cos2(\delta-\varphi)+q\cos3\delta\), common vacuum energy
+\(E(\varphi)=\sum_s\min_\delta V_s\), exact sector exchange \(V_{\rm Re}(-\delta;\pi/4-\varphi)=V_{\rm Im}(\delta;\varphi)\) (r73.8), symmetric
+minimum \(\varphi^*=\pi/8\).  Measured: \(x=0.0395773\) (Im sector, pole masses), \(x_\nu=0.04336\pm0.00213\) (Re sector, from \(R\)).
+H228--H235 still carried the fit value \(q=-0.0852\) of H167 next to \(\varphi\) where the tree model was evaluated at finite \(q\); r74.10 settles
+this.  Tools: Python for every main computation, Wolfram Language independently for every test and for k449; all common numbers agree.
+Qiskit was not used (no circuit).  No HDL/MMA comparison: no finite search or selection procedure of \texttt{RUN\_TAPE} is involved.
+
+\subsection*{v4.10.0-r74 results}
+\label{subsec:v4100-r74-results}
+
+\paragraph{Theoremlet v4.10.0-r74.1 (\(\varphi\) is neither the limit of a simple loop nor a natural stage of the flow; H228, k442; refuted).}
+(A) Among \(111\,110\) words of length \(1\) to \(5\) in ten angle operations of the frame (\(46\,993\) attracting fixed points in \((0,\pi/4)\))
+none lies within \(x\pm2\sigma_\varphi\) (\(\pm1.56\cdot10^{-6}\)); the nearest is \(27\sigma\) off, and the neighbourhood of \(x\) is thinner than that of
+a typical control value (\(77\%\) of the controls have at least as many fixed points nearby).  Post hoc: at this precision a loop search of length
+five is near its limit of resolution (random expectation \(0.39\) hits in the window).  (B, not blind) In leading order the gradient flow of
+\(E\) from \(0\) to \(\pi/8\) has the closed form \(\varphi(t)=\pi/8-\tfrac23\arctan\bigl(\tan(3\pi/16)\,e^{-t/\tau}\bigr)\), \(\tau=1/E''(\pi/8)\)
+(Wolfram DSolve and NDSolve); the data value is reached at \(t_x/\tau=0.132105\).  None of ten clocks fixed in advance (\(\tfrac18\),
+\(\beta_{\rm sym}^2\), \(1/\gamma_L^2\), \(\tfrac13\), \(1\), \(\tfrac12\), \(\ln2\), \(\varepsilon\), \(\beta_{\rm sym}\), \(1/\gamma_L\)) hits; the nearest,
+\(\tfrac18\), lies \(2652\sigma\) off.  Reading \(\varphi\) as an asymptote only moves the measured number \(\varphi\) into a measured number
+\(t_x/\tau\).
+
+\paragraph{Theoremlet v4.10.0-r74.2 (loosening \(J\) at order six chooses the branch but not the angle; H229, k443; refuted for \(\varphi\)).}
+On the author's choice the full square \(\lambda N^2\) (\(\lambda\ge0\)) of the cubic norm was admitted on trial; at \(K=\tfrac23\) its
+\(\delta\)-part is \(2r^6g(\delta)\), \(g=-2\sqrt2\cos3\delta+\cos6\delta\) (Wolfram symbolic).  (a, not blind) For all strengths
+\(w=10^{-4}\ldots3\) and \(\varphi=0.01\ldots0.06\) both sectors choose the data branch: stability supplies the sign that r73.6 had to set.
+(b) The global minima of \(E(\varphi;w)\) are only the pair \(\pi/12,\pi/6\) (\(w\le0.03\)) or \(\pi/8\) (\(w\ge0.1\)); no \(w\) gives \(x\).
+(c) Without rotation the Im data branch is a stationary point of \(g\) (\(g'(5\pi/4)=0\)), so \(N^2\) shifts only the Re branch; the nearly equal
+offsets of the data do not come from one strength.  The loosening exchanges a set sign for a changed rule.  It is not adopted: the sign of
+the branch-choice term remains the setting of r73.6 (author).  A first version of part (c) used the wrong representative of the Im branch; it
+was corrected before part (c) was evaluated, and the discarded value is noted in the output file.
+
+\paragraph{Theoremlet v4.10.0-r74.3 (no frame map carries the symmetry point \(\pi/8\) to the measured value; H230, k444; refuted).}
+The symmetry point \(\pi/8\) of \(E\) lies in the rest frame R; \(x\) is measured in the matter frame M.  The missing transfer was made.
+(A) The mask on the spectrum with forms K, linear and S at \(\pm\varepsilon_0\), \(\pm2\varepsilon_0\): form S (similarity) leaves the phase
+unchanged in every frame (\(\pi/24\) in both sectors); forms K and linear destroy \(K=\tfrac23\) (\(K'=0.744\) to \(23.7\)) and nowhere give the
+data phase.  (B) Aberration, contraction and mask with \(\beta_{\rm sym}\) or \(\tanh2\varepsilon_0\), readings \(\varphi,2\varphi,3\varphi\):
+the \(36\) images lie between \(0.116\) and \(1.200\); the point \(0\) is fixed by all of them.  Limit cases: the light point P sends angles to
+\(0\) or \(\pi\), the dual frame T (\(z\mapsto iz\)) shifts by \(\pi/2\).  Within this frame there is no frame-dependent phase at fixed Koide
+value.  The value of \(\varphi\) is not a problem of translation between R and M; the step is closed.
+
+\paragraph{Theoremlet v4.10.0-r74.4 (expansion as a clock: Hubble friction does not freeze \(\varphi\) at the measured value; H231, k445; refuted).}
+Set up (in the advance note) as a field rolling in the potential \(E\) from \(0\) in a flat \(\Lambda\)CDM background with Planck values,
+\(\ddot\varphi+3H\dot\varphi+E'(\varphi)=0\), without back reaction.  For \(m\ll H_0\) the field stays at its starting value; for \(m\gg H_0\) it rolls
+early and oscillates about \(\pi/8\).  Exactly one mass, \(\mu^*=m/H_0=0.9721\), gives \(\varphi=x\) today, and there the field is rolling
+(\(d\varphi/d\ln a=0.075\)).  Since \(d\ln m_e/d\varphi=51.5\), this gives \(|d\ln m_e/dt|=2.7\cdot10^{-10}\) per year, about \(2.7\cdot10^6\) times
+the atomic-clock bound of order \(10^{-16}\) per year (order of magnitude from the literature, not recomputed).  Natural values of \(\mu\)
+(\(\sqrt{\Omega_\Lambda}\), \(1\), \(\beta_{\rm sym}\), \(\tfrac32\), \(\gamma_L\), \(1/\beta_{\rm sym}\)) do not hit and carry the same drift.  A frozen
+\(\varphi=x\) is an initial condition.
+
+\paragraph{Theoremlet v4.10.0-r74.5 (backward search for the breaker: \(\varphi\) is the mean of the sector offsets; a symmetric term makes \(x\) only a local minimum; H232, k446; refuted).}
+(A1, not blind, Wolfram symbolic) \(dE/d\varphi=-4\cos(o_{\rm Im}-o_{\rm Re})\sin(o_{\rm Im}+o_{\rm Re}-2\varphi)\); hence for every additional term that
+depends on \(\delta\) only, at every stationary \(\varphi\),
+\[
+o_{\rm Im}+o_{\rm Re}=2\varphi ,
+\]
+exact.  The data then require \(\varphi^*=(x+x_\nu)/2=0.04147\pm0.00106\), and the distance \(x_\nu-x\) (\(1.78\sigma\), r73.1) is twice the shift of
+the offsets against \(\varphi\).  (B1) A symmetric spectral term \(q\cos3\delta+r\cos6\delta\) at \(q=-0.0852\) makes \(x\) stationary at
+\(r^*=0.0450231\) and a minimum in \(\delta\), but not the global one (\(E(7\pi/24)\) lies lower), and gives \(x_{\nu,\rm pred}=0.09185\), \(+22.8\sigma\).
+(B2) The leading-order ratio \(r/|q|=\tfrac23\) does not survive at finite \(q\) (\(0.528\)).  (C, report) For no \(q\) is \(x\) global; a term of
+the size of the fine-structure constant in the Im sector alone does not reach \(x\).  As in H226, \(x\) becomes at most a local, stable minimum.
+
+\paragraph{Theoremlet v4.10.0-r74.6 (the fine angles do not lock to eight positions; H233, k447; refuted).}
+On the author's picture ``eight positions, each bit carrying twice as much'': grids \((\pi/4)2^{-k}\) and \((\pi/12)2^{-k}\), \(k=0,\ldots,8\).
+The tree values \(\pi/12\), \(\pi/6\), \(\pi/4\) and the eighth turns lie on the grids (known, H167, H171).  \(\varphi\) does not: after eight halvings
+it is still \(3.06\cdot10^{-4}\) rad, i.e.\ \(392\sigma\), from the nearest point, and it is no remainder of a natural angle after locking.  Eight
+grid hits of the mixing angles (\(\theta_{23}\approx\pi/4\), \(\theta_{12}\approx3\pi/16\), \(\theta_{13}\approx3\pi/64\)) match the random
+expectation \(5.7\) (\(P(\ge8)=0.22\)).  Locking fixes the tree values, not the fine angles; \(\varphi\) is a continuous remainder.
+
+\paragraph{Theoremlet v4.10.0-r74.7 (no common fine step; H234, k448; refuted).}
+Do the fine values \(\varphi\), \(\beta_{\rm sym}-\tfrac12\), \(D/B-1\), \(x_\nu-x\) follow from one small number, \(F=c\,\epsilon^n\) (15 simple factors,
+\(n=1,2,3\))?  With \(\epsilon=\varphi\) the sharp value \(\beta_{\rm sym}-\tfrac12\) misses by \(36\sigma\) (best \(\sqrt2\,\varphi\)); with free \(\epsilon\)
+the hits occur as often as chance predicts for this density of formulas (\(p=0.74\)).  Post hoc and not counted: \((\beta_{\rm sym}-\tfrac12)/\varphi
+=1.2483\), near \(\tfrac54\).  The distinction ``discrete values derived, continuous values open'' describes the state; it saves no input.
+
+\paragraph{Remark v4.10.0-r74.8 (inner and outer field with a Casimir gap; exploration k449, not blind; no number, no prediction).}
+On the author's picture of a separated inner region of the original field, an outer field resisting collapse and a vacuum layer between them.
+Computed exactly with two tools: a real field with \(V=\lambda(\phi^2-1)^2\) has the two vacua \(\pm1=S^0\), the unit sphere of HS(0), separated by
+a kink (BPS remainder \(0\)); two regions give projectors \(e_\pm\) with \(e_+e_-=0\), \(e_++e_-=1\), and \(j=e_+-e_-\) with \(j^2=+1\), i.e.\ exactly
+\(\mathbb R\oplus\mathbb Rj\) = HS(\(-1\)) (consistent with k405); in a gap with modes \((n+a)\pi/d\), equal boundary conditions (DD) attract and mixed
+ones (DN) repel, ratio \(-7/8\); a relative phase \(\alpha\) across the gap gives \(E(\alpha)\propto-\sum_n\cos(n\alpha)/n^4\) with \(S(\pi)/S(0)=-7/8\)
+(exact via \(\operatorname{Re}\operatorname{Li}_4(e^{i\alpha})\)), critical points only at \(0,\pi,2\pi\).  The ratio \(7/8=1-2^{-3}\) is the known
+counting number \(\eta(4)/\zeta(4)\).  \emph{Reading, not derived:} two regions give HS(\(-1\)), merged regions HS(0) \(=\mathbb R\), a continuous phase
+HS(1) \(=\mathbb C\); the last is admitted by hand, not generated.  Post hoc: only the repulsive case keeps the separation stable, and it is
+the case \(j^2=+1\).  The exploration gives no number; the continuous phase is set; \(\varphi\) stays open.
+
+\paragraph{Theoremlet v4.10.0-r74.9 (the Casimir twist breaks the sector exchange but does not place \(\varphi\) at the measured value; H235, k450; refuted).}
+Twist energy from k449 with counting weights \(2\) (Im sector, complex) and \(1\) (Re sector, real), fermionic sign, free strength \(\kappa\), in
+the tree model with \(q=-0.0852\).  The weights \(2:1\) break the exchange.  (A) A term that depends on \(\varphi\) only cannot change the neutrino
+prediction (the offsets are tree functions): requiring \(o_{\rm Im}=x\) gives \(x_{\nu,\rm pred}=0.06295\), \(+9.20\sigma\).  (B1) \(\kappa^*=0.1056\) makes
+\(\varphi_x\) a local minimum; (B2) the global minimum lies near \(2\pi/3\), at the mirror partner with the wrong sign of the Im offset.  Post hoc
+(k450c, not counted): with small \(q\) the neutrino prediction moves to \(-0.5\sigma\ldots-1.8\sigma\), \(\varphi_x\) is never global, and the model
+counts the offset twice when the fit \(q\) of H167 and \(\varphi\) stand together; this led to r74.10.
+
+\paragraph{Theoremlet v4.10.0-r74.10 (double counting settled: \(\varphi\) carries the offset, \(q\) only its sign; no earlier verdict changes; H236, k451; holds).}
+(A) Reading Q (\(q=-0.0852\) carries, not blind): \(x_{\nu,\rm pred}=0.06295\), \(+9.20\sigma\).  Reading \(\Phi\) (\(\varphi\) carries, \(q\to0^-\), not
+blind): \(x_{\nu,\rm pred}=x\), \(-1.78\sigma\).  Both free (blind): the \(2\sigma\) range of \(q\) is
+\[
+q\in[-0.029,\,0],
+\]
+the end \(-0.029\) corresponding to \(x_\nu+2\sigma\) and the end \(0\) arising because \(x_\nu-2\sigma<x\), which would need \(q>0\), the
+branch rejected by r73.5.  So \(q=0\) is admitted and \(-0.0852\) lies three
+times further out: \(\varphi\) carries the offset, \(q\) is only the sign of the branch choice.  (B, blind) Part B of H226 repeated in reading
+\(\Phi\) (\(q=-0.01\), \(-0.001\)): T1 still gives \(x_{\nu,\rm pred}\approx0.48\) (\(+207\sigma\)), T2 and T3 have no solution; the verdict of H226 stands.
+(C) Inventory of H221--H235: no verdict changes; numbers that change are the neutrino distances in H232 and H235 (\(-1.3\sigma\), \(-1.8\sigma\)
+instead of \(+22.8\sigma\), \(+9.2\sigma\)) and the clock of H228 (\(0.1321\) in reading \(\Phi\) instead of \(0.1231\)); the remark ``\(\tfrac18\) only
+\(1.5\%\) off'' of H228 holds only at \(q=-0.0852\) (\(5.7\%\) in reading \(\Phi\)).  The lepton masses and the recorded predictions of r73.10 (H227:
+\(\sum m_\nu=59.30\pm0.24\) meV, \(m_\beta\), \(m_{\beta\beta}\), \(R\)) are not affected.  From now on the tree model is used with \(q\to0^-\) (sign set,
+value zero) and the offset in \(\varphi\); a finite \(q\) would have to be justified as a scale part.
+
+\paragraph{Author decision v4.10.0-r74.D (28 November 2026, 15:41).}
+\(\varphi=0.0395773\) is left open as a measured input, and the \(\varphi\) strand rests.  H235 was the one additional attempt released with
+the exploration k449; H236 settles the bookkeeping and makes no claim on the value of \(\varphi\).  OP3 remains open.
+
+\subsection*{v4.10.0-r74 balance of settings}
+\label{subsec:v4100-r74-balance}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}@{}}
+\toprule
+item & status\\
+\midrule
+\(\varphi\) at every equilibrium & derived: exact mean of the two sector offsets for any \(\delta\)-dependent addition (r74.5)\\
+a breaker depending on \(\varphi\) only & derived: cannot change the neutrino prediction (r74.9)\\
+minima of \(E\) under the sector exchange & derived: only at distinguished points \(\pi/12\), \(\pi/8\), \(\pi/6\) for the \(N^2\) ratio (r74.2)\\
+transfer of \(\pi/8\) from R to M & done; no frame map gives \(x\) (r74.3)\\
+asymptote, expansion clock, eight-position grid, fine step, Casimir twist & do not fix \(\varphi\) (r74.1, r74.4, r74.6, r74.7, r74.9)\\
+sign of the branch-choice term & set by the author (r73.6); loosening of \(J\) at order six would replace it by a rule change, not adopted (r74.2)\\
+coefficient \(q\) of H167 & only a sign, \(q\to0^-\); data allow \(|q|\le0.029\) (\(2\sigma\)) and require none (r74.10)\\
+value \(\varphi=0.0395773\) & measured; left open by the author, strand rests (r74.D)\\
+\(K=\tfrac23\), Brannen form, H99, scales \(\mu_e,\mu_\nu\), circulant sector, tree level & set (inputs), as before\\
+HS(\(-1\)), HS(0), HS(1) from inner/outer field & reading of an exploration; the continuous phase for HS(1) set (r74.8)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Since r73.4 the open choice sits in the value of \(\varphi\), and this layer did not move it: eight further routes left it where it was.  Four
+results point the same way, without deciding it: in H226, H232 and H235 the measured value becomes at most a local, stable minimum, and in H231
+a frozen value is the starting value.  The target \(\varphi\) is itself a measured input.  One question arose only in a chosen decomposition:
+the tree model carried the offset twice (fit \(q\) and rotation \(\varphi\)); r74.10 removes this by fixing that \(\varphi\) carries it.  The fork
+``equilibrium value against initial or boundary condition (metastable vacuum)'' was put to the author, who left \(\varphi\) open (r74.D).
+
+\subsection*{v4.10.0-r74 frames}
+\label{subsec:v4100-r74-frames}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}@{}}
+\toprule
+item & frame & comparison\\
+\midrule
+r74.1, r74.2, r74.5, r74.6, r74.7, r74.9, r74.10 (phases, potential, grids) & M & pole masses; \(K\) and \(R\) frame independent in form S\\
+r74.3 (symmetry point) & R \(\to\) M; P and T as limit cases & images of \(\pi/8\) and \(0\) compared with \(x\) in M\\
+r74.4 (expansion clock) & M (cosmological background) & drift of \(m_e\) against atomic clocks\\
+r74.8 (inner/outer field) & no frame & no comparison with data\\
+\bottomrule
+\end{tabular}
+\end{center}
+The sector exchange (\(\delta\to-\delta\), \(\varphi\to\pi/4-\varphi\), Im \(\leftrightarrow\) Re), the frame exchange \(J\), the dual map
+\(z\mapsto iz\) and time reversal \(z\mapsto\bar z\) are kept apart (r51, r81).
+
+\subsection*{v4.10.0-r74 register entries}
+\label{subsec:v4100-r74-register}
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.52\textwidth}@{}}
+\toprule
+statement & status after v4.10.0-r74\\
+\midrule
+H228, H230, H231, H232, H233, H234, H235 & refuted\\
+H229 & refuted for \(\varphi\); branch chosen by stability under the loosened \(J\); loosening not adopted\\
+H236 & holds: \(\varphi\) carries the offset, \(q\to0^-\), \(2\sigma\) range \(q\in[-0.029,0]\)\\
+k449 & exploration (not blind); reading, no number\\
+verdicts of H221--H235 & unchanged (r74.10)\\
+\(\sum m_\nu=59.30\pm0.24\) meV, \(m_\beta=8.87\) meV, \(m_{\beta\beta}\in[1.29,4.00]\) meV, \(R=0.030839\) (H227) & predictions, open, unaffected\\
+\(\varphi=0.0395773\) & measured input; left open (author, 28 November 2026, 15:41)\\
+sign of the branch-choice term & setting (author, 28 November 2026), as in r73\\
+symmetry point \(\pi/8\) in M & transfer done (H230); no frame effect\\
+OP3, OP4 & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{v4.10.0-r74 notes}
+\label{subsec:v4100-r74-notes}
+
+{\raggedright
+\texttt{notes/\allowbreak research/\allowbreak hilbert\_\allowbreak shift\_\allowbreak felder\_\allowbreak 2026\_\allowbreak 11\_\allowbreak 24/}: folders
+\texttt{asymptote\_\allowbreak phi\_\allowbreak h228/}, \texttt{j\_\allowbreak ordnung6\_\allowbreak h229/}, \texttt{symmetriepunkt\_\allowbreak frame\_\allowbreak h230/},
+\texttt{expansion\_\allowbreak uhr\_\allowbreak h231/}, \texttt{rueckwaerts\_\allowbreak brecher\_\allowbreak h232/}, \texttt{einrastung\_\allowbreak f18\_\allowbreak h233/},
+\texttt{feinstufe\_\allowbreak h234/}, \texttt{innen\_\allowbreak aussen\_\allowbreak k449/}, \texttt{casimir\_\allowbreak verdrehung\_\allowbreak h235/},
+\texttt{doppelzaehlung\_\allowbreak h236/}: advance notes (none for k449), result notes, scripts \texttt{k442} to \texttt{k451} (each with a Wolfram
+cross-check \texttt{b}; post hoc addendum \texttt{k450c}; part B of H236 in \texttt{k451\_\allowbreak teilB\_\allowbreak h226.py}) and their actual outputs.
+Layer notes: \texttt{notes/\allowbreak research/\allowbreak v4\_\allowbreak 10\_\allowbreak 0\_\allowbreak r74\_\allowbreak phi\_\allowbreak strang\_\allowbreak ruht/}.
+Tools: Python and Wolfram Language for every test; no Qiskit (no circuit); no HDL/MMA comparison (no finite search or selection procedure
+of \texttt{RUN\_TAPE} involved).
+\par}
+
+\subsection*{v4.10.0-r74 ledger and guard update}
+\label{subsec:v4100-r74-ledger-guard}
+
+\[
+R_{\rm chk}^{v4100\text{-}r74}=(1,1,1)
+\]
+for (status recorded; computations checked in the cited scripts with independent Wolfram cross-checks; comparison with data in r74.4, r74.5,
+r74.9, r74.10; \(\varphi\), the branch sign and the scales not derived).
+
+The layer spends no guard:
+\[
+R_{\rm glob}^{(v4100\text{-}r74,+)}=(0,1,1,1,1),
+\qquad
+\Gamma_{\rm guard}^{v4100\text{-}r74}=(1,1,1,1,1),
+\qquad
+\beta_4=1/256\ \text{unspent}.
+\]
+The layer does not imply exact finite \(C5\) zero closure, exact all-readout terminality, \(C6/T2\), a global photon-clock theorem,
+or global all-readout closure.  OP1--OP5, C5 and C6/T2 remain open.

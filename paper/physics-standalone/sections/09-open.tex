@@ -1,5 +1,5 @@
 % Section 9 (group D): open problems and testable statements.
-% Sources: Companion rounds v4.10.0-r05, r08, r18, r21, r28, r30, r31, r55, r56, r59, r60;
+% Sources: Companion rounds v4.10.0-r05, r08, r18, r21, r28, r30, r31, r55, r56, r59, r60, r72--r75;
 % wiki/Vorhersagen-und-Tests.md, wiki/Offene-Probleme.md, wiki/Gesamtbild.md.
 \section{Open problems and testable statements}
 \label{sec:open}
@@ -30,7 +30,7 @@ parts and leaves OP1 open in the form ``derive the counting postulate''. A solut
 number but none of the five identifications (\rnd{r55}, r55.1). Section~\ref{sec:beta} gives the details.
 
 \paragraph{OP2: the Dirac operator on the antisymmetric sector.} \Open\ Existence and self-adjointness of the operator $D_-$
-on the antisymmetric sector were derived from the Riemann work, which has not been a source of proof since v4.8.0-r04.
+on the antisymmetric sector were derived from an earlier manuscript of the author, which has not been a source of proof since v4.8.0-r04.
 Its own remainder is that proof; its identification with the frame offset (spectral offset $=\bsym$) is one of the five
 set translations (\rnd{r30}, r30.6).
 
@@ -45,7 +45,8 @@ not blind; recorded in Companion rounds \rnd{r62}, \rnd{r63}). The three $G_2$-s
 $su(3)$ and have no common charge: they are three readings of one generation, not three generations (H138, H140); the number of generations stays an input. In an
 amplitude readout $K=1/(3\cos^2\theta)$, so $K=\tfrac23$ holds exactly at the mixing angle $\theta=\pi/4$, the fixed point of
 a swap read as the exchange of matter and tachyon frame (H148, H149); the swap symmetry is a postulate that the algebra
-does not supply (H156), and the phase $\delta=2/9$ remains a fit.
+does not supply (H156), and the phase $\delta=2/9$ remains a fit. Rounds \rnd{r73} and \rnd{r74} reduce it to one set sign and one
+rotation angle, $\varphi_\ell=0.0395773$, which no route tried derives and which stays a measured input (Section~\ref{sec:B-lepton-phase}).
 
 \paragraph{OP4: the origin of the mixing angles.} \Open\ Several constructions reproduce the mixing data, but as fits.
 The translations of the number are $|U_{e2}|^2=\bsym^2$ (H9) and the mask parameter $\varepsilon=\eta$ (H46). The own
@@ -71,10 +72,11 @@ obstruction, is open; under the original definition of the score its answer is n
 $C5=0$ is not made.
 
 \paragraph{C6/T2 and the guards.} The global closure of all readouts, C6/T2, is \emph{not claimed}. The Companion
-asserts only local, frame-typed closures (thesis T15). Its five guards are unchanged: every round up to \rnd{r61} records
+asserts only local, frame-typed closures (thesis T15). Its five guards are unchanged: every round up to \rnd{r75} records
 $R_{\mathrm{glob}}=(0,1,1,1,1)$, $\Gamma_{\mathrm{guard}}=(1,1,1,1,1)$ and the end bound $\beta_4=1/256$ unspent, and states that it
 implies no exact finite C5 zero closure, no exact all-readout terminality, no C6/T2, no global photon-clock theorem and no
-global all-readout closure.
+global all-readout closure. Round \rnd{r72} restates the fourth guard, unchanged in content and value, as ``no global photon-clock
+theorem''.
 
 \subsection{Testable statements}
 \label{sec:open-tests}
@@ -82,7 +84,8 @@ global all-readout closure.
 The Companion fixes each prediction in a pre-registration note (hypothesis, data, decision criterion) committed before
 the decisive data exist; a value counts as tested only with a measurement after the stated cutoff, and earlier data are
 given for comparison only. Table~\ref{tab:open-tests} lists the predictions that are open, together with H2. The status is
-that of 25~November 2026. None of the open tests is decided. One further open pre-registration is in no Companion round up to
+that of 25~November 2026; the dated list of this version, with the neutrino masses of H227 and the mixing readings recorded after
+that date, is Table~\ref{tab:open-predictions}. None of the open tests is decided. One further open pre-registration is in no Companion round up to
 \rnd{r61} and not in the table: H105 (horizon area steps $4\ln2\,\ell_P^2$ and ringdown echoes under an added setting V1,
 deadline 31.12.2028; recorded in \rnd{r64}); its value is not specific to the construction.
 
@@ -132,4 +135,56 @@ places.
 
 \Open\ \textbf{No blind prediction of the Companion has so far been confirmed against measurement data.} The confirmed
 tests without the mark ``not blind'' all check inner mathematics (\rnd{r05}, remark r05.2), and no later test, up to
-\rnd{r60} and in H128--H156 after it, has changed this. The predictions above are the places where that can change.
+\rnd{r75}, has changed this. The predictions above and in Section~\ref{sec:open-predictions} are the places where that can change.
+
+\subsection{Predictions of this version (as of 28 November 2026)}
+\label{sec:open-predictions}
+
+This version of the article (1.2.0) states the model of Companion v5.6.0 (Version DOI
+\href{https://doi.org/10.5281/zenodo.24632437}{10.5281/zenodo.24632437}; predecessor v5.5.0, 10.5281/zenodo.24563811), as of
+28~November 2026. Table~\ref{tab:open-predictions} collects its predictions. The full dated register, with deciding experiments, deadlines
+and refutation criteria, is round \rnd{r75} of the Companion, which is authoritative; the binding criteria stand in the advance notes
+of the tests. The last column says what each value rests on: \emph{derived} means computed from the stated inputs, \emph{set} a postulate
+or a setting, \emph{measured} a measured input or a scale fitted to data, \emph{post hoc} a relation found after the data were known.
+Common to all lepton rows: the Brannen form \eqref{eq:B-brannen-sector} is set; $K=\tfrac23$ holds under the postulate of equal standing
+of the frames; $\varphi_\ell=0.0395773$ is a measured input; the sign of the branch choice is a setting; the scales $\mu_e$, $\mu_\nu$
+are fitted. Common to the rows that use $\bsym$: the value $\bsym=0.5494056410$ is computed from the counting postulate of \rnd{r67}
+and is not derived.
+
+\begin{table}[htp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.26\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+quantity & prediction & source & rests on\\
+\midrule
+mass ordering & normal & H227, H213; \rnd{r73} & derived from $\varphi_\ell$ (measured); branch sign and Brannen form set\\
+$\sum m_\nu$ & $59.30\pm0.24$\,meV & H227; \rnd{r73} & derived; $\varphi_\ell$ measured, $\mu_\nu$ fitted to $\Delta m^2_{31}$; $K=\tfrac23$ postulate; form and sign set\\
+$m_1$, $m_2$, $m_3$ & $0.379$, $8.81$, $50.11$\,meV & H227; \rnd{r73} & as for $\sum m_\nu$\\
+$m_\beta$ & $8.87$\,meV & H227; \rnd{r73} & as for $\sum m_\nu$; mixing data measured\\
+$m_{\beta\beta}$ & $1.3$ to $4.0$\,meV (Majorana phases free) & H227; \rnd{r73} & as for $m_\beta$\\
+$R=\Delta m^2_{21}/\Delta m^2_{31}$ & $0.030839$ (data $+1.8\sigma$; not blind) & H99, H100, H227 & derived from $\varphi_\ell$ (measured); sector assignment H99 and form set\\
+$\sin^2\theta_{12}$ & three exclusive readings: $0.3086$; $0.3019$; $0.318$ to $0.3195$ & H9; H176; H206--H208 & H9: $\bsym^2$ (postulate), found post hoc; H176: one-number candidate with set readouts, selected post hoc; H206--H208: column $|U_{e1}|^2=\tfrac23$ derived, readout set\\
+$\theta_{12}$--CP correlation & $\sin^2\theta_{12}\gtrsim0.315$ with $|\sin\delta|\approx1$, or $\sin^2\theta_{12}$ near $0.304$ with $|\sin\delta|\approx0.65$ & H206--H208 (JUNO with DUNE) & structural readout set; additional term allowed, not derived; correlation found post hoc (H208)\\
+$\sin^2\theta_{23}$ & $0.4954$ (H176); $\le0.54$ (H42); $[0.49,0.50]$ (H46) & H176; H42, H46 & set readouts; $\bsym$ from the postulate (H46)\\
+$\sin^2\theta_{13}$ & $0.0223$ (H176); $0.0216$ without parameter (H207) & H176, H207 & set readouts; H207 partly not blind\\
+$\delta_{\rm CP}$ & $|\sin\delta|\approx0.977$ and $\sin\delta<0$, together about $282^\circ$ & H176; H125 & modulus as for $\theta_{23}$; sign rests on setting S1 and the same-side setting\\
+$\Omega_m$ (flat $\Lambda$CDM) & $\bsym^2=0.30185$ & H96 & $\bsym$ from the postulate; identification $\Omega_M=\bsym^2$ set\\
+$m_W$ & $80.3615\pm0.0018$\,GeV & H15 & $\gamma_L$ from the postulate; $\cot\theta_W=\gamma_L$ set, found post hoc; $m_Z$ measured\\
+$m_\tau$ & $1776.969$\,MeV (Koide; not blind); alternative $1777.134$\,MeV & \rnd{r63}, H227; H102 & $K=\tfrac23$ postulate, $m_e$, $m_\mu$ measured; the alternative rests on the bent-octant placeholders, found post hoc\\
+\bottomrule
+\end{tabularx}
+\caption{Predictions of version 1.2.0, as of 28 November 2026 (Companion v5.6.0, round \rnd{r75}). The rows are not independent: H15,
+H46 and H96 share the counting core; H9, H96 and H112 share $\bsym^2$; the three readings of $\theta_{12}$ exclude one another.}
+\label{tab:open-predictions}
+\end{table}
+
+\paragraph{Version rule.} By a standing rule of the author (28 November 2026; \rnd{r75}.1) every public version records its predictions
+with date and DOI. These numbers are fixed with this version and are not readjusted after a new measurement. A correction appears only in
+a later version, with its reason stated (progress of the model or an error). The version that was fixed before the measurement counts as
+the test, and earlier versions stay visible under their DOIs. Several rows fall together: an established inverted ordering or a measured
+$\sum m_\nu<58$\,meV refutes the mass balance and with it the Brannen form for neutrinos; JUNO separates the three readings of
+$\theta_{12}$ and, with DUNE, tests the correlation; a deviation of $\Omega_m$ or $m_W$ bears on the counting postulate; the two values of
+$m_\tau$ separate only at an uncertainty of about $0.05$\,MeV. The register adds no derivation, no guard is spent, and OP1--OP5, C5 and
+C6/T2 remain open.

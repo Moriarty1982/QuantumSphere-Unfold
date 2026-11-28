@@ -1,22 +1,22 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite the Zenodo public release."
 title: "Quantum Sphaera Companion: A Structure-First Mathematical Unfolding"
-version: "v5.5.0"
-date-released: "2026-11-26"
+version: "v5.6.0"
+date-released: "2026-11-28"
 authors:
   - family-names: "Brendecke"
     given-names: "Marc"
-doi: "10.5281/zenodo.24563811"
+doi: "10.5281/zenodo.24632437"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.24563811"
-    description: "Version DOI for v5.5.0 (published on 2026-11-26)"
+    value: "10.5281/zenodo.24632437"
+    description: "Version DOI for v5.6.0 (reserved on 2026-11-28; resolves after publication)"
   - type: doi
     value: "10.5281/zenodo.19210728"
     description: "Concept DOI for the Quantum Sphaera Companion record"
   - type: doi
-    value: "10.5281/zenodo.24500009"
-    description: "Version DOI for the previous release v5.4.0"
+    value: "10.5281/zenodo.24563811"
+    description: "Version DOI for the previous release v5.5.0"
 repository-code: "https://github.com/Moriarty1982/QuantumSphere-Unfold"
 abstract: >-
   Structure-first mathematical companion material for the Quantum Sphaera / Sphere Framework project.
