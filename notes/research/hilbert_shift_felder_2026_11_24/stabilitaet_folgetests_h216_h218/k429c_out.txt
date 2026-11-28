@@ -1,0 +1,5 @@
+Woerter mit Fixpunkt x_E (abstossend): 182  (anziehend): 0
+Umkehr, Woerter, ohne x_E-Cluster: N(beta_sym) = 59; Kontrollen Median 46, 95. P. 106.0, 99. P. 159.0; Anteil >= 0.3345
+Umkehr, verschiedene Fixpunktwerte: N(beta_sym) = 27; Kontrollen Median 29, 95. P. 56.0, 99. P. 67.0; Anteil >= 0.5960
+Umkehr, verschiedene Werte, ohne x_E: N(beta_sym) = 26; Kontrollen Median 29, 95. P. 56.0, 99. P. 67.0; Anteil >= 0.6325
+Vorwaerts, verschiedene Fixpunktwerte: N(beta_sym) = 3; Kontrollen Median 6, 95. P. 15.0, 99. P. 32.0; Anteil >= 0.8690

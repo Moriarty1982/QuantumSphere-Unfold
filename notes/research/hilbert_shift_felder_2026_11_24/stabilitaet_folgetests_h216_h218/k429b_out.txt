@@ -1,0 +1,11 @@
+(Ausgabe des Wolfram-Kerns, 28.11.2026, Teile a und b; Teil c siehe unten)
+{{Casimir, 1.86469976460937, 0.549405640974529}, {j+1/2, 2.00000000000000, 0.577350269189626}, {j, 1.58496250072116, 0.475704094507202}}
+j: gamma = log2 3 ? 0. 10^-14   ;  j+1/2: gamma - 2 = 0. 10^-14
+E^-1 G (1/Sqrt3) - 1/Sqrt3 = 0
+E(1/Sqrt3) = 1/2,  G(1/Sqrt3) = 1/2
+E(beta_j) = 2/3;  E^-1(2/3) - beta_j = 0
+(E^-1 G)'(1/Sqrt3) = 1/Log[4] = 0.72134752
+Warnung: Symbol::undefined2 (Hinweis des Kerns auf globale Hilfssymbole, kein Rechenfehler). Symbolische Nullreste: die drei "= 0".
+
+Teil c (zweiter Lauf):
+RGRE(1/Sqrt3) - 1/Sqrt3 = 0,  RGRE'(1/Sqrt3) = 1.3862944 (Log[4] = 1.3862944)

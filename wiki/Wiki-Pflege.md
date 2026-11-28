@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Tests H216–H218 (Folgetests zum Stabilitätstest):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme (OP1) ergänzt. Umkehrschleifen sind formal teilweise auffällig, das liegt nur am bekannten E-Fixpunkt. Die Flächenvarianten sind nicht trennscharf (j + ½ als geschlossene Form bevorzugt). Für χ und Λ ist keine Schleife herleitbar.
+
 **28.11.2026, Test H215 (Stabilitätstest β_sym, Rückwärtssuche):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme (OP1) ergänzt. Keine einfache Schleife des Rahmens zieht β_sym an; χ und Λ haben keinen Zielwert.
 
 **27.11.2026, Test H214 (Massenschema):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Polmassen sind das Schema des Rahmens (nur dort K = ⅔); M_Z-Lesart aus H213c unzulässig; kein zulässiges Schema schließt den 1,78σ-Abstand; R schemafest; trägt.
