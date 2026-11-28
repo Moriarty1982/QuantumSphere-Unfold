@@ -1,0 +1,54 @@
+{
+  "title": "Quantum Sphaera: Auf dem Weg zu einem gemeinsamen Rahmen für Materie, Eichstruktur und Raumzeitgeometrie",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Brendecke, Marc"
+    }
+  ],
+  "description": "<p>Dieser deutschsprachige Preprint fragt, was ein Heisenberg-Kompensator leisten müsste, und folgt dieser Frage vom Photon zu einem gemeinsamen mathematischen Träger für Materie, Eichstruktur und Raumzeitgeometrie. Ein Feldbeispiel präzisiert die Rolle der Projektion, die Biquaternionen dienen als Träger, und ein Vergleich mit der Dixon-Algebra grenzt ein, wo ein Generationsindex sitzen kann. Die Massenauslese wird an der Koide-Relation untersucht; das Vorzeichen des Oktantschritts erweist sich als Zeitorientierung der Auslese, die kein Baustein festlegt. Eine Fallstudie zu OP5 verfolgt eine präparierte Materiequelle bis zum geometrischen Achsenkontrast: Der gewöhnliche Beitrag folgt aus der linearisierten Einstein-Gleichung, der gerichtete Kontrast braucht einen Vermittler, den die Vergleichswirkung nicht enthält, und ist im Vakuum nur mit verschwindend kleiner Kopplung verträglich. Die bedingten Zahlenwerte hängen an einer einzigen Zahl β; die Zählregel, aus der sie folgt, ist ein Postulat und nicht hergeleitet. Das Bild der Leptonenmassen braucht daneben eine gemessene Zahl, einen gemeinsamen Drehwinkel der Phase.</p><p>Neu gegenüber Fassung 0.4.0 (doi:10.5281/zenodo.24563916), nach den Companion-Schichten v4.10.0-r69 bis r75 (Forschungsschicht, erscheinen mit v5.6.0): Abschnitt 5.9 zur Leptonphase. Der gemeinsame Versatz der Brannen-Phasen beider Lepton-Sektoren von den Oktantwerten ist ein dimensionsloser Drehwinkel φ, keine Skala (H221). Der Zweig der Daten wird ohne Skala über das Vorzeichen von cos 3δ gewählt; dieses Vorzeichen folgt weder aus der Frame-Symmetrie noch aus Stabilität und ist eine Setzung des Autors (H222, H223, Erkundung k436). Der Wert φ = 0,0395773 bleibt die eine gemessene Zahl des Leptonbilds: Wigner-Drehung, Vakuumminimum (es liegt exakt am Symmetriepunkt π/8), Tauschbruch, Schleifen und Fluss, eine Lockerung der Frame-Symmetrie bei Ordnung sechs (liefert nur das Vorzeichen, nicht übernommen), Übertragung des Symmetriepunkts in den Materie-Frame, die Expansion als Uhr, eine Rückwärtssuche nach einem Brecher (φ ist an jedem Gleichgewicht der Mittelwert der Sektorversätze, der Messwert nur metastabil), ein Einrasten auf acht Stellungen, eine gemeinsame Feinstufe und eine Casimir-Verdrehung sind widerlegt oder ohne Treffer (H224–H235); eine Erkundung zu innerem und äußerem Feld mit Casimir-Lücke (k449) ist eine Lesart. H236 klärt eine Doppelzählung (φ trägt den Versatz, der Koeffizient q nur das Vorzeichen); kein Urteil ändert sich. Bilanz H227: drei Zahlen (φ, μ_e, μ_ν) tragen sechs Leptonenmassen. Neuer Abschnitt 5.10 hält die Vorhersagen dieser Fassung mit Datum (28. November 2026) fest und trennt für jede, was hergeleitet, gesetzt, gemessene Eingabe oder nachträglich gefunden ist: normale Ordnung; Σm_ν = 59,30 ± 0,24 meV; m₁, m₂, m₃ = 0,379 / 8,81 / 50,11 meV; m_β = 8,87 meV; m_ββ = 1,3 bis 4,0 meV; R = 0,030839; drei sich ausschließende Lesarten für sin²θ₁₂ und eine θ₁₂-CP-Korrelation für JUNO und DUNE; θ₂₃, θ₁₃ und δ_CP; Ω_m = β² = 0,30185; m_W = 80,3615 GeV; m_τ. Gemessene Eingabe ist φ, gesetzt sind das Zweigvorzeichen, β = 0,5494056410 (aus dem am 26. November 2026 angenommenen Zählpostulat, nicht hergeleitet), K = ⅔ (Postulat der Frame-Gleichberechtigung) und die Brannen-Form; die Skalen μ_e und μ_ν sind angepasst. Dazu die Versionsregel des Autors: Jede öffentliche Fassung hält den Modellstand mit Vorhersagen fest; Korrekturen erscheinen nur in einer neuen Fassung mit Begründung (Modellfortschritt oder Fehler), nie als Nachjustieren nach einer neuen Messung; als Test zählt die vor der Messung festgeschriebene Fassung. Abschnitt 1.3 ergänzt die Lage der Frames auf der Kugel der Feldzustände mit einer Korrektur (Gewichte gegen Amplituden, Erkundung k382; kein Urteil ändert sich) und die neuen Namen Ruheframe, Materie-Frame, Dual-Frame, Lichtpunkt sowie Re- und Im-Sektor.</p><p><strong>Geltungsbereich.</strong> Der Preprint beansprucht keine Lösung der offenen Probleme des Quantum Sphaera Companion (OP1–OP5, C5, C6/T2); keines ist geschlossen und keine gesperrte Aussage (Guard) aufgehoben. Keine Vorhersage ist entschieden. Maßgebliche Fassung der Herleitungen ist der Companion (Basis v5.5.0, doi:10.5281/zenodo.24563811; Schichten r69 bis r75 mit v5.6.0).</p><p><strong>English summary.</strong> This German-language preprint asks what a Heisenberg compensator would have to do and follows the question from the photon to a common mathematical carrier for matter, gauge structure and spacetime geometry. A field example fixes the role of the projection, biquaternions serve as the carrier, and a comparison with the Dixon algebra narrows down where a generation index can sit. The mass readout is studied at the Koide relation; the sign of the octant step turns out to be a time orientation of the readout that no ingredient fixes. A case study of OP5 follows a prepared matter source to the geometric axis contrast. The conditional numbers rest on a single number β, which follows from a counting rule adopted as a postulate (not derived). New in version 0.5.0, following Companion layers v4.10.0-r69 to r75 (research layer, to appear with v5.6.0): a section on the lepton phase shows that the common offset of the Brannen phases is a dimensionless rotation angle φ rather than a scale; the data branch is selected without a scale by the sign of cos 3δ, and that sign is a setting of the author; the value φ = 0.0395773 is not derived by any of the routes tried (Wigner rotation, vacuum minimum, symmetry breaking, loops and flow, cosmic expansion as a clock, backward search, lattice locking, a common fine step, a Casimir twist) and remains the one measured number of the lepton picture; three numbers (φ, μ_e, μ_ν) carry all six lepton masses. A new dated section records the predictions of this version as of 28 November 2026 (normal ordering, Σm_ν = 59.30 ± 0.24 meV, m_β = 8.87 meV, m_ββ = 1.3–4.0 meV, R, the mixing angles and a θ₁₂–CP correlation for JUNO and DUNE, Ω_m = β², m_W, m_τ) and labels each dependence as derived, set (postulate or setting), measured input, or found after the fact. It also states the author's version rule: corrections only in a new version with a stated reason (model progress or error), never retuning after a new measurement; a test counts against the version fixed before the measurement. All open problems (OP1–OP5, C5, C6/T2) remain open; no guard is lifted.</p>",
+  "version": "0.5.0",
+  "language": "deu",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Quantum Sphaera",
+    "mathematische Physik",
+    "Heisenberg-Kompensator",
+    "Koide-Relation",
+    "OP5",
+    "QAM",
+    "Barbero-Immirzi-Parameter",
+    "Horizontzählung",
+    "Cayley-Dickson-Turm",
+    "CP-Verletzung",
+    "Brannen-Phase",
+    "Neutrinomassen",
+    "Vorhersageregister"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24405552",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24563916",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24563811",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Deutschsprachiger Preprint, Fassung 0.5.0 (Entwurf vom 28.11.2026). Version-DOI wird reserviert. Quellstand der neuen Literaturlinks: Merge-Commit des Vorbereitungs-PR auf main (beim Release eintragen).",
+  "publication_date": "2026-11-28"
+}
