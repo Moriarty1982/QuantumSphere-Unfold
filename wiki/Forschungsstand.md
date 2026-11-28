@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Expansion als Uhr: die Hubble-Reibung friert φ nicht beim Messwert ein (28.11.2026, Test H231, k445)
+
+Idee des Autors: φ rollt wie ein Teilchen von einem Energieberg, während sich der Raum ausdehnt; die Hubble-Reibung könnte es beim Messwert anhalten. Gerechnet
+als Feld im Potential der gemeinsamen Vakuumenergie (Minimum π/8) im ΛCDM-Hintergrund, Start bei 0. **Widerlegt.** Solange die Feldmasse m klein gegen die
+Expansionsrate ist, bleibt φ beim Startwert; danach läuft es ins Minimum und schwingt dort aus. Weil die Expansion mit der Zeit langsamer wird, lässt die Bremse
+nach statt anzuziehen, einen Zwischenwert durchläuft das Feld nur. Genau ein Wert m = 0,97 H₀ bringt φ heute auf 0,0396, dann rollt es aber gerade, und die
+Elektronmasse würde sich um 2,7·10⁻¹⁰ pro Jahr ändern, millionenfach mehr, als Atomuhren erlauben. Ein eingefrorenes φ = 0,0396 ist also eine
+Anfangsbedingung; sonst braucht es einen echten Brecher des Sektortauschs. OP3 offen. Ergebnis:
+`notes/research/hilbert_shift_felder_2026_11_24/expansion_uhr_h231/`.
+
 ### Symmetriepunkt π/8 im Materie-Frame: kein Frame-Bild trifft den Messwert, abgehakt (28.11.2026, Test H230, k444)
 
 Der symmetrische Punkt π/8 der gemeinsamen Vakuumenergie liegt im Ruheframe; der Messwert φ = 0,0396 im Materie-Frame. Der fehlende Übertragungsschritt ist
