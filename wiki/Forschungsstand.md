@@ -1,5 +1,25 @@
 # Forschungsstand
 
+### Zweimal RAIDZ2 in den Sedenionen? Nur die Kapazität passt (28.11.2026, Test H239, k455)
+
+Marc: „prüfe bitte ob das evtl. quasi zwei raidz2 sein könnten“. Übersetzung (gesetzt): Der Code eines Nullteilers x ist das Bild der Linksmultiplikation
+(16 Koordinaten, Rang 12), zweimal RAIDZ2 wäre ein [16, 12]-Code aus zwei unabhängigen Gruppen zu je 6 Daten und 2 Parität. **Nach Wortlaut trägt
+teilweise, inhaltlich nur die Zahl:** Jeder Nullteiler verliert genau 4 von 16 Richtungen (12/16 = 6/8 wie zweimal RAIDZ2). Aber der Code spaltet an der
+Wand e₈ nicht (4 + 4 statt 6 + 6, die generische Lage), allgemeine Nullteiler spalten an keiner der 6435 Aufteilungen, und keine Gruppe verkraftet auch
+nur einen Ausfall. Zufällige Codes gleicher Größe verkraften jeden Ausfall bis 4. Nachträglich: Basis-Nullteiler e_i ± e_j sind „halb gespiegelt (RAID1),
+halb ungeschützt“; bei allgemeinen Nullteilern bleiben 1 und e₈ ungeschützt, derselbe Raum wie der gemeinsame Kern in H237.
+Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/raidz2_sedenion_h239/`.
+
+### Eine Energie zeichnet die drei Kopien aus: Leck-Energie 42·sin²3θ (28.11.2026, Test H238, k454)
+
+Nach H237 lässt die Feldgleichung einen ganzen Kreis wellenfähiger Richtungsräume U_θ zu. **Trägt:** Ein Feld in span{1, U_θ}, das quadratisch mit sich
+selbst wechselwirkt, verliert Anteile aus seinem Raum („Leck“). Diese Leck-Energie ist exakt L(θ) = 42·sin²3θ (Python und Wolfram symbolisch). Sie hat
+genau drei nicht entartete Minima (L″ = 756), und zwar genau an den drei G₂-Kopien; weitere Minima gibt es nicht. Die Dreizahl ist damit Minimum einer
+Energie, nicht nur Abgeschlossenheit (die Lage der Nullstellen war aus H138 bekannt, Form und Nicht-Entartung blind). Lesart (Identität): Die Überlappe mit
+den Kopien sind cos(θ − θ_k); ein Feld 1 + w·u hat Koide K = (2 + w²)/6, also ⅔ genau bei w = √2, das ist die Brannen-Form. Die gemessenen Brannen-Phasen
+liegen nicht in Minima (L/max 0,38 und 0,99); ihre Lage braucht weiter eine eigene Größe. Kopien = Generationen ist nicht gezeigt.
+Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/kreis_energie_h238/`.
+
 ### Stabile Bereiche in den Sedenionen: die drei Oktonion-Kopien sind auf ganz 𝕊 wellenfähig (28.11.2026, Test H237, k453)
 
 Nach k452 (Marc: „es könnte in den Sedenionen noch Bereiche geben, die stabile Felder zulassen“). **Trägt:** Für jede der drei G₂-stabilen
