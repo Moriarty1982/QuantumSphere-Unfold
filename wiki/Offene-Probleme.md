@@ -58,6 +58,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H228, 28.11.2026 (k442):** Für OP3. φ als Asymptote widerlegt: kein anziehender Fixpunkt einfacher Winkelschleifen (Länge ≤ 5, 111 110 Wörter) im 2σ-Fenster, nächster 27σ; auf dem Gradientenfluss von 0 nach π/8 liegt φ bei t/τ = 0,1321, keine natürliche Uhr trifft (nächste ⅛, 2650σ). φ bleibt Messzahl, OP3 offen.
+
 **Test H227, 28.11.2026 (k441):** Für OP3. Bilanz der Leptonenmassen: drei Zahlen (φ, μ_e, μ_ν) tragen sechs Massen; Koide 0,43σ, Neutrino-R 1,80σ; festgeschrieben Σm = 59,30 ± 0,24 meV, m_β = 8,87 meV, m_ββ 1,3–4,0 meV. Das Skalenverhältnis ist frei. OP3 offen. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/massen_bilanz_h227/Ergebnis_H227_Massen_Bilanz.md).
 
 **Test H226, 28.11.2026 (k440):** Für OP3. Kein einfacher tauschbrechender Term legt φ auf den Messwert: Der Konjugationsterm nur im geladenen Sektor gibt höchstens ein lokales Minimum bei x und sagt angepasst x_ν = 0,495 voraus (212σ); ungleiche Stärken wirken nicht. φ bleibt gemessen. OP3 offen. [Ergebnis](../notes/research/hilbert_shift_felder_2026_11_24/tauschbruch_phi_h226/Ergebnis_H226_Tauschbruch_phi.md).

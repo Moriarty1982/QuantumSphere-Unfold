@@ -1,0 +1,64 @@
+============================================================================================
+H228 (k442)  phi als Asymptote
+============================================================================================
+beta_sym = 0.549405640974528999, gamma_L = 1.86469976460937256
+Ziel x = 0.0395773407, sigma = 7.8e-07, W2 = +-1.56e-06, Wc = x(1 +- 1e-03) = +-3.96e-05
+
+============================================================================================
+Teil A  Schleifen der Laenge 1..5 ueber {h,d,s,t,X,Y,Z,B,U,G}, anziehende Fixpunkte in (0, pi/4)
+============================================================================================
+  Laenge 1: Woerter bisher 10, identitaetsartig 0, anziehende Fixpunkte bisher 0
+  Laenge 2: Woerter bisher 110, identitaetsartig 10, anziehende Fixpunkte bisher 24
+  Laenge 3: Woerter bisher 1110, identitaetsartig 25, anziehende Fixpunkte bisher 335
+  Laenge 4: Woerter bisher 11110, identitaetsartig 254, anziehende Fixpunkte bisher 4163
+  Laenge 5: Woerter bisher 111110, identitaetsartig 1087, anziehende Fixpunkte bisher 46993
+Woerter gesamt 111110 (erwartet 111110), identitaetsartig ausgeschlossen 1087, anziehende Fixpunkte 46993
+
+Haeufung N_c(x) = 4;  Kontrollen: Mittel 9.68, Median 7, 95. Perz. 22, 99. Perz. 59; Anteil Kontrollen mit N_c >= N_c(x): 77.4 %
+Dichte der Fixpunkte in [0,02; 0,06]: 123725.0 pro rad  ->  Erwartung in W2 (Breite 3.12e-06): lambda = 0.3860
+
+Kandidaten mit |x* - x| <= 3e-3 x (Gitterwert): 28; exakte Nachrechnung (mpmath, 30 Stellen):
+  BBGYB  x* = 0.0395987045  Abstand 2.14e-05 =      27.4 sigma  f' = -0.0942  
+  BGBYB  x* = 0.0395987045  Abstand 2.14e-05 =      27.4 sigma  f' = -0.0942  
+  GBBYB  x* = 0.0395987045  Abstand 2.14e-05 =      27.4 sigma  f' = -0.0942  
+  ZGXhh  x* = 0.0395400862  Abstand 3.73e-05 =      47.8 sigma  f' = +0.2060  
+  hBYZt  x* = 0.0395292536  Abstand 4.81e-05 =      61.7 sigma  f' = -0.8360  
+  hBYt   x* = 0.0395292536  Abstand 4.81e-05 =      61.7 sigma  f' = -0.8360  
+  hBYtZ  x* = 0.0395292536  Abstand 4.81e-05 =      61.7 sigma  f' = -0.8360  
+  hBZXt  x* = 0.0395292536  Abstand 4.81e-05 =      61.7 sigma  f' = -0.8360  
+  hBZtX  x* = 0.0395292536  Abstand 4.81e-05 =      61.7 sigma  f' = -0.8360  
+  hBZtY  x* = 0.0395292536  Abstand 4.81e-05 =      61.7 sigma  f' = -0.8360  
+  sZUUY  x* = 0.0396261731  Abstand 4.88e-05 =      62.6 sigma  f' = -0.7440  
+  hsYUs  x* = 0.0396267390  Abstand 4.94e-05 =      63.3 sigma  f' = -0.1011  
+  shYUs  x* = 0.0396267390  Abstand 4.94e-05 =      63.3 sigma  f' = -0.1011  
+  hsYsU  x* = 0.0396306456  Abstand 5.33e-05 =      68.3 sigma  f' = -0.1008  
+  hssXU  x* = 0.0396306456  Abstand 5.33e-05 =      68.3 sigma  f' = -0.1008  
+Treffer in W2 (anziehend): 0  []
+Poisson-Wahrscheinlichkeit fuer >= 0 Treffer bei lambda = 0.3860: 1
+Urteil Teil A: WIDERLEGT
+Benannte Vergleichswerte N_c: pi/8 396, pi/12 1039, pi/24 272, pi/16 234, atan(beta) 32, eps/8 4
+
+============================================================================================
+Teil B  Gradientenfluss von 0 nach pi/8, phi(t) = pi/8 - (2/3) atan(tan(3pi/16) e^(-t/tau))  [nicht blind]
+============================================================================================
+t_x/tau = 0.132105185233  (sigma_t = 2.683e-6);  Probe phi(t_x) = 0.039577340726
+  t*/tau = 1                =        1.0: phi(t*) = 0.2320120864  Abstand +1.924e-01 =    +246711.2 sigma
+  t*/tau = 1/2              =        0.5: phi(t*) = 0.1360044674  Abstand +9.643e-02 =    +123624.5 sigma
+  t*/tau = 1/3              = 0.33333333: phi(t*) = 0.09501870493  Abstand +5.544e-02 =     +71078.7 sigma
+  t*/tau = 1/8              =      0.125: phi(t*) = 0.03750841171  Abstand -2.069e-03 =      -2652.5 sigma
+  t*/tau = ln 2             = 0.69314718: phi(t*) = 0.1777452236  Abstand +1.382e-01 =    +177138.3 sigma
+  t*/tau = eps=artanh beta  = 0.61752958: phi(t*) = 0.1621327447  Abstand +1.226e-01 =    +157122.3 sigma
+  t*/tau = beta_sym         = 0.54940564: phi(t*) = 0.1472667001  Abstand +1.077e-01 =    +138063.3 sigma
+  t*/tau = beta_sym^2       = 0.30184656: phi(t*) = 0.08676242055  Abstand +4.719e-02 =     +60493.7 sigma
+  t*/tau = 1/gamma_L        = 0.53627936: phi(t*) = 0.1443140906  Abstand +1.047e-01 =    +134277.9 sigma
+  t*/tau = 1/gamma_L^2      = 0.28759555: phi(t*) = 0.08297305805  Abstand +4.340e-02 =     +55635.5 sigma
+  nachtraeglich k t* = pi/8 (t*/tau = pi/24 = 0.13089969): phi = 0.03922682318, Abstand -449.4 sigma; 3 t_x/tau / (pi/8) - 1 = 0.0092093
+
+Pruefung mit exakter Minimierung in delta (H225-Modell, w = 1):
+  q = -0.0100: E''(pi/8) = 0.163464, t_x/tau = 0.130963  (fuehrende Ordnung 0.132105)
+  q = -0.0852: E''(pi/8) = 1.227790, t_x/tau = 0.123108  (fuehrende Ordnung 0.132105)
+  q = -0.3000: E''(pi/8) = 3.163372, t_x/tau = 0.112659  (fuehrende Ordnung 0.132105)
+Urteil Teil B: WIDERLEGT
+
+============================================================================================
+H228 Gesamturteil: WIDERLEGT   (A: WIDERLEGT, B: WIDERLEGT)
