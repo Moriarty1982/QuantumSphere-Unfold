@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H223 (Elternterm für das Vorzeichen):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: kein natürlicher Elternterm bindet das Vorzeichen unter J; widerlegt.
+
 **28.11.2026, Erkundung k436 (Vorzeichen des Zweigwahl-Terms):** Forschungsstand und Offene-Probleme ergänzt: weder J noch Stabilität legen das Vorzeichen fest; N² unter J verboten.
 
 **28.11.2026, Test H222 (skalenfreie Zweigwahl):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: das Vorzeichen von cos 3δ (Determinante der Wurzelmatrix) wählt in beiden Lepton-Sektoren den Zweig der Daten, verworfener neutraler Zweig 51σ; trägt, Vorzeichen gesetzt.
