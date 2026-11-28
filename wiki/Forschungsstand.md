@@ -1,5 +1,13 @@
 # Forschungsstand
 
+### Ordnet die ℤ₃-Regel der Kopien die Lepton-Mischung? Teilweise (28.11.2026, Test H243/k460)
+
+Nach Marcs „ja“ wurde die ℤ₃-Ladung aus H242 an der Mischung geprüft, in der Eigenbasis von T (Ladungsbasis der geladenen Leptonen). **Trägt teilweise.**
+Die θ₁₃ erzeugenden Richtungen sind rein ℤ₃-geladen: die führende Versatzrichtung b ∝ √x und die massenerhaltende θ₁₃-Richtung K₂ haben Klasse-0-Anteil 0
+(exakt, Wolfram). Der TM1-Baum N̂(π/6) ist aber nicht geschlossen: Klasse-0-Anteil 2/3, genau wie die feste Spalte v₀. Projiziert man den Baum auf
+Klasse 0, verschwindet θ₁₂; sin²θ₁₂ = 1/3 sitzt also im geladenen Teil. θ₁₃ ist damit keine ℤ₃-Brechung eines geschlossenen Baums. OP4 bleibt offen.
+Notiz: `notes/research/hilbert_shift_felder_2026_11_24/z3_mischung_h243/`.
+
 ### Ist φ eine kleine ℤ₃-Brechung? Nein (28.11.2026, Erkundung k459, nicht blind)
 
 Nach H242 (Marc „weiter“) wurde geprüft, ob der Lepton-Versatz φ als kleine Brechung der ℤ₃-Regel erscheint. **Nein.** Die ℤ₃-geschlossenen Lagen liegen 12,7°
