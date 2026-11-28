@@ -1,0 +1,45 @@
+========================================================================================
+H225 a  fuehrende Ordnung: E = -(1+w) + q [w |cos(pi/4-3phi)| + |sin 3phi|],  q<0 -> tan 3phi* = 1 + sqrt2/w
+========================================================================================
+  w=0.5000: analytisch phi* = 0.4384337 (0.13956 pi), numerisch 0.4384354; im Fenster (pi/12, pi/6): True; Abstand zu x 1008 %
+  w=0.7071: analytisch phi* = 0.4163486 (0.13253 pi), numerisch 0.4163500; im Fenster (pi/12, pi/6): True; Abstand zu x 952 %
+  w=1.0000: analytisch phi* = 0.3926991 (0.12500 pi), numerisch 0.3926991; im Fenster (pi/12, pi/6): True; Abstand zu x 892 %
+  w=1.4142: analytisch phi* = 0.3690496 (0.11747 pi), numerisch 0.3690481; im Fenster (pi/12, pi/6): True; Abstand zu x 832 %
+  w=2.0000: analytisch phi* = 0.3469645 (0.11044 pi), numerisch 0.3469627; im Fenster (pi/12, pi/6): True; Abstand zu x 777 %
+  w=1: phi* - pi/8 = 0.0e+00
+  Datenpunkt phi = x: S = 0.904341 (Maximum 1.847759), dS/dphi = 4.8340 (kein stationaerer Punkt)
+
+========================================================================================
+H225 b  endliches q (w = 1), exakte Minimierung in delta, phi-Gitter ueber eine Periode pi/3
+========================================================================================
+  q=-0.0010: globale Minima phi* = ['0.3926991']  (pi/8 = 0.3926991); alle lokalen Minima [0.392699, 0.916298]
+           E(phi*) = -2.001848088, E(x) = -2.000905879, Anteil Gitterpunkte unter E(x): 0.674; naechstes globales Minimum zu x: 892.2 % bzw. 164 sigma(x_nu)
+  q=-0.0100: globale Minima phi* = ['0.3926991']  (pi/8 = 0.3926991); alle lokalen Minima [0.392699, 0.916298]
+           E(phi*) = -2.018509869, E(x) = -2.009196287, Anteil Gitterpunkte unter E(x): 0.674; naechstes globales Minimum zu x: 892.2 % bzw. 164 sigma(x_nu)
+  q=-0.0500: globale Minima phi* = ['0.3926991']  (pi/8 = 0.3926991); alle lokalen Minima [0.392699, 0.916298]
+           E(phi*) = -2.093133827, E(x) = -2.048930766, Anteil Gitterpunkte unter E(x): 0.674; naechstes globales Minimum zu x: 892.2 % bzw. 164 sigma(x_nu)
+  q=-0.0852: globale Minima phi* = ['0.3926991']  (pi/8 = 0.3926991); alle lokalen Minima [0.392699, 0.916298]
+           E(phi*) = -2.159458800, E(x) = -2.087549688, Anteil Gitterpunkte unter E(x): 0.674; naechstes globales Minimum zu x: 892.2 % bzw. 164 sigma(x_nu)
+  q=-0.2000: globale Minima phi* = ['0.3926991']  (pi/8 = 0.3926991); alle lokalen Minima [0.392699, 0.916298]
+           E(phi*) = -2.378822943, E(x) = -2.233554660, Anteil Gitterpunkte unter E(x): 0.674; naechstes globales Minimum zu x: 892.2 % bzw. 164 sigma(x_nu)
+  q=-0.3000: globale Minima phi* = ['0.3926991']  (pi/8 = 0.3926991); alle lokalen Minima [0.392699, 0.916298]
+           E(phi*) = -2.572465908, E(x) = -2.380094219, Anteil Gitterpunkte unter E(x): 0.674; naechstes globales Minimum zu x: 892.2 % bzw. 164 sigma(x_nu)
+
+========================================================================================
+H225 c  Ordnung 6 allein: r cos 6delta, r = +-1e-3 (q = 0)
+========================================================================================
+  r=+1e-03: globale Minima phi* = ['0.9162979']  (in pi: [np.float64(0.29167)]); alle lokalen [np.float64(0.916298)]; naechstes zu x: 2215.2 %
+  r=-1e-03: globale Minima phi* = ['0.3926991']  (in pi: [np.float64(0.125)]); alle lokalen [np.float64(0.392699)]; naechstes zu x: 892.2 %
+
+========================================================================================
+H225 d (nachtraeglich, nicht in der Vorab-Notiz)  Sektor-Tausch: V_Re(-delta; pi/4 - phi) = V_Im(delta; phi) fuer alle q, r
+========================================================================================
+  groesste Abweichung (1000 Stichproben): 1.3e-15  -> E(phi) = e_Im(phi) + e_Im(pi/4 - phi) ist spiegelsymmetrisch um phi = pi/8
+  phi* = pi/8: delta_Im = -0.130900, delta_Re = +0.130900;  m/m_max Im [0.003352 0.036481 1.      ]  Re [0.003352 0.036481 1.      ]
+  phi = x (Daten): delta_Im = +0.222222, delta_Re = +0.484021;  m/m_max Im [2.880e-04 5.946e-02 1.000e+00]  Re [0.007562 0.175768 1.      ]
+
+========================================================================================
+H225 Gesamturteil (Kriterium: globales Minimum innerhalb 1 % von x = 0,0395773)
+========================================================================================
+  a (w=1, nicht blind) Treffer: False;  b (endliches q) Treffer: False (bester 892.2 %);  c (Ordnung 6) Treffer: False (bester 892.2 %)
+  -> WIDERLEGT
