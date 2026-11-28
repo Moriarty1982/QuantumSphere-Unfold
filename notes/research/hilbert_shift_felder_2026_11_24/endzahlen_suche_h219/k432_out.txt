@@ -1,0 +1,52 @@
+H219 (k432): Endzahlen-Suche; Blaetter 1,2,3,pi,ln2; sqrt, x^2, 1/x, 2^-x; + - * /
+verschiedene Werte je Groesse: {1: 5, 2: 16, 3: 72, 4: 461, 5: 2624, 6: 16769, 7: 108800, 8: 724138, 9: 4926181}  gesamt 5779066
+
+--- Einzelziele (Fenster 2 sigma; p = Anteil Kontrollen mit s_min <= s_min(Ziel)) ---
+Ziel                       Wert rel. Fenster s_min       N       p  kuerzester Treffer (angepasst)
+sin2 t12                 0.3088     8.61e-02     2   61353   0.338  inv(pi) = 0.3183098862
+                   Kontrollen: s_min Median 3, Anteil ohne Treffer 0.000
+sin2 t23                   0.47     1.32e-01     2  128723   0.467  sq(ln2) = 0.4804530139
+                   Kontrollen: s_min Median 3, Anteil ohne Treffer 0.000
+sin2 t13                0.02248     9.96e-02     5    9024   0.938  sq(sq(sq(e2(ln2)))) = 0.02141584712
+                   Kontrollen: s_min Median 4, Anteil ohne Treffer 0.000
+dm21/dm31               0.03002     6.13e-02     5    6852   0.954  e2((pi/e2(ln2))) = 0.02957766627
+                   Kontrollen: s_min Median 4, Anteil ohne Treffer 0.000
+cot tW onshell           1.8655     2.97e-03     5    3593   0.862  sqrt((pi+inv(3))) = 1.864115336
+                   Kontrollen: s_min Median 5, Anteil ohne Treffer 0.000
+sin2 tW MSbar           0.23129     6.92e-04     5     410   0.215  sq(inv((3*ln2))) = 0.2312632201
+                   Kontrollen: s_min Median 6, Anteil ohne Treffer 0.000
+mH/mZ                     1.373     3.50e-03     5    4162   0.930  sqrt((2-e2(pi))) = 1.373566623
+                   Kontrollen: s_min Median 5, Anteil ohne Treffer 0.000
+mt/mW                    2.1472     6.89e-03     5    8597   0.965  sqrt((pi+inv(ln2))) = 2.141094976
+                   Kontrollen: s_min Median 4, Anteil ohne Treffer 0.000
+mmu/mtau               0.059464     2.69e-04     7      54   0.669  (3*sq(sq(e2(sqrt(2))))) = 0.05946185377
+                   Kontrollen: s_min Median 7, Anteil ohne Treffer 0.000
+alpha_s                   0.118     3.05e-02     5    9417   0.989  (e2(inv(ln2))/pi) = 0.117099663
+                   Kontrollen: s_min Median 4, Anteil ohne Treffer 0.000
+|Vus|                    0.2243     1.43e-02     5    7049   0.984  sqrt(e2((3/ln2))) = 0.2231301601
+                   Kontrollen: s_min Median 4, Anteil ohne Treffer 0.000
+|Vcb|                    0.0408     1.37e-01     4   18775   0.862  (e2(3)/pi) = 0.03978873577
+                   Kontrollen: s_min Median 4, Anteil ohne Treffer 0.000
+|Vub|                   0.00382     2.09e-01     4    8971   0.458  sq(sq(e2(2))) = 0.00390625
+                   Kontrollen: s_min Median 5, Anteil ohne Treffer 0.000
+Omega_m DESI             0.2975     1.16e-01     3   75448   0.723  e2(sqrt(pi)) = 0.2927104484
+                   Kontrollen: s_min Median 3, Anteil ohne Treffer 0.000
+n_s                      0.9649     1.74e-02     4   31425   0.932  sqrt(e2(e2(3))) = 0.9576032807
+                   Kontrollen: s_min Median 4, Anteil ohne Treffer 0.000
+Omega_b h2              0.02237     2.68e-02     5    2400   0.760  (sq(e2(3))/ln2) = 0.02254211001
+                   Kontrollen: s_min Median 5, Anteil ohne Treffer 0.000
+beta_sym (k358)        0.549406     1.29e-03     6    1321   0.978  (inv(pi)+sq(sq(ln2))) = 0.5491449848
+                   Kontrollen: s_min Median 5, Anteil ohne Treffer 0.000
+me/mmu               0.00483633     8.71e-08     -       0   1.000  -
+                   Kontrollen: s_min Median 99, Anteil ohne Treffer 0.997
+
+--- Familien f(n), n = 1, 2, 3 (Vorlagen bis Groesse 8 ) ---
+Vorlagen (verschiedene Wertvektoren): 1742454
+Leptonen: s_min = -, p = 1.000, Kontrollen mit Treffer 0.000
+CKM: s_min = -, p = 1.000, Kontrollen mit Treffer 0.101
+PMNS: s_min = -, p = 1.000, Kontrollen mit Treffer 0.106
+
+--- Urteil nach Vorab-Notiz ---
+Ziele mit p < 0,05: 0 von 18 ([])
+nach Bonferroni signifikant: Ziele [], Familien []
+Urteil H219: widerlegt (alle Treffer angepasst)
