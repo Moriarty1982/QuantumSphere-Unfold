@@ -1,0 +1,5 @@
+me/mmu                     kein Treffer bis Groesse 8
+mmu/mtau                   erster Treffer bei Groesse 5: inv((16+sqrt(2/3))) = 0.0594654180904 (+0.35 sigma); Kontrollen bis Groesse 5 getroffen: 0.132
+sin2 tW MSbar              erster Treffer bei Groesse 6: (inv(7)+(C(1)/16)) = 0.231245490505 (-1.11 sigma); Kontrollen bis Groesse 6 getroffen: 0.989
+1/alpha_em(0)              kein Treffer bis Groesse 8
+mW/mZ (nicht blind, H15)   erster Treffer bei Groesse 6: (2/(C(3/2)+inv(3))) = 0.881125194378 (-1.59 sigma); Kontrollen bis Groesse 6 getroffen: 1.000
