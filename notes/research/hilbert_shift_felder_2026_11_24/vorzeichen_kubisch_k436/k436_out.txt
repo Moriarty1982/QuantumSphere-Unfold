@@ -1,0 +1,34 @@
+====================================================================================
+1  Ist N^2 (Quadrat der kubischen Norm) unter J erlaubt?
+====================================================================================
+Kontrolle det(Zirkulante) - N = 0
+  cos(0 delta): phi**6   (phi^6 r^0) J-erlaubt: ja
+  cos(0 delta): 2*r**6   (phi^0 r^6) J-erlaubt: ja
+  cos(0 delta): -6*phi**4*r**2   (phi^4 r^2) J-erlaubt: ja
+  cos(0 delta): 9*phi**2*r**4   (phi^2 r^4) J-erlaubt: ja
+  cos(3 delta): -12*phi*r**5   (phi^1 r^5) J-erlaubt: NEIN
+  cos(3 delta): 4*phi**3*r**3   (phi^3 r^3) J-erlaubt: ja
+  cos(6 delta): 2*r**6   (phi^0 r^6) J-erlaubt: NEIN
+  -> N^2 ist nicht J-erlaubt; verbotene Teile: [(-12*phi*r**5, 3), (2*r**6, 6)]
+  J-erlaubter sextischer Term mit cos 3delta (H158c): nur phi^3 r^3 cos 3delta; dazu phi^3 r^3 cos delta
+
+====================================================================================
+2  Legt Stabilitaet das Vorzeichen fest?  F6 = J-erlaubte Ordnung 6
+====================================================================================
+F6(phi; -c4, -beta3) - F6(-phi; c4, beta3) = 0  -> Feldraum enthaelt phi < 0, also gleiche Beschraenktheit fuer beide Vorzeichen
+  (c1,c2,c3,c4,beta3) = (1.0, 0.5, 0.2, 0.0, 0.3): min F6 auf dem Einheitskreis = +0.30415 -> beschraenkt
+  (c1,c2,c3,c4,beta3) = (1.0, 0.5, 0.2, 0.0, -0.3): min F6 auf dem Einheitskreis = +0.30415 -> beschraenkt
+  (c1,c2,c3,c4,beta3) = (1.0, 0.5, 0.2, 0.4, 0.3): min F6 auf dem Einheitskreis = +0.31768 -> beschraenkt
+  (c1,c2,c3,c4,beta3) = (1.0, 0.5, 0.2, -0.4, -0.3): min F6 auf dem Einheitskreis = +0.31768 -> beschraenkt
+  (c1,c2,c3,c4,beta3) = (1.0, 0.0, 0.0, 0.0, 9.0): min F6 auf dem Einheitskreis = -0.87500 -> unbeschraenkt
+  (c1,c2,c3,c4,beta3) = (1.0, 0.0, 0.0, 0.0, -9.0): min F6 auf dem Einheitskreis = -0.87500 -> unbeschraenkt
+
+====================================================================================
+3  Zweigwahl mit beiden J-erlaubten Termen (beta3 cos 3delta + c4 cos delta), phi > 0, nach gemeinsamer Drehung p
+====================================================================================
+  Im: V(Daten) - V(andere) = 2*beta3*sin(3*p + pi/4) - 2*c4*cos(p + pi/4)   bei p = x_lepton: 1.57178*beta3 - 1.35715*c4
+  Re: V(Daten) - V(andere) = 2*beta3*sin(3*p) - 2*c4*sin(p)   bei p = x_lepton: 0.236906*beta3 - 0.079134*c4
+  Anteil der Richtungen (beta3, c4), die in beiden Sektoren den Daten-Zweig waehlen: 0.4380
+  nur cos 3delta (c4 = 0): beta3 < 0 -> ja;  nur cos delta (beta3 = 0): c4 > 0 -> ja
+  Keil (Winkel von beta3-Achse): 71.53 deg bis 229.19 deg  (beta3 = -1: 180 deg, c4 = +1: 90 deg)
+  Grenzen: Re-Sektor beta3/c4 = sin p/sin 3p = 0.3340; Im-Sektor beta3/c4 = cos(pi/4+p)/cos(pi/4-3p) = 0.8635

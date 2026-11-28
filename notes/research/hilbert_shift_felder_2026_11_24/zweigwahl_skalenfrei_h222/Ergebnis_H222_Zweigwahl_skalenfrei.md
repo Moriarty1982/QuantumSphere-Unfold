@@ -51,4 +51,4 @@ hier nicht geleistet. Kein Guard berührt; OP3/OP4/OP5 offen.
 - `k435_test_h222.py`, `k435_out.txt` — Python-Rechnung und Ausgabe.
 - `k435b_gegenprobe.wl`, `k435b_out.txt` — Wolfram-Gegenprobe und Ausgabe (Warnungen und Rückgabewert im Kopf der Ausgabe).
 
-Vergeben: H222, k435. Nächste frei: H223, k436 (vor Vergabe gegen `main` prüfen).
+Vergeben: H222, k435. Nächste frei: H223, k436, nach Erkundung k436 nun k437 (vor Vergabe gegen `main` prüfen).
