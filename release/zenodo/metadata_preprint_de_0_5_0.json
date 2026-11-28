@@ -53,6 +53,12 @@
       "identifier": "https://github.com/Moriarty1982/QuantumSphere-Unfold",
       "relation": "references",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.24632621",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
     }
   ],
   "notes": "Deutschsprachiger Preprint, Fassung 0.5.0. Version-DOI 10.5281/zenodo.24632440 (reserviert am 28.11.2026). Bezug auf Companion v5.6.0 (10.5281/zenodo.24632437; Entscheidung des Autors vom 28.11.2026, v5.6.0 erscheint vor oder zusammen mit dem Preprint). Quellstand der neuen Literaturlinks: Merge-Commit des Vorbereitungs-PR auf main (beim Release eintragen).",
