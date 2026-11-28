@@ -128,6 +128,10 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** [Anleitung für LLM-Kontext und Cache](notes/anleitungen/llm-cache-optimieren.md) anwenden.
+- **Artikel mitziehen und DOIs verlinken** (Dauerauftrag des Autors vom 28.11.2026): Bei jeder neuen Companion-Version den deutschen Preprint
+  (`paper/preprint-de/`) und das englische Physik-Paper „One Object, Three Frames“ (`paper/physics-standalone/`) mit einer neuen Fassung nachziehen.
+  Die DOIs verlinken sich gegenseitig: in den Zenodo-Metadaten Companion `isSupplementedBy` Preprint und Paper, Preprint und Paper je `isSupplementTo`
+  Companion und `references` das jeweils andere; im Text nennt jeder Artikel den Companion und den anderen Artikel mit DOI.
 - **Physik-Ausgabe im Companion-Paket** (Entscheidung des Autors vom 28.11.2026): v5.6.0 erscheint noch mit beiden Ausgaben (Companion und
   Physik-Ausgabe „Graded carriers and physical readouts“). Ab v5.7.0 wird die Physik-Ausgabe nicht mehr mitgebaut; das englische Physik-Paper ist dann
   allein „One Object, Three Frames“ (`paper/physics-standalone/`, eigener Record). Build, Tests und Anleitungen dafür vor v5.7.0 umstellen.
