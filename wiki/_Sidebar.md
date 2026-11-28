@@ -5,6 +5,7 @@
 - **[Was im Companion steht](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Inhalt)**
 - [Forschungslinie](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Forschungslinie)
 - [Vorhersagen und Tests](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Vorhersagen-und-Tests)
+- **[Prüfbare Vorhersagen nach Experiment](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Pruefbare-Vorhersagen)**
 - [Offene Probleme](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Offene-Probleme)
 - **[Geführter Dokumentweg (DE)](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Dokumentfuehrer)**
 - [Rechenbeispiel (DE)](https://github.com/Moriarty1982/QuantumSphere-Unfold/wiki/Beispiel-Koide)

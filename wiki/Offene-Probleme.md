@@ -58,6 +58,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H234, 28.11.2026 (k448):** Für OP3. Gemeinsame Feinstufe (Grob/Fein): φ, β_sym − ½, D/B − 1 und x_ν − x folgen nicht aus einer Zahl ε (ε = φ: β − ½ 36σ daneben; freies ε nur Zufallsniveau, p = 0,74) — widerlegt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/feinstufe_h234/`.
+
 **Test H233, 28.11.2026 (k447):** Für OP3 (F18). Einrastung auf 8 Stellungen mit Halbierung bis 8 Bit: Baumwerte sind Stellungen, φ liegt 392σ neben dem nächsten Gitterpunkt, kein Rastfehler-Kandidat trifft; Mischungswinkel-Treffer = Zufall (P = 0,22) — widerlegt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/einrastung_f18_h233/`.
 
 **Test H232, 28.11.2026 (k446):** Für OP3. Rückwärtssuche nach dem Brecher des Sektortauschs: An jedem Gleichgewicht ist φ der Mittelwert der beiden Sektor-Versätze (exakt). Ein symmetrischer Term q cos 3δ + r cos 6δ macht x höchstens zu einem lokalen Minimum (nie global), mit q = −0,0852 liegt x_ν 22,8σ daneben; ein Ladungsterm der Größe α reicht nicht — widerlegt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/rueckwaerts_brecher_h232/`.
