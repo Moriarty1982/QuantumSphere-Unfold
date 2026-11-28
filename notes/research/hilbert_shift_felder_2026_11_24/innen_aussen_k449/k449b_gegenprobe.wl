@@ -1,0 +1,23 @@
+(* k449b: unabhaengige Wolfram-Gegenprobe zu k449 (Erkundung, nicht blind) *)
+Bf[a_] := Pi^4/90 - Pi^2 a^2/12 + Pi a^3/12 - a^4/48;
+r2 = {HurwitzZeta[-3, 1], HurwitzZeta[-3, 1/2]};
+r1 = FullSimplify[HurwitzZeta[-3, 1/2]/HurwitzZeta[-3, 1]];
+s = FullSimplify[Sum[Cos[n a]/n^4, {n, 1, Infinity}] - Bf[a], Assumptions -> 0 < a < 2 Pi];
+ex = N[(PolyLog[4, Exp[I Pi/4]] + PolyLog[4, Exp[-I Pi/4]])/2 - Bf[Pi/4], 20];
+ratio = FullSimplify[Bf[Pi]/Bf[0]];
+crit = Solve[D[-Bf[a], a] == 0 && 0 <= a <= 2 Pi, a];
+lam = 1; ph = Tanh[Sqrt[2 lam] x];
+bps = FullSimplify[D[ph, x]^2/2 - lam (ph^2 - 1)^2];
+en = Integrate[D[ph, x]^2, {x, -Infinity, Infinity}];
+j = {{0, 1}, {1, 0}}; ep = (IdentityMatrix[2] + j)/2; em = (IdentityMatrix[2] - j)/2;
+idem = {ep.ep == ep, em.em == em, ep.em == 0 ep, ep + em == IdentityMatrix[2], j.j == IdentityMatrix[2]};
+chk = Table[{a, N[NSum[Cos[n a]/n^4, {n, 1, Infinity}, WorkingPrecision -> 30], 15], N[Bf[a], 15]}, {a, {0, Pi/4, Pi/2, Pi}}];
+Print["Hurwitz zeta(-3,1), zeta(-3,1/2): ", r2];
+Print["Ratio DN/DD: ", r1];
+Print["Sum - Bernoulli (0<a<2pi): ", s];
+Print["Polylog exact at pi/4 minus B: ", ex];
+Print["B(pi)/B(0): ", ratio];
+Print["Critical points of -B: ", crit];
+Print["Kink BPS residue: ", bps, "  energy: ", en, " = ", N[en]];
+Print["Idempotents: ", idem];
+Print["NSum check: ", chk];
