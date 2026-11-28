@@ -1,0 +1,16 @@
+(* Ausgabe des Wolfram-Evaluators fuer k435b_gegenprobe.wl, 28.11.2026, ein Lauf. *)
+Warnungen (harmlos): Solve::ratnz (inexakte Eingabe phi = x_lepton, exakt geloest und numerisch eingesetzt);
+FindMinimum::precw (Eingaben in Maschinenpraezision, WorkingPrecision 30); General::messages (Sammelhinweis auf diese beiden).
+Rueckgabewert: Null (nur Print-Ausgaben).
+
+d(i) det Y/mu^3 = (4 - 3 a^2 + a^3 Cos[3 d])/4;  Differenz zu 1-3a^2/4+a^3/4 Cos[3d]: 0
+d(ii) cos3(-d)-cos3d = 0;  cos3(d+2Pi/3)-cos3d = 0;  cos3(d+Pi/3)+cos3d = 0
+d(iii) Moden cos(n d), n=1..6, invariant unter d->d+2Pi/3 (cos ist reflexionsgerade): n = {3, 6}  (sin n d: reflexionsungerade, faellt weg)
+a/b) phi=0.010000: Im-Zweige {0.251799388, 0.795398163} cos3d {0.727999, -0.727999} -> Wahl 0.251799388 (Ziel 0.251799388);  Re-Zweige {0.513598776, 0.533598776} cos3d {0.0299955, -0.0299955} -> Wahl 0.513598776 (Ziel 0.513598776)
+a/b) phi=0.0395773: Im-Zweige {0.222222047, 0.824975504} cos3d {0.785888, -0.785888} -> Wahl 0.222222047 (Ziel 0.222222047);  Re-Zweige {0.484021435, 0.563176116} cos3d {0.118453, -0.118453} -> Wahl 0.484021435 (Ziel 0.484021435)
+a/b) phi=0.0600000: Im-Zweige {0.201799388, 0.845398163} cos3d {0.822276, -0.822276} -> Wahl 0.201799388 (Ziel 0.201799388);  Re-Zweige {0.463598776, 0.583598776} cos3d {0.179030, -0.179030} -> Wahl 0.463598776 (Ziel 0.463598776)
+c) gewaehlt pi/6-x: R_NO = 0.03083880 (1.8 sigma);  verworfen pi/6+x: R_NO = 0.05331824 (50.9 sigma)
+e) eps=1.e-2: Im Minimum gefaltet 0.217665220363 Abstand 4.56e-3;  Re Minimum gefaltet 0.476595602236 Abstand 7.43e-3
+e) eps=1.e-4: Im Minimum gefaltet 0.222175677568 Abstand 4.64e-5;  Re Minimum gefaltet 0.483946964886 Abstand 7.45e-5
+e) eps=1.e-6: Im Minimum gefaltet 0.222221583297 Abstand 4.64e-7;  Re Minimum gefaltet 0.484020690153 Abstand 7.45e-7
+e) Wahl im Grenzfall: V(Zweig 1) - V(Zweig 2) = -q (cos3d1 - cos3d2); Im: cos3(5Pi/4+p) - cos3(Pi/4+p) = 2 Sin[3 p + Pi/4];  Re: cos3(Pi/2+p) - cos3(3Pi/2+p) = 2 Sin[3 p]

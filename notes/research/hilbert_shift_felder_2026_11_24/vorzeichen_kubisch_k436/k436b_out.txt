@@ -1,0 +1,8 @@
+(* Ausgabe des Wolfram-Evaluators fuer k436b_gegenprobe.wl, 28.11.2026, ein Lauf; keine Warnungen; Rueckgabewert Null. *)
+1) det(Zirkulante) - N = 0
+1) N^2 Fourier: ph^6 - 6 ph^4 r^2 + 9 ph^2 r^4 + 2 r^6 + 4 ph r^3 (ph^2 - 3 r^2) Cos[3 d] + 2 r^6 Cos[6 d]
+2) F6(phi;-c4,-b3) - F6(-phi;c4,b3) = 0
+3) Im: Sqrt[2] (Cos[p] - Sin[p]) (b3 - c4 + 2 b3 Sin[2 p]) ; bei x_lepton: 1.35715 (1.15814 b3 - 1. c4)
+3) Re: 2 (b3 - c4 + 2 b3 Cos[2 p]) Sin[p] ; bei x_lepton: 0.079134 (2.99374 b3 - 1. c4)
+3) Keilgrenzen beta3/c4: Re 0.334031, Im 0.86345
+3) Keilanteil: 0.43795
