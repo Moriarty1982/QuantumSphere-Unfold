@@ -1,5 +1,7 @@
 # Physik-Artikel „One Object, Three Frames“, Fassung 1.2.0: Vorbereitung
 
+**Veröffentlicht am 28.11.2026** (Freigabe des Autors): [Record 24632621](https://zenodo.org/records/24632621), Lauf 46169545113 (Workflow „Paper release“, stage publish; 54 Seiten). Vorschau im selben Lauf geprüft: `Quantum_Sphaera_One_Object_Three_Frames_v1.2.0.pdf`, korrekt. Tag `physics-paper-v1.2.0` legt der Autor an.
+
 **Reserviert am 28.11.2026 (Freigabe des Autors):** Zenodo-Entwurf 24632621, Version-DOI 10.5281/zenodo.24632621 (Workflow „Zenodo Release“, Lauf 46167530942, neue Version von 24563808). Gestempelt mit `tools/paper_release.py stamp` (Konfiguration, Metadaten, `release-info.tex`). Ab jetzt nur `deposition_id=24632621`. DOIs gegenseitig verlinkt: Companion v5.6.0 `isSupplementedBy` diesen Artikel und den Preprint 0.5.0; dieser Artikel `isSupplementTo` Companion und `references` den Preprint; der Preprint `references` diesen Artikel.
 
 **Status (28.11.2026): Entwurf, nicht reserviert, nicht veröffentlicht.** Kein Zenodo-Schritt ist erfolgt. Vorfassung: 1.1.0, Record 24563808,

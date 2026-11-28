@@ -1,5 +1,7 @@
 # Deutscher Preprint, Fassung 0.5.0: Release-Paket
 
+**Status (28.11.2026): veröffentlicht**, [Record 24632440](https://zenodo.org/records/24632440) (Upload und Veröffentlichung Lauf 46169542735, Workflow „Zenodo Release“, Freigabe des Autors; 66 Seiten). Vorschau nach dem Veröffentlichen geprüft (Lauf 46169634007): `Quantum_Sphaera_Preprint_0.5.0.pdf`, korrekt. Der folgende Text hält die Vorbereitung fest.
+
 **Reserviert am 28.11.2026 (Freigabe des Autors):** Zenodo-Entwurf 24632440, Version-DOI 10.5281/zenodo.24632440 (Workflow „Zenodo Release“, Lauf 46166762716, neue Fassung von 24563916). Ab jetzt `deposition_id=24632440`, nie `new_version_of`. Nichts hochgeladen. `\versiondoi` ist gesetzt. Der Preprint verweist auf Companion v5.6.0 (10.5281/zenodo.24632437; Entscheidung des Autors vom 28.11.2026); v5.6.0 erscheint vorher oder gleichzeitig.
 
 **Status (28.11.2026): vorbereitet, nicht reserviert, nicht hochgeladen, nicht veröffentlicht.** Jeder Zenodo-Schritt (Reservierung,

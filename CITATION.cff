@@ -10,7 +10,7 @@ doi: "10.5281/zenodo.24632437"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.24632437"
-    description: "Version DOI for v5.6.0 (reserved on 2026-11-28; resolves after publication)"
+    description: "Version DOI for v5.6.0 (published on 2026-11-28)"
   - type: doi
     value: "10.5281/zenodo.19210728"
     description: "Concept DOI for the Quantum Sphaera Companion record"
