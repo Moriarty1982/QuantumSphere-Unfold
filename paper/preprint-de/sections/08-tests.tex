@@ -154,7 +154,7 @@ auf H112 an der Zuordnung der Zählregeln, also an OP1; die Zufallsabschätzung 
 Zweitens sind H9 und H102 nach dem Sehen der älteren Daten gefunden worden; blind sind sie nur gegenüber künftigen Messungen. Drittens
 prüft H112 eine schwächere Aussage: dass an beiden Stellen dieselbe Zahl steht, gleich welche. Er widerlegt erst ab einem Unterschied
 von etwa \(0{,}022\) in \(\beta^2\). Weitere Vorhersagen zum Mischungswinkel \(\theta_{23}\) warten auf die nächste globale Auswertung
-der Neutrinodaten \cite{predictions}.
+der Neutrinodaten \cite{predictions}. Abschnitt~\ref{sec:predictions-0-5} hält alle Vorhersagen dieser Fassung mit Datum und Abhängigkeiten fest.
 
 \subsection{Welche Rechnung eine Annahme mitführt}
 
@@ -289,6 +289,146 @@ Keine dieser Runden leitet \(\beta\), eine Masse, einen Mischungswinkel oder \(\
 die Definition der Kopie, die Ladungsachse, die Seite der Multiplikation, die Auslese an den Amplituden und jede Skala; angepasst bleibt
 \(\delta\). OP1 bis OP5, C5 und C6/T2 bleiben offen, und kein Guard ist aufgehoben.
 
+\subsection{Die Leptonphase: ein Winkel, ein Vorzeichen, eine gemessene Zahl}
+\label{sec:lepton-phase}
+
+Nach Fassung 0.4.0 hat der Companion die Schichten v4.10.0-r69 bis v4.10.0-r75 erhalten; sie sind Forschungsschicht und erscheinen mit
+v5.6.0 \cite{layersr69r75}. Runde r69 legt neue Namen fest. Für die Frames stehen sie in Abschnitt~\ref{sec:frames}; die beiden
+Lepton-Sektoren heißen Re-Sektor (bisher Sektor der neutralen Leptonen, \(c=0\)) und Im-Sektor (bisher Sektor der geladenen Leptonen,
+\(c=1\)). Diese Namen gelten nur für Leptonen und nur als Lesart unter der Sektorzuordnung H99; die Quarks behalten Up- und Down-Sektor.
+Runde r70 steht in Abschnitt~\ref{sec:frames}. Runde r71 ergänzt ein Diagnosewerkzeug für wiederkehrende Muster einer Folge
+(Koinzidenzindex nach Friedman); es entscheidet nichts und berührt keine Aussage dieses Artikels. Runde r72 ist redaktionell: Der vierte
+Guard des Companion heißt jetzt kurz \glqq kein globales Photon-Uhr-Theorem\grqq{}, Inhalt und Wert bleiben. Runde r75 führt das datierte
+Register der Vorhersagen, das Abschnitt~\ref{sec:predictions-0-5} wiedergibt. Dieser Abschnitt fasst die Runden r73 und r74 zusammen; alle
+Tests darin waren vor der Rechnung in Vorab-Notizen festgelegt, gerechnet in Python mit unabhängiger Gegenprobe in Wolfram Language.
+Maßgeblich sind die Runden und die Ergebnis-Notizen \cite{leptonphase,phiopen}.
+
+\paragraph{Ausgangslage.}
+In jedem Lepton-Sektor \(s\) wird die Brannen-Form gesetzt,
+\[
+ \sqrt{m_k}=\mu_s\bigl(1+\sqrt2\cos(\delta_s+2\pi k/3)\bigr),\qquad k=0,1,2 .
+\]
+Die Amplitude \(\sqrt2\) ist gleichwertig mit \(K=\tfrac23\); dieser Wert folgt aus dem Postulat der Frame-Gleichberechtigung
+(Abschnitt~\ref{sec:family-copies-koide}). Die Phasen liegen nahe den Oktantwerten \(\pi/12\) (Im-Sektor) und \(\pi/6\) (Re-Sektor), aber um
+eine kleine Zahl daneben. Aus den Polmassen der geladenen Leptonen folgt der Versatz \(0{,}0395773\), entsprechend \(\delta=0{,}2222220\) nahe dem
+Wert \(2/9\) aus Abschnitt~\ref{sec:family-copies-koide}; aus dem Verhältnis \(R=\Delta m^2_{21}/\Delta m^2_{31}\) der Neutrinos folgt
+\(0{,}0434\pm0{,}0021\). Beide Werte liegen \(1{,}78\sigma\) auseinander und sind mit einem gemeinsamen Versatz verträglich; eine frühere Notiz
+hatte mit falschem Nenner \(4{,}2\sigma\) angegeben, diese Zahl ist zurückgezogen (H213). \(K=\tfrac23\) gilt nur für Polmassen, nicht für
+laufende Massen bei gemeinsamer Skala (H214).
+
+\paragraph{Der Versatz ist ein Winkel (H221).}
+Dreht man im Phasenpotential beider Sektoren den Mischwinkel gemeinsam um \(\varphi\), verschieben sich beide Minima exakt um \(\varphi\), auf
+\(\pi/12-\varphi\) und \(\pi/6-\varphi\), für jeden Wert von \(\varphi\). Eine Skala erklärt den gemeinsamen Versatz dagegen nicht: Ein Term sechster
+Ordnung mit Sektorskala verfehlt den Re-Sektor um \(9{,}2\sigma\), der Konjugationsterm um \(23\sigma\). Der Versatz ist also ein dimensionsloser
+Drehwinkel \(\varphi\); er ist nicht die Bargmann-Phase aus Abschnitt~\ref{sec:mass}.
+
+\paragraph{Der Zweig ist eine Setzung (H222, H223).}
+Für die Matrix \(Y\) der Massenwurzeln gilt bei \(K=\tfrac23\) exakt \(\det Y/\mu_s^3=-\tfrac12+\cos3\delta/\sqrt2\). Die Regel \glqq größeres
+\(\cos3\delta\)\grqq{} wählt ohne Skala und in beiden Sektoren mit demselben Vorzeichen den Zweig der Daten; der verworfene Zweig des Re-Sektors
+verfehlt \(R\) um \(51\sigma\). Sie ist der Grenzfall \(q\to0^-\) des Terms sechster Ordnung \(q\cos3\delta\): Die Skala fällt heraus, die Wahl
+bleibt. Ihr Vorzeichen folgt weder aus dem Tausch \(J\) noch aus Stabilität noch aus einem natürlichen Elternterm (Erkundung k436, nicht
+blind; Test H223, widerlegt). Der Autor hat es am 28.~November 2026 als Setzung angenommen.
+
+\paragraph{Der Wert bleibt gemessen (H224 bis H236).}
+Keiner der versuchten Wege legt \(\varphi\) fest. Widerlegt oder ohne Treffer sind \(\varphi\) als Wigner-Drehung der Frame-Boosts (H224); als
+Minimum der gemeinsamen Vakuumenergie, das exakt am Symmetriepunkt \(\pi/8\) liegt, weil ein Sektortausch die beiden Potentiale ineinander
+überführt (H225); ein einfacher Term, der diesen Tausch bricht (H226); \(\varphi\) als Grenzwert einer Schleife oder als Zwischenstand eines
+Flusses (H228); eine Lockerung des Postulats \(J\) bei Ordnung sechs, die nur das Vorzeichen des Zweigs liefert und nicht übernommen wird
+(H229); der Symmetriepunkt \(\pi/8\), in den Materie-Frame übertragen (H230); die Expansion als Uhr, die \(\varphi\) nur im Durchlaufen trifft und
+dann eine Drift der Elektronmasse verlangt, die Atomuhren um mehr als sechs Größenordnungen ausschließen (H231); eine Rückwärtssuche nach einem
+Brecher, nach der \(\varphi\) an jedem Gleichgewicht der Mittelwert der beiden Sektorversätze ist und der Messwert nur metastabil erreicht wird
+(H232); ein Einrasten auf acht Stellungen mit Halbierungen, von dem \(\varphi\) mindestens \(392\sigma\) entfernt bleibt (H233); eine gemeinsame
+Feinstufe aller kleinen Korrekturen (H234); und eine Casimir-Verdrehung zwischen einem inneren und einem äußeren Feld (H235). Die Erkundung
+k449 (nicht blind) liest zu diesem Bild die untersten Stufen des Turms aus Abschnitt~\ref{sec:handedness-tower}, eine split-komplexe Stufe
+unter den reellen Zahlen, die reellen und die komplexen Zahlen, als innere und äußere Felder mit einer Casimir-Lücke; das ist eine Lesart und
+prüft nichts. Test H236 klärt eine Doppelzählung: Mehrere dieser Rechnungen hatten neben \(\varphi\) auch einen angepassten Wert von \(q\) als
+Träger des Versatzes mitgeführt. \(\varphi\) trägt den Versatz, \(q\) nur das Vorzeichen (\(q\to0^-\)); kein früheres Urteil ändert sich, und die
+Vorhersagen von H227 bleiben unverändert. Der Autor hat am 28.~November 2026 festgehalten: \(\varphi\) bleibt offen, und dieser Strang ruht.
+
+\paragraph{Bilanz der Leptonenmassen (H227).}
+Mit \(K=\tfrac23\), der Brannen-Form und dem gesetzten Zweig tragen drei Zahlen alle sechs Leptonenmassen: der Winkel \(\varphi\) und die beiden
+Sektorskalen \(\mu_e\) und \(\mu_\nu\). Daraus folgen \(m_\tau=1776{,}969\)\,MeV aus \(m_e\) und \(m_\mu\) (\(+0{,}43\sigma\), nicht blind),
+\(R=0{,}030839\) (\(+1{,}80\sigma\), nicht blind) und, mit \(\mu_\nu\) aus \(\Delta m^2_{31}\) bei normaler Ordnung, die absolute Neutrinoskala:
+\(m_1=0{,}379\)\,meV, \(m_2=8{,}81\)\,meV, \(m_3=50{,}11\)\,meV, \(\sum m_\nu=59{,}30\pm0{,}24\)\,meV, \(m_\beta=8{,}87\)\,meV und \(m_{\beta\beta}\) zwischen
+\(1{,}3\) und \(4{,}0\)\,meV bei freien Majorana-Phasen. Alle Werte liegen unter den heutigen Schranken. Eine gemessene Summe unter \(58\)\,meV oder
+eine festgestellte umgekehrte Ordnung widerlegt das Bild. Das Verhältnis der Skalen, \(\mu_\nu^2/\mu_e^2\approx3\cdot10^{-11}\), ist keine einfache
+Rahmenzahl (Erkundung, nicht blind). Ob \(\varphi\) mit \(\beta\) zusammenhängt, ist offen; die Suche nach einer gemeinsamen Feinstufe fand nichts
+über dem Zufall (H234).
+
+Hergeleitet sind in diesen Runden die gleiche Verschiebung beider Minima unter der Drehung, die Zweigwahl durch \(\cos3\delta\) bei gesetztem
+Vorzeichen und die Massen aus den drei Eingaben. Gesetzt bleiben \(K=\tfrac23\) (Postulat), die Brannen-Form, die Sektorzuordnung H99, das
+Polmassen-Schema, das Vorzeichen des Zweigs und die Skalen; gemessen ist \(\varphi\). Neben \(\beta\) aus Abschnitt~\ref{sec:one-number} ist
+\(\varphi\) die eine gemessene Zahl des Leptonbilds. OP3 und OP4 bleiben offen, und kein Guard ist aufgehoben.
+
+\subsection{Vorhersagen dieser Fassung (Stand 28.~November 2026)}
+\label{sec:predictions-0-5}
+
+Der Autor hat am 28.~November 2026 eine Regel für die Fassungen festgelegt. Jede öffentliche Fassung hält den Modellstand mit seinen
+Vorhersagen fest, mit Datum und DOI; ältere Fassungen bleiben sichtbar. Korrekturen erscheinen nur in einer neuen Fassung und mit Begründung,
+nämlich Modellfortschritt oder Fehler, nie als Nachjustieren nach einer neuen Messung. Als Test zählt die Fassung, die vor der Messung
+festgeschrieben war. Für die Fassung 0.5.0 gilt der Stand vom 28.~November 2026. Maßgeblich ist das datierte Register des Companion in Runde
+v4.10.0-r75 \cite{layersr69r75}; Prüfgröße, Stichtag und Entscheidungskriterium jeder Vorhersage stehen in ihrer Vorab-Notiz \cite{predictions}. Im Repository gilt als Datum der
+Festschreibung der Commit der Vorab-Notiz; jede Notiz nennt die Daten, die damals schon bekannt waren und deshalb nicht zählen.
+
+Die Tabellen trennen vier Arten der Abhängigkeit. \emph{Hergeleitet} heißt aus den genannten Eingaben gerechnet. \emph{Gesetzt} heißt
+benannt und nicht hergeleitet, als Postulat oder als Setzung. \emph{Gemessene Eingabe} heißt an Daten abgelesen oder angepasst.
+\emph{Nachträglich} heißt nach dem Sehen der heutigen Daten gefunden; eine solche Vorhersage ist nur gegen künftige Messungen blind. Die erste
+Tabelle nennt die Eingaben, an denen die Vorhersagen hängen.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.17\linewidth}p{.25\linewidth}p{.13\linewidth}p{.35\linewidth}@{}}
+\hline
+\textbf{Eingabe} & \textbf{Wert} & \textbf{Quelle} & \textbf{Art}\\
+\hline
+\raggedright Leptonwinkel \(\varphi\) & \raggedright \(0{,}0395773\) & \raggedright r73, H221, H227 & \raggedright gemessene Eingabe (aus den Polmassen der geladenen Leptonen); von keinem Weg hergeleitet (H224--H236)\tabularnewline
+\raggedright Zweigvorzeichen & \raggedright \(q\to0^-\), größeres \(\cos3\delta\) & \raggedright r73, H222, H236 & \raggedright Setzung des Autors vom 28.~November 2026\tabularnewline
+\raggedright \(\beta_{\rm sym}\) & \raggedright \(0{,}5494056410\) & \raggedright r67 & \raggedright aus dem am 26.~November 2026 angenommenen Zählpostulat berechnet; Postulat, nicht hergeleitet\tabularnewline
+\raggedright \(K=\tfrac23\) & \raggedright Koide-Wert beider Lepton-Sektoren & \raggedright r63 & \raggedright gesetzt: Postulat der Frame-Gleichberechtigung, mit gesetzter Skala\tabularnewline
+\raggedright Brannen-Form & \raggedright \(\sqrt{m_k}=\mu_s(1+\sqrt2\cos(\delta_s+2\pi k/3))\) & \raggedright H99, r73 & \raggedright gesetzt, ebenso die Sektorzuordnung H99 und das Polmassen-Schema (H214)\tabularnewline
+\raggedright Skalen \(\mu_e\), \(\mu_\nu\) & \raggedright aus \(m_e\) und \(\Delta m^2_{31}\) & \raggedright H227 & \raggedright angepasst (gemessene Eingaben); ihr Verhältnis ist keine Rahmenzahl\tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\noindent Die zweite Tabelle nennt die Vorhersagen. Wo mehrere Lesarten nebeneinander stehen, schließen sie sich aus; die Messung entscheidet
+zwischen ihnen.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{.15\linewidth}p{.25\linewidth}p{.13\linewidth}p{.37\linewidth}@{}}
+\hline
+\textbf{Größe} & \textbf{Vorhersage} & \textbf{Quelle} & \textbf{Abhängigkeit}\\
+\hline
+\raggedright Massenordnung & \raggedright normal & \raggedright H227, H222 & \raggedright folgt aus dem gesetzten Zweig; eine umgekehrte Ordnung mit \(3\sigma\) widerlegt\tabularnewline
+\raggedright \(\sum m_\nu\) & \raggedright \(59{,}30\pm0{,}24\)\,meV & \raggedright H227, r73 & \raggedright hergeleitet aus \(\varphi\) und \(\mu_\nu\); gesetzt: Brannen-Form, \(K\), Zweig; nicht blind (H213, H168); widerlegt unter \(58\)\,meV\tabularnewline
+\raggedright \(m_1\), \(m_2\), \(m_3\) & \raggedright \(0{,}379\); \(8{,}81\); \(50{,}11\)\,meV & \raggedright H227 & \raggedright wie \(\sum m_\nu\)\tabularnewline
+\raggedright \(m_\beta\) & \raggedright \(8{,}87\)\,meV & \raggedright H227 & \raggedright wie \(\sum m_\nu\), dazu gemessene Mischungswinkel; neu in H227\tabularnewline
+\raggedright \(m_{\beta\beta}\) & \raggedright \(1{,}3\) bis \(4{,}0\)\,meV & \raggedright H227 & \raggedright wie \(m_\beta\), Majorana-Phasen frei; \(3{,}49\)\,meV nur in einer gesetzten Vorzeichen-Lesart\tabularnewline
+\raggedright \(R=\Delta m^2_{21}/\Delta m^2_{31}\) & \raggedright \(0{,}030839\) (H100: Variante A; B \(0{,}030087\), C \(0{,}030375\)) & \raggedright H99, H100, H227 & \raggedright hergeleitet aus \(\varphi\) und Brannen-Form; nachträglich (heute \(+1{,}80\sigma\)); H100 entscheidet am nächsten NuFIT-Fit\tabularnewline
+\raggedright \(\sin^2\theta_{12}\) & \raggedright \(0{,}3086\) (H9); \(0{,}3019\) (H176); \(0{,}318\) bis \(0{,}3195\) (H206--H208) & \raggedright H9, H176, H206--H208 & \raggedright H9: \(\beta_{\rm sym}^2\) (Postulat) mit gesetzter Gleichsetzung, nachträglich; H176: angepasst, dann festgeschrieben; H206--H208: feste Spalte hergeleitet, Richtung gesetzt\tabularnewline
+\raggedright Korrelation \(\theta_{12}\)--CP & \raggedright entweder \(\sin^2\theta_{12}\gtrsim0{,}315\) und \(|\sin\delta_{\rm CP}|\approx1\), oder \(\sin^2\theta_{12}\approx0{,}304\) und \(|\sin\delta_{\rm CP}|\approx0{,}65\) & \raggedright H208, mit H176 und H9 & \raggedright nachträglich gefunden (H208); der senkende Zusatzterm ist erlaubt, nicht hergeleitet; JUNO (\(\theta_{12}\)) und DUNE (\(\delta_{\rm CP}\)) prüfen gemeinsam\tabularnewline
+\raggedright \(\sin^2\theta_{23}\) & \raggedright \(0{,}4954\) (H176); \(0{,}4945\) (H207) & \raggedright H176, H207 & \raggedright H176 angepasst; H207 ohne freien Parameter aus \(\varphi\), teils nicht blind; dazu H42 (\(\le0{,}54\)) und H46 (\([0{,}49;\,0{,}50]\), Lesart \(\varepsilon=\eta\))\tabularnewline
+\raggedright \(\sin^2\theta_{13}\) & \raggedright \(0{,}0223\) (H176); \(0{,}0216\) (H207) & \raggedright H176, H207 & \raggedright H176 angepasst; H207 ohne freien Parameter aus \(\varphi\), Richtung hergeleitet\tabularnewline
+\raggedright \(\delta_{\rm CP}\) & \raggedright \(|\sin\delta_{\rm CP}|\approx1\) (H176: \(\pm77{,}7^\circ\)) und \(\sin\delta_{\rm CP}<0\) (H125), zusammen etwa \(282^\circ\) & \raggedright H176, H207, H125 & \raggedright Betrag: H176 angepasst, H207 unter Setzungen; Vorzeichen: gesetzt (Setzung S1 und dieselbe Seite der Multiplikation), Frist Ende 2035\tabularnewline
+\hline
+\raggedright \(\Omega_m\) & \raggedright \(\beta_{\rm sym}^2=0{,}30185\) & \raggedright H96 & \raggedright Postulat (Zählregel) und gesetzte Gleichsetzung \(\Omega_M=\beta^2\); \(\Lambda\) bleibt Eingabe\tabularnewline
+\raggedright \(m_W\) & \raggedright \(80{,}3615\pm0{,}0018\)\,GeV & \raggedright H15 & \raggedright Postulat (Zählregel) und gesetzte Gleichsetzung \(\cot\theta_W=\gamma_L\), nachträglich gefunden; \(m_Z\) gemessene Eingabe\tabularnewline
+\raggedright \(m_\tau\) & \raggedright \(1776{,}969\)\,MeV (Koide); \(1777{,}134\)\,MeV (H102) & \raggedright r63, H227; H102 & \raggedright Koide: hergeleitet unter dem Postulat \(K=\tfrac23\) aus \(m_e\), \(m_\mu\), nicht blind; H102: nachträglich in einer Suche gefunden, an Platzhaltern des Companion\tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+Heute entscheidet keine Messung einen dieser Tests. Zum Vergleich, ohne Testwert: JUNO 2026 misst \(\sin^2\theta_{12}=0{,}3036\pm0{,}0064\)
+\cite{juno2026}; die Kombination von DESI DR2 mit dem kosmischen Mikrowellenhintergrund begrenzt \(\sum m_\nu\) auf weniger als
+\(64{,}2\)\,meV (95\,\%) \cite{desi-dr2}; PDG~2026 gibt \(m_W=80{,}3625\pm0{,}0077\)\,GeV und \(m_\tau=1776{,}93\pm0{,}09\)\,MeV \cite{pdg}. Die Vorhersagen H105
+(Abschnitt~\ref{sec:family-copies-koide}) und H112 (Abschnitt~\ref{sec:data}) bleiben daneben offen. Die Neutrinogrößen hängen an \(\varphi\) und den
+Setzungen der Leptonphase, nicht an \(\beta_{\rm sym}\); \(\Omega_m\), \(m_W\) und H9 hängen an \(\beta_{\rm sym}\) und damit am Zählpostulat. Eine
+Widerlegung träfe deshalb verschiedene Annahmen: Bei den Neutrinomassen die Brannen-Form für Neutrinos und den Zweig, bei \(\Omega_m\) und \(m_W\)
+zuerst die Zählregel. Die Zeilen sind auch keine unabhängigen Tests: \(m_W\), H46 und \(\Omega_m\) ruhen auf demselben Zählkern, H9, \(\Omega_m\) und H112 teilen
+\(\beta_{\rm sym}^2\), und die Neutrinozeilen von H227 fallen zusammen mit dem Ordnungskriterium von H176, falls die umgekehrte Ordnung
+festgestellt wird. Keine Vorhersage dieser Fassung schließt ein offenes Problem.
+
 \subsection{Was nach dieser Fassung offen bleibt}
 \label{sec:open-points}
 
@@ -303,9 +443,9 @@ geschlossen, und kein Guard ist aufgehoben \cite{companion,layers}.
 \textbf{Name} & \textbf{Frage} & \textbf{im Artikel}\\
 \hline
 OP1 & Woher kommt die Zahl \(\beta=0{,}5494\), also warum zählen die Frames M und T die Horizontzustände nach verschiedenen Regeln? & Abschnitt~\ref{sec:one-number}\\
-OP2 & Existiert der Dirac-artige Operator auf dem antisymmetrischen Sektor als selbstadjungierter Operator, ohne die zurückgezogene Riemann-Arbeit, und liegt sein Spektralversatz bei \(\beta\)? & nur als Gleichsetzung in Abschnitt~\ref{sec:one-number}\\
-OP3 & Welche Übergänge der Hülle sind zulässig, woher kommen drei Generationen, und was legt Phase und Vorzeichen der Leptonphase fest? & Abschnitte~\ref{sec:charged-multiplicity}, \ref{sec:octant-sign}, \ref{sec:handedness-tower} und \ref{sec:family-copies-koide}\\
-OP4 & Woher kommen die Mischungswinkel der Neutrinos und der Quarks? & Gleichsetzung in Abschnitt~\ref{sec:one-number}; relatives CP-Vorzeichen in den Abschnitten~\ref{sec:handedness-tower} und \ref{sec:family-copies-koide}\\
+OP2 & Existiert der Dirac-artige Operator auf dem antisymmetrischen Sektor als selbstadjungierter Operator, ohne die zurückgezogene frühere Arbeit, und liegt sein Spektralversatz bei \(\beta\)? & nur als Gleichsetzung in Abschnitt~\ref{sec:one-number}\\
+OP3 & Welche Übergänge der Hülle sind zulässig, woher kommen drei Generationen, und was legt Phase und Vorzeichen der Leptonphase fest? & Abschnitte~\ref{sec:charged-multiplicity}, \ref{sec:octant-sign}, \ref{sec:handedness-tower}, \ref{sec:family-copies-koide} und \ref{sec:lepton-phase}\\
+OP4 & Woher kommen die Mischungswinkel der Neutrinos und der Quarks? & Gleichsetzung in Abschnitt~\ref{sec:one-number}; relatives CP-Vorzeichen in den Abschnitten~\ref{sec:handedness-tower} und \ref{sec:family-copies-koide}; Vorhersagen in Abschnitt~\ref{sec:predictions-0-5}\\
 OP5 & Wie fügen sich Vakuumbilanz und kosmologische Konstante in den Rahmen, und welche Materiequelle treibt welches geometrische Feld? & Fallstudie in Abschnitt~\ref{sec:op5-coupling}, Anhang~\ref{sec:anhang-b-annahmen}\\
 C5 & Kann die verbleibende Obstruktion in endlich vielen Schritten exakt null werden, statt nur unter eine Detektorschwelle zu fallen? & nicht behandelt\\
 C6/T2 & Schließen alle Auslesungen zugleich, global und nicht nur lokal? & nicht behandelt; durch Guards gesperrt\\

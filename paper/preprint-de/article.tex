@@ -10,11 +10,11 @@
 \definecolor{qs axis}{HTML}{565F68}
 \definecolor{qs blue}{HTML}{174D75}
 \definecolor{qs rust}{HTML}{99471C}
-\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Preprint, Fassung 0.4.0}]{hyperref}
+\usepackage[hidelinks,pdftitle={Quantum Sphaera},pdfauthor={Marc Brendecke},pdfsubject={Preprint, Fassung 0.5.0}]{hyperref}
 
-% Version-DOI der Fassung 0.4.0: reserviert am 26.11.2026 (Zenodo-Entwurf 24563916, unveröffentlicht)
-% (Fassung 0.3.0: 10.5281/zenodo.24497991; Fassung 0.2.0: 10.5281/zenodo.24481107)
-\newcommand*{\versiondoi}{10.5281/zenodo.24563916}
+% Version-DOI der Fassung 0.5.0: nach der Reservierung auf Zenodo eintragen, z. B. \newcommand*{\versiondoi}{10.5281/zenodo.NNNNNNNN}
+% (Fassung 0.4.0: 10.5281/zenodo.24563916; Fassung 0.3.0: 10.5281/zenodo.24497991; Fassung 0.2.0: 10.5281/zenodo.24481107)
+\newcommand*{\versiondoi}{}
 
 \setlength{\parindent}{1em}
 \raggedbottom
@@ -28,7 +28,7 @@
 \noindent{\large Auf dem Weg zu einem gemeinsamen Rahmen\\
 für Materie, Eichstruktur und Raumzeitgeometrie\par}
 \vspace{0.7em}
-\noindent Marc Brendecke\hfill{\small Fassung 0.4.0 \enspace$\cdot$\enspace 26. November 2026}\par
+\noindent Marc Brendecke\hfill{\small Fassung 0.5.0 \enspace$\cdot$\enspace 28. November 2026}\par
 \noindent{\small Version-DOI: \ifx\versiondoi\empty wird bei der Reservierung auf Zenodo vergeben\else\href{https://doi.org/\versiondoi}{doi:\versiondoi}\fi\par}
 \noindent{\small Concept-DOI (alle Fassungen): \href{https://doi.org/10.5281/zenodo.24405552}{doi:10.5281/zenodo.24405552}\par}
 \vspace{0.55em}
@@ -47,13 +47,15 @@ Problem OP5 verfolgt eine präparierte Materiequelle bis zum geometrischen Achse
 linearisierten Einstein-Gleichung; der gerichtete Kontrast braucht einen Vermittler, den die Vergleichswirkung nicht enthält,
 und ist im Vakuum nur mit verschwindend kleiner Kopplung verträglich, verlangt also ein Material. Alle bedingten Zahlenwerte
 hängen an einer einzigen Zahl. Sie folgt aus einer Zählregel für die Zustände eines Horizonts, die seit Runde v4.10.0-r67 des
-Companion als Postulat angenommen und nicht hergeleitet ist. Der Artikel beansprucht keine Lösung
+Companion als Postulat angenommen und nicht hergeleitet ist. Das Bild der Leptonenmassen braucht daneben eine gemessene Zahl,
+einen gemeinsamen Drehwinkel der Phase, den keiner der versuchten Wege herleitet. Der Artikel beansprucht keine Lösung
 der offenen Probleme. Er legt offen, welche Annahmen jede Rechnung mitführt und wo eine Herleitung ansetzen müsste. Die
 Rechnungen sind mit Wolfram Language geprüft, einzelne mit Python; maßgebliche Fassung ist der Quantum Sphaera Companion. Neu in
-dieser Fassung sind das Zählpostulat in Abschnitt~\ref{sec:one-number} und Abschnitt~\ref{sec:family-copies-koide} zu den Runden
-v4.10.0-r60 bis v4.10.0-r65: Familiensymmetrie, Oktonion-Kopien in den Sedenionen und der Koide-Punkt als Fixpunkt eines Frame-Tauschs
-unter einem Postulat. Diese Fassung 0.4.0 ersetzt die Fassung 0.3.0 vom 24.~November 2026
-(\href{https://doi.org/10.5281/zenodo.24497991}{doi:10.5281/zenodo.24497991}).
+dieser Fassung sind Abschnitt~\ref{sec:lepton-phase} zur Leptonphase nach den Companion-Schichten v4.10.0-r70 bis v4.10.0-r74 (der
+gemeinsame Versatz ist ein Winkel, die Wahl des Zweigs ist eine Setzung, drei Zahlen tragen sechs Leptonenmassen) und
+Abschnitt~\ref{sec:predictions-0-5}, der die Vorhersagen dieser Fassung mit Datum festhält und für jede angibt, was hergeleitet,
+gesetzt, gemessen oder nachträglich gefunden ist. Diese Fassung 0.5.0 ersetzt die Fassung 0.4.0 vom 26.~November 2026
+(\href{https://doi.org/10.5281/zenodo.24563916}{doi:10.5281/zenodo.24563916}); die älteren Fassungen bleiben unter der Concept-DOI sichtbar.
 \end{quote}
 \section*{Vorwort}
 Was soll ein Heisenberg-Kompensator eigentlich kompensieren? Und wenn man dann mal endlich erfährt, was er kompensieren soll, fragt man sich ziemlich erstaunt: \glqq Wie verdammt noch mal soll er das machen?\grqq{}
@@ -188,10 +190,20 @@ M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/c0
 \bibitem{towerlayer}
 M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/73d6a5d7ffd6bf2b6452211ef7d857f690fd19a0/notes/research/v4_10_0_r59/README.md}{Die Drehsinn-Reihe und der Hilbert-Shift-Turm}, Companion, Runde v4.10.0-r59 (Erkundungen k245--k274, Tests H125 und H126), 24. November 2026.
 \bibitem{layers}
-M.~Brendecke, \emph{Quantum Sphaera Companion, Forschungsschichten nach v5.3.0}, Runden v4.10.0-r31 bis v4.10.0-r67, 22.--26. November 2026.
+M.~Brendecke, \emph{Quantum Sphaera Companion, Forschungsschichten nach v5.3.0}, Runden v4.10.0-r31 bis v4.10.0-r68, 22.--26. November 2026.
 Die Runden bis r59 sind in v5.4.0 enthalten, die Runden r60 bis r68 in v5.5.0
 (\href{https://doi.org/10.5281/zenodo.24563811}{doi:10.5281/zenodo.24563811}).
 \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/3fc66afdf52467e3a2ef10cfdfe13353892cc081/sources/research/parts/v4100-post-release-layers.tex}{Schichtdatei auf GitHub}.
+\bibitem{layersr69r75}
+M.~Brendecke, \emph{Quantum Sphaera Companion, Companion-Schichten v4.10.0-r69 bis v4.10.0-r75}, 26.--28. November 2026
+(Forschungsschicht, erscheinen mit v5.6.0; Basis ist v5.5.0, \href{https://doi.org/10.5281/zenodo.24563811}{doi:10.5281/zenodo.24563811}).
+\href{https://github.com/Moriarty1982/QuantumSphere-Unfold/blob/main/sources/research/parts/v4100-post-release-layers.tex}{Schichtdatei auf GitHub}.
+\bibitem{leptonphase}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/notes/research/hilbert_shift_felder_2026_11_24}{Der gemeinsame Leptonversatz als Winkel; Bilanz der Leptonenmassen},
+Ergebnis-Notizen der Tests H213 bis H227 (Skripte k426 bis k441, Erkundung k436), im Companion Runde v4.10.0-r73, 28. November 2026.
+\bibitem{phiopen}
+M.~Brendecke, \href{https://github.com/Moriarty1982/QuantumSphere-Unfold/tree/main/notes/research/hilbert_shift_felder_2026_11_24}{Wege zum Wert des Leptonwinkels},
+Ergebnis-Notizen der Tests H228 bis H236 (Skripte k442 bis k451) und der Erkundung k449, im Companion Runde v4.10.0-r74, 28. November 2026.
 \bibitem{koide}
 Y.~Koide, \emph{A fermion-boson composite model of quarks and leptons}, Phys. Lett. B 120, 161--165 (1983).
 \bibitem{pdg}
