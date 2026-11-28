@@ -1,0 +1,9 @@
+k445b Wolfram-Gegenprobe zu H231, ausgefuehrt ueber den Wolfram-Kernel (MCP); keine Warnungen, Rueckgabewert Null. Ausgaben aus Print[...] woertlich.
+
+mu = 97211243/100000000: phi(heute) = 0.0395773404102, phi' = 0.075236939
+mu = 1: phi(heute) = 0.0418368111062, phi' = 0.079432661
+mu = 103449/125000: phi(heute) = 0.0288240643986, phi' = 0.055108077
+d ln m_e/d phi bei x (k = 1, Elektron): 51.48855552;  m-Werte k=0,1,2: {5.66173, 0.00162813, 0.336646}
+Drift bei mu*: 2.6703*10^-10 /yr
+
+(phi(heute) bei mu* weicht von Python um 3*10^-10 ab, durch die unabhaengige Integration; unerheblich fuer das Urteil.)

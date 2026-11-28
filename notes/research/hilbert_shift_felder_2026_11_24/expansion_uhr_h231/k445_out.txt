@@ -1,0 +1,40 @@
+============================================================================================
+H231 (k445)  Expansion als Uhr: phi rollt in V = -A cos 3(phi - pi/8) im LCDM-Hintergrund, Start phi = 0 bei a = 1e-8
+============================================================================================
+Omega_m = 0.315, Omega_r = 9.1e-05, Omega_L = 0.684909; H0 = 6.8931e-11 /yr; Grenze |d ln m_e/dt| < 1e-16 /yr
+Ziel x = 0.0395773407;  d ln m_e / d phi bei x = +51.4886
+
+Teil a  phi(heute) und phi' = d phi/d ln a heute als Funktion von mu = m/H0
+  mu =       0.01: phi = +0.000004, phi' = +8.2515e-06
+  mu =     0.0261: phi = +0.000029, phi' = +5.6216e-05
+  mu =    0.06813: phi = +0.000198, phi' = +3.8294e-04
+  mu =     0.1778: phi = +0.001346, phi' = +2.6065e-03
+  mu =     0.4642: phi = +0.009143, phi' = +1.7644e-02
+  mu =      1.212: phi = +0.060846, phi' = +1.1422e-01
+  mu =      3.162: phi = +0.326333, phi' = +4.0925e-01
+  mu =      8.254: phi = +0.350218, phi' = -3.5836e-02
+  mu =      21.54: phi = +0.376176, phi' = -3.4086e-02
+  mu =      56.23: phi = +0.391707, phi' = +3.5776e-01
+  mu =      146.8: phi = +0.390498, phi' = -1.5902e-01
+  mu =      383.1: phi = +0.393082, phi' = -3.3290e-01
+  mu =       1000: phi = +0.392335, phi' = +3.7402e-02
+  Bereich phi(heute): 0.000004 .. 0.464622
+
+Teil a/b  alle mu* mit phi(heute) = x und die Drift heute
+  mu* = 0.97211243: phi = 0.0395773407, phi' = +7.5237e-02, phi_dot = +5.186e-12 /yr, |d ln m_e/dt| = 2.670e-10 /yr  (2.7e+06 x Grenze)
+
+Teil c  natuerliche mu-Werte
+  mu = sqrt(Omega_L) (k251)   = 0.827592: phi(heute) = +0.02882408 (Abstand -27.2 %), phi' = +5.511e-02, Drift 2.67e-10 /yr
+  mu = 1                      = 1.000000: phi(heute) = +0.04183681 (Abstand +5.7 %), phi' = +7.943e-02, Drift 2.67e-10 /yr
+  mu = 3/2                    = 1.500000: phi(heute) = +0.09174316 (Abstand +131.8 %), phi' = +1.686e-01, Drift 2.64e-10 /yr
+  mu = beta_sym               = 0.549406: phi(heute) = +0.01279040 (Abstand -67.7 %), phi' = +2.464e-02, Drift 2.67e-10 /yr
+  mu = gamma_L                = 1.864700: phi(heute) = +0.13778498 (Abstand +248.1 %), phi' = +2.432e-01, Drift 2.58e-10 /yr
+  mu = 1/beta_sym             = 1.820149: phi(heute) = +0.13180611 (Abstand +233.0 %), phi' = +2.340e-01, Drift 2.59e-10 /yr
+
+Kontrolle: Einfrieren fuer H >> m (mu = 0,01) und Endwert fuer grosses mu (Schwingung um pi/8)
+  mu = 0.01: phi bei ln a = [np.float64(-3.0), np.float64(-2.5), np.float64(-2.0), np.float64(-1.5), np.float64(-1.0), np.float64(-0.5), np.float64(0.0)]: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  mu = 30.0: phi bei ln a = [np.float64(-3.0), np.float64(-2.5), np.float64(-2.0), np.float64(-1.5), np.float64(-1.0), np.float64(-0.5), np.float64(0.0)]: [0.00794, 0.03531, 0.14897, 0.4394, 0.34031, 0.38722, 0.39304]
+  mu = 300.0: phi bei ln a = [np.float64(-3.0), np.float64(-2.5), np.float64(-2.0), np.float64(-1.5), np.float64(-1.0), np.float64(-0.5), np.float64(0.0)]: [0.45659, 0.34371, 0.41644, 0.39863, 0.38933, 0.39354, 0.39176]
+
+============================================================================================
+H231 Gesamturteil: WIDERLEGT   (natuerlich False, angepasst mit Drift unter Grenze False, Zahl der mu* 1)
