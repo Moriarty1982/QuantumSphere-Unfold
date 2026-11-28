@@ -1,5 +1,12 @@
 # Forschungsstand
 
+### Coprozessor ruht, bis die Mathematik weiter ist (28.11.2026, Stand, kein Befund)
+Auf Entscheidung des Autors ruht die Arbeit am Coprozessor (`qam/examples/coprocessor/`, HDL unter `qam/examples/zuse_machine/hdl/`). Fertig und
+gemergt sind Kern, Register, Qiskit/Wolfram-Brücke, Boot-Monitor, Pipeline, Bandregister, parallele Rechenwerke, √2-Kürzen mit Selbstüberwachung,
+Selbstjustierung (Ergebnisse „angepasst“), ZFS-Baustein (PRs #390–#401) sowie die Stabilitäts- und Endzahlen-Tests H215–H220 (k428–k433, alle ohne
+Treffer über Zufall hinaus; OP1 bleibt beim Postulat der Zählregel). Der geplante Planer (Snapshots gemeinsamer Präfixe, Abhängigkeitsgraph,
+Gatter-Fusion) ist **nicht begonnen**. Er startet erst nach einer Besprechung mit dem Autor, wenn es mathematisch weitergeht.
+
 ### Riemann-Vermutung als ruhende Notiz, nicht mehr in der Guard-Liste (27.11.2026, Runde r72, redaktionell)
 Anlass: KI-Zusammenfassungen betonten ständig, dass der Companion die Riemann-Vermutung nicht beweist; das war nie sein Ziel.
 - **r72.1:** Der Companion macht keine Aussage zur Riemann-Vermutung. Die Riemann-Arbeit ist seit v4.8.0-r04 keine Beweisquelle; das steht
