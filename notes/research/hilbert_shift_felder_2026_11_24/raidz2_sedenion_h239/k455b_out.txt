@@ -1,0 +1,14 @@
+k455b Gegenprobe (Wolfram Language, exakt, ein Aufruf). Tatsaechliche Ausgaben (Print):
+
+Z1 Anzahl: 84; Raenge: {12}
+Z1 Wand (C cap unten, C cap oben): {{4, 4}}
+allgemeiner Nullteiler x2: Rang = 12; Wand = {4, 4}
+Paritaetspruefung (4 Zeilen), ungeschuetzte Koordinaten (Spalte = 0): {0, 8}
+Kern von L_x2 exakt: {{0,0,0,-1/2,1/2,-1/2,1/2,0, 0,0,0,0,0,0,0,1},
+                      {0,1/4,-1/4,1/2,-1/2,-1/4,1/4,-1/2, 0,-1/2,1/2,0,0,0,1,0},
+                      {0,-3/4,1/4,1/2,-1/2,-1/4,3/4,1/2, 0,-1/2,1/2,0,0,1,0,0},
+                      {0,-1/2,1/2,0,0,1/2,1/2,-1, 0,0,0,-1,1,0,0,0}}
+(x2 = (a, b), a = (0,1,1,1,1,0,0,0)/2, b = (0,1,-1,0,0,1,1,0)/2, a ⟂ b, |a| = |b|)
+
+Warnungen: "Symbol::undefined2" betrifft nur lokal benutzte Namen der Evaluator-Umgebung; "General::messages" bezieht sich darauf.
+Keine Rechenwarnung. Uebereinstimmung mit k455: Rang 12, Wand (4, 4) = generische Lage, ungeschuetzt e0 und e8.

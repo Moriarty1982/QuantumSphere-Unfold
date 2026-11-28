@@ -1,5 +1,47 @@
 # Forschungsstand
 
+### Zweimal RAIDZ2 in den Sedenionen? Nur die Kapazität passt (28.11.2026, Test H239, k455)
+
+Marc: „prüfe bitte ob das evtl. quasi zwei raidz2 sein könnten“. Übersetzung (gesetzt): Der Code eines Nullteilers x ist das Bild der Linksmultiplikation
+(16 Koordinaten, Rang 12), zweimal RAIDZ2 wäre ein [16, 12]-Code aus zwei unabhängigen Gruppen zu je 6 Daten und 2 Parität. **Nach Wortlaut trägt
+teilweise, inhaltlich nur die Zahl:** Jeder Nullteiler verliert genau 4 von 16 Richtungen (12/16 = 6/8 wie zweimal RAIDZ2). Aber der Code spaltet an der
+Wand e₈ nicht (4 + 4 statt 6 + 6, die generische Lage), allgemeine Nullteiler spalten an keiner der 6435 Aufteilungen, und keine Gruppe verkraftet auch
+nur einen Ausfall. Zufällige Codes gleicher Größe verkraften jeden Ausfall bis 4. Nachträglich: Basis-Nullteiler e_i ± e_j sind „halb gespiegelt (RAID1),
+halb ungeschützt“; bei allgemeinen Nullteilern bleiben 1 und e₈ ungeschützt, derselbe Raum wie der gemeinsame Kern in H237.
+Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/raidz2_sedenion_h239/`.
+
+### Eine Energie zeichnet die drei Kopien aus: Leck-Energie 42·sin²3θ (28.11.2026, Test H238, k454)
+
+Nach H237 lässt die Feldgleichung einen ganzen Kreis wellenfähiger Richtungsräume U_θ zu. **Trägt:** Ein Feld in span{1, U_θ}, das quadratisch mit sich
+selbst wechselwirkt, verliert Anteile aus seinem Raum („Leck“). Diese Leck-Energie ist exakt L(θ) = 42·sin²3θ (Python und Wolfram symbolisch). Sie hat
+genau drei nicht entartete Minima (L″ = 756), und zwar genau an den drei G₂-Kopien; weitere Minima gibt es nicht. Die Dreizahl ist damit Minimum einer
+Energie, nicht nur Abgeschlossenheit (die Lage der Nullstellen war aus H138 bekannt, Form und Nicht-Entartung blind). Lesart (Identität): Die Überlappe mit
+den Kopien sind cos(θ − θ_k); ein Feld 1 + w·u hat Koide K = (2 + w²)/6, also ⅔ genau bei w = √2, das ist die Brannen-Form. Die gemessenen Brannen-Phasen
+liegen nicht in Minima (L/max 0,38 und 0,99); ihre Lage braucht weiter eine eigene Größe. Kopien = Generationen ist nicht gezeigt.
+Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/kreis_energie_h238/`.
+
+### Stabile Bereiche in den Sedenionen: die drei Oktonion-Kopien sind auf ganz 𝕊 wellenfähig (28.11.2026, Test H237, k453)
+
+Nach k452 (Marc: „es könnte in den Sedenionen noch Bereiche geben, die stabile Felder zulassen“). **Trägt:** Für jede der drei G₂-stabilen
+Oktonion-Kopien (H138) quadriert sich die Feldgleichung erster Ordnung auf **ganz** 𝕊 zur Wellengleichung. Zusammen mit e₈ (der vierten Wand) bildet
+jede Kopie eine volle Menge aus 8 wellenfähigen Richtungen, das Maximum nach Hurwitz–Radon. Karte: 15 ℂ-, 35 ℍ- und 15 achtdimensionale
+Basis-Unteralgebren. Von den 8 Oktonionen ist nur die innere auf ganz 𝕊 stabil, die anderen 7 nur in sich selbst. Die 7 Quasi-Oktonionen haben
+Nullteiler. Mit allen 15 Richtungen zugleich bleibt nur span{1, e₈}. Nachträglich: Die Wellenbedingung gilt für einen ganzen Kreis von
+Richtungsräumen; die Dreizahl kommt aus der Abgeschlossenheit als Algebra, nicht aus der Feldgleichung. Der Turm hält also bei den Richtungen an
+(höchstens 8), nicht bei den Feldwerten. Generationen bleiben offen. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/sedenion_bereiche_h237/`.
+
+### Höhere HS-Stufen als Wände, Vergleich der Stufen und warum der Turm bei 𝕆 anhält (28.11.2026, Erkundung k452, nicht blind)
+
+Fortsetzung von k449. **Jede Stufe ist eine weitere Wand um alles Bisherige**, mit Vorzeichen g = ℓ² je Wand (+1 Spiegel, −1 Verdrehung). Divisionsalgebren
+entstehen nur bei Verdrehung an jeder Wand. Zwei Wände: Die Reihenfolge der Durchgänge zählt (ℍ). Drei Wände: Die Klammerung zählt (𝕆). Vier Wände:
+Intensität geht verloren, es gibt Lecks (𝕊). Vergleich: Jede verdrehte Wand bringt eine Symmetrieschicht, der Reihe nach nichts, U(1), SU(2) und
+SU(3) ⊂ G₂ (dim Der 0, 0, 3, 14). Bei HS(4) kommt keine neue stetige Symmetrie dazu, nur drei Kopien (Lesart: Eichstruktur und Generationen).
+**Abbruch, physikalisch:** Eine Feldgleichung erster Ordnung D f = 0 der Stufe (Cauchy–Riemann, Fueter, oktonionischer Dirac) ist nur bis 𝕆 eine Wurzel
+der Wellengleichung (LᵢLⱼ + LⱼLᵢ = −2δᵢⱼ exakt bis HS(3), verletzt bei HS(4)). Gleichwertig: Die Wand S^(N−1) trägt einen vollen Rahmen von
+Verdrehungsfeldern nur für N = 1, 2, 4, 8 (Radon–Hurwitz/Adams; S¹⁵ hat nur 8 von 15). Die Forderung „lokale, kausale Feldgleichung erster
+Ordnung je Stufe“ erzeugt also den Turm und beendet ihn. Gesetzt sind dabei: Verdrehung an jeder Wand, Feldwert in der Stufe selbst (mit allgemeinen
+Clifford-Algebren hielte nichts an) und das Dirac-Prinzip. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/innen_aussen_turm_k452/`.
+
 ### Companion-Runden r74 und r75: φ-Strang ruht; datiertes Vorhersage-Register für v5.6.0 (28.11.2026, H228–H236, k449)
 r74 hält die Tests H228–H236 und die Erkundung k449 fest: Kein weiterer Weg legt den Wert φ = 0,0395773 fest (Asymptote, J-Lockerung bei Ordnung 6, Symmetriepunkt im Materie-Frame, Expansion als Uhr, Rückwärtssuche nach dem Brecher, Einrasten auf 8 Stellungen, gemeinsame Feinstufe, Casimir-Verdrehung: widerlegt oder ohne Treffer). H236 klärt die Doppelzählung (φ trägt den Versatz, q nur das Vorzeichen, q → 0⁻); kein Urteil kippt, die Vorhersagen aus H227 bleiben. Entscheidung des Autors: φ bleibt offen, der Strang ruht. r75 ist das erste datierte Register des Modellstands mit allen offenen Vorhersagen (Stand 28.11.2026) und trennt für jede Zeile hergeleitet, gesetzt, gemessene Eingabe und nachträglich; es gilt für die Version v5.6.0 (veröffentlicht 28.11.2026, DOI 10.5281/zenodo.24632437). Übersicht nach Experiment: [Prüfbare Vorhersagen](Pruefbare-Vorhersagen). OP1–OP5 bleiben offen.
 

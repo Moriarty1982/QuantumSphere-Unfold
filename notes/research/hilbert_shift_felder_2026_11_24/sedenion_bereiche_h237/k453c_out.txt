@@ -1,0 +1,12 @@
+k453c  Wellendefekt und Abgeschlossenheit als Funktion von theta
+  theta =    0.0 Grad: delta = 0.0e+00, dim W = 16, Abgeschlossenheitsdefekt 0.00e+00 (Unteralgebra)
+  theta =   15.0 Grad: delta = 2.5e-17, dim W = 16, Abgeschlossenheitsdefekt 6.83e-01 (keine Unteralgebra)
+  theta =   30.0 Grad: delta = 1.5e-17, dim W = 16, Abgeschlossenheitsdefekt 8.66e-01 (keine Unteralgebra)
+  theta =   45.0 Grad: delta = 2.0e-17, dim W = 16, Abgeschlossenheitsdefekt 5.00e-01 (keine Unteralgebra)
+  theta =   60.0 Grad: delta = 3.0e-17, dim W = 16, Abgeschlossenheitsdefekt 3.33e-16 (Unteralgebra)
+  theta =   90.0 Grad: delta = 0.0e+00, dim W = 16, Abgeschlossenheitsdefekt 1.00e+00 (keine Unteralgebra)
+  theta =  120.0 Grad: delta = 2.2e-16, dim W = 16, Abgeschlossenheitsdefekt 6.11e-16 (Unteralgebra)
+  theta =  180.0 Grad: delta = 0.0e+00, dim W = 16, Abgeschlossenheitsdefekt 3.67e-16 (Unteralgebra)
+  theta =  240.0 Grad: delta = 8.0e-18, dim W = 16, Abgeschlossenheitsdefekt 1.33e-15 (Unteralgebra)
+  theta =  300.0 Grad: delta = 3.0e-17, dim W = 16, Abgeschlossenheitsdefekt 3.33e-16 (Unteralgebra)
+  theta =   37.5 Grad: delta = 1.3e-18, dim W = 16, Abgeschlossenheitsdefekt 7.33e-01 (keine Unteralgebra)

@@ -58,6 +58,16 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H239, 28.11.2026 (k455):** Zweimal RAIDZ2? Nullteiler-Codes haben die Kapazität 12/16, spalten aber weder an der Wand e₈ noch (allgemein) an
+einer anderen 8+8-Aufteilung und verkraften keinen Ausfall je Gruppe. Nach Wortlaut trägt teilweise, inhaltlich keine Paritätsstruktur. 1 und e₈ bleiben
+ungeschützt. Offen bleibt, ob eine andere, G₂-invariante Übersetzung eine Paritätsstruktur zeigt.
+
+**Test H238, 28.11.2026 (k454):** Zur Generationsfrage. Auf dem Kreis wellenfähiger Richtungsräume ist die Leck-Energie L(θ) = 42·sin²3θ mit genau drei
+nicht entarteten Minima an den drei Kopien (trägt). Koide ⅔ entspricht w = √2 im Feld 1 + w·u (Identität). Die gemessenen Brannen-Phasen liegen abseits der
+Minima. Generationen weiter offen.
+
+**Test H237, 28.11.2026 (k453):** Zur Generationsfrage (Kopien aus H138). Die drei G₂-stabilen Oktonion-Kopien sind auf ganz 𝕊 wellenfähig (D̄D = Δ, mit e₈ volle 8er-Clifford-Menge) — trägt; die Dreizahl kommt aber aus der Abgeschlossenheit, nicht aus der Feldgleichung (ganzer Kreis wellenfähiger Richtungsräume). Kopien = Generationen weiter offen; `notes/research/hilbert_shift_felder_2026_11_24/sedenion_bereiche_h237/`.
+
 **Test H236, 28.11.2026 (k451):** Für OP3. Doppelzählung geklärt: φ trägt den Lepton-Versatz, q (H167) ist nur das Vorzeichen der Zweigwahl (2σ-Bereich q ∈ [−0,029; 0]); kein Urteil aus H221–H235 kippt, H227-Vorhersagen unverändert — trägt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/doppelzaehlung_h236/`.
 
 **Test H235, 28.11.2026 (k450):** Für OP3. Casimir-Verdrehung mit Zählgewichten (Im 2, Re 1) bricht den Sektortausch, aber ein reiner φ-Term lässt x_ν,pred = 0,0630 (+9,2σ) unverändert, und x ist nur lokal stabil — widerlegt. Nachträglich: q-Fit (H167) und φ tragen den Versatz im H225-Modell doppelt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/casimir_verdrehung_h235/`.
