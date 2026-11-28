@@ -1,0 +1,20 @@
+k461b Wolfram-Gegenprobe (tatsaechliche Print-Ausgaben, InputForm wiedergegeben; 28.11.2026; Teil 1 und Teil 2 in getrennten Kernelaufrufen)
+--- Teil 1 ---
+t_k Eigenvektoren: {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}; orthonormal: True
+Muster: 63; |M| = 9; |S| = 21; |M ∩ S| = 3; M = S: False
+M = {{None, 0, 0}, {None, 1, 1}, {None, 2, 2}, {0, None, 0}, {0, 0, None}, {1, None, 1}, {1, 1, None}, {2, None, 2}, {2, 2, None}}
+Anteilsklassen: {{{1/3, 1/3, 1/3}, 27}, {{2/3, 1/6, 1/6}, 9}, {{1/6, 1/6, 2/3}, 9}, {{1/6, 2/3, 1/6}, 9}, {{1, 0, 0}, 3}, {{0, 0, 1}, 3}, {{0, 1, 0}, 3}}
+Mittel W ueber schliessende Vollbelegungen: {1/3, 1/3, 1/3}
+--- Teil 2 ---
+Klassennormen (b, c reell): {3 + 2 c0^2/3, 2 (3 b^2 + c0^2)/3, 2 (3 b^2 + c0^2)/3}
+W0(b, c) = (9 + 2 c0^2)/(9 + 12 b^2 + 6 c0^2)
+W0 = 2/3 genau auf: -(1/2) Sqrt[3/2] <= b <= Sqrt[3/2]/2 && (c0 == -(Sqrt[3 - 8 b^2]/Sqrt[2]) || c0 == Sqrt[3 - 8 b^2]/Sqrt[2])   (Ellipse c^2 + 4 b^2 = 3/2)
+Sortierung auf [0, pi/6] geprueft (Stichproben): True
+b^2(d) = Cos[d] (Cos[d] - Sqrt[3] Sin[d])/2;  c(d) = -(Sqrt[2] Sin[d + Pi/6])
+W0 entlang Baum, bei pi/6: 2/3; bei pi/12: 11/18; bei 0: 5/9
+Nullstellen W0 - 2/3 auf [0, pi/6]: d == Pi/6
+dW0/dd > 0 auf [0, pi/6) (Minimum der Ableitung, 30 Stellen): 0.1924500897
+
+Warnungen: Symbol::undefined2 (nur lokal verwendete Namen, kein Rechenfehler); General::messages als Folge davon.
+Keine symbolischen Restterme. Ein erster Aufruf mit FullSimplify in der Musterschleife lief in die Zeitgrenze (60 s, kein Ergebnis) und wurde
+durch RootReduce/ComplexExpand ersetzt. Alle Werte stimmen mit k461 ueberein.
