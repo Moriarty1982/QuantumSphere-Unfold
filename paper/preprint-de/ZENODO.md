@@ -1,5 +1,7 @@
 # Zenodo-Angaben zur Fassung 0.5.0
 
+**Reserviert am 28.11.2026:** Entwurf 24632440, Version-DOI 10.5281/zenodo.24632440; Bezug auf Companion v5.6.0 (10.5281/zenodo.24632437) vom Autor bestätigt. Der folgende Status beschreibt die Vorbereitung.
+
 **Status:** vorbereitet am 28.11.2026 (Entwurf); nicht reserviert, nicht hochgeladen, nicht veröffentlicht. Es gibt keinen Zenodo-Entwurf und
 keine Version-DOI für 0.5.0; die Titelseite zeigt bis zur Reservierung „wird bei der Reservierung auf Zenodo vergeben“ (Version-DOI wird
 reserviert). Eine neue Zenodo-Version entsteht nur mit ausdrücklicher Freigabe des Autors (`AGENTS.md`), und jeder einzelne Zenodo-Schritt

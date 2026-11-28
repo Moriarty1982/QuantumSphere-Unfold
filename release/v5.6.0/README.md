@@ -1,4 +1,6 @@
-# Quantum Sphaera Companion v5.6.0 — PREPARATION (nothing reserved or published)
+# Quantum Sphaera Companion v5.6.0 — DOI RESERVED (draft unpublished)
+
+**Reserved on 28 November 2026 with the author's approval:** Zenodo draft 24632437, version DOI 10.5281/zenodo.24632437 (workflow "Zenodo Release", run 46166760238, new version of 24563811). From now on use `deposition_id=24632437`, never `new_version_of`. Nothing uploaded; upload and publication need the author's approval. DOI stamped in `qam/editions/v5_release.json`, the metadata description, `.zenodo.json`, `CITATION.cff`, `working-preamble.tex`, `DOI_ROLES` in `tools/qs.py` and `AGENTS.md`. The German preprint 0.5.0 references this version (author decision of 28 November 2026), so v5.6.0 is published before or together with it.
 
 Status (28 November 2026): release files prepared on branch and PR. No Zenodo step has been taken. Reservation, upload and
 publication each need the author's explicit approval (`AGENTS.md`), and so does the decision that this version appears.

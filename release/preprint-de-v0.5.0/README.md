@@ -1,5 +1,7 @@
 # Deutscher Preprint, Fassung 0.5.0: Release-Paket
 
+**Reserviert am 28.11.2026 (Freigabe des Autors):** Zenodo-Entwurf 24632440, Version-DOI 10.5281/zenodo.24632440 (Workflow „Zenodo Release“, Lauf 46166762716, neue Fassung von 24563916). Ab jetzt `deposition_id=24632440`, nie `new_version_of`. Nichts hochgeladen. `\versiondoi` ist gesetzt. Der Preprint verweist auf Companion v5.6.0 (10.5281/zenodo.24632437; Entscheidung des Autors vom 28.11.2026); v5.6.0 erscheint vorher oder gleichzeitig.
+
 **Status (28.11.2026): vorbereitet, nicht reserviert, nicht hochgeladen, nicht veröffentlicht.** Jeder Zenodo-Schritt (Reservierung,
 Upload, Veröffentlichung) und die Entscheidung, dass diese Fassung erscheint, brauchen die ausdrückliche Freigabe des Autors (`AGENTS.md`).
 Concept-DOI 10.5281/zenodo.24405552; Vorgänger 0.4.0 vom 26.11.2026, [Record 24563916](https://zenodo.org/records/24563916),
