@@ -58,6 +58,8 @@ $\beta_{\mathrm{sym}} \approx 0{,}549$ wird aus zwei veröffentlichten Barbero�
 
 **Runde r67, 26.11.2026 (Zählpostulat):** Der Autor nimmt die Zählregel als Postulat an: (C1) Gewicht 2 je Spin im Frame M, (C2) Fläche √(j(j+1)), (C3) T zählt nur j = ½ mit einem Bit, samt Zuordnung zu den Frames. Daraus folgt β_sym = 0,5494056410 als berechnete Zahl (γ_L = 1,8646997646); mit j + ½ gäbe dieselbe Regel 1/√3. **OP1 ist damit nicht geschlossen.** Es lautet jetzt: Leite das Zählpostulat her, also warum ein Spin mit der Casimir-Fläche wiegt, warum Gewicht 2 und warum T nur j = ½ zählt.
 
+**Test H235, 28.11.2026 (k450):** Für OP3. Casimir-Verdrehung mit Zählgewichten (Im 2, Re 1) bricht den Sektortausch, aber ein reiner φ-Term lässt x_ν,pred = 0,0630 (+9,2σ) unverändert, und x ist nur lokal stabil — widerlegt. Nachträglich: q-Fit (H167) und φ tragen den Versatz im H225-Modell doppelt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/casimir_verdrehung_h235/`.
+
 **Test H234, 28.11.2026 (k448):** Für OP3. Gemeinsame Feinstufe (Grob/Fein): φ, β_sym − ½, D/B − 1 und x_ν − x folgen nicht aus einer Zahl ε (ε = φ: β − ½ 36σ daneben; freies ε nur Zufallsniveau, p = 0,74) — widerlegt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/feinstufe_h234/`.
 
 **Test H233, 28.11.2026 (k447):** Für OP3 (F18). Einrastung auf 8 Stellungen mit Halbierung bis 8 Bit: Baumwerte sind Stellungen, φ liegt 392σ neben dem nächsten Gitterpunkt, kein Rastfehler-Kandidat trifft; Mischungswinkel-Treffer = Zufall (P = 0,22) — widerlegt. OP3 offen; `notes/research/hilbert_shift_felder_2026_11_24/einrastung_f18_h233/`.

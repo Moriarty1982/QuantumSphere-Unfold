@@ -1,0 +1,47 @@
+================================================================================================
+H235 (k450)  Casimir-Verdrehung mit Sektorgewichten: legt sie phi = x fest?
+================================================================================================
+
+Vorpruefung: Baum E_tree(phi) = E_tree(pi/4 - phi) und C mit w_I = w_R symmetrisch
+  phi = 0.03: E_tree Diff +0.0e+00;  C(1,1) Diff +0.0e+00;  C(2,1) Diff -1.080e+00
+  phi = 0.1: E_tree Diff +0.0e+00;  C(1,1) Diff +0.0e+00;  C(2,1) Diff -9.139e-01
+  phi = 0.25: E_tree Diff +0.0e+00;  C(1,1) Diff +0.0e+00;  C(2,1) Diff -4.748e-01
+
+Teil A (teilweise blind)  phi_x mit o_Im(phi_x) = x; x_nu,pred = o_Re(phi_x)
+  Nullstellen in [0, 0,2]: [2.2291e-05]
+  phi_x = 0.0000222910  (x = 0.0395773407, phi_x - x = -3.956e-02)
+  o_Im = 0.0395773407, o_Re = x_nu,pred = 0.0629521  ->  +9.20 sigma  (A bestanden: False)
+  E_tree(phi_x) = -2.0719152557, dE_tree/dphi = -4.091105e-01
+
+Teil B (blind)  kappa* aus dE/dphi = 0 bei phi_x, Hauptfall w_I = 2, w_R = 1 (Fermionen: kappa > 0)
+  (w_I, w_R) = (2, 1): kappa* = +1.055585e-01  (kappa*/|q| = +1.23895), d2E/dphi2 = +1.4151e-01 (Minimum)
+     globales Minimum auf Gitter bei phi = 2.04498 (E = -2.3053366368); E(phi_x) = -1.9701536040; phi_x global: False
+     Vergleich: 1/(16 pi^2) = 6.33257e-03, alpha = 7.29735e-03, alpha |q| = 6.21734e-04
+  B1 (kappa* > 0 und lokales Minimum): True;  B2 (zusaetzlich global): False
+
+Nur Bericht
+  (1, 0) nur geladen: kappa* = +2.111091e-01  (kappa*/|q| = +2.47781), d2E/dphi2 = +8.3602e-01 (Minimum)
+     globales Minimum auf Gitter bei phi = 2.09294 (E = -2.2482399314); E(phi_x) = -2.0844015884; phi_x global: False
+     Vergleich: 1/(16 pi^2) = 6.33257e-03, alpha = 7.29735e-03, alpha |q| = 6.21734e-04
+  (2, 2) Dirac-Neutrinos: kappa* = +1.055625e-01  (kappa*/|q| = +1.23900), d2E/dphi2 = -5.5305e-01 (kein Minimum)
+     globales Minimum auf Gitter bei phi = 1.69470 (E = -2.3769328247); E(phi_x) = -1.8558969723; phi_x global: False
+     Vergleich: 1/(16 pi^2) = 6.33257e-03, alpha = 7.29735e-03, alpha |q| = 6.21734e-04
+  (1, 2) vertauscht: kappa* = +2.111410e-01  (kappa*/|q| = +2.47818), d2E/dphi2 = -1.9423e+00 (kein Minimum)
+     globales Minimum auf Gitter bei phi = 1.66273 (E = -2.5729735764); E(phi_x) = -1.6273577635; phi_x global: False
+     Vergleich: 1/(16 pi^2) = 6.33257e-03, alpha = 7.29735e-03, alpha |q| = 6.21734e-04
+  (4, 1): kappa* = +5.277827e-02  (kappa*/|q| = +0.61946), d2E/dphi2 = +4.8877e-01 (Minimum)
+     globales Minimum auf Gitter bei phi = 2.09294 (E = -2.2758643364); E(phi_x) = -2.0272786770; phi_x global: False
+     Vergleich: 1/(16 pi^2) = 6.33257e-03, alpha = 7.29735e-03, alpha |q| = 6.21734e-04
+  Lage des globalen Minimums als Funktion von kappa, (2, 1):
+    kappa = -1e-01: phi_min = 0.47930  (o_Im dort +0.07783)
+    kappa = -1e-02: phi_min = 0.40668  (o_Im dort +0.13980)
+    kappa = -1e-03: phi_min = 0.39506  (o_Im dort +0.14964)
+    kappa = +0e+00: phi_min = 0.39215  (o_Im dort +0.15210)
+    kappa = +1e-03: phi_min = 1.44371  (o_Im dort +0.14841)
+    kappa = +1e-02: phi_min = 1.47566  (o_Im dort +0.12129)
+    kappa = +3e-02: phi_min = 1.53957  (o_Im dort +0.06658)
+    kappa = +1e-01: phi_min = 2.04211  (o_Im dort -0.00620)
+    kappa = +1e+00: phi_min = 2.09149  (o_Im dort +0.03703)
+
+================================================================================================
+H235 Gesamturteil: WIDERLEGT   (A False, B1 True, B2 False)

@@ -1,0 +1,14 @@
+(Ausgabe des Wolfram-Evaluators, 28.11.2026; Teil 1 und Teil 2 in zwei Aufrufen)
+
+Warnungen (keine Rueckgabewerte): Symbol::undefined2 (Hinweis auf globale Namen); FindMinimum::lstol (Maschinengenauigkeit in Teil 1);
+FindMinimum::precw (Teil 2: Startwerte mit 16 Stellen bei WorkingPrecision 30). Im ersten Aufruf war die zweite Ableitung mit h = 1e-4
+aus E selbst berechnet: -3901,6. Das ist Rundungsrauschen (FindMinimum-Fehler ~1e-8 geteilt durch h^2 = 1e-8) und kein Ergebnis.
+Deshalb Teil 2 aus der Einhuellenden dE/dphi mit 30 Stellen.
+
+Teil 1:
+phi_x = 0.000022294  oI = 0.0395773  x_nu,pred = oR = 0.0629521  z = 9.19818
+dE_tree/dphi = -0.409111  kappa* = 0.105559  kappa*/|q| = 1.23895
+E(phi_x) = -1.97015  global min at phi = 2.04429 E = -2.30534  oI there = -0.00428072 oR there = 0.110664
+
+Teil 2:
+d2E (aus Einhuellender) = 0.14150668   dE(phi_x) = 1.79485*10^-6

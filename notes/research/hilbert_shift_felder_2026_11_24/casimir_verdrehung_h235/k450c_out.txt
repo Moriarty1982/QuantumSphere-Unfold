@@ -1,0 +1,4 @@
+k450c  Nachtrag: kleines q (Versatz aus phi), Gewichte (2, 1), Fermionen-Vorzeichen
+  q = -0.01: phi_x = 0.0349395, x_nu,pred = 0.042379 (-0.46 sigma), kappa* = +1.305e-02 (kappa*/|q| = +1.3045), d2E = +1.631e-02, globales Minimum bei 2.0522 (E -2.03599549 gegen E(phi_x) -1.99467102)
+  q = -0.001: phi_x = 0.0391136, x_nu,pred = 0.039858 (-1.64 sigma), kappa* = +1.313e-03 (kappa*/|q| = +1.3126), d2E = +1.636e-03, globales Minimum bei 2.0537 (E -2.00360103 gegen E(phi_x) -1.99944434)
+  q = -0.0001: phi_x = 0.0395310, x_nu,pred = 0.039605 (-1.76 sigma), kappa* = +1.313e-04 (kappa*/|q| = +1.3134), d2E = +1.621e-04, globales Minimum bei 2.0552 (E -2.00036012 gegen E(phi_x) -1.99994421)

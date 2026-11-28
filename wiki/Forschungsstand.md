@@ -1,5 +1,14 @@
 # Forschungsstand
 
+### Casimir-Verdrehung als Tauschbrecher: bricht den Tausch, wählt aber nicht x (28.11.2026, Test H235, k450)
+
+Nach k449 geprüft: Eine Casimir-Verdrehungsenergie zwischen innerem und äußerem Feld mit Zählgewichten (2 für den geladenen Im-Sektor, 1 für den
+neutralen Re-Sektor, Fermionen-Vorzeichen, Stärke κ frei) bricht den exakten Sektortausch aus H225. **Widerlegt:** Ein Term, der nur von φ abhängt,
+kann die Neutrino-Vorhersage nicht ändern. Sie bleibt x_ν = 0,0630 (+9,2σ) im H225-Modell mit dem q-Fit aus H167. Der Datenpunkt wird bei
+κ* = 0,106 (17-mal größer als ein Schleifenfaktor) nur ein lokales Minimum; das globale liegt beim Spiegelpartner mit falschem Im-Versatz.
+Nachträglich: Im H225-Modell tragen q-Fit und φ den Versatz doppelt. Kommt er ganz aus φ (kleines q), liegt x_ν bei −0,5σ bis −1,8σ, aber x bleibt
+nicht global. φ bleibt Messzahl, OP3 offen. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/casimir_verdrehung_h235/`.
+
 ### Inneres und äußeres Feld: wie HS(−1), HS(0), HS(1) entstehen könnten (28.11.2026, Erkundung k449, nicht blind)
 
 Marcs Bild: Der Urknall ordnet nur einen abgetrennten Bereich des Ursprungsfelds neu, das äußere Feld stemmt sich dagegen, dazwischen liegt eine
