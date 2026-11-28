@@ -1,0 +1,31 @@
+================================================================================================
+H239 (k455)  Zweimal RAIDZ2?  Code C_x = Bild(L_x), Ausfallrichtungen K_x = Kern(L_x)
+================================================================================================
+
+Z1 Basis-Diagonalen (e_i +- e_j)/sqrt2: 84 Nullteiler
+  D1 Rang L_x: [12]
+  D2 Spaltung an der Wand e8 (dim C cap unten, dim C cap oben): [(4, 4)]
+  Kern: (dim K cap unten, dim K cap oben, Rang Proj unten, Rang Proj oben): [(0, 0, 4, 4)]
+
+Z2 allgemeine Nullteiler (a,b)/sqrt2 (verworfen, weil regulaer: 0): 200 Nullteiler
+  D1 Rang L_x: [12]
+  D2 Spaltung an der Wand e8 (dim C cap unten, dim C cap oben): [(4, 4)]
+  Kern: (dim K cap unten, dim K cap oben, Rang Proj unten, Rang Proj oben): [(0, 0, 4, 4)]
+
+Z1: Suche ueber alle 6435 Aufteilungen 8+8 (Gruppe enthaelt Koordinate 0)
+  Zahl der 6+6-Aufteilungen je Nullteiler: [210]
+  Beispiel (1, 10, 1): [(0, 1, 2, 3, 4, 5, 14, 15), (0, 1, 2, 3, 4, 6, 13, 15), (0, 1, 2, 3, 4, 7, 12, 15), (0, 1, 2, 3, 5, 6, 13, 14), (0, 1, 2, 3, 5, 7, 12, 14), (0, 1, 2, 3, 6, 7, 12, 13)]
+  gemeinsame Aufteilungen aller 84: []
+  D3 an gefundenen Aufteilungen (G1: 1,2,3 ok; G2: 1,2,3 ok): [(False, False, False, False, False, False)]
+
+Nur Bericht: dim(K_x cap V_k) fuer die Kopien V_k (H138)
+  Z1: [(0, 0, 0)]
+  Z2: [(0, 0, 0)]
+
+Zufallskontrolle
+  zufaellige 12-dim Unterraeume: 6+6-Spaltung an der Wand in 0/2000
+  zufaellige Rang-12-Bilder:     6+6-Spaltung an der Wand in 0/2000
+  D3-Profil zufaelliger [8,6]-Codes (1,2,3 ok): [(True, True, False)]
+
+================================================================================================
+D1 True, D2 (Wand, Z1 und Z2) False, D3 False, Kontrolle spaltet nie True
