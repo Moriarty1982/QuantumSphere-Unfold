@@ -5,9 +5,12 @@ unabhängig vom Werkzeug. `CLAUDE.md` verweist nur hierauf. Regeln werden **hier
 
 ## Was dieses Repository ist
 Quellen, Notizen und Werkzeuge zum *Quantum Sphaera Companion*, dem mathematischen Unfold der Paper-Reihe „Quantum
-Sphaera“. Die öffentliche Baseline ist **v5.5.0** vom 2026-11-26
-(Version-DOI 10.5281/zenodo.24563811, Concept-DOI 10.5281/zenodo.19210728;
-Vorgänger v5.4.0, 10.5281/zenodo.24500009; davor v5.3.0, 10.5281/zenodo.24434403, und v5.2.0, 10.5281/zenodo.24294648).
+Sphaera“. Die öffentliche Baseline ist **v5.6.0** vom 2026-11-28
+(Version-DOI 10.5281/zenodo.24632437, Concept-DOI 10.5281/zenodo.19210728;
+Vorgänger v5.5.0, 10.5281/zenodo.24563811; davor v5.4.0, 10.5281/zenodo.24500009, v5.3.0, 10.5281/zenodo.24434403, und v5.2.0, 10.5281/zenodo.24294648).
+v5.6.0 bringt die Runden v4.10.0-r69 bis r75 mit dem ersten datierten Vorhersage-Register (r75) (1604/41 Seiten); Paketquellstand
+2635e037ef0e5d377c7bb2ca2ef229ba186f230f, Tag v5.6.0 (legt der Autor an). Am selben Tag veröffentlicht: deutscher Preprint 0.5.0
+(10.5281/zenodo.24632440) und Physik-Artikel „One Object, Three Frames“ 1.2.0 (10.5281/zenodo.24632621; Concept-DOI des Records 10.5281/zenodo.24539643).
 v5.5.0 bringt die Runden v4.10.0-r60 bis r68 (1572/38 Seiten); Paketquellstand e69452a4073426f71c4337617a5ed902347eec4b,
 Tag v5.5.0 (legt der Autor an). Am selben Tag veröffentlicht: Physik-Artikel 1.1.0 (10.5281/zenodo.24563808; Concept-DOI des Records
 10.5281/zenodo.24539643) und deutscher Preprint 0.4.0 (10.5281/zenodo.24563916).
@@ -125,6 +128,18 @@ Details: `release/v5.0.0/README.md`, Entwicklungsgeschichte in
 - **Wiki:** Jede inhaltliche Änderung zieht `wiki/` im selben PR mit. Das Wiki gibt den Inhalt wieder, nicht nur Links.
 - **Keine festen absoluten Pfade** in Skripten. Datenordner als Argument übergeben oder relativ zum Repo auflösen.
 - **Sparsam arbeiten:** [Anleitung für LLM-Kontext und Cache](notes/anleitungen/llm-cache-optimieren.md) anwenden.
+- **Artikel mitziehen und DOIs verlinken** (Dauerauftrag des Autors vom 28.11.2026): Bei jeder neuen Companion-Version den deutschen Preprint
+  (`paper/preprint-de/`) und das englische Physik-Paper „One Object, Three Frames“ (`paper/physics-standalone/`) mit einer neuen Fassung nachziehen.
+  Die DOIs verlinken sich gegenseitig: in den Zenodo-Metadaten Companion `isSupplementedBy` Preprint und Paper, Preprint und Paper je `isSupplementTo`
+  Companion und `references` das jeweils andere; im Text nennt jeder Artikel den Companion und den anderen Artikel mit DOI.
+- **Physik-Ausgabe im Companion-Paket** (Entscheidung des Autors vom 28.11.2026): v5.6.0 erscheint noch mit beiden Ausgaben (Companion und
+  Physik-Ausgabe „Graded carriers and physical readouts“). Ab v5.7.0 wird die Physik-Ausgabe nicht mehr mitgebaut; das englische Physik-Paper ist dann
+  allein „One Object, Three Frames“ (`paper/physics-standalone/`, eigener Record). Build, Tests und Anleitungen dafür vor v5.7.0 umstellen.
+- **Vorhersagen je Version** (Dauerauftrag des Autors vom 28.11.2026): Jede öffentliche Version (Companion, Physik-Paper, deutscher Preprint)
+  enthält einen datierten Abschnitt mit dem Modellstand und seinen Vorhersagen (Datum, DOI; ältere Versionen bleiben sichtbar). Für jede Vorhersage
+  offen kennzeichnen, was hergeleitet, was gesetzt (Postulat, Setzung), was gemessene Eingabe und was nachträglich gefunden ist. Korrekturen nur in
+  einer neuen Version mit Begründung (Modellfortschritt oder Fehler), nie Nachjustieren nach einer neuen Messung. Als Test zählt die Version, die vor
+  der Messung festgeschrieben war. Maßgeblich ist das Register im Companion (zuerst Runde v4.10.0-r75 für v5.6.0).
 - **Bilanz der Setzungen:** Nach zwei Runden in Folge mit „trägt teilweise“ zur selben offenen Voraussetzung vor der nächsten Runde
   eine Bilanz ziehen: je Runde, was gesetzt, was hergeleitet und wohin die offene Wahl gewandert ist. Dabei prüfen, ob das Ziel selbst eine
   gesetzte Eingabe ist und ob die Frage nur in einer gewählten Zerlegung entsteht; eine stillschweigend gewählte Weggabelung dem Autor vorlegen

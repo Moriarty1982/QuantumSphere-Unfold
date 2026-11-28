@@ -5,6 +5,8 @@ stehen in den Vorab-Notizen und auf [Vorhersagen und Tests](Vorhersagen-und-Test
 Literatur** (Planungsangaben der Kollaborationen), im Repo nicht nachgerechnet. Ehrlicher Status: OP1 bis OP5 bleiben offen. φ = 0,0396 ist eine gemessene
 Eingabe, die Vorhersagen hängen an den Setzungen der jeweiligen Notiz (K = ⅔, Brannen-Form H99, Zweigvorzeichen und andere).
 
+**Verbindliches Register:** Companion-Runde v4.10.0-r75 (Stand 28.11.2026, gilt für Version v5.6.0, veröffentlicht 28.11.2026, DOI 10.5281/zenodo.24632437) mit der Einstufung jeder Abhängigkeit. Regel des Autors: Jede öffentliche Version hält ihre Vorhersagen datiert fest; Korrekturen nur in einer neuen Version mit Begründung, nie Nachjustieren nach einer Messung; als Test zählt die vor der Messung festgeschriebene Version.
+
 ## Auf einen Blick
 | Größe | Vorhersage | heute | prüft | was sie trennt |
 |---|---|---|---|---|

@@ -1,6 +1,6 @@
 % Section 5 (group B): Koide as geometry. Sources: Companion thm:koide-triolic (status), rounds v4.10.0-r12, r13.2, r14,
 % r15, r16, r17, r19, r25, r28, r30, r31 (H118), r59; tests from wiki/Vorhersagen-und-Tests.md;
-% after publication: tests H148--H156 (recorded in v4.10.0-r63).
+% after publication: tests H148--H156 (recorded in v4.10.0-r63); lepton phase H213--H236 (v4.10.0-r73, r74).
 \section{Koide as geometry, not as derivation}
 \label{sec:B-koide}
 
@@ -284,6 +284,63 @@ nine candidates listed beforehand selects an orbit natively. H118a (the formula)
 \rnd{r59} followed this handedness further and found it set at every step, ending at the choice of $i$, a convention; only the
 relative sign between leptons and quarks of Section~\ref{sec:B-cp} is not a convention.
 
+\subsection{The lepton phase: an angle, a branch and one measured number}
+\label{sec:B-lepton-phase}
+
+Rounds \rnd{r73} and \rnd{r74} take up the phase $\delta$ of the Brannen form. In each lepton sector $s$ the masses are
+written as
+\begin{equation}
+ \sqrt{m_k}=\mu_s\bigl(1+\sqrt2\cos(\delta_s+2\pi k/3)\bigr),\qquad k=0,1,2,
+ \label{eq:B-brannen-sector}
+\end{equation}
+which gives $K=\tfrac23$ for every phase. The form is set, and $K=\tfrac23$ rests on the postulate of equal standing of the
+frames, the swap $J$ above. Under the sector assignment H99, which remains a \Reading, the charged leptons form the Im sector and the
+neutral leptons the Re sector (names of \rnd{r69}; Section~\ref{sec:A-convention}). The charged phase is $\delta^*=0.2222220$, the
+value $\approx2/9$ of the preceding subsections; it lies $0.0395773$ below the octant value $\pi/12$. The ratio
+$R=\Delta m^2_{21}/\Delta m^2_{31}$ gives an offset $0.04336\pm0.00213$ of the neutrino phase from $\pi/6$. With pole masses,
+the only scheme in which $K=\tfrac23$ holds, the two offsets differ by $1.78\sigma$ (H213, H214); a figure of $4.2\sigma$ in an
+earlier research note used the wrong uncertainty and is withdrawn (\rnd{r73}.1, .2).
+
+\paragraph{The offset is an angle.} In a phase potential $V_s(\delta)=-\alpha'_s\cos2(\delta-\xi_s-\varphi_\ell)+q\cos3\delta$, with
+$(\alpha'_s,\xi_s)=(1,\pi/4)$ in the Im and $(-1,0)$ in the Re sector, a common rotation by $\varphi_\ell$ moves both minima
+\emph{exactly} by $\varphi_\ell$, to $\pi/12-\varphi_\ell$ and $\pi/6-\varphi_\ell$, for every $\varphi_\ell$; a sector scale or a
+conjugation term misses the two offsets by $9.2\sigma$ and $23\sigma$ (H221, \rnd{r73}.4). The common offset is therefore a
+dimensionless rotation angle, not a scale \Established{} (within the potential). We write it $\varphi_\ell$ to keep it apart from the
+bend angle $\varphi$ of Proposition~\ref{prop:B-bent}; the Companion calls it $\varphi$.
+
+\paragraph{A branch without a scale, and its sign.} Each minimum is still twofold. Exactly,
+\begin{equation}
+ \prod_{k=0}^{2}\bigl(1+a\cos(\delta+2\pi k/3)\bigr)=\frac{4-3a^2+a^3\cos3\delta}{4},
+ \label{eq:B-cubic-invariant}
+\end{equation}
+and the rule ``larger $\cos3\delta$'', equivalently larger determinant of the mass matrix, selects in both sectors, with the same sign,
+the branch of the data; the rejected neutrino branch would miss $R$ by $51\sigma$ (H222, \rnd{r73}.5). The rule is the limit
+$q\to0^-$ of the sixth-order term: the scale drops out and only a sign remains. That sign follows neither from $J$, nor from
+stability, nor from a natural parent term (k436, H223); the author set it on 28 November 2026 \Conditional{} (setting).
+
+\paragraph{The value is not derived.} $\varphi_\ell$ is not a Wigner rotation of the frame boosts (H224), not the minimum of the common
+vacuum energy, which has an exact exchange symmetry of the two sectors and settles at $\pi/8$ (H225), and not fixed by four simple terms
+that break that exchange (H226). Round \rnd{r74} adds nine tests registered in advance and one exploration: loops and the gradient flow
+(H228), a loosening of $J$ at sixth order (H229), frame maps from R to M (H230), a field rolling with Hubble friction (H231; excluded by
+atomic clocks), breakers of the sector exchange (H232; at every equilibrium $\varphi_\ell$ is the mean of the two sector offsets), a grid of
+eight positions (H233), a common fine step (H234) and a Casimir twist (H235) all miss the measured value. The last test, H236, clears a
+double counting: $\varphi_\ell$ carries the offset and $q$ only the sign of the branch choice, $q\to0^-$; the data allow $|q|\le0.029$
+at $2\sigma$ and require none (\rnd{r74}.10). No verdict changes. On 28 November 2026 the author left $\varphi_\ell$ open and let this
+line of work rest (\rnd{r74}, decision r74.D). Thus
+\begin{equation}
+ \varphi_\ell=0.0395773
+ \label{eq:B-phi-measured}
+\end{equation}
+stays the one measured number of the lepton picture \Open.
+
+\paragraph{Mass balance.} With $K=\tfrac23$ and the branch sign set, three inputs, $\varphi_\ell$ and the fitted scales $\mu_e$,
+$\mu_\nu$, carry all six lepton masses (H227, carries partly; \rnd{r73}.10). Koide gives $m_\tau=1776.969$\,MeV from $m_e$ and $m_\mu$
+($+0.43\sigma$) and $\varphi_\ell$ gives $R=0.030839$ ($+1.80\sigma$); neither is blind. With $\mu_\nu$ fitted to $\Delta m^2_{31}$
+the neutrino masses follow in normal ordering, $m_{1,2,3}=0.379$, $8.81$, $50.11$\,meV, with $\sum m_\nu=59.30\pm0.24$\,meV,
+$m_\beta=8.87$\,meV and $m_{\beta\beta}$ between $1.29$ and $4.00$\,meV for free Majorana phases. All lie below present bounds and are
+recorded as predictions (Section~\ref{sec:open-predictions}); a measured $\sum m_\nu<58$\,meV or an established inverted ordering would
+refute the picture. The ratio of the two scales is no integer power of a frame number. OP3 and OP4 remain open.
+
 \subsection{Tests that ground the result}
 \label{sec:B-koide-tests}
 
@@ -309,6 +366,8 @@ H106--H111 & carrier variants (singlet admixture, nested normalisation, entangle
 close the residual bend & refuted; no hit (\rnd{r28})\\
 H115--H117 & compensator, endpoints or two windows fix the sign of the octant step & as stated above; not blind (\rnd{r30})\\
 H118 & a native structure fixes the orientation & formula confirmed, selection refuted (\rnd{r31})\\
+H213--H227 & lepton phase: common offset as an angle, branch by $\cos3\delta$, value of $\varphi_\ell$, mass balance & angle and branch hold (sign set); value not derived; H227 partly, predictions open (\rnd{r73})\\
+H228--H236 & further routes to the value of $\varphi_\ell$; double counting & all routes refuted; H236 holds (\rnd{r74})\\
 \bottomrule
 \end{tabularx}
 \caption{Tests bearing on the Koide geometry (status from \texttt{wiki/Vorhersagen-und-Tests.md} and the cited rounds).}
@@ -322,5 +381,6 @@ complete sets of unbiased states; on the invariant doublet $\chi$ the non-orthog
 and form exactly the octants; the sign of the step is a time orientation. \Reading: the complementarity reading, the
 readouts of one object, the time cycle and the guarded core. \Open: the overlap $\tfrac12$ itself (now traced to the postulated
 swap symmetry $J$; H149, H155, H156), the bend to
-$\varphi=\tfrac23$ (equivalently the core size, OP1), the orientation, and a charged carrier with three generations. The
+$\varphi=\tfrac23$ (equivalently the core size, OP1), the orientation, and a charged carrier with three generations, and the
+lepton angle $\varphi_\ell=0.0395773$, a measured input (Section~\ref{sec:B-lepton-phase}). The
 Koide relation is described, not derived; OP3 remains open.

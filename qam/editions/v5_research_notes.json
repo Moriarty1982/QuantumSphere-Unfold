@@ -673,5 +673,93 @@
     ],
     "guard": "Sensitivity of the dependent numbers to the reference value of β_sym",
     "obligation": "The σ distances are descriptions of position, not tests. Hit counts of the mask scans change through a raster effect and are not a measure. No statement on the origin of β_sym follows. OP1 remains open."
+  },
+  {
+    "id": "naming-frames-and-lepton-sectors-r69",
+    "path": "notes/research/v4_10_0_r69_namenskonvention/README.md",
+    "title": "Naming convention: rest frame R, matter frame M, dual frame T, light point P; Re and Im sector of the leptons",
+    "excerpt": "Die Buchstaben M, T, P, R und alle bisherigen Namen bleiben gültig; ältere Runden werden nicht",
+    "assumptions": [
+      "Author decision of 26 November 2026; convention only, no computation, no test; the Re/Im sector names apply to leptons only and as a reading under H99."
+    ],
+    "guard": "Naming only; no frame identification derived",
+    "obligation": "Names change no statement and no status. Which frame the data are compared in (M rather than T) is not derived. Earlier layers and published versions are not renamed. OP1-OP5 remain open."
+  },
+  {
+    "id": "op3-common-lepton-offset-is-rotation-angle-h221",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/skala_zwei_sektoren_h221/Ergebnis_H221_Skala_zwei_Sektoren.md",
+    "title": "The common lepton offset is a scale-free rotation angle; scale and conjugation term are excluded as its universal source",
+    "excerpt": "Der neutrale Sektor schließt Skala und Konjugationsterm als universelle Quelle des Versatzes aus",
+    "assumptions": [
+      "Tree model of H167 written for the Im and Re sector; Brannen form with K = 2/3 under J; circulant sector, tree level, H99; verdict partly (criterion scale free met). Recorded in r73.4."
+    ],
+    "guard": "Value of the rotation angle phi (OP3)",
+    "obligation": "A common rotation chi -> chi + phi shifts both minima exactly by phi for every phi; it does not fix phi. The twofold degeneracy of each minimum is lifted only by the branch choice (H222). OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-scale-free-branch-choice-cubic-invariant-h222",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/zweigwahl_skalenfrei_h222/Ergebnis_H222_Zweigwahl_skalenfrei.md",
+    "title": "The sign of the cubic spectral invariant cos 3delta (proportional to det Y) chooses the data branch in both lepton sectors without a scale",
+    "excerpt": "Das Vorzeichen der kubischen Spektralinvariante wählt den Zweig in beiden Lepton-Sektoren — ohne Skala",
+    "assumptions": [
+      "Rotation of H221; rule larger cos 3delta for phi = 0.01 to 0.06; part a not blind, b and c partly not blind, d and e blind; recorded in r73.5."
+    ],
+    "guard": "Sign of the branch-choice term (setting of the author)",
+    "obligation": "The sign q < 0 is set by the author (28 November 2026); it follows neither from J, nor from stability, nor from a natural parent term (r73.6). Loosening J at order six would replace it by a rule change and was not adopted (H229, r74.2). OP3 remains open."
+  },
+  {
+    "id": "op3-lepton-angle-stays-measured-r73",
+    "path": "notes/research/v4_10_0_r73_lepton_phase_bilanz/README.md",
+    "title": "The value phi = 0.0395773 of the common lepton angle stays a measured input",
+    "excerpt": "Bilanz: Seit r73.4 sitzt die offene Wahl im Wert von φ.",
+    "assumptions": [
+      "Record round r73 of the tests H213-H227; Wigner rotation (H224), modulus minimum (H225) and simple exchange-breaking terms (H226) give no derivation."
+    ],
+    "guard": "Value of phi (OP3)",
+    "obligation": "phi is the one measured number of the lepton picture; whether it is an equilibrium value or an initial or boundary condition is not decided. OP3 remains open."
+  },
+  {
+    "id": "op3-lepton-mass-balance-neutrino-predictions-h227",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/massen_bilanz_h227/Ergebnis_H227_Massen_Bilanz.md",
+    "title": "Three numbers carry all six lepton masses; recorded prediction sum m_nu = 59.30 +- 0.24 meV, m_beta = 8.87 meV, m_betabeta 1.29-4.00 meV",
+    "excerpt": "Drei Zahlen tragen alle sechs Leptonenmassen; die absolute Neutrinoskala ist vorhergesagt, das Skalenverhältnis ist frei",
+    "assumptions": [
+      "Inputs phi, mu_e, mu_nu; K = 2/3 under J, Brannen form, H99, branch sign set, normal ordering, pole masses; mu_nu from Delta m^2_31; masses not blind, m_beta and m_betabeta new; verdict partly. Recorded in r73.10 and in the register r75."
+    ],
+    "guard": "Absolute neutrino scale against future data",
+    "obligation": "The predictions are open: a measured sum m_nu < 58 meV or an established inverted ordering refutes the picture. The scale ratio mu_nu/mu_e is not a frame number. OP3 and OP4 remain open."
+  },
+  {
+    "id": "op3-phi-carries-offset-q-only-sign-h236",
+    "path": "notes/research/hilbert_shift_felder_2026_11_24/doppelzaehlung_h236/Ergebnis_H236_Doppelzaehlung.md",
+    "title": "Double counting settled: phi carries the lepton offset, the coefficient q of H167 only the sign of the branch choice",
+    "excerpt": "φ trägt den Versatz, q ist nur ein Vorzeichen. Kein früheres Urteil kippt",
+    "assumptions": [
+      "Tree model of H225, branch after H222 (q < 0), data x and x_nu (H213), pole masses (H214); readings Q and Phi not blind, mixed reading M and part B blind. 2-sigma range q in [-0.029, 0]. Recorded in r74.10."
+    ],
+    "guard": "Value of phi (OP3)",
+    "obligation": "No verdict of H221-H235 changes and the H227 predictions are unaffected. Future computations use q -> 0- with the offset in phi; a finite q would need a justification as a scale part. phi stays a measured input; OP3 remains open."
+  },
+  {
+    "id": "op3-phi-strand-rests-r74",
+    "path": "notes/research/v4_10_0_r74_phi_strang_ruht/README.md",
+    "title": "No route fixes the lepton angle phi (H228-H235); the author leaves phi open and the strand rests",
+    "excerpt": "Autorentscheidung 28.11.2026, 15:41: φ = 0,0395773 bleibt offen (gemessene Eingabe), der",
+    "assumptions": [
+      "Record round r74 of H228-H236 and the exploration k449; no new computation; each cited test with Python and an independent Wolfram cross-check."
+    ],
+    "guard": "Value of phi (OP3)",
+    "obligation": "Asymptote, loosened J, frame transfer, expansion clock, backward search, locking, fine step and Casimir twist do not fix phi; at every equilibrium phi is the mean of the two sector offsets. The strand rests by author decision; OP3 remains open."
+  },
+  {
+    "id": "dated-prediction-register-v560-r75",
+    "path": "notes/research/v4_10_0_r75_vorhersage_register/README.md",
+    "title": "Dated register of the model state and its predictions for version v5.6.0 (Stand 28 November 2026)",
+    "excerpt": "r75 ist das erste Register (für v5.6.0, Version-DOI noch zu reservieren); es gilt als Bezug ab der Veröffentlichung von v5.6.0.",
+    "assumptions": [
+      "Standing rule of the author of 28 November 2026; register only, no computation; values copied from the cited advance and result notes; experiment sensitivities are literature planning values, not recomputed."
+    ],
+    "guard": "Open pre-registered predictions against future data",
+    "obligation": "Criteria and verdicts are those of the source notes; corrections only in a new version with a stated reason, never a readjustment after a measurement. Tests H173-H212 are not yet recorded as a layer. OP1-OP5 remain open."
   }
 ]

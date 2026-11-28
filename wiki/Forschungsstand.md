@@ -22,6 +22,9 @@ Verdrehungsfeldern nur für N = 1, 2, 4, 8 (Radon–Hurwitz/Adams; S¹⁵ hat nu
 Ordnung je Stufe“ erzeugt also den Turm und beendet ihn. Gesetzt sind dabei: Verdrehung an jeder Wand, Feldwert in der Stufe selbst (mit allgemeinen
 Clifford-Algebren hielte nichts an) und das Dirac-Prinzip. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/innen_aussen_turm_k452/`.
 
+### Companion-Runden r74 und r75: φ-Strang ruht; datiertes Vorhersage-Register für v5.6.0 (28.11.2026, H228–H236, k449)
+r74 hält die Tests H228–H236 und die Erkundung k449 fest: Kein weiterer Weg legt den Wert φ = 0,0395773 fest (Asymptote, J-Lockerung bei Ordnung 6, Symmetriepunkt im Materie-Frame, Expansion als Uhr, Rückwärtssuche nach dem Brecher, Einrasten auf 8 Stellungen, gemeinsame Feinstufe, Casimir-Verdrehung: widerlegt oder ohne Treffer). H236 klärt die Doppelzählung (φ trägt den Versatz, q nur das Vorzeichen, q → 0⁻); kein Urteil kippt, die Vorhersagen aus H227 bleiben. Entscheidung des Autors: φ bleibt offen, der Strang ruht. r75 ist das erste datierte Register des Modellstands mit allen offenen Vorhersagen (Stand 28.11.2026) und trennt für jede Zeile hergeleitet, gesetzt, gemessene Eingabe und nachträglich; es gilt für die Version v5.6.0 (veröffentlicht 28.11.2026, DOI 10.5281/zenodo.24632437). Übersicht nach Experiment: [Prüfbare Vorhersagen](Pruefbare-Vorhersagen). OP1–OP5 bleiben offen.
+
 ### Doppelzählung geklärt: φ trägt den Versatz, q ist nur ein Vorzeichen (28.11.2026, Test H236, k451)
 
 Seit H225 standen im Baum-Modell zwei Größen für denselben Lepton-Versatz: der Fit q = −0,0852 aus H167 und die gemeinsame Drehung φ. **Trägt:**
