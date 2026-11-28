@@ -1,0 +1,33 @@
+H215 (k428): Rueckwaertssuche, Schleifen aus 9 Grundoperationen, Laenge 1..5
+gamma_L = 1.8646997646093725635   beta_sym = 0.54940564097452899867
+Fenster relativ +-0.00065  ->  [0.549049, 0.549763]  (k358: [0,54907; 0,54978])
+Woerter: 66429
+identitaetsartig ausgeschlossen: 63
+anziehende Fixpunkte in (0,1) gesamt: 11748
+
+--- Ziel beta_sym ---
+N(beta_sym) ohne Einzelwort E: 3   mit E: 3
+Treffer im Fenster (Wort, x*, f', |f(beta)-beta| mit 30 Stellen):
+  DWHEH  x*=0.549422148  f'=-0.1690  Abstand x*-beta=+1.65e-05  |f(beta)-beta|=1.93e-5
+  RWERW  x*=0.549344439  f'=-0.6069  Abstand x*-beta=-6.12e-05  |f(beta)-beta|=9.83e-5
+  WREWR  x*=0.549294470  f'=-0.5864  Abstand x*-beta=-1.11e-04  |f(beta)-beta|=0.000176
+exakte Treffer (ohne E allein): keine
+
+--- Einzelwort E (nicht blind, getrennt) ---
+
+--- Kontrollen ---
+Zufall (2000, [0,35;0,75], Startwert 215): Mittel 13.95, Median 7, 95. Perzentil 40.0, 99. Perzentil 101.0, Maximum 587
+Anteil Kontrollen mit N >= N(beta_sym): 0.8950
+  N(1/2 = 0.5000000) = 530
+  N(1/3 = 0.3333333) = 15
+  N(1/sqrt3 = 0.5773503) = 28
+  N(1/sqrt2 = 0.7071068) = 86
+  N(1/gamma_L = 0.5362794) = 6
+  N(2^(1-gamma_L) = 0.5491607) = 11
+
+--- Urteil nach Vorab-Notiz ---
+widerlegt (kein exakter Treffer, N nicht auffaellig)
+
+N(beta_sym) nur Laenge <= 3 (fuer Gegenprobe): 0 []
+N(1/2) Laenge <= 3: 19
+N(1/3) Laenge <= 3: 0

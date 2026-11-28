@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H215 (Stabilitätstest β_sym, Rückwärtssuche):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme (OP1) ergänzt. Keine einfache Schleife des Rahmens zieht β_sym an; χ und Λ haben keinen Zielwert.
+
 **27.11.2026, Test H214 (Massenschema):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Polmassen sind das Schema des Rahmens (nur dort K = ⅔); M_Z-Lesart aus H213c unzulässig; kein zulässiges Schema schließt den 1,78σ-Abstand; R schemafest; trägt.
 
 **27.11.2026, Test H213 (Versatz-Abstand Neutrino/Lepton):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: der in H207 genannte 4,2σ-Abstand zwischen x_ν (aus R) und x_lepton war ein Nenner-Fehler (0,00091 statt σ(x_ν) = 0,00213); richtig 1,78σ, mit M_Z-Massen 1,22σ; trägt. Die H207-Einträge bleiben stehen, die Korrektur steht im H213-Eintrag.
