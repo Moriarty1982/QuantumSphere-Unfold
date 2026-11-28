@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H241 (Kopien als XOR):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: Block nicht in Kopie; XOR trägt (nicht blind); Produktregel nachträglich.
+
 **28.11.2026, Test H240 (zwei RAIDZ2 anders verschaltet):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: trägt teilweise, mit Korrektur zu H239.
 
 **28.11.2026, Tests H238 (Leck-Energie auf dem Kreis) und H239 (zweimal RAIDZ2):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: H238 trägt, H239 trägt teilweise (nur Kapazität).
