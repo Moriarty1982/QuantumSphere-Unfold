@@ -1,5 +1,15 @@
 # Forschungsstand
 
+### Inneres und äußeres Feld: wie HS(−1), HS(0), HS(1) entstehen könnten (28.11.2026, Erkundung k449, nicht blind)
+
+Marcs Bild: Der Urknall ordnet nur einen abgetrennten Bereich des Ursprungsfelds neu, das äußere Feld stemmt sich dagegen, dazwischen liegt eine
+Vakuumschicht mit Casimir-Effekt. Ergebnis als Anschauung: Zwei Bereiche ergeben genau die Algebra ℝ⊕ℝj mit j² = +1 (Projektoren e₊ und e₋,
+j = Vorzeichen über die Wand), also **HS(−1)**. Verschmelzen innen und außen, bleibt nur ℝ = **HS(0)**. Wird das Vorzeichen zur stetigen Phase,
+entsteht ℂ = **HS(1)**; diese Phase ist aber von Hand gesetzt, HS(1) wird also zugelassen, nicht erzeugt. Im Spalt ist gleiche Randbedingung
+anziehend (der Spalt schließt sich) und Vorzeichenwechsel abstoßend (der Spalt bleibt offen), Verhältnis exakt −7/8. Dieselbe Zahl ergibt die
+Verdrehung S(π)/S(0). Nachträglich: Nur der abstoßende Fall hält die Trennung stabil, und das ist der Fall mit j² = +1. Keine Zahl, keine
+Vorhersage, φ bleibt offen. Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/innen_aussen_k449/`.
+
 ### Grob und fein: keine gemeinsame Feinstufe (28.11.2026, Test H234, k448)
 
 Marcs Frage: Sind die Eingaben Grob- und Feintuning? Das Muster stimmt: Alles Diskrete (π/12, π/6, K = ⅔, Oktant, Achteldrehungen) ist hergeleitet, alles

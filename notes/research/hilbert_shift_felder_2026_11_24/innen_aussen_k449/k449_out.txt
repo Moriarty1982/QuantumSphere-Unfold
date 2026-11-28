@@ -1,0 +1,31 @@
+==========================================================================================
+k449  Inneres und aeusseres Feld mit Vakuumschicht: Wand, Spalt, Verdrehung
+==========================================================================================
+
+1 Wand: V = lam (phi^2 - 1)^2, Vakua phi = +-1 (= S^0, Einheitssphaere von HS(0)); Kink phi = tanh(sqrt(2 lam) x)
+  BPS-Rest max|phi' - sqrt(2lam)(1-phi^2)| = 8.83e-06; Wandenergie 1.577617 (exakt 4/3 sqrt(2 lam) = 1.577621)
+  topologische Ladung (phi(+inf) - phi(-inf))/2 = +1.000000  (Werte 0, +-1: innen und aussen gleich oder entgegengesetzt)
+
+2 Spiegelstufe R[Z2] = R + R j, j^2 = +1: e_pm = (1 +- j)/2
+  e+^2 - e+ = 0e+00, e-^2 - e- = 0e+00, e+ e- = 0e+00, e+ + e- = 1: True
+  Lesart: e+ projiziert auf das innere, e- auf das aeussere Feld; j = Vorzeichen ueber die Wand
+
+3 Casimir im Spalt der Breite d: Moden (n + a) pi/d; E/A = -(pi^2/(12 d^3)) zeta(-3, a)
+  DD (gleiche Randbedingung, a = 1): zeta(-3,a) = 0.00833333333333, E/A * d^3 = -0.0068538919452  (anziehend)
+  DN (gemischte Randbedingung, a = 1/2): zeta(-3,a) = -0.00729166666667, E/A * d^3 = 0.00599715545205  (abstossend)
+  Verhaeltnis E_DN/E_DD = -0.875 (= -7/8)
+
+4 Verdrehung: komplexes Feld mit Phase alpha ueber den Umlauf; E(alpha) proportional -S(alpha), S = sum cos(n alpha)/n^4
+  alpha =        0: S = 1.0823232337111, geschlossene Form (Bernoulli) 1.0823232337111, Differenz 1.97e-31; nsum 1.0823232337111
+  alpha = 0.785398: S = 0.69389179973766, geschlossene Form (Bernoulli) 0.69389179973766, Differenz 1.97e-31; nsum 0.69398586696756
+  alpha =   1.5708: S = -0.059189551843578, geschlossene Form (Bernoulli) -0.059189551843578, Differenz 1.54e-31; nsum -0.059189551843578
+  alpha =  3.14159: S = -0.94703282949725, geschlossene Form (Bernoulli) -0.94703282949725, Differenz -4.93e-31; nsum -0.94703282949725
+  alpha =  4.71239: S = -0.059189551843578, geschlossene Form (Bernoulli) -0.059189551843578, Differenz 4.09e-30; nsum -0.059189551843578
+  S(pi)/S(0) = -0.875 (= -7/8, dieselbe Zahl wie DN/DD)
+  Bosonen (Vorzeichen +): Minimum der Energie bei alpha = 0; Fermionen (Vorzeichen -): bei alpha = pi
+  numerisch: argmin(-S) = 0.0000, argmin(+S) = 3.1416 (pi = 3.1416)
+
+Zuordnung (Lesart, nicht hergeleitet):
+  alpha = 0  : innen und aussen gleich, Casimir anziehend -> Spalt schliesst, ein Feld          ~ HS(0)  (R)
+  alpha = pi : Vorzeichenwechsel ueber den Spalt, abstossend -> zwei getrennte Haelften         ~ HS(-1) (R + R j)
+  alpha frei : Phase zwischen beiden, U(1) mit Z2 = {0, pi} als Teilmenge                      ~ HS(1)  (C)

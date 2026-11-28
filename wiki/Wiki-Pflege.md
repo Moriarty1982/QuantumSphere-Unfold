@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Erkundung k449 (inneres und äußeres Feld, HS(−1) bis HS(1)):** Forschungsstand ergänzt (Anschauung, nicht blind).
+
 **28.11.2026, Test H234 (gemeinsame Feinstufe):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: widerlegt.
 
 **28.11.2026, neue Seite Prüfbare-Vorhersagen:** Übersicht der offenen Vorhersagen nach Experimenten (Auftrag des Autors, 15:12); Sidebar und Vorhersagen-und-Tests verlinkt.

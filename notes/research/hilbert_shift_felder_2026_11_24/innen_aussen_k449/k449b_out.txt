@@ -1,0 +1,19 @@
+(Ausgabe des Wolfram-Evaluators, 28.11.2026; erster Lauf mit Funktionsname B statt Bf, sonst gleich)
+
+Warnungen (keine Rueckgabewerte): Symbol::undefined2 (Hinweis auf globalen Namen B);
+MinValue::infeas / MaxValue::infeas (mehrfach, aus Solve mit Ungleichung; die Liste der kritischen Punkte ist vollstaendig
+und stimmt mit der Ableitung -pi^2 a/6 + pi a^2/4 - a^3/12 = -(a/12)(a-pi)(a-2pi) ueberein).
+
+Hurwitz zeta(-3,1), zeta(-3,1/2): {1/120, -7/960}
+Ratio DN/DD: -7/8
+Sum - Bernoulli (0<a<2pi): (15 a^4 - 60 a^3 Pi + 60 a^2 Pi^2 - 8 Pi^4 + 360 (PolyLog[4, E^(-I a)] + PolyLog[4, E^(I a)]))/720
+   (symbolisch nicht auf 0 vereinfacht; numerisch exakt 0, siehe naechste Zeile und Python-Lauf, Differenz < 1e-29)
+Polylog exact at pi/4 minus B: {0}
+B(pi)/B(0): -7/8
+Critical points of -B: {{a -> 0}, {a -> Pi}, {a -> 2 Pi}}
+Kink BPS residue: 0  energy: 4 Sqrt[2]/3 = 1.88562   (lam = 1; allgemein 4/3 sqrt(2 lam))
+Idempotents: {True, True, True, True, True}
+NSum check: {{0, 1.08224248078697, 1.08232323371114}, {Pi/4, 0.693880123009057, 0.693891799737658},
+             {Pi/2, -0.0591544586821404, -0.0591895518435779}, {Pi, -0.947032829497246, -0.947032829497246}}
+   (NSum ist fuer die langsam oszillierende Reihe ungenau, ~1e-5 bis 1e-4; ebenso mpmath nsum im ersten Python-Lauf bei pi/4.
+    Massgeblich ist die exakte Polylog-Form, die mit der Bernoulli-Form uebereinstimmt.)
