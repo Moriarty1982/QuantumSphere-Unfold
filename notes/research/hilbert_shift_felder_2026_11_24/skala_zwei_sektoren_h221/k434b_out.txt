@@ -1,0 +1,15 @@
+(* Ausgabe des Wolfram-Evaluators fuer k434b_gegenprobe.wl, 28.11.2026 (zwei Laeufe zusammengefuehrt; der erste Lauf hatte in c
+   den neutralen Zielwinkel auf den falschen Zweig gesetzt, 3Pi/2 + x statt Pi/2 + x, und wurde fuer c verworfen). *)
+Warnungen (harmlos, Maschinenpraezision in den Eingaben):
+FindRoot::precw: The precision of the argument function (0.158144101093096 + 1.855108170381778*q == 0) is less than WorkingPrecision (20.).
+FindMinimum::precw: ... is less than WorkingPrecision (20.).  (zweimal)
+Print-Ausgaben:
+Weg S geladen: q/alphap = -0.08524791364
+b) q_nu = -1|q|: Minimum 0.4606338223  x_nu,pred = 0.062964953  z = 9.213
+b) q_nu = 1|q|: Minimum 0.5865637289  x_nu,pred = -0.062964953  z = -49.96
+a) neutral Weg K: V = (1 + a) Cos[2 d] -> Minimum bei pi/2 fuer 1+a>0, x_nu,pred = 0
+d) geladen: dV/dd bei d = Pi/4+phi+Pi: 0   zweite Ableitung: 4
+d) neutral: dV/dd bei d = Pi/2 + phi: 0  zweite Ableitung: 4
+c) s_a=1 s_q=1: alpha=0.0238459 q=-0.0596201  global geladen fold=0.22222205 (Ziel 0.22222205)  global neutral fold=0.48023978 (Ziel 0.48023978)
+c) s_a=-1 s_q=1: alpha=0.0265779 q=-0.0566838  global geladen fold=0.22222205 (Ziel 0.22222205)  global neutral fold=0.48023978 (Ziel 0.48023978)
+Rueckgabewert: Null; keine symbolischen Reste (d: exakt 0 bzw. 4 fuer jedes phi)

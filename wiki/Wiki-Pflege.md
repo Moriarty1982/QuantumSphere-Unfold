@@ -1,5 +1,7 @@
 # Wiki-Pflege
 
+**28.11.2026, Test H221 (Skala oder skalenfrei, neutraler Sektor als Trennprobe):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt: mit gleichen Koeffizienten in beiden Sektoren scheitern Konjugationsterm (23σ) und Ordnung 6 mit Skala (9σ); eine gemeinsame Drehung von χ gibt gleiche Versätze exakt; spricht für skalenfrei; trägt teilweise.
+
 **28.11.2026, Test H220 (Endzahlen-Suche mit strukturellen Bausteinen):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme ergänzt. Bei passender Dichte gibt es keinen Treffer; alle Formeln sind angepasst.
 
 **28.11.2026, Test H219 (Endzahlen-Suche):** Forschungsstand, Vorhersagen-und-Tests und Offene-Probleme (OP1) ergänzt. Die Bausteine des Rahmens treffen die Zielzahlen nicht besser als der Zufall; alle Treffer sind angepasst.
