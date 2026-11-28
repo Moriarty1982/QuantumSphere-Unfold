@@ -1,0 +1,31 @@
+================================================================================================
+H241 (k457)  Klartext-Block B_x = H_x + H_x e8 vs. drei G2-Kopien; XOR-Relationen
+================================================================================================
+
+Teil A: Lage des Blocks
+  Z1 (84 Basis-Nullteiler): dim(B_x cap V_k) = [(4, 4, 4)]; B_x in einer Kopie: 0; (abgeschlossen, alternativ, normmult.) = [(np.True_, np.True_, np.True_)]; (x in B_x, e8 in B_x) = [(True, True)]
+    A-blind: Typ von B_x unter den 15 Basis-Unteralgebren: {'Oktonion': 84}
+  Z2 (200 allgemeine): dim(B_x cap V_k) = [(4, 4, 4)]; B_x in einer Kopie: 0; (abgeschlossen, alternativ, normmult.) = [(np.True_, np.True_, np.True_)]; (x in B_x, e8 in B_x) = [(True, True)]
+  Typen der 15 Basis-Unteralgebren (Funktional f -> Typ): 1:O, 2:O, 3:O, 4:O, 5:O, 6:O, 7:O, 8:O, 9:Q, 10:Q, 11:Q, 12:Q, 13:Q, 14:Q, 15:Q
+  Oktonionen: 8, Quasi-Oktonionen: 7; alle abgeschlossen: True
+  Oktonionen, die e8 enthalten: [1, 2, 3, 4, 5, 6, 7]; Oktonion ohne e8: [8]
+
+Teil B1: e_i e_j = +- e_(i XOR j)
+  alle 256 Paare: True
+
+Teil B2: Bueschel aus drei Basis-Unteralgebren (f3 = f1 XOR f2)
+  Zahl der Bueschel: 35; H1 Delta H2 = Komplement H3 in allen: True
+  Typenkombinationen: {('O', 'O', 'O'): 7, ('O', 'O', 'Q'): 7, ('O', 'Q', 'Q'): 21}
+
+Teil B3: Parität der G2-Kopien
+  max |u1(q)+u2(q)+u3(q)| ueber 50 q: 0.0e+00
+  Zufallskontrolle: Anteil zufaelliger Winkel-Tripel mit Paritaet: 0/10000
+
+Teil B4: Vertraeglichkeit mit dem Produkt
+  u_k(p) u_k(q) = -(p.q) + u_k(Im pq) fuer alle drei Kopien (max Abw.): 2.2e-16  -> q -> u_k(q) ist fuer jedes k ein Isomorphismus von O
+  Paritaet im Block: B_x cap V3 in (B_x cap V1)+(B_x cap V2) fuer alle 200: True
+
+Nur Bericht (nachtraeglich): Produkt ueber Kreuz u1(p) u2(q), Anteil in V3 im Vergleich zu V1, V2 und Zufall
+  mittlerer Anteil in V1, V2, V3: [0.25   0.25   0.8938]; zufaelliger 8-dim Raum: 0.4930
+
+================================================================================================

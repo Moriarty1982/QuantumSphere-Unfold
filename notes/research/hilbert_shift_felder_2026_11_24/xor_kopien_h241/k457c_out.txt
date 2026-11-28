@@ -1,0 +1,8 @@
+k457c: u_a(p) u_b(q) zerlegt in Realteil (e0), e8-Teil und Imaginaerteil; Test Imaginaerteil = u_g(Im(pq)+ (p.q)) mit g = -(a+b)
+  max |Imaginaerteil - u_(-(a+b))(p x q)| = 6.9e-16
+  Realteil/(-(p.q)) - cos(b-a): max 4.7e-15;  e8-Teil/(-(p.q)) - sin(b-a): max 3.7e-15
+  => u_a(p) u_b(q) = -(p.q) [cos(b-a) + sin(b-a) e8] + u_(-(a+b))(p x q)
+  Kopien a, b in {0, 120, 240 Grad}: -(a+b) mod 180 ist wieder eine Kopie; fuer a != b die dritte, fuer a = b dieselbe (Z3-Gesetz k1+k2+k3 = 0 mod 3).
+   V1*V1 -> V1;  V1*V2 -> V3;  V1*V3 -> V2
+   V2*V1 -> V3;  V2*V2 -> V2;  V2*V3 -> V1
+   V3*V1 -> V2;  V3*V2 -> V1;  V3*V3 -> V3

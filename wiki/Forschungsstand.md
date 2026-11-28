@@ -1,5 +1,20 @@
 # Forschungsstand
 
+### Die drei Kopien als XOR: Parität und Produktgesetz k₁ + k₂ + k₃ ≡ 0 (mod 3) (28.11.2026, Test H241, k457)
+
+Marc: „es könnte nämlich auch eine art xor der anderen sein“.
+- **Klartext-Block:** Der ungeschützte Block B_x eines Nullteilers (H240) liegt in keiner Kopie. Er ist eine eigene Oktonion-Algebra mit e₈ und schneidet
+  jede Kopie in einem Quaternion-Teil (dim 4).
+- **XOR, trägt (nicht blind):** Die Imaginärteile der drei Kopien erfüllen u₁(q) + u₂(q) + u₃(q) = 0 exakt, wie eine RAID5-Parität über ℝ. Das Vorzeichen
+  spielt keine Rolle, denn v und −v geben dieselbe Kopie. Zufällige Winkel-Tripel tun das nie (0/10 000). Die 15 Basis-Oktonionen und Quasi-Oktonionen
+  bilden 35 Büschel mit H₁ Δ H₂ = Komplement von H₃ (Index-XOR).
+- **Nachträglich, symbolisch bewiesen:** u_α(p)·u_β(q) = −(p·q)[cos(β−α) + sin(β−α)·e₈] + u_{−(α+β)}(p × q). Das Produkt zweier verschiedener Kopien
+  landet in der dritten, nach dem Gesetz k₁ + k₂ + k₃ ≡ 0 (mod 3), so wie die Basis dem Index-XOR folgt.
+- Daraus folgt H238 analytisch: Der Leckanteil ist sin²3θ, und 42 ist die Zahl der geordneten Paare verschiedener imaginärer Einheiten.
+- Generationen sind nicht gezeigt.
+
+Ergebnis: `notes/research/hilbert_shift_felder_2026_11_24/xor_kopien_h241/`.
+
 ### Zwei RAIDZ2 anders verschaltet? Ein Nullteiler teilt 𝕊 in Klartext-Block und Spiegelpaare (28.11.2026, Test H240, k456)
 
 Marc: „was wäre wenn wir zwei raidz2 haben die noch anders zusammengeschaltet sind?“ Die Zusammenhangskomponenten des Nullteiler-Codes erfassen alle
