@@ -1,0 +1,2 @@
+130b0639e8992c7aaa75a26bbd9c33e309a5bd69412660060fa07cfb3984b2cb  Quantum_Sphaera_One_Object_Three_Frames_v1.2.0.pdf
+9eda4b7a4304236afd8eeada2772e707ab4dfa949e0f4004c4cfea515d2d165f  Quantum_Sphaera_One_Object_Three_Frames_v1.2.0_source.tar.gz
